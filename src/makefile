@@ -59,7 +59,7 @@ IE.jar : US.jar $(COMPENDIUM)
 	bash moznua US
 	bash mozdist US
 
-langpack-ga-IE.xpi : ga-IE.jar ga-win.jar ga-mac.jar ga-unix.jar IE.jar 
+langpack-ga-IE.xpi : ga-win.jar ga-mac.jar ga-unix.jar IE.jar ga-IE.jar
 	rm -Rf bin sp
 	mkdir bin sp bin/chrome bin/defaults bin/defaults/profile bin/defaults/profile/IE
 	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > bin/defaults/profile/IE/bookmarks.html
