@@ -29,11 +29,13 @@ then
 	sed -i '/MOZ_LANGPACK_CONTRIBUTORS/r aistr.8.txt' ${IRISHPREF}/defines.inc
 	sed -i '/^# /d' ${IRISHPREF}/defines.inc
 	rm -f aistr.8.txt
-else
+fi
+if echo "${1}" | egrep '^toolkit' > /dev/null
+then
 	(cd eile-tk; cp -Rf * ../${IRISHPREF})
 fi
 rm -f "${IRISHJAR}.jar"
 jar cvf "${IRISHJAR}.jar" "${IRISHPREF}"
-mv -f "${IRISHPREF}" ga-IE
-cp -Rf ga-IE "${HOME}/seal/mozilla/${PACK}/locales"
-mv ga-IE "${IRISHPREF}"
+mv -f "${IRISHPREF}" "${PACK}"
+cp -Rf ${PACK} "${HOME}/seal/moz/l10n/ga-IE"
+mv -f "${PACK}" "${IRISHPREF}"
