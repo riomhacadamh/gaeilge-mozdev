@@ -37,6 +37,7 @@ CHROME=/usr/lib/MozillaFirefox/chrome
 INSTALL = /bin/install -c
 INSTALL_DATA = $(INSTALL) -m 644
 INSTALL_PROGRAM = /bin/install -c
+PARALLEL = ${HOME}/gaeilge/diolaim/comp
 
 all : browser-ga-IE.jar toolkit-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
@@ -45,8 +46,8 @@ all : browser-ga-IE.jar toolkit-ga-IE.jar
 install : all
 	bash xpiscr
 	$(INSTALL_DATA) langpack-build-dir/langpack-ga-IE.xpi ${HOME}/public_html/mozilla
-	cp -f langpack-build-dir/langpack-ga-IE.xpi ../downloads
-	vim ../www/installation.html
+#	cp -f langpack-build-dir/langpack-ga-IE.xpi ../downloads
+#	vim ../www/installation.html
 
 $(UTFCOMP) : $(COMPENDIUM)
 	rm -f $(UTFCOMP)
@@ -67,14 +68,20 @@ cvsdiff : FORCE
 	- diff -u -r browser-en-US $(HOME)/gaeilge/gnu/mozilla/mozilla/browser/locales/en-US | egrep -v '^Only in .*: CVS$$'
 	- diff -u -r toolkit-en-US $(HOME)/gaeilge/gnu/mozilla/mozilla/toolkit/locales/en-US | egrep -v '^Only in .*: CVS$$' | egrep -v '^Only in .*: mozilla.dtd$$'
 	- diff -u eile-tk/chrome/global/mozilla.dtd $(HOME)/gaeilge/gnu/mozilla/mozilla/toolkit/locales/en-US/chrome/global/mozilla.dtd
+	- diff -u installer-en.inc $(HOME)/gaeilge/gnu/mozilla/mozilla/browser/locales/en-US/installer/installer.inc
 
 gram : FORCE
-	cat ${HOME}/gaeilge/diolaim/comp/firefox | sed 's/$$/./' | tr -d '&' | gram-ga.pl --aschod=iso-8859-1
+	cat $(PARALLEL)/firefox | sed 's/$$/./' | tr -d '&' | gram-ga.pl --aschod=iso-8859-1
 
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
-	cat ${HOME}/gaeilge/diolaim/comp/firefox | tokenize | keepif /usr/local/share/crubadan/ga/GLAN latin-1 | keepif -n freqtemp.txt latin-1 | mutate -d | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -r -n | egrep -v ' [123] ' | sed 's/^ *[0-9]* //' | sort -u | keepif /usr/local/share/crubadan/ga/GLAN latin-1
+	cat $(PARALLEL)/firefox | tokenize | keepif /usr/local/share/crubadan/ga/GLAN latin-1 | keepif -n freqtemp.txt latin-1 | mutate -d | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -r -n | egrep -v ' [123] ' | sed 's/^ *[0-9]* //' | sort -u | keepif /usr/local/share/crubadan/ga/GLAN latin-1
 	rm -f ./freqtemp.txt
+
+pcorpus : FORCE
+	cat installer-en.inc | sed -n '/^#define/{s/^#define [^ ]* //; s/&//; p}' | egrep -n '.' | sed 's/:/: /' > $(PARALLEL)/ffinstaller-b
+	cat installer-ga.inc | sed -n '/^#define/{s/^#define [^ ]* //; s/&//; p}' | egrep -n '.' | sed 's/:/: /' > $(PARALLEL)/ffinstaller
+
 
 clean :
 	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po
