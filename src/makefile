@@ -48,8 +48,10 @@ install : all
 
 $(UTFCOMP) : $(COMPENDIUM)
 	rm -f $(UTFCOMP)
-	iconv -f iso-8859-1 -t utf8 "$(COMPENDIUM)" | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
+	Pofake $(COMPENDIUM) | msgcat - > firefox-temp.po
+	iconv -f iso-8859-1 -t utf8 firefox-temp.po | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
 	chmod 444 $(UTFCOMP)
+	rm -f firefox-temp.po
 
 browser-ga-IE.jar : $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
@@ -61,6 +63,11 @@ toolkit-ga-IE.jar : $(UTFCOMP)
 
 gram : FORCE
 	cat ${HOME}/gaeilge/diolaim/comp/firefox | sed 's/$$/./' | tr -d '&' | gram-ga.pl --aschod=iso-8859-1
+
+topwords : FORCE
+	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
+	cat ${HOME}/gaeilge/diolaim/comp/firefox | tokenize | keepif /usr/local/share/crubadan/ga/GLAN latin-1 | keepif -n freqtemp.txt latin-1 | mutate -d | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -r -n | egrep -v ' [123] ' | sed 's/^ *[0-9]* //' | sort -u | keepif /usr/local/share/crubadan/ga/GLAN latin-1
+	rm -f ./freqtemp.txt
 
 clean :
 	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po
