@@ -11,7 +11,9 @@ mkdir -p langpack-build-dir/chrome/locale
 cd ${MBL}/chrome
 cp -R browser browser-region cookie global ${BUILDDIR}/chrome/locale
 cd ${MOZCVS}/mozilla/browser/locales/generic/chrome
-# help? inspector?
+# next line didn't have help/inspector in V.B. version;
+# only stuff we're copying with this are the contents.rdf...
+#  adding either seems to cause bugs
 cp -R browser browser-region cookie ${BUILDDIR}/chrome/locale
 cd ..
 cp install.rdf ${BUILDDIR}/install.rdf-orig
@@ -52,7 +54,7 @@ zip -0rD -q $AB_CD.jar locale
 cd ..
 
 # (autoconfig is not present by default in FF nightlies and releases, so remove it)
-grep -v "^#" install.rdf-orig |\
+grep -v "^#" install.rdf-orig | grep -v "locale/inspector" | grep -v "locale/help" |\
 	grep -v autoconfig - |\
 	sed -e "s/@MOZ_LANGPACK_EID@/$MOZ_LANGPACK_EID/g" - |\
 	sed -e "s/@MOZ_LANG_TITLE@/$MOZ_LANG_TITLE/g" - |\
