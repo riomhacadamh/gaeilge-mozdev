@@ -39,17 +39,8 @@ do
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		msgmerge -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
-	echo "Defaulting to English in ${FILENAMEBASE}.po..."
-	Pofake ${FILENAMEBASE}.po
+	Pofake ${FILENAMEBASE}.po | msgcat - > tempe.po
+	mv tempe.po ${FILENAMEBASE}.po
 	echo
 	rm -f ${TEMPPOT} ${pofile}
 done
-
-
-# the Pofake line above calls a modified version of my "personal" 
-# Po file editor program, which I've hacked for the moment to 
-# simply copy msgid's to msgstr's when the latter are missing--
-# this is because the dtd's etc. will be unhappy with empty strings
-# and we don't get to rely on the gettext smarts anymore!
-#  should keep this even if I smugly think every string is handled in PO
-#  as a kind of fail-safe!
