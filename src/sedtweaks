@@ -1,4 +1,11 @@
 #!/bin/bash
+cat aistr.txt | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
 echo "Applying sed tweaks..."
 sed -i '/ENTITY mediaAccesskey /s/"."/"m"/' locale/ga-IE/browser/pageInfo.dtd
 sed -i '/ENTITY linksAccesskey /s/"."/"N"/' locale/ga-IE/browser/pageInfo.dtd
+sed -i '/blank in the original/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
+sed -i '/gopherPort.accesskey/s/.*/<!ENTITY  gopherPort.accesskey          "">/' browser-ga-IE/chrome/browser/pref/pref-connection.dtd
+sed -i '/blank in the original/d' browser-ga-IE/chrome/browser/credits.dtd
+sed -i "s/'_: dpi stands for.*/\"dpi\">/" browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
+sed -i '/^dpi/d' browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
+rm -f aistr.8.txt
