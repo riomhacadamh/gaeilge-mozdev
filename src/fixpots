@@ -1,0 +1,21 @@
+#!/bin/sh
+#    pass a dir and it "cleans up" all pots in that subdir
+#  only used in moznua, mozcomp
+MSGUNIQ="false"
+if [ "${1}" = "-u" ]
+then
+	MSGUNIQ="true"
+	shift
+fi
+find "${1}" -name '*.pot' |
+while read pofile
+do
+	sed -i "s/person..s interests/person's interests/" "${pofile}"
+	sed -i 's/\\\([)(]\)/\\\\\1/g' "${pofile}"
+	sed -i 's/\\\\"/\\"/g' "${pofile}"
+	if [ "${MSGUNIQ}" = "true" ]
+	then
+		msguniq "${pofile}" > "${pofile}.tmp"
+		mv "${pofile}.tmp" "${pofile}"
+	fi
+done
