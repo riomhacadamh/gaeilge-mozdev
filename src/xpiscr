@@ -15,8 +15,8 @@ cd ${MOZCVS}/mozilla/browser/locales/generic/chrome
 # only stuff we're copying with this are the contents.rdf...
 #  adding either seems to cause bugs
 cp -R browser browser-region cookie ${BUILDDIR}/chrome/locale
-cd ..
-cp install.rdf ${BUILDDIR}/install.rdf-orig
+# cd ..
+# cp install.rdf ${BUILDDIR}/install.rdf-orig
 cd ${MTL}/chrome
 cp -R global global-platform global-region mozapps necko passwordmgr pipnss pippki ${BUILDDIR}/chrome/locale
 cd ${MOZCVS}/mozilla/toolkit/locales/generic/chrome
@@ -24,21 +24,20 @@ cp -R global global-platform global-region mozapps necko passwordmgr pipnss pipp
 cd ${BUILDDIR}/chrome/locale
 rm -rf `find . -name 'CVS'`
 export AB_CD=ga-IE
-export MOZ_LOC_VER=1.7
-export MOZ_REG_VER=1.7
-export APP_VERSION=1.7
+export IRISH_VERSION=0.7.1
+#  seems like these should all be the same, but I don't really understand
+#  how they are used by chrome registry
+export MOZ_LOC_VER=${IRISH_VERSION}
+export MOZ_REG_VER=${IRISH_VERSION}
+export APP_VERSION=${IRISH_VERSION}
 # generated on borel using uuidgen
-export MOZ_LANGPACK_EID="{906b5382-9a34-4ab1-a627-39487b0678a9}"
-export MOZ_LANGPACK_CREATOR="mozilla.org"
+# export MOZ_LANGPACK_EID="{906b5382-9a34-4ab1-a627-39487b0678a9}"
+# export MOZ_LANGPACK_CREATOR="mozilla.org"
 # (Use the same format as in browser/locales/en-US/defines.inc)
-export MOZ_LANGPACK_CONTRIBUTORS=`echo "<em:contributor>Cillian de Roiste<\/em:contributor> <em:contributor>Cian Duffy<\/em:contributor> <em:contributor>Conor Farrell<\/em:contributor> <em:contributor>Marion Gunn<\/em:contributor> <em:contributor>Panu Höglund<\/em:contributor> <em:contributor>Brian King<\/em:contributor> <em:contributor>Dáithi Mac Sithigh<\/em:contributor> <em:contributor>Enda McGuinness<\/em:contributor> <em:contributor>Séamus Ó Ciardhuáin<\/em:contributor> <em:contributor>Caoimhín Ó Donnaile<\/em:contributor> <em:contributor>Tony Pratschke<\/em:contributor> <em:contributor>Rüdiger Reinhardt<\/em:contributor> <em:contributor>Kevin Scannell<\/em:contributor>" | iconv -f iso-8859-1 -t utf8`
 export MOZ_LANG_TITLE="Irish (IE)"
 for DIR in browser browser-region cookie global global-platform global-region mozapps necko passwordmgr pipnss pippki; do
 	cd $DIR;
 	mv contents.rdf contents.rdf-orig;
-# First we remove the comments, then we replace @AB_CD@,
-# @MOZILLA_LOCALE_VERSION@, then we replace @MOZILLA_REGION_VERSION@,
-# then we replace @MOZ_LANG_TITLE@
 	grep -v "^#" contents.rdf-orig |\
 		sed -e "s/@AB_CD@/$AB_CD/g" - |\
 		sed -e "s/@MOZILLA_LOCALE_VERSION@/$MOZ_LOC_VER/g" - |\
@@ -54,16 +53,22 @@ zip -0rD -q $AB_CD.jar locale
 cd ..
 
 # (autoconfig is not present by default in FF nightlies and releases, so remove it)
-grep -v "^#" install.rdf-orig | grep -v "locale/inspector" | grep -v "locale/help" |\
-	grep -v autoconfig - |\
-	sed -e "s/@MOZ_LANGPACK_EID@/$MOZ_LANGPACK_EID/g" - |\
-	sed -e "s/@MOZ_LANG_TITLE@/$MOZ_LANG_TITLE/g" - |\
-	sed -e "s/@APP_VERSION@/$APP_VERSION/g" - |\
-	sed -e "s/@MOZ_LANGPACK_CREATOR@/$MOZ_LANGPACK_CREATOR/g" - |\
-	sed -e \
-"s/@MOZ_LANGPACK_CONTRIBUTORS@/$MOZ_LANGPACK_CONTRIBUTORS/g" - |\
-	sed -e "s/@AB_CD@/$AB_CD/g" - >\
-	install.rdf
+## Next block is now defunct since we're using Brian's install.rdf 30 Sep 2004
+# grep -v "^#" install.rdf-orig | grep -v "locale/inspector" | grep -v "locale/help" |\
+# 	grep -v autoconfig - |\
+# 	sed -e "s/@MOZ_LANGPACK_EID@/$MOZ_LANGPACK_EID/g" - |\
+# 	sed -e "s/@MOZ_LANG_TITLE@/$MOZ_LANG_TITLE/g" - |\
+# 	sed -e "s/@APP_VERSION@/$APP_VERSION/g" - |\
+# 	sed -e "s/@MOZ_LANGPACK_CREATOR@/$MOZ_LANGPACK_CREATOR/g" - |\
+# 	sed -e \
+# "s/@MOZ_LANGPACK_CONTRIBUTORS@/$MOZ_LANGPACK_CONTRIBUTORS/g" - |\
+# 	sed -e "s/@AB_CD@/$AB_CD/g" - >\
+# 	install.rdf
+# rm install.rdf-orig
 
-rm install.rdf-orig
+cp ../install.rdf .
+sed -i "s/@APP_VERSION@/$APP_VERSION/g" install.rdf
+cat ../aistr.txt | sed 's/.*/    <em:contributor>&<\/em:contributor>/' | iconv -f iso-8859-1 -t utf8 > aistr.8.txt
+sed -i "/The Irish Mozilla Localisation Team/r aistr.8.txt" install.rdf
+rm -f aistr.8.txt
 zip -9D -q langpack-$AB_CD.xpi install.rdf chrome/$AB_CD.jar
