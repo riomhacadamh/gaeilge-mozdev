@@ -38,7 +38,8 @@ do
 	then
 		echo "merged fine."
 	else
-		echo "PROBLEM TRANSLATING ${3}!!!" >> ../aistriuchan.log
+		echo "PROBLEM TRANSLATING ${pofile}!!!" >> ../aistriuchan.log
+		msgmerge -C "../${COMPENDIUM}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > ../aistriuchan.log 2>&1
 	fi
 	echo "Defaulting to English in ${FILENAMEBASE}.po..."
 	Pofake ${FILENAMEBASE}.po
