@@ -1,0 +1,30 @@
+#!/bin/sh
+# script called to package up final jar file; only from firefox/makefile
+#
+#   Copyright 2004 Kevin P. Scannell
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+
+if [ $# -ne 1 ]; then
+	echo 'Usage: mozdist <englishjarnoextension>'
+ 	exit
+fi
+IRISHJAR=`echo "${1}" | sed 's/en/ga/; s/US/IE/'`
+ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
+IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
+cd locale
+po2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
+proppo2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
+cd ..
+rm -f "${IRISHJAR}.jar"
+jar cvf "${IRISHJAR}.jar" "locale/${IRISHPREF}"
+
+# only files not handled by make dist  (should store separately)
+# ./en-US/communicator/search/default.htm
+# ./en-US/global/about.xhtml
+# ./en-US/browser/credits.html
+# ./en-US/global/intl.css
+#    also see stuff in defaults/profile/US (mainly bookmarks.html)

@@ -1,0 +1,47 @@
+#!/bin/sh
+# script that extracts en jar file and translates according to the compendium
+# defined in the variable COMPENDIUM below.  Only called from firefox/makefile
+#
+#  Copyright 2004 Kevin P. Scannell
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+
+
+if [ $# -ne 1 ]; then
+	echo 'Usage: moznua <englishjarnoextension>'
+ 	exit
+fi
+COMPENDIUM="firefox-0.8.ga.po"
+rm -f aistriuchan.log
+rm -Rf locale
+jar xvf "${1}.jar"
+cd locale
+ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
+IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
+mkdir "${IRISHPREF}"
+rdf2template "${ENGLISHPREF}" "${IRISHPREF}"
+mkdir "${IRISHPREF}po"
+dtd2pot "${ENGLISHPREF}" "${IRISHPREF}po"
+prop2pot "${ENGLISHPREF}" "${IRISHPREF}po"
+fixpots "${IRISHPREF}po"
+find "${IRISHPREF}po" -name '*.pot' |
+while read pofile
+do
+	FILENAMEBASE=`echo "${pofile}" | sed 's/\(.*\)\.pot$/\1/'`
+	echo "Translating ${FILENAMEBASE}.po..."
+	bash ../mymsgmerge "../${COMPENDIUM}" "${pofile}" ${FILENAMEBASE}.po
+	echo "Defaulting to English in ${FILENAMEBASE}.po..."
+	Pofake ${FILENAMEBASE}.po
+done
+
+
+# the Pofake line above calls a modified version of my "personal" 
+# Po file editor program, which I've hacked for the moment to 
+# simply copy msgid's to msgstr's when the latter are missing--
+# this is because the dtd's etc. will be unhappy with empty strings
+# and we don't get to rely on the gettext smarts anymore!
+#  should keep this even if I smugly think every string is handled in PO
+#  as a kind of fail-safe!

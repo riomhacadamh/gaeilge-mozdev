@@ -1,0 +1,28 @@
+#!/bin/sh
+# msgcat together the 
+# "working" PO files for other translators prior to final jar release
+#  ONCE PER RELEASE -- only from obair.po target in mozilla makefile
+#
+#   Copyright 2004 Kevin P. Scannell
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+
+if [ $# -ne 1 ]; then
+	echo 'Usage: mozcat <englishjarnoextension>'
+ 	exit
+fi
+IRISHJAR=`echo "${1}" | sed 's/en/ga/; s/US/IE/'`
+ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
+IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
+cd locale
+mkdir gatemp
+find "${IRISHPREF}po" -name '*.po' | 
+while read pofile
+do
+	msguniq "${pofile}" > "`mktemp -p gatemp`.po"
+done
+msgcat -t "ISO-8859-1" gatemp/*.po > ../${IRISHJAR}.po 
+rm -Rf gatemp
