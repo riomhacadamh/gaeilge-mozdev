@@ -21,8 +21,12 @@ po2moz -i "${IRISHPREF}po" -o "${IRISHPREF}" -t "${ENGLISHPREF}"
 bash sedtweaks
 if echo "${1}" | egrep '^browser' > /dev/null
 then
+	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' | iconv -f iso-8859-1 -t utf8 > aistr.8.txt
 	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > ${IRISHPREF}/profile/bookmarks.html
-	(cd eile; cp -Rf * ../${IRISHPREF})
+	(cd eile; cp -Rf * ../${IRISHPREF};)
+	sed -i '/MOZ_LANGPACK_CONTRIBUTORS/r aistr.8.txt' ${IRISHPREF}/defines.inc
+	sed -i '/^# /d' ${IRISHPREF}/defines.inc
+	rm -f aistr.8.txt
 else
 	(cd eile-tk; cp -Rf * ../${IRISHPREF})
 fi
