@@ -32,12 +32,12 @@ do
 	echo "Translating ${FILENAMEBASE}.po..."
 	TEMPPOT=`mktemp`
 	msguniq "${pofile}" > ${TEMPPOT}
-	if msgmerge -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
+	if msgmerge -N -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
 	then
 		echo "merged fine."
 	else
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
-		msgmerge -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
+		msgmerge -N -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
 	Pofake ${FILENAMEBASE}.po | msgcat - > tempe.po
 	mv tempe.po ${FILENAMEBASE}.po

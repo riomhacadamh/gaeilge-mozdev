@@ -1,19 +1,17 @@
 #!/bin/bash
 cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoirí<\/h3><ul>/; s/$/<\/ul>">\n/' | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
 echo "Applying sed tweaks..."
-sed -i '/blank in the original/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
+sed -i '/^-->/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
 rm -f aistr.8.txt
-sed -i '/gopherPort.accesskey/s/.*/<!ENTITY  gopherPort.accesskey          "">/' browser-ga-IE/chrome/browser/pref/pref-connection.dtd
-sed -i '/blockImageCmd.accesskey/s/.*/<!ENTITY blockImageCmd.accesskey "C">/' browser-ga-IE/chrome/browser/browser.dtd
+sed -i '/^<!ENTITY credit.translation "">/d' browser-ga-IE/chrome/browser/credits.dtd
 
 sed -i '/cmd_cut_accesskey/s/.*/cmd_cut_accesskey=g/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 sed -i '/cmd_bm_newseparator_accesskey/s/.*/cmd_bm_newseparator_accesskey=t/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 sed -i '/cmd_bm_newbookmark_accesskey/s/.*/cmd_bm_newbookmark_accesskey=N/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 sed -i '/cmd_bm_collapsefolder_accesskey/s/.*/cmd_bm_collapsefolder_accesskey=L/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 
-sed -i '/blank in the original/d' browser-ga-IE/chrome/browser/credits.dtd
-sed -i "s/'_: dpi stands for.*/\"dpi\">/" browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
-sed -i '/^dpi/d' browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
-perl -i -e 'local $/; $_ = <ARGV>; s/<!ENTITY prefWindow\.size.*?>/<!ENTITY prefWindow.size "width: 62.3em; height: 41em;">/s; print;' browser-ga-IE/chrome/browser/pref/pref.dtd
+# perl -i -e 'local $/; $_ = <ARGV>; s/<!ENTITY prefWindow\.size.*?>/<!ENTITY prefWindow.size "width: 62.3em; height: 41em;">/s; print;' browser-ga-IE/chrome/browser/pref/pref.dtd
+
+# still need these two with latest translate toolkit
 sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
 sed -i '/^en=/s/.*/en=en-US/' toolkit-ga-IE/chrome/global/accept2locale.properties

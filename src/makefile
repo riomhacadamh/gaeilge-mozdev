@@ -21,16 +21,22 @@
 #  $ mv toolkit-en-US/chrome/global/mozilla.dtd .
 #     and compare the translatable strings with eile-tk/chrome/global version
 #  Next:
+#   Comment out the pofake+mv in moznua, rebuild UTFCOMP without Pofake
+#   and then:
 #  Do "make obair.po" to build PO file for new version (leave VERSION
 #  variable below pointing to the current compendium, i.e. don't update
 #  to new version number until after the "make obair.po".  Rename obair.po to
 #  firefox-x.x.ga.po and check into mozdev CVS.  Symbolically link from
 #  gaeilge/gnu/gnu and add to BSONRAI, etc.  Now update VERSION.
+#  Put pofakes back in moznua and UTFCOMP target below
+#
+#  It is critical to translate anything with a leading "_" since those
+#  will be Pofaked as-is, including the comment...
 #
 #  moznua and mozdist rely on the "translate" python tools written by
 #  David Fraser of translate.za.org
 
-VERSION=1.0_pre
+VERSION=1.0.1
 COMPENDIUM=firefox-$(VERSION).ga.po
 UTFCOMP=firefox-$(VERSION).po
 CHROME=/usr/lib/MozillaFirefox/chrome
@@ -51,6 +57,7 @@ install : all
 
 $(UTFCOMP) : $(COMPENDIUM)
 	rm -f $(UTFCOMP)
+#	cat $(COMPENDIUM) | msgcat - > firefox-temp.po
 	Pofake $(COMPENDIUM) | msgcat - > firefox-temp.po
 	iconv -f iso-8859-1 -t utf8 firefox-temp.po | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
 	chmod 444 $(UTFCOMP)
@@ -164,20 +171,10 @@ installold : all
 	$(INSTALL_DATA) ga-unix.jar $(CHROME)/ga-unix.jar
 	$(INSTALL_DATA) IE.jar $(CHROME)/IE.jar
 
-
-
-
-
-##########################################################################
-#   For 0.8 only had to make obair.po once; that was when I was using
-#  a compendium extracted from MOZILLA-L archives in moznua; it didn't
-#  have all strings and had no "comments".    This target did the 
-#   translation based on that compendium and then msgcatted the POs
-#  to create a new, cleaner, compendium
 obair.po : FORCE
 	bash moznua browser-en-US $(VERSION)
 	bash mozcat browser-en-US
 	bash moznua toolkit-en-US $(VERSION)
 	bash mozcat toolkit-en-US
-	msgcat browser-ga-IE.po toolkit-ga-IE.po > obair.po
+	msgcat -t iso-8859-1 browser-ga-IE.po toolkit-ga-IE.po > obair.po
 	rm -f browser-ga-IE.po toolkit-ga-IE.po
