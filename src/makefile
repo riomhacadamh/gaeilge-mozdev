@@ -35,15 +35,21 @@ COMPENDIUM=firefox-$(VERSION).ga.po
 UTFCOMP=firefox-$(VERSION).po
 CHROME=/usr/lib/MozillaFirefox/chrome
 INSTALL = /bin/install -c
-INSTALL_DATA = ${INSTALL} -m 644
+INSTALL_DATA = $(INSTALL) -m 644
 INSTALL_PROGRAM = /bin/install -c
 
 all : browser-ga-IE.jar toolkit-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
 	- perl -w compare-locales.pl browser-en-US browser-ga-IE
 
+install : all
+	bash xpiscr
+	$(INSTALL_DATA) langpack-build-dir/langpack-ga-IE.xpi ${HOME}/public_html/mozilla
+
 $(UTFCOMP) : $(COMPENDIUM)
-	iconv -f iso-8859-1 -t utf8 "${COMPENDIUM}" | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > ${UTFCOMP}
+	rm -f $(UTFCOMP)
+	iconv -f iso-8859-1 -t utf8 "$(COMPENDIUM)" | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
+	chmod 444 $(UTFCOMP)
 
 browser-ga-IE.jar : $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
@@ -55,6 +61,7 @@ toolkit-ga-IE.jar : $(UTFCOMP)
 
 clean :
 	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP)
+	rm -fR langpack-build-dir
 
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
@@ -110,7 +117,7 @@ IE.jar : US.jar $(COMPENDIUM)
 	bash mozdist US
 
 # 0.8 and 0.9 xpi format only; defunct now
-langpack-ga-IE.xpi : ga-win.jar ga-mac.jar ga-unix.jar IE.jar ga-IE.jar
+langpack-ga-IE.old.xpi : ga-win.jar ga-mac.jar ga-unix.jar IE.jar ga-IE.jar
 	rm -Rf bin sp
 	mkdir bin sp bin/chrome bin/defaults bin/defaults/profile bin/defaults/profile/IE
 	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > bin/defaults/profile/IE/bookmarks.html
@@ -126,15 +133,13 @@ langpack-ga-IE.xpi : ga-win.jar ga-mac.jar ga-unix.jar IE.jar ga-IE.jar
 
 # technically need to update $(CHROME)/installed-chrome.txt
 # the first time the langpack is installed (e.g. by loading xpi in browser)
-install : all
+installold : all
 	$(INSTALL_DATA) ga-IE.jar $(CHROME)/ga-IE.jar
 	$(INSTALL_DATA) ga-mac.jar $(CHROME)/ga-mac.jar
 	$(INSTALL_DATA) ga-win.jar $(CHROME)/ga-win.jar
 	$(INSTALL_DATA) ga-unix.jar $(CHROME)/ga-unix.jar
 	$(INSTALL_DATA) IE.jar $(CHROME)/IE.jar
 
-installweb : dist
-	cp langpack-ga-IE.xpi ${HOME}/public_html/mozilla
 
 
 
