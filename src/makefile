@@ -16,11 +16,13 @@ INSTALL_DATA = $(INSTALL) -m 644
 INSTALL_PROGRAM = /bin/install -c
 PARALLEL = ${HOME}/gaeilge/diolaim/comp
 
-all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar
+all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
 	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
 	- perl -w compare-locales.pl dom-en-US dom-ga-IE
 	- perl -w compare-locales.pl browser-en-US browser-ga-IE
+	- perl -w compare-locales.pl other-licenses-en-US other-licenses-ga-IE
+	- perl -w compare-locales.pl security-en-US security-ga-IE
 
 install : all
 	bash xpiscr
@@ -51,6 +53,14 @@ netwerk-ga-IE.jar : $(UTFCOMP)
 toolkit-ga-IE.jar : $(UTFCOMP)
 	bash moznua toolkit-en-US $(VERSION)
 	bash mozdist toolkit-en-US
+
+other-licenses-ga-IE.jar : $(UTFCOMP)
+	bash moznua other-licenses-en-US $(VERSION)
+	bash mozdist other-licenses-en-US
+
+security-ga-IE.jar : $(UTFCOMP)
+	bash moznua security-en-US $(VERSION)
+	bash mozdist security-en-US
 
 # needs updating for trunk
 cvsdiff : FORCE
@@ -85,7 +95,11 @@ obair.po : $(UTFCOMP)
 	bash mozcat netwerk-en-US
 	bash moznua toolkit-en-US $(VERSION)
 	bash mozcat toolkit-en-US
-	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po > obair.po
-	rm -f browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po
+	bash moznua other-licenses-en-US $(VERSION)
+	bash mozcat other-licenses-en-US
+	bash moznua security-en-US $(VERSION)
+	bash mozcat security-en-US
+	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po > obair.po
+#	rm -f browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po
 
 FORCE :

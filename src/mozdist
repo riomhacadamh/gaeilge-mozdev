@@ -16,7 +16,7 @@ IRISHJAR=`echo "${1}" | sed 's/en-US/ga-IE/'`
 PACK=`echo "${1}" | sed 's/-en-US//'`
 rm -fR "${IRISHJAR}"
 mkdir "${IRISHJAR}"
-po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${ENGLISHJAR}"
+po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
 bash sedtweaks
 if echo "${1}" | egrep '^browser' > /dev/null
 then
