@@ -1,10 +1,10 @@
 #!/bin/bash
-cat aistr.txt | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
+cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoirí<\/h3><ul>/; s/$/<\/ul>">\n/' | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
 echo "Applying sed tweaks..."
 sed -i '/blank in the original/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
+rm -f aistr.8.txt
 sed -i '/gopherPort.accesskey/s/.*/<!ENTITY  gopherPort.accesskey          "">/' browser-ga-IE/chrome/browser/pref/pref-connection.dtd
 sed -i '/blank in the original/d' browser-ga-IE/chrome/browser/credits.dtd
 sed -i "s/'_: dpi stands for.*/\"dpi\">/" browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
 sed -i '/^dpi/d' browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
-rm -f aistr.8.txt
 perl -i -e 'local $/; $_ = <ARGV>; s/<!ENTITY prefWindow\.size.*?>/<!ENTITY prefWindow.size "width: 52.3em; height: 41em;">/s; print;' browser-ga-IE/chrome/browser/pref/pref.dtd
