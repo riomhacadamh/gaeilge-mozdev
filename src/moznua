@@ -20,11 +20,10 @@ fi
 VERSION="${2}"
 UTFCOMP="firefox-${VERSION}.po"
 rm -f aistriuchan.log
-ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
-IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
+IRISHPREF=`echo "${1}" | sed 's/en-US/ga-IE/'`
 rm -Rf "${IRISHPREF}po"
 mkdir "${IRISHPREF}po"
-moz2po -P --progress=verbose -i "${ENGLISHPREF}" -o "${IRISHPREF}po"
+moz2po -P --progress=verbose -i "${1}" -o "${IRISHPREF}po"
 find "${IRISHPREF}po" -name '*.pot' |
 while read pofile
 do
@@ -39,8 +38,8 @@ do
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		msgmerge -N -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
-	Pofake ${FILENAMEBASE}.po | msgcat - > tempe.po
-	mv tempe.po ${FILENAMEBASE}.po
+#	Pofake ${FILENAMEBASE}.po | msgcat - > tempe.po
+#	mv tempe.po ${FILENAMEBASE}.po
 	echo
 	rm -f ${TEMPPOT} ${pofile}
 done
