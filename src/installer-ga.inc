@@ -8,7 +8,7 @@
 #define SETUP_MESSAGE0 Tá tú ar tí %s leagan $Version$ a shuiteáil.
 #define SETUP_MESSAGE1 Moltar go láidir duit scoir de gach clár Windows sula gcuirfidh tú an clár suiteála seo ar siúl.
 #define SETUP_MESSAGE1_UNIX Moltar go láidir duit scoir de gach sampla de %s sula gcuirfidh tú an clár suiteála seo ar siúl.
-#define SETUP_MESSAGE2 Gliogáil Cealaigh chun scoir den tSuiteáil agus de gach a bhfuil de chláracha ar siúl agat anois. Gliogáil Anonn chun leanúint den chlár Suiteála.
+#define SETUP_MESSAGE2 Gliogáil Cealaigh chun scoir den tSuiteáil, agus dún ansin a bhfuil de chláracha ar siúl agat anois. Gliogáil Anonn chun leanúint den chlár Suiteála.
 #define SETUP_MESSAGE3 Gliogáil Anonn chun leanúint de chlár %s leagan $Version$ a shuiteáil.
 
 #define LICENSE_TITLE Comhaontú um an gCeadúnas Earra Bhoig
@@ -27,7 +27,7 @@
 #define TYPE_STANDARD_DESC Déanfar an Brabhsálaí a shuiteáil leis na gnáthroghanna.
 
 #define TYPE_CUSTOM S&ainshuiteáil
-#define TYPE_CUSTOM_DESC Is féidir leat roghanna ar leith a shannadh lena suiteáil. Rogha molta i gcomhair úsáideoirí le taithí mhaith ar an ábhar acu.
+#define TYPE_CUSTOM_DESC Is féidir leat roghanna ar leith a shannadh lena suiteáil. Níl an rogha seo molta ach amháin d'úsaideoirí a bhfuil taithí mhaith acu ar an ábhar.
 
 #define SELECT_TITLE Roghnaigh Comhpháirteanna
 #define SELECT_SUBTITLE Comhpháirteanna breise a chuireann le cumas $ProductShortName$.
