@@ -9,16 +9,17 @@
 #  New firefox release:
 #  Get the 5 English jar files:
 #  en-US.jar, en-win.jar, en-mac.jar, en-unix.jar, US.jar,
-#  stick them in a directory.   We have moznua script pointing to
-#  the "current" mozilla compendium in gaeilge/gnu/mozilla/gaeilge.
-#  Do "make obair.po" to build PO file for new version.  Rename to
+#  stick them in a directory.   
+#  Do "make obair.po" to build PO file for new version (leave VERSION
+#  variable below pointing to the current compendium, i.e. don't update
+#  to new version number until after the "make obair.po".  Rename obair.po to
 #  firefox-x.x.ga.po and check into mozdev CVS.  Symbolically link from
-#  gaeilge/gnu/gnu and add to BSONRAI, etc.
+#  gaeilge/gnu/gnu and add to BSONRAI, etc.  Now update VERSION.
 #
 #  moznua and mozdist are each based fundamentally on "mozpotools" by
 #  David Fraser of translate.za.org
 
-VERSION=0.8
+VERSION=0.9.3
 COMPENDIUM=firefox-$(VERSION).ga.po
 CHROME=/usr/lib/MozillaFirefox/chrome
 INSTALL = /bin/install -c
@@ -40,23 +41,23 @@ installweb : dist
 	cp langpack-ga-IE.xpi ${HOME}/public_html/mozilla
 
 ga-IE.jar : en-US.jar $(COMPENDIUM)
-	bash moznua en-US
+	bash moznua en-US $(VERSION)
 	bash mozdist en-US
 
 ga-win.jar : en-win.jar $(COMPENDIUM)
-	bash moznua en-win
+	bash moznua en-win $(VERSION)
 	bash mozdist en-win
 
 ga-mac.jar : en-mac.jar $(COMPENDIUM)
-	bash moznua en-mac
+	bash moznua en-mac $(VERSION)
 	bash mozdist en-mac
 
 ga-unix.jar : en-unix.jar $(COMPENDIUM)
-	bash moznua en-unix
+	bash moznua en-unix $(VERSION)
 	bash mozdist en-unix
 
 IE.jar : US.jar $(COMPENDIUM)
-	bash moznua US
+	bash moznua US $(VERSION)
 	bash mozdist US
 
 langpack-ga-IE.xpi : ga-win.jar ga-mac.jar ga-unix.jar IE.jar ga-IE.jar
@@ -100,15 +101,15 @@ FORCE :
 #   translation based on that compendium and then msgcatted the POs
 #  to create a new, cleaner, compendium
 obair.po : FORCE
-	bash moznua en-US
+	bash moznua en-US $(VERSION)
 	bash mozcat en-US
-	bash moznua en-win
+	bash moznua en-win $(VERSION)
 	bash mozcat en-win
-	bash moznua en-mac
+	bash moznua en-mac $(VERSION)
 	bash mozcat en-mac
-	bash moznua en-unix
+	bash moznua en-unix $(VERSION)
 	bash mozcat en-unix
-	bash moznua US
+	bash moznua US $(VERSION)
 	bash mozcat US
 	msgcat ga-IE.po ga-win.po ga-mac.po ga-unix.po IE.po > obair.po
 	rm -f ga-IE.po ga-win.po ga-mac.po ga-unix.po IE.po
