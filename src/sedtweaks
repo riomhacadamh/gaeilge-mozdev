@@ -8,3 +8,4 @@ sed -i '/blank in the original/d' browser-ga-IE/chrome/browser/credits.dtd
 sed -i "s/'_: dpi stands for.*/\"dpi\">/" browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
 sed -i '/^dpi/d' browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
 perl -i -e 'local $/; $_ = <ARGV>; s/<!ENTITY prefWindow\.size.*?>/<!ENTITY prefWindow.size "width: 52.3em; height: 41em;">/s; print;' browser-ga-IE/chrome/browser/pref/pref.dtd
+sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
