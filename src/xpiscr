@@ -2,6 +2,8 @@
 # posted by Vincent Béron to the mozilla-l10n mailing list
 #  and tweaked by Kevin Scannell 20 Sept 2004 to work with 
 #  gaeilge.mozdev CVS structure
+export IRISH_VERSION=0.7.8
+
 MOZCVS=${HOME}/gaeilge/gnu/mozilla
 BUILDDIR=${MOZCVS}/gaeilge/src/langpack-build-dir
 rm -Rf ${BUILDDIR}
@@ -10,6 +12,30 @@ MTL=${MOZCVS}/gaeilge/src/toolkit-ga-IE   # mozilla/toolkit/locales/en-US
 mkdir -p langpack-build-dir/chrome/locale
 cd ${MBL}/chrome
 cp -R browser browser-region cookie global ${BUILDDIR}/chrome/locale
+
+#   can uncomment subsets of lines below for debugging;
+#cd ${MOZCVS}/gaeilge/src/browser-en-US/chrome
+# cp -R browser ${BUILDDIR}/chrome/locale
+
+#cp browser/browser.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/aboutDialog.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/credits.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/metaData.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/openLocation.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/page-drawer.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/pageInfo.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/pageReport.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/pageReportFirstTime.dtd ${BUILDDIR}/chrome/locale/browser
+#cp browser/setWallpaper.dtd ${BUILDDIR}/chrome/locale/browser
+
+#cp browser/*.properties ${BUILDDIR}/chrome/locale/browser
+#cp -R browser/bookmarks ${BUILDDIR}/chrome/locale/browser
+#cp -R browser/cookieviewer ${BUILDDIR}/chrome/locale/browser
+#cp -R browser/history ${BUILDDIR}/chrome/locale/browser
+#cp -R browser/migration ${BUILDDIR}/chrome/locale/browser
+#cp -R browser/pref ${BUILDDIR}/chrome/locale/browser
+#cp -R browser/sidebar ${BUILDDIR}/chrome/locale/browser
+
 cd ${MOZCVS}/mozilla/browser/locales/generic/chrome
 # next line didn't have help/inspector in V.B. version;
 # only stuff we're copying with this are the contents.rdf...
@@ -24,7 +50,6 @@ cp -R global global-platform global-region mozapps necko passwordmgr pipnss pipp
 cd ${BUILDDIR}/chrome/locale
 rm -rf `find . -name 'CVS'`
 export AB_CD=ga-IE
-export IRISH_VERSION=0.7.1
 #  seems like these should all be the same, but I don't really understand
 #  how they are used by chrome registry
 export MOZ_LOC_VER=${IRISH_VERSION}
