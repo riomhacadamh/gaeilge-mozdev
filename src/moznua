@@ -1,6 +1,9 @@
 #!/bin/sh
-# script that extracts en jar file and translates according to the compendium
-# defined in the variable COMPENDIUM below.  Only called from firefox/makefile
+# script that translates the files in the given English directory
+# (gotten directly from CVS or by unpacking a jar) using the compendium
+# defined in the variable UTFCOMP below.  Only called from firefox/makefile
+#   Result is a temporary directory ending in "po" with a bunch of po's in it.
+#   This directory is packaged up using mozdist.
 #
 #  Copyright 2004 Kevin P. Scannell
 #
@@ -15,21 +18,13 @@ if [ $# -ne 2 ]; then
  	exit
 fi
 VERSION="${2}"
-COMPENDIUM="firefox-${VERSION}.ga.po"
+UTFCOMP="firefox-${VERSION}.po"
 rm -f aistriuchan.log
-rm -Rf "${1}"
-jar xvf "${1}.jar"
-#cd "${1}"
 ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
 IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
-rm -Rf "${IRISHPREF}"
-mkdir "${IRISHPREF}"
-rdf2template "${ENGLISHPREF}" "${IRISHPREF}"
 rm -Rf "${IRISHPREF}po"
 mkdir "${IRISHPREF}po"
-dtd2pot "${ENGLISHPREF}" "${IRISHPREF}po"
-prop2pot "${ENGLISHPREF}" "${IRISHPREF}po"
-bash fixpots "${IRISHPREF}po"
+moz2po -P --progress=verbose -i "${ENGLISHPREF}" -o "${IRISHPREF}po"
 find "${IRISHPREF}po" -name '*.pot' |
 while read pofile
 do
@@ -37,17 +32,17 @@ do
 	echo "Translating ${FILENAMEBASE}.po..."
 	TEMPPOT=`mktemp`
 	msguniq "${pofile}" > ${TEMPPOT}
-	if msgmerge -C "${COMPENDIUM}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
+	if msgmerge -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
 	then
 		echo "merged fine."
 	else
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
-		msgmerge -C "${COMPENDIUM}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
+		msgmerge -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
 	echo "Defaulting to English in ${FILENAMEBASE}.po..."
 	Pofake ${FILENAMEBASE}.po
 	echo
-	rm -f ${TEMPPOT}
+	rm -f ${TEMPPOT} ${pofile}
 done
 
 

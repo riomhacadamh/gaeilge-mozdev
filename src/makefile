@@ -7,20 +7,32 @@
 # overview:
 #
 #  New firefox release:
-#  Get the 5 English jar files:
-#  en-US.jar, en-win.jar, en-mac.jar, en-unix.jar, US.jar,
-#  stick them in a directory.   
+#  Check out latest version of English-US from CVS; see
+#  $ cd ~/gaeilge/gnu/mozilla
+#  $ cvs update -r AVIARY_1_0_20040515_BRANCH mozilla/toolkit/locales
+#  $ cvs update -r AVIARY_1_0_20040515_BRANCH mozilla/browser/locales
+#  $ cd mozilla/toolkit/locales
+#  $ cp -Rf en-US ~/gaeilge/gnu/mozilla/gaeilge/src/toolkit-en-US
+#  $ cd ../../browser/locales
+#  $ cp -Rf en-US ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US
+#  $ cd ~/gaeilge/gnu/mozilla/gaeilge/src
+#  $ find toolkit-en-US -name 'CVS' | xargs rm -fR
+#  $ find browser-en-US -name 'CVS' | xargs rm -fR
+#  $ mv toolkit-en-US/chrome/global/mozilla.dtd .
+#     and compare the translatable strings with eile-tk/chrome/global version
+#  Next:
 #  Do "make obair.po" to build PO file for new version (leave VERSION
 #  variable below pointing to the current compendium, i.e. don't update
 #  to new version number until after the "make obair.po".  Rename obair.po to
 #  firefox-x.x.ga.po and check into mozdev CVS.  Symbolically link from
 #  gaeilge/gnu/gnu and add to BSONRAI, etc.  Now update VERSION.
 #
-#  moznua and mozdist are each based fundamentally on "mozpotools" by
+#  moznua and mozdist rely on the "translate" python tools written by
 #  David Fraser of translate.za.org
 
 VERSION=1.0_pre
 COMPENDIUM=firefox-$(VERSION).ga.po
+UTFCOMP=firefox-$(VERSION).po
 CHROME=/usr/lib/MozillaFirefox/chrome
 INSTALL = /bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
@@ -30,28 +42,19 @@ all : browser-ga-IE.jar toolkit-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
 	- perl -w compare-locales.pl browser-en-US browser-ga-IE
 
-# technically need to update $(CHROME)/installed-chrome.txt
-# the first time the langpack is installed (e.g. by loading xpi in browser)
-install : all
-	$(INSTALL_DATA) ga-IE.jar $(CHROME)/ga-IE.jar
-	$(INSTALL_DATA) ga-mac.jar $(CHROME)/ga-mac.jar
-	$(INSTALL_DATA) ga-win.jar $(CHROME)/ga-win.jar
-	$(INSTALL_DATA) ga-unix.jar $(CHROME)/ga-unix.jar
-	$(INSTALL_DATA) IE.jar $(CHROME)/IE.jar
+$(UTFCOMP) : $(COMPENDIUM)
+	iconv -f iso-8859-1 -t utf8 "${COMPENDIUM}" | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > ${UTFCOMP}
 
-installweb : dist
-	cp langpack-ga-IE.xpi ${HOME}/public_html/mozilla
-
-browser-ga-IE.jar : browser-en-US.jar $(COMPENDIUM)
+browser-ga-IE.jar : $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
 	bash mozdist browser-en-US
 
-toolkit-ga-IE.jar : toolkit-en-US.jar $(COMPENDIUM)
+toolkit-ga-IE.jar : $(UTFCOMP)
 	bash moznua toolkit-en-US $(VERSION)
 	bash mozdist toolkit-en-US
 
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP)
 
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
@@ -121,6 +124,18 @@ langpack-ga-IE.xpi : ga-win.jar ga-mac.jar ga-unix.jar IE.jar ga-IE.jar
 	mv -f langpack-ga-IE.zip langpack-ga-IE.xpi
 	rm -Rf bin sp
 
+# technically need to update $(CHROME)/installed-chrome.txt
+# the first time the langpack is installed (e.g. by loading xpi in browser)
+install : all
+	$(INSTALL_DATA) ga-IE.jar $(CHROME)/ga-IE.jar
+	$(INSTALL_DATA) ga-mac.jar $(CHROME)/ga-mac.jar
+	$(INSTALL_DATA) ga-win.jar $(CHROME)/ga-win.jar
+	$(INSTALL_DATA) ga-unix.jar $(CHROME)/ga-unix.jar
+	$(INSTALL_DATA) IE.jar $(CHROME)/IE.jar
+
+installweb : dist
+	cp langpack-ga-IE.xpi ${HOME}/public_html/mozilla
+
 
 
 
@@ -137,15 +152,3 @@ obair.po : FORCE
 	bash mozcat toolkit-en-US
 	msgcat browser-ga-IE.po toolkit-ga-IE.po > obair.po
 	rm -f browser-ga-IE.po toolkit-ga-IE.po
-#	bash moznua en-US $(VERSION)
-#	bash mozcat en-US
-#	bash moznua en-win $(VERSION)
-#	bash mozcat en-win
-#	bash moznua en-mac $(VERSION)
-#	bash mozcat en-mac
-#	bash moznua en-unix $(VERSION)
-#	bash mozcat en-unix
-#	bash moznua US $(VERSION)
-#	bash mozcat US
-#	msgcat ga-IE.po ga-win.po ga-mac.po ga-unix.po IE.po > obair.po
-#	rm -f ga-IE.po ga-win.po ga-mac.po ga-unix.po IE.po

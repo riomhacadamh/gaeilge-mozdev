@@ -15,15 +15,16 @@ fi
 IRISHJAR=`echo "${1}" | sed 's/en/ga/; s/US/IE/'`
 ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
 IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
-po2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
-proppo2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
+rm -fR "${IRISHPREF}"
+mkdir "${IRISHPREF}"
+po2moz -i "${IRISHPREF}po" -o "${IRISHPREF}" -t "${ENGLISHPREF}"
 bash sedtweaks
 if echo "${1}" | egrep '^browser' > /dev/null
 then
 	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > ${IRISHPREF}/profile/bookmarks.html
-	(cd eile; cp -R * ../${IRISHPREF})
+	(cd eile; cp -Rf * ../${IRISHPREF})
 else
-	(cd eile-tk; cp -R * ../${IRISHPREF})
+	(cd eile-tk; cp -Rf * ../${IRISHPREF})
 fi
 rm -f "${IRISHJAR}.jar"
 jar cvf "${IRISHJAR}.jar" "${IRISHPREF}"

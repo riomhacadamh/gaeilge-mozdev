@@ -17,7 +17,6 @@ fi
 IRISHJAR=`echo "${1}" | sed 's/en/ga/; s/US/IE/'`
 ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
 IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
-#cd locale
 mkdir gatemp
 find "${IRISHPREF}po" -name '*.po' | 
 while read pofile
