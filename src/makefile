@@ -59,8 +59,11 @@ toolkit-ga-IE.jar : $(UTFCOMP)
 	bash moznua toolkit-en-US $(VERSION)
 	bash mozdist toolkit-en-US
 
+gram : FORCE
+	cat ${HOME}/gaeilge/diolaim/comp/firefox | sed 's/$$/./' | tr -d '&' | gram-ga.pl --aschod=iso-8859-1
+
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP)
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po
 	rm -fR langpack-build-dir
 
 ###########################################################################
