@@ -62,10 +62,8 @@
 #define WININT_PFOLDER_TITLE Socrú $ProductShortName$ - Roghnaigh Fillteán Clár
 #define WININT_PFOLDER_MESSAGE0 Cuirfidh Socrú dealbha clár isteach san Fhillteán Clár a luaitear thíos.  Is féidir leat fillteán nua a chruthú, nó ceann a roghnú ar liosta na bhFillteán Reatha. Gliogáil Anonn chun leanúint ar aghaidh.
 
-
 #define ADDL_OPTIONS_TITLE Socrú $ProductShortName$ - Roghanna Breise
-#define ADDL_OPTIONS_MSG1 Roghnaigh an rogha seo a leanas más mian leat comhaid a bhaineann le Socruithe Suiteála a luchtú go dtí do ríomhaire féin. Cuirfidh sé sin ar do chumas Socrú a athrith gan na comhaid a athluchtú. Déanfar comhaid na
-Socruithe a shábháil de réir an chosáin thíos.
+#define ADDL_OPTIONS_MSG1 Roghnaigh an rogha seo a leanas más mian leat comhaid a bhaineann le Socruithe Suiteála a luchtú go dtí do ríomhaire féin. Cuirfidh sé sin ar do chumas Socrú a athrith gan na comhaid a athluchtú. Déanfar comhaid na Socruithe a shábháil de réir an chosáin thíos.
 
 #define ADV_SETTINGS_TITLE Socrú $ProductShortName$ - Socruithe Casta
 #define ADV_SETTINGS_MSG I gcás go n-éilíonn do nasc Idirlín ionadaí friothálaí, iontráil ainm do fhriothálaí agus eolas poirt anseo. Muna n-éilíonn, fág bán na réimsí sin.
@@ -117,30 +115,30 @@ Socruithe a shábháil de réir an chosáin thíos.
 #define CORE_PREPARING Suiteáil á hullmhú. Fan go fóill, le do thoil...
 #define INST_UNINST An díshuiteálaí á shuiteáil. Fan go fóill, le do thoil...
 
-#define MSG_UNFINISHED_DL A previous session of Setup did not finish downloading all the necessary files.  Would you like to use the files previously downloaded, to avoid downloading them again?
-#define MSG_UNFINISHED_INSTALL A previous session of Setup did not finish with installation of all the necessary files.  Would you like to use the files previously downloaded, to avoid downloading them again?
-#define MSG_CORRUPTED Setup has detected that the following archives within this Setup are corrupted:%sYou will need to obtain another copy of the $ProductShortName$ Setup in order for installation to proceed.
-#define MSG_CORRUPTED_AUTO Setup has detected that at least one archive within this Setup is corrupt.  You will need to obtain another copy of the $ProductShortName$ Setup in order for installation to proceed.
-#define MSG_TOO_MANY_CRC Too many download failures.  Setup will cancel.  Any files already downloaded will not be deleted.  The next time Setup is run, these files will be taken into account during the download.
-#define MSG_TOO_MANY_NETWORK Too many network errors trying to download %s.  Setup will now Pause.  Please click Resume to retry downloading the files.
-#define MSG_VERIFYING Verifying integrity of archives, please wait...
-#define MSG_UNDEFINED Error undefined
-#define MSG_OOM Out of memory!
-#define MSG_STATUS_DL %s at %.2f KB/sec (%u KB of %u KB downloaded)
-#define MSG_COMPLETED %d%% completed
-#define MSG_REQUIRED (Required)
-#define MSG_CANCELING Canceling Setup, please wait...
-#define MSG_ERROR_UNCOMPRESS Error uncompressing file %s: %d
-#define MSG_USAGE Usage: %s [options]\n	[options] can be any of the following combination:\n		-h: This help.\n		-a [path]: Alternate archive search path.\n		-app [app id]: ID of application which is launching the installer (shared installs)\n		-app_path [app]: Points to (full path) representative file of application (Shared installs)\n	*	-dd [path]: Suggested install destination directory. (Shared installs)\n	*	-greLocal: Forces GRE to be installed into the application dir.\n	*	-greShared: Forces GRE to be installed into a global, shared dir (normally)\n			c:\program files\common files\mozilla.org\GRE\n		-reg_path [path]: Where to make entries in the Windows registry. (Shared installs)\n		-f: Force install of GRE installer (Shared installs), though it'll work\n			for non GRE installers too.\n		-greForce: Force 'Component GRE' to be downloaded, run, and installed.  This\n			bypasses GRE's logic of determining when to install by running its\n			installer with a '-f' flag.\n		-n [filename]: Setup's parent process filename.\n	*	-ma: Run setup in Auto mode.\n	*	-ms: Run setup in Silent mode.\n		-ira: Ignore the [RunAppX] sections\n		-ispf: Ignore the [Program FolderX] sections that show\n			the Start Menu shortcut folder at the end of installation.\n	*	-showBanner: Show the banner image in the download and install progress dialogs\n	*	-hideBanner: Hide the banner image in the download and install progress dialogs\n	*	-cleanupOnUpgrade: Tells Setup to check to see if user is upgrading (installing on top\n		of previous version of product).  If user is upgrading:\n			* NORMAL mode: prompt user on how to proceed\n			* All other modes: assume user wants to cleanup.\n	*	-noCleanupOnUpgrade: Tells Setup to not check if user is upgrading (installing on top\n		of previous version of product).  This will disable the cleanup feature.\n\n	* means it will override config.ini
-#define MSG_USE_FTP Use &FTP for downloading files
-#define MSG_USE_HTTP Use &HTTP for downloading files
-#define MSG_SAVE_LOCALLY &Save installer files locally
-#define MSG_DL_PAUSED Setup has encountered a network problem and has paused the download.  If you have just lost your network connection, please click Resume once your network has been reestablished.
-#define MSG_NOT_ADMIN Setup has detected that you do not have the appropriate Administrator privileges to this system.  It is highly recommended that you do not continue with the installation of $ProductShortName$, or it may not function properly.  Would you still like to continue?
-#define MSG_NOT_ADMIN_AUTO Setup has detected that you do not have the appropriate Administrator privileges to this system.  Setup cannot continue with the installation of $ProductShortName$.
+#define MSG_UNFINISHED_DL Níor tháinig deireadh ceart ar íoslódáil na gcomhad riachtanach ag ceann de na seisiúin suiteála roimhe seo. Ar mhaith leat úsáid a bhaint as na comhaid a híoslódáladh cheana le hathíoslódáil a sheachaint?
+#define MSG_UNFINISHED_INSTALL Níor tháinig deireadh ceart ar shuiteáil na gcomhad riachtanach ag ceann de na seisiúin suiteála roimhe seo. Ar mhaith leat úsáid a bhaint as na comhaid a híoslódáladh cheana le hathíoslódáil a sheachaint?
+#define MSG_CORRUPTED Bhraith an suiteálaí go bhfuil na comhaid seo leanas taobh istigh den tsuiteáil seo curtha ó mhaith:%sNí mór duit cóip eile de shuiteáil $ProductShortName$ a fháil le dul ar aghaidh leis an tsuiteáil.
+#define MSG_CORRUPTED_AUTO Bhraith an suiteálaí go bhfuil cartlann taobh istigh den tsuiteáil seo curtha ó mhaith.  Ní mór duit cóip eile de shuiteáil $ProductShortName$ a fháil le dul ar aghaidh leis an tsuiteáil.
+#define MSG_TOO_MANY_CRC An iomarca teipeanna ag íoslódáil. Cuirfear an tsuiteáil ar ceal. Na comhaid a híoslódáladh cheana, ní scriosfar iad. An chéad uair eile a rithfear an tsuiteáil, cuirfear na comhaid seo san áireamh.
+#define MSG_TOO_MANY_NETWORK An iomarca earráidí líonra ag iarraidh %s a íoslódáil.  Tiocfaidh sos leis an tsuiteáil anois.  Gliogáil ar Lean le triail eile a bhaint as íoslódáil na gcomhad.
+#define MSG_VERIFYING Sláine na gcartlann á fíorú, bí ag fanacht leat...
+#define MSG_UNDEFINED Earráid nár míníodh
+#define MSG_OOM As cuimhne!
+#define MSG_STATUS_DL %s ag %.2f KB/soic (%u KB as %u KB lódáilte)
+#define MSG_COMPLETED %d%% curtha i gcrích
+#define MSG_REQUIRED (Riachtanach)
+#define MSG_CANCELING An tsuiteáil á cur ar ceal, bí ag fanacht leat...
+#define MSG_ERROR_UNCOMPRESS Earráid dí-chomhbhrúite an chomhaid %s: %d
+#define MSG_USAGE Úsáid: %s [roghanna]\n	Is féidir le cinn ar bith de na roghanna seo a leanas a bheith i [roghanna]:\n		-h: An t-eolas cabhrach seo.\n		-a [conair]: Conair eile le haghaidh cuardach na gcartlanna.\n		-app [aitheantas_feidhmchláir]: Aitheantas an fheidhmchláir atá ag tosú an tsuiteálaithe (suiteáileanna roinnte)\n		-app_path [feidhmchlár]: Síneann seo (conair iomlán) i dtreo chomhad samplach an fheidhmchláir (suiteáileanna roinnte)\n	*	-dd [conair]: Comhadlann suiteála molta (suiteáileanna roinnte)\n	*	-greLocal: Suiteálfar GRE i gcomhadlann an fheidhmchláir.\n	*	-greShared: Suiteálfar GRE i gcomhadlann dhomhanda roinnte (de ghnáth)\n			c:\program files\common files\mozilla.org\GRE\n		-reg_path [conair]: An áit i gClárlann (Registry) Windows ina chuirfear iontráileacha (suiteáileanna roinnte).\n		-f: Suiteálfar Suiteálaí GRE (suiteáleanna roinnte), ach oibreoidh sé seo\n			le haghaidh suiteálaithe eile freisin.\n		-greForce: Íoslódálfar, rithfear agus suiteálfar 'Component GRE'.  Leis seo,\n			rithfear suiteálaí GRE leis an rogha '-f' sa chaoi nach mbacfar   \n			leis an loighic atá ag GRE chun cinneadh a dhéanamh ar shuiteáil.\n		-n [ainm comhaid]: Ainm mháthairphróisis an tSuiteálaithe.\n	*	-ma: Rith an Suiteálaí ina mhód uathoibríoch.\n	*	-ms: Rith an Suiteálaí ina mhód tostach.\n		-ira: Tabhair neamhaird ar na ranna [RunAppX]\n		-ispf: Tabhair neamhaird ar na ranna [Program FolderX]\n			a thaispeánann fillteán aicearraí an Roghchláir Tosaigh ag deireadh na suiteála.\n	*	-showBanner: Taispeáin an íomhá brataí sna dialóga dul chun cinn don íoslódáil agus suiteáil\n	*	-hideBanner: Ná taispeáin an íomhá brataí sna dialóga dul chun cinn don íoslódáil agus suiteáil\n	*	-cleanupOnUpgrade: Déan seiceáil an bhfuil an t-úsáideoir ag uasghrádú (.i. ag suiteáil\n		in áit seanleagan den táirge). Má tá:\n			* Gnáthmhód: Fiafraigh den úsáideoir conas leanadh ar aghaidh\n			* Gach mód eile: Glac leis go dteastaíonn leis an t-úsáideoir glanadh a dhéanamh.\n	*	-noCleanupOnUpgrade: Ná déan seiceáil an bhfuil an t-úsáideoir ag uasghrádú (.i. ag  \n		suiteáil in áit seanleagan den táirge). Leis seo, beidh an ghné ghlantacháin díchumasaithe.\n\n	* Ciallaíonn seo go sáróidh sé config.ini
+#define MSG_USE_FTP Úsáid &FTP chun comhaid a íoslódáil
+#define MSG_USE_HTTP Úsáid &HTTP chun comhaid a íoslódáil
+#define MSG_SAVE_LOCALLY &Sábháil comhaid an tsuiteálaithe go logánta
+#define MSG_DL_PAUSED Tháinig fadhb ghréasáin roimh an Díshuiteálaí agus tá sos curtha leis an íoslódáil. Má tá do cheangal gréasáin tar éis briseadh, gliogáil ar Lean nuair a bheidh an cheangal gréasáin athbhunaithe.
+#define MSG_NOT_ADMIN Bhraith an Suiteálaí nach bhfuil primhléidí cuí an Riarthóra agat ar an ríomhaire seo. Moltar go mór duit gan leanadh le suiteáil $ProductShortName$, ar eagla nach n-oibreoidh sé i gceart.  Ar mhaith leat leanadh ar aghaidh ar aon nós?
+#define MSG_NOT_ADMIN_AUTO Bhraith an Suiteálaí nach bhfuil primhléidí cuí an Riarthóra agat ar an ríomhaire seo. Ní féidir leis an Suiteálaí leanadh le suiteáil $ProductShortName$.
 
-#define UNINST_RUNNING $ProductNameInternal$ is detected to be currently running.  Please quit $ProductNameInternal$ before continuing.  Click OK to exit $ProductNameInternal$ automatically and proceed with uninstallation.
-#define UNINST_SHUTDOWN Shutting down $ProductNameInternal$.  Please wait...
+#define UNINST_RUNNING Tugtar faoi deara go bhfuil $ProductNameInternal$ ag rith faoi láthair.  Cuir stop le $ProductNameInternal$ roimh leanúint. Gliogáil ar Tá go Maith chun $ProductNameInternal$ a stopadh go huathoibríoch agus leanadh leis an díshuiteáil.
+#define UNINST_SHUTDOWN Ag stopadh $ProductNameInternal$.  Fan bomaite...
 
 #define UNINST_FONT MS Sans Serif
 #define UNINST_FONTSIZE 8
@@ -155,39 +153,39 @@ Socruithe a shábháil de réir an chosáin thíos.
 #  CHINESEBIG5_CHARSET = 136
 #  OEM_CHARSET 255
 
-#define UNINST_TITLE $ProductName$ Uninstaller
-#define UNINST_MESSAGE0 Are you sure you want to completely remove %s and all of its components?
-#define BTN_UNINST &Uninstall
-#define BTN_CANCEL &Cancel
-#define BTN_MESSAGE1 Uninstall has detected that the following shared file is no longer used by any programs.  If any programs still require the shared file and it is removed, those programs may no longer function.  Are you sure you want to remove this shared file?
-#define BTN_MESSAGE2 Leaving this file will not harm your system.  If you are not sure, it is recommended that the shared file be not removed from the system.
-#define BTN_FILENAME File name:
-#define BTN_NO &No
-#define BTN_NOTOALL N&o to all
-#define BTN_YES &Yes
-#define BTN_YESTOALL Y&es to all
+#define UNINST_TITLE Díshuiteálaí $ProductName$
+#define UNINST_MESSAGE0 An bhfuil tú cinnte gur mian leat %s agus a gcomhpháirteanna a bhaint ina n-iomláine?
+#define BTN_UNINST Dísh&uiteáil
+#define BTN_CANCEL &Cealaigh
+#define BTN_MESSAGE1 Bhraith an Díshuiteálaí nach bhfuil an comhad roinnte seo a leanas in úsáid ag ríomhchlár ar bith. Má bhaintear an comhad roinnte agus é fós ag teastáil ó ríomhchlár éigin, tá baol ann nach n-oibreoidh an ríomhchlár sin feasta. An bhfuil tú cinnte go dteastaíonn uait an comhad roinnte seo a bhaint den chóras?
+#define BTN_MESSAGE2 Ní dhéanfar aon dochar do do chóras má fhágtar an comhad seo air. Mura bhfuil tú cinnte faoi, moltar duit gan an comhad roinnte a bhaint den chóras.
+#define BTN_FILENAME Ainm an chomhaid:
+#define BTN_NO &Ná déan
+#define BTN_NOTOALL Ná déan &ceann ar bith
+#define BTN_YES &Déan
+#define BTN_YESTOALL Déan iad go léir
 
-#define ERROR_DLL_LOAD Could not load %s
-#define ERROR_STRING_LOAD Could not load string resource ID %d
-#define ERROR_STRING_NULL Null pointer encountered.
-#define ERROR_GLOBALALLOC Memory allocation error.
-#define ERROR_FAILED %s failed.
-#define ERROR_DIALOG_CREATE Could not create %s dialog.
-#define DLGQUITTITLE Question
-#define DLGQUITMSG Are you sure you want to cancel?
-#define ERROR_GET_SYSTEM_DIRECTORY_FAILED GetSystemDirectory() failed.
-#define ERROR_GET_WINDOWS_DIRECTORY_FAILED GetWindowsDirectory() failed.
-#define ERROR_CREATE_TEMP_DIR Uninstall was not able to create the TEMP directory: %s
-#define ERROR_SETUP_REQUIREMENT Windows95 or greater Operating System is required!  Exiting Uninstall...
-#define MB_WARNING_STR Warning
-#define ERROR_UNINSTALL_LOG_FOLDER Uninstall log folder not found:%s
-#define MB_MESSAGE_STR Message
-#define DLG_REMOVE_FILE_TITLE Remove File?
-#define ERROR_GETVERSION GetVersionEx() failed!
-#define MB_ATTENTION_STR Attention
-#define MSG_FORCE_QUIT_PROCESS Uninstall has detected that %s (%s) is still running.  Click OK to quit %s and proceed with uninstallation. Alternatively, use the Windows Task Manager to quit %s, and then click OK to continue with uninstallation.
-#define MSG_FORCE_QUIT_PROCESS_FAILED Uninstall will now exit.  Uninstall could not continue because %s (%s) is still running. Try manually quitting %s using Windows Task Manager, and then run Uninstall again.
-#define MSG_DELETE_INSTALLATION_PATH Not all files were uninstalled from the installation directory:\n\n  %s\n\nDo you want to completely delete this directory?
-#define MSG_INSTALLATION_PATH_WITHIN_WINDIR Uninstall has detected that the installation path of $ProductNameInternal$ is installed to a folder within your Windows folder.  Uninstall will not attempt to delete this installation due to the potential removal of critical system files.
+#define ERROR_DLL_LOAD Níorbh fhéidir %s a lódáil
+#define ERROR_STRING_LOAD Níorbh fhéidir aitheantas na hacmhainne teaghráin %d a lódáil
+#define ERROR_STRING_NULL Fuarthas pointeoir neamhnitheach.
+#define ERROR_GLOBALALLOC Earráid leithdháilte cuimhne.
+#define ERROR_FAILED Theip ar %s.
+#define ERROR_DIALOG_CREATE Níorbh fhéidir an dialóg %s a chrúthú.
+#define DLGQUITTITLE Ceist
+#define DLGQUITMSG An bhfuil tú cinnte gur mian leat cealú?
+#define ERROR_GET_SYSTEM_DIRECTORY_FAILED Theip ar GetSystemDirectory().
+#define ERROR_GET_WINDOWS_DIRECTORY_FAILED Theip ar GetWindowsDirectory().
+#define ERROR_CREATE_TEMP_DIR Níor éirigh leis an díshuiteálaí an chomhadlann TEMP a chruthú: %s
+#define ERROR_SETUP_REQUIREMENT Tá Windows95 nó córas oibriúcháin níos déanaí ná é de dhíth! Ag fágáil an díshuiteálaí...
+#define MB_WARNING_STR Rabhadh
+#define ERROR_UNINSTALL_LOG_FOLDER Níor aimsíodh an fillteán loga díshuiteála:%s
+#define MB_MESSAGE_STR Teachtaireacht
+#define DLG_REMOVE_FILE_TITLE Bain an Comhad?
+#define ERROR_GETVERSION Theip ar GetVersionEx()!
+#define MB_ATTENTION_STR Aire
+#define MSG_FORCE_QUIT_PROCESS Bhraith an Díshuiteálaí go bhfuil %s (%s) fós ag rith. Gliogáil Tá go Maith chun %s a stopadh agus leanadh leis an tsuiteáil. Nó úsáid Bainisteoir na dTascanna Windows chun %s a stopadh, agus gliogáil ar Tá go Maith ina dhiaidh sin chun leanadh leis an díshuiteáil.
+#define MSG_FORCE_QUIT_PROCESS_FAILED Stopfaidh an Díshuiteálaí anois. Ní féidir leis an Díshuiteálaí leanúint toisc go bhfuil %s (%s) fós ag rith. Bain triail as %s a stopadh de lámh le Bainisteoir na dTascanna Windows, agus ansin rith an Díshuiteálaí arís.
+#define MSG_DELETE_INSTALLATION_PATH Níor díshuiteáladh gach comhad ón gcomhadlann suiteála:\n\n  %s\n\nAr mhaith leat an chomhadlann seo a bhaint ina hiomláine?
+#define MSG_INSTALLATION_PATH_WITHIN_WINDIR Bhraith an Díshuiteálaí go bhfuil conair shuiteála $ProductNameInternal$ lonnaithe i bhfo-fhillteán i d'fhillteán Windows. Ní dhéanfaidh an Díshuiteálaí iarracht an suiteáil seo a bhaint de bharr an bhaoil atá ann go mbainfear cuid de chomhaid riachtanacha an chórais.
 
 #unfilter emptyLines
