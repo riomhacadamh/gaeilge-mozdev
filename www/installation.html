@@ -1,4 +1,54 @@
 <!-- MAIN CONTENT -->
 <h5 class="page-header"><a id="content" name="content">Installation</a></h5>
 
+<p>
+Coming soon...
+</p>
+
+<!--
 <p><a href="http://downloads.mozdev.org/gaeilge/FILENAME.xpi">XPI INSTALL LINK</a></p>
+-->
+
+
+<!-- Everything from here down I extracted from pages linking the XPI's 
+for other languages on mozdev.org.  The plain link above
+to the xpi file is all that was given in the original
+installation.html template.  The (working) link below that I
+had on borel is at the bottom of this page-->
+
+<!-- XPInstall Scripts -->
+<script language="javascript" type="text/javascript">
+<!--
+function triggerURL(url) {
+   if (!InstallTrigger.updateEnabled())
+      	return false; 
+   else
+        InstallTrigger.startSoftwareUpdate(url); 
+}
+
+function instWarning(xpi, lastinstalledlocale)
+{
+ if (navigator.userAgent.indexOf('Gecko') == -1)
+     alert ("This package is designed to be installed on Mozilla Gecko "+
+            "compatible browsers. "+
+            "Browse to ftp.mozilla.org to download locally this file and "+
+            "install it later on a Mozilla Gecko compatible browser.");
+ else if (!InstallTrigger.enabled())
+     alert ("The installation of this package requres you to enable "+
+            "online installations from the preferences.");
+ else {
+      document.cookie = 'lastinstalledlocale=' + escape(lastinstalledlocale);
+      InstallTrigger.install(xpi);
+      }
+}
+
+function setTBcookie (CookieTxt)
+{ document.cookie = 'TBlangpack=' + escape(CookieTxt); }
+//-->
+</script>
+
+
+<!--
+<a href="index.html" onClick="javascript: xpi = {'Irish Mozilla Firefox Language Pack': 'http://borel.slu.edu/mozilla/langpack-ga-IE.xpi'}; instWarning(xpi,'ga-IE');">installable language pack (for development only!)</a>
+<hr/>
+-->
