@@ -1,5 +1,5 @@
 #!/bin/sh
-# script called to package up final jar file; only from firefox/makefile
+# script called to package up final jar files; only from firefox/makefile
 #
 #   Copyright 2004 Kevin P. Scannell
 #
@@ -15,20 +15,15 @@ fi
 IRISHJAR=`echo "${1}" | sed 's/en/ga/; s/US/IE/'`
 ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
 IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
-cd locale
 po2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
 proppo2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
-cd ..
-if [ "${1}" = "en-US" ]
+bash sedtweaks
+if echo "${1}" | egrep '^browser' > /dev/null
 then
-	bash sedtweaks
+	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > ${IRISHPREF}/profile/bookmarks.html
+	(cd eile; cp -R * ../${IRISHPREF})
+else
+	(cd eile-tk; cp -R * ../${IRISHPREF})
 fi
 rm -f "${IRISHJAR}.jar"
-jar cvf "${IRISHJAR}.jar" "locale/${IRISHPREF}"
-
-# only files not handled by make dist  (should store separately)
-# ./en-US/communicator/search/default.htm
-# ./en-US/global/about.xhtml
-# ./en-US/browser/credits.html
-# ./en-US/global/intl.css
-#    also see stuff in defaults/profile/US (mainly bookmarks.html)
+jar cvf "${IRISHJAR}.jar" "${IRISHPREF}"
