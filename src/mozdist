@@ -19,6 +19,10 @@ cd locale
 po2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
 proppo2dtd "${ENGLISHPREF}" "${IRISHPREF}" "${IRISHPREF}po"
 cd ..
+if [ "${1}" = "en-US" ]
+then
+	bash sedtweaks
+fi
 rm -f "${IRISHJAR}.jar"
 jar cvf "${IRISHJAR}.jar" "locale/${IRISHPREF}"
 
