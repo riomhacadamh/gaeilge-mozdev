@@ -15,6 +15,7 @@ fi
 IRISHJAR=`echo "${1}" | sed 's/en/ga/; s/US/IE/'`
 ENGLISHPREF=`echo "${1}" | sed 's/win/US/; s/mac/US/; s/unix/US/'`
 IRISHPREF=`echo "${ENGLISHPREF}" | sed 's/en/ga/; s/US/IE/'`
+PACK=`echo "${1}" | sed 's/-.*//'`
 rm -fR "${IRISHPREF}"
 mkdir "${IRISHPREF}"
 po2moz -i "${IRISHPREF}po" -o "${IRISHPREF}" -t "${ENGLISHPREF}"
@@ -24,6 +25,7 @@ then
 	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' | iconv -f iso-8859-1 -t utf8 > aistr.8.txt
 	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > ${IRISHPREF}/profile/bookmarks.html
 	(cd eile; cp -Rf * ../${IRISHPREF};)
+	cat installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHPREF}/installer/installer.inc
 	sed -i '/MOZ_LANGPACK_CONTRIBUTORS/r aistr.8.txt' ${IRISHPREF}/defines.inc
 	sed -i '/^# /d' ${IRISHPREF}/defines.inc
 	rm -f aistr.8.txt
@@ -32,3 +34,6 @@ else
 fi
 rm -f "${IRISHJAR}.jar"
 jar cvf "${IRISHJAR}.jar" "${IRISHPREF}"
+mv -f "${IRISHPREF}" ga-IE
+cp -Rf ga-IE "${HOME}/seal/mozilla/${PACK}/locales"
+mv ga-IE "${IRISHPREF}"
