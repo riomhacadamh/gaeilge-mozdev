@@ -208,7 +208,7 @@ if (verifyDiskSpace(fProgram, srDest))
         if (err == -202)
         {
             // ----LOCALIZATION NOTE: translate only these ------
-            alert("Rinne tobscor ar an suiteáil.  Ní féidir a scríobh sa chomhadlann\n" +
+            alert("Rinneadh tobscor ar an suiteáil.  Ní féidir a scríobh sa chomhadlann\n" +
                    "\"chrome\" Firefox. Deimhnigh na ceadanna ar an gcomhadlann seo\n" +
                    "nó atosaigh an suiteáil le ceadanna sárúsáideora\n" +
                    "nó den riarthóir do chórais.");
