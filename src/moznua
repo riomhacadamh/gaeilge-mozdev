@@ -32,9 +32,18 @@ while read pofile
 do
 	FILENAMEBASE=`echo "${pofile}" | sed 's/\(.*\)\.pot$/\1/'`
 	echo "Translating ${FILENAMEBASE}.po..."
-	bash ../mymsgmerge "../${COMPENDIUM}" "${pofile}" ${FILENAMEBASE}.po
+	TEMPPOT=`mktemp`
+	msguniq "${pofile}" > ${TEMPPOT}
+	if msgmerge -C "../${COMPENDIUM}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
+	then
+		echo "merged fine."
+	else
+		echo "PROBLEM TRANSLATING ${3}!!!" >> ../aistriuchan.log
+	fi
 	echo "Defaulting to English in ${FILENAMEBASE}.po..."
 	Pofake ${FILENAMEBASE}.po
+	echo
+	rm -f ${TEMPPOT}
 done
 
 
