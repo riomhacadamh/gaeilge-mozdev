@@ -4,6 +4,13 @@ echo "Applying sed tweaks..."
 sed -i '/blank in the original/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
 rm -f aistr.8.txt
 sed -i '/gopherPort.accesskey/s/.*/<!ENTITY  gopherPort.accesskey          "">/' browser-ga-IE/chrome/browser/pref/pref-connection.dtd
+sed -i '/blockImageCmd.accesskey/s/.*/<!ENTITY blockImageCmd.accesskey "C">/' browser-ga-IE/chrome/browser/browser.dtd
+
+sed -i '/cmd_cut_accesskey/s/.*/cmd_cut_accesskey=g/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
+sed -i '/cmd_bm_newseparator_accesskey/s/.*/cmd_bm_newseparator_accesskey=t/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
+sed -i '/cmd_bm_newbookmark_accesskey/s/.*/cmd_bm_newbookmark_accesskey=N/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
+sed -i '/cmd_bm_collapsefolder_accesskey/s/.*/cmd_bm_collapsefolder_accesskey=L/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
+
 sed -i '/blank in the original/d' browser-ga-IE/chrome/browser/credits.dtd
 sed -i "s/'_: dpi stands for.*/\"dpi\">/" browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
 sed -i '/^dpi/d' browser-ga-IE/chrome/browser/pref/pref-fonts.dtd
