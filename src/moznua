@@ -26,7 +26,7 @@ rdf2template "${ENGLISHPREF}" "${IRISHPREF}"
 mkdir "${IRISHPREF}po"
 dtd2pot "${ENGLISHPREF}" "${IRISHPREF}po"
 prop2pot "${ENGLISHPREF}" "${IRISHPREF}po"
-fixpots "${IRISHPREF}po"
+bash ../fixpots "${IRISHPREF}po"
 find "${IRISHPREF}po" -name '*.pot' |
 while read pofile
 do
