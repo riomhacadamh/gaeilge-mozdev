@@ -10,11 +10,12 @@
 #   (at your option) any later version.
 
 
-if [ $# -ne 1 ]; then
-	echo 'Usage: moznua <englishjarnoextension>'
+if [ $# -ne 2 ]; then
+	echo 'Usage: moznua <englishjarnoextension> <currentcompendiumversion>'
  	exit
 fi
-COMPENDIUM="firefox-0.8.ga.po"
+VERSION="${2}"
+COMPENDIUM="firefox-${VERSION}.ga.po"
 rm -f aistriuchan.log
 rm -Rf locale
 jar xvf "${1}.jar"
