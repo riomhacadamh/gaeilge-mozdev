@@ -63,6 +63,11 @@ toolkit-ga-IE.jar : $(UTFCOMP)
 	bash moznua toolkit-en-US $(VERSION)
 	bash mozdist toolkit-en-US
 
+cvsdiff : FORCE
+	- diff -u -r browser-en-US $(HOME)/gaeilge/gnu/mozilla/mozilla/browser/locales/en-US | egrep -v '^Only in .*: CVS$$'
+	- diff -u -r toolkit-en-US $(HOME)/gaeilge/gnu/mozilla/mozilla/toolkit/locales/en-US | egrep -v '^Only in .*: CVS$$' | egrep -v '^Only in .*: mozilla.dtd$$'
+	- diff -u eile-tk/chrome/global/mozilla.dtd $(HOME)/gaeilge/gnu/mozilla/mozilla/toolkit/locales/en-US/chrome/global/mozilla.dtd
+
 gram : FORCE
 	cat ${HOME}/gaeilge/diolaim/comp/firefox | sed 's/$$/./' | tr -d '&' | gram-ga.pl --aschod=iso-8859-1
 
