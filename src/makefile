@@ -45,6 +45,8 @@ all : browser-ga-IE.jar toolkit-ga-IE.jar
 install : all
 	bash xpiscr
 	$(INSTALL_DATA) langpack-build-dir/langpack-ga-IE.xpi ${HOME}/public_html/mozilla
+	cp -f langpack-build-dir/langpack-ga-IE.xpi ../downloads
+	vim ../www/installation.html
 
 $(UTFCOMP) : $(COMPENDIUM)
 	rm -f $(UTFCOMP)
