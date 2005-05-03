@@ -1,5 +1,5 @@
 #!/bin/bash
-cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoir�<\/h3><ul>/; s/$/<\/ul>">\n/' | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
+cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | LC_ALL=C sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoir�<\/h3><ul>/; s/$/<\/ul>">\n/' | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
 echo "Applying sed tweaks..."
 sed -i '/^-->/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
 rm -f aistr.8.txt
@@ -12,8 +12,21 @@ sed -i '/cmd_bm_newseparator_accesskey/s/.*/cmd_bm_newseparator_accesskey=t/' br
 sed -i '/cmd_bm_newbookmark_accesskey/s/.*/cmd_bm_newbookmark_accesskey=N/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 sed -i '/cmd_bm_collapsefolder_accesskey/s/.*/cmd_bm_collapsefolder_accesskey=L/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 
-# perl -i -e 'local $/; $_ = <ARGV>; s/<!ENTITY prefWindow\.size.*?>/<!ENTITY prefWindow.size "width: 62.3em; height: 41em;">/s; print;' browser-ga-IE/chrome/browser/pref/pref.dtd
-
 # still need these two with latest translate toolkit
 sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
 sed -i '/^en=/s/.*/en=en-US/' toolkit-ga-IE/chrome/global/accept2locale.properties
+LC_ALL=C sed -i '
+/^ar=/s/.*/ar=Araibis/
+/^bn=/s/.*/bn=Beangáilis/
+/^el=/s/.*/el=Gréigis/
+/^gu=/s/.*/gu=Gúisearáitis/
+/^he=/s/.*/he=Eabhrais/
+/^hy=/s/.*/hy=Airméinis/
+/^ja=/s/.*/ja=Seapáinis/
+/^ka=/s/.*/ka=Seoirsis/
+/^ko=/s/.*/ko=Cóiréis/
+/^ml=/s/.*/ml=Mailéalaimis/
+/^ta=/s/.*/ta=Tamailis/
+/^th=/s/.*/th=Téalainnis/
+/^tr=/s/.*/tr=Tuircis/
+' toolkit-ga-IE/chrome/global/languageNames.properties
