@@ -9,34 +9,25 @@
 
 VERSION=trunk
 COMPENDIUM=firefox-$(VERSION).ga.po
-UTFCOMP=firefox-$(VERSION).po
-CHROME=/usr/lib/MozillaFirefox/chrome
-INSTALL = /bin/install -c
-INSTALL_DATA = $(INSTALL) -m 644
-INSTALL_PROGRAM = /bin/install -c
+TBCOMPENDIUM=tbird-$(VERSION).ga.po
+UTFCOMP=mozilla-$(VERSION).po
 PARALLEL = ${HOME}/gaeilge/diolaim/comp
 
-all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar
+all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar editor-ga-IE.jar mail-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
+	- perl -w compare-locales.pl extensions-en-US extensions-ga-IE
 	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
 	- perl -w compare-locales.pl dom-en-US dom-ga-IE
 	- perl -w compare-locales.pl browser-en-US browser-ga-IE
 	- perl -w compare-locales.pl other-licenses-en-US other-licenses-ga-IE
 	- perl -w compare-locales.pl security-en-US security-ga-IE
+	- perl -w compare-locales.pl editor-en-US editor-ga-IE
+	- perl -w compare-locales.pl mail-en-US mail-ga-IE
 
-install : all
-	bash xpiscr
-	$(INSTALL_DATA) langpack-build-dir/langpack-ga-IE.xpi ${HOME}/public_html/mozilla
-#	cp -f langpack-build-dir/langpack-ga-IE.xpi ../downloads
-#	vim ../www/installation.html
-
-$(UTFCOMP) : $(COMPENDIUM)
+$(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM)
 	rm -f $(UTFCOMP)
-	cat $(COMPENDIUM) | msgcat - > firefox-temp.po
-#	Pofake $(COMPENDIUM) | msgcat - > firefox-temp.po   # no need for this since moznua now does 'msgmerge -N' and then Pofake
-	iconv -f iso-8859-1 -t utf8 firefox-temp.po | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
+	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) | iconv -f iso-8859-1 -t utf-8 | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
 	chmod 444 $(UTFCOMP)
-	rm -f firefox-temp.po
 
 browser-ga-IE.jar : $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
@@ -45,6 +36,10 @@ browser-ga-IE.jar : $(UTFCOMP)
 dom-ga-IE.jar : $(UTFCOMP)
 	bash moznua dom-en-US $(VERSION)
 	bash mozdist dom-en-US
+
+extensions-ga-IE.jar : $(UTFCOMP)
+	bash moznua extensions-en-US $(VERSION)
+	bash mozdist extensions-en-US
 
 netwerk-ga-IE.jar : $(UTFCOMP)
 	bash moznua netwerk-en-US $(VERSION)
@@ -62,11 +57,13 @@ security-ga-IE.jar : $(UTFCOMP)
 	bash moznua security-en-US $(VERSION)
 	bash mozdist security-en-US
 
-# needs updating for trunk
-cvsdiff : FORCE
-	- diff -u -r browser-en-US $(HOME)/gaeilge/gnu/mozilla/mozilla/browser/locales/en-US | egrep -v '^Only in .*: CVS$$'
-	- diff -u -r toolkit-en-US $(HOME)/gaeilge/gnu/mozilla/mozilla/toolkit/locales/en-US | egrep -v '^Only in .*: CVS$$'
-	- diff -u installer-en.inc $(HOME)/gaeilge/gnu/mozilla/mozilla/browser/locales/en-US/installer/installer.inc
+editor-ga-IE.jar : $(UTFCOMP)
+	bash moznua editor-en-US $(VERSION)
+	bash mozdist editor-en-US
+
+mail-ga-IE.jar : $(UTFCOMP)
+	bash moznua mail-en-US $(VERSION)
+	bash mozdist mail-en-US
 
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
@@ -91,6 +88,8 @@ obair.po : $(UTFCOMP)
 	bash mozcat browser-en-US
 	bash moznua dom-en-US $(VERSION)
 	bash mozcat dom-en-US
+	bash moznua extensions-en-US $(VERSION)
+	bash mozcat extensions-en-US
 	bash moznua netwerk-en-US $(VERSION)
 	bash mozcat netwerk-en-US
 	bash moznua toolkit-en-US $(VERSION)
@@ -99,7 +98,12 @@ obair.po : $(UTFCOMP)
 	bash mozcat other-licenses-en-US
 	bash moznua security-en-US $(VERSION)
 	bash mozcat security-en-US
-	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po > obair.po
-#	rm -f browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po
+	bash moznua editor-en-US $(VERSION)
+	bash mozcat editor-en-US
+	bash moznua mail-en-US $(VERSION)
+	bash mozcat mail-en-US
+	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
+	msgcat -t iso-8859-1 editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
+#	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po
 
 FORCE :
