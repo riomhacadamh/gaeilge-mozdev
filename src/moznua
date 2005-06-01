@@ -18,12 +18,18 @@ if [ $# -ne 2 ]; then
  	exit
 fi
 VERSION="${2}"
-UTFCOMP="firefox-${VERSION}.po"
+UTFCOMP="mozilla-${VERSION}.po"
 rm -f aistriuchan.log
 IRISHPREF=`echo "${1}" | sed 's/en-US/ga-IE/'`
+MSGMERGE="msgmerge -N"
+# MSGMERGE="msgmerge"
 rm -Rf "${IRISHPREF}po"
 mkdir "${IRISHPREF}po"
 moz2po -P --progress=verbose -i "${1}" -o "${IRISHPREF}po"
+if [ $1 = "dom-en-US" ]
+then
+        sed -i 's/image.*cannot/image \\"%S\\" cannot/' dom-ga-IEpo/chrome/layout/MediaDocument.properties.pot
+fi
 find "${IRISHPREF}po" -name '*.pot' |
 while read pofile
 do
@@ -31,12 +37,12 @@ do
 	echo "Translating ${FILENAMEBASE}.po..."
 	TEMPPOT=`mktemp`
 	msguniq "${pofile}" > ${TEMPPOT}
-	if msgmerge -N -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
+	if $MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
 	then
 		echo "merged fine."
 	else
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
-		msgmerge -N -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
+		$MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
 	Pofake ${FILENAMEBASE}.po | msgcat - > tempe.po
 	mv tempe.po ${FILENAMEBASE}.po
