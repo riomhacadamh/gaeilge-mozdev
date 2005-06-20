@@ -5,17 +5,17 @@
 # Installer keys (don't translate strings in $$)
 #define SETUP_TITLE $ProductShortName$ a shuiteáil
 #define SETUP_WELCOME Fáilte chuig %s
-#define SETUP_MESSAGE0 Tá tú ar tí %s leagan $Version$ a shuiteáil.
+#define SETUP_MESSAGE0 Tá tú ar tí %s a shuiteáil.
 #define SETUP_MESSAGE1 Moltar go láidir duit scoir de gach clár Windows sula gcuirfidh tú an clár suiteála seo ar siúl.
 #define SETUP_MESSAGE1_UNIX Moltar go láidir duit scoir de gach sampla de %s sula gcuirfidh tú an clár suiteála seo ar siúl.
 #define SETUP_MESSAGE2 Gliogáil Cealaigh chun scoir den tSuiteáil, agus dún ansin a bhfuil de chláracha ar siúl agat anois. Gliogáil Anonn chun leanúint den chlár Suiteála.
-#define SETUP_MESSAGE3 Gliogáil Anonn chun leanúint de chlár %s leagan $Version$ a shuiteáil.
+#define SETUP_MESSAGE3 Gliogáil Anonn chun leanúint de chlár %s a shuiteáil.
 
 #define LICENSE_TITLE Comhaontú um an gCeadúnas Earra Bhoig
 #define LICENSE_SUBTITLE Téarmaí agus coinníollacha úsáide an phacáiste seo.
 #define LICENSE_MESSAGE0 Léigh an comhaontú um cheadúnas earra bhoig seo a leanas, le do thoil.  Úsáid an barra scrollála chun an chuid eile den chomhaontú seo a léamh.
-#define LICENSE_ACCEPT Táim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
-#define LICENSE_DECLINE Nílim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
+#define LICENSE_ACCEPT &Táim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
+#define LICENSE_DECLINE &Nílim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
 
 #define SETUP_TYPE_TITLE An Modh Suiteála is Roghain Leatsa
 #define SETUP_TYPE_SUBTITLE Roghanna suiteála a roghnú.
@@ -87,10 +87,9 @@
 #define INSTALL_STATUSCOMP Á Shuiteáil anois:
 
 #define COMPLETE_TITLE Suiteáil arna Cur i gCrích
-#define COMPLETE_MESSAGE0 Suiteáil %s leagan $Version$ curtha i gcrích.
+#define COMPLETE_MESSAGE0 Suiteáil %s curtha i gcrích.
 #define COMPLETE_MESSAGE1 Gliogáil Críochnaigh chun Socrú a chur i gcrích.
-#define COMPLETE_LAUNCH Lainseáil %s leagan $Version$ anois.
-#define COMPLETE_RESET_HOMEPAGE Úsáid Tús Firefox mar mo Leathanach Baile.
+#define COMPLETE_LAUNCH Lainseáil %s anois.
 
 #define DL2_TITLE $ProductShortName$ - Lódáil
 #define DL2_MESSAGE0 Tá na comhaid a theastaíonn á luchtú ag Socrú i láthair na huaire. Seans go nglacfaidh sé sin roinnt ama, ag brath ar luas do naisc idirlín.
@@ -111,6 +110,9 @@
 
 #define QFA_SHORT Gníomhaire Aiseolais um Cháilíocht
 #define QFA_LONG tuairiscí, maidir le tuairteanna $ProductShortName$
+
+#define RPT_SHORT Website Reporter
+#define RPT_LONG for reporting $ProductShortName$ website compatibility problems
 
 #define CORE_PREPARING Suiteáil á hullmhú. Fan go fóill, le do thoil...
 #define INST_UNINST An díshuiteálaí á shuiteáil. Fan go fóill, le do thoil...
