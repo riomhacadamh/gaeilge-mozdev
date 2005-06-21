@@ -32,6 +32,11 @@ if echo "${1}" | egrep '^toolkit' > /dev/null
 then
 	(cd eile-tk; cp -Rf * ../${IRISHJAR})
 fi
+if echo "${1}" | egrep '^mail' > /dev/null
+then
+	cp tbird-credits.html ${IRISHJAR}/chrome/messenger/credits.html
+	cp tbird-start.html ${IRISHJAR}/chrome/messenger/start.html
+fi
 rm -f "${IRISHJAR}.jar"
 jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
 mv -f "${IRISHJAR}" "${PACK}"
