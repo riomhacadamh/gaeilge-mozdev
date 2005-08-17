@@ -8,8 +8,8 @@
 #define SETUP_MESSAGE0 Tá tú ar tí %s a shuiteáil.
 #define SETUP_MESSAGE1 Moltar go láidir duit scoir de gach clár Windows sula gcuirfidh tú an clár suiteála seo ar siúl.
 #define SETUP_MESSAGE1_UNIX Moltar go láidir duit scoir de gach sampla de %s sula gcuirfidh tú an clár suiteála seo ar siúl.
-#define SETUP_MESSAGE2 Gliogáil Cealaigh chun scoir den tSuiteáil, agus dún ansin a bhfuil de chláracha ar siúl agat anois. Gliogáil Anonn chun leanúint den chlár Suiteála.
-#define SETUP_MESSAGE3 Gliogáil Anonn chun leanúint de chlár %s a shuiteáil.
+#define SETUP_MESSAGE2 Gliogáil Cealaigh chun scoir den tSuiteáil, agus dún ansin a bhfuil de chláracha ar siúl agat anois. Gliogáil Ar Aghaidh chun leanúint den chlár Suiteála.
+#define SETUP_MESSAGE3 Gliogáil Ar Aghaidh chun leanúint de chlár %s a shuiteáil.
 
 #define LICENSE_TITLE Comhaontú um an gCeadúnas Earra Bhoig
 #define LICENSE_SUBTITLE Téarmaí agus coinníollacha úsáide an phacáiste seo.
@@ -19,7 +19,7 @@
 
 #define SETUP_TYPE_TITLE An Modh Suiteála is Roghain Leatsa
 #define SETUP_TYPE_SUBTITLE Roghanna suiteála a roghnú.
-#define SETUP_TYPE_MESSAGE0 Roghnaigh an cineál Suiteála is fearr leat, agus gliogáil Anonn ina dhiaidh sin.
+#define SETUP_TYPE_MESSAGE0 Roghnaigh an cineál Suiteála is fearr leat, agus gliogáil Ar Aghaidh ina dhiaidh sin.
 #define SETUP_TYPE_EXISTING Tá ábhar a bhaineann le Firefox arna shuiteáil cheana féin san fhillteán a roghnaigh tú. Chun %s a dhealú ina iomláine, brúigh cnaipe 'Dealaigh Fillteán'. Níor cheart go gcuirfí isteach ná amach ar do shocruithe reatha Firefox. Nó is féidir leat cnaipe 'Cealaigh' a bhrú agus áit eile a roghnú lena shuiteáil.
 
 # &Ampersand is used to select a shortcut key
@@ -31,7 +31,7 @@
 
 #define SELECT_TITLE Roghnaigh Comhpháirteanna
 #define SELECT_SUBTITLE Comhpháirteanna breise a chuireann le cumas $ProductShortName$.
-#define SELECT_MESSAGE0 Roghnaigh na comhpháirteanna breise is mian leat a shuiteáil, agus gliogáil Anonn ina dhiaidh sin.
+#define SELECT_MESSAGE0 Roghnaigh na comhpháirteanna breise is mian leat a shuiteáil, agus gliogáil Ar Aghaidh ina dhiaidh sin.
 
 #define LOCATION_TITLE Fillteán Suiteála
 #define LOCATION_SUBTITLE An áit ina ndéanfar $ProductShortName$ a shuiteáil.
@@ -60,7 +60,7 @@
 #define USE_AS_DEFAULT Úsáid %s mar mo Rogha Brabhsálaí.
 
 #define WININT_PFOLDER_TITLE Socrú $ProductShortName$ - Roghnaigh Fillteán Clár
-#define WININT_PFOLDER_MESSAGE0 Cuirfidh Socrú dealbha clár isteach san Fhillteán Clár a luaitear thíos.  Is féidir leat fillteán nua a chruthú, nó ceann a roghnú ar liosta na bhFillteán Reatha. Gliogáil Anonn chun leanúint ar aghaidh.
+#define WININT_PFOLDER_MESSAGE0 Cuirfidh Socrú dealbha clár isteach san Fhillteán Clár a luaitear thíos.  Is féidir leat fillteán nua a chruthú, nó ceann a roghnú ar liosta na bhFillteán Reatha. Gliogáil Ar Aghaidh chun leanúint ar aghaidh.
 
 #define ADDL_OPTIONS_TITLE Socrú $ProductShortName$ - Roghanna Breise
 #define ADDL_OPTIONS_MSG1 Roghnaigh an rogha seo a leanas más mian leat comhaid a bhaineann le Socruithe Suiteála a luchtú go dtí do ríomhaire féin. Cuirfidh sé sin ar do chumas Socrú a athrith gan na comhaid a athluchtú. Déanfar comhaid na Socruithe a shábháil de réir an chosáin thíos.
@@ -72,7 +72,7 @@
 #define START_SUBTITLE Réidh chun $ProductShortName$ a shuiteáil.
 #define START_INSTALL Déanfaidh Socrú na comhpháirteanna seo a leanas a shuiteáil:
 #define START_DOWNLOAD Déanfaidh Socrú na comhpháirteanna seo a leanas a luchtú agus a shuiteáil:
-#define START_MESSAGE0 Gliogáil Anonn chun leanúint ar aghaidh.
+#define START_MESSAGE0 Gliogáil Ar Aghaidh chun leanúint ar aghaidh.
 
 #define DL_TITLE Lódáil
 #define DL_SUBTITLE Tá na comhpháirteanna a theastaíonn á lódáil...
