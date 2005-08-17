@@ -7,7 +7,12 @@
 #  moznua and mozdist rely on the "translate" python tools written by
 #  David Fraser of translate.za.org
 
-VERSION=trunk
+#VERSION=trunk
+#CVSDIREC=moz
+VERSION=1.5
+CVSDIREC=moz1.8
+##################################
+CVSFULLPATH=${HOME}/seal/$(CVSDIREC)/l10n/ga-IE
 COMPENDIUM=firefox-$(VERSION).ga.po
 TBCOMPENDIUM=tbird-$(VERSION).ga.po
 UTFCOMP=mozilla-$(VERSION).po
@@ -31,39 +36,39 @@ $(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM)
 
 browser-ga-IE.jar : $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
-	bash mozdist browser-en-US
+	bash mozdist browser-en-US $(CVSFULLPATH)
 
 dom-ga-IE.jar : $(UTFCOMP)
 	bash moznua dom-en-US $(VERSION)
-	bash mozdist dom-en-US
+	bash mozdist dom-en-US $(CVSFULLPATH)
 
 extensions-ga-IE.jar : $(UTFCOMP)
 	bash moznua extensions-en-US $(VERSION)
-	bash mozdist extensions-en-US
+	bash mozdist extensions-en-US $(CVSFULLPATH)
 
 netwerk-ga-IE.jar : $(UTFCOMP)
 	bash moznua netwerk-en-US $(VERSION)
-	bash mozdist netwerk-en-US
+	bash mozdist netwerk-en-US $(CVSFULLPATH)
 
 toolkit-ga-IE.jar : $(UTFCOMP)
 	bash moznua toolkit-en-US $(VERSION)
-	bash mozdist toolkit-en-US
+	bash mozdist toolkit-en-US $(CVSFULLPATH)
 
 other-licenses-ga-IE.jar : $(UTFCOMP)
 	bash moznua other-licenses-en-US $(VERSION)
-	bash mozdist other-licenses-en-US
+	bash mozdist other-licenses-en-US $(CVSFULLPATH)
 
 security-ga-IE.jar : $(UTFCOMP)
 	bash moznua security-en-US $(VERSION)
-	bash mozdist security-en-US
+	bash mozdist security-en-US $(CVSFULLPATH)
 
 editor-ga-IE.jar : $(UTFCOMP)
 	bash moznua editor-en-US $(VERSION)
-	bash mozdist editor-en-US
+	bash mozdist editor-en-US $(CVSFULLPATH)
 
 mail-ga-IE.jar : $(UTFCOMP)
 	bash moznua mail-en-US $(VERSION)
-	bash mozdist mail-en-US
+	bash mozdist mail-en-US $(CVSFULLPATH)
 
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt

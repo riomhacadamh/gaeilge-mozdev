@@ -8,12 +8,13 @@
 #   the Free Software Foundation; either version 2 of the License, or
 #   (at your option) any later version.
 
-if [ $# -ne 1 ]; then
-	echo 'Usage: mozdist <englishjarnoextension>'
+if [ $# -ne 2 ]; then
+	echo 'Usage: mozdist <englishjarnoextension> <fullcvsinstallpath>'
  	exit
 fi
 IRISHJAR=`echo "${1}" | sed 's/en-US/ga-IE/'`
 PACK=`echo "${1}" | sed 's/-en-US//'`
+CVSFULLPATH="${2}"
 rm -fR "${IRISHJAR}"
 mkdir "${IRISHJAR}"
 po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
@@ -41,5 +42,5 @@ fi
 rm -f "${IRISHJAR}.jar"
 jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
 mv -f "${IRISHJAR}" "${PACK}"
-cp -Rf ${PACK} "${HOME}/seal/moz/l10n/ga-IE"
+cp -Rf ${PACK} "${CVSFULLPATH}"
 mv -f "${PACK}" "${IRISHJAR}"
