@@ -28,6 +28,7 @@ then
 	sed -i '/MOZ_LANGPACK_CONTRIBUTORS/r aistr.8.txt' ${IRISHJAR}/defines.inc
 	sed -i '/^# /d' ${IRISHJAR}/defines.inc
 	rm -f aistr.8.txt
+	sed -i '1s/.*/<!ENTITY % brandDTD SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n%brandDTD;\n\n&/' ${IRISHJAR}/chrome/overrides/netError.dtd
 fi
 if echo "${1}" | egrep '^toolkit' > /dev/null
 then
