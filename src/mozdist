@@ -37,8 +37,9 @@ fi
 if echo "${1}" | egrep '^mail' > /dev/null
 then
 #	cp tbird-credits.html ${IRISHJAR}/chrome/messenger/credits.html
-	cp tbird-start.html ${IRISHJAR}/chrome/messenger/start.html
+#	cp tbird-start.html ${IRISHJAR}/chrome/messenger/start.html
 	cp tbird-defines.inc ${IRISHJAR}/defines.inc
+	cat tb-installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
 fi
 rm -f "${IRISHJAR}.jar"
 jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
