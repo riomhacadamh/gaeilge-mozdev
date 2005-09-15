@@ -19,7 +19,8 @@ mkdir gatemp
 find "${IRISHJAR}po" -name '*.po' | 
 while read pofile
 do
-	msguniq "${pofile}" > "`mktemp -p gatemp`.po"
+	POTEMP=`echo $pofile | sed "s/^${IRISHJAR}po\///" | tr -d '/' | sed 's/^/gatemp\//'`
+	msguniq "${pofile}" > "$POTEMP"
 done
 msgcat -t "ISO-8859-1" gatemp/*.po > ${IRISHJAR}.po 
 rm -Rf gatemp
