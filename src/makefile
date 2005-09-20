@@ -7,8 +7,12 @@
 #  moznua and mozdist rely on the "translate" python tools written by
 #  David Fraser of translate.za.org
 
+#  these vars are needed both for the install AND for the translation
+#  process (including build of obair.po during newrelease)
 #VERSION=trunk
 #CVSDIREC=moz
+#VERSION=1.5
+#CVSDIREC=moz1.8
 VERSION=1.5
 CVSDIREC=moz1.8
 ##################################
@@ -83,14 +87,16 @@ pcorpus : FORCE
 
 
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po
 	rm -fR langpack-build-dir
 
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
 ###########################################################################
 
-obair.po : $(UTFCOMP)
+obair.po : FORCE
+	rm -f $(UTFCOMP)
+	$(MAKE) $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
 	bash mozcat browser-en-US
 	bash moznua dom-en-US $(VERSION)
@@ -111,6 +117,8 @@ obair.po : $(UTFCOMP)
 	bash mozcat mail-en-US
 	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
 	msgcat -t iso-8859-1 editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
+	sed -i 's/msgstr "Staid"/msgstr "Stát"/' tb_obair.po
+	sed -i 's/msgstr "is"/msgstr "atá"/' tb_obair.po
 #	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po
 
 FORCE :
