@@ -38,7 +38,7 @@ Integration_Message0=Cruthaigh deilbhíní i gcomhair $ProductShortName$:
 
 Integration_Desktop=Ar an Deasc agamsa
 Integration_StartMenu=San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)
-Integration_QuickLaunch=I mo Bharra Luathláinseála
+Integration_QuickLaunch=I mo Bharra Mearlainseála
 
 SelectFolder_Title=Suiteáil $ProductShortName$ - Roghnaigh Fillteán Ríomhchlár
 SelectFolder_Message0=Cuirfidh an Suiteálaí deilbhíní isteach san Fhillteán Ríomhchlár a luaitear thíos. Is féidir leat fillteán nua a chruthú, nó ceann a roghnú ar liosta na bhFillteán Reatha. Gliogáil 'Ar aghaidh' chun leanúint ar aghaidh.

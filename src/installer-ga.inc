@@ -55,7 +55,7 @@
 
 #define WININT_DESKTOP Ar an Deasc agamsa
 #define WININT_START San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)
-#define WININT_QUICKL I mo Bharra Luathláinseála
+#define WININT_QUICKL I mo Bharra Mearlainseála
 
 #define USE_AS_DEFAULT Úsáid %s mar mo Rogha Brabhsálaí.
 
