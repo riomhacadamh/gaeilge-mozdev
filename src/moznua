@@ -44,7 +44,7 @@ do
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		$MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
-	Pofake ${FILENAMEBASE}.po | msgcat - > tempe.po
+	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
 	mv tempe.po ${FILENAMEBASE}.po
 	echo
 	rm -f ${TEMPPOT} ${pofile}
