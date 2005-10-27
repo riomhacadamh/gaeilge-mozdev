@@ -117,8 +117,7 @@ obair.po : FORCE
 	bash mozcat mail-en-US
 	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
 	msgcat -t iso-8859-1 editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
-	sed -i 's/msgstr "Staid"/msgstr "Stát"/' tb_obair.po
-	sed -i 's/msgstr "is"/msgstr "atá"/' tb_obair.po
+	sed -i 's/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "S&coir"/msgstr "\&Scoir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
 #	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po
 
 FORCE :
