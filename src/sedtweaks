@@ -12,6 +12,11 @@ sed -i '/cmd_bm_newseparator_accesskey/s/.*/cmd_bm_newseparator_accesskey=t/' br
 sed -i '/cmd_bm_newbookmark_accesskey/s/.*/cmd_bm_newbookmark_accesskey=N/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 sed -i '/cmd_bm_collapsefolder_accesskey/s/.*/cmd_bm_collapsefolder_accesskey=L/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 
+# WINDOW SIZES!
+sed -i 's/\(ENTITY window\..*idth\).*/\1 "50em">/' browser-ga-IE/chrome/browser/preferences/connection.dtd
+sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/preferences/fonts.dtd
+sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
+
 # still need these two with latest translate toolkit
 sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
 sed -i '/^en=/s/.*/en=en-US/' toolkit-ga-IE/chrome/global/accept2locale.properties
