@@ -17,6 +17,7 @@ Use and test at your own risk.</li>
 <div class="infoTab" id="">
 <h4 class="infoTitle">Other Stuff</h5>
 <ul>
+<li><a href="http://www.aimsigh.com/">aimsigh.com</a></li>
 <li><a href="http://ga.openoffice.org/" title="">Open Office Irish Language Project</a></li>
 <li><a href="http://borel.slu.edu/gnu/index.html">GNU/Linux Irish translation</a></li>
 <li><a href="http://i18n.kde.org/teams/index.php?action=info&team=ga">KDE translation</a></li>
@@ -27,6 +28,35 @@ Use and test at your own risk.</li>
 </div>
 
 <h5 class="contentTitle" id="content">Firefox in Irish</h5>
+
+<script
+  type="text/javascript">
+<!--
+function errorMsg()
+{
+  alert("Netscape 6 or Mozilla is needed to install a sherlock plugin");
+}
+function addEngine(name,ext,cat,type)
+{
+  if ((typeof window.sidebar == "object") && (typeof
+  window.sidebar.addSearchEngine == "function"))
+  {
+    //cat="Web";
+    //cat=prompt('In what category should this engine be installed?','Web')
+    window.sidebar.addSearchEngine(
+      "http://mycroft.mozdev.org/update.php/id0/"+name+".src",
+      "http://mycroft.mozdev.org/update.php/id0/"+name+"."+ext,
+      name,
+      cat );
+  }
+  else
+  {
+    errorMsg();
+  }
+}
+//-->
+</script>
+
 
 <div id="gaeilge-main">
 
@@ -41,6 +71,15 @@ Coinciding with the release of version 1.0.1 Firefox is now <a href="http://www.
 <div align="center">
 <img src="/images/banners/firefox_as_gaeilge_seanchlo_460_110.png" alt="Firefox as Gaeilge Anois" title="Firefox as Gaeilge Anois" border="0" />
 </div>
+
+<p>
+Once you've downloaded Firefox, you can install the
+<a href="http://www.aimsigh.com/">aimsigh.com</a>
+search plugin by clicking
+<a href="javascript:addEngine('aimsigh','png','Web',0)">here</a>.
+This allows you to search Irish language documents on the web
+directly from the Firefox search bar.
+</p>
 
 <p>
 And as of November 3rd 2004 the Irish locale files have been checked into mozilla.org's CVS which means that for every major release of Firefox, there will be an official release of Irish Firefox. This means Irish as default ... no more language switching necessary. It will be publicised and hosted on their servers.
