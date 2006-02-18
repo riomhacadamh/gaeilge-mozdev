@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-01-12 14:04\n"
-"PO-Revision-Date: 2005-03-30 01:59-0000\n"
+"POT-Creation-Date: 2006-02-16 12:37\n"
+"PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
-"Language-Team: Irish <ga@li.org>\n"
+"Language-Team: Irish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -333,7 +333,7 @@ msgid ""
 "p"
 msgstr "p"
 
-#: closeCmd.label closeButton.label close tabs.close
+#: closeCmd.label closeButton.label close
 msgid "Close"
 msgstr "Dún"
 
@@ -502,7 +502,7 @@ msgid ""
 "f"
 msgstr "f"
 
-#: editfind.keybinding2 findOnCmd.commandkey2
+#: editfind.keybinding2
 msgid "VK_F19"
 msgstr "VK_F19"
 
@@ -1290,11 +1290,11 @@ msgid ""
 "a"
 msgstr "a"
 
-#: formatindent.keybinding goForwardCmd.commandKey
+#: formatindent.keybinding
 msgid "]"
 msgstr "]"
 
-#: formatoutdent.keybinding goBackCmd.commandKey
+#: formatoutdent.keybinding
 msgid "["
 msgstr "["
 
@@ -4232,7 +4232,7 @@ msgstr "&Leithead:"
 msgid "Alignment"
 msgstr "Ailíniú"
 
-#: rightRadio.accessKey radioRememberPrevState.accesskey
+#: rightRadio.accessKey editRewrapCmd.key radioRememberPrevState.accesskey
 msgid "R"
 msgstr "R"
 
@@ -5177,7 +5177,7 @@ msgstr "Ná hathraigh ach na míreanna roghna&ithe"
 msgid "Page Properties"
 msgstr "Airíonna an Leathanaigh"
 
-#: location.label linkHREFLabel
+#: location.label
 msgid "Location:"
 msgstr "Suíomh:"
 
@@ -6461,6 +6461,10 @@ msgstr "Leathanach Idirlín, HTML amháin"
 msgid "Web Page, XHTML only"
 msgstr "Leathanach Idirlín, XHTML amháin"
 
+#: WebPageSVGOnlyFilter
+msgid "Web Page, SVG only"
+msgstr "Leathanach Idirlín, SVG amháin"
+
 #: WebPageXMLOnlyFilter
 msgid "Web Page, XML only"
 msgstr "Leathanach Idirlín, XML amháin"
@@ -7105,11 +7109,11 @@ msgstr "leagan"
 
 #: copyrightText
 msgid ""
-"&#169;1998-2005 Contributors. All Rights Reserved. Mozilla Thunderbird and "
+"&#169;1998-2006 Contributors. All Rights Reserved. Mozilla Thunderbird and "
 "the                                  Thunderbird logos are trademarks of the "
 "Mozilla Foundation.  All rights                                  reserved."
 msgstr ""
-"&#169;1998-2005 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
+"#169;1998-2006 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
 "trádmharcanna de chuid Fondúireacht Mozilla iad Mozilla Thunderbird agus "
 "suaitheantais Thunderbird. Gach ceart ar cosaint."
 
@@ -8008,10 +8012,6 @@ msgstr "e"
 msgid "Address B&ook Toolbar"
 msgstr "Barra na Leabhar Se&oltaí"
 
-#: showSearchToolbarCmd.label showSearchToolbarCmd.accesskey
-msgid "S&earch Bar"
-msgstr "B&arra Cuardaigh"
-
 #: showCardPane.label showCardPane.accesskey
 msgid "&Card Summary Pane"
 msgstr "Pána Achoimre &Cárta"
@@ -8148,20 +8148,6 @@ msgstr "Scrios an cárta nó leabhar seoltaí roghnaithe"
 msgid "&Name or Email"
 msgstr "Ai&nm nó Seoladh Ríomhphoist"
 
-#: clearButton.label clearButton.accesskey resetButton.label
-#: resetButton.accesskey
-msgid "&Clear"
-msgstr "&Bánaigh"
-
-#: clearButton.tooltip
-msgid "Clear the search criteria and show all entries"
-msgstr "Bánaigh na critéir chuardaigh agus taispeáin gach iontráil"
-
-#: advancedButton.label advancedButton.accesskey soundbutton.label
-#: soundbutton.accesskey
-msgid "&Advanced..."
-msgstr "&Ardroghanna..."
-
 #: advancedButton.tooltip
 msgid "Advanced address search"
 msgstr "Ardchuardach seoltaí"
@@ -8169,6 +8155,10 @@ msgstr "Ardchuardach seoltaí"
 #: quickSearchCmd.key appCheckNow.accesskey focusSearch2.key
 msgid "k"
 msgstr "k"
+
+#: searchItem.title
+msgid "Quick Search"
+msgstr "Mearchuardach"
 
 #: GeneratedName.label GeneratedName.accesskey
 msgid "&Name"
@@ -8266,13 +8256,13 @@ msgstr "&Airíonna"
 msgid "Window"
 msgstr "Fuinneog"
 
-#: minimizeWindow.key messengerCmd.accesskey
-msgid "m"
-msgstr "l"
-
 #: minimizeWindow.label
 msgid "Minimize"
 msgstr "Íoslaghdaigh"
+
+#: minimizeWindow.key messengerCmd.accesskey
+msgid "m"
+msgstr "l"
 
 #: bringAllToFront.label
 msgid "Bring All to Front"
@@ -8439,6 +8429,27 @@ msgstr "Cuir vCard in Eagar"
 #: editVCardTitleWithDisplayName
 msgid "Edit vCard for %S"
 msgstr "Cuir vCard le haghaidh %S in eagar"
+
+# # LOCALIZATION NOTE (cardRequiredDataMissingMessage):  do not localize \n
+#: cardRequiredDataMissingMessage
+msgid ""
+"You must enter at least one of the following items:\n"
+"Email Address, First Name, Last Name, Display Name, Organization."
+msgstr ""
+
+#: cardRequiredDataMissingTitle
+msgid "Required Information Missing"
+msgstr "Faisnéis riachtanach ar iarraidh"
+
+#: incorrectEmailAddressFormatMessage
+msgid "The primary e-mail address must be of the form user@host."
+msgstr ""
+"Caithfidh an príomhsheoladh ríomhphoist a bheith san fhoirm "
+"úsáideoir@óstríomhaire."
+
+#: incorrectEmailAddressFormatTitle
+msgid "Incorrect Email Address Format"
+msgstr ""
 
 #: viewCardTitle
 msgid "Card for %S"
@@ -8652,6 +8663,14 @@ msgstr "Iontráil Uimhir Phoirt bhailí, le do thoil."
 #: invalidResults
 msgid "Please enter a valid number in the results field."
 msgstr "Iontráil uimhir bhailí i réimse na dtorthaí, le do thoil."
+
+#: abReplicationOfflineWarning
+msgid "You must be online to perform LDAP replication."
+msgstr "Ní mór bheith ar líne chun macasamhlú LDAP a dhéanamh."
+
+#: abReplicationSaveSettings
+msgid "Settings must be saved before a directory may be downloaded."
+msgstr "Ní mór na socruithe a shábháil sular féidir eolaire a íosluchtú."
 
 # #-#-#-#-#  tmp.XXXX9hKvi3.po (thunderbird)  #-#-#-#-#
 # For importing / exporting
@@ -10906,7 +10925,7 @@ msgid "Highest"
 msgstr "Is Airde"
 
 #: conditionDesc.label
-msgid "For incoming messages that:"
+msgid "For incoming messages which:"
 msgstr "Le haghaidh teachtaireachtaí isteach:"
 
 #: filterActionDesc.label filterActionDesc.accesskey
@@ -11968,8 +11987,8 @@ msgstr ""
 "Ríomhphost agus/nó Leabhar Seoltaí &brandShortName;"
 
 #: selectDescription.label
-msgid "Please select the program from which you would like to import:"
-msgstr "Roghnaigh an clár is mian leat iompórtáil uaidh:"
+msgid "Please select the type of file that you would like to import:"
+msgstr ""
 
 #: back.label
 msgid "&lt; Back"
@@ -12355,6 +12374,10 @@ msgstr ""
 "Ní féidir ríomhphost le hiompórtáil a aimsiú. Cinntigh go bhfuil an "
 "feidhmchlár ríomhphoist suiteáilte i gceart ar an ríomhaire seo."
 
+#: ImportEmptyAddressBook
+msgid "Can't import empty address book %S."
+msgstr "Ní féidir an leabhar seoltaí folamh %S a iompórtáil."
+
 # LOCALIZATION NOTE : Do not translate the word "%S" below.
 #: ImportMailFailed
 msgid "An error occurred importing mail from %S"
@@ -12667,7 +12690,7 @@ msgstr ""
 msgid "Building summary file for %S..."
 msgstr "Ag tógáil comhaid achoimre le haghaidh %S..."
 
-#: 4001 statusText.label nv_done
+#: 4001 statusText.label
 msgid "Done"
 msgstr "Déanta"
 
@@ -12715,17 +12738,6 @@ msgstr ""
 "Ní féidir an teachtaireacht a scríobh sa bhosca ríomhphoist. Cinntigh go "
 "bhfuil pribhléidí scríofa agat sa chomhadchóras agus go bhfuil go leor spáis "
 "diosca agat chun an bosca ríomhphoist a chóipeáil."
-
-# Status - write error occurred
-# # @name POP3_MESSAGE_FOLDER_BUSY
-# # @loc None
-#: 4029
-msgid ""
-"This folder is being processed. Please wait until processing is complete to "
-"get messages."
-msgstr ""
-"Tá an fillteán seo á phróiseáil. Fan go mbeidh an phróiseáil críochnaithe "
-"roimh theachtaireachtaí a fháil."
 
 # Status - connecting to host
 # # @name POP3_CONNECT_HOST_CONTACTED_SENDING_LOGIN_INFORMATION
@@ -12904,6 +12916,17 @@ msgstr "%S as %S teachtaireacht á gcóipeáil go %S"
 #: 4028
 msgid "Moving %S of %S messages to %S"
 msgstr "%S as %S teachtaireacht á bogadh go %S"
+
+# Status - write error occurred
+# # @name POP3_MESSAGE_FOLDER_BUSY
+# # @loc None
+#: 4029
+msgid ""
+"This folder is being processed. Please wait until processing is complete to "
+"get messages."
+msgstr ""
+"Tá an fillteán seo á phróiseáil. Fan go mbeidh an phróiseáil críochnaithe "
+"roimh theachtaireachtaí a fháil."
 
 # secure authentication failed
 # # @name CANNOT_PROCESS_SECURE_AUTH
@@ -14209,8 +14232,8 @@ msgid "VK_F7"
 msgstr "VK_F7"
 
 #: enableInlineSpellChecker.label enableInlineSpellChecker.accesskey
-msgid "&Spell As You Type"
-msgstr "Litriú &Beo"
+msgid "&Spell Check As You Type"
+msgstr "&Litriú Beo"
 
 #: quoteCmd.label quoteCmd.accesskey
 msgid "&Quote Message"
@@ -14686,13 +14709,11 @@ msgstr "&Snáithe"
 msgid "a"
 msgstr "a"
 
-#: filtersCmd.label filtersCmd.accesskey
-msgid "Message &Filters..."
-msgstr "&Scagairí Teachtaireachta..."
-
-#: filtersApply.label filtersApply.accesskey
-msgid "&Run Filters on Folder"
-msgstr "&Rith Scagairí ar an Fhillteán"
+#: menuFavoriteFolder.label menuFavoriteFolder.accesskey
+msgid ""
+"_: menuFavoriteFolder.label menuFavoriteFolder.accesskey\n"
+"F&avorite Folder"
+msgstr ""
 
 #: folderPropsCmd.label folderPropsCmd.accesskey
 msgid "Pr&operties..."
@@ -14759,6 +14780,30 @@ msgstr "Amharc &Ingearach"
 #: showMessageCmd.label showMessageCmd.accesskey
 msgid "&Message Pane"
 msgstr "Pána &Teachtaireachta"
+
+#: folderView.label folderView.accesskey
+msgid "&Folders"
+msgstr "&Fillteáin"
+
+#: allFolders.label allFolders.accesskey
+msgid ""
+"_: allFolders.label allFolders.accesskey\n"
+"&All"
+msgstr "&Uile"
+
+#: unreadFolders.label unreadFolders.accesskey
+msgid ""
+"_: unreadFolders.label unreadFolders.accesskey\n"
+"&Unread"
+msgstr "&Gan léamh"
+
+#: favoriteFolders.label favoriteFolders.accesskey
+msgid "&Favorite"
+msgstr ""
+
+#: recentFolders.label recentFolders.accesskey
+msgid "&Recent"
+msgstr ""
 
 #: sortByDateCmd.label sortByDateCmd.accesskey
 msgid "Dat&e"
@@ -15380,6 +15425,14 @@ msgstr "Scrios Post Marcái&lte mar Dhramhphost san Fhillteán"
 msgid "JavaScript Co&nsole"
 msgstr "Co&nsól JavaScript"
 
+#: filtersCmd.label filtersCmd.accesskey
+msgid "Message &Filters..."
+msgstr "&Scagairí Teachtaireachta..."
+
+#: filtersApply.label filtersApply.accesskey
+msgid "&Run Filters on Folder"
+msgstr "&Rith Scagairí ar an Fhillteán"
+
 #: hintsAndTips.label hintsAndTips.accesskey
 msgid "&brandFullName; &Help"
 msgstr "Cab&hair &brandFullName;"
@@ -15423,6 +15476,10 @@ msgstr "Marcáil"
 #: updatesItem.title
 msgid "Updates"
 msgstr "Nuashonraigh"
+
+#: mailViewsToolbarItem.title
+msgid "Mail Views"
+msgstr "Amhairc Ríomhphoist"
 
 # Mail Toolbar Tooltips
 #: advancedButton.tooltip
@@ -15493,24 +15550,11 @@ msgstr "Marcáil na teachtaireachtaí roghnaithe mar phost ceart"
 msgid "Go to the address book"
 msgstr "Téigh go dtí an leabhar seoltaí"
 
-#: folderPaneHeader.label
-msgid "Folders"
-msgstr "Fillteáin"
-
 #: folderSizeColumn.label
 msgid ""
 "_: folderSizeColumn.label\n"
 "Size"
 msgstr "Méid"
-
-# Folder Pane Context Menu
-#: folderContextGetMessages.label folderContextGetMessages.accesskey
-msgid "&Get Messages for Account"
-msgstr "Fai&gh Teachtaireachtaí an Chuntais"
-
-#: folderContextOpenNewWindow.label folderContextOpenNewWindow.accesskey
-msgid "Open in New Mail &Window"
-msgstr "Oscail i bh&Fuinneog Nua Ríomhphoist"
 
 #: folderContextRename.label folderContextRename.accesskey
 msgid "&Rename"
@@ -15523,8 +15567,8 @@ msgid ""
 msgstr "&Scrios"
 
 #: folderContextCompact.label folderContextCompact.accesskey
-msgid "Compact This &Folder"
-msgstr "Dlúthaigh an &Fillteán Seo"
+msgid "&Compact"
+msgstr "&Dlúthaigh"
 
 #: folderContextEmptyTrash.label folderContextEmptyTrash.accesskey
 msgid ""
@@ -15552,10 +15596,6 @@ msgstr "Mar&cáil an Grúpa Nuachta mar Léite"
 msgid "Mar&k Folder Read"
 msgstr "Mar&cáil an Fillteán mar Léite"
 
-#: folderContextNew.label folderContextNew.accesskey
-msgid "&New Subfolder..."
-msgstr "Fo-Fhillteán &Nua..."
-
 #: folderContextSubscribe.label folderContextSubscribe.accesskey
 msgid ""
 "_: folderContextSubscribe.label folderContextSubscribe.accesskey\n"
@@ -15563,16 +15603,22 @@ msgid ""
 msgstr "&Liostáil..."
 
 #: folderContextSearchMessages.label folderContextSearchMessages.accesskey
-msgid "&Search Messages..."
-msgstr "Cuardaigh &sna Teachtaireachtaí..."
+msgid "&Search..."
+msgstr "&Cuardaigh..."
 
 #: folderContextProperties.label folderContextProperties.accesskey
 msgid "&Properties..."
 msgstr "&Airíonna..."
 
 #: folderContextCopyLocation.label folderContextCopyLocation.accesskey
-msgid "&Copy Folder Location"
-msgstr "&Cóipeáil Suíomh an Fhillteáin"
+msgid "Copy Folder &Location"
+msgstr "Cóipeáil &Suíomh an Fhillteáin"
+
+#: folderContextFavoriteFolder.label folderContextFavoriteFolder.accesskey
+msgid ""
+"_: folderContextFavoriteFolder.label folderContextFavoriteFolder.accesskey\n"
+"F&avorite Folder"
+msgstr ""
 
 # #-#-#-#-#  tmp.XXXX8zSuZ3.po (thunderbird)  #-#-#-#-#
 # LOCALIZATION NOTE msgViewPickerOverlay.dtd UI for showing various views on a folder
@@ -15603,6 +15649,11 @@ msgstr "Sábháil an tAmharc mar Fhillteán..."
 #: SearchNameOrEmail.label SearchNameOrEmail.accesskey
 msgid "&Name or Email contains:"
 msgstr "Ai&nm nó Seoladh Ríomhphoist ina bhfuil:"
+
+#: clearButton.label clearButton.accesskey resetButton.label
+#: resetButton.accesskey
+msgid "&Clear"
+msgstr "&Bánaigh"
 
 # Quick Search Menu Bar
 #: searchSubjectMenu.label
@@ -15936,14 +15987,6 @@ msgstr "Athainmnigh Cuntas..."
 msgid "Rename News Account..."
 msgstr "Athainmnigh Cuntas Nuachta..."
 
-#: renameFolder
-msgid "Rename Folder..."
-msgstr "Athainmnigh Fillteán..."
-
-#: compactFolder
-msgid "Compact This Folder"
-msgstr "Dlúthaigh an fillteán seo"
-
 #: removeAccount
 msgid "Delete Account..."
 msgstr "Scrios Cuntas..."
@@ -15951,10 +15994,6 @@ msgstr "Scrios Cuntas..."
 #: removeNewsAccount
 msgid "Delete News Account..."
 msgstr "Scrios Cuntas Nuachta..."
-
-#: removeFolder
-msgid "Delete Folder"
-msgstr "Scrios Fillteán"
 
 #: newFolderMenuItem
 msgid "Folder..."
@@ -16671,6 +16710,15 @@ msgstr "-- %1$S teachtaireacht nua"
 msgid "has %1$S new messages"
 msgstr "-- %1$S teachtaireacht nua"
 
+# LOCALIZATION NOTES(biffNotification): %1$S is the name of the account %2$S is the number of new messages  
+#: newBiffNotification_message
+msgid "%1$S has %2$S new message"
+msgstr "Tá %2$S teachtaireacht nua ag %1$S"
+
+#: newBiffNotification_messages
+msgid "%1$S has %2$S new messages"
+msgstr "Tá %2$S teachtaireacht nua ag %1$S"
+
 # For the Quota tab in the mail folder properties dialog
 #: quotaUsedFree
 msgid "%S of %S KB used"
@@ -16782,25 +16830,62 @@ msgstr ""
 "dteastaíonn uait dul go %2$S?"
 
 # Check for Updates
-#: updates_checkForUpdates
-msgid "Check for Updates..."
-msgstr "Lorg Nuashonruithe..."
+#: updatesItem_default
+msgid ""
+"_: updatesItem_default\n"
+"Check for Updates..."
+msgstr "Nuashonruithe á Seiceáil..."
 
-#: updates_downloadingUpdates
+#: updatesItem_defaultFallback
+msgid ""
+"_: updatesItem_defaultFallback\n"
+"Check for Updates..."
+msgstr "Nuashonruithe á Seiceáil..."
+
+#: updatesItem_downloading
 msgid "Downloading %S..."
 msgstr "%S á íosluchtú..."
 
-#: updates_downloadingUpdatesFallback
+#: updatesItem_downloadingFallback
 msgid "Downloading Update..."
 msgstr "Nuashonrú á Íosluchtú..."
 
-#: updates_resumeDownloading
+#: updatesItem_resume
 msgid "Resume Downloading %S..."
 msgstr "Lean le híosluchtú %S..."
 
-#: updates_resumeDownloadingFallback
+#: updatesItem_resumeFallback
 msgid "Resume Downloading Update..."
 msgstr "Lean le híosluchtú an nuashonraithe..."
+
+#: updatesItem_pending
+msgid ""
+"_: updatesItem_pending\n"
+"Apply Downloaded Update Now..."
+msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois..."
+
+#: updatesItem_pendingFallback
+msgid ""
+"_: updatesItem_pendingFallback\n"
+"Apply Downloaded Update Now..."
+msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois..."
+
+# Folder Pane Header Title Strings
+#: folderPaneHeader
+msgid "All Folders"
+msgstr "Gach Fillteán"
+
+#: folderPaneHeader_unread
+msgid "Unread Folders"
+msgstr "Fillteáin Gan Léamh"
+
+#: folderPaneHeader_favorites
+msgid "Favorite Folders"
+msgstr ""
+
+#: folderPaneHeader_recent
+msgid "Recent Folders"
+msgstr ""
 
 #: migrationWizard.title
 msgid "Import Wizard"
@@ -17810,7 +17895,6 @@ msgstr ""
 # #-#-#-#-#  tmp.XXXXeT0IAo.po (thunderbird)  #-#-#-#-#
 # folder pane context menu item
 #: manageSubscriptions.label manageSubscriptions.accesskey
-#: folderContextRSSSubscribe.label folderContextRSSSubscribe.accesskey
 msgid "&Manage Subscriptions..."
 msgstr "&Bainistigh Síntiúis..."
 
@@ -17873,6 +17957,11 @@ msgstr "&Iompórtáil"
 #: button.exportOPML.label button.exportOPML.accesskey
 msgid "E&xport"
 msgstr "Ea&spórtáil"
+
+# folder pane context menu item
+#: folderContextRSSSubscribe.label folderContextRSSSubscribe.accesskey
+msgid "Su&bscribe..."
+msgstr "&Liostáil..."
 
 #: subscribe-validating
 msgid "Verifying the RSS feed..."
@@ -18394,9 +18483,9 @@ msgstr "Taispeáin colúin &fhairsingithe i bpána na bhfillteán"
 msgid "Remem&ber the last selected message"
 msgstr "Mea&bhraigh an teachtaireacht roghnaithe is déanaí"
 
-#: reuseExp.label
-msgid "Open new messages in:"
-msgstr "Oscail teachtaireachtaí nua:"
+#: openMsgIn.label
+msgid "Open messages in:"
+msgstr "Oscail teachtaireachtaí:"
 
 #: reuseExpRadio0.label reuseExpRadio0.accesskey
 msgid "A new message w&indow"
@@ -18602,7 +18691,7 @@ msgid "&Check spelling before sending"
 msgstr "&Ceartaigh litriú sula seolfar é"
 
 #: spellCheckInline.label spellCheckInline.accesskey
-msgid "E&nable spell as you type"
+msgid "E&nable spell check as you type"
 msgstr "Cu&masaigh litriú beo"
 
 #: languagePopup.label languagePopup.accessKey
@@ -19301,29 +19390,6 @@ msgstr "Is féidir teangacha nua a chumrú i bPainéal na dTeangacha."
 msgid "All&ow messages to use other fonts"
 msgstr "Ceadaigh teachtaireachtaí chun cló&nna eile a úsáid"
 
-#: resolution.label resolution.accesskey
-msgid "Display &resolution:"
-msgstr "Leibhéal &taifigh:"
-
-#: resolution.dpi
-msgid ""
-"_: dpi stands for \"dots per inch\"\n"
-"dpi"
-msgstr "pso"
-
-# LOCALIZATION NOTE (resolution.dpi): $val will be replaced by a numeric dpi value.
-#: resolution.dpival
-msgid "$val &resolution.dpi;"
-msgstr "$val &resolution.dpi;"
-
-#: resolution.system.label
-msgid "System setting"
-msgstr "Socrú Córais"
-
-#: resolution.other choose.label
-msgid "Other..."
-msgstr "Eile..."
-
 #: generalSettings.caption
 msgid "Default Settings"
 msgstr "Réamhshocruithe"
@@ -19390,6 +19456,10 @@ msgstr "Seinn &fuaim"
 #: showAnimatedAlert.label showAnimatedAlert.accesskey
 msgid "&Show an alert"
 msgstr "Tai&speáin airdeall"
+
+#: soundbutton.label soundbutton.accesskey
+msgid "&Advanced..."
+msgstr "&Ardroghanna..."
 
 #: showConnections.label showConnections.accesskey
 msgid "C&onnection Settings..."
@@ -20134,12 +20204,14 @@ msgstr "http://www.mozilla.org/products/thunderbird/"
 # @ZI == zip code
 # @CO == country
 #: mail.addr_book.mapit_url.format
-msgid ""
-"http://www.mapquest.com/maps/map.adp?country=@CO&address=@A1%"
-"20@A2&city=@CI&state=@ST&zipcode=@ZI"
-msgstr ""
-"http://www.mapquest.com/maps/map.adp?country=@CO&address=@A1%"
-"20@A2&city=@CI&state=@ST&zipcode=@ZI"
+msgid "http://maps.google.com/maps?q=@A1%20@A2%20@CI%20@ST%20@ZI%20@CO"
+msgstr "http://maps.google.com/maps?q=@A1%20@A2%20@CI%20@ST%20@ZI%20@CO"
+
+# This is the fallback URL for release notes. Do not change this 
+# unless you are providing localized release notes!
+#: app.update.url.details
+msgid "http://www.mozilla.org/products/thunderbird/releases/"
+msgstr "http://www.mozilla.org/products/thunderbird/releases/"
 
 #: renameFolderDialog.title
 msgid "Rename Folder"
@@ -21522,10 +21594,6 @@ msgstr ""
 msgid "&Enable the Filter Log"
 msgstr "&Cumasaigh Loga na Scagairí"
 
-#: server.label server.accesskey
-msgid "&Account: "
-msgstr "Cunt&as: "
-
 #: virtualFolderListTitle.title
 msgid "Select Folder(s)"
 msgstr "Roghnaigh Fillteá(i)n"
@@ -21623,6 +21691,10 @@ msgstr "Fiafraigh díom cá sábhálfar gach iatán"
 #: neverAsk.label
 msgid "Save all attachments to this folder:"
 msgstr "Sábháil gach iatán san fhillteán seo:"
+
+#: choose.label
+msgid "Other..."
+msgstr "Eile..."
 
 #: showFolder.label
 msgid "Show Folder"
@@ -22025,285 +22097,3 @@ msgstr "Bhraith an cliant lúb"
 #: 97
 msgid "Referral hop limit exceeded"
 msgstr "Imithe thar teorainn na bpreab atreoraithe"
-
-#: nv_timeout
-msgid "Timed Out"
-msgstr "Thar Am"
-
-#: nv_stopped
-msgid "Stopped"
-msgstr "Stadadh"
-
-#: openFile
-msgid "Open File"
-msgstr "Oscail Comhad"
-
-#: uploadFile
-msgid "Upload File"
-msgstr "Uasluchtaigh Comhad"
-
-#: droponhomebutton
-msgid "Drop a link or file to make it your home page"
-msgstr "Cuir nasc nó comhad anseo lena shocrú mar leathanach baile agat"
-
-#: droponhometitle
-msgid ""
-"_: droponhometitle\n"
-"Set Home Page"
-msgstr "Socraigh Leathanach Baile"
-
-#: droponhomemsg
-msgid "Do you want this document to be your new home page?"
-msgstr ""
-"An bhfuil tú ag iarraidh an cháipéis seo a roghnú mar do leathanach baile?"
-
-#: droponhomeokbutton
-msgid ""
-"_: droponhomeokbutton\n"
-"Set Home Page"
-msgstr "Socraigh Leathanach Baile"
-
-#: jserror
-msgid "An error has occurred on this page. Double click here for details."
-msgstr "Earráid sa leathanach seo.  Déghliogáil anseo i gcomhair mionsonraí."
-
-# #-#-#-#-#  ga-IE.po (firefox 0.8)  #-#-#-#-#
-# #-#-#-#-#  tmp.XXXXgm6QQt.po (firefox 0.8)  #-#-#-#-#
-# all.js
-#
-# Localization Note: Cases of charset names must be preserved. If you're
-# adding charsets to your localized version, please refer to
-# intl/uconv/src/charsetalias.properties file for the list of canonical
-# charset names and use canonical names exactly as listed there.
-# #-#-#-#-#  tmp.XXXXu9VoC2.po (firefox 0.8)  #-#-#-#-#
-#
-# localizable preference value
-#
-# all.js
-#
-# Localization Note: Cases of charset names must be preserved. If you're
-# adding charsets to your localized version, please refer to
-# intl/uconv/src/charsetalias.properties file for the list of canonical
-# charset names and use canonical names exactly as listed there.
-# #-#-#-#-#  IE.po (firefox 0.8)  #-#-#-#-#
-# sidebar customize/more... panel locale
-#: general.useragent.locale
-msgid "en-US"
-msgstr "ga-IE"
-
-#: font.language.group
-msgid "x-western"
-msgstr "x-western"
-
-#: intl.accept_languages
-msgid "en-us, en"
-msgstr "ga-ie, ga, en-ie, en-gb, en-us, en"
-
-# moved from navigator/locale/navigator.properties
-# valid collation options are: <empty string> or useCodePointOrder
-#: intl.charsetmenu.browser.static
-msgid "ISO-8859-1, UTF-8"
-msgstr "ISO-8859-1, UTF-8"
-
-#: intl.charsetmenu.browser.more1
-msgid ""
-"ISO-8859-1, ISO-8859-15, IBM850, x-mac-roman, windows-1252, ISO-8859-14, ISO-"
-"8859-7, x-mac-greek, windows-1253, x-mac-icelandic, ISO-8859-10, ISO-8859-3"
-msgstr ""
-"ISO-8859-1, ISO-8859-15, IBM850, x-mac-roman, windows-1252, ISO-8859-14, ISO-"
-"8859-7, x-mac-greek, windows-1253, x-mac-icelandic, ISO-8859-10, ISO-8859-3"
-
-#: intl.charsetmenu.browser.more2
-msgid ""
-"ISO-8859-4, ISO-8859-13, windows-1257, IBM852, ISO-8859-2, x-mac-ce, windows-"
-"1250, x-mac-croatian, IBM855, ISO-8859-5, ISO-IR-111, KOI8-R, x-mac-cyrillic, "
-"windows-1251, IBM866, KOI8-U, x-mac-ukrainian, ISO-8859-16, x-mac-romanian"
-msgstr ""
-"ISO-8859-4, ISO-8859-13, windows-1257, IBM852, ISO-8859-2, x-mac-ce, windows-"
-"1250, x-mac-croatian, IBM855, ISO-8859-5, ISO-IR-111, KOI8-R, x-mac-cyrillic, "
-"windows-1251, IBM866, KOI8-U, x-mac-ukrainian, ISO-8859-16, x-mac-romanian"
-
-#: intl.charsetmenu.browser.more3
-msgid ""
-"GB2312, x-gbk, gb18030, HZ-GB-2312, ISO-2022-CN, Big5, Big5-HKSCS, x-euc-tw, "
-"EUC-JP, ISO-2022-JP, Shift_JIS, EUC-KR, x-windows-949, x-johab, ISO-2022-KR"
-msgstr ""
-"GB2312, x-gbk, gb18030, HZ-GB-2312, ISO-2022-CN, Big5, Big5-HKSCS, x-euc-tw, "
-"EUC-JP, ISO-2022-JP, Shift_JIS, EUC-KR, x-windows-949, x-johab, ISO-2022-KR"
-
-#: intl.charsetmenu.browser.more4
-msgid ""
-"armscii-8, GEOSTD8, TIS-620, ISO-8859-11, windows-874, IBM857, ISO-8859-9, x-"
-"mac-turkish, windows-1254, x-viet-tcvn5712, VISCII, x-viet-vps, windows-1258, "
-"x-mac-devanagari, x-mac-gujarati, x-mac-gurmukhi"
-msgstr ""
-"armscii-8, GEOSTD8, TIS-620, ISO-8859-11, windows-874, IBM857, ISO-8859-9, x-"
-"mac-turkish, windows-1254, x-viet-tcvn5712, VISCII, x-viet-vps, windows-1258, "
-"x-mac-devanagari, x-mac-gujarati, x-mac-gurmukhi"
-
-#: intl.charsetmenu.browser.more5
-msgid ""
-"ISO-8859-6, windows-1256, IBM864, x-mac-arabic, x-mac-farsi, ISO-8859-8-I, "
-"windows-1255, ISO-8859-8, IBM862, x-mac-hebrew"
-msgstr ""
-"ISO-8859-6, windows-1256, IBM864, x-mac-arabic, x-mac-farsi, ISO-8859-8-I, "
-"windows-1255, ISO-8859-8, IBM862, x-mac-hebrew"
-
-# Localization Note: Do NOT change this entry.
-#: intl.charsetmenu.browser.unicode
-msgid "UTF-8, UTF-16, UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE, UTF-7"
-msgstr "UTF-8, UTF-16, UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE, UTF-7"
-
-# moved from navigator/locale/navigator.properties
-# valid collation options are: <empty string> or useCodePointOrder
-#: intl.charset.default
-msgid "ISO-8859-1"
-msgstr "ISO-8859-1"
-
-#: intl.charsetmenu.mailedit
-msgid ""
-"ISO-8859-1, ISO-8859-15, ISO-8859-6, armscii-8, geostd8, ISO-8859-13, ISO-"
-"8859-14, ISO-8859-2, GB2312, GB18030, Big5, KOI8-R, windows-1251, KOI8-U, ISO-"
-"8859-7, ISO-8859-8-I, windows-1255, ISO-2022-JP, EUC-KR, ISO-8859-10, ISO-"
-"8859-3, TIS-620, ISO-8859-9, UTF-8, VISCII"
-msgstr ""
-"ISO-8859-1, ISO-8859-15, ISO-8859-6, armscii-8, geostd8, ISO-8859-13, ISO-"
-"8859-14, ISO-8859-2, GB2312, GB18030, Big5, KOI8-R, windows-1251, KOI8-U, ISO-"
-"8859-7, ISO-8859-8-I, windows-1255, ISO-2022-JP, EUC-KR, ISO-8859-10, ISO-"
-"8859-3, TIS-620, ISO-8859-9, UTF-8, VISCII"
-
-# #-#-#-#-#  ga-IE.po (firefox 0.8)  #-#-#-#-#
-# valid collation options are: <empty string> or useCodePointOrder
-#: wallet.Server
-msgid "http://www.mozilla.org/wallet/tables/"
-msgstr "http://www.mozilla.org/wallet/tables/"
-
-#: wallet.Samples
-msgid "http://www.mozilla.org/wallet/samples/"
-msgstr "http://www.mozilla.org/wallet/samples/"
-
-# valid intl.menuitems.appendedacceskeys are: true or false, <empty string> (missing or empty preference equals false)
-# valid intl.menuitems.insertseparatorbeforeaccesskeys are: true or false, <empty string> (missing or empty preference equals false)
-#: intl.menuitems.insertseparatorbeforeaccesskeys
-msgid ""
-"_: intl.menuitems.insertseparatorbeforeaccesskeys\n"
-"true"
-msgstr "true"
-
-#: linkTargetLabel
-msgid "Link will open in:"
-msgstr "Osclófar an nasc i:"
-
-#: nothingAvailable
-msgid "(Nothing Available)"
-msgstr "(Níl ar Fáil)"
-
-# navigator.js
-#: oldthemetitle
-msgid "Warning: incompatible theme"
-msgstr "Rabhadh: téama neamh-chomhoiriúnach"
-
-#: oldTheme
-msgid ""
-"You have selected a theme which was designed for an earlier version of %brand"
-"% and is incompatible with your current %brand% version. Please check %brand% "
-"theme sites for an updated version of the theme. You can uninstall this theme "
-"by clicking \"OK\" button."
-msgstr ""
-"Tá téama roghnaithe agat a dhearadh le haghaidh leagain níos sine de %brand% "
-"agus atá neamh-chomhoiriúnach don leagan de %brand% atá agat faoi láthair. "
-"Lorg leagan nua den téama ó shuíomhanna téamaí %brand%. Tig leat an téama seo "
-"a dhíshuiteáil trí chliceáil ar an gcnaipe \"Tá go maith\"."
-
-#: noPopupControl
-msgid "can't control popups for this site"
-msgstr "ní féidir preabfhuinneoga a srianadh ar an suíomh seo"
-
-# nsContextMenu.js (setWallpaper confirmation dialog)
-#: wallpaperConfirmTitle
-msgid "Set As Wallpaper"
-msgstr "Socraigh Mar Pháipéar Balla"
-
-#: wallpaperConfirmButton
-msgid "Set Wallpaper"
-msgstr "Socraigh Páipéar Balla"
-
-#: wallpaperConfirmMsg
-msgid "Do you want to set this image as your desktop wallpaper?"
-msgstr "An mian leat é seo a shocrú mar íomhá deisce?"
-
-# XXX - this sucks and should only be temporary.
-#: switchskins
-msgid "Theme changes will take effect when you restart %S."
-msgstr "Cuirfear athruithe téama i bhfeidhm nuair a atosóidh tú %S."
-
-#: switchskinstitle
-msgid "Apply Theme"
-msgstr "Cuir Téama i bhFeidhm"
-
-# Localization Note: Use 'true' or 'false' to control the pref:theme to
-# show the English description or not
-# for example, in Japanese build, instead of showing English description
-# set the following value to false so it won't show up.
-#: showskinsdescription
-msgid ""
-"_: showskinsdescription\n"
-"true"
-msgstr "true"
-
-#: tabs.closeTab
-msgid "Close Tab"
-msgstr "Dún Cluaisín"
-
-#: tabs.closeWarningTitle
-msgid "Confirm close"
-msgstr "Dearbhaigh"
-
-#: tabs.closeWarning
-msgid ""
-"This Navigator window has %S tabs open. Do you want to close it and all its "
-"tabs?"
-msgstr ""
-"Tá %S cluaisín ar oscailt ag an bhfuinneog Navigaotr seo. An mian leat an "
-"fhuinneog agus a cluaisíní go léir a dhúnadh?"
-
-#: tabs.closeButton
-msgid "Close all tabs"
-msgstr "Dún gach cluaisín"
-
-# see also "Warn me when I attempt to close multiple tabs"
-# see also "Warn when closing multiple tabs"
-#: tabs.closeWarningPromptMe
-msgid "Warn me when closing multiple tabs"
-msgstr "Tabhair rabhadh dom agus cluaisíní iomadúla á ndúnadh"
-
-#: tabs.historyItem
-msgid "Group of Tabs"
-msgstr "Grúpa Cluaisíní"
-
-# urlbarBindings.xml
-# LOCALIZATION NOTE: This is for the location bar drop-down string:
-#   "Seach " + search_engine_name + " for " + user_input
-#   e.g. "Search Google for abc"
-# DO NOT change the %S order when translate, the first %S must be the search engine name.
-#: searchFor
-msgid "Search %S for \"%S\""
-msgstr "Cuardaigh %S le haghaidh \"%S\""
-
-# For JVM Configuration
-#: switchJVMTitle
-msgid "Select Java version"
-msgstr "Roghnaigh leagan Java"
-
-#: switchJVMFailed
-msgid "Failed to select this version of java"
-msgstr "Theip ar roghnú an leagan seo Java"
-
-# LOCALIZATION NOTE: RTL languages may wish to switch these
-#: goBackCmd.keyCode
-msgid "VK_LEFT"
-msgstr "VK_LEFT"
-
-#: goForwardCmd.keyCode
-msgid "VK_RIGHT"
-msgstr "VK_RIGHT"
