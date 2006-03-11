@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-03-04 12:22\n"
+"POT-Creation-Date: 2006-03-11 05:09\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -307,7 +307,7 @@ msgstr "Taispeáin gach fillteán leabharmhairc"
 msgid "Hide"
 msgstr "Folaigh"
 
-#: acceptButton.label certmgr.add.label
+#: acceptButton.label
 msgid "Add"
 msgstr "Cuir Leis"
 
@@ -322,7 +322,8 @@ msgstr "&Comhad"
 
 # "A" in main browser window
 #: viewMenu.label viewMenu.accesskey mnView.label mnView.accesskey
-#: pageInfo.view.label pageInfo.view.accesskey
+#: certmgr.view.label certmgr.view.accesskey pageInfo.view.label
+#: pageInfo.view.accesskey
 msgid "&View"
 msgstr "&Amharc"
 
@@ -330,6 +331,7 @@ msgstr "&Amharc"
 #: closeCmd.label closeCmd.accesskey button.close.label button.close.accesskey
 #: cmdClose.label cmdClose.accesskey preferencesCloseButton.label
 #: preferencesCloseButton.accesskey close.label close.accesskey
+#: certmgr.close.label certmgr.close.accesskey
 msgid "&Close"
 msgstr "&Dún"
 
@@ -367,7 +369,7 @@ msgstr "Cuardaigh..."
 # Ctrl+F, Ctrl+G as find, find again transcend language?
 # also "Foirmeacha" on "Eolas Leathanaigh"  (so no tweaking needed)
 #: edit.find.keybinding findOnCmd.commandkey focusSearch1.key
-#: cmdShowFindDialog.accelkey
+#: cmdShowFindDialog.accelkey loaddevice.filename.accesskey
 msgid "f"
 msgstr "f"
 
@@ -388,7 +390,9 @@ msgstr "Athai&nmnigh..."
 
 #: command.delete.label command.delete.accesskey deleteCmd.label
 #: deleteCmd.accesskey mnEditDelete.label mnEditDelete.accesskey
-#: cmdDelete.label cmdDelete.accesskey
+#: cmdDelete.label cmdDelete.accesskey certmgr.delete.label
+#: certmgr.delete.accesskey validation.deletecrl.label
+#: validation.deletecrl.accesskey
 msgid "&Delete"
 msgstr "&Scrios"
 
@@ -621,8 +625,7 @@ msgid "P"
 msgstr "R"
 
 # the "deleteCmd.label" is a keycap and should be "Delete", others ok?
-#: cmd_delete cmdDeleteNode.label certmgr.delete.label
-#: validation.deletecrl.label
+#: cmd_delete cmdDeleteNode.label
 msgid "Delete"
 msgstr "Scrios"
 
@@ -648,7 +651,7 @@ msgstr "Roghnaigh Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #: cmd_selectAll_accesskey selectAllCmd.key selectall.key
-#: cmd_addEngine_accesskey
+#: cmd_addEngine_accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -948,6 +951,7 @@ msgstr "Fillteán Nua..."
 
 #: cmd_bm_newfolder_accesskey formsAccesskey enableAppUpdate.accesskey
 #: findCmd.key cmd.show.accesskeyMac findOnCmd.commandkey
+#: devmgr.button.fips.accesskey
 msgid "F"
 msgstr "F"
 
@@ -956,8 +960,8 @@ msgid "New Bookmark..."
 msgstr "Leabharmharc Nua..."
 
 # cmd_bm_newbookmark_accesskey sedtweaked
-#: cmd_bm_newbookmark_accesskey bookmarksSidebarCmd.accesskey
-#: bookmarkCurTab_accesskey
+#: cmd_bm_newbookmark_accesskey bookmarkCurTab_accesskey
+#: loaddevice.browse.accesskey
 msgid "B"
 msgstr "B"
 
@@ -1152,7 +1156,7 @@ msgid "&Open File..."
 msgstr "&Oscail Comhad..."
 
 # Ctrl+O for "Oscail" in Main -> Comhad
-#: openFileCmd.commandkey SSLport.accesskey
+#: openFileCmd.commandkey SSLport.accesskey warn.enteringweak.accesskey
 msgid "o"
 msgstr "o"
 
@@ -1235,7 +1239,6 @@ msgstr "Athshlánaigh"
 
 #: fullScreenClose.tooltip close closeButton.label dialogClose.label tabs.close
 #: acceptButton.label aboutWindowCloseButton closeButton closebutton.label
-#: certmgr.close.label
 msgid "Close"
 msgstr "Dún"
 
@@ -1258,13 +1261,27 @@ msgid ""
 "d"
 msgstr "m"
 
+#: addCurPagesCmd.label addCurPagesCmd.accesskey
+msgid "Bookmark All &Tabs..."
+msgstr "Leabharmharcáil Gach &Cluaisín..."
+
 #: manBookmarksCmd.label manBookmarksCmd.accesskey
-msgid "&Manage Bookmarks..."
-msgstr "Bainistiú na Leabhar&mharcanna..."
+msgid "Organize Book&marks..."
+msgstr "Eagraigh Leabhar&mharcanna..."
 
 #: bookmarkAllCmd.label bookmarkAllTabs_label
 msgid "Bookmark All Tabs..."
 msgstr "Leabharmharcáil Gach Cluaisín..."
+
+#: searchBookmarksCmd.label searchBookmarksCmd.accesskey
+msgid "&Search in Bookmarks..."
+msgstr "&Cuardaigh Leabharmharcanna..."
+
+#: searchBookmarksCmd.commandkey
+msgid ""
+"_: searchBookmarksCmd.commandkey\n"
+"B"
+msgstr "B"
 
 # "S" under Main -> Gabh and also under right click menu
 #: backCmd.label backCmd.accesskey backButton.label backButton.accesskey
@@ -1375,6 +1392,12 @@ msgstr "Leabharmharcanna"
 msgid "Display your bookmarks"
 msgstr "Léirigh do Leabharmharcanna"
 
+#: bookmarksSidebarCmd.accesskey
+msgid ""
+"_: bookmarksSidebarCmd.accesskey\n"
+"B"
+msgstr "B"
+
 #: bookmarksSidebarWinCmd.commandkey
 msgid ""
 "_: bookmarksSidebarWinCmd.commandkey\n"
@@ -1468,7 +1491,7 @@ msgstr "Fuinneog &Nua"
 
 # "E" in main browser window
 #: editMenu.label editMenu.accesskey mnEditEdit.label mnEditEdit.accesskey
-#: mnEdit.label mnEdit.accesskey
+#: mnEdit.label mnEdit.accesskey certmgr.edit.label certmgr.edit.accesskey
 msgid "&Edit"
 msgstr "&Eagar"
 
@@ -1516,6 +1539,7 @@ msgstr "&Cóipeáil"
 #  collapse_folder accesskey sedtweaked
 #: copyCmd.key copy.key copyCmd.commandkey accesskey-next-mac
 #: found.updatetype.patches.accesskey CertDumpAVACountry
+#: changepassword.accesskey
 msgid "C"
 msgstr "C"
 
@@ -1526,7 +1550,7 @@ msgid "&Paste"
 msgstr "G&reamaigh"
 
 # Ctrl+V = Greamaigh, transcending language
-#: pasteCmd.key
+#: pasteCmd.key warn.viewmixed.accesskey
 msgid "V"
 msgstr "V"
 
@@ -1592,7 +1616,7 @@ msgstr ""
 
 #: historyClearCmd.label historyClearCmd.accesskey
 msgid "&Clear History..."
-msgstr ""
+msgstr "&Glan an Stair..."
 
 # "G" in main browser window
 #: goMenu.label goMenu.accesskey
@@ -1954,6 +1978,19 @@ msgstr "g"
 msgid "VK_F3"
 msgstr "VK_F3"
 
+# new bookmarks and history
+#: location.status.not_bookmarked
+msgid "Star (Off)"
+msgstr ""
+
+#: location.status.bookmarked
+msgid "Star (On)"
+msgstr ""
+
+#: location.status.bookmark.tooltip
+msgid "Add a Bookmark to this page"
+msgstr "Cuir Leabharmharc leis an leathanach seo"
+
 #: nv_done done.label saveChanges.label button-finish-mac
 msgid "Done"
 msgstr "Déanta"
@@ -2049,6 +2086,7 @@ msgid "Web Page, HTML only"
 msgstr "Leathanach Idirlín, HTML amháin"
 
 #: bookmarkAllTabs_accesskey reportForm.problem_type.accesskey detailsAccessKey
+#: managepassword.askfirsttime.accesskey enable.tls.accesskey
 msgid "T"
 msgstr "T"
 
@@ -3418,6 +3456,7 @@ msgid "Links"
 msgstr "Naisc"
 
 #: linksAccesskey found.updatetype.languages.accesskey CertDumpAVALocality
+#: warn.enteringsecure.accesskey
 msgid "L"
 msgstr "L"
 
@@ -3458,7 +3497,8 @@ msgid "Media"
 msgstr "Meáin"
 
 # "B" for Roghanna->Casta under Bailíochtú
-#: mediaAccesskey validation.managecrls.accesskey
+#: mediaAccesskey loaddevice.modname.accesskey managecerts.accesskey
+#: validation.managecrls.accesskey
 msgid "M"
 msgstr "B"
 
@@ -3551,6 +3591,7 @@ msgstr "Sábháil Mar..."
 # cmd_bm_newseparator sedtweaked
 #: mediaSaveAs.accesskey cmd_clearHistory_accesskey
 #: reportResults.showDetail.accesskey savePageCmd.commandkey
+#: managedevices.accesskey warn.insecurepost.accesskey
 msgid "S"
 msgstr "S"
 
@@ -3811,7 +3852,7 @@ msgstr "Ú&sáid uathscrollú"
 msgid "Use s&mooth scrolling"
 msgstr "Úsáid &mínscrollú"
 
-#: updateTab.label
+#: updateTab.label validation.crl.autoupdate.time.label1
 msgid "Update"
 msgstr "Nuashonraigh"
 
@@ -4698,7 +4739,7 @@ msgstr "&Roghnaigh teanga chun cur leis..."
 
 # "C" is Ionchódú Carachtar... 
 #: languages.customize.addButton.label languages.customize.addButton.accesskey
-#: add.label add.accessKey
+#: add.label add.accessKey certmgr.add.label certmgr.add.accesskey
 msgid "&Add"
 msgstr "Cuir &Leis"
 
@@ -5038,7 +5079,7 @@ msgstr ""
 msgid "Clear"
 msgstr "Bánaigh"
 
-#: view.label certmgr.view.label downloadCert.viewCert.label
+#: view.label downloadCert.viewCert.label
 msgid "View"
 msgstr "Amharc"
 
@@ -5288,7 +5329,7 @@ msgstr "&Stair an Bhainisteora Íosluchtaithe"
 msgid "Authenticated &Sessions"
 msgstr "&Seisiúin Fhíordheimhnithe"
 
-#: settings.label
+#: settings.label edit.button
 msgid "Settings"
 msgstr "Socruithe"
 
@@ -8841,7 +8882,7 @@ msgstr ""
 msgid "DOM &Inspector"
 msgstr "Scrúda&itheoir DOM"
 
-#: inspectorTaskCmd.accesskey.ff
+#: inspectorTaskCmd.accesskey.ff managepassword.asktimeout.accesskey
 msgid "n"
 msgstr "n"
 
@@ -9217,7 +9258,7 @@ msgstr "Oscail Comhad in Eagarthóir"
 msgid "New Property"
 msgstr "Airí Nua"
 
-#: editSelectedProperty.label certmgr.edit.label
+#: editSelectedProperty.label
 msgid "Edit"
 msgstr "Eagar"
 
@@ -9309,7 +9350,7 @@ msgid ""
 "Report Broken Web Site"
 msgstr "Seol Tuairisc ar Shuíomh Briste"
 
-#: reporterMenu.accesskey
+#: reporterMenu.accesskey resetpassword.accesskey
 msgid "R"
 msgstr "R"
 
@@ -9482,7 +9523,7 @@ msgid "Email (Optional):"
 msgstr "Seoladh Ríomhphoist (Roghnach)"
 
 #: reportForm.email.accesskey found.updatetype.addons.accesskey
-#: CertDumpPK9Email edit.sslciphers.accesskey
+#: CertDumpPK9Email managepassword.askeverytime.accesskey
 msgid "E"
 msgstr "E"
 
@@ -15000,7 +15041,7 @@ msgstr "Breiseán Anaithnid (%S)"
 msgid "Click here to download plugin."
 msgstr "Gliogáil anseo chun an breiseán a íosluchtú."
 
-#: setPassword.title
+#: setPassword.title changepassword.caption
 msgid "Change Master Password"
 msgstr "Athraigh Príomhfhocal Faire"
 
@@ -16710,7 +16751,7 @@ msgstr "Éirithe as Oibriú"
 msgid "Certificate Hold"
 msgstr "Fionraíocht Teastais"
 
-#: CertDumpOCSPResponder validation.ocsp.label
+#: CertDumpOCSPResponder validation.ocsp.caption
 msgid "OCSP"
 msgstr "OCSP"
 
@@ -17704,33 +17745,33 @@ msgstr ""
 "Níl na teastais bailíochtaithe le OCSP. Gliogáil \"Amharc\" chun é sin a "
 "dhéanamh."
 
-#: certmgr.editca.label
-msgid "Edit CA Trust"
-msgstr "Cuir Muinín na nÚdarás Deimhniúcháin in Eagar"
+#: certmgr.editca.label certmgr.editca.accesskey
+msgid "E&dit CA Trust"
+msgstr "Cuir Muinín na nÚdarás &Deimhniúcháin in Eagar"
 
-#: certmgr.backup.label
-msgid "Backup"
-msgstr "Déan cúltaca"
+#: certmgr.backup.label certmgr.backup.accesskey
+msgid "&Backup"
+msgstr "&Cúltaca"
 
-#: certmgr.backupall.label
-msgid "Backup All"
-msgstr "Déan Cúltaca Iomlán"
+#: certmgr.backupall.label certmgr.backupall.accesskey
+msgid "Bac&kup All"
+msgstr "Déan Cúl&taca Iomlán"
 
-#: certmgr.restore.label
-msgid "Import"
-msgstr "Iompórtáil"
+#: certmgr.restore.label certmgr.restore.accesskey
+msgid "I&mport"
+msgstr "Io&mpórtáil"
 
-#: certmgr.details.label
-msgid "Certificate Fields"
-msgstr "Réimsí Teastais"
+#: certmgr.details.label certmgr.details.accesskey
+msgid "Certificate &Fields"
+msgstr "&Réimsí Teastais"
 
-#: certmgr.fields.label
-msgid "Field Value"
-msgstr "Luach Réimse"
+#: certmgr.fields.label certmgr.fields.accesskey
+msgid "Field &Value"
+msgstr "&Luach Réimse"
 
-#: certmgr.hierarchy.label
-msgid "Certificate Hierarchy"
-msgstr "Ordlathas Teastais"
+#: certmgr.hierarchy.label certmgr.hierarchy.accesskey
+msgid "&Certificate Hierarchy"
+msgstr "O&rdlathas Teastais"
 
 # - The contents of this file are subject to the Mozilla Public
 # - License Version 1.1 (the "License"); you may not use this file
@@ -17760,29 +17801,29 @@ msgstr "Bainisteoir na nGléasanna"
 msgid "Security Modules and Devices"
 msgstr "Modúil agus Gléasanna Slándála"
 
-#: devmgr.button.changeslotname.label
-msgid "Change Slot Name"
-msgstr "Athraigh Ainm an tSliotáin"
+#: devmgr.button.changeslotname.label devmgr.button.changeslotname.accesskey
+msgid "&Change Slot Name"
+msgstr "&Athraigh Ainm an tSliotáin"
 
-#: devmgr.button.login.label
-msgid "Log In"
-msgstr "Logáil Isteach"
+#: devmgr.button.login.label devmgr.button.login.accesskey
+msgid "Log I&n"
+msgstr "Lo&gáil Isteach"
 
-#: devmgr.button.logout.label
-msgid "Log Out"
-msgstr "Logáil Amach"
+#: devmgr.button.logout.label devmgr.button.logout.accesskey
+msgid "Log &Out"
+msgstr "Logáil A&mach"
 
-#: devmgr.button.changepw.label
-msgid "Change Password"
-msgstr "Athraigh Focal Faire"
+#: devmgr.button.changepw.label devmgr.button.changepw.accesskey
+msgid "Change &Password"
+msgstr "Athraigh an &Focal Faire"
 
-#: devmgr.button.load.label
-msgid "Load"
-msgstr "Luchtaigh"
+#: devmgr.button.load.label devmgr.button.load.accesskey
+msgid "&Load"
+msgstr "&Luchtaigh"
 
-#: devmgr.button.unload.label
-msgid "Unload"
-msgstr "Díluchtaigh"
+#: devmgr.button.unload.label devmgr.button.unload.accesskey
+msgid "&Unload"
+msgstr "&Díluchtaigh"
 
 #: loaddevice.info
 msgid "Enter the information for the module you want to add."
@@ -17946,7 +17987,7 @@ msgstr "Focal Faire Nua:"
 msgid "New password (again):"
 msgstr "Focal Faire Nua (Arís):"
 
-#: resetPassword.title resetPasswordConfirmationTitle
+#: resetPassword.title resetPasswordConfirmationTitle resetpassword.caption
 msgid "Reset Master Password"
 msgstr "Bánaigh an Príomhfhocal Faire"
 
@@ -17995,7 +18036,7 @@ msgstr "Leibhéal Slándála"
 msgid "Use paranoid security settings"
 msgstr "Úsáid socruithe slándála na paranáia"
 
-#: pref.security.general.manageCert.label
+#: pref.security.general.manageCert.label managecerts.caption
 msgid "Manage Certificates"
 msgstr "Bainistiú na dTeastas"
 
@@ -18780,11 +18821,11 @@ msgstr ""
 "Tá an suíomh '%S' ag iarraidh ort an teachtaireacht téacs seo a leanas a "
 "shíniú:"
 
-#: lheader masterpass.label
+#: pref.masterpass.title masterpass.label
 msgid "Master Passwords"
 msgstr "Príomhfhocail Fhaire"
 
-#: managepassword.label
+#: managepassword.caption
 msgid "Master Password Timeout"
 msgstr "Teorainn Ama an Phríomhfhocail Fhaire"
 
@@ -18808,10 +18849,6 @@ msgstr "Murar úsáideadh é le"
 msgid "minutes or longer"
 msgstr "nóiméad nó níos faide"
 
-#: changepassword.label changepassword.accesskey
-msgid "&Change Master Password"
-msgstr "&Athraigh Príomhfhocal Faire"
-
 #: changepassword.text
 msgid ""
 "Your master password protects sensitive information such as web passwords and "
@@ -18824,13 +18861,9 @@ msgstr ""
 msgid "Change Password..."
 msgstr "Athraigh Focal Faire..."
 
-#: resetpassword.label resetpassword.accesskey
-msgid "&Reset Master Password"
-msgstr "Athshoc&raigh Príomhfhocal Faire"
-
 #: resetpassword.text
 msgid ""
-"If you reset your master password, all of your stored web and e-mail "
+"If you reset your master password, all of your stored Web and e-mail "
 "passwords, form data, personal certificates, and private keys will be lost."
 msgstr ""
 "Má athshocraíonn tú do phríomhfhocal faire, caillfear na focail fhaire don "
@@ -18841,6 +18874,10 @@ msgstr ""
 msgid "Reset Password"
 msgstr "Athshocraigh Focal Faire"
 
+#: encryptExpire.label encryptExpire.accesskey
+msgid "&Expire master password after each use."
+msgstr ""
+
 #: security.label
 msgid "Privacy and Security"
 msgstr "Príobháideachas agus Slándáil"
@@ -18849,17 +18886,9 @@ msgstr "Príobháideachas agus Slándáil"
 msgid "SSL"
 msgstr "SSL"
 
-#: validation.label validation.title
+#: validation.label pref.validation.title
 msgid "Validation"
 msgstr "Bailíochtú"
-
-#: security.title
-msgid "Security Preferences"
-msgstr "Sainroghanna Slándála"
-
-#: security.description
-msgid "Settings for Privacy and Security"
-msgstr "Socruithe Príobháideachais agus Slándála"
 
 #: resetsettings.label
 msgid "Reset Settings"
@@ -18868,10 +18897,6 @@ msgstr "Athshocraigh na Socruithe"
 #: resetpreferences.label
 msgid "Reset Preferences..."
 msgstr "Athshocraigh Sainroghanna..."
-
-#: managecerts.label managecerts.accesskey
-msgid "&Manage Certificates"
-msgstr "&Bainistiú na dTeastas"
 
 #: managecerts.text
 msgid ""
@@ -18885,9 +18910,9 @@ msgstr ""
 msgid "Manage Certificates..."
 msgstr "Bainistiú na dTeastas..."
 
-#: managedevices.label managedevices.accesskey
-msgid "Manage &Security Devices"
-msgstr "Bainistiú na nGléas &Slándála"
+#: managedevices.caption
+msgid "Manage Security Devices"
+msgstr "Bainistiú na nGléas Slándála"
 
 #: managedevices.text
 msgid "Use this button to manage your security devices, such as smart cards."
@@ -18899,11 +18924,11 @@ msgstr ""
 msgid "Manage Security Devices..."
 msgstr "Bainistiú na nGléas Slándála..."
 
-#: certs.title
+#: pref.certs.title
 msgid ""
-"_: certs.title\n"
+"_: pref.certs.title\n"
 "Certificates"
-msgstr "Teastais Deimhnithe"
+msgstr "Teastais"
 
 #: certs.label
 msgid ""
@@ -18932,19 +18957,19 @@ msgstr "Teastais Deimhnithe"
 # -   Bob Lord <lord@netscape.com>
 # -   Terry Hayes <thayes@netscape.com>
 # ->
-#: SSLProtocolVersions
+#: SSLProtocolVersions.caption
 msgid "SSL Protocol Versions"
 msgstr "Leagain an Phrótacail SSL"
 
-#: SSLWarnings
+#: SSLWarnings.caption
 msgid "SSL Warnings"
 msgstr "Rabhaidh SSL"
 
-#: SSLClientAuthMethod
+#: SSLClientAuthMethod.caption
 msgid "Client Certificate Selection"
 msgstr "Roghnú Teastas Cliaint"
 
-#: prefheader.title
+#: pref.ssl.title
 msgid "Secure Sockets Layer (SSL)"
 msgstr "Secure Sockets Layer (SSL)"
 
@@ -18952,9 +18977,17 @@ msgstr "Secure Sockets Layer (SSL)"
 msgid "Enable SSL version 2"
 msgstr "Cumasaigh SSL leagan 2"
 
+#: enable.ssl2.accesskey
+msgid "2"
+msgstr "2"
+
 #: enable.ssl3
 msgid "Enable SSL version 3"
 msgstr "Cumasaigh SSL leagan 3"
+
+#: enable.ssl3.accesskey
+msgid "3"
+msgstr "3"
 
 #: enable.tls
 msgid "Enable TLS"
@@ -18963,6 +18996,12 @@ msgstr "Cumasaigh TLS"
 #: edit.sslciphers
 msgid "Edit Ciphers..."
 msgstr "Cuir na sifir in eagar..."
+
+#: edit.sslciphers.accesskey
+msgid ""
+"_: edit.sslciphers.accesskey\n"
+"E"
+msgstr "E"
 
 #: warn.description
 msgid ""
@@ -18990,6 +19029,10 @@ msgstr ""
 #: warn.leavingsecure
 msgid "Leaving a page that supports encryption"
 msgstr "Leathanach a thacaíonn le criptiúchán á fhágáil"
+
+#: warn.leavingsecure.accesskey
+msgid "a"
+msgstr "a"
 
 #: warn.secureredirect
 msgid "Redirecting from one encrypted page to another"
@@ -19020,6 +19063,12 @@ msgstr "Roghnaigh go huathoibríoch"
 #: certselect.ask
 msgid "Ask Every Time"
 msgstr "Fiafraigh gach uair"
+
+#: certselect.ask.accesskey
+msgid ""
+"_: certselect.ask.accesskey\n"
+"E"
+msgstr "E"
 
 # Cipher pref window
 #: cipher.title
@@ -19221,7 +19270,7 @@ msgstr "Sonraí..."
 msgid "Cipher Details"
 msgstr "Sonraí Sifear"
 
-#: validation.crl.label
+#: validation.crl.caption
 msgid "CRL"
 msgstr "Liosta Teastas Cúlghairmthe"
 
@@ -19258,17 +19307,13 @@ msgstr "Nuashonrú uathoibríoch"
 msgid "Auto Update Status"
 msgstr "Stádas an Nuashonrú Uathoibríoch"
 
-#: validation.updatecrl.label
-msgid ""
-"_: validation.updatecrl.label\n"
-"Update"
-msgstr "Nuashonraigh"
+#: validation.updatecrl.label validation.updatecrl.accesskey
+msgid "&Update"
+msgstr "N&uashonraigh"
 
-#: validation.advanced.label
-msgid ""
-"_: validation.advanced.label\n"
-"Settings"
-msgstr "Socruithe"
+#: validation.advanced.label validation.advanced.accesskey
+msgid "&Settings"
+msgstr "Soc&ruithe"
 
 #: validation.crl.autoupdate.title
 msgid "Automatic CRL Update Preferences"
@@ -19277,12 +19322,6 @@ msgstr "Sainroghanna do Nuashonrú Uathoibríoch CRL"
 #: validation.crl.autoupdate.enable.label
 msgid "Enable Automatic Update for this CRL"
 msgstr "Cumasaigh Nuashonrú Uathoibríoch don CRL seo"
-
-#: validation.crl.autoupdate.time.label1
-msgid ""
-"_: validation.crl.autoupdate.time.label1\n"
-"Update"
-msgstr "Nuashonraigh"
 
 #: validation.crl.autoupdate.time.label2
 msgid "Day(s) before Next Update date"
@@ -19332,8 +19371,15 @@ msgstr "Theip ar Nuashonrú go Leanúnach cheana: "
 msgid "Details of Last Update Failure: "
 msgstr "Sonraí faoin uair dheireanach ar theip ar Nuashonrú: "
 
-#: edit.button
-msgid ""
-"_: edit.button\n"
-"Settings"
-msgstr "Socruithe"
+#: disableOCSP.label disableOCSP.accesskey
+msgid "&Do not use OCSP for certificate validation"
+msgstr "&Ná húsáid OCSP do bhailíochtú teastas"
+
+#: certOCSP.label certOCSP.accesskey
+msgid "&Use OCSP to validate only certificates that specify an OCSP service URL"
+msgstr "Ú&sáid OCSP do bhailíochtú teastas lena sannaítear URL le seirbhís OCSP"
+
+#: proxyOCSP.label proxyOCSP.accesskey
+msgid "Use &OCSP to validate all certificates using this URL and signer:"
+msgstr ""
+"Úsáid &OCSP do bhailíochtú teastas uile an URL seo agus an tsínitheora seo:"
