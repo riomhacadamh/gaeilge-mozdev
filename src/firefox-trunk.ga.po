@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-03-04 12:22\n"
+"POT-Creation-Date: 2006-03-11 05:09\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -956,8 +956,8 @@ msgid "New Bookmark..."
 msgstr "Leabharmharc Nua..."
 
 # cmd_bm_newbookmark_accesskey sedtweaked
-#: cmd_bm_newbookmark_accesskey bookmarksSidebarCmd.accesskey
-#: bookmarkCurTab_accesskey loaddevice.browse.accesskey
+#: cmd_bm_newbookmark_accesskey bookmarkCurTab_accesskey
+#: loaddevice.browse.accesskey
 msgid "B"
 msgstr "B"
 
@@ -1257,13 +1257,27 @@ msgid ""
 "d"
 msgstr "m"
 
+#: addCurPagesCmd.label addCurPagesCmd.accesskey
+msgid "Bookmark All &Tabs..."
+msgstr "Leabharmharcáil Gach &Cluaisín..."
+
 #: manBookmarksCmd.label manBookmarksCmd.accesskey
-msgid "&Manage Bookmarks..."
-msgstr "Bainistiú na Leabhar&mharcanna..."
+msgid "Organize Book&marks..."
+msgstr "Eagraigh Leabhar&mharcanna..."
 
 #: bookmarkAllCmd.label bookmarkAllTabs_label
 msgid "Bookmark All Tabs..."
 msgstr "Leabharmharcáil Gach Cluaisín..."
+
+#: searchBookmarksCmd.label searchBookmarksCmd.accesskey
+msgid "&Search in Bookmarks..."
+msgstr "&Cuardaigh Leabharmharcanna..."
+
+#: searchBookmarksCmd.commandkey
+msgid ""
+"_: searchBookmarksCmd.commandkey\n"
+"B"
+msgstr "B"
 
 # "S" under Main -> Gabh and also under right click menu
 #: backCmd.label backCmd.accesskey backButton.label backButton.accesskey
@@ -1373,6 +1387,12 @@ msgstr "Leabharmharcanna"
 #: bookmarksButton.tooltip
 msgid "Display your bookmarks"
 msgstr "Léirigh do Leabharmharcanna"
+
+#: bookmarksSidebarCmd.accesskey
+msgid ""
+"_: bookmarksSidebarCmd.accesskey\n"
+"B"
+msgstr "B"
 
 #: bookmarksSidebarWinCmd.commandkey
 msgid ""
@@ -1590,7 +1610,7 @@ msgstr ""
 
 #: historyClearCmd.label historyClearCmd.accesskey
 msgid "&Clear History..."
-msgstr ""
+msgstr "&Glan an Stair..."
 
 # "G" in main browser window
 #: goMenu.label goMenu.accesskey
@@ -1971,6 +1991,19 @@ msgstr "&Teangacha"
 #: spellAddDictionaries.label spellAddDictionaries.accesskey
 msgid "&Add dictionaries..."
 msgstr "&Cuir foclóirí leis..."
+
+# new bookmarks and history
+#: location.status.not_bookmarked
+msgid "Star (Off)"
+msgstr ""
+
+#: location.status.bookmarked
+msgid "Star (On)"
+msgstr ""
+
+#: location.status.bookmark.tooltip
+msgid "Add a Bookmark to this page"
+msgstr "Cuir Leabharmharc leis an leathanach seo"
 
 #: nv_done done.label saveChanges.label button-finish-mac
 msgid "Done"
@@ -13868,6 +13901,10 @@ msgstr "Bog &Síos"
 msgid "About"
 msgstr "Maidir le"
 
+#: moreInfo.label
+msgid "More Information"
+msgstr "Tuilleadh Eolais"
+
 #: installNow.label
 msgid "Update Now"
 msgstr "Nuashonraigh Anois"
@@ -13943,7 +13980,7 @@ msgstr "Ní thacaítear leis an nuashonrú (suíomh suiteála le cead léite amháin)"
 #: updateNotManagedMessage
 msgid "Update not supported (install location is not managed by %S)."
 msgstr ""
-"Ní thacaítear leis an nuashonrú (níl an suíomh suiteála faoi bhainistíocht ag "
+"Ní thacaítear leis an nuashonrú (níl an suíomh suiteála faoi bhainisteoireacht ag "
 "%S)."
 
 #: restartBeforeEnableTitle
@@ -13961,6 +13998,10 @@ msgstr "Beidh %S cumasaithe tar éis duit %S a atosú."
 #: restartBeforeDisableMessage
 msgid "%S will be disabled when %S is restarted."
 msgstr "Beidh %S díchumasaithe tar éis duit %S a atosú."
+
+#: restartBeforeDisableBlocklisted
+msgid "%S will be disabled when %S is restarted for your protection."
+msgstr ""
 
 #: restartBeforeUninstallTitle
 msgid ""
@@ -14009,6 +14050,20 @@ msgid ""
 "_: uninstallButton\n"
 "Uninstall"
 msgstr "Díshuiteáil"
+
+#: restartButton
+msgid "Restart %S"
+msgstr "Atosaigh %S"
+
+#: laterButton
+msgid ""
+"_: laterButton\n"
+"Later"
+msgstr "Amach Anseo"
+
+#: moreInfoText
+msgid "More information"
+msgstr "Tuilleadh eolais"
 
 #: uninstallTitle
 msgid "Uninstall %S"
@@ -14161,6 +14216,10 @@ msgstr "Díchumasaithe - neamh-chomhoiriúnach le %S %S"
 msgid "Disabled - requires additional items to operate."
 msgstr ""
 
+#: blocklistedDisabled
+msgid "Disabled for your protection"
+msgstr ""
+
 #: invalidGUIDMessage
 msgid ""
 "\"%S\" could not be installed because of an error in its Install Manifest (\"%"
@@ -14187,6 +14246,28 @@ msgstr ""
 "Níorbh fhéidir \"%S\" a shuiteáil toisc nach bhfuil sé comhoiriúnach le "
 "cineál tógála do %S (%S). Téigh i dteagmháil le húdar na míre seo maidir leis "
 "an bhfadhb, le do thoil."
+
+#: blocklistedInstallTitle
+msgid "This extension is not secure"
+msgstr ""
+
+#: blocklistedInstallMsg
+msgid "The extension %S is known to be dangerous, and can't be installed."
+msgstr ""
+
+#: blocklistNotifyTitle
+msgid "Some of your extensions aren't secure"
+msgstr ""
+
+#: blocklistNotifyMsg
+msgid ""
+"A security update to %S has indicated that one or more of your extensions are "
+"no longer considered safe."
+msgstr ""
+
+#: blocklistRestartMsg
+msgid "You should restart %S so that these extensions can be disabled."
+msgstr ""
 
 #: missingFileTitle
 msgid "Missing File"
@@ -14355,9 +14436,11 @@ msgstr ""
 msgid "Install Now"
 msgstr "Suiteáil Anois"
 
-#: updatesAvailableCancel laterButton
-msgid "Later"
-msgstr "Amach Anseo"
+#: updatesAvailableCancel
+msgid ""
+"_: updatesAvailableCancel\n"
+"Later"
+msgstr ""
 
 #: updatesAvailableTitle found.title
 msgid "Updates Found"
@@ -15799,6 +15882,10 @@ msgstr "Sos in íosluchtú %S"
 #: restartButton
 msgid "Restart %S Now"
 msgstr "Atosaigh %S Anois"
+
+#: laterButton
+msgid "Later"
+msgstr "Amach Anseo"
 
 #: restartLaterTitle
 msgid ""
@@ -17782,15 +17869,15 @@ msgstr ""
 
 #: certmgr.editca.label certmgr.editca.accesskey
 msgid "E&dit CA Trust"
-msgstr "&Cuir Muinín na nÚdarás Deimhniúcháin in Eagar"
+msgstr "Cuir Muinín na nÚdarás &Deimhniúcháin in Eagar"
 
 #: certmgr.backup.label certmgr.backup.accesskey
 msgid "&Backup"
-msgstr "Cúl&taca"
+msgstr "&Cúltaca"
 
 #: certmgr.backupall.label certmgr.backupall.accesskey
 msgid "Bac&kup All"
-msgstr "Déan Cúltaca &Iomlán"
+msgstr "Déan Cúl&taca Iomlán"
 
 #: certmgr.restore.label certmgr.restore.accesskey
 msgid "I&mport"
@@ -17806,7 +17893,7 @@ msgstr "&Luach Réimse"
 
 #: certmgr.hierarchy.label certmgr.hierarchy.accesskey
 msgid "&Certificate Hierarchy"
-msgstr "&Ordlathas Teastais"
+msgstr "O&rdlathas Teastais"
 
 # - The contents of this file are subject to the Mozilla Public
 # - License Version 1.1 (the "License"); you may not use this file
@@ -17846,11 +17933,11 @@ msgstr "Lo&gáil Isteach"
 
 #: devmgr.button.logout.label devmgr.button.logout.accesskey
 msgid "Log &Out"
-msgstr "Logáil &Amach"
+msgstr "Logáil A&mach"
 
 #: devmgr.button.changepw.label devmgr.button.changepw.accesskey
 msgid "Change &Password"
-msgstr "Athraigh &Focal Faire"
+msgstr "Athraigh an &Focal Faire"
 
 #: devmgr.button.load.label devmgr.button.load.accesskey
 msgid "&Load"
