@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-03-30 13:27\n"
+"POT-Creation-Date: 2006-04-19 13:49\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1282,7 +1282,8 @@ msgid ""
 msgstr "B"
 
 # "S" under Main -> Gabh and also under right click menu
-#: backCmd.label backCmd.accesskey backButton.label backButton.accesskey
+#: backCmd.label backCmd.accesskey button-back-unix.label
+#: button-back-unix.accesskey backButton.label backButton.accesskey
 msgid "&Back"
 msgstr "&Siar"
 
@@ -1536,7 +1537,7 @@ msgstr "&Cóipeáil"
 # Ctrl+"C" = Cóipeáil; leave alone
 #  collapse_folder accesskey sedtweaked
 #: copyCmd.key copy.key cmd_clearHistory_accesskey copyCmd.commandkey
-#: accesskey-next-mac found.updatetype.patches.accesskey CertDumpAVACountry
+#: found.updatetype.patches.accesskey CertDumpAVACountry
 #: changepassword.accesskey
 msgid "C"
 msgstr "C"
@@ -1997,7 +1998,7 @@ msgstr ""
 msgid "Add a Bookmark to this page"
 msgstr "Cuir Leabharmharc leis an leathanach seo"
 
-#: nv_done done.label saveChanges.label button-finish-mac
+#: nv_done done.label saveChanges.label button-finish-mac.label
 msgid "Done"
 msgstr "Déanta"
 
@@ -2175,25 +2176,22 @@ msgid ""
 "O"
 msgstr "O"
 
-#: xpinstallDisabledWarning
-msgid ""
-"Software installation is currently disabled. Click Edit Options... to enable "
-"it and try again."
+#: xpinstallDisabledMessageLocked
+msgid "Software installation has been disabled by your system administrator."
 msgstr ""
-"Suiteáil bogearraí díchumasaithe faoi láthair. Gliogáil Roghanna chun é a "
-"chumasú."
 
-#: xpinstallDisabledWarningButton
-msgid ""
-"_: xpinstallDisabledWarningButton\n"
-"Edit Options..."
-msgstr "Roghanna..."
+#: xpinstallDisabledMessage
+msgid "Software installation is currently disabled. Click Enable and try again."
+msgstr ""
 
-#: xpinstallDisabledWarningButton.accesskey
-msgid ""
-"_: xpinstallDisabledWarningButton.accesskey\n"
-"O"
-msgstr "O"
+#: xpinstallDisabledButton
+msgid "Enable"
+msgstr "Cumasaigh"
+
+#: xpinstallDisabledButton.accesskey inspectorTaskCmd.accesskey.ff
+#: managepassword.asktimeout.accesskey
+msgid "n"
+msgstr "n"
 
 #: themeWarning
 msgid ""
@@ -3597,7 +3595,8 @@ msgstr "Sábháil Mar..."
 
 # cmd_bm_newseparator sedtweaked
 #: mediaSaveAs.accesskey reportResults.showDetail.accesskey
-#: savePageCmd.commandkey managedevices.accesskey warn.insecurepost.accesskey
+#: submitReport.accesskey savePageCmd.commandkey managedevices.accesskey
+#: warn.insecurepost.accesskey
 msgid "S"
 msgstr "S"
 
@@ -6640,7 +6639,7 @@ msgstr ""
 msgid "Stop script"
 msgstr "Stop an script"
 
-#: WaitForScriptButton button-next-mac Continue serverCertExpired.accept.label
+#: WaitForScriptButton Continue serverCertExpired.accept.label
 msgid "Continue"
 msgstr "Ar Aghaidh"
 
@@ -6682,6 +6681,30 @@ msgid ""
 msgstr ""
 "Déantar tagairt ar eilimint le ID/NAME sa scóip chomhchoiteann. Úsáid "
 "document.getElementById() de réir chaighdeán an W3C ina háit."
+
+#: UseOfCaptureEventsWarning
+msgid "Use of captureEvents() is deprecated, see bug 330494."
+msgstr ""
+
+#: UseOfReleaseEventsWarning
+msgid "Use of releaseEvents() is deprecated, see bug 330494."
+msgstr ""
+
+#: UseOfRouteEventWarning
+msgid "Use of routeEvent() is deprecated, see bug 330494."
+msgstr ""
+
+#: UseOfPreventBubbleWarning
+msgid ""
+"Event=%S, use of preventBubble() is deprecated. Use W3C standard "
+"stopPropagation() instead."
+msgstr ""
+
+#: UseOfPreventCaptureWarning
+msgid ""
+"Event=%S, use of preventCapture() is deprecated. Use W3C standard "
+"stopPropagation() instead."
+msgstr ""
 
 # "left-to-right" -- leave AS IS --KPS
 #: locale.dir
@@ -8863,10 +8886,6 @@ msgstr ""
 msgid "DOM &Inspector"
 msgstr "Scrúda&itheoir DOM"
 
-#: inspectorTaskCmd.accesskey.ff managepassword.asktimeout.accesskey
-msgid "n"
-msgstr "n"
-
 #: inspectPageTaskCmd.label inspectPageTaskCmd.accesskey
 msgid "&Inspect Page"
 msgstr "Scrúdaigh &Leathanach"
@@ -9324,6 +9343,10 @@ msgid ""
 "_: reporterMenu.title\n"
 "Report Broken Web Site"
 msgstr "Seol Tuairisc ar Shuíomh Briste"
+
+#: reporterToolBarButton.title
+msgid "Report Site"
+msgstr ""
 
 #: reporterMenu.tooltip
 msgid ""
@@ -12950,83 +12973,53 @@ msgstr "Foinse DOM an Roghnaithe"
 msgid "DOM Source of MathML"
 msgstr "Foinse DOM MathML"
 
-#: button-back
-msgid "< Back"
-msgstr "< Ar Ais"
+#: button-back-mac.label button-back-mac.accesskey
+msgid "Go &Back"
+msgstr ""
 
-#: accesskey-back
+#: button-next-mac.label button-next-mac.accesskey
+msgid "&Continue"
+msgstr "&Lean ar aghaidh"
+
+#: button-cancel-mac.label
 msgid ""
-"_: accesskey-back\n"
-"B"
-msgstr "B"
-
-#: button-next nextButtonText
-msgid "Next >"
-msgstr "Ar Aghaidh >"
-
-#: accesskey-next
-msgid ""
-"_: accesskey-next\n"
-"N"
-msgstr "N"
-
-#: button-finish
-msgid ""
-"_: button-finish\n"
-"Finish"
-msgstr "Críochnaigh"
-
-#: button-cancel
-msgid ""
-"_: button-cancel\n"
+"_: button-cancel-mac.label\n"
 "Cancel"
 msgstr "Cealaigh"
 
-#: button-back-unix
-msgid "Back"
-msgstr "Siar"
+#: button-next-unix.label button-next-unix.accesskey
+msgid "&Next"
+msgstr "&Ar Aghaidh"
 
-#: accesskey-back-unix
+#: button-finish-unix.label
 msgid ""
-"_: accesskey-back-unix\n"
-"B"
-msgstr "B"
-
-#: button-next-unix
-msgid "Next"
-msgstr "Ar Aghaidh"
-
-#: accesskey-next-unix
-msgid ""
-"_: accesskey-next-unix\n"
-"N"
-msgstr "N"
-
-#: button-finish-unix
-msgid ""
-"_: button-finish-unix\n"
+"_: button-finish-unix.label\n"
 "Finish"
 msgstr "Críochnaigh"
 
-#: button-cancel-unix
+#: button-cancel-unix.label
 msgid ""
-"_: button-cancel-unix\n"
+"_: button-cancel-unix.label\n"
 "Cancel"
 msgstr "Cealaigh"
 
-#: button-back-mac
-msgid "Go Back"
-msgstr "Siar"
+#: button-back-win.label button-back-win.accesskey
+msgid "&lt; &Back"
+msgstr "&lt; &Siar"
 
-#: accesskey-back-mac
-msgid ""
-"_: accesskey-back-mac\n"
-"B"
-msgstr "B"
+#: button-next-win.label button-next-win.accesskey
+msgid "&Next &gt;"
+msgstr "&Ar Aghaidh &gt;"
 
-#: button-cancel-mac
+#: button-finish-win.label
 msgid ""
-"_: button-cancel-mac\n"
+"_: button-finish-win.label\n"
+"Finish"
+msgstr "Críochnaigh"
+
+#: button-cancel-win.label
+msgid ""
+"_: button-cancel-win.label\n"
 "Cancel"
 msgstr "Cealaigh"
 
@@ -14692,6 +14685,10 @@ msgstr "C"
 msgid "Don't Check"
 msgstr "Ná Seiceáil"
 
+#: nextButtonText
+msgid "Next >"
+msgstr "Ar Aghaidh >"
+
 #: cancelButtonTextAccesskey
 msgid ""
 "_: cancelButtonTextAccesskey\n"
@@ -15195,6 +15192,10 @@ msgstr ""
 msgid "To begin creating your profile, click Next."
 msgstr "Chun próifíl a chruthú, gliogáil Ar Aghaidh."
 
+#: profileCreationExplanation_4Mac.text
+msgid "To begin creating your profile, click Continue."
+msgstr "Chun próifíl a chruthú, gliogáil Lean ar aghaidh."
+
 # Second wizard page
 #: profileCreationIntro.text
 msgid ""
@@ -15400,6 +15401,10 @@ msgstr "Próifíl ann cheana"
 #: profileFinishText
 msgid "Click Finish to create this new profile."
 msgstr "Gliogáil Críochnaigh chun an phróifíl nua a chruthú."
+
+#: profileFinishTextMac
+msgid "Click Done to create this new profile."
+msgstr "Gliogáil Déanta chun an phróifíl nua a chruthú."
 
 #: errors.title
 msgid "Errors"
@@ -17249,6 +17254,12 @@ msgid ""
 msgstr ""
 "Earráid agus an teastas ó %S á bhailíochtú le OCSP - earráid ag cuardach an "
 "eolaire."
+
+#: OCSPDeadlock
+msgid ""
+"An internal failure has been detected. It is not possible to complete the "
+"requested OCSP operation."
+msgstr ""
 
 #: CertInfoIssuedFor
 msgid "Issued to:"
