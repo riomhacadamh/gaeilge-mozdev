@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-04-19 13:49\n"
+"POT-Creation-Date: 2006-05-31 17:33\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -6878,7 +6878,7 @@ msgstr "Níl aon réimse ar féidir é a líonadh roimh ré."
 msgid "Never for this site"
 msgstr "Choíche don suíomh seo"
 
-#: Confirm
+#: Confirm confirmResetJunkTrainingTitle
 msgid "Confirm"
 msgstr "Dearbhaigh"
 
@@ -7080,8 +7080,8 @@ msgid ""
 "%S is not currently set as your default browser. Would you like to make it "
 "your default browser?"
 msgstr ""
-"Níl %S curtha mar bhrabhsálaí réamhshocraithe. Ar mhaith leat é a chur mar "
-"bhrabhsálaí réamhshocraithe?"
+"Níl %S curtha mar bhrabhsálaí réamhshocraithe. An bhfuil tú ag iarraidh é a "
+"shocrú mar bhrabhsálaí réamhshocraithe?"
 
 #: prefsLabel
 msgid "Pr&eferences"
@@ -8149,6 +8149,7 @@ msgid "Advanced address search"
 msgstr "Ardchuardach seoltaí"
 
 #: quickSearchCmd.key appCheckNow.accesskey focusSearch2.key
+#: markAsReadOnSpam.acesskey
 msgid "k"
 msgstr "k"
 
@@ -8643,6 +8644,14 @@ msgstr "%S cárta cóipeáilte"
 #: cardCopied
 msgid "1 card copied"
 msgstr "Cárta amháin cóipeáilte"
+
+#: cardsMoved
+msgid "%S cards moved"
+msgstr ""
+
+#: cardMoved
+msgid "1 card moved"
+msgstr ""
 
 #: invalidName
 msgid "Please enter a valid Name."
@@ -9562,6 +9571,53 @@ msgstr "Socruithe Aitheantais"
 msgid "Configure the settings for this identity:"
 msgstr "Cumraigh na socruithe don aitheantas seo:"
 
+#: junkSettings.label prefPanel-junk
+msgid "Junk Settings"
+msgstr "Socruithe Dramhphoist"
+
+#: trainingWarning.label
+msgid ""
+"If enabled, you must first train &brandShortName; to identify junk mail by "
+"using the Junk toolbar button to mark messages as junk or not. You need to "
+"identify both junk and non junk messages."
+msgstr ""
+"Má tá seo cumasaithe, caithfidh tu &brandShortName; a thraenáil ar dtús chun "
+"dramhphost a aithint. Úsáid an cnaipe 'Dramhphost' ar an mbarra uirlisí chun "
+"teachtaireachtaí a mharcáil mar dhramhphost nó mar phost ceart. Caithfidh tú "
+"idir idir dhramhphost agus phost ceart a mharcáil."
+
+#: level.label level.accesskey
+msgid "&Enable adaptive junk mail controls for this account"
+msgstr "&Cumasaigh rialtáin oiriúnaitheacha dramhphoist don chuntas seo"
+
+#: move.label
+msgid "Move new junk messages to:"
+msgstr "Bog teachtaireachtaí nua dramhphoist go:"
+
+#: junkFolderOn.label
+msgid "&quot;Junk&quot; folder on:"
+msgstr "Fillteán &quot;Dramhphost&quot; ar:"
+
+#: otherFolder.label
+msgid "Other:"
+msgstr "Eile:"
+
+#: purge1.label purge1.accesskey
+msgid "A&utomatically delete junk mail older than"
+msgstr "Baint &uathoibríoch de theachtaireachtaí dramhphoist níos sine ná"
+
+#: purge2.label days.label daysEnd.label
+msgid "days"
+msgstr "lá is déanaí"
+
+#: whitelist.label whitelist.accesskey
+msgid "&Do not mark mail as junk if the sender is in: "
+msgstr "&Ná marcáil teachtaireachtaí mar dhramhphost má tá an seoltóir i: "
+
+#: ispHeaders.label ispHeaders.accesskey
+msgid "&Trust junk mail headers set by: "
+msgstr "Cuir muinín i gceann&tásca dramhphoist a shocraigh:"
+
 #: accountName.label accountName.accesskey
 msgid "Account &Name:"
 msgstr "Ai&nm an Chuntais:"
@@ -9714,10 +9770,6 @@ msgstr "Teachtaireachtaí níos &mó ná"
 #: kb.label
 msgid "KB"
 msgstr "KB"
-
-#: days.label daysEnd.label
-msgid "days"
-msgstr "lá is déanaí"
 
 #: daysOld.label
 msgid "days old"
@@ -10896,7 +10948,7 @@ msgstr "gan"
 msgid "F&ilter name:"
 msgstr "A&inm an scagaire:"
 
-#: junk.label junkButton.label
+#: junk.label junkButton.label itemJunk.label
 msgid "Junk"
 msgstr "Dramhphost"
 
@@ -12471,150 +12523,6 @@ msgstr ""
 "Roghnaigh an phróifíl ina bhfuil an Ríomhphost Logánta a theastaíonn uait é a "
 "iompórtáil:"
 
-#: junkLog.title
-msgid "Junk Mail Log"
-msgstr "Loga Dramhphoist"
-
-#: junkLogInfo.text
-msgid ""
-"The Junk Mail Log documents the junk mail control activity on this account.  "
-"Use the check box below to enable logging."
-msgstr ""
-"Coimeádann an Loga Dramhphoist taifead ar ghníomhaíocht na rialtán "
-"dramhphoist don chuntas seo. Úsáid an ticbhosca thíos le logáil a chumasú."
-
-#: clearLog.label clearLog.accesskey
-msgid "&Clear Log"
-msgstr "&Glan an Loga"
-
-#: enableLog.label enableLog.accesskey
-msgid "&Enable the Junk Mail Log"
-msgstr "&Cumasaigh Logáil Dramhphoist"
-
-#: closeLog.label closeLog.accesskey button.close.label button.close.accesskey
-msgid "Cl&ose"
-msgstr "&Dún"
-
-#: window.title
-msgid "Junk Mail Controls"
-msgstr "Rialtáin Dramhphoist"
-
-#: mainDescription.label
-msgid ""
-"&brandShortName; has several ways to detect junk mail. These controls "
-"evaluate incoming messages and identify those that are most likely to be junk "
-"mail."
-msgstr ""
-"Is féidir le &brandShortName; dramhphost a aithint ar bhealaí éagsúla. "
-"Scrúdaíonn na rialtáin seo teachtaireachtaí ag teacht isteach agus aithníonn "
-"siad na cinn gur dócha gur dramhphost iad."
-
-#: adaptiveTab.label
-msgid ""
-"_: adaptiveTab.label\n"
-"Adaptive Filter"
-msgstr "Scagaire Oiriúnaitheach"
-
-# Settings tab
-#: move.label
-msgid "Move incoming messages determined to be junk mail to:"
-msgstr "Bog teachtaireachtaí isteach ar dhramhphost iad go:"
-
-#: otherFolder.label
-msgid "Other:"
-msgstr "Eile:"
-
-#: junkFolderOn.label
-msgid "&quot;Junk&quot; folder on:"
-msgstr "Fillteán &quot;Dramhphost&quot; ar:"
-
-#: purge1.label purge1.accesskey
-msgid "A&utomatically delete junk messages older than"
-msgstr "Baint &uathoibríoch de theachtaireachtaí dramhphoist níos sine ná"
-
-#: purge2.label
-msgid "days from this folder"
-msgstr "lá ón bhfillteán seo"
-
-#: manualMark.label
-msgid "When I manually mark messages as Junk:"
-msgstr "Agus teachtaireachtaí marcáilte mar Dhramhphost agam de láimh:"
-
-#: manualMarkModeMove.label
-msgid "Move them to the &quot;Junk&quot; folder"
-msgstr "Bog go dtí an fillteán &quot;Dramhphost&quot; iad"
-
-#: manualMarkModeDelete.label
-msgid "Delete them"
-msgstr "Scrios iad"
-
-#: renderWithSafeHtml.label
-msgid "When displaying HTML messages marked as junk, sanitize the HTML"
-msgstr ""
-"Agus teachtaireachtaí HTML atá marcáilte mar dhramhphost á dtaispeáint, "
-"íonghlan an HTML"
-
-#: log.label
-msgid "Logging"
-msgstr "Logáil"
-
-#: handling.label
-msgid "Handling"
-msgstr "Láimhseáil"
-
-#: account.label account.accesskey
-msgid "&Configure Junk Settings for:"
-msgstr "&Cumraigh na Socruithe Dramhphoist do:"
-
-#: viewLog.label viewLog.accesskey
-msgid "&Junk Mail Log"
-msgstr "Lo&ga Dramhphoist"
-
-#: loggingDescription.label
-msgid "View and configure junk mail logging."
-msgstr "Taispeáin agus cumraigh logáil an dramhphoist."
-
-#: adaptiveCaption.label
-msgid ""
-"_: adaptiveCaption.label\n"
-"Adaptive Filter"
-msgstr "Scagaire Oiriúnaitheach"
-
-#: trainingWarning.label
-msgid ""
-"If enabled, you must first train &brandShortName; to identify junk mail by "
-"using the Junk toolbar button to mark messages as junk or not. You need to "
-"identify both junk and non junk messages."
-msgstr ""
-"Má tá seo cumasaithe, caithfidh tu &brandShortName; a thraenáil ar dtús chun "
-"dramhphost a aithint. Úsáid an cnaipe 'Dramhphost' ar an mbarra uirlisí chun "
-"teachtaireachtaí a mharcáil mar dhramhphost nó mar phost ceart. Caithfidh tú "
-"idir idir dhramhphost agus phost ceart a mharcáil."
-
-#: level.label level.accesskey
-msgid "&Enable adaptive junk mail detection"
-msgstr "Cumasaigh brath oiriúnaith&each an dramhphoist"
-
-#: resetTrainingDescription.label
-msgid ""
-"Resetting the training data used by the adaptive filter requires you to "
-"retrain the filter:"
-msgstr ""
-"Ní mór an scagaire a atraenáil tar éis na sonraí traenála a úsáideann an "
-"scagaire oiriúnaitheach a ghlanadh:"
-
-#: resetTrainingData.label resetTrainingData.accesskey
-msgid "&Reset Training Data"
-msgstr "Glan na son&raí traenála"
-
-#: whitelist.label whitelist.accesskey
-msgid "&Do not mark messages as junk if the sender is in: "
-msgstr "Ná marcáil teachtaireachtaí mar &dhramhphost má tá an seoltóir i:"
-
-#: ispHeaders.label ispHeaders.accesskey
-msgid "&Trust junk mail headers set by: "
-msgstr "Cuir muinín i gceann&tásca dramhphoist a shocraigh:"
-
 #: window.title
 msgid "About Junk Mail"
 msgstr "Maidir le Dramhphost"
@@ -13040,9 +12948,9 @@ msgstr "Cu&ardaigh Seoltaí..."
 msgid "S&earch Messages..."
 msgstr "Cuardaigh T&eachtaireachtaí..."
 
-#: javaScriptConsoleCmd.label javaScriptConsoleCmd.accesskey
-msgid "Java&Script Console"
-msgstr "Consól &JavaScript"
+#: errorConsoleCmd.label errorConsoleCmd.accesskey
+msgid "Error Con&sole"
+msgstr ""
 
 #: MailNews
 msgid "&Mail && Newsgroups"
@@ -13126,8 +13034,8 @@ msgid ""
 "%S is not currently set as your default news application.  Would you like to "
 "make it your default news application?"
 msgstr ""
-"Ní hé %S an feidhmchlár nuachta réamhshocraithe faoi láthair. An bhfuil tú ag iarraidh "
-"é a úsáid mar an feidhmchlár nuachta réamhshocraithe?"
+"Ní hé %S an feidhmchlár nuachta réamhshocraithe faoi láthair. An bhfuil tú ag "
+"iarraidh é a úsáid mar an feidhmchlár nuachta réamhshocraithe?"
 
 #: setDefaultFeed
 msgid ""
@@ -15378,21 +15286,9 @@ msgstr "&Oscail Teachtaireacht"
 msgid "&Window"
 msgstr "&Fuinneog"
 
-#: extensions.label extensions.accesskey
-msgid "&Extensions"
-msgstr "&Eisínteachtaí"
-
-#: extensions.tooltip
-msgid "Show and Manage installed Extensions"
-msgstr "Léiriú agus Bainistiú Eisínteachtaí Suiteáilte"
-
-#: themes.label themes.accesskey
-msgid "&Themes"
-msgstr "&Téamaí"
-
-#: themes.tooltip
-msgid "Change the Theme"
-msgstr "Athraigh an Téama"
+#: addons.label addons.accesskey
+msgid "A&dd-ons"
+msgstr "&Breiseáin"
 
 #: messengerCmd.commandkey
 msgid ""
@@ -15418,9 +15314,9 @@ msgstr "Rith na Rialtái&n Dramhphoist san Fhillteán"
 msgid "De&lete Mail Marked as Junk in Folder"
 msgstr "Scrios Post Marcái&lte mar Dhramhphost san Fhillteán"
 
-#: javaScriptConsoleCmd.label javaScriptConsoleCmd.accesskey
-msgid "JavaScript Co&nsole"
-msgstr "Co&nsól JavaScript"
+#: errorConsoleCmd.label errorConsoleCmd.accesskey
+msgid "Error Co&nsole"
+msgstr ""
 
 #: filtersCmd.label filtersCmd.accesskey
 msgid "Message &Filters..."
@@ -16769,19 +16665,6 @@ msgstr "Deimhnigh"
 msgid "Opening %S messages may be slow.  Continue?"
 msgstr ""
 "D'fhéadfadh oscailt %S teachtaireacht a bheith mall. Lean ar aghaidh leis?"
-
-# for checking if the user really wants to delete the adaptive filter training set
-#: confirmResetJunkTrainingTitle
-msgid ""
-"_: confirmResetJunkTrainingTitle\n"
-"Confirm"
-msgstr "Deimhnigh"
-
-#: confirmResetJunkTrainingText
-msgid "Are you sure you want to reset the adaptive filter training data?"
-msgstr ""
-"An bhfuil tu cinnte go dteastaíonn uait sonraí traenála an scagaire "
-"oiriúnaithigh a bhánú?"
 
 # for the virtual folder list dialog title
 # %S is the name of the saved search folder
@@ -19148,6 +19031,10 @@ msgstr "C&uardaigh:"
 msgid "C&lear"
 msgstr "&Bánaigh"
 
+#: button.close.label button.close.accesskey closeLog.label closeLog.accesskey
+msgid "Cl&ose"
+msgstr "&Dún"
+
 #: askOnSave.label
 msgid "Attachments Folder"
 msgstr "Fillteán na nIatán"
@@ -19497,6 +19384,18 @@ msgstr "Athchóirigh na Réamhshocruithe:"
 msgid "&Restore"
 msgstr "Athchói&righ"
 
+#: junkLog.title
+msgid "Junk Mail Log"
+msgstr "Loga Dramhphoist"
+
+#: junkLogInfo.label
+msgid "Log of junk mail control activity."
+msgstr ""
+
+#: clearLog.label clearLog.accesskey
+msgid "&Clear Log"
+msgstr "&Glan an Loga"
+
 #: notificationsDialog.title
 msgid "New Mail Sound"
 msgstr "Fuaim Nua Ríomhphoist"
@@ -19582,6 +19481,12 @@ msgstr "Earráid in Ainm Fearainn"
 #: domainDuplicationError
 msgid "The domain name %S already exists in the HTML or Plain Text lists."
 msgstr "Tá an t-ainm fearainn %S sna liostaí HTML nó gnáththéacs cheana."
+
+#: confirmResetJunkTrainingText
+msgid "Are you sure you want to reset the adaptive filter training data?"
+msgstr ""
+"An bhfuil tu cinnte go dteastaíonn uait sonraí traenála an scagaire "
+"oiriúnaithigh a bhánú?"
 
 #: setMasterPassword
 msgid "Set Master Password..."
@@ -19762,6 +19667,39 @@ msgstr "Ce&adaigh cianíomhánna má tá an seoltóir i mo:"
 #: enbJsCheckMailNews.label enbJsCheckMailNews.accesskey
 msgid "Block &JavaScript in mail messages"
 msgstr "Cosc ar &JavaScript i dteachtaireachtaí ríomhphoist"
+
+# Junk Mail Controls
+#: junkMail.intro
+msgid "Goto Account Settings to configure account specific junk mail settings."
+msgstr ""
+
+#: manualMark.label
+msgid "When I mark messages as junk:"
+msgstr "Agus teachtaireachtaí marcáilte mar dhramhphost agam:"
+
+#: manualMarkModeMove.label
+msgid "Move them to the account's &quot;Junk&quot; folder"
+msgstr "Bog go dtí an fillteán quot;Dramhphost&quot; don chuntas seo iad"
+
+#: markAsReadOnSpam.label
+msgid "Mark messages determined to be Junk as read"
+msgstr ""
+
+#: manualMarkModeDelete.label
+msgid "Delete them"
+msgstr "Scrios iad"
+
+#: enableJunkLogging.label enableJunkLogging.accesskey
+msgid "Enable junk filter lo&gging"
+msgstr ""
+
+#: openJunkLog.label openJunkLog.accesskey
+msgid "S&how log"
+msgstr "&Taispeáin an logchomhad"
+
+#: resetTrainingData.label resetTrainingData.accesskey
+msgid "Reset Training &Data"
+msgstr "Glan na Sonraí &Traenála"
 
 # Phishing Detector
 #: phishingDetector.intro
