@@ -41,8 +41,8 @@ then
 	cp tbird-defines.inc ${IRISHJAR}/defines.inc
 	cat tb-installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
 fi
-rm -f "${IRISHJAR}.jar"
-jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
+#rm -f "${IRISHJAR}.jar"
+#jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
 mv -f "${IRISHJAR}" "${PACK}"
 cp -Rf ${PACK} "${CVSFULLPATH}"
 mv -f "${PACK}" "${IRISHJAR}"
