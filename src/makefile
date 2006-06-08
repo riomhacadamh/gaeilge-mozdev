@@ -19,10 +19,11 @@ CVSDIREC=moz1.8
 CVSFULLPATH=${HOME}/seal/$(CVSDIREC)/l10n/ga-IE
 COMPENDIUM=firefox-$(VERSION).ga.po
 TBCOMPENDIUM=tbird-$(VERSION).ga.po
+CALCOMPENDIUM=calendar-$(VERSION).ga.po
 UTFCOMP=mozilla-$(VERSION).po
 PARALLEL = ${HOME}/gaeilge/diolaim/comp
 
-all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar editor-ga-IE.jar mail-ga-IE.jar
+all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar editor-ga-IE.jar mail-ga-IE.jar calendar-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
 	- perl -w compare-locales.pl extensions-en-US extensions-ga-IE
 	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
@@ -32,10 +33,11 @@ all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-
 	- perl -w compare-locales.pl security-en-US security-ga-IE
 	- perl -w compare-locales.pl editor-en-US editor-ga-IE
 	- perl -w compare-locales.pl mail-en-US mail-ga-IE
+	- perl -w compare-locales.pl calendar-en-US calendar-ga-IE
 
-$(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM)
+$(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM)
 	rm -f $(UTFCOMP)
-	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) | iconv -f iso-8859-1 -t utf-8 | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
+	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM) | iconv -f iso-8859-1 -t utf-8 | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
 	chmod 444 $(UTFCOMP)
 
 browser-ga-IE.jar : $(UTFCOMP)
@@ -74,6 +76,10 @@ mail-ga-IE.jar : $(UTFCOMP)
 	bash moznua mail-en-US $(VERSION)
 	bash mozdist mail-en-US $(CVSFULLPATH)
 
+calendar-ga-IE.jar : $(UTFCOMP)
+	bash moznua calendar-en-US $(VERSION)
+	bash mozdist calendar-en-US $(CVSFULLPATH)
+
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
 	cat $(PARALLEL)/firefox | tokenize | keepif /usr/local/share/crubadan/ga/GLAN latin-1 | keepif -n freqtemp.txt latin-1 | mutate -d | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -r -n | egrep -v ' [123] ' | sed 's/^ *[0-9]* //' | sort -u | keepif /usr/local/share/crubadan/ga/GLAN latin-1
@@ -87,7 +93,7 @@ pcorpus : FORCE
 
 
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po
 	rm -fR langpack-build-dir
 
 ###########################################################################
@@ -99,6 +105,8 @@ obair.po : FORCE
 	$(MAKE) $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
 	bash mozcat browser-en-US
+	bash moznua calendar-en-US $(VERSION)
+	bash mozcat calendar-en-US
 	bash moznua dom-en-US $(VERSION)
 	bash mozcat dom-en-US
 	bash moznua extensions-en-US $(VERSION)
@@ -118,6 +126,7 @@ obair.po : FORCE
 	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
 	msgcat -t iso-8859-1 editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
 	sed -i 's/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
+	msgcat -t iso-8859-1 calendar-ga-IE.po > cal_obair.po
 #	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po
 
 FORCE :
