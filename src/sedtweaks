@@ -6,6 +6,10 @@ rm -f aistr.8.txt
 sed -i '/>Name Here</s/.*/<!ENTITY credit.translation\n  "<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>">/' browser-ga-IE/chrome/browser/credits.dtd
 sed -i '/^<!ENTITY credit.translation "">/d' browser-ga-IE/chrome/browser/credits.dtd
 
+# https://bugzilla.mozilla.org/show_bug.cgi?id=340723
+sed -i '/pref.showConnections.label/s/.*/\n#ifdef MOZ_SUNBIRD\n&/' calendar-ga-IE/chrome/calendar/prefs.dtd
+sed -i '/pref.connectionsInfo.caption/s/.*/&\n#endif\n/' calendar-ga-IE/chrome/calendar/prefs.dtd
+
 sed -i '/^VK_ALT=/s/.*/VK_ALT=\\u0007/' toolkit-ga-IE/chrome/global-platform/mac/platformKeys.properties
 sed -i '/cmd_cut_accesskey/s/.*/cmd_cut_accesskey=g/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 sed -i '/cmd_bm_newseparator_accesskey/s/.*/cmd_bm_newseparator_accesskey=t/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
