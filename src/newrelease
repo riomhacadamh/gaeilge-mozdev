@@ -1,0 +1,62 @@
+#!/bin/bash
+if [ $# -ne 1 ]
+then
+	echo "Usage: newrelease [-b|-t]"
+	echo "Use -b for 1.8 branch (v. 1.5+), -t for trunk"
+	exit
+fi
+PONAME='trunk'
+SRCDIR='moz'
+if [ $1 = "-b" ]
+then
+	PONAME='1.5'
+	SRCDIR='moz1.8'
+fi
+
+# commit any outstanding changes to PO files
+cvs commit -m "outstanding changes before sync" firefox-${PONAME}.ga.po tbird-${PONAME}.ga.po calendar-${PONAME}.ga.po
+
+
+#  Updates CVS and creates new *en-US files in this dir
+cd ~/gaeilge/gnu/mozilla/gaeilge/src
+rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US
+mkdir -p other-licenses-en-US/branding
+mkdir extensions-en-US security-en-US editor-en-US
+mkdir extensions-en-US/inspector
+cd ~/seal/$SRCDIR/mozilla
+cvs update -d browser calendar dom editor extensions mail netwerk other-licenses security toolkit
+cp -Rf browser/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US
+cp -Rf calendar/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/calendar-en-US
+cp -Rf dom/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/dom-en-US
+cp -Rf extensions/reporter/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/reporter
+cp -Rf extensions/inspector/resources/locale/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/inspector/resources
+cp -Rf netwerk/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/netwerk-en-US
+cp -Rf toolkit/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/toolkit-en-US
+cp -Rf other-licenses/branding/firefox/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/firefox
+cp -Rf other-licenses/branding/thunderbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/thunderbird
+cp -Rf security/manager/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/security-en-US/manager
+cp -Rf editor/ui/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/editor-en-US/ui
+cp -Rf mail/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US
+
+# HACKS until these files are cleaned up in CVS or translate toolkit works
+sed -i 's/> \(<!ENTITY subscribeImap\)/>\n\1/' ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US/chrome/messenger/msgAccountCentral.dtd
+sed -i '/^<!-- commenting/d; /<!ENTITY messagesHeader.label/d' ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US/chrome/messenger/subscribe.dtd
+# next two uncomment the "credit.translation" field
+sed -i 's/credit.translation "/&<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>/' ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US/chrome/messenger/credits.dtd
+sed -i '1,2d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/overrides/netError.dtd
+
+cd ~/gaeilge/gnu/mozilla/gaeilge/src
+find *-en-US -name 'CVS' | xargs rm -fR
+diff -u installer-en.inc browser-en-US/installer/installer.inc
+
+# set up variables in makefile; need "VERSION" correct
+# before translation starts since moznua needs it
+sed -i "/^VERSION/s/.*/VERSION=$PONAME/" makefile
+sed -i "/^CVSDIREC/s/.*/CVSDIREC=$SRCDIR/" makefile
+
+
+make obair.po
+
+
+cpo -q *${PONAME}.ga.po
+cpo -q *obair.po
