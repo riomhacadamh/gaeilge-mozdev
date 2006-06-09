@@ -101,6 +101,7 @@ clean :
 ###########################################################################
 
 obair.po : FORCE
+	sed -i '/tempe/s/^/#/' moznua
 	rm -f $(UTFCOMP)
 	$(MAKE) $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
@@ -127,6 +128,8 @@ obair.po : FORCE
 	msgcat -t iso-8859-1 editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
 	sed -i 's/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
 	msgcat -t iso-8859-1 calendar-ga-IE.po > cal_obair.po
+	sed -i '/tempe/s/^#//' moznua
+	sed -i '1d' obair.po
 #	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po
 
 FORCE :
