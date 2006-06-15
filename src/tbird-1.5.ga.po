@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-06-08 17:47\n"
+"POT-Creation-Date: 2006-06-15 20:10\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -349,7 +349,7 @@ msgid ""
 "w"
 msgstr "w"
 
-#: exitCmd.label quitButton quitComposeWindowQuitButtonLabel
+#: exitCmd.label quitComposeWindowQuitButtonLabel
 msgid "Quit"
 msgstr "Scoir"
 
@@ -695,7 +695,7 @@ msgstr "Carachtair agus Siombailí..."
 # Ctrl+"C" = Cóipeáil; leave alone
 #  collapse_folder accesskey sedtweaked
 #: insertchars.accesskey centerRadio.accessKey copyCmd.key
-#: checkMailNow.accesskey
+#: cancelDownloadButtonAccessKey checkMailNow.accesskey
 msgid "C"
 msgstr "C"
 
@@ -3066,7 +3066,7 @@ msgstr ""
 
 #: Click
 msgid "Click"
-msgstr "Gliogáil"
+msgstr "Cliceáil"
 
 #: Drag
 msgid "Drag"
@@ -6523,7 +6523,8 @@ msgstr "Y"
 msgid "X"
 msgstr "X"
 
-#: deleteCmd.key fieldMapImport.down.accesskey detachLabelAccesskey
+#: deleteCmd.key downloadButtonAccessKey fieldMapImport.down.accesskey
+#: detachLabelAccesskey
 msgid "D"
 msgstr "D"
 
@@ -9156,10 +9157,6 @@ msgstr ""
 "Is féidir leat cóip logánta den chomhadlann seo a íosluchtú ionas go mbeidh "
 "sé ar fáil duit agus tú ag obair as líne."
 
-#: downloadNowButton.label downloadNowButton.accesskey
-msgid "&Download Now"
-msgstr "Íos&luchtaigh Anois"
-
 # Localization note: this is here because the width of the dialog
 # is determined by the width of the base DN box; and that is likely
 # to vary somewhat with the language.
@@ -9231,18 +9228,6 @@ msgid ""
 "LDAP Directory Server"
 msgstr "Freastalaí Eolaire LDAP"
 
-#: status.label folderQuotaStatus.label status
-msgid "Status:"
-msgstr "Stádas:"
-
-#: progress.label progress
-msgid "Progress:"
-msgstr "Dul chun cinn:"
-
-#: replicationCancel.label replicationCancel.accesskey
-msgid "&Cancel"
-msgstr "&Cealaigh"
-
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
 #
@@ -9296,47 +9281,23 @@ msgstr "D'éirigh leis an macasamhlú"
 msgid "Replication failed"
 msgstr "Theip ar an mhacasamhlú"
 
+#: replicationCancelled
+msgid "Replication cancelled"
+msgstr ""
+
 # LOCALIZATION NOTE
 # do not localize %S.  %S is the current entry number (an integer)
 #: currentCount
 msgid "Replicating directory entry: %S"
 msgstr "Iontráil eolaire á macasamhlú: %S"
 
-# LOCALIZATION NOTE
-# do not localize %S.  %S is the current address book name
-#: replicatingTitle
-msgid "Replicating %S"
-msgstr "%S á mhacasamhlú"
+#: downloadButton
+msgid "Download Now"
+msgstr "Íosluchtaigh Anois"
 
-#: replicationOfSameInProgress
-msgid "A replication of this directory is already in progress."
-msgstr "Tá macasamhlú den eolaire seo ar siúl cheana."
-
-#: replicationOfOtherInProgress
-msgid ""
-"A replication of another directory is already in progress.  You can only "
-"replicate one directory at a time."
-msgstr ""
-"Tá macasamhlú d'eolaire eile ar siúl. Ní féidir ach eolaire amháin a "
-"mhacasamhlú ag an am céanna."
-
-#: mustBeOnlineToReplicate
-msgid "You must be online to replicate a directory."
-msgstr "Caithfidh tú bheith ar líne chun eolaire a mhacasamhlú."
-
-# LOCALIZATION NOTE
-# do not localize %S.  %S is the product name.
-#: replicationInProgress
-msgid ""
-"%S is currently in the process of replicating an address book.  Would you "
-"like to wait until the process has completed before quitting or quit now?"
-msgstr ""
-"Tá leabhar seoltaí á mhacasamhlú ag %S faoi láthair. An mian leat fanacht go "
-"gcríochnóidh an próiseas roimh scor, nó scoir anois?"
-
-#: waitButton quitComposeWindowWaitButtonLabel
-msgid "Wait"
-msgstr "Fan"
+#: cancelDownloadButton
+msgid "Cancel Download"
+msgstr "Cealaigh Íosluchtú"
 
 # #-#-#-#-#  tmp.XXXXusU6as.po (thunderbird)  #-#-#-#-#
 # extracted from am-addressing.xul
@@ -9611,7 +9572,7 @@ msgstr "Baint &uathoibríoch de theachtaireachtaí dramhphoist níos sine ná"
 
 #: purge2.label days.label daysEnd.label
 msgid "days"
-msgstr "lá is déanaí"
+msgstr "lá anuas"
 
 #: whitelist.label whitelist.accesskey
 msgid "&Do not mark mail as junk if the sender is in: "
@@ -11344,6 +11305,10 @@ msgstr "Fréamh an Chuóta:"
 #: folderQuotaUsage.label
 msgid "Usage:"
 msgstr "Úsáid:"
+
+#: folderQuotaStatus.label status
+msgid "Status:"
+msgstr "Stádas:"
 
 # The following are used by the imap code to display progress/status/error messages
 #
@@ -13925,6 +13890,10 @@ msgstr ""
 "Ar mhaith leat fanacht go dtí go mbeidh an teachtaireacht seolta roimh scor, "
 "nó scor anois?"
 
+#: quitComposeWindowWaitButtonLabel
+msgid "Wait"
+msgstr "Fan"
+
 # # Strings used by prompt for Ctrl-Enter check before sending message
 #: sendMessageCheckWindowTitle
 msgid ""
@@ -14437,6 +14406,10 @@ msgstr "Teachtaireachtaí á Sábháil -"
 #: titlePrefixSend
 msgid "Sending Messages -"
 msgstr "Teachtaireachtaí á Seoladh -"
+
+#: progress
+msgid "Progress:"
+msgstr "Dul chun cinn:"
 
 # This string is used to format the text to the right of the progress
 # meter.
@@ -15651,7 +15624,7 @@ msgstr "Iatáin"
 
 #: columnChooser.tooltip
 msgid "Click to select columns to display"
-msgstr "Gliogáil chun colúin a roghnú le cur ar taispeáin"
+msgstr "Cliceáil chun colúin a roghnú le cur ar taispeáin"
 
 #: threadColumn.tooltip
 msgid "Click to display message threads"
