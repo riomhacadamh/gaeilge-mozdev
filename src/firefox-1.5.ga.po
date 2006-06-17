@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-06-16 03:52\n"
+"POT-Creation-Date: 2006-06-17 12:32\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -573,7 +573,7 @@ msgid "Expand"
 msgstr "Leathnaigh"
 
 # for Leathnaigh
-#: cmd_bm_expandfolder_accesskey cmd.edit_cut.key cookieExceptions.accesskey
+#: cmd_bm_expandfolder_accesskey cmd.edit_cut.key
 msgid "x"
 msgstr "L"
 
@@ -618,7 +618,7 @@ msgstr "Gearr"
 
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
 #  cmd_cut_accesskey is sedtweaked
-#: cmd_cut_accesskey tabCmd.commandkey SOCKSport.accesskey
+#: cmd_cut_accesskey tabCmd.commandkey certs.ask.accesskey SOCKSport.accesskey
 msgid "t"
 msgstr "t"
 
@@ -1441,7 +1441,7 @@ msgid ""
 "i"
 msgstr "e"
 
-#: historyButton.label itemHistory.label
+#: historyButton.label
 msgid "History"
 msgstr "Stair"
 
@@ -1679,7 +1679,8 @@ msgid "&Release Notes"
 msgstr "&Nótaí Eisiúna"
 
 # Ctrl+i is highlights URL for opening
-#: openCmd.commandkey focus1.commandkey goToLineCmd.commandkey
+#: openCmd.commandkey certs.auto.accesskey focus1.commandkey
+#: goToLineCmd.commandkey
 msgid "l"
 msgstr "i"
 
@@ -4607,29 +4608,67 @@ msgstr "Aimsigh i '%S'..."
 msgid "Accessibility"
 msgstr "Inrochtaineacht"
 
-#: moveSystemCaret.label moveSystemCaret.accesskey
-msgid "Allow text to &be selected with the keyboard"
-msgstr "Ceadaigh roghnú &téacs leis an méarchlár"
+#: useCursorNavigation.label useCursorNavigation.accesskey
+msgid "Always use the &cursor keys to navigate within pages"
+msgstr ""
 
-#: useTypeAheadFind.label useTypeAheadFind.accesskey
-msgid "Begin finding when you begin ty&ping"
-msgstr "Úsáid Cuardach &Beo"
+#: searchStartTyping.label searchStartTyping.accesskey
+msgid "&Search for text when I start typing"
+msgstr ""
 
 #: browsing.label
 msgid "Browsing"
 msgstr "Brabhsáil"
 
-#: enableAutoImageResizing.label enableAutoImageResizing.accesskey
-msgid "Resi&ze large images to fit in the browser window"
-msgstr "Cuir íomhánna &móra in oiriúint do mhéid na fuinneoige"
-
-#: useAutoScrolling.label useAutoScrolling.accesskey
-msgid "U&se autoscrolling"
-msgstr "Ú&sáid uathscrollú"
+#: useAutoScroll.label useAutoScroll.accesskey
+msgid "Use &autoscrolling"
+msgstr "Úsáid u&athscrollú"
 
 #: useSmoothScrolling.label useSmoothScrolling.accesskey
 msgid "Use s&mooth scrolling"
 msgstr "Úsáid &mínscrollú"
+
+#: languages.label
+msgid ""
+"_: languages.label\n"
+"Languages"
+msgstr "Teangacha"
+
+#: chooseLanguage.label
+msgid "Choose your preferred language for displaying pages"
+msgstr ""
+
+#: chooseButton.label chooseButton.accesskey
+msgid "Ch&oose..."
+msgstr "R&oghnaigh..."
+
+#: networkTab.label
+msgid "Network"
+msgstr "Líonra"
+
+#: connection.label connectionsInfo.caption
+msgid "Connection"
+msgstr "Nascadh"
+
+#: connectionDesc.label
+msgid "Configure how &brandShortName; connects to the Internet"
+msgstr "Cumraigh conas a nascfar &brandShortName; leis an Idirlíon"
+
+#: connectionSettings.label connectionSettings.accesskey
+msgid "S&ettings..."
+msgstr "Socruith&e..."
+
+#: cache.label itemCache.label
+msgid "Cache"
+msgstr "Taisce"
+
+#: useCacheBefore.label useCacheBefore.accesskey
+msgid "&Use up to"
+msgstr "Ú&sáid suas le"
+
+#: useCacheAfter.label
+msgid "MB of space for the cache"
+msgstr "MB spás don taisce"
 
 #: updateTab.label validation.crl.autoupdate.time.label1
 msgid "Update"
@@ -4659,9 +4698,9 @@ msgstr "Lorg Anois..."
 msgid "When updates to &brandShortName; are found:"
 msgstr "Agus nuashonruithe do &brandShortName; aimsithe:"
 
-#: modeAskMe.label modeAskMe.accesskey
-msgid "&Ask me what I want to do"
-msgstr "Fi&afraigh díom cad atá le déanamh"
+#: askMe.label askMe.accesskey
+msgid "As&k me what I want to do"
+msgstr "Fiafraigh díom &cad atá le déanamh"
 
 #: modeAutomatic.label modeAutomatic.accesskey
 msgid "Automatically &download and install the update"
@@ -4672,13 +4711,13 @@ msgid "&Warn me if this will disable extensions or themes"
 msgstr ""
 "&Tabhair rabhadh dom má bheidh eisínteachtaí nó téamaí díchumasaithe dá mbarr"
 
-#: showUpdates.label showUpdates.accesskey
-msgid "Show &Update History"
-msgstr "Taispeáin Stair na N&uashonruithe"
+#: updateHistory.label updateHistory.accesskey
+msgid "Show U&pdate History"
+msgstr "Tais&peáin Stair na Nuashonruithe"
 
-#: securityTab.label pageInfo.securityTab pref.security.general.lHeader
-msgid "Security"
-msgstr "Slándáil"
+#: encryptionTab.label
+msgid "Encryption"
+msgstr "Criptiúchán"
 
 #: protocols.label
 msgid "Protocols"
@@ -4702,8 +4741,67 @@ msgstr "Teastais"
 msgid "When a web site requires a certificate:"
 msgstr "Agus teastas ag teastáil ó shuíomh gréasáin:"
 
+#: certs.auto
+msgid ""
+"_: certs.auto\n"
+"Select one automatically"
+msgstr "Roghnaigh go huathoibríoch"
+
+#: certs.ask
+msgid ""
+"_: certs.ask\n"
+"Ask me every time"
+msgstr "Fiafraigh díom i gcónaí"
+
+#: viewCerts.label viewCerts.accesskey
+msgid "&View Certificates"
+msgstr "&Taispeáin Teastais"
+
+#: viewCRLs.label viewCRLs.accesskey
+msgid "&Revocation Lists"
+msgstr "&Liostaí Cúlghairme"
+
+#: verify.label verify.accesskey
+msgid "Ver&ification"
+msgstr "&Fíorú"
+
+#: viewSecurityDevices.label viewSecurityDevices.accesskey
+msgid "Securit&y Devices"
+msgstr "&Gléasanna Slándála"
+
+#: moveSystemCaret.label moveSystemCaret.accesskey
+msgid "Allow text to &be selected with the keyboard"
+msgstr "Ceadaigh roghnú &téacs leis an méarchlár"
+
+#: useTypeAheadFind.label useTypeAheadFind.accesskey
+msgid "Begin finding when you begin ty&ping"
+msgstr "Úsáid Cuardach &Beo"
+
+#: enableAutoImageResizing.label enableAutoImageResizing.accesskey
+msgid "Resi&ze large images to fit in the browser window"
+msgstr "Cuir íomhánna &móra in oiriúint do mhéid na fuinneoige"
+
+#: useAutoScrolling.label useAutoScrolling.accesskey
+msgid "U&se autoscrolling"
+msgstr "Ú&sáid uathscrollú"
+
+#: modeAskMe.label modeAskMe.accesskey
+msgid "&Ask me what I want to do"
+msgstr "Fi&afraigh díom cad atá le déanamh"
+
+#: showUpdates.label showUpdates.accesskey
+msgid "Show &Update History"
+msgstr "Taispeáin Stair na N&uashonruithe"
+
+#: securityTab.label paneSecurity.title pageInfo.securityTab
+#: pref.security.general.lHeader
+msgid "Security"
+msgstr "Slándáil"
+
 #: certselect.auto
-msgid "Select one automatically"
+msgid ""
+"_: certselect.auto\n"
+"Select one automatically"
 msgstr "Roghnaigh go huathoibríoch"
 
 #: certselect.auto.accesskey size.accesskey2
@@ -4711,24 +4809,18 @@ msgid "e"
 msgstr "e"
 
 #: certselect.ask
-msgid "Ask me every time"
+msgid ""
+"_: certselect.ask\n"
+"Ask me every time"
 msgstr "Fiafraigh díom i gcónaí"
 
 #: viewCertificates.label viewCertificates.accesskey
 msgid "View &Certificates"
 msgstr "Taispeáin &Teastais"
 
-#: viewCRLs.label viewCRLs.accesskey
-msgid "&Revocation Lists"
-msgstr "&Liostaí Cúlghairme"
-
 #: viewOCSP.label viewOCSP.accesskey
 msgid "&Verification"
 msgstr "&Fíorú"
-
-#: viewSecurityDevices.label viewSecurityDevices.accesskey
-msgid "Securit&y Devices"
-msgstr "&Gléasanna Slándála"
 
 #: securityWarnings.label
 msgid "Warnings"
@@ -4742,8 +4834,10 @@ msgstr "Roghnaigh na rabhaidh shlándála a thaispeánfar le linn brabhsála."
 msgid "Confi&gure Security Warnings"
 msgstr "Cumrai&gh Rabhaidh Shlándála"
 
-#: languages.caption locales.label
-msgid "Languages"
+#: languages.caption
+msgid ""
+"_: languages.caption\n"
+"Languages"
 msgstr "Teangacha"
 
 #: languagesInfo.label
@@ -5033,6 +5127,85 @@ msgstr "Sampla: .mozilla.org, .net.nz, 192.168.1.0/24"
 msgid "Use this pro&xy server for all protocols"
 msgstr "Úsái&d an seachfhreastalaí seo do gach prótacal"
 
+#: blockPopups.label blockPopups.accesskey
+msgid "&Block pop-up windows"
+msgstr "&Cuir Cosc ar Phreabfhuinneoga"
+
+#: popupExceptions.label popupExceptions.accesskey cookieExceptions.label
+#: cookieExceptions.accesskey addonExceptions.label addonExceptions.accesskey
+msgid "&Exceptions..."
+msgstr "&Eisceachtaí..."
+
+#: loadImages.label loadImages.accesskey
+msgid "Load &images automatically"
+msgstr "&Luchtaigh íomhánna go huathoibríoch"
+
+#: imageExceptions.label imageExceptions.accesskey
+msgid ""
+"_: imageExceptions.label imageExceptions.accesskey\n"
+"E&xceptions"
+msgstr "Ei&sceachtaí"
+
+#: enableJavaScript.label enableJavaScript.accesskey
+msgid "Enable &JavaScript"
+msgstr "Cumasaigh &JavaScript"
+
+#: advancedJS.label advancedJS.accesskey
+msgid "Ad&vanced..."
+msgstr "Ard&roghanna..."
+
+#: font.label font.accesskey
+msgid "Defa&ult font:"
+msgstr "Cló &Réamhshocraithe:"
+
+#: advancedFonts.label advancedFonts.accesskey
+msgid "A&dvanced..."
+msgstr "Ar&droghanna..."
+
+#: defaultSize.label defaultSize.accesskey
+msgid "Default &size:"
+msgstr "Méid réamh&shocruithe:"
+
+#: colors.label colors.accesskey
+msgid "&Colors..."
+msgstr "&Dathanna..."
+
+#: feeds.label
+msgid "Feeds"
+msgstr "Fothaí"
+
+#: feedReader.label feedReader.accesskey
+msgid "&Feed Reader:"
+msgstr ""
+
+#: feedClick.label
+msgid "When I click on a web feed:"
+msgstr ""
+
+#: ask.label ask.accesskey
+msgid "&Ask me what to use"
+msgstr ""
+
+#: subLiveBookmark.label subLiveBookmark.accesskey
+msgid "Always subscribe with a &Live Bookmark"
+msgstr ""
+
+#: subReader.label subReader.accesskey
+msgid "Always subscribe using the Feed &Reader"
+msgstr ""
+
+#: fileTypes.label
+msgid "File Types"
+msgstr "Cineálacha Comhaid"
+
+#: configureFileTypes.label
+msgid "Configure how &brandShortName; handles certain types of files"
+msgstr ""
+
+#: manage.label manage.accesskey
+msgid "&Manage..."
+msgstr "&Bainistiú..."
+
 #: lHeader
 msgid "Web Features"
 msgstr "Sainghnéithe Idirlín"
@@ -5040,14 +5213,6 @@ msgstr "Sainghnéithe Idirlín"
 #: enbJavaCheck.label enbJavaCheck.accesskey
 msgid "Enable &Java"
 msgstr "Cumasaigh &Java"
-
-#: enableJavaScript.label enableJavaScript.accesskey
-msgid "Enable Java&Script"
-msgstr "Cumasaigh Java&Script"
-
-#: advancedJS.label advancedJS.accesskey
-msgid "Ad&vanced..."
-msgstr "Ard&roghanna..."
 
 #: enableImages.label enableImages.accesskey
 msgid "Load &Images"
@@ -5068,7 +5233,9 @@ msgid "A&llowed Sites"
 msgstr "&Suímh Cheadaithe"
 
 #: exceptionsSoftware.label exceptionsSoftware.accesskey
-msgid "E&xceptions"
+msgid ""
+"_: exceptionsSoftware.label exceptionsSoftware.accesskey\n"
+"E&xceptions"
 msgstr "Ei&sceachtaí"
 
 #: exceptions.label exceptions.accesskey
@@ -5078,14 +5245,6 @@ msgstr "&Eisceachtaí"
 #: fonts.caption
 msgid "Fonts &amp; Colors"
 msgstr "Clófhoirne &amp; Dathanna"
-
-#: advancedFonts.label advancedFonts.accesskey
-msgid "A&dvanced..."
-msgstr "Ar&droghanna..."
-
-#: colors.label colors.accesskey
-msgid "&Colors..."
-msgstr "&Dathanna..."
 
 #: defaultFontSize.label defaultFontSize.accesskey
 msgid "Si&ze:"
@@ -5107,7 +5266,7 @@ msgstr "&Bain Fianán"
 msgid "Remove &All Cookies"
 msgstr "Bain G&ach Fianán"
 
-#: window.title itemCookies.label
+#: window.title
 msgid "Cookies"
 msgstr "Fianáin"
 
@@ -5190,7 +5349,8 @@ msgstr "Deasc"
 msgid "My Downloads"
 msgstr "Mo Chuid Íosluchtaithe"
 
-#: chooseFolderMac.label chooseFolderMac.accesskey
+#: chooseFolderMac.label chooseFolderMac.accesskey choose.label
+#: choose.accesskey
 msgid "C&hoose..."
 msgstr "R&oghnaigh..."
 
@@ -5433,7 +5593,7 @@ msgstr "Ionchódú Carachtar"
 msgid "Default &Character Encoding:"
 msgstr "Ionchódú &Carachtar Réamhshocraithe:"
 
-#: header2.label
+#: header2.label homePage.label
 msgid "Home Page"
 msgstr "Leathanach Baile"
 
@@ -5480,10 +5640,6 @@ msgstr "S&ocruithe Naisc..."
 #: proxiesInfo.label
 msgid "Determine how &brandShortName; connects to the Internet."
 msgstr "Socraigh conas a nascfar &brandShortName; leis an Idirlíon."
-
-#: connectionsInfo.caption
-msgid "Connection"
-msgstr "Nascadh"
 
 # XXXben improve this text
 #: feedReader.label
@@ -5540,6 +5696,60 @@ msgstr "Roghnaigh teanga chun cur leis..."
 msgid "&Add"
 msgstr "Cuir &Leis"
 
+#: useDefaultHome.label useDefaultHome.accesskey
+msgid "&brandShortName; &Start"
+msgstr ""
+
+#: useABookmark.label useABookmark.accesskey
+msgid "Use a &Bookmark"
+msgstr "Úsáid Lea&bharmharc"
+
+#: useOther.label useOther.accesskey
+msgid "Use this &page"
+msgstr "Úsáid an &leathanach seo"
+
+#: useCurrent.label useCurrent.accesskey
+msgid "Use &Current"
+msgstr "Úsáid an Leathanach &Reatha"
+
+#: downloads.label paneDownloads.title downloads.title
+msgid "Downloads"
+msgstr "Íosluchtú"
+
+#: showWhenDownloading.label showWhenDownloading.accesskey
+msgid "Show the &Downloads window when downloading a file"
+msgstr ""
+
+#: closeWhenDone.label closeWhenDone.accesskey
+msgid "Close it &when all downloads are finished"
+msgstr "&Dún é i ndiaidh na n-íosluchtuithe"
+
+#: saveTo.label saveTo.accesskey
+msgid "Sa&ve files to"
+msgstr ""
+
+#: chooseFolderWin.label chooseFolderWin.accesskey
+msgid "Br&owse..."
+msgstr "Br&abhsáil..."
+
+#: chooseFolderMac.label chooseFolderMac.accesskey
+msgid "Choos&e..."
+msgstr "&Roghnaigh..."
+
+#: alwaysAsk.label alwaysAsk.accesskey
+msgid "&Always ask me where to save files"
+msgstr ""
+
+#: systemDefaults.label
+msgid "System Defaults"
+msgstr ""
+
+# XXX
+#: alwaysCheckDefault.label alwaysCheckDefault.accesskey
+msgid ""
+"Alwa&ys check to see if &brandShortName; is the default browser on startup"
+msgstr ""
+
 #: removepermission.label removepermission.accesskey
 msgid "&Remove Site"
 msgstr "&Bain Suíomh"
@@ -5577,22 +5787,22 @@ msgstr "width: 56em;"
 msgid "width: 42em; height: 38.5em;"
 msgstr "width: 47em; height: 42.5em;"
 
-#: panePrivacy.title privacy.label
-msgid "Privacy"
-msgstr "Príobháideachas"
-
-#: paneDownloads.title downloads.title
-msgid "Downloads"
-msgstr "Íosluchtú"
-
-#: paneAdvanced.title
-msgid "Advanced"
-msgstr "Ardroghanna"
+#: paneMain.title
+msgid "Main"
+msgstr ""
 
 # OK as is --kps
 #: paneTabs.title tabsTab.label
 msgid "Tabs"
 msgstr "Cluaisíní"
+
+#: panePrivacy.title privacy.label
+msgid "Privacy"
+msgstr "Príobháideachas"
+
+#: paneAdvanced.title
+msgid "Advanced"
+msgstr "Ardroghanna"
 
 #: choosehomepage
 msgid "Choose Home Page"
@@ -5860,6 +6070,94 @@ msgstr "Meaitseálann na fianáin seo a leanas do chuardach:"
 msgid "Remove Cookies"
 msgstr "Bain Fianáin"
 
+#: history.label
+msgid ""
+"_: history.label\n"
+"History"
+msgstr "Stair"
+
+#: rememberBefore.label rememberBefore.accesskey
+msgid "Remember &visited pages for the last"
+msgstr "Meabhraigh leathanaigh ar tugadh &cuairt orthu le"
+
+#: rememberAfter.label
+msgid ""
+"_: rememberAfter.label\n"
+"days."
+msgstr ""
+
+#: rememberForms.label rememberForms.accesskey
+msgid "Remember what I enter in &forms and the search bar"
+msgstr ""
+"Sábháil gach faisnéis a bhíonn á iontráil agam i bh&foirmeacha agus i mBarra "
+"an Chuardaigh"
+
+#: rememberDownloads.label rememberDownloads.accesskey
+msgid "Remember what I've &downloaded"
+msgstr ""
+
+#: cookies.label
+msgid ""
+"_: cookies.label\n"
+"Cookies"
+msgstr "Fianáin"
+
+#: acceptCookies.label acceptCookies.accesskey
+msgid "A&ccept cookies from sites"
+msgstr ""
+
+#: alwaysAsk.label alwaysAsk.accesskey
+msgid "&Always ask before accepting a cookie"
+msgstr ""
+
+#: keepUntilClose.label keepUntilClose.accesskey
+msgid "&Only keep the cookies until I close &brandShortName;"
+msgstr ""
+
+#: showCookies.label showCookies.accesskey
+msgid "&Show Cookies..."
+msgstr "Tai&speáin Fianáin..."
+
+#: passwords.label
+msgid ""
+"_: passwords.label\n"
+"Passwords"
+msgstr "Focail Fhaire"
+
+#: rememberPasswords.label rememberPasswords.accesskey
+msgid "&Remember passwords for sites"
+msgstr ""
+
+#: useMasterPassword.label useMasterPassword.accesskey
+msgid "&Use a master password"
+msgstr "Úsáid &príomhfhocal faire"
+
+#: passwordExceptions.label passwordExceptions.accesskey
+msgid "E&xceptions..."
+msgstr "Ei&sceachtaí..."
+
+#: masterPassword.label masterPassword.accesskey
+msgid "Set &Master Password..."
+msgstr "Socraigh an &Príomhfhocal Faire..."
+
+#: showPasswords.label showPasswords.accesskey
+msgid "Show Saved &Passwords..."
+msgstr "Taispeáin &focail fhaire a sábháladh..."
+
+#: clearPrivateData.label sanitizeDialog.title
+msgid "Clear Private Data"
+msgstr "Bánaigh Sonraí Príobháideacha"
+
+#: alwaysClear.label alwaysClear.accesskey
+msgid "Al&ways clear my private data when I close &brandShortName;"
+msgstr "Glan sonraí príobháideacha agus &brandShortName; á dhúnadh"
+
+#: clearDataSettings.label clearDataSettings.accesskey
+msgid ""
+"_: clearDataSettings.label clearDataSettings.accesskey\n"
+"Se&ttings..."
+msgstr "So&cruithe..."
+
 #: privacy.intro
 msgid ""
 "As you browse the web, &brandShortName; keeps information about where you "
@@ -5876,13 +6174,21 @@ msgstr "Bánaigh"
 msgid "View"
 msgstr "Amharc"
 
+#: itemHistory.label
+msgid ""
+"_: itemHistory.label\n"
+"History"
+msgstr "Stair"
+
 #: rememberPages.label rememberPages.accesskey
 msgid "Remember visite&d pages for the last"
 msgstr "Mea&bhraigh leathanaigh ar tugadh cuairt orthu le"
 
 #: rememberDays.label
-msgid "days."
-msgstr "lá anuas."
+msgid ""
+"_: rememberDays.label\n"
+"days."
+msgstr ""
 
 #: clearHistory.label clearHistory.accesskey
 msgid "&Clear Browsing History Now"
@@ -5912,7 +6218,9 @@ msgid "Clear Saved &Form Data Now"
 msgstr "Glan anois na sonraí a sábháladh ó &fhoirmeacha"
 
 #: itemPasswords.label
-msgid "Passwords"
+msgid ""
+"_: itemPasswords.label\n"
+"Passwords"
 msgstr "Focail Fhaire"
 
 #: savedPasswords.intro
@@ -5982,6 +6290,12 @@ msgstr "S&tair an Bhainisteora Íosluchtaithe"
 msgid "Cle&ar Download History Now"
 msgstr "&Bánaigh Stair an Chuardaigh Anois"
 
+#: itemCookies.label
+msgid ""
+"_: itemCookies.label\n"
+"Cookies"
+msgstr "Fianáin"
+
 #: cookies.intro
 msgid ""
 "Cookies are pieces of information stored by sites on your computer. They are "
@@ -6047,10 +6361,6 @@ msgstr "&Taispeáin Fianáin"
 msgid "Clear C&ookies Now"
 msgstr "Bánaigh Fianáin An&ois"
 
-#: itemCache.label
-msgid "Cache"
-msgstr "Taisce"
-
 #: cache.intro
 msgid "Pages you view are stored in the cache for faster viewing later on."
 msgstr ""
@@ -6070,8 +6380,10 @@ msgid "Clear Cache &Now"
 msgstr "Bá&naigh an Taisce Anois"
 
 #: sanitizeSettings.label sanitizeSettings.accesskey
-msgid "Se&ttings..."
-msgstr "Socrui&the..."
+msgid ""
+"_: sanitizeSettings.label sanitizeSettings.accesskey\n"
+"Se&ttings..."
+msgstr "So&cruithe..."
 
 #: sanitize.intro
 msgid ""
@@ -6081,10 +6393,6 @@ msgstr ""
 "Is féidir Glantóir na Sonraí Príobháideacha a úsáid chun do shonraí "
 "príobháideacha a ghlanadh le haicearra méarchláir nó ar dhúnadh "
 "&brandShortName;"
-
-#: sanitizeDialog.title
-msgid "Clear Private Data"
-msgstr "Bánaigh Sonraí Príobháideacha"
 
 #: items.label
 msgid "Private Data"
@@ -6134,6 +6442,40 @@ msgstr "&Glan sonraí príobháideacha agus &brandShortName; á dhúnadh"
 msgid "As&k me before clearing private data"
 msgstr "&Fiafraigh díom roimh ghlanadh na sonraí príobháideacha"
 
+#: warnAddonInstall.label warnAddonInstall.accesskey
+msgid "&Warn me when sites try to install add-ons"
+msgstr ""
+"Tabhair &rabhadh dom nuair a dhéanann suímh ghréasáin iarracht breiseáin a "
+"shuiteáil"
+
+#: checkPhish.label checkPhish.accesskey
+msgid "&Check to see if the site I'm loading is a forgery"
+msgstr ""
+
+#: useCachedPhishList.label useCachedPhishList.accesskey
+msgid "&Use a list of known forgeries provided by"
+msgstr ""
+
+#: checkPhishOnLoad.label checkPhishOnLoad.accesskey
+msgid "&Ask"
+msgstr "&Fiafraigh díom"
+
+#: checkPhishOnLoadAfter.label
+msgid "to check every site I visit"
+msgstr ""
+
+#: warnings.label
+msgid "Warning Messages"
+msgstr "Teachtaireachtaí Rabhaidh"
+
+#: chooseWarnings.label
+msgid "Choose which warning messages you want to see while browsing the web"
+msgstr ""
+
+#: warningSettings.label warningSettings.accesskey
+msgid "&Settings..."
+msgstr "&Socruithe..."
+
 #: securityWarnings.title
 msgid "Security Warnings"
 msgstr "Rabhaidh Shlándála"
@@ -6165,6 +6507,34 @@ msgid ""
 msgstr ""
 "féachaint ar leathanach crip&tithe ina bhfuil cuid den fhaisnéis "
 "neamhchriptithe."
+
+#: linksOpenIn.label
+msgid "When a link opens a new window, open it in:"
+msgstr ""
+
+#: inNewWindow.label inNewWindow.accesskey
+msgid "a ne&w window"
+msgstr ""
+
+#: inNewTab.label inNewTab.accesskey
+msgid "a new &tab"
+msgstr ""
+
+#: warnCloseMultiple.label warnCloseMultiple.accesskey
+msgid "Warn &me when I close a window with multiple tabs"
+msgstr "Tabhair rabhadh do&m agus fuinneog le cluaisíní iomadúla á dúnadh"
+
+#: warnOpenMany.label warnOpenMany.accesskey
+msgid "Warn me when I &open lots of tabs at once"
+msgstr ""
+
+#: showTabBar.label showTabBar.accesskey
+msgid "Always show the ta&b bar"
+msgstr "Taispeáin an &barra cluaisíní i gcónaí"
+
+#: switchToNewTabs.label switchToNewTabs.accesskey
+msgid "When I open a link in a new tab, &switch to it immediately"
+msgstr ""
 
 #: linkTargeting.label
 msgid "Open links that would open new windows in:"
@@ -14648,6 +15018,10 @@ msgstr "Eisínteachtaí"
 #: themes.label themesTitle
 msgid "Themes"
 msgstr "Téamaí"
+
+#: locales.label
+msgid "Languages"
+msgstr "Teangacha"
 
 #: plugins.label
 msgid "Plugins"
