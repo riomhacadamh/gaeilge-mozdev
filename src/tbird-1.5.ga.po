@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-06-15 20:10\n"
+"POT-Creation-Date: 2006-06-18 17:52\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -2944,7 +2944,7 @@ msgstr "Liosta Roghnúcháin"
 msgid "Button"
 msgstr "Cnaipe"
 
-#: Label labelColumn.label 48 1043
+#: Label 48 1043
 msgid "Label"
 msgstr "Lipéad"
 
@@ -2952,7 +2952,7 @@ msgstr "Lipéad"
 msgid "Field Set"
 msgstr "Tacar Réimsí"
 
-#: Tag
+#: Tag tagsColumn.label
 msgid "Tag"
 msgstr "Clib"
 
@@ -10981,6 +10981,10 @@ msgstr "Lipéad le chur ar an Teachtaireacht"
 msgid "Set Priority to"
 msgstr "Socraigh Tosaíocht mar"
 
+#: addTag.label
+msgid "Tag Message"
+msgstr ""
+
 #: setJunkScore.label
 msgid "Set Junk Status to"
 msgstr "Socraigh Stádas Dramhphoist mar"
@@ -14712,11 +14716,9 @@ msgstr "Méi&d"
 msgid "Stat&us"
 msgstr "Stád&as"
 
-#: sortByLabelCmd.label sortByLabelCmd.accesskey
-msgid ""
-"_: sortByLabelCmd.label sortByLabelCmd.accesskey\n"
-"&Label"
-msgstr "&Lipéad"
+#: sortByTagsCmd.label sortByTagsCmd.accesskey
+msgid "Ta&gs"
+msgstr "Cli&beanna"
 
 #: sortByJunkStatusCmd.label sortByJunkStatusCmd.accesskey
 msgid "&Junk Status"
@@ -15128,11 +15130,9 @@ msgstr "&Comhdaigh Anseo"
 msgid "&Copy Here"
 msgstr "&Cóipeáil Anseo"
 
-#: labelMenu.label labelMenu.accesskey
-msgid ""
-"_: labelMenu.label labelMenu.accesskey\n"
-"&Label"
-msgstr "&Lipéad"
+#: tagsMenu.label tagsMenu.accesskey
+msgid "Ta&g"
+msgstr "Cli&b"
 
 #: labelCmd0.accesskey
 msgid ""
@@ -15512,7 +15512,7 @@ msgid ""
 "Unread"
 msgstr "Gan Léamh"
 
-#: viewPickerCustomView.label 49
+#: viewPickerCustomView.label
 msgid "Customize..."
 msgstr "Saincheap..."
 
@@ -15650,9 +15650,9 @@ msgstr "Gliogáil chun sórtáil de réir dáta"
 msgid "Click to sort by priority"
 msgstr "Gliogáil chun sórtáil de réir tosaíochta"
 
-#: labelColumn.tooltip
-msgid "Click to sort by label"
-msgstr "Gliogáil chun sórtáil de réir lipéid"
+#: tagsColumn.tooltip
+msgid "Click to sort by tags"
+msgstr ""
 
 #: accountColumn.tooltip
 msgid "Click to sort by account"
@@ -15884,6 +15884,10 @@ msgstr "Fofhillteán Nua..."
 #: folderProperties
 msgid "Folder Properties"
 msgstr "Airíonna Fillteáin"
+
+#: newTag
+msgid "New Tag..."
+msgstr "Clib Nua..."
 
 #: getNextNMessages
 msgid "Get Next %S News Messages"
@@ -16342,10 +16346,10 @@ msgstr "Coicís ó shin"
 msgid "Old Mail"
 msgstr "Seanphost"
 
-# Grouped By Label
-#: unlabeledMessages
-msgid "Unlabeled Messages"
-msgstr "Teachtaireachtaí gan Lipéid"
+# Grouped By Tags
+#: untaggedMessages
+msgid "Untagged Messages"
+msgstr ""
 
 # Grouped by status
 #: messagesWithNoStatus
@@ -16452,6 +16456,12 @@ msgid ""
 "_: junk\n"
 "Junk"
 msgstr "Dramhphost"
+
+# #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+# for the Tag picker in search and mail views.
+#: tag 15 tagsColumn.label
+msgid "Tags"
+msgstr "Clibeanna"
 
 # mailnews.js
 #: mailnews.send_default_charset
@@ -16661,6 +16671,11 @@ msgstr "Deimhnigh"
 msgid "Opening %S messages may be slow.  Continue?"
 msgstr ""
 "D'fhéadfadh oscailt %S teachtaireacht a bheith mall. Lean ar aghaidh leis?"
+
+# for warning the user that a tag they're trying to create already exists
+#: tagExists
+msgid "A tag with that name already exists."
+msgstr ""
 
 # for the virtual folder list dialog title
 # %S is the name of the saved search folder
@@ -18094,6 +18109,48 @@ msgstr "Tharla earráid údaraithe.  Iontráil d'ainm agus/nó d'fhocal faire arís."
 #: -206
 msgid "A communications error occurred.  Try connecting again.  TCP Error:"
 msgstr "Tharla earráid chumarsáide. Déan iarracht eile ceangail. Earráid TCP:"
+
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is new tag dialog
+# -
+# - The Initial Developer of the Original Code is
+# - The Mozilla Corporation.
+# - Portions created by the Initial Developer are Copyright (C) 2006
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+# Labels
+#: newTagDialog.title
+msgid "New Tag"
+msgstr "Clib Nua"
+
+#: name.label name.accesskey
+msgid "&Tag:"
+msgstr "&Clib:"
 
 # Description of import module
 # # @name OEIMPORT_DESCRIPTION
@@ -20185,10 +20242,6 @@ msgstr "Faisnéis Fhillteáin"
 msgid "AnyText"
 msgstr "Téacs ar Bith"
 
-#: 15
-msgid "Keywords"
-msgstr "Lorgfhocail"
-
 # for AB and LDAP
 #: 16
 msgid "Any Name"
@@ -20287,6 +20340,10 @@ msgstr "curtha in áirithe do AB"
 #: 46
 msgid "Attachment Status"
 msgstr "Stádas Iatáin"
+
+#: 49
+msgid "Customize"
+msgstr "Saincheap"
 
 # for SearchDialog.xul
 #: searchHeading.label searchHeading.accesskey
