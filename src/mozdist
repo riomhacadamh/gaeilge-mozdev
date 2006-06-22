@@ -29,6 +29,12 @@ then
 	sed -i '/^# /d' ${IRISHJAR}/defines.inc
 	rm -f aistr.8.txt
 	sed -i '1s/.*/<!ENTITY % brandDTD SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n%brandDTD;\n\n&/' ${IRISHJAR}/chrome/overrides/netError.dtd
+	cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | LC_ALL=C sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoirí<\/h3><ul>/; s/$/<\/ul>">\n/' | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
+	sed -i '/^-->/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
+	rm -f aistr.8.txt
+	sed -i '/>Name Here</s/.*/<!ENTITY credit.translation\n  "<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>">/' browser-ga-IE/chrome/browser/credits.dtd
+	sed -i '/^<!ENTITY credit.translation "">/d' browser-ga-IE/chrome/browser/credits.dtd
+
 fi
 if echo "${1}" | egrep '^toolkit' > /dev/null
 then
