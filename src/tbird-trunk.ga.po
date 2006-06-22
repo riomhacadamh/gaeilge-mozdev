@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-06-08 16:13\n"
+"POT-Creation-Date: 2006-06-22 11:58\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -349,7 +349,7 @@ msgid ""
 "w"
 msgstr "w"
 
-#: exitCmd.label quitButton quitComposeWindowQuitButtonLabel
+#: exitCmd.label quitComposeWindowQuitButtonLabel
 msgid "Quit"
 msgstr "Scoir"
 
@@ -695,7 +695,7 @@ msgstr "Carachtair agus Siombailí..."
 # Ctrl+"C" = Cóipeáil; leave alone
 #  collapse_folder accesskey sedtweaked
 #: insertchars.accesskey centerRadio.accessKey copyCmd.key
-#: checkMailNow.accesskey
+#: cancelDownloadButtonAccessKey checkMailNow.accesskey
 msgid "C"
 msgstr "C"
 
@@ -2944,7 +2944,7 @@ msgstr "Liosta Roghnúcháin"
 msgid "Button"
 msgstr "Cnaipe"
 
-#: Label labelColumn.label 48 1043
+#: Label 48 1043
 msgid "Label"
 msgstr "Lipéad"
 
@@ -2952,7 +2952,7 @@ msgstr "Lipéad"
 msgid "Field Set"
 msgstr "Tacar Réimsí"
 
-#: Tag
+#: Tag tagsColumn.label
 msgid "Tag"
 msgstr "Clib"
 
@@ -3066,7 +3066,7 @@ msgstr ""
 
 #: Click
 msgid "Click"
-msgstr "Gliogáil"
+msgstr "Cliceáil"
 
 #: Drag
 msgid "Drag"
@@ -6527,7 +6527,8 @@ msgstr "Y"
 msgid "X"
 msgstr "X"
 
-#: deleteCmd.key fieldMapImport.down.accesskey detachLabelAccesskey
+#: deleteCmd.key downloadButtonAccessKey fieldMapImport.down.accesskey
+#: detachLabelAccesskey
 msgid "D"
 msgstr "D"
 
@@ -9164,10 +9165,6 @@ msgstr ""
 "Is féidir leat cóip logánta den chomhadlann seo a íosluchtú ionas go mbeidh "
 "sé ar fáil duit agus tú ag obair as líne."
 
-#: downloadNowButton.label downloadNowButton.accesskey
-msgid "&Download Now"
-msgstr "Íos&luchtaigh Anois"
-
 # Localization note: this is here because the width of the dialog
 # is determined by the width of the base DN box; and that is likely
 # to vary somewhat with the language.
@@ -9239,18 +9236,6 @@ msgid ""
 "LDAP Directory Server"
 msgstr "Freastalaí Eolaire LDAP"
 
-#: status.label folderQuotaStatus.label status
-msgid "Status:"
-msgstr "Stádas:"
-
-#: progress.label progress
-msgid "Progress:"
-msgstr "Dul chun cinn:"
-
-#: replicationCancel.label replicationCancel.accesskey
-msgid "&Cancel"
-msgstr "&Cealaigh"
-
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
 #
@@ -9304,47 +9289,23 @@ msgstr "D'éirigh leis an macasamhlú"
 msgid "Replication failed"
 msgstr "Theip ar an mhacasamhlú"
 
+#: replicationCancelled
+msgid "Replication cancelled"
+msgstr ""
+
 # LOCALIZATION NOTE
 # do not localize %S.  %S is the current entry number (an integer)
 #: currentCount
 msgid "Replicating directory entry: %S"
 msgstr "Iontráil eolaire á macasamhlú: %S"
 
-# LOCALIZATION NOTE
-# do not localize %S.  %S is the current address book name
-#: replicatingTitle
-msgid "Replicating %S"
-msgstr "%S á mhacasamhlú"
+#: downloadButton
+msgid "Download Now"
+msgstr "Íosluchtaigh Anois"
 
-#: replicationOfSameInProgress
-msgid "A replication of this directory is already in progress."
-msgstr "Tá macasamhlú den eolaire seo ar siúl cheana."
-
-#: replicationOfOtherInProgress
-msgid ""
-"A replication of another directory is already in progress.  You can only "
-"replicate one directory at a time."
-msgstr ""
-"Tá macasamhlú d'eolaire eile ar siúl. Ní féidir ach eolaire amháin a "
-"mhacasamhlú ag an am céanna."
-
-#: mustBeOnlineToReplicate
-msgid "You must be online to replicate a directory."
-msgstr "Caithfidh tú bheith ar líne chun eolaire a mhacasamhlú."
-
-# LOCALIZATION NOTE
-# do not localize %S.  %S is the product name.
-#: replicationInProgress
-msgid ""
-"%S is currently in the process of replicating an address book.  Would you "
-"like to wait until the process has completed before quitting or quit now?"
-msgstr ""
-"Tá leabhar seoltaí á mhacasamhlú ag %S faoi láthair. An mian leat fanacht go "
-"gcríochnóidh an próiseas roimh scor, nó scoir anois?"
-
-#: waitButton quitComposeWindowWaitButtonLabel
-msgid "Wait"
-msgstr "Fan"
+#: cancelDownloadButton
+msgid "Cancel Download"
+msgstr "Cealaigh Íosluchtú"
 
 # #-#-#-#-#  tmp.XXXXusU6as.po (thunderbird)  #-#-#-#-#
 # extracted from am-addressing.xul
@@ -9623,7 +9584,7 @@ msgstr "Baint &uathoibríoch de theachtaireachtaí dramhphoist níos sine ná"
 
 #: purge2.label days.label daysEnd.label
 msgid "days"
-msgstr "lá is déanaí"
+msgstr "lá anuas"
 
 #: whitelist.label whitelist.accesskey
 msgid "&Do not mark mail as junk if the sender is in: "
@@ -9992,8 +9953,8 @@ msgstr "Sábháil an focal faire"
 #: biffStart.label biffStart.accesskey
 msgid ""
 "_: translate below 2 line with grammer dependency\n"
-"Chec&k for new messages every "
-msgstr "Lor&g teachtaireachtaí nua gach"
+"Check for new messages ever&y "
+msgstr ""
 
 #: socketType.label isSecure.label
 msgid "Use secure connection:"
@@ -10053,21 +10014,21 @@ msgid ""
 "POP Server Information"
 msgstr "Faisnéis an Fhreastalaí POP"
 
-#: deleteMessagePrefix.label deleteMessagePrefix.accesskey
-msgid "&When I delete a message:"
-msgstr "Agus mé ag &scriosadh teachtaireachta:"
+#: deleteMessagePrefix.label
+msgid "When I delete a message:"
+msgstr ""
 
-#: modelMoveToTrash.label
-msgid "Move it to the Trash folder"
-msgstr "Bog go dtí an Bruscar é"
+#: modelMoveToTrash.label modelMoveToTrash.accesskey
+msgid "M&ove it to this folder:"
+msgstr ""
 
-#: modelMarkDeleted.label
-msgid "Mark it as deleted"
-msgstr "Marcáil é scriosta"
+#: modelMarkDeleted.label modelMarkDeleted.accesskey
+msgid "Just mar&k it as deleted"
+msgstr ""
 
-#: modelDeleteImmediately.label
-msgid "Remove it immediately"
-msgstr "Bain é láithreach"
+#: modelDeleteImmediately.label modelDeleteImmediately.accesskey
+msgid "Remove it imme&diately"
+msgstr ""
 
 #: expungeOnExit.label expungeOnExit.accesskey
 msgid ""
@@ -11032,6 +10993,10 @@ msgstr "Lipéad le chur ar an Teachtaireacht"
 msgid "Set Priority to"
 msgstr "Socraigh Tosaíocht mar"
 
+#: addTag.label
+msgid "Tag Message"
+msgstr ""
+
 #: setJunkScore.label
 msgid "Set Junk Status to"
 msgstr "Socraigh Stádas Dramhphoist mar"
@@ -11356,6 +11321,10 @@ msgstr "Fréamh an Chuóta:"
 #: folderQuotaUsage.label
 msgid "Usage:"
 msgstr "Úsáid:"
+
+#: folderQuotaStatus.label status
+msgid "Status:"
+msgstr "Stádas:"
 
 # The following are used by the imap code to display progress/status/error messages
 #
@@ -13937,6 +13906,10 @@ msgstr ""
 "Ar mhaith leat fanacht go dtí go mbeidh an teachtaireacht seolta roimh scor, "
 "nó scor anois?"
 
+#: quitComposeWindowWaitButtonLabel
+msgid "Wait"
+msgstr "Fan"
+
 # # Strings used by prompt for Ctrl-Enter check before sending message
 #: sendMessageCheckWindowTitle
 msgid ""
@@ -14450,6 +14423,10 @@ msgstr "Teachtaireachtaí á Sábháil -"
 msgid "Sending Messages -"
 msgstr "Teachtaireachtaí á Seoladh -"
 
+#: progress
+msgid "Progress:"
+msgstr "Dul chun cinn:"
+
 # This string is used to format the text to the right of the progress
 # meter.
 #
@@ -14751,11 +14728,9 @@ msgstr "Méi&d"
 msgid "Stat&us"
 msgstr "Stád&as"
 
-#: sortByLabelCmd.label sortByLabelCmd.accesskey
-msgid ""
-"_: sortByLabelCmd.label sortByLabelCmd.accesskey\n"
-"&Label"
-msgstr "&Lipéad"
+#: sortByTagsCmd.label sortByTagsCmd.accesskey
+msgid "Ta&gs"
+msgstr "Cli&beanna"
 
 #: sortByJunkStatusCmd.label sortByJunkStatusCmd.accesskey
 msgid "&Junk Status"
@@ -15167,11 +15142,13 @@ msgstr "&Comhdaigh Anseo"
 msgid "&Copy Here"
 msgstr "&Cóipeáil Anseo"
 
+#: tagMenu.label tagMenu.accesskey
+msgid "Ta&g"
+msgstr "Cli&b"
+
 #: labelMenu.label labelMenu.accesskey
-msgid ""
-"_: labelMenu.label labelMenu.accesskey\n"
-"&Label"
-msgstr "&Lipéad"
+msgid "&Label"
+msgstr ""
 
 #: labelCmd0.accesskey
 msgid ""
@@ -15663,7 +15640,7 @@ msgstr "Iatáin"
 
 #: columnChooser.tooltip
 msgid "Click to select columns to display"
-msgstr "Gliogáil chun colúin a roghnú le cur ar taispeáin"
+msgstr "Cliceáil chun colúin a roghnú le cur ar taispeáin"
 
 #: threadColumn.tooltip
 msgid "Click to display message threads"
@@ -15689,9 +15666,9 @@ msgstr "Gliogáil chun sórtáil de réir dáta"
 msgid "Click to sort by priority"
 msgstr "Gliogáil chun sórtáil de réir tosaíochta"
 
-#: labelColumn.tooltip
-msgid "Click to sort by label"
-msgstr "Gliogáil chun sórtáil de réir lipéid"
+#: tagsColumn.tooltip
+msgid "Click to sort by tags"
+msgstr ""
 
 #: accountColumn.tooltip
 msgid "Click to sort by account"
@@ -15971,6 +15948,10 @@ msgstr "Fofhillteán Nua..."
 #: folderProperties
 msgid "Folder Properties"
 msgstr "Airíonna Fillteáin"
+
+#: newTag
+msgid "New Tag..."
+msgstr "Clib Nua..."
 
 #: getNextNMessages
 msgid "Get Next %S News Messages"
@@ -16429,10 +16410,10 @@ msgstr "Coicís ó shin"
 msgid "Old Mail"
 msgstr "Seanphost"
 
-# Grouped By Label
-#: unlabeledMessages
-msgid "Unlabeled Messages"
-msgstr "Teachtaireachtaí gan Lipéid"
+# Grouped By Tags
+#: untaggedMessages
+msgid "Untagged Messages"
+msgstr ""
 
 # Grouped by status
 #: messagesWithNoStatus
@@ -16539,6 +16520,12 @@ msgid ""
 "_: junk\n"
 "Junk"
 msgstr "Dramhphost"
+
+# #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+# for the Tag picker in search and mail views.
+#: tag 15 tagsColumn.label
+msgid "Tags"
+msgstr "Clibeanna"
 
 # mailnews.js
 #: mailnews.send_default_charset
@@ -16748,6 +16735,11 @@ msgstr "Deimhnigh"
 msgid "Opening %S messages may be slow.  Continue?"
 msgstr ""
 "D'fhéadfadh oscailt %S teachtaireacht a bheith mall. Lean ar aghaidh leis?"
+
+# for warning the user that a tag they're trying to create already exists
+#: tagExists
+msgid "A tag with that name already exists."
+msgstr ""
 
 # for the virtual folder list dialog title
 # %S is the name of the saved search folder
@@ -18181,6 +18173,48 @@ msgstr "Tharla earráid údaraithe.  Iontráil d'ainm agus/nó d'fhocal faire arís."
 #: -206
 msgid "A communications error occurred.  Try connecting again.  TCP Error:"
 msgstr "Tharla earráid chumarsáide. Déan iarracht eile ceangail. Earráid TCP:"
+
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is new tag dialog
+# -
+# - The Initial Developer of the Original Code is
+# - The Mozilla Corporation.
+# - Portions created by the Initial Developer are Copyright (C) 2006
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+# Labels
+#: newTagDialog.title
+msgid "New Tag"
+msgstr "Clib Nua"
+
+#: name.label name.accesskey
+msgid "&Tag:"
+msgstr "&Clib:"
 
 # Description of import module
 # # @name OEIMPORT_DESCRIPTION
@@ -20271,10 +20305,6 @@ msgstr "Faisnéis Fhillteáin"
 #: 14
 msgid "AnyText"
 msgstr "Téacs ar Bith"
-
-#: 15
-msgid "Keywords"
-msgstr "Lorgfhocail"
 
 # for AB and LDAP
 #: 16
