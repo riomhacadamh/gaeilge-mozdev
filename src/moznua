@@ -30,9 +30,14 @@ if [ $1 = "dom-en-US" ]
 then
         sed -i 's/image.*cannot/image \\"%S\\" cannot/' dom-ga-IEpo/chrome/layout/MediaDocument.properties.pot
 fi
+if [ $1 = "browser-en-US" ]
+then
+        rm -f browser-ga-IEpo/chrome/help/*.xhtml.pot
+fi
 if [ $1 = "toolkit-en-US" ]
 then
         sed -i '/^#: VK_SHIFT/{N; s/msgid .*/msgid "\\\\u0005"/}; /^#: VK_META/{N; s/msgid .*/msgid "\\\\u0011"/}; /^#: VK_ALT/{N; s/msgid .*/msgid "\\\\u0007"/}; /^#: VK_CONTROL/{N; s/msgid .*/msgid "\\\\u0006"/}' toolkit-ga-IEpo/chrome/global-platform/mac/platformKeys.properties.pot
+        rm -f toolkit-ga-IEpo/chrome/mozapps/help/*.xhtml.pot
 fi
 find "${IRISHPREF}po" -name '*.pot' |
 while read pofile
@@ -48,8 +53,8 @@ do
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		$MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
-	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
-	mv tempe.po ${FILENAMEBASE}.po
+#	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
+#	mv tempe.po ${FILENAMEBASE}.po
 	echo
 	rm -f ${TEMPPOT} ${pofile}
 done
