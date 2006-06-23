@@ -93,7 +93,7 @@ pcorpus : FORCE
 
 
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-1.5.po
 	rm -fR langpack-build-dir
 
 distclean :
