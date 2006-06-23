@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
-"POT-Creation-Date: 2006-06-20 11:36\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-23 08:31-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -54,16 +55,13 @@ msgstr "leagan"
 
 #: copyrightText
 msgid ""
-"&#169;1998-2006 Contributors. All rights                                 "
-"reserved. Mozilla Sunbird, Sunbird, and the                                 "
-"Sunbird logos are trademarks of the Mozilla                                 "
-"Foundation. All rights reserved."
+"&#169;1998-2006 Contributors. All rights reserved. Mozilla Sunbird, Sunbird, "
+"and the Sunbird logos are trademarks of the Mozilla Foundation. All rights "
+"reserved."
 msgstr ""
-"#169;1998-2006 le lucht déanta a gcion. Gach ceart ar cosaint. "
-"Is                                  trádmharcanna de chuid Fondúireacht "
-"Mozilla iad Mozilla Sunbird, Sunbird, "
-"agus                                         suaitheantais Sunbird.  Gach "
-"ceart ar cosaint."
+"#169;1998-2006 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
+"trádmharcanna de chuid Fondúireacht Mozilla iad Mozilla Sunbird, Sunbird, "
+"agus suaitheantais Sunbird. Gach ceart ar cosaint."
 
 #: brandMotto
 msgid "it's about time"
@@ -84,6 +82,15 @@ msgstr "Inneall Leagain Amach Gecko"
 #: credit.thanks
 msgid "Special Thanks To"
 msgstr "Buíochas ar leith le"
+
+# localization credits look like this:
+#
+# <!ENTITY credit.translation
+# "<h3>Translators</h3><ul><li>Name Here</li></ul>">
+#
+#: credit.translation
+msgid "_: credit.translation\n"
+msgstr ""
 
 #: credit.visuals
 msgid "Visual Design Coordinator"
@@ -373,15 +380,14 @@ msgstr "Mí"
 msgid "Year"
 msgstr "Bliain"
 
-#: priority.level.none
-msgid ""
-"_: priority.level.none\n"
-"Not specified"
+#: priority.level.none newevent.status.none.label
+msgid "Not specified"
 msgstr "Gan sonrú"
 
 # Ctrl+N is Fuinneog Nua under Main -> Comhad
 # see also lowercase for "Navigator" command
-#: priority.level.none.accesskey
+#: priority.level.none.accesskey event.new.event.key event.new.event.accesskey
+#: goNextCmd.accesskey
 msgid "N"
 msgstr "N"
 
@@ -397,10 +403,10 @@ msgstr "L"
 msgid "Medium"
 msgstr "Measartha"
 
-#: priority.level.medium.accesskey
-msgid ""
-"_: priority.level.medium.accesskey\n"
-"M"
+#: priority.level.medium.accesskey calendar.monthview.accesskey
+#: calendar.maintoolbar.accesskey day.2.short event.mail.event.key
+#: event.mail.event.accesskey minimizeWindow.key
+msgid "M"
 msgstr "M"
 
 #: priority.level.high highPriority
@@ -411,35 +417,24 @@ msgstr "Ard"
 msgid "H"
 msgstr "H"
 
-#: newevent.title.label
-msgid ""
-"_: newevent.title.label\n"
-"Title"
+#: newevent.title.label calendar.unifinder.tree.title.label
+#: calendar.print.title.label
+msgid "Title"
 msgstr "Teideal"
 
-#: newevent.location.label
-msgid ""
-"_: newevent.location.label\n"
-"Location"
+#: newevent.location.label calendar.unifinder.tree.location.label
+#: calendar.importoutlook.outlooklocation.label outlookCSVLocation
+msgid "Location"
 msgstr "Suíomh"
 
-#: newevent.start.label
-msgid ""
-"_: newevent.start.label\n"
-"Start"
+#: newevent.start.label newevent.startdate.label
+#: calendar.unifinder.tree.startdate.label
+msgid "Start"
 msgstr "Tosú"
 
-#: newevent.date.label
-msgid ""
-"_: newevent.date.label\n"
-"Date"
+#: newevent.date.label calendar.calendartab.label
+msgid "Date"
 msgstr "Dáta"
-
-#: newevent.startdate.label
-msgid ""
-"_: newevent.startdate.label\n"
-"Start"
-msgstr "Tosú"
 
 #: newevent.from.label
 msgid "From"
@@ -449,10 +444,8 @@ msgstr "Ó"
 msgid "To"
 msgstr "Go"
 
-#: newevent.enddate.label
-msgid ""
-"_: newevent.enddate.label\n"
-"End"
+#: newevent.enddate.label calendar.unifinder.tree.enddate.label
+msgid "End"
 msgstr "Críoch"
 
 #: newevent.set.label
@@ -475,10 +468,9 @@ msgstr "Saincheap..."
 msgid "All Day"
 msgstr "I Rith an Lae"
 
-#: newevent.description.label
-msgid ""
-"_: newevent.description.label\n"
-"Description"
+#: newevent.description.label calendar.importoutlook.outlookdescription.label
+#: outlookCSVDescription
+msgid "Description"
 msgstr "Cur Síos"
 
 #: newevent.uri.label
@@ -497,10 +489,9 @@ msgstr "roimh"
 msgid "after"
 msgstr "tar éis"
 
-#: newevent.private.label
-msgid ""
-"_: newevent.private.label\n"
-"Private"
+#: newevent.private.label calendar.importoutlook.outlookprivate.label
+#: outlookCSVPrivate
+msgid "Private"
 msgstr "Príobháideach"
 
 #: newevent.privacy.label
@@ -519,10 +510,8 @@ msgstr "Poiblí"
 msgid "Confidential"
 msgstr "Faoi Rún"
 
-#: newevent.alarm.label
-msgid ""
-"_: newevent.alarm.label\n"
-"Alarm"
+#: newevent.alarm.label event.title.alarm
+msgid "Alarm"
 msgstr "Aláram"
 
 #: newevent.server.label calendarPanel.label
@@ -577,10 +566,9 @@ msgstr "Go Deo"
 msgid "Number of times"
 msgstr ""
 
-#: newevent.category.label
-msgid ""
-"_: newevent.category.label\n"
-"Category"
+#: newevent.category.label newtodo.categories.label
+#: calendar.unifinder.tree.categories.label prefWindow.category
+msgid "Category"
 msgstr "Catagóir"
 
 #: newevent.popup.label
@@ -664,7 +652,7 @@ msgid ""
 msgstr ""
 
 #: newevent.general.tab.label paneGeneral.title
-#: pref.calendar.view.allview.caption
+#: pref.calendar.view.allview.caption calendar.general.label
 msgid "General"
 msgstr "Ginearálta"
 
@@ -677,6 +665,8 @@ msgid "Edit Recurrence"
 msgstr ""
 
 #: newevent.recurrence.remove.label remove.label
+#: ab-selectAddressesDialogRemoveButton.label
+#: ab-selectAddressesDialogUninvite.label
 msgid "Remove"
 msgstr "Bain"
 
@@ -732,16 +722,8 @@ msgstr ""
 msgid "Exceptions:"
 msgstr "Eisceachtaí:"
 
-#: newevent.attendees.tab.label
-msgid ""
-"_: newevent.attendees.tab.label\n"
-"Attendees"
-msgstr "Rannpháirtithe"
-
-#: newevent.attendees.label
-msgid ""
-"_: newevent.attendees.label\n"
-"Attendees"
+#: newevent.attendees.tab.label newevent.attendees.label
+msgid "Attendees"
 msgstr "Rannpháirtithe"
 
 #: calendar.edit.attendees
@@ -756,16 +738,14 @@ msgstr "Iatáin"
 msgid "Advanced"
 msgstr "Ardroghanna"
 
-#: newevent.completed.label
-msgid ""
-"_: newevent.completed.label\n"
-"Completed"
+#: newevent.completed.label newtodo.completed.label
+#: calendar.unifinder.tree.completeddate.label statusCompleted
+msgid "Completed"
 msgstr "Críochnaithe"
 
-#: newevent.status.label
-msgid ""
-"_: newevent.status.label\n"
-"Status"
+#: newevent.status.label newtodo.status.label
+#: calendar.unifinder.tree.status.label
+msgid "Status"
 msgstr "Stádas"
 
 #: newevent.status.longlabel
@@ -784,10 +764,8 @@ msgstr "Idir Lámha"
 msgid "Completed on"
 msgstr "Críochnaithe ar"
 
-#: newevent.status.cancelled.label
-msgid ""
-"_: newevent.status.cancelled.label\n"
-"Cancelled"
+#: newevent.status.cancelled.label newtodo.cancelled.label statusCancelled
+msgid "Cancelled"
 msgstr "Cealaithe"
 
 # #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
@@ -801,12 +779,6 @@ msgstr "Sealadach"
 msgid "Confirmed"
 msgstr "Cinntithe"
 
-#: newevent.status.none.label
-msgid ""
-"_: newevent.status.none.label\n"
-"Not specified"
-msgstr "Gan sonrú"
-
 #: newevent.itemType.label
 msgid "Item Type"
 msgstr "Cineál na Míre"
@@ -815,10 +787,8 @@ msgstr "Cineál na Míre"
 msgid "Event"
 msgstr "Imeacht"
 
-#: newevent.itemType.todo.label
-msgid ""
-"_: newevent.itemType.todo.label\n"
-"Task"
+#: newevent.itemType.todo.label newtodo.newtodo.tab.label
+msgid "Task"
 msgstr "Tasc"
 
 #: newevent.itemType.journal.label
@@ -837,12 +807,6 @@ msgstr "Ceangail Comhad..."
 msgid "Remove Selected File"
 msgstr "Bain an Comhad Roghnaithe"
 
-#: newtodo.completed.label
-msgid ""
-"_: newtodo.completed.label\n"
-"Completed"
-msgstr "Críochnaithe"
-
 #: newtodo.duedate.label
 msgid "Due Date"
 msgstr "Spriocdháta"
@@ -851,37 +815,17 @@ msgstr "Spriocdháta"
 msgid "Start Date"
 msgstr "Dáta Tosaigh"
 
-#: newtodo.priority.label
-msgid ""
-"_: newtodo.priority.label\n"
-"Priority"
+#: newtodo.priority.label calendar.unifinder.tree.priority.label
+msgid "Priority"
 msgstr "Tosaíocht"
 
 #: newtodo.percentcomplete.label
 msgid "&#37; complete"
 msgstr ""
 
-#: newtodo.categories.label
-msgid ""
-"_: newtodo.categories.label\n"
-"Category"
-msgstr "Catagóir"
-
 #: newtodo.starttime.warning
 msgid "Your start date occurs after your due date."
 msgstr ""
-
-#: newtodo.cancelled.label
-msgid ""
-"_: newtodo.cancelled.label\n"
-"Cancelled"
-msgstr "Cealaithe"
-
-#: newtodo.status.label
-msgid ""
-"_: newtodo.status.label\n"
-"Status"
-msgstr "Stádas"
 
 #: newtodo.beforealarm.label
 msgid "before this task"
@@ -890,12 +834,6 @@ msgstr ""
 #: newtodo.beforealarmends.label
 msgid "before the task is due"
 msgstr ""
-
-#: newtodo.newtodo.tab.label
-msgid ""
-"_: newtodo.newtodo.tab.label\n"
-"Task"
-msgstr "Tasc"
 
 #: newtodo.status.longlabel
 msgid "Task Status"
@@ -929,26 +867,17 @@ msgstr ""
 msgid "Remind me again in "
 msgstr ""
 
-#: event.title.alarm
-msgid ""
-"_: event.title.alarm\n"
-"Alarm"
-msgstr "Aláram"
-
-#: event.title.new
-msgid ""
-"_: event.title.new\n"
-"New Event"
+#: event.title.new calendar.flat.topbar.new calendar.newevent.button.label
+#: newEvent newEventDialog
+msgid "New Event"
 msgstr "Imeacht Nua"
 
 #: event.title.label
 msgid "Edit Item"
 msgstr "Cuir Mír in Eagar"
 
-#: event.title.edit
-msgid ""
-"_: event.title.edit\n"
-"Edit Event"
+#: event.title.edit calendar.alarm.editevent.label editEventDialog
+msgid "Edit Event"
 msgstr "Cuir Imeacht in Eagar"
 
 #: onthe-text
@@ -963,10 +892,8 @@ msgstr ""
 msgid " of the month"
 msgstr " na míosa"
 
-#: todo.title.new
-msgid ""
-"_: todo.title.new\n"
-"New Task"
+#: todo.title.new calendar.newtask.button.label newTaskDialog
+msgid "New Task"
 msgstr "Tasc Nua"
 
 #: todo.title.edit editTaskDialog
@@ -993,55 +920,37 @@ msgstr "Cuir tasc atá ann in eagar."
 msgid "Alarm!"
 msgstr "Aláram!"
 
-#: calendar.flat.topbar.new
-msgid ""
-"_: calendar.flat.topbar.new\n"
-"New Event"
-msgstr "Imeacht Nua"
-
-#: calendar.flat.topbar.gototoday
-msgid ""
-"_: calendar.flat.topbar.gototoday\n"
-"Go to Today"
+#: calendar.flat.topbar.gototoday calendar.gototoday.button.label
+msgid "Go to Today"
 msgstr ""
 
 #: calendar.flat.topbar.choosedate
 msgid "Go to Date"
 msgstr ""
 
-#: calendar.flat.topbar.dayview
-msgid ""
-"_: calendar.flat.topbar.dayview\n"
-"Day View"
+#: calendar.flat.topbar.dayview calendar.dayview.button.label
+#: pref.calendar.view.dayview.caption
+msgid "Day View"
 msgstr "Amharc Lae"
 
 #: calendar.dayview.accesskey event.delete.event.accesskey
 msgid "D"
 msgstr "D"
 
-#: calendar.flat.topbar.weekview
-msgid ""
-"_: calendar.flat.topbar.weekview\n"
-"Week View"
-msgstr ""
+#: calendar.flat.topbar.weekview calendar.weekview.button.label
+#: pref.calendar.view.weekview.caption
+msgid "Week View"
+msgstr "Amharc Seachtaine"
 
-#: calendar.weekview.accesskey
-msgid ""
-"_: calendar.weekview.accesskey\n"
-"W"
-msgstr ""
+#: calendar.weekview.accesskey calendar.menu.options.close.key week.short
+#: day.4.short
+msgid "W"
+msgstr "W"
 
-#: calendar.flat.topbar.monthview
-msgid ""
-"_: calendar.flat.topbar.monthview\n"
-"Month View"
-msgstr ""
-
-#: calendar.monthview.accesskey
-msgid ""
-"_: calendar.monthview.accesskey\n"
-"M"
-msgstr ""
+#: calendar.flat.topbar.monthview calendar.monthview.button.label
+#: pref.calendar.view.monthview.caption
+msgid "Month View"
+msgstr "Amharc Míosa"
 
 #: calendar.flat.topbar.multiweekview pref.calendar.view.multiweekview.caption
 msgid "Multiweek View"
@@ -1052,16 +961,12 @@ msgstr ""
 msgid "u"
 msgstr "u"
 
-#: calendar.dayView.key
-msgid ""
-"_: calendar.dayView.key\n"
-"1"
+#: calendar.dayView.key progress.level.100.accesskey
+msgid "1"
 msgstr "1"
 
-#: calendar.weekView.key
-msgid ""
-"_: calendar.weekView.key\n"
-"2"
+#: calendar.weekView.key progress.level.25.accesskey
+msgid "2"
 msgstr "2"
 
 #: calendar.multiweekView.key
@@ -1112,23 +1017,9 @@ msgstr "Tascanna"
 msgid "Hide Completed Tasks"
 msgstr "Folaigh Tascanna Críochnaithe"
 
-#: calendar.calendartab.label
-msgid ""
-"_: calendar.calendartab.label\n"
-"Date"
-msgstr "Dáta"
-
-#: calendar.listofcalendarstab.label
-msgid ""
-"_: calendar.listofcalendarstab.label\n"
-"Calendars"
+#: calendar.listofcalendarstab.label calendar.calendarlistbox.label
+msgid "Calendars"
 msgstr "Féilirí"
-
-#: calendar.gototoday.button.label
-msgid ""
-"_: calendar.gototoday.button.label\n"
-"Go to Today"
-msgstr ""
 
 #: calendar.more.label
 msgid "More"
@@ -1137,12 +1028,6 @@ msgstr "Tuilleadh"
 #: calendar.less.label
 msgid "Less"
 msgstr "Níos Lú"
-
-#: calendar.calendarlistbox.label
-msgid ""
-"_: calendar.calendarlistbox.label\n"
-"Calendars"
-msgstr "Féilirí"
 
 #: calendar.events.filter.all.label
 msgid "All Events"
@@ -1192,61 +1077,13 @@ msgstr ""
 msgid "Done"
 msgstr "Déanta"
 
-#: calendar.unifinder.tree.priority.label
-msgid ""
-"_: calendar.unifinder.tree.priority.label\n"
-"Priority"
-msgstr "Tosaíocht"
-
-#: calendar.unifinder.tree.title.label
-msgid ""
-"_: calendar.unifinder.tree.title.label\n"
-"Title"
-msgstr "Teideal"
-
 #: calendar.unifinder.tree.percentcomplete.label
 msgid "&#37; Complete"
 msgstr "&#37; Déanta"
 
-#: calendar.unifinder.tree.startdate.label
-msgid ""
-"_: calendar.unifinder.tree.startdate.label\n"
-"Start"
-msgstr "Tosú"
-
-#: calendar.unifinder.tree.enddate.label
-msgid ""
-"_: calendar.unifinder.tree.enddate.label\n"
-"End"
-msgstr "Deireadh"
-
 #: calendar.unifinder.tree.duedate.label
 msgid "Due"
 msgstr "Spriocdháta"
-
-#: calendar.unifinder.tree.completeddate.label
-msgid ""
-"_: calendar.unifinder.tree.completeddate.label\n"
-"Completed"
-msgstr "Críochnaithe"
-
-#: calendar.unifinder.tree.categories.label
-msgid ""
-"_: calendar.unifinder.tree.categories.label\n"
-"Category"
-msgstr "Catagóir"
-
-#: calendar.unifinder.tree.location.label
-msgid ""
-"_: calendar.unifinder.tree.location.label\n"
-"Location"
-msgstr "Suíomh"
-
-#: calendar.unifinder.tree.status.label
-msgid ""
-"_: calendar.unifinder.tree.status.label\n"
-"Status"
-msgstr "Stádas"
 
 #: calendar.unifinder.tree.calendarname.label
 msgid "Calendar Name"
@@ -1300,73 +1137,33 @@ msgstr "An Mhí Seo Chugainn"
 msgid "Previous Month"
 msgstr "An Mhí Roimhe Seo"
 
-#: calendar.newtask.button.label
-msgid ""
-"_: calendar.newtask.button.label\n"
-"New Task"
-msgstr "Tasc Nua"
-
-#: calendar.newevent.button.label
-msgid ""
-"_: calendar.newevent.button.label\n"
-"New Event"
-msgstr "Imeacht Nua"
-
-#: calendar.delete.button.label
-msgid ""
-"_: calendar.delete.button.label\n"
-"Delete"
+#: calendar.delete.button.label calendar.menu.options.remove
+msgid "Delete"
 msgstr "Scrios"
 
-#: calendar.edit.button.label
-msgid ""
-"_: calendar.edit.button.label\n"
-"Edit"
+#: calendar.edit.button.label calendar.menu.options.modify edit.label
+msgid "Edit"
 msgstr "Eagar"
 
 #: calendar.choosedate.button.label
 msgid "Choose Date"
 msgstr "Roghnaigh Dáta"
 
-#: calendar.cut.button.tooltip
-msgid ""
-"_: calendar.cut.button.tooltip\n"
-"Cut"
+#: calendar.cut.button.tooltip calendar.cut.button.label
+msgid "Cut"
 msgstr "Gearr"
 
-#: calendar.copy.button.tooltip
-msgid ""
-"_: calendar.copy.button.tooltip\n"
-"Copy"
+#: calendar.copy.button.tooltip calendar.copy.button.label
+msgid "Copy"
 msgstr "Cóipeáil"
 
-#: calendar.paste.button.tooltip
-msgid ""
-"_: calendar.paste.button.tooltip\n"
-"Paste"
+#: calendar.paste.button.tooltip calendar.paste.button.label
+msgid "Paste"
 msgstr "Greamaigh"
 
 #: calendar.print.button.tooltip
 msgid "Print Calendar"
 msgstr "Priontáil Féilire"
-
-#: calendar.cut.button.label
-msgid ""
-"_: calendar.cut.button.label\n"
-"Cut"
-msgstr "Gearr"
-
-#: calendar.copy.button.label
-msgid ""
-"_: calendar.copy.button.label\n"
-"Copy"
-msgstr "Cóipeáil"
-
-#: calendar.paste.button.label
-msgid ""
-"_: calendar.paste.button.label\n"
-"Paste"
-msgstr "Greamaigh"
 
 #: calendar.print.button.label
 msgid "Print"
@@ -1416,10 +1213,8 @@ msgstr "Easpórtáil"
 msgid "Subscribe"
 msgstr "Liostáil"
 
-#: calendar.publish.button.label
-msgid ""
-"_: calendar.publish.button.label\n"
-"Publish"
+#: calendar.publish.button.label calendar.publish.publish.button
+msgid "Publish"
 msgstr "Foilsigh"
 
 #: calendar.localreload.button.label
@@ -1438,24 +1233,6 @@ msgstr "Athluchtaigh"
 msgid "Reload all remote calendars"
 msgstr "Athluchtaigh gach féilire cianda"
 
-#: calendar.dayview.button.label
-msgid ""
-"_: calendar.dayview.button.label\n"
-"Day View"
-msgstr "Amharc Lae"
-
-#: calendar.weekview.button.label
-msgid ""
-"_: calendar.weekview.button.label\n"
-"Week View"
-msgstr "Amharc Seachtaine"
-
-#: calendar.monthview.button.label
-msgid ""
-"_: calendar.monthview.button.label\n"
-"Month View"
-msgstr "Amharc Míosa"
-
 #: calendar.multiweekview.button.label
 msgid "Multiweek"
 msgstr "Amharc Seachtainí"
@@ -1469,27 +1246,9 @@ msgstr "Laethanta oib&re amháin"
 msgid "Tasks in &View"
 msgstr "Tascanna san &Amharc"
 
-#: calendar.menu.options.modify
-msgid ""
-"_: calendar.menu.options.modify\n"
-"Edit"
-msgstr "Eagar"
-
-#: calendar.menu.options.remove
-msgid ""
-"_: calendar.menu.options.remove\n"
-"Delete"
-msgstr "Scrios"
-
 #: calendar.menu.options.close
 msgid "Close Window"
 msgstr "Dún an Fhuinneog"
-
-#: calendar.menu.options.close.key
-msgid ""
-"_: calendar.menu.options.close.key\n"
-"W"
-msgstr "W"
 
 # Ctrl+"C" = Cóipeáil; leave alone
 #  collapse_folder accesskey sedtweaked
@@ -1567,12 +1326,6 @@ msgstr "AOI"
 msgid "SAT"
 msgstr "SAT"
 
-#: week.short
-msgid ""
-"_: week.short\n"
-"W"
-msgstr "S"
-
 # Statusbar
 #: statusText.label
 msgid "Document: Done"
@@ -1597,12 +1350,6 @@ msgstr "Sain&cheap Barra Uirlisí..."
 #: calendar.maintoolbar.name
 msgid "Main Toolbar"
 msgstr "Príomhbharra Uirlisí"
-
-#: calendar.maintoolbar.accesskey
-msgid ""
-"_: calendar.maintoolbar.accesskey\n"
-"M"
-msgstr "P"
 
 # Context Menu
 #: calendar.context.newevent.label calendar.context.newevent.accesskey
@@ -1723,12 +1470,6 @@ msgstr "0"
 msgid "25&percnt;"
 msgstr "25&percnt;"
 
-#: progress.level.25.accesskey
-msgid ""
-"_: progress.level.25.accesskey\n"
-"2"
-msgstr "2"
-
 #: progress.level.50
 msgid "50&percnt;"
 msgstr "50&percnt;"
@@ -1748,12 +1489,6 @@ msgstr "7"
 #: progress.level.100
 msgid "100&percnt;"
 msgstr "100&percnt;"
-
-#: progress.level.100.accesskey
-msgid ""
-"_: progress.level.100.accesskey\n"
-"1"
-msgstr "1"
 
 # Server Context Menu
 #: calendar.context.newserver.label calendar.context.newserver.accesskey
@@ -1802,12 +1537,6 @@ msgstr "Barra Uirlisí Loingseoireachta"
 #: calendar.alarm.acknowledge.label
 msgid "Acknowledge"
 msgstr "Admhaigh"
-
-#: calendar.alarm.editevent.label
-msgid ""
-"_: calendar.alarm.editevent.label\n"
-"Edit Event"
-msgstr "Cuir Imeacht in Eagar"
 
 #: calendar.alarm.acknowledgeall.label
 msgid "Acknowledge All Alarms"
@@ -1937,12 +1666,6 @@ msgstr "Foilsigh Féilire"
 msgid "Publishing URL"
 msgstr "URL Foilsithe"
 
-#: calendar.publish.publish.button
-msgid ""
-"_: calendar.publish.publish.button\n"
-"Publish"
-msgstr "Foilsigh"
-
 #: calendar.publish.close.button
 msgid "Close"
 msgstr "Dún"
@@ -2020,27 +1743,9 @@ msgstr "Dáta deiridh"
 msgid "End time"
 msgstr "Am deiridh"
 
-#: calendar.importoutlook.outlooklocation.label
-msgid ""
-"_: calendar.importoutlook.outlooklocation.label\n"
-"Location"
-msgstr "Suíomh"
-
-#: calendar.importoutlook.outlookdescription.label
-msgid ""
-"_: calendar.importoutlook.outlookdescription.label\n"
-"Description"
-msgstr "Cur Síos"
-
 #: calendar.importoutlook.outlookallday.label
 msgid "All-day event"
 msgstr "Imeacht lae"
-
-#: calendar.importoutlook.outlookprivate.label
-msgid ""
-"_: calendar.importoutlook.outlookprivate.label\n"
-"Private"
-msgstr "Príobháideach"
 
 #: calendar.importoutlook.outlookalarm.label
 msgid "Alarm on/off"
@@ -2075,12 +1780,6 @@ msgstr "Falsa"
 #: calendar.print.window.title
 msgid "Print A Calendar"
 msgstr "Priontáil Féilire"
-
-#: calendar.print.title.label
-msgid ""
-"_: calendar.print.title.label\n"
-"Title"
-msgstr "Teideal"
 
 #: calendar.print.layout.label
 msgid "Layout"
@@ -2130,28 +1829,6 @@ msgstr "Tharla earráid"
 msgid "Print Preview of %1$S"
 msgstr "Réamhamharc Priontála %1$S"
 
-# Default name for new events
-#: newEvent
-msgid ""
-"_: newEvent\n"
-"New Event"
-msgstr "Imeacht Nua"
-
-# Titles for the event/task dialog
-#: newEventDialog
-msgid ""
-"_: newEventDialog\n"
-"New Event"
-msgstr "Imeacht Nua"
-
-#: editEventDialog
-msgid "Edit Event"
-msgstr "Cuir Imeacht in Eagar"
-
-#: newTaskDialog
-msgid "New Task"
-msgstr "Tasc Nua"
-
 # also with &
 # VK_HOME is a key cap, handled by sedtweak (appears under Main->Gabh as
 # the shortcut "Alt+Home" --kps
@@ -2163,14 +1840,6 @@ msgstr "Baile"
 #: untitledCalendarName
 msgid "Untitled Calendar"
 msgstr "Féilire Gan Teideal"
-
-#: statusCancelled
-msgid "Cancelled"
-msgstr "Cealaithe"
-
-#: statusCompleted
-msgid "Completed"
-msgstr "Críochnaithe"
 
 #: noEventsOrTasksToImport
 msgid ""
@@ -2267,10 +1936,8 @@ msgid "Add duplicate entry:"
 msgstr ""
 
 # spaces needed at the end of the following lines
-#: eventTitle
-msgid ""
-"_: eventTitle\n"
-"Title:"
+#: eventTitle tooltipTitle
+msgid "Title:"
 msgstr "Teideal:"
 
 #: eventStartTime
@@ -2309,21 +1976,13 @@ msgstr ""
 msgid "MozillaCalEvents"
 msgstr "MozillaCalEvents"
 
-#: deleteCalendarTitle
-msgid ""
-"_: deleteCalendarTitle\n"
-"Delete Calendar"
+#: deleteCalendarTitle deleteCalendarOnly
+msgid "Delete Calendar"
 msgstr "Scrios Féilire"
 
 #: deleteCalendarMessage
 msgid "Are you sure you want to delete this calendar?"
 msgstr ""
-
-#: deleteCalendarOnly
-msgid ""
-"_: deleteCalendarOnly\n"
-"Delete Calendar"
-msgstr "Scrios Féilire"
 
 #: deleteCalendarAndFile
 msgid "Delete Calendar And File"
@@ -2383,13 +2042,6 @@ msgstr ""
 #: eventUntitled
 msgid "Untitled"
 msgstr "Gan Teideal"
-
-# Tooltips of events or todos
-#: tooltipTitle
-msgid ""
-"_: tooltipTitle\n"
-"Title:"
-msgstr "Teideal:"
 
 #: tooltipDate
 msgid "Date:"
@@ -2511,17 +2163,14 @@ msgstr ""
 msgid "Reminder Time"
 msgstr ""
 
-#: outlookCSVDescription
-msgid "Description"
-msgstr "Cur Síos"
-
-#: outlookCSVLocation
-msgid "Location"
-msgstr "Suíomh"
-
-#: outlookCSVPrivate
-msgid "Private"
-msgstr "Príobháideach"
+# Questions to user about how to parse values
+#: outlookCSVDateParseConfirm
+msgid ""
+"A date in this file is formatted as \"%1$S\".\n"
+"The operating system is set to parse this date as \"%2$S\".\n"
+"Is this OK?\n"
+"(If not, adjust settings so format matches, then restart this application.)"
+msgstr ""
 
 # Questions to user about how to parse values
 # Remote calendar errors
@@ -2727,10 +2376,8 @@ msgstr "Már"
 msgid "Apr"
 msgstr "Aib"
 
-#: month.5.Mmm
-msgid ""
-"_: month.5.Mmm\n"
-"May"
+#: month.5.Mmm month.5.name
+msgid "May"
 msgstr "Bealtaine"
 
 #: month.6.Mmm
@@ -2776,12 +2423,6 @@ msgstr "Márta"
 #: month.4.name
 msgid "April"
 msgstr "Aibreán"
-
-#: month.5.name
-msgid ""
-"_: month.5.name\n"
-"May"
-msgstr "Bealtaine"
 
 #: month.6.name
 msgid "June"
@@ -2868,238 +2509,48 @@ msgid "Sat"
 msgstr "Sath"
 
 # Can someone tell me why were not counting from zero?
-#: day.1.short
-msgid ""
-"_: day.1.short\n"
-"S"
+#: day.1.short day.7.short
+msgid "S"
 msgstr "D"
 
-# "B" for Roghanna->Casta under Bailíochtú
-#: day.2.short
-msgid "M"
-msgstr "B"
-
-#: day.3.short
-msgid ""
-"_: day.3.short\n"
-"T"
+#: day.3.short day.5.short event.new.todo.key event.new.todo.accesskey
+#: event.delete.tasks.accesskey
+msgid "T"
 msgstr "M"
-
-# ctrl+D is "Dún" under Main -> Comhad
-#: day.4.short
-msgid "W"
-msgstr "D"
-
-#: day.5.short
-msgid ""
-"_: day.5.short\n"
-"T"
-msgstr "D"
 
 #: day.6.short
 msgid "F"
 msgstr "F"
 
-#: day.7.short
-msgid ""
-"_: day.7.short\n"
-"S"
-msgstr "S"
-
-#: am-string
+#: am-string time.am time.AM
 msgid "AM"
 msgstr "AM"
 
-#: pm-string
+#: pm-string time.pm time.PM
 msgid "PM"
 msgstr "PM"
 
 # Added to support localization of messages within eventDialog.js
 #   Day ordinals imply order within a list.
-#: ordinal.suffix.1
-msgid ""
-"_: ordinal.suffix.1\n"
-"st"
+#: ordinal.suffix.1 ordinal.suffix.21 ordinal.suffix.31
+msgid "st"
 msgstr "ú"
 
-#: ordinal.suffix.2
-msgid ""
-"_: ordinal.suffix.2\n"
-"nd"
+#: ordinal.suffix.2 ordinal.suffix.22
+msgid "nd"
 msgstr "ú"
 
-#: ordinal.suffix.3
-msgid ""
-"_: ordinal.suffix.3\n"
-"rd"
+#: ordinal.suffix.3 ordinal.suffix.23
+msgid "rd"
 msgstr "ú"
 
-#: ordinal.suffix.4
-msgid ""
-"_: ordinal.suffix.4\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.5
-msgid ""
-"_: ordinal.suffix.5\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.6
-msgid ""
-"_: ordinal.suffix.6\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.7
-msgid ""
-"_: ordinal.suffix.7\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.8
-msgid ""
-"_: ordinal.suffix.8\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.9
-msgid ""
-"_: ordinal.suffix.9\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.10
-msgid ""
-"_: ordinal.suffix.10\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.11
-msgid ""
-"_: ordinal.suffix.11\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.12
-msgid ""
-"_: ordinal.suffix.12\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.13
-msgid ""
-"_: ordinal.suffix.13\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.14
-msgid ""
-"_: ordinal.suffix.14\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.15
-msgid ""
-"_: ordinal.suffix.15\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.16
-msgid ""
-"_: ordinal.suffix.16\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.17
-msgid ""
-"_: ordinal.suffix.17\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.18
-msgid ""
-"_: ordinal.suffix.18\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.19
-msgid ""
-"_: ordinal.suffix.19\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.20
-msgid ""
-"_: ordinal.suffix.20\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.21
-msgid ""
-"_: ordinal.suffix.21\n"
-"st"
-msgstr "ú"
-
-#: ordinal.suffix.22
-msgid ""
-"_: ordinal.suffix.22\n"
-"nd"
-msgstr "ú"
-
-#: ordinal.suffix.23
-msgid ""
-"_: ordinal.suffix.23\n"
-"rd"
-msgstr "ú"
-
-#: ordinal.suffix.24
-msgid ""
-"_: ordinal.suffix.24\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.25
-msgid ""
-"_: ordinal.suffix.25\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.26
-msgid ""
-"_: ordinal.suffix.26\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.27
-msgid ""
-"_: ordinal.suffix.27\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.28
-msgid ""
-"_: ordinal.suffix.28\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.29
-msgid ""
-"_: ordinal.suffix.29\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.30
-msgid ""
-"_: ordinal.suffix.30\n"
-"th"
-msgstr "ú"
-
-#: ordinal.suffix.31
-msgid ""
-"_: ordinal.suffix.31\n"
-"st"
+#: ordinal.suffix.4 ordinal.suffix.5 ordinal.suffix.6 ordinal.suffix.7
+#: ordinal.suffix.8 ordinal.suffix.9 ordinal.suffix.10 ordinal.suffix.11
+#: ordinal.suffix.12 ordinal.suffix.13 ordinal.suffix.14 ordinal.suffix.15
+#: ordinal.suffix.16 ordinal.suffix.17 ordinal.suffix.18 ordinal.suffix.19
+#: ordinal.suffix.20 ordinal.suffix.24 ordinal.suffix.25 ordinal.suffix.26
+#: ordinal.suffix.27 ordinal.suffix.28 ordinal.suffix.29 ordinal.suffix.30
+msgid "th"
 msgstr "ú"
 
 #: ordinal.name.last
@@ -3302,18 +2753,6 @@ msgstr "22:00"
 msgid "11:00 PM"
 msgstr "23:00"
 
-#: time.am
-msgid ""
-"_: time.am\n"
-"AM"
-msgstr "AM"
-
-#: time.pm
-msgid ""
-"_: time.pm\n"
-"PM"
-msgstr "PM"
-
 #: month.1.MMM
 msgid "JAN"
 msgstr "EAN"
@@ -3362,18 +2801,6 @@ msgstr "SAM"
 msgid "DEC"
 msgstr "NOL"
 
-#: time.AM
-msgid ""
-"_: time.AM\n"
-"AM"
-msgstr "AM"
-
-#: time.PM
-msgid ""
-"_: time.PM\n"
-"PM"
-msgstr "PM"
-
 #: more.label
 msgid "MORE"
 msgstr "TUILLEADH"
@@ -3381,10 +2808,6 @@ msgstr "TUILLEADH"
 #: less.label
 msgid "LESS"
 msgstr ""
-
-#: edit.label
-msgid "Edit"
-msgstr "Eagar"
 
 # Units
 #: calendar.global.units.second
@@ -3439,33 +2862,9 @@ msgstr "v"
 msgid "New Event..."
 msgstr "Imeacht Nua..."
 
-#: event.new.event.key
-msgid ""
-"_: event.new.event.key\n"
-"N"
-msgstr "N"
-
-#: event.new.event.accesskey
-msgid ""
-"_: event.new.event.accesskey\n"
-"N"
-msgstr "N"
-
 #: event.new.todo
 msgid "New Task..."
 msgstr "Tasc Nua..."
-
-#: event.new.todo.key
-msgid ""
-"_: event.new.todo.key\n"
-"T"
-msgstr "T"
-
-#: event.new.todo.accesskey
-msgid ""
-"_: event.new.todo.accesskey\n"
-"T"
-msgstr "T"
 
 #: calendar.new.server.label calendar.new.server.accesskey
 msgid "New Ca&lendar File..."
@@ -3491,16 +2890,8 @@ msgstr "O"
 msgid "Edit Selection..."
 msgstr "Cuir Roghnúchán in Eagar..."
 
-#: event.edit.event.key
-msgid ""
-"_: event.edit.event.key\n"
-"E"
-msgstr "E"
-
-#: event.edit.event.accesskey
-msgid ""
-"_: event.edit.event.accesskey\n"
-"E"
+#: event.edit.event.key event.edit.event.accesskey
+msgid "E"
 msgstr "E"
 
 #: event.delete.event
@@ -3511,26 +2902,8 @@ msgstr "Scrios na hImeachtaí Roghnaithe"
 msgid "Delete Selected Tasks"
 msgstr "Scrios na Tascanna Roghnaithe"
 
-#: event.delete.tasks.accesskey
-msgid ""
-"_: event.delete.tasks.accesskey\n"
-"T"
-msgstr "T"
-
 #: event.mail.event
 msgid "Mail Selection..."
-msgstr ""
-
-#: event.mail.event.key
-msgid ""
-"_: event.mail.event.key\n"
-"M"
-msgstr ""
-
-#: event.mail.event.accesskey
-msgid ""
-"_: event.mail.event.accesskey\n"
-"M"
 msgstr ""
 
 # "P" under Main -> Comhad
@@ -3538,10 +2911,8 @@ msgstr ""
 msgid "&Print..."
 msgstr "&Priontáil..."
 
-#: calendar.print.key
-msgid ""
-"_: calendar.print.key\n"
-"P"
+#: calendar.print.key goPreviousCmd.accesskey HTTPport.accesskey
+msgid "P"
 msgstr "P"
 
 # "R" under Main -> Comhad
@@ -3703,18 +3074,6 @@ msgstr "&Inniu"
 msgid "&Date..."
 msgstr "&Dáta..."
 
-#: goPreviousCmd.accesskey
-msgid ""
-"_: goPreviousCmd.accesskey\n"
-"P"
-msgstr ""
-
-#: goNextCmd.accesskey
-msgid ""
-"_: goNextCmd.accesskey\n"
-"N"
-msgstr ""
-
 #: taskMenu.label taskMenu.accesskey
 msgid "Tas&ks"
 msgstr "Tas&canna"
@@ -3826,12 +3185,6 @@ msgstr "Íoslaghdaigh"
 #: zoomWindow.label
 msgid "Zoom"
 msgstr "Súmáil"
-
-#: minimizeWindow.key
-msgid ""
-"_: minimizeWindow.key\n"
-"M"
-msgstr "l"
 
 #: bringAllToFront.label
 msgid "Bring All to Front"
@@ -3952,9 +3305,9 @@ msgstr ""
 msgid "Default time an alarm goes off before a task:"
 msgstr ""
 
-#: pref.alarmbox.label paneAlarms.title
+#: pref.alarmbox.label paneAlarms.title calendar.alarms.label
 msgid "Alarms"
-msgstr ""
+msgstr "Aláraim"
 
 #: pref.defaultemail.label
 msgid "Default address to send alarms to:"
@@ -4044,10 +3397,10 @@ msgstr "Seachfhreastalaí &Gopher:"
 msgid "HTTP Prox&y:"
 msgstr "&Seachfhreastalaí HTTP:"
 
-# G&reamaigh, P&riontáil
-#: HTTPport.accesskey
-msgid "P"
-msgstr "R"
+# No accesskey for gopher (':' doesn't go well) - mpt's going to redesign the window
+#: gopherPort.accesskey
+msgid "_: gopherPort.accesskey\n"
+msgstr ""
 
 #: pref.dateformat.label
 msgid "Date Text Format:"
@@ -5737,22 +5090,8 @@ msgstr "&Féilire"
 msgid "Publishing"
 msgstr "Foilsiú"
 
-#: calendar.general.label
-msgid ""
-"_: calendar.general.label\n"
-"General"
-msgstr "Ginearálta"
-
-#: calendar.alarms.label
-msgid ""
-"_: calendar.alarms.label\n"
-"Alarms"
-msgstr "Aláraim"
-
-#: calendar.timezone.label
-msgid ""
-"_: calendar.timezone.label\n"
-"My Timezone"
+#: calendar.timezone.label pref.calendar.timezone.label
+msgid "My Timezone"
 msgstr "Mo Chrios Ama"
 
 #: prefWindow.size
@@ -5762,19 +5101,9 @@ msgid ""
 "width: 52.3em; height: 41em;"
 msgstr "width: 52.3em; height: 41em;"
 
-#: prefWindow.category
-msgid "Category"
-msgstr "Catagóir"
-
 #: pref.preview.label
 msgid "Preview"
 msgstr "Réamhamharc"
-
-#: pref.alarmbox.label
-msgid ""
-"_: pref.alarmbox.label\n"
-"Alarms"
-msgstr "Aláraim"
 
 #: pref.dateformat.storeingmt
 msgid "Store dates in Universal Time"
@@ -5896,24 +5225,6 @@ msgstr "22:00"
 msgid "23:00"
 msgstr "23:00"
 
-#: pref.calendar.view.allview.caption
-msgid ""
-"_: pref.calendar.view.allview.caption\n"
-"General"
-msgstr "Ginearálta"
-
-#: pref.calendar.view.dayview.caption
-msgid "Day View"
-msgstr ""
-
-#: pref.calendar.view.weekview.caption
-msgid "Week View"
-msgstr ""
-
-#: pref.calendar.view.monthview.caption
-msgid "Month View"
-msgstr ""
-
 #: pref.calendar.view.restrict.label
 msgid "Restrict Views to "
 msgstr ""
@@ -5933,13 +5244,6 @@ msgstr "Athluchtaigh Féilirí Cianda Ag Am Tosaithe"
 #: pref.minutes.label
 msgid "Minutes"
 msgstr "Nóiméad"
-
-# Calendar Timezone preferences information
-#: pref.calendar.timezone.label
-msgid ""
-"_: pref.calendar.timezone.label\n"
-"My Timezone"
-msgstr "Mo Chrios Ama"
 
 #: pref.calendar.timezone.description
 msgid ""
@@ -6085,12 +5389,6 @@ msgstr "Cc "
 msgid "Bcc "
 msgstr "Bcc "
 
-#: ab-selectAddressesDialogRemoveButton.label
-msgid ""
-"_: ab-selectAddressesDialogRemoveButton.label\n"
-"Remove"
-msgstr "Bain"
-
 #: ab-selectAddressesDialogAddressTo.label
 msgid "Address Message To:"
 msgstr ""
@@ -6111,12 +5409,19 @@ msgstr "Bcc: "
 msgid "No email address"
 msgstr "Gan seoladh ríomhphoist"
 
-#: ab-selectAddressesDialogUninvite.label
-msgid ""
-"_: ab-selectAddressesDialogUninvite.label\n"
-"Remove"
-msgstr "Bain"
-
 #: ab-selectAddressesDialogInviteList.label
 msgid "Invite list:"
+msgstr ""
+
+# plug-ins URLs
+#: MOZ_LANGPACK_CREATOR
+msgid "mozilla.org"
+msgstr "mozilla.org"
+
+# If non-English locales wish to credit multiple contributors, uncomment this
+# variable definition and use the format specified.
+#: MOZ_LANGPACK_CONTRIBUTORS
+msgid ""
+"<em:contributor>Joe Solon</em:contributor> <em:contributor>Suzy Solon</em:"
+"contributor>"
 msgstr ""
