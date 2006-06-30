@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-06-23 20:58-0500\n"
+"POT-Creation-Date: 2006-06-26 18:49-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -516,7 +516,7 @@ msgstr "Oscail"
 
 #: cmd_bm_open_accesskey cmd_bm_openfolder_accesskey
 #: xpinstallPromptWarningButton.accesskey popupWarningButton.accesskey
-#: found.updatetype.components.accesskey CertDumpAVAOrg
+#: CertDumpAVAOrg
 msgid "O"
 msgstr "O"
 
@@ -534,8 +534,7 @@ msgid "Collapse"
 msgstr "Laghdaigh"
 
 #: cmd_bm_collapsefolder_accesskey cmd_copy_accesskey copyCmd.key copy.key
-#: cmd_clearHistory_accesskey copyCmd.commandkey
-#: found.updatetype.patches.accesskey mismatchCheckNowAccesskey
+#: cmd_clearHistory_accesskey copyCmd.commandkey mismatchCheckNowAccesskey
 #: cancelButtonTextAccesskey CertDumpAVACountry changepassword.accesskey
 msgid "C"
 msgstr "C"
@@ -605,7 +604,7 @@ msgstr "Roghnaigh Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #: cmd_selectAll_accesskey selectAllCmd.key selectall.key cmd.about.accesskey
-#: certselect.auto.accesskey
+#: updateFound.addons.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -627,8 +626,7 @@ msgid "Change Location..."
 msgstr "Athraigh Suíomh..."
 
 #: cmd_bm_renamebookmark2_accesskey cmd_bm_refreshlivemark_accesskey
-#: cmd_bm_refreshmicrosummary_accesskey linksAccesskey
-#: found.updatetype.languages.accesskey CertDumpAVALocality
+#: cmd_bm_refreshmicrosummary_accesskey linksAccesskey CertDumpAVALocality
 #: warn.enteringsecure.accesskey
 msgid "L"
 msgstr "L"
@@ -2739,7 +2737,7 @@ msgstr "Iompórtáil curtha i gcrích"
 msgid "The following items were successfully imported:"
 msgstr "Iompórtáladh na rudaí seo go rathúil:"
 
-#: profileName_format appNameAndVersionFormat updateName
+#: profileName_format updateName
 msgid "%S %S"
 msgstr "%S %S"
 
@@ -15442,25 +15440,27 @@ msgstr "Míreanna breise de dhíth."
 msgid "Disabled for your protection."
 msgstr "Díchumasaithe ar mhaithe le do chosaint."
 
-#: needsDisable.label
-msgid "Will be disabled when &brandShortName; is restarted."
-msgstr "Beidh sé díchumasaithe tar éis duit &brandShortName; a atosú."
+#: toBeDisabled.label
+msgid "This add-on will be disabled when &brandShortName; is restarted."
+msgstr "Díchumasófar an Breiseán seo nuair a atosófar &brandShortName;."
 
-#: needsEnable.label
-msgid "Will be enabled when &brandShortName; is restarted."
-msgstr "Beidh sé cumasaithe tar éis duit &brandShortName; a atosú."
+#: toBeEnabled.label
+msgid "This add-on will be enabled when &brandShortName; is restarted."
+msgstr "Cumasófar an Breiseán seo nuair a atosófar &brandShortName;."
 
-#: needsInstall.label
-msgid "Will be installed when &brandShortName; is restarted."
-msgstr "Beidh sé suiteáilte tar éis duit &brandShortName; a atosú."
+#: toBeInstalled.label
+msgid "This add-on will be installed when &brandShortName; is restarted."
+msgstr "Déanfar suiteáil ar an mBreiseán seo nuair a atosófar &brandShortName;."
 
-#: needsUninstall.label
-msgid "Will be uninstalled when &brandShortName; is restarted."
-msgstr "Beidh sé díshuiteáilte tar éis duit &brandShortName; a atosú."
+#: toBeUninstalled.label
+msgid "This add-on will be uninstalled when &brandShortName; is restarted."
+msgstr ""
+"Déanfar díshuiteáil ar an mBreiseán seo nuair a atosófar &brandShortName;."
 
-#: needsUpgrade.label
-msgid "Will be upgraded when &brandShortName; is restarted."
-msgstr "Beidh sé nuashonraithe tar éis duit &brandShortName; a atosú."
+#: toBeUpgraded.label
+msgid "This add-on will be upgraded when &brandShortName; is restarted."
+msgstr ""
+"Beidh an breiseán seo nuashonraithe tar éis duit &brandShortName; a atosú."
 
 #: getExtensions.label
 msgid "Get Extensions"
@@ -15600,18 +15600,11 @@ msgstr "Tuilleadh eolais"
 msgid "Uninstall %S"
 msgstr "Díshuiteáil %S"
 
-#: uninstallWarningDependMsg
+#: uninstallWarnDependMsg
 msgid ""
-"If you uninstall %S, the following items that require this add-on will be "
-"disabled:"
+"%S is required by one or more add-ons. If you continue, the following items "
+"will be disabled:"
 msgstr ""
-"Má dhíshuiteálann tú %S, beidh na rudaí seo atá ag brath ar an mBreiseán seo "
-"díchumasaithe:"
-
-#: uninstallWarningMessage
-msgid ""
-"If you uninstall %S, the functionality it offers will no longer be available."
-msgstr "Má dhíshuiteálann tú %S, ní bheidh a fheidhmeanna ar fáil a thuilleadh."
 
 #: uninstallQueryMessage
 msgid "Do you want to uninstall %S?"
@@ -15760,10 +15753,6 @@ msgstr "Díchumasaithe - neamh-chomhoiriúnach le %S %S"
 #: incompatibleAddonMsg
 msgid "Not compatible with %S %S"
 msgstr "Neamh-chomhoiriúnach le %S %S"
-
-#: needsDependenciesDisabled
-msgid "Disabled - requires additional items to operate."
-msgstr "Díchumasaithe - tá rudaí breise de dhíth lena hoibre."
 
 #: blocklistedDisabled
 msgid "Disabled for your protection"
@@ -16023,30 +16012,28 @@ msgstr ""
 msgid "&brandShortName; Update"
 msgstr "Nuashonrú &brandShortName;"
 
-#: mismatch.title
-msgid "Incompatible Components"
-msgstr "Comhpháirteanna Neamh-chomhoiriúnacha"
+#: mismatch.win.title
+msgid "Incompatible Add-ons"
+msgstr "Breiseáin Neamh-chomhoiriúnacha"
 
-#: mismatch.intro1.label
+#: mismatch.introduction1.label
 msgid ""
-"The following components are not compatible with the new version of "
-"&brandShortName; you have just installed:"
+"The following add-ons are not compatible with this version of "
+"&brandShortName;:"
 msgstr ""
-"Níl na comhpháirteanna seo a leanas comhoiriúnach leis an leagan nua de "
-"&brandShortName; atá tar éis suiteála agat:"
+"Níl na breiseáin seo a leanas comhoiriúnach leis an leagan seo "
+"&brandShortName;:"
 
 #: mismatch.intro2.label
 msgid "They have been disabled until compatible versions are installed."
 msgstr ""
 "Tá siad díchumasaithe go dtí go mbeidh leaganacha comhoiriúnacha suiteáilte."
 
-#: mismatch.intro3.label
-msgid ""
-"&brandShortName; can check for and install newer, compatible versions of "
-"these components."
+#: mismatch.introduction3.label
+msgid "&brandShortName; can check for compatible versions of these add-ons."
 msgstr ""
-"Is féidir le &brandShortName; leaganacha comhoiriúnacha níos nuaí de na "
-"comhpháirteanna seo a lorg agus a shuiteáil."
+"Is féidir le &brandShortName; leaganacha comhoiriúnacha de na comhpháirteanna "
+"seo a lorg."
 
 #: checking.title
 msgid "Checking for Updates"
@@ -16056,21 +16043,9 @@ msgstr "Nuashonruithe á seiceáil"
 msgid "&brandShortName; is now checking for available updates..."
 msgstr "Tá cibé nuashonruithe atá le fáil á lorg anois ag &brandShortName;..."
 
-#: checking.status version.status
+#: checking.status
 msgid "This may take a few minutes..."
 msgstr "Seans go dtógfaidh sé seo cúpla bomaite..."
-
-#: version.title
-msgid "Checking for Compatibility Updates"
-msgstr "Nuashonruithe Comhoiriúnachta á seiceáil"
-
-#: version.intro.label
-msgid ""
-"&brandShortName; is now checking for compatibility updates to your Extensions "
-"and Themes..."
-msgstr ""
-"Tá &brandShortName; ag seiceáil le haghaidh nuashonruithe comhoiriúnacha ar "
-"do Eisínteachtaí agus do Théamaí..."
 
 #: found.intro.label
 msgid "&brandShortName; found the following available updates:"
@@ -16080,49 +16055,21 @@ msgstr "D'aimsigh &brandShortName; na nuashonruithe seo a leanas:"
 msgid "from: "
 msgstr "ó: "
 
-#: found.updatetype.addons.accesskey CertDumpPK9Email
-#: managepassword.askeverytime.accesskey certselect.ask.accesskey
-msgid "E"
-msgstr "E"
-
-#: found.criticalUpdates.label
-msgid "The following Critical Updates are available for &brandShortName;:"
-msgstr ""
-"Tá na Nuashonruithe Criticiúla seo a leanas le fáil do &brandShortName;:"
-
-#: found.criticalUpdates.info
+#: foundUpdates.addons.label
 msgid ""
-"You should install these updates immediately to protect your computer from "
-"attack."
+"Updates are available for the following add-ons to make them compatible with "
+"this version of &brandShortName;:"
 msgstr ""
-"Ba cheart duit na nuashonruithe seo a shuiteáil láithreach chun do ríomhaire "
-"a chosaint ó ionsaithe."
 
-#: found.app.infoLink
-msgid "More Information..."
-msgstr "Tuilleadh Eolais..."
-
-#: found.components.label
-msgid "The following components and plugins are available to install:"
-msgstr "Tá na comhpháirteanna agus forlíontáin seo a leanas le fáil:"
-
-#: found.components.info
-msgid "Installing these components may improve your browsing experience."
-msgstr ""
-"Agus na comhpháirteanna seo suiteáilte, b'fhéidir go mbainfeá níos mó "
-"taitnimh as brabhsáil."
-
-#: found.addons.label
+#: found.disabledXPinstall.label
 msgid ""
-"The following updates are available to Extensions and Themes that you already "
-"have installed"
+"These updates can't be installed because software installation is currently "
+"disabled. You can change this setting below."
 msgstr ""
-"Tá na nuashonruithe seo a leanas ar fáil le haghaidh Eisínteachtaí agus "
-"Téamaí atá suiteáilte agat cheana."
 
-#: found.languages.label
-msgid "The following language packs are available: "
-msgstr "Tá na pacáistí teanga seo a leanas le fáil: "
+#: found.enableXPInstall.label found.enableXPInstall.accesskey
+msgid "&Allow web sites to install software"
+msgstr ""
 
 # The contents of this file are subject to the Netscape Public License
 # Version 1.1 (the "License"); you may not use this file except in
@@ -16157,11 +16104,6 @@ msgstr "Nuashonruithe á suiteáil"
 #: installing.intro.label
 msgid "Now downloading and installing updates..."
 msgstr "Nuashonruithe á n-íosluchtú agus á suiteáil..."
-
-#: installing.disclaimer.label
-msgid "XXXben - this will not work until we have a scriptable API to XPInstall."
-msgstr ""
-"XXXben - this will not work until we have a scriptable API to XPInstall."
 
 #: noupdates.title noupdatesfound.title
 msgid "No Updates Found"
@@ -16211,62 +16153,40 @@ msgstr ""
 "Tá na nuashonruithe atá ar fáil suiteáilte ag &brandShortName;. Ní mór "
 "&brandShortName; a atosú chun roinnt nuashonruithe a chur i gcrích."
 
-#: finished.remaining.label
-msgid ""
-"Some incompatible components could not be updated, perhaps because compatible "
-"versions are not available at this time. &brandShortName; will check "
-"periodically and inform you when updated versions become available."
+#: finished.adminDisabled.label
+msgid "&brandShortName; is unable to install updates."
 msgstr ""
-"Ní fhéadfaí roinn comhpháirteanna a nuashonrú, b'fhéidir nach bhfuil "
-"leaganacha comhoiriúnacha ar fáil faoi láthair. Seiceálfaidh &brandShortName; "
-"go rialta agus cuirfear in iúl duit nuair a bhíonn leaganacha nuashonraithe "
-"ar fáil."
 
-#: finished.remaining2.label
+#: finished.remain1.label
 msgid ""
-"Some incompatible components could not be updated, perhaps because compatible "
-"versions are not available at this time. &brandShortName; can check "
-"periodically and inform you when updated versions become available."
+"No compatible versions of the following add-ons could be found. These add-ons "
+"will be disabled, but &brandShortName; will check periodically and inform you "
+"when compatible versions become available."
 msgstr ""
-"Ní fhéadfaí roinnt comhpháirteanna neamhoiriúnacha a nuashonrú, b'fhéidir "
-"nach bhfuil leaganacha comhoiriúnacha ar fáil faoi láthair. Is féidir le "
-"&brandShortName; seiceáil go rialta agus inseofar duit nuair atá leaganacha "
-"nuashonraithe ar fáil."
 
-#: finished.error.label
+#: finished.xpinstallLocked.label
 msgid ""
-"&brandShortName; did not succeed in downloading and installing some updates."
+"It is not possible to update the incompatible add-ons because software "
+"installation for &brandShortName; has been disabled. Please contact your "
+"System Administrator for assistance."
 msgstr ""
-"Níor éirigh le &brandShortName; roinnt nuashonruithe a íosluchtú ná a "
-"shuiteáil."
 
 #: finished.mismatch.label
 msgid "Click Finish to continue starting &brandShortName;."
 msgstr ""
 "Cliceáil Críochnaigh chun leanúint ar aghaidh le &brandShortName; a thosú."
 
-#: optional.title
-msgid "Optional Components"
-msgstr "Comhpháirteanna Roghnacha"
-
-#: optional.intro.label
-msgid ""
-"Choose additional components you want to install, then click Install Now."
-msgstr ""
-"Roghnaigh comhpháirteanna eile ba mhaith leat a shuiteáil, agus ansin "
-"cliceáil ar Suiteáil Anois."
-
 #: errors.title
 msgid "Problems During Update"
 msgstr "Fadhbanna le Nuashonrú"
 
-#: errors.intro.label
+#: errors.introduction.label
 msgid ""
 "&brandShortName; encountered problems when updating your software, and as a "
-"result not all components could be updated."
+"result not all add-ons could be updated."
 msgstr ""
 "Bhí fadhbanna ag &brandShortName; le nuashonrú do bhogearra, agus níorbh "
-"fhéidir na comhpháirteanna go léir a nuashonrú dá bharr sin."
+"fhéidir na breiseáin go léir a nuashonrú dá bharr sin."
 
 #: errors.details.label errors.details.accesskey updateCheckError.label
 #: updateCheckError.accesskey detailsButton.label detailsButton.accesskey
@@ -16281,26 +16201,14 @@ msgstr ""
 "Bhí fadhbanna ag &brandShortName; agus é ag iarraidh teacht ar nuashonruithe "
 "do mhíreanna áirithe."
 
-#: resolveMaxVersion.title
-msgid "Checking for Compatible Extensions and Themes..."
-msgstr "Ag seiceáil le haghaidh Eisínteachtaí agus Téamaí Comhoiriúnacha..."
-
-#: resolveMaxVersion.intro1.label
-msgid ""
-"&brandShortName; is checking for compatibility updates to your Extensions and "
-"Themes..."
-msgstr ""
-"Tá &brandShortName; ag seiceáil le haghaidh nuashonruithe comhoiriúnacha ar "
-"do Eisínteachtaí agus do Théamaí..."
-
-#: versioninfo.title
+#: compatCheck.title
 msgid "Compatibility Updates"
 msgstr "Nuashonruithe Comhoiriúnachta"
 
-#: versioninfo.intro
-msgid "Checking for compatibility updates to your Extensions..."
+#: compatCheck.intro
+msgid "Checking for compatibility updates to your Add-ons..."
 msgstr ""
-"Ag seiceáil le haghaidh nuashonruithe comhoiriúnacha ar d'Eisínteachtaí..."
+"Ag seiceáil le haghaidh nuashonruithe comhoiriúnacha ar do Bhreiseáin..."
 
 #: mismatchCheckNow
 msgid "Check Now"
@@ -16313,14 +16221,6 @@ msgstr "Ná Seiceáil"
 #: nextButtonText NEXT
 msgid "Next >"
 msgstr "Ar Aghaidh >"
-
-#: updatesAvailableTitle
-msgid "New Updates Available"
-msgstr "Nuashonruithe ar fáil"
-
-#: updatesAvailableText
-msgid "Click Here to View"
-msgstr "Cliceáil anseo chun iad a thaispeáint"
 
 #: checkingPrefix
 msgid "Checking for Updates to %S ..."
@@ -16360,108 +16260,20 @@ msgstr "%S á íosluchtú"
 msgid "Installing: %S"
 msgstr "%S á shuiteáil"
 
-#: installErrorDescription errors.intro.title
-msgid ""
-"The following components could not be installed due to errors (the file could "
-"not be downloaded, was corrupt, or for some other reason)."
-msgstr ""
-"Níorbh fhéidir na comhpháirteanna seo a leanas a shuiteáil de bharr earráidí "
-"(níorbh fhéidir an comhad a íosluchtú, bhí se truaillithe, nó fadhb éigin "
-"eile)."
+#: updateTypeAddons
+msgid "Add-ons (%S)"
+msgstr "Breiseáin (%S)"
 
-#: checkingErrorDescription
-msgid ""
-"%S could not check for updates to the following components (either the update "
-"server(s) did not respond, or the update service(s) were not found)."
-msgstr ""
-"Níorbh fhéidir le %S nuashonruithe a lorg do na comhpháirteanna seo a leanas "
-"(ní bhfuarthas freagra ón bhfreastalaí nuashonraithe nó níor aimsíodh an "
-"tseirbhís nuashonraithe)."
-
-#: installErrorItemFormat updateFullName
-msgid "%S (%S)"
-msgstr "%S (%S)"
-
-#: versionUpdateComplete
-msgid "Version Compatibility Update Complete"
-msgstr "Tá nuashonrú chomhoiriúnacht na leaganacha curtha i gcrích"
-
-#: updatesAvailableTooltip-0 updatesAvailableTooltip-1
-msgid "Update(s) Available"
-msgstr "Nuashonrú Le Fáil"
-
-#: updatesAvailableTooltip-2
-msgid "Critical Update(s) Available"
-msgstr "Nuashonrú Criticiúil Le Fáil"
-
-#: updatesCheckForUpdatesTooltip
-msgid "Double-click here to check for updates"
-msgstr "Déchliceáil anseo chun nuashonruithe a lorg"
-
-#: installTextNoFurtherActions foundInstructions
+#: foundInstructions
 msgid ""
 "Choose the ones you want to install and click Install Now to install them."
 msgstr ""
 "Roghnaigh comhpháirteanna eile ba mhaith leat a shuiteáil, agus ansin "
 "cliceáil ar Suiteáil Anois."
 
-#: installTextFurtherCations foundInstructionsAppComps
-msgid "Choose the ones you want to install and click Next to continue."
-msgstr ""
-"Roghnaigh na cinn ba mhaith leat a shuiteáil agus cliceáil Ar Aghaidh chun "
-"leanúint."
-
-#: updateTypePatches
-msgid "Critical Updates (%S)"
-msgstr "Nuashonruithe Criticiúla (%S)"
-
-#: updateTypeComponents
-msgid "Optional Components (%S)"
-msgstr "Comhpháirteanna Roghnacha (%S)"
-
-#: updateTypeExtensions
-msgid "Extensions and Themes (%S)"
-msgstr "Eisínteachtaí agus Téamaí (%S)"
-
-#: updateTypeLangPacks
-msgid "Language Packs (%S)"
-msgstr "Teangacha (%S)"
-
-#: foundAppLabel
-msgid ""
-"%S %S is available. We strongly recommend that you install this upgrade as "
-"soon as possible."
-msgstr ""
-"Tá %S %S ar fáil. Moltar duit an nuashonrú seo a shuiteáil chomh luath agus "
-"is féidir."
-
-#: foundAppFeatures
-msgid "%S %S features:"
-msgstr "Gnéithe %S %S:"
-
-#: foundAppInfoLink
-msgid "More information about %S %S ..."
-msgstr "Tuilleadh eolais faoi %S %S..."
-
-#: appupdateperformedtitle
-msgid "Restart Required"
-msgstr "Atosú de dhíth"
-
-#: appupdateperformedmessage
-msgid ""
-"%S has been updated this session. Please restart %S before performing any "
-"more updates."
-msgstr ""
-"Nuashonraíodh %S le linn an tseisiúin seo. Atosaigh %S roimh aon nuashonrú "
-"eile a dhéanamh."
-
-#: updatesdisabledtitle
-msgid "Update Disabled"
-msgstr "Nuashonrú Díchumasaithe"
-
-#: updatesdisabledmessage
-msgid "Update has been disabled by your Administrator."
-msgstr "Tá Nuashonrú díchumasaithe ag do Riarthóir."
+#: installErrorItemFormat updateFullName
+msgid "%S (%S)"
+msgstr "%S (%S)"
 
 #: homeButton.tooltip
 msgid "Go to the Help Start Page"
@@ -16993,6 +16805,15 @@ msgstr "Cliceáil Déanta chun an phróifíl nua a chruthú."
 #: errors.title
 msgid "Errors"
 msgstr "Earráidí"
+
+#: errors.intro.title
+msgid ""
+"The following components could not be installed due to errors (the file could "
+"not be downloaded, was corrupt, or for some other reason)."
+msgstr ""
+"Níorbh fhéidir na comhpháirteanna seo a leanas a shuiteáil de bharr earráidí "
+"(níorbh fhéidir an comhad a íosluchtú, bhí se truaillithe, nó fadhb éigin "
+"eile)."
 
 #: history.title
 msgid "Update History"
@@ -18523,6 +18344,11 @@ msgstr "CN"
 msgid "UID"
 msgstr "UID"
 
+#: CertDumpPK9Email managepassword.askeverytime.accesskey
+#: certselect.ask.accesskey
+msgid "E"
+msgstr "E"
+
 #: CertDumpAVADN
 msgid "DN"
 msgstr "DN"
@@ -19813,6 +19639,36 @@ msgstr "(as feidhm)"
 #: NicknameNotYetValid
 msgid "(not yet valid)"
 msgstr "(gan bailíocht fós)"
+
+#: CaCertExists
+msgid "This certificate is already installed as a certificate authority."
+msgstr ""
+
+#: NotACACert
+msgid ""
+"This is not a certificate authority certificate, so it can't be imported into "
+"the certificate authority list."
+msgstr ""
+
+#: NotImportingUnverifiedCert
+msgid ""
+"This certificate can't be verified and will not be imported. The certificate "
+"issuer might be unknown or untrusted, the certificate might have expired or "
+"been revoked, or the certificate might not have been approved."
+msgstr ""
+
+#: UserCertIgnoredNoPrivateKey
+msgid ""
+"This personal certificate can't be installed because you do not own the "
+"corresponding private key which was created when the certificate was "
+"requested."
+msgstr ""
+
+#: UserCertImported
+msgid ""
+"Your personal certificate has been installed. You should keep a backup copy "
+"of this certificate."
+msgstr ""
 
 # The contents of this file are subject to the Netscape Public
 # License Version 1.1 (the "License"); you may not use this file
