@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-06-30 07:41-0500\n"
+"POT-Creation-Date: 2006-07-11 04:59-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -183,6 +183,7 @@ msgid "Hide &brandShortName;"
 msgstr "Folaigh &brandShortName;"
 
 #: hideThisAppCmdMac.commandkey hideOtherAppsCmdMac.commandkey
+#: hideButton.accesskey
 msgid "H"
 msgstr "F"
 
@@ -263,7 +264,7 @@ msgstr "Roghnaigh Fillteán"
 msgid "Show all the bookmarks folders"
 msgstr "Taispeáin gach fillteán leabharmhairc"
 
-#: expanderUp.tooltip cmdHideSearchItems.label hideButtonLabel
+#: expanderUp.tooltip cmdHideSearchItems.label hideButton
 msgid "Hide"
 msgstr "Folaigh"
 
@@ -582,7 +583,7 @@ msgid "Delete"
 msgstr "Scrios"
 
 #: cmd_delete_accesskey deleteCmd.key dontShowMessage.accesskey
-#: mismatchDontCheckAccesskey
+#: mismatchDontCheckAccesskey IDoNotAgree.accesskey downloadButton.accesskey
 msgid "D"
 msgstr "D"
 
@@ -597,7 +598,7 @@ msgstr "Roghnaigh Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #: cmd_selectAll_accesskey selectAllCmd.key selectall.key cmd.about.accesskey
-#: updateFound.addons.accesskey certselect.auto.accesskey
+#: updateFound.addons.accesskey IAgree.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -610,7 +611,7 @@ msgstr "Athainmnigh..."
 #: cmd_bm_newbookmark_redo_accesskey cmd_bm_newlivemark_redo_accesskey
 #: cmd_bm_newfolder_redo_accesskey cmd_bm_newseparator_redo_accesskey
 #: cmd_bm_drag_redo_accesskey cmd_bm_move_redo_accesskey
-#: cmd_bm_import_redo_accesskey resetpassword.accesskey
+#: cmd_bm_import_redo_accesskey restartButton.accesskey resetpassword.accesskey
 msgid "R"
 msgstr "R"
 
@@ -1135,8 +1136,7 @@ msgstr "Athluchtaigh an leathanach reatha"
 msgid "&Stop"
 msgstr "&Stad"
 
-#: stopCmd.macCommandKey safeb.palm.message.part3.dot
-#: safeb.palm.message.part4.dot safeb.palm.message.part5.dot
+#: stopCmd.macCommandKey safeb.palm.message.p3.end
 msgid "."
 msgstr "."
 
@@ -1357,6 +1357,10 @@ msgstr "Sain&cheap..."
 #: historyMenu.label historyMenu.accesskey
 msgid "H&istory"
 msgstr "Sta&ir"
+
+#: historyUndoMenu.label historyUndoMenu.accesskey
+msgid "&Recently Closed Tabs"
+msgstr ""
 
 #: historyHomeCmd.label historyHomeCmd.accesskey
 msgid "&Home"
@@ -4705,6 +4709,38 @@ msgstr "Meaitseálann na fianáin seo a leanas do chuardach:"
 msgid "Remove Cookies"
 msgstr "Bain Fianáin"
 
+# LOCALIZATION NOTE:
+#   the next four strings (phish*) are here for b1 only;
+#   don't bother localizing them unless you've localized everything else,
+#   because they're going away because this is clearly a gross hack
+#: phishEULATitle
+msgid "Anti-Phishing Privacy Policy"
+msgstr ""
+
+#: phishEULAText
+msgid ""
+"If you choose Google as your provider for Phishing Protection in Enhanced "
+"Protection mode, Google will receive the URLs of pages you visit for "
+"evaluation.  When you click to accept, reject, or close the warning message "
+"that Phishing Protection gives you about a suspicious page, Google will log "
+"your action and the URL of the page.  Google will receive standard log "
+"information <http://www.google.com/privacy_faq.html#serverlogs>, including a "
+"cookie, as part of this process.  Google will not associate the information "
+"that Phishing Protection logs with other personal information about you. "
+"However, it is possible that a URL sent to Google may itself contain personal "
+"information.  Please see the Google Privacy Policy <http://www.google.com/"
+"privacypolicy.html> for more information.  Do you wish to use Google as your "
+"Phishing Protection provider?"
+msgstr ""
+
+#: phishEULACancel
+msgid "Use Locally Stored List"
+msgstr ""
+
+#: phishEULAOK
+msgid "Use Google"
+msgstr ""
+
 #: rememberBefore.label rememberBefore.accesskey
 msgid "Remember &visited pages for the last"
 msgstr "Meabhraigh leathanaigh ar tugadh &cuairt orthu le"
@@ -5156,25 +5192,11 @@ msgstr "Tabhair rabhadh do&m agus ag iarraidh cluaisíní iomadúla a dhúnadh"
 msgid "Warn when &opening a lot of tabs at once"
 msgstr "Tabhair rabhadh agus a lán cluaisíní á n-&oscailt le chéile"
 
-#: general.useragent.contentlocale
-msgid "US"
-msgstr "US"
-
-#: homePageDefault browser.startup.homepage
-msgid "http://start.mozilla.org/firefox"
-msgstr "http://ga-ie.start.mozilla.com/firefox"
-
-# config.js
-# search-panel.properties
-#: fallbackDefaultSearchURL
-msgid "http://www.google.com/search?&q="
-msgstr "http://www.google.com/search?&q="
-
 #: releaseNotesURL
 msgid "http://www.mozilla.org/projects/bonecho/releases/%S.html"
 msgstr "http://www.mozilla.org/projects/bonecho/releases/%S.html"
 
-#: browser.search.order.1 browser.search.defaultenginename
+#: browser.search.defaultenginename browser.search.order.1
 msgid "Google"
 msgstr "Google"
 
@@ -5182,111 +5204,67 @@ msgstr "Google"
 msgid "Yahoo"
 msgstr "Yahoo.co.uk"
 
-# config.js
-#: startup.homepage_override_url
-msgid "http://www.mozilla.org/products/firefox/releases/whatsnew/"
-msgstr "http://www.mozilla.org/products/firefox/releases/whatsnew/"
-
-# update notifications: new update page
-#: update_notifications.provider.0.datasource
-msgid "_: update_notifications.provider.0.datasource\n"
-msgstr ""
-
-# update notifications: new update page
 #: searchEnginesURL
-msgid "http://www.mozilla.org/products/firefox/add-engines.html"
-msgstr "http://www.mozilla.org/products/firefox/add-engines.html"
+msgid "https://addons.mozilla.org/search-engines.php"
+msgstr "https://addons.mozilla.org/search-engines.php"
 
-#: feedLiveBookmarkInfoURL
-msgid "http://www.mozilla.org/products/firefox/live-bookmarks"
-msgstr "http://www.mozilla.org/products/firefox/live-bookmarks"
+# This page gets displayed on first start and update
+#: startup.homepage_override_url
+msgid "http://www.mozilla.com/firefox/releases/whatsnew/"
+msgstr "http://www.mozilla.com/firefox/releases/whatsnew/"
 
 # This is the fallback URL for release notes. Do not change this 
 # unless you are providing localized release notes!
 #: app.update.url.details
-msgid "http://www.mozilla.org/products/firefox/releases/"
-msgstr "http://www.mozilla.org/products/firefox/releases/"
+msgid "http://www.mozilla.com/firefox/releases/"
+msgstr "http://www.mozilla.com/firefox/releases/"
 
-#: safeb.palm.warning.heading
-msgid "Web Forgery"
-msgstr "Falsaíocht Ghréasáin"
-
-#: safeb.palm.message.part1
-msgid ""
-"This page is very likely to have been designed to trick users into sharing "
-"personal or financial information. Entering any personal information on this "
-"page may result in identity theft or other fraud. &#160;"
+#: safeb.palm.warning.title
+msgid "Suspected Web Forgery"
 msgstr ""
-"Gach seans gur dearadh an leathanach seo chun faisnéis phearsanta nó "
-"airgeadais a fháil le cleas ó dhaoine. D'fhéadfadh goid aitheantais nó "
-"calaois eile teacht mar thoradh ar fhaisnéis phearsanta ar bith a chur "
-"isteach sa leathanach seo. &#160;"
 
-#: safeb.palm.message.link1.more
-msgid "more &#187;"
-msgstr "tuilleadh &#187;"
-
-#: safeb.palm.showmore.statustext
-msgid "Read more"
-msgstr "Tuilleadh eolais"
-
-#: safeb.palm.message.part2
+#: safeb.palm.message.p1
 msgid ""
-"Safe Browsing uses automated technology to warn you about web pages that we "
-"believe may be unsafe. This page appears to be a part of a scam known as a"
+"This page has been reported as a web forgery designed to trick users into "
+"sharing personal or financial information. Entering any personal information "
+"on this page may result in identity theft or other fraud. &#160;"
 msgstr ""
-"Úsáideann Brabhsáil Shábháilte teicneolaíocht uathoibríoch le rabhadh a "
-"thabhairt duit maidir le leathanaigh ghréasáin a d'fhéadfadh bheith "
-"míshábháilte. Tá an cosúlacht air gur chuid de chamscéim ar a thugtar"
 
-#: safeb.palm.message.link2.phishing.faq
-msgid "phishing"
-msgstr "bréagbhrandáil"
+#: safeb.palm.message.p1.linkText
+msgid "Read more &#187;"
+msgstr "Tuilleadh &#187;"
 
-#: safeb.palm.message.link2.href
-msgid "http://www.google.com/tools/service/npredir?r=ff_sb_faq#phishing"
-msgstr "http://www.google.com/tools/service/npredir?r=ff_sb_faq#phishing"
+#: safeb.palm.p1.linkStatusText
+msgid "Read more &#133;"
+msgstr "Tuilleadh &#133;"
 
-#: safeb.palm.message.part3
+#: safeb.palm.message.p2.start
 msgid ""
-"attack, in which criminals create fraudulent pages to mimic legitimate "
-"sources that you may trust. You can read more about phishing at"
+"These types of web forgeries are used in scams known as phishing attacks, in "
+"which fradulent web pages and emails are used to imitate sources you may "
+"trust. You can find out more about "
 msgstr ""
-"an leathanach seo, .i. cruthaíonn coirpigh leathanaigh chalaoiseacha chun "
-"aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín agat astu. Is "
-"féidir tuilleadh a léamh faoin mbréagbhrandáil ag"
 
-#: safeb.palm.message.link3.antiphishing.org
-msgid "antiphishing.org"
-msgstr "antiphishing.org"
+#: safeb.palm.message.p2.linkText
+msgid "how Firefox protects you"
+msgstr ""
 
-#: safeb.palm.message.link3.href
-msgid "http://antiphishing.org/"
-msgstr "http://antiphishing.org/"
+#: safeb.palm.message.p2.linkURL
+msgid "http://www.mozilla.org/projects/bonecho/anti-phishing/"
+msgstr "http://www.mozilla.org/projects/bonecho/anti-phishing/"
 
-#: safeb.palm.message.part4
-msgid "You can also learn more about"
-msgstr "Tig leat freisin tuilleadh eolais a fháil maidir le"
+#: safeb.palm.message.p2.end
+msgid " from phishing attacks."
+msgstr ""
 
-#: safeb.palm.message.link4.gwghome safeb.palm.toolmenu.label
-msgid "Safe Browsing"
-msgstr "Brabhsáil Shábháilte"
-
-#: safeb.palm.message.link4.href
-msgid "http://www.google.com/tools/service/npredir?r=ff_sb_home"
-msgstr "http://www.google.com/tools/service/npredir?r=ff_sb_home"
-
-#: safeb.palm.message.part5
+#: safeb.palm.message.p3.start
 msgid ""
-"Finally, if you believe this page has been falsely flagged as a forgery, you "
-"can "
+"If you believe this page has been falsely reported as a web forgery, you can "
 msgstr ""
-"Má chreideann tú go bhfuil an leathanach seo taispeánta go mícheart mar "
-"fhalsaíocht, tig leat "
 
-#: safeb.palm.message.link5.report
-msgid "report it"
-msgstr "tuarascáil a sheoladh faoi"
+#: safeb.palm.message.p3.linkText
+msgid "let us know"
+msgstr ""
 
 #: safeb.palm.accept.label
 msgid "Get me out of here!"
@@ -5312,6 +5290,10 @@ msgstr "Seol tuairisc"
 msgid "Add to blacklist"
 msgstr "Cuir leis an liosta dubh"
 
+#: safeb.palm.toolmenu.label
+msgid "Safe Browsing"
+msgstr "Brabhsáil Shábháilte"
+
 #: safeb.palm.toolmenu.reportphishing.label
 msgid "Report phishing..."
 msgstr "Seol tuarascáil faoi bhréagbhrandáil..."
@@ -5329,6 +5311,10 @@ msgid "This page might be dangerous; click for details."
 msgstr ""
 "D'fhéadfadh an leathanach seo bheith contúirteach; cliceáil le haghaidh "
 "eolais."
+
+#: reportPhishingMenu.title reportPhishingMenu.accesskey
+msgid "Report &Phishing Website"
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # #if 0
@@ -5434,17 +5420,21 @@ msgstr "Bánaigh Stair an Chuardaigh"
 msgid "Download Error"
 msgstr "Earráid Íosluchtaithe"
 
-#: error_loading_engine_msg
+# LOCALIZATION NOTE (error_loading_engine_msg2): %1$S = brandShortName, %2$S = location
+#: error_loading_engine_msg2
 msgid ""
 "%S could not download the search plugin from:\n"
-"%S\n"
-"\n"
-"Please try again or contact the author."
+"%S"
 msgstr ""
-"Níorbh fhéidir le %S an forlíontán cuardaigh a híosluchtú ó:\n"
-"%S\n"
-"\n"
-"Déan iarracht eile, nó téigh i dteagmháil leis an údar."
+
+#: error_invalid_engine_title
+msgid "Install Error"
+msgstr ""
+
+# LOCALIZATION NOTE (error_invalid_engine_msg): %S = brandShortName
+#: error_invalid_engine_msg
+msgid "This search engine isn't supported by %S and can't be installed."
+msgstr ""
 
 #: cmd_addFoundEngine
 msgid "Add \"%S\""
@@ -5454,24 +5444,24 @@ msgstr "Cuir \"%S\" Leis"
 msgid "Suggestions"
 msgstr "Moltaí"
 
-#: restoreTitle
-msgid "%S - Session Restore"
-msgstr "%S - Athbhunú Seisiúin"
-
-#: restoreText
-msgid ""
-"%S has recovered from a serious error.  One of the pages you were viewing may "
-"have caused the problem, so you may experience further problems if you "
-"continue with the previous browsing session."
+#: restoredTitle
+msgid "%S - Restore Previous Session"
 msgstr ""
-"Tá %S tar éis athshlánaithe ó earráid mhór. Is féidir go raibh ceann de na "
-"leathanaigh ar a raibh tú ag amharc freagrach as an bhfadhb, agus dá bhrí sin "
-"is féidir go mbeidh tuilleadh fadhbanna agat má leanann tú leis an seisiún "
-"brabhsála roimhe seo."
+
+#: restoredText
+msgid ""
+"%S experienced a serious error, and your last session closed unexpectedly. "
+"You can restore the tabs and windows from your previous session, or start a "
+"new session if the problem continues."
+msgstr ""
 
 #: buttonTitle
 msgid "Restore Session"
 msgstr "Athchóirigh an Seisiún"
+
+#: cancelTitle
+msgid "Start New Session"
+msgstr ""
 
 #: position.label
 msgid "Position:"
@@ -6076,6 +6066,26 @@ msgstr "&San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)"
 #: ICONS_QUICKLAUNCH
 msgid "In my &Quick Launch bar"
 msgstr "I mo Bharra &Luathláinseála"
+
+#: STATUS_INSTALL_APP
+msgid "Installing ${BrandShortName}..."
+msgstr ""
+
+#: STATUS_INSTALL_LANG
+msgid "Installing Language Files (${AB_CD})..."
+msgstr ""
+
+#: STATUS_INSTALL_OPTIONAL
+msgid "Installing Optional Components..."
+msgstr ""
+
+#: STATUS_UNINSTALL_MAIN
+msgid "Uninstalling ${BrandShortName}..."
+msgstr ""
+
+#: STATUS_CLEANUP
+msgid "A Little Housekeeping..."
+msgstr ""
 
 # _DESC strings support approximately 65 characters per line.
 # One line
@@ -16503,14 +16513,6 @@ msgstr ""
 msgid "Show &List"
 msgstr "Taispeáin &Liosta"
 
-#: later.label later.accesskey
-msgid "L&ater"
-msgstr "&Ar Ball"
-
-#: download.label download.accesskey
-msgid "&Download &amp; Install Now &#0187;"
-msgstr "Ío&sluchtú &amp; Suiteáil Anois &#0187;"
-
 #: upgrade.evangelism
 msgid ""
 "It is strongly recommended that you upgrade &brandShortName; as soon as "
@@ -16673,11 +16675,11 @@ msgstr "Tá leagan nua de %S ar fáil:"
 msgid "%S could not confirm the integrity of the update package."
 msgstr "Níorbh fhéidir le %S sláine an phacáiste nuashonraithe a dhearbhú."
 
-#: IAgreeLabel
+#: IAgree
 msgid "I Agree"
 msgstr "Glacaim Leis"
 
-#: IDoNotAgreeLabel
+#: IDoNotAgree
 msgid "I Disagree"
 msgstr "Ní Ghlacaim Leis"
 
@@ -16730,6 +16732,14 @@ msgstr "Íosluchtú %S curtha ar shos"
 #: restartButton
 msgid "Restart %S Now"
 msgstr "Atosaigh %S Anois"
+
+#: downloadButton
+msgid "Download & Install Now Â»"
+msgstr ""
+
+#: laterButton.accesskey warn.leavingsecure.accesskey
+msgid "a"
+msgstr "a"
 
 #: restartLaterMessage
 msgid ""
@@ -18813,21 +18823,24 @@ msgstr "(Eagras Anaithnid)"
 msgid "%S = %S"
 msgstr "%S = %S"
 
-#: SSLDisabled
-msgid "You cannot connect to %S because SSL is disabled."
-msgstr "Ní féidir ceangal le %S toisc go bhfuil SSL díchumasaithe."
-
-#: SSL2Disabled
-msgid "You cannot connect to %S because SSL version 2 is disabled."
-msgstr "Ní féidir ceangal le %S toisc go bhfuil SSL leagan 2 díchumasaithe."
-
-#: SSLNoMatchingCiphers
+# for the next 3 lines, %1$S will be product name (e.g. Firefox), %2$S will be the www.example.com address we connect to
+#: SSL_Disabled
 msgid ""
-"%S and %S cannot communicate securely because they have no common encryption "
-"algorithms."
+"%1$S can't connect securely to %2$S because the SSL protocol has been "
+"disabled."
 msgstr ""
-"Ní féidir le %S agus %S ceangal slán a bhunú eatarthu toisc nach bhfuil "
-"comhalgartaim chriptiúcháin acu."
+
+#: SSL2_Disabled
+msgid ""
+"%1$S can't connect securely to %2$S because the site uses an older, insecure "
+"version of the SSL protocol."
+msgstr ""
+
+#: SSL_NoMatchingCiphers
+msgid ""
+"%1$S can't connect securely to %2$S because the site uses a security protocol "
+"which isn't enabled."
+msgstr ""
 
 #: UsersCertRevoked
 msgid ""
@@ -20804,10 +20817,6 @@ msgstr ""
 msgid "Leaving a page that supports encryption"
 msgstr "Leathanach a thacaíonn le criptiúchán á fhágáil"
 
-#: warn.leavingsecure.accesskey
-msgid "a"
-msgstr "a"
-
 #: warn.secureredirect
 msgid "Redirecting from one encrypted page to another"
 msgstr "athstiúradh ó leathanach criptithe amháin go ceann eile"
@@ -21075,10 +21084,6 @@ msgstr "Brabhsáil Suíomhanna"
 msgid "Text:"
 msgstr "Téacs:"
 
-#: zoomUIText.label
-msgid "UI:"
-msgstr "Comhéadan:"
-
 #: zoomTextMinus.label
 msgid " - "
 msgstr " - "
@@ -21145,13 +21150,14 @@ msgstr ""
 msgid ""
 "The certificate presented by the server is no longer valid because the "
 "validity period has expired.  This means that the website you are connecting "
-"to hasn't renewed their certificate.  This ususally isn't a major security "
+"to hasn't renewed its certificate.  This usually isn't a major security "
 "problem. Do you want to continue?"
 msgstr ""
 
 #: loadFailed
 msgid ""
-"Failed to library (%S). This may mean that some functionality will be lost."
+"Failed to load library (%S). This may mean that some functionality will be "
+"lost."
 msgstr ""
 
 #: loadFailedTitle
@@ -21247,6 +21253,14 @@ msgstr ""
 
 #: setDefaultBrowser.label
 msgid "Set Minimo as the default browser"
+msgstr ""
+
+#: fullScreenEnabled.label
+msgid "Full Screen Enabled"
+msgstr ""
+
+#: homebarEnabled.label
+msgid "Homebar Enabled"
 msgstr ""
 
 # Small Screen Settings
