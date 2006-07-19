@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-12 10:36-0500\n"
+"POT-Creation-Date: 2006-07-17 07:32-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -551,7 +551,7 @@ msgstr "S"
 msgid "Define Button..."
 msgstr "Sainigh Cnaipe..."
 
-#: insertbutton.accesskey formatToolbar.boldChar
+#: insertbutton.accesskey formatToolbar.boldChar Byte
 msgid "B"
 msgstr "B"
 
@@ -4188,7 +4188,8 @@ msgstr "Focal &nua:"
 # "C" is Ionchódú Carachtar... 
 #: AddButton.label AddButton.accessKey addDirectory.label
 #: addDirectory.accesskey addButton.label addButton.accesskey
-#: button.addFeed.label button.addFeed.accesskey
+#: button.addFeed.label button.addFeed.accesskey addTagButton.label
+#: addTagButton.accesskey
 msgid "&Add"
 msgstr "Cuir &Leis"
 
@@ -4206,7 +4207,7 @@ msgid "R&emove"
 msgstr "B&ain"
 
 #: CloseButton.label CloseButton.accessKey closeButton.label
-#: closeButton.accessKey closeCmd.label closeCmd.accesskey
+#: closeButton.accessKey closeCmd.label closeCmd.accesskey CloseBtn
 msgid "&Close"
 msgstr "&Dún"
 
@@ -5398,6 +5399,7 @@ msgstr "&Nua"
 # "E" in main browser window
 #: editMenu.label editMenu.accesskey editDirectory.label
 #: editDirectory.accesskey button.editFeed.label button.editFeed.accesskey
+#: editTagButton.label editTagButton.accesskey
 msgid "&Edit"
 msgstr "&Eagar"
 
@@ -5913,7 +5915,7 @@ msgstr "Sain&cheap..."
 #: cancelButtonLabel cancel.label saveDlogCancelBtn
 #: downloadMessagesCancelButtonLabel sendMessagesCancelButtonLabel
 #: getMessagesOfflineCancelButtonLabel sendMessagesOfflineCancelButtonLabel
-#: WizardContinue
+#: WizardContinue CancelBtn
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -6582,6 +6584,7 @@ msgid "Phone"
 msgstr "Fón"
 
 #: description.heading headingDescription 1020
+#: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE
 msgid "Description"
 msgstr "Cur Síos"
 
@@ -6729,7 +6732,7 @@ msgstr "Eolaire LDAP..."
 msgid "&Message"
 msgstr "&Teachtaireacht"
 
-#: newMessageCmd.key newMessage.key previousMsgCmd.accesskey
+#: newMessageCmd.key newMessage.key previousMsgCmd.accesskey Mega
 msgid "M"
 msgstr "B"
 
@@ -10163,7 +10166,7 @@ msgstr "Theip ar an logáil isteach go dtí an freastalaí %S."
 # Place the word %lu where the number of headers should appear.
 #: 5036
 msgid "%S Downloading message header %lu of %lu"
-msgstr "Ceanntásc %lu as %lu á íosluchtú ó %S"
+msgstr "Ceanntásc %2$lu as %3$lu á íosluchtú ó %1$S"
 
 # # @name IMAP_RECEIVING_MESSAGE_FLAGS_OF
 # # @loc None
@@ -10172,7 +10175,7 @@ msgstr "Ceanntásc %lu as %lu á íosluchtú ó %S"
 # Place the word %lu where the number of flags should appear.
 #: 5037
 msgid "%S Downloading message flag %lu of %lu"
-msgstr "Brat teachtaireachta %lu as %lu á íosluchtú ó %S"
+msgstr "Brat teachtaireachta %2$lu as %3$lu á íosluchtú ó %1$S"
 
 # # @name IMAP_DELETING_MESSAGES
 # # @loc None
@@ -12595,7 +12598,7 @@ msgstr "&Aimsigh agus Athchuir..."
 msgid "Find A&gain"
 msgstr "Ai&msigh Arís"
 
-#: findAgainCmd.key findPrevCmd.key groupBySortCmd.key
+#: findAgainCmd.key findPrevCmd.key groupBySortCmd.key Giga
 msgid "G"
 msgstr "G"
 
@@ -12631,7 +12634,7 @@ msgstr "&Roghanna"
 msgid "C&heck Spelling..."
 msgstr "Ceartaig&h Litriú"
 
-#: checkSpellingCmd.key
+#: checkSpellingCmd.key Kilo
 msgid "K"
 msgstr "K"
 
@@ -14504,7 +14507,7 @@ msgstr "Curtha ar aghaidh"
 
 # #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 # for the Tag picker in search and mail views.
-#: tag 15 tagsColumn.label
+#: tag itemTags.label 15 tagsColumn.label
 msgid "Tags"
 msgstr "Clibeanna"
 
@@ -16595,10 +16598,6 @@ msgstr "Fothaí &RSS"
 msgid "Formatting"
 msgstr "Formáidiú"
 
-#: itemLabels.label labelsSettings.label
-msgid "Labels"
-msgstr "Lipéid"
-
 #: itemFonts.label fontsCaption.label fontsDialog.title
 msgid "Fonts"
 msgstr "Clófhoirne"
@@ -16673,22 +16672,21 @@ msgid "HTML Messages"
 msgstr "Teachtaireachtaí HTML"
 
 #: overrideSender.label overrideSender.accesskey
-msgid "Wh&en displaying HTML messages, use the following:"
+msgid "Whe&n displaying HTML messages, use the following:"
 msgstr "Agus t&eachtaireachtaí HTML á dtaispeáint, úsáid:"
 
 #: textColor.label textColor.accesskey
 msgid "&Text Color:"
 msgstr "Dath an &Téacs:"
 
-#: displayLabelsText.label
-msgid "Labels can be used to categorize and prioritize your messages."
+# labels
+#: displayTagsText.label
+msgid "Tags can be used to categorize and prioritize your messages."
 msgstr ""
-"Is féidir lipéid a úsáid chun catagóir agus tosaíocht a chur le do chuid "
-"teachtaireachtaí."
 
-#: restoreDefaults.label restoreDefaults.accesskey
-msgid "&Restore Defaults"
-msgstr "Athchói&righ na Réamhshocruithe"
+#: removeTagButton.label removeTagButton.accesskey
+msgid "De&lete"
+msgstr "S&crios"
 
 # Fonts
 #: fontsDescription.label
@@ -19594,6 +19592,143 @@ msgstr ""
 "<em:contributor>Séamus Ó Ciardhuáin</em:contributor> <em:contributor>Kevin "
 "Scannell</em:contributor> <em:contributor>Brian King</em:contributor>"
 
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
+#: APP_DESC
+msgid "Required files for the ${BrandShortName} application"
+msgstr ""
+
+#: DEV_TOOLS_DESC
+msgid ""
+"A tool for inspecting the DOM of HTML, XUL, and XML pages, including the "
+"application's chrome."
+msgstr ""
+
+#: QFA_DESC
+msgid "A tool for submitting crash reports to Mozilla.org."
+msgstr ""
+
+#: SAFE_MODE
+msgid "Safe Mode"
+msgstr "Mód Slán"
+
+#: OPTIONS_PAGE_TITLE Type_Title
+msgid "Setup Type"
+msgstr "Modh Suiteála"
+
+#: OPTIONS_PAGE_SUBTITLE
+msgid "Choose setup options"
+msgstr "Roghanna suiteála an phacáiste seo"
+
+#: SHORTCUTS_PAGE_TITLE Integration_Title
+msgid "Set Up Shortcuts"
+msgstr "Socrú Aicearraí"
+
+#: SHORTCUTS_PAGE_SUBTITLE
+msgid "Create Program Icons"
+msgstr "Cruthaigh Deilbhíní"
+
+#: SURVEY_TEXT
+msgid "&Tell us what you thought of ${BrandShortName}"
+msgstr ""
+
+#: LAUNCH_TEXT
+msgid "&Launch $(^Name) now"
+msgstr ""
+
+#: WARN_APP_RUNNING_INSTALL
+msgid ""
+"$(^Name) must be closed to proceed with the installation.\n"
+"\n"
+"Click \"OK\" to exit $(^Name) automatically and continue."
+msgstr ""
+
+#: WARN_APP_RUNNING_UNINSTALL
+msgid ""
+"$(^Name) must be closed to proceed with the uninstall.\n"
+"\n"
+"Click \"OK\" to exit $(^Name) automatically and continue."
+msgstr ""
+
+#: CREATE_ICONS_DESC
+msgid "Create icons for ${BrandShortName}:"
+msgstr ""
+
+#: ICONS_DESKTOP
+msgid "On my &Desktop"
+msgstr "Ar an &Deasc agamsa"
+
+#: ICONS_STARTMENU
+msgid "In my &Start Menu Programs folder"
+msgstr "&San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)"
+
+#: ICONS_QUICKLAUNCH
+msgid "In my &Quick Launch bar"
+msgstr "I mo Bharra &Luathláinseála"
+
+#: STATUS_INSTALL_APP
+msgid "Installing ${BrandShortName}..."
+msgstr ""
+
+#: STATUS_INSTALL_LANG
+msgid "Installing Language Files (${AB_CD})..."
+msgstr ""
+
+#: STATUS_INSTALL_OPTIONAL
+msgid "Installing Optional Components..."
+msgstr ""
+
+#: STATUS_UNINSTALL_MAIN
+msgid "Uninstalling ${BrandShortName}..."
+msgstr ""
+
+#: STATUS_CLEANUP
+msgid "Cleaning up the birdcage..."
+msgstr ""
+
+# _DESC strings support approximately 65 characters per line.
+# One line
+#: OPTIONS_SUMMARY
+msgid "Choose the type of setup you prefer, then click Next."
+msgstr ""
+"Roghnaigh an cineál suiteála is fearr leat, agus cliceáil 'Ar aghaidh' ina "
+"dhiaidh sin."
+
+# One line
+#: OPTION_STANDARD_DESC
+msgid "${BrandShortName} will be installed with the most common options."
+msgstr "Déanfar ${BrandShortName} a shuiteáil leis na gnáthroghanna."
+
+#: OPTION_STANDARD_RADIO Standard_Short
+msgid "&Standard"
+msgstr "&Caighdeánach"
+
+# One line
+#: OPTION_COMPLETE_DESC
+msgid "${BrandShortName} will be installed with all available options."
+msgstr ""
+
+#: OPTION_COMPLETE_RADIO
+msgid "C&omplete"
+msgstr "I&omlán"
+
+#: OPTION_CUSTOM_DESC Custom_Long
+msgid ""
+"You may choose individual options to be installed. Recommended for "
+"experienced users."
+msgstr ""
+"Is féidir leat roghanna ar leith a shannadh lena suiteáil. Níl an rogha seo "
+"molta ach amháin d'úsaideoirí a bhfuil taithí mhaith acu ar an ábhar."
+
+#: OPTION_CUSTOM_RADIO Custom_Short
+msgid "&Custom"
+msgstr "&Saincheaptha"
+
 #: Welcome_Title
 msgid "$ProductName$ Setup"
 msgstr "Suiteáil $ProductName$"
@@ -19651,10 +19786,6 @@ msgstr "&Glacaim leis an Chomhaontú um Cheadúnas"
 msgid "I do NO&T Accept the terms of the License Agreement"
 msgstr "&Nílim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas"
 
-#: Type_Title
-msgid "Setup Type"
-msgstr "Modh Suiteála"
-
 #: Type_SubTitle
 msgid "Choose setup options."
 msgstr "Roghanna suiteála an phacáiste seo."
@@ -19665,25 +19796,9 @@ msgstr ""
 "Roghnaigh an cineál suiteála is fearr leat, agus cliceáil 'Ar aghaidh' ina "
 "dhiaidh sin."
 
-#: Standard_Short
-msgid "&Standard"
-msgstr "&Caighdeánach"
-
 #: Standard_Long
 msgid "Thunderbird will be installed with the most common options."
 msgstr "Déanfar Thunderbird a shuiteáil leis na gnáthroghanna."
-
-#: Custom_Short
-msgid "&Custom"
-msgstr "&Saincheaptha"
-
-#: Custom_Long
-msgid ""
-"You may choose individual options to be installed. Recommended for "
-"experienced users."
-msgstr ""
-"Is féidir leat roghanna ar leith a shannadh lena suiteáil. Níl an rogha seo "
-"molta ach amháin d'úsaideoirí a bhfuil taithí mhaith acu ar an ábhar."
 
 #: Select_Title
 msgid "Select Components"
@@ -19710,10 +19825,6 @@ msgstr "An áit ina shuiteálfar $ProductName$."
 #: Path_Message0
 msgid "$ProductName$ will be installed into the following folder:"
 msgstr "Suiteálfar $ProductName$ san fhillteán thíos:"
-
-#: Integration_Title
-msgid "Set Up Shortcuts"
-msgstr "Socrú Aicearraí"
 
 #: Integration_SubTitle
 msgid "Creates Program Icons"
@@ -19780,7 +19891,7 @@ msgstr ""
 "Déanfaidh an Suiteálaí na comhpháirteanna seo a leanas a luchtú agus a "
 "shuiteáil:"
 
-#: Install_Message0
+#: Install_Message0 ClickNext
 msgid "Click Next to continue."
 msgstr "Cliceáil 'Ar aghaidh' chun leanúint ar aghaidh."
 
@@ -19804,7 +19915,7 @@ msgstr "Luchtú ar siúl:"
 msgid "Time Remaining:"
 msgstr "Aga fanta:"
 
-#: Installing_Title
+#: Installing_Title MUI_TEXT_INSTALLING_TITLE
 msgid "Installing"
 msgstr "Á Shuiteáil"
 
@@ -19894,6 +20005,489 @@ msgstr "Gníomhaire Aiseolais um Cháilíocht"
 #: Component_QFA_Long
 msgid "for reporting $ProductName$ crash information"
 msgstr "Le haghaidh tuairiscí maidir le tuairteanna $ProductName$"
+
+# To make the l10n tinderboxen see changes to this file you can change a value
+# name by adding - to the end of the name followed by chars (e.g. Branding-2).
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace $(^NameDA) or $(^Name) with a custom string.
+# Do not change $(^NameDA) to $(^Name) or $(^Name) to $(^NameDA). NameDA allows
+# Name to contain an ampersand (e.g. DA stands for double ampersand) and
+# prevents the letter following the ampersand being used as an accesskey.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
+#: MUI_TEXT_WELCOME_INFO_TITLE
+msgid "Welcome to the $(^NameDA) Setup Wizard"
+msgstr "Fáilte go dtí Draoi Suiteála $(^NameDA)"
+
+#: MUI_TEXT_WELCOME_INFO_TEXT
+msgid ""
+"This wizard will guide you through the installation of $(^NameDA).\n"
+"\n"
+"It is recommended that you close all other applications before starting "
+"Setup. This will make it possible to update relevant system files without "
+"having to reboot your computer.\n"
+"\n"
+"$_CLICK"
+msgstr ""
+"Déanfaidh an draoi seo treorú duit tríd an suiteáil de $(^NameDA).\n"
+"\n"
+"Moltar duit gach feidhmchlár eile a dhúnadh sula dtosaíonn tú an Suiteálaí. "
+"Cinnteoidh sé seo gur féidir na comhaid oiriúnacha a nuashonrú gan do "
+"ríomhaire a atosú.\n"
+"\n"
+"$_CLICK"
+
+#: MUI_TEXT_LICENSE_TITLE
+msgid "License Agreement"
+msgstr "Comhaontú um Cheadúnas"
+
+#: MUI_TEXT_LICENSE_SUBTITLE
+msgid "Please review the license terms before installing $(^NameDA)."
+msgstr ""
+"Déan iniúchadh ar choinníollacha an cheadúnais sula suiteálann tú $(^NameDA)."
+
+#: MUI_INNERTEXT_LICENSE_TOP
+msgid "Press Page Down to see the rest of the agreement."
+msgstr "Brúigh \"Page Down\" chun an chuid eile den cheadúnas a léamh."
+
+#: MUI_INNERTEXT_LICENSE_BOTTOM_RADIOBUTTONS
+msgid ""
+"If you accept the terms of the agreement, select the first option below. You "
+"must accept the agreement to install $(^NameDA). $_CLICK"
+msgstr ""
+"Má ghlacann tú le coinníollacha an chomhaontaithe, roghnaigh an chéad rogha "
+"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $(^NameDA) a "
+"dhíshuiteáil. $_CLICK"
+
+#: MUI_TEXT_COMPONENTS_TITLE
+msgid "Choose Components"
+msgstr "Roghnaigh Comhpháirteanna"
+
+#: MUI_TEXT_COMPONENTS_SUBTITLE
+msgid "Choose which features of $(^NameDA) you want to install."
+msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
+
+#: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_INFO
+msgid "Position your mouse over a component to see its description."
+msgstr "Cuir do luch os cionn comhpháirte chun cur síos a fheiceáil."
+
+#: MUI_TEXT_DIRECTORY_TITLE
+msgid "Choose Install Location"
+msgstr "Roghnaigh Suíomh na Suiteála"
+
+#: MUI_TEXT_DIRECTORY_SUBTITLE
+msgid "Choose the folder in which to install $(^NameDA)."
+msgstr "Roghnaigh an fillteán inar mian leat $(^NameDA) a shuiteáil."
+
+#: MUI_TEXT_INSTALLING_SUBTITLE
+msgid "Please wait while $(^NameDA) is being installed."
+msgstr "Fan go fóill; $(^NameDA) á shuiteáil."
+
+#: MUI_TEXT_FINISH_TITLE
+msgid "Installation Complete"
+msgstr "Suiteáil Críochnaithe"
+
+#: MUI_TEXT_FINISH_SUBTITLE
+msgid "Setup was completed successfully."
+msgstr "D'éirigh leis an tsuiteáil."
+
+#: MUI_TEXT_ABORT_TITLE
+msgid "Installation Aborted"
+msgstr "Suiteáil Tobscortha"
+
+#: MUI_TEXT_ABORT_SUBTITLE
+msgid "Setup was not completed successfully."
+msgstr "Níor éirigh leis an tsuiteáil."
+
+#: MUI_BUTTONTEXT_FINISH
+msgid "&Finish"
+msgstr "&Críochnaigh"
+
+#: MUI_TEXT_FINISH_INFO_TITLE
+msgid "Completing the $(^NameDA) Setup Wizard"
+msgstr "Draoi Suiteála $(^NameDA) á Chríochnú"
+
+#: MUI_TEXT_FINISH_INFO_TEXT
+msgid ""
+"$(^NameDA) has been installed on your computer.\n"
+"\n"
+"Click Finish to close this wizard."
+msgstr ""
+"Suiteáladh $(^NameDA) ar do ríomhaire.\n"
+"\n"
+"Cliceáil \"Críochnaigh\" chun an draoi seo a dhúnadh."
+
+#: MUI_TEXT_FINISH_INFO_REBOOT
+msgid ""
+"Your computer must be restarted in order to complete the installation of "
+"$(^NameDA). Do you want to reboot now?"
+msgstr ""
+"Ní mór duit do ríomhaire a atosú chun suiteáil $(^NameDA) a chur i gcrích. Ar "
+"mhaith leat atosú anois?"
+
+#: MUI_TEXT_FINISH_REBOOTNOW
+msgid "Reboot now"
+msgstr "Atosaigh anois"
+
+#: MUI_TEXT_FINISH_REBOOTLATER
+msgid "I want to manually reboot later"
+msgstr "Atosóidh mé de láimh níos déanaí"
+
+#: MUI_TEXT_STARTMENU_TITLE
+msgid "Choose Start Menu Folder"
+msgstr "Roghnaigh Fillteán sa Roghchlár Tosaigh"
+
+#: MUI_TEXT_STARTMENU_SUBTITLE
+msgid "Choose a Start Menu folder for the $(^NameDA) shortcuts."
+msgstr ""
+"Roghnaigh fillteán sa Roghchlár Tosaigh a gcuirfear aicearraí $(^NameDA) ann."
+
+#: MUI_INNERTEXT_STARTMENU_TOP
+msgid ""
+"Select the Start Menu folder in which you would like to create the program's "
+"shortcuts. You can also enter a name to create a new folder."
+msgstr ""
+"Roghnaigh an fillteán sa Roghchlár Tosaigh inar mian leat aicearraí an chláir "
+"a chruthú. Is féidir freisin fillteán nua a chruthú trí ainm nua a iontráil."
+
+#: MUI_TEXT_ABORTWARNING
+msgid "Are you sure you want to quit $(^Name) Setup?"
+msgstr "An bhfuil tú cinnte gur mian leat Suiteálaí $(^Name) a scor?"
+
+#: MUI_UNTEXT_WELCOME_INFO_TITLE
+msgid "Welcome to the $(^NameDA) Uninstall Wizard"
+msgstr "Fáilte go dtí Draoi Díshuiteála $(^NameDA)"
+
+#: MUI_UNTEXT_WELCOME_INFO_TEXT
+msgid ""
+"This wizard will guide you through the uninstallation of $(^NameDA).\n"
+"\n"
+"Before starting the uninstallation, make sure $(^NameDA) is not running.\n"
+"\n"
+"$_CLICK"
+msgstr ""
+"Déanfaidh an draoi seo treorú duit tríd an díshuiteáil de $(^NameDA).\n"
+"\n"
+"Bí cinnte nach bhfuil $(^NameDA) ag rith sula dtosaíonn tú an díshuiteáil.\n"
+"\n"
+"$_CLICK"
+
+#: MUI_UNTEXT_CONFIRM_TITLE
+msgid "Uninstall $(^NameDA)"
+msgstr "Díshuiteáil $(^NameDA)"
+
+#: MUI_UNTEXT_CONFIRM_SUBTITLE
+msgid "Remove $(^NameDA) from your computer."
+msgstr "Bain $(^NameDA) ó do ríomhaire."
+
+#: MUI_UNTEXT_UNINSTALLING_TITLE
+msgid "Uninstalling"
+msgstr "Á Dhíshuiteáil"
+
+#: MUI_UNTEXT_UNINSTALLING_SUBTITLE
+msgid "Please wait while $(^NameDA) is being uninstalled."
+msgstr "Fan go fóill; $(^NameDA) á dhíshuiteáil."
+
+#: MUI_UNTEXT_FINISH_TITLE
+msgid "Uninstallation Complete"
+msgstr "Díshuiteáil Críochnaithe"
+
+#: MUI_UNTEXT_FINISH_SUBTITLE
+msgid "Uninstall was completed successfully."
+msgstr "D'éirigh leis an díshuiteáil."
+
+#: MUI_UNTEXT_ABORT_TITLE
+msgid "Uninstallation Aborted"
+msgstr "Díshuiteáil Tobscortha"
+
+#: MUI_UNTEXT_ABORT_SUBTITLE
+msgid "Uninstall was not completed successfully."
+msgstr "Níor éirigh leis an díshuiteáil."
+
+#: MUI_UNTEXT_FINISH_INFO_TITLE
+msgid "Completing the $(^NameDA) Uninstall Wizard"
+msgstr "Draoi Díshuiteála $(^NameDA) á Chríochnú"
+
+#: MUI_UNTEXT_FINISH_INFO_TEXT
+msgid ""
+"$(^NameDA) has been uninstalled from your computer.\n"
+"\n"
+"Click Finish to close this wizard."
+msgstr ""
+"Díshuiteáladh $(^NameDA) ó do ríomhaire.\n"
+"\n"
+"Cliceáil \"Críochnaigh\" chun an draoi seo a dhúnadh."
+
+#: MUI_UNTEXT_FINISH_INFO_REBOOT
+msgid ""
+"Your computer must be restarted in order to complete the uninstallation of "
+"$(^NameDA). Do you want to reboot now?"
+msgstr ""
+"Ní mór duit do ríomhaire a atosú chun díshuiteáil $(^NameDA) a chur i gcrích. "
+"Ar mhaith leat atosú anois?"
+
+#: MUI_UNTEXT_ABORTWARNING
+msgid "Are you sure you want to quit $(^Name) Uninstall?"
+msgstr "An bhfuil tú cinnte gur mian leat Díshuiteálaí $(^Name) a scor?"
+
+#: SetupCaption
+msgid "$(^Name) Setup"
+msgstr "Socrú $(^Name)"
+
+#: UninstallCaption
+msgid "$(^Name) Uninstall"
+msgstr "Díshuiteáil $(^Name)"
+
+#: BackBtn
+msgid "< &Back"
+msgstr "< Ar Ai&s"
+
+#: NextBtn
+msgid "&Next >"
+msgstr "Ar &Aghaidh >"
+
+#: AcceptBtn
+msgid "I &accept the terms in the License Agreement"
+msgstr "Táim toilteanach &glacadh le coinníollacha an Chomhaontú um Cheadúnas"
+
+#: DontAcceptBtn
+msgid "I &do not accept the terms in the License Agreement"
+msgstr "Nílim &toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas"
+
+#: InstallBtn
+msgid "&Install"
+msgstr "&Suiteáil"
+
+#: UninstallBtn
+msgid "&Uninstall"
+msgstr "&Díshuiteáil"
+
+#: BrowseBtn
+msgid "B&rowse..."
+msgstr "B&rabhsáil..."
+
+#: ShowDetailsBtn
+msgid "Show &details"
+msgstr "Taispeáin &sonraí"
+
+#: ClickInstall
+msgid "Click Install to start the installation."
+msgstr "Cliceáil \"Suiteáil\" chun tosú."
+
+#: ClickUninstall
+msgid "Click Uninstall to start the uninstallation."
+msgstr "Cliceáil \"Díshuiteáil\" chun tosú."
+
+#: Completed
+msgid "Completed"
+msgstr "Críochnaithe"
+
+#: LicenseTextRB
+msgid ""
+"Please review the license agreement before installing $(^NameDA). If you "
+"accept all terms of the agreement, select the first option below. $_CLICK"
+msgstr ""
+"Déan iniúchadh ar an gComhaontú um Cheadúnas sula suiteálann tú $(^NameDA). "
+"Má ghlacann tú le gach coinníoll den chomhaontú, roghnaigh an chéad rogha "
+"thíos. $_CLICK"
+
+#: ComponentsText
+msgid ""
+"Check the components you want to install and uncheck the components you don't "
+"want to install. $_CLICK"
+msgstr ""
+"Roghnaigh na comhpháirteanna is mian leat a shuiteáil, agus díroghnaigh na "
+"comhpháirteanna nach mian leat a shuiteáil. $_CLICK"
+
+#: ComponentsSubText2_NoInstTypes
+msgid "Select components to install:"
+msgstr "Roghnaigh na comhpháirteanna is mian leat a shuiteáil:"
+
+#: DirText
+msgid ""
+"Setup will install $(^NameDA) in the following folder. To install in a "
+"different folder, click Browse and select another folder. $_CLICK"
+msgstr ""
+"Cuirfidh an Suiteálaí $(^NameDA) san fhillteán seo a leanas. Más mian leat "
+"suiteáil i bhfillteán difriúil, cliceáil \"Brabhsáil\" agus roghnaigh "
+"fillteán eile. $_CLICK"
+
+#: DirSubText
+msgid "Destination Folder"
+msgstr "Sprioc-Fhillteán"
+
+#: DirBrowseText
+msgid "Select the folder to install $(^NameDA) in:"
+msgstr "Roghnaigh an fillteán inar mian leat $(^NameDA) a shuiteáil:"
+
+#: SpaceAvailable
+msgid "\"Space available: \""
+msgstr "\"Spás le fáil: \""
+
+#: SpaceRequired
+msgid "\"Space required: \""
+msgstr "\"Spás de dhíth: \""
+
+#: UninstallingText
+msgid "$(^NameDA) will be uninstalled from the following folder. $_CLICK"
+msgstr "Díshuiteálfar $(^NameDA) ón fhillteán seo a leanas. $_CLICK"
+
+#: UninstallingSubText
+msgid "Uninstalling from:"
+msgstr "Á dhíshuiteáil ó:"
+
+#: FileError
+msgid ""
+"Error opening file for writing: \\r\n"
+"\\r\n"
+"$0\\r\n"
+"\\r\n"
+"Click Abort to stop the installation,\\r\n"
+"Retry to try again, or\\r\n"
+"Ignore to skip this file."
+msgstr ""
+"Earráid agus comhad á scríobh: \\r\n"
+"\\r\n"
+"$0\\r\n"
+"\\r\n"
+"Cliceáil \"Abort\" chun an tsuiteáil a stopadh,\\r\n"
+"\"Retry\" chun iarracht eile a dhéanamh, nó\\r\n"
+"\"Ignore\" chun neamhaird a dhéanamh den chomhad seo."
+
+#: FileError_NoIgnore
+msgid ""
+"Error opening file for writing: \\r\n"
+"\\r\n"
+"$0\\r\n"
+"\\r\n"
+"Click Retry to try again, or\\r\n"
+"Cancel to stop the installation."
+msgstr ""
+"Earráid agus comhad á scríobh: \\r\n"
+"\\r\n"
+"$0\\r\n"
+"\\r\n"
+"Cliceáil \"Retry\" chun iarracht eile a dhéanamh, nó\\r\n"
+"\"Cancel\" chun an tsuiteáil a stopadh."
+
+#: CantWrite
+msgid "\"Can't write: \""
+msgstr "\"Ní féidir scríobh: \""
+
+#: CopyFailed
+msgid "Copy failed"
+msgstr "Theip ar an gcóipeáil"
+
+#: CopyTo
+msgid "\"Copy to \""
+msgstr "\"Cóipeáil go \""
+
+#: Registering
+msgid "\"Registering: \""
+msgstr "\"Clárú: \""
+
+#: Unregistering
+msgid "\"Unregistering: \""
+msgstr "\"Díchlárú: \""
+
+#: SymbolNotFound
+msgid "\"Could not find symbol: \""
+msgstr "\"Níorbh fhéidir siombail a aimsiú: \""
+
+#: CouldNotLoad
+msgid "\"Could not load: \""
+msgstr "\"Níorbh fhéidir luchtú: \""
+
+#: CreateFolder
+msgid "\"Create folder: \""
+msgstr "\"Cruthaigh fillteán: \""
+
+#: CreateShortcut
+msgid "\"Create shortcut: \""
+msgstr "\"Cruthaigh aicearra: \""
+
+#: CreatedUninstaller
+msgid "\"Created uninstaller: \""
+msgstr "\"Cruthaíodh díshuiteálaí: \""
+
+#: Delete
+msgid "\"Delete file: \""
+msgstr "\"Scrios comhad: \""
+
+#: DeleteOnReboot
+msgid "\"Delete on reboot: \""
+msgstr "\"Scrios ag am atosaithe: \""
+
+#: ErrorCreatingShortcut
+msgid "\"Error creating shortcut: \""
+msgstr "\"Earráid agus aicearra á chruthú: \""
+
+#: ErrorCreating
+msgid "\"Error creating: \""
+msgstr "\"Earráid le linn cruthaithe: \""
+
+#: ErrorDecompressing
+msgid "Error decompressing data! Corrupted installer?"
+msgstr "Earráid agus sonraí á ndíchomhbhrú! Suiteálaí truaillithe?"
+
+#: ErrorRegistering
+msgid "Error registering DLL"
+msgstr "Earráid agus DLL á chlárú"
+
+#: ExecShell
+msgid "\"ExecShell: \""
+msgstr "\"Blaosc: \""
+
+#: Exec
+msgid "\"Execute: \""
+msgstr "\"Rith: \""
+
+#: Extract
+msgid "\"Extract: \""
+msgstr "\"Bain Amach: \""
+
+#: ErrorWriting
+msgid "\"Extract: error writing to file \""
+msgstr "\"Extract: earráid le linn scríofa \""
+
+#: InvalidOpcode
+msgid "Installer corrupted: invalid opcode"
+msgstr "Díshuiteálaí truaillithe: cód neamhbhailí oibríochta"
+
+#: NoOLE
+msgid "\"No OLE for: \""
+msgstr "\"Gan OLE le haghaidh: \""
+
+#: OutputFolder
+msgid "\"Output folder: \""
+msgstr "\"Fillteán aschurtha: \""
+
+#: RemoveFolder
+msgid "\"Remove folder: \""
+msgstr "\"Bain fillteán: \""
+
+#: RenameOnReboot
+msgid "\"Rename on reboot: \""
+msgstr "\"Athainmnigh ag am atosaithe: \""
+
+#: Rename
+msgid "\"Rename: \""
+msgstr "\"Athainmnigh: \""
+
+#: Skipped
+msgid "\"Skipped: \""
+msgstr "\"Neamhaird déanta de: \""
+
+#: CopyDetails
+msgid "Copy Details To Clipboard"
+msgstr "Cóipeáil Sonraí go dtí an Ghearrthaisce"
+
+#: LogInstall
+msgid "Log install process"
+msgstr "Logáil an próiseas suiteála"
 
 #: Title
 msgid "Software Update"
