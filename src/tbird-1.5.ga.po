@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-19 10:37-0500\n"
+"POT-Creation-Date: 2006-07-25 20:32-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -360,7 +360,7 @@ msgstr "Íomhá"
 # Ctrl+e is Eolas Leathanaigh
 #: pasteImage.accesskey insertmenu.accesskey insertimage.accesskey
 #: editlink.accesskey styleitalic.keybinding increaseindent.accesskey
-#: tableinsertmenu.accesskey propertiesCmd.key markFlaggedCmd.key
+#: tableinsertmenu.accesskey propertiesCmd.key
 msgid "i"
 msgstr "e"
 
@@ -486,7 +486,6 @@ msgstr "Foirm"
 
 #: insertformmenu.accesskey insertfieldset.accesskey chooseFile.accessKey
 #: fieldMapImport.skipFirstRecord.accessKey findCmd.key compactFolder.accesskey
-#: previousFlaggedMsgCmd.accesskey
 msgid "F"
 msgstr "F"
 
@@ -544,7 +543,8 @@ msgstr "Liosta Roghnúchán..."
 
 #: insertselect.accesskey stylesubscript.accesskey mapviewscale.accesskey
 #: offlineSelect.accesskey saveCmd.key accountManagerCmdUnix.accesskey
-#: accesskeyForStopButton accesskeyForSearchButton
+#: previousFlaggedMsgCmd.accesskey markFlaggedCmd.key accesskeyForStopButton
+#: accesskeyForSearchButton
 msgid "S"
 msgstr "S"
 
@@ -9600,8 +9600,8 @@ msgid "Mark As Read"
 msgstr "Marcáil mar Léite"
 
 #: markMessageFlagged.label
-msgid "Mark As Flagged"
-msgstr "Marcáil le Bratach"
+msgid "Add Star"
+msgstr "Cuir Réiltín Leis"
 
 #: labelMessage.label
 msgid "Label Message As"
@@ -13119,10 +13119,9 @@ msgstr "Le Gai&rid"
 msgid "Dat&e"
 msgstr "Dát&a"
 
-#: sortByFlagCmd.label sortByFlagCmd.accesskey markFlaggedCmd.label
-#: markFlaggedCmd.accesskey
-msgid "&Flag"
-msgstr "&Bratach"
+#: sortByFlagCmd.label sortByFlagCmd.accesskey
+msgid "&Star"
+msgstr "&Réiltín"
 
 #: sortBySizeCmd.label sortBySizeCmd.accesskey
 msgid "Si&ze"
@@ -13141,7 +13140,7 @@ msgid "&Junk Status"
 msgstr "&Stádas Dramhphoist"
 
 #: sortBySubjectCmd.label sortBySubjectCmd.accesskey
-msgid "&Subject"
+msgid "Su&bject"
 msgstr "Á&bhar"
 
 #: sortBySenderCmd.label sortBySenderCmd.accesskey
@@ -13283,19 +13282,15 @@ msgid "&Unread Message"
 msgstr "Teachtaireacht &Gan Léamh"
 
 #: nextFlaggedMsgCmd.label nextFlaggedMsgCmd.accesskey
-msgid "&Flagged Message"
+msgid "&Starred Message"
 msgstr "Teachtaireacht &Marcáilte"
-
-#: nextUnflaggedMsgCmd.label
-msgid "Unflagged Message"
-msgstr "Teachtaireacht gan Mharcáil"
 
 #: nextUnreadThread.label
 msgid "Unread Thread"
 msgstr "Snáithe Gan Léamh"
 
 #: prevFlaggedMsgCmd.label
-msgid "Flagged Message"
+msgid "Starred Message"
 msgstr "Teachtaireacht Marcáilte"
 
 #: startPageCmd.label startPageCmd.accesskey
@@ -13416,6 +13411,10 @@ msgstr "Léite de réir &dáta..."
 #: markAllReadCmd.label markAllReadCmd.accesskey
 msgid "&All Read"
 msgstr "G&ach ceann léite"
+
+#: markFlaggedCmd.label markFlaggedCmd.accesskey
+msgid "Add &Star"
+msgstr "Cuir &Réiltín Leis"
 
 #: markAsJunkCmd.label markAsJunkCmd.accesskey
 msgid "As &Junk"
@@ -13706,8 +13705,8 @@ msgid "Lines"
 msgstr "Línte"
 
 #: flagColumn.label
-msgid "Flag"
-msgstr "Bratach"
+msgid "Starred"
+msgstr "Marcáilte"
 
 #: idColumn.label
 msgid "Order Received"
@@ -13778,8 +13777,8 @@ msgid "Click to sort by read"
 msgstr "Cliceáil chun sórtáil de réir stádas léite"
 
 #: flagColumn.tooltip
-msgid "Click to sort by flag"
-msgstr "Cliceáil chun sórtáil de réir brait"
+msgid "Click to sort by star"
+msgstr "Cliceáil chun sórtáil de réir réiltín"
 
 #: locationColumn.tooltip
 msgid "Click to sort by location"
@@ -15989,8 +15988,8 @@ msgid "Get Selected &Messages"
 msgstr "Faigh na Teachtaireachtaí &Roghnaithe"
 
 #: downloadFlaggedCmd.label downloadFlaggedCmd.accesskey
-msgid "Get &Flagged Messages"
-msgstr "&Faigh na Teachtaireachtaí Marcáilte"
+msgid "Get St&arred Messages"
+msgstr "F&aigh na Teachtaireachtaí Marcáilte"
 
 #: prefOfflineConnection.label
 msgid "Offline and Connection Settings"
@@ -17384,10 +17383,12 @@ msgstr "Cosc ar &JavaScript i dteachtaireachtaí ríomhphoist"
 
 # Junk Mail Controls
 #: junkMail.intro
-msgid "Goto Account Settings to configure account specific junk mail settings."
+msgid ""
+"Set your default junk mail settings. Account specific junk mail settings can "
+"be configured in Account Settings."
 msgstr ""
-"Téigh go Socruithe an Chuntais chun socruithe dramhphoist an chuntais seo a "
-"chumrú."
+"Socraigh na réamhshocruithe dramhphoist. Téigh go Socruithe an Chuntais chun "
+"socruithe dramhphoist an chuntais seo a chumrú."
 
 #: manualMark.label
 msgid "When I mark messages as junk:"
