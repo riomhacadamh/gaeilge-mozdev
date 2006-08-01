@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-31 00:31-0500\n"
+"POT-Creation-Date: 2006-07-31 07:04-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -170,7 +170,7 @@ msgstr "L&org Nuashonruithe..."
 msgid "Preferences..."
 msgstr "Sainroghanna..."
 
-#: preferencesCmdMac.commandkey cmd.options.commandKey
+#: preferencesCmdMac.commandkey bookmarkjoiner cmd.options.commandKey
 msgid ","
 msgstr ","
 
@@ -219,7 +219,7 @@ msgstr "&Lorgfhocal:"
 msgid "Live Titles"
 msgstr "Teidil Bheo"
 
-#: url.label url.accesskey
+#: url.label url.accesskey location.label location.accesskey
 msgid "&Location:"
 msgstr "&Suíomh:"
 
@@ -340,7 +340,7 @@ msgstr "Ai&ríonna..."
 
 # Ctrl+e is Eolas Leathanaigh
 #: edit.properties.keybinding pageInfoCmd.commandkey
-#: bookmarksSidebarWinCmd.commandkey viewPasswordExceptions.accesskey
+#: bookmarksSidebarWinCmd.commandkey certs.ask.accesskey
 #: inspectorTaskCmd.commandkey cmd.info.commandKey
 msgid "i"
 msgstr "e"
@@ -543,7 +543,8 @@ msgid "Manage Folder"
 msgstr "Bainistiú an Fhillteáin"
 
 #: cmd_bm_managefolder_accesskey cmd_bm_movebookmark_accesskey mediaAccesskey
-#: Mega loaddevice.modname.accesskey managecerts.accesskey
+#: setMasterPassword_accesskey changeMasterPassword_accesskey Mega
+#: loaddevice.modname.accesskey managecerts.accesskey
 #: validation.managecrls.accesskey
 msgid "M"
 msgstr "B"
@@ -558,7 +559,7 @@ msgstr "Gearr"
 
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
 #  cmd_cut_accesskey is sedtweaked
-#: cmd_cut_accesskey tabCmd.commandkey certs.ask.accesskey SOCKSport.accesskey
+#: cmd_cut_accesskey tabCmd.commandkey SOCKSport.accesskey
 msgid "t"
 msgstr "t"
 
@@ -755,8 +756,7 @@ msgstr "Oscail i bhFuinneog Nua"
 
 # Ctrl+N is Fuinneog Nua under Main -> Comhad
 # see also lowercase for "Navigator" command
-#: cmd_bm_openinnewwindow_accesskey newNavigatorCmd.key appCheckNow.accesskey
-#: nextButtonTextAccesskey
+#: cmd_bm_openinnewwindow_accesskey newNavigatorCmd.key nextButtonTextAccesskey
 msgid "N"
 msgstr "N"
 
@@ -1191,7 +1191,7 @@ msgstr "Baile"
 msgid "Display your bookmarks"
 msgstr "Léirigh do Leabharmharcanna"
 
-#: historyButton.label history.label itemHistory.label
+#: historyButton.label history.label
 msgid "History"
 msgstr "Stair"
 
@@ -1401,13 +1401,11 @@ msgstr "&Nótaí Eisiúna"
 msgid "l"
 msgstr "i"
 
-#: searchFocus.commandkey certselect.ask.accesskey focusSearch2.key
-#: helpSearch.commandkey
+#: searchFocus.commandkey focusSearch2.key helpSearch.commandkey
 msgid "k"
 msgstr "k"
 
-#: searchFocus.commandkey2 viewPartialSourceCmd.accesskey
-#: certselect.auto.accesskey size.accesskey2
+#: searchFocus.commandkey2 viewPartialSourceCmd.accesskey size.accesskey2
 msgid "e"
 msgstr "l"
 
@@ -1957,11 +1955,11 @@ msgstr "Taispeáin '%S'"
 
 #: imageWarningBlocked
 msgid "Firefox will now always block images from this site"
-msgstr ""
+msgstr "Cuirfidh Firefox cosc ar íomhánna ón suíomh seo i gcónaí"
 
 #: imageWarningAllowed
 msgid "Firefox will now allow images from this site"
-msgstr ""
+msgstr "Ceadóidh Firefox íomhánna ón suíomh seo anois"
 
 #: saveFormInformationMessage
 msgid ""
@@ -2051,7 +2049,7 @@ msgstr "Liostáil leis an leathanach seo..."
 msgid "Undo Close Tab"
 msgstr "Cealaigh Dúnadh an Chluaisín"
 
-#: window.title exceptions.label
+#: window.title
 msgid "Exceptions"
 msgstr "Eisceachtaí"
 
@@ -2337,7 +2335,7 @@ msgstr "Úsáid Lea&bharmharcanna Beo"
 
 #: useAsDefault.label useAsDefault.accesskey
 msgid "&Use this reader as my default reader"
-msgstr ""
+msgstr "Ú&sáid é seo mar léitheoir fothaí réamhshocraithe"
 
 #: feedPage.title
 msgid "Viewing Feed"
@@ -2844,7 +2842,7 @@ msgid "Internet Options"
 msgstr "Roghanna Idirlín"
 
 #: 2_ie 2_opera 2_dogbert 2_seamonkey 2_phoenix 2_safari 2_macie window.title
-#: cookies.label itemCookies.label
+#: cookies.label
 msgid "Cookies"
 msgstr "Fianáin"
 
@@ -2939,8 +2937,7 @@ msgid ""
 "470"
 msgstr "470"
 
-#: generalTab generalTab.label paneGeneral.title
-#: certmgr.detail.general_tab.title general.label
+#: generalTab generalTab.label certmgr.detail.general_tab.title general.label
 msgid "General"
 msgstr "Ginearálta"
 
@@ -3333,8 +3330,12 @@ msgstr "Úsáid u&athscrollú"
 msgid "Use s&mooth scrolling"
 msgstr "Úsáid &mínscrollú"
 
-#: languages.label languages.caption languages.customize.Header
-#: languages.customize.label locales.label
+#: checkSpelling.label checkSpelling.accesskey
+msgid "Check my spelling as I &type"
+msgstr "Litriú &beo"
+
+#: languages.label languages.customize.Header languages.customize.label
+#: locales.label
 msgid "Languages"
 msgstr "Teangacha"
 
@@ -3362,7 +3363,7 @@ msgstr "Cumraigh conas a nascfar &brandShortName; leis an Idirlíon"
 msgid "S&ettings..."
 msgstr "Socruith&e..."
 
-#: cache.label itemCache.label
+#: cache.label
 msgid "Cache"
 msgstr "Taisce"
 
@@ -3393,10 +3394,6 @@ msgstr "Ei&sínteachtaí agus Téamaí Suiteáilte"
 #: enableSearchUpdate.label enableSearchUpdate.accesskey
 msgid "Searc&h Engines"
 msgstr "Innill C&huardaigh"
-
-#: checkNow.label
-msgid "Check Now..."
-msgstr "Lorg Anois..."
 
 #: whenUpdatesFound.label
 msgid "When updates to &brandShortName; are found:"
@@ -3446,11 +3443,11 @@ msgstr "Teastais"
 msgid "When a web site requires a certificate:"
 msgstr "Agus teastas ag teastáil ó shuíomh Gréasáin:"
 
-#: certs.auto certselect.auto
+#: certs.auto
 msgid "Select one automatically"
 msgstr "Roghnaigh go huathoibríoch"
 
-#: certs.ask certselect.ask
+#: certs.ask
 msgid "Ask me every time"
 msgstr "Fiafraigh díom i gcónaí"
 
@@ -3463,91 +3460,12 @@ msgid "&Revocation Lists"
 msgstr "&Liostaí Cúlghairme"
 
 #: verify.label verify.accesskey
-msgid "Ver&ification"
+msgid "Verificatio&n"
 msgstr "&Fíorú"
 
 #: viewSecurityDevices.label viewSecurityDevices.accesskey
 msgid "Securit&y Devices"
 msgstr "&Gléasanna Slándála"
-
-#: moveSystemCaret.label moveSystemCaret.accesskey
-msgid "Allow text to &be selected with the keyboard"
-msgstr "Ceadaigh roghnú &téacs leis an méarchlár"
-
-#: useTypeAheadFind.label useTypeAheadFind.accesskey
-msgid "Begin finding when you begin ty&ping"
-msgstr "Úsáid Cuardach &Beo"
-
-#: enableAutoImageResizing.label enableAutoImageResizing.accesskey
-msgid "Resi&ze large images to fit in the browser window"
-msgstr "Cuir íomhánna &móra in oiriúint do mhéid na fuinneoige"
-
-#: useAutoScrolling.label useAutoScrolling.accesskey
-msgid "U&se autoscrolling"
-msgstr "Ú&sáid uathscrollú"
-
-#: modeAskMe.label modeAskMe.accesskey
-msgid "&Ask me what I want to do"
-msgstr "Fi&afraigh díom cad atá le déanamh"
-
-#: showUpdates.label showUpdates.accesskey
-msgid "Show &Update History"
-msgstr "Taispeáin Stair na N&uashonruithe"
-
-#: securityTab.label paneSecurity.title pageInfo.securityTab
-#: pref.security.general.lHeader
-msgid "Security"
-msgstr "Slándáil"
-
-#: viewCertificates.label viewCertificates.accesskey
-msgid "View &Certificates"
-msgstr "Taispeáin &Teastais"
-
-#: viewOCSP.label viewOCSP.accesskey
-msgid "&Verification"
-msgstr "&Fíorú"
-
-#: securityWarnings.label
-msgid "Warnings"
-msgstr "Rabhaidh"
-
-#: securityWarnings.description
-msgid "Choose which security warnings should be displayed while browsing."
-msgstr "Roghnaigh na rabhaidh shlándála a thaispeánfar le linn brabhsála."
-
-#: securityWarningsButton.label securityWarningsButton.accesskey
-msgid "Confi&gure Security Warnings"
-msgstr "Cumrai&gh Rabhaidh Shlándála"
-
-#: languagesInfo.label
-msgid "Choose Languages web pages are displayed in."
-msgstr "Roghnaigh na teangacha ina dtaispeánfar leathanaigh Ghréasáin."
-
-#: showLanguages.label showLanguages.accesskey
-msgid "Edit &Languages..."
-msgstr "Cuir &Teangacha in Eagar..."
-
-#: safeBrowsingTab.label
-msgid "Anti-Phishing"
-msgstr "Frith-Bhréagbhrandáil"
-
-#: safeBrowsing.label
-msgid "While I'm browsing the Internet:"
-msgstr "Agus mé ag brabhsáil an Idirlín:"
-
-#: safeBrowsingEnable.label safeBrowsingEnable.accesskey
-msgid "Check t&o see if the site I'm visiting might be a scam"
-msgstr ""
-"Seiceáil an bhféadfadh an suí&omh ar a bhfuil mé ag amharc bheith ina "
-"chamscéim"
-
-#: safeBrowsingLocal.label safeBrowsingLocal.accesskey
-msgid "Using a locally s&tored list"
-msgstr "Le lios&ta logánta"
-
-#: safeBrowsingRemote.label safeBrowsingRemote.accesskey
-msgid "By ask&ing:"
-msgstr "Trí f&iafraí:"
 
 # ***** BEGIN LICENSE BLOCK *****
 # #if 0
@@ -3824,10 +3742,10 @@ msgstr "&Eisceachtaí..."
 msgid "Load &images automatically"
 msgstr "&Luchtaigh íomhánna go huathoibríoch"
 
-#: imageExceptions.label imageExceptions.accesskey exceptionsSoftware.label
-#: exceptionsSoftware.accesskey
-msgid "E&xceptions"
-msgstr "Ei&sceachtaí"
+#: exceptions.label exceptions.accesskey passwordExceptions.label
+#: passwordExceptions.accesskey
+msgid "E&xceptions..."
+msgstr "Ei&sceachtaí..."
 
 #: enableJavaScript.label enableJavaScript.accesskey
 msgid "Enable &JavaScript"
@@ -3837,23 +3755,31 @@ msgstr "Cumasaigh &JavaScript"
 msgid "Ad&vanced..."
 msgstr "Ard&roghanna..."
 
-#: font.label font.accesskey
-msgid "Defa&ult font:"
-msgstr "Cló &Réamhshocraithe:"
+#: enableJava.label enableJava.accesskey
+msgid "E&nable Java"
+msgstr "Cu&masaigh Java"
+
+#: fontsAndColors.label
+msgid "Fonts &amp; Colors"
+msgstr "Clófhoirne &amp; Dathanna"
+
+#: defaultFont.label defaultFont.accesskey
+msgid "&Default font:"
+msgstr "Cló réamh&shocraithe:"
+
+#: defaultSize.label defaultSize.accesskey
+msgid "S&ize:"
+msgstr "&Méid:"
 
 #: advancedFonts.label advancedFonts.accesskey
 msgid "A&dvanced..."
 msgstr "Ar&droghanna..."
 
-#: defaultSize.label defaultSize.accesskey
-msgid "Default &size:"
-msgstr "Méid réamh&shocruithe:"
-
 #: colors.label colors.accesskey
 msgid "&Colors..."
 msgstr "&Dathanna..."
 
-#: feeds.label
+#: feeds.label paneFeeds.title
 msgid "Feeds"
 msgstr "Fothaí"
 
@@ -3889,48 +3815,6 @@ msgstr ""
 #: manage.label manage.accesskey
 msgid "&Manage..."
 msgstr "&Bainistiú..."
-
-#: lHeader
-msgid "Web Features"
-msgstr "Sainghnéithe Idirlín"
-
-#: enbJavaCheck.label enbJavaCheck.accesskey
-msgid "Enable &Java"
-msgstr "Cumasaigh &Java"
-
-#: enableImages.label enableImages.accesskey
-msgid "Load &Images"
-msgstr "&Luchtaigh Íomhánna"
-
-#: popupReject.label popupReject.accesskey
-msgid "&Block Popup Windows"
-msgstr "Cuir Cosc ar Phreab&fhuinneoga"
-
-#: enableXPInstallWarning.label enableXPInstallWarning.accesskey
-msgid "W&arn me when web sites try to install extensions or themes"
-msgstr ""
-"T&abhair rabhadh dom nuair a dhéanann suímh Ghréasáin iarracht eisínteachtaí "
-"nó téamaí a shuiteáil"
-
-#: allowedSitesPopup.label allowedSitesPopup.accesskey
-msgid "A&llowed Sites"
-msgstr "&Suímh Cheadaithe"
-
-#: exceptions.label exceptions.accesskey
-msgid "&Exceptions"
-msgstr "&Eisceachtaí"
-
-#: fonts.caption
-msgid "Fonts &amp; Colors"
-msgstr "Clófhoirne &amp; Dathanna"
-
-#: defaultFontSize.label defaultFontSize.accesskey
-msgid "Si&ze:"
-msgstr "Méi&d:"
-
-#: defaultFont.label defaultFont.accesskey
-msgid "Default &Font:"
-msgstr "&Cló Réamhshocraithe:"
 
 #: cookiesonsystem.label cookiesAll
 msgid "The following cookies are stored on your computer:"
@@ -4023,8 +3907,7 @@ msgstr "Deasc"
 msgid "My Downloads"
 msgstr "Mo Chuid Íosluchtaithe"
 
-#: chooseFolderMac.label chooseFolderMac.accesskey choose.label
-#: choose.accesskey
+#: chooseFolderMac.label chooseFolderMac.accesskey
 msgid "C&hoose..."
 msgstr "R&oghnaigh..."
 
@@ -4279,11 +4162,12 @@ msgstr "Leathanach Baile"
 msgid "Loc&ation(s):"
 msgstr "Suí&omh(anna):"
 
-#: useCurrent.label useCurrent.accesskey
+#: useCurrent.label useCurrent.accesskey useCurrentPage.label
+#: useCurrentPage.accesskey
 msgid "Use &Current Page"
 msgstr "Úsáid an Leathanach &Reatha"
 
-#: useCurrentMultiple.label loadHomePageCurrent.label
+#: useCurrentMultiple.label useMultiple.label loadHomePageCurrent.label
 msgid "Use Current Pages"
 msgstr "Úsáid na Leathanaigh Reatha"
 
@@ -4362,23 +4246,15 @@ msgstr "Roghnaigh teanga chun cur leis..."
 msgid "&Add"
 msgstr "Cuir &Leis"
 
-#: useDefaultHome.label useDefaultHome.accesskey
-msgid "&brandShortName; &Start"
-msgstr "To&sú &brandShortName;"
-
-#: useABookmark.label useABookmark.accesskey
-msgid "Use a &Bookmark"
+#: useBookmark.label useBookmark.accesskey
+msgid "Use &Bookmark"
 msgstr "Úsáid Lea&bharmharc"
 
-#: useOther.label useOther.accesskey
-msgid "Use this &page"
-msgstr "Úsáid an &leathanach seo"
+#: restoreDefault.label restoreDefault.accesskey
+msgid "&Restore to Default"
+msgstr "Athchói&righ na Réamhshocruithe"
 
-#: useCurrent.label useCurrent.accesskey
-msgid "Use &Current"
-msgstr "Úsáid an Leathanach &Reatha"
-
-#: downloads.label paneDownloads.title downloads.title
+#: downloads.label downloads.title
 msgid "Downloads"
 msgstr "Íosluchtú"
 
@@ -4460,7 +4336,7 @@ msgid "Main"
 msgstr "Príomhphána"
 
 # OK as is --kps
-#: paneTabs.title tabsTab.label
+#: paneTabs.title
 msgid "Tabs"
 msgstr "Cluaisíní"
 
@@ -4468,9 +4344,17 @@ msgstr "Cluaisíní"
 msgid "Privacy"
 msgstr "Príobháideachas"
 
+#: paneSecurity.title pageInfo.securityTab pref.security.general.lHeader
+msgid "Security"
+msgstr "Slándáil"
+
 #: paneAdvanced.title advanced.label
 msgid "Advanced"
 msgstr "Ardroghanna"
+
+#: blankpage
+msgid "(blank page)"
+msgstr "(leathanach bán)"
 
 #: choosehomepage
 msgid "Choose Home Page"
@@ -4488,6 +4372,43 @@ msgstr ""
 #: choosefile
 msgid "Choose a file"
 msgstr "Roghnaigh comhad"
+
+# ### Content
+#: addReader
+msgid "Add New Reader..."
+msgstr "Cuir Léitheoir Nua Leis..."
+
+# LOCALIZATION NOTE:
+#   the next four strings (phish*) are here for b1 only;
+#   don't bother localizing them unless you've localized everything else,
+#   because they're going away because this is clearly a gross hack
+#: phishEULATitle
+msgid "Anti-Phishing Privacy Policy"
+msgstr ""
+
+#: phishEULAText
+msgid ""
+"If you choose Google as your provider for Safe Browsing in Enhanced "
+"Protection mode, Google will receive the URLs of pages you visit for "
+"evaluation.  When you click to accept, reject, or close the warning message "
+"that Safe Browsing gives you about a suspicious page, Google will log your "
+"action and the URL of the page.  Google will receive standard log information "
+"<http://www.google.com/privacy_faq.html#serverlogs>, including a cookie, as "
+"part of this process.  Google will not associate the information that Safe "
+"Browsing logs with other personal information about you. However, it is "
+"possible that a URL sent to Google may itself contain personal information.  "
+"Please see the Google Privacy Policy <http://www.google.com/privacypolicy."
+"html> for more information.  Do you wish to use Google as your Safe Browsing "
+"provider?"
+msgstr ""
+
+#: phishEULACancel
+msgid "Disable Safe Browsing"
+msgstr "Díchumasaigh Brabhsáil Shábháilte"
+
+#: phishEULAOK
+msgid "Use Google"
+msgstr "Úsáid Google"
 
 #: setMasterPassword
 msgid "Set Master Password..."
@@ -4722,43 +4643,11 @@ msgstr "Meaitseálann na fianáin seo a leanas do chuardach:"
 msgid "Remove Cookies"
 msgstr "Bain Fianáin"
 
-# LOCALIZATION NOTE:
-#   the next four strings (phish*) are here for b1 only;
-#   don't bother localizing them unless you've localized everything else,
-#   because they're going away because this is clearly a gross hack
-#: phishEULATitle
-msgid "Anti-Phishing Privacy Policy"
-msgstr ""
-
-#: phishEULAText
-msgid ""
-"If you choose Google as your provider for Phishing Protection in Enhanced "
-"Protection mode, Google will receive the URLs of pages you visit for "
-"evaluation.  When you click to accept, reject, or close the warning message "
-"that Phishing Protection gives you about a suspicious page, Google will log "
-"your action and the URL of the page.  Google will receive standard log "
-"information <http://www.google.com/privacy_faq.html#serverlogs>, including a "
-"cookie, as part of this process.  Google will not associate the information "
-"that Phishing Protection logs with other personal information about you. "
-"However, it is possible that a URL sent to Google may itself contain personal "
-"information.  Please see the Google Privacy Policy <http://www.google.com/"
-"privacypolicy.html> for more information.  Do you wish to use Google as your "
-"Phishing Protection provider?"
-msgstr ""
-
-#: phishEULACancel
-msgid "Use Locally Stored List"
-msgstr "Úsáid Liosta Logánta"
-
-#: phishEULAOK
-msgid "Use Google"
-msgstr "Úsáid Google"
-
 #: rememberBefore.label rememberBefore.accesskey
 msgid "Remember &visited pages for the last"
 msgstr "Meabhraigh leathanaigh ar tugadh &cuairt orthu le"
 
-#: rememberAfter.label rememberDays.label
+#: rememberAfter.label
 msgid "days."
 msgstr "lá anuas"
 
@@ -4776,264 +4665,49 @@ msgstr "Meabhraigh cad a &d'íosluchtaigh mé"
 msgid "A&ccept cookies from sites"
 msgstr "Gla&c le fianáin ó shuímh"
 
-#: alwaysAsk.label alwaysAsk.accesskey
-msgid "&Always ask before accepting a cookie"
-msgstr "Fi&afraigh díom i gcónaí roimh ghlacadh le fianán"
+#: keepUntil.label keepUntil.accesskey
+msgid "&Keep until:"
+msgstr "&Coinnigh:"
 
-#: keepUntilClose.label keepUntilClose.accesskey
-msgid "&Only keep the cookies until I close &brandShortName;"
-msgstr "C&oinnigh na fianáin go dtí go ndúnaim &brandShortName;"
+#: expire.label
+msgid "they expire"
+msgstr "go dtí go mbeidh siad caite"
+
+#: close.label
+msgid "I close &brandShortName;"
+msgstr "go dtí go ndúnaim &brandShortName;"
+
+#: askEachTime.label
+msgid "ask me every time"
+msgstr "fiafraigh díom i gcónaí"
 
 #: showCookies.label showCookies.accesskey
 msgid "&Show Cookies..."
 msgstr "Tai&speáin Fianáin..."
 
-#: passwords.label itemPasswords.label
-msgid "Passwords"
-msgstr "Focail Fhaire"
-
-#: rememberPasswords.label rememberPasswords.accesskey
-msgid "&Remember passwords for sites"
-msgstr "Meabh&raigh focail fhaire le haghaidh suíomhanna"
-
-#: useMasterPassword.label useMasterPassword.accesskey
-msgid "&Use a master password"
-msgstr "Úsáid &príomhfhocal faire"
-
-#: passwordExceptions.label passwordExceptions.accesskey
-msgid "E&xceptions..."
-msgstr "Ei&sceachtaí..."
-
-#: masterPassword.label masterPassword.accesskey
-msgid "Set &Master Password..."
-msgstr "Socraigh an &Príomhfhocal Faire..."
-
-#: showPasswords.label showPasswords.accesskey
-msgid "Show Saved &Passwords..."
-msgstr "Taispeáin &focail fhaire a sábháladh..."
-
-#: clearPrivateData.label sanitizeDialog.title
-msgid "Clear Private Data"
-msgstr "Bánaigh Sonraí Príobháideacha"
+#: privateData.label items.label
+msgid "Private Data"
+msgstr "Sonraí Príobháideacha"
 
 #: alwaysClear.label alwaysClear.accesskey
 msgid "Al&ways clear my private data when I close &brandShortName;"
 msgstr "Glan sonraí &príobháideacha agus &brandShortName; á dhúnadh"
 
-#: clearDataSettings.label clearDataSettings.accesskey sanitizeSettings.label
-#: sanitizeSettings.accesskey
+#: clearDataSettings.label clearDataSettings.accesskey
 msgid "Se&ttings..."
 msgstr "So&cruithe..."
 
-#: privacy.intro
-msgid ""
-"As you browse the web, &brandShortName; keeps information about where you "
-"have been, what you have done etc. in the following areas:"
-msgstr ""
-"Agus tú ag siúl an idirlín, coinníonn &brandShortName; faisnéis faoi na "
-"háiteanna ina rabhais, faoi do ghníomhartha, srl., sna réimsí thíos:"
+#: clearDataNow.label clearDataNow.accesskey
+msgid "Clear &Now..."
+msgstr "Bánaigh A&nois..."
 
-#: clear.label cmdClearSearch.label
-msgid "Clear"
-msgstr "Bánaigh"
+#: clearDataNow.label2
+msgid "Clear Now"
+msgstr "Bánaigh Anois"
 
-#: view.label downloadCert.viewCert.label
-msgid "View"
-msgstr "Amharc"
-
-#: rememberPages.label rememberPages.accesskey
-msgid "Remember visite&d pages for the last"
-msgstr "Mea&bhraigh leathanaigh ar tugadh cuairt orthu le"
-
-#: clearHistory.label clearHistory.accesskey
-msgid "&Clear Browsing History Now"
-msgstr "&Bánaigh Stair Bhrabhsála Anois"
-
-#: itemFormData.label
-msgid "Saved Forms"
-msgstr "Foirmeacha Sábháilte"
-
-#: savedFormData.intro
-msgid ""
-"Information entered in forms and the Search Bar is saved to make filling out "
-"forms and searching faster."
-msgstr ""
-"Déantar faisnéis arna hiontráil i bhfoirmeacha leathanaigh Gréasáin agus i "
-"mBarra an Chuardaigh a shábháil, chun dlús a chur le comhlánú foirmeacha agus "
-"le cuardach ábhair."
-
-#: enableFormFill.label enableFormFill.accesskey
-msgid "&Save information I enter in forms and the Search Bar."
-msgstr ""
-"&Sábháil gach faisnéis a bhíonn á iontráil agam i bhfoirmeacha leathanaigh "
-"lín agus i mBarra an Chuardaigh"
-
-#: clearFormData.label clearFormData.accesskey
-msgid "Clear Saved &Form Data Now"
-msgstr "Glan anois na sonraí a sábháladh ó &fhoirmeacha"
-
-#: savedPasswords.intro
-msgid ""
-"&brandShortName; can remember login information for web pages so that you do "
-"not need to re-enter your login details every time you visit."
-msgstr ""
-"Is féidir le &brandShortName; faisnéis logála do leathanaigh idirlín a "
-"choinneáil i mBainisteoir na bhFocal Faire, i slí is nach gá duit do shonraí "
-"logála a iontráil gach uair a thugann tú cuairt."
-
-#: enablePasswords.label enablePasswords.accesskey
-msgid "Remem&ber Passwords"
-msgstr "Meabh&raigh Focail Fhaire"
-
-#: masterPassword.intro
-msgid ""
-"When set, the Master Password protects all your passwords - but you must "
-"enter it once per session."
-msgstr ""
-"Agus é socruithe, cosnaíonn an Príomhfhocal Faire d'fhocail fhaire go léir, "
-"ach ní mór duit é a iontráil uair amháin sa seisiún."
-
-#: setMasterPassword.label setMasterPassword.accesskey
-msgid "&Master Password"
-msgstr "&Príomhfhocal Faire"
-
-#: removeMasterPassword.label removeMasterPassword.accesskey
-msgid "&Remove Master Password..."
-msgstr "Bain an P&ríomhfhocal Faire..."
-
-#: viewPasswords.label viewPasswords.accesskey
-msgid "&View Saved Passwords"
-msgstr "&Taispeáin Focail Fhaire a Sábháladh"
-
-#: itemDownloads.label
-msgid "Download History"
-msgstr "Stair an Bhainisteora Íosluchtaithe"
-
-#: downloadManager.intro
-msgid "The Downloads window keeps track of recently downloaded files."
-msgstr ""
-"Coimeádann an Bainisteoir Íosluchtaithe tuairisc ar na comhaid a "
-"íosluchtaíodh le déanaí."
-
-#: downloadsRetentionPolicy.label downloadsRetentionPolicy.accesskey
-msgid "R&emove files from the Download Manager:"
-msgstr "B&ain comhaid ón mBainisteoir Íosluchtaithe:"
-
-#: downloadsRemoveImmediately.label
-msgid "Upon successful download"
-msgstr "Tar éis éirí le híosluchtú"
-
-#: downloadsRemoveExit.label
-msgid "When &brandShortName; exits"
-msgstr "Agus &brandShortName; ag scor"
-
-#: downloadsRemoveManually.label
-msgid "Manually"
-msgstr "De Láimh"
-
-#: viewDownloads.label viewDownloads.accesskey
-msgid "View Download Histor&y"
-msgstr "S&tair an Bhainisteora Íosluchtaithe"
-
-#: clearDownloads.label clearDownloads.accesskey
-msgid "Cle&ar Download History Now"
-msgstr "&Bánaigh Stair an Chuardaigh Anois"
-
-#: cookies.intro
-msgid ""
-"Cookies are pieces of information stored by sites on your computer. They are "
-"used to remember login information and other data."
-msgstr ""
-"Is píosaí beaga eolais iad fianáin a fhágtar ar do ríomhaire ó leathanaigh "
-"lín.  Úsáidtear iad chun eolas logála isteach agus sonraí eile a choinneáil."
-
-# The contents of this file are subject to the Netscape Public
-# License Version 1.1 (the "License"); you may not use this file
-# except in compliance with the License. You may obtain a copy of
-# the License at http://www.mozilla.org/NPL/
-#
-# Software distributed under the License is distributed on an "AS
-# IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
-# implied. See the License for the specific language governing
-# rights and limitations under the License.
-#
-# The Original Code is mozilla.org code.
-#
-# The Initial Developer of the Original Code is Netscape
-# Communications Corporation. Portions created by Netscape are
-# Copyright (C) 1998 Netscape Communications Corporation. All
-# Rights Reserved.
-#
-# Contributor(s):
-#   Ben Goodger
-# note this section of the code may require some tinkering in other languages =(
-# format in dialog: site [can/cannot] set cookies
-#: enableCookies.label enableCookies.accesskey
-msgid "A&llow sites to set Cookies"
-msgstr "Ceadaigh do shuíomhanna &Fianáin a shocrú"
-
-#: enableCookiesForOriginating.label enableCookiesForOriginating.accesskey
-msgid "for the ori&ginating site only"
-msgstr "don suíomh bunaidh &Idirlín amháin"
-
-#: enableCookiesNotRemoved.label enableCookiesNotRemoved.accesskey
-msgid "&unless I have removed cookies set by the site"
-msgstr "m&ura bhfuil na fianáin socraithe ag an suíomh bainte agam"
-
-#: keepCookies.label keepCookies.accesskey
-msgid "&Keep Cookies:"
-msgstr "&Coinnigh Fianáin:"
-
-#: acceptNormally.label
-msgid "until they expire"
-msgstr "go dtí go mbeidh siad caite"
-
-#: acceptForSession.label
-msgid "until I close &brandShortName;"
-msgstr "go dtí go ndúnaim &brandShortName;"
-
-#: askAboutCookies.label
-msgid "ask me every time"
-msgstr "fiafraigh díom i gcónaí"
-
-#: viewCookies.label viewCookies.accesskey
-msgid "Vie&w Cookies"
-msgstr "&Taispeáin Fianáin"
-
-#: clearCookies.label clearCookies.accesskey
-msgid "Clear C&ookies Now"
-msgstr "Bánaigh Fianáin An&ois"
-
-#: cache.intro
-msgid "Pages you view are stored in the cache for faster viewing later on."
-msgstr ""
-"Cuirtear na leathanaigh sa taisce i ndiaidh cuairte, len iad a ataispeáint "
-"níos gasta."
-
-#: cacheUseUpTo.label cacheUseUpTo.accesskey
-msgid "Use u&p to:"
-msgstr "Úsáid s&uas le:"
-
-#: cacheSize.label
-msgid "MB of disk space for the cache."
-msgstr "MB spás diosca don taisce."
-
-#: clearCache.label clearCache.accesskey
-msgid "Clear Cache &Now"
-msgstr "Bá&naigh an Taisce Anois"
-
-#: sanitize.intro
-msgid ""
-"The Clear Private Data tool can be used to erase your private data using a "
-"keyboard shortcut or when &brandShortName; closes."
-msgstr ""
-"Is féidir Glantóir na Sonraí Príobháideacha a úsáid chun do shonraí "
-"príobháideacha a ghlanadh le haicearra méarchláir nó ar dhúnadh "
-"&brandShortName;"
-
-#: items.label
-msgid "Private Data"
-msgstr "Sonraí Príobháideacha"
+#: sanitizeDialog.title
+msgid "Clear Private Data"
+msgstr "Bánaigh Sonraí Príobháideacha"
 
 #: sanitizeItems.label
 msgid "Select the items to be cleared:"
@@ -5085,15 +4759,33 @@ msgstr ""
 "Tabhair &rabhadh dom nuair a dhéanann suímh Ghréasáin iarracht breiseáin a "
 "shuiteáil"
 
-#: checkPhish.label checkPhish.accesskey
-msgid "&Check to see if the site I'm loading is a forgery"
+# The methods by which forged (phished) sites will be detected by phishing
+# providers will vary from human review to machine-based heuristics to a
+# combination of both, so it's important that this string,
+# useCachedPhishAfter.label, and useCachedPhish.label convey the meaning
+# "suspected" (and not something like "known").
+#
+#: checkMaybePhish.label checkMaybePhish.accesskey
+msgid ""
+"_: \n"
+"&Check to see if the site I'm loading is a suspected forgery"
 msgstr ""
 "Sei&ceáil an bhféadfadh an suíomh ar a bhfuil mé ag amharc bheith ina "
 "chamscéim"
 
-#: useCachedPhishList.label useCachedPhishList.accesskey
-msgid "&Use a list of known forgeries provided by"
+# LOCALIZATION NOTE:
+# The entities useCachedPhish.label and useCachedPhishAfter.label
+# appear on a single line in preferences as follows:
+#
+# &useCachedPhish.label  [ menulist of phishing list providers ]   &useCachedPhishAfter.label;
+#
+#: useCachedPhish.label useCachedPhish.accesskey
+msgid "&Use a list of suspected forgeries provided by"
 msgstr "Ú&sáid liosta de chamscéimeanna atá curtha le fáil ag"
+
+#: useCachedPhishAfter.label
+msgid "_: useCachedPhishAfter.label\n"
+msgstr ""
 
 #: checkPhishOnLoad.label checkPhishOnLoad.accesskey
 msgid "&Ask"
@@ -5102,6 +4794,26 @@ msgstr "&Fiafraigh díom"
 #: checkPhishOnLoadAfter.label
 msgid "to check every site I visit"
 msgstr "le gach suíomh ar a dtugaim cuairt a sheiceáil"
+
+#: passwords.label
+msgid "Passwords"
+msgstr "Focail Fhaire"
+
+#: rememberPasswords.label rememberPasswords.accesskey
+msgid "&Remember passwords for sites"
+msgstr "Meabh&raigh focail fhaire le haghaidh suíomhanna"
+
+#: useMasterPassword.label useMasterPassword.accesskey
+msgid "&Use a master password"
+msgstr "Úsáid &príomhfhocal faire"
+
+#: changeMasterPassword.label changeMasterPassword.accesskey
+msgid "Change &Master Password..."
+msgstr "Athraigh &Príomhfhocal Faire..."
+
+#: showPasswords.label showPasswords.accesskey
+msgid "Show &Passwords..."
+msgstr "Tais&peáin Focail Fhaire..."
 
 #: warnings.label
 msgid "Warning Messages"
@@ -5147,9 +4859,9 @@ msgstr ""
 "féachaint ar leathanach crip&tithe ina bhfuil cuid den fhaisnéis "
 "neamhchriptithe."
 
-#: linksOpenIn.label
-msgid "When a link opens a new window, open it in:"
-msgstr "Nuair a osclaíonn nasc fuinneog nua, oscail é:"
+#: newPagesIn.label
+msgid "New pages should be opened in:"
+msgstr ""
 
 #: inNewWindow.label inNewWindow.accesskey
 msgid "a ne&w window"
@@ -5174,38 +4886,6 @@ msgstr "Taispeáin an &barra cluaisíní i gcónaí"
 #: switchToNewTabs.label switchToNewTabs.accesskey
 msgid "When I open a link in a new tab, &switch to it immediately"
 msgstr "Tar éi&s dom nasc a oscailt i gcluaisín nua, athraigh chuige láithreach"
-
-#: linkTargeting.label
-msgid "Open links that would open new windows in:"
-msgstr "Oscail naisc a d'osclódh fuinneoga nua:"
-
-#: newWindow.label newWindow.accesskey
-msgid "ne&w windows"
-msgstr "i bh&fuinneoga nua"
-
-#: newTabInRecentWindow.label newTabInRecentWindow.accesskey
-msgid "new &tabs in the most recent window"
-msgstr "i g&cluaisíní nua san fhuinneog is déanaí"
-
-#: hideTabBar.label hideTabBar.accesskey
-msgid "Hi&de the tab bar when only one web site is open"
-msgstr "Folaigh &barra na gcluaisíní mura bhfuil ach suíomh amháin oscailte"
-
-#: loadInBackground.label loadInBackground.accesskey
-msgid "Se&lect new tabs opened from links"
-msgstr "Roghnaigh c&luaisíní nua atá oscailte ó naisc"
-
-#: loadBookmarksInBackground.label loadBookmarksInBackground.accesskey
-msgid "Select new ta&bs opened from bookmarks or history"
-msgstr "Roghnaigh cluaisíní nua ó lea&bharmharcanna nó ón stair"
-
-#: warnOnClose.label warnOnClose.accesskey
-msgid "Warn when closing &multiple tabs"
-msgstr "Tabhair rabhadh do&m agus ag iarraidh cluaisíní iomadúla a dhúnadh"
-
-#: warnOnOpen.label warnOnOpen.accesskey
-msgid "Warn when &opening a lot of tabs at once"
-msgstr "Tabhair rabhadh agus a lán cluaisíní á n-&oscailt le chéile"
 
 #: releaseNotesURL
 msgid "http://www.mozilla.org/projects/bonecho/releases/%S.html"
@@ -10119,6 +9799,10 @@ msgstr "Cóipeáil Gach Rud"
 #: cmdSaveSearchItemText.label
 msgid "Save..."
 msgstr "Sábháil..."
+
+#: cmdClearSearch.label
+msgid "Clear"
+msgstr "Bánaigh"
 
 #: inspectNewWindow.label cmdInspectInNewWindow.label
 msgid "Inspect in New Window"
@@ -15895,7 +15579,7 @@ msgstr ""
 
 #: adminDisabled.wizard.title
 msgid "Unable to Check for Updates"
-msgstr ""
+msgstr "Ní féidir nuashonruithe a lorg"
 
 #: adminDisabled.warning.label
 msgid ""
@@ -15909,7 +15593,7 @@ msgstr ""
 
 #: versioninfo.wizard.title
 msgid "Checking Compatibility of Add-ons"
-msgstr ""
+msgstr "Ag seiceáil comhoiriúnacht na bmbreiseán"
 
 #: versioninfo.top.label
 msgid ""
@@ -20102,6 +19786,10 @@ msgid ""
 msgstr ""
 "Sula gcuireann tú muinín san údarás deimhniúcháin seo, ba cheart duit a "
 "theastas, a pholasaithe agus a mhodhanna oibre a scrúdú má tá fáil orthu."
+
+#: downloadCert.viewCert.label
+msgid "View"
+msgstr "Amharc"
 
 #: downloadCert.viewPolicy.label
 msgid "Policy"
