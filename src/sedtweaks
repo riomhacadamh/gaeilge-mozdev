@@ -1,10 +1,6 @@
 #!/bin/bash
 echo "Applying sed tweaks..."
 
-# https://bugzilla.mozilla.org/show_bug.cgi?id=340723
-sed -i '/pref.showConnections.label/s/.*/\n#ifdef MOZ_SUNBIRD\n&/' calendar-ga-IE/chrome/calendar/prefs.dtd
-sed -i '/pref.connectionsInfo.caption/s/.*/&\n#endif\n/' calendar-ga-IE/chrome/calendar/prefs.dtd
-
 sed -i '/^VK_ALT=/s/.*/VK_ALT=\\u0007/' toolkit-ga-IE/chrome/global-platform/mac/platformKeys.properties
 sed -i '/cmd_cut_accesskey/s/.*/cmd_cut_accesskey=g/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
 sed -i '/cmd_bm_newseparator_accesskey/s/.*/cmd_bm_newseparator_accesskey=t/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
@@ -15,6 +11,17 @@ sed -i '/cmd_bm_collapsefolder_accesskey/s/.*/cmd_bm_collapsefolder_accesskey=L/
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "50em">/' browser-ga-IE/chrome/browser/preferences/connection.dtd
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/preferences/fonts.dtd
 sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
+
+# calendar days of the week
+sed -i '
+s/^day.1.short=.*/day.1.short=D/
+s/^day.2.short=.*/day.2.short=L/
+s/^day.3.short=.*/day.3.short=M/
+s/^day.4.short=.*/day.4.short=C/
+s/^day.5.short=.*/day.5.short=D/
+s/^day.6.short=.*/day.6.short=A/
+s/^day.7.short=.*/day.7.short=S/
+' calendar-ga-IE/chrome/calendar/dateFormat.properties
 
 # still need these two with latest translate toolkit
 sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
