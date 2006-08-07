@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-18 22:31-0500\n"
+"POT-Creation-Date: 2006-08-07 09:40-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -36,7 +36,7 @@ msgstr "Admhálacha"
 msgid "&lt; About &brandFullName;"
 msgstr "&lt; Maidir le &brandFullName;"
 
-#: aboutVersion
+#: aboutVersion about.version
 msgid "version"
 msgstr "leagan"
 
@@ -46,7 +46,7 @@ msgid ""
 "logos are trademarks of the Mozilla Foundation.  All rights reserved. Some "
 "trademark rights used under license from The Charlton Company."
 msgstr ""
-"#169;1998-2006 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
+"&#169;1998-2006 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
 "trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
 "Firefox.  Gach ceart ar cosaint.  Tá roinnt cearta trádmharc á n-úsáid faoi "
 "cheadúnas ón Charlton Company."
@@ -220,7 +220,7 @@ msgstr "&Lorgfhocal:"
 msgid "Live Titles"
 msgstr "Teidil Bheo"
 
-#: url.label url.accesskey
+#: url.label url.accesskey location.label location.accesskey
 msgid "&Location:"
 msgstr "&Suíomh:"
 
@@ -345,7 +345,7 @@ msgstr "Ai&ríonna..."
 
 # Ctrl+e is Eolas Leathanaigh
 #: edit.properties.keybinding pageInfoCmd.commandkey
-#: bookmarksSidebarWinCmd.commandkey cmd.show_info.key
+#: bookmarksSidebarWinCmd.commandkey cmd.show_info.key certs.ask.accesskey
 #: inspectorTaskCmd.commandkey cmd.info.commandKey
 msgid "i"
 msgstr "e"
@@ -565,7 +565,7 @@ msgstr "Gearr"
 
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
 #  cmd_cut_accesskey is sedtweaked
-#: cmd_cut_accesskey tabCmd.commandkey certs.ask.accesskey SOCKSport.accesskey
+#: cmd_cut_accesskey tabCmd.commandkey SOCKSport.accesskey
 msgid "t"
 msgstr "t"
 
@@ -604,7 +604,7 @@ msgstr "Roghnaigh Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #: cmd_selectAll_accesskey selectAllCmd.key selectall.key cmd.about.accesskey
-#: updateFound.addons.accesskey IAgree.accesskey certselect.auto.accesskey
+#: IAgree.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -653,13 +653,13 @@ msgid "Sort By Name"
 msgstr "Sórtáil de réir Ainm"
 
 #: cmd_bm_sortbyname_accesskey cmd_bm_newseparator_accesskey
-#: mediaSaveAs.accesskey defaultGroupOnAccesskey submitReport.accesskey
-#: savePageCmd.commandkey pageInfo.securityTab.accesskey
+#: mediaSaveAs.accesskey defaultGroupOnAccesskey cmd_showSuggestions_accesskey
+#: submitReport.accesskey savePageCmd.commandkey pageInfo.securityTab.accesskey
 #: managedevices.accesskey warn.insecurepost.accesskey
 msgid "S"
 msgstr "S"
 
-#: cmd_bm_undo
+#: cmd_bm_undo undo
 msgid "Undo"
 msgstr "Cealaigh"
 
@@ -667,7 +667,7 @@ msgstr "Cealaigh"
 #: cmd_bm_paste_undo_accesskey cmd_bm_newbookmark_undo_accesskey
 #: cmd_bm_newlivemark_undo_accesskey cmd_bm_newfolder_undo_accesskey
 #: cmd_bm_newseparator_undo_accesskey cmd_bm_drag_undo_accesskey
-#: cmd_bm_move_undo_accesskey cmd_bm_import_undo_accesskey
+#: cmd_bm_move_undo_accesskey cmd_bm_import_undo_accesskey undo.accessKey
 #: tabContext.undoCloseTabAccessKey cmd.uninstall2.accesskey
 msgid "U"
 msgstr "U"
@@ -1142,8 +1142,7 @@ msgstr "Athluchtaigh an leathanach reatha"
 msgid "&Stop"
 msgstr "&Stad"
 
-#: stopCmd.macCommandKey safeb.palm.message.part3.dot
-#: safeb.palm.message.part4.dot safeb.palm.message.part5.dot
+#: stopCmd.macCommandKey safeb.palm.message.p3.end
 msgid "."
 msgstr "."
 
@@ -1364,9 +1363,9 @@ msgstr "Barra &Taoibh"
 msgid "&Customize..."
 msgstr "Sain&cheap..."
 
-# XXX places only
+# XXX historyMenu entities are used with or without places (bug 336058)
 #: historyMenu.label historyMenu.accesskey
-msgid "H&istory"
+msgid "Hi&story"
 msgstr "Sta&ir"
 
 #: historyUndoMenu.label historyUndoMenu.accesskey
@@ -1916,7 +1915,8 @@ msgid "Enable"
 msgstr "Cumasaigh"
 
 #: xpinstallDisabledButton.accesskey inspectorTaskCmd.accesskey.ff
-#: enableButtonAccesskey managepassword.asktimeout.accesskey
+#: dirTextInputAccesskey enableButtonAccesskey
+#: managepassword.asktimeout.accesskey
 msgid "n"
 msgstr "n"
 
@@ -1964,6 +1964,14 @@ msgstr "Ná taispeáin teachtaireacht eolais má tá cosc ar phreabfhuinneoga"
 #: popupShowPopupPrefix
 msgid "Show '%S'"
 msgstr "Taispeáin '%S'"
+
+#: imageWarningBlocked
+msgid "Firefox will now always block images from this site"
+msgstr "Cuirfidh Firefox cosc ar íomhánna ón suíomh seo i gcónaí"
+
+#: imageWarningAllowed
+msgid "Firefox will now allow images from this site"
+msgstr "Ceadóidh Firefox íomhánna ón suíomh seo anois"
 
 #: saveFormInformationMessage
 msgid ""
@@ -2180,6 +2188,30 @@ msgstr "Inneall Leagain Amach Gecko"
 msgid "Special Thanks To"
 msgstr "Buíochas ar leith le"
 
+#: credit.thanks2
+msgid "Many thanks to our"
+msgstr ""
+
+#: credit.prethanks
+msgid "_: credit.prethanks\n"
+msgstr ""
+
+#: credit.friends
+msgid "Friends"
+msgstr ""
+
+#: credit.and
+msgid "&amp;"
+msgstr ""
+
+#: credit.contributors
+msgid "Contributors"
+msgstr ""
+
+#: credit.postthanks
+msgid "_: credit.postthanks\n"
+msgstr ""
+
 # localization credits look like this:
 #
 # <!ENTITY credit.translation
@@ -2284,6 +2316,10 @@ msgstr "&Bain"
 msgid "Get more se&arch engines..."
 msgstr "F&aigh innill chuardaigh breise..."
 
+#: enableSuggest.label enableSuggest.accesskey
+msgid "&Show search suggestions"
+msgstr ""
+
 #: addFeedReader.title
 msgid "Add Feed Reader"
 msgstr "Cuir Léitheoir Fothaí Leis"
@@ -2307,13 +2343,6 @@ msgstr "Roghanna Liostála"
 #: readers.title feedSubscribePreferredReader
 msgid "Choose a Feed Reader:"
 msgstr "Roghnaigh Léitheoir Fothaí:"
-
-#: autoHandle.label autoHandle.accesskey
-msgid ""
-"&Open Feeds with my chosen reader automatically, skipping the preview page"
-msgstr ""
-"&Oscail Fothaí go huathoibríoch le mo léitheoir roghnaithe, gan an leathanach "
-"réamhamhairc a thaispeáint"
 
 #: chooseClientApp.label chooseClientApp.accesskey
 msgid "&Change..."
@@ -2339,6 +2368,10 @@ msgstr "Úsáid Léitheoir &Fothaí:"
 #: useBookmarks.label useBookmarks.accesskey
 msgid "Use Live &Bookmarks"
 msgstr "Úsáid Lea&bharmharcanna Beo"
+
+#: useAsDefault.label useAsDefault.accesskey
+msgid "&Use this reader as my default reader"
+msgstr "Ú&sáid é seo mar léitheoir fothaí réamhshocraithe"
 
 #: feedPage.title
 msgid "Viewing Feed"
@@ -2944,7 +2977,7 @@ msgid ""
 "470"
 msgstr "470"
 
-#: generalTab generalTab.label certmgr.detail.general_tab.title
+#: generalTab generalTab.label
 msgid "General"
 msgstr "Ginearálta"
 
@@ -3807,6 +3840,10 @@ msgstr "Úsáid u&athscrollú"
 msgid "Use s&mooth scrolling"
 msgstr "Úsáid &mínscrollú"
 
+#: checkSpelling.label checkSpelling.accesskey
+msgid "Check my spelling as I &type"
+msgstr "Litriú &beo"
+
 #: languages.label languages.customize.Header languages.customize.label
 #: locales.label
 msgid "Languages"
@@ -3933,7 +3970,7 @@ msgid "&Revocation Lists"
 msgstr "&Liostaí Cúlghairme"
 
 #: verify.label verify.accesskey
-msgid "Ver&ification"
+msgid "Verificatio&n"
 msgstr "&Fíorú"
 
 #: viewSecurityDevices.label viewSecurityDevices.accesskey
@@ -4215,9 +4252,10 @@ msgstr "&Eisceachtaí..."
 msgid "Load &images automatically"
 msgstr "&Luchtaigh íomhánna go huathoibríoch"
 
-#: imageExceptions.label imageExceptions.accesskey
-msgid "E&xceptions"
-msgstr "Ei&sceachtaí"
+#: exceptions.label exceptions.accesskey passwordExceptions.label
+#: passwordExceptions.accesskey
+msgid "E&xceptions..."
+msgstr "Ei&sceachtaí..."
 
 #: enableJavaScript.label enableJavaScript.accesskey
 msgid "Enable &JavaScript"
@@ -4227,31 +4265,31 @@ msgstr "Cumasaigh &JavaScript"
 msgid "Ad&vanced..."
 msgstr "Ard&roghanna..."
 
-#: fontsColors.label
-msgid "Change default fonts and colors:"
-msgstr ""
+#: enableJava.label enableJava.accesskey
+msgid "E&nable Java"
+msgstr "Cu&masaigh Java"
 
-#: fontsBtn.label fontsBtn.accesskey
-msgid "&Fonts..."
-msgstr "&Clónna..."
+#: fontsAndColors.label
+msgid "Fonts &amp; Colors"
+msgstr "Clófhoirne &amp; Dathanna"
 
-#: colors.label colors.accesskey
-msgid "&Colors..."
-msgstr "&Dathanna..."
+#: defaultFont.label defaultFont.accesskey
+msgid "&Default font:"
+msgstr "Cló réamh&shocraithe:"
 
-#: font.label font.accesskey
-msgid "Defa&ult font:"
-msgstr "Cló &Réamhshocraithe:"
+#: defaultSize.label defaultSize.accesskey
+msgid "S&ize:"
+msgstr "&Méid:"
 
 #: advancedFonts.label advancedFonts.accesskey
 msgid "A&dvanced..."
 msgstr "Ar&droghanna..."
 
-#: defaultSize.label defaultSize.accesskey
-msgid "Default &size:"
-msgstr "Méid réamh&shocruithe:"
+#: colors.label colors.accesskey
+msgid "&Colors..."
+msgstr "&Dathanna..."
 
-#: feeds.label
+#: feeds.label paneFeeds.title
 msgid "Feeds"
 msgstr "Fothaí"
 
@@ -4328,7 +4366,7 @@ msgid ""
 "Automatically perform the associated Action with each of the following file "
 "types:"
 msgstr ""
-"Déan an gníomh comhcheangalta leis na cineálacha chomhaid seo go "
+"Déan an gníomh comhcheangailte leis na cineálacha chomhaid seo go "
 "huathoibríoch:"
 
 #: fileHandlerColumn.label fileHandlerColumn.accesskey
@@ -4373,18 +4411,6 @@ msgstr "39em"
 #: window.macWidth
 msgid "43em"
 msgstr "43em"
-
-#: defaultFontAndSize.label
-msgid "Default Font:"
-msgstr ""
-
-#: defaultFont.label defaultFont.accesskey
-msgid "&Default font:"
-msgstr ""
-
-#: defaultSize.label defaultSize.accesskey
-msgid "S&ize:"
-msgstr ""
 
 #: language.label language.accesskey
 msgid "&Fonts for:"
@@ -4621,25 +4647,21 @@ msgstr "Cuir &Leis"
 msgid "Home Page"
 msgstr "Leathanach Baile"
 
-#: useDefaultHome.label useDefaultHome.accesskey
-msgid "&brandShortName; &Start"
-msgstr "To&sú &brandShortName;"
+#: useCurrentPage.label useCurrentPage.accesskey
+msgid "Use &Current Page"
+msgstr "Úsáid an Leathanach &Reatha"
 
-#: useABookmark.label useABookmark.accesskey
-msgid "Use a &Bookmark"
+#: useMultiple.label
+msgid "Use Current Pages"
+msgstr "Úsáid na Leathanaigh Reatha"
+
+#: useBookmark.label useBookmark.accesskey
+msgid "Use &Bookmark"
 msgstr "Úsáid Lea&bharmharc"
 
-#: choose.label choose.accesskey
-msgid "C&hoose..."
-msgstr "R&oghnaigh..."
-
-#: useOther.label useOther.accesskey
-msgid "Use this &page"
-msgstr "Úsáid an &leathanach seo"
-
-#: useCurrent.label useCurrent.accesskey
-msgid "Use &Current"
-msgstr "Úsáid an Leathanach &Reatha"
+#: restoreDefault.label restoreDefault.accesskey
+msgid "&Restore to Default"
+msgstr "Athchói&righ na Réamhshocruithe"
 
 #: downloads.label downloads.title
 msgid "Downloads"
@@ -4745,7 +4767,7 @@ msgstr "Ardroghanna"
 
 #: blankpage
 msgid "(blank page)"
-msgstr ""
+msgstr "(leathanach bán)"
 
 #: choosehomepage
 msgid "Choose Home Page"
@@ -4763,6 +4785,11 @@ msgstr ""
 #: choosefile
 msgid "Choose a file"
 msgstr "Roghnaigh comhad"
+
+# ### Content
+#: addReader
+msgid "Add New Reader..."
+msgstr "Cuir Léitheoir Nua Leis..."
 
 # LOCALIZATION NOTE:
 #   the next four strings (phish*) are here for b1 only;
@@ -4790,11 +4817,11 @@ msgstr ""
 
 #: phishEULACancel
 msgid "Disable Safe Browsing"
-msgstr ""
+msgstr "Díchumasaigh Brabhsáil Shábháilte"
 
 #: phishEULAOK
 msgid "Use Google"
-msgstr ""
+msgstr "Úsáid Google"
 
 #: setMasterPassword
 msgid "Set Master Password..."
@@ -4822,18 +4849,18 @@ msgstr ""
 msgid "Exceptions - Cookies"
 msgstr "Eisceachtaí - Fianán"
 
-#: installpermissionstext
+#: addonspermissionstext
 msgid ""
-"You can specify which web sites are allowed to install software. Type the "
+"You can specify which web sites are allowed to install add-ons. Type the "
 "exact address of the site you want to allow and then click Allow."
 msgstr ""
-"Is féidir na suíomhanna a bhfuil cead acu bogearraí a shuiteáil a shonrú. "
+"Is féidir na suíomhanna a bhfuil cead acu breiseáin a shuiteáil a shonrú. "
 "Clóscríobh seoladh cruinn an tsuímh a theastaíonn uait a cheadú agus ansin "
 "cliceáil Ceadaigh."
 
-#: installpermissionstitle
-msgid "Allowed Sites - Software Installation"
-msgstr "Suíomhanna ceadaithe chun bogearraí a shuiteáil"
+#: addonspermissionstitle
+msgid "Allowed Sites - Add-ons"
+msgstr "Suíomhanna Ceadaithe - Breiseáin"
 
 #: popuppermissionstext
 msgid ""
@@ -4847,20 +4874,6 @@ msgstr ""
 #: popuppermissionstitle
 msgid "Allowed Sites - Popups"
 msgstr "Suíomhanna ceadaithe chun preabfhuinneoga a oscailt"
-
-#: downloadpermissionstext
-msgid ""
-"You can specify which web sites are allowed to download files to your "
-"computer. Type the exact address of the site you want to allow and then click "
-"Allow."
-msgstr ""
-"Is féidir na suíomhanna a bhfuil cead acu comhaid a íosluchtú chuig do "
-"ríomhaire a shonrú. Clóscríobh seoladh cruinn an tsuímh a theastaíonn uait a "
-"cheadú agus ansin cliceáil Ceadaigh."
-
-#: downloadpermissionstitle
-msgid "Allowed Sites - Downloading Software"
-msgstr "Suíomhanna ceadaithe chun bogearraí a íosluchtú"
 
 #: imagepermissionstext
 msgid ""
@@ -4993,7 +5006,7 @@ msgstr ""
 "comhaid den chineál lena mbaineann siad. An bhfuil tú cinnte gur mian leat na "
 "Gníomhartha seo a bhaint?"
 
-#: fileEnding
+#: fileEnding fileType
 msgid "%S file"
 msgstr "Comhad %S"
 
@@ -5061,15 +5074,15 @@ msgstr "Gla&c le fianáin ó shuímh"
 
 #: keepUntil.label keepUntil.accesskey
 msgid "&Keep until:"
-msgstr ""
+msgstr "&Coinnigh:"
 
 #: expire.label
 msgid "they expire"
-msgstr ""
+msgstr "go dtí go mbeidh siad caite"
 
 #: close.label
 msgid "I close &brandShortName;"
-msgstr ""
+msgstr "go dtí go ndúnaim &brandShortName;"
 
 #: askEachTime.label
 msgid "ask me every time"
@@ -5079,25 +5092,37 @@ msgstr "fiafraigh díom i gcónaí"
 msgid "&Show Cookies..."
 msgstr "Tai&speáin Fianáin..."
 
-#: clearPrivateData.label sanitizeDialog.title
-msgid "Clear Private Data"
-msgstr "Bánaigh Sonraí Príobháideacha"
+#: privateData.label
+msgid "Private Data"
+msgstr "Sonraí Príobháideacha"
 
 #: alwaysClear.label alwaysClear.accesskey
 msgid "Al&ways clear my private data when I close &brandShortName;"
 msgstr "Glan sonraí &príobháideacha agus &brandShortName; á dhúnadh"
 
+#: askBeforeClear.label askBeforeClear.accesskey
+msgid "&Ask me before clearing private data"
+msgstr ""
+
 #: clearDataSettings.label clearDataSettings.accesskey
 msgid "Se&ttings..."
 msgstr "So&cruithe..."
 
-#: items.label
-msgid "Private Data"
-msgstr "Sonraí Príobháideacha"
+#: clearDataNow.label clearDataNow.accesskey
+msgid "Clear &Now..."
+msgstr "Bánaigh A&nois..."
 
-#: sanitizeItems.label
-msgid "Select the items to be cleared:"
-msgstr "Roghnaigh na míreanna le glanadh:"
+#: clearDataNow.label2
+msgid "Clear Now"
+msgstr "Bánaigh Anois"
+
+#: sanitizeDialog.title
+msgid "Clear Private Data"
+msgstr "Bánaigh Sonraí Príobháideacha"
+
+#: clearDataSettings.label
+msgid "When I ask &brandShortName; to clear my private data, it should erase:"
+msgstr ""
 
 #: itemHistory.label itemHistory.accesskey
 msgid "&Browsing History"
@@ -5127,18 +5152,6 @@ msgstr "&Stair an Bhainisteora Íosluchtaithe"
 msgid "Authenticated &Sessions"
 msgstr "&Seisiúin Fhíordheimhnithe"
 
-#: settings.label edit.button
-msgid "Settings"
-msgstr "Socruithe"
-
-#: sanitizeOnShutDown.label sanitizeOnShutDown.accesskey
-msgid "Cl&ear private data when closing &brandShortName;"
-msgstr "&Glan sonraí príobháideacha agus &brandShortName; á dhúnadh"
-
-#: promptOnSanitize.label promptOnSanitize.accesskey
-msgid "As&k me before clearing private data"
-msgstr "&Fiafraigh díom roimh ghlanadh na sonraí príobháideacha"
-
 #: warnAddonInstall.label warnAddonInstall.accesskey
 msgid "&Warn me when sites try to install add-ons"
 msgstr ""
@@ -5156,6 +5169,8 @@ msgid ""
 "_: \n"
 "&Check to see if the site I'm loading is a suspected forgery"
 msgstr ""
+"Sei&ceáil an bhféadfadh an suíomh ar a bhfuil mé ag amharc bheith ina "
+"chamscéim"
 
 # LOCALIZATION NOTE:
 # The entities useCachedPhish.label and useCachedPhishAfter.label
@@ -5165,7 +5180,7 @@ msgstr ""
 #
 #: useCachedPhish.label useCachedPhish.accesskey
 msgid "&Use a list of suspected forgeries provided by"
-msgstr ""
+msgstr "Ú&sáid liosta de chamscéimeanna atá curtha le fáil ag"
 
 #: useCachedPhishAfter.label
 msgid "_: useCachedPhishAfter.label\n"
@@ -5191,13 +5206,13 @@ msgstr "Meabh&raigh focail fhaire le haghaidh suíomhanna"
 msgid "&Use a master password"
 msgstr "Úsáid &príomhfhocal faire"
 
-#: passwordExceptions.label passwordExceptions.accesskey
-msgid "E&xceptions..."
-msgstr "Ei&sceachtaí..."
+#: changeMasterPassword.label changeMasterPassword.accesskey
+msgid "Change &Master Password..."
+msgstr "Athraigh &Príomhfhocal Faire..."
 
 #: showPasswords.label showPasswords.accesskey
-msgid "Show Saved &Passwords..."
-msgstr "Taispeáin &focail fhaire a sábháladh..."
+msgid "Show &Passwords..."
+msgstr "Tais&peáin Focail Fhaire..."
 
 #: warnings.label
 msgid "Warning Messages"
@@ -5243,9 +5258,9 @@ msgstr ""
 "féachaint ar leathanach crip&tithe ina bhfuil cuid den fhaisnéis "
 "neamhchriptithe."
 
-#: linksOpenIn.label
-msgid "When a link opens a new window, open it in:"
-msgstr "Nuair a osclaíonn nasc fuinneog nua, oscail é:"
+#: newPagesIn.label
+msgid "New pages should be opened in:"
+msgstr ""
 
 #: inNewWindow.label inNewWindow.accesskey
 msgid "a ne&w window"
@@ -5276,6 +5291,7 @@ msgid "http://www.mozilla.com/firefox/releases/%S.html"
 msgstr ""
 
 #: browser.search.defaultenginename browser.search.order.1
+#: browser.contentHandlers.types.1.title
 msgid "Google"
 msgstr "Google"
 
@@ -5294,7 +5310,7 @@ msgstr ""
 
 #: startup.homepage_welcome_url
 msgid "http://www.mozilla.com/firefox/central"
-msgstr ""
+msgstr "http://www.mozilla.com/firefox/central"
 
 # This is the fallback URL for release notes. Do not change this 
 # unless you are providing localized release notes!
@@ -5302,86 +5318,90 @@ msgstr ""
 msgid "http://www.mozilla.com/firefox/releases/"
 msgstr "http://www.mozilla.com/firefox/releases/"
 
-#: safeb.palm.warning.heading
-msgid "Web Forgery"
+# These are the default web service based feed readers
+#: browser.contentHandlers.types.0.title
+msgid "Bloglines"
+msgstr "Bloglines"
+
+#: browser.contentHandlers.types.0.uri
+msgid "http://www.bloglines.com/login?r=/sub/%s"
+msgstr "http://www.bloglines.com/login?r=/sub/%s"
+
+#: browser.contentHandlers.types.1.uri
+msgid "http://fusion.google.com/add?feedurl=%s"
+msgstr "http://fusion.google.com/add?feedurl=%s"
+
+#: browser.contentHandlers.types.2.title
+msgid "My Yahoo"
+msgstr "My Yahoo"
+
+#: browser.contentHandlers.types.2.uri
+msgid "http://add.my.yahoo.com/rss?url=%s"
+msgstr "http://add.my.yahoo.com/rss?url=%s"
+
+# Keyword URL (for location bar searches)
+#: keyword.URL
+msgid ""
+"http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
+msgstr ""
+"http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
+
+#: safeb.palm.warning.title
+msgid "Suspected Web Forgery"
 msgstr "Falsaíocht Ghréasáin"
 
-#: safeb.palm.message.part1
+#: safeb.palm.message.p1
 msgid ""
-"This page is very likely to have been designed to trick users into sharing "
-"personal or financial information. Entering any personal information on this "
-"page may result in identity theft or other fraud. &#160;"
+"This page has been reported as a web forgery designed to trick users into "
+"sharing personal or financial information. Entering any personal information "
+"on this page may result in identity theft or other fraud. &#160;"
 msgstr ""
 "Gach seans gur dearadh an leathanach seo chun faisnéis phearsanta nó "
 "airgeadais a fháil le cleas ó dhaoine. D'fhéadfadh goid aitheantais nó "
 "calaois eile teacht mar thoradh ar fhaisnéis phearsanta ar bith a chur "
-"isteach sa leathanach seo. &#160;"
+"isteach sa leathanach seo. #&160;"
 
-#: safeb.palm.message.link1.more
-msgid "more &#187;"
-msgstr "tuilleadh &#187;"
+#: safeb.palm.message.p1.linkText
+msgid "Read more &#187;"
+msgstr "Tuilleadh &#187;"
 
-#: safeb.palm.showmore.statustext
-msgid "Read more"
-msgstr "Tuilleadh eolais"
+#: safeb.palm.p1.linkStatusText
+msgid "Read more &#133;"
+msgstr "Tuilleadh &#133;"
 
-#: safeb.palm.message.part2
+#: safeb.palm.message.p2.start
 msgid ""
-"Safe Browsing uses automated technology to warn you about web pages that we "
-"believe may be unsafe. This page appears to be a part of a scam known as a"
+"These types of web forgeries are used in scams known as phishing attacks, in "
+"which fradulent web pages and emails are used to imitate sources you may "
+"trust. You can find out more about "
 msgstr ""
-"Úsáideann Brabhsáil Shábháilte teicneolaíocht uathoibríoch le rabhadh a "
-"thabhairt duit maidir le leathanaigh ghréasáin a d'fhéadfadh bheith "
-"míshábháilte. Tá an cosúlacht air gur chuid de chamscéim ar a thugtar"
+"Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar \"bréagbhrandáil"
+"\", ina gcruthaíonn coirpigh leathanaigh chalaoiseacha chun aithris a "
+"dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín agat astu. Is féidir "
+"tuilleadh a léamh"
 
-#: safeb.palm.message.link2.phishing.faq
-msgid "phishing"
-msgstr "bréagbhrandáil"
+#: safeb.palm.message.p2.linkText
+msgid "how Firefox protects you"
+msgstr "faoi conas a dhéanann Firefox cosaint ort"
 
-#: safeb.palm.message.link2.href
-msgid "http://www.google.com/tools/service/npredir?r=ff_sb_faq#phishing"
-msgstr "http://www.google.com/tools/service/npredir?r=ff_sb_faq#phishing"
+#: safeb.palm.message.p2.linkURL
+msgid "http://www.mozilla.org/projects/bonecho/anti-phishing/"
+msgstr "http://www.mozilla.org/projects/bonecho/anti-phishing/"
 
-#: safeb.palm.message.part3
+#: safeb.palm.message.p2.end
+msgid " from phishing attacks."
+msgstr " ó ionsaithe bréagbhrandála."
+
+#: safeb.palm.message.p3.start
 msgid ""
-"attack, in which criminals create fraudulent pages to mimic legitimate "
-"sources that you may trust. You can read more about phishing at"
+"If you believe this page has been falsely reported as a web forgery, you can "
 msgstr ""
-"an leathanach seo, .i. cruthaíonn coirpigh leathanaigh chalaoiseacha chun "
-"aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín agat astu. Is "
-"féidir tuilleadh a léamh faoin mbréagbhrandáil ag"
+"Má cheapann tú go bhfuil tuarascáil mhícheart déanta gur falsaíocht Ghréasáin "
+"é an leathanach seo, is féidir leat "
 
-#: safeb.palm.message.link3.antiphishing.org
-msgid "antiphishing.org"
-msgstr "antiphishing.org"
-
-#: safeb.palm.message.link3.href
-msgid "http://antiphishing.org/"
-msgstr "http://antiphishing.org/"
-
-#: safeb.palm.message.part4
-msgid "You can also learn more about"
-msgstr "Tig leat freisin tuilleadh eolais a fháil maidir le"
-
-#: safeb.palm.message.link4.gwghome safeb.palm.toolmenu.label
-msgid "Safe Browsing"
-msgstr "Brabhsáil Shábháilte"
-
-#: safeb.palm.message.link4.href
-msgid "http://www.google.com/tools/service/npredir?r=ff_sb_home"
-msgstr "http://www.google.com/tools/service/npredir?r=ff_sb_home"
-
-#: safeb.palm.message.part5
-msgid ""
-"Finally, if you believe this page has been falsely flagged as a forgery, you "
-"can "
-msgstr ""
-"Má chreideann tú go bhfuil an leathanach seo taispeánta go mícheart mar "
-"fhalsaíocht, tig leat "
-
-#: safeb.palm.message.link5.report
-msgid "report it"
-msgstr "tuarascáil a sheoladh faoi"
+#: safeb.palm.message.p3.linkText
+msgid "let us know"
+msgstr "é sin a insint dúinn"
 
 #: safeb.palm.accept.label
 msgid "Get me out of here!"
@@ -5406,6 +5426,10 @@ msgstr "Seol tuairisc"
 #: safeb.palm.addbutton.label safeb.palm.addbutton.tooltip
 msgid "Add to blacklist"
 msgstr "Cuir leis an liosta dubh"
+
+#: safeb.palm.toolmenu.label
+msgid "Safe Browsing"
+msgstr "Brabhsáil Shábháilte"
 
 #: safeb.palm.toolmenu.reportphishing.label
 msgid "Report phishing..."
@@ -5533,6 +5557,25 @@ msgstr "Cuardaigh le %S"
 msgid "Clear Search History"
 msgstr "Bánaigh Stair an Chuardaigh"
 
+#: cmd_showSuggestions
+msgid "Show Suggestions"
+msgstr "Taispeáin Moltaí"
+
+#: addEngineConfirmTitle
+msgid "Add Search Engine"
+msgstr "Inneall Cuardaigh Nua"
+
+#: addEngineConfirmation
+msgid ""
+"Add \"%S\" to the list of engines available in the search bar?\n"
+"\n"
+"From: %S"
+msgstr ""
+
+#: addEngineUseNowText
+msgid "Start &using it right away"
+msgstr "Ú&sáid é láithreach"
+
 #: error_loading_engine_title downloadErrorAlertTitle
 msgid "Download Error"
 msgstr "Earráid Íosluchtaithe"
@@ -5544,6 +5587,14 @@ msgid ""
 msgstr ""
 "Níorbh fhéidir le %S an forlíontán cuardaigh a íosluchtú ó:\n"
 "%S"
+
+#: error_duplicate_engine_msg
+msgid ""
+"%S could not install the search plugin from \"%S\" because an engine with the "
+"same name already exists."
+msgstr ""
+"Níorbh fhéidir le %S an forlíontán cuardaigh ó \"%S\" a shuiteáil toisc go "
+"bhfuil inneall ann cheana leis an ainm céanna."
 
 #: error_invalid_engine_title
 msgid "Install Error"
@@ -5567,15 +5618,16 @@ msgstr "Moltaí"
 msgid "%S - Restore Previous Session"
 msgstr "%S - Athchóirigh an Seisiún Roimhe Seo"
 
-#: restoredText
+#: restoredMsg
 msgid ""
-"%S experienced a serious error, and your last session closed unexpectedly. "
-"You can restore the tabs and windows from your previous session, or start a "
-"new session if the problem continues."
+"Your last %S session closed unexpectedly. You can restore the tabs and "
+"windows from your previous session, or start a new session if you think the "
+"problem was related to a page you were viewing."
 msgstr ""
-"Bhuail %S ar dhrochearráid, agus stop do sheisiún dheireanach gan súil leis. "
-"Is féidir leat na cluaisíní agus na fuinneoga ó do sheisiún dheireanach a "
-"chur ar ais, nó seisiún nua a thosú má leanann an fhadhb ag tarlú."
+"Stop do sheisiún dheireanach %S gan súil leis. Is féidir leat na cluaisíní "
+"agus na fuinneoga ó do sheisiún dheireanach a chur ar ais, nó seisiún nua a "
+"thosú má ceapann tú go bhfuil baint idir an fhadhb agus an leathanach a raibh "
+"tú ag féachaint air."
 
 #: buttonTitle
 msgid "Restore Session"
@@ -5657,33 +5709,6 @@ msgstr "(níl aon réamhamharc ar fáil)"
 #: DesktopBackgroundDownloading
 msgid "Saving Picture..."
 msgstr "Pictiúr á Shábháil..."
-
-#: addEngineConfirmTitle
-msgid "Add Search Engine"
-msgstr "Inneall Cuardaigh Nua"
-
-#: addEngineConfirmText
-msgid ""
-"Add %S to the list of engines available in the search bar?\n"
-"\n"
-"From: %S"
-msgstr ""
-"An mian leat %S a chur le liosta na n-inneall atá le fáil sa bharra "
-"cuardaigh?\n"
-"\n"
-"Ó: %S"
-
-#: addEngineQuotedEngineName
-msgid "\"%S\""
-msgstr "\"%S\""
-
-#: addEngineDefaultEngineName
-msgid "a new search engine"
-msgstr "inneall cuardaigh nua"
-
-#: addEngineUseNowText
-msgid "Start &using it right away"
-msgstr "Ú&sáid é láithreach"
 
 #: addMicsumGenConfirmTitle
 msgid "Add Microsummary Generator"
@@ -6142,21 +6167,48 @@ msgstr ""
 # Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
+#: OPTIONAL_COMPONENTS_TITLE
+msgid "Choose Optional Components"
+msgstr "Roghnaigh Comhpháirteanna Roghnacha"
+
+#: OPTIONAL_COMPONENTS_SUBTITLE MUI_TEXT_COMPONENTS_SUBTITLE
+msgid "Choose which features of $(^NameDA) you want to install."
+msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
+
+#: OPTIONAL_COMPONENTS_LABEL
+msgid "Optional Components:"
+msgstr "Comhpháirteanna Roghnacha:"
+
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
 #: APP_DESC
 msgid "Required files for the ${BrandShortName} application"
 msgstr "Comhaid a bhfuil gá leo le haghaidh ${BrandShortName}"
 
-#: DEV_TOOLS_DESC
-msgid ""
-"A tool for inspecting the DOM of HTML, XUL, and XML pages, including the "
-"browser chrome."
-msgstr ""
-"Uirlis chun an DOM de leathanaigh HTML, XUL, agus XML a scrúdú, snas "
-"brabhsálaí san áireamh"
+#: DOMI_TITLE Inspector.title sidebar.title Inspector.label
+msgid "DOM Inspector"
+msgstr "Scrúdaitheoir DOM"
 
-#: QFA_DESC
-msgid "A tool for submitting crash reports to Mozilla.org."
-msgstr "Uirlis chun tuarascálacha earráide a sheoladh go Mozilla.org."
+#: DOMI_TEXT
+msgid "Inspects the structure and properties of a window and its contents."
+msgstr ""
+
+#: QFA_TITLE QFA_SHORT
+msgid "Quality Feedback Agent"
+msgstr "Gníomhaire Aiseolais um Cháilíocht"
+
+#: QFA_TEXT
+msgid "Sends information about program crashes to Mozilla."
+msgstr ""
+
+#: OPTIONS
+msgid "$(^NameDA) &Options"
+msgstr "R&oghanna $(^NameDA)"
 
 #: SAFE_MODE
 msgid "Safe Mode"
@@ -6668,10 +6720,6 @@ msgstr "Uirlisí Forbróra"
 msgid "The Document Inspector - a tool for web developers."
 msgstr "Cigire Cáipéisí - uirlis le haghaidh forbróirí idirlín"
 
-#: QFA_SHORT
-msgid "Quality Feedback Agent"
-msgstr "Gníomhaire Aiseolais um Cháilíocht"
-
 #: QFA_LONG
 msgid "for reporting $ProductShortName$ crash information"
 msgstr "Le haghaidh tuairiscí maidir le tuairteanna $ProductShortName$"
@@ -7177,10 +7225,6 @@ msgstr ""
 #: MUI_TEXT_COMPONENTS_TITLE
 msgid "Choose Components"
 msgstr "Roghnaigh Comhpháirteanna"
-
-#: MUI_TEXT_COMPONENTS_SUBTITLE
-msgid "Choose which features of $(^NameDA) you want to install."
-msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
 
 #: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE description_label
 #: reportDecsription DESCRIPTION devinfo_desc
@@ -9872,6 +9916,18 @@ msgstr "Léigh socraithe an fheidhmchláir"
 msgid "Modify program settings"
 msgstr "Mionathraigh socraithe feidhmchláir"
 
+#: storageWriteError
+msgid ""
+"There was an error writing data to the disk. This error is sometimes caused "
+"by a full disk.\n"
+"\n"
+"Please restart this application"
+msgstr ""
+
+#: AttributeParseWarning
+msgid "Unexpected value %2$S parsing %1$S attribute."
+msgstr ""
+
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
 #
@@ -10143,10 +10199,6 @@ msgstr "Earráid i rith trasfhoirmithe XSLT: %S"
 #: mnEditInsert.label mnEditInsert.accesskey
 msgid "&Insert"
 msgstr "&Ionsáigh"
-
-#: Inspector.title sidebar.title Inspector.label
-msgid "DOM Inspector"
-msgstr "Scrúdaitheoir DOM"
 
 #: thDOMNodes.label
 msgid "DOM Nodes"
@@ -11014,6 +11066,10 @@ msgstr "Tá an cuma mhícheart air"
 msgid "Other problem"
 msgstr "Fadhb eile"
 
+#: reportForm.problem_type.item8.title
+msgid "Disability access"
+msgstr ""
+
 #: reportForm.describe.title reportForm.describe.accesskey
 msgid "&Describe Problem:"
 msgstr "&Déan cur síos ar an bhfadhb:"
@@ -11289,32 +11345,22 @@ msgstr "Ba mhaith leis an suíomh %S fianán atá ann cheana a athrú."
 msgid "The site %S wants to load an image."
 msgstr "Ba mhaith leis an suíomh %S íomhá a luchtú."
 
-#: about.copy.beforeLink1
+#: about.copy.beforeLink
 msgid "Copyright &copy; 1998-2006 by"
 msgstr "Copyright &copy; 1998-2006 by"
 
 #  leave alone --KPS
-#: about.copy.link1Title license.contrib
+#: about.copy.linkTitle license.contrib
 msgid "contributors"
 msgstr "contributors"
 
-#: about.copy.beforeLink2
-msgid "to the"
-msgstr "to the"
-
-#: about.copy.link2Title
-msgid "Mozilla Project"
-msgstr "Mozilla Project"
+#: about.copy.afterLink
+msgid "to the Mozilla Project."
+msgstr "to the Mozilla Project."
 
 #: about.license.beforeLink about.relnotes.beforeLink
 msgid "Read the"
 msgstr "Read the"
-
-#: about.license.link
-msgid ""
-"_: This has to be either \"about:license\" or \"about:licence\".\n"
-"about:license"
-msgstr "about:license"
 
 #: about.license.linkTitle
 msgid "licensing information"
@@ -11527,9 +11573,13 @@ msgstr "&Fill"
 msgid "&Don't Save"
 msgstr "&Ná Sábháil"
 
-#: ScriptDlgTitle
-msgid "[JavaScript Application] %S"
-msgstr "[Feidhmchlár JavaScript] %S"
+#: ScriptDlgGenericHeading
+msgid "[JavaScript Application]"
+msgstr "[Feidhmchlár JavaScript]"
+
+#: ScriptDlgHeading
+msgid "The page at %S says:"
+msgstr ""
 
 #: window.title
 msgid "about:config"
@@ -12129,6 +12179,10 @@ msgstr "&Aibhsigh gach rud"
 msgid "Highlight all occurrences of the phrase"
 msgstr "Soilsigh gach sampla den nath"
 
+#: caseSensitiveCheckbox.label caseSensitiveCheckbox.accesskey
+msgid "Mat&ch case"
+msgstr "Meaitseáil an &cás"
+
 #: NotFound
 msgid "Phrase not found"
 msgstr "Abairtín gan aimsiú"
@@ -12165,10 +12219,6 @@ msgstr "Aimsigh sa Fhráma Seo"
 #: findField.label findField.accesskey
 msgid "Fi&nd what:"
 msgstr "Aimsigh an rud &seo:"
-
-#: caseSensitiveCheckbox.label caseSensitiveCheckbox.accesskey
-msgid "Mat&ch case"
-msgstr "Meaitseáil an &cás"
 
 #: wrapCheckbox.label wrapCheckbox.accesskey
 msgid "&Wrap"
@@ -13228,6 +13278,12 @@ msgid ""
 "its strength <em>renewed</em>, and the followers of <em>Mammon</em> cowered "
 "in horror."
 msgstr ""
+"And so at last the beast <em class=\"f\">fell</em> and the unbelievers "
+"rejoiced. But all was not lost, for from the ash rose a <em>great bird</em>. "
+"The bird gazed down upon the unbelievers and cast <em class=\"f\">fire</em> "
+"and <em>thunder</em> upon them. For the beast had been <em>reborn</em> with "
+"its strength <em>renewed</em>, and the followers of <em>Mammon</em> cowered "
+"in horror."
 
 #: mozilla.from
 msgid "from <strong>The Book of Mozilla,</strong> 7:15"
@@ -14257,6 +14313,10 @@ msgstr "Athluchtaigh &Gach Cluaisín"
 #: reloadTab.label reloadTab.accesskey
 msgid "&Reload Tab"
 msgstr "&Athluchtaigh Cluaisín"
+
+#: listAllTabs.label
+msgid "List all tabs"
+msgstr "Liostaigh gach cluaisín"
 
 #: tabs.loading
 msgid "Loading..."
@@ -15764,7 +15824,7 @@ msgstr ""
 msgid "Install Now"
 msgstr "Suiteáil Anois"
 
-#: updatesAvailableTitle found.title
+#: updatesAvailableTitle
 msgid "Updates Found"
 msgstr "Nuashonruithe Aimsithe"
 
@@ -15823,56 +15883,61 @@ msgstr "Tá nuashonruithe nua le fáil le haghaidh do chuid bhreiseán."
 msgid "&brandShortName; Update"
 msgstr "Nuashonrú &brandShortName;"
 
+#: offline.title
+msgid "&brandShortName; is working offline"
+msgstr "Tá &brandShortName; ag obair as líne"
+
+#: offline.description
+msgid ""
+"&brandShortName; needs to go online in order to see if updates are available "
+"for your add-ons to make them compatible with this version."
+msgstr ""
+
+#: offline.toggleOffline.label offline.toggleOffline.accesskey
+msgid "&Go online now."
+msgstr "&Téigh ar líne anois."
+
 #: mismatch.win.title
 msgid "Incompatible Add-ons"
 msgstr "Breiseáin Neamh-chomhoiriúnacha"
 
-#: mismatch.introduction1.label
+#: mismatch.top.label
 msgid ""
 "The following add-ons are not compatible with this version of "
-"&brandShortName;:"
+"&brandShortName; and have been disabled:"
 msgstr ""
 "Níl na breiseáin seo a leanas comhoiriúnach leis an leagan seo "
-"&brandShortName;:"
+"&brandShortName; agus díchumasaíodh iad:"
 
-#: mismatch.intro2.label
-msgid "They have been disabled until compatible versions are installed."
-msgstr ""
-"Tá siad díchumasaithe go dtí go mbeidh leaganacha comhoiriúnacha suiteáilte."
-
-#: mismatch.introduction3.label
-msgid "&brandShortName; can check for compatible versions of these add-ons."
+#: mismatch.bottom.label
+msgid ""
+"&brandShortName; can check if there are compatible versions of these add-ons "
+"available."
 msgstr ""
 "Is féidir le &brandShortName; leaganacha comhoiriúnacha de na comhpháirteanna "
 "seo a lorg."
 
-#: checking.title
-msgid "Checking for Updates"
-msgstr "Nuashonruithe á seiceáil"
+#: checking.wizard.title
+msgid "Checking for Compatible Add-ons"
+msgstr "Ag lorg Breiseáin Chomhoiriúnacha"
 
-#: checking.intro.label
-msgid "&brandShortName; is now checking for available updates..."
-msgstr "Tá cibé nuashonruithe atá le fáil á lorg anois ag &brandShortName;..."
+#: checking.top.label
+msgid "Checking your incompatible add-ons for updates..."
+msgstr ""
+"Ag seiceáil le haghaidh nuashonruithe ar do bhreiseáin neamh-"
+"chomhoiriúnacha..."
 
-#: checking.status
+#: checking.status versioninfo.waiting
 msgid "This may take a few minutes..."
 msgstr "Seans go dtógfaidh sé seo cúpla bomaite..."
 
-#: found.intro.label
-msgid "&brandShortName; found the following available updates:"
-msgstr "D'aimsigh &brandShortName; na nuashonruithe seo a leanas:"
+#: found.wizard.title
+msgid "Found Compatible Add-ons"
+msgstr "Aimsíodh Breiseáin Chomhoiriúnacha"
 
-#: from.label
-msgid "from: "
-msgstr "ó: "
-
-#: foundUpdates.addons.label
-msgid ""
-"Updates are available for the following add-ons to make them compatible with "
-"this version of &brandShortName;:"
-msgstr ""
-"Tá nuashonruithe ar fáil do na breiseáin seo a leanas le hiad a dhéanamh "
-"comhoiriúnach leis an leagan seo de &brandShortName;:"
+#: found.top.label
+msgid "Select the add-ons you would like to install:"
+msgstr "Roghnaigh na breiseáin is mian leat a shuiteáil:"
 
 #: found.disabledXPinstall.label
 msgid ""
@@ -15886,150 +15951,105 @@ msgstr ""
 msgid "&Allow web sites to install software"
 msgstr "T&abhair cead do shuíomhanna Gréasáin bogearraí a shuiteáil"
 
-# The contents of this file are subject to the Netscape Public License
-# Version 1.1 (the "License"); you may not use this file except in
-# compliance with the License. You may obtain a copy of the License at
-# http://www.mozilla.org/NPL/
-#
-# Software distributed under the License is distributed on an "AS IS" basis,
-# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# for the specific language governing rights and limitations under the
-# License.
-#
-# The Original Code is Mozilla Communicator client code, released March
-# 31, 1998.
-#
-# The Initial Developer of the Original Code is Netscape Communications
-# Corporation. Portions created by Netscape are Copyright (C) 1998-1999
-# Netscape Communications Corporation. All Rights Reserved.
-#
-# Contributors:
-#     Samir Gehani <sgehani@netscape.com>
-#     Daniel Veditz <dveditz@netscape.com>
-#
-# String resources for xpinstall user interface dialogs
-#
-# --------------------------------------------------------------------
-#   Install Actions
-# --------------------------------------------------------------------
-#: installing.title
-msgid "Installing Updates"
-msgstr "Nuashonruithe á suiteáil"
+#: installing.wizard.title
+msgid "Installing Compatible Add-ons"
+msgstr "Breiseáin Chomhoiriúnacha á Suiteáil"
 
-#: installing.intro.label
-msgid "Now downloading and installing updates..."
+#: installing.top.label
+msgid "Downloading and installing updates to your add-ons..."
 msgstr "Nuashonruithe á n-íosluchtú agus á suiteáil..."
 
-#: noupdates.title noupdatesfound.title
-msgid "No Updates Found"
-msgstr "Ní bhfuarthas nuashonruithe"
+#: noupdates.wizard.title
+msgid "No Compatible Add-ons Found"
+msgstr "Níor Aimsíodh Breiseáin Chomhoiriúnacha"
 
-#: noupdates.intro.user.label
-msgid "&brandShortName; was not able to find any available updates."
-msgstr "Ní fhéadfadh &brandShortName; teacht ar aon nuashonrú."
-
-#: noupdates.intro.mismatch.label
+#: noupdates.intro.desc
 msgid ""
-"&brandShortName; was not able to find any available updates - compatible "
-"versions may not be available at this time."
+"&brandShortName; was unable to find updates to your incompatible add-ons."
 msgstr ""
-"Ní fhéadfadh &brandShortName; teacht ar aon nuashonrú - b'fhéidir nach bhfuil "
-"leagan comhoiriúnach ar fáil faoi láthair."
+"Níorbh fhéidir le &brandShortName; nuashonruithe a aimsiú ar do bhreiseáin "
+"neamh-chomhoiriúnacha."
 
-#: noupdates.intro2.mismatch.label
+#: noupdates.error.desc
+msgid "Some problems were encountered when trying to find updates."
+msgstr "Bhí fadhbanna ann agus nuashonruithe á chuardach."
+
+#: noupdates.checkEnabled.desc
 msgid ""
 "&brandShortName; will check periodically and inform you when compatible "
-"versions become available."
+"updates for these add-ons are found."
 msgstr ""
 "Seiceálfaidh &brandShortName; go rialta agus cuirfear in iúl duit nuair atá "
 "leaganacha comhoiriúnacha ar fáil."
 
-#: noupdates.intro3.mismatch.label
+#: finished.wizard.title
+msgid "Compatible Add-ons Installed"
+msgstr "Suiteáladh Breiseáin Chomhoiriúnacha"
+
+#: finished.top.label
+msgid "&brandShortName; has installed the updates to your add-ons."
+msgstr "Shuiteáil &brandShortName; nuashonruithe ar do bhreiseáin."
+
+#: finished.checkDisabled.desc
 msgid ""
-"&brandShortName; can check periodically and inform you when compatible "
-"versions become available."
+"&brandShortName; can check periodically and inform you when updates for add-"
+"ons are found."
 msgstr ""
-"Is féidir le &brandShortName; seiceáil go rialta agus a chur in iúl duit "
-"nuair a bhíonn leaganacha comhoiriúnacha ar fáil."
+"Is féidir le &brandShortName; seiceáil go rialta agus cur in iúl duit nuair "
+"atá leaganacha comhoiriúnacha ar fáil."
 
-#: noupdates.enableChecking.label finished.enableChecking.label
-msgid "Allow &brandShortName; to check for updates."
-msgstr "Lig do &brandShortName; seiceáil le haghaidh nuashonruithe."
-
-#: finished.title
-msgid "Update Complete"
-msgstr "Nuashonrú i gCrích"
-
-#: finished.updated.label
+#: finished.checkEnabled.desc
 msgid ""
-"&brandShortName; has installed the available updates. You will have to "
-"restart &brandShortName; for some updates to take effect."
+"&brandShortName; will check periodically and inform you when updates for add-"
+"ons are found."
 msgstr ""
-"Tá na nuashonruithe atá ar fáil suiteáilte ag &brandShortName;. Ní mór "
-"&brandShortName; a atosú chun roinnt nuashonruithe a chur i gcrích."
+"Seiceálfaidh &brandShortName; go rialta agus cuirfear in iúl duit nuair atá "
+"nuashonruithe ar fáil."
 
-#: finished.adminDisabled.label
-msgid "&brandShortName; is unable to install updates."
-msgstr "Ní féidir le &brandShortName; nuashonruithe a shuiteáil."
+#: adminDisabled.wizard.title
+msgid "Unable to Check for Updates"
+msgstr "Ní féidir nuashonruithe a lorg"
 
-#: finished.remain1.label
+#: adminDisabled.warning.label
 msgid ""
-"No compatible versions of the following add-ons could be found. These add-ons "
-"will be disabled, but &brandShortName; will check periodically and inform you "
-"when compatible versions become available."
-msgstr ""
-"Níor aimsíodh leaganacha comhoiriúnacha de na breiseáin seo a leanas. "
-"Díchumasófar na breiseáin seo, ach seiceálfaidh &brandShortName; go rialta "
-"agus cuirfear in iúl duit nuair atá leaganacha comhoiriúnacha ar fáil."
-
-#: finished.xpinstallLocked.label
-msgid ""
-"It is not possible to update the incompatible add-ons because software "
-"installation for &brandShortName; has been disabled. Please contact your "
-"System Administrator for assistance."
+"It is not possible to check for updates to incompatible add-ons because "
+"software installation for &brandShortName; has been disabled. Please contact "
+"your System Administrator for assistance."
 msgstr ""
 "Ní féidir na breiseáin neamh-chomhoiriúnacha a nuashonrú toisc go bhfuil "
 "suiteáil bhogearraí do &brandShortName; díchumasaithe. Déan teagmháil le "
 "riarthóir do chórais le haghaidh cabhrach."
 
-#: finished.mismatch.label
+#: versioninfo.wizard.title
+msgid "Checking Compatibility of Add-ons"
+msgstr "Ag seiceáil comhoiriúnacht na bmbreiseán"
+
+#: versioninfo.top.label
+msgid ""
+"Checking your add-ons for compatibility with this version of &brandShortName;."
+msgstr ""
+
+#: installerrors.wizard.title
+msgid "Problems Installing Updates"
+msgstr "Bhí fadhbanna le linn suiteála na nuashonruithe"
+
+#: installerrors.intro.label
+msgid ""
+"&brandShortName; encountered problems when updating some of your add-ons."
+msgstr "Bhí fadhbanna ag &brandShortName; le nuashonrú do bhreiseán."
+
+#: clickFinish.label
 msgid "Click Finish to continue starting &brandShortName;."
 msgstr ""
 "Cliceáil Críochnaigh chun leanúint ar aghaidh le &brandShortName; a thosú."
 
-#: errors.title
-msgid "Problems During Update"
-msgstr "Fadhbanna le Nuashonrú"
+#: enableChecking.label
+msgid "Allow &brandShortName; to check for updates."
+msgstr "Lig do &brandShortName; seiceáil le haghaidh nuashonruithe."
 
-#: errors.introduction.label
-msgid ""
-"&brandShortName; encountered problems when updating your software, and as a "
-"result not all add-ons could be updated."
-msgstr ""
-"Bhí fadhbanna ag &brandShortName; le nuashonrú do bhogearra, agus níorbh "
-"fhéidir na breiseáin go léir a nuashonrú dá bharr sin."
-
-#: errors.details.label errors.details.accesskey updateCheckError.label
-#: updateCheckError.accesskey detailsButton.label detailsButton.accesskey
-msgid "&Details"
-msgstr "&Sonraí"
-
-#: updateCheckError.description
-msgid ""
-"&brandShortName; encountered problems when trying to find updates for some "
-"items."
-msgstr ""
-"Bhí fadhbanna ag &brandShortName; agus é ag iarraidh teacht ar nuashonruithe "
-"do mhíreanna áirithe."
-
-#: compatCheck.title
-msgid "Compatibility Updates"
-msgstr "Nuashonruithe Comhoiriúnachta"
-
-#: compatCheck.intro
-msgid "Checking for compatibility updates to your Add-ons..."
-msgstr ""
-"Ag seiceáil le haghaidh nuashonruithe comhoiriúnacha ar do Bhreiseáin..."
+#: details.label details.accesskey
+msgid "&Details..."
+msgstr "&Mionsonraí..."
 
 #: mismatchCheckNow
 msgid "Check Now"
@@ -16043,9 +16063,9 @@ msgstr "Ná Seiceáil"
 msgid "Next >"
 msgstr "Ar Aghaidh >"
 
-#: checkingPrefix
-msgid "Checking for Updates to %S ..."
-msgstr "Nuashonruithe ar %S á lorg..."
+#: statusPrefix
+msgid "Finished checking %S"
+msgstr ""
 
 #: downloadingPrefix
 msgid "Downloading: %S"
@@ -16081,16 +16101,13 @@ msgstr "%S á íosluchtú"
 msgid "Installing: %S"
 msgstr "%S á shuiteáil"
 
-#: updateTypeAddons
-msgid "Add-ons (%S)"
-msgstr "Breiseáin (%S)"
-
-#: foundInstructions
-msgid ""
-"Choose the ones you want to install and click Install Now to install them."
+#: installErrors
+msgid "%S was unable to install updates for the following add-ons:"
 msgstr ""
-"Roghnaigh comhpháirteanna eile ba mhaith leat a shuiteáil, agus ansin "
-"cliceáil ar Suiteáil Anois."
+
+#: checkingErrors
+msgid "%S was unable to check for updates for the following add-ons:"
+msgstr ""
 
 #: installErrorItemFormat updateFullName
 msgid "%S (%S)"
@@ -16513,6 +16530,16 @@ msgstr ""
 "Tá %S ag rith cheana, ach níl aon fhreagra uaidh. Ní mór an seanphróiseas %S "
 "a stopadh chun fuinneog nua a oscailt."
 
+#: restartMessageNoUnlockerMac
+msgid "A copy of %S is already open. Only one copy of %S can be open at a time."
+msgstr ""
+
+#: restartMessageUnlockerMac
+msgid ""
+"A copy of %S is already open. The running copy of %S will quit in order to "
+"open this one."
+msgstr ""
+
 #: profileTooltip
 msgid "Profile: '%S' - Path: '%S'"
 msgstr "Próifíl: '%S' - Conair: '%S'"
@@ -16638,6 +16665,12 @@ msgstr "Stair na Nuashonruithe"
 msgid "The following updates have been installed:"
 msgstr "Suiteáladh na nuashonruithe seo a leanas:"
 
+#: detailsButton.label detailsButton.accesskey
+#: certmgr.detail.prettyprint_tab.title
+#: certmgr.detail.prettyprint_tab.accesskey
+msgid "&Details"
+msgstr "&Sonraí"
+
 #: noupdates.label
 msgid "No updates installed yet"
 msgstr "Níor suiteáladh nuashonrú ar bith fós"
@@ -16685,9 +16718,17 @@ msgstr ""
 "agus tú ag brabhsáil, fiú má bhíonn roinnt de do chuid Eisínteachtaí agus "
 "Téamaí neamh-chomhoiriúnach ina dhiaidh sin."
 
+#: checking.title
+msgid "Checking for Updates"
+msgstr "Nuashonruithe á seiceáil"
+
 #: checking.label
 msgid "&brandShortName; is now checking for updates..."
 msgstr "Tá cibé nuashonruithe atá le fáil á lorg anois ag &brandShortName;..."
+
+#: noupdatesfound.title
+msgid "No Updates Found"
+msgstr "Ní bhfuarthas nuashonruithe"
 
 #: noupdatesfound.intro
 msgid ""
@@ -16766,8 +16807,7 @@ msgstr ""
 "fhíorú tar éis é a íosluchtú. Dá bhrí sin, tá an pacáiste nuashonraithe á "
 "íosluchtú ina iomláine."
 
-#: details.link update.details.label certmgr.detail.prettyprint_tab.title
-#: devmgr.details.title
+#: details.link update.details.label devmgr.details.title
 msgid "Details"
 msgstr "Mionsonraí"
 
@@ -19754,6 +19794,10 @@ msgid ""
 "You have certificates on file that identify these certificate authorities:"
 msgstr "Tá teastais agat a shainaithníonn na húdaráis deimhniúcháin seo:"
 
+#: certmgr.detail.general_tab.title certmgr.detail.general_tab.accesskey
+msgid "&General"
+msgstr ""
+
 #: certmgr.subjectinfo.label
 msgid "Issued To"
 msgstr "Eisithe Go"
@@ -20045,8 +20089,8 @@ msgid "Please notify the site's webmaster about this problem."
 msgstr "Cuir an fhadhb seo in iúl don stiúrthóir Gréasáin le do thoil."
 
 #: newserver.examine
-msgid "Examine Certificate..."
-msgstr "Déan iniúchadh ar an teastas..."
+msgid "View Certificate..."
+msgstr ""
 
 #: newserver.remember
 msgid "Accept this certificate permanently"
@@ -20055,10 +20099,6 @@ msgstr "Glac leis an teastas seo go buan"
 #: newserver.session
 msgid "Accept this certificate temporarily for this session"
 msgstr "Glac leis an teastas seo go ceann an tseisiúin seo"
-
-#: newserver.refuse
-msgid "Do not accept this certificate and do not connect to this Web site"
-msgstr "Ná glac leis an teastas seo agus ná ceangal leis an suíomh Gréasáin seo"
 
 # The contents of this file are subject to the Netscape Public
 # License Version 1.1 (the "License"); you may not use this file
@@ -21236,6 +21276,10 @@ msgstr "Theip ar Nuashonrú go Leanúnach cheana: "
 #: crl.autoupdate.fail.reason.label
 msgid "Details of Last Update Failure: "
 msgstr "Sonraí faoin uair dheireanach ar theip ar Nuashonrú: "
+
+#: edit.button
+msgid "Settings"
+msgstr "Socruithe"
 
 #: disableOCSP.label disableOCSP.accesskey
 msgid "&Do not use OCSP for certificate validation"
