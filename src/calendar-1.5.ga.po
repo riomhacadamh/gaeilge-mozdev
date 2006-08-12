@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-07 18:32-0500\n"
+"POT-Creation-Date: 2006-08-10 18:18-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -405,8 +405,8 @@ msgid "Medium"
 msgstr "Measartha"
 
 #: priority.level.medium.accesskey calendar.monthview.accesskey
-#: calendar.maintoolbar.accesskey day.2.short event.mail.event.key
-#: event.mail.event.accesskey minimizeWindow.key Mega
+#: calendar.maintoolbar.accesskey day.2.short day.2.Ddd.accesskey
+#: event.mail.event.key event.mail.event.accesskey minimizeWindow.key Mega
 msgid "M"
 msgstr "B"
 
@@ -662,8 +662,7 @@ msgstr "Atarlú"
 msgid "Edit Recurrence"
 msgstr "Cuir Atarlú in Eagar"
 
-#: newevent.recurrence.remove.label remove.label
-#: ab-selectAddressesDialogRemoveButton.label
+#: newevent.recurrence.remove.label ab-selectAddressesDialogRemoveButton.label
 #: ab-selectAddressesDialogUninvite.label
 msgid "Remove"
 msgstr "Bain"
@@ -794,7 +793,7 @@ msgstr "Tasc"
 msgid "Journal"
 msgstr "Iris"
 
-#: newevent.add.contact.label add.label
+#: newevent.add.contact.label
 msgid "Add"
 msgstr "Cuir Leis"
 
@@ -944,7 +943,7 @@ msgstr "Amharc Seachtaine"
 
 # ctrl+D is "Dún" under Main -> Comhad
 #: calendar.weekview.accesskey calendar.menu.options.close.key week.short
-#: day.4.short
+#: day.4.short day.4.Ddd.accesskey
 msgid "W"
 msgstr "D"
 
@@ -1145,7 +1144,7 @@ msgstr "An Mhí Roimhe Seo"
 msgid "Delete"
 msgstr "Scrios"
 
-#: calendar.edit.button.label calendar.menu.options.modify edit.label
+#: calendar.edit.button.label calendar.menu.options.modify
 msgid "Edit"
 msgstr "Eagar"
 
@@ -2537,16 +2536,16 @@ msgstr "Aoin"
 msgid "Sat"
 msgstr "Sath"
 
-#: day.1.short day.7.short
+#: day.1.short day.7.short day.1.Ddd.accesskey
 msgid "S"
 msgstr "S"
 
-#: day.3.short day.5.short event.new.todo.key event.new.todo.accesskey
-#: event.delete.tasks.accesskey
+#: day.3.short day.5.short day.3.Ddd.accesskey event.new.todo.key
+#: event.new.todo.accesskey event.delete.tasks.accesskey
 msgid "T"
 msgstr "T"
 
-#: day.6.short
+#: day.6.short day.6.Ddd.accesskey
 msgid "F"
 msgstr "F"
 
@@ -2780,6 +2779,15 @@ msgstr "22:00"
 #: time.23
 msgid "11:00 PM"
 msgstr "23:00"
+
+# Ctrl+h = Stair (for now, most other good ones are taken)
+#: day.5.Ddd.accesskey
+msgid "h"
+msgstr "h"
+
+#: day.7.Ddd.accesskey
+msgid "a"
+msgstr "a"
 
 #: month.1.MMM
 msgid "JAN"
@@ -3310,12 +3318,12 @@ msgstr "l"
 msgid "Alarm Defaults"
 msgstr ""
 
-#: pref.defalarm4events.label
-msgid "Default alarm setting for events:"
+#: pref.defalarm4events.label pref.defalarm4events.accesskey
+msgid "D&efault alarm setting for events:"
 msgstr ""
 
-#: pref.defalarm4todos.label
-msgid "Default alarm setting for tasks:"
+#: pref.defalarm4todos.label pref.defalarm4todos.accesskey
+msgid "Def&ault alarm setting for tasks:"
 msgstr ""
 
 #: pref.alarm.on
@@ -3326,12 +3334,12 @@ msgstr "Ar Siúl"
 msgid "Off"
 msgstr "Múchta"
 
-#: pref.defalarmlen4events.label
-msgid "Default time an alarm goes off before an event:"
+#: pref.defalarmlen4events.label pref.defalarmlen4events.accesskey
+msgid "Defa&ult time an alarm goes off before an event:"
 msgstr ""
 
-#: pref.defalarmlen4todos.label
-msgid "Default time an alarm goes off before a task:"
+#: pref.defalarmlen4todos.label pref.defalarmlen4todos.accesskey
+msgid "Default time an alarm g&oes off before a task:"
 msgstr ""
 
 #: pref.alarmbox.label paneAlarms.title
@@ -3346,9 +3354,21 @@ msgstr ""
 msgid "Default text for alarms:"
 msgstr ""
 
+#: pref.categories.addButton.label pref.categories.addButton.accesskey
+msgid "&Add..."
+msgstr "&Cuir Leis..."
+
 #: pref.categories.edit.title
 msgid "Edit Category"
 msgstr "Cuir Catagóir in Eagar"
+
+#: pref.categories.editButton.label pref.categories.editButton.accesskey
+msgid "&Edit..."
+msgstr "&Eagar..."
+
+#: pref.categories.removeButton.label pref.categories.removeButton.accesskey
+msgid "&Remove"
+msgstr "&Bain"
 
 #: pref.categories.name.label ab-selectAddressesDialogNameColumn.label
 msgid "Name"
@@ -3423,8 +3443,8 @@ msgstr "&Seachfhreastalaí HTTP:"
 msgid "_: gopherPort.accesskey\n"
 msgstr ""
 
-#: pref.dateformat.label
-msgid "Date Text Format:"
+#: pref.dateformat.label pref.dateformat.accesskey
+msgid "&Date Text Format:"
 msgstr ""
 
 #: pref.dateformat.long
@@ -3435,12 +3455,12 @@ msgstr "Fada"
 msgid "Short"
 msgstr "Gearr"
 
-#: pref.defaultlength.label
-msgid "Default Event Length:"
+#: pref.defaultlength.label pref.defaultlength.accesskey
+msgid "Default &Event Length:"
 msgstr ""
 
-#: pref.defaultsnoozelength.label
-msgid "Default Snooze Length:"
+#: pref.defaultsnoozelength.label pref.defaultsnoozelength.accesskey
+msgid "Default &Snooze Length:"
 msgstr ""
 
 #: prefWindow.titleWin
@@ -5011,18 +5031,18 @@ msgid "Workweek"
 msgstr ""
 
 # NOTE TO LOCALIZERS: This entity should end with a space character.
-#: pref.calendar.view.restrict.label
-msgid "Display from "
-msgstr ""
+#: pref.calendar.view.restrict.label pref.calendar.view.restrict.accesskey
+msgid "&Display from "
+msgstr "&Taispeáin ó "
 
 # NOTE TO LOCALIZERS: This entity should start with a space character.
-#: pref.calendar.view.endtime.label
-msgid " until "
-msgstr ""
+#: pref.calendar.view.endtime.label pref.calendar.view.endtime.accesskey
+msgid " &until "
+msgstr " &go dtí "
 
-#: pref.weekstarts.label
-msgid "Start the week on:"
-msgstr ""
+#: pref.weekstarts.label pref.weekstarts.accesskey
+msgid "Sta&rt the week on:"
+msgstr "&Tosaigh an tseachtain ar:"
 
 #: pref.daysoff.label
 msgid "Include these days in the workweek:"
@@ -5034,37 +5054,37 @@ msgid ""
 "this setting."
 msgstr ""
 
-#: pref.numberofweeks.label
-msgid "Default weeks to show (including previous weeks):"
+#: pref.numberofweeks.label pref.numberofweeks.accesskey
+msgid "D&efault weeks to show (including previous weeks):"
 msgstr ""
 
-#: pref.numberofpreviousweeks.label
-msgid "Previous weeks to show:"
-msgstr ""
+#: pref.numberofpreviousweeks.label pref.numberofpreviousweeks.accesskey
+msgid "&Previous weeks to show:"
+msgstr "&Seachtainí roimhe seo le taispeáint:"
 
 #: pref.numberofweeks.1
 msgid "1 week"
-msgstr ""
+msgstr "1 seachtain"
 
 #: pref.numberofweeks.2
 msgid "2 weeks"
-msgstr ""
+msgstr "2 sheachtain"
 
 #: pref.numberofweeks.3
 msgid "3 weeks"
-msgstr ""
+msgstr "3 seachtaine"
 
 #: pref.numberofweeks.4
 msgid "4 weeks"
-msgstr ""
+msgstr "4 seachtaine"
 
 #: pref.numberofweeks.5
 msgid "5 weeks"
-msgstr ""
+msgstr "5 seachtaine"
 
 #: pref.numberofweeks.6
 msgid "6 weeks"
-msgstr ""
+msgstr "6 seachtaine"
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -5211,7 +5231,9 @@ msgstr ""
 
 # args: host
 #: noHttpsConfirmation.text
-msgid "Insecure login on %1$S! Server does not support HTTPS. Continue?"
+msgid ""
+"Insecure login on %1$S! Server does not support HTTPS.\n"
+"Continue?"
 msgstr ""
 
 #: noHttpsConfirmation.check.text
@@ -5232,8 +5254,15 @@ msgid "Session TimeOut"
 msgstr ""
 
 # args: host, prodId, serverVersion, wcapVersion
-#: insufficientWcapVersionError.text
-msgid "Server %1$S (%2$S, v%3$S) has insufficient WCAP version %4$S!"
+#: insufficientWcapVersionConfirmation.text
+msgid ""
+"Server %1$S (%2$S, v%3$S, WCAP v%4$S) doesn't support a sufficient WCAP "
+"version! The required version is at least 3.0.0.\n"
+"Continue?"
+msgstr ""
+
+#: insufficientWcapVersionConfirmation.label
+msgid "Insufficient WCAP version!"
 msgstr ""
 
 # args: host, prodId, serverVersion, wcapVersion
