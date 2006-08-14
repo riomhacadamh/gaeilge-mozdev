@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-12 18:00-0500\n"
+"POT-Creation-Date: 2006-08-14 15:44-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -937,22 +937,21 @@ msgstr "Leabharmharcáil Gach Cluaisín"
 msgid "Confirm open"
 msgstr "Dearbhú na hOscailte"
 
-#: tabs.openWarningMultiple
+#: tabs.openWarningMultipleBranded
 msgid ""
-"You have asked to open %S tabs at once. This might slow down your system "
-"while the pages are loading."
+"You are about to open %S tabs.  This might slow down %S while the pages are "
+"loading.  Are you sure you want to continue?"
 msgstr ""
-"D'iarr tú %S cluaisín a oscailt le chéile. D'fhéadfadh do chóras éirí mall "
-"agus na leathanaigh á luchtú."
+"Tá tú ar tí %S cluaisín a oscailt. D'fhéadfadh do %S éirí mall agus na "
+"leathanaigh á luchtú.  An bhfuil tú cinnte go dteastaíonn leanúint ar aghaidh?"
 
 #: tabs.openButtonMultiple
 msgid "Open tabs"
 msgstr "Oscail cluaisíní"
 
-#: tabs.openWarningPromptMe
-msgid "Warn me when I attempt to open a lot of tabs at once"
+#: tabs.openWarningPromptMeBranded
+msgid "Warn me when opening multiple tabs might slow down %S"
 msgstr ""
-"Tabhair rabhadh dom agus ag iarraidh cluaisíní iomadúla a oscailt le chéile"
 
 #: viewsourcetitle.preface
 msgid "Source for: "
@@ -1852,28 +1851,6 @@ msgstr "Sábháil an Nasc"
 msgid "Web Panels"
 msgstr "Painéil Idirlín"
 
-#: tabs.closeWarningTitle
-msgid "Confirm close"
-msgstr "Dearbhaigh"
-
-#: tabs.closeWarning
-msgid ""
-"This Browser window has %S tabs open. Do you want to close it and all its "
-"tabs?"
-msgstr ""
-"Tá %S cluaisín ar oscailt sa bhrabhsálaí seo. An mian leat é féin agus a "
-"chuid cluaisíní uile a dhúnadh?"
-
-#: tabs.closeButton
-msgid "Close all tabs"
-msgstr "Dún gach cluaisín"
-
-# see also "Warn me when I attempt to close multiple tabs"
-# see also "Warn when closing multiple tabs"
-#: tabs.closeWarningPromptMe
-msgid "Warn me when closing multiple tabs"
-msgstr "Tabhair rabhadh dom agus cluaisíní iomadúla á ndúnadh"
-
 #: xpinstallPromptWarning
 msgid ""
 "%S prevented this site (%S) from asking you to install software on your "
@@ -1950,13 +1927,13 @@ msgstr "Ná taispeáin teachtaireacht eolais má tá cosc ar phreabfhuinneoga"
 msgid "Show '%S'"
 msgstr "Taispeáin '%S'"
 
-#: imageWarningBlocked
-msgid "Firefox will now always block images from this site"
-msgstr "Cuirfidh Firefox cosc ar íomhánna ón suíomh seo i gcónaí"
+#: imageBlockedWarning
+msgid "%S will now always block images from %S."
+msgstr "Cuirfidh %S cosc ar íomhánna ó %S i gcónaí."
 
-#: imageWarningAllowed
-msgid "Firefox will now allow images from this site"
-msgstr "Ceadóidh Firefox íomhánna ón suíomh seo anois"
+#: imageAllowedWarning
+msgid "%S will now allow images from %S."
+msgstr "Ceadóidh %S íomhánna ó %S anois."
 
 #: saveFormInformationMessage
 msgid ""
@@ -2307,7 +2284,7 @@ msgstr ""
 
 #: restoreDefaults.label restoreDefaults.accesskey
 msgid "R&estore Defaults"
-msgstr ""
+msgstr "&Athchóirigh na Réamhshocruithe"
 
 #: addFeedReader.title
 msgid "Add Feed Reader"
@@ -4786,13 +4763,13 @@ msgstr "i bh&fuinneog nua"
 msgid "a new &tab"
 msgstr "i g&cluaisín nua"
 
-#: warnCloseMultiple.label warnCloseMultiple.accesskey
-msgid "Warn &me when I close a window with multiple tabs"
-msgstr "Tabhair rabhadh do&m agus fuinneog le cluaisíní iomadúla á dúnadh"
+#: warnCloseMultipleTabs.label warnCloseMultipleTabs.accesskey
+msgid "Warn &me when closing multiple tabs"
+msgstr "Tabhair rabhadh do&m agus cluaisíní iomadúla á ndúnadh"
 
-#: warnOpenMany.label warnOpenMany.accesskey
-msgid "Warn me when I &open lots of tabs at once"
-msgstr "Tabhair rabhadh d&om nuair a osclaím neart cluaisíní le chéile"
+#: warnOpenManyTabs.label warnOpenManyTabs.accesskey
+msgid "Warn me when &opening multiple tabs might slow down &brandShortName;"
+msgstr ""
 
 #: showTabBar.label showTabBar.accesskey
 msgid "Always show the ta&b bar"
@@ -5674,6 +5651,20 @@ msgstr ""
 # Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
+#: REG_APP_DESC
+msgid ""
+"${BrandShortName} delivers safe, easy web browsing. A familiar user "
+"interface, enhanced security features including protection from online "
+"identity theft, and integrated search let you get the most out of the web."
+msgstr ""
+
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
 #: OPTIONAL_COMPONENTS_TITLE
 msgid "Choose Optional Components"
 msgstr "Roghnaigh Comhpháirteanna Roghnacha"
@@ -5782,6 +5773,26 @@ msgstr "&San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)"
 #: ICONS_QUICKLAUNCH
 msgid "In my &Quick Launch bar"
 msgstr "I mo Bharra &Luathláinseála"
+
+#: WARN_WRITE_ACCESS
+msgid ""
+"You don't have access to write to the installation directory.\n"
+"\n"
+"Click OK to select a different directory."
+msgstr ""
+"Níl cead agat na comhaid a scríobh sa chomhadlann suiteála.\n"
+"\n"
+"Cliceáil OK chun comhadlann eile a roghnú."
+
+#: WARN_DISK_SPACE
+msgid ""
+"You don't have sufficient disk space to install to this location.\n"
+"\n"
+"Click OK to select a different location."
+msgstr ""
+"Níl go leor spáis diosca agat chun suiteáil a dhéanamh sa suíomh seo.\n"
+"\n"
+"Cliceáil OK chun suíomh eile a roghnú."
 
 #: STATUS_INSTALL_APP
 msgid "Installing ${BrandShortName}..."
@@ -13847,17 +13858,21 @@ msgstr ""
 "roghnú leis an méarchlár. An bhfuil tú ag iarraidh Brabhsáil le Cúrsóir a "
 "chur ar siúl?"
 
-#: tabs.closeWarningOne
-msgid "You are about to close %S open tab. Are you sure you want to continue?"
-msgstr ""
-"Tá tú chun %S cluaisín oscailte a dhúnadh. An bhfuil tú cinnte go dteastaíonn "
-"uait leanadh ar aghaidh?"
+#: tabs.closeWarningTitle
+msgid "Confirm close"
+msgstr "Dearbhaigh"
 
-#: tabs.closeWarningMultiple
-msgid "You are about to close %S open tabs. Are you sure you want to continue?"
+#: tabs.closeWarningOneTab
+msgid "You are about to close %S tab. Are you sure you want to continue?"
 msgstr ""
-"Tá tú chun %S cluaisín oscailte a dhúnadh. An bhfuil tú cinnte go dteastaíonn "
-"uait leanadh ar aghaidh?"
+"Tá tú ar tí %S cluaisín a dhúnadh. An bhfuil tú cinnte go dteastaíonn uait "
+"leanúint ar aghaidh?"
+
+#: tabs.closeWarningMultipleTabs
+msgid "You are about to close %S tabs. Are you sure you want to continue?"
+msgstr ""
+"Tá tú ar tí %S cluaisín a dhúnadh. An bhfuil tú cinnte go dteastaíonn uait "
+"leanúint ar aghaidh?"
 
 #: tabs.closeButtonOne
 msgid "Close tab"
@@ -16433,7 +16448,7 @@ msgstr "Tá leagan nua de %S ar fáil:"
 
 #: introType_major_app_and_version
 msgid "You can download and install %S %S now!"
-msgstr ""
+msgstr "Is féidir leat %S %S a íosluchtú agus a shuiteáil anois!"
 
 #: verificationError
 msgid "%S could not confirm the integrity of the update package."
@@ -16462,6 +16477,8 @@ msgid ""
 "The license file for this version could not be found. Please visit the %S "
 "homepage for more information."
 msgstr ""
+"Níorbh fhéidir an comhad ceadúnais a aimsiú don leagan seo. Féach ar "
+"leathanach baile %S le haghaidh tuilleadh eolais."
 
 #: updateMoreInfoContentNotFound
 msgid ""
@@ -16471,7 +16488,7 @@ msgstr ""
 
 #: licenseContentDownloading
 msgid "Getting license for %S %S..."
-msgstr ""
+msgstr "Ceadúnas do %S %S á fháil..."
 
 #: updateMoreInfoContentDownloading
 msgid "Getting more details about %S %S..."
