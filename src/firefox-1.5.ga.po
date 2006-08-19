@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-17 22:11-0500\n"
+"POT-Creation-Date: 2006-08-18 17:09-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1145,6 +1145,10 @@ msgstr "."
 msgid "Stop loading this page"
 msgstr "Éirigh as an leathanach seo a luchtú"
 
+#: goEndCap.label goCmd.label
+msgid "Go"
+msgstr "Gabh"
+
 #: goEndCap.tooltip
 msgid "Go to the address in the Location Bar"
 msgstr "Téigh go dtí an seoladh atá sa Bharra Suímh"
@@ -1161,7 +1165,8 @@ msgstr "Priontáil an leathanach seo"
 msgid "Location"
 msgstr "Suíomh"
 
-#: searchItem.title GopherPromptTitle searchButton.label searchToolbar.label
+#: searchItem.title searchEndCap.label GopherPromptTitle searchButton.label
+#: searchToolbar.label
 msgid "Search"
 msgstr "Cuardach"
 
@@ -3834,6 +3839,10 @@ msgstr "&Athraigh Gníomh..."
 msgid "Cl&ose"
 msgstr "&Dún"
 
+#: fallback.text
+msgid "<p>The privacy agreement failed to load.</p>"
+msgstr ""
+
 #: showPreview.label showPreview.accesskey
 msgid "&Show me a preview and ask me which Feed Reader to use"
 msgstr ""
@@ -4217,8 +4226,8 @@ msgstr "Ceadaigh don &Seisiún"
 msgid "&Allow"
 msgstr "&Ceadaigh"
 
-#: phishDialog.title
-msgid "Phishing Protection Privacy Agreement"
+#: phishDlg.title
+msgid "Phishing Protection Terms of Service"
 msgstr ""
 
 # LOCALIZATION NOTE:
@@ -4228,13 +4237,34 @@ msgstr ""
 # already agreed with the policy for that provider; once you agree to a
 # provider's policy, you don't see it again).
 #
-#: phishDialog.height phishDialog.width
+#: phishDlg.height
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"40em"
+msgstr "40em"
+
+# LOCALIZATION NOTE:
+# The following entities contain sizing information for the phishing privacy
+# agreement dialog, which is opened when you select the "Check by asking"
+# option as how the browser checks for phishing attempts (if you haven't
+# already agreed with the policy for that provider; once you agree to a
+# provider's policy, you don't see it again).
+#
+#: phishDlg.width
 msgid ""
 "_: Do not translate this.  Only change the numeric values if you need this "
 "dialogue box to appear bigger.\n"
 "35em"
+msgstr "35em"
+
+#: acceptToS.label
+msgid "I accept these Phishing Protection terms of service"
 msgstr ""
-"35em"
+
+#: declineToS.label
+msgid "I do NOT accept these Phishing Protection terms of service"
+msgstr ""
 
 #: accept.label
 msgid "Accept and Continue"
@@ -4312,20 +4342,13 @@ msgid "Add New Reader..."
 msgstr "Cuir Léitheoir Nua Leis..."
 
 # ### Security
-# LOCALIZATION NOTE: phishBefore and phishAfter use %S to represent the name of
-#                    the provider whose privacy policy must be accepted (for
-#                    enabling check-every-page-as-I-load-it phishing
-#                    protection).
-#: phishBefore
+# LOCALIZATION NOTE: phishBefore uses %S to represent the name of the provider
+#                    whose privacy policy must be accepted (for enabling
+#                    check-every-page-as-I-load-it phishing protection).
+#: phishBeforeText
 msgid ""
 "Selecting this option will send the address of web pages you are viewing to %"
-"S. To continue, please review the following privacy agreement:"
-msgstr ""
-
-#: phishAfter
-msgid ""
-"Do you want to accept this privacy agreement and ask %S about each site you "
-"visit?"
+"S. To continue, please review and accept the following terms of service."
 msgstr ""
 
 #: setMasterPassword
@@ -4797,7 +4820,6 @@ msgid "http://www.mozilla.org/projects/bonecho/releases/%S.html"
 msgstr "http://www.mozilla.org/projects/bonecho/releases/%S.html"
 
 #: browser.search.defaultenginename browser.search.order.1
-#: browser.contentHandlers.types.1.title
 msgid "Google"
 msgstr "Google"
 
@@ -4833,17 +4855,21 @@ msgstr "Bloglines"
 msgid "http://www.bloglines.com/login?r=/sub/%s"
 msgstr "http://www.bloglines.com/login?r=/sub/%s"
 
-#: browser.contentHandlers.types.1.uri
-msgid "http://fusion.google.com/add?feedurl=%s"
-msgstr "http://fusion.google.com/add?feedurl=%s"
-
-#: browser.contentHandlers.types.2.title
+#: browser.contentHandlers.types.1.title
 msgid "My Yahoo"
 msgstr "My Yahoo"
 
-#: browser.contentHandlers.types.2.uri
+#: browser.contentHandlers.types.1.uri
 msgid "http://add.my.yahoo.com/rss?url=%s"
 msgstr "http://add.my.yahoo.com/rss?url=%s"
+
+#: browser.contentHandlers.types.2.title
+msgid "Google Reader"
+msgstr "Google Reader"
+
+#: browser.contentHandlers.types.2.uri
+msgid "http://fusion.google.com/add?feedurl=%s"
+msgstr "http://fusion.google.com/add?feedurl=%s"
 
 # Keyword URL (for location bar searches)
 #: keyword.URL
@@ -20967,10 +20993,6 @@ msgstr "Clómhéid Níos Mó"
 #: textSizeMinus.label
 msgid "Text Size -"
 msgstr "Clómhéid Níos Lú"
-
-#: goCmd.label
-msgid "Go"
-msgstr "Gabh"
 
 #: panCmd.label
 msgid "Pan"
