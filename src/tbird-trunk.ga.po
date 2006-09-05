@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-07 09:41-0500\n"
+"POT-Creation-Date: 2006-08-29 18:43-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -197,7 +197,7 @@ msgstr "Foilsigh Mar..."
 
 # Ctrl+h = Stair (for now, most other good ones are taken)
 #: publishas.accesskey pasteHTML.accesskey mapeditprops.accesskey
-#: maphelpmenu.accesskey extensionsCheckNow.accesskey checkNewsNow.accesskey
+#: maphelpmenu.accesskey enableAppUpdate.accesskey checkNewsNow.accesskey
 msgid "h"
 msgstr "h"
 
@@ -207,7 +207,6 @@ msgstr "Easpórtáil mar Théacs..."
 
 #: fileexporttotext.accesskey inserttextarea.accesskey bodytext.accesskey
 #: EnterLinkTextAccessKey nextUnreadThreadCmd.accesskey
-#: enableAppUpdate.accesskey
 msgid "T"
 msgstr "T"
 
@@ -437,7 +436,7 @@ msgstr "Seiceáil Naisc"
 
 #: editcheckspelling.keybinding insertbreakall.accesskey createlink.accesskey
 #: stylestrikethru.accesskey formatremovelinks.keybinding quickSearchCmd.key
-#: killThreadMenu.key appCheckNow.accesskey focusSearch2.key
+#: killThreadMenu.key focusSearch2.key
 msgid "k"
 msgstr "k"
 
@@ -497,7 +496,7 @@ msgid "Characters and Symbols..."
 msgstr "Carachtair agus Siombailí..."
 
 #: insertchars.accesskey centerRadio.accessKey copyCmd.key
-#: cancelDownloadButtonAccessKey checkMailNow.accesskey
+#: cancelDownloadButton.accesskey checkMailNow.accesskey
 msgid "C"
 msgstr "C"
 
@@ -515,7 +514,7 @@ msgid "Define Form..."
 msgstr "Sainigh Foirm..."
 
 #: insertform.accesskey decreaseindent.accesskey tabledeletemenu.accesskey
-#: deleteCmd.key downloadButtonAccessKey fieldMapImport.down.accesskey
+#: deleteCmd.key downloadButton.accesskey fieldMapImport.down.accesskey
 #: detachLabelAccesskey
 msgid "D"
 msgstr "D"
@@ -542,7 +541,8 @@ msgstr "Liosta Roghnúchán..."
 
 #: insertselect.accesskey stylesubscript.accesskey mapviewscale.accesskey
 #: offlineSelect.accesskey saveCmd.key accountManagerCmdUnix.accesskey
-#: markStarredCmd.key accesskeyForStopButton accesskeyForSearchButton
+#: markStarredCmd.key labelForStopButton.accesskey
+#: labelForSearchButton.accesskey
 msgid "S"
 msgstr "S"
 
@@ -812,11 +812,11 @@ msgstr "y"
 msgid "&Remove Named Anchors"
 msgstr "Bain Ancai&rí Ainmnithe"
 
-#: formatindent.keybinding
+#: formatindent.keybinding goForwardCmd.commandKey
 msgid "]"
 msgstr "]"
 
-#: formatoutdent.keybinding
+#: formatoutdent.keybinding goBackCmd.commandKey
 msgid "["
 msgstr "["
 
@@ -5272,6 +5272,7 @@ msgstr "Cóipeáil an S&eoladh Ríomhphoist"
 
 # "R" under Main -> Eagar ("G" is Gearr)
 #: pasteCmd.label pasteCmd.accesskey paste.label paste.accesskey
+#: pasteLinkCmd.label pasteLinkCmd.accesskey
 msgid "&Paste"
 msgstr "Grea&maigh"
 
@@ -5594,6 +5595,14 @@ msgstr "Taispeáin Focail Fhaire"
 #: noMasterPasswordPrompt
 msgid "Are you sure you wish to show your passwords?"
 msgstr "An bhfuil tú cinnte gur mian leat d'fhocail fhaire a thaispeáint?"
+
+#: removeAllPasswordsPrompt
+msgid "Are you sure you wish to remove all passwords?"
+msgstr "An bhfuil tú cinnte gur mian leat gach focal faire a scriosadh?"
+
+#: removeAllPasswordsTitle
+msgid "Remove all passwords"
+msgstr "Scrios gach focal faire"
 
 # #-#-#-#-#  tmp.XXXXkpkYLz.po (thunderbird)  #-#-#-#-#
 # Used in the SMTP Account Settings panel when a server value has no properties
@@ -6835,6 +6844,7 @@ msgid "O"
 msgstr "O"
 
 #: helpMenu.label helpMenu.accesskey helpButton.label helpButton.accesskey
+#: helpMenuWin.label helpMenuWin.accesskey
 msgid "&Help"
 msgstr "Cab&hair"
 
@@ -9841,6 +9851,91 @@ msgstr ""
 "scagaire seo. Ní féidir an scagaire seo a chumasú toisc nach fios conas é a "
 "chur i bhfeidhm."
 
+# for junk mail logging / mail filter logging
+# LOCALIZATION NOTE(junkLogDetectStr)
+# %1$S=author, %2$S=subject, %3$S=date
+#: junkLogDetectStr
+msgid "Detected junk message from %1$S - %2$S at %3$S"
+msgstr ""
+
+# LOCALIZATION NOTE(logMoveStr)
+# %1$S=message id, %2$S=folder URI
+#: logMoveStr
+msgid "moved message id = %1$S to %2$S"
+msgstr ""
+
+# LOCALIZATION NOTE(logCopyStr)
+# %1$S=message id, %2$S=folder URI
+#: logCopyStr
+msgid "copied message id = %1$S to %2$S"
+msgstr ""
+
+# LOCALIZATION NOTE(filterLogDetectStr)
+# %1$S=filter name %2$S=author, %3$S=subject, %4$S=date
+#: filterLogDetectStr
+msgid "Applied filter \"%1$S\" to message from %2$S - %3$S at %4$S"
+msgstr ""
+
+#: filterAction2
+msgid "priority changed"
+msgstr ""
+
+#: filterAction3
+msgid "deleted"
+msgstr ""
+
+#: filterAction4
+msgid "marked as read"
+msgstr ""
+
+#: filterAction5
+msgid "thread killed"
+msgstr ""
+
+#: filterAction6
+msgid "thread watched"
+msgstr ""
+
+#: filterAction7
+msgid "starred"
+msgstr ""
+
+#: filterAction8
+msgid "tagged"
+msgstr ""
+
+#: filterAction9
+msgid "replied"
+msgstr ""
+
+#: filterAction10
+msgid "forwarded"
+msgstr ""
+
+#: filterAction11
+msgid "execution stopped"
+msgstr ""
+
+#: filterAction12
+msgid "deleted from POP3 server"
+msgstr ""
+
+#: filterAction13
+msgid "left on POP3 server"
+msgstr ""
+
+#: filterAction14
+msgid "junk score"
+msgstr ""
+
+#: filterAction15
+msgid "body fetched from POP3 server"
+msgstr ""
+
+#: filterAction16
+msgid "copied to folder"
+msgstr ""
+
 #: unreadColumn.label viewPickerUnread.label
 msgid "Unread"
 msgstr "Gan léamh"
@@ -9875,8 +9970,8 @@ msgstr ""
 "teachtaireachtaí féin agus ar bhrath uathoibríoch)"
 
 #: folderRebuildSummaryFile.label folderRebuildSummaryFile.accesskey
-msgid "&Rebuild"
-msgstr "&Atóg"
+msgid "&Rebuild Index"
+msgstr "&Atóg an tInnéacs"
 
 #: folderRebuildSummaryFileTip.label
 msgid "Rebuild Summary File"
@@ -12967,10 +13062,6 @@ msgstr "Faigh an 500 &Teachtaireacht Nuachta Eile"
 msgid "Sen&d Unsent Messages"
 msgstr "Seo&l na teachtaireachtaí gan seoladh"
 
-#: loadFirstDraft.label
-msgid "Load First Draft Message"
-msgstr "Luchtaigh an Chéad Dréacht-theachtaireacht"
-
 #: subscribeCmd.label subscribeCmd.accesskey folderContextSubscribe.label
 #: folderContextSubscribe.accesskey folderContextRSSSubscribe.label
 #: folderContextRSSSubscribe.accesskey
@@ -13083,10 +13174,6 @@ msgstr "Cealaigh Cóipeáil Teachtaireachta"
 msgid "Redo Copy Message"
 msgstr "Athfheidhmigh Cóipeáil Teachtaireachta"
 
-#: editDraftCmd.label editDraftCmd.accesskey
-msgid "Edit Dra&ft"
-msgstr "Cuir D&réacht in Eagar"
-
 #: messagePaneLayoutStyle.label messagePaneLayoutStyle.accesskey
 msgid "&Layout"
 msgstr "&Leagan Amach"
@@ -13102,6 +13189,10 @@ msgstr "Amharc &Leathan"
 #: messagePaneVertical.label messagePaneVertical.accesskey
 msgid "&Vertical View"
 msgstr "Amharc &Ingearach"
+
+#: threadPaneWide.label threadPaneWide.accesskey
+msgid "W&ide List View"
+msgstr ""
 
 #: showMessageCmd.label showMessageCmd.accesskey
 msgid "&Message Pane"
@@ -13298,6 +13389,15 @@ msgstr "Teachtaireacht &Marcáilte"
 msgid "Unread Thread"
 msgstr "Snáithe Gan Léamh"
 
+#: goForwardCmd.label forwardButton.label
+msgid "Forward"
+msgstr "Ar Aghaidh"
+
+# Toolbar
+#: goBackCmd.label
+msgid "Back"
+msgstr "Siar"
+
 #: startPageCmd.label startPageCmd.accesskey
 msgid "Mail &Start Page"
 msgstr "&Leathanaigh Tosaigh Ríomhphoist"
@@ -13325,7 +13425,7 @@ msgid "Re&ply to All"
 msgstr "Freag&air Cách"
 
 #: forwardAsMenu.label forwardAsMenu.accesskey
-msgid "F&orward As"
+msgid "For&ward As"
 msgstr "Seol ar A&ghaidh Mar"
 
 #: forwardAsInline.label forwardAsInline.accesskey inline.label
@@ -13487,8 +13587,12 @@ msgstr "Freagair"
 msgid "Reply All"
 msgstr "Freagair Cách"
 
-#: forwardButton.label
-msgid "Forward"
+#: backButton.label
+msgid "Go Back"
+msgstr "Siar"
+
+#: goForwardButton.label
+msgid "Go Forward"
 msgstr "Ar Aghaidh"
 
 #: markButton.label
@@ -13502,6 +13606,10 @@ msgstr "Nuashonraigh"
 #: mailViewsToolbarItem.title
 msgid "Mail Views"
 msgstr "Amhairc Ríomhphoist"
+
+#: folderLocationToolbarItem.title
+msgid "Folder Location"
+msgstr "Suíomh an Fhillteáin"
 
 # Mail Toolbar Tooltips
 #: advancedButton.tooltip
@@ -13543,6 +13651,14 @@ msgstr "Téigh go dtí an chéad teachtaireacht eile gan léamh"
 #: previousButton.tooltip
 msgid "Move to the previous unread message"
 msgstr "Téigh go dtí an teachtaireacht gan léamh roimhe"
+
+#: goForwardButton.tooltip
+msgid "Go forward one message"
+msgstr "An chéad teachtaireacht eile"
+
+#: goBackButton.tooltip
+msgid "Go back one message"
+msgstr "An teachtaireacht roimhe seo"
 
 #: deleteButton.tooltip
 msgid "Delete selected message or folder"
@@ -13879,14 +13995,6 @@ msgstr "Cruthaigh &Scagaire ón Teachtaireacht..."
 #: BlockAddress.label BlockAddress.accesskey
 msgid "Block &Address"
 msgstr "Cuir Cosc &ar an Seoladh"
-
-#: unreadCountText.label
-msgid "Unread: "
-msgstr "Gan léamh: "
-
-#: totalCountText.label
-msgid " Total: "
-msgstr " Iomlán: "
 
 #: preferencesCmdMac.label
 msgid "Preferences..."
@@ -16199,9 +16307,9 @@ msgstr "Déan nuashonruithe a lorg go huathoibríoch i gcóir:"
 msgid "&brandShortName;"
 msgstr "&brandShortName;"
 
-#: enableExtensionUpdate.label enableExtensionUpdate.accesskey
-msgid "Installed E&xtensions and Themes"
-msgstr "Ei&sínteachtaí agus Téamaí Suiteáilte"
+#: enableAddonsUpdate.label enableAddonsUpdate.accesskey
+msgid "Ins&talled Add-ons"
+msgstr "Breiseáin Shuiteáilte"
 
 #: checkNow.label
 msgid "Check Now..."
@@ -16212,17 +16320,16 @@ msgid "When updates to &brandShortName; are found,"
 msgstr "Agus nuashonruithe do &brandShortName; aimsithe,"
 
 #: modeAskMe.label modeAskMe.accesskey
-msgid "&Ask me what I want to do"
-msgstr "Fi&afraigh díom cad atá le déanamh"
+msgid "As&k me what I want to do"
+msgstr "Fiafraigh díom &cad atá le déanamh"
 
 #: modeAutomatic.label modeAutomatic.accesskey
-msgid "Automatically &download and install the update"
+msgid "Auto&matically download and install the update"
 msgstr "Íos&luchtaigh agus suiteáil an nuashonrú go huathoibríoch"
 
-#: modeAutoWarn.label modeAutoWarn.accesskey
-msgid "&Warn me if this will disable extensions or themes"
-msgstr ""
-"&Tabhair rabhadh dom má tá eisínteachtaí nó téamaí díchumasaithe dá mbarr"
+#: modeAutoAddonWarn.label modeAutoAddonWarn.accesskey
+msgid "&Warn me if this will disable any of my add-ons"
+msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 
 #: showUpdates.label showUpdates.accesskey
 msgid "Show &Update History"
@@ -17792,10 +17899,6 @@ msgstr "http://www.mozilla.org/products/thunderbird/releases/%S.html"
 msgid "http://www.mozilla.org/support/thunderbird/"
 msgstr "http://www.mozilla.org/support/thunderbird/"
 
-#: messenger.throbber.url startpage.pageURL
-msgid "http://www.mozilla.org/products/thunderbird/"
-msgstr "http://www.mozilla.org/products/thunderbird/"
-
 # To make mapit buttons to disappear in the addressbook, specify empty string.  For example:
 # mail.addr_book.mapit_url.format=
 # The format for "mail.addr_book.mapit_url.format" is:
@@ -18665,6 +18768,10 @@ msgstr "Leathanach táirge Thunderbird"
 #: startpage.pageInfo
 msgid "For product information, visit the"
 msgstr "Le haghaidh faisnéis táirge, téigh chuig"
+
+#: startpage.pageURL
+msgid "http://www.mozilla.org/products/thunderbird/"
+msgstr "http://www.mozilla.org/products/thunderbird/"
 
 #: startpage.extra
 msgid "_: startpage.extra\n"
@@ -19755,7 +19862,7 @@ msgstr ""
 
 #: License_Accept
 msgid "I &Accept the terms of the License Agreement"
-msgstr "&Glacaim leis an Chomhaontú um Cheadúnas"
+msgstr "&Táim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas"
 
 #: License_Decline
 msgid "I do NO&T Accept the terms of the License Agreement"
