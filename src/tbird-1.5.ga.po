@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-28 07:18-0500\n"
+"POT-Creation-Date: 2006-09-04 20:50-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -348,7 +348,8 @@ msgstr "Téacs"
 #: formatfontfixed.keybinding fonttimes.accesskey listterm.accesskey
 #: tabletable.accesskey mapeditcut.accesskey mapviewtbar.accesskey
 #: tbar.accesskey getNewMsgCmd.key getAllNewMsgCmd.key nextUnreadThreadCmd.key
-#: SOCKSport.accesskey DeletePlainText.accesskey
+#: moveToFolderAgainAccessKey copyToFolderAgainAccessKey SOCKSport.accesskey
+#: DeletePlainText.accesskey
 msgid "t"
 msgstr "t"
 
@@ -700,7 +701,7 @@ msgid "x-small"
 msgstr "an-bheag"
 
 #: size-x-small.accesskey listnumbered.accesskey minimizeWindow.key
-#: messengerCmd.accesskey markAsReadCmd.key
+#: messengerCmd.accesskey moveToFolderAgainCmd.key markAsReadCmd.key
 msgid "m"
 msgstr "l"
 
@@ -13118,7 +13119,9 @@ msgstr "&Neamhléite"
 msgid "&Favorite"
 msgstr "Mo Rogha &Fillteán"
 
-#: recentFolders.label recentFolders.accesskey
+#: recentFolders.label recentFolders.accesskey moveCopyMsgRecentMenu.label
+#: moveCopyMsgRecentMenu.accesskey contextMoveCopyMsgRecentMenu.label
+#: contextMoveCopyMsgRecentMenu.accesskey
 msgid "&Recent"
 msgstr "Le Gai&rid"
 
@@ -13359,6 +13362,10 @@ msgstr "&Bog"
 #: copyMessageLocation.label copyMessageLocation.accesskey
 msgid "Copy &Message Location"
 msgstr "Cóipeáil Suío&mh na Teachtaireachta"
+
+#: moveToFolderAgain.label moveToFolderAgain.accesskey
+msgid "Move Aga&in"
+msgstr ""
 
 #: killThreadMenu.label killThreadMenu.accesskey
 msgid "&Ignore Thread"
@@ -14745,6 +14752,22 @@ msgstr "Mo Rogha Fillteán"
 #: folderPaneHeader_recent
 msgid "Recent Folders"
 msgstr "Fillteáin Dheireanacha"
+
+# Copy / Move to Folder Again
+# LOCALIZATION NOTE %1$S is the name of the folder we will move to. moveToFolderAgainAccessKey
+# should have the same value as copyToFolderAgainAccessKey as they are the same menu item in the UI
+# moveToFolderAgainAccessKey should also be a letter that occurs before %1$S
+#: moveToFolderAgain
+msgid "Move to \"%1$S\" Again"
+msgstr ""
+
+# LOCALIZATION NOTE %1$S is the name of the folder we will copy to
+# copyToFolderAgainAccessKey
+# should have the same value as moveToFolderAgainAccessKey as they are the same menu item in the UI
+# copyToFolderAgainAccessKey should also be a letter that occurs before %1$S
+#: copyToFolderAgain
+msgid "Copy to \"%1$S\" Again"
+msgstr ""
 
 #: migrationWizard.title
 msgid "Import Wizard"
@@ -19563,21 +19586,45 @@ msgstr ""
 # Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
+#: OPTIONAL_COMPONENTS_TITLE
+msgid "Choose Optional Components"
+msgstr "Roghnaigh Comhpháirteanna Roghnacha"
+
+#: OPTIONAL_COMPONENTS_SUBTITLE MUI_TEXT_COMPONENTS_SUBTITLE
+msgid "Choose which features of $(^NameDA) you want to install."
+msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
+
+#: OPTIONAL_COMPONENTS_LABEL
+msgid "Optional Components:"
+msgstr "Comhpháirteanna Roghnacha:"
+
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
 #: APP_DESC
 msgid "Required files for the ${BrandShortName} application"
 msgstr "Comhaid a bhfuil gá leo le haghaidh ${BrandShortName}"
 
-#: DEV_TOOLS_DESC
-msgid ""
-"A tool for inspecting the DOM of HTML, XUL, and XML pages, including the "
-"application's chrome."
-msgstr ""
-"Uirlis chun an DOM de leathanaigh HTML, XUL, agus XML a scrúdú, snas an "
-"fheidhmchláir san áireamh."
+#: DOMI_TITLE
+msgid "DOM Inspector"
+msgstr "Scrúdaitheoir DOM"
 
-#: QFA_DESC
-msgid "A tool for submitting crash reports to Mozilla.org."
-msgstr "Uirlis chun tuarascálacha earráide a sheoladh go Mozilla.org."
+#: DOMI_TEXT
+msgid "Inspects the structure and properties of a window and its contents."
+msgstr ""
+"Scrúdaíonn struchtúr agus sainghnéithe fuinneoige agus gach a bhfuil inti."
+
+#: QFA_TITLE Component_QFA
+msgid "Quality Feedback Agent"
+msgstr "Gníomhaire Aiseolais um Cháilíocht"
+
+#: QFA_TEXT
+msgid "Sends information about program crashes to Mozilla."
+msgstr "Cuireann eolas faoi thuairteanna ríomhchlár chuig Mozilla."
 
 #: OPTIONS
 msgid "$(^NameDA) &Options"
@@ -19646,6 +19693,26 @@ msgstr "&San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)"
 #: ICONS_QUICKLAUNCH
 msgid "In my &Quick Launch bar"
 msgstr "I mo Bharra &Luathláinseála"
+
+#: WARN_WRITE_ACCESS
+msgid ""
+"You don't have access to write to the installation directory.\n"
+"\n"
+"Click OK to select a different directory."
+msgstr ""
+"Níl cead agat na comhaid a scríobh sa chomhadlann suiteála.\n"
+"\n"
+"Cliceáil OK chun comhadlann eile a roghnú."
+
+#: WARN_DISK_SPACE
+msgid ""
+"You don't have sufficient disk space to install to this location.\n"
+"\n"
+"Click OK to select a different location."
+msgstr ""
+"Níl go leor spáis diosca agat chun suiteáil a dhéanamh sa suíomh seo.\n"
+"\n"
+"Cliceáil OK chun suíomh eile a roghnú."
 
 #: STATUS_INSTALL_APP
 msgid "Installing ${BrandShortName}..."
@@ -19974,10 +20041,6 @@ msgstr "Tacaíocht RSS"
 msgid "Adds RSS support to $ProductName$."
 msgstr "Cuireann seo tacaíocht do RSS le $ProductName$."
 
-#: Component_QFA
-msgid "Quality Feedback Agent"
-msgstr "Gníomhaire Aiseolais um Cháilíocht"
-
 #: Component_QFA_Long
 msgid "for reporting $ProductName$ crash information"
 msgstr "Le haghaidh tuairiscí maidir le tuairteanna $ProductName$"
@@ -20041,10 +20104,6 @@ msgstr ""
 #: MUI_TEXT_COMPONENTS_TITLE
 msgid "Choose Components"
 msgstr "Roghnaigh Comhpháirteanna"
-
-#: MUI_TEXT_COMPONENTS_SUBTITLE
-msgid "Choose which features of $(^NameDA) you want to install."
-msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
 
 #: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_INFO
 msgid "Position your mouse over a component to see its description."
