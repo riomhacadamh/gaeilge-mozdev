@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-29 18:41-0500\n"
+"POT-Creation-Date: 2006-09-04 22:21-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -425,12 +425,13 @@ msgstr "Ard"
 msgid "H"
 msgstr "F"
 
-#: newevent.title.label calendar.unifinder.tree.title.label
+#: newevent.title.label calendar.unifinder.tree.title.label htmlPrefixTitle
 msgid "Title"
 msgstr "Teideal"
 
 #: newevent.location.label calendar.unifinder.tree.location.label
 #: calendar.importoutlook.outlooklocation.label outlookCSVLocation
+#: htmlPrefixLocation
 msgid "Location"
 msgstr "Suíomh"
 
@@ -477,7 +478,8 @@ msgid "All Day"
 msgstr "I Rith an Lae"
 
 #: newevent.description.label calendar.importoutlook.outlookdescription.label
-#: outlookCSVDescription MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE
+#: outlookCSVDescription htmlPrefixDescription
+#: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE
 msgid "Description"
 msgstr "Cur Síos"
 
@@ -1089,6 +1091,10 @@ msgstr "Spriocdháta"
 msgid "Calendar Name"
 msgstr "Ainm an Fhéilire"
 
+#: calendar.find.key day.6.short day.6.Ddd.accesskey
+msgid "F"
+msgstr "F"
+
 #: calendar.gototoday.button.tooltip
 msgid "Go to today"
 msgstr "Oscail inniu"
@@ -1569,6 +1575,30 @@ msgstr "Díbir"
 #: calendar.alarm.dismissall.label
 msgid "Dismiss All"
 msgstr "Díbir Uile"
+
+#: calendar.alarm.for.label
+msgid "for"
+msgstr "ar feadh"
+
+#: calendar.alarm.5minutes
+msgid "5 minutes"
+msgstr "5 nóiméad"
+
+#: calendar.alarm.15minutes
+msgid "15 minutes"
+msgstr "15 nóiméad"
+
+#: calendar.alarm.30minutes
+msgid "30 minutes"
+msgstr "30 nóiméad"
+
+#: calendar.alarm.1hour
+msgid "1 hour"
+msgstr "1 uair"
+
+#: calendar.alarm.1day
+msgid "1 day"
+msgstr "1 lá"
 
 # Calendar Server Dialog
 #: calendar.server.dialog.title.new
@@ -2280,6 +2310,10 @@ msgstr "iCalendar"
 msgid "Comma Separated Values (from Outlook)"
 msgstr "Deighilte le Camóga (ó Outlook)"
 
+#: htmlPrefixWhen
+msgid "When"
+msgstr ""
+
 # Categories
 #: categoryReplace
 msgid ""
@@ -2302,6 +2336,33 @@ msgstr "Catagóir Nua..."
 #: attendeeInstructions
 msgid "email@example.com"
 msgstr "ríomhphost@sampla.ie"
+
+#: today agendaToday
+msgid "Today"
+msgstr "Inniu"
+
+#: tomorrow agendaTomorrow
+msgid "Tomorrow"
+msgstr "Amárach"
+
+#: yesterday
+msgid "Yesterday"
+msgstr "Inné"
+
+#: go
+msgid "Go"
+msgstr "Gabh"
+
+# Some languages have different conjugations of 'next' and 'last'.  If yours
+# does not, simply repeat the value.  This will be used with day names, as in
+# 'next Sunday'.
+#: next1 next2
+msgid "next"
+msgstr ""
+
+#: last1 last2
+msgid "last"
+msgstr ""
 
 # default categories
 #: categories
@@ -2467,10 +2528,6 @@ msgstr "S"
 #: event.new.todo.accesskey event.delete.tasks.accesskey
 msgid "T"
 msgstr "T"
-
-#: day.6.short day.6.Ddd.accesskey
-msgid "F"
-msgstr "F"
 
 #: am-string time.am time.AM
 msgid "AM"
@@ -5423,14 +5480,6 @@ msgstr "Nua..."
 msgid "Edit..."
 msgstr "Eagar..."
 
-#: agendaToday
-msgid "Today"
-msgstr "Inniu"
-
-#: agendaTomorrow
-msgid "Tomorrow"
-msgstr "Amárach"
-
 #: agendaSoon
 msgid "Soon"
 msgstr "Go Luath"
@@ -5527,21 +5576,49 @@ msgstr ""
 # Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
+#: OPTIONAL_COMPONENTS_TITLE
+msgid "Choose Optional Components"
+msgstr "Roghnaigh Comhpháirteanna Roghnacha"
+
+#: OPTIONAL_COMPONENTS_SUBTITLE MUI_TEXT_COMPONENTS_SUBTITLE
+msgid "Choose which features of $(^NameDA) you want to install."
+msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
+
+#: OPTIONAL_COMPONENTS_LABEL
+msgid "Optional Components:"
+msgstr "Comhpháirteanna Roghnacha:"
+
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
 #: APP_DESC
 msgid "Required files for the ${BrandShortName} application"
 msgstr "Comhaid a bhfuil gá leo le haghaidh ${BrandShortName}"
 
-#: DEV_TOOLS_DESC
-msgid ""
-"A tool for inspecting the DOM of HTML, XUL, and XML pages, including the "
-"application's chrome."
-msgstr ""
-"Uirlis chun an DOM de leathanaigh HTML, XUL, agus XML a scrúdú, snas an "
-"fheidhmchláir san áireamh."
+#: DOMI_TITLE
+msgid "DOM Inspector"
+msgstr "Scrúdaitheoir DOM"
 
-#: QFA_DESC
-msgid "A tool for submitting crash reports to Mozilla.org."
-msgstr "Uirlis chun tuarascálacha earráide a sheoladh go Mozilla.org."
+#: DOMI_TEXT
+msgid "Inspects the structure and properties of a window and its contents."
+msgstr ""
+"Scrúdaíonn struchtúr agus sainghnéithe fuinneoige agus gach a bhfuil inti."
+
+#: QFA_TITLE
+msgid "Quality Feedback Agent"
+msgstr "Gníomhaire Aiseolais um Cháilíocht"
+
+#: QFA_TEXT
+msgid "Sends information about program crashes to Mozilla."
+msgstr "Cuireann eolas faoi thuairteanna ríomhchlár chuig Mozilla."
+
+#: OPTIONS
+msgid "$(^NameDA) &Options"
+msgstr "R&oghanna $(^NameDA)"
 
 #: SAFE_MODE
 msgid "Safe Mode"
@@ -5606,6 +5683,26 @@ msgstr "&San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)"
 #: ICONS_QUICKLAUNCH
 msgid "In my &Quick Launch bar"
 msgstr "I mo Bharra &Luathláinseála"
+
+#: WARN_WRITE_ACCESS
+msgid ""
+"You don't have access to write to the installation directory.\n"
+"\n"
+"Click OK to select a different directory."
+msgstr ""
+"Níl cead agat na comhaid a scríobh sa chomhadlann suiteála.\n"
+"\n"
+"Cliceáil OK chun comhadlann eile a roghnú."
+
+#: WARN_DISK_SPACE
+msgid ""
+"You don't have sufficient disk space to install to this location.\n"
+"\n"
+"Click OK to select a different location."
+msgstr ""
+"Níl go leor spáis diosca agat chun suiteáil a dhéanamh sa suíomh seo.\n"
+"\n"
+"Cliceáil OK chun suíomh eile a roghnú."
 
 #: STATUS_INSTALL_APP
 msgid "Installing ${BrandShortName}..."
@@ -5724,10 +5821,6 @@ msgstr ""
 #: MUI_TEXT_COMPONENTS_TITLE
 msgid "Choose Components"
 msgstr "Roghnaigh Comhpháirteanna"
-
-#: MUI_TEXT_COMPONENTS_SUBTITLE
-msgid "Choose which features of $(^NameDA) you want to install."
-msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
 
 #: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_INFO
 msgid "Position your mouse over a component to see its description."

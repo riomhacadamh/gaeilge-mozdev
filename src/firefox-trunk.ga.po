@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-29 18:42-0500\n"
+"POT-Creation-Date: 2006-09-04 22:22-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -542,10 +542,10 @@ msgstr "Oscail gach rud i gcluaisíní"
 msgid "Manage Folder"
 msgstr "Bainistiú an Fhillteáin"
 
-#: cmd_bm_managefolder_accesskey cmd_bm_movebookmark_accesskey mediaAccesskey
-#: setMasterPassword_accesskey changeMasterPassword_accesskey Mega
-#: loaddevice.modname.accesskey managecerts.accesskey
-#: validation.managecrls.accesskey
+#: cmd_bm_managefolder_accesskey cmd_bm_movebookmark_accesskey
+#: mediaTab.accesskey setMasterPassword_accesskey
+#: changeMasterPassword_accesskey Mega loaddevice.modname.accesskey
+#: managecerts.accesskey validation.managecrls.accesskey
 msgid "M"
 msgstr "B"
 
@@ -598,8 +598,8 @@ msgid "Select All"
 msgstr "Roghnaigh Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
-#: cmd_selectAll_accesskey selectAllCmd.key selectall.key cmd.about.accesskey
-#: IAgree.accesskey certselect.auto.accesskey
+#: cmd_selectAll_accesskey selectAllCmd.key selectall.key mediaSaveAs.accesskey
+#: cmd.about.accesskey IAgree.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -621,7 +621,7 @@ msgid "Change Location..."
 msgstr "Athraigh Suíomh..."
 
 #: cmd_bm_renamebookmark2_accesskey cmd_bm_refreshlivemark_accesskey
-#: cmd_bm_refreshmicrosummary_accesskey linksAccesskey CertDumpAVALocality
+#: cmd_bm_refreshmicrosummary_accesskey linksTab.accesskey CertDumpAVALocality
 #: warn.enteringsecure.accesskey
 msgid "L"
 msgstr "L"
@@ -648,8 +648,8 @@ msgid "Sort By Name"
 msgstr "Sórtáil de réir Ainm"
 
 #: cmd_bm_sortbyname_accesskey cmd_bm_newseparator_accesskey
-#: mediaSaveAs.accesskey defaultGroupOnAccesskey cmd_showSuggestions_accesskey
-#: submitReport.accesskey savePageCmd.commandkey pageInfo.securityTab.accesskey
+#: defaultGroupOnAccesskey cmd_showSuggestions_accesskey submitReport.accesskey
+#: savePageCmd.commandkey pageInfo.securityTab.accesskey
 #: managedevices.accesskey warn.insecurepost.accesskey
 msgid "S"
 msgstr "S"
@@ -777,9 +777,10 @@ msgstr "d"
 msgid "New Folder..."
 msgstr "Fillteán Nua..."
 
-#: cmd_bm_newfolder_accesskey formsAccesskey cmd.context_new_folder.accesskey
-#: livemarkGroupOnAccesskey enableAppUpdate.accesskey findCmd.key
-#: cmd.show.accesskeyMac findOnCmd.commandkey devmgr.button.fips.accesskey
+#: cmd_bm_newfolder_accesskey formsTab.accesskey
+#: cmd.context_new_folder.accesskey livemarkGroupOnAccesskey
+#: enableAppUpdate.accesskey findCmd.key cmd.show.accesskeyMac
+#: findOnCmd.commandkey devmgr.button.fips.accesskey
 msgid "F"
 msgstr "F"
 
@@ -2928,7 +2929,7 @@ msgstr "470"
 msgid "General"
 msgstr "Ginearálta"
 
-#: generalAccesskey Giga findAgainCmd.key goOnlineButtonAccesskey
+#: generalTab.accesskey Giga findAgainCmd.key goOnlineButtonAccesskey
 #: findAgainCmd.commandkey downloadButton_major.accesskey
 msgid "G"
 msgstr "G"
@@ -5589,6 +5590,10 @@ msgid ""
 "\n"
 "From: %S"
 msgstr ""
+"An mian leat \"%S\" a chur le liosta na n-inneall atá le fáil sa bharra "
+"cuardaigh?\n"
+"\n"
+"Ó: %S"
 
 #: addEngineUseNowText
 msgid "Start &using it right away"
@@ -6071,6 +6076,8 @@ msgid ""
 "<ul> <li>Please contact the website owners to inform them of this problem.</"
 "li> </ul>"
 msgstr ""
+"<ul> <li>Téigh i dteagmháil le húinéirí an tsuímh ghréasáin leis an bhfadhb a "
+"chur in iúl dóibh, le do thoil.</li> </ul>"
 
 #: netReset.title
 msgid "The connection was reset"
@@ -9341,7 +9348,7 @@ msgstr "tagairt d'aonán seachtrach i dtréith"
 
 #: 17
 msgid "XML or text declaration not at start of entity"
-msgstr ""
+msgstr "Níl an fógra xml nó téacs ag tús an aonáin"
 
 #: 18
 msgid "unknown encoding"
@@ -9400,6 +9407,8 @@ msgid ""
 "reserved prefix (xml) must not be undeclared or bound to another namespace "
 "name"
 msgstr ""
+"ní cheadaítear an réimír choimeádta (xml) a dhífhógairt nó a cheangal le "
+"hainm ainmspáis eile"
 
 #: 39
 msgid "reserved prefix (xmlns) must not be declared or undeclared"
@@ -9408,6 +9417,8 @@ msgstr "ní cheadaítear an réimír choimeádta (xmlns) a fhógairt nó a dhífhógairt"
 #: 40
 msgid "prefix must not be bound to one of the reserved namespace names"
 msgstr ""
+"ní cheadaítear réimír a cheangal le ceann de na hainmneacha ainmspáis "
+"coimeádta"
 
 # %1$S is replaced by the Expat error string, may be followed by Expected (see below)
 # %2$S is replaced by URL
@@ -9419,6 +9430,9 @@ msgid ""
 "Location: %2$S\n"
 "Line Number %3$u, Column %4$u:"
 msgstr ""
+"Earráid agus XML á pharsáil: %1$S\n"
+"Suíomh: %2$S\n"
+"Líne-Uimhir %3$u, Colún %4$u:"
 
 # %S is replaced by a tag name.
 # This gets appended to the error string if the error is mismatched tag.
@@ -10642,7 +10656,7 @@ msgstr "Taispeáin Nóid Spáis &Bháin"
 
 #: cmdToggleAccessibleNodes.label cmdToggleAccessibleNodes.accesskey
 msgid "Show A&ccessible Nodes"
-msgstr ""
+msgstr "Taispeáin Nóid &Inrochtana"
 
 #: cmdToggleAttributes.label cmdToggleAttributes.accesskey
 msgid "Show Att&ributes"
@@ -10791,7 +10805,7 @@ msgstr "Luach an Nóid:"
 
 #: namespaceTitle.null.label
 msgid "null"
-msgstr ""
+msgstr "nialasach"
 
 #: namespaceTitle.default.label
 msgid "Document Default"
@@ -10800,59 +10814,59 @@ msgstr ""
 # LOCALIZATION NOTE: DO NOT LOCALIZE These are generic Namespaces
 #: namespaceTitle.XMLNS.label
 msgid "XMLNS"
-msgstr ""
+msgstr "XMLNS"
 
 #: namespaceTitle.XML.label
 msgid "XML"
-msgstr ""
+msgstr "XML"
 
 #: namespaceTitle.XHTML.label
 msgid "XHTML"
-msgstr ""
+msgstr "XHTML"
 
 #: namespaceTitle.XLink.label
 msgid "XLink"
-msgstr ""
+msgstr "XLink"
 
 #: namespaceTitle.XSLT.label
 msgid "XSLT"
-msgstr ""
+msgstr "XSLT"
 
 #: namespaceTitle.XBL.label
 msgid "XBL"
-msgstr ""
+msgstr "XBL"
 
 #: namespaceTitle.MathML.label
 msgid "MathML"
-msgstr ""
+msgstr "MathML"
 
 #: namespaceTitle.RDF.label
 msgid "RDF"
-msgstr ""
+msgstr "RDF"
 
 #: namespaceTitle.XUL.label
 msgid "XUL"
-msgstr ""
+msgstr "XUL"
 
 #: namespaceTitle.SVG.label
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 #: namespaceTitle.XMLEvents.label
 msgid "XML Events"
-msgstr ""
+msgstr "Teagmhais XML"
 
 #: namespaceTitle.WAIRoles.label
 msgid "WAI Roles"
-msgstr ""
+msgstr "Rólanna WAI"
 
 #: namespaceTitle.WAIProperties.label
 msgid "WAI Properties"
-msgstr ""
+msgstr "Airíonna WAI"
 
 #: namespaceTitle.custom.label
 msgid "Custom"
-msgstr ""
+msgstr "Saincheaptha"
 
 # ***** BEGIN LICENSE BLOCK *****
 # #if 0
@@ -11366,10 +11380,16 @@ msgid ""
 "\n"
 "Is \"%1$S\" the site you want to visit?"
 msgstr ""
+"Tá tú ar tí logáil isteach sa suíomh \"%1$S\" leis an ainm úsáideora \"%2$S"
+"\", ach níl fíordheimhniú ag teastáil ón suíomh. Seans gur iarracht é seo tú "
+"a chur amú.\n"
+"\n"
+"An é \"%1$S\" an suíomh atá uait?"
 
 #: AutomaticAuth
 msgid "You are about to log in to the site \"%1$S\" with the username \"%2$S\"."
 msgstr ""
+"Tá tú ar tí logáil isteach sa suíomh \"%1$S\" leis an ainm úsáideora \"%2$S\"."
 
 #: readConfigTitle
 msgid "Configuration Error"
@@ -14073,89 +14093,145 @@ msgstr "Á Phriontáil"
 msgid "Printing is Completed."
 msgstr "Priontáil curtha i gcrích."
 
+#: ad
+msgid "\tAndorra"
+msgstr "Andóra"
+
 #: ae
 msgid "\tU.A.E."
 msgstr "Aontas na nÉimíríochtaí Arabacha"
 
-#: bh
-msgid "\tBahrain"
-msgstr "An Bhairéin"
+#: af
+msgid "\tAfghanistan"
+msgstr "An Afganastáin"
 
-#: dz
-msgid "\tAlgeria"
-msgstr "An Ailgéir"
+#: ag
+msgid "\tAntigua and Barbuda"
+msgstr "Antigua agus Barbúda"
 
-#: eg
-msgid "\tEgypt"
-msgstr "An Éigipt"
+#: ai
+msgid "\tAnguilla"
+msgstr "Anguilla"
 
-#: iq
-msgid "\tIraq"
-msgstr "An Iaráic"
+#: al
+msgid "\tAlbania"
+msgstr "An Albáin"
 
-#: jo
-msgid "\tJordan"
-msgstr "An Iordáin"
+#: am
+msgid "\tArmenia"
+msgstr "An Airméin"
 
-#: kw
-msgid "\tKuwait"
-msgstr "An Chuáit"
+#: an
+msgid "\tNetherlands Antilles"
+msgstr "Aintillí na hÍsiltíre"
 
-#: lb
-msgid "\tLebanon"
-msgstr "An Liobáin"
+#: ao
+msgid "\tAngola"
+msgstr "Angóla"
 
-#: ly
-msgid "\tLibya"
-msgstr "An Libia"
+#: aq
+msgid "\tAntarctica"
+msgstr "An Antartaice"
 
-#: ma
-msgid "\tMorocco"
-msgstr "Maracó"
+#: ar
+msgid "\tArgentina"
+msgstr "An Airgintín"
 
-#: om
-msgid "\tOman"
-msgstr "Oman"
-
-#: qa
-msgid "\tQatar"
-msgstr "Catar"
-
-#: sa
-msgid "\tSaudi Arabia"
-msgstr "An Araib Shádach"
-
-#: sy
-msgid "\tSyria"
-msgstr "An tSiria"
-
-#: tn
-msgid "\tTunisia"
-msgstr "An Túinéis"
-
-#: ye
-msgid "\tYemen"
-msgstr "An Éimin"
+#: as
+msgid "\tAmerican Samoa"
+msgstr "Samó Meiriceánach"
 
 #: at
 msgid "\tAustria"
 msgstr "An Ostair"
 
-#: de
-msgid "\tGermany"
-msgstr "An Ghearmáin"
-
-#: lu
-msgid "\tLuxembourg"
-msgstr "Lucsamburg"
-
-#: li
-msgid "\tLiechtenstein"
-msgstr "Lichtinstéin"
-
 #: au
 msgid "\tAustralia"
 msgstr "An Astráil"
+
+#: aw
+msgid "\tAruba"
+msgstr "Aruba"
+
+#: ax
+msgid "\tÃ…land Islands"
+msgstr ""
+
+#: az
+msgid "\tAzerbaijan"
+msgstr "An Asarbaiseáin"
+
+#: ba
+msgid "\tBosnia and Herzegovina"
+msgstr "Boisnia agus Heirseagaivéin"
+
+#: bb
+msgid "\tBarbados"
+msgstr "Barbadós"
+
+#: bd
+msgid "\tBangladesh"
+msgstr "An Bhanglaidéis"
+
+#: be
+msgid "\tBelgium"
+msgstr "An Bheilg"
+
+#: bf
+msgid "\tBurkina Faso"
+msgstr "Buircíne Fasó"
+
+#: bg
+msgid "\tBulgaria"
+msgstr "An Bhulgáir"
+
+#: bh
+msgid "\tBahrain"
+msgstr "An Bhairéin"
+
+#: bi
+msgid "\tBurundi"
+msgstr "An Bhurúin"
+
+#: bj
+msgid "\tBenin"
+msgstr "Beinin"
+
+#: bm
+msgid "\tBermuda"
+msgstr "Beirmiúda"
+
+#: bn
+msgid "\tBrunei Darussalam"
+msgstr "Brúiné Dárasalám"
+
+#: bo
+msgid "\tBolivia"
+msgstr "An Bholaiv"
+
+#: br
+msgid "\tBrazil"
+msgstr "An Bhrasaíl"
+
+#: bs
+msgid "\tBahamas"
+msgstr "Na Bahámaí"
+
+#: bt
+msgid "\tBhutan"
+msgstr "An Bhútáin"
+
+#: bv
+msgid "\tBouvet Island"
+msgstr "Oileán Bouvet"
+
+#: bw
+msgid "\tBotswana"
+msgstr "An Bhotsuáin"
+
+#: by
+msgid "\tBelarus"
+msgstr "An Bhílearúis"
 
 #: bz
 msgid "\tBelize"
@@ -14165,53 +14241,45 @@ msgstr "An Bheilís"
 msgid "\tCanada"
 msgstr "Ceanada"
 
-#: gb
-msgid "\tUnited Kingdom"
-msgstr "An Ríocht Aontaithe"
+#: cc
+msgid "\tCocos (Keeling) Islands"
+msgstr "Oileáin na gCócónna (Keeling)"
 
-#: ie
-msgid "\tIreland"
-msgstr "Éire"
+#: cd
+msgid "\tCongo-Kinshasa"
+msgstr "Congó-Cinseasa"
 
-#: jm
-msgid "\tJamaica"
-msgstr "An Iamáice"
+#: cf
+msgid "\tCentral African Republic"
+msgstr "Poblacht na hAfraice Láir"
 
-#: nz
-msgid "\tNew Zealand"
-msgstr "An Nua-Shéalainn"
+#: cg
+msgid "\tCongo-Brazzaville"
+msgstr "Congó-Brazzaville"
 
-#: ph
-msgid "\tPhilippines"
-msgstr "Na hOileáin Fhilipíneacha"
+#: ch
+msgid "\tSwitzerland"
+msgstr "An Eilvéis"
 
-#: tt
-msgid "\tTrinidad"
-msgstr "Oileán na Tríonóide"
+#: ci
+msgid "\tIvory Coast"
+msgstr "An Cósta Eabhair"
 
-#: us
-msgid "\tUnited States"
-msgstr "Stáit Aontaithe Mheiriceá"
-
-#: za
-msgid "\tSouth Africa"
-msgstr "An Afraic Theas"
-
-#: zw
-msgid "\tZimbabwe"
-msgstr "An tSiombáib"
-
-#: ar
-msgid "\tArgentina"
-msgstr "An Airgintín"
-
-#: bo
-msgid "\tBolivia"
-msgstr "An Bholaiv"
+#: ck
+msgid "\tCook Islands"
+msgstr "Oileáin Cook"
 
 #: cl
 msgid "\tChile"
 msgstr "An tSile"
+
+#: cm
+msgid "\tCameroon"
+msgstr "Camarún"
+
+#: cn
+msgid "\tChina"
+msgstr "An tSín"
 
 #: co
 msgid "\tColombia"
@@ -14221,113 +14289,285 @@ msgstr "An Cholóim"
 msgid "\tCosta Rica"
 msgstr "Cósta Ríce"
 
+#: cs
+msgid "\tSerbia and Montenegro"
+msgstr "Seirbia agus Montainéagró"
+
+#: cu
+msgid "\tCuba"
+msgstr "Cúba"
+
+#: cv
+msgid "\tCape Verde"
+msgstr "Rinn Verde"
+
+#: cx
+msgid "\tChristmas Island"
+msgstr "Oileán na Nollag"
+
+#: cy
+msgid "\tCyprus"
+msgstr "An Chipir"
+
+#: cz
+msgid "\tCzech Republic"
+msgstr "Poblacht na Seice"
+
+#: de
+msgid "\tGermany"
+msgstr "An Ghearmáin"
+
+#: dj
+msgid "\tDjibouti"
+msgstr "Djibouti"
+
+#: dk
+msgid "\tDenmark"
+msgstr "An Danmhairg"
+
+#: dm
+msgid "\tDominica"
+msgstr "Dominice"
+
 #: do
 msgid "\tDominican Republic"
 msgstr "An Phoblacht Dhoiminiceach"
+
+#: dz
+msgid "\tAlgeria"
+msgstr "An Ailgéir"
 
 #: ec
 msgid "\tEcuador"
 msgstr "Eacuadór"
 
+#: ee
+msgid "\tEstonia"
+msgstr "An Eastóin"
+
+#: eg
+msgid "\tEgypt"
+msgstr "An Éigipt"
+
+#: eh
+msgid "\tWestern Sahara"
+msgstr "An Sahára Thiar"
+
+#: er
+msgid "\tEritrea"
+msgstr "An Eiritré"
+
 #: es
 msgid "\tSpain"
 msgstr "An Spáinn"
 
-#: gt
-msgid "\tGuatemala"
-msgstr "Guatamala"
-
-#: hn
-msgid "\tHonduras"
-msgstr "Hondúras"
-
-#: mx
-msgid "\tMexico"
-msgstr "Meicsiceo"
-
-#: ni
-msgid "\tNicaragua"
-msgstr "Nicearagua"
-
-#: pa
-msgid "\tPanama"
-msgstr "Panama"
-
-#: pe
-msgid "\tPeru"
-msgstr "An Peiriú"
-
-#: pr
-msgid "\tPuerto Rico"
-msgstr "Portó Ríce"
-
-#: py
-msgid "\tParaguay"
-msgstr "Paragua"
-
-#: sv
-msgid "\tEl Salvador"
-msgstr "An tSalvadóir"
-
-#: uy
-msgid "\tUruguay"
-msgstr "Uragua"
-
-#: ve
-msgid "\tVenezuela"
-msgstr "Veiniséala"
-
-#: be
-msgid "\tBelgium"
-msgstr "An Bheilg"
-
-#: ch
-msgid "\tSwitzerland"
-msgstr "An Eilvéis"
-
-#: fr
-msgid "\tFrance"
-msgstr "An Fhrainc"
-
-#: mc
-msgid "\tMonaco"
-msgstr "Monacó"
-
-#: br
-msgid "\tBrazil"
-msgstr "An Bhrasaíl"
-
-#: md
-msgid "\tMoldova, Republic of"
-msgstr "Poblacht na Moldóive"
-
-#: mo
-msgid "\tMacao"
-msgstr "Macao"
+#: et
+msgid "\tEthiopia"
+msgstr "An Aetóip"
 
 #: fi
 msgid "\tFinland"
 msgstr "An Fhionlainn"
 
-#: cn
-msgid "\tChina"
-msgstr "An tSín"
+#: fj
+msgid "\tFiji"
+msgstr "Fidsí"
+
+#: fk
+msgid "\tFalkland Islands (Malvinas)"
+msgstr "Na hOileáin Fháclainne (Malvinas)"
+
+#: fm
+msgid "\tMicronesia"
+msgstr "An Mhicrinéis"
+
+#: fo
+msgid "\tFaroe Islands"
+msgstr "Na Scigirí"
+
+#: fr
+msgid "\tFrance"
+msgstr "An Fhrainc"
+
+#: ga
+msgid "\tGabon"
+msgstr "An Ghabúin"
+
+#: gb
+msgid "\tUnited Kingdom"
+msgstr "An Ríocht Aontaithe"
+
+#: gd
+msgid "\tGrenada"
+msgstr "Grenada"
+
+#: ge
+msgid "\tGeorgia"
+msgstr "An tSeoirsia"
+
+#: gf
+msgid "\tFrench Guiana"
+msgstr "Guáin na Fraince"
+
+#: gg
+msgid "\tGuernsey"
+msgstr "Geansaí"
+
+#: gh
+msgid "\tGhana"
+msgstr "Gána"
+
+#: gi
+msgid "\tGibraltar"
+msgstr "Giobráltar"
+
+#: gl
+msgid "\tGreenland"
+msgstr "An Ghraonlainn"
+
+#: gm
+msgid "\tGambia"
+msgstr "An Ghaimbia"
+
+#: gn
+msgid "\tGuinea"
+msgstr "An Ghuine"
+
+#: gp
+msgid "\tGuadeloupe"
+msgstr "An Ghuadalúip"
+
+#: gq
+msgid "\tEquatorial Guinea"
+msgstr "An Ghuine Mheánchiorclach"
+
+#: gr
+msgid "\tGreece"
+msgstr "An Ghréig"
+
+#: gs
+msgid "\tSouth Georgia and the South Sandwich Islands"
+msgstr "An tSeoirsia Theas agus Oileáin Sandwich Theas"
+
+#: gt
+msgid "\tGuatemala"
+msgstr "Guatamala"
+
+#: gu
+msgid "\tGuam"
+msgstr "Guam"
+
+#: gw
+msgid "\tGuinea-Bissau"
+msgstr "Guine Bhissau"
+
+#: gy
+msgid "\tGuyana"
+msgstr "An Ghuáin"
 
 #: hk
 msgid "\tHong Kong"
 msgstr "Hong Cong"
 
-#: sg
-msgid "\tSingapore"
-msgstr "Singeapór"
+#: hm
+msgid "\tHeard Island and McDonald Islands"
+msgstr "Oileáin Heard agus McDonald"
 
-#: tw
-msgid "\tTaiwan"
-msgstr "An Téaváin"
+#: hn
+msgid "\tHonduras"
+msgstr "Hondúras"
 
-#: mk
-msgid "\tMacedonia, F.Y.R. of"
-msgstr "An Mhacadóin"
+#: hr
+msgid "\tCroatia"
+msgstr "An Chróit"
+
+#: ht
+msgid "\tHaiti"
+msgstr "Háití"
+
+#: hu
+msgid "\tHungary"
+msgstr "An Ungáir"
+
+#: id
+msgid "\tIndonesia"
+msgstr "An Indinéis"
+
+#: ie
+msgid "\tIreland"
+msgstr "Éire"
+
+#: il
+msgid "\tIsrael"
+msgstr "Iosrael"
+
+#: im
+msgid "\tIsle of Man"
+msgstr "Oileán Mhanann"
+
+#: in
+msgid "\tIndia"
+msgstr "An India"
+
+#: io
+msgid "\tBritish Indian Ocean Territory"
+msgstr ""
+
+#: iq
+msgid "\tIraq"
+msgstr "An Iaráic"
+
+#: ir
+msgid "\tIran"
+msgstr "An Iaráin"
+
+#: is
+msgid "\tIceland"
+msgstr "An Íoslainn"
+
+#: it
+msgid "\tItaly"
+msgstr "An Iodáil"
+
+#: je
+msgid "\tJersey"
+msgstr "Geirsí"
+
+#: jm
+msgid "\tJamaica"
+msgstr "An Iamáice"
+
+#: jo
+msgid "\tJordan"
+msgstr "An Iordáin"
+
+#: jp
+msgid "\tJapan"
+msgstr "An tSeapáin"
+
+#: ke
+msgid "\tKenya"
+msgstr "An Chéinia"
+
+#: kg
+msgid "\tKyrgyzstan"
+msgstr "An Chirgeastáin"
+
+#: kh
+msgid "\tCambodia"
+msgstr "An Chambóid"
+
+#: ki
+msgid "\tKiribati"
+msgstr "Cireabaití"
+
+#: km
+msgid "\tComoros"
+msgstr "Oileáin Chomóra"
+
+#: kn
+msgid "\tSaint Kitts and Nevis"
+msgstr "San Críostóir Nimheas"
 
 #: kp
 msgid "\tNorth Korea"
@@ -14337,109 +14577,493 @@ msgstr "An Chóiré Thuaidh"
 msgid "\tSouth Korea"
 msgstr "An Chóiré Theas"
 
+#: kw
+msgid "\tKuwait"
+msgstr "An Chuáit"
+
+#: ky
+msgid "\tCayman Islands"
+msgstr "Na hOileáin Cayman"
+
+#: kz
+msgid "\tKazakhstan"
+msgstr "An Chasacstáin"
+
+#: la
+msgid "\tLaos"
+msgstr "Laos"
+
+#: lb
+msgid "\tLebanon"
+msgstr "An Liobáin"
+
+#: lc
+msgid "\tSaint Lucia"
+msgstr "St. Lucia"
+
+#: li
+msgid "\tLiechtenstein"
+msgstr "Lichtinstéin"
+
+#: lk
+msgid "\tSri Lanka"
+msgstr "Srí Lanca"
+
+#: lr
+msgid "\tLiberia"
+msgstr "An Libéir"
+
+#: ls
+msgid "\tLesotho"
+msgstr "Leosóta"
+
+#: lt
+msgid "\tLithuania"
+msgstr "An Liotuáin"
+
+#: lu
+msgid "\tLuxembourg"
+msgstr "Lucsamburg"
+
+#: lv
+msgid "\tLatvia"
+msgstr "An Laitvia"
+
+#: ly
+msgid "\tLibya"
+msgstr "An Libia"
+
+#: ma
+msgid "\tMorocco"
+msgstr "Maracó"
+
+#: mc
+msgid "\tMonaco"
+msgstr "Monacó"
+
+#: md
+msgid "\tMoldova"
+msgstr "An Mholdóiv"
+
+#: mg
+msgid "\tMadagascar"
+msgstr "Madagascar"
+
+#: mh
+msgid "\tMarshall Islands"
+msgstr "Oileáin Marshall"
+
+#: mk
+msgid "\tMacedonia, F.Y.R. of"
+msgstr "An Mhacadóin"
+
+#: ml
+msgid "\tMali"
+msgstr "Mailí"
+
+#: mm
+msgid "\tMyanmar"
+msgstr "Maenmar"
+
+#: mn
+msgid "\tMongolia"
+msgstr "An Mhongóil"
+
+#: mo
+msgid "\tMacao"
+msgstr "Macao"
+
+#: mp
+msgid "\tNorthern Mariana Islands"
+msgstr ""
+
+#: mq
+msgid "\tMartinique"
+msgstr "An Mhartainíc"
+
+#: mr
+msgid "\tMauritania"
+msgstr "An Mháratáin"
+
+#: ms
+msgid "\tMontserrat"
+msgstr "Montsarat"
+
+#: mt
+msgid "\tMalta"
+msgstr "Málta"
+
+#: mu
+msgid "\tMauritius"
+msgstr "Oileán Mhuirís"
+
+#: mv
+msgid "\tMaldives"
+msgstr "Oileáin Mhaildíve"
+
+#: mw
+msgid "\tMalawi"
+msgstr "An Mhaláiv"
+
+#: mx
+msgid "\tMexico"
+msgstr "Meicsiceo"
+
 #: my
 msgid "\tMalaysia"
 msgstr "An Mhalaeisia"
 
-#: bn
-msgid "\tBrunei Darussalam"
-msgstr "Brúiné Dárasalám"
+#: mz
+msgid "\tMozambique"
+msgstr "Mósaimbíc"
+
+#: na
+msgid "\tNamibia"
+msgstr "An Namaib"
+
+#: nc
+msgid "\tNew Caledonia"
+msgstr "An Nua-Chaladóin"
+
+#: ne
+msgid "\tNiger"
+msgstr "An Nígir"
+
+#: nf
+msgid "\tNorfolk Island"
+msgstr "Oileán Norfolc"
+
+#: ng
+msgid "\tNigeria"
+msgstr "An Nigéir"
+
+#: ni
+msgid "\tNicaragua"
+msgstr "Nicearagua"
+
+#: nl
+msgid "\tNetherlands"
+msgstr "An Ísiltír"
+
+#: no
+msgid "\tNorway"
+msgstr "An Iorua"
+
+#: np
+msgid "\tNepal"
+msgstr "Neipeal"
+
+#: nr
+msgid "\tNauru"
+msgstr "Nárú"
+
+#: nu
+msgid "\tNiue"
+msgstr "Niue"
+
+#: nz
+msgid "\tNew Zealand"
+msgstr "An Nua-Shéalainn"
+
+#: om
+msgid "\tOman"
+msgstr "Oman"
+
+#: pa
+msgid "\tPanama"
+msgstr "Panama"
+
+#: pe
+msgid "\tPeru"
+msgstr "An Peiriú"
+
+#: pf
+msgid "\tFrench Polynesia"
+msgstr "Polainéis na Fraince"
+
+#: pg
+msgid "\tPapua New Guinea"
+msgstr "Nua-Ghuine Phapua"
+
+#: ph
+msgid "\tPhilippines"
+msgstr "Na hOileáin Fhilipíneacha"
 
 #: pk
 msgid "\tPakistan"
 msgstr "An Phacastáin"
 
-#: in
-msgid "\tIndia"
-msgstr "An India"
-
-#: it
-msgid "\tItaly"
-msgstr "An Iodáil"
-
 #: pl
 msgid "\tPoland"
 msgstr "An Pholainn"
 
+#: pm
+msgid "\tSaint Pierre and Miquelon"
+msgstr "Peadar Naofa agus Micilín"
+
+#: pn
+msgid "\tPitcairn"
+msgstr "Oileán Pitcairn"
+
+#: pr
+msgid "\tPuerto Rico"
+msgstr "Portó Ríce"
+
+#: ps
+msgid "\tOccupied Palestinian Territory"
+msgstr ""
+
+#: pt
+msgid "\tPortugal"
+msgstr "An Phortaingéil"
+
+#: pw
+msgid "\tPalau"
+msgstr "Palau"
+
+#: py
+msgid "\tParaguay"
+msgstr "Paragua"
+
+#: qa
+msgid "\tQatar"
+msgstr "Catar"
+
+#: re
+msgid "\tReunion"
+msgstr "Réunion"
+
+#: ro
+msgid "\tRomania"
+msgstr "An Rómáin"
+
 #: ru
-msgid "\tRussia"
-msgstr "An Rúis"
+msgid "\tRussian Federation"
+msgstr "Cónaidhm na Rúise"
+
+#: rw
+msgid "\tRwanda"
+msgstr "Ruanda"
+
+#: sa
+msgid "\tSaudi Arabia"
+msgstr "An Araib Shádach"
+
+#: sb
+msgid "\tSolomon Islands"
+msgstr "Oileáin Sholamóin"
+
+#: sc
+msgid "\tSeychelles"
+msgstr "Na Séiséil"
+
+#: sd
+msgid "\tSudan"
+msgstr "An tSúdáin"
 
 #: se
 msgid "\tSweden"
 msgstr "An tSualainn"
 
-#: jp
-msgid "\tJapan"
-msgstr "An tSeapáin"
+#: sg
+msgid "\tSingapore"
+msgstr "Singeapór"
 
-#: ir
-msgid "\tIran"
-msgstr ""
+#: sh
+msgid "\tSaint Helena"
+msgstr "San Héilin"
 
-#: ba
-msgid "\tBosnia and Herzegovina"
-msgstr ""
+#: si
+msgid "\tSlovenia"
+msgstr "An tSlóivéin"
 
-#: bg
-msgid "\tBulgaria"
-msgstr ""
-
-#: ad
-msgid "\tAndorra"
-msgstr ""
-
-#: hr
-msgid "\tCroatia"
-msgstr ""
-
-#: cz
-msgid "\tCzech Republic"
-msgstr ""
-
-#: dk
-msgid "\tDenmark"
-msgstr ""
-
-#: nl
-msgid "\tNetherlands"
-msgstr ""
-
-#: gr
-msgid "\tGreece"
-msgstr ""
-
-#: il
-msgid "\tIsrael"
-msgstr ""
-
-#: hu
-msgid "\tHungary"
-msgstr ""
-
-#: lt
-msgid "\tLithuania"
-msgstr ""
-
-#: no
-msgid "\tNorway"
-msgstr ""
+#: sj
+msgid "\tSvalbard and Jan Mayen"
+msgstr "Svalbard agus Jan Mayen"
 
 #: sk
 msgid "\tSlovakia"
+msgstr "An tSlóvaic"
+
+#: sl
+msgid "\tSierra Leone"
+msgstr "Siarra Leon"
+
+#: sm
+msgid "\tSan Marino"
+msgstr "San Mairíne"
+
+#: sn
+msgid "\tSenegal"
+msgstr "An tSeineagáil"
+
+#: so
+msgid "\tSomalia"
+msgstr "An tSomáil"
+
+#: sr
+msgid "\tSuriname"
+msgstr "Suranam"
+
+#: st
+msgid "\tSao Tome and Principe"
+msgstr "São Tomé agus Príncipe"
+
+#: sv
+msgid "\tEl Salvador"
+msgstr "An tSalvadóir"
+
+#: sy
+msgid "\tSyria"
+msgstr "An tSiria"
+
+#: sz
+msgid "\tSwaziland"
+msgstr "An tSuasalainn"
+
+#: tc
+msgid "\tTurks and Caicos Islands"
+msgstr "Oileáin Turks agus Caicos"
+
+#: td
+msgid "\tChad"
+msgstr "Sead"
+
+#: tf
+msgid "\tFrench Southern Territories"
 msgstr ""
+
+#: tg
+msgid "\tTogo"
+msgstr "Tóga"
 
 #: th
 msgid "\tThailand"
+msgstr "An Téalainn"
+
+#: tj
+msgid "\tTajikistan"
+msgstr "An Táidsíceastáin"
+
+#: tk
+msgid "\tTokelau"
+msgstr "Oileáin Tócalá"
+
+#: tl
+msgid "\tTimor-Leste"
 msgstr ""
+
+#: tm
+msgid "\tTurkmenistan"
+msgstr "An Tuircméanastáin"
+
+#: tn
+msgid "\tTunisia"
+msgstr "An Túinéis"
+
+#: to
+msgid "\tTonga"
+msgstr "Tonga"
 
 #: tr
 msgid "\tTurkey"
-msgstr ""
+msgstr "An Tuirc"
+
+#: tt
+msgid "\tTrinidad and Tobago"
+msgstr "Oileán na Tríonóide agus Tobága"
+
+#: tv
+msgid "\tTuvalu"
+msgstr "Tuvalu"
+
+#: tw
+msgid "\tTaiwan"
+msgstr "An Téaváin"
+
+#: tz
+msgid "\tTanzania"
+msgstr "An Tansáin"
 
 #: ua
 msgid "\tUkraine"
+msgstr "An Úcráin"
+
+#: ug
+msgid "\tUganda"
+msgstr "Uganda"
+
+#: um
+msgid "\tUnited States Minor Outlying Islands"
 msgstr ""
+
+#: us
+msgid "\tUnited States"
+msgstr "Stáit Aontaithe Mheiriceá"
+
+#: uy
+msgid "\tUruguay"
+msgstr "Uragua"
+
+#: uz
+msgid "\tUzbekistan"
+msgstr "An Úisbéiceastáin"
+
+#: va
+msgid "\tVatican City"
+msgstr "Cathair na Vatacáine"
+
+#: vc
+msgid "\tSaint Vincent and the Grenadines"
+msgstr "St. Vincent agus Grenadines"
+
+#: ve
+msgid "\tVenezuela"
+msgstr "Veiniséala"
+
+#: vg
+msgid "\tBritish Virgin Islands"
+msgstr "Oileáin Bhriotanacha na Maighdean"
+
+#: vi
+msgid "\tU.S. Virgin Islands"
+msgstr "Oileáin Mheiriceánacha na Maighdean"
+
+#: vn
+msgid "\tVietnam"
+msgstr "Vítneam"
+
+#: vu
+msgid "\tVanuatu"
+msgstr "Vanuatú"
+
+#: wf
+msgid "\tWallis and Futuna"
+msgstr "Vailís agus Futúna"
+
+#: ws
+msgid "\tSamoa"
+msgstr "Samó"
+
+#: ye
+msgid "\tYemen"
+msgstr "An Éimin"
+
+#: yt
+msgid "\tMayotte"
+msgstr "Mayotte"
+
+#: za
+msgid "\tSouth Africa"
+msgstr "An Afraic Theas"
+
+#: zm
+msgid "\tZambia"
+msgstr "An tSaimbia"
+
+#: zw
+msgid "\tZimbabwe"
+msgstr "An tSiombáib"
 
 # #-#-#-#-#  tmp.XXXX37CK2Q.po (firefox 0.8)  #-#-#-#-#
 # brand.dtd
@@ -17500,7 +18124,7 @@ msgstr "An bhfuil tú cinnte gur mian leat gach focal faire a scriosadh?"
 
 #: removeAllPasswordsTitle
 msgid "Remove all passwords"
-msgstr ""
+msgstr "Scrios gach focal faire"
 
 # converted from #defines file
 #: MOZ_LANG_TITLE
@@ -18236,6 +18860,29 @@ msgstr "Roghnú an Leathanaigh Bhaile"
 #: homePageMigrationDescription
 msgid "Please select the home page you wish to use:"
 msgstr "Roghnaigh an leathanach baile atá uait, le do thoil:"
+
+#: brandShortName
+msgid "Sunbird"
+msgstr "Sunbird"
+
+#: brandFullName
+msgid "Mozilla Sunbird"
+msgstr "Mozilla Sunbird"
+
+# LOCALIZATION NOTE (releaseNotesURL):
+#   For nightly builds, direct the user to an appropriate, yet non-version
+#   specific project site.
+#
+#   %s is replaced by __MOZ_APP_VERSION__
+#
+#   example:
+#     __MOZ_APP_VERSION__: 0.4
+#     releaseNotesUrl: http://www.mozilla.foo/sunbird%s.html
+#     result: http://www.mozilla.foo/sunbird0.4.html
+#
+#: releaseNotesURL
+msgid "http://www.mozilla.org/projects/calendar/releases/sunbird%s.html"
+msgstr "http://www.mozilla.org/projects/calendar/releases/sunbird%s.html"
 
 #: lang.version
 msgid "__MOZILLA_LOCALE_VERSION__"
@@ -20690,11 +21337,6 @@ msgstr ""
 msgid "Certificate for this certificate authority was not found"
 msgstr "Níl fáil ar an teastas don údarás teastais seo"
 
-# For Deleting Certificates
-#: deleteSslCertFlag
-msgid "deleteSslFlag"
-msgstr "deleteSslFlag"
-
 #: deleteSslCertConfirm
 msgid "Are you sure you want to delete these web site certificates?"
 msgstr ""
@@ -20713,10 +21355,6 @@ msgstr ""
 msgid "Delete Web Site Certificates"
 msgstr "Scrios Teastais na suíomhanna Gréasáin"
 
-#: deleteUserCertFlag
-msgid "deleteUserFlag"
-msgstr "deleteUserFlag"
-
 #: deleteUserCertConfirm
 msgid "Are you sure you want to delete these certificates?"
 msgstr "An bhfuil tú cinnte gur mian leat na teastais seo a scriosadh?"
@@ -20732,10 +21370,6 @@ msgstr ""
 #: deleteUserCertTitle
 msgid "Delete your Certificates"
 msgstr "Scrios do Theastais"
-
-#: deleteCaCertFlag
-msgid "deleteCaFlag"
-msgstr "deleteCaFlag"
 
 #: deleteCaCertConfirm
 msgid "Are you sure you want to delete these CA certificates?"
@@ -20755,10 +21389,6 @@ msgstr ""
 #: deleteCaCertTitle
 msgid "Delete CA Certificates"
 msgstr "Scrios Teastais na nÚdarás Deimhniúcháin"
-
-#: deleteEmailCertFlag
-msgid "deleteEmailFlag"
-msgstr "deleteEmailFlag"
 
 #: deleteEmailCertConfirm
 msgid "Are you sure you want to delete these people's e-mail certificates?"
