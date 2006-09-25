@@ -2312,6 +2312,9 @@ msgid ""
 "in read-only mode, since changes to this calendar will likely result in data-"
 "loss.  You may change this setting by choosing 'Edit Calendar'."
 msgstr ""
+"Tharla earráid agus sonraí á léamh don fhéilire %1$S. Tá sé curthasa mhód "
+"inléite amháin, mar is dócha go gcaillfear sonraí má athraítear anféilire. Is "
+"féidir leat an socrú seo a athrú ach 'Cuir Féilire in Eagar' a roghnú."
 
 #: minorError
 msgid ""
@@ -2332,12 +2335,17 @@ msgid ""
 "the file, including symbols and accented letters, is encoded using the UTF-8 "
 "character encoding."
 msgstr ""
+"Tharla earráid agus comhad iCalendar (ics) á léamh mar UTF-8. Dearbhaighgo "
+"bhfuil an comhad ionchódaithe leis an ionchódú carachtar UTF-8, siombailíagus "
+"carachtair le haicinn san áireamh."
 
 #: icsMalformedError
 msgid ""
 "Parsing an iCalendar (ics) file failed. Check that the file conforms to "
 "iCalendar (ics) file syntax."
 msgstr ""
+"Theip ar pharsáil chomhad iCalendar (ics). Dearbhaigh go gcloíonn an comhadle "
+"comhréir na gcomhad iCalendar (ics)."
 
 #: likelyTimezone pref.timezone.America.New_York
 msgid "America/New_York"
@@ -2606,11 +2614,11 @@ msgstr "T"
 
 #: am-string time.am time.AM
 msgid "AM"
-msgstr "AM"
+msgstr "a.m."
 
 #: pm-string time.pm time.PM
 msgid "PM"
-msgstr "PM"
+msgstr "p.m."
 
 # Added to support localization of messages within eventDialog.js
 #   Day ordinals imply order within a list.
@@ -2856,6 +2864,11 @@ msgid ""
 "This message sent to you from the Mozilla Calendar.\n"
 "http://www.mozilla.org/projects/calendar/"
 msgstr ""
+"Tugadh aláram imeachta fhéilire!\n"
+"--------------------------------\n"
+"Teideal: %1$S ag %2$S\n"
+"Féilire Mozilla a sheol an teachtaireacht seo chugat.\n"
+"http://www.mozilla.org/projects/calendar/"
 
 #: AlarmEmailSubject
 msgid "Mozilla Calendar Alarm: %1$S"
@@ -3120,7 +3133,7 @@ msgstr "Féi&lire Nua..."
 
 #: calendar.new.journal.label calendar.new.journal.accesskey
 msgid "New &Journal Item..."
-msgstr ""
+msgstr "Mír Nua &Dialainne..."
 
 #: calendar.new.journal.key
 msgid "J"
@@ -3537,7 +3550,7 @@ msgstr "8"
 
 #: pref.alarmgoesoff.label
 msgid "When an alarm goes off:"
-msgstr ""
+msgstr "Nuair a thabharfar aláram:"
 
 #: pref.playasound
 msgid "Play a sound"
@@ -3573,7 +3586,7 @@ msgstr "L"
 
 #: pref.missedalarms
 msgid "Show missed alarms"
-msgstr ""
+msgstr "Taispeáin aláraim chaillte"
 
 #: pref.calendar.alarms.missedAlarms.accessKey
 msgid "m"
@@ -3585,11 +3598,11 @@ msgstr "Réamhshocruithe Aláraim"
 
 #: pref.defalarm4events.label pref.defalarm4events.accesskey
 msgid "D&efault alarm setting for events:"
-msgstr ""
+msgstr "Aláram réamshocraithe d'im&eachtaí:"
 
 #: pref.defalarm4todos.label pref.defalarm4todos.accesskey
 msgid "Def&ault alarm setting for tasks:"
-msgstr ""
+msgstr "Aláram réamhshocraithe do th&ascanna:"
 
 #: pref.alarm.on
 msgid "On"
@@ -3601,11 +3614,11 @@ msgstr "Múchta"
 
 #: pref.defalarmlen4events.label pref.defalarmlen4events.accesskey
 msgid "Defa&ult time an alarm goes off before an event:"
-msgstr ""
+msgstr "Achar réamhshocraithe roimh &imeacht a thabharfar an t-aláram:"
 
 #: pref.defalarmlen4todos.label pref.defalarmlen4todos.accesskey
 msgid "Default time an alarm g&oes off before a task:"
-msgstr ""
+msgstr "Achar réamhshocraithe roimh &tasc a thabharfar an t-aláram:"
 
 #: pref.alarmbox.label paneAlarms.title
 msgid "Alarms"
@@ -3613,11 +3626,11 @@ msgstr "Aláraim"
 
 #: pref.defaultemail.label
 msgid "Default address to send alarms to:"
-msgstr ""
+msgstr "Seoladh réamhshocraithe a seolfar aláraim chuige:"
 
 #: pref.defaulttext.label
 msgid "Default text for alarms:"
-msgstr ""
+msgstr "Téacs réamhshocraithe d'aláraim:"
 
 #: pref.categories.addButton.label pref.categories.addButton.accesskey
 msgid "&Add..."
@@ -3784,7 +3797,7 @@ msgstr "Úsái&d an seachfhreastalaí seo do gach prótacal"
 
 #: pref.dateformat.label pref.dateformat.accesskey
 msgid "&Date Text Format:"
-msgstr ""
+msgstr "Formáid Téacs do &Dhátaí:"
 
 #: pref.dateformat.long
 msgid "Long"
@@ -3796,11 +3809,11 @@ msgstr "Gearr"
 
 #: pref.defaultlength.label pref.defaultlength.accesskey
 msgid "Default &Event Length:"
-msgstr ""
+msgstr "Achar réamhshocraithe na n-im&eachtaí:"
 
 #: pref.defaultsnoozelength.label pref.defaultsnoozelength.accesskey
 msgid "Default &Snooze Length:"
-msgstr ""
+msgstr "Achar codlata réamh&shocraithe:"
 
 #: prefWindow.titleWin
 msgid "Options"
@@ -5371,12 +5384,14 @@ msgstr "&Tosaigh an tseachtain ar:"
 
 #: pref.daysoff.label
 msgid "Include these days in the workweek:"
-msgstr ""
+msgstr "Bíodh na laethanta seo sa tseachtain oibre:"
 
 # _number_ of weeks to show
 #: pref.numberofweeks.label pref.numberofweeks.accesskey
 msgid "D&efault weeks to show (including previous weeks):"
 msgstr ""
+"Méid réamhshocraithe s&eachtainí a thaispeánfar (seachtainí roimh ré san "
+"áireamh):"
 
 #: pref.numberofpreviousweeks.label pref.numberofpreviousweeks.accesskey
 msgid "&Previous weeks to show:"
@@ -5422,6 +5437,8 @@ msgid ""
 "Insecure login on %1$S! Server does not support HTTPS.\n"
 "Continue?"
 msgstr ""
+"Logáil isteach neamhdhaingean ar %1$S! Ní thacaíonn an freastalaí le HTTPS.\n"
+"Lean ar aghaidh?"
 
 #: noHttpsConfirmation.check.text
 msgid "Don't ask again."
@@ -5434,7 +5451,7 @@ msgstr "Rabhadh!"
 # args: host
 #: reconnectConfirmation.text
 msgid "Session on %1$S has timed out. Reconnect?"
-msgstr ""
+msgstr "Tá seisiún ar %1$S imithe thar am. Athcheangal leis?"
 
 #: reconnectConfirmation.label
 msgid "Session TimeOut"
@@ -5447,10 +5464,13 @@ msgid ""
 "version! The required version is at least 3.0.0.\n"
 "Continue?"
 msgstr ""
+"Ní thacaíonn freastalaí %1$S (%2$S, leagan %3$S, WCAP leagan %4$S) le "
+"leaganoiriúnach de WCAP! Tá leagan 3.0.0 ar a laghad de dhíth.\n"
+"Lean ar aghaidh?"
 
 #: insufficientWcapVersionConfirmation.label
 msgid "Insufficient WCAP version!"
-msgstr ""
+msgstr "Ní leor an leagan de WCAP!"
 
 # args: host, prodId, serverVersion, wcapVersion
 #: loginDialog.text
@@ -5463,7 +5483,7 @@ msgstr "Sábháil focal faire"
 
 #: loginDialog.label
 msgid "Sun Java System Calendar Server WCAP login"
-msgstr ""
+msgstr "Logáil isteach le WCAP ar Fhreastalaí Féilire Sun Java System"
 
 #: busyItem.title.text
 msgid "Busy"
@@ -5578,7 +5598,7 @@ msgstr "Priontáil an Féilire..."
 # iMIP Bar (meeting support)
 #: lightning.imipbar.description imipBarText
 msgid "This message contains an invitation to an event."
-msgstr ""
+msgstr "Tá cuireadh d'imeacht sa teachtaireacht seo."
 
 #: agendaSoon
 msgid "Soon"
@@ -5587,7 +5607,7 @@ msgstr "Go Luath"
 # Html event display in message
 #: imipHtml.header
 msgid "Event Invitation"
-msgstr ""
+msgstr "Cuireadh Imeachta"
 
 #: imipAddToCalendar.label
 msgid "Add To Calendar"
