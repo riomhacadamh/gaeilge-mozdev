@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-16 09:33-0500\n"
+"POT-Creation-Date: 2006-10-31 07:52-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -51,7 +51,7 @@ msgstr "Barra Formáidithe"
 #: editfind.keybinding formatfontmenu.accesskey localfontmenu.accesskey
 #: paragraphpreformat.accesskey tablecellafter.accesskey tablefix.accesskey
 #: toolsetfocus.accesskey mapfilemenu.accesskey searchAddressesCmd.key
-#: searchMailCmd.key findCmd.key nextMsgCmd.key focusSearch1.key
+#: findCmd.key searchMailCmd.key nextMsgCmd.key focusSearch1.key
 msgid "f"
 msgstr "f"
 
@@ -161,10 +161,10 @@ msgstr "Fill"
 msgid "Save"
 msgstr "Sábháil"
 
-#: filesave.accesskey filesave.keybinding editcheckspelling.accesskey
-#: viewpagesource.accesskey size-small.accesskey formatstylemenu.accesskey
-#: tableselectmenu.accesskey mapselectall.accesskey savePageCmd.commandkey
-#: saveAsFileCmd.key radioAskUnsent.accesskey
+#: filesave.accesskey filesave.keybinding viewpagesource.accesskey
+#: size-small.accesskey formatstylemenu.accesskey tableselectmenu.accesskey
+#: mapselectall.accesskey savePageCmd.commandkey saveAsFileCmd.key
+#: radioAskUnsent.accesskey
 msgid "s"
 msgstr "s"
 
@@ -196,8 +196,8 @@ msgid "Publish As..."
 msgstr "Foilsigh Mar..."
 
 # Ctrl+h = Stair (for now, most other good ones are taken)
-#: publishas.accesskey pasteHTML.accesskey mapeditprops.accesskey
-#: maphelpmenu.accesskey enableAppUpdate.accesskey checkNewsNow.accesskey
+#: publishas.accesskey pasteHTML.accesskey editcheckspelling.accesskey
+#: mapeditprops.accesskey maphelpmenu.accesskey enableAppUpdate.accesskey
 msgid "h"
 msgstr "h"
 
@@ -317,7 +317,7 @@ msgstr "Eagar"
 
 #: editmenu.accesskey insertinputtag.accesskey size-xx-large.accesskey
 #: mapeditmenu.accesskey viewPartialSourceCmd.accesskey editMsgAsNewCmd.key
-#: radioAutoDownload.accesskey checkFeedAggregatorNow.accesskey
+#: radioAutoDownload.accesskey proportionalSize.accesskey
 msgid "e"
 msgstr "l"
 
@@ -421,9 +421,19 @@ msgstr "VK_F3"
 msgid "Find Previous"
 msgstr "Roimhe Seo"
 
+#: enableInlineSpellChecker.label enableInlineSpellChecker.accesskey
+msgid "&Spellcheck As You Type"
+msgstr ""
+
 #: checkSpellingCmd.label CheckSpelling windowTitle.label
 msgid "Check Spelling"
 msgstr "Seiceáil Litriú"
+
+#: editcheckspelling.keybinding insertbreakall.accesskey createlink.accesskey
+#: stylestrikethru.accesskey formatremovelinks.keybinding quickSearchCmd.key
+#: killThreadMenu.key focusSearch2.key markAsReadOnSpam.acesskey
+msgid "k"
+msgstr "k"
 
 #: validateCmd.label
 msgid "Validate HTML"
@@ -432,12 +442,6 @@ msgstr "Bailíochtaigh HTML"
 #: checkLinksCmd.label
 msgid "Check Links"
 msgstr "Seiceáil Naisc"
-
-#: editcheckspelling.keybinding insertbreakall.accesskey createlink.accesskey
-#: stylestrikethru.accesskey formatremovelinks.keybinding quickSearchCmd.key
-#: killThreadMenu.key focusSearch2.key markAsReadOnSpam.acesskey
-msgid "k"
-msgstr "k"
 
 # View menu items
 #: viewPageSource.label
@@ -495,7 +499,7 @@ msgid "Characters and Symbols..."
 msgstr "Carachtair agus Siombailí..."
 
 #: insertchars.accesskey centerRadio.accessKey copyCmd.key
-#: cancelDownloadButtonAccessKey checkMailNow.accesskey
+#: cancelDownloadButtonAccessKey
 msgid "C"
 msgstr "C"
 
@@ -571,9 +575,22 @@ msgstr "Cuardach Innéacs"
 
 # for Leathnaigh
 #: insertisindex.accesskey fontfixedwidth.accesskey size-x-large.accesskey
-#: RemoveTextStylesAccesskey cut.accesskey
+#: RemoveTextStylesAccesskey cut.accesskey monospaceSize.accesskey
 msgid "x"
 msgstr "L"
+
+# Used just in context popup.
+#: spellCheckNoSuggestions.label
+msgid "(No Suggestions Found)"
+msgstr "(Níl Aon Mholadh)"
+
+#: spellCheckIgnoreWord.label spellCheckIgnoreWord.accesskey
+msgid "&Ignore Word"
+msgstr "Tabhair neamha&ird ar an bhFocal Seo"
+
+#: spellCheckAddToDictionary.label spellCheckAddToDictionary.accesskey
+msgid "Add to Dictio&nary"
+msgstr "Cuir sa&n Fhoclóir"
 
 # Used just in context popup.
 #: createLinkCmd.label
@@ -699,7 +716,7 @@ msgid "x-small"
 msgstr "an-bheag"
 
 #: size-x-small.accesskey listnumbered.accesskey minimizeWindow.key
-#: messengerCmd.accesskey moveToFolderAgainCmd.key markAsReadCmd.key
+#: moveToFolderAgainCmd.key markAsReadCmd.key
 msgid "m"
 msgstr "m"
 
@@ -2485,6 +2502,10 @@ msgstr "T&aispeáin an dialóg fhoilsithe i gcónaí agus leathanaigh á bhfoilsiú"
 #: composerEditing.label
 msgid "Editing"
 msgstr "Eagarthóireacht"
+
+#: spellCheckInline.label spellCheckInline.accesskey
+msgid "&Check spelling as you type"
+msgstr "Sei&ceáil litriú le linn clóscríofa"
 
 #: maintainStructure.label maintainStructure.accesskey
 msgid "&Maintain table layout when inserting or deleting cells"
@@ -5315,6 +5336,26 @@ msgstr "Athrai&gh Treo an Leathanaigh"
 msgid "S&witch Text Direction"
 msgstr "Athraigh Treo an &Téacs"
 
+#: spellAddToDictionary.label spellAddToDictionary.accesskey
+msgid "Add &to dictionary"
+msgstr "Cuir &leis an bhfoclóir"
+
+#: spellEnable.label spellEnable.accesskey
+msgid "&Spell check this field"
+msgstr "&Seiceáil litriú an réimse seo"
+
+#: spellNoSuggestions.label
+msgid "(No spelling suggestions)"
+msgstr "(Gan moltaí litrithe)"
+
+#: spellDictionaries.label spellDictionaries.accesskey
+msgid "&Languages"
+msgstr "&Teangacha"
+
+#: spellAddDictionaries.label spellAddDictionaries.accesskey
+msgid "&Download more dictionaries..."
+msgstr "Íosluchtaigh tuillea&dh foclóirí..."
+
 #: searchText
 msgid "Web Search for \"%S\""
 msgstr "Cuardach Idirlín do \"%S\""
@@ -6474,6 +6515,10 @@ msgstr "Gnáth-théacs"
 msgid "&Screen Name:"
 msgstr "Ainm &Scáileáin:"
 
+#: allowRemoteContent.label allowRemoteContent.accesskey
+msgid "Allow remote ima&ges in HTML mail."
+msgstr "Ceadaigh cianío&mhánna i ríomhphost HTML."
+
 #: Phones.box
 msgid "Phones"
 msgstr "Fóin"
@@ -6702,8 +6747,8 @@ msgstr "Bog Suas"
 msgid "Move Down"
 msgstr "Bog Síos"
 
-#: addressbookWindow.title addressBook taskAddressBook.tooltip
-#: addressBookButton.label 4_oexpress 4_outlook
+#: addressbookWindow.title addressBook addressBookButton.label 4_oexpress
+#: 4_outlook
 msgid "Address Book"
 msgstr "Leabhar Seoltaí"
 
@@ -8626,9 +8671,9 @@ msgstr "Ná &faigh ach na ceanntásca"
 msgid "F&or at most"
 msgstr "Ar &feadh ar a mhéid"
 
-#: deleteOnServer.label deleteOnServer.accesskey
-msgid "Until I &delete or move them from Inbox"
-msgstr "Go &dtí go scriosfaidh mé iad nó go mbogfaidh mé ón mBosca Isteach iad"
+#: deleteOnServer2.label deleteOnServer2.accesskey
+msgid "Until I &delete them"
+msgstr "Go dtí go scrio&sfaidh mé iad"
 
 #: downloadOnBiff.label downloadOnBiff.accesskey
 msgid "Auto&matically download new messages"
@@ -9132,6 +9177,30 @@ msgstr ""
 "Tá carachtar neamhbhailí sa cheanntásc a d'iontráil tú, m.s. ':', carachtar "
 "dophriontáilte, carachtar nach ASCII é, nó carachtar ASCII ocht ngiotán. Bain "
 "an carachtar neamhbhailí, le do thoil, agus déan iarracht eile."
+
+#: defaultClient.title alreadyDefaultClientTitle
+msgid "Default Client"
+msgstr "Cliant Réamhshocraithe"
+
+#: defaultClient.intro
+msgid "Use &brandShortName; as the default client for:"
+msgstr "Úsáid &brandShortName; mar chliant réamhshocraithe le haghaidh:"
+
+#: email.label
+msgid "E-Mail"
+msgstr "R-Phost"
+
+#: newsgroups.label NEWSGROUPS 1014 newsSectionHdr.label
+msgid "Newsgroups"
+msgstr "Grúpaí-Nuachta"
+
+#: rss.label
+msgid "RSS Feeds"
+msgstr "Fothaí RSS"
+
+#: checkOnStartup.label checkOnStartup.accesskey
+msgid "&Always perform this check when starting &brandShortName;"
+msgstr "Seiceáil m&ar seo i gcónaí agus &brandShortName; á thosú"
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -10709,6 +10778,24 @@ msgstr "Iompórtáil"
 msgid "Mail"
 msgstr "Post"
 
+# LOCALIZATION NOTE:
+# The following entities contain sizing information for the phishing privacy
+# agreement dialog, which is opened when you select the "Check by asking"
+# option as how the browser checks for phishing attempts (if you haven't
+# already agreed with the policy for that provider; once you agree to a
+# provider's policy, you don't see it again).
+#
+#: window.width
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"40em"
+msgstr "40em"
+
+#: window.macWidth
+msgid "45em"
+msgstr "45em"
+
 #: importTitle.label
 msgid "&brandShortName; Mail Import Wizard"
 msgstr "Draoi Iompórtála Ríomhphoist &brandShortName;"
@@ -11634,30 +11721,13 @@ msgstr "&Seol Leathanach..."
 msgid "Address Book &Card..."
 msgstr "&Cárta sa Leabhar Seoltaí..."
 
-#: addressBookCmd.label addressBookCmd.accesskey Addressbook
-msgid "&Address Book"
-msgstr "Le&abhar Seoltaí"
-
-#: taskMessenger.tooltip messengerWindow.title
-msgid "Mail &amp; Newsgroups"
-msgstr "Ríomhphost &amp; Grúpaí Nuachta"
-
-# searchAddressesCmd is also used by addressbook
-#: searchAddressesCmd.label searchAddressesCmd.accesskey
-msgid "Search &Addresses..."
-msgstr "Cu&ardaigh Seoltaí..."
-
-#: searchMailCmd.label searchMailCmd.accesskey
-msgid "S&earch Messages..."
-msgstr "Cuardaigh T&eachtaireachtaí..."
-
-#: errorConsoleCmd.label errorConsoleCmd.accesskey
-msgid "Error Con&sole"
-msgstr "Con&sól Earráide"
-
 #: MailNews
 msgid "&Mail && Newsgroups"
 msgstr "&Ríomhphost && Grúpaí Nuachta"
+
+#: Addressbook addressBookCmd.label addressBookCmd.accesskey
+msgid "&Address Book"
+msgstr "Le&abhar Seoltaí"
 
 # LOCALIZATION NOTE msgViewPickerOverlay.dtd UI for showing various views on a folder
 #: mailViewListTitle.label
@@ -12622,6 +12692,14 @@ msgstr "Ar %s"
 msgid "-------- Original Message --------"
 msgstr "-------- Teachtaireacht Bhunaidh --------"
 
+#: attachImageSource.label attachImageSource.accesskey
+msgid "Attach thi&s image to the message"
+msgstr "Ceangail a&n íomhá seo leis an teachtaireacht"
+
+#: attachLinkSource.label attachLinkSource.accesskey
+msgid "Attach the &source of this link to the message"
+msgstr "Ceangail &foinse an naisc seo leis an teachtaireacht"
+
 # LOCALIZATION NOTE messengercompose.dtd Main UI for message composition
 #: msgComposeWindow.title
 msgid "Compose: (no subject)"
@@ -12936,14 +13014,6 @@ msgstr "Glas ar an teanga"
 msgid "No Suggestions Found"
 msgstr "Níl Aon Mholadh"
 
-#: spellCheckIgnoreWord.label spellCheckIgnoreWord.accesskey
-msgid "&Ignore Word"
-msgstr "Tabhair neamha&ird ar an bhFocal Seo"
-
-#: spellCheckAddToDictionary.label spellCheckAddToDictionary.accesskey
-msgid "Add to Dictio&nary"
-msgstr "Cuir sa&n Fhoclóir"
-
 #: pasteQuote.label pasteQuote.accesskey
 msgid "Paste As &Quotation"
 msgstr "Greamaigh mar &Athfhriotal"
@@ -12996,6 +13066,10 @@ msgstr "Seoladh do theachtaireacht"
 #: messageSaved
 msgid "Your message has been saved"
 msgstr "Tá do theachtaireacht sábháilte"
+
+#: messengerWindow.title
+msgid "Mail &amp; Newsgroups"
+msgstr "Ríomhphost &amp; Grúpaí Nuachta"
 
 #: titledefault.label
 msgid "&brandFullName;"
@@ -13378,15 +13452,6 @@ msgstr "Teachtaireacht &Marcáilte"
 msgid "Unread Thread"
 msgstr "Snáithe Gan Léamh"
 
-#: goForwardCmd.label forwardButton.label
-msgid "Forward"
-msgstr "Ar Aghaidh"
-
-# Toolbar
-#: goBackCmd.label
-msgid "Back"
-msgstr "Siar"
-
 #: startPageCmd.label startPageCmd.accesskey
 msgid "Mail &Start Page"
 msgstr "&Leathanaigh Tosaigh Ríomhphoist"
@@ -13444,7 +13509,7 @@ msgstr "Cóipeáil Suío&mh na Teachtaireachta"
 
 #: moveToFolderAgain.label moveToFolderAgain.accesskey
 msgid "Move Aga&in"
-msgstr ""
+msgstr "Bog &Arís"
 
 #: killThreadMenu.label killThreadMenu.accesskey
 msgid "&Ignore Thread"
@@ -13579,6 +13644,10 @@ msgstr "Freagair"
 #: replyAllButton.label
 msgid "Reply All"
 msgstr "Freagair Cách"
+
+#: forwardButton.label
+msgid "Forward"
+msgstr "Ar Aghaidh"
 
 #: backButton.label
 msgid "Go Back"
@@ -14182,9 +14251,9 @@ msgstr ""
 msgid "Compacting folder %S..."
 msgstr "Fillteán %S á dhlúthú..."
 
-#: compactingDone
-msgid "Done compacting folders"
-msgstr "Tá dlúthú na bhfillteán críochnaithe"
+#: doneCompacting
+msgid "Done compacting"
+msgstr ""
 
 #: autoCompactAllFolders
 msgid "Do you wish to compact all local and offline folders to save disk space?"
@@ -14848,6 +14917,11 @@ msgstr ""
 msgid "Copy to \"%1$S\" Again"
 msgstr ""
 
+# LOCALIZATION NOTE %1$S is the e-mail address of the person we will allow remote images for
+#: alwaysLoadRemoteContentForSender
+msgid "Click here to always load remote images from %1$S"
+msgstr ""
+
 #: migrationWizard.title
 msgid "Import Wizard"
 msgstr "Draoi Iompórtála"
@@ -15015,10 +15089,6 @@ msgstr "Aitheantas-Teachtaireachta"
 #: MIME-VERSION
 msgid "MIME-Version"
 msgstr "Leagan-MIME"
-
-#: NEWSGROUPS 1014 newsSectionHdr.label
-msgid "Newsgroups"
-msgstr "Grúpaí-Nuachta"
 
 #: REFERENCES 1016
 msgid "References"
@@ -16613,43 +16683,6 @@ msgstr "Sampla: .mozilla.org, .net.nz, 192.168.1.0/24"
 msgid "Use this pro&xy server for all protocols"
 msgstr "Úsái&d an seachfhreastalaí seo do gach prótacal"
 
-#: window.title
-msgid "Default Client Settings"
-msgstr "Réamhshocruithe Cliaint"
-
-#: window.width
-msgid ""
-"_: Do not translate this.  Only change the numeric values if you need this "
-"dialogue box to appear bigger.\n"
-"400px"
-msgstr "400px"
-
-#: checkNow.label
-msgid "Check Now"
-msgstr "Seiceáil Anois"
-
-#: whenStartingCheckFor.label
-msgid ""
-"When starting, &brandShortName; should check to see if it is the default "
-"application for"
-msgstr ""
-"Agus é ag tosú, ba cheart do &brandShortName; seiceáil a dhéanamh an é an "
-"feidhmchlár réamhshocraithe do"
-
-#: mailApplication.label mailApplication.accesskey setDefaultMailClient.label
-#: setDefaultMailClient.accesskey
-msgid "&Mail"
-msgstr "Río&mhphost"
-
-#: newsApplication.label newsApplication.accesskey setDefaultNewsClient.label
-#: setDefaultNewsClient.accesskey
-msgid "&News"
-msgstr "&Nuacht"
-
-#: rssFeeds.label rssFeeds.accesskey
-msgid "&RSS Feeds"
-msgstr "Fothaí &RSS"
-
 #: itemFormatting.label
 msgid "Formatting"
 msgstr "Formáidiú"
@@ -17090,29 +17123,32 @@ msgstr "Is féidir teangacha nua a chumrú i bPainéal na dTeangacha."
 msgid "All&ow messages to use other fonts"
 msgstr "Ceadaigh teachtaireachtaí chun cló&nna eile a úsáid"
 
-#: generalSettings.caption
-msgid "Default Settings"
-msgstr "Réamhshocruithe"
+#: systemDefaults.label
+msgid "System Defaults"
+msgstr "Réamhshocruithe an Chórais"
 
-#: generalSettings.label
-msgid "Make &brandShortName; the default application for:"
-msgstr "Bíodh &brandShortName; ina fheidhmchlár réamhshocraithe le haghaidh:"
-
-#: setDefaultFeedClient.label setDefaultFeedClient.accesskey
-msgid "RSS &Feeds"
-msgstr "&Fothaí RSS"
-
-#: checkDefaultMailClient.label checkDefaultMailClient.accesskey
+#: alwaysCheckDefault.label alwaysCheckDefault.accesskey
 msgid ""
-"&brandShortName; should check to see if it is the default mail clie&nt when "
-"starting"
+"A&lways check to see if &brandShortName; is the default mail client on startup"
 msgstr ""
-"Ba cheart do &brandShortName; seiceáil ag am tosaithe an é an clia&nt "
-"ríomhphoist réamhshocraithe"
+"Seiceái&l i gcónaí ag am tosaithe an é &brandShortName; an cliant "
+"réamhshocraithe ríomhphoist"
 
-#: defaultClientAdvanced.label defaultClientAdvanced.accesskey
-msgid "A&dvanced..."
-msgstr "Ar&droghanna..."
+# There's some sort of bug which makes wrapping checkboxes not properly reflow,
+# causing the bottom border of the groupbox to be cut off; set this
+# appropriately if your localization causes this checkbox to wrap.
+#
+#: alwaysCheckDefault.height
+msgid ""
+"_: \n"
+" Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"3em"
+msgstr "3em"
+
+#: checkNow.label checkNow.accesskey
+msgid "Check &Now"
+msgstr "Seiceáil A&nois"
 
 #: windowSettings.label
 msgid "Window Configuration"
@@ -18124,6 +18160,19 @@ msgstr "Meaitseáil a&on rud a leanas"
 #: matchAllMsgs.label matchAllMsgs.accesskey
 msgid "&Match all messages"
 msgstr "&Meaitseáil gach teachtaireacht"
+
+# also see with dots (that one is "R" under Main -> Uirlisí)
+#: optionsLabel
+msgid "%S &Options"
+msgstr "%S &Roghanna"
+
+#: safeModeLabel
+msgid "%S &Safe Mode"
+msgstr "%S Mód &Slán"
+
+#: alreadyDefault
+msgid "%S is already set as your default mail client."
+msgstr "Is é %S an cliant ríomhphoist réamhshocraithe cheana."
 
 # LOCALIZATION NOTE shown while obtaining certificates from a directory
 #: title.label
@@ -20611,7 +20660,7 @@ msgstr "Nuashonrú Bogearraí"
 
 #: Info
 msgid ""
-"Thunderbird is installing your updates and will start in a few moments ..."
+"Thunderbird is installing your updates and will start in a few moments..."
 msgstr ""
 "Tá do chuid nuashonruithe á suiteáil ag Thunderbird agus tosóidh sé go "
 "luath..."
