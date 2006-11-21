@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-31 07:50-0600\n"
+"POT-Creation-Date: 2006-11-07 11:03-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -153,7 +153,7 @@ msgid "Powered by"
 msgstr "Á Chumhachtú ag"
 
 #  leave alone --KPS
-#: license.and
+#: license.and repeatDetailsAnd
 msgid "and"
 msgstr "and"
 
@@ -308,15 +308,15 @@ msgstr "Cruthaíodh d'fhéilire"
 msgid "My Calendar"
 msgstr "M'fhéilire"
 
-#: alarm.units.minutes calendar.global.units.minutes
+#: alarm.units.minutes calendar.global.units.minutes reminderCustomUnitMinutes
 msgid "minutes"
 msgstr "nóiméad"
 
-#: alarm.units.hours calendar.global.units.hours
+#: alarm.units.hours calendar.global.units.hours reminderCustomUnitHours
 msgid "hours"
 msgstr "uaire"
 
-#: alarm.units.days calendar.global.units.days
+#: alarm.units.days calendar.global.units.days reminderCustomUnitDays
 msgid "days"
 msgstr "lá"
 
@@ -403,7 +403,7 @@ msgstr "Gan sonrú"
 msgid "N"
 msgstr "N"
 
-#: priority.level.low lowPriority
+#: priority.level.low lowPriority event.menu.options.priority.low.label
 msgid "Low"
 msgstr "Íseal"
 
@@ -421,7 +421,7 @@ msgstr "Measartha"
 msgid "M"
 msgstr "B"
 
-#: priority.level.high highPriority
+#: priority.level.high highPriority event.menu.options.priority.high.label
 msgid "High"
 msgstr "Ard"
 
@@ -468,11 +468,11 @@ msgstr "Socraigh patrú&n..."
 msgid "General Settings"
 msgstr "Socruithe Ghinearálta"
 
-#: newevent.none.label pref.numberofweeks.0 event.recurrence.none.label
+#: newevent.none.label pref.numberofweeks.0
 msgid "none"
 msgstr "neamhní"
 
-#: newevent.custom.label
+#: newevent.custom.label event.reminder.custom.label event.repeat.custom.label
 msgid "Custom..."
 msgstr "Saincheap..."
 
@@ -492,11 +492,11 @@ msgstr "&URL"
 msgid "&Visit URL"
 msgstr "&Tabhair cuairt ar an URL"
 
-#: newevent.before.label
+#: newevent.before.label reminderCustomRelationStart
 msgid "before"
 msgstr "roimhe"
 
-#: newevent.after.label
+#: newevent.after.label reminderCustomRelationEnd
 msgid "after"
 msgstr "ina dhiaidh"
 
@@ -617,11 +617,11 @@ msgstr "Roghnaigh dáta críochnaithe"
 msgid "Your repeat-until time is before your end time."
 msgstr "Tá d'am athdhéan-go-dtí roimh d'am críochnaithe."
 
-#: newevent.15minutes.before.label
+#: newevent.15minutes.before.label event.reminder.15minutes.before.label
 msgid "15 minutes before"
 msgstr "15 nóiméad roimhe"
 
-#: newevent.30minutes.before.label
+#: newevent.30minutes.before.label event.reminder.30minutes.before.label
 msgid "30 minutes before"
 msgstr "30 nóiméad roimhe"
 
@@ -667,7 +667,7 @@ msgstr ""
 msgid "General"
 msgstr "Ginearálta"
 
-#: newevent.recurrence.tab.label event.tab.recurrence.label
+#: newevent.recurrence.tab.label
 msgid "Recurrence"
 msgstr "Atarlú"
 
@@ -740,7 +740,7 @@ msgstr "Athdhéan go dtí"
 msgid "Exceptions:"
 msgstr "Eisceachtaí:"
 
-#: newevent.attendees.tab.label event.tab.attendees.label
+#: newevent.attendees.tab.label
 msgid "Attendees"
 msgstr "Rannpháirtithe"
 
@@ -804,7 +804,8 @@ msgstr "Cinntithe"
 msgid "Item Type"
 msgstr "Cineál na Míre"
 
-#: newevent.itemType.event.label event.menu.title event.tab.main.label
+#: newevent.itemType.event.label event.menu.title
+#: event.menu.file.new.event.label
 msgid "Event"
 msgstr "Imeacht"
 
@@ -920,7 +921,7 @@ msgstr "Deireadh "
 msgid " of the month"
 msgstr " na míosa"
 
-#: todo.title.new calendar.newtask.button.label newTaskDialog
+#: todo.title.new calendar.newtask.button.label newTaskDialog newTask
 msgid "New Task"
 msgstr "Tasc Nua"
 
@@ -1194,11 +1195,12 @@ msgstr "An Mhí Roimhe Seo"
 
 # the "deleteCmd.label" is a keycap and should be "Delete", others ok?
 #: calendar.delete.button.label calendar.menu.options.remove
-#: lightning.sidebar.delete.label
+#: lightning.sidebar.delete.label reminder.delete.label
 msgid "Delete"
 msgstr "Scrios"
 
 #: calendar.edit.button.label calendar.menu.options.modify
+#: event.menu.edit.label
 msgid "Edit"
 msgstr "Eagar"
 
@@ -1207,14 +1209,17 @@ msgid "Choose Date"
 msgstr "Roghnaigh Dáta"
 
 #: calendar.cut.button.tooltip calendar.cut.button.label
+#: event.menu.edit.cut.label
 msgid "Cut"
 msgstr "Gearr"
 
 #: calendar.copy.button.tooltip calendar.copy.button.label
+#: event.menu.edit.copy.label
 msgid "Copy"
 msgstr "Cóipeáil"
 
 #: calendar.paste.button.tooltip calendar.paste.button.label
+#: event.menu.edit.paste.label
 msgid "Paste"
 msgstr "Greamaigh"
 
@@ -1222,7 +1227,7 @@ msgstr "Greamaigh"
 msgid "Print Calendar"
 msgstr "Priontáil an Féilire"
 
-#: calendar.print.button.label
+#: calendar.print.button.label event.menu.file.print.label
 msgid "Print"
 msgstr "Priontáil"
 
@@ -1308,6 +1313,7 @@ msgid "Close Window"
 msgstr "Dún an Fhuinneog"
 
 #: calendar.menu.options.close.mac calendar.publish.close.button
+#: event.menu.file.close.label
 msgid "Close"
 msgstr "Dún"
 
@@ -1738,6 +1744,7 @@ msgid "Format:"
 msgstr "Formáid:"
 
 #: calendarproperties.location.label tooltipLocation imipHtml.location
+#: event.location.label
 msgid "Location:"
 msgstr "Suíomh:"
 
@@ -1880,6 +1887,7 @@ msgid "Print A Calendar"
 msgstr "Priontáil Féilire"
 
 #: calendar.print.title.label eventTitle tooltipTitle imipHtml.summary
+#: event.title.textbox.label
 msgid "Title:"
 msgstr "Teideal:"
 
@@ -1924,6 +1932,7 @@ msgid "Error number:"
 msgstr "Earráid uimhir:"
 
 #: calendar.error.description eventDescription imipHtml.description
+#: event.description.label
 msgid "Description:"
 msgstr "Cur Síos:"
 
@@ -2124,7 +2133,7 @@ msgstr "Seachtain %1$S"
 msgid "Weeks %1$S-%2$S"
 msgstr "Seachtainí %1$S-%2$S"
 
-#: None
+#: None event.menu.options.priority.none.label
 msgid "None"
 msgstr "Gan sonrú"
 
@@ -2175,13 +2184,13 @@ msgstr "An ceann seo amháin"
 msgid "Date:"
 msgstr "Dáta:"
 
-#: tooltipStatus
+#: tooltipStatus task.status.label
 msgid "Status:"
 msgstr "Stádas:"
 
 # task/todo fields
 # start date time, due date time, task priority number, completed date time
-#: tooltipStart
+#: tooltipStart event.from.label task.from.label
 msgid "Start:"
 msgstr "Tosach:"
 
@@ -2201,7 +2210,7 @@ msgstr "% Críochnaithe:"
 msgid "Completed:"
 msgstr "Críochnaithe:"
 
-#: New
+#: New event.menu.file.new.label reminder.new.label
 msgid "New"
 msgstr "Nua"
 
@@ -2209,7 +2218,7 @@ msgstr "Nua"
 msgid "Open"
 msgstr "Oscail"
 
-#: Save event.command.save.label
+#: Save event.menu.file.save.label
 msgid "Save"
 msgstr "Sábháil"
 
@@ -2494,7 +2503,7 @@ msgstr "Gabh"
 msgid "next"
 msgstr "seo chugainn"
 
-#: last1 last2
+#: last1 last2 repeatDetailsOrdinal-1
 msgid "last"
 msgstr "seo caite"
 
@@ -2577,7 +2586,7 @@ msgid "Apr"
 msgstr "Aib"
 
 # sedtweaked
-#: month.5.Mmm month.5.name
+#: month.5.Mmm month.5.name repeatDetailsMonth5
 msgid "May"
 msgstr "Bealtaine"
 
@@ -2609,75 +2618,75 @@ msgstr "Sam"
 msgid "Dec"
 msgstr "Nol"
 
-#: month.1.name
+#: month.1.name repeatDetailsMonth1
 msgid "January"
 msgstr "Eanáir"
 
-#: month.2.name
+#: month.2.name repeatDetailsMonth2
 msgid "February"
 msgstr "Feabhra"
 
-#: month.3.name
+#: month.3.name repeatDetailsMonth3
 msgid "March"
 msgstr "Márta"
 
-#: month.4.name
+#: month.4.name repeatDetailsMonth4
 msgid "April"
 msgstr "Aibreán"
 
-#: month.6.name
+#: month.6.name repeatDetailsMonth6
 msgid "June"
 msgstr "Meitheamh"
 
-#: month.7.name
+#: month.7.name repeatDetailsMonth7
 msgid "July"
 msgstr "Iúil"
 
-#: month.8.name
+#: month.8.name repeatDetailsMonth8
 msgid "August"
 msgstr "Lúnasa"
 
-#: month.9.name
+#: month.9.name repeatDetailsMonth9
 msgid "September"
 msgstr "Meán Fómhair"
 
-#: month.10.name
+#: month.10.name repeatDetailsMonth10
 msgid "October"
 msgstr "Deireadh Fómhair"
 
-#: month.11.name
+#: month.11.name repeatDetailsMonth11
 msgid "November"
 msgstr "Mí na Samhna"
 
-#: month.12.name
+#: month.12.name repeatDetailsMonth12
 msgid "December"
 msgstr "Mí na Nollag"
 
-#: day.1.name
+#: day.1.name repeatDetailsDay1
 msgid "Sunday"
 msgstr "Domhnach"
 
-#: day.2.name
+#: day.2.name repeatDetailsDay2
 msgid "Monday"
 msgstr "Luan"
 
-#: day.3.name
+#: day.3.name repeatDetailsDay3
 msgid "Tuesday"
 msgstr "Máirt"
 
-#: day.4.name
+#: day.4.name repeatDetailsDay4
 msgid "Wednesday"
 msgstr "Céadaoin"
 
-#: day.5.name
+#: day.5.name repeatDetailsDay5
 msgid "Thursday"
 msgstr "Déardaoin"
 
-#: day.6.name
+#: day.6.name repeatDetailsDay6
 msgid "Friday"
 msgstr "Aoine"
 
-#: day.7.name
+#: day.7.name repeatDetailsDay7
 msgid "Saturday"
 msgstr "Satharn"
 
@@ -2725,6 +2734,49 @@ msgstr "a.m."
 #: pm-string time.pm time.PM
 msgid "PM"
 msgstr "p.m."
+
+#: noon time.noon
+msgid "Noon"
+msgstr "Meán lae"
+
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is OEone Calendar Code, released October 31st, 2001.
+# -
+# - The Initial Developer of the Original Code is
+# - OEone Corporation.
+# - Portions created by the Initial Developer are Copyright (C) 2001
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s): Garth Smedley <garths@oeone.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#: midnight time.midnight
+msgid "Midnight"
+msgstr "Meán Oíche"
 
 #: AllDay
 msgid "All Day"
@@ -2984,45 +3036,6 @@ msgstr ""
 msgid "Mozilla Calendar Alarm: %1$S"
 msgstr "Aláram Féilire Mozilla: %1$S"
 
-# ***** BEGIN LICENSE BLOCK *****
-# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
-# -
-# - The contents of this file are subject to the Mozilla Public License Version
-# - 1.1 (the "License"); you may not use this file except in compliance with
-# - the License. You may obtain a copy of the License at
-# - http://www.mozilla.org/MPL/
-# -
-# - Software distributed under the License is distributed on an "AS IS" basis,
-# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# - for the specific language governing rights and limitations under the
-# - License.
-# -
-# - The Original Code is OEone Calendar Code, released October 31st, 2001.
-# -
-# - The Initial Developer of the Original Code is
-# - OEone Corporation.
-# - Portions created by the Initial Developer are Copyright (C) 2001
-# - the Initial Developer. All Rights Reserved.
-# -
-# - Contributor(s): Garth Smedley <garths@oeone.com>
-# -
-# - Alternatively, the contents of this file may be used under the terms of
-# - either the GNU General Public License Version 2 or later (the "GPL"), or
-# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# - in which case the provisions of the GPL or the LGPL are applicable instead
-# - of those above. If you wish to allow use of your version of this file only
-# - under the terms of either the GPL or the LGPL, and not to allow others to
-# - use your version of this file under the terms of the MPL, indicate your
-# - decision by deleting the provisions above and replace them with the notice
-# - and other provisions required by the LGPL or the GPL. If you do not delete
-# - the provisions above, a recipient may use your version of this file under
-# - the terms of any one of the MPL, the GPL or the LGPL.
-# -
-# - ***** END LICENSE BLOCK *****
-#: time.midnight
-msgid "Midnight"
-msgstr "Meán Oíche"
-
 #: time.1
 msgid "1:00 AM"
 msgstr "1:00"
@@ -3066,10 +3079,6 @@ msgstr "10:00"
 #: time.11
 msgid "11:00 AM"
 msgstr "11:00"
-
-#: time.noon
-msgid "Noon"
-msgstr "Meán lae"
 
 #: time.13
 msgid "1:00 PM"
@@ -3181,7 +3190,7 @@ msgid "LESS"
 msgstr "NÍOS LÚ"
 
 # Units
-#: calendar.global.units.second
+#: calendar.global.units.second repeatDetailsOrdinal2
 msgid "second"
 msgstr "soicind"
 
@@ -3189,15 +3198,15 @@ msgstr "soicind"
 msgid "seconds"
 msgstr "soicind"
 
-#: calendar.global.units.minute
+#: calendar.global.units.minute reminderCustomUnitMinute
 msgid "minute"
 msgstr "nóiméad"
 
-#: calendar.global.units.hour
+#: calendar.global.units.hour reminderCustomUnitHour
 msgid "hour"
 msgstr "uair"
 
-#: calendar.global.units.day
+#: calendar.global.units.day reminderCustomUnitDay
 msgid "day"
 msgstr "lá"
 
@@ -3979,7 +3988,7 @@ msgstr "Achar réamhshocraithe na n-im&eachtaí:"
 msgid "Default &Snooze Length:"
 msgstr "Achar codlata réamh&shocraithe:"
 
-#: prefWindow.titleWin
+#: prefWindow.titleWin event.menu.options.label
 msgid "Options"
 msgstr "Roghanna"
 
@@ -4003,7 +4012,7 @@ msgstr "width: 52em; height: 37.5em;"
 msgid "Views"
 msgstr "Amhairc"
 
-#: paneTimezones.title event.tab.timezone.label
+#: paneTimezones.title event.menu.options.timezone.label
 msgid "Timezone"
 msgstr "Crios Ama"
 
@@ -5646,7 +5655,7 @@ msgstr ""
 msgid "Calendar Server Password Required"
 msgstr "Focal Faire an Fhreastalaí Féilire de dhíth"
 
-#: busyItem.title.text
+#: busyItem.title.text event.menu.options.show.time.busy.label
 msgid "Busy"
 msgstr "Gnóthach"
 
@@ -5710,7 +5719,7 @@ msgstr "Féilire..."
 msgid "View:"
 msgstr "Amharc:"
 
-#: agenda.treeview.menu.label
+#: agenda.treeview.menu.label event.menu.view.label
 msgid "View"
 msgstr "Amharc"
 
@@ -5782,9 +5791,244 @@ msgstr "Cuir leis an bhFéilire"
 msgid "Event Added to Calendar"
 msgstr "Cuireadh an tImeacht Leis an bhFéilire"
 
+#: event.menu.file.label
+msgid "File"
+msgstr "Comhad"
+
+#: event.menu.file.new.message.label
+msgid "Message"
+msgstr "Teachtaireacht"
+
+#: event.menu.file.new.address.label
+msgid "Address Book Card"
+msgstr "Cárta sa Leabhar Seoltaí"
+
+# see also with &
+#: event.menu.file.page.setup.label
+msgid "Page Setup"
+msgstr "Socrú Leathanaigh"
+
+#: event.menu.file.exit.label
+msgid "Exit"
+msgstr "Scoir"
+
+#: event.menu.edit.undo.label
+msgid "Undo"
+msgstr "Cealaigh"
+
+#: event.menu.edit.redo.label
+msgid "Redo"
+msgstr "Athfheidhmigh"
+
+#: event.menu.edit.select.all.label
+msgid "Select All"
+msgstr "Roghnaigh Uile"
+
+#: event.menu.view.toolbars.label
+msgid "Toolbars"
+msgstr "Barraí Uirlisí"
+
+#: event.menu.view.toolbars.event.label
+msgid "Event Toolbar"
+msgstr ""
+
+#: event.menu.view.toolbars.customize.label
+msgid "Customize"
+msgstr "Saincheap"
+
+#: event.menu.options.spellcheck.label
+msgid "Check Spelling..."
+msgstr "Seiceáil Litriú..."
+
+#: event.menu.options.inline.spellcheck.label
+msgid "Spell Check As You Type"
+msgstr "Litriú Beo"
+
+#: event.menu.options.url.label
+msgid "Link to Documents"
+msgstr "Nasc le Cáipéisí"
+
+#: event.menu.options.priority.label
+msgid "Importance"
+msgstr "Tábhacht"
+
+#: event.menu.options.priority.normal.label
+msgid "Normal"
+msgstr "Gnách"
+
+#: event.menu.options.privacy.label event.toolbar.privacy.label
+msgid "Privacy"
+msgstr "Príobháideachas"
+
+#: event.menu.options.privacy.public.label
+msgid "Public Event"
+msgstr "Imeacht Poiblí"
+
+#: event.menu.options.privacy.confidential.label
+msgid "Show Time and Date Only"
+msgstr "Taispeáin Am agus Dáta Amháin"
+
+#: event.menu.options.privacy.private.label
+msgid "Private Event"
+msgstr "Imeacht Príobháideach"
+
+#: event.menu.options.show.time.label
+msgid "Show Time as"
+msgstr "Taispeáin an tAm Mar"
+
+#: event.menu.options.show.time.free.label
+msgid "Free"
+msgstr "Saor"
+
+#: event.help.label
+msgid "Help"
+msgstr "Cabhair"
+
+#: event.help.release.notes.label
+msgid "Release Notes"
+msgstr "Nótaí Eisiúna"
+
+#: event.help.help.label
+msgid "&brandShortName; Help"
+msgstr "Cabhair &brandShortName;"
+
+#: event.help.about.label
+msgid "About &brandShortName;"
+msgstr "Maidir le &brandShortName;"
+
+# Toolbar
+#: event.toolbar.save.label
+msgid "Save and Close"
+msgstr "Sábháil agus Dún"
+
+#: event.toolbar.attendees.label
+msgid "Invite Attendees"
+msgstr ""
+
+#: event.toolbar.spellcheck.label
+msgid "Spellcheck"
+msgstr "Seiceáil an litriú"
+
+#: event.toolbar.document.label
+msgid "Documents"
+msgstr "Cáipéisí"
+
+#: event.categories.label
+msgid "Category:"
+msgstr "Catagóir:"
+
+#: event.calendar.label
+msgid "Calendar:"
+msgstr "Féilire:"
+
+#: event.attendees.label
+msgid "Attendees:"
+msgstr "Rannpháirtithe:"
+
+#: event.alldayevent.label
+msgid "All day Event"
+msgstr "Imeacht tríd an lá go léir"
+
+#: event.to.label
+msgid "End:"
+msgstr "Críoch:"
+
+#: task.to.label
+msgid "Due Date:"
+msgstr "Dáta Dlite:"
+
+#: event.repeat.label
+msgid "Repeat:"
+msgstr "Athdhéan:"
+
+#: event.reminder.label
+msgid "Reminder:"
+msgstr "Meabhrúchán:"
+
+#: event.document.label
+msgid "Document:"
+msgstr "Cáipéis:"
+
+#: event.document.change.label
+msgid "Change..."
+msgstr "Athraigh..."
+
 #: event.confidential.label
 msgid "Time and Date Only"
 msgstr "Am agus Dáta Amháin"
+
+#: event.reminder.none.label
+msgid "No reminder "
+msgstr "Gan meabhrúchán "
+
+#: event.reminder.5minutes.before.label
+msgid "5 minutes before"
+msgstr ""
+
+#: event.reminder.10minutes.before.label
+msgid "10 minutes before"
+msgstr ""
+
+#: event.reminder.45minutes.before.label
+msgid "45 minutes before"
+msgstr ""
+
+#: event.reminder.1hour.before.label
+msgid "1 hour before"
+msgstr ""
+
+#: event.reminder.2hours.before.label
+msgid "2 hours before"
+msgstr ""
+
+#: event.reminder.5hours.before.label
+msgid "5 hours before"
+msgstr ""
+
+#: event.reminder.15hours.before.label
+msgid "15 hours before"
+msgstr ""
+
+#: event.reminder.1day.before.label
+msgid "1 day before"
+msgstr ""
+
+#: event.reminder.2days.before.label
+msgid "2 days before"
+msgstr ""
+
+#: event.reminder.1week.before.label
+msgid "1 week before"
+msgstr ""
+
+# Recurrence dialog
+#: event.repeat.does.not.repeat.label
+msgid "Does not repeat"
+msgstr "Ná hathdhéan"
+
+#: event.repeat.daily.label
+msgid "Daily"
+msgstr "Laethúil"
+
+#: event.repeat.weekly.label
+msgid "Weekly"
+msgstr "Seachtainiúil"
+
+#: event.repeat.every.weekday.label
+msgid "Every Weekday"
+msgstr "Gach Lá Oibre"
+
+#: event.repeat.bi.weekly.label
+msgid "Bi-weekly"
+msgstr ""
+
+#: event.repeat.monthly.label
+msgid "Monthly"
+msgstr "Míosúil"
+
+#: event.repeat.yearly.label
+msgid "Yearly"
+msgstr "Bliantúil"
 
 # Recurrence page
 #: event.recurrence.pattern.label
@@ -5835,6 +6079,35 @@ msgstr "Coinne/Coinní"
 msgid "Preview"
 msgstr "Réamhamharc"
 
+# Reminder dialog
+#: reminder.title.label
+msgid "Custom Reminder"
+msgstr "Meabhrúchán Saincheaptha"
+
+#: reminder.reminder.label
+msgid "Reminder"
+msgstr "Meabhrúchán"
+
+#: reminder.due.label
+msgid "When Reminder becomes Due"
+msgstr ""
+
+#: reminder.action.alert.label
+msgid "Show an Alert"
+msgstr "Taispeáin Airdeall"
+
+#: reminder.action.sound.label
+msgid "Play a Sound"
+msgstr "Seinn Fuaim"
+
+#: reminder.action.email.label
+msgid "Send an E-mail"
+msgstr "Seol Ríomhphost"
+
+#: reminder.rename.label
+msgid "Rename"
+msgstr "Athainmnigh"
+
 # Attendees page
 #: event.organizer.label
 msgid "Organizer"
@@ -5855,6 +6128,142 @@ msgstr "An chéad uair eile"
 #: event.freebusy.minus
 msgid "Previous hour"
 msgstr "An uair roimhe seo"
+
+# Timezone dialog
+#: timezone.title.label
+msgid "Please Specify the Timezone"
+msgstr ""
+
+#: repeatDetailsRuleDaily1
+msgid "every day"
+msgstr "gach lá"
+
+#: repeatDetailsRuleDaily2
+msgid "every other day"
+msgstr "gach re lá"
+
+#: repeatDetailsRuleDaily3
+msgid "every %1$S days"
+msgstr "gach %1$S lá"
+
+#: repeatDetailsRuleDaily4
+msgid "every weekday"
+msgstr "gach lá oibre"
+
+#: repeatDetailsRuleWeekly1
+msgid "every %1$S"
+msgstr "gach %1$S"
+
+#: repeatDetailsRuleWeekly2
+msgid "every other week on %1$S"
+msgstr "gach re seachtain ar %1$S"
+
+#: repeatDetailsRuleWeekly3
+msgid "every %1$S weeks on %2$S"
+msgstr "gach %1$S seachtaine ar %2$S"
+
+#: repeatDetailsRuleMonthly1
+msgid "the %1$S %2$S"
+msgstr "an %1$S %2$S"
+
+#: repeatDetailsRuleMonthly2
+msgid "the %1$S %2$S of every other month"
+msgstr "an %1$S %2$S de gach dara mí"
+
+#: repeatDetailsRuleMonthly3
+msgid "the %1$S %2$S of every %3$S month"
+msgstr "an %1$S %2$S de gach %3$S mí"
+
+#: repeatDetailsRuleMonthly4
+msgid "day %1$S of every month"
+msgstr "lá %1$S de gach mí"
+
+#: repeatDetailsRuleMonthly5
+msgid "day %1$S of every other month"
+msgstr "lá %1$S de gach dara mí"
+
+#: repeatDetailsRuleMonthly6
+msgid "day %1$S of every %2$S month"
+msgstr "lá %1$S de gach %2$S mí"
+
+#: repeatDetailsOrdinal1
+msgid "first"
+msgstr "an chéad"
+
+#: repeatDetailsOrdinal3
+msgid "third"
+msgstr "tríú"
+
+#: repeatDetailsOrdinal4
+msgid "fourth"
+msgstr "ceathrú"
+
+#: repeatDetailsRuleYearly1
+msgid "every %1$S %2$S"
+msgstr "gach %1$S %2$S"
+
+#: repeatDetailsRuleYearly2
+msgid "every other year on %1$S %2$S"
+msgstr "gach re bliain ar %1$S %2$S"
+
+#: repeatDetailsRuleYearly3
+msgid "every %3$S years on %1$S %2$S"
+msgstr "gach %3$S bliain ar %1$S %2$S"
+
+#: repeatDetailsRuleYearly4
+msgid "the %1$S %2$S of %3$S"
+msgstr "an %1$S %2$S de %3$S"
+
+#: repeatDetailsRuleYearly5
+msgid "every other year the %1$S %2$S of %3$S"
+msgstr "gach re bliain ar an %1$S %2$S de %3$S"
+
+#: repeatDetailsRuleYearly6
+msgid "every %4$S years the %1$S %2$S of %3$S"
+msgstr "gach %4$S bliain ar an %1$S %2$S de %3$S"
+
+#: repeatDetailsCount
+msgid ""
+"Occurs %1$S\n"
+"effective %2$S for %3$S times\n"
+" from %4$S to %5$S."
+msgstr ""
+
+#: repeatDetailsCountAllDay
+msgid ""
+"Occurs %1$S\n"
+"effective %2$S for %3$S times."
+msgstr ""
+
+#: repeatDetailsUntil
+msgid ""
+"Occurs %1$S\n"
+"effective %2$S until %3$S\n"
+" from %4$S to %5$S."
+msgstr ""
+
+#: repeatDetailsUntilAllDay
+msgid ""
+"Occurs %1$S\n"
+"effective %2$S until %3$S."
+msgstr ""
+
+#: repeatDetailsInfinite
+msgid ""
+"Occurs %1$S\n"
+"effective %2$S\n"
+" from %3$S to %4$S."
+msgstr ""
+
+#: repeatDetailsInfiniteAllDay
+msgid ""
+"Occurs %1$S\n"
+"effective %2$S."
+msgstr ""
+
+#: reminderCustomTitle
+msgid "%1$S %2$S %3$S the event starts"
+msgstr ""
 
 # plug-ins URLs
 #: MOZ_LANGPACK_CREATOR
