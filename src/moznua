@@ -45,7 +45,8 @@ do
 	FILENAMEBASE=`echo "${pofile}" | sed 's/\(.*\)\.pot$/\1/'`
 	echo "Translating ${FILENAMEBASE}.po..."
 	TEMPPOT=`mktemp`
-	msguniq "${pofile}" | sed 's/â.¦/.../g' > ${TEMPPOT}
+#	msguniq "${pofile}" | sed 's/â.¦/.../g' > ${TEMPPOT}
+	msguniq "${pofile}" > ${TEMPPOT}
 	if $MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
 	then
 		echo "merged fine." > /dev/null
@@ -53,7 +54,7 @@ do
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		$MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
-#	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
-#	mv tempe.po ${FILENAMEBASE}.po
+	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
+	mv tempe.po ${FILENAMEBASE}.po
 	rm -f ${TEMPPOT} ${pofile}
 done

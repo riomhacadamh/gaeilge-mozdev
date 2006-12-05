@@ -24,7 +24,9 @@ then
 	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' | iconv -f iso-8859-1 -t utf8 > aistr.8.txt
 	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > ${IRISHJAR}/profile/bookmarks.html
 	(cd eile; cp -Rf * ../${IRISHJAR};)
-	cat installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
+#	cat installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
+	sed -i '/^$/d' ${IRISHJAR}/installer/installer.inc
+	sed -i 's/BTN_NO .*/BTN_NO \&Ná déan/; s/BTN_YES .*/BTN_YES \&Déan/' ${IRISHJAR}/installer/installer.inc
 	sed -i '/MOZ_LANGPACK_CONTRIBUTORS/r aistr.8.txt' ${IRISHJAR}/defines.inc
 	sed -i '/^# /d' ${IRISHJAR}/defines.inc
 	rm -f aistr.8.txt
@@ -46,6 +48,7 @@ then
 #	cp tbird-start.html ${IRISHJAR}/chrome/messenger/start.html
 	cp tbird-defines.inc ${IRISHJAR}/defines.inc
 	cat tb-installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
+#	sed -i '/^$/d' ${IRISHJAR}/installer/installer.inc
 fi
 #rm -f "${IRISHJAR}.jar"
 #jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"

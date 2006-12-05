@@ -38,7 +38,8 @@ all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-
 
 $(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM)
 	rm -f $(UTFCOMP)
-	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM) | iconv -f iso-8859-1 -t utf-8 | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
+#	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM) | iconv -f iso-8859-1 -t utf-8 | sed '/^"Content-Type: /s/ISO-8859-1/UTF-8/' > $(UTFCOMP)
+	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM) > $(UTFCOMP)
 	chmod 444 $(UTFCOMP)
 
 browser-ga-IE.jar : $(UTFCOMP)
@@ -142,11 +143,12 @@ obair.po : FORCE
 	bash mozcat mail-en-US
 	bash moznua minimo-en-US $(VERSION)
 	bash mozcat minimo-en-US
-	msgcat -t iso-8859-1 browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po minimo-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian BokmÂl"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volap¸k"/; /msgid ".Spx /s/ .. / ◊ /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
-	msgcat -t iso-8859-1 editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
-	sed -i 's/msgstr "Staid"/msgstr "St·t"/; s/msgstr "is"/msgstr "at·"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "IonchÛd˙ &Carachtar"/msgstr "IonchÛd˙ Ca\&rachtar"/; s/msgstr "Socr˙ &Leathanaigh..."/msgstr "Socr˙ L\&eathanaigh..."/' tb_obair.po
-	msgcat -t iso-8859-1 calendar-ga-IE.po > cal_obair.po
-	sed -i 's/msgstr "End"/msgstr "CrÌoch"/; s/msgstr "Chuig"/msgstr "Go"/; s/msgstr "l· anuas"/msgstr "l·"/; s/msgstr "seachtain anuas"/msgstr "seachtain"/; s/msgstr "mÌ anuas"/msgstr "mÌ"/' cal_obair.po
+	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po minimo-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokm√•l"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volap√ºk"/; /msgid ".Spx /s/ .. / √ó /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
+	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "√çosluchtaigh agus Suite√°il Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
+	msgcat editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
+	sed -i 's/msgstr "Staid"/msgstr "St√°t"/; s/msgstr "is"/msgstr "at√°"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionch√≥d√∫ &Carachtar"/msgstr "Ionch√≥d√∫ Ca\&rachtar"/; s/msgstr "Socr√∫ &Leathanaigh..."/msgstr "Socr√∫ L\&eathanaigh..."/' tb_obair.po
+	msgcat calendar-ga-IE.po > cal_obair.po
+	sed -i 's/msgstr "End"/msgstr "Cr√≠och"/; s/msgstr "Chuig"/msgstr "Go"/; s/msgstr "l√° anuas"/msgstr "l√°"/; s/msgstr "seachtain anuas"/msgstr "seachtain"/; s/msgstr "m√≠ anuas"/msgstr "m√≠"/' cal_obair.po
 	sed -i '/tempe/s/^#//' moznua
 	sed -i '1d' obair.po
 #	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po
