@@ -12,6 +12,81 @@ sed -i 's/\(ENTITY window\..*idth\).*/\1 "50em">/' browser-ga-IE/chrome/browser/
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/preferences/fonts.dtd
 sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
 
+# commandkey problems - don't want any translated - routine now is
+# to leave single letters untranslated in PO and then fix the accesskeys
+# that need fixing
+sed -i 's/^hideButton.accesskey.*/hideButton.accesskey=F/' toolkit-ga-IE/chrome/mozapps/update/updates.properties
+sed -i 's/certs.ask.accesskey "."/certs.ask.accesskey "d"/; s/certs.auto.accesskey "."/certs.auto.accesskey "u"/' browser-ga-IE/chrome/browser/preferences/advanced.dtd
+sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/' browser-ga-IE/chrome/browser/browser.dtd
+sed -i 's/cmd_bm_openinnewtab_accesskey.*/cmd_bm_openinnewtab_accesskey=C/' browser-ga-IE/chrome/browser/bookmarks/bookmarks.properties
+sed -i 's/selectAllCmd.key "."/selectAllCmd.key "A"/' toolkit-ga-IE/chrome/global/editMenuOverlay.dtd
+sed -i '
+s/printCmd.commandkey "."/printCmd.commandkey "P"/
+s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/
+' toolkit-ga-IE/chrome/global/viewSource.dtd
+sed -i 's/JoinCellAccesskey=.*/JoinCellAccesskey=C/' editor-ga-IE/ui/chrome/composer/editor.properties
+sed -i '
+s/filepreview.accesskey "."/filepreview.accesskey "B"/
+s/sendPage.accesskey "."/sendPage.accesskey "S"/
+s/fileprintsetup.accesskey "."/fileprintsetup.accesskey "c"/
+s/fileclose.accesskey "."/fileclose.accesskey "D"/
+s/pasteImage.accesskey "."/pasteImage.accesskey "m"/
+s/editpastelink.accesskey "."/editpastelink.accesskey "N"/
+s/insertlink.accesskey "."/insertlink.accesskey "N"/
+s/insertimage.accesskey "."/insertimage.accesskey "m"/
+s/delete.accesskey "."/delete.accesskey "S"/
+s/clear.accesskey "."/clear.accesskey "B"/
+s/size-xx-small.accesskey "."/size-xx-small.accesskey "f"/
+s/size-x-small.accesskey "."/size-x-small.accesskey "a"/
+s/size-small.accesskey "."/size-small.accesskey "b"/
+s/size-medium.accesskey "."/size-medium.accesskey "s"/
+s/size-large.accesskey "."/size-large.accesskey "m"/
+s/listdefinition.accesskey "."/listdefinition.accesskey "S"/
+s/alignjustify.accesskey "."/alignjustify.accesskey "C"/
+' editor-ga-IE/ui/chrome/composer/editorOverlay.dtd
+sed -i '
+s/about.accesskey "."/about.accesskey "M"/
+s/clear.accesskey "."/clear.accesskey "B"/
+s/close.accesskey "."/close.accesskey "D"/
+s/cut.accesskey "."/cut.accesskey "G"/
+s/paste.accesskey "."/paste.accesskey "r"/
+s/props.accesskey "."/props.accesskey "A"/
+' editor-ga-IE/ui/chrome/dialogs/EditorImageMap.dtd 
+sed -i 's/newMessageCmd.key "."/newMessageCmd.key "M"/' mail-ga-IE/chrome/messenger/mailOverlay.dtd
+sed -i '
+s/findAgainCmd.key "."/findAgainCmd.key "g"/
+s/findPrevCmd.key "."/findPrevCmd.key "g"/
+s/editMsgAsNewCmd.key "."/editMsgAsNewCmd.key "e"/
+' mail-ga-IE/chrome/messenger/messenger.dtd
+sed -i '
+s/newMessageCmd.key "."/newMessageCmd.key "M"/
+s/selectAllCmd.key "."/selectAllCmd.key "A"/
+' mail-ga-IE/chrome/messenger/addressbook/abMainWindow.dtd
+sed -i '
+s/newMessage.key "."/newMessage.key "M"/
+s/printCmd.key "."/printCmd.key "P"/
+s/selectAllCmd.key "."/selectAllCmd.key "A"/
+' mail-ga-IE/chrome/messenger/messengercompose/messengercompose.dtd
+sed -i '
+s/AddPlainText.accesskey "."/AddPlainText.accesskey "C"/
+s/DeleteHtmlDomain.accesskey "."/DeleteHtmlDomain.accesskey "i"/
+s/add.htmldomain.accesskey "."/add.htmldomain.accesskey "H"/
+s/add.plaintext.accesskey "."/add.plaintext.accesskey "G"/
+' mail-ga-IE/chrome/messenger/preferences/sendoptions.dtd
+
+sed -i 's/priority.level.medium.accesskey "."/priority.level.medium.accesskey "M"/; s/priority.level.high.accesskey "."/priority.level.high.accesskey "A"/; s/calendar.dayview.accesskey "."/calendar.dayview.accesskey "L"/; s/calendar.weekview.accesskey "."/calendar.weekview.accesskey "S"/; s/calendar.monthview.accesskey "."/calendar.monthview.accesskey "M"/; s/calendar.menu.options.close.accesskey "."/calendar.menu.options.close.accesskey "D"/; s/week.short "."/week.short "S"/' calendar-ga-IE/chrome/calendar/calendar.dtd
+sed -i '
+s/day.1.Ddd.accesskey "."/day.1.Ddd.accesskey "D"/
+s/day.2.Ddd.accesskey "."/day.2.Ddd.accesskey "L"/
+s/day.3.Ddd.accesskey "."/day.3.Ddd.accesskey "M"/
+s/day.4.Ddd.accesskey "."/day.4.Ddd.accesskey "C"/
+s/day.5.Ddd.accesskey "."/day.5.Ddd.accesskey "r"/
+s/day.6.Ddd.accesskey "."/day.6.Ddd.accesskey "A"/
+s/day.7.Ddd.accesskey "."/day.7.Ddd.accesskey "S"/
+' calendar-ga-IE/chrome/calendar/global.dtd
+
+sed -i 's/event.delete.event.accesskey "."/event.delete.event.accesskey "R"/' calendar-ga-IE/chrome/calendar/menuOverlay.dtd
+
 # calendar days of the week
 sed -i '
 s/^day.1.short=.*/day.1.short=D/
@@ -21,7 +96,23 @@ s/^day.4.short=.*/day.4.short=C/
 s/^day.5.short=.*/day.5.short=D/
 s/^day.6.short=.*/day.6.short=A/
 s/^day.7.short=.*/day.7.short=S/
+s/^month.5.Mmm=.*/month.5.Mmm=Bea/
 ' calendar-ga-IE/chrome/calendar/dateFormat.properties
+
+sed -i '
+s/"End"/"Deireadh"/
+s/newevent.before.label "[^"]*"/newevent.before.label "roimhe"/
+s/newevent.after.label "[^"]*"/newevent.after.label "ina dhiaidh"/
+' calendar-ga-IE/chrome/calendar/calendar.dtd
+
+sed -i '
+s/window.width "..em"/window.width "42em"/
+s/window.macWidth "..em"/window.macWidth "45em"/
+' calendar-ga-IE/chrome/calendar/preferences/connection.dtd
+
+sed -i '
+s/inspectReturnNew.label "[^"]*"/inspectReturnNew.label "i bhfuinneog nua"/
+' extensions-ga-IE/inspector/resources/viewers/jsObject.dtd
 
 # still need these two with latest translate toolkit
 sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
@@ -44,3 +135,7 @@ LC_ALL=C sed -i '
 /^uk=/s/.*/uk=Úcráinis/
 /^zh=/s/.*/zh=Sínis/
 ' toolkit-ga-IE/chrome/global/languageNames.properties
+
+sed -i '
+s/credit.translation ""/credit.translation "<h3>Aistritheoirí<\/h3><ul><li>Marion Gunn<\/li><li>Séamus Ó Ciardhuáin<\/li><li>Kevin Scannell<\/li><\/ul>"/
+' calendar-ga-IE/chrome/calendar/aboutDialog.dtd
