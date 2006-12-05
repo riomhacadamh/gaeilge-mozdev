@@ -93,7 +93,7 @@ cd ..
 
 cp ../install.rdf .
 sed -i "s/@APP_VERSION@/$APP_VERSION/g" install.rdf
-cat ../aistr.txt | sed 's/.*/    <em:contributor>&<\/em:contributor>/' | iconv -f iso-8859-1 -t utf8 > aistr.8.txt
+cat ../aistr.txt | sed 's/.*/    <em:contributor>&<\/em:contributor>/' > aistr.8.txt
 sed -i "/The Irish Mozilla Localisation Team/r aistr.8.txt" install.rdf
 rm -f aistr.8.txt
 zip -9D -q langpack-$AB_CD.xpi install.rdf chrome/$AB_CD.jar

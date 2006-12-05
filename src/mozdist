@@ -21,7 +21,7 @@ po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
 bash sedtweaks
 if echo "${1}" | egrep '^browser' > /dev/null
 then
-	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' | iconv -f iso-8859-1 -t utf8 > aistr.8.txt
+	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' > aistr.8.txt
 	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > ${IRISHJAR}/profile/bookmarks.html
 	(cd eile; cp -Rf * ../${IRISHJAR};)
 #	cat installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
@@ -31,7 +31,7 @@ then
 	sed -i '/^# /d' ${IRISHJAR}/defines.inc
 	rm -f aistr.8.txt
 	sed -i '1s/.*/<!ENTITY % brandDTD SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n%brandDTD;\n\n&/' ${IRISHJAR}/chrome/overrides/netError.dtd
-	cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | LC_ALL=C sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoirí<\/h3><ul>/; s/$/<\/ul>">\n/' | iconv -f iso-8859-1 -t utf-8 > aistr.8.txt
+	cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | LC_ALL=C sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoirí<\/h3><ul>/; s/$/<\/ul>">\n/' > aistr.8.txt
 	sed -i '/^-->/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
 	rm -f aistr.8.txt
 	sed -i '/>Name Here</s/.*/<!ENTITY credit.translation\n  "<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>">/' browser-ga-IE/chrome/browser/credits.dtd
