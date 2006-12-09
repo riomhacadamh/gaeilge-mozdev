@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-05 15:47-0600\n"
+"POT-Creation-Date: 2006-12-09 08:02-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: brandShortName brandFullName lightning.calendar.label
+#: brandShortName brandFullName
 msgid "Calendar"
 msgstr "Féilire"
 
@@ -328,7 +328,6 @@ msgid "Go to Date"
 msgstr "Téigh go Dáta"
 
 #: calendar.flat.topbar.dayview calendar.dayview.button.label
-#: lightning.toolbar.dayview.label
 msgid "Day View"
 msgstr "Amharc Lae"
 
@@ -338,12 +337,10 @@ msgid "D"
 msgstr "D"
 
 #: calendar.flat.topbar.weekview calendar.weekview.button.label
-#: lightning.toolbar.weekview.label
 msgid "Week View"
 msgstr "Amharc Seachtaine"
 
 #: calendar.flat.topbar.monthview calendar.monthview.button.label
-#: lightning.toolbar.monthview.label
 msgid "Month View"
 msgstr "Amharc Míosa"
 
@@ -660,8 +657,8 @@ msgstr "Laethanta oib&re amháin"
 
 #: calendar.displaytodos.checkbox.label
 #: calendar.displaytodos.checkbox.accesskey
-msgid "Tasks in &View"
-msgstr "Tascanna san &Amharc"
+msgid "Tas&ks in View"
+msgstr ""
 
 #: calendar.search.options.searchfor
 msgid " contain"
@@ -1139,7 +1136,8 @@ msgstr "&Athdhéan"
 msgid "Set patter&n…"
 msgstr "Socraigh an patrú&n…"
 
-#: newevent.server.label newevent.server.accesskey
+#: newevent.server.label newevent.server.accesskey lightning.calendar.label
+#: lightning.calendar.accesskey
 msgid "&Calendar"
 msgstr "&Féilire"
 
@@ -1538,7 +1536,8 @@ msgstr "Seachtain %1$S"
 msgid "Weeks %1$S-%2$S"
 msgstr "Seachtainí %1$S-%2$S"
 
-#: None event.menu.options.priority.none.label
+#: None calendar.invitations.list.none.text
+#: event.menu.options.priority.none.label
 msgid "None"
 msgstr "Gan sonrú"
 
@@ -1698,7 +1697,7 @@ msgstr "Dáta Críochnaithe"
 msgid "End Time"
 msgstr "Am Críochnaithe"
 
-#: outlookCSVAllDayEvent
+#: outlookCSVAllDayEvent calendar.invitations.list.alldayevent.text
 msgid "All day event"
 msgstr "Imeacht tríd an lá go léir"
 
@@ -5349,6 +5348,7 @@ msgid "Calendar Server Password Required"
 msgstr "Focal Faire an Fhreastalaí Féilire de dhíth"
 
 #: busyItem.title.text event.menu.options.show.time.busy.label
+#: event.freebusy.legend.busy
 msgid "Busy"
 msgstr "Gnóthach"
 
@@ -5461,9 +5461,22 @@ msgstr "Eagar…"
 msgid "Show completed tasks"
 msgstr "Taispeáin tascanna críochnaithe"
 
-#: lightning.toolbar.print.label
-msgid "Print Calendar…"
-msgstr "Priontáil Féilire…"
+# Messenger Toolbar
+#: lightning.toolbar.dayview.label lightning.toolbar.dayview.accesskey
+msgid "&Day View"
+msgstr ""
+
+#: lightning.toolbar.weekview.label lightning.toolbar.weekview.accesskey
+msgid "&Week View"
+msgstr ""
+
+#: lightning.toolbar.monthview.label lightning.toolbar.monthview.accesskey
+msgid "&Month View"
+msgstr ""
+
+#: lightning.toolbar.print.label lightning.toolbar.print.accesskey
+msgid "&Print Calendar…"
+msgstr ""
 
 # #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
 # iMIP Bar (meeting support)
@@ -5487,6 +5500,113 @@ msgstr "Cuir leis an bhFéilire"
 #: imipAddedItemToCal
 msgid "Event Added to Calendar"
 msgstr "Cuireadh an tImeacht Leis an bhFéilire"
+
+# #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is Sun Microsystems code.
+# -
+# - The Initial Developer of the Original Code is Sun Microsystems.
+# - Portions created by the Initial Developer are Copyright (C) 2006
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s): Thomas Benisch <thomas.benisch@sun.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#
+# Calendar Invitations Dialog
+# #-#-#-#-#  chromeprototypessun-lightning.dtd.po (firefox)  #-#-#-#-#
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is Sun Microsystems code.
+# -
+# - The Initial Developer of the Original Code is Sun Microsystems.
+# - Portions created by the Initial Developer are Copyright (C) 2006
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s): Thomas Benisch <thomas.benisch@sun.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#
+# Messenger Sidebar
+#: calendar.invitations.dialog.invitations.text
+#: lightning.sidebar.invitations.label
+msgid "Invitations"
+msgstr ""
+
+#: calendar.invitations.dialog.statusmessage.updating.text
+msgid "Updating list of invitations."
+msgstr ""
+
+#: calendar.invitations.dialog.statusmessage.noinvitations.text
+msgid "No unconfirmed invitations found."
+msgstr ""
+
+#: calendar.invitations.list.accept.button.label
+msgid "Accept"
+msgstr "Glac Leis"
+
+#: calendar.invitations.list.decline.button.label
+msgid "Decline"
+msgstr "Diúltaigh"
+
+#: calendar.invitations.list.recurrentevent.text
+msgid "Repeating event"
+msgstr ""
+
+#: calendar.invitations.list.location.text
+msgid "Location: "
+msgstr ""
+
+#: calendar.invitations.list.organizer.text
+msgid "Organizer: "
+msgstr ""
 
 #: event.menu.file.label
 msgid "File"
@@ -5573,7 +5693,7 @@ msgstr "Imeacht Príobháideach"
 msgid "Show Time as"
 msgstr "Taispeáin an tAm Mar"
 
-#: event.menu.options.show.time.free.label
+#: event.menu.options.show.time.free.label event.freebusy.legend.free
 msgid "Free"
 msgstr "Saor"
 
@@ -5817,18 +5937,34 @@ msgstr "Seol Ríomhphost"
 msgid "Rename"
 msgstr "Athainmnigh"
 
+#: reminder.relation.start.label reminderCustomOriginBegin
+msgid "the event starts"
+msgstr ""
+
+#: reminder.relation.end.label reminderCustomOriginEnd
+msgid "the event ends"
+msgstr ""
+
 # Attendees page
 #: event.organizer.label
 msgid "Organizer"
 msgstr "Eagraí"
 
+#: event.freebusy.suggest.slot
+msgid "Suggest time slot:"
+msgstr ""
+
 #: event.freebusy.next.slot
-msgid "Next slot"
-msgstr "An chéad sliotán eile"
+msgid "Next slot "
+msgstr ""
 
 #: event.freebusy.previous.slot
-msgid "Previous slot"
-msgstr "An sliotán roimhe seo"
+msgid " Previous slot"
+msgstr ""
+
+#: event.freebusy.zoom
+msgid "Zoom:"
+msgstr ""
 
 #: event.freebusy.plus
 msgid "Next hour"
@@ -5837,6 +5973,10 @@ msgstr "An chéad uair eile"
 #: event.freebusy.minus
 msgid "Previous hour"
 msgstr "An uair roimhe seo"
+
+#: event.freebusy.legend.unknown
+msgid "No information"
+msgstr ""
 
 #: repeat.units.weeks.both
 msgid "Week(s)"
@@ -5983,7 +6123,7 @@ msgid ""
 msgstr ""
 
 #: reminderCustomTitle
-msgid "%1$S %2$S %3$S the event starts"
+msgid "%1$S %2$S %3$S %4$S"
 msgstr ""
 
 # plug-ins URLs
