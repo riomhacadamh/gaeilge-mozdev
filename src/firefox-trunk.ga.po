@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-25 07:52-0500\n"
+"POT-Creation-Date: 2006-12-09 16:47-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -164,7 +164,7 @@ msgstr "L&org Nuashonruithe..."
 msgid "Preferences..."
 msgstr "Sainroghanna..."
 
-#: preferencesCmdMac.commandkey bookmarkjoiner cmd.options.commandKey
+#: preferencesCmdMac.commandkey cmd.options.commandKey
 msgid ","
 msgstr ","
 
@@ -379,7 +379,6 @@ msgid "Reload &Live Bookmark"
 msgstr "Athluchtaigh &Leabharmharc Beo"
 
 #: menuitem.view.command.toolbar.label menuitem.view.command.toolbar.accesskey
-#: view.toolbar.label view.toolbar.accesskey
 msgid "&Toolbar"
 msgstr "Barra na n&Uirlisí"
 
@@ -527,8 +526,9 @@ msgid "Collapse"
 msgstr "Laghdaigh"
 
 #: cmd_bm_collapsefolder_accesskey cmd_copy_accesskey copyCmd.key copy.key
-#: cmd_clearHistory_accesskey copyCmd.commandkey mismatchCheckNowAccesskey
-#: cancelButtonTextAccesskey CertDumpAVACountry changepassword.accesskey
+#: view.sortBy.visitCount.accesskey cmd_clearHistory_accesskey
+#: copyCmd.commandkey mismatchCheckNowAccesskey cancelButtonTextAccesskey
+#: CertDumpAVACountry changepassword.accesskey
 msgid "C"
 msgstr "C"
 
@@ -542,9 +542,9 @@ msgid "Manage Folder"
 msgstr "Bainistiú an Fhillteáin"
 
 #: cmd_bm_managefolder_accesskey cmd_bm_movebookmark_accesskey
-#: mediaTab.accesskey setMasterPassword_accesskey
-#: changeMasterPassword_accesskey Mega loaddevice.modname.accesskey
-#: managecerts.accesskey validation.managecrls.accesskey
+#: view.sortBy.colLastModDate.accesskey mediaTab.accesskey Mega
+#: loaddevice.modname.accesskey managecerts.accesskey
+#: validation.managecrls.accesskey
 msgid "M"
 msgstr "B"
 
@@ -597,8 +597,9 @@ msgid "Select All"
 msgstr "Roghnaigh Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
-#: cmd_selectAll_accesskey selectAllCmd.key selectall.key mediaSaveAs.accesskey
-#: cmd.about.accesskey IAgree.accesskey certselect.auto.accesskey
+#: cmd_selectAll_accesskey selectAllCmd.key addHandlerAddButtonAccesskey
+#: selectall.key mediaSaveAs.accesskey cmd.about.accesskey IAgree.accesskey
+#: certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -620,7 +621,8 @@ msgid "Change Location..."
 msgstr "Athraigh Suíomh..."
 
 #: cmd_bm_renamebookmark2_accesskey cmd_bm_refreshlivemark_accesskey
-#: cmd_bm_refreshmicrosummary_accesskey linksTab.accesskey CertDumpAVALocality
+#: cmd_bm_refreshmicrosummary_accesskey view.sortBy.colURL.accesskey
+#: linksTab.accesskey view.sortBy.url.accesskey CertDumpAVALocality
 #: warn.enteringsecure.accesskey
 msgid "L"
 msgstr "L"
@@ -756,9 +758,9 @@ msgstr "Oscail i bhFuinneog Nua"
 
 # Ctrl+N is Fuinneog Nua under Main -> Comhad
 # see also lowercase for "Navigator" command
-#: cmd_bm_openinnewwindow_accesskey newNavigatorCmd.key
-#: defaultGroupOffAccesskey livemarkGroupOffAccesskey nextButtonTextAccesskey
-#: neverButton.accesskey
+#: cmd_bm_openinnewwindow_accesskey view.sortBy.colName.accesskey
+#: newNavigatorCmd.key defaultGroupOffAccesskey livemarkGroupOffAccesskey
+#: nextButtonTextAccesskey neverButton.accesskey
 msgid "N"
 msgstr "N"
 
@@ -873,9 +875,53 @@ msgstr "Iontráil achar ama."
 msgid "Please enter at least one notification method."
 msgstr "Iontráil modh fógartha amháin, ar a laghad."
 
-#: SortMenuItem
-msgid "Sorted by %S"
-msgstr "Arna shórtáil de réir %S"
+#: view.sortBy.colName.label
+msgid "Sorted by Name"
+msgstr ""
+
+#: view.sortBy.colURL.label
+msgid "Sorted by Location"
+msgstr ""
+
+#: view.sortBy.colShortcutURL.label
+msgid "Sorted by Keyword"
+msgstr ""
+
+#: view.sortBy.colShortcutURL.accesskey Kilo
+msgid "K"
+msgstr "K"
+
+#: view.sortBy.colDescription.label
+msgid "Sorted by Description"
+msgstr ""
+
+#: view.sortBy.colDescription.accesskey cmd.edit_copy.key
+#: license.accept.accesskey
+msgid "c"
+msgstr "c"
+
+#: view.sortBy.colAddDate.label
+msgid "Sorted by Added"
+msgstr ""
+
+#: view.sortBy.colAddDate.accesskey searchFocus.commandkey2
+#: viewPartialSourceCmd.accesskey sizeMonospace.accesskey
+msgid "e"
+msgstr "l"
+
+#: view.sortBy.colLastModDate.label
+msgid "Sorted by Last Modified"
+msgstr ""
+
+#: view.sortBy.colLastVisitDate.label
+msgid "Sorted by Last Visited"
+msgstr ""
+
+# Ctrl+V = Greamaigh, transcending language
+#: view.sortBy.colLastVisitDate.accesskey pasteCmd.key
+#: view.sortBy.date.accesskey warn.viewmixed.accesskey
+msgid "V"
+msgstr "V"
 
 #: ShortFindTitle
 msgid "Find: '%S'"
@@ -894,12 +940,12 @@ msgid "Imported NetPositive Bookmarks"
 msgstr "Leabharmharcanna NetPositive arna n-iompórtáil"
 
 #: SelectImport
-msgid "Import bookmark file:"
-msgstr "Iompórtáil comhad leabharmharc:"
+msgid "Import Bookmarks File"
+msgstr ""
 
 #: EnterExport
-msgid "Export bookmark file:"
-msgstr "Easpórtáil comhad leabharmharc:"
+msgid "Export Bookmarks File"
+msgstr ""
 
 #: search_button_label findNodesFind.label notFoundTitle
 msgid "Find"
@@ -917,7 +963,7 @@ msgstr "Cruthaigh Leabharmharc?"
 msgid "Add Bookmark to \"%S\" (%S)?"
 msgstr "Cruthaigh Leabharmharc i \"%S\" (%S)?"
 
-#: addLiveBookmarkTitle addLiveBookmarkMenupopup.label dialogTitleAddLivemark
+#: addLiveBookmarkTitle dialogTitleAddLivemark
 msgid "Add Live Bookmark"
 msgstr "Cruthaigh Leabharmharc Beo"
 
@@ -937,20 +983,19 @@ msgstr "Leabharmharcáil Gach Cluaisín"
 msgid "Confirm open"
 msgstr "Dearbhú na hOscailte"
 
-#: tabs.openWarningMultiple
-msgid "You are about to open %S tabs. Are you sure you want to open these tabs?"
+#: tabs.openWarningMultipleBranded
+msgid ""
+"You are about to open %S tabs.  This might slow down %S while the pages are "
+"loading.  Are you sure you want to continue?"
 msgstr ""
-"Tá tú ar tí %S cluaisín a oscailt. An bhfuil tú cinnte go dteastaíonn uait na "
-"cluaisíní seo a oscailt?"
 
 #: tabs.openButtonMultiple
 msgid "Open tabs"
 msgstr "Oscail cluaisíní"
 
-#: tabs.openWarningPromptMe
-msgid "Warn me when I attempt to open a lot of tabs at once"
+#: tabs.openWarningPromptMeBranded
+msgid "Warn me when opening multiple tabs might slow down %S"
 msgstr ""
-"Tabhair rabhadh dom agus ag iarraidh cluaisíní iomadúla a oscailt le chéile"
 
 #: viewsourcetitle.preface
 msgid "Source for: "
@@ -1080,10 +1125,6 @@ msgstr "Liostáil leis an Leathanach Seo"
 msgid "Subscribe to This Page..."
 msgstr "Liostáil leis an Leathanach Seo..."
 
-#: addLiveBookmarkMenuitem.label feedHasFeeds
-msgid "Add Live Bookmark..."
-msgstr "Cruthaigh Leabharmharc Beo..."
-
 #: addCurPagesCmd.label addCurPagesCmd.accesskey
 msgid "Bookmark All &Tabs..."
 msgstr "Leabharmharcáil Gach &Cluaisín..."
@@ -1123,7 +1164,7 @@ msgstr "Leathanach amháin ar aghaidh"
 # "A" under Main -> Amharc ("L" is Níos Lú)
 #  see also "Re&load"
 #  need a tweak for right click menu, "A" and "L" taken
-#: reloadCmd.label reloadCmd.accesskey
+#: reloadCmd.label reloadCmd.accesskey cmd.reload.label cmd.reload.accesskey
 msgid "&Reload"
 msgstr "&Athluchtaigh"
 
@@ -1317,11 +1358,6 @@ msgstr "&Cóipeáil"
 msgid "&Paste"
 msgstr "G&reamaigh"
 
-# Ctrl+V = Greamaigh, transcending language
-#: pasteCmd.key warn.viewmixed.accesskey
-msgid "V"
-msgstr "V"
-
 # "U" under Main -> Eagar, analogue of English
 #: selectAllCmd.label selectAllCmd.accesskey selectall.label
 #: selectall.accesskey cmd.select_all.label cmd.select_all.accesskey
@@ -1408,10 +1444,6 @@ msgstr "l"
 #: searchFocus.commandkey focusSearch2.key helpSearch.commandkey
 msgid "k"
 msgstr "k"
-
-#: searchFocus.commandkey2 viewPartialSourceCmd.accesskey size.accesskey2
-msgid "e"
-msgstr "l"
 
 #: openLinkCmd.label openLinkCmd.accesskey
 msgid "Open Link in New &Window"
@@ -1505,6 +1537,10 @@ msgstr "Sábháil an Leathanach &Mar..."
 #: saveFrameCmd.label saveFrameCmd.accesskey
 msgid "Save &Frame As..."
 msgstr "Sábháil an &Fráma Mar..."
+
+#: printFrameCmd.label printFrameCmd.accesskey
+msgid "&Print Frame..."
+msgstr ""
 
 #: saveLinkCmd.label saveLinkCmd.accesskey
 msgid "Save Lin&k As..."
@@ -1690,22 +1726,6 @@ msgstr "Ai&msigh Arís"
 msgid "VK_F3"
 msgstr "VK_F3"
 
-#: spellAddToDictionary.label spellAddToDictionary.accesskey
-msgid "Add &to dictionary"
-msgstr "Cuir &leis an bhfoclóir"
-
-#: spellEnable.label spellEnable.accesskey
-msgid "&Spell check this field"
-msgstr "&Seiceáil litriú an réimse seo"
-
-#: spellNoSuggestions.label
-msgid "(No spelling suggestions)"
-msgstr "(Gan moltaí litrithe)"
-
-#: spellDictionaries.label spellDictionaries.accesskey
-msgid "&Languages"
-msgstr "&Teangacha"
-
 #: spellAddDictionaries.label spellAddDictionaries.accesskey
 msgid "&Add dictionaries..."
 msgstr "&Cuir foclóirí leis..."
@@ -1822,8 +1842,9 @@ msgstr "Leathanach Idirlín, ina iomláine"
 msgid "Web Page, HTML only"
 msgstr "Leathanach Idirlín, HTML amháin"
 
-#: bookmarkAllTabs_accesskey detailsAccessKey license.decline.accesskey
-#: managepassword.askfirsttime.accesskey enable.tls.accesskey
+#: bookmarkAllTabs_accesskey view.sortBy.title.accesskey detailsAccessKey
+#: license.decline.accesskey managepassword.askfirsttime.accesskey
+#: enable.tls.accesskey
 msgid "T"
 msgstr "T"
 
@@ -1859,28 +1880,6 @@ msgstr "Sábháil an Nasc"
 #: webPanels
 msgid "Web Panels"
 msgstr "Painéil Idirlín"
-
-#: tabs.closeWarningTitle
-msgid "Confirm close"
-msgstr "Dearbhaigh"
-
-#: tabs.closeWarning
-msgid ""
-"This Browser window has %S tabs open. Do you want to close it and all its "
-"tabs?"
-msgstr ""
-"Tá %S cluaisín ar oscailt sa bhrabhsálaí seo. An mian leat é féin agus a "
-"chuid cluaisíní uile a dhúnadh?"
-
-#: tabs.closeButton
-msgid "Close all tabs"
-msgstr "Dún gach cluaisín"
-
-# see also "Warn me when I attempt to close multiple tabs"
-# see also "Warn when closing multiple tabs"
-#: tabs.closeWarningPromptMe
-msgid "Warn me when closing multiple tabs"
-msgstr "Tabhair rabhadh dom agus cluaisíní iomadúla á ndúnadh"
 
 #: xpinstallPromptWarning
 msgid ""
@@ -2034,10 +2033,6 @@ msgstr "Lean le híosluchtú an nuashonraithe..."
 msgid "Apply Downloaded Update Now..."
 msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois..."
 
-#: feedShowFeed
-msgid "Add '%S' as Live Bookmark..."
-msgstr "Cruthaigh '%S' mar Leabharmharc Beo..."
-
 #: feedNoFeeds
 msgid "Page has no feeds"
 msgstr "Níl aon fhothú ag an leathanach"
@@ -2054,6 +2049,10 @@ msgstr "Liostáil leis an leathanach seo..."
 #: tabContext.undoCloseTab
 msgid "Undo Close Tab"
 msgstr "Cealaigh Dúnadh an Chluaisín"
+
+#: menuOpenInTabs.label
+msgid "Open in Tabs"
+msgstr "Oscail i gCluaisíní"
 
 #: window.title
 msgid "Exceptions"
@@ -2318,22 +2317,6 @@ msgstr "Tai&speáin moltaí cuardaigh"
 msgid "R&estore Defaults"
 msgstr "&Athchóirigh na Réamhshocruithe"
 
-#: addFeedReader.title
-msgid "Add Feed Reader"
-msgstr "Cuir Léitheoir Fothaí Leis"
-
-#: addAsDefault.label addAsDefault.accesskey
-msgid "&Make this my default feed reader"
-msgstr "Úsáid é seo &mar léitheoir fothaí réamhshocraithe"
-
-#: forSite.label
-msgid "Site:"
-msgstr "Suíomh:"
-
-#: feedReaderRegistered.title
-msgid "Feed Reader Already Registered"
-msgstr "Cláraíodh an Léitheoir Fothaí Cheana"
-
 #: feedPage.title
 msgid "Viewing Feed"
 msgstr "Fotha á Thaispeáint"
@@ -2387,16 +2370,12 @@ msgid "Go to %S"
 msgstr "Téigh go %S"
 
 #: addHandler
-msgid "Add \"%S\" as a feed reader?"
-msgstr "Cuir \"%S\" leis mar léitheoir fothaí?"
+msgid "Add \"%S\" (%S) as a Feed Reader?"
+msgstr ""
 
-#: addHandlerYes yes_label browsewithcaret.checkButtonLabel YES_LABEL yesButton
-msgid "Yes"
-msgstr "Tá"
-
-#: addHandlerNo no_label noButtonLabel NO_LABEL noButton
-msgid "No"
-msgstr "Níl"
+#: addHandlerAddButton
+msgid "Add Feed Reader"
+msgstr "Cuir Léitheoir Fothaí Leis"
 
 #: handlerRegistered
 msgid "\"%S\" is already registered as a Feed Reader"
@@ -2475,17 +2454,17 @@ msgstr "Airíonna Eiliminte"
 msgid "Image Properties"
 msgstr "Airíonna Íomhá"
 
+#: image-type.label generalType
+msgid "Type:"
+msgstr "Cineál:"
+
 #: image-alt.label
 msgid "Alternate text:"
 msgstr "Téacs mar Mhalairt:"
 
-#: image-width.label
-msgid "Width:"
-msgstr "Leithead:"
-
-#: image-height.label
-msgid "Height:"
-msgstr "Airde:"
+#: image-size.label
+msgid "Image Dimensions:"
+msgstr ""
 
 #: image-filesize.label
 msgid "Size of File:"
@@ -2560,6 +2539,10 @@ msgstr "Fuinneog chéanna"
 msgid "New window"
 msgstr "Fuinneog nua"
 
+#: newTabText
+msgid "New tab"
+msgstr ""
+
 #: parentFrameText
 msgid "Parent frame"
 msgstr "Máthairfhráma"
@@ -2592,9 +2575,13 @@ msgstr "%S KB (%S giotán)"
 msgid "Unknown (not cached)"
 msgstr "Anaithnid (gan taisceadh)"
 
-#: imageWidth imageHeight
-msgid "%Spx"
-msgstr "%Spx"
+#: imageDimensions mediaSize
+msgid "%Spx × %Spx"
+msgstr "%Spx × %Spx"
+
+#: imageDimensionsScaled
+msgid "%Spx × %Spx (scaled × %Spx × %Spx)"
+msgstr ""
 
 # LOCALIZATION NOTE: Next two strings are for language name representations
 #                    %1$S = language name, %2$S = region name
@@ -2896,18 +2883,6 @@ msgstr "Roghnaigh Comhad"
 msgid "Grab Page"
 msgstr "Glac Leathanach"
 
-#: preface
-msgid "Info for: "
-msgstr "Maidir le: "
-
-#: title pageInfo.title
-msgid "Page Info"
-msgstr "Eolas Leathanaigh"
-
-#: description
-msgid "Information about the current page"
-msgstr "Eolas faoin leathanach reatha"
-
 #: pageInfoWindow.width
 msgid ""
 "_: Do not translate this.  Only change the numeric values if you need this "
@@ -2934,10 +2909,6 @@ msgstr "G"
 #: generalMode
 msgid "Render Mode:"
 msgstr "Mód Léirithe:"
-
-#: generalType
-msgid "Type:"
-msgstr "Cineál:"
 
 #: generalSize size.label
 msgid "Size:"
@@ -3088,6 +3059,10 @@ msgstr "Réamhamharc na Meán:"
 msgid "Frames"
 msgstr "Frámaí"
 
+#: pageInfo.title
+msgid "Page Info"
+msgstr "Eolas Leathanaigh"
+
 #: frameInfo.title
 msgid "Frame Info"
 msgstr "Eolas Fráma"
@@ -3228,10 +3203,6 @@ msgstr "Deilbhín"
 msgid "Input"
 msgstr "Ionchur"
 
-#: mediaSize
-msgid "%Spx × %Spx"
-msgstr "%Spx × %Spx"
-
 #: generalDiskCache
 msgid "Disk cache"
 msgstr "Taisce diosca"
@@ -3347,6 +3318,10 @@ msgstr "Cuir Airíonna an Fhillteáin in Eagar"
 msgid "Places"
 msgstr "Áiteanna"
 
+#: view.toolbar.label view.toolbar.accesskey
+msgid "T&oolbar"
+msgstr ""
+
 #: view.columns.label view.columns.accesskey
 msgid "&Show Columns"
 msgstr "Tai&speáin Colúin"
@@ -3383,15 +3358,11 @@ msgstr "A&imsigh sa Bhailiúchán Reatha..."
 msgid "a"
 msgstr "a"
 
-#: cmd.edit_copy.key license.accept.accesskey
-msgid "c"
-msgstr "c"
-
 #: cmd.edit_paste.key
 msgid "v"
 msgstr "v"
 
-#: cmd.edit_undo.key size.accesskey1
+#: cmd.edit_undo.key sizeProportional.accesskey
 msgid "z"
 msgstr "z"
 
@@ -3427,10 +3398,6 @@ msgstr "&Sórtáil de réir Ainm"
 #: cmd.new_separator.label cmd.new_separator.accesskey
 msgid "New &Separator"
 msgstr "&Deighilteoir Nua"
-
-#: cmd.reload.label cmd.reload.accesskey
-msgid "Re&load"
-msgstr "Ath&luchtaigh"
 
 #: cmd.groupby_site.label cmd.groupby_site.accesskey
 msgid "Group by &Site"
@@ -3701,10 +3668,6 @@ msgstr "Cuardach Casta"
 msgid "Open \"%S\""
 msgstr "Oscail \"%S\""
 
-#: menuOpenInTabs.label
-msgid "Open in Tabs"
-msgstr "Oscail i gCluaisíní"
-
 #: defaultGroupOnLabel
 msgid "Group by Site"
 msgstr "Grúpáil de réir Suímh"
@@ -3737,9 +3700,21 @@ msgstr "Sórtáil '%S' de réir Ainm"
 msgid "Sort by Name"
 msgstr "Sórtáil de réir Ainm"
 
-#: sortByPrefix
-msgid "Sort by %S"
-msgstr "Sórtáil de réir %S"
+#: view.sortBy.title.label
+msgid "Sort by Title"
+msgstr ""
+
+#: view.sortBy.url.label
+msgid "Sort by Location"
+msgstr ""
+
+#: view.sortBy.date.label
+msgid "Sort by Visit Date"
+msgstr ""
+
+#: view.sortBy.visitCount.label
+msgid "Sort by Visit Count"
+msgstr ""
 
 #: searchDefault
 msgid "Search in Bookmarks & History"
@@ -3752,14 +3727,6 @@ msgstr "Cuardaigh i '%S'"
 #: findInPrefix
 msgid "Find in '%S'..."
 msgstr "Aimsigh i '%S'..."
-
-#: tabs.openWarningMultiple
-msgid ""
-"You have asked to open %S tabs at once. This might slow down your system "
-"while the pages are loading."
-msgstr ""
-"D'iarr tú %S cluaisín a oscailt le chéile. D'fhéadfadh do chóras éirí mall "
-"agus na leathanaigh á luchtú."
 
 #: accessibility.label
 msgid "Accessibility"
@@ -4233,30 +4200,6 @@ msgstr "Ar&droghanna..."
 msgid "&Colors..."
 msgstr "&Dathanna..."
 
-#: feeds.label paneFeeds.title
-msgid "Feeds"
-msgstr "Fothaí"
-
-#: feedReader.label feedReader.accesskey
-msgid "&Feed Reader:"
-msgstr "Léitheoir &Fothaí:"
-
-#: feedClick.label
-msgid "When I click on a web feed:"
-msgstr "Nuair a chliceálaim ar fhotha Gréasáin:"
-
-#: ask.label ask.accesskey
-msgid "&Ask me what to use"
-msgstr "Fiafr&aigh díom cad atá le húsáid"
-
-#: subLiveBookmark.label subLiveBookmark.accesskey
-msgid "Always subscribe with a &Live Bookmark"
-msgstr "Liostáil le &Leabharmharc Beo i gcónaí"
-
-#: subReader.label subReader.accesskey
-msgid "Always subscribe using the Feed &Reader"
-msgstr "Liostáil leis an Léitheoir &Fothaí i gcónaí"
-
 #: fileTypes.label
 msgid "File Types"
 msgstr "Cineálacha Comhaid"
@@ -4345,6 +4288,10 @@ msgstr "&Dún"
 msgid "<p>The privacy agreement failed to load.</p>"
 msgstr "<p>Comhaontú Príobháideachais gan luchtú.</p>"
 
+#: feedClick.label
+msgid "When I click on a web feed:"
+msgstr "Nuair a chliceálaim ar fhotha Gréasáin:"
+
 #: showPreview.label showPreview.accesskey
 msgid "&Show me a preview and ask me which Feed Reader to use"
 msgstr ""
@@ -4395,20 +4342,6 @@ msgstr "Sa&ns-serif:"
 #: monospace.label monospace.accesskey
 msgid "&Monospace:"
 msgstr "Cló &Aonleithid:"
-
-#: fantasy.label fantasy.accesskey
-msgid ""
-"_: 'Fantasy' means 'Ornate'\n"
-"&Fantasy:"
-msgstr "&Ornáideach:"
-
-#: cursive.label cursive.accesskey
-msgid "&Cursive:"
-msgstr "&Reatha:"
-
-#: fontsize.units
-msgid "pixels"
-msgstr "picteilíní"
 
 #: font.langGroup.latin1
 msgid "Western"
@@ -4538,7 +4471,7 @@ msgstr "Gúisearátach"
 msgid "Gurmukhi"
 msgstr "Gurmúcaíoch"
 
-#: font.langGroup.khmer
+#: font.langGroup.khmer km
 msgid "Khmer"
 msgstr "Ciméarach"
 
@@ -4804,6 +4737,10 @@ msgstr "Príomhphána"
 msgid "Tabs"
 msgstr "Cluaisíní"
 
+#: paneFeeds.title
+msgid "Feeds"
+msgstr "Fothaí"
+
 #: panePrivacy.title
 msgid "Privacy"
 msgstr "Príobháideachas"
@@ -4815,32 +4752,6 @@ msgstr "Slándáil"
 #: paneAdvanced.title
 msgid "Advanced"
 msgstr "Ardroghanna"
-
-#: blankpage
-msgid "(blank page)"
-msgstr "(leathanach bán)"
-
-#: choosehomepage
-msgid "Choose Home Page"
-msgstr "Roghnaigh Leathanach Baile"
-
-#: choosebookmark
-msgid ""
-"%brand% can set your home page to a site you have already added to your "
-"Bookmarks. Select a Bookmark below and click OK."
-msgstr ""
-"Is féidir le %brand% suíomh i measc do chuid Leabharmharc a shocrú mar "
-"leathanach baile duit féin. Roghnaigh Leabharmharc thíos, agus cliceáil Tá go "
-"Maith."
-
-#: choosefile
-msgid "Choose a file"
-msgstr "Roghnaigh comhad"
-
-# ### Content
-#: addReader
-msgid "Add New Reader..."
-msgstr "Cuir Léitheoir Nua Leis..."
 
 # ### Security
 # LOCALIZATION NOTE: phishBefore uses %S to represent the name of the provider
@@ -4854,14 +4765,6 @@ msgstr ""
 "Má roghnaíonn tú an rogha seo, cuirfear seoltaí na leathanaigh a léifidh tú "
 "chuig %S. Más mian leat leanúint ar aghaidh, caithfidh tú na téarmaí "
 "seirbhíse seo a léamh agus glacadh leo."
-
-#: setMasterPassword
-msgid "Set Master Password..."
-msgstr "Socraigh an Príomhfhocal Faire..."
-
-#: changeMasterPassword
-msgid "Change Master Password..."
-msgstr "Athraigh an Príomhfhocal Faire..."
 
 #: labelDefaultFont
 msgid "Default (%S)"
@@ -4928,38 +4831,6 @@ msgstr "Iontráil óstainm bailí, le do thoil"
 msgid "Invalid Hostname Entered"
 msgstr "Óstainm neamhbhailí"
 
-#: password_not_set
-msgid "(not set)"
-msgstr "(gan socrú)"
-
-#: failed_pw_change
-msgid "Unable to change Master Password."
-msgstr "Níorbh fhéidir an Príomhfhocal Faire a athrú."
-
-#: incorrect_pw
-msgid "You did not enter the correct current Master Password. Please try again."
-msgstr "Níor iontráil tú an Príomhfhocal Faire ceart.  Déan iarracht eile."
-
-#: pw_change_ok
-msgid "Master Password successfully changed."
-msgstr "D'éirigh le hathrú an Phríomhfhocail Faire."
-
-#: pw_erased_ok
-msgid "You have deleted your Master Password."
-msgstr "Tá do Phríomhfhocal Faire scriosta agat."
-
-#: pw_not_wanted
-msgid "Warning! You have decided not to use a Master Password."
-msgstr "Rabhadh! Tá sé beartaithe agat gan Príomhfhocal Faire a úsáid."
-
-#: pw_empty_warning
-msgid ""
-"Your stored web and email passwords, form data, and private keys will not be "
-"protected."
-msgstr ""
-"Ní bheidh cosaint ag na focail faire Ghréasáin agus ríomhphoist, sonraí "
-"foirme, ná ag na heochracha príobháideacha atá agat."
-
 #: pw_change2empty_in_fips_mode
 msgid ""
 "You are currently in FIPS mode. FIPS requires a non-empty Master Password."
@@ -4967,17 +4838,9 @@ msgstr ""
 "Tá tú i mód FIPS faoi láthair. Tá Príomhfhocal Faire neamhfholamh ag teastáil "
 "ó FIPS."
 
-#: pw_change_success_title
-msgid "Password Change Succeeded"
-msgstr "D'éirigh le hathrú an fhocail faire"
-
 #: pw_change_failed_title
 msgid "Password Change Failed"
 msgstr "Theip ar athrú an fhocail faire."
-
-#: pw_remove_button
-msgid "Remove"
-msgstr "Bain"
 
 # LOCALIZATION NOTE: Next two strings are for language name representations with
 #   and without the region.
@@ -4990,10 +4853,6 @@ msgstr "%1$S/%2$S  [%3$S]"
 #: languageCodeFormat
 msgid "%1$S  [%2$S]"
 msgstr "%1$S  [%2$S]"
-
-#: fontScalingResolutionFormat
-msgid "%S dpi"
-msgstr "%S pso"
 
 #: desktopFolderName displayNameDesktop
 msgid "Desktop"
@@ -5152,44 +5011,6 @@ msgstr "Bánaigh A&nois..."
 msgid "Clear Now"
 msgstr "Bánaigh Anois"
 
-#: sanitizeDialog.title
-msgid "Clear Private Data"
-msgstr "Bánaigh Sonraí Príobháideacha"
-
-#: clearDataSettings.label
-msgid "When I ask &brandShortName; to clear my private data, it should erase:"
-msgstr ""
-"Nuair a fhiafraím de &brandShortName; mo chuid sonraí príobháideacha a "
-"ghlanadh, ba chóir dó a ghlanadh:"
-
-#: itemHistory.label itemHistory.accesskey
-msgid "&Browsing History"
-msgstr "Stair &Bhrabhsála"
-
-#: itemFormData.label itemFormData.accesskey
-msgid "Saved &Form Information"
-msgstr "&Faisnéis Sábháilte ó Fhoirmeacha"
-
-#: itemPasswords.label itemPasswords.accesskey
-msgid "Saved &Passwords"
-msgstr "&Focail Fhaire a sábháladh"
-
-#: itemCookies.label itemCookies.accesskey
-msgid "&Cookies"
-msgstr "&Fianáin"
-
-#: itemCache.label itemCache.accesskey
-msgid "C&ache"
-msgstr "T&aisce"
-
-#: itemDownloads.label itemDownloads.accesskey
-msgid "&Download History"
-msgstr "&Stair an Bhainisteora Íosluchtaithe"
-
-#: itemSessions.label itemSessions.accesskey
-msgid "Authenticated &Sessions"
-msgstr "&Seisiúin Fhíordheimhnithe"
-
 #: warnAddonInstall.label warnAddonInstall.accesskey
 msgid "&Warn me when sites try to install add-ons"
 msgstr ""
@@ -5303,13 +5124,13 @@ msgstr "i bh&fuinneog nua"
 msgid "a new &tab"
 msgstr "i g&cluaisín nua"
 
-#: warnCloseMultiple.label warnCloseMultiple.accesskey
-msgid "Warn &me when I close a window with multiple tabs"
-msgstr "Tabhair rabhadh do&m agus fuinneog le cluaisíní iomadúla á dúnadh"
+#: warnCloseMultipleTabs.label warnCloseMultipleTabs.accesskey
+msgid "Warn &me when closing multiple tabs"
+msgstr ""
 
-#: warnOpenMany.label warnOpenMany.accesskey
-msgid "Warn me when I &open lots of tabs at once"
-msgstr "Tabhair rabhadh d&om nuair a osclaím neart cluaisíní le chéile"
+#: warnOpenManyTabs.label warnOpenManyTabs.accesskey
+msgid "Warn me when &opening multiple tabs might slow down &brandShortName;"
+msgstr ""
 
 #: showTabBar.label showTabBar.accesskey
 msgid "Always show the ta&b bar"
@@ -5535,13 +5356,47 @@ msgstr "Cuir na hAthruithe i bhFeidhm agus Atosaigh"
 msgid "Continue in Safe Mode"
 msgstr "Lean Ar Aghaidh sa Mhód Sábháilteachta"
 
+#: sanitizeDialog.title
+msgid "Clear Private Data"
+msgstr "Bánaigh Sonraí Príobháideacha"
+
 #: sanitizeItems.label
 msgid "Clear the following items now:"
 msgstr "Bánaigh na míreanna seo a leanas anois:"
 
+#: clearDataSettings.label
+msgid "When I ask &brandShortName; to clear my private data, it should erase:"
+msgstr ""
+"Nuair a fhiafraím de &brandShortName; mo chuid sonraí príobháideacha a "
+"ghlanadh, ba chóir dó a ghlanadh:"
+
+#: itemHistory.label itemHistory.accesskey
+msgid "&Browsing History"
+msgstr "Stair &Bhrabhsála"
+
 #: itemFormSearchHistory.label itemFormSearchHistory.accesskey
 msgid "Saved &Form and Search History"
 msgstr "Stair Shábháilte &Fhoirmeacha agus Staire"
+
+#: itemPasswords.label itemPasswords.accesskey
+msgid "Saved &Passwords"
+msgstr "&Focail Fhaire a sábháladh"
+
+#: itemCookies.label itemCookies.accesskey
+msgid "&Cookies"
+msgstr "&Fianáin"
+
+#: itemCache.label itemCache.accesskey
+msgid "C&ache"
+msgstr "T&aisce"
+
+#: itemDownloads.label itemDownloads.accesskey
+msgid "&Download History"
+msgstr "&Stair an Bhainisteora Íosluchtaithe"
+
+#: itemSessions.label itemSessions.accesskey
+msgid "Authenticated &Sessions"
+msgstr "&Seisiúin Fhíordheimhnithe"
 
 #: cmd_engineManager.label cmd_engineManager.accesskey
 msgid "&Manage Search Engines..."
@@ -5833,30 +5688,17 @@ msgstr ""
 "Bhraith Firefox go bhfuil an freastalaí ag atreorú an iarratais i slí nach "
 "gcríochnóidh choíche."
 
-#: repost
+# # LOCALIZATION NOTE (confirmRepost): In this item, don't translate "%S"
+#: confirmRepost
 msgid ""
-"The page you are trying to view contains POSTDATA that has expired from "
-"cache. If you resend the data, any action the form carried out (such as a "
-"search or online purchase) will be repeated. To resend the data, click OK. "
-"Otherwise, click Cancel."
+"To display this page, the information previously sent by %S must be resent. "
+"This will repeat any action (such as a search or order submission) that had "
+"been performed earlier."
 msgstr ""
-"Tá tú ag iarraidh leathanach a thaispeáint ina bhfuil sonraí POSTDATA a "
-"shíothlaigh as an taisce. Má sheolann tú na sonraí arís, déanfar arís gach "
-"gníomh a chuir an fhoirm i bhfeidhm (cuardach nó ceannach ar líne, mar "
-"shampla). Má tá tú ag iarraidh na sonraí a athsheoladh, cliceáil Tá go Maith. "
-"Mura bhfuil, cliceáil Cealaigh."
 
-#: repostConfirm
-msgid ""
-"The page you are trying to view contains POSTDATA. If you resend the data, "
-"any action the form carried out (such as a search or online purchase) will be "
-"repeated. To resend the data, click OK. Otherwise, click Cancel."
+#: resendButton.label
+msgid "Resend"
 msgstr ""
-"Tá tú ag iarraidh leathanach a thaispeáint ina bhfuil sonraí POSTDATA a "
-"shíothlaigh as an taisce. Má sheolann tú na sonraí arís, déanfar arís gach "
-"gníomh a chuir an fhoirm i bhfeidhm (cuardach nó ceannach ar líne, mar "
-"shampla). Má tá tú ag iarraidh na sonraí a athsheoladh, cliceáil Tá go Maith. "
-"Mura bhfuil, cliceáil Cealaigh."
 
 #: unknownSocketType
 msgid "Firefox doesn't know how to communicate with the server."
@@ -7697,18 +7539,13 @@ msgstr "Cóipeáil Sonraí go dtí an Ghearrthaisce"
 msgid "Log install process"
 msgstr "Logáil an próiseas suiteála"
 
-#: Kilo
-msgid "K"
-msgstr "K"
-
 #: Title updateWizard.title restartLaterTitle resumePausedAfterCloseTitle
 msgid "Software Update"
 msgstr "Nuashonrú Bogearraí"
 
 #: Info
-msgid "Firefox is installing your updates and will start in a few moments ..."
+msgid "Firefox is installing your updates and will start in a few moments..."
 msgstr ""
-"Tá do chuid nuashonruithe á suiteáil ag Firefox agus tosóidh sé go luath..."
 
 #: jump
 msgid "Jump"
@@ -8260,9 +8097,9 @@ msgstr "Dífhabhtaigh an script"
 msgid "Continue"
 msgstr "Ar Aghaidh"
 
-#: NeverShowDialogAgain
-msgid "Never show this dialog again"
-msgstr "Ná taispeáin an bosca comhrá seo arís"
+#: DontAskAgain
+msgid "Don't ask me again"
+msgstr ""
 
 #: JSURLLoadBlockedWarning
 msgid ""
@@ -8330,6 +8167,16 @@ msgid ""
 msgstr ""
 "Teagmhas=%S, ní mholtar úsáid preventCapture(). Úsáid stopPropagation() "
 "caighdeánaithe ag an W3C ina aít."
+
+#: UnexpectedCanvasVariantStyle
+msgid ""
+"canvas: an attempt to set strokeStyle or fillStyle to a value that is neither "
+"a string, a CanvasGradient, or a CanvasPattern was ignored."
+msgstr ""
+
+#: EmptyGetElementByIdParam
+msgid "Empty string passed to getElementById()."
+msgstr ""
 
 # "left-to-right" -- leave AS IS --KPS
 #: locale.dir
@@ -9249,6 +9096,20 @@ msgstr ""
 "Níl an teagmhas eochrach ar fáil ar leagain amach méarchláir áirithe: eochair="
 "\"%S\", mionathraitheoir=\"%S\""
 
+#: RecursiveBinding
+msgid "The XBL binding \"%S\" is already used by an ancestor element"
+msgstr ""
+
+#: CircularExtendsBinding
+msgid ""
+"Extending the XBL binding \"%S\" with \"%S\" would lead to it extending itself"
+msgstr ""
+
+# LOCALIZATION NOTE: do not localize <handler command="...">
+#: CommandNotInChrome
+msgid "Use of <handler command=\"...\"> not allowed outside chrome."
+msgstr ""
+
 # The contents of this file are subject to the Netscape Public
 # License Version 1.1 (the "License"); you may not use this file
 # except in compliance with the License. You may obtain a copy of
@@ -9430,6 +9291,12 @@ msgstr ". Ag súil le: <%S>."
 #: MissingOverlay
 msgid "Failed to load overlay from %1$S."
 msgstr "Theip ar luchtú forleagain ó %1$S."
+
+#: PINotInProlog
+msgid ""
+"<?%1$S?> processing instruction does not have any effect outside the prolog "
+"anymore (see bug 360119)."
+msgstr ""
 
 #: loadError.label
 msgid "Page Load Error"
@@ -9856,6 +9723,14 @@ msgstr "Iarmhíreanna"
 msgid "Enabled"
 msgstr "Cumasaithe"
 
+#: yes_label browsewithcaret.checkButtonLabel YES_LABEL yesButton
+msgid "Yes"
+msgstr "Tá"
+
+#: no_label noButtonLabel NO_LABEL noButton
+msgid "No"
+msgstr "Níl"
+
 #: PrintFrames printframeGroup.label
 msgid "Print Frames"
 msgstr "Priontáil Frámaí"
@@ -9871,6 +9746,23 @@ msgstr "An &fráma roghnaithe"
 #: Eachframe
 msgid "&Each frame separately"
 msgstr "&Gach fráma go scartha"
+
+#: EnterUserPasswordForRealm
+msgid "Enter username and password for \"%1$S\" at %2$S"
+msgstr "Iontráil ainm úsáideora agus focal faire do \"%1$S\" ag %2$S"
+
+#: EnterUserPasswordForProxy
+msgid "Enter username and password for proxy \"%1$S\" at %2$S"
+msgstr ""
+"Iontráil ainm úsáideora agus focal faire don seachfhreastalaí \"%1$S\" ag %2$S"
+
+#: EnterUserPasswordFor
+msgid "Enter username and password for %1$S"
+msgstr "Iontráil ainm úsáideora agus focal faire do %1$S"
+
+#: EnterPasswordFor
+msgid "Enter password for %1$S on %2$S"
+msgstr "Iontráil focal faire do %1$S ar %2$S"
 
 #: No
 msgid "Deny"
@@ -9936,6 +9828,13 @@ msgstr "Diúltaíodh cead chun rapar a chruthú do réad de chineál %S"
 #: ExtensionCapability
 msgid "Unknown: %S"
 msgstr "Anaithnid: %S"
+
+#: ProtocolFlagError
+msgid ""
+"Warning: Protocol handler for '%S' doesn't advertise a security policy.  "
+"While loads of such protocols are allowed for now, this is deprecated.  "
+"Please see the documentation in nsIProtocolHandler.idl."
+msgstr ""
 
 # The following descriptions are shown in the EnableCapabilityQuery dialog
 #
@@ -10271,9 +10170,13 @@ msgstr "Cuardaigh nód le scrúdú trí chliceáil air"
 msgid "Find a node to inspect by id, tag, or attribute"
 msgstr "Cuardaigh nód le scrúdú de réir aitheantais, clibe, nó aitreabúide"
 
-#: mnInspectDocument.label mnInspectDocument.accesskey
-msgid "Inspect &Document"
-msgstr "Scrú&daigh Cáipéis"
+#: mnInspectContentDocument.label mnInspectContentDocument.accesskey
+msgid "Inspect C&ontent Document"
+msgstr ""
+
+#: mnInspectChromeDocument.label mnInspectChromeDocument.accesskey
+msgid "Inspect C&hrome Document"
+msgstr ""
 
 #: cmdShowOpenURLDialog.label cmdShowOpenURLDialog.accesskey
 msgid "Inspect a &URL..."
@@ -10295,10 +10198,6 @@ msgstr "&Rith..."
 #: cmdToggleBrowser.label browserPanel.label
 msgid "Browser"
 msgstr "Brabhsálaí"
-
-#: cmdToggleChrome.label cmdToggleChrome.accesskey
-msgid "&Chrome"
-msgstr "&Snas"
 
 #: cmdViewSearchItem.label
 msgid "View..."
@@ -10798,6 +10697,10 @@ msgstr "nialasach"
 msgid "Document Default"
 msgstr ""
 
+#: namespaceTitle.custom.label
+msgid "Custom"
+msgstr "Saincheaptha"
+
 # LOCALIZATION NOTE: DO NOT LOCALIZE These are generic Namespaces
 #: namespaceTitle.XMLNS.label
 msgid "XMLNS"
@@ -10850,10 +10753,6 @@ msgstr "Rólanna WAI"
 #: namespaceTitle.WAIProperties.label
 msgid "WAI Properties"
 msgstr "Airíonna WAI"
-
-#: namespaceTitle.custom.label
-msgid "Custom"
-msgstr "Saincheaptha"
 
 # ***** BEGIN LICENSE BLOCK *****
 # #if 0
@@ -11314,23 +11213,6 @@ msgstr "Tús á chur le hidirbheartaíocht FTP..."
 msgid "Finished FTP transaction"
 msgstr "Idirbheartaíocht FTP críochnaithe"
 
-#: EnterUserPasswordForRealm
-msgid "Enter username and password for \"%1$S\" at %2$S"
-msgstr "Iontráil ainm úsáideora agus focal faire do \"%1$S\" ag %2$S"
-
-#: EnterUserPasswordForProxy
-msgid "Enter username and password for proxy \"%1$S\" at %2$S"
-msgstr ""
-"Iontráil ainm úsáideora agus focal faire don seachfhreastalaí \"%1$S\" ag %2$S"
-
-#: EnterUserPasswordFor
-msgid "Enter username and password for %1$S"
-msgstr "Iontráil ainm úsáideora agus focal faire do %1$S"
-
-#: EnterPasswordFor
-msgid "Enter password for %1$S on %2$S"
-msgstr "Iontráil focal faire do %1$S ar %2$S"
-
 #: UnsupportedFTPServer
 msgid "The FTP server %1$S is currently unsupported."
 msgstr "Ní thacaítear leis an bhfreastalaí FTP %1$S faoi láthair."
@@ -11520,85 +11402,6 @@ msgstr "used for this version."
 msgid "Build identifier: "
 msgstr "Build identifier: "
 
-# The contents of this file are subject to the Netscape Public
-# License Version 1.1 (the "License"); you may not use this file
-# except in compliance with the License. You may obtain a copy of
-# the License at http://www.mozilla.org/NPL/
-#
-# Software distributed under the License is distributed on an "AS
-# IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
-# implied. See the License for the specific language governing
-# rights and limitations under the License.
-#
-# The Original Code is mozilla.org code.
-#
-# The Initial Developer of the Original Code is Netscape
-# Communications Corporation. Portions created by Netscape are
-# Copyright (C) 2000 Netscape Communications Corporation. All
-# Rights Reserved.
-#
-# Contributor(s): Tao Cheng <tao@netscape.com>
-#
-#: ar
-msgid "ar-sa"
-msgstr "ar-sa"
-
-#: de
-msgid "de-DE"
-msgstr "de-DE"
-
-# #-#-#-#-#  ga-IE.po (firefox 0.8)  #-#-#-#-#
-# #-#-#-#-#  tmp.XXXXgm6QQt.po (firefox 0.8)  #-#-#-#-#
-# all.js
-#
-# Localization Note: Cases of charset names must be preserved. If you're
-# adding charsets to your localized version, please refer to
-# intl/uconv/src/charsetalias.properties file for the list of canonical
-# charset names and use canonical names exactly as listed there.
-# #-#-#-#-#  tmp.XXXXu9VoC2.po (firefox 0.8)  #-#-#-#-#
-#
-# localizable preference value
-#
-# all.js
-#
-# Localization Note: Cases of charset names must be preserved. If you're
-# adding charsets to your localized version, please refer to
-# intl/uconv/src/charsetalias.properties file for the list of canonical
-# charset names and use canonical names exactly as listed there.
-# #-#-#-#-#  IE.po (firefox 0.8)  #-#-#-#-#
-# sidebar customize/more... panel locale
-#: en general.useragent.locale
-msgid "en-US"
-msgstr "ga-IE"
-
-#: es
-msgid "es-ES"
-msgstr "es-ES"
-
-#: fr
-msgid "fr-FR"
-msgstr "fr-FR"
-
-#: it
-msgid "it-IT"
-msgstr "it-IT"
-
-#: ja
-msgid "ja-JP"
-msgstr "ja-JP"
-
-#: ko
-msgid "ko-KR"
-msgstr "ko-KR"
-
-#: pt
-msgid "pt-PT"
-msgstr "pt-PT"
-
-#: sv
-msgid "sv-SE"
-msgstr "sv-SE"
-
 # "C" under Main -> Amharc 
 #: charsetMenu.label charsetMenu.accesskey
 msgid "&Character Encoding"
@@ -11710,6 +11513,26 @@ msgstr "Deir an leathanach ag %S:"
 #: window.title
 msgid "about:config"
 msgstr "about:config"
+
+#: scaryWarningTitle.label
+msgid "Be careful, this gun is loaded!"
+msgstr ""
+
+#: scaryWarningText.label
+msgid ""
+"This configuration page allows you to modify advanced preferences that "
+"control this application. It is possible to create harmful side effects by "
+"changing the values of these preferences. You should only continue if you "
+"know what you are doing or if you are following trusted advice."
+msgstr ""
+
+#: scaryWarningButton.label
+msgid "I'll be careful, I promise!"
+msgstr ""
+
+#: scaryWarningCheckbox.label
+msgid "Show this warning next time"
+msgstr ""
 
 #: filterPrefs.label filterPrefs.accesskey
 msgid "F&ilter:"
@@ -12207,6 +12030,10 @@ msgstr "Ainm comhadlainne:"
 msgid "Save"
 msgstr "Sábháil"
 
+#: saveAsLabel
+msgid "Save As:"
+msgstr ""
+
 #: errorOpenFileDoesntExistTitle errorOpeningFileTitle
 msgid "Error opening %S"
 msgstr "Bhí earráid ann agus %S á oscailt"
@@ -12329,6 +12156,10 @@ msgstr "Aimsigh:"
 msgid "Quick Find:"
 msgstr "Aimsiú Tapa:"
 
+#: FastFindLinksLabel
+msgid "Quick Find (links only):"
+msgstr ""
+
 #: CaseSensitive
 msgid "(Case sensitive)"
 msgstr "(Cásíogair)"
@@ -12373,6 +12204,30 @@ msgstr "&Síos"
 #: notFoundWarning
 msgid "The text you entered was not found."
 msgstr "Ní raibh an téacs a bhí curtha agat faighte."
+
+# #-#-#-#-#  ga-IE.po (firefox 0.8)  #-#-#-#-#
+# #-#-#-#-#  tmp.XXXXgm6QQt.po (firefox 0.8)  #-#-#-#-#
+# all.js
+#
+# Localization Note: Cases of charset names must be preserved. If you're
+# adding charsets to your localized version, please refer to
+# intl/uconv/src/charsetalias.properties file for the list of canonical
+# charset names and use canonical names exactly as listed there.
+# #-#-#-#-#  tmp.XXXXu9VoC2.po (firefox 0.8)  #-#-#-#-#
+#
+# localizable preference value
+#
+# all.js
+#
+# Localization Note: Cases of charset names must be preserved. If you're
+# adding charsets to your localized version, please refer to
+# intl/uconv/src/charsetalias.properties file for the list of canonical
+# charset names and use canonical names exactly as listed there.
+# #-#-#-#-#  IE.po (firefox 0.8)  #-#-#-#-#
+# sidebar customize/more... panel locale
+#: general.useragent.locale
+msgid "en-US"
+msgstr "ga-IE"
 
 #: font.language.group
 msgid "x-western"
@@ -12778,10 +12633,9 @@ msgstr "Gearmáinis"
 msgid "Divehi"
 msgstr "Divéihis"
 
-# Panu
 #: dz
-msgid "Bhutani"
-msgstr "Bútáinis"
+msgid "Dzongkha"
+msgstr ""
 
 #: ee
 msgid "Ewe"
@@ -12826,12 +12680,16 @@ msgid "Fijian"
 msgstr "Fidsis"
 
 #: fo
-msgid "Faeroese"
-msgstr "Faróis"
+msgid "Faroese"
+msgstr ""
 
 #: fr
 msgid "French"
 msgstr "Fraincis"
+
+#: fur
+msgid "Friulian"
+msgstr ""
 
 #: fy
 msgid "Frisian"
@@ -12913,8 +12771,8 @@ msgid "Sichuan Yi"
 msgstr "Íais Shisiuánach"
 
 #: ik
-msgid "Inupiak"
-msgstr "Iniúpiaicis"
+msgid "Inupiaq"
+msgstr ""
 
 # NOT "Edo"
 #: io
@@ -12957,11 +12815,6 @@ msgstr "Casaicis"
 #: kl
 msgid "Greenlandic"
 msgstr "Graonlainnis"
-
-# Panu
-#: km
-msgid "Cambodian"
-msgstr "Cambóidis"
 
 #: kn
 msgid "Kannada"
@@ -13019,10 +12872,9 @@ msgstr "Limbuirgis"
 msgid "Lingala"
 msgstr "Liongáilis"
 
-# Panu
 #: lo
-msgid "Laothian"
-msgstr "Láóis"
+msgid "Lao"
+msgstr ""
 
 #: lt
 msgid "Lithuanian"
@@ -13203,8 +13055,8 @@ msgid "Northern Sami"
 msgstr "Sáimis Thuaidh"
 
 #: sg
-msgid "Sangro"
-msgstr "Sangóis"
+msgid "Sango"
+msgstr ""
 
 #: si
 msgid "Singhalese"
@@ -13249,8 +13101,8 @@ msgid "Sotho, Southern"
 msgstr "Sotho Theas"
 
 #: su
-msgid "Sudanese"
-msgstr "Súdáinis"
+msgid "Sundanese"
+msgstr ""
 
 #: sv
 msgid "Swedish"
@@ -13414,6 +13266,10 @@ msgstr ""
 #: mozilla.from
 msgid "from <strong>The Book of Mozilla,</strong> 7:15"
 msgstr "ó <strong>The Book of Mozilla,</strong> 7:15"
+
+#: closeNotification.tooltip
+msgid "Close this message"
+msgstr "Dún an teachtaireacht seo"
 
 #: caption.label unknownOpeningTitle
 msgid "Opening #1"
@@ -14151,7 +14007,7 @@ msgid "\tAruba"
 msgstr "Aruba"
 
 #: ax
-msgid "\tÃland Islands"
+msgid "\tÅland Islands"
 msgstr ""
 
 #: az
@@ -15143,17 +14999,17 @@ msgstr ""
 "roghnú leis an méarchlár. An bhfuil tú ag iarraidh Brabhsáil le Cúrsóir a "
 "chur ar siúl?"
 
-#: tabs.closeWarningOne
-msgid "You are about to close %S open tab. Are you sure you want to continue?"
-msgstr ""
-"Tá tú chun %S cluaisín oscailte a dhúnadh. An bhfuil tú cinnte go dteastaíonn "
-"uait leanadh ar aghaidh?"
+#: tabs.closeWarningTitle
+msgid "Confirm close"
+msgstr "Dearbhaigh"
 
-#: tabs.closeWarningMultiple
-msgid "You are about to close %S open tabs. Are you sure you want to continue?"
+#: tabs.closeWarningOneTab
+msgid "You are about to close %S tab. Are you sure you want to continue?"
 msgstr ""
-"Tá tú chun %S cluaisín oscailte a dhúnadh. An bhfuil tú cinnte go dteastaíonn "
-"uait leanadh ar aghaidh?"
+
+#: tabs.closeWarningMultipleTabs
+msgid "You are about to close %S tabs. Are you sure you want to continue?"
+msgstr ""
 
 #: tabs.closeButtonOne
 msgid "Close tab"
@@ -15166,6 +15022,22 @@ msgstr "Dún cluaisíní"
 #: tabs.closeWarningPromptMe
 msgid "Warn me when I attempt to close multiple tabs"
 msgstr "Tabhair rabhadh dom agus ag iarraidh cluaisíní iomadúla a dhúnadh"
+
+#: spellAddToDictionary.label spellAddToDictionary.accesskey
+msgid "Add t&o dictionary"
+msgstr ""
+
+#: spellEnable.label spellEnable.accesskey
+msgid "&Spell check this field"
+msgstr "&Seiceáil litriú an réimse seo"
+
+#: spellNoSuggestions.label
+msgid "(No spelling suggestions)"
+msgstr "(Gan moltaí litrithe)"
+
+#: spellDictionaries.label spellDictionaries.accesskey
+msgid "&Languages"
+msgstr "&Teangacha"
 
 #: restoreNaturalOrder.label
 msgid "Restore Defaults"
@@ -16156,10 +16028,6 @@ msgstr "Níl íomhá réamhamhairc ag an téama seo"
 msgid "More Information"
 msgstr "Tuilleadh Eolais"
 
-#: closeMessage.tooltip
-msgid "Close this message"
-msgstr "Dún an teachtaireacht seo"
-
 #: updateSuccess.label
 msgid "Update completed successfully."
 msgstr "D'éirigh leis an nuashonrú."
@@ -16841,6 +16709,10 @@ msgid "Click Finish to continue starting &brandShortName;."
 msgstr ""
 "Cliceáil Críochnaigh chun leanúint ar aghaidh le &brandShortName; a thosú."
 
+#: clickFinish.labelMac
+msgid "Click Done to continue starting &brandShortName;."
+msgstr ""
+
 #: enableChecking.label
 msgid "Allow &brandShortName; to check for updates."
 msgstr "Lig do &brandShortName; seiceáil le haghaidh nuashonruithe."
@@ -16916,10 +16788,6 @@ msgstr "%S (%S)"
 #: homeButton.tooltip
 msgid "Go to the Help Start Page"
 msgstr "Téigh go dtí an Leathanach Tosaigh Chabhrach"
-
-#: throbber.tooltip
-msgid "Go to the Help on Help section"
-msgstr "Téigh go dtí an rannóg Cabhair maidir le Cabhair"
 
 #: toctab.label toctab.accesskey
 msgid "&Contents"
@@ -17154,6 +17022,46 @@ msgstr "URL na &Seirbhíse:"
 #: signingCA.label signingCA.accesskey
 msgid "&Response Signer:"
 msgstr "Sínitheoir na bhFreag&raí:"
+
+#: password_not_set
+msgid "(not set)"
+msgstr "(gan socrú)"
+
+#: failed_pw_change
+msgid "Unable to change Master Password."
+msgstr "Níorbh fhéidir an Príomhfhocal Faire a athrú."
+
+#: incorrect_pw
+msgid "You did not enter the correct current Master Password. Please try again."
+msgstr "Níor iontráil tú an Príomhfhocal Faire ceart.  Déan iarracht eile."
+
+#: pw_change_ok
+msgid "Master Password successfully changed."
+msgstr "D'éirigh le hathrú an Phríomhfhocail Faire."
+
+#: pw_erased_ok
+msgid "You have deleted your Master Password."
+msgstr "Tá do Phríomhfhocal Faire scriosta agat."
+
+#: pw_not_wanted
+msgid "Warning! You have decided not to use a Master Password."
+msgstr "Rabhadh! Tá sé beartaithe agat gan Príomhfhocal Faire a úsáid."
+
+#: pw_empty_warning
+msgid ""
+"Your stored web and email passwords, form data, and private keys will not be "
+"protected."
+msgstr ""
+"Ní bheidh cosaint ag na focail faire Ghréasáin agus ríomhphoist, sonraí "
+"foirme, ná ag na heochracha príobháideacha atá agat."
+
+#: pw_change_success_title
+msgid "Password Change Succeeded"
+msgstr "D'éirigh le hathrú an fhocail faire"
+
+#: pw_remove_button
+msgid "Remove"
+msgstr "Bain"
 
 #: removePassword.title
 msgid "Remove Master Password"
@@ -17830,11 +17738,11 @@ msgid "Restart %S Now"
 msgstr "Atosaigh %S Anois"
 
 #: downloadButton downloadButton_minor
-msgid "Download & Install Now Â»"
+msgid "Download & Install Now »"
 msgstr "Íosluchtaigh agus Suiteáil Anois >>"
 
 #: downloadButton_major
-msgid "Get the new version Â»"
+msgid "Get the new version »"
 msgstr "Faigh an leagan nua >>"
 
 #: neverButton
@@ -19005,12 +18913,12 @@ msgid "Any Certificate Authority"
 msgstr "Údarás Deimhniúcháin ar bith"
 
 #: HighGrade
-msgid "2048 (High Grade)"
-msgstr "2048 (Láidir)"
+msgid "High Grade"
+msgstr ""
 
 #: MediumGrade
-msgid "1024 (Medium Grade)"
-msgstr "1024 (Meánach)"
+msgid "Medium Grade"
+msgstr ""
 
 #: nick_template
 msgid "%1$s's %2$s ID"
@@ -19154,6 +19062,14 @@ msgstr "Paraiméadair an Algartaim"
 #: CertDumpRSAEncr
 msgid "PKCS #1 RSA Encryption"
 msgstr "Criptiúchán RSA de réir PKCS #1"
+
+#: CertDumpRSATemplate
+msgid ""
+"Modulus (%S bits):\n"
+"%S\n"
+"Exponent (%S bits):\n"
+"%S"
+msgstr ""
 
 #: CertDumpIssuerUniqueID
 msgid "Issuer Unique ID"
@@ -20635,6 +20551,10 @@ msgstr "Láithreáin Ghréasáin"
 msgid "Authorities"
 msgstr "Údaráis"
 
+#: certmgr.tab.orphan
+msgid "Extra"
+msgstr ""
+
 #: certmgr.ca.builtins
 msgid "Built-in CAs"
 msgstr "Údaráis Deimhniúcháin Inmheánaigh"
@@ -20659,6 +20579,11 @@ msgstr "Tá teastais agat a shainaithníonn na suíomhanna Gréasáin seo:"
 msgid ""
 "You have certificates on file that identify these certificate authorities:"
 msgstr "Tá teastais agat a shainaithníonn na húdaráis deimhniúcháin seo:"
+
+#: certmgr.orphans
+msgid ""
+"You have certificates on file that do not fit in any of the other categories:"
+msgstr ""
 
 #: certmgr.detail.general_tab.title certmgr.detail.general_tab.accesskey
 msgid "&General"
@@ -21351,7 +21276,7 @@ msgstr ""
 msgid "Delete Web Site Certificates"
 msgstr "Scrios Teastais na suíomhanna Gréasáin"
 
-#: deleteUserCertConfirm
+#: deleteUserCertConfirm deleteOrphanCertConfirm
 msgid "Are you sure you want to delete these certificates?"
 msgstr "An bhfuil tú cinnte gur mian leat na teastais seo a scriosadh?"
 
@@ -21403,6 +21328,18 @@ msgstr ""
 #: deleteEmailCertTitle
 msgid "Delete E-Mail Certificates"
 msgstr "Scrios Teastais Ríomhphoist"
+
+#: deleteOrphanCertFlag
+msgid "deleteOrphanFlag"
+msgstr ""
+
+#: deleteOrphanCertImpact
+msgid "_: deleteOrphanCertImpact\n"
+msgstr ""
+
+#: deleteOrphanCertTitle
+msgid "Delete Certificates"
+msgstr ""
 
 # PKCS#12 file dialogs
 #: chooseP12RestoreFileDialog
