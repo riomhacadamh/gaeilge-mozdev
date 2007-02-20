@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-06 11:43-0600\n"
+"POT-Creation-Date: 2007-02-14 10:51-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -597,9 +597,9 @@ msgid "Select All"
 msgstr "Roghnaigh Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
-#: cmd_selectAll_accesskey selectAllCmd.key addHandlerAddButtonAccesskey
-#: selectall.key mediaSaveAs.accesskey cmd.about.accesskey IAgree.accesskey
-#: certselect.auto.accesskey
+#: cmd_selectAll_accesskey selectAllCmd.key refreshBlocked.goButton.accesskey
+#: addHandlerAddButtonAccesskey selectall.key mediaSaveAs.accesskey
+#: cmd.about.accesskey IAgree.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -788,9 +788,8 @@ msgstr "F"
 msgid "New Bookmark..."
 msgstr "Leabharmharc Nua..."
 
-#: cmd_bm_newbookmark_accesskey searchBookmarksCmd.commandkey
-#: bookmarksSidebarCmd.accesskey bookmarkCurTab_accesskey Byte
-#: loaddevice.browse.accesskey
+#: cmd_bm_newbookmark_accesskey bookmarksSidebarCmd.accesskey
+#: bookmarkCurTab_accesskey Byte loaddevice.browse.accesskey
 msgid "B"
 msgstr "B"
 
@@ -997,7 +996,9 @@ msgstr "Oscail cluaisíní"
 
 #: tabs.openWarningPromptMeBranded
 msgid "Warn me when opening multiple tabs might slow down %S"
-msgstr "Tabhair rabhadh dom má ta baol ann go mbeidh %S níos moille tar éis cluaisíní iomadúla a oscailt"
+msgstr ""
+"Tabhair rabhadh dom má ta baol ann go mbeidh %S níos moille tar éis cluaisíní "
+"iomadúla a oscailt"
 
 #: viewsourcetitle.preface
 msgid "Source for: "
@@ -1138,10 +1139,6 @@ msgstr "Eagraigh Leabhar&mharcanna..."
 #: bookmarkAllCmd.label bookmarkAllTabs_label
 msgid "Bookmark All Tabs..."
 msgstr "Leabharmharcáil Gach Cluaisín..."
-
-#: searchBookmarksCmd.label searchBookmarksCmd.accesskey
-msgid "&Search in Bookmarks..."
-msgstr "&Cuardaigh Leabharmharcanna..."
 
 # "S" under Main -> Gabh and also under right click menu
 #: backCmd.label backCmd.accesskey button-back-unix.label
@@ -1734,19 +1731,6 @@ msgstr "VK_F3"
 msgid "&Add dictionaries..."
 msgstr "&Cuir foclóirí leis..."
 
-# new bookmarks and history
-#: location.status.not_bookmarked locationStatusNotBookmarked
-msgid "Star (Off)"
-msgstr "Réalt (As)"
-
-#: location.status.bookmarked locationStatusBookmarked
-msgid "Star (On)"
-msgstr "Réalt (Ar)"
-
-#: location.status.bookmark.tooltip
-msgid "Add a Bookmark to this page"
-msgstr "Cuir Leabharmharc leis an leathanach seo"
-
 #: nv_done done.label saveChanges.label button-finish-mac.label
 msgid "Done"
 msgstr "Déanta"
@@ -2054,6 +2038,18 @@ msgstr "Liostáil leis an leathanach seo..."
 msgid "Undo Close Tab"
 msgstr "Cealaigh Dúnadh an Chluaisín"
 
+#: refreshBlocked.goButton allow.label can Yes
+msgid "Allow"
+msgstr "Ceadaigh"
+
+#: refreshBlocked.refreshLabel
+msgid "%S prevented this page from automatically reloading."
+msgstr ""
+
+#: refreshBlocked.redirectLabel
+msgid "%S prevented this page from automatically redirecting to another page."
+msgstr ""
+
 #: window.title
 msgid "Exceptions"
 msgstr "Eisceachtaí"
@@ -2090,10 +2086,6 @@ msgstr "Coisc"
 #: session.label canSession
 msgid "Allow for Session"
 msgstr "Ceadaigh don Seisiún"
-
-#: allow.label can Yes
-msgid "Allow"
-msgstr "Ceadaigh"
 
 #: div.cookiesonsystem.label
 msgid "View and remove cookies that are stored on your computer."
@@ -2581,7 +2573,7 @@ msgstr "%Spx × %Spx"
 
 #: imageDimensionsScaled
 msgid "%Spx × %Spx (scaled × %Spx × %Spx)"
-msgstr "%Spct × %Spct (scálaithe × %Spct × %Spct)"
+msgstr ""
 
 # LOCALIZATION NOTE: Next two strings are for language name representations
 #                    %1$S = language name, %2$S = region name
@@ -3736,6 +3728,10 @@ msgstr "Úsáid eochracha &cúrsóra i gcónaí chun bogadh laistigh de leathana
 msgid "Search for te&xt when I start typing"
 msgstr "Cuardaigh téa&cs nuair a thosóidh mé ag clóbhualadh"
 
+#: blockAutoRefresh.label blockAutoRefresh.accesskey
+msgid "Wa&rn me when web sites try to redirect or reload the page"
+msgstr ""
+
 #: browsing.label
 msgid "Browsing"
 msgstr "Brabhsáil"
@@ -4181,12 +4177,12 @@ msgid "&Default font:"
 msgstr "Cló réamh&shocraithe:"
 
 #: defaultSize.label defaultSize.accesskey
-msgid "S&ize:"
+msgid "&Size:"
 msgstr "&Méid:"
 
 #: advancedFonts.label advancedFonts.accesskey
-msgid "A&dvanced..."
-msgstr "Ar&droghanna..."
+msgid "&Advanced..."
+msgstr ""
 
 #: colors.label colors.accesskey
 msgid "&Colors..."
@@ -4286,7 +4282,9 @@ msgstr "Nuair a chliceálaim ar fhotha Gréasáin:"
 
 #: showPreview.label showPreview.accesskey
 msgid "&Show me a preview and ask me which Feed Reader to use"
-msgstr "Tai&spéain réamhamharc dom agus fiafraigh díom cén Léitheoir Fothaí atá le húsáid"
+msgstr ""
+"Tai&spéain réamhamharc dom agus fiafraigh díom cén Léitheoir Fothaí atá le "
+"húsáid"
 
 #: subscribeUsing.label subscribeUsing.accesskey
 msgid "S&ubscribe to the feed using:"
@@ -5122,7 +5120,9 @@ msgstr "Tabhair rabhadh do&m agus cluaisíní iomadúla á ndúnadh"
 
 #: warnOpenManyTabs.label warnOpenManyTabs.accesskey
 msgid "Warn me when &opening multiple tabs might slow down &brandShortName;"
-msgstr "Tabhair rabhadh dom má ta ba&ol ann go mbeidh %S níos moille tar éis cluaisíní iomadúla a oscailt"
+msgstr ""
+"Tabhair rabhadh dom má ta ba&ol ann go mbeidh %S níos moille tar éis "
+"cluaisíní iomadúla a oscailt"
 
 #: showTabBar.label showTabBar.accesskey
 msgid "Always show the ta&b bar"
@@ -5691,7 +5691,10 @@ msgid ""
 "To display this page, the information previously sent by %S must be resent. "
 "This will repeat any action (such as a search or order submission) that had "
 "been performed earlier."
-msgstr "Leis an leathanach seo a thaispeáint, caithfear an fhaisnéis a sheol %S cheana a athsheoladh. Déanfar arís gníomh ar bith (m.sh. cuardach nó cur isteach ordaithe) a deineadh níos luaithe."
+msgstr ""
+"Leis an leathanach seo a thaispeáint, caithfear an fhaisnéis a sheol %S "
+"cheana a athsheoladh. Déanfar arís gníomh ar bith (m.sh. cuardach nó cur "
+"isteach ordaithe) a deineadh níos luaithe."
 
 #: resendButton.label
 msgid "Resend"
@@ -7581,6 +7584,10 @@ msgstr "Cliceáil"
 msgid "Activate"
 msgstr "Gníomhachtaigh"
 
+#: cycle
+msgid "Cycle"
+msgstr ""
+
 #: fileNotFound
 msgid "The file %S cannot be found. Please check the location and try again."
 msgstr "Comhad %S gan aimsiú. Deimhnigh an suíomh agus bain triail eile as."
@@ -8174,7 +8181,9 @@ msgstr ""
 msgid ""
 "canvas: an attempt to set strokeStyle or fillStyle to a value that is neither "
 "a string, a CanvasGradient, or a CanvasPattern was ignored."
-msgstr "canvas: tugadh neamhaird ar iarracht luach a chur ar strokeStyle nó fillStyle nach teaghrán, CanvasGradient nó CanvasPattern é."
+msgstr ""
+"canvas: tugadh neamhaird ar iarracht luach a chur ar strokeStyle nó fillStyle "
+"nach teaghrán, CanvasGradient nó CanvasPattern é."
 
 #: EmptyGetElementByIdParam
 msgid "Empty string passed to getElementById()."
@@ -9300,7 +9309,8 @@ msgid ""
 "<?%1$S?> processing instruction does not have any effect outside the prolog "
 "anymore (see bug 360119)."
 msgstr ""
-"Níl éifeacht ag an treoir phróiseála <?%1$S?> taobh amuigh den réamhfhocal anois (feic fabht 360119)."
+"Níl éifeacht ag an treoir phróiseála <?%1$S?> taobh amuigh den réamhfhocal "
+"anois (feic fabht 360119)."
 
 #: loadError.label
 msgid "Page Load Error"
@@ -9839,7 +9849,9 @@ msgid ""
 "While loads of such protocols are allowed for now, this is deprecated.  "
 "Please see the documentation in nsIProtocolHandler.idl."
 msgstr ""
-"Rabhadh: ní fhograíonn an láimhseálaí prótacail le haghaidh '%S' polasaí slándála. Cé go gceadaítear a leithéid de phrótacal faoi láthair, ní moltar é. Feic an doiciméadú i nsIProtocolHandler.idl le do thoil."
+"Rabhadh: ní fhograíonn an láimhseálaí prótacail le haghaidh '%S' polasaí "
+"slándála. Cé go gceadaítear a leithéid de phrótacal faoi láthair, ní moltar "
+"é. Feic an doiciméadú i nsIProtocolHandler.idl le do thoil."
 
 # The following descriptions are shown in the EnableCapabilityQuery dialog
 #
@@ -9878,7 +9890,8 @@ msgid ""
 "\n"
 "Please restart this application"
 msgstr ""
-"Tharla earráid agus sonraí á scríobh chuig an diosca. Diosca lán atá freagrach as an earráid seo uaireanta.\n"
+"Tharla earráid agus sonraí á scríobh chuig an diosca. Diosca lán atá "
+"freagrach as an earráid seo uaireanta.\n"
 "\n"
 "Atosaigh an feidhmchlár seo le do thoil."
 
@@ -10164,7 +10177,8 @@ msgstr "Eilimint á crúthú le QName neamhbhailí."
 
 #: 31
 msgid "Variable binding shadows variable binding within the same template."
-msgstr "Tá ceangal athróga á scáthú ag ceangal athróga eile sa teimpléid chéanna."
+msgstr ""
+"Tá ceangal athróga á scáthú ag ceangal athróga eile sa teimpléid chéanna."
 
 #: LoadingError
 msgid "Error loading stylesheet: %S"
@@ -11558,7 +11572,10 @@ msgid ""
 "changing the values of these preferences. You should only continue if you "
 "know what you are doing or if you are following trusted advice."
 msgstr ""
-"Leis an leathanach cumraíochta seo, is féidir leat athruithe a dhéanamh ar ardroghanna a rialaíonn an feidhmchlár seo. Is féidir dochar a dhéanamh trí luachanna na roghanna seo a athrú. Ná lean ar aghaidh muna dtuigeann tú cad atá á dhéanamh agat, nó muna bhfuil comhairle iontaofa agat."
+"Leis an leathanach cumraíochta seo, is féidir leat athruithe a dhéanamh ar "
+"ardroghanna a rialaíonn an feidhmchlár seo. Is féidir dochar a dhéanamh trí "
+"luachanna na roghanna seo a athrú. Ná lean ar aghaidh muna dtuigeann tú cad "
+"atá á dhéanamh agat, nó muna bhfuil comhairle iontaofa agat."
 
 #: scaryWarningButton.label
 msgid "I'll be careful, I promise!"
@@ -17372,8 +17389,11 @@ msgid ""
 "the folder \"%S\" and cannot be undone.\n"
 "Would you like to delete the profile data files?"
 msgstr ""
-"Bainfear an phróifíl ó liosta na bpróifílí atá ar fáil má scriostar í, agus ní féidir é seo a chur ar ceal.\n"
-"Is féidir leat scriosadh comhaid sonraí na bpróifílí a roghnú, ina measc do chuid socruithe, teastais agus sonraí úsáideora eile. Scriosfaidh an rogha seo an fillteán \"%S\" agus ní féidir é a chur ar ceal.\n"
+"Bainfear an phróifíl ó liosta na bpróifílí atá ar fáil má scriostar í, agus "
+"ní féidir é seo a chur ar ceal.\n"
+"Is féidir leat scriosadh comhaid sonraí na bpróifílí a roghnú, ina measc do "
+"chuid socruithe, teastais agus sonraí úsáideora eile. Scriosfaidh an rogha "
+"seo an fillteán \"%S\" agus ní féidir é a chur ar ceal.\n"
 "An dteastaíonn uait comhaid sonraí na bpróifílí a scriosadh?"
 
 #: deleteFiles
@@ -17514,7 +17534,8 @@ msgid ""
 "Checking if this update will cause problems with your extensions and/or "
 "themes..."
 msgstr ""
-"Ag seiceáil an mbeidh fadhbanna le do chuid eisínteachtaí agus/nó téamaí de dheasca an nuashonraithe seo..."
+"Ag seiceáil an mbeidh fadhbanna le do chuid eisínteachtaí agus/nó téamaí de "
+"dheasca an nuashonraithe seo..."
 
 #: clickHere.label
 msgid "View more information about this update"
@@ -17916,7 +17937,9 @@ msgid ""
 "The update could not be installed. Please make sure there are no other copies "
 "of %S running on your computer, and then restart %S to try again."
 msgstr ""
-"Níorbh fhéidir an nuashonrú a shuiteáil. Bí cinnte de nach bhfuil cópieanna eile de %S ag rith ar do ríomhaire, agus ansin atosaigh %S le iarracht eile a dhéanamh."
+"Níorbh fhéidir an nuashonrú a shuiteáil. Bí cinnte de nach bhfuil cópieanna "
+"eile de %S ag rith ar do ríomhaire, agus ansin atosaigh %S le iarracht eile a "
+"dhéanamh."
 
 #: dialog.title
 msgid "Software Installation"
@@ -20644,8 +20667,7 @@ msgstr "Tá teastais agat a shainaithníonn na húdaráis deimhniúcháin seo:"
 #: certmgr.orphans
 msgid ""
 "You have certificates on file that do not fit in any of the other categories:"
-msgstr ""
-"Tá teastais agat nach féidir iad a chur i gcatagóir ar bith eile:"
+msgstr "Tá teastais agat nach féidir iad a chur i gcatagóir ar bith eile:"
 
 #: certmgr.detail.general_tab.title certmgr.detail.general_tab.accesskey
 msgid "&General"
@@ -21384,7 +21406,8 @@ msgid ""
 "If you delete a person's e-mail certificate, you will no longer be able to "
 "send encrypted e-mail to that person."
 msgstr ""
-"Má scriosann tú teastas ríomhphoist duine, ní bheidh tú in ann ríomhphost criptithe a sheoladh chuige a thuilleadh."
+"Má scriosann tú teastas ríomhphoist duine, ní bheidh tú in ann ríomhphost "
+"criptithe a sheoladh chuige a thuilleadh."
 
 #: deleteEmailCertTitle
 msgid "Delete E-Mail Certificates"
