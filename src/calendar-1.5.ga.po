@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-26 22:47-0600\n"
+"POT-Creation-Date: 2007-03-23 08:18-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -664,9 +664,9 @@ msgstr "Tas&canna san Amharc"
 msgid " contain"
 msgstr " ina bhfuil"
 
-#: calendar.menu.numberofweeks.label
-msgid "Number of Weeks"
-msgstr "Líon na Seachtainí"
+#: calendar.menu.numberofweeks.label calendar.menu.numberofweeks.accesskey
+msgid "&Number of Weeks"
+msgstr "Lío&n na Seachtainí"
 
 #: calendar.menu.numberofweeks.2
 msgid "2 Weeks"
@@ -1368,6 +1368,13 @@ msgstr "Cén féilire a bhfuil nithe le heaspórtáil as?"
 msgid "Which calendar do you want to publish?"
 msgstr "Cén féilire is mian leat a fhoilsiú?"
 
+# LOCALIZATION NOTE (importItemsFailed): 
+#    %1$S will be replaced with number of failed items
+#    %2$S will be replaced with last error code / error string
+#: importItemsFailed
+msgid "%1$S items failed to import. The last error was: %2$S"
+msgstr ""
+
 #: unableToRead
 msgid "Unable to read from file:"
 msgstr "Ní féidir léamh ó chomhad:"
@@ -1385,6 +1392,16 @@ msgstr "MozillaCalEvents"
 #: HTMLTitle
 msgid "Mozilla Calendar"
 msgstr "Féilire Mozilla"
+
+#: timezoneError
+msgid "An unknown and undefined timezone was found while reading %1$S."
+msgstr ""
+
+#: duplicateError
+msgid ""
+"%1$S item(s) were ignored since they exist in both the destination calendar "
+"and %2$S."
+msgstr ""
 
 #: unsubscribeCalendarTitle
 msgid "Unsubscribe from Calendar"
@@ -1408,17 +1425,20 @@ msgstr "Seachtainí %1$S-%2$S"
 msgid "None"
 msgstr "Gan sonrú"
 
-#: tooNewSchemaErrorTitle
-msgid "Your data isn't compatible with this version of %1$S"
+# Error strings
+# # @name UID_NOT_FOUND
+# # @loc none
+#: tooNewSchemaErrorBoxTitle
+msgid "Your calendar data isn't compatible with this version of %1$S"
 msgstr "Níl do chuid sonraí comhoiriúnach leis an leagan seo de %1$S"
 
-#: tooNewSchemaErrorText
+#: tooNewSchemaErrorBoxText
 msgid ""
-"The data in your profile was updated by a newer version of %1$S, and "
-"continuing will probably cause the information to be lost or corrupted. %1$S "
+"The calendar data in your profile was updated by a newer version of %1$S, and "
+"continuing will probably cause the information to be lost or corrupted. %2$S "
 "will now quit."
 msgstr ""
-"Tá na sonraí i do phróifíl nuashonraithe ag leagan níos nuaí de %1$S agus má "
+"Bhí na sonraí féilire i do phróifíl nuashonraithe ag leagan níos nuaí de %1$S agus má "
 "leantar ar aghaidh is é is dóichí ná go gcaillfear nó go dtruaillfear an "
 "fhaisnéis. Stopfaidh %1$S anois."
 
@@ -1993,19 +2013,19 @@ msgstr "Sath"
 # Can someone tell me why were not counting from zero?
 #: day.1.short
 msgid "Su"
-msgstr ""
+msgstr "Do"
 
 #: day.3.short
 msgid "Tu"
-msgstr ""
+msgstr "M"
 
 #: day.5.short
 msgid "Th"
-msgstr ""
+msgstr "Dé"
 
 #: day.7.short
 msgid "Sa"
-msgstr ""
+msgstr "S"
 
 #: am-string time.am time.AM
 msgid "AM"
@@ -2284,49 +2304,6 @@ msgstr "An Satharn deiridh den mhí"
 #: recurNthDay
 msgid "%1$S%2$S day of the month"
 msgstr "%1$S%2$S lá den mhí"
-
-# Email items.
-#: AttachmentName
-msgid "CalendarEvent.ics"
-msgstr "CalendarEvent.ics"
-
-#: When imipHtml.when
-msgid "When:"
-msgstr "Cathain:"
-
-#: Where
-msgid "Where:"
-msgstr "Cén áit:"
-
-#: Organizer imipHtml.organizer
-msgid "Organizer:"
-msgstr "Eagraí:"
-
-#: Summary
-msgid "Summary:"
-msgstr "Achoimre:"
-
-#: EmailSubject
-msgid "Calendar Events"
-msgstr "Imeachtaí ón Fhéilire"
-
-#: AlarmEmailBody
-msgid ""
-"Calendar Event Alarm Went Off!\n"
-"----------------------------\n"
-"Title: %1$S at %2$S\n"
-"This message sent to you from the Mozilla Calendar.\n"
-"http://www.mozilla.org/projects/calendar/"
-msgstr ""
-"Tugadh aláram imeachta fhéilire!\n"
-"--------------------------------\n"
-"Teideal: %1$S ag %2$S\n"
-"Féilire Mozilla a sheol an teachtaireacht seo chugat.\n"
-"http://www.mozilla.org/projects/calendar/"
-
-#: AlarmEmailSubject
-msgid "Mozilla Calendar Alarm: %1$S"
-msgstr "Aláram Féilire Mozilla: %1$S"
 
 #: time.1
 msgid "1:00 AM"
@@ -3513,9 +3490,9 @@ msgstr "Achar codlata réamh&shocraithe:"
 msgid "Refresh Settings"
 msgstr "Nuashonraigh Socruithe"
 
-#: pref.autorefresh.label
-msgid "Refresh calendars every"
-msgstr "Athnuaigh féilirí gach"
+#: pref.autorefresh.label pref.autorefresh.accesskey
+msgid "&Refresh calendars every"
+msgstr "&Athnuaigh féilirí gach"
 
 #: prefWindow.titleWin event.menu.options.label
 msgid "Options"
@@ -5112,6 +5089,10 @@ msgstr "An tAigéan Ciúin/Wake"
 msgid "Pacific/Wallis"
 msgstr "An tAigéan Ciúin/Bhailís"
 
+#: pref.calendar.view.dayandweekviews.caption
+msgid "Day and Week Views"
+msgstr ""
+
 #: pref.calendar.view.workweek.caption
 msgid "Workweek"
 msgstr "Laethanta Oibre"
@@ -5123,6 +5104,23 @@ msgstr "&Tosaigh an tseachtain ar:"
 #: pref.daysoff.label
 msgid "Include these days in the workweek:"
 msgstr "Bíodh na laethanta seo sa tseachtain oibre:"
+
+#: pref.calendar.view.daystart.label pref.calendar.view.daystart.accesskey
+msgid "&Day starts at:"
+msgstr "Tosaíonn an lá ag:"
+
+#: pref.calendar.view.dayend.label pref.calendar.view.dayend.accesskey
+msgid "Da&y ends at:"
+msgstr ""
+
+#: pref.calendar.view.visiblehours.label
+#: pref.calendar.view.visiblehours.accesskey
+msgid "Sh&ow:"
+msgstr "T&aispéain:"
+
+#: pref.calendar.view.visiblehoursend.label
+msgid "hours at a time"
+msgstr "uaire ag aon am amháin"
 
 # _number_ of weeks to show
 #: pref.numberofweeks.label pref.numberofweeks.accesskey
@@ -5158,6 +5156,58 @@ msgstr "5 seachtaine"
 #: pref.numberofweeks.6
 msgid "6 weeks"
 msgstr "6 seachtaine"
+
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is Google Calendar Provider code.
+# -
+# - The Initial Developer of the Original Code is
+# -   Philipp Kewisch (mozilla@kewis.ch)
+# - Portions created by the Initial Developer are Copyright (C) 2006
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s):
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#: gdata-provider.label
+msgid "Google Calendar"
+msgstr "Féilire Google"
+
+# args: calendar or account name
+#: loginDialogText
+msgid "Please enter your login information for \"%1$S\"."
+msgstr ""
+
+#: loginDialogCheckText
+msgid "Use Password Manager to remember these values."
+msgstr "Úsáid Bainisteoir na bhFocal Faire chun na luachanna seo a mheabhrú."
+
+#: loginDialogTitle
+msgid "Google Calendar Login"
+msgstr ""
 
 # args: host
 #: accessingServerFailedError.text
@@ -5254,7 +5304,7 @@ msgstr "Gnóthach"
 # - ***** END LICENSE BLOCK *****
 #
 # Tools menu
-#: lightning.taskLabel
+#: lightning.taskLabel brandShortName
 msgid "Lightning"
 msgstr "Lightning"
 
@@ -5338,13 +5388,9 @@ msgstr "A&mharc Seachtaine"
 msgid "&Month View"
 msgstr "Amharc &Míosa"
 
-#: lightning.toolbar.print.label lightning.toolbar.print.accesskey
-msgid "&Print Calendar…"
-msgstr "&Priontáil Féilire…"
-
 # #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
 # iMIP Bar (meeting support)
-#: lightning.imipbar.description imipBarText
+#: lightning.imipbar.description imipBarRequestText
 msgid "This message contains an invitation to an event."
 msgstr "Tá cuireadh d'imeacht sa teachtaireacht seo."
 
@@ -5357,6 +5403,14 @@ msgstr "Go Luath"
 msgid "Event Invitation"
 msgstr "Cuireadh Imeachta"
 
+#: imipHtml.when
+msgid "When:"
+msgstr "Cathain:"
+
+#: imipHtml.organizer
+msgid "Organizer:"
+msgstr "Eagraí:"
+
 #: imipAddToCalendar.label
 msgid "Add To Calendar"
 msgstr "Cuir leis an bhFéilire"
@@ -5364,6 +5418,43 @@ msgstr "Cuir leis an bhFéilire"
 #: imipAddedItemToCal
 msgid "Event Added to Calendar"
 msgstr "Cuireadh an tImeacht Leis an bhFéilire"
+
+#: imipBarReplyText
+msgid "This message contains a reply to an invitation."
+msgstr ""
+
+#: imipBarUnsupportedText
+msgid ""
+"This message contains an event that this version of Lightning cannot process."
+msgstr ""
+
+#: imipAcceptInvitation.label calendar.invitations.list.accept.button.label
+msgid "Accept"
+msgstr "Glac Leis"
+
+#: imipDeclineInvitation.label calendar.invitations.list.decline.button.label
+msgid "Decline"
+msgstr "Diúltaigh"
+
+#: itipReplySubject
+msgid "Event Invitation Reply: %1$S"
+msgstr ""
+
+#: itipReplyBodyAccept
+msgid "%1$S has accepted your event invitation."
+msgstr ""
+
+#: itipReplyBodyDecline
+msgid "%1$S has declined your event invitation."
+msgstr ""
+
+#: itipRequestSubject
+msgid "Event Invitation: %1$S"
+msgstr ""
+
+#: itipRequestBody
+msgid "%1$S has invited you to %2$S"
+msgstr ""
 
 # #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
 # ***** BEGIN LICENSE BLOCK *****
@@ -5451,14 +5542,6 @@ msgstr "Tá liosta na gcuirí á nuashonrú."
 #: calendar.invitations.dialog.statusmessage.noinvitations.text
 msgid "No unconfirmed invitations found."
 msgstr "Níor aimsíodh aon cuireadh neamhdhaingnithe."
-
-#: calendar.invitations.list.accept.button.label
-msgid "Accept"
-msgstr "Glac Leis"
-
-#: calendar.invitations.list.decline.button.label
-msgid "Decline"
-msgstr "Diúltaigh"
 
 #: calendar.invitations.list.recurrentevent.text
 msgid "Repeating event"
