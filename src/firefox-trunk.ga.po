@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-19 19:59-0600\n"
+"POT-Creation-Date: 2007-03-09 11:54-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -194,7 +194,7 @@ msgid "Show All"
 msgstr "Taispeáin Gach"
 
 #: newBookmark.title addBookmarkPromptButton bookmarkCurTabTitle addPanel.label
-#: cmd.accept.add dialogAcceptLabelAdd dialogTitleAdd
+#: cmd.accept.add dialogAcceptLabelAdd dialogTitleAddBookmark
 msgid "Add Bookmark"
 msgstr "Cruthaigh Leabharmharc"
 
@@ -300,6 +300,7 @@ msgstr "&Leabharmharc Nua..."
 
 # "L" on main bookmark manager menu
 #: menuitem.newLivemark.label menuitem.newLivemark.accesskey
+#: cmd.new_livemark.label cmd.new_livemark.accesskey
 msgid "New &Live Bookmark..."
 msgstr "Leabharmharc &Beo Nua..."
 
@@ -430,6 +431,7 @@ msgstr "Feicthe"
 
 # Ctrl+B shows bookmarks in the sidebar
 #: treecol.lastvisit.accesskey bookmarksSidebarCmd.commandkey
+#: cmd.personalToolbarFolder.menuAccesskey
 msgid "b"
 msgstr "b"
 
@@ -492,7 +494,7 @@ msgstr "Lorgfhocal:"
 msgid "Description:"
 msgstr "Cur Síos:"
 
-#: bookmarks.webpanels.label
+#: bookmarks.webpanels.label bookmark.loadInSidebar.title
 msgid "Load this bookmark in the sidebar"
 msgstr "Luchtaigh an leabharmharc seo sa bharra taoibh"
 
@@ -798,15 +800,15 @@ msgstr "B"
 msgid "New Separator"
 msgstr "Deighilteoir Nua"
 
-#: ile_newfolder newFolderTitle newFolderDefault
+#: ile_newfolder newFolderDefault
 msgid "New Folder"
 msgstr "Fillteán Nua"
 
-#: ile_newbookmark
+#: ile_newbookmark newBookmarkDefault
 msgid "New Bookmark"
 msgstr "Leabharmharc Nua"
 
-#: ile_newlivemark
+#: ile_newlivemark newLivemarkDefault
 msgid "New Live Bookmark"
 msgstr "Leabharmharc Beo Nua"
 
@@ -2157,18 +2159,6 @@ msgstr "ag deireadh seisiúin"
 msgid "Rediscover the Web"
 msgstr "Déan Athaimsiú ar an nGréasán"
 
-#: credit.leads
-msgid "Engineering Leads"
-msgstr "Príomhfhorbróirí Innealtóireachta"
-
-#: credit.core
-msgid "Core Development Posse"
-msgstr "Lárfhoireann Forbartha"
-
-#: credit.gecko
-msgid "Gecko Layout Engine"
-msgstr "Inneall Leagain Amach Gecko"
-
 #: credit.thanks
 msgid "Special Thanks To"
 msgstr "Buíochas ar leith le"
@@ -2205,62 +2195,6 @@ msgstr ""
 #: credit.translation
 msgid "_: credit.translation\n"
 msgstr ""
-
-#: credit.visuals
-msgid "Visual Design Coordinator"
-msgstr "Comhordaitheoir an Amharcdhearaidh"
-
-#: credit.theme
-msgid "Theme Design"
-msgstr "Dearadh na dTéamaí"
-
-#: credit.brand
-msgid "Brand Identity"
-msgstr "Aitheantas an Bhranda"
-
-#: credit.web
-msgid "Web Design"
-msgstr "Dearadh Gréasáin"
-
-#: credit.update
-msgid "Mozilla Update"
-msgstr "Nuashonrú Mozilla"
-
-#: credit.qalead
-msgid "Quality Assurance Lead"
-msgstr "Príomhfhorbróir Dearbhaithe Cáilíochta"
-
-#: credit.qa
-msgid "Quality Assurance"
-msgstr "Dearbhú Cáilíochta"
-
-#: credit.build
-msgid "Build and Release"
-msgstr "Tógáil agus Scaoileadh Amach"
-
-#: credit.infra
-msgid "Infrastructure Support"
-msgstr "Tacaíocht Bhonneagair"
-
-#: credit.support
-msgid "Support Resources"
-msgstr "Acmhainní Tacaíochta"
-
-#: credit.manage
-msgid "Project Management"
-msgstr "Bainistiú an Tionscadail"
-
-#: credit.marketleads
-msgid "Marketing Leads"
-msgstr "Ceannairí Margaíochta"
-
-#: credit.market
-msgid "Marketing"
-msgstr "Margaíocht"
-
-#: credit.creators
-msgid "Created By"
-msgstr "Cruthaithe ag"
 
 #: credit.memory
 msgid "In Fond Memory Of"
@@ -3254,7 +3188,7 @@ msgstr ""
 msgid "About Popup Blocking"
 msgstr "Maidir le Cosc Preabfhuinneog"
 
-#: bookmark.property.panel.title dialogTitleBookmarkEdit
+#: bookmark.property.panel.title
 msgid "Bookmark Properties"
 msgstr "Airíonna an Leabharmhairc"
 
@@ -3302,9 +3236,13 @@ msgstr "Sábháil Athruithe"
 msgid "Add Bookmarks"
 msgstr "Cruthaigh Leabharmharcanna"
 
-#: dialogTitleFolderEdit
-msgid "Edit Folder Properties"
-msgstr "Cuir Airíonna an Fhillteáin in Eagar"
+#: dialogTitleAddFolder
+msgid "Add Folder"
+msgstr ""
+
+#: dialogTitleEdit
+msgid "Properties for \"%S\""
+msgstr ""
 
 #: window.style
 msgid "width: 36em; height: 18em;"
@@ -3426,6 +3364,10 @@ msgstr ""
 #: cmd.moveBookmarks.label cmd.moveBookmarks.accesskey
 msgid "&Move..."
 msgstr "&Bog..."
+
+#: cmd.personalToolbarFolder.menuLabel
+msgid "Set as Bookmarks Toolbar Folder"
+msgstr ""
 
 #: col.title.label hfTitle
 msgid "Title"
@@ -3627,10 +3569,6 @@ msgstr "(gan teideal)"
 #: localhost
 msgid "(local files)"
 msgstr "(comhaid logánta)"
-
-#: newFolderMessage
-msgid "Enter a name for the new folder:"
-msgstr "Iontráil ainm nua ar d'fhillteán:"
 
 #: bookmarksMenuName
 msgid "Bookmarks Menu"
@@ -12693,7 +12631,7 @@ msgstr "Slaivis"
 
 #: cv
 msgid "Chuvash"
-msgstr "Suvais"
+msgstr "Suvaisis"
 
 #: cy
 msgid "Welsh"
@@ -12927,7 +12865,7 @@ msgstr "Coirnis"
 
 #: ky
 msgid "Kirghiz"
-msgstr "Cirgeastáinis"
+msgstr "Cirgisis"
 
 #: la
 msgid "Latin"
@@ -13172,7 +13110,7 @@ msgstr "Seirbis"
 
 #: ss
 msgid "Siswati"
-msgstr "Siosváitis"
+msgstr "Suaisis"
 
 #: st
 msgid "Sotho, Southern"
@@ -13201,7 +13139,7 @@ msgstr "Táidsícis"
 
 #: ti
 msgid "Tigrinya"
-msgstr "Tigrinis"
+msgstr "Tigrínis"
 
 #: tig
 msgid "Tigre"
@@ -13209,7 +13147,7 @@ msgstr "Tígréis"
 
 #: tk
 msgid "Turkmen"
-msgstr "Turcamáinis"
+msgstr "Tuircméinis"
 
 #: tl
 msgid "Tagalog"
@@ -18822,42 +18760,9 @@ msgstr "Firefox"
 msgid "Mozilla Firefox"
 msgstr "Mozilla Firefox"
 
-#: homePageOptionCount
-msgid "1"
-msgstr "1"
-
 #: homePageSingleStartMain
-msgid "Firefox Start, a fast search page with search results by Google"
-msgstr "Firefox Start, leathanach mearchuardaigh le torthaí cuardaigh ó Google"
-
-# expand homePageSingleStartMainURL=http://en-us.start.mozilla.com/firefox?client=firefox-a&rls=__MOZ_DISTRIBUTION_ID_UNQUOTED__:__AB_CD__:official
-#: homePageMultipleStartMain
-msgid "_: homePageMultipleStartMain\n"
-msgstr ""
-
-#: homePageMultipleStart1Label
-msgid "_: homePageMultipleStart1Label\n"
-msgstr ""
-
-#: homePageMultipleStart1URL
-msgid "_: homePageMultipleStart1URL\n"
-msgstr ""
-
-#: homePageMultipleStart2Label
-msgid "_: homePageMultipleStart2Label\n"
-msgstr ""
-
-#: homePageMultipleStart2URL
-msgid "_: homePageMultipleStart2URL\n"
-msgstr ""
-
-#: homePageMultipleStart3Label
-msgid "_: homePageMultipleStart3Label\n"
-msgstr ""
-
-#: homePageMultipleStart3URL
-msgid "_: homePageMultipleStart3URL\n"
-msgstr ""
+msgid "Firefox Start, a fast home page with built-in search"
+msgstr "Firefox Start, leathanach baile tapaidh le cuardach ionsuite"
 
 # expand homePageSingleStartMainURL=http://en-us.start.mozilla.com/firefox?client=firefox-a&rls=__MOZ_DISTRIBUTION_ID_UNQUOTED__:__AB_CD__:official
 #: homePageImport
@@ -19102,7 +19007,7 @@ msgid "SSL received an unexpected Certificate Verify handshake message."
 msgstr ""
 
 #: SSL_ERROR_RX_UNEXPECTED_CLIENT_KEY_EXCH
-msgid "SSL received an unexpected Cllient Key Exchange handshake message."
+msgid "SSL received an unexpected Client Key Exchange handshake message."
 msgstr ""
 
 #: SSL_ERROR_RX_UNEXPECTED_FINISHED
@@ -19146,7 +19051,8 @@ msgid "SSL peer was not expecting a handshake message it received."
 msgstr ""
 
 #: SSL_ERROR_DECOMPRESSION_FAILURE_ALERT
-msgid "SSL peer was unable to succesfully decompress an SSL record it received."
+msgid ""
+"SSL peer was unable to successfully decompress an SSL record it received."
 msgstr ""
 
 #: SSL_ERROR_HANDSHAKE_FAILURE_ALERT
@@ -19477,7 +19383,7 @@ msgstr ""
 #: SEC_ERROR_CRL_EXPIRED
 msgid ""
 "The CRL for the certificate's issuer has expired.  Update it or check your "
-"system data and time."
+"system date and time."
 msgstr ""
 
 #: SEC_ERROR_CRL_BAD_SIGNATURE
@@ -19943,7 +19849,7 @@ msgid "Unsupported elliptic curve point form."
 msgstr ""
 
 #: SEC_ERROR_UNRECOGNIZED_OID
-msgid "Unrecognized Object IDentifier."
+msgid "Unrecognized Object Identifier."
 msgstr ""
 
 #: SEC_ERROR_OCSP_INVALID_SIGNING_CERT
@@ -20044,15 +19950,16 @@ msgstr "Seirbhísí inmheánacha criptiúcháin PSM"
 msgid "PSM Private Keys"
 msgstr "Eochracha príobháideacha PSM"
 
-# 64
-#: FipsSlotDescription
-msgid "PSM Internal FIPS-140-1 Cryptographic Services"
-msgstr "Seirbhísí inmheánacha criptiúcháin FIPS-140-1 PSM"
+#
+# 32
+#: Fips140TokenDescription
+msgid "FIPS-140 Softw. Security Device"
+msgstr ""
 
 # 64
-#: FipsPrivateSlotDescription
-msgid "PSM FIPS-140-1 User Private Key Services"
-msgstr "Seirbhísí eochracha príobháideacha an úsáideora FIPS-140-1 PSM"
+#: Fips140SlotDescription
+msgid "FIPS-140 Cryptographic, Key and Certificate Services"
+msgstr ""
 
 # Strings for the cert picker dialog
 #: VerifySSLClient
