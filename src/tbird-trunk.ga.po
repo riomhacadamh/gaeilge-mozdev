@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-09 22:15-0500\n"
+"POT-Creation-Date: 2007-10-24 11:10-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -557,7 +557,8 @@ msgstr "B"
 msgid "Define Label"
 msgstr "Sainigh Lipéad"
 
-#: insertlabel.accesskey leftRadio.accessKey currentListTab.accesskey
+#: insertlabel.accesskey leftRadio.accessKey currentListTab-nntp.accesskey
+#: currentListTab-imap.accesskey
 msgid "L"
 msgstr "L"
 
@@ -1190,8 +1191,8 @@ msgid "Browse"
 msgstr "Brabhsáil"
 
 #: previewToolbarCmd.tooltip
-msgid "Load this page into Navigator"
-msgstr "Luchtaigh an leathanach seo i Navigator"
+msgid "Load this page in the browser"
+msgstr ""
 
 #: printToolbarCmd.label print.label printButton.label
 msgid "Print"
@@ -1370,8 +1371,8 @@ msgid "&Preview"
 msgstr "&Réamhamharc"
 
 #: PreviewMode.tooltip
-msgid "Display as WYSIWYG (as in Navigator)"
-msgstr "Taispeáint 'faigheann tú a bhfeiceann tu' (fearacht Navigator)"
+msgid "Display as WYSIWYG (as in the browser)"
+msgstr ""
 
 # "left-to-right" -- leave AS IS --KPS
 #: SourceTabDirection
@@ -1617,8 +1618,8 @@ msgid "before closing"
 msgstr "roimh dhúnadh"
 
 #: BeforePreview
-msgid "before viewing in Navigator"
-msgstr "roimh thaispeáint i Navigator"
+msgid "before viewing in the browser"
+msgstr ""
 
 #: BeforeValidate
 msgid "before validating the document"
@@ -2661,7 +2662,7 @@ msgstr "Teagmhais JavaScript"
 msgid "Click on an item above to edit its value"
 msgstr "Cliceáil mír thuas chun é a chur in eagar"
 
-#: removeAttribute.label remove.label RemoveButton.label pw_remove_button
+#: removeAttribute.label remove.label RemoveButton.label
 msgid "Remove"
 msgstr "Bain"
 
@@ -7922,6 +7923,44 @@ msgstr "&Eile:"
 msgid "Drafts and Templates"
 msgstr "Dréachtaí agus Teimpléid"
 
+# #-#-#-#-#  chromemessengeram-dsn.properties.po (firefox)  #-#-#-#-#
+# # Strings used in prefs.
+#: pane.title prefPanel-dsn
+msgid "Delivery Status Notification"
+msgstr ""
+
+#: useGlobalPrefs.label useGlobalPrefs.accesskey
+msgid "&Use my global Delivery Status Notification preferences for this account"
+msgstr ""
+
+#: useCustomPrefs.label useCustomPrefs.accesskey
+msgid "&Customize Delivery Status Notification for this account"
+msgstr ""
+
+#: requestAlways.label requestAlways.accesskey
+msgid "&When sending messages, always request a Delivery Status Notification"
+msgstr ""
+
+#: optionTitle.label
+msgid "Ask notification on :"
+msgstr ""
+
+#: requestOnSucess.label requestOnSucess.accesskey
+msgid "&Success in delivering"
+msgstr ""
+
+#: requestOnFailure.label requestOnFailure.accesskey
+msgid "&Failure in delivering"
+msgstr ""
+
+#: requestOnDelay.label requestOnDelay.accesskey
+msgid "&Delay in delivering"
+msgstr ""
+
+#: requestNever.label requestNever.accesskey
+msgid "&Never receive Delivery Status Notification"
+msgstr ""
+
 #: identitiesListTitle.label
 msgid "Identities Associated With This Account"
 msgstr "Aitheantais a bhfuil baint acu leis an gcuntas seo"
@@ -9880,7 +9919,7 @@ msgstr "Fréamh an Chuóta:"
 msgid "Usage:"
 msgstr "Úsáid:"
 
-#: folderQuotaStatus.label status
+#: folderQuotaStatus.label status.label
 msgid "Status:"
 msgstr "Stádas:"
 
@@ -12323,9 +12362,9 @@ msgstr ""
 # # @name NS_ERROR_SMTP_SEND_FAILED_UNKNOWN_REASON
 #: 12593
 msgid ""
-"The message could not be sent using SMTP server %S for unknown reason. Please "
-"verify that your SMTP server settings are correct and try again, or contact "
-"your network administrator."
+"The message could not be sent using SMTP server %S for an unknown reason. "
+"Please verify that your SMTP server settings are correct and try again, or "
+"contact your network administrator."
 msgstr ""
 
 # # Strings use for the save message dialog shown when the user close a message compose window
@@ -12617,6 +12656,10 @@ msgstr "Ceangail Cárta Pearsanta (&v-Chárta)"
 msgid "Re&turn Receipt"
 msgstr "Admháil Léi&te"
 
+#: dsnMenu.label dsnMenu.accesskey
+msgid "Delivery Status &Notification"
+msgstr ""
+
 #: outputFormatMenu.label outputFormatMenu.accesskey
 msgid "&Format"
 msgstr "&Formáid"
@@ -12821,6 +12864,10 @@ msgstr "Ceangail Leathanach &Gréasáin..."
 msgid "Sending Messages"
 msgstr "Teachtaireachtaí á Seoladh"
 
+#: progress.label
+msgid "Progress:"
+msgstr "Dul chun cinn:"
+
 #: titlePrefixSave
 msgid "Saving Messages -"
 msgstr "Teachtaireachtaí á Sábháil -"
@@ -12829,27 +12876,18 @@ msgstr "Teachtaireachtaí á Sábháil -"
 msgid "Sending Messages -"
 msgstr "Teachtaireachtaí á Seoladh -"
 
-#: progress
-msgid "Progress:"
-msgstr "Dul chun cinn:"
-
-# This string is used to format the text to the right of the progress
-# meter.
-#
-# #1 will be replaced by the percentage of the file that has been saved
-#: percentMsg
-msgid ""
-"_: \n"
-"#1&#037;"
-msgstr "#1&#037;"
+# for quota in main window (commandglue.js)
+#: percentMsg percent
+msgid "%S%%"
+msgstr ""
 
 #: messageSent
-msgid "Your message has been sent"
-msgstr "Seoladh do theachtaireacht"
+msgid "Your message has been sent."
+msgstr ""
 
 #: messageSaved
-msgid "Your message has been saved"
-msgstr "Tá do theachtaireacht sábháilte"
+msgid "Your message has been saved."
+msgstr ""
 
 #: messengerWindow.title
 msgid "Mail &amp; Newsgroups"
@@ -14688,11 +14726,6 @@ msgstr "%S as %S KB úsáidte"
 #: quotaPercentUsed
 msgid "%S%% full"
 msgstr "%S%% lán"
-
-# for quota in main window (commandglue.js)
-#: percent
-msgid "%S%%"
-msgstr ""
 
 #: quotaTooltip
 msgid "IMAP quota: %S KB used of %S KB total. Click for details."
@@ -17205,17 +17238,17 @@ msgstr "Roghanna"
 msgid "&brandShortName; Preferences"
 msgstr "Sainroghanna &brandShortName;"
 
-#: prefWindow.styleWin
-msgid "width: 44em; height: 38em;"
-msgstr "width: 52em; height: 42em;"
+#: prefWindow.styleWindows
+msgid "width: 44em; min-height: 38.5em;"
+msgstr ""
 
 #: prefWindow.styleMac
 msgid "width: 47em;"
 msgstr "width: 58em;"
 
-#: prefWindow.styleUnix
-msgid "width: 42em;"
-msgstr "width: 50em;"
+#: prefWindow.styleGNOME
+msgid "width: 42em; min-height: 38em;"
+msgstr ""
 
 #: paneDisplay.title
 msgid "Display"
@@ -17265,49 +17298,6 @@ msgstr "Socraigh an Príomhfhocal Faire..."
 #: changeMasterPassword
 msgid "Change Master Password..."
 msgstr "Athraigh an Príomhfhocal Faire..."
-
-#: password_not_set
-msgid "(not set)"
-msgstr "(gan socrú)"
-
-#: failed_pw_change
-msgid "Unable to change Master Password."
-msgstr "Níorbh fhéidir an Príomhfhocal Faire a athrú."
-
-#: incorrect_pw
-msgid "You did not enter the correct current Master Password. Please try again."
-msgstr "Níor iontráil tú an Príomhfhocal Faire ceart.  Déan iarracht eile."
-
-#: pw_change_ok
-msgid "Master Password successfully changed."
-msgstr "D'éirigh le hathrú an Phríomhfhocail Faire."
-
-#: pw_erased_ok
-msgid "You have deleted your Master Password."
-msgstr "Tá do Phríomhfhocal Faire scriosta agat."
-
-#: pw_not_wanted
-msgid "Warning! You have decided not to use a Master Password."
-msgstr "Rabhadh! Tá sé beartaithe agat gan Príomhfhocal Faire a úsáid."
-
-#: pw_empty_warning
-msgid "Your stored email passwords will not be protected."
-msgstr "Ní dhéanfar cosaint ar na focail fhaire ríomhphoist atá stóráilte agat."
-
-#: pw_change2empty_in_fips_mode
-msgid ""
-"You are currently in FIPS mode. FIPS requires a non-empty Master Password."
-msgstr ""
-"Tá tú i mód FIPS faoi láthair. Tá Príomhfhocal Faire neamhfholamh ag teastáil "
-"ó FIPS."
-
-#: pw_change_success_title
-msgid "Password Change Succeeded"
-msgstr "D'éirigh le hathrú an fhocail faire"
-
-#: pw_change_failed_title
-msgid "Password Change Failed"
-msgstr "Theip ar athrú an fhocail faire."
 
 #: chooseDownloadFolderTitle
 msgid "Choose Download Folder:"
@@ -17360,14 +17350,6 @@ msgstr "Oscail le %S"
 msgid "The following Actions match your search:"
 msgstr "Meaitseálann na Gníomhartha seo a leanas do chuardach:"
 
-#: downloadHelperNoneSelected
-msgid "None Selected"
-msgstr "Faic Roghnaithe"
-
-#: pluginHelperNoneAvailable
-msgid "None Available"
-msgstr "Níl ar Fáil"
-
 #: fpTitleChooseApp
 msgid "Select Helper Application"
 msgstr "Roghnaigh Feidhmchlár Cabhrach"
@@ -17375,22 +17357,6 @@ msgstr "Roghnaigh Feidhmchlár Cabhrach"
 #: fpTitleChooseDL
 msgid "Select Download Folder"
 msgstr "Roghnaigh Fillteán an Íosluchtaithe"
-
-# LOCALIZATION NOTE: Next two strings are for language name representations with
-#   and without the region.
-#   e.g. languageRegionCodeFormat : "French/Canada  [fr-ca]" languageCodeFormat : "French  [fr]"
-#   %1$S = language name, %2$S = region name, %3$S = language-region code
-#: languageRegionCodeFormat
-msgid "%1$S/%2$S  [%3$S]"
-msgstr "%1$S/%2$S  [%3$S]"
-
-#: languageCodeFormat
-msgid "%1$S  [%2$S]"
-msgstr "%1$S  [%2$S]"
-
-#: fontScalingResolutionFormat
-msgid "%S dpi"
-msgstr "%S pso"
 
 # ### Sound Notifications
 #: soundFilePickerTitle
@@ -18759,11 +18725,11 @@ msgstr "Roghnaigh na grúpaí nuachta le liostáil leo:"
 msgid "Select the folders to subscribe to:"
 msgstr "Roghnaigh na fillteáin le liostáil leo:"
 
-#: currentListTabLabel-nntp
+#: currentListTab-nntp.label
 msgid "Current Group List"
 msgstr ""
 
-#: currentListTabLabel-imap
+#: currentListTab-imap.label
 msgid "Folder List"
 msgstr "Liosta Fillteán"
 
@@ -19674,6 +19640,22 @@ msgstr "Socrú Aicearraí"
 msgid "Create Program Icons"
 msgstr "Cruthaigh Deilbhíní"
 
+#: SUMMARY_PAGE_TITLE Install_Title
+msgid "Summary"
+msgstr "Achoimre"
+
+#: SUMMARY_PAGE_SUBTITLE
+msgid "Ready to start installing ${BrandShortName}"
+msgstr ""
+
+#: SUMMARY_INSTALLED_TO
+msgid "${BrandShortName} will be installed to the following location:"
+msgstr ""
+
+#: SUMMARY_CLICK
+msgid "Click Install to continue."
+msgstr ""
+
 #: SURVEY_TEXT
 msgid "&Tell us what you thought of ${BrandShortName}"
 msgstr "Noch&t dúinn do bharúil faoi ${BrandShortName}"
@@ -19692,16 +19674,6 @@ msgstr ""
 "\n"
 "Cliceáil \"OK\" chun scoir de $(^Name) go huathoibríoch agus dul ar aghaidh."
 
-#: WARN_APP_RUNNING_UNINSTALL
-msgid ""
-"$(^Name) must be closed to proceed with the uninstall.\n"
-"\n"
-"Click \"OK\" to exit $(^Name) automatically and continue."
-msgstr ""
-"Caithfear $(^Name) a dhúnadh roimh an díshuiteáil.\n"
-"\n"
-"Cliceáil \"OK\" chun scoir de $(^Name) go huathoibríoch agus dul ar aghaidh."
-
 #: CREATE_ICONS_DESC
 msgid "Create icons for ${BrandShortName}:"
 msgstr "Cruthaigh deilbhíní le haghaidh ${BrandShortName}:"
@@ -19717,6 +19689,21 @@ msgstr "&San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Progra
 #: ICONS_QUICKLAUNCH
 msgid "In my &Quick Launch bar"
 msgstr "I mo Bharra &Mearlainseála"
+
+#: WARN_MANUALLY_CLOSE_APP_UNINSTALL
+msgid ""
+"${BrandFullName} must be closed to proceed with the uninstall.\n"
+"\n"
+"Please close ${BrandFullName} to continue."
+msgstr ""
+
+#: WARN_MANUALLY_CLOSE_APP_LAUNCH
+msgid ""
+"${BrandFullName} is already running.\n"
+"\n"
+"Please close ${BrandFullName} prior to launching the version you have just "
+"installed."
+msgstr ""
 
 #: WARN_WRITE_ACCESS
 msgid ""
@@ -19737,6 +19724,28 @@ msgstr ""
 "Níl go leor spáis diosca agat chun suiteáil a dhéanamh sa suíomh seo.\n"
 "\n"
 "Cliceáil OK chun suíomh eile a roghnú."
+
+#: WARN_UNSUPPORTED_MSG
+msgid ""
+"Sorry, ${BrandShortName} can't be installed. This version of "
+"${BrandShortName} requires ${MinUnsupportedVer} or newer."
+msgstr ""
+
+#: WARN_RESTART_REQUIRED_UNINSTALL
+msgid ""
+"Your computer must be restarted to complete a previous uninstall of "
+"${BrandShortName}. Do you want to reboot now?"
+msgstr ""
+
+#: ERROR_CREATE_DIRECTORY
+msgid ""
+"Error creating directory:\n"
+"\n"
+"$0\n"
+"\n"
+"Click Cancel to stop the installation or\n"
+"Retry to try again."
+msgstr ""
 
 #: STATUS_INSTALL_APP
 msgid "Installing ${BrandShortName}..."
@@ -19940,10 +19949,6 @@ msgstr ""
 "I gcás go n-éilíonn do nasc Idirlín seachfhreastalaí, iontráil ainm do "
 "fhreastalaí agus eolas poirt anseo. Muna n-éilíonn, fág bán na réimsí sin."
 
-#: Install_Title
-msgid "Summary"
-msgstr "Achoimre"
-
 #: Install_SubTitle
 msgid "Ready to start installing $ProductName$."
 msgstr "Réidh chun $ProductName$ a shuiteáil."
@@ -20115,6 +20120,12 @@ msgstr ""
 #: MUI_INNERTEXT_LICENSE_TOP
 msgid "Press Page Down to see the rest of the agreement."
 msgstr "Brúigh \"Page Down\" chun an chuid eile den cheadúnas a léamh."
+
+#: MUI_INNERTEXT_LICENSE_BOTTOM_CHECKBOX
+msgid ""
+"If you accept the terms of the agreement, click the check box below. You must "
+"accept the agreement to install $(^NameDA). $_CLICK"
+msgstr ""
 
 #: MUI_INNERTEXT_LICENSE_BOTTOM_RADIOBUTTONS
 msgid ""

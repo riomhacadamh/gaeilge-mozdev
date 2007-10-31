@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-09 22:15-0500\n"
+"POT-Creation-Date: 2007-10-24 11:10-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -30,7 +30,7 @@ msgstr "Admhálacha"
 #: copyCmd.key copy.key view.sortBy.visitCount.accesskey
 #: cmd_clearHistory_accesskey copyPref.key copyCmd.commandkey
 #: mismatchCheckNowAccesskey cancelButtonTextAccesskey CertDumpAVACountry
-#: changepassword.accesskey
+#: exceptionMgr.exceptionButtonAccess changepassword.accesskey
 msgid "C"
 msgstr "C"
 
@@ -42,8 +42,8 @@ msgstr "&lt; Maidir le &brandFullName;"
 #: aboutLink.accesskey cmd_selectAll_accesskey selectAllCmd.key
 #: xpinstallPromptAllowButton.accesskey refreshBlocked.goButton.accesskey
 #: addHandlerAddButtonAccesskey selectall.key mediaSaveAs.accesskey
-#: view.sortBy.dateAdded.accesskey cmd.about.accesskey
-#: certselect.auto.accesskey
+#: search.scopeHistory.accesskey view.sortBy.dateAdded.accesskey
+#: cmd.about.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -62,7 +62,7 @@ msgstr ""
 "Firefox.  Gach ceart ar cosaint.  Tá roinnt cearta trádmharc á n-úsáid faoi "
 "cheadúnas ón Charlton Company."
 
-#: minimizeWindow.key
+#: minimizeWindow.key certmgr.restore.accesskey
 msgid "m"
 msgstr "m"
 
@@ -292,14 +292,12 @@ msgid "Bookmarks Toolbar"
 msgstr "Barra Leabharmharc"
 
 # "C" in main browser window
-#: fileMenu.label fileMenu.accesskey file.label file.accesskey mnFile.label
-#: mnFile.accesskey
+#: fileMenu.label fileMenu.accesskey mnFile.label mnFile.accesskey
 msgid "&File"
 msgstr "&Comhad"
 
 # "A" in main browser window
-#: viewMenu.label viewMenu.accesskey view.label view.accesskey mnView.label
-#: mnView.accesskey certmgr.view.label certmgr.view.accesskey
+#: viewMenu.label viewMenu.accesskey mnView.label mnView.accesskey
 #: pageInfo.view.label pageInfo.view.accesskey
 msgid "&View"
 msgstr "&Amharc"
@@ -308,7 +306,8 @@ msgstr "&Amharc"
 #: button.close.label button.close.accesskey CloseBtn cmdClose.label
 #: cmdClose.accesskey preferencesCloseButton.label
 #: preferencesCloseButton.accesskey close.label close.accesskey
-#: certmgr.close.label certmgr.close.accesskey
+#: closebutton.label closebutton.accesskey certmgr.close.label
+#: certmgr.close.accesskey
 msgid "&Close"
 msgstr "&Dún"
 
@@ -378,8 +377,8 @@ msgstr "Athai&nmnigh..."
 #: command.delete.label command.delete.accesskey deleteCmd.label
 #: deleteCmd.accesskey cmd.edit_delete.label cmd.edit_delete.accesskey
 #: mnEditDelete.label mnEditDelete.accesskey cmdDelete.label
-#: cmdDelete.accesskey DELETE_ certmgr.delete.label certmgr.delete.accesskey
-#: validation.deletecrl.label validation.deletecrl.accesskey
+#: cmdDelete.accesskey DELETE_ validation.deletecrl.label
+#: validation.deletecrl.accesskey
 msgid "&Delete"
 msgstr "&Scrios"
 
@@ -507,14 +506,15 @@ msgid "Name:"
 msgstr "Teideal:"
 
 #: bookmarks.location.label image-url.label editBookmarkOverlay.location.label
+#: exceptionMgr.certlocation.url
 msgid "Location:"
 msgstr "Suíomh:"
 
-#: bookmarks.feedurl.label
+#: bookmarks.feedurl.label editBookmarkOverlay.feedLocation.label
 msgid "Feed Location:"
 msgstr "Suíomh Fotha:"
 
-#: bookmarks.shortcut.label
+#: bookmarks.shortcut.label editBookmarkOverlay.keyword.label
 msgid "Keyword:"
 msgstr "Lorgfhocal:"
 
@@ -523,7 +523,7 @@ msgstr "Lorgfhocal:"
 msgid "Description:"
 msgstr "Cur Síos:"
 
-#: bookmarks.webpanels.label
+#: bookmarks.webpanels.label editBookmarkOverlay.loadInSidebar.label
 msgid "Load this bookmark in the sidebar"
 msgstr "Luchtaigh an leabharmharc seo sa bharra taoibh"
 
@@ -608,7 +608,7 @@ msgstr "Scrios"
 
 #: cmd_delete_accesskey deleteCmd.key dontShowMessage.accesskey
 #: view.sortBy.description.accesskey mismatchDontCheckAccesskey
-#: downloadButton_minor.accesskey
+#: downloadButton_minor.accesskey certmgr.delete.accesskey
 msgid "D"
 msgstr "D"
 
@@ -667,10 +667,10 @@ msgid "Sort By Name"
 msgstr "Sórtáil de réir Ainm"
 
 #: cmd_bm_sortbyname_accesskey cmd_bm_newseparator_accesskey
-#: chromelessWindow.accessKey securityTab.accesskey defaultGroupOnAccesskey
-#: cmd_showSuggestions_accesskey saveCmd.key submitReport.accesskey
-#: savePageCmd.commandkey pageInfo.securityTab.accesskey
-#: managedevices.accesskey warn.insecurepost.accesskey
+#: securityTab.accesskey defaultGroupOnAccesskey cmd_showSuggestions_accesskey
+#: saveCmd.key submitReport.accesskey savePageCmd.commandkey
+#: pageInfo.securityTab.accesskey managedevices.accesskey
+#: warn.insecurepost.accesskey
 msgid "S"
 msgstr "S"
 
@@ -683,7 +683,7 @@ msgstr "Cealaigh"
 #: cmd_bm_newlivemark_undo_accesskey cmd_bm_newfolder_undo_accesskey
 #: cmd_bm_newseparator_undo_accesskey cmd_bm_drag_undo_accesskey
 #: cmd_bm_move_undo_accesskey cmd_bm_import_undo_accesskey undo.accessKey
-#: tabContext.undoCloseTabAccessKey cmd.uninstall2.accesskey
+#: cmd.uninstall2.accesskey
 msgid "U"
 msgstr "U"
 
@@ -797,7 +797,7 @@ msgstr "w"
 msgid "New Folder..."
 msgstr "Fillteán Nua..."
 
-#: cmd_bm_newfolder_accesskey feedTab.accesskey
+#: cmd_bm_newfolder_accesskey feedTab.accesskey file.accesskey
 #: cmd.context_new_folder.accesskey livemarkGroupOnAccesskey
 #: enableAppUpdate.accesskey findCmd.key cmd.show.accesskeyMac
 #: findOnCmd.commandkey devmgr.button.fips.accesskey
@@ -809,7 +809,7 @@ msgid "New Bookmark..."
 msgstr "Leabharmharc Nua..."
 
 #: cmd_bm_newbookmark_accesskey bookmarksSidebarCmd.accesskey
-#: bookmarkCurTab_accesskey mediaBlockImage.accesskey Byte
+#: mediaBlockImage.accesskey Byte certmgr.backup.accesskey
 #: loaddevice.browse.accesskey
 msgid "B"
 msgstr "B"
@@ -847,7 +847,7 @@ msgstr "%S - Leabharmharcanna"
 msgid "Search Results"
 msgstr "Torthaí Cuardaigh"
 
-#: bookmarks_title places.bm.title
+#: bookmarks_title
 msgid "Bookmarks Manager"
 msgstr "Bainisteoir na Leabharmharcanna"
 
@@ -940,7 +940,9 @@ msgstr "Sórtáilte de réir Cuairte is déanaí"
 
 # Ctrl+V = Greamaigh, transcending language
 #: view.sortBy.colLastVisitDate.accesskey pasteCmd.key securityView.accesskey
-#: view.sortBy.date.accesskey warn.viewmixed.accesskey
+#: view.accesskey view.sortBy.date.accesskey certmgr.view.accesskey
+#: exceptionMgr.certstatus.accesskey examineCert.accesskey
+#: warn.viewmixed.accesskey
 msgid "V"
 msgstr "V"
 
@@ -1113,7 +1115,7 @@ msgid "Restore"
 msgstr "Athshlánaigh"
 
 #: fullScreenClose.tooltip tabs.close close closeButton.label dialogClose.label
-#: aboutWindowCloseButton closeButton closebutton.label
+#: aboutWindowCloseButton closeButton closebutton.label Close
 msgid "Close"
 msgstr "Dún"
 
@@ -1142,7 +1144,8 @@ msgstr "Liostáil leis an Leathanach Seo"
 msgid "Subscribe to This Page..."
 msgstr "Liostáil leis an Leathanach Seo..."
 
-#: addCurPagesCmd.label addCurPagesCmd.accesskey
+#: addCurPagesCmd.label addCurPagesCmd.accesskey bookmarkAllTabs.label
+#: bookmarkAllTabs.accesskey
 msgid "Bookmark All &Tabs..."
 msgstr "Leabharmharcáil Gach &Cluaisín..."
 
@@ -1150,7 +1153,7 @@ msgstr "Leabharmharcáil Gach &Cluaisín..."
 msgid "Organize Book&marks..."
 msgstr "Eagraigh Leabhar&mharcanna..."
 
-#: bookmarkAllCmd.label bookmarkAllTabs_label
+#: bookmarkAllCmd.label
 msgid "Bookmark All Tabs..."
 msgstr "Leabharmharcáil Gach Cluaisín..."
 
@@ -1233,7 +1236,7 @@ msgstr ""
 "Tarraing agus lig ann an deilbhín seo chun nasc a chruthú don leathanach seo"
 
 # Toolbar items
-#: homeButton.label historyHomeCmd.label goHomeCmd.label VK_HOME
+#: homeButton.label historyHomeCmd.label VK_HOME
 msgid "Home"
 msgstr "Baile"
 
@@ -1241,7 +1244,7 @@ msgstr "Baile"
 msgid "Display your bookmarks"
 msgstr "Léirigh do Leabharmharcanna"
 
-#: historyButton.label history.label
+#: historyButton.label search.scopeHistory.label history.label
 msgid "History"
 msgstr "Stair"
 
@@ -1272,7 +1275,8 @@ msgid "Web &Search"
 msgstr "&Cuardach Idirlín"
 
 # "L" under Main -> Uirlisí
-#: downloads.label downloads.accesskey
+#: downloads.label downloads.accesskey search.scopeDownloads.label
+#: search.scopeDownloads.accesskey
 msgid "&Downloads"
 msgstr "Íos&luchtú"
 
@@ -1307,8 +1311,7 @@ msgstr "Fuinneog &Nua"
 
 # "E" in main browser window
 #: editMenu.label editMenu.accesskey edit.label edit.accesskey mnEditEdit.label
-#: mnEditEdit.accesskey mnEdit.label mnEdit.accesskey certmgr.edit.label
-#: certmgr.edit.accesskey
+#: mnEditEdit.accesskey mnEdit.label mnEdit.accesskey
 msgid "&Edit"
 msgstr "&Eagar"
 
@@ -1414,7 +1417,7 @@ msgid "l"
 msgstr "l"
 
 #: searchFocus.commandkey securityView.privacy.viewCookies.accessKey
-#: focusSearch2.key helpSearch.commandkey
+#: focusSearch2.key helpSearch.commandkey certmgr.backupall.accesskey
 msgid "k"
 msgstr "k"
 
@@ -1752,16 +1755,6 @@ msgstr "Cuardaigh %S ar \"%S\""
 msgid "Block Images from %S"
 msgstr "Cuir Cosc ar Íomhánna ó %S"
 
-#: bookmarkAllTabs_accesskey view.sortBy.tags.accesskey detailsAccessKey
-#: license.decline.accesskey managepassword.askfirsttime.accesskey
-#: enable.tls.accesskey
-msgid "T"
-msgstr "T"
-
-#: bookmarkCurTab_label
-msgid "Bookmark This Tab..."
-msgstr "Cruthaigh Leabharmharc don Chluaisín Seo..."
-
 # bookmark dialog strings
 #: bookmarkAllTabsDefault
 msgid "[Folder Name]"
@@ -1907,11 +1900,6 @@ msgstr "Liostáil le '%S'..."
 msgid "Subscribe to this page..."
 msgstr "Liostáil leis an leathanach seo..."
 
-# tab context menu additions
-#: tabContext.undoCloseTab
-msgid "Undo Close Tab"
-msgstr "Cealaigh Dúnadh an Chluaisín"
-
 #: refreshBlocked.refreshLabel
 msgid "%S prevented this page from automatically reloading."
 msgstr ""
@@ -1920,17 +1908,13 @@ msgstr ""
 msgid "%S prevented this page from automatically redirecting to another page."
 msgstr ""
 
-# Chromeless popup handling
-#: chromelessWindow.warningMessage
-msgid "The web site at %S has hidden your toolbars."
-msgstr ""
+# Star button
+#: starButtonOn.tooltip
+msgid "Edit this bookmark"
+msgstr "Cuir an leabharmharc seo in eagar"
 
-#: chromelessWindow.warningNoLocation
-msgid "This web site has hidden your toolbars."
-msgstr ""
-
-#: chromelessWindow.showToolbarsButton
-msgid "Show Toolbars"
+#: starButtonOff.tooltip
+msgid "Bookmark this page"
 msgstr ""
 
 # Identity information
@@ -1944,7 +1928,8 @@ msgstr ""
 
 #: identity.domainverified.supplemental
 msgid ""
-"Information identifying the owner of this site may not have been validated."
+"Information identifying the owner of this web site may not have been "
+"validated."
 msgstr ""
 
 #: identity.identified.title
@@ -1952,7 +1937,7 @@ msgid "Identity Verified"
 msgstr ""
 
 #: identity.identified.body
-msgid "This website is owned by:"
+msgid "This web site is owned by:"
 msgstr ""
 
 #: identity.identified.verifier
@@ -1963,7 +1948,8 @@ msgstr ""
 msgid "%S, %S"
 msgstr "%S, %S"
 
-#: identity.identified.title_with_country installErrorItemFormat updateFullName
+#: identity.identified.title_with_country typeDescriptionWithType
+#: installErrorItemFormat updateFullName
 msgid "%S (%S)"
 msgstr "%S (%S)"
 
@@ -2382,7 +2368,7 @@ msgstr "%Spx × %Spx"
 
 #: imageDimensionsScaled
 msgid "%Spx × %Spx (scaled × %Spx × %Spx)"
-msgstr ""
+msgstr "%Spx × %Spx (scálaithe × %Spx × %Spx)"
 
 # LOCALIZATION NOTE: Next two strings are for language name representations
 #                    %1$S = language name, %2$S = region name
@@ -2719,14 +2705,14 @@ msgid ""
 "_: Do not translate this.  Only change the numeric values if you need this "
 "dialogue box to appear bigger.\n"
 "600"
-msgstr ""
+msgstr "600"
 
 #: pageInfoWindow.height
 msgid ""
 "_: Do not translate this.  Only change the numeric values if you need this "
 "dialogue box to appear bigger.\n"
 "500"
-msgstr ""
+msgstr "500"
 
 #: generalTab generalTab.label
 msgid "General"
@@ -2734,6 +2720,7 @@ msgstr "Ginearálta"
 
 #: generalTab.accesskey Giga findAgainCmd.key goOnlineButtonAccesskey
 #: findAgainCmd.commandkey downloadButton_major.accesskey
+#: exceptionMgr.certlocation.accesskey
 msgid "G"
 msgstr "G"
 
@@ -2761,7 +2748,7 @@ msgstr "Ionchódú:"
 msgid "Content"
 msgstr "Ábhar"
 
-#: generalSecurityMore
+#: generalSecurityMore detailsPane.more.label
 msgid "More"
 msgstr "Tuilleadh"
 
@@ -3095,7 +3082,7 @@ msgstr ""
 
 #: bookmarks.newFolderButton.label bookmarks.newFolderButton.accesskey
 msgid "N&ew Folder"
-msgstr ""
+msgstr "Fillteán N&ua"
 
 #: dialogAcceptLabelAddMulti
 msgid "Add Bookmarks"
@@ -3107,10 +3094,14 @@ msgstr "Sábháil Athruithe"
 
 #: dialogTitleAddFolder
 msgid "Add Folder"
-msgstr ""
+msgstr "Cuir Fillteán Leis"
 
 #: dialogTitleEdit
 msgid "Properties for \"%S\""
+msgstr ""
+
+#: editBookmarkOverlay.siteLocation.label
+msgid "Site Location:"
 msgstr ""
 
 #: editBookmarkOverlay.folder.label
@@ -3119,21 +3110,19 @@ msgstr "Fillteán:"
 
 #: editBookmarkOverlay.allBookmarksFolderItem.label
 msgid "All Bookmarks"
-msgstr ""
+msgstr "Gach Leabharmharc"
 
 #: editBookmarkOverlay.bookmarksMenuFolderItem.label bookmarksMenuName
 msgid "Bookmarks Menu"
 msgstr "Roghchlár na Leabharmharcanna"
 
-# #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
-# for the Tag picker in search and mail views.
-#: editBookmarkOverlay.tags.label col.tags.label
-msgid "Tags"
-msgstr "Clibeanna"
+#: editBookmarkOverlay.tags.label
+msgid "Tags:"
+msgstr "Clibeanna:"
 
 #: editBookmarkOverlay.tagsExpanderDown.tooltip
 msgid "Show all tags"
-msgstr ""
+msgstr "Taispeáin gach clib"
 
 #: window.style
 msgid "width: 36em; height: 18em;"
@@ -3147,13 +3136,29 @@ msgstr "Bog go:"
 msgid "&New Folder"
 msgstr "Fillteán &Nua"
 
+#: places.organizer.title
+msgid "Places Organizer"
+msgstr ""
+
+#: organize.label
+msgid "Organize"
+msgstr "Eagraigh"
+
+#: views.label
+msgid "Views"
+msgstr "Amhairc"
+
 #: view.toolbar.label view.toolbar.accesskey
 msgid "T&oolbar"
 msgstr "B&arra na nUirlisí"
 
 #: view.columns.label view.columns.accesskey
-msgid "&Show Columns"
-msgstr "Tai&speáin Colúin"
+msgid "Show &Columns"
+msgstr ""
+
+#: view.sort.label view.sort.accesskey
+msgid "&Sort"
+msgstr "&Sórtáil"
 
 #: view.sortAscending.label view.sortAscending.accesskey
 msgid "&A > Z Sort Order"
@@ -3177,7 +3182,7 @@ msgstr "Ard&leideanna &amp; Ardchleasanna"
 
 #: cmd.findInBookmarks.label cmd.findInBookmarks.accesskey
 msgid "&Find in Bookmarks..."
-msgstr ""
+msgstr "&Aimsigh i Leabharmharcanna..."
 
 #: cmd.findCurrent.label cmd.findCurrent.accesskey
 msgid "F&ind in Current Collection..."
@@ -3185,7 +3190,7 @@ msgstr "A&imsigh sa Bhailiúchán Reatha..."
 
 #: cmd.backup.label cmd.backup.accesskey
 msgid "&Backup..."
-msgstr ""
+msgstr "&Cúltaca..."
 
 #: cmd.restore.label cmd.restore.accesskey
 msgid "&Restore..."
@@ -3193,7 +3198,7 @@ msgstr ""
 
 #: cmd.restoreFromFile.label cmd.restoreFromFile.accesskey
 msgid "&Choose File..."
-msgstr ""
+msgstr "&Roghnaigh Comhad..."
 
 #: cmd.select_all.key laterButton.accesskey warn.leavingsecure.accesskey
 msgid "a"
@@ -3267,6 +3272,12 @@ msgstr "&Bog..."
 msgid "Set as Bookmarks Toolbar Folder"
 msgstr ""
 
+# #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+# for the Tag picker in search and mail views.
+#: col.tags.label
+msgid "Tags"
+msgstr "Clibeanna"
+
 #: col.lastvisit.label
 msgid "Visit Date"
 msgstr "Dáta Cuairte"
@@ -3293,7 +3304,28 @@ msgid "&Current Collection Only"
 msgstr "Bailiú&chán Reatha Amháin"
 
 #: search.allBookmarks.label search.allBookmarks.accesskey
+#: search.scopeAll.label search.scopeAll.accesskey
 msgid "&All Bookmarks"
+msgstr "G&ach Leabharmharc"
+
+#: search.scopeFolder.label search.scopeFolder.accesskey
+msgid "Selected &Folder"
+msgstr "&Fillteán Roghnaithe"
+
+#: search.scopeMenu.label search.scopeMenu.accesskey
+msgid "Bookmarks &Menu"
+msgstr ""
+
+#: search.scopeToolbar.label search.scopeToolbar.accesskey
+msgid "Bookmarks &Toolbar"
+msgstr ""
+
+#: search.scopeBarExpanderDown.tooltip
+msgid "Show search builder"
+msgstr ""
+
+#: search.scopeBarExpanderUp.tooltip
+msgid "Hide search builder"
 msgstr ""
 
 #: saveSearch.label saveSearch.accesskey Save
@@ -3421,6 +3453,44 @@ msgstr "Uasmhéid na dtorthaí: "
 msgid "Feed"
 msgstr "Fotha"
 
+#: view.detailsMacOSX.label
+msgid "List"
+msgstr "Liosta"
+
+#: view.details.label view.details.accesskey
+#: certmgr.detail.prettyprint_tab.title
+#: certmgr.detail.prettyprint_tab.accesskey
+msgid "&Details"
+msgstr "&Sonraí"
+
+#: view.addons.label
+msgid "Get View Add-ons"
+msgstr ""
+
+#: maintenance.label
+msgid "Import and Backup"
+msgstr ""
+
+#: backButton.tooltip
+msgid "Go back"
+msgstr ""
+
+#: forwardButton.tooltip
+msgid "Go forward"
+msgstr ""
+
+#: detailsPane.less.label
+msgid "Less"
+msgstr "Níos Lú"
+
+#: detailsPane.noPreviewAvailable.label preview.label
+msgid "Preview"
+msgstr "Réamhamharc"
+
+#: detailsPane.selectAnItemText.description
+msgid "Select an item to view and edit its properties"
+msgstr ""
+
 #: deleteHost
 msgid "Delete all from %S"
 msgstr "Scrios uile as %S"
@@ -3473,8 +3543,13 @@ msgstr "(gan teideal)"
 msgid "(local files)"
 msgstr "(comhaid logánta)"
 
+# LOCALIZATION NOTE (bookmarksBackupFilename) :
+# %S will be replaced by the current date in ISO 8601 format, YYYY-MM-DD.
+# The resulting string will be suggested as a filename, so make sure that you're
+# only using characters legal for file names. Consider falling back to the
+# en-US value if you have to use non-ascii characters.
 #: bookmarksBackupFilename
-msgid "Bookmarks %1$S.html"
+msgid "Bookmarks %S.html"
 msgstr ""
 
 #: bookmarksBackupTitle
@@ -3574,6 +3649,11 @@ msgstr ""
 msgid "Sort by Tags"
 msgstr "Sórtáil de réir Clibeanna"
 
+#: view.sortBy.tags.accesskey detailsAccessKey license.decline.accesskey
+#: managepassword.askfirsttime.accesskey enable.tls.accesskey
+msgid "T"
+msgstr "T"
+
 #: searchByDefault
 msgid "Search in Bookmarks"
 msgstr "Cuardaigh i Leabharmharcanna"
@@ -3630,6 +3710,46 @@ msgstr "Sábháil Cuardach"
 msgid "New Query"
 msgstr "Iarratas Nua"
 
+#: detailsPane.noItems
+msgid "No items"
+msgstr ""
+
+#: detailsPane.oneItem
+msgid "One item"
+msgstr "Mír amháin"
+
+#: detailsPane.multipleItems
+msgid "%S items"
+msgstr "%S mír"
+
+#: placesFolderTitle
+msgid "Places"
+msgstr "Áiteanna"
+
+#: recentlyCreatedBookmarksTitle
+msgid "Recently Starred Pages"
+msgstr ""
+
+#: recentlyVisitedBookmarksTitle
+msgid "Recently Visited Starred Pages"
+msgstr ""
+
+#: mostVisitedBookmarksTitle
+msgid "Most Visited Starred Pages"
+msgstr ""
+
+#: recentlyUsedTagsTitle
+msgid "Recently Used Tags"
+msgstr ""
+
+#: mostUsedTagsTitle
+msgid "Most Used Tags"
+msgstr ""
+
+#: mostVisitedSitesTitle
+msgid "Most Visited Pages"
+msgstr ""
+
 #: accessibility.label
 msgid "Accessibility"
 msgstr "Inrochtaineacht"
@@ -3661,18 +3781,6 @@ msgstr "Úsáid &mínscrollú"
 #: checkSpelling.label checkSpelling.accesskey
 msgid "Check my spelling as I &type"
 msgstr "Litriú &beo"
-
-#: languages.label languages.customize.Header locales.label
-msgid "Languages"
-msgstr "Teangacha"
-
-#: chooseLanguage.label
-msgid "Choose your preferred language for displaying pages"
-msgstr "Roghnaigh an teanga is fearr leat le taispeáint leathanach"
-
-#: chooseButton.label chooseButton.accesskey
-msgid "Ch&oose..."
-msgstr "R&oghnaigh..."
 
 #: networkTab.label
 msgid "Network"
@@ -3863,16 +3971,6 @@ msgstr "An barra stádais a f&holú"
 #: changeStatusBar.label changeStatusBar.accesskey
 msgid "&Change status bar text"
 msgstr "Téa&cs an bharra stádais a athrú"
-
-#: prefpane.label
-msgid ""
-"Here you can configure &brandShortName; to let your favorite applications "
-"handle different types of content."
-msgstr ""
-
-#: filterActive.label
-msgid "The following entries match your search:"
-msgstr ""
 
 #: typeColumn.label typeColumn.accesskey
 msgid "Content &Type"
@@ -4071,6 +4169,18 @@ msgstr "&Casta..."
 msgid "&Colors..."
 msgstr "&Dathanna..."
 
+#: languages.label languages.customize.Header locales.label
+msgid "Languages"
+msgstr "Teangacha"
+
+#: chooseLanguage.label
+msgid "Choose your preferred language for displaying pages"
+msgstr "Roghnaigh an teanga is fearr leat le taispeáint leathanach"
+
+#: chooseButton.label chooseButton.accesskey
+msgid "Ch&oose..."
+msgstr "R&oghnaigh..."
+
 #: window.width
 msgid ""
 "_: Do not translate this.  Only change the numeric values if you need this "
@@ -4087,6 +4197,7 @@ msgid "Cookie Name"
 msgstr "Ainm ar an fhianán"
 
 #: cookiedomain.label treehead.sitename.label reportSite treehead.site.label
+#: certmgr.certsite
 msgid "Site"
 msgstr "Suíomh"
 
@@ -4454,7 +4565,7 @@ msgstr ""
 msgid "&Manage Add-ons..."
 msgstr "&Bainistigh Breiseáin..."
 
-#: window.title
+#: window.title certmgr.typesofoverrides
 msgid "Exceptions"
 msgstr "Eisceachtaí"
 
@@ -4552,9 +4663,9 @@ msgstr "Sainroghanna &brandShortName;"
 msgid "width: 42em; min-height: 44em;"
 msgstr "width: 47em; min-height: 49em;"
 
-#: prefWindow.styleMac
-msgid "width: 47em;"
-msgstr "width: 58em;"
+#: prefWin.styleMac
+msgid "width: 47em; min-height: 45em;"
+msgstr "width: 51em; min-height: 49em;"
 
 #: prefWin.styleGNOME
 msgid "width: 42em; min-height: 44.5em;"
@@ -4690,28 +4801,13 @@ msgstr "Deasc"
 msgid "Choose Download Folder:"
 msgstr "Roghnaigh Fillteán an Íosluchtaithe:"
 
-# ### Applications
-#: removeType
-msgid "Remove this entry..."
-msgstr "Bain an iontráil seo..."
-
-#: removeButton removeTitle
-msgid "Remove Entry"
-msgstr "Bain Iontráil"
-
-#: removeMessage
-msgid ""
-"If you remove this entry, Firefox will ask you what to do next time you "
-"access content of this type.  Are you sure you want to remove this entry?"
-msgstr ""
-
 #: fileEnding fileType
 msgid "%S file"
 msgstr "Comhad %S"
 
-#: saveToDisk
-msgid "Save to Disk"
-msgstr "Sábháil chuig Diosca"
+#: saveFile fpDialog.title unknownAccept.label
+msgid "Save File"
+msgstr "Sábháil an Comhad"
 
 #: chooseApp
 msgid "Choose application..."
@@ -4725,8 +4821,24 @@ msgstr "Roghnaigh Feidhmchlár Cabhrach"
 msgid "Web Feed"
 msgstr "Fotha Gréasáin"
 
-#: alwaysAskAboutFeed
-msgid "Show me a preview and ask me which Feed Reader to use"
+#: alwaysAsk
+msgid "Always ask"
+msgstr "Fiafraigh díom i gcónaí"
+
+# LOCALIZATION NOTE (pluginName):
+# %1$S = plugin name (for example "QuickTime Plugin-in 7.2")
+# %2$S = brandShortName from brand.properties (for example "Minefield")
+#: pluginName
+msgid "%S (in %S)"
+msgstr "%S (i %S)"
+
+# LOCALIZATION NOTE (previewInApp, liveBookmarksInApp): %S = brandShortName
+#: previewInApp
+msgid "Preview in %S"
+msgstr "Réamhamharc i %S"
+
+#: liveBookmarksInApp
+msgid "Live Bookmarks in %S"
 msgstr ""
 
 #: domainColon
@@ -4833,17 +4945,20 @@ msgstr ""
 "Tabhair &rabhadh dom nuair a dhéanann suímh Ghréasáin iarracht breiseáin a "
 "shuiteáil"
 
-# The methods by which forged (phished) sites will be detected by phishing
-# providers will vary from human review to machine-based heuristics to a
-# combination of both, so it's important that this string and
+# LOCALIZATION NOTE (tellMaybeForgery.label, tellMaybeAttackSite.label):
+# The methods by which forged (phished) and attack sites will be detected by
+# phishing providers will vary from human review to machine-based heuristics to a
+# combination of both, so it's important that these strings and
 # useDownloadedList.label convey the meaning "suspected" (and not something like
 # "known").
 #
+#: tellMaybeAttackSite.label tellMaybeAttackSite.accesskey
+msgid "Tell me if the site I'm visiting is a suspected attac&k site"
+msgstr ""
+
 #: tellMaybeForgery.label tellMaybeForgery.accesskey
-msgid ""
-"_: \n"
-"&Tell me if the site I'm visiting is a suspected forgery"
-msgstr "&Abair liom má tá an suíomh ar a bhfuil mé ag amharc ina chamscéim"
+msgid "&Tell me if the site I'm visiting is a suspected forgery"
+msgstr ""
 
 #: useDownloadedList.label useDownloadedList.accesskey
 msgid "Check using a &downloaded list of suspected sites"
@@ -5346,10 +5461,6 @@ msgstr "Láraithe"
 msgid "Stretch"
 msgstr "Sínte"
 
-#: preview.label
-msgid "Preview"
-msgstr "Réamhamharc"
-
 #: color.label colorGroup.label
 msgid "Color:"
 msgstr "Dath:"
@@ -5440,6 +5551,14 @@ msgstr "&Athluchtaigh Cluaisín"
 #: listAllTabs.label
 msgid "List all tabs"
 msgstr "Liostaigh gach cluaisín"
+
+#: bookmarkCurTab.label bookmarkCurTab.accesskey
+msgid "&Bookmark This Tab..."
+msgstr ""
+
+#: undoCloseTab.label undoCloseTab.accesskey
+msgid "&Undo Close Tab"
+msgstr ""
 
 #: tabs.loading
 msgid "Loading..."
@@ -5930,6 +6049,57 @@ msgid ""
 "href='http://www.stopbadware.org/home/reviewinfo' >request a review</a>.</p>"
 msgstr ""
 
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# # ***** BEGIN LICENSE BLOCK *****
+# # Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# #
+# # The contents of this file are subject to the Mozilla Public License Version
+# # 1.1 (the "License"); you may not use this file except in compliance with
+# # the License. You may obtain a copy of the License at
+# # http://www.mozilla.org/MPL/
+# #
+# # Software distributed under the License is distributed on an "AS IS" basis,
+# # WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# # for the specific language governing rights and limitations under the
+# # License.
+# #
+# # The Original Code is Mozilla.org Code.
+# #
+# # The Initial Developer of the Original Code is
+# # Doron Rosenberg.
+# # Portions created by the Initial Developer are Copyright (C) 2001
+# # the Initial Developer. All Rights Reserved.
+# #
+# # Contributor(s):
+# #   Ben Goodger <ben@bengoodger.com>
+# #   Myk Melez <myk@mozilla.org>
+# #
+# # Alternatively, the contents of this file may be used under the terms of
+# # either the GNU General Public License Version 2 or later (the "GPL"), or
+# # the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# # in which case the provisions of the GPL or the LGPL are applicable instead
+# # of those above. If you wish to allow use of your version of this file only
+# # under the terms of either the GPL or the LGPL, and not to allow others to
+# # use your version of this file under the terms of the MPL, indicate your
+# # decision by deleting the provisions above and replace them with the notice
+# # and other provisions required by the GPL or the LGPL. If you do not delete
+# # the provisions above, a recipient may use your version of this file under
+# # the terms of any one of the MPL, the GPL or the LGPL.
+# #
+# # ***** END LICENSE BLOCK *****
+#
+#: settingsChangePreferences.label
+msgid ""
+"Settings can be changed using the Applications tab in &brandShortName;'s "
+"Preferences."
+msgstr ""
+
+#: settingsChangeOptions.label
+msgid ""
+"Settings can be changed using the Applications tab in &brandShortName;'s "
+"Options."
+msgstr ""
+
 # plug-ins URLs
 #: MOZ_LANGPACK_CREATOR more_plugins_label
 msgid "mozilla.org"
@@ -5949,16 +6119,20 @@ msgstr ""
 # This file must be saved as UTF8
 # Accesskeys are defined by prefixing the letter that is to be used for the
 # accesskey with an ampersand (e.g. &).
-# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
+# Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+# custom string and always use the same one as used by the en-US files.
+# $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+# for double ampersand) and prevents the letter following the ampersand from
+# being used as an accesskey.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
 #: REG_APP_DESC
 msgid ""
-"${BrandShortName} delivers safe, easy web browsing. A familiar user "
-"interface, enhanced security features including protection from online "
-"identity theft, and integrated search let you get the most out of the web."
+"$BrandShortName delivers safe, easy web browsing. A familiar user interface, "
+"enhanced security features including protection from online identity theft, "
+"and integrated search let you get the most out of the web."
 msgstr ""
-"Soláthraíonn ${BrandShortName} bealach brabhsála atá sábháilte agus éasca. "
+"Soláthraíonn $BrandShortName bealach brabhsála atá sábháilte agus éasca. "
 "Cabhraíonn comhéadan aitheanta, áiseanna breise slándála, díonadh in aghaidh "
 "sonraí ID a ghoid agus cuardach comhtháite leat an leas is fearr a bhaint as "
 "an nGréasán."
@@ -5974,24 +6148,13 @@ msgstr ""
 msgid "Choose Optional Components"
 msgstr "Roghnaigh Comhpháirteanna Roghnacha"
 
-#: OPTIONAL_COMPONENTS_SUBTITLE MUI_TEXT_COMPONENTS_SUBTITLE
-msgid "Choose which features of $(^NameDA) you want to install."
-msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
+#: OPTIONAL_COMPONENTS_SUBTITLE
+msgid "Choose which features of $BrandShortName you want to install."
+msgstr "Roghnaigh na gnéithe $BrandShortName ba mhaith leat suiteáil."
 
 #: OPTIONAL_COMPONENTS_LABEL
 msgid "Optional Components:"
 msgstr "Comhpháirteanna Roghnacha:"
-
-# LOCALIZATION NOTE:
-# This file must be saved as UTF8
-# Accesskeys are defined by prefixing the letter that is to be used for the
-# accesskey with an ampersand (e.g. &).
-# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
-# You can use \n to create a newline in the string but only when the string
-# from en-US contains a \n.
-#: APP_DESC
-msgid "Required files for the ${BrandShortName} application"
-msgstr "Comhaid a bhfuil gá leo le haghaidh ${BrandShortName}"
 
 #: DOMI_TITLE Inspector.title sidebar.title Inspector.label
 msgid "DOM Inspector"
@@ -6002,21 +6165,13 @@ msgid "Inspects the structure and properties of a window and its contents."
 msgstr ""
 "Scrúdaíonn struchtúr agus sainghnéithe fuinneoige agus gach a bhfuil inti."
 
-#: QFA_TITLE QFA_SHORT
-msgid "Quality Feedback Agent"
-msgstr "Gníomhaire Aiseolais um Cháilíocht"
-
-#: QFA_TEXT
-msgid "Sends information about program crashes to Mozilla."
-msgstr "Cuireann eolas faoi thuairteanna ríomhchlár chuig Mozilla."
-
 #: CONTEXT_OPTIONS
-msgid "${BrandShortName} &Options"
-msgstr "${BrandShortName} R&oghanna"
+msgid "$BrandShortName &Options"
+msgstr "R&oghanna $BrandShortName"
 
 #: CONTEXT_SAFE_MODE
-msgid "${BrandShortName} &Safe Mode"
-msgstr "Mód &Sábháilteachta ${BrandShortName}"
+msgid "$BrandShortName &Safe Mode"
+msgstr "Mód &Sábháilteachta $BrandShortName"
 
 #: SAFE_MODE
 msgid "Safe Mode"
@@ -6038,39 +6193,44 @@ msgstr "Socrú Aicearraí"
 msgid "Create Program Icons"
 msgstr "Cruthaigh Deilbhíní"
 
+#: SUMMARY_PAGE_TITLE START_TITLE
+msgid "Summary"
+msgstr "Achoimre"
+
+#: SUMMARY_PAGE_SUBTITLE
+msgid "Ready to start installing $BrandShortName"
+msgstr "Réidh chun $BrandShortName a shuiteáil"
+
+#: SUMMARY_INSTALLED_TO
+msgid "$BrandShortName will be installed to the following location:"
+msgstr ""
+
+#: SUMMARY_CLICK
+msgid "Click Install to continue."
+msgstr ""
+
 #: SURVEY_TEXT
-msgid "&Tell us what you thought of ${BrandShortName}"
-msgstr "Noch&t dúinn do bharúil faoi ${BrandShortName}"
+msgid "&Tell us what you thought of $BrandShortName"
+msgstr "&Nocht dúinn do bharúil faoi $BrandShortName"
 
 #: LAUNCH_TEXT
-msgid "&Launch ${BrandFullName} now"
-msgstr "&Lainseáil ${BrandFullName} anois"
+msgid "&Launch $BrandShortName now"
+msgstr "&Tosaigh $BrandShortName anois"
 
 #: WARN_APP_RUNNING_INSTALL
 msgid ""
-"${BrandFullName} must be closed to proceed with the installation.\n"
+"$BrandShortName must be closed to proceed with the installation.\n"
 "\n"
-"Click \"OK\" to exit ${BrandFullName} automatically and continue."
+"Click \"OK\" to exit $BrandShortName automatically and continue."
 msgstr ""
-"Is gá ${BrandFullName} a dhúnadh chun leanúint den tsuiteáil.\n"
+"Caithfear $BrandShortName a dhúnadh roimh an tsuiteáil.\n"
 "\n"
-"Cliceáil \"OK\" chun scor go huathoibríoch de ${BrandFullName} agus luí "
-"isteach ar a shuiteáil."
-
-#: WARN_APP_RUNNING_UNINSTALL
-msgid ""
-"${BrandFullName} must be closed to proceed with the uninstall.\n"
-"\n"
-"Click \"OK\" to exit ${BrandFullName} automatically and continue."
-msgstr ""
-"Caithfear ${BrandFullName} a dhúnadh roimh an díshuiteáil.\n"
-"\n"
-"Cliceáil \"OK\" chun scoir de ${BrandFullName} go huathoibríoch agus dul ar "
+"Cliceáil \"OK\" chun scoir de $BrandShortName go huathoibríoch agus dul ar "
 "aghaidh."
 
 #: CREATE_ICONS_DESC
-msgid "Create icons for ${BrandShortName}:"
-msgstr "Cruthaigh deilbhíní le haghaidh ${BrandShortName}:"
+msgid "Create icons for $BrandShortName:"
+msgstr "Cruthaigh deilbhíní le haghaidh $BrandShortName:"
 
 #: ICONS_DESKTOP
 msgid "On my &Desktop"
@@ -6083,6 +6243,24 @@ msgstr "&San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Progra
 #: ICONS_QUICKLAUNCH
 msgid "In my &Quick Launch bar"
 msgstr "I mo Bharra &Mearlainseála"
+
+#: WARN_MANUALLY_CLOSE_APP_UNINSTALL
+msgid ""
+"$BrandShortName must be closed to proceed with the uninstall.\n"
+"\n"
+"Please close $BrandShortName to continue."
+msgstr ""
+"Caithfear $BrandShortName a dhúnadh roimh an díshuiteáil.\n"
+"\n"
+"Dún $BrandShortName chun dul ar aghaidh."
+
+#: WARN_MANUALLY_CLOSE_APP_LAUNCH
+msgid ""
+"$BrandShortName is already running.\n"
+"\n"
+"Please close $BrandShortName prior to launching the version you have just "
+"installed."
+msgstr ""
 
 #: WARN_WRITE_ACCESS
 msgid ""
@@ -6104,9 +6282,60 @@ msgstr ""
 "\n"
 "Cliceáil OK chun suíomh eile a roghnú."
 
+#: WARN_UNSUPPORTED_MSG
+msgid ""
+"Sorry, $BrandShortName can't be installed. This version of $BrandShortName "
+"requires ${MinUnsupportedVer} or newer."
+msgstr ""
+
+#: WARN_RESTART_REQUIRED_UNINSTALL
+msgid ""
+"Your computer must be restarted to complete a previous uninstall of "
+"$BrandShortName. Do you want to reboot now?"
+msgstr ""
+"Ní mór duit do ríomhaire a atosú chun díshuiteáil $BrandShortName a chur i "
+"gcrích. Ar mhaith leat atosú anois?"
+
+#: ERROR_CREATE_DIRECTORY
+msgid ""
+"Error creating directory:\n"
+"\n"
+"$0\n"
+"\n"
+"Click Cancel to stop the installation or\n"
+"Retry to try again."
+msgstr ""
+
+#: UN_CONFIRM_PAGE_TITLE
+msgid "Uninstall $BrandFullName"
+msgstr "Díshuiteáil $BrandFullName"
+
+#: UN_CONFIRM_PAGE_SUBTITLE
+msgid "Remove $BrandFullName from your computer."
+msgstr "Bain $BrandShortName ó do ríomhaire."
+
+#: UN_CONFIRM_UNINSTALLED_FROM
+msgid "$BrandShortName will be uninstalled from the following location:"
+msgstr ""
+
+#: UN_CONFIRM_CLICK
+msgid "Click Uninstall to continue."
+msgstr ""
+
+#: UN_REMOVE_PROFILES
+msgid "&Remove my $BrandShortName personal data and customizations"
+msgstr ""
+
+#: UN_REMOVE_PROFILES_DESC
+msgid ""
+"This will permanently remove your bookmarks, saved passwords, cookies and "
+"customizations. You may wish to keep this information if you plan on "
+"installing another version of $BrandShortName in the future."
+msgstr ""
+
 #: STATUS_INSTALL_APP
-msgid "Installing ${BrandShortName}..."
-msgstr "${BrandShortName} á Shuiteáil..."
+msgid "Installing $BrandShortName..."
+msgstr "$BrandShortName á Shuiteáil..."
 
 #: STATUS_INSTALL_LANG
 msgid "Installing Language Files (${AB_CD})..."
@@ -6117,8 +6346,8 @@ msgid "Installing Optional Components..."
 msgstr "Comhpháirteanna Roghnacha á Suiteáil..."
 
 #: STATUS_UNINSTALL_MAIN
-msgid "Uninstalling ${BrandShortName}..."
-msgstr "${BrandShortName} á Dhíshuiteáil..."
+msgid "Uninstalling $BrandShortName..."
+msgstr "$BrandShortName á Dhíshuiteáil..."
 
 #: STATUS_CLEANUP
 msgid "A Little Housekeeping..."
@@ -6134,8 +6363,8 @@ msgstr ""
 
 # One line
 #: OPTION_STANDARD_DESC
-msgid "${BrandShortName} will be installed with the most common options."
-msgstr "Déanfar ${BrandShortName} a shuiteáil leis na gnáthroghanna."
+msgid "$BrandShortName will be installed with the most common options."
+msgstr "Déanfar $BrandShortName a shuiteáil leis na gnáthroghanna."
 
 #: OPTION_STANDARD_RADIO TYPE_STANDARD
 msgid "&Standard"
@@ -6143,8 +6372,8 @@ msgstr "Gnáth&shuiteáil"
 
 # One line
 #: OPTION_COMPLETE_DESC
-msgid "${BrandShortName} will be installed with all available options."
-msgstr "Suiteálfar ${BrandShortName} le gach rogha atá le fáil."
+msgid "$BrandShortName will be installed with all available options."
+msgstr "Suiteálfar $BrandShortName le gach rogha atá le fáil."
 
 #: OPTION_COMPLETE_RADIO
 msgid "C&omplete"
@@ -6403,10 +6632,6 @@ msgstr ""
 "I gcás go n-éilíonn do nasc Idirlín seachfhreastalaí, iontráil ainm do "
 "fhreastalaí agus eolas poirt anseo. Muna n-éilíonn, fág bán na réimsí sin."
 
-#: START_TITLE
-msgid "Summary"
-msgstr "Achoimre"
-
 #: START_SUBTITLE
 msgid "Ready to start installing $ProductShortName$."
 msgstr "Réidh chun $ProductShortName$ a shuiteáil."
@@ -6551,6 +6776,10 @@ msgstr "Uirlisí Forbróra"
 #: ADT_LONG
 msgid "The Document Inspector - a tool for web developers."
 msgstr "Cigire Cáipéisí - uirlis le haghaidh forbróirí idirlín"
+
+#: QFA_SHORT
+msgid "Quality Feedback Agent"
+msgstr "Gníomhaire Aiseolais um Cháilíocht"
 
 #: QFA_LONG
 msgid "for reporting $ProductShortName$ crash information"
@@ -7000,19 +7229,20 @@ msgstr ""
 # This file must be saved as UTF8
 # Accesskeys are defined by prefixing the letter that is to be used for the
 # accesskey with an ampersand (e.g. &).
-# Do not replace $(^NameDA) or $(^Name) with a custom string.
-# Do not change $(^NameDA) to $(^Name) or $(^Name) to $(^NameDA). NameDA allows
-# Name to contain an ampersand (e.g. DA stands for double ampersand) and
-# prevents the letter following the ampersand being used as an accesskey.
+# Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+# custom string and always use the same one as used by the en-US files.
+# $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+# for double ampersand) and prevents the letter following the ampersand from
+# being used as an accesskey.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
 #: MUI_TEXT_WELCOME_INFO_TITLE
-msgid "Welcome to the $(^NameDA) Setup Wizard"
-msgstr "Fáilte go dtí Draoi Suiteála $(^NameDA)"
+msgid "Welcome to the $BrandFullNameDA Setup Wizard"
+msgstr "Fáilte go dtí Draoi Suiteála $BrandShortNameDA"
 
 #: MUI_TEXT_WELCOME_INFO_TEXT
 msgid ""
-"This wizard will guide you through the installation of $(^NameDA).\n"
+"This wizard will guide you through the installation of $BrandFullNameDA.\n"
 "\n"
 "It is recommended that you close all other applications before starting "
 "Setup. This will make it possible to update relevant system files without "
@@ -7020,7 +7250,7 @@ msgid ""
 "\n"
 "$_CLICK"
 msgstr ""
-"Déanfaidh an draoi seo treorú duit tríd an tsuiteáil de $(^NameDA).\n"
+"Déanfaidh an draoi seo treorú duit tríd an tsuiteáil de $BrandFullNameDA.\n"
 "\n"
 "Moltar duit gach feidhmchlár eile a dhúnadh sula dtosaíonn tú an Suiteálaí. "
 "Cinnteoidh sé seo gur féidir na comhaid oiriúnacha a nuashonrú gan do "
@@ -7033,26 +7263,40 @@ msgid "License Agreement"
 msgstr "Comhaontú um Cheadúnas"
 
 #: MUI_TEXT_LICENSE_SUBTITLE
-msgid "Please review the license terms before installing $(^NameDA)."
+msgid "Please review the license terms before installing $BrandFullNameDA."
 msgstr ""
-"Déan iniúchadh ar choinníollacha an cheadúnais sula suiteálann tú $(^NameDA)."
+"Déan iniúchadh ar choinníollacha an cheadúnais sula suiteálann tú "
+"$BrandFullNameDA."
 
 #: MUI_INNERTEXT_LICENSE_TOP
 msgid "Press Page Down to see the rest of the agreement."
 msgstr "Brúigh \"Page Down\" chun an chuid eile den cheadúnas a léamh."
 
+#: MUI_INNERTEXT_LICENSE_BOTTOM_CHECKBOX
+msgid ""
+"If you accept the terms of the agreement, click the check box below. You must "
+"accept the agreement to install $BrandFullNameDA. $_CLICK"
+msgstr ""
+"Má ghlacann tú le coinníollacha an chomhaontaithe, cliceáil an ticbhosca "
+"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $BrandFullNameDA a "
+"shuiteáil. $_CLICK"
+
 #: MUI_INNERTEXT_LICENSE_BOTTOM_RADIOBUTTONS
 msgid ""
 "If you accept the terms of the agreement, select the first option below. You "
-"must accept the agreement to install $(^NameDA). $_CLICK"
+"must accept the agreement to install $BrandFullNameDA. $_CLICK"
 msgstr ""
 "Má ghlacann tú le coinníollacha an chomhaontaithe, roghnaigh an chéad rogha "
-"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $(^NameDA) a "
-"dhíshuiteáil. $_CLICK"
+"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $BrandFullNameDA a "
+"shuiteáil. $_CLICK"
 
 #: MUI_TEXT_COMPONENTS_TITLE
 msgid "Choose Components"
 msgstr "Roghnaigh Comhpháirteanna"
+
+#: MUI_TEXT_COMPONENTS_SUBTITLE
+msgid "Choose which features of $BrandFullNameDA you want to install."
+msgstr "Roghnaigh na gnéithe $BrandFullNameDA ba mhaith leat suiteáil."
 
 #: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_INFO
 msgid "Position your mouse over a component to see its description."
@@ -7063,12 +7307,12 @@ msgid "Choose Install Location"
 msgstr "Roghnaigh Suíomh na Suiteála"
 
 #: MUI_TEXT_DIRECTORY_SUBTITLE
-msgid "Choose the folder in which to install $(^NameDA)."
-msgstr "Roghnaigh an fillteán inar mian leat $(^NameDA) a shuiteáil."
+msgid "Choose the folder in which to install $BrandFullNameDA."
+msgstr "Roghnaigh an fillteán inar mian leat $BrandFullNameDA a shuiteáil."
 
 #: MUI_TEXT_INSTALLING_SUBTITLE
-msgid "Please wait while $(^NameDA) is being installed."
-msgstr "Fan go fóill; $(^NameDA) á shuiteáil."
+msgid "Please wait while $BrandFullNameDA is being installed."
+msgstr ""
 
 #: MUI_TEXT_FINISH_TITLE installCompleteTitle
 msgid "Installation Complete"
@@ -7091,26 +7335,21 @@ msgid "&Finish"
 msgstr "&Críochnaigh"
 
 #: MUI_TEXT_FINISH_INFO_TITLE
-msgid "Completing the $(^NameDA) Setup Wizard"
-msgstr "Draoi Suiteála $(^NameDA) á Chríochnú"
+msgid "Completing the $BrandFullNameDA Setup Wizard"
+msgstr ""
 
 #: MUI_TEXT_FINISH_INFO_TEXT
 msgid ""
-"$(^NameDA) has been installed on your computer.\n"
+"$BrandFullNameDA has been installed on your computer.\n"
 "\n"
 "Click Finish to close this wizard."
 msgstr ""
-"Suiteáladh $(^NameDA) ar do ríomhaire.\n"
-"\n"
-"Cliceáil \"Críochnaigh\" chun an draoi seo a dhúnadh."
 
 #: MUI_TEXT_FINISH_INFO_REBOOT
 msgid ""
 "Your computer must be restarted in order to complete the installation of "
-"$(^NameDA). Do you want to reboot now?"
+"$BrandFullNameDA. Do you want to reboot now?"
 msgstr ""
-"Ní mór duit do ríomhaire a atosú chun suiteáil $(^NameDA) a chur i gcrích. Ar "
-"mhaith leat atosú anois?"
 
 #: MUI_TEXT_FINISH_REBOOTNOW
 msgid "Reboot now"
@@ -7125,9 +7364,8 @@ msgid "Choose Start Menu Folder"
 msgstr "Roghnaigh Fillteán sa Roghchlár Tosaigh"
 
 #: MUI_TEXT_STARTMENU_SUBTITLE
-msgid "Choose a Start Menu folder for the $(^NameDA) shortcuts."
+msgid "Choose a Start Menu folder for the $BrandFullNameDA shortcuts."
 msgstr ""
-"Roghnaigh fillteán sa Roghchlár Tosaigh a gcuirfear aicearraí $(^NameDA) ann."
 
 #: MUI_INNERTEXT_STARTMENU_TOP
 msgid ""
@@ -7138,42 +7376,38 @@ msgstr ""
 "a chruthú. Is féidir freisin fillteán nua a chruthú trí ainm nua a iontráil."
 
 #: MUI_TEXT_ABORTWARNING
-msgid "Are you sure you want to quit $(^Name) Setup?"
-msgstr "An bhfuil tú cinnte gur mian leat Suiteálaí $(^Name) a scor?"
+msgid "Are you sure you want to quit $BrandFullName Setup?"
+msgstr ""
 
 #: MUI_UNTEXT_WELCOME_INFO_TITLE
-msgid "Welcome to the $(^NameDA) Uninstall Wizard"
-msgstr "Fáilte go dtí Draoi Díshuiteála $(^NameDA)"
+msgid "Welcome to the $BrandFullNameDA Uninstall Wizard"
+msgstr ""
 
 #: MUI_UNTEXT_WELCOME_INFO_TEXT
 msgid ""
-"This wizard will guide you through the uninstallation of $(^NameDA).\n"
+"This wizard will guide you through the uninstallation of $BrandFullNameDA.\n"
 "\n"
-"Before starting the uninstallation, make sure $(^NameDA) is not running.\n"
+"Before starting the uninstallation, make sure $BrandFullNameDA is not "
+"running.\n"
 "\n"
 "$_CLICK"
 msgstr ""
-"Déanfaidh an draoi seo treorú duit tríd an díshuiteáil de $(^NameDA).\n"
-"\n"
-"Bí cinnte nach bhfuil $(^NameDA) ag rith sula dtosaíonn tú an díshuiteáil.\n"
-"\n"
-"$_CLICK"
 
 #: MUI_UNTEXT_CONFIRM_TITLE
-msgid "Uninstall $(^NameDA)"
-msgstr "Díshuiteáil $(^NameDA)"
+msgid "Uninstall $BrandFullNameDA"
+msgstr ""
 
 #: MUI_UNTEXT_CONFIRM_SUBTITLE
-msgid "Remove $(^NameDA) from your computer."
-msgstr "Bain $(^NameDA) ó do ríomhaire."
+msgid "Remove $BrandFullNameDA from your computer."
+msgstr ""
 
 #: MUI_UNTEXT_UNINSTALLING_TITLE
 msgid "Uninstalling"
 msgstr "Á Dhíshuiteáil"
 
 #: MUI_UNTEXT_UNINSTALLING_SUBTITLE
-msgid "Please wait while $(^NameDA) is being uninstalled."
-msgstr "Fan go fóill; $(^NameDA) á dhíshuiteáil."
+msgid "Please wait while $BrandFullNameDA is being uninstalled."
+msgstr ""
 
 #: MUI_UNTEXT_FINISH_TITLE
 msgid "Uninstallation Complete"
@@ -7192,38 +7426,48 @@ msgid "Uninstall was not completed successfully."
 msgstr "Níor éirigh leis an díshuiteáil."
 
 #: MUI_UNTEXT_FINISH_INFO_TITLE
-msgid "Completing the $(^NameDA) Uninstall Wizard"
-msgstr "Draoi Díshuiteála $(^NameDA) á Chríochnú"
+msgid "Completing the $BrandFullNameDA Uninstall Wizard"
+msgstr ""
 
 #: MUI_UNTEXT_FINISH_INFO_TEXT
 msgid ""
-"$(^NameDA) has been uninstalled from your computer.\n"
+"$BrandFullNameDA has been uninstalled from your computer.\n"
 "\n"
 "Click Finish to close this wizard."
 msgstr ""
-"Díshuiteáladh $(^NameDA) ó do ríomhaire.\n"
-"\n"
-"Cliceáil \"Críochnaigh\" chun an draoi seo a dhúnadh."
 
 #: MUI_UNTEXT_FINISH_INFO_REBOOT
 msgid ""
 "Your computer must be restarted in order to complete the uninstallation of "
-"$(^NameDA). Do you want to reboot now?"
+"$BrandFullNameDA. Do you want to reboot now?"
 msgstr ""
-"Ní mór duit do ríomhaire a atosú chun díshuiteáil $(^NameDA) a chur i gcrích. "
-"Ar mhaith leat atosú anois?"
 
 #: MUI_UNTEXT_ABORTWARNING
-msgid "Are you sure you want to quit $(^Name) Uninstall?"
-msgstr "An bhfuil tú cinnte gur mian leat Díshuiteálaí $(^Name) a scor?"
+msgid "Are you sure you want to quit $BrandFullName Uninstall?"
+msgstr ""
 
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+# custom string and always use the same one as used by the en-US files.
+# $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+# for double ampersand) and prevents the letter following the ampersand from
+# being used as an accesskey.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
+# Strings that require a space at the end should be enclosed with double
+# quotes and the double quotes will be removed. To add quotes to the beginning
+# and end of a strong enclose the add and additional double quote to the
+# beginning and end of the string (e.g. ""This will include quotes"").
 #: SetupCaption
-msgid "$(^Name) Setup"
-msgstr "Socrú $(^Name)"
+msgid "$BrandFullName Setup"
+msgstr ""
 
 #: UninstallCaption
-msgid "$(^Name) Uninstall"
-msgstr "Díshuiteáil $(^Name)"
+msgid "$BrandFullName Uninstall"
+msgstr ""
 
 #: BackBtn BACK_
 msgid "< &Back"
@@ -7267,12 +7511,9 @@ msgstr "Críochnaithe"
 
 #: LicenseTextRB
 msgid ""
-"Please review the license agreement before installing $(^NameDA). If you "
-"accept all terms of the agreement, select the first option below. $_CLICK"
+"Please review the license agreement before installing $BrandFullNameDA. If "
+"you accept all terms of the agreement, select the first option below. $_CLICK"
 msgstr ""
-"Déan iniúchadh ar an gComhaontú um Cheadúnas sula suiteálann tú $(^NameDA). "
-"Má ghlacann tú le gach coinníoll den chomhaontú, roghnaigh an chéad rogha "
-"thíos. $_CLICK"
 
 #: ComponentsText
 msgid ""
@@ -7288,20 +7529,17 @@ msgstr "Roghnaigh na comhpháirteanna is mian leat a shuiteáil:"
 
 #: DirText
 msgid ""
-"Setup will install $(^NameDA) in the following folder. To install in a "
+"Setup will install $BrandFullNameDA in the following folder. To install in a "
 "different folder, click Browse and select another folder. $_CLICK"
 msgstr ""
-"Cuirfidh an Suiteálaí $(^NameDA) san fhillteán seo a leanas. Más mian leat "
-"suiteáil i bhfillteán difriúil, cliceáil \"Brabhsáil\" agus roghnaigh "
-"fillteán eile. $_CLICK"
 
 #: DirSubText
 msgid "Destination Folder"
 msgstr "Sprioc-Fhillteán"
 
 #: DirBrowseText
-msgid "Select the folder to install $(^NameDA) in:"
-msgstr "Roghnaigh an fillteán inar mian leat $(^NameDA) a shuiteáil:"
+msgid "Select the folder to install $BrandFullNameDA in:"
+msgstr ""
 
 #: SpaceAvailable
 msgid "\"Space available: \""
@@ -7312,8 +7550,8 @@ msgid "\"Space required: \""
 msgstr "\"Spás de dhíth: \""
 
 #: UninstallingText
-msgid "$(^NameDA) will be uninstalled from the following folder. $_CLICK"
-msgstr "Díshuiteálfar $(^NameDA) ón fhillteán seo a leanas. $_CLICK"
+msgid "$BrandFullNameDA will be uninstalled from the following folder. $_CLICK"
+msgstr ""
 
 #: UninstallingSubText
 msgid "Uninstalling from:"
@@ -8030,7 +8268,7 @@ msgstr "Stop an script"
 msgid "Debug script"
 msgstr "Dífhabhtaigh an script"
 
-#: WaitForScriptButton Continue serverCertExpired.accept.label
+#: WaitForScriptButton Continue
 msgid "Continue"
 msgstr "Ar Aghaidh"
 
@@ -8535,7 +8773,7 @@ msgstr "Bánaigh"
 msgid "Submit Query"
 msgstr "Seol Fiosrú"
 
-#: Browse loaddevice.browse
+#: Browse BrowseButton.label loaddevice.browse
 msgid "Browse..."
 msgstr "Brabhsáil..."
 
@@ -10344,9 +10582,57 @@ msgstr "Staid:"
 msgid "Action Name:"
 msgstr ""
 
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is DOM Inspector.
+# -
+# - The Initial Developer of the Original Code is
+# - Mozilla Foundation.
+# - Portions created by the Initial Developer are Copyright (C) 2007
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s):
+# -   Alexander Surkov <surkov.alexander@gmail.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#: relationType.label
+msgid "Relation Type"
+msgstr ""
+
 #: role.label
 msgid "Role"
 msgstr "Ról"
+
+#: relations.label
+msgid "Relations: "
+msgstr ""
+
+#: relationTargets.label
+msgid "Relation Targets: "
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # #if 0
@@ -10940,7 +11226,7 @@ msgstr "Teaghrán UserAgent"
 msgid "Language"
 msgstr "Teanga"
 
-#: reportEmail CertDumpCertTypeEmail
+#: reportEmail CertDumpCertTypeEmail CertInfoEmail
 msgid "Email"
 msgstr "Ríomhphost"
 
@@ -11355,6 +11641,14 @@ msgstr "used for this version."
 #: about.buildIdentifier
 msgid "Build identifier: "
 msgstr "Build identifier: "
+
+#: NoAppFound.label
+msgid "No applications were found for this file type."
+msgstr ""
+
+#: SendMsg.label
+msgid "Send this item to:"
+msgstr ""
 
 #: browsewithcaret.checkMsg
 msgid "Do not show me this dialog box again."
@@ -13289,7 +13583,7 @@ msgid "Open it &with"
 msgstr "Oscail &le"
 
 #: chooseApp.label chooseApp.accesskey chooseHandlerMac.label
-#: chooseHandlerMac.accesskey
+#: chooseHandlerMac.accesskey ChooseApp.label ChooseApp.accessKey
 msgid "&Choose..."
 msgstr "&Roghnaigh..."
 
@@ -13505,10 +13799,6 @@ msgstr "Alt"
 #: VK_CONTROL
 msgid "Ctrl"
 msgstr "Ctrl"
-
-#: fpDialog.title unknownAccept.label
-msgid "Save File"
-msgstr "Sábháil an Comhad"
 
 #: fileCheck.label
 msgid "Print to File"
@@ -15170,7 +15460,7 @@ msgstr "D'éirigh leis"
 msgid "Restart to complete"
 msgstr "Atosaigh chun é a chríochnú"
 
-#: error-202
+#: error-202 writeFileAccessDenied
 msgid "Access denied"
 msgstr "Rochtain diúltaithe"
 
@@ -15299,6 +15589,10 @@ msgstr "Teipthe"
 msgid "Blocked by Parental Controls"
 msgstr ""
 
+#: scanning.label
+msgid "Scanning for viruses..."
+msgstr ""
+
 #: cmd.pause.label cmd.pause.accesskey PAUSE_
 msgid "&Pause"
 msgstr "Cuir ar &Shos"
@@ -15371,6 +15665,13 @@ msgstr "Gan Tosú"
 #: finished
 msgid "Finished"
 msgstr "Críochnaithe"
+
+#: downloadErrorGeneric
+msgid ""
+"The download cannot be saved because an unknown error occurred.\n"
+"\n"
+"Please try again."
+msgstr ""
 
 #: quitCancelDownloadsAlertTitle offlineCancelDownloadsAlertTitle
 msgid "Cancel All Downloads?"
@@ -15553,6 +15854,53 @@ msgstr "Oscail Comhad Inrite?"
 msgid "Don't ask me this again"
 msgstr "Ná fiafraigh arís."
 
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# # ***** BEGIN LICENSE BLOCK *****
+# # Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# #
+# # The contents of this file are subject to the Mozilla Public License Version
+# # 1.1 (the "License"); you may not use this file except in compliance with
+# # the License. You may obtain a copy of the License at
+# # http://www.mozilla.org/MPL/
+# #
+# # Software distributed under the License is distributed on an "AS IS" basis,
+# # WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# # for the specific language governing rights and limitations under the
+# # License.
+# #
+# # The Original Code is Mozilla.org Code.
+# #
+# # The Initial Developer of the Original Code is
+# # Doron Rosenberg.
+# # Portions created by the Initial Developer are Copyright (C) 2001
+# # the Initial Developer. All Rights Reserved.
+# #
+# # Contributor(s):
+# #   Ben Goodger <ben@bengoodger.com>
+# #   Myk Melez <myk@mozilla.org>
+# #
+# # Alternatively, the contents of this file may be used under the terms of
+# # either the GNU General Public License Version 2 or later (the "GPL"), or
+# # the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# # in which case the provisions of the GPL or the LGPL are applicable instead
+# # of those above. If you wish to allow use of your version of this file only
+# # under the terms of either the GPL or the LGPL, and not to allow others to
+# # use your version of this file under the terms of the MPL, indicate your
+# # decision by deleting the provisions above and replace them with the notice
+# # and other provisions required by the GPL or the LGPL. If you do not delete
+# # the provisions above, a recipient may use your version of this file under
+# # the terms of any one of the MPL, the GPL or the LGPL.
+# #
+# # ***** END LICENSE BLOCK *****
+#
+#: settingsChangePreferences.label
+msgid "Settings can be changed in &brandShortName;'s Preferences."
+msgstr ""
+
+#: settingsChangeOptions.label
+msgid "Settings can be changed in &brandShortName;'s Options."
+msgstr ""
+
 #: intro.label
 msgid "You have chosen to open"
 msgstr "Roghnaigh tú é seo a oscailt:"
@@ -15573,30 +15921,13 @@ msgstr "&Oscail le"
 msgid "Other..."
 msgstr "Eile..."
 
-#: save.label save.accesskey
-msgid "&Save to Disk"
-msgstr "&Sábháil chuig diosca"
+#: saveFile.label saveFile.accesskey
+msgid "&Save File"
+msgstr ""
 
 #: rememberChoice.label rememberChoice.accesskey
 msgid "Do this &automatically for files like this from now on."
 msgstr "Déan é seo go hu&athoibríoch le haghaidh comhad mar seo as seo amach."
-
-#: settingsChange.label
-msgid "Settings can be changed in the Content section of Tools, Options."
-msgstr "Tig leat socruithe a athrú sa roinn \"Ábhar\" de \"Uirlisí, Roghanna\"."
-
-#: settingsChangeMac.label
-msgid ""
-"Settings can be changed in the Content section of &brandShortName;, "
-"Preferences."
-msgstr ""
-"Tig leat socruithe a athrú sa roinn \"Ábhar\" de \"brandShortName;, "
-"Sainroghanna\"."
-
-#: settingsChangeUnix.label
-msgid "Settings can be changed in the Content section of Edit, Preferences."
-msgstr ""
-"Tig leat socruithe a athrú sa roinn \"Ábhar\" de \"Eagar, Sainroghanna\"."
 
 #: whichIsA.label
 msgid "which is a:"
@@ -16376,10 +16707,6 @@ msgstr "Nuashonruithe do Bhreiseáin %S"
 msgid "There are new updates available for your add-ons."
 msgstr "Tá nuashonruithe nua le fáil le haghaidh do chuid bhreiseán."
 
-#: toolkitName
-msgid "Gecko Toolkit"
-msgstr ""
-
 #: updateWizard.title
 msgid "&brandShortName; Update"
 msgstr "Nuashonrú &brandShortName;"
@@ -16624,6 +16951,48 @@ msgstr ""
 msgid "%S was unable to check for updates for the following add-ons:"
 msgstr ""
 "Níorbh fhéidir le %S nuashonruithe a aimsiú do na breiseáin seo a leanas:"
+
+#: window.width
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"320"
+msgstr ""
+
+#: window.height
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"250"
+msgstr ""
+
+#: ChooseApp.description
+msgid "Choose an Application"
+msgstr ""
+
+#: protocol.title
+msgid "Launch Application"
+msgstr ""
+
+#: protocol.description
+msgid "This link needs to be opened with an application."
+msgstr ""
+
+#: protocol.choices.label
+msgid "Send to:"
+msgstr ""
+
+#: protocol.checkbox.label
+msgid "Remember my choice for %S links."
+msgstr ""
+
+#: protocol.checkbox.extra
+msgid "This can be changed in %S's preferences."
+msgstr ""
+
+#: choose.application.title
+msgid "Another Application..."
+msgstr ""
 
 #: homeButton.tooltip
 msgid "Go to the Help Start Page"
@@ -17848,6 +18217,12 @@ msgstr ""
 "An mian leat go n-athróidh Bainisteoir na bhFocal Faire an focal faire atá "
 "stóráilte le haghaidh %S?"
 
+#: passwordChangeTextNoUser
+msgid ""
+"Would you like to have Password Manager change the stored password for this "
+"login?"
+msgstr ""
+
 #: userSelectText
 msgid "Please confirm which user you are changing the password for"
 msgstr "Dearbhaigh cén t-úsáideoir lena bhfuil tú ag athrú an focal faire"
@@ -17871,6 +18246,145 @@ msgstr "An bhfuil tú cinnte gur mian leat gach focal faire a scriosadh?"
 #: removeAllPasswordsTitle
 msgid "Remove all passwords"
 msgstr "Scrios gach focal faire"
+
+#: passwordsAll
+msgid "The following passwords have been saved by the Password Manager:"
+msgstr ""
+
+#: passwordsFiltered
+msgid "The following passwords match your search:"
+msgstr ""
+
+# converted from pseudo-properties .it file
+# This file is in the UTF-8 encoding
+# section: [Strings]
+#: CrashReporterTitle
+msgid "Crash Reporter"
+msgstr ""
+
+# LOCALIZATION NOTE (CrashReporterVendorTitle): %s is replaced with the vendor name.  (i.e. "Mozilla")
+#: CrashReporterVendorTitle
+msgid "%s Crash Reporter"
+msgstr ""
+
+# LOCALIZATION NOTE (CrashReporterError): %s is replaced with another string containing detailed information.
+#: CrashReporterError
+msgid ""
+"We're sorry, but the application hit an unexpected problem and crashed.\n"
+"\n"
+"Unfortunately the crash reporter is unable to submit a report for this "
+"crash.\n"
+"\n"
+"Details: %s"
+msgstr ""
+
+# LOCALIZATION NOTE (CrashReporterProductError): The first %s is replaced with the product name (i.e. "Firefox"), the second is replaced with another string containing detailed information.  These two substitutions can not be reordered!
+#: CrashReporterProductError
+msgid ""
+"We're sorry, but %s hit an unexpected problem and crashed.  We'll try to "
+"restore your tabs and windows when it restarts.\n"
+"\n"
+"Unfortunately the crash reporter is unable to submit a crash report.\n"
+"\n"
+"Details: %s"
+msgstr ""
+
+#: CrashReporterHeader
+msgid "Crash! Bang! Boom!"
+msgstr ""
+
+# LOCALIZATION NOTE (CrashReporterDescription): The %s is replaced with the product name.
+#: CrashReporterDescription
+msgid ""
+"We're sorry, but %s hit an unexpected problem and crashed.  We'll try to "
+"restore your tabs and windows when it restarts.\n"
+"\n"
+"To help us diagnose and repair this problem, you can send us a crash report."
+msgstr ""
+
+#: CrashReporterDefault
+msgid ""
+"This application is run after a crash to report the problem to the "
+"application vendor.  It should not be run directly."
+msgstr ""
+
+#: ViewReport
+msgid "View Report"
+msgstr ""
+
+#: ExtraReportInfo
+msgid ""
+"This report also contains information about the state of the application when "
+"it crashed."
+msgstr ""
+
+# LOCALIZATION NOTE (CheckSubmit): The %s is replaced with the vendor name.
+#: CheckSubmit
+msgid "Submit crash report to %s"
+msgstr ""
+
+#: CheckEmail
+msgid "Email me when the problem is fixed"
+msgstr ""
+
+# LOCALIZATION NOTE (Restart): The %s is replaced with the product name.
+#: Restart
+msgid "Restart %s"
+msgstr ""
+
+#: SubmitFailed
+msgid "Failed to submit crash report"
+msgstr ""
+
+# LOCALIZATION NOTE (CrashID): The %s is replaced with the Crash ID from the server, which is a string like abc12345-6789-0abc-def1-23456abcdef1
+#: CrashID
+msgid "Crash ID: %s"
+msgstr ""
+
+# LOCALIZATION NOTE (CrashDetailsURL): The %s is replaced with a URL that the user can visit to view the crash details.
+#: CrashDetailsURL
+msgid "You can view details of this crash at %s"
+msgstr ""
+
+#: ErrorBadArguments
+msgid "The application passed an invalid argument."
+msgstr ""
+
+#: ErrorExtraFileExists
+msgid "The application didn't leave an application data file."
+msgstr ""
+
+#: ErrorExtraFileRead
+msgid "Couldn't read the application data file."
+msgstr ""
+
+#: ErrorExtraFileMove
+msgid "Couldn't move application data file."
+msgstr ""
+
+#: ErrorDumpFileExists
+msgid "The application did not leave a crash dump file."
+msgstr ""
+
+#: ErrorDumpFileMove
+msgid "Couldn't move crash dump."
+msgstr ""
+
+#: ErrorNoProductName
+msgid "The application did not identify itself."
+msgstr ""
+
+#: ErrorNoServerURL
+msgid "The application did not specify a crash reporting server."
+msgstr ""
+
+#: ErrorNoSettingsPath
+msgid "Couldn't find the crash reporter's settings."
+msgstr ""
+
+#: ErrorCreateDumpDir
+msgid "Couldn't create pending dump directory."
+msgstr ""
 
 # converted from #defines file
 #: MOZ_LANG_TITLE
@@ -19925,8 +20439,8 @@ msgstr "CN"
 msgid "UID"
 msgstr "UID"
 
-#: CertDumpPK9Email managepassword.askeverytime.accesskey
-#: certselect.ask.accesskey
+#: CertDumpPK9Email certmgr.edit.accesskey
+#: managepassword.askeverytime.accesskey certselect.ask.accesskey
 msgid "E"
 msgstr "E"
 
@@ -20376,6 +20890,10 @@ msgstr "Údaráis Teastais Eisiúna"
 msgid "Certification Practice Statement pointer"
 msgstr "Treoir do Ráiteas Cleachtaidh Dheimhniúcháin"
 
+#: CertDumpPolicyOidEV
+msgid "Extended Validation (EV) SSL Server Certificate"
+msgstr ""
+
 #: CertDumpUserNotice
 msgid "User Notice"
 msgstr "Fógra Úsáideora"
@@ -20632,7 +21150,7 @@ msgstr "Méid: %S Beart / %S Giotán"
 msgid "Client"
 msgstr "Cliant"
 
-#: VerifySSLServer_p
+#: VerifySSLServer_p exceptionMgr.certlocation.caption2
 msgid "Server"
 msgstr "Freastalaí"
 
@@ -20832,6 +21350,28 @@ msgstr ""
 msgid "An error occurred during a connection to %S."
 msgstr ""
 
+#: certErrorIntro
+msgid ""
+"An error occurred during a connection to %S because it uses an invalid "
+"security certificate."
+msgstr ""
+
+#: certErrorUntrusted
+msgid "The certificate is not trusted or its issuer certificate is invalid."
+msgstr ""
+
+#: certErrorMismatch
+msgid "The certificate is not valid for domain name %S."
+msgstr ""
+
+#: certErrorExpired
+msgid "The certificate has expired on %S."
+msgstr ""
+
+#: certErrorNotYetValid
+msgid "The certificate will not be valid until %S."
+msgstr ""
+
 #: CertInfoIssuedFor
 msgid "Issued to:"
 msgstr "Eisithe go:"
@@ -21014,6 +21554,14 @@ msgstr ""
 "Tá do theastas pearsanta suiteáilte. Ba cheart duit cóip den teastas seo a "
 "choinneáil."
 
+#: CertOrgUnknown
+msgid "(Unknown)"
+msgstr ""
+
+#: CertNotStored
+msgid "(Not Stored)"
+msgstr ""
+
 # The contents of this file are subject to the Netscape Public
 # License Version 1.1 (the "License"); you may not use this file
 # except in compliance with the License. You may obtain a copy of
@@ -21166,21 +21714,21 @@ msgstr "Bainisteoir na dTeastas"
 msgid "Your Certificates"
 msgstr "Do Theastais"
 
-#: certmgr.tab.others
-msgid "Other People's"
-msgstr "Teastais Dhaoine Eile"
+#: certmgr.tab.others2
+msgid "People"
+msgstr ""
 
-#: certmgr.tab.websites
-msgid "Web Sites"
-msgstr "Láithreáin Ghréasáin"
+#: certmgr.tab.websites3
+msgid "Servers"
+msgstr ""
 
 #: certmgr.tab.ca
 msgid "Authorities"
 msgstr "Údaráis"
 
-#: certmgr.tab.orphan
-msgid "Extra"
-msgstr "Breise"
+#: certmgr.tab.orphan2
+msgid "Others"
+msgstr ""
 
 #: certmgr.ca.builtins
 msgid "Built-in CAs"
@@ -21198,9 +21746,9 @@ msgstr "Tá teastais agat ó na heagrais seo a shainaithníonn tusa:"
 msgid "You have certificates on file that identify these people:"
 msgstr "Tá teastais agat a shainaithníonn na daoine seo:"
 
-#: certmgr.websites
-msgid "You have certificates on file that identify these web sites:"
-msgstr "Tá teastais agat a shainaithníonn na suíomhanna Gréasáin seo:"
+#: certmgr.websites2
+msgid "You have certificates on file that identify these servers:"
+msgstr ""
 
 #: certmgr.cas
 msgid ""
@@ -21215,11 +21763,6 @@ msgstr "Tá teastais agat nach féidir iad a chur i gcatagóir ar bith eile:"
 #: certmgr.detail.general_tab.title certmgr.detail.general_tab.accesskey
 msgid "&General"
 msgstr "&Ginearálta"
-
-#: certmgr.detail.prettyprint_tab.title
-#: certmgr.detail.prettyprint_tab.accesskey
-msgid "&Details"
-msgstr "&Sonraí"
 
 #: certmgr.pending.label
 msgid "Currently verifying certificate..."
@@ -21345,21 +21888,37 @@ msgstr "Eisithe ar an"
 msgid "Expires On"
 msgstr "Le síothlú"
 
+#: certmgr.view2.label exceptionMgr.certstatus.viewCert
+msgid "View…"
+msgstr ""
+
+#: certmgr.edit2.label
+msgid "Edit…"
+msgstr ""
+
 #: certmgr.editca.label certmgr.editca.accesskey
 msgid "E&dit CA Trust"
 msgstr "Cuir Muinín na nÚdarás &Deimhniúcháin in Eagar"
 
-#: certmgr.backup.label certmgr.backup.accesskey
-msgid "&Backup"
-msgstr "&Cúltaca"
+#: certmgr.export.label certmgr.export.accesskey
+msgid "E&xport…"
+msgstr ""
 
-#: certmgr.backupall.label certmgr.backupall.accesskey
-msgid "Bac&kup All"
-msgstr "Déan Cúl&taca Iomlán"
+#: certmgr.delete2.label
+msgid "Delete…"
+msgstr ""
 
-#: certmgr.restore.label certmgr.restore.accesskey
-msgid "I&mport"
-msgstr "Io&mpórtáil"
+#: certmgr.backup2.label
+msgid "Backup…"
+msgstr ""
+
+#: certmgr.backupall2.label
+msgid "Backup All…"
+msgstr ""
+
+#: certmgr.restore2.label
+msgid "Import…"
+msgstr "Iompórtáil…"
 
 #: certmgr.details.label certmgr.details.accesskey
 msgid "Certificate &Fields"
@@ -21372,6 +21931,31 @@ msgstr "&Luach Réimse"
 #: certmgr.hierarchy.label certmgr.hierarchy.accesskey
 msgid "&Certificate Hierarchy"
 msgstr "O&rdlathas Teastais"
+
+#: certmgr.addException.label certmgr.addException.accesskey
+msgid "Add E&xception…"
+msgstr ""
+
+#: exceptionMgr.title
+msgid "Add Security Exception"
+msgstr ""
+
+#: exceptionMgr.exceptionButton
+msgid "Confirm Security Exception"
+msgstr ""
+
+#: exceptionMgr.supplementalWarning
+msgid ""
+"Legitimate banks, stores, and other public sites will not ask you to do this."
+msgstr ""
+
+#: exceptionMgr.certlocation.download
+msgid "Get Certificate"
+msgstr ""
+
+#: exceptionMgr.certstatus.caption
+msgid "Certificate Status"
+msgstr ""
 
 # - The contents of this file are subject to the Mozilla Public
 # - License Version 1.1 (the "License"); you may not use this file
@@ -21663,19 +22247,6 @@ msgstr "Tá an teastas ann"
 msgid "The Certificate already exists."
 msgstr "Tá an teastas ann cheana."
 
-# Strings for the MismatchDomain dialog
-#: domainMismatch.title
-msgid "Security Error: Domain Name Mismatch"
-msgstr "Earráid shlándála: mímheaitseáil na n-ainmneacha fearainn"
-
-#: examineCert.label examineCert.accesskey
-msgid "&View Certificate"
-msgstr "&Taispeáin an Teastas"
-
-#: serverCertExpired.continue
-msgid "Would you like to continue anyway?"
-msgstr "Ar mhaith leat leanúint pé scéal é?"
-
 # Strings for the SSL client auth ask dialog
 #: clientAuthAsk.title
 msgid "User Identification Request"
@@ -21882,23 +22453,20 @@ msgstr ""
 msgid "Certificate for this certificate authority was not found"
 msgstr "Níl fáil ar an teastas don údarás teastais seo"
 
-#: deleteSslCertConfirm
-msgid "Are you sure you want to delete these web site certificates?"
+# For Deleting Certificates
+#: deleteSslCertConfirm2
+msgid "Are you sure you want to delete these web site exceptions?"
 msgstr ""
-"An bhfuil tú cinnte gur mian leat teastais na suíomhanna Gréasáin seo a "
-"scriosadh?"
 
-#: deleteSslCertImpact
+#: deleteSslCertImpact2
 msgid ""
-"If you delete a web site certificate, you will be asked to accept it again "
-"the next time you visit the web site."
+"If you delete a web site exception, you restore the usual security checks for "
+"that site and require it uses a valid certificate."
 msgstr ""
-"Má scriosann tú teastas suíomh Gréasáin, iarrfar ort glacadh leis arís an "
-"chéad uair eile a thugann tú cuairt ar an suíomh Gréasáin."
 
-#: deleteSslCertTitle
-msgid "Delete Web Site Certificates"
-msgstr "Scrios Teastais na suíomhanna Gréasáin"
+#: deleteSslCertTitle2
+msgid "Delete Web Site Certificate Exceptions"
+msgstr ""
 
 #: deleteUserCertConfirm deleteOrphanCertConfirm
 msgid "Are you sure you want to delete these certificates?"
@@ -21966,59 +22534,6 @@ msgstr "Ainm an Chomhaid atá le cóipeáil"
 #: file_browse_PKCS12_spec
 msgid "PKCS12 Files"
 msgstr "Comhaid PKCS12"
-
-# Mismatch Domain Dialg
-#: mismatchDomainMsg1
-msgid ""
-"You have attempted to establish a connection with \"%S\".  However, the "
-"security certificate presented belongs to \"%S\".  It is possible, though "
-"unlikely, that someone may be trying to intercept your communication with "
-"this web site."
-msgstr ""
-"Rinne tú iarracht ceangal a bhunú le \"%S\", ach is le \"%S\" an teastas a "
-"tairgeadh. Cé nach dócha é, b'fhéidir go bhfuil duine éigin ag iarraidh "
-"idircheap a dhéanamh ar do chuid cumarsáide leis an suíomh Gréasáin seo."
-
-#: mismatchDomainMsg2
-msgid ""
-"If you suspect the certificate shown does not belong to \"%S\", please cancel "
-"the connection and notify the site administrator."
-msgstr ""
-"Má tá tú den tuairim nach le \"%S\" an teastas atá á thaispeáint, cealaigh an "
-"ceangal agus cuir fios ar riarthóir an tsuímh le do thoil."
-
-# Server Cert expired
-#: serverCertExpiredMsg1
-msgid ""
-"\"%S\" is a site that uses a security certificate to encrypt data during "
-"transmission, but its certificate expired on %S."
-msgstr ""
-"Is suíomh é \"%S\" a úsáideann teastas slándála chun sonraí a chriptiú le "
-"linn tarchurtha, ach d'imigh a theastas as feidhm ar %S."
-
-#: serverCertExpiredTitle
-msgid "Server Certificate Expired"
-msgstr "Tá teastas an fhreastalaí as feidhm."
-
-#: serverCertNotYetValedMsg1
-msgid ""
-"\"%S\" is a site that uses a security certificate to encrypt data during "
-"transmission, but its certificate will not be valid until %S."
-msgstr ""
-"Is suíomh é \"%S\" a úsáideann teastas slándála chun sonraí a chriptiú le "
-"linn tarchurtha, ach ní bheidh a theastas bailí go dtí %S."
-
-#: serverCertNotYetValidTitle
-msgid "Server Certificate Not Yet Valid"
-msgstr "Níl teastas an fhreastalaí bailí fós"
-
-#: serverCertExpiredMsg2
-msgid ""
-"You should check to make sure that your computer's time (currently set to %S) "
-"is correct."
-msgstr ""
-"Ba cheart duit cinntiú go bhfuil an t-am ceart ar do ríomhaire (%S faoi "
-"láthair)."
 
 # Preferences
 #: resetPreferences
@@ -22361,6 +22876,122 @@ msgid "The site '%S' has requested that you sign the following text message:"
 msgstr ""
 "Tá an suíomh '%S' ag iarraidh ort an teachtaireacht téacs seo a leanas a "
 "shíniú:"
+
+# Cert export
+#: SaveCertAs
+msgid "Save Certificate To File"
+msgstr ""
+
+#: CertFormatBase64
+msgid "X.509 Certificate (PEM)"
+msgstr ""
+
+#: CertFormatBase64Chain
+msgid "X.509 Certificate with chain (PEM)"
+msgstr ""
+
+#: CertFormatDER
+msgid "X.509 Certificate (DER)"
+msgstr ""
+
+#: CertFormatPKCS7
+msgid "X.509 Certificate (PKCS#7)"
+msgstr ""
+
+#: CertFormatPKCS7Chain
+msgid "X.509 Certificate with chain (PKCS#7)"
+msgstr ""
+
+#: writeFileFailure
+msgid "File Error"
+msgstr ""
+
+#: writeFileFailed
+msgid ""
+"Can't write to file %S:\n"
+"%S."
+msgstr ""
+
+#: writeFileIsLocked
+msgid "File is locked"
+msgstr ""
+
+#: writeFileNoDeviceSpace
+msgid "No space left on device"
+msgstr ""
+
+#: writeFileUnknownError
+msgid "Unknown error"
+msgstr "Earráid anaithnid"
+
+# Add Security Exception dialog
+#: addExceptionBrandedWarning
+msgid "You are about to override how %S identifies sites."
+msgstr ""
+
+#: addExceptionInvalidHeader
+msgid "This site attempts to identity itself with invalid information."
+msgstr ""
+
+#: addExceptionDomainMismatchShort
+msgid "Wrong Site"
+msgstr ""
+
+#: addExceptionDomainMismatchLong
+msgid ""
+"Certificate belongs to a different site, which could indicate an identity "
+"theft."
+msgstr ""
+
+#: addExceptionExpiredShort
+msgid "Outdated Information"
+msgstr ""
+
+#: addExceptionExpiredLong
+msgid ""
+"Certificate is not currently valid. It is impossible to verify whether this "
+"identity was reported as stolen or lost."
+msgstr ""
+
+#: addExceptionUnverifiedShort
+msgid "Unknown Identity"
+msgstr ""
+
+#: addExceptionUnverifiedLong
+msgid ""
+"Certificate is not trusted, because it hasn't been verified by a recognized "
+"authority."
+msgstr ""
+
+#: addExceptionValidShort
+msgid "Valid Certificate"
+msgstr ""
+
+#: addExceptionValidLong
+msgid ""
+"This site provides valid, verified identification.  There is no need to add "
+"an exception."
+msgstr ""
+
+#: addExceptionCheckingShort
+msgid "Checking Information"
+msgstr ""
+
+#: addExceptionCheckingLong
+msgid "Attempting to identify the site..."
+msgstr ""
+
+#: addExceptionNoCertShort
+msgid "No Information Available"
+msgstr ""
+
+#: addExceptionNoCertLong
+msgid "Unable to obtain identification status for the given site."
+msgstr ""
+
+#: addExceptionConnectionFailed
+msgid "Connection Failed"
+msgstr ""
 
 #: pref.masterpass.title masterpass.label
 msgid "Master Passwords"
