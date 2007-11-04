@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-10-24 11:10-0500\n"
+"POT-Creation-Date: 2007-10-30 20:13-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -466,7 +466,7 @@ msgstr "&Cur Síos"
 
 #: bookmarksRoot.label BookmarksRoot bookmarksItem.title bookmarksButton.label
 #: 32_opera 32_dogbert 32_seamonkey 32_phoenix 32_safari
-#: bookmarks.bookmarksFolderItem.label
+#: bookmarks.bookmarksFolderItem.label PlacesBookmarksRootTitle
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
@@ -843,7 +843,7 @@ msgstr "Cruthaigh Fillteán Nua faoin Teideal:"
 msgid "%S - Bookmarks"
 msgstr "%S - Leabharmharcanna"
 
-#: search_results_title cmdToggleSearch.label searchResults.label
+#: search_results_title cmdToggleSearch.label
 msgid "Search Results"
 msgstr "Torthaí Cuardaigh"
 
@@ -855,7 +855,7 @@ msgstr "Bainisteoir na Leabharmharcanna"
 msgid "File in \"%S\""
 msgstr "Cuir i bhfillteán \"%S\""
 
-#: BookmarksToolbarFolder
+#: BookmarksToolbarFolder PlacesBookmarksToolbarTitle
 msgid "Bookmarks Toolbar Folder"
 msgstr "Fillteán do Bharra Uirlisí Leabharmharcanna"
 
@@ -1559,51 +1559,48 @@ msgstr "Cóipeáil an S&eoladh Ríomhphoist"
 msgid "T&his Frame"
 msgstr "An F&ráma Seo"
 
-# "M" under Main -> Amharc
-#: textZoomEnlargeCmd.label textZoomEnlargeCmd.accesskey menu_textEnlarge.label
-#: menu_textEnlarge.accesskey
-msgid "&Increase"
-msgstr "Clómhéid Níos &Mó"
+#: fullZoomEnlargeCmd.label fullZoomEnlargeCmd.accesskey
+#: fullZoomEnlargeBtn.label fullZoomEnlargeBtn.accesskey
+msgid "Zoom &In"
+msgstr "Súmáil &Isteach"
 
 # #-#-#-#-#  ga-win.po (firefox 0.8)  #-#-#-#-#
 # the separator character used between modifiers
 # #-#-#-#-#  ga-unix.po (firefox 0.8)  #-#-#-#-#
 # the separator character used between modifiers
-#: textZoomEnlargeCmd.commandkey moreCriteria.label advancedSearch.plus.label
+#: fullZoomEnlargeCmd.commandkey moreCriteria.label advancedSearch.plus.label
 #: MODIFIER_SEPARATOR textEnlarge.commandkey
 msgid "+"
 msgstr "+"
 
 # + is above this key on many keyboards
-#: textZoomEnlargeCmd.commandkey2 textEnlarge.commandkey2
+#: fullZoomEnlargeCmd.commandkey2 textEnlarge.commandkey2
 msgid "="
 msgstr "="
 
-# "L" under Main -> Amharc
-#: textZoomReduceCmd.label textZoomReduceCmd.accesskey menu_textReduce.label
-#: menu_textReduce.accesskey
-msgid "&Decrease"
-msgstr "Clómhéid Níos &Lú"
+#: fullZoomReduceCmd.label fullZoomReduceCmd.accesskey fullZoomReduceBtn.label
+#: fullZoomReduceBtn.accesskey
+msgid "Zoom &Out"
+msgstr "Súmáil &Amach"
 
-#: textZoomReduceCmd.commandkey advancedSearch.minus.label lessCriteria.label
+#: fullZoomReduceCmd.commandkey advancedSearch.minus.label lessCriteria.label
 #: textReduce.commandkey
 msgid "-"
 msgstr "-"
 
-#: textZoomResetCmd.commandkey UNINST_CHARSET firstdayofweek.default
+#: fullZoomResetCmd.commandkey UNINST_CHARSET firstdayofweek.default
 #: textReset.commandkey CHARSET
 msgid "0"
 msgstr "0"
 
-#: textZoomResetCmd.label textZoomResetCmd.accesskey menu_textReset.label
-#: menu_textReset.accesskey
-msgid "&Normal"
-msgstr "G&náthmhéid"
+#: fullZoomResetCmd.label fullZoomResetCmd.accesskey reset.label
+#: reset.accesskey
+msgid "&Reset"
+msgstr "Athshoc&raigh"
 
-#: textSize.label textSize.accesskey menu_textSize.label
-#: menu_textSize.accesskey
-msgid "Text Si&ze"
-msgstr "Méid Téac&s"
+#: fullZoom.label fullZoom.accesskey
+msgid "&Zoom"
+msgstr "&Súmáil"
 
 #: newTabButton.tooltip
 msgid "Open a new tab"
@@ -1702,7 +1699,7 @@ msgstr "Déanta"
 
 #: identity.moreInfoLinkText
 msgid "Tell me more about this web site..."
-msgstr ""
+msgstr "Inis tuilleadh dom maidir leis an suíomh seo..."
 
 #: nv_timeout
 msgid "Timed Out"
@@ -1902,11 +1899,13 @@ msgstr "Liostáil leis an leathanach seo..."
 
 #: refreshBlocked.refreshLabel
 msgid "%S prevented this page from automatically reloading."
-msgstr ""
+msgstr "Níor lig %S don leathanach seo athluchtú go huathoibríoch."
 
 #: refreshBlocked.redirectLabel
 msgid "%S prevented this page from automatically redirecting to another page."
 msgstr ""
+"Níor lig %S don leathanach seo athstiúradh go leathanach eile go "
+"huathoibríoch."
 
 # Star button
 #: starButtonOn.tooltip
@@ -1915,7 +1914,7 @@ msgstr "Cuir an leabharmharc seo in eagar"
 
 #: starButtonOff.tooltip
 msgid "Bookmark this page"
-msgstr ""
+msgstr "Cruthaigh leabharmharc don leathanach seo"
 
 # Identity information
 #: identity.domainverified.title
@@ -1938,11 +1937,11 @@ msgstr ""
 
 #: identity.identified.body
 msgid "This web site is owned by:"
-msgstr ""
+msgstr "Tá an suíomh Gréasáin seo ar úinéireacht ag:"
 
 #: identity.identified.verifier
 msgid "Verified by: %S"
-msgstr ""
+msgstr "Cinntithe ag: %S"
 
 #: identity.identified.state_and_country
 msgid "%S, %S"
@@ -1959,7 +1958,7 @@ msgstr ""
 
 #: identity.unknown.body securityNoIdentity
 msgid "This web site does not supply identity information."
-msgstr ""
+msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena aitheantas."
 
 #: identity.encrypted
 msgid "Your connection to this web site is encrypted to prevent eavesdropping."
@@ -2076,7 +2075,7 @@ msgstr "Cuir Lorgfhocal in Eagar"
 
 #: editMsg
 msgid "Enter a new keyword for \"%S\":"
-msgstr ""
+msgstr "Iontráil eochairfhocal nua le haghaidh \"%S\":"
 
 #: duplicateTitle
 msgid "Duplicate Keyword"
@@ -2356,7 +2355,7 @@ msgstr "Anaithnid (gan taisceadh)"
 
 #: imageType
 msgid "%S image"
-msgstr ""
+msgstr "Íomhá %S"
 
 #: animatedImageType
 msgid "%S image (animated, %S frames)"
@@ -2834,15 +2833,15 @@ msgstr "Luchtaigh Íomhánna"
 
 #: permPopup
 msgid "Open Popup Windows"
-msgstr ""
+msgstr "Oscail Preabfhuinneoga"
 
 #: permCookie
 msgid "Set Cookies"
-msgstr ""
+msgstr "Socraigh Fianáin"
 
 #: permInstall
 msgid "Install Extensions or Themes"
-msgstr ""
+msgstr "Suiteáil Eisínteachtaí nó Téamaí"
 
 #: securityTab paneSecurity.title pageInfo.securityTab
 #: pref.security.general.lHeader
@@ -2855,7 +2854,7 @@ msgstr "Eolas slándála maidir leis an leathanach seo"
 
 #: securityView.certView
 msgid "View Certificate"
-msgstr ""
+msgstr "Taispeáin an Teastas"
 
 #: securityView.unknown unknown UNKNOWN CertUnknown
 msgid "Unknown"
@@ -2879,11 +2878,11 @@ msgstr ""
 
 #: securityView.privacy.header
 msgid "Privacy &amp; History"
-msgstr ""
+msgstr "Príobháideacht &amp; Stair"
 
 #: securityView.privacy.history
 msgid "Have I visited this website before today?"
-msgstr ""
+msgstr "An ndearna mé cuairt ar an suíomh seo roimh inniu?"
 
 #: securityView.privacy.cookies
 msgid "Is this web site storing information (cookies) on my computer?"
@@ -2891,15 +2890,15 @@ msgstr ""
 
 #: securityView.privacy.viewCookies
 msgid "View Cookies"
-msgstr ""
+msgstr "Féach ar Fhianáin"
 
 #: securityView.privacy.passwords
 msgid "Have I saved any passwords for this web site?"
-msgstr ""
+msgstr "Ar shábháil mé focail fhaire le haghaidh an tsuímh seo?"
 
 #: securityView.privacy.viewPasswords
 msgid "View Saved Passwords"
-msgstr ""
+msgstr "Taispeáin Focail Fhaire a Sábháladh"
 
 #: securityView.technical.header
 msgid "Technical Details"
@@ -2907,11 +2906,11 @@ msgstr "Sonraí Teicniúla"
 
 #: pageInfo.page.title
 msgid "Page Info - %S"
-msgstr ""
+msgstr "Eolas Leathanaigh - %S"
 
 #: pageInfo.frame.title
 msgid "Frame Info - %S"
-msgstr ""
+msgstr "Eolas Fráma - %S"
 
 #: noPageTitle
 msgid "Untitled Page:"
@@ -2969,7 +2968,7 @@ msgstr "%S kB"
 
 #: mediaSelectFolder
 msgid "Select a Folder to Save the Images"
-msgstr ""
+msgstr "Roghnaigh Fillteán a Sábhálfar na hÍomhánna Ann"
 
 #: generalNotCached
 msgid "Not cached"
@@ -2985,11 +2984,11 @@ msgstr "Taisce cuimhne"
 
 #: generalMetaTag
 msgid "Meta (1 tag)"
-msgstr ""
+msgstr "Meitea (clib amháin)"
 
 #: generalMetaTags
 msgid "Meta (%S tags)"
-msgstr ""
+msgstr "Meitea (%S clib)"
 
 #: generalSiteIdentity
 msgid ""
@@ -3070,15 +3069,15 @@ msgstr "&Cur Síos:"
 
 #: bookmarks.feed_location.label bookmarks.feed_location.accesskey
 msgid "&Feed Location:"
-msgstr ""
+msgstr "Suíomh &Fotha:"
 
 #: bookmarks.site_location.label bookmarks.site_location.accesskey
 msgid "&Site Location:"
-msgstr ""
+msgstr "&Suíomh:"
 
 #: bookmarks.loadInSidebar.label bookmarks.loadInSidebar.accesskey
 msgid "L&oad this bookmark in the sidebar"
-msgstr ""
+msgstr "Luchtaigh an leabharmharc se&o sa bharra taoibh"
 
 #: bookmarks.newFolderButton.label bookmarks.newFolderButton.accesskey
 msgid "N&ew Folder"
@@ -3098,11 +3097,11 @@ msgstr "Cuir Fillteán Leis"
 
 #: dialogTitleEdit
 msgid "Properties for \"%S\""
-msgstr ""
+msgstr "Airíonna \"%S\""
 
 #: editBookmarkOverlay.siteLocation.label
 msgid "Site Location:"
-msgstr ""
+msgstr "Suíomh:"
 
 #: editBookmarkOverlay.folder.label
 msgid "Folder:"
@@ -3138,7 +3137,7 @@ msgstr "Fillteán &Nua"
 
 #: places.organizer.title
 msgid "Places Organizer"
-msgstr ""
+msgstr "Eagraí Áiteanna"
 
 #: organize.label
 msgid "Organize"
@@ -3154,7 +3153,7 @@ msgstr "B&arra na nUirlisí"
 
 #: view.columns.label view.columns.accesskey
 msgid "Show &Columns"
-msgstr ""
+msgstr "Taispeáin &Colúin"
 
 #: view.sort.label view.sort.accesskey
 msgid "&Sort"
@@ -3194,7 +3193,7 @@ msgstr "&Cúltaca..."
 
 #: cmd.restore.label cmd.restore.accesskey
 msgid "&Restore..."
-msgstr ""
+msgstr "&Athshlánaigh..."
 
 #: cmd.restoreFromFile.label cmd.restoreFromFile.accesskey
 msgid "&Choose File..."
@@ -3242,11 +3241,11 @@ msgstr "&Deighilteoir Nua"
 
 #: cmd.reloadLivebookmark.label cmd.reloadLivebookmark.accesskey
 msgid "&Reload Live Bookmark"
-msgstr ""
+msgstr "Athluchtaigh &Leabharmharc Beo"
 
 #: cmd.reloadMicrosummary.label cmd.reloadMicrosummary.accesskey
 msgid "&Reload Live Title"
-msgstr ""
+msgstr "Athluchtaigh &Teideal Beo"
 
 #: cmd.groupby_site.label cmd.groupby_site.accesskey
 msgid "Group by &Site"
@@ -3270,7 +3269,7 @@ msgstr "&Bog..."
 
 #: cmd.personalToolbarFolder.menuLabel
 msgid "Set as Bookmarks Toolbar Folder"
-msgstr ""
+msgstr "Socraigh mar Fhillteán do Bharra Uirlisí Leabharmharcanna"
 
 # #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 # for the Tag picker in search and mail views.
@@ -3293,7 +3292,7 @@ msgstr "Cur Síos"
 
 #: col.dateadded.label
 msgid "Added"
-msgstr ""
+msgstr "Cruthaithe"
 
 #: col.lastmodified.label DirColMTime lastModified.label
 msgid "Last Modified"
@@ -3314,11 +3313,11 @@ msgstr "&Fillteán Roghnaithe"
 
 #: search.scopeMenu.label search.scopeMenu.accesskey
 msgid "Bookmarks &Menu"
-msgstr ""
+msgstr "Roghchlár na Leabhar&mharcanna"
 
 #: search.scopeToolbar.label search.scopeToolbar.accesskey
 msgid "Bookmarks &Toolbar"
-msgstr ""
+msgstr "Ba&rra Leabharmharc"
 
 #: search.scopeBarExpanderDown.tooltip
 msgid "Show search builder"
@@ -3469,15 +3468,15 @@ msgstr ""
 
 #: maintenance.label
 msgid "Import and Backup"
-msgstr ""
+msgstr "Iompórtáil agus Cúltaca"
 
 #: backButton.tooltip
 msgid "Go back"
-msgstr ""
+msgstr "Siar"
 
 #: forwardButton.tooltip
 msgid "Go forward"
-msgstr ""
+msgstr "Ar Aghaidh"
 
 #: detailsPane.less.label
 msgid "Less"
@@ -3550,7 +3549,7 @@ msgstr "(comhaid logánta)"
 # en-US value if you have to use non-ascii characters.
 #: bookmarksBackupFilename
 msgid "Bookmarks %S.html"
-msgstr ""
+msgstr "Leabharmharcanna %S.html"
 
 #: bookmarksBackupTitle
 msgid "Bookmarks backup filename"
@@ -3974,7 +3973,7 @@ msgstr "Téa&cs an bharra stádais a athrú"
 
 #: typeColumn.label typeColumn.accesskey
 msgid "Content &Type"
-msgstr ""
+msgstr "Cineál Á&bhar"
 
 #: actionColumn.label actionColumn.accesskey
 msgid "&Application"
@@ -4839,7 +4838,7 @@ msgstr "Réamhamharc i %S"
 
 #: liveBookmarksInApp
 msgid "Live Bookmarks in %S"
-msgstr ""
+msgstr "Leabharmharcanna Beo i %S"
 
 #: domainColon
 msgid "Domain:"
@@ -4958,7 +4957,7 @@ msgstr ""
 
 #: tellMaybeForgery.label tellMaybeForgery.accesskey
 msgid "&Tell me if the site I'm visiting is a suspected forgery"
-msgstr ""
+msgstr "&Abair liom má tá an suíomh ar a bhfuil mé ag amharc ina chamscéim"
 
 #: useDownloadedList.label useDownloadedList.accesskey
 msgid "Check using a &downloaded list of suspected sites"
@@ -5148,6 +5147,59 @@ msgid ""
 "http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
 msgstr ""
 "http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
+
+#: malware.title malwareBlocked.title
+msgid "Suspected Attack Site!"
+msgstr ""
+
+#: malware.shortDesc
+msgid ""
+"The web site at %S has been reported as an attack site and has been blocked "
+"based on your security preferences."
+msgstr ""
+
+#: malware.longDesc
+msgid ""
+"<p>Attack sites try to install programs that steal private information, use "
+"your computer to attack others, or damage your system.</p>\n"
+"<p>Web site owners who believe their site has been reported as an attack site "
+"in error may <a href='http://www.stopbadware.org/home/reviewinfo' >request a "
+"review</a>.</p>"
+msgstr ""
+
+#: phishing.title phishingBlocked.title
+msgid "Suspected Web Forgery!"
+msgstr "Falsaíocht Ghréasáin!"
+
+#: phishing.shortDesc phishingBlocked
+msgid ""
+"The web site at %S has been reported as a web forgery designed to trick users "
+"into sharing personal or financial information."
+msgstr ""
+"Gach seans gur dearadh an leathanach seo chun faisnéis phearsanta nó "
+"airgeadais a fháil le cleas ó dhaoine."
+
+#: phishing.longDesc
+msgid ""
+"<p>Entering any personal information on this page may result in identity "
+"theft or other fraud.</p><p>These types of web forgeries are used in scams "
+"known as phishing attacks, in which fraudulent web pages and emails are used "
+"to imitate sources you may trust.</p>"
+msgstr ""
+"<p>D'fhéadfadh goid aitheantais nó calaois eile teacht mar thoradh ar "
+"fhaisnéis phearsanta ar bith a chur isteach sa leathanach seo.</"
+"p><p>Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar "
+"\"bréagbhrandáil\", ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist "
+"chalaoiseacha chun aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín "
+"agat astu.</p>"
+
+# Localization note (phishing.learnMoreLink): please leave the <a id="faqLink" href=""> text
+# as-is.  A localized href is pulled in from user preferences automatically.
+#: phishing.learnMoreLink
+msgid ""
+"<p>You can find out more about <a id=\"faqLink\" href=\"\">how %S protects "
+"you</a> from phishing attacks.</p>"
+msgstr ""
 
 #: safeb.palm.warning.title
 msgid "Suspected Web Forgery"
@@ -5439,7 +5491,7 @@ msgstr ""
 # so that hitting the more prominent button doesn't lead to dataloss (see bug 346264).
 #: okTitle
 msgid "Restore Previous Session"
-msgstr ""
+msgstr "Athchóirigh an Seisiún Roimhe Seo"
 
 #: cancelTitle
 msgid "Start New Session"
@@ -5554,11 +5606,11 @@ msgstr "Liostaigh gach cluaisín"
 
 #: bookmarkCurTab.label bookmarkCurTab.accesskey
 msgid "&Bookmark This Tab..."
-msgstr ""
+msgstr "Cruthaigh Lea&bharmharc don Chluaisín Seo..."
 
 #: undoCloseTab.label undoCloseTab.accesskey
 msgid "&Undo Close Tab"
-msgstr ""
+msgstr "&Cealaigh Dúnadh an Chluaisín"
 
 #: tabs.loading
 msgid "Loading..."
@@ -6010,7 +6062,7 @@ msgstr ""
 "do ríomhaire.</li> <li>D'fhéadfadh seo tarlú de dheasca cumraíocht "
 "neamhchaighdeánach an fhreastalaí.</li></ul>"
 
-#: nssFailure2.title
+#: nssFailure2.title nssBadCert.title
 msgid "Secure Connection Failed"
 msgstr ""
 
@@ -6020,6 +6072,16 @@ msgid ""
 "authenticity of the received data could not be verified.</li> <li>Please "
 "contact the web site owners to inform them of this problem. Alternatively, "
 "use the command found in the help menu to report this broken site.</li> </ul>"
+msgstr ""
+
+#: nssBadCert.longDesc
+msgid ""
+"<ul> <li>This could be a problem with the server's configuration, or it could "
+"be someone trying to impersonate the server.</li> <li>If you have connected "
+"to this server successfully in the past, the error may be temporary, and you "
+"can try again later.</li> <li>You can see and change your current list of "
+"servers with known security problems in your advanced encryption settings.</"
+"li> </ul>"
 msgstr ""
 
 #: sharedLongDesc
@@ -6037,10 +6099,6 @@ msgstr ""
 "seachfhreastalaí, cinntigh go bhfuil cead ag &brandShortName; an Gréasán a "
 "rochtain.</li></ul>"
 
-#: malwareBlocked.title
-msgid "Suspected Attack Site!"
-msgstr ""
-
 #: malwareBlocked.longDesc
 msgid ""
 "<p>Attack sites try to install programs that steal private information, use "
@@ -6048,6 +6106,20 @@ msgid ""
 "who believe their site has been reported as an attack site in error may <a "
 "href='http://www.stopbadware.org/home/reviewinfo' >request a review</a>.</p>"
 msgstr ""
+
+#: phishingBlocked.longDesc
+msgid ""
+"<p>Entering any personal information on this page may result in identity "
+"theft or other fraud.</p> <p>These types of web forgeries are used in scams "
+"known as phishing attacks, in which fraudulent web pages and emails are used "
+"to imitate sources you may trust.</p>"
+msgstr ""
+"<p>D'fhéadfadh goid aitheantais nó calaois eile teacht mar thoradh ar "
+"fhaisnéis phearsanta ar bith a chur isteach sa leathanach seo.</"
+"p> <p>Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar "
+"\"bréagbhrandáil\", ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist "
+"chalaoiseacha chun aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín "
+"agat astu.</p>"
 
 # -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
 # # ***** BEGIN LICENSE BLOCK *****
@@ -7505,7 +7577,7 @@ msgstr "Cliceáil \"Suiteáil\" chun tosú."
 msgid "Click Uninstall to start the uninstallation."
 msgstr "Cliceáil \"Díshuiteáil\" chun tosú."
 
-#: Completed completedDownloads.label
+#: Completed
 msgid "Completed"
 msgstr "Críochnaithe"
 
@@ -9458,6 +9530,12 @@ msgid ""
 msgstr ""
 "Níl éifeacht ag an treoir phróiseála <?%1$S?> taobh amuigh den réamhfhocal "
 "anois (feic fabht 360119)."
+
+#: NeededToWrapXUL
+msgid ""
+"XUL box for %1$S element contained an inline %2$S child, forcing all its "
+"children to be wrapped in a block."
+msgstr ""
 
 #: loadError.label
 msgid "Page Load Error"
@@ -11841,10 +11919,6 @@ msgstr "&Athraigh"
 #: toggle.label toggle.accesskey
 msgid "&Toggle"
 msgstr "&Scoránaigh"
-
-#: reset.label reset.accesskey
-msgid "&Reset"
-msgstr "Athshoc&raigh"
 
 #: new.label new.accesskey
 msgid "Ne&w"
@@ -15195,6 +15269,24 @@ msgstr "&Timfhill Línte Fada"
 msgid "Syntax &Highlighting"
 msgstr "Soilsiú Com&hréire"
 
+#: menu_textSize.label menu_textSize.accesskey
+msgid "Text Si&ze"
+msgstr "Méid Téac&s"
+
+# "M" under Main -> Amharc
+#: menu_textEnlarge.label menu_textEnlarge.accesskey
+msgid "&Increase"
+msgstr "Clómhéid Níos &Mó"
+
+# "L" under Main -> Amharc
+#: menu_textReduce.label menu_textReduce.accesskey
+msgid "&Decrease"
+msgstr "Clómhéid Níos &Lú"
+
+#: menu_textReset.label menu_textReset.accesskey
+msgid "&Normal"
+msgstr "G&náthmhéid"
+
 #: goToLineTitle
 msgid "Go to line"
 msgstr "Téigh go líne"
@@ -15629,11 +15721,11 @@ msgstr "B&ain"
 msgid "&Information"
 msgstr "&Eolas"
 
-#: cmd.cleanUp.label cmd.cleanUp.accesskey
-msgid "&Clean Up"
-msgstr "Gl&an"
+#: cmd.clearList.label cmd.clearList.accesskey
+msgid "&Clear List"
+msgstr ""
 
-#: cmd.cleanUp.tooltip
+#: cmd.clearList.tooltip
 msgid "Removes completed, canceled, and failed downloads from the list"
 msgstr ""
 
@@ -15648,10 +15740,6 @@ msgstr "Dún an Bainisteoir Íosluchtaithe i ndiaidh an íosluchtaithe"
 #: showFolder.label
 msgid "Show this Folder"
 msgstr "Taispeáin an Fillteán seo"
-
-#: activeDownloads.label
-msgid "Active"
-msgstr "Gníomhach"
 
 # LOCALIZATION NOTE (paused): — is the "em dash" (long dash)
 #: paused
@@ -16952,18 +17040,8 @@ msgid "%S was unable to check for updates for the following add-ons:"
 msgstr ""
 "Níorbh fhéidir le %S nuashonruithe a aimsiú do na breiseáin seo a leanas:"
 
-#: window.width
-msgid ""
-"_: Do not translate this.  Only change the numeric values if you need this "
-"dialogue box to appear bigger.\n"
-"320"
-msgstr ""
-
-#: window.height
-msgid ""
-"_: Do not translate this.  Only change the numeric values if you need this "
-"dialogue box to appear bigger.\n"
-"250"
+#: window.emWidth window.emHeight
+msgid "26em"
 msgstr ""
 
 #: ChooseApp.description
@@ -17009,16 +17087,6 @@ msgstr "Á&bhar"
 #: zLevel.label zLevel.accesskey
 msgid "Always on &Top"
 msgstr "Chun &Tosaigh i gCónaí"
-
-# "L" under Main -> Amharc
-#: textZoomReduceBtn.label textZoomReduceBtn.accesskey
-msgid "&Decrease Text Size"
-msgstr "Clómhéid Níos &Lú"
-
-# "M" under Main -> Amharc
-#: textZoomEnlargeBtn.label textZoomEnlargeBtn.accesskey
-msgid "&Increase Text Size"
-msgstr "Clómhéid Níos &Mó"
 
 #: emptySearchText
 msgid "No search items found."
@@ -18253,6 +18321,19 @@ msgstr ""
 
 #: passwordsFiltered
 msgid "The following passwords match your search:"
+msgstr ""
+
+#: PlacesBookmarksRootDescription
+msgid "Add bookmarks to this folder to see them displayed on the Bookmarks Menu"
+msgstr ""
+
+#: PlacesBookmarksRootIconURI
+msgid "chrome://browser/skin/places/bookmarksMenu.png"
+msgstr ""
+
+#: PlacesBookmarksToolbarDescription
+msgid ""
+"Add bookmarks to this folder to see them displayed on the Bookmarks Toolbar"
 msgstr ""
 
 # converted from pseudo-properties .it file
@@ -21351,25 +21432,60 @@ msgid "An error occurred during a connection to %S."
 msgstr ""
 
 #: certErrorIntro
-msgid ""
-"An error occurred during a connection to %S because it uses an invalid "
-"security certificate."
+msgid "%S uses an invalid security certificate."
 msgstr ""
 
-#: certErrorUntrusted
-msgid "The certificate is not trusted or its issuer certificate is invalid."
+#: certErrorTrust_SelfSigned
+msgid "The certificate is not trusted because it is self signed."
+msgstr ""
+
+#: certErrorTrust_UnknownIssuer
+msgid ""
+"The certificate is not trusted because the issuer certificate is unknown."
+msgstr ""
+
+#: certErrorTrust_CaInvalid
+msgid ""
+"The certificate is not trusted because it was issued by an invalid CA "
+"certificate."
+msgstr ""
+
+#: certErrorTrust_Issuer
+msgid ""
+"The certificate is not trusted because the issuer certificate is not trusted."
+msgstr ""
+
+#: certErrorTrust_ExpiredIssuer
+msgid ""
+"The certificate is not trusted because the issuer certificate has expired."
+msgstr ""
+
+#: certErrorTrust_Untrusted
+msgid "The certificate does not come from a trusted source."
 msgstr ""
 
 #: certErrorMismatch
-msgid "The certificate is not valid for domain name %S."
+msgid "The certificate is not valid for the name %S."
+msgstr ""
+
+#: certErrorMismatchSingle
+msgid "The certificate is only valid for name %S."
+msgstr ""
+
+#: certErrorMismatchMultiple
+msgid "The certificate is only valid for the following names:"
 msgstr ""
 
 #: certErrorExpired
-msgid "The certificate has expired on %S."
+msgid "The certificate expired on %S."
 msgstr ""
 
 #: certErrorNotYetValid
 msgid "The certificate will not be valid until %S."
+msgstr ""
+
+#: certErrorCodePrefix
+msgid "(Error code: %S)"
 msgstr ""
 
 #: CertInfoIssuedFor
@@ -21556,11 +21672,11 @@ msgstr ""
 
 #: CertOrgUnknown
 msgid "(Unknown)"
-msgstr ""
+msgstr "(Anaithnid)"
 
 #: CertNotStored
 msgid "(Not Stored)"
-msgstr ""
+msgstr "(Gan Sábháil)"
 
 # The contents of this file are subject to the Netscape Public
 # License Version 1.1 (the "License"); you may not use this file
@@ -21716,11 +21832,11 @@ msgstr "Do Theastais"
 
 #: certmgr.tab.others2
 msgid "People"
-msgstr ""
+msgstr "Daoine"
 
 #: certmgr.tab.websites3
 msgid "Servers"
-msgstr ""
+msgstr "Freastalaithe"
 
 #: certmgr.tab.ca
 msgid "Authorities"
@@ -21728,7 +21844,7 @@ msgstr "Údaráis"
 
 #: certmgr.tab.orphan2
 msgid "Others"
-msgstr ""
+msgstr "Cinn Eile"
 
 #: certmgr.ca.builtins
 msgid "Built-in CAs"
@@ -21748,7 +21864,7 @@ msgstr "Tá teastais agat a shainaithníonn na daoine seo:"
 
 #: certmgr.websites2
 msgid "You have certificates on file that identify these servers:"
-msgstr ""
+msgstr "Tá teastais agat a shainaithníonn na freastalaithe seo:"
 
 #: certmgr.cas
 msgid ""
@@ -21890,11 +22006,11 @@ msgstr "Le síothlú"
 
 #: certmgr.view2.label exceptionMgr.certstatus.viewCert
 msgid "View…"
-msgstr ""
+msgstr "Amharc…"
 
 #: certmgr.edit2.label
 msgid "Edit…"
-msgstr ""
+msgstr "Eagar…"
 
 #: certmgr.editca.label certmgr.editca.accesskey
 msgid "E&dit CA Trust"
@@ -21902,15 +22018,15 @@ msgstr "Cuir Muinín na nÚdarás &Deimhniúcháin in Eagar"
 
 #: certmgr.export.label certmgr.export.accesskey
 msgid "E&xport…"
-msgstr ""
+msgstr "Ea&spórtáil…"
 
 #: certmgr.delete2.label
 msgid "Delete…"
-msgstr ""
+msgstr "Scrios…"
 
 #: certmgr.backup2.label
 msgid "Backup…"
-msgstr ""
+msgstr "Cúltaca…"
 
 #: certmgr.backupall2.label
 msgid "Backup All…"
@@ -21951,11 +22067,11 @@ msgstr ""
 
 #: exceptionMgr.certlocation.download
 msgid "Get Certificate"
-msgstr ""
+msgstr "Faigh Teastas"
 
 #: exceptionMgr.certstatus.caption
 msgid "Certificate Status"
-msgstr ""
+msgstr "Stádas an Teastais"
 
 # - The contents of this file are subject to the Mozilla Public
 # - License Version 1.1 (the "License"); you may not use this file
@@ -22589,11 +22705,11 @@ msgstr "Eisithe Faoi: \"%S\""
 # Page Info
 #: pageInfo_SiteNotVerified
 msgid "Web Site Identity Not Verified"
-msgstr "Níl Céannacht an tSuímh Gréasáin dearbhaithe"
+msgstr "Níl Aitheantas an tSuímh Gréasáin dearbhaithe"
 
 #: pageInfo_WebSiteVerified
 msgid "Web Site Identity Verified"
-msgstr "Céannacht an tSuímh Gréasáin dearbhaithe"
+msgstr "Aitheantas an tSuímh Gréasáin dearbhaithe"
 
 #: pageInfo_Identity_Verified
 msgid ""
@@ -22884,23 +23000,23 @@ msgstr ""
 
 #: CertFormatBase64
 msgid "X.509 Certificate (PEM)"
-msgstr ""
+msgstr "Teastas X.509 (PEM)"
 
 #: CertFormatBase64Chain
 msgid "X.509 Certificate with chain (PEM)"
-msgstr ""
+msgstr "Teastas X.509 le slabhra (PEM)"
 
 #: CertFormatDER
 msgid "X.509 Certificate (DER)"
-msgstr ""
+msgstr "Teastas X.509 (DER)"
 
 #: CertFormatPKCS7
 msgid "X.509 Certificate (PKCS#7)"
-msgstr ""
+msgstr "Teastas X.509 (PKCS#7)"
 
 #: CertFormatPKCS7Chain
 msgid "X.509 Certificate with chain (PKCS#7)"
-msgstr ""
+msgstr "Teastas X.509 le slabhra (PKCS#7)"
 
 #: writeFileFailure
 msgid "File Error"
@@ -22914,7 +23030,7 @@ msgstr ""
 
 #: writeFileIsLocked
 msgid "File is locked"
-msgstr ""
+msgstr "Comhad faoi ghlas"
 
 #: writeFileNoDeviceSpace
 msgid "No space left on device"
@@ -22955,7 +23071,7 @@ msgstr ""
 
 #: addExceptionUnverifiedShort
 msgid "Unknown Identity"
-msgstr ""
+msgstr "Aitheantas Anaithnid"
 
 #: addExceptionUnverifiedLong
 msgid ""
@@ -22965,7 +23081,7 @@ msgstr ""
 
 #: addExceptionValidShort
 msgid "Valid Certificate"
-msgstr ""
+msgstr "Teastas Bailí"
 
 #: addExceptionValidLong
 msgid ""
