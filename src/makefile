@@ -13,8 +13,8 @@
 #CVSDIREC=moz
 #VERSION=1.5
 #CVSDIREC=moz1.8
-VERSION=1.5
-CVSDIREC=moz1.8
+VERSION=trunk
+CVSDIREC=moz
 ##################################
 CVSFULLPATH=${HOME}/seal/$(CVSDIREC)/l10n/ga-IE
 COMPENDIUM=firefox-$(VERSION).ga.po
@@ -88,7 +88,7 @@ minimo-ga-IE.jar : $(UTFCOMP)
 
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
-	cat $(PARALLEL)/firefox | tokenize | keepif /usr/local/share/crubadan/ga/GLAN latin-1 | keepif -n freqtemp.txt latin-1 | mutate -d | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -r -n | egrep -v ' [123] ' | sed 's/^ *[0-9]* //' | sort -u | keepif /usr/local/share/crubadan/ga/GLAN latin-1
+	cat $(PARALLEL)/firefox | tokenize | keepif ${HOME}/gaeilge/ispell/ispell-gaeilge/aspell.txt latin-1 | keepif -n freqtemp.txt latin-1 | mutate -d | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -r -n | egrep -v ' [123] ' | sed 's/^ *[0-9]* //' | sort -u | keepif ${HOME}/gaeilge/ispell/ispell-gaeilge/aspell.txt latin-1
 	rm -f ./freqtemp.txt
 
 pcorpus : FORCE
