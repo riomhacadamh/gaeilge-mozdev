@@ -2,8 +2,8 @@
 #  ASCII ONLY
 if [ $# -ne 1 ]
 then
-	echo "Usage: newrelease [-b|-t]"
-	echo "Use -b for 1.8 branch (v. 1.5+), -t for trunk"
+	echo "Usage: newrelease [-b|-t|-l|-s]"
+	echo "Use -b for 1.8 branch (v. 1.5+), -t for trunk, -l for lightning 0.3, -s for sunbird 0.3"
 	exit
 fi
 PONAME='trunk'
@@ -12,6 +12,16 @@ if [ $1 = "-b" ]
 then
 	PONAME='1.5'
 	SRCDIR='moz1.8'
+fi
+if [ $1 = "-l" ]
+then
+	PONAME='lightning'
+	SRCDIR='moz-lightning'
+fi
+if [ $1 = "-s" ]
+then
+	PONAME='sunbird'
+	SRCDIR='moz-sunbird'
 fi
 
 # commit any outstanding changes to PO files
