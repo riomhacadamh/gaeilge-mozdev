@@ -50,6 +50,10 @@ then
 	cat tb-installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
 #	sed -i '/^$/d' ${IRISHJAR}/installer/installer.inc
 fi
+if echo "${1}" | egrep '^calendar' > /dev/null
+then
+	cp sunbird-l10n.js ${IRISHJAR}
+fi
 #rm -f "${IRISHJAR}.jar"
 #jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
 mv -f "${IRISHJAR}" "${PACK}"
