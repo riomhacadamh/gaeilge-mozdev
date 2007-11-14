@@ -54,6 +54,11 @@ s/props.accesskey "."/props.accesskey "A"/
 ' editor-ga-IE/ui/chrome/dialogs/EditorImageMap.dtd 
 sed -i 's/newMessageCmd.key "."/newMessageCmd.key "M"/' mail-ga-IE/chrome/messenger/mailOverlay.dtd
 sed -i '
+s/forwardMsgCmd.label "[^"]*"/forwardMsgCmd.label "Cuir Ar Aghaidh"/
+s/forwardMsgCmd.accesskey "."/forwardMsgCmd.accesskey "C"/
+s/contextForward.label "[^"]*"/contextForward.label "Cuir Ar Aghaidh"/
+s/contextForward.accesskey "."/contextForward.accesskey "C"/
+s/forwardButton.label "[^"]*"/forwardButton.label "Cuir Ar Aghaidh"/
 s/findAgainCmd.key "."/findAgainCmd.key "g"/
 s/findPrevCmd.key "."/findPrevCmd.key "g"/
 s/editMsgAsNewCmd.key "."/editMsgAsNewCmd.key "e"/
@@ -75,6 +80,7 @@ s/add.plaintext.accesskey "."/add.plaintext.accesskey "G"/
 ' mail-ga-IE/chrome/messenger/preferences/sendoptions.dtd
 
 sed -i 's/priority.level.medium.accesskey "."/priority.level.medium.accesskey "M"/; s/priority.level.high.accesskey "."/priority.level.high.accesskey "A"/; s/calendar.dayview.accesskey "."/calendar.dayview.accesskey "L"/; s/calendar.weekview.accesskey "."/calendar.weekview.accesskey "S"/; s/calendar.monthview.accesskey "."/calendar.monthview.accesskey "M"/; s/calendar.menu.options.close.accesskey "."/calendar.menu.options.close.accesskey "D"/; s/week.short "."/week.short "S"/' calendar-ga-IE/chrome/calendar/calendar.dtd
+sed -i 's/^likelyTimezone.*/likelyTimezone=Europe\/Dublin/' calendar-ga-IE/chrome/calendar/calendar.properties
 sed -i '
 s/day.1.Ddd.accesskey "."/day.1.Ddd.accesskey "D"/
 s/day.2.Ddd.accesskey "."/day.2.Ddd.accesskey "L"/
@@ -84,10 +90,6 @@ s/day.5.Ddd.accesskey "."/day.5.Ddd.accesskey "r"/
 s/day.6.Ddd.accesskey "."/day.6.Ddd.accesskey "A"/
 s/day.7.Ddd.accesskey "."/day.7.Ddd.accesskey "S"/
 ' calendar-ga-IE/chrome/calendar/global.dtd
-
-sed -i 's/event.delete.event.accesskey "."/event.delete.event.accesskey "R"/' calendar-ga-IE/chrome/calendar/menuOverlay.dtd
-
-# calendar days of the week
 sed -i '
 s/^day.1.short=.*/day.1.short=D/
 s/^day.2.short=.*/day.2.short=L/
@@ -98,6 +100,8 @@ s/^day.6.short=.*/day.6.short=A/
 s/^day.7.short=.*/day.7.short=S/
 s/^month.5.Mmm=.*/month.5.Mmm=Bea/
 ' calendar-ga-IE/chrome/calendar/dateFormat.properties
+
+sed -i 's/event.delete.event.accesskey "."/event.delete.event.accesskey "R"/' calendar-ga-IE/chrome/calendar/menuOverlay.dtd
 
 sed -i '
 s/"End"/"Deireadh"/
