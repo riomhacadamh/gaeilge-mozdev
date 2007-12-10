@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-04 11:38-0600\n"
+"POT-Creation-Date: 2007-12-05 08:39-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -264,7 +264,7 @@ msgstr "Oi&brigh As Líne"
 
 #: navbarCmd.label navbarCmd.accesskey
 msgid "&Navigation Toolbar"
-msgstr "Barra Loi&ngseoireachta"
+msgstr "Barra &Nascleanúna"
 
 #: personalbarCmd.label personalbarCmd.accesskey
 msgid "&Bookmarks Toolbar"
@@ -3291,6 +3291,18 @@ msgstr "Íosluchtú"
 msgid "All Bookmarks"
 msgstr "Gach Leabharmharc"
 
+#: tagResultLabel
+msgid "Tag"
+msgstr "Clib"
+
+# LOCALIZATION NOTE (bookmarkResultLabel) :
+# This is what we use to form the label (for screen readers)
+# for url bar autocomplete results of type "bookmark"
+# See createResultLabel() in urlbarBindings.xml 
+#: bookmarkResultLabel
+msgid "Bookmark"
+msgstr "Leabharmharc"
+
 #: accessibility.label
 msgid "Accessibility"
 msgstr "Inrochtaineacht"
@@ -3327,7 +3339,7 @@ msgstr "Litriú &beo"
 
 #: systemDefaults.label
 msgid "System Defaults"
-msgstr "Réamhshocruithe an Chórais"
+msgstr "Réamhshocrú an Chórais"
 
 # XXX
 #: alwaysCheckDefault.label alwaysCheckDefault.accesskey
@@ -4415,13 +4427,19 @@ msgstr "Bain Fianáin"
 msgid "Remove Cookie"
 msgstr "Bain Fianán"
 
-#: rememberBefore.label rememberBefore.accesskey
-msgid "Remember &visited pages for the last"
-msgstr "Meabhraigh leathanaigh ar tugadh &cuairt orthu le"
+# LOCALIZATION NOTE:
+# The entities rememberDaysBefore.label and rememberDaysAfter.label appear on a single
+# line in preferences as follows:
+#
+# &rememberDaysBefore.label  [ textbox for number of days ]   &rememberDaysAfter.label;
+#
+#: rememberDaysBefore.label rememberDaysBefore.accesskey
+msgid "Keep my &history for at least"
+msgstr "Meabhraig&h leathanaigh ar tugadh cuairt orthu le"
 
-#: rememberAfter.label
+#: rememberDaysAfter.label
 msgid "days."
-msgstr "lá anuas"
+msgstr "lá anuas."
 
 #: rememberForms.label rememberForms.accesskey
 msgid "Remember what I enter in &forms and the search bar"
@@ -4907,12 +4925,12 @@ msgstr "Athshoc&raigh barraí uirlisí agus rialtáin"
 
 #: resetBookmarks.label resetBookmarks.accesskey
 msgid "Reset &bookmarks to &brandShortName; defaults"
-msgstr "Athshocraigh na lea&bharmharcanna go réamhshocruithe &brandShortName;"
+msgstr "Athshocraigh na lea&bharmharcanna go réamhshocrú &brandShortName;"
 
 #: resetUserPrefs.label resetUserPrefs.accesskey
 msgid "Reset all user &preferences to &brandShortName; defaults"
 msgstr ""
-"Athshocraigh gach &sainrogha an úsáideora go réamhshocruithe &brandShortName;"
+"Athshocraigh gach &sainrogha an úsáideora go réamhshocrú &brandShortName;"
 
 #: restoreSearch.label restoreSearch.accesskey
 msgid "Re&store default search engines"
@@ -6113,7 +6131,7 @@ msgstr "Beagán Glantacháin…"
 #: OPTIONS_SUMMARY
 msgid "Choose the type of setup you prefer, then click Next."
 msgstr ""
-"Roghnaigh an cineál suiteála is fearr leat, agus cliceáil \"Ar aghaidh\" ina "
+"Roghnaigh an cineál suiteála is fearr leat, agus cliceáil \"Ar Aghaidh\" ina "
 "dhiaidh sin."
 
 # One line
@@ -6180,12 +6198,12 @@ msgid ""
 "Click Next to continue the Setup program."
 msgstr ""
 "Cliceáil \"Cealaigh\" chun scoir den tsuiteáil, agus dún ansin a bhfuil de "
-"chláracha ar siúl agat anois. Cliceáil \"Ar aghaidh\" chun leanúint den "
+"chláracha ar siúl agat anois. Cliceáil \"Ar Aghaidh\" chun leanúint den "
 "tsuiteáil."
 
 #: SETUP_MESSAGE3
 msgid "Click Next to continue installing %s."
-msgstr "Cliceáil \"Ar aghaidh\" chun leanúint de %s a shuiteáil."
+msgstr "Cliceáil \"Ar Aghaidh\" chun leanúint de %s a shuiteáil."
 
 #: LICENSE_TITLE license.titleText
 msgid "Software License Agreement"
@@ -6218,7 +6236,7 @@ msgstr "Roghanna suiteála an phacáiste seo."
 #: SETUP_TYPE_MESSAGE0
 msgid "Choose the type of Setup you prefer, then click Next."
 msgstr ""
-"Roghnaigh an cineál suiteála is fearr leat, agus cliceáil \"Ar aghaidh\" ina "
+"Roghnaigh an cineál suiteála is fearr leat, agus cliceáil \"Ar Aghaidh\" ina "
 "dhiaidh sin."
 
 #: SETUP_TYPE_EXISTING
@@ -6250,7 +6268,7 @@ msgstr "Comhpháirteanna breise a chuireann le cumas $ProductShortName$."
 msgid "Choose additional components you want to install, then click Next."
 msgstr ""
 "Roghnaigh na comhpháirteanna breise is mian leat a shuiteáil, agus cliceáil "
-"\"Ar aghaidh\" ina dhiaidh sin."
+"\"Ar Aghaidh\" ina dhiaidh sin."
 
 #: LOCATION_TITLE DESTINATIONDIRECTORY
 msgid "Install Folder"
@@ -6358,7 +6376,7 @@ msgid ""
 msgstr ""
 "Cuirfidh an Suiteálaí deilbhíní isteach san Fhillteán Ríomhchlár a luaitear "
 "thíos. Is féidir leat fillteán nua a chruthú, nó ceann a roghnú ar liosta na "
-"bhFillteán Reatha. Cliceáil \"Ar aghaidh\" chun leanúint ar aghaidh."
+"bhFillteán Reatha. Cliceáil \"Ar Aghaidh\" chun leanúint ar aghaidh."
 
 #: ADDL_OPTIONS_TITLE
 msgid "$ProductShortName$ Setup - Additional Options"
@@ -6404,7 +6422,7 @@ msgstr ""
 
 #: START_MESSAGE0 ClickNext
 msgid "Click Next to continue."
-msgstr "Cliceáil \"Ar aghaidh\" chun leanúint ar aghaidh."
+msgstr "Cliceáil \"Ar Aghaidh\" chun leanúint ar aghaidh."
 
 #: DL_TITLE downloading
 msgid "Downloading"
@@ -9840,15 +9858,15 @@ msgstr "Léigh agus uasluchtaigh comhaid logánta"
 
 #: capdesc.CapabilityPreferencesAccess
 msgid "By-pass core security settings"
-msgstr "Seachthreoraigh croíshocraithe slándála"
+msgstr "Seachthreoraigh croíshocruithe slándála"
 
 #: capdesc.UniversalPreferencesRead
 msgid "Read program settings"
-msgstr "Léigh socraithe an fheidhmchláir"
+msgstr "Léigh socruithe an fheidhmchláir"
 
 #: capdesc.UniversalPreferencesWrite
 msgid "Modify program settings"
-msgstr "Mionathraigh socraithe feidhmchláir"
+msgstr "Mionathraigh socruithe an fheidhmchláir"
 
 #: storageWriteError
 msgid ""
@@ -12531,19 +12549,19 @@ msgstr "F20"
 # LOCALIZATION NOTE : BLOCK GLYPHS, DO translate this block
 #: VK_UP
 msgid "Up Arrow"
-msgstr "Up Arrow"
+msgstr "Saighead Suas"
 
 #: VK_DOWN
 msgid "Down Arrow"
-msgstr "Down Arrow"
+msgstr "Saighead Síos"
 
 #: VK_LEFT
 msgid "Left Arrow"
-msgstr "Left Arrow"
+msgstr "Saighead Chlé"
 
 #: VK_RIGHT
 msgid "Right Arrow"
-msgstr "Right Arrow"
+msgstr "Saighead Dheas"
 
 #: VK_PAGE_UP
 msgid "Page Up"
@@ -16360,20 +16378,6 @@ msgstr ""
 "&status=%ITEM_STATUS%&appID=%APP_ID%&appVersion=%APP_VERSION%&appOS=%APP_OS%"
 "&appABI=%APP_ABI%&locale=%APP_LOCALE%"
 
-#: extensions.getMoreExtensionsURL
-msgid ""
-"https://%LOCALE%.add-ons.mozilla.com/%LOCALE%/%APP%/%VERSION%/extensions/"
-msgstr ""
-"https://%LOCALE%.add-ons.mozilla.com/%LOCALE%/%APP%/%VERSION%/extensions/"
-
-#: extensions.getMoreThemesURL
-msgid "https://%LOCALE%.add-ons.mozilla.com/%LOCALE%/%APP%/%VERSION%/themes/"
-msgstr "https://%LOCALE%.add-ons.mozilla.com/%LOCALE%/%APP%/%VERSION%/themes/"
-
-#: extensions.getMorePluginsURL
-msgid "https://%LOCALE%.add-ons.mozilla.com/%LOCALE%/%APP%/%VERSION%/plugins/"
-msgstr "https://%LOCALE%.add-ons.mozilla.com/%LOCALE%/%APP%/%VERSION%/plugins/"
-
 #: statusFormatKBKB progressFormatKBKB
 msgid "#1 of #2 KB"
 msgstr "#1 as #2 KB"
@@ -17089,7 +17093,7 @@ msgid ""
 "once per session when &brandShortName; retrieves saved information protected "
 "by the password."
 msgstr ""
-"Úsáidtear príomhfhocal faire chun eolas íogair ar nós focail faire suímh a "
+"Úsáidtear príomhfhocal faire chun eolas íogair ar nós focail fhaire suímh a "
 "chosaint. Má chruthaíonn tú príomhfhocal faire iarrfar ort é a iontráil uair "
 "amháin le linn seisiúin nuair a aisghabhann &brandShortName; eolas sábháilte "
 "atá faoi chosaint an fhocail faire."
@@ -22469,6 +22473,21 @@ msgstr ""
 "Chun dearbhú go bhfuil tú sásta an teachtaireacht téacs seo a shíniú le do "
 "theastas roghnaithe, iontráil do Phríomhfhocal Faire:"
 
+# Strings for protectedAuth dialog
+#: protectedAuth.title
+msgid "Protected Token Authentication"
+msgstr ""
+
+#: protectedAuth.msg
+msgid ""
+"Please authenticate to the token. Authentication method depends on the type "
+"of your token."
+msgstr ""
+
+#: protectedAuth.tokenName.label
+msgid "Token:"
+msgstr "Ceadchomhartha:"
+
 #: CertPassPrompt
 msgid ""
 "Please enter the Personal Security Password for the PSM Private Keys security "
@@ -23416,4 +23435,3 @@ msgid "When an OCSP server connection fails, treat the certificate as invalid"
 msgstr ""
 "Nuair a theipeann ar cheangal le freastalaí OCSP, meas go bhfuil an teastas "
 "neamhbhailí"
-
