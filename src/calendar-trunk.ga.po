@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-05 08:37-0600\n"
+"POT-Creation-Date: 2007-12-14 09:25-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -19,15 +19,15 @@ msgid "Mozilla"
 msgstr "Mozilla"
 
 # LOCALIZATION NOTE (releaseNotesURL):
-#   For nightly builds, direct the user to an appropriate, yet non-version
-#   specific project site.
+# For nightly builds, direct the user to an appropriate, yet non-version
+# specific project site.
 #
-#   %s is replaced by __MOZ_APP_VERSION__
+# %s is replaced by __MOZ_APP_VERSION__
 #
-#   example:
-#     __MOZ_APP_VERSION__: 0.4
-#     releaseNotesUrl: http://www.mozilla.foo/sunbird%s.html
-#     result: http://www.mozilla.foo/sunbird0.4.html
+# example:
+# __MOZ_APP_VERSION__: 0.4
+# releaseNotesUrl: http://www.mozilla.foo/sunbird%s.html
+# result: http://www.mozilla.foo/sunbird0.4.html
 #
 #: releaseNotesURL
 msgid "http://www.mozilla.org/projects/calendar/"
@@ -153,7 +153,7 @@ msgstr "I nDílchuimhne Ar"
 msgid "Powered by"
 msgstr "Á Chumhachtú ag"
 
-#  leave alone --KPS
+# leave alone --KPS
 #: license.and repeatDetailsAnd
 msgid "and"
 msgstr "and"
@@ -881,9 +881,30 @@ msgstr "&Easpórtáil Féilire…"
 msgid "&Properties"
 msgstr "&Airíonna"
 
-#: calendar.alarm.snooze.label
-msgid "Snooze"
-msgstr "Glac Néal"
+#: calendar.alarm.location.label calendarproperties.location.label
+#: tooltipLocation customize.toolbar.location.label imipHtml.location
+#: read.only.location.label
+msgid "Location:"
+msgstr "Suíomh:"
+
+# Error reporting
+#: calendar.alarm.details.label calendar.error.detail
+msgid "Details…"
+msgstr "Mionsonraí…"
+
+#: calendar.alarm.snoozefor.label
+msgid "Snooze for"
+msgstr ""
+
+#: calendar.alarm.snoozeallfor.label
+msgid "Snooze All for"
+msgstr ""
+
+# In case your language needs a different word order, this entity can be used
+# to add words to the end of the "Snooze all for XXX minutes" line
+#: calendar.alarm.snoozeall.suffix.label
+msgid "_: calendar.alarm.snoozeall.suffix.label\n"
+msgstr ""
 
 #: calendar.alarm.title.label
 msgid "Calendar Alarm"
@@ -897,29 +918,37 @@ msgstr "Díbir"
 msgid "Dismiss All"
 msgstr "Díbir Uile"
 
-#: calendar.alarm.for.label
-msgid "for"
-msgstr "do"
+#: calendar.alarm.snooze.5minutes.label
+msgid "5 Minutes"
+msgstr "5 Nóiméad"
 
-#: calendar.alarm.5minutes
-msgid "5 minutes"
-msgstr "5 nóiméad"
+#: calendar.alarm.snooze.10minutes.label
+msgid "10 Minutes"
+msgstr "10 Nóiméad"
 
-#: calendar.alarm.15minutes
-msgid "15 minutes"
-msgstr "15 nóiméad"
+#: calendar.alarm.snooze.15minutes.label
+msgid "15 Minutes"
+msgstr "15 Nóiméad"
 
-#: calendar.alarm.30minutes
-msgid "30 minutes"
-msgstr "30 nóiméad"
+#: calendar.alarm.snooze.30minutes.label
+msgid "30 Minutes"
+msgstr "30 Nóiméad"
 
-#: calendar.alarm.1hour
-msgid "1 hour"
-msgstr "1 uair"
+#: calendar.alarm.snooze.45minutes.label
+msgid "45 Minutes"
+msgstr "45 Nóiméad"
 
-#: calendar.alarm.1day
-msgid "1 day"
-msgstr "1 lá"
+#: calendar.alarm.snooze.1hour.label
+msgid "1 Hour"
+msgstr "1 Uair"
+
+#: calendar.alarm.snooze.2hours.label
+msgid "2 Hours"
+msgstr "2 Uair"
+
+#: calendar.alarm.snooze.1day.label
+msgid "1 Day"
+msgstr "1 Lá"
 
 #: calendar.server.dialog.title.edit
 msgid "Edit Calendar"
@@ -948,11 +977,6 @@ msgstr "Sun Java System Calendar Server (WCAP)"
 #: calendarproperties.format.label
 msgid "Format:"
 msgstr "Formáid:"
-
-#: calendarproperties.location.label tooltipLocation
-#: customize.toolbar.location.label imipHtml.location read.only.location.label
-msgid "Location:"
-msgstr "Suíomh:"
 
 #: calendarproperties.name.label
 msgid "Name:"
@@ -1101,11 +1125,6 @@ msgstr "Chuig:"
 #: calendar.print.settingsGroup.label
 msgid "Print Settings"
 msgstr "Socruithe Priontála"
-
-# Error reporting
-#: calendar.error.detail
-msgid "Details…"
-msgstr "Mionsonraí…"
 
 #: calendar.error.number
 msgid "Error number:"
@@ -1425,8 +1444,8 @@ msgid "Which calendar do you want to publish?"
 msgstr "Cén féilire is mian leat a fhoilsiú?"
 
 # LOCALIZATION NOTE (importItemsFailed):
-#    %1$S will be replaced with number of failed items
-#    %2$S will be replaced with last error code / error string
+# %1$S will be replaced with number of failed items
+# %2$S will be replaced with last error code / error string
 #: importItemsFailed
 msgid "%1$S items failed to import. The last error was: %2$S"
 msgstr "Theip ar iompórtáil %1$S mír. Earráid dheireanach: %2$S"
@@ -1929,6 +1948,27 @@ msgstr "Lean le híosluchtú an nuashonraithe…"
 msgid "Apply Downloaded Update Now…"
 msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois…"
 
+# Alarm Dialog
+#: alarmWindowTitle
+msgid "%1$S Reminders"
+msgstr ""
+
+#: alarmDue
+msgid "Due: %1$S"
+msgstr ""
+
+#: alarmStarts
+msgid "Starts: %1$S"
+msgstr ""
+
+#: alarmTodayAt
+msgid "Today at %1$S"
+msgstr ""
+
+#: alarmYesterdayAt
+msgid "Yesterday at %1$S"
+msgstr ""
+
 #: newevent.recurrence.occurs.label
 msgid "Occurs"
 msgstr "Tarlaíonn sé"
@@ -2248,7 +2288,7 @@ msgid "All Day"
 msgstr "I Rith an Lae"
 
 # Added to support localization of messages within eventDialog.js
-#   Day ordinals imply order within a list.
+# Day ordinals imply order within a list.
 #: ordinal.suffix.1 ordinal.suffix.21 ordinal.suffix.31
 msgid "st"
 msgstr "ú"
@@ -3720,7 +3760,7 @@ msgid "_: gopherPort.accesskey\n"
 msgstr ""
 
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
-#  cmd_cut_accesskey is sedtweaked
+# cmd_cut_accesskey is sedtweaked
 #: SOCKSport.accesskey
 msgid "t"
 msgstr "t"
@@ -5604,6 +5644,11 @@ msgstr ""
 msgid "Calendar Server Password Required"
 msgstr "Focal faire de dhíth le haghaidh freastalaí féilire"
 
+# args: user, host
+#: loginDialogPasswordOnly.text
+msgid "Enter password for user %1$S on %2$S."
+msgstr ""
+
 #: busyItem.title.text event.freebusy.legend.busy
 msgid "Busy"
 msgstr "Gnóthach"
@@ -6759,7 +6804,7 @@ msgstr "Beagán Glantacháin..."
 #: OPTIONS_SUMMARY
 msgid "Choose the type of setup you prefer, then click Next."
 msgstr ""
-"Roghnaigh an cineál suiteála is fearr leat, agus cliceáil \"Ar aghaidh\" ina "
+"Roghnaigh an cineál suiteála is fearr leat, agus cliceáil \"Ar Aghaidh\" ina "
 "dhiaidh sin."
 
 # One line
@@ -7065,7 +7110,7 @@ msgstr "Taispeáin &sonraí"
 
 #: ClickNext
 msgid "Click Next to continue."
-msgstr "Cliceáil \"Ar aghaidh\" chun leanúint ar aghaidh."
+msgstr "Cliceáil \"Ar Aghaidh\" chun leanúint ar aghaidh."
 
 #: ClickInstall
 msgid "Click Install to start the installation."
