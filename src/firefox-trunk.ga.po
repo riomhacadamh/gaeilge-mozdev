@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-14 09:27-0600\n"
+"POT-Creation-Date: 2008-01-03 16:37-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -52,11 +52,11 @@ msgstr "leagan"
 
 #: copyrightText
 msgid ""
-"&#169;1998-2007 Contributors. All Rights Reserved. Firefox and the Firefox "
+"&#169;1998-2008 Contributors. All Rights Reserved. Firefox and the Firefox "
 "logos are trademarks of the Mozilla Foundation.  All rights reserved. Some "
 "trademark rights used under license from The Charlton Company."
 msgstr ""
-"&#169;1998-2007 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
+"&#169;1998-2008 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
 "trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
 "Firefox. Gach ceart ar cosaint.  Tá roinnt cearta trádmharc á n-úsáid faoi "
 "cheadúnas ón Charlton Company."
@@ -460,7 +460,7 @@ msgid "s"
 msgstr "s"
 
 # Ctrl+h = Stair (for now, most other good ones are taken)
-#: historySidebarCmd.commandKey
+#: historySidebarCmd.commandKey cbxStateHover.accesskey
 msgid "h"
 msgstr "h"
 
@@ -574,7 +574,8 @@ msgstr "&Cóipeáil"
 # "R" under Main -> Eagar ("G" is Gearr)
 #: pasteCmd.label pasteCmd.accesskey cmd.edit_paste.label
 #: cmd.edit_paste.accesskey mnEditPaste.label mnEditPaste.accesskey
-#: cmdPaste.label cmdPaste.accesskey
+#: cmdPaste.label cmdPaste.accesskey mnEditPasteMenu.label
+#: mnEditPasteMenu.accesskey
 msgid "&Paste"
 msgstr "G&reamaigh"
 
@@ -592,7 +593,8 @@ msgstr "V"
 msgid "&Delete"
 msgstr "&Scrios"
 
-#: deleteCmd.key dontShowMessage.accesskey view.sortBy.description.accesskey
+#: deleteCmd.key dontShowMessage.accesskey
+#: blockedpluginsMessage.infoButton.accesskey view.sortBy.description.accesskey
 #: mismatchDontCheckAccesskey downloadButton_minor.accesskey
 msgid "D"
 msgstr "D"
@@ -760,7 +762,8 @@ msgstr "Sábháil an Leathanach &Mar…"
 
 # G&reamaigh, P&riontáil
 #: savePageCmd.accesskey2 popupWarningButtonUnix.accesskey permTab.accesskey
-#: HTTPport.accesskey printCmd.commandkey
+#: HTTPport.accesskey printCmd.commandkey hidePasswordsAccessKey
+#: showPasswordsAccessKey
 msgid "P"
 msgstr "R"
 
@@ -880,7 +883,7 @@ msgstr "Gearr"
 msgid "Copy"
 msgstr "Cóipeáil"
 
-#: pasteButton.tooltip mnEditPasteMenu.label
+#: pasteButton.tooltip
 msgid "Paste"
 msgstr "Greamaigh"
 
@@ -967,7 +970,8 @@ msgstr "&Aimsigh sa Leathanach Seo…"
 # Ctrl+F, Ctrl+G as find, find again transcend language?
 # also "Foirmeacha" on "Eolas Leathanaigh"  (so no tweaking needed)
 #: findOnCmd.commandkey cmd.find.key focusSearch1.key
-#: cmdShowFindDialog.accelkey cmd.find.commandKey loaddevice.filename.accesskey
+#: cmdShowFindDialog.accelkey cbxStateFocus.accesskey cmd.find.commandKey
+#: loaddevice.filename.accesskey
 msgid "f"
 msgstr "f"
 
@@ -1140,7 +1144,8 @@ msgstr "Ceadóidh %S íomhánna ó %S anois."
 msgid "Undo"
 msgstr "Cealaigh"
 
-#: undo.accessKey cmd.uninstall2.accesskey
+#: undo.accessKey blockedpluginsMessage.searchButton.accesskey
+#: cmd.uninstall2.accesskey
 msgid "U"
 msgstr "U"
 
@@ -1158,6 +1163,20 @@ msgstr "Suiteáil na forlíontáin ar iarraidh…"
 #: missingpluginsMessage.button.accesskey installButtonTextAccesskey
 msgid "I"
 msgstr "I"
+
+#: blockedpluginsMessage.title
+msgid ""
+"Some plugins required by this page have been blocked for your protection."
+msgstr ""
+
+# Error reporting
+#: blockedpluginsMessage.infoButton.label
+msgid "Details…"
+msgstr "Mionsonraí…"
+
+#: blockedpluginsMessage.searchButton.label
+msgid "Update Plugins…"
+msgstr "Nuashonraigh Forlíontáin…"
 
 # Sanitize
 #: sanitizeWithPromptLabel
@@ -1753,7 +1772,7 @@ msgid "&Netscape 6, 7 or Mozilla 1.x"
 msgstr "&Netscape 6, 7 nó Mozilla 1.x"
 
 # update notifications: new update page
-# plug-ins URLs
+# plugins URLs
 #: importFromNetscape4.label importFromNetscape4.accesskey
 msgid "Netscape &4.x"
 msgstr "Netscape &4.x"
@@ -1854,7 +1873,7 @@ msgstr "Netscape 6/7/Mozilla"
 
 # trade name, do not translate
 # update notifications: new update page
-# plug-ins URLs
+# plugins URLs
 #: sourceNameDogbert
 msgid "Netscape 4"
 msgstr "Netscape 4"
@@ -2402,7 +2421,7 @@ msgid "Yes, %S times"
 msgstr "%S uaire"
 
 #: caption.label
-msgid "Blocked Popups"
+msgid "Blocked Pop-ups"
 msgstr "Preabfhuinneoga Coiscthe"
 
 #: intro.label
@@ -2422,7 +2441,7 @@ msgstr "Bain Cosc de Sh&uíomh"
 msgid ""
 "A web site has attempted to open a pop-up window without your permission. "
 "&brandShortName; has automatically closed the pop-up window.  Whenever "
-"&brandShortName; blocks these popups, you will see an icon on the status bar."
+"&brandShortName; blocks these pop-ups, you will see an icon on the status bar."
 msgstr ""
 "Thug Suíomh Gréasáin iarracht preabfhuinneog a oscailt ar neamhchead duit. "
 "Dhruid &brandShortName; an phreabfhuinneog sin go huathoibríoch.  Feicfidh tú "
@@ -2432,7 +2451,7 @@ msgstr ""
 #: endDescription.label
 msgid ""
 "You can click on this icon to see which sites &brandShortName; blocked and to "
-"allow those sites to open popups if they are required for the site to "
+"allow those sites to open pop-ups if they are required for the site to "
 "function correctly."
 msgstr ""
 "Cliceáil ar an deilbhín seo chun na suíomh ar chuir &brandShortName; cosc "
@@ -2663,7 +2682,8 @@ msgstr "&Athshlánaigh…"
 msgid "&Choose File…"
 msgstr "&Roghnaigh Comhad…"
 
-#: cmd.select_all.key laterButton.accesskey warn.leavingsecure.accesskey
+#: cmd.select_all.key cbxStateActive.accesskey laterButton.accesskey
+#: warn.leavingsecure.accesskey
 msgid "a"
 msgstr "a"
 
@@ -4302,7 +4322,7 @@ msgstr ""
 "cliceáil Ceadaigh."
 
 #: popuppermissionstitle
-msgid "Allowed Sites - Popups"
+msgid "Allowed Sites - Pop-ups"
 msgstr "Suíomhanna ceadaithe chun preabfhuinneoga a oscailt"
 
 #: imagepermissionstext
@@ -5310,8 +5330,8 @@ msgstr "http://www.mozilla.org/projects/firefox/help/2.0"
 
 # Copyright years
 #: copyright.years
-msgid "2003-2007"
-msgstr "2003-2007"
+msgid "2003-2008"
+msgstr "2003-2008"
 
 #: malformedURI
 msgid "The URL is not valid and cannot be loaded."
@@ -5827,7 +5847,7 @@ msgstr ""
 "Is féidir socruithe a athrú trí úsáid an chluaisín Feidhmchláir i Roghanna "
 "&brandShortName;."
 
-# plug-ins URLs
+# plugins URLs
 #: MOZ_LANGPACK_CREATOR more_plugins_label
 msgid "mozilla.org"
 msgstr "mozilla.org"
@@ -9701,23 +9721,23 @@ msgstr ""
 # Those strings are inserted into an HTML page, so you all HTML characters
 # have to be escaped in a way that they show up correctly in HTML!
 #: title_label
-msgid "About Plug-ins"
+msgid "About Plugins"
 msgstr "Maidir le Forlíontáin"
 
 #: installedplugins_label
-msgid "Installed plug-ins"
+msgid "Installed plugins"
 msgstr "Forlíontáin suiteáilte"
 
 #: nopluginsareinstalled_label
-msgid "No plug-ins are installed"
+msgid "No plugins are installed"
 msgstr "Níl forlíontán ar bith suiteáilte"
 
 #: findmore_label
-msgid "Find more information about browser plug-ins at"
+msgid "Find more information about browser plugins at"
 msgstr "Tuilleadh eolais faoi fhorlíontáin ag"
 
 #: installhelp_label
-msgid "Help for installing plug-ins is available from"
+msgid "Help for installing plugins is available from"
 msgstr "Tá cabhair le haghaidh suiteáil na bhforlíontán ar fáil ó"
 
 #: mimetype_label
@@ -10176,7 +10196,8 @@ msgstr "Bhí earráid ann agus stílbhileog á luchtú: %S"
 msgid "Error during XSLT transformation: %S"
 msgstr "Earráid i rith trasfhoirmithe XSLT: %S"
 
-#: mnEditInsert.label mnEditInsert.accesskey
+#: mnEditInsert.label mnEditInsert.accesskey mnEditInsertMenu.label
+#: mnEditInsertMenu.accesskey
 msgid "&Insert"
 msgstr "&Ionsáigh"
 
@@ -10233,7 +10254,7 @@ msgstr "Torthaí Cuardaigh"
 msgid "Browser"
 msgstr "Brabhsálaí"
 
-#: inspectNewWindow.label cmdInspectInNewWindow.label
+#: inspectNewWindow.label
 msgid "Inspect in New Window"
 msgstr "Scrúdaigh i bhFuinneog Nua"
 
@@ -10399,6 +10420,74 @@ msgstr "Scrúda&itheoir DOM"
 #: inspectPageTaskCmd.label inspectPageTaskCmd.accesskey
 msgid "&Inspect Page"
 msgstr "Scrúdaigh &Leathanach"
+
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is DOM Inspector.
+# -
+# - The Initial Developer of the Original Code is
+# - Mozilla Foundation.
+# - Portions created by the Initial Developer are Copyright (C) 2007
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s):
+# -   Alexander Surkov <surkov.alexander@gmail.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#: descIsFromUserInput.label
+msgid "Is from user input: "
+msgstr ""
+
+#: descState.label
+msgid "State: "
+msgstr ""
+
+#: descIsEnabled.label
+msgid "Is state enabled: "
+msgstr ""
+
+#: descStartOffset.label
+msgid "Start offset: "
+msgstr ""
+
+#: descLength.label
+msgid "Length: "
+msgstr "Fad: "
+
+#: descIsInserted.label
+msgid "Is text inserted: "
+msgstr ""
+
+#: descModifiedText.label
+msgid "Modified text: "
+msgstr "Téacs mionathraithe: "
+
+#: descCaretOffset.label
+msgid "Caret offset: "
+msgstr ""
 
 #: eventType.label
 msgid "Event Type"
@@ -10639,21 +10728,25 @@ msgstr "&Colúin…"
 msgid "Insert…"
 msgstr "Ionsáigh…"
 
-#: cmdCopyXML.label
-msgid "Copy XML"
-msgstr "Cóipeáil XML"
+#: cmdCopyXML.label cmdCopyXML.accesskey
+msgid "Copy &XML"
+msgstr "Cóipeáil &XML"
 
-#: cmdBlink.label
-msgid "Blink Element"
-msgstr "Cuir Eilimint ag Caochadh"
+#: cmdBlink.label cmdBlink.accesskey
+msgid "&Blink Element"
+msgstr "Cuir Eilimint ag &Caochadh"
 
-#: cmdInspectBrowser.label
-msgid "Inspect Contained Document"
-msgstr "Scrúdaigh an Cháipéis Chuimsithe"
+#: cmdInspectBrowser.label cmdInspectBrowser.accesskey
+msgid "Insp&ect Contained Document"
+msgstr "Scrúdaigh an Cháipéis Chuimsith&e"
+
+#: cmdInspectInNewWindow.label cmdInspectInNewWindow.accesskey
+msgid "Inspect in &New Window"
+msgstr "Scrúdaigh i bhFuinneog &Nua"
 
 #: cmdShowPseudoClasses.label cmdShowPseudoClasses.accesskey
-msgid "Set &Pseudo-classes…"
-msgstr "Socraigh &Súdaicmí…"
+msgid "&Set Pseudo-classes…"
+msgstr ""
 
 #: pseudoClasses.title
 msgid "Pseudo-classes"
@@ -10696,34 +10789,33 @@ msgstr "&Síos"
 msgid "Find"
 msgstr "Aimsigh"
 
-#: mnEditPasteBefore.label mnEditInsertBefore.label
-msgid "Before"
-msgstr "Roimh"
+#: mnEditPasteBefore.label mnEditPasteBefore.accesskey mnEditInsertBefore.label
+#: mnEditInsertBefore.accesskey
+msgid "&Before"
+msgstr ""
 
-#: mnEditPasteAfter.label mnEditInsertAfter.label
-msgid "After"
-msgstr "Tar Éis"
+#: mnEditPasteAfter.label mnEditPasteAfter.accesskey mnEditInsertAfter.label
+#: mnEditInsertAfter.accesskey
+msgid "&After"
+msgstr ""
 
-#: mnEditPasteReplace.label
-msgid "In place of (Replace)"
-msgstr "In áit (Ionadaigh)"
+#: mnEditPasteReplace.label mnEditPasteReplace.accesskey
+msgid "&In place of (Replace)"
+msgstr "&In áit (Ionadaigh)"
 
-#: mnEditPasteFirstChild.label mnEditInsertFirstChild.label
-msgid "As first child"
-msgstr "Mar chéad mhac"
+#: mnEditPasteFirstChild.label mnEditPasteFirstChild.accesskey
+#: mnEditInsertFirstChild.label mnEditInsertFirstChild.accesskey
+msgid "As &first child"
+msgstr "Mar &chéad mhac"
 
-#: mnEditPasteLastChild.label mnEditInsertLastChild.label
-msgid "As last child"
-msgstr "Mar mhac deireanach"
+#: mnEditPasteLastChild.label mnEditPasteLastChild.accesskey
+#: mnEditInsertLastChild.label mnEditInsertLastChild.accesskey
+msgid "As last &child"
+msgstr "Mar mhac &deireanach"
 
-#: mnEditPasteAsParent.label
-msgid "As parent"
-msgstr "Mar mháthair"
-
-# Insert menu items
-#: mnEditInsertMenu.label
-msgid "Insert"
-msgstr "Ionsáigh"
+#: mnEditPasteAsParent.label mnEditPasteAsParent.accesskey
+msgid "As pa&rent"
+msgstr ""
 
 #: insertNode.title
 msgid "Insert Node"
@@ -11490,8 +11582,8 @@ msgid "The site %S wants to modify an existing cookie."
 msgstr "Ba mhaith leis an suíomh %S fianán atá ann cheana a athrú."
 
 #: about.copy.beforeLink
-msgid "Copyright &copy; 1998-2007 by"
-msgstr "Copyright &copy; 1998-2007 by"
+msgid "Copyright &copy; 1998-2008 by"
+msgstr "Copyright &copy; 1998-2008 by"
 
 # leave alone --KPS
 #: about.copy.linkTitle license.contrib
@@ -15515,6 +15607,10 @@ msgstr "Oscail &Le…"
 msgid "&Retry"
 msgstr "&Atriail"
 
+#: cmd.goToDownloadPage.label cmd.goToDownloadPage.accesskey
+msgid "&Go to Download Page"
+msgstr ""
+
 #: cmd.copyDownloadLink.label cmd.copyDownloadLink.accesskey
 msgid "Copy Download &Link"
 msgstr ""
@@ -15522,10 +15618,6 @@ msgstr ""
 #: cmd.removeFromList.label cmd.removeFromList.accesskey
 msgid "R&emove From List"
 msgstr "&Bain ón Liosta"
-
-#: cmd.info.label cmd.info.accesskey
-msgid "&Information"
-msgstr "&Eolas"
 
 #: cmd.clearList.label cmd.clearList.accesskey
 msgid "&Clear List"
