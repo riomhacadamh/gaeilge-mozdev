@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-03 16:37-0600\n"
+"POT-Creation-Date: 2008-01-10 12:09-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -139,26 +139,22 @@ msgstr "D'úsáideoirí &Internet Explorer"
 msgid "VK_F1"
 msgstr "VK_F1"
 
-#: openHelpMac.commandkey
-msgid "VK_HELP"
-msgstr "VK_HELP"
-
 # LOCALIZATION NOTE openHelpMac2.commandkey and openHelpMac2.modifiers
 # are all the necessary keys to hit OS X's open-help
 # keyboard (visible) shortcut (that's Cmd+? for most locales)
-#: openHelpMac2.commandkey
+#: openHelpMac.commandkey
 msgid "/"
 msgstr "/"
 
-#: openHelpMac2.modifiers
+#: openHelpMac.modifiers
 msgid "accel,shift"
 msgstr "accel,shift"
 
-#: openHelpMac2.frontendCommandkey
+#: openHelpMac.frontendCommandkey
 msgid "?"
 msgstr "?"
 
-#: openHelpMac2.frontendModifiers preferencesCmdMac.modifiers
+#: openHelpMac.frontendModifiers preferencesCmdMac.modifiers
 #: hideThisAppCmdMac.modifiers
 msgid "accel"
 msgstr "accel"
@@ -436,8 +432,8 @@ msgstr "Baile"
 msgid "Display your bookmarks"
 msgstr "Taispeáin do Leabharmharcanna"
 
-#: bookmarksSidebarCmd.accesskey mediaBlockImage.accesskey Byte
-#: loaddevice.browse.accesskey
+#: bookmarksSidebarCmd.accesskey blockImageCmd.accesskey
+#: mediaBlockImage.accesskey Byte loaddevice.browse.accesskey
 msgid "B"
 msgstr "B"
 
@@ -791,9 +787,9 @@ msgstr "Sábháil an Íomhá &Mar…"
 msgid "Se&nd Image…"
 msgstr "Seol a&n Íomhá…"
 
-#: copyLinkCmd.label copyLinkCmd.accesskey copyLink.label copyLink.accesskey
-msgid "&Copy Link Location"
-msgstr "&Cóipeáil Suíomh an Naisc"
+#: copyLinkCmd.label copyLinkCmd.accesskey
+msgid "Copy Link Loc&ation"
+msgstr "Cói&peáil Suíomh an Naisc"
 
 #: copyImageCmd.label copyImageCmd.accesskey
 msgid "C&opy Image Location"
@@ -802,10 +798,6 @@ msgstr "Cóipeáil Suí&omh na hÍomhá"
 #: copyImageContentsCmd.label copyImageContentsCmd.accesskey
 msgid "Cop&y Image"
 msgstr "Cói&peáil Íomhá"
-
-#: blockImageCmd.accesskey findAgainCmd.commandkey findNodesByTag.accesskey2
-msgid "g"
-msgstr "C"
 
 #: metadataCmd.label metadataCmd.accesskey
 msgid "&Properties"
@@ -979,6 +971,10 @@ msgstr "f"
 #: findAgainCmd.label findAgainCmd.accesskey
 msgid "Find A&gain"
 msgstr "Ai&msigh Arís"
+
+#: findAgainCmd.commandkey findNodesByTag.accesskey2
+msgid "g"
+msgstr "C"
 
 #: findAgainCmd.commandkey2 findAgainCmd.key2
 msgid "VK_F3"
@@ -1565,6 +1561,10 @@ msgstr "Oscail i bh&Fuinneog Nua"
 #: bookmarkLink.label bookmarkLink.accesskey
 msgid "&Bookmark This Link…"
 msgstr "Cruthaigh &Leabharmharc don Nasc Seo…"
+
+#: copyLink.label copyLink.accesskey
+msgid "&Copy Link Location"
+msgstr "&Cóipeáil Suíomh an Naisc"
 
 #: no-properties.label
 msgid "No properties set."
@@ -5373,16 +5373,12 @@ msgstr ""
 "Bhraith Firefox go bhfuil an freastalaí ag atreorú an iarratais i slí nach "
 "gcríochnóidh choíche."
 
-# # LOCALIZATION NOTE (confirmRepost): In this item, don't translate "%S"
-#: confirmRepost
+# # LOCALIZATION NOTE (confirmRepostPrompt): In this item, don't translate "%S"
+#: confirmRepostPrompt
 msgid ""
-"To display this page, the information previously sent by %S must be resent. "
-"This will repeat any action (such as a search or order submission) that had "
-"been performed earlier."
+"To display this page, %S must send information that will repeat any action "
+"(such as a search or order confirmation) that was performed earlier."
 msgstr ""
-"Leis an leathanach seo a thaispeáint, caithfear an fhaisnéis a sheol %S "
-"cheana a athsheoladh. Déanfar arís gníomh ar bith (m.sh. cuardach nó cur "
-"isteach ordaithe) a deineadh níos luaithe."
 
 #: resendButton.label
 msgid "Resend"
@@ -7617,6 +7613,16 @@ msgid ""
 msgstr ""
 "Teorainn atreoraithe don URL seo. Ní féidir an leathanach iarrtha a luchtú.  "
 "Is féidir gur fianáin coiscthe is cúis leis seo."
+
+#: confirmRepostPrompt
+msgid ""
+"To display this page, the application must send information that will repeat "
+"any action (such as a search or order confirmation) that was performed "
+"earlier."
+msgstr ""
+"Leis an leathanach seo a thaispeáint, ní mór don fheidhmchlár faisnéis a "
+"sheoladh a dhéanfaidh gníomh ar bith arís (m.sh. cuardach nó cur isteach "
+"ordaithe) a deineadh níos luaithe."
 
 #: unknownSocketType
 msgid ""
@@ -10463,7 +10469,7 @@ msgstr ""
 
 #: descState.label
 msgid "State: "
-msgstr ""
+msgstr "Staid: "
 
 #: descIsEnabled.label
 msgid "Is state enabled: "
@@ -13459,23 +13465,28 @@ msgstr "document. All Rights Reserved."
 
 #: mozilla.quote
 msgid ""
-"And so at last the beast <em class=\"f\">fell</em> and the unbelievers "
-"rejoiced. But all was not lost, for from the ash rose a <em>great bird</em>. "
-"The bird gazed down upon the unbelievers and cast <em class=\"f\">fire</em> "
-"and <em>thunder</em> upon them. For the beast had been <em>reborn</em> with "
-"its strength <em>renewed</em>, and the followers of <em>Mammon</em> cowered "
-"in horror."
+"Mammon slept. And the <em>beast reborn</em> spread over the earth and its "
+"numbers grew legion. And they spoke forth the Times and <em>sacrificed</em> "
+"crops unto the fire, with the <em>cunning of foxes</em>. And they built a new "
+"world in their own image as promised by the <em><a href=\"http://www.mozilla."
+"org/about/mozilla-manifesto.html\"> sacred words</a></em>, and <em><a href="
+"\"http://wiki.mozilla.org/About:mozilla\">spoke </a></em> of the beast with "
+"their children. When Mammon awoke, lo! it was <em>naught</em> but a follower."
 msgstr ""
-"And so at last the beast <em class=\"f\">fell</em> and the unbelievers "
-"rejoiced. But all was not lost, for from the ash rose a <em>great bird</em>. "
-"The bird gazed down upon the unbelievers and cast <em class=\"f\">fire</em> "
-"and <em>thunder</em> upon them. For the beast had been <em>reborn</em> with "
-"its strength <em>renewed</em>, and the followers of <em>Mammon</em> cowered "
-"in horror."
+"Mammon slept. And the <em>beast reborn</em> spread over the earth and its "
+"numbers grew legion. And they spoke forth the Times and <em>sacrificed</em> "
+"crops unto the fire, with the <em>cunning of foxes</em>. And they built a new "
+"world in their own image as promised by the <em><a href=\"http://www.mozilla."
+"org/about/mozilla-manifesto.html\"> sacred words</a></em>, and <em><a href="
+"\"http://wiki.mozilla.org/About:mozilla\">spoke </a></em> of the beast with "
+"their children. When Mammon awoke, lo! it was <em>naught</em> but a follower."
 
 #: mozilla.from
-msgid "from <strong>The Book of Mozilla,</strong> 7:15"
-msgstr "ó <strong>The Book of Mozilla,</strong> 7:15"
+msgid ""
+"from <strong>The Book of Mozilla,</strong> 11:9<br/><small>(10th Edition)</"
+"small>"
+msgstr ""
+"ó <strong>The Book of Mozilla,</strong> 11:9<br/><small>(10ú Eagrán)</small>"
 
 #: closeNotification.tooltip
 msgid "Close this message"
@@ -15609,11 +15620,11 @@ msgstr "&Atriail"
 
 #: cmd.goToDownloadPage.label cmd.goToDownloadPage.accesskey
 msgid "&Go to Download Page"
-msgstr ""
+msgstr "Téi&gh go Leathanach Íosluchtaithe"
 
 #: cmd.copyDownloadLink.label cmd.copyDownloadLink.accesskey
 msgid "Copy Download &Link"
-msgstr ""
+msgstr "Cóipeáil &Nasc Íosluchtaithe"
 
 #: cmd.removeFromList.label cmd.removeFromList.accesskey
 msgid "R&emove From List"
@@ -15988,6 +15999,46 @@ msgstr ""
 #: selectDownloadDir
 msgid "Select Download Folder"
 msgstr "Roghnaigh Fillteán an Íosluchtaithe"
+
+# LOCALIZATION NOTE (wpsDefaultOS2): OS/2 only, WPS refers to the Workplace Shell and should probably not be translated
+#: wpsDefaultOS2
+msgid "WPS Default"
+msgstr "Réamhshocrú WPS"
+
+# LOCALIZATION NOTE (classViewerOS2): OS/2 only
+#: classViewerOS2
+msgid "Viewer for Class %S"
+msgstr ""
+
+# LOCALIZATION NOTE (mmImageViewerOS2): OS/2 only, default operation of image files with OS/2 multimedia support installed
+#: mmImageViewerOS2
+msgid "Image Viewer"
+msgstr "Amharcán Íomhánna"
+
+# LOCALIZATION NOTE (mmAudioPlayerOS2): OS/2 only, default operation of audio files with OS/2 multimedia support installed
+#: mmAudioPlayerOS2
+msgid "Audio Player"
+msgstr "Seinnteoir Fuaime"
+
+# LOCALIZATION NOTE (mmVideoPlayerOS2): OS/2 only, default operation of video files with OS/2 multimedia support installed
+#: mmVideoPlayerOS2
+msgid "Video Player"
+msgstr "Seinnteoir Físe"
+
+# LOCALIZATION NOTE (mmMidiPlayerOS2): OS/2 only, default operation of MIDI files with OS/2 multimedia support installed
+#: mmMidiPlayerOS2
+msgid "MIDI Player"
+msgstr "Seinnteoir MIDI"
+
+# LOCALIZATION NOTE (odZipFolderOS2): OS/2 only, refers to ZipFolder of Object Desktop
+#: odZipFolderOS2
+msgid "ZipFolder"
+msgstr ""
+
+# LOCALIZATION NOTE (odTextViewOS2): OS/2 only, refers to TextView of Object Desktop
+#: odTextViewOS2
+msgid "TextView"
+msgstr ""
 
 #: creator.label
 msgid "Created By:"
@@ -16995,6 +17046,11 @@ msgstr "Seol chuig:"
 msgid "Remember my choice for %S links."
 msgstr "Meabhraigh mo rogha le haghaidh naisc %S."
 
+#: protocol.checkbox.accesskey restartButton.accesskey
+#: notifyBarRememberButtonAccessKey resetpassword.accesskey
+msgid "R"
+msgstr "R"
+
 #: protocol.checkbox.extra
 msgid "This can be changed in %S's preferences."
 msgstr "Is féidir é seo a athrú i Sainroghanna %S."
@@ -17938,11 +17994,6 @@ msgstr "Íosluchtú %S curtha ar shos"
 msgid "Restart %S Now"
 msgstr "Atosaigh %S Anois"
 
-#: restartButton.accesskey notifyBarRememberButtonAccessKey
-#: resetpassword.accesskey
-msgid "R"
-msgstr "R"
-
 #: downloadButton_minor
 msgid "Download & Install Now »"
 msgstr "Íosluchtaigh agus Suiteáil Anois >>"
@@ -18069,6 +18120,27 @@ msgstr ""
 "Níorbh fhéidir an nuashonrú a shuiteáil. Bí cinnte de nach bhfuil cóipeanna "
 "eile de %S ag rith ar do ríomhaire, agus ansin atosaigh %S le hiarracht eile "
 "a dhéanamh."
+
+#: updateAvailable_minor.title updateAvailable_major.title
+#: updateDownloaded_minor.title updateDownloaded_major.title
+msgid "%S available"
+msgstr ""
+
+#: updateAvailable_minor.text
+msgid "Download & Install…"
+msgstr "Íosluchtaigh agus Suiteáil…"
+
+#: updateAvailable_major.text
+msgid "Get the new version…"
+msgstr "Faigh an leagan nua…"
+
+#: updateDownloaded_minor.text
+msgid "Apply Downloaded Update…"
+msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm…"
+
+#: updateDownloaded_major.text
+msgid "Install the new version…"
+msgstr "Suiteáil an leagan nua…"
 
 #: dialog.title
 msgid "Software Installation"
