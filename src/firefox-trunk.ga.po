@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-10 12:09-0600\n"
+"POT-Creation-Date: 2008-01-23 07:02-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -39,10 +39,10 @@ msgstr "&lt; Maidir le &brandFullName;"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #: aboutLink.accesskey selectAllCmd.key xpinstallPromptAllowButton.accesskey
-#: refreshBlocked.goButton.accesskey addHandlerAddButtonAccesskey selectall.key
-#: mediaSaveAs.accesskey search.scopeHistory.accesskey
-#: view.sortBy.dateAdded.accesskey cmd.about.accesskey
-#: certselect.auto.accesskey
+#: refreshBlocked.goButton.accesskey offlineApps.allowAccessKey
+#: addHandlerAddButtonAccesskey selectall.key mediaSaveAs.accesskey
+#: search.scopeHistory.accesskey view.sortBy.dateAdded.accesskey
+#: cmd.about.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -184,7 +184,7 @@ msgid "Hide &brandShortName;"
 msgstr "Folaigh &brandShortName;"
 
 #: hideThisAppCmdMac.commandkey hideOtherAppsCmdMac.commandkey
-#: hideButton.accesskey
+#: showAllHistoryCmd.commandkey hideButton.accesskey
 msgid "H"
 msgstr "H"
 
@@ -319,11 +319,11 @@ msgstr "Dún an &Fhuinneog"
 msgid "&Bookmarks"
 msgstr "&Leabharmharcanna"
 
-#: addCurPageAsCmd.label
-msgid "Bookmark This Page…"
-msgstr "Cruthaigh Leabharmharc don Leathanach Seo…"
+#: bookmarkThisPageCmd.label
+msgid "Bookmark This Page"
+msgstr "Cruthaigh Leabharmharc don Leathanach Seo"
 
-#: addCurPageAsCmd.commandkey urlbar.accesskey findNodesById.accesskey2
+#: bookmarkThisPageCmd.commandkey urlbar.accesskey findNodesById.accesskey2
 #: focus2.commandkey
 msgid "d"
 msgstr "d"
@@ -393,7 +393,7 @@ msgstr "Éirigh as an leathanach seo a luchtú"
 msgid "Go to the address in the Location Bar"
 msgstr "Téigh go dtí an seoladh atá sa Bharra Suímh"
 
-#: printButton.label printDialog.title
+#: printButton.label printTitle printDialog.title
 msgid "Print"
 msgstr "Priontáil"
 
@@ -734,18 +734,17 @@ msgstr "Taispeáin Íomhá sa &Chúlra"
 msgid "&Set As Desktop Background…"
 msgstr "&Socraigh Mar Chúlra na Deisce…"
 
-# L under right click menu
-#: bookmarkPageCmd.label bookmarkPageCmd.accesskey
-msgid "Book&mark This Page…"
-msgstr "Cruthaigh &Leabharmharc don Leathanach Seo…"
+#: bookmarkPageCmd2.label bookmarkPageCmd2.accesskey
+msgid "Book&mark This Page"
+msgstr "Cruthaigh Leabhar&mharc don Leathanach Seo"
 
-#: bookmarkLinkCmd.label bookmarkLinkCmd.accesskey
-msgid "Bookmark This &Link…"
-msgstr "Cruthaigh &Leabharmharc don Nasc Seo…"
+#: bookmarkThisLinkCmd.label bookmarkThisLinkCmd.accesskey
+msgid "Bookmark This &Link"
+msgstr "Cruthaigh &Leabharmharc don Nasc Seo"
 
-#: bookmarkFrameCmd.label bookmarkFrameCmd.accesskey
-msgid "Book&mark This Frame…"
-msgstr "Cruthaigh Leabhar&mharc don Fhráma Seo…"
+#: bookmarkThisFrameCmd.label bookmarkThisFrameCmd.accesskey
+msgid "Book&mark This Frame"
+msgstr "Cruthaigh Leabhar&mharc don Fhráma Seo"
 
 #: sendPageCmd.label sendPageCmd.accesskey
 msgid "S&end Link…"
@@ -1062,7 +1061,8 @@ msgstr ""
 "Stop %S an suíomh seo (%S) ó bheith ag iarraidh ort bogearraí a shuiteáil ar "
 "do ríomhaire."
 
-#: xpinstallPromptAllowButton refreshBlocked.goButton permAllow can Yes
+#: xpinstallPromptAllowButton refreshBlocked.goButton offlineApps.allow
+#: permAllow can Yes
 msgid "Allow"
 msgstr "Ceadaigh"
 
@@ -1094,7 +1094,7 @@ msgstr "Níor lig %S don suíomh seo preabfhuinneog a oscailt."
 msgid "%S prevented this site from opening %S pop-up windows."
 msgstr "Níor lig %S don suíomh seo %S preabfhuinneog a oscailt."
 
-#: popupWarningButton prefWindow.titleWin options
+#: popupWarningButton prefWindow.titleWin options optionsTabLabel
 #: preferencesDefaultTitleWin.title optionsGroup.label
 msgid "Options"
 msgstr "Roghanna"
@@ -1168,7 +1168,7 @@ msgstr ""
 "tú a chosaint."
 
 # Error reporting
-#: blockedpluginsMessage.infoButton.label
+#: blockedpluginsMessage.infoButton.label Details
 msgid "Details…"
 msgstr "Mionsonraí…"
 
@@ -1244,6 +1244,12 @@ msgstr "Cuir an leabharmharc seo in eagar"
 #: starButtonOff.tooltip
 msgid "Bookmark this page"
 msgstr "Cruthaigh leabharmharc don leathanach seo"
+
+# Offline web applications
+#: offlineApps.available
+msgid ""
+"This website (%S) is offering to store data on your computer for offline use."
+msgstr ""
 
 # Identity information
 #: identity.domainverified.title
@@ -1580,8 +1586,7 @@ msgstr "Airíonna Eiliminte"
 msgid "Image Properties"
 msgstr "Airíonna Íomhá"
 
-#: image-url.label editBookmarkOverlay.location.label
-#: exceptionMgr.certlocation.url
+#: image-url.label exceptionMgr.certlocation.url
 msgid "Location:"
 msgstr "Suíomh:"
 
@@ -1589,7 +1594,7 @@ msgstr "Suíomh:"
 msgid "Type:"
 msgstr "Cineál:"
 
-#: image-desc.label editBookmarkOverlay.description.label descDescription.label
+#: image-desc.label descDescription.label
 msgid "Description:"
 msgstr "Cur Síos:"
 
@@ -2121,7 +2126,7 @@ msgstr "Ionchódú:"
 msgid "Content"
 msgstr "Ábhar"
 
-#: generalSecurityMore detailsPane.more.label
+#: generalSecurityMore
 msgid "More"
 msgstr "Tuilleadh"
 
@@ -2465,19 +2470,24 @@ msgstr ""
 msgid "About Pop-up Blocking"
 msgstr "Maidir le Cosc Preabfhuinneog"
 
-#: bookmarks.name.label bookmarks.name.accesskey
+#: bookmarks.name.label bookmarks.name.accesskey editBookmarkOverlay.name.label
+#: editBookmarkOverlay.name.accesskey
 msgid "&Name:"
 msgstr "Ai&nm:"
 
 #: bookmarks.location.label bookmarks.location.accesskey
+#: editBookmarkOverlay.location.label editBookmarkOverlay.location.accesskey
 msgid "&Location:"
 msgstr "&Suíomh:"
 
 #: bookmarks.keyword.label bookmarks.keyword.accesskey
+#: editBookmarkOverlay.keyword.label editBookmarkOverlay.keyword.accesskey
 msgid "&Keyword:"
 msgstr "&Lorgfhocal:"
 
 #: bookmarks.description.label bookmarks.description.accesskey
+#: editBookmarkOverlay.description.label
+#: editBookmarkOverlay.description.accesskey
 msgid "&Description:"
 msgstr "&Cur Síos:"
 
@@ -2491,10 +2501,14 @@ msgid "&Create in:"
 msgstr "&Cruthaigh i:"
 
 #: bookmarks.feed_location.label bookmarks.feed_location.accesskey
+#: editBookmarkOverlay.feedLocation.label
+#: editBookmarkOverlay.feedLocation.accesskey
 msgid "&Feed Location:"
 msgstr "Suíomh &Fotha:"
 
 #: bookmarks.site_location.label bookmarks.site_location.accesskey
+#: editBookmarkOverlay.siteLocation.label
+#: editBookmarkOverlay.siteLocation.accesskey
 msgid "&Site Location:"
 msgstr "&Suíomh:"
 
@@ -2560,38 +2574,22 @@ msgstr "Leabharmharc Nua"
 msgid "New Live Bookmark"
 msgstr "Leabharmharc Beo Nua"
 
-#: editBookmarkOverlay.name.label saveSearch.inputLabel props.name.label
-#: descName.label
-msgid "Name:"
-msgstr "Teideal:"
-
-#: editBookmarkOverlay.feedLocation.label
-msgid "Feed Location:"
-msgstr "Suíomh Fotha:"
-
-#: editBookmarkOverlay.siteLocation.label
-msgid "Site Location:"
-msgstr "Suíomh:"
-
 #: editBookmarkOverlay.folder.label
 msgid "Folder:"
 msgstr "Fillteán:"
 
-#: editBookmarkOverlay.tags.label
-msgid "Tags:"
-msgstr "Clibeanna:"
-
-#: editBookmarkOverlay.keyword.label
-msgid "Keyword:"
-msgstr "Lorgfhocal:"
+#: editBookmarkOverlay.tags.label editBookmarkOverlay.tags.accesskey
+msgid "&Tags:"
+msgstr "&Clibeanna:"
 
 #: editBookmarkOverlay.tagsExpanderDown.tooltip
 msgid "Show all tags"
 msgstr "Taispeáin gach clib"
 
 #: editBookmarkOverlay.loadInSidebar.label
-msgid "Load this bookmark in the sidebar"
-msgstr "Luchtaigh an leabharmharc seo sa bharra taoibh"
+#: editBookmarkOverlay.loadInSidebar.accesskey
+msgid "Load t&his bookmark in the sidebar"
+msgstr "Luc&htaigh an leabharmharc seo sa bharra taoibh"
 
 #: window.title
 msgid "Choose Folder"
@@ -2983,9 +2981,13 @@ msgstr "Siar"
 msgid "Go forward"
 msgstr "Ar Aghaidh"
 
-#: detailsPane.less.label
-msgid "Less"
-msgstr "Níos Lú"
+#: detailsPane.more.label detailsPane.more.accesskey
+msgid "Mor&e"
+msgstr "Níos &Mó"
+
+#: detailsPane.less.label detailsPane.less.accesskey
+msgid "L&ess"
+msgstr "Níos &Lú"
 
 #: detailsPane.noPreviewAvailable.label preview.label
 msgid "Preview"
@@ -3274,6 +3276,10 @@ msgstr "Easpórtáil Comhad Leabharmharcanna"
 msgid "Save Search"
 msgstr "Sábháil Cuardach"
 
+#: saveSearch.inputLabel props.name.label descName.label
+msgid "Name:"
+msgstr "Teideal:"
+
 #: saveSearch.defaultText
 msgid "New Query"
 msgstr "Iarratas Nua"
@@ -3393,9 +3399,9 @@ msgstr "Cumraigh conas a nascfar &brandShortName; leis an Idirlíon"
 msgid "S&ettings…"
 msgstr "Socruith&e…"
 
-#: cache.label
-msgid "Cache"
-msgstr "Taisce"
+#: offlineStorage.label
+msgid "Offline Storage"
+msgstr "Stóras As Líne"
 
 #: useCacheBefore.label useCacheBefore.accesskey
 msgid "&Use up to"
@@ -3448,6 +3454,25 @@ msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 #: updateHistory.label updateHistory.accesskey
 msgid "Show U&pdate History"
 msgstr "Tais&peáin Stair na Nuashonruithe"
+
+#: offlineAppsList.label
+msgid "The following websites have data installed for offline use:"
+msgstr ""
+
+#: offlineAppsList.height
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"7em"
+msgstr "7em"
+
+#: offlineAppsList.remove
+msgid "Remove..."
+msgstr "Bain..."
+
+#: offlineAppRemove.confirm offlineAppRemoveConfirm
+msgid "Remove offline data"
+msgstr "Bain sonraí as líne"
 
 #: encryptionTab.label
 msgid "Encryption"
@@ -4451,6 +4476,17 @@ msgstr "Bain Fianáin"
 msgid "Remove Cookie"
 msgstr "Bain Fianán"
 
+# ### Offline apps
+#: offlineAppRemoveTitle
+msgid "Remove offline website data"
+msgstr ""
+
+#: offlineAppRemovePrompt
+msgid ""
+"After removing this data, %S will not be available offline.  Are you sure you "
+"want to remove this offline website?"
+msgstr ""
+
 # LOCALIZATION NOTE:
 # The entities rememberDaysBefore.label and rememberDaysAfter.label appear on a single
 # line in preferences as follows:
@@ -5002,6 +5038,10 @@ msgstr "&Fianáin"
 msgid "C&ache"
 msgstr "T&aisce"
 
+#: itemOfflineApps.label itemOfflineApps.accesskey
+msgid "&Offline Website Data"
+msgstr ""
+
 #: itemDownloads.label itemDownloads.accesskey
 msgid "&Download History"
 msgstr "&Stair an Bhainisteora Íosluchtaithe"
@@ -5116,7 +5156,7 @@ msgstr "Suíomh:"
 msgid "Tile"
 msgstr "Tíleanna"
 
-#: center.label
+#: center.label center
 msgid "Center"
 msgstr "Láraithe"
 
@@ -5219,9 +5259,9 @@ msgstr "Liostaigh gach cluaisín"
 msgid "Bookmark All &Tabs…"
 msgstr "Leabharmharcáil Gach &Cluaisín…"
 
-#: bookmarkCurTab.label bookmarkCurTab.accesskey
-msgid "&Bookmark This Tab…"
-msgstr "Cruthaigh Lea&bharmharc don Chluaisín Seo…"
+#: bookmarkThisTab.label bookmarkThisTab.accesskey
+msgid "&Bookmark This Tab"
+msgstr "Cruthaigh Lea&bharmharc don Chluaisín Seo"
 
 #: undoCloseTab.label undoCloseTab.accesskey
 msgid "&Undo Close Tab"
@@ -5432,13 +5472,10 @@ msgstr ""
 #: contentEncodingError
 msgid ""
 "The page you are trying to view cannot be shown because it uses an invalid or "
-"unsupported form of compression. Please contact the website owners to inform "
-"them of this problem."
+"unsupported form of compression."
 msgstr ""
 "An leathanach atá tú ag iarraidh a amharc, ní féidir é a thaispeáint, agus "
-"comhbhrú ann nach bhfuil bailí nó nach bhfuil tacaíocht leis. Téigh i "
-"dteagmháil le húinéirí an tsuímh ghréasáin leis an bhfadhb a chur in iúl "
-"dóibh, le do thoil."
+"comhbhrú ann nach bhfuil bailí."
 
 #: unsafeContentType
 msgid ""
@@ -5847,6 +5884,41 @@ msgid ""
 msgstr ""
 "Is féidir socruithe a athrú trí úsáid an chluaisín Feidhmchláir i Roghanna "
 "&brandShortName;."
+
+# converted from pseudo-properties .it file
+# This file is in the UTF-8 encoding
+# section: [Strings]
+# LOCALIZATION NOTE (CrashReporterProductErrorText): The %s is replaced with a string containing detailed information.
+#: CrashReporterProductErrorText2
+msgid ""
+"Firefox had a problem and crashed. We'll try to restore your tabs and windows "
+"when it restarts.\n"
+"\n"
+"Unfortunately the crash reporter is unable to submit a crash report.\n"
+"\n"
+"Details: %s"
+msgstr ""
+"Tharla fadhb gan súil i bhFirefox agus chlis sé. Déanfar "
+"iarracht do chuid cluaisíní agus fuinneoga a chur ar ais nuair a atosaíonn "
+"sé.\n"
+"\n"
+"Ar an drochuair ní féidir le tuairisceoir na gclistí tuarascáil a sheoladh.\n"
+"\n"
+"Sonraí: %s"
+
+#: CrashReporterDescriptionText2
+msgid ""
+"Firefox had a problem and crashed. We'll try to restore your tabs and windows "
+"when it restarts.\n"
+"\n"
+"To help us diagnose and fix the problem, you can send us a crash report."
+msgstr ""
+"Tharla fadhb gan súil i bhFirefox agus chlis sé. Déanfar "
+"iarracht do chuid cluaisíní agus fuinneoga a chur ar ais nuair a atosaíonn "
+"sé.\n"
+"\n"
+"Chun cabhrú linn leis an bhfadhb seo a aithint agus a dheisiú, is féidir leat "
+"tuarascáil chliste a sheoladh chugainn."
 
 # plugins URLs
 #: MOZ_LANGPACK_CREATOR more_plugins_label
@@ -9763,7 +9835,7 @@ msgstr "Iarmhíreanna"
 msgid "Enabled"
 msgstr "Cumasaithe"
 
-#: PrintFrames printframeGroup.label
+#: PrintFrames printFramesTitle printframeGroup.label
 msgid "Print Frames"
 msgstr "Priontáil Frámaí"
 
@@ -11756,7 +11828,7 @@ msgstr "Fíordheimhniú de dhíth"
 msgid "Password Required"
 msgstr "Focal faire de dhíth"
 
-#: OK okButton.label button-accept OK_LABEL crlAutoupdateOk
+#: OK okButton.label button-accept Ok OK_LABEL crlAutoupdateOk
 msgid "OK"
 msgstr "OK"
 
@@ -12436,6 +12508,85 @@ msgstr "&Síos"
 msgid "The text you entered was not found."
 msgstr "Ní raibh an téacs a bhí curtha agat faighte."
 
+# TRANSLATOR NOTE: For radio button labels and check button labels, an underscore _
+# before a character will turn that character into an accesskey.
+# e.g. "_As laid out" will make A the accesskey.
+#: asLaidOut
+msgid "_As Laid Out on the Screen"
+msgstr "M_ar atá léirithe ar an scáileán"
+
+#: selectedFrame
+msgid "The _Selected Frame"
+msgstr "An fráma _roghnaithe"
+
+#: separateFrames
+msgid "Each Frame on Separate _Pages"
+msgstr "Gach fráma ar _leathanach ar leith"
+
+#: shrinkToFit
+msgid "Ignore Scaling and S_hrink To Fit Page Width"
+msgstr ""
+
+#: selectionOnly
+msgid "Print Selection _Only"
+msgstr "Priontáil an roghnúchán _amháin"
+
+#: printBGOptions
+msgid "Print Backgrounds"
+msgstr "Priontáil an Cúlra"
+
+#: printBGColors
+msgid "Print Background _Colors"
+msgstr "Priontáil Dathanna an _Chúlra"
+
+#: printBGImages
+msgid "Print Background I_mages"
+msgstr "Priontáil Ío_mhánna an Chúlra"
+
+#: headerFooter
+msgid "Header and Footer"
+msgstr "Ceanntásc agus Buntásc"
+
+#: left
+msgid "Left"
+msgstr "Ar Chlé"
+
+#: right
+msgid "Right"
+msgstr "Ar Dheis"
+
+#: headerFooterBlank hfBlank
+msgid "--blank--"
+msgstr "--bán--"
+
+#: headerFooterTitle hfTitle
+msgid "Title"
+msgstr "Teideal"
+
+#: headerFooterURL hfURL
+msgid "URL"
+msgstr "URL"
+
+#: headerFooterDate hfDateAndTime
+msgid "Date/Time"
+msgstr "Dáta/Am"
+
+#: headerFooterPage hfPage
+msgid "Page #"
+msgstr "Leathanach #"
+
+#: headerFooterPageTotal hfPageAndTotal
+msgid "Page # of #"
+msgstr "Leathanach # as #"
+
+#: headerFooterCustom
+msgid "Custom..."
+msgstr "Saincheaptha..."
+
+#: customHeaderFooterPrompt
+msgid "Please enter your custom header/footer text"
+msgstr "Cuir isteach do théacs ceanntáisc/buntáisc féin"
+
 # #-#-#-#-#  ga-IE.po (firefox 0.8)  #-#-#-#-#
 # #-#-#-#-#  tmp.XXXXgm6QQt.po (firefox 0.8)  #-#-#-#-#
 # all.js
@@ -12459,6 +12610,10 @@ msgstr "Ní raibh an téacs a bhí curtha agat faighte."
 #: general.useragent.locale
 msgid "en-US"
 msgstr "ga-IE"
+
+#: pluralRule
+msgid "1"
+msgstr "1"
 
 #: font.language.group
 msgid "x-western"
@@ -13471,20 +13626,20 @@ msgstr "document. All Rights Reserved."
 #: mozilla.quote
 msgid ""
 "Mammon slept. And the <em>beast reborn</em> spread over the earth and its "
-"numbers grew legion. And they spoke forth the Times and <em>sacrificed</em> "
+"numbers grew legion. And they proclaimed the times and <em>sacrificed</em> "
 "crops unto the fire, with the <em>cunning of foxes</em>. And they built a new "
 "world in their own image as promised by the <em><a href=\"http://www.mozilla."
 "org/about/mozilla-manifesto.html\"> sacred words</a></em>, and <em><a href="
 "\"http://wiki.mozilla.org/About:mozilla\">spoke </a></em> of the beast with "
-"their children. When Mammon awoke, lo! it was <em>naught</em> but a follower."
+"their children. Mammon awoke, and lo! it was <em>naught</em> but a follower."
 msgstr ""
 "Mammon slept. And the <em>beast reborn</em> spread over the earth and its "
-"numbers grew legion. And they spoke forth the Times and <em>sacrificed</em> "
+"numbers grew legion. And they proclaimed the times and <em>sacrificed</em> "
 "crops unto the fire, with the <em>cunning of foxes</em>. And they built a new "
 "world in their own image as promised by the <em><a href=\"http://www.mozilla."
 "org/about/mozilla-manifesto.html\"> sacred words</a></em>, and <em><a href="
 "\"http://wiki.mozilla.org/About:mozilla\">spoke </a></em> of the beast with "
-"their children. When Mammon awoke, lo! it was <em>naught</em> but a follower."
+"their children. Mammon awoke, and lo! it was <em>naught</em> but a follower."
 
 #: mozilla.from
 msgid ""
@@ -14016,30 +14171,6 @@ msgstr "Buntásc lárnach"
 #: footerRight.tip
 msgid "Right footer"
 msgstr "Buntásc ar dheis"
-
-#: hfTitle
-msgid "Title"
-msgstr "Teideal"
-
-#: hfURL
-msgid "URL"
-msgstr "URL"
-
-#: hfDateAndTime
-msgid "Date/Time"
-msgstr "Dáta/Am"
-
-#: hfPage
-msgid "Page #"
-msgstr "Leathanach #"
-
-#: hfPageAndTotal
-msgid "Page # of #"
-msgstr "Leathanach # as #"
-
-#: hfBlank
-msgid "--blank--"
-msgstr "--bán--"
 
 #: hfCustom customPrompt.title Custom.label
 msgid "Custom…"
@@ -15659,6 +15790,24 @@ msgstr "Taispeáin an Fillteán seo"
 msgid "Search…"
 msgstr "Cuardaigh…"
 
+# LOCALIZATION NOTE (seconds, minutes, hours, days): Semi-colon list of plural
+# forms. See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: seconds
+msgid "second;seconds"
+msgstr ""
+
+#: minutes
+msgid "minute;minutes"
+msgstr ""
+
+#: hours
+msgid "hour;hours"
+msgstr ""
+
+#: days
+msgid "day;days"
+msgstr ""
+
 # LOCALIZATION NOTE (paused): — is the "em dash" (long dash)
 #: paused
 msgid "Paused —  #1"
@@ -15679,6 +15828,10 @@ msgstr "Críochnaithe"
 #: canceled stateCanceled
 msgid "Canceled"
 msgstr "Cealaithe"
+
+#: cannotPause
+msgid "This download cannot be paused"
+msgstr ""
 
 #: downloadErrorGeneric
 msgid ""
@@ -15800,29 +15953,29 @@ msgstr "#1 as #3 #4"
 msgid "#1 #2 of #3 #4"
 msgstr "#1 #2 as #3 #4"
 
-#: transferNoTotal doneSize monthDate
+#: transferNoTotal timePair doneSize monthDate
 msgid "#1 #2"
 msgstr "#1 #2"
 
-# LOCALIZATION NOTE (timeMinutesLeft): number of minutes left (greater than 1)
-# LOCALIZATION NOTE (timeSecondsLeft): number of seconds left (greater than 3)
-# 3 min -> 2 min -> 60 secs -> 59 secs -> … -> 5 secs -> 4 secs -> few secs
-# examples: 11 minutes left; 11 seconds left;
-#: timeMinutesLeft
-msgid "#1 minutes left"
-msgstr "#1 nóiméad fágtha"
+# LOCALIZATION NOTE (timeLeftSingle): #1 time left
+# example: 1 minute remaining; 11 hours remaining
+#: timeLeftSingle
+msgid "#1 remaining"
+msgstr "#1 fágtha"
 
-#: timeSecondsLeft
-msgid "#1 seconds left"
-msgstr "#1 soicind fágtha"
+# LOCALIZATION NOTE (timeLeftDouble): #1 time left; #2 time left sub units
+# example: 11 hours, 2 minutes remaining; 1 day, 22 hours remaining
+#: timeLeftDouble
+msgid "#1, #2 remaining"
+msgstr "#1, #2 fágtha"
 
 #: timeFewSeconds
-msgid "A few seconds left"
+msgid "A few seconds remaining"
 msgstr "Cúpla soicind fágtha"
 
 #: timeUnknown
-msgid "Unknown time left"
-msgstr "Ní fios cá fhad atá fágtha"
+msgid "Unknown time remaining"
+msgstr "Am anaithnid fágtha"
 
 # LOCALIZATION NOTE (doneStatus): — is the "em dash" (long dash)
 # #1 download size for FINISHED or download state; #2 host (e.g., eTLD + 1, IP)
@@ -18151,16 +18304,27 @@ msgstr "Suiteáil an leagan nua…"
 msgid "Software Installation"
 msgstr "Suiteáil Bhogearraí"
 
-#: warningText2.label
+#: dialog.style
+msgid "width: 45em"
+msgstr "width: 50em"
+
+#: warningMain.label
+msgid "Only install add-ons from authors whom you trust."
+msgstr ""
+
+#: warningSecondary.label
 msgid "Malicious software can damage your computer or violate your privacy."
 msgstr ""
 "Is féidir le bogearraí mailíseacha dochar a dhéanamh don ríomhaire agus do "
 "phríobháideachas a shárú"
 
-#: warningText3.label
-msgid "You should only install software from sources that you trust."
-msgstr ""
-"Is fearr gan ach ríomhábhar ó fhoinse a bhfuil muinín agat aisti a shuiteáil"
+#: unsigned
+msgid "(Author Unknown)"
+msgstr "(Údar Anaithnid)"
+
+#: signed
+msgid "(%S)"
+msgstr "(%S)"
 
 #: itemWarnIntroMultiple
 msgid "You have asked to install the following %S items:"
@@ -18361,56 +18525,52 @@ msgstr "Tuairisceoir na gClistí"
 msgid "%s Crash Reporter"
 msgstr "Tuairisceoir na gClistí %s"
 
-# LOCALIZATION NOTE (CrashReporterError): %s is replaced with another string containing detailed information.
-#: CrashReporterError
+# LOCALIZATION NOTE (CrashReporterErrorText): %s is replaced with another string containing detailed information.
+#: CrashReporterErrorText
 msgid ""
-"We're sorry, but the application hit an unexpected problem and crashed.\n"
+"The application had problem and crashed.\n"
 "\n"
 "Unfortunately the crash reporter is unable to submit a report for this "
 "crash.\n"
 "\n"
 "Details: %s"
 msgstr ""
-"Tá brón orainn ach tharla fadhb gan súil san fheidhmchlár agus chlis sé.\n"
+"Tharla fadhb gan súil san fheidhmchlár agus chlis sé.\n"
 "\n"
 "Ar an drochuair ní féidir le tuairisceoir na gclistí tuarascáil faoin "
 "gcliseadh seo a sheoladh.\n"
 "\n"
 "Sonraí: %s"
 
-# LOCALIZATION NOTE (CrashReporterProductError): The first %s is replaced with the product name (i.e. "Firefox"), the second is replaced with another string containing detailed information.  These two substitutions can not be reordered!
-#: CrashReporterProductError
+# LOCALIZATION NOTE (CrashReporterProductErrorText): The first %s is replaced with the product name (i.e. "Firefox"), the second is replaced with another string containing detailed information.  These two substitutions can not be reordered!
+#: CrashReporterProductErrorText2
 msgid ""
-"We're sorry, but %s hit an unexpected problem and crashed.  We'll try to "
-"restore your tabs and windows when it restarts.\n"
+"%s had a problem and crashed.\n"
 "\n"
 "Unfortunately the crash reporter is unable to submit a crash report.\n"
 "\n"
 "Details: %s"
 msgstr ""
-"Tá brón orainn ach tharla fadhb gan súil i %s agus chlis sé. Déanfar iarracht "
-"do chuid cluaisíní agus fuinneoga a chur ar ais nuair a atosaíonn sé.\n"
+"Tharla fadhb gan súil i %s agus chlis sé.\n"
 "\n"
 "Ar an drochuair ní féidir le tuairisceoir na gclistí tuarascáil a sheoladh.\n"
 "\n"
 "Sonraí: %s"
 
-#: CrashReporterHeader
-msgid "Crash! Bang! Boom!"
-msgstr "Clis! Tuairt! Blosc!"
+#: CrashReporterSorry
+msgid "We're Sorry"
+msgstr "Tá brón orainn"
 
-# LOCALIZATION NOTE (CrashReporterDescription): The %s is replaced with the product name.
-#: CrashReporterDescription
+# LOCALIZATION NOTE (CrashReporterDescriptionText): The %s is replaced with the product name.
+#: CrashReporterDescriptionText2
 msgid ""
-"We're sorry, but %s hit an unexpected problem and crashed.  We'll try to "
-"restore your tabs and windows when it restarts.\n"
+"%s had a problem and crashed.\n"
 "\n"
-"To help us diagnose and repair this problem, you can send us a crash report."
+"To help us diagnose and fix the problem, you can send us a crash report."
 msgstr ""
-"Tá brón orainn ach tharla fadhb gan súil i %s agus chlis sé. Déanfar iarracht "
-"do chuid cluaisíní agus fuinneoga a chur ar ais nuair a atosaíonn sé.\n"
+"Tharla fadhb gan súil i %s agus chlis sé.\n"
 "\n"
-"Chun cabhrú linn leis an bhfadhb seo a aithint agus a shocrú, is féidir leat "
+"Chun cabhrú linn leis an bhfadhb seo a aithint agus a dheisiú, is féidir leat "
 "tuarascáil chliste a sheoladh chugainn."
 
 #: CrashReporterDefault
@@ -18421,39 +18581,67 @@ msgstr ""
 "Ritear an feidhmchlár tar éis cliste chun tuarascáil faoin bhfadhb a sheoladh "
 "chuig déantóir an fheidhmchláir. Ní ceart é a rith go díreach."
 
-#: ViewReport
-msgid "View Report"
-msgstr "Taispeáin Tuairisc"
+#: ViewReportTitle
+msgid "Report Contents"
+msgstr ""
+
+#: CommentGrayText
+msgid "Add a comment.  Note: Comments are publicly visible"
+msgstr ""
 
 #: ExtraReportInfo
 msgid ""
-"This report also contains information about the state of the application when "
-"it crashed."
+"This report also contains technical information about the state of the "
+"application when it crashed."
 msgstr ""
-"Tá faisnéis sa tuarascáil freisin maidir le staid an fheidhmchláir ag am a "
-"chliste."
+"Tá faisnéis theicniúil sa tuarascáil freisin maidir le staid an fheidhmchláir "
+"ag am a chliste."
 
-# LOCALIZATION NOTE (CheckSubmit): The %s is replaced with the vendor name.
-#: CheckSubmit
-msgid "Submit crash report to %s"
-msgstr "Seol tuarascáil chliste chuig %s"
+# LOCALIZATION NOTE (CheckSendReport): The %s is replaced with the vendor name.
+#: CheckSendReport
+msgid "Tell %s about this crash so they can fix it"
+msgstr ""
 
-#: CheckURL
-msgid "Include the URL in the crash report"
-msgstr "Cuir an nasc (URL) sa tuarascáil chliste"
+#: CheckIncludeURL
+msgid "Include the address of the page I was on"
+msgstr ""
 
-#: CheckEmail
-msgid "Email me when the problem is fixed"
-msgstr "Seol ríomhphost chugam nuair a bheidh an fhadhb réitithe"
+#: CheckSendEmail
+msgid "Email me when more information is available"
+msgstr "Seol ríomhphost chugam nuair a bheidh tuilleadh eolais ar fáil"
+
+#: EmailGrayText
+msgid "Enter your email address here"
+msgstr "Cuir isteach do sheoladh ríomhphoist anseo"
+
+#: ReportPreSubmit
+msgid "Your crash report will be submitted when you restart."
+msgstr ""
+
+#: ReportDuringSubmit
+msgid "Submitting your report and restarting…"
+msgstr ""
+
+#: ReportSubmitSuccess
+msgid "Report submitted successfully!"
+msgstr "Seoladh an tuairisc gan fadhb."
+
+#: ReportSubmitFailed
+msgid "There was a problem submitting your report."
+msgstr ""
+
+#: ReportResubmit
+msgid "Resending reports that previously failed to send…"
+msgstr ""
+
+#: Quit
+msgid "Quit without sending"
+msgstr ""
 
 # LOCALIZATION NOTE (Restart): The %s is replaced with the product name.
 #: Restart
 msgid "Restart %s"
 msgstr "Atosaigh %s"
-
-#: SubmitFailed
-msgid "Failed to submit crash report"
-msgstr "Theip ar sheoladh na tuarascála cliste"
 
 # LOCALIZATION NOTE (CrashID): The %s is replaced with the Crash ID from the server, which is a string like abc12345-6789-0abc-def1-23456abcdef1
 #: CrashID
@@ -18505,6 +18693,14 @@ msgstr "Níorbh fhéidir socruithe tuairisceoir na gclistí a aimsiú."
 #: ErrorCreateDumpDir
 msgid "Couldn't create pending dump directory."
 msgstr "Níorbh fhéidir comhadlann an dumpa ar feitheamh a chruthú."
+
+# LOCALIZATION NOTE (ErrorEndOfLife): The %s is replaced with the product name.
+#: ErrorEndOfLife
+msgid ""
+"The version of %s you are using is no longer supported. Crash reports are no "
+"longer being accepted for this version. Please consider upgrading to a "
+"supported version."
+msgstr ""
 
 # converted from #defines file
 #: MOZ_LANG_TITLE
@@ -21701,6 +21897,10 @@ msgstr "Níl an teastas bailí ach le haghaidh %S."
 msgid "The certificate is only valid for the following names:"
 msgstr "Níl an teastas bailí ach do na hainmneacha seo a leanas:"
 
+#: certErrorMismatchNoNames
+msgid "The certificate is not valid for any server names."
+msgstr ""
+
 #: certErrorExpired
 msgid "The certificate expired on %S."
 msgstr "D'imigh an teastas as feidhm %S."
@@ -23607,4 +23807,3 @@ msgid "When an OCSP server connection fails, treat the certificate as invalid"
 msgstr ""
 "Nuair a theipeann ar cheangal le freastalaí OCSP, meas go bhfuil an teastas "
 "neamhbhailí"
-
