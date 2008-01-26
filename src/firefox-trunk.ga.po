@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-24 11:39-0600\n"
+"POT-Creation-Date: 2008-01-26 07:33-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -41,8 +41,7 @@ msgstr "&lt; Maidir le &brandFullName;"
 #: aboutLink.accesskey selectAllCmd.key xpinstallPromptAllowButton.accesskey
 #: refreshBlocked.goButton.accesskey offlineApps.allowAccessKey
 #: addHandlerAddButtonAccesskey selectall.key mediaSaveAs.accesskey
-#: search.scopeHistory.accesskey view.sortBy.dateAdded.accesskey
-#: cmd.about.accesskey certselect.auto.accesskey
+#: search.scopeHistory.accesskey cmd.about.accesskey certselect.auto.accesskey
 msgid "A"
 msgstr "W"
 
@@ -50,16 +49,14 @@ msgstr "W"
 msgid "version"
 msgstr "leagan"
 
-#: copyrightText
+#: copyrightInfo
 msgid ""
 "&#169;1998-2008 Contributors. All Rights Reserved. Firefox and the Firefox "
-"logos are trademarks of the Mozilla Foundation.  All rights reserved. Some "
-"trademark rights used under license from The Charlton Company."
+"logos are trademarks of the Mozilla Foundation.  All rights reserved."
 msgstr ""
 "&#169;1998-2008 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
 "trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
-"Firefox. Gach ceart ar cosaint.  Tá roinnt cearta trádmharc á n-úsáid faoi "
-"cheadúnas ón Charlton Company."
+"Firefox. Gach ceart ar cosaint."
 
 #: minimizeWindow.key
 msgid "m"
@@ -669,8 +666,8 @@ msgid "k"
 msgstr "k"
 
 #: searchFocus.commandkey2 viewPartialSourceCmd.accesskey
-#: mediaSaveAs2.accesskey sizeMonospace.accesskey
-#: notifyBarNeverForSiteButtonAccessKey
+#: mediaSaveAs2.accesskey view.sortBy.dateAdded.accesskey
+#: sizeMonospace.accesskey notifyBarNeverForSiteButtonAccessKey
 msgid "e"
 msgstr "l"
 
@@ -858,6 +855,10 @@ msgstr "0"
 msgid "&Reset"
 msgstr "Athshoc&raigh"
 
+#: fullZoomToggleCmd.label fullZoomToggleCmd.accesskey
+msgid "Zoom &Text Only"
+msgstr "Súmáil &Téacs Amháin"
+
 #: fullZoom.label fullZoom.accesskey
 msgid "&Zoom"
 msgstr "&Súmáil"
@@ -1004,6 +1005,10 @@ msgstr "Scrios"
 #: identity.moreInfoLinkText
 msgid "Tell me more about this web site…"
 msgstr "Inis tuilleadh dom maidir leis an suíomh seo…"
+
+#: downloadMonitor.tooltip
+msgid "Double-click to open downloads window"
+msgstr "Cliceáil faoi dhó chun fuinneog na n-íosluchtuithe a oscailt"
 
 #: nv_timeout
 msgid "Timed Out"
@@ -1315,6 +1320,23 @@ msgstr ""
 msgid "Your connection to this web site is not encrypted."
 msgstr "Níl do cheangal leis an suíomh Gréasáin seo criptithe."
 
+# Downloads Monitor Panel
+# LOCALIZATION NOTE (activeDownloads, pausedDownloads): Semi-colon list of plural
+# forms. See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 number of downloads; #2 time left
+# examples: One active download (2 minutes remaining); 11 paused downloads
+#: activeDownloads
+msgid "One active download (#2);#1 active downloads (#2)"
+msgstr ""
+"Íosluchtú gníomhach amháin (#2);#1 íosluchtú ghníomhacha (#2);#1 íosluchtú "
+"ghníomhacha (#2);#1 n-íosluchtú ghníomhacha (#2);#1 íosluchtú ghníomhacha (#2)"
+
+#: pausedDownloads
+msgid "One paused download;#1 paused downloads"
+msgstr ""
+"Íosluchtú moillithe amháin;#1 íosluchtú mhoillithe;#1 íosluchtú mhoillithe;#1 "
+"n-íosluchtú mhoillithe;#1 íosluchtú mhoillithe"
+
 #: brandMotto
 msgid "Rediscover the Web"
 msgstr "Déan Athaimsiú ar an nGréasán"
@@ -1361,9 +1383,9 @@ msgstr ""
 msgid "In Fond Memory Of"
 msgstr "I nDílchuimhne Ar"
 
-#: credit.poweredByGecko
-msgid "Powered by Gecko&trade;"
-msgstr "Á chumhachtú ag Gecko&trade;"
+#: credit.poweredByGeckoReg
+msgid "Powered by Gecko&reg;"
+msgstr "Á chumhachtú ag Gecko&reg;"
 
 #: engineManager.title
 msgid "Manage Search Engine List"
@@ -1453,9 +1475,10 @@ msgstr "Fotha á Thaispeáint"
 msgid "This is a &#8220;"
 msgstr "Is &#8220;"
 
-#: feedName
+# See feedsubscription2 to see why caps
+#: feedName webFeed
 msgid "feed"
-msgstr "fotha"
+msgstr "Fotha"
 
 #: feedSubscriptionInfo1b
 msgid "&#8221; of frequently changing content on this site."
@@ -1507,6 +1530,82 @@ msgstr "Roghnaigh Feidhmchlár"
 #: alwaysUse
 msgid "Always use %S to subscribe to feeds"
 msgstr "Liostáil le fothaí le %S i gcónaí"
+
+#: mediaLabel
+msgid "Media files"
+msgstr "Comhaid mheán"
+
+# # LOCALIZATION NOTE (cityOrStateAndZip):
+# # %1$S is city or state, %2$S is zip
+#: enclosureSizeText
+msgid "%1$S %2$S"
+msgstr "%1$S %2$S"
+
+#: bytes
+msgid "bytes"
+msgstr "beart"
+
+#: kilobyte
+msgid "KB"
+msgstr "kB"
+
+#: megabyte
+msgid "MB"
+msgstr "MB"
+
+#: gigabyte
+msgid "GB"
+msgstr "GB"
+
+# LOCALIZATION NOTE: The next three strings explains to the user what they're 
+# doing.
+# e.g. alwaysUseForVideoPodcasts : "Always use Miro to subscribe to video podcasts."
+# %S = application to use (Miro, iTunes, ...)
+#: alwaysUseForFeeds
+msgid "Always use %S to subscribe to feeds."
+msgstr "Liostáil le fothaí le %S i gcónaí."
+
+#: alwaysUseForPodcasts
+msgid "Always use %S to subscribe to podcasts."
+msgstr "Liostáil le podchraoltaí le %S i gcónaí."
+
+#: alwaysUseForVideoPodcasts
+msgid "Always use %S to subscribe to video podcasts."
+msgstr "Liostáil le podchraoltaí físe le %S i gcónaí."
+
+#: subscribeFeedUsing
+msgid "Subscribe to this feed using"
+msgstr "Liostáil leis an bhfotha seo le"
+
+#: subscribePodcastUsing
+msgid "Subscribe to this podcast using"
+msgstr "Liostáil leis an bpodchraoladh seo le"
+
+#: subscribeVideoPodcastUsing
+msgid "Subscribe to this video podcast using"
+msgstr "Liostáil leis an bpodchraoladh físe seo le"
+
+# "This is a "xyz" of frequently changing content on this site."
+#: feedsubscription1
+msgid "This is a \"%S\" of frequently changing content on this site."
+msgstr "%S é seo a thaispeánann inneachar ar an suíomh seo a athraíonn go minic."
+
+#: feedsubscription2
+msgid ""
+"You can subscribe to this %S to receive updates when this content changes."
+msgstr ""
+"%S é seo ar féidir leat liostáil leis chun nuashonruithe a fháil nuair a athraítear "
+"an t-inneachar."
+
+# See feedsubscription2 to see why caps
+#: videoPodcastFeed
+msgid "video podcast"
+msgstr "Podchraoladh físe"
+
+# See feedsubscription2 to see why caps
+#: audioPodcastFeed
+msgid "podcast"
+msgstr "Podchraoladh"
 
 # Protocol Handling
 # "Add %appName (%appDomain) as an application for %protocolType links?"
@@ -3509,9 +3608,9 @@ msgstr "Úsáid TLS &1.0"
 msgid "Certificates"
 msgstr "Teastais"
 
-#: certselect.description
-msgid "When a web site requires a certificate:"
-msgstr "Agus teastas ag teastáil ó shuíomh Gréasáin:"
+#: certSelection.description
+msgid "When a server requests my personal certificate:"
+msgstr "Nuair atá freastalaí ag iarraidh mo theastas pearsanta:"
 
 #: certs.auto
 msgid "Select one automatically"
@@ -3688,6 +3787,10 @@ msgstr "Cumraigh Seachfhreastalaí Rochtana Idirlín"
 #: directTypeRadio.label directTypeRadio.accesskey
 msgid "&Direct connection to the Internet"
 msgstr "Ceangal &díreach leis an Idirlíon"
+
+#: systemTypeRadio.label systemTypeRadio.accesskey
+msgid "Use s&ystem proxy settings"
+msgstr "Úsáid socruithe &seachfhreastalaí an chórais"
 
 #: WPADTypeRadio.label WPADTypeRadio.accesskey
 msgid "Auto-detect proxy settings for this net&work"
@@ -4264,7 +4367,7 @@ msgstr "Glac leo agus lean ar aghaidh"
 #: cancel.label CancelBtn findNodesCancel.label Cancel cancelButton.label
 #: button-cancel cancel dialogCancel.label button-cancel-mac.label
 #: button-cancel-unix.label button-cancel-win.label unknownCancel.label
-#: cancelButton cancelButtonText CANCEL CANCEL_LABEL
+#: cancelSearch.button cancelButton cancelButtonText CANCEL CANCEL_LABEL
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -4435,6 +4538,14 @@ msgstr "Roghnaigh Feidhmchlár Cabhrach"
 #: webFeed
 msgid "Web Feed"
 msgstr "Fotha Gréasáin"
+
+#: videoPodcastFeed
+msgid "Video Podcast"
+msgstr "Podchraoladh Físe"
+
+#: audioPodcastFeed
+msgid "Podcast"
+msgstr "Podchraoladh"
 
 #: alwaysAsk
 msgid "Always ask"
@@ -6565,7 +6676,7 @@ msgstr "Comhad á ullmhú:"
 msgid "Currently Installing:"
 msgstr "Á shuiteáil anois:"
 
-#: COMPLETE_TITLE
+#: COMPLETE_TITLE searchResultInstalled.label
 msgid "Install Complete"
 msgstr "Suiteáil arna Cur i gCrích"
 
@@ -8195,8 +8306,8 @@ msgid "Continue"
 msgstr "Ar Aghaidh"
 
 #: DontAskAgain
-msgid "Don't ask me again"
-msgstr "Ná fiafraigh díom arís"
+msgid "&Don't ask me again"
+msgstr "&Ná fiafraigh díom arís"
 
 #: JSURLLoadBlockedWarning
 msgid ""
@@ -9391,6 +9502,18 @@ msgid ""
 msgstr ""
 "Bhí mac inlíne %2$S i mbosca XUL na heiliminte %1$S, agus dá bhrí sin ní mór "
 "a mhic go léir a bheith clúdaithe i mbloc."
+
+#: NeededToWrapXULInlineBox
+msgid ""
+"XUL box for %1$S element contained an inline %2$S child, forcing all its "
+"children to be wrapped in a block.  This can often be fixed by replacing "
+"\"display: -moz-inline-box\" with \"display: -moz-inline-box; display: inline-"
+"block\"."
+msgstr ""
+"Bhí mac inlíne %2$S i mbosca XUL na heiliminte %1$S, agus dá bhrí sin ní mór "
+"a mhic go léir a bheith clúdaithe i mbloc.  Go minic is féidir é seo a "
+"dheisiú trí \"display: -moz-inline-box; display: inline-block\" a chur in "
+"ionad \"display: -moz-inline-box\""
 
 #: securityOverride.warningText
 msgid ""
@@ -15591,7 +15714,7 @@ msgstr "Á Íosluchtú…"
 msgid "Downloaded"
 msgstr "Íosluchtaithe"
 
-#: progress.installing installFinishing.label
+#: progress.installing searchResultInstalling.label installFinishing.label
 msgid "Installing…"
 msgstr "Á Shuiteáil…"
 
@@ -15934,22 +16057,6 @@ msgstr "Tá gach comhad íosluchtaithe."
 msgid "#4 — #1 (#2 #3/sec)"
 msgstr "#4 — #1 (#2 #3/soic)"
 
-#: bytes
-msgid "bytes"
-msgstr "beart"
-
-#: kilobyte
-msgid "KB"
-msgstr "kB"
-
-#: megabyte
-msgid "MB"
-msgstr "MB"
-
-#: gigabyte
-msgid "GB"
-msgstr "GB"
-
 # LOCALIZATION NOTE (transferSameUnits, transferDiffUnits, transferNoTotal):
 # #1 progress number; #2 progress unit; #3 total number; #4 total unit
 # examples: 1.1 of 333 MB; 11.1 MB of 3.3 GB; 111 KB
@@ -16241,6 +16348,11 @@ msgid ""
 "380"
 msgstr "380"
 
+# View labels
+#: search.label
+msgid "Get Add-ons"
+msgstr "Faigh Breiseáin"
+
 #: extensions.label extensionsTitle CertDumpExtensions
 msgid "Extensions"
 msgstr "Eisínteachtaí"
@@ -16427,6 +16539,14 @@ msgstr "Folaig&h Eolas"
 msgid "Hide information about these updates"
 msgstr "Folaigh eolas maidir leis na nuashonruithe seo"
 
+#: cmd.installSearchResult.label cmd.installSearchResult.accesskey
+msgid "&Add to &brandShortName;…"
+msgstr "&Cuir le &brandShortName;…"
+
+#: cmd.installSearchResult.tooltip
+msgid "Download and install this add-on"
+msgstr "Íosluchtaigh agus suiteáil an breiseán seo"
+
 #: cmd.homepage.label cmd.homepage.accesskey
 msgid "Visit &Home Page"
 msgstr "Féach ar an leathanach &baile"
@@ -16498,6 +16618,66 @@ msgstr "Faigh Téamaí"
 msgid "Get Plugins"
 msgstr "Faigh Forlíontáin"
 
+#: searchAddons.label searchBox.label
+msgid "Search All Add-ons"
+msgstr "Cuardaigh na breiseáin go léir"
+
+#: browseAddons.label
+msgid "Browse All Add-ons"
+msgstr "Brabhsáil na breiseáin go léir"
+
+#: searchFailed.label
+msgid "&brandShortName; couldn't retrieve add-ons"
+msgstr ""
+
+#: recommendedHeader.label
+msgid "Recommended"
+msgstr "Molta"
+
+#: recommendedThrobber.label
+msgid "Retrieving recommended add-ons"
+msgstr ""
+
+#: searchThrobber.label
+msgid "Searching add-ons"
+msgstr ""
+
+#: resetSearch.label
+msgid "Clear Results"
+msgstr "Bánaigh na Torthaí"
+
+#: searchEmpty.label
+msgid "No Matching Add-ons"
+msgstr "Níor Aimsíodh Breiseáin Chomhoiriúnacha"
+
+#: searchEmpty.button
+msgid "Ok"
+msgstr "OK"
+
+#: searchResultHomepage.value
+msgid "Learn More"
+msgstr "Faigh Tuilleadh Eolais"
+
+#: recommendedResults.label
+msgid "See All Recommended Add-ons"
+msgstr ""
+
+#: searchResultFailed.label statusFailed
+msgid "Install Failed"
+msgstr "Theip ar Shuiteáil"
+
+#: addonTypeExtension.label type-2
+msgid "Extension"
+msgstr "Eisínteacht"
+
+#: addonTypeTheme.label type-4
+msgid "Theme"
+msgstr "Téama"
+
+#: missingThumbnail.label
+msgid "No Preview"
+msgstr "Gan Réamhamharc"
+
 #: previewNoThemeSelected.label
 msgid "No Theme Selected"
 msgstr "Níl aon téama roghnaithe"
@@ -16553,6 +16733,28 @@ msgstr "Theip ar shuiteáil."
 #: progressStatus.label
 msgid "Checking For Updates"
 msgstr "Nuashonruithe á seiceáil"
+
+#: eula.title
+msgid "End-User License Agreement"
+msgstr "Comhaontú Ceadúnais Úsáideoir Deiridh"
+
+#: eula.width
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"560px"
+msgstr "560px"
+
+#: eula.height
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"400px"
+msgstr "400px"
+
+#: eula.accept
+msgid "Accept and Install…"
+msgstr "Glac Leis agus Suiteáil…"
 
 #: aboutWindowTitle aboutAddon
 msgid "About %S"
@@ -16619,6 +16821,15 @@ msgstr "D'aimsigh %S nuashonrú le haghaidh ceann amháin de do bhreiseáin"
 #: multipleUpdateNotificationText
 msgid "%S has found updates for %S of your add-ons"
 msgstr "D'aimsigh %S nuashonrú le haghaidh %S breiseán"
+
+#: restartMessage
+msgid "Restart %S to complete your changes."
+msgstr "Ní mór duit %S a atosú chun na hathruithe a chur i bhfeidhm."
+
+#: restartAccessKey protocol.checkbox.accesskey restartButton.accesskey
+#: notifyBarRememberButtonAccessKey resetpassword.accesskey
+msgid "R"
+msgstr "R"
 
 #: laterButton
 msgid "Later"
@@ -16707,14 +16918,6 @@ msgstr "Pacáiste Ileisínteachta"
 #: type-16
 msgid "Plugin"
 msgstr "Forlíontán"
-
-#: type-4
-msgid "Theme"
-msgstr "Téama"
-
-#: type-2
-msgid "Extension"
-msgstr "Eisínteacht"
 
 #: incompatibleTitle
 msgid "Incompatible %S"
@@ -16933,6 +17136,14 @@ msgstr ""
 "Tá %S as líne faoi láthair agus ní féidir Breiseáin a nuashonrú. Cliceáil "
 "Téigh Ar Líne agus déan iarracht eile."
 
+#: offlineSearchMsg
+msgid ""
+"%S is currently in offline mode and is unable to search for add-ons. Click Go "
+"Online and try again."
+msgstr ""
+"Tá %S as líne faoi láthair agus ní féidir breiseáin a lorg. Cliceáil Téigh Ar "
+"Líne agus déan iarracht eile."
+
 #: goOnlineButtonLabel
 msgid "Go Online"
 msgstr "Téigh Ar Líne"
@@ -16944,6 +17155,16 @@ msgstr "Nuashonruithe do Bhreiseáin %S"
 #: newUpdatesAvailableMsg
 msgid "There are new updates available for your add-ons."
 msgstr "Tá nuashonruithe nua le fáil le haghaidh do chuid bhreiseán."
+
+#: searchResults
+msgid "See all results (%S)"
+msgstr ""
+
+#: eulaHeader
+msgid ""
+"%S requires that you accept the following End User License Agreement before "
+"installation can proceed:"
+msgstr ""
 
 #: updateWizard.title
 msgid "&brandShortName; Update"
@@ -17211,11 +17432,6 @@ msgstr "Seol chuig:"
 #: protocol.checkbox.label
 msgid "Remember my choice for %S links."
 msgstr "Meabhraigh mo rogha le haghaidh naisc %S."
-
-#: protocol.checkbox.accesskey restartButton.accesskey
-#: notifyBarRememberButtonAccessKey resetpassword.accesskey
-msgid "R"
-msgstr "R"
 
 #: protocol.checkbox.extra
 msgid "This can be changed in %S's preferences."
@@ -18090,10 +18306,6 @@ msgstr "Mionsonraí breise á lorg, maidir le %S %S…"
 #: statusSucceededFormat
 msgid "Installed on: %S"
 msgstr "Suiteáilte ar: %S"
-
-#: statusFailed
-msgid "Install Failed"
-msgstr "Theip ar Shuiteáil"
 
 #: updatesfound_minor.title
 msgid "Update Available"
