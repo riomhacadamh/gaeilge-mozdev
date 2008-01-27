@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 07:33-0600\n"
+"POT-Creation-Date: 2008-01-26 23:04-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -28,7 +28,8 @@ msgstr "Admhálacha"
 
 #: copyright.accesskey copyCmd.key copy.key view.sortBy.visitCount.accesskey
 #: cmd_clearHistory_accesskey copyPref.key copyCmd.commandkey
-#: mismatchCheckNowAccesskey cancelButtonTextAccesskey CertDumpAVACountry
+#: mismatchCheckNowAccesskey cancelButtonTextAccesskey
+#: notifyBarChangeButtonAccessKey CertDumpAVACountry
 #: exceptionMgr.exceptionButtonAccess changepassword.accesskey
 msgid "C"
 msgstr "C"
@@ -597,6 +598,7 @@ msgstr "&Scrios"
 #: deleteCmd.key dontShowMessage.accesskey
 #: blockedpluginsMessage.infoButton.accesskey view.sortBy.description.accesskey
 #: mismatchDontCheckAccesskey downloadButton_minor.accesskey
+#: notifyBarDontChangeButtonAccessKey
 msgid "D"
 msgstr "D"
 
@@ -726,6 +728,10 @@ msgstr "Ta&ispeáin Sonraí an Leathanaigh"
 msgid "View Frame &Info"
 msgstr "Taispeáin &Eolas Fráma"
 
+#: showImageCmd.label showImageCmd.accesskey
+msgid "&Show Image"
+msgstr "&Taispeáin Íomhá"
+
 #: viewImageCmd.label viewImageCmd.accesskey
 msgid "View &Image"
 msgstr "&Taispeáin Íomhá"
@@ -794,6 +800,10 @@ msgstr "Seol a&n Íomhá…"
 #: copyLinkCmd.label copyLinkCmd.accesskey
 msgid "Copy Link Loc&ation"
 msgstr "Cói&peáil Suíomh an Naisc"
+
+#: copyLinkTextCmd.label copyLinkTextCmd.accesskey
+msgid "Copy Link Te&xt"
+msgstr "Cóipeáil Téa&cs an Naisc"
 
 #: copyImageCmd.label copyImageCmd.accesskey
 msgid "C&opy Image Location"
@@ -1588,14 +1598,15 @@ msgstr "Liostáil leis an bpodchraoladh físe seo le"
 # "This is a "xyz" of frequently changing content on this site."
 #: feedsubscription1
 msgid "This is a \"%S\" of frequently changing content on this site."
-msgstr "%S é seo a thaispeánann inneachar ar an suíomh seo a athraíonn go minic."
+msgstr ""
+"%S é seo a thaispeánann inneachar ar an suíomh seo a athraíonn go minic."
 
 #: feedsubscription2
 msgid ""
 "You can subscribe to this %S to receive updates when this content changes."
 msgstr ""
-"%S é seo ar féidir leat liostáil leis chun nuashonruithe a fháil nuair a athraítear "
-"an t-inneachar."
+"%S é seo ar féidir leat liostáil leis chun nuashonruithe a fháil nuair a "
+"athraítear an t-inneachar."
 
 # See feedsubscription2 to see why caps
 #: videoPodcastFeed
@@ -3577,9 +3588,9 @@ msgid ""
 "7em"
 msgstr "7em"
 
-#: offlineAppsList.remove
-msgid "Remove..."
-msgstr "Bain..."
+#: offlineAppsListRemove.label offlineAppsListRemove.accesskey
+msgid "&Remove…"
+msgstr "&Bain…"
 
 #: offlineAppRemove.confirm offlineAppRemoveConfirm
 msgid "Remove offline data"
@@ -5173,9 +5184,9 @@ msgstr "&Stair an Bhainisteora Íosluchtaithe"
 msgid "Authenticated &Sessions"
 msgstr "&Seisiúin Fhíordheimhnithe"
 
-#: cmd_engineManager.label cmd_engineManager.accesskey
-msgid "&Manage Search Engines…"
-msgstr "&Bainistigh Innill Chuardaigh…"
+#: cmd_engineManager.label
+msgid "Manage Search Engines…"
+msgstr "Bainistigh Innill Chuardaigh…"
 
 #: searchtip
 msgid "Search using %S"
@@ -11981,27 +11992,23 @@ msgstr "Deir an leathanach ag %S:"
 msgid "about:config"
 msgstr "about:config"
 
-#: scaryWarningTitle.label
-msgid "Be careful, this gun is loaded!"
-msgstr "Bí cúramach, tá an gunna seo lódáilte!"
+# about:config warning page
+#: configWarningTitle.label
+msgid "Be careful, this page is loaded!"
+msgstr "Bí cúramach, tá an leathanach seo lódáilte!"
 
-#: scaryWarningText.label
+#: configWarningText.label
 msgid ""
-"This configuration page allows you to modify advanced preferences that "
-"control this application. It is possible to create harmful side effects by "
-"changing the values of these preferences. You should only continue if you "
-"know what you are doing or if you are following trusted advice."
+"Changing the values of these advanced settings can be harmful to the "
+"stability, security, and performance of this application. You should only "
+"continue if you are sure of what you are doing."
 msgstr ""
-"Leis an leathanach cumraíochta seo, is féidir leat athruithe a dhéanamh ar "
-"ardroghanna a rialaíonn an feidhmchlár seo. Is féidir dochar a dhéanamh trí "
-"luachanna na roghanna seo a athrú. Ná lean ar aghaidh mura dtuigeann tú cad "
-"atá á dhéanamh agat, nó muna bhfuil comhairle iontaofa agat."
 
-#: scaryWarningButton.label
+#: configWarningButton.label
 msgid "I'll be careful, I promise!"
 msgstr "Geallaim go mbeidh mé cúramach!"
 
-#: scaryWarningCheckbox.label
+#: configWarningCheckbox.label
 msgid "Show this warning next time"
 msgstr "Taispeáin an rabhadh seo an chéad uair eile"
 
@@ -12611,6 +12618,18 @@ msgstr "Mearchuardach (nascanna amháin):"
 #: CaseSensitive
 msgid "(Case sensitive)"
 msgstr "(Cásíogair)"
+
+#: FoundMatchCount
+msgid "%S match"
+msgstr ""
+
+#: FoundMatchesCount
+msgid "%S matches"
+msgstr ""
+
+#: FoundTooManyMatches
+msgid "More than %S matches"
+msgstr ""
 
 # see also with "this" and with &
 #: findDialog.title
@@ -15839,12 +15858,12 @@ msgstr "Cuimhne ídithe"
 msgid "Unexpected error %S"
 msgstr "Earráid %S gan choinne"
 
-#: window.width
-msgid ""
-"_: Do not translate this.  Only change the numeric values if you need this "
-"dialogue box to appear bigger.\n"
-"400"
-msgstr "400"
+# LOCALIZATION NOTE (window.width2, window.height): These values should be
+# close to the golden ratio (1.618:1) while making sure it's wide enough for long
+# file names and tall enough to hint that there are more downloads in the list
+#: window.width2
+msgid "485"
+msgstr "485"
 
 #: window.height
 msgid ""
@@ -16150,6 +16169,23 @@ msgstr "%S%% as 1 comhad - Íosluchtú"
 #: downloadsTitleMultiple
 msgid "%S%% of %S files - Downloads"
 msgstr "%S%% as %S comhad - Íosluchtú"
+
+# LOCALIZATION NOTE (downloadsTitleFiles, downloadsTitlePercent): Semi-colon list of
+# plural forms. See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 number of files; #2 overall download percent (only for downloadsTitlePercent)
+# examples: 2% of 1 file - Downloads; 22% of 11 files - Downloads
+#: downloadsTitleFiles
+msgid "#1 file - Downloads;#1 files - Downloads"
+msgstr ""
+"#1 chomhad - Íosluchtuithe;#1 chomhad - Íosluchtuithe;#1 chomhad - "
+"Íosluchtuithe;#1 gcomhad - Íosluchtuithe;#1 comhad - Íosluchtuithe"
+
+#: downloadsTitlePercent
+msgid "#2% of #1 file - Downloads;#2% of #1 files - Downloads"
+msgstr ""
+"#2% as #1 chomhad - Íosluchtuithe;#2% as #1 chomhad - Íosluchtuithe;#2% as #1 "
+"chomhad - Íosluchtuithe;#2% as #1 gcomhad - Íosluchtuithe;#2% as #1 comhad - "
+"Íosluchtuithe"
 
 #: fileExecutableSecurityWarning
 msgid ""
@@ -18683,19 +18719,20 @@ msgid "Confirm Password Change"
 msgstr "Dearbhaigh an Focal Faire Nua"
 
 #: passwordChangeText
-msgid ""
-"Would you like to have Password Manager change the stored password for %S?"
-msgstr ""
-"An mian leat go n-athróidh Bainisteoir na bhFocal Faire an focal faire atá "
-"stóráilte le haghaidh %S?"
+msgid "Would you like to change the stored password for %S?"
+msgstr "An mian leat an focal faire atá stóráilte le haghaidh %S a athrú?"
 
 #: passwordChangeTextNoUser
-msgid ""
-"Would you like to have Password Manager change the stored password for this "
-"login?"
+msgid "Would you like to change this the stored password for this login?"
 msgstr ""
-"An mian leat go n-athróidh Bainisteoir na bhFocal Faire focal faire stóráilte "
-"an aitheantais logála isteach seo?"
+
+#: notifyBarChangeButtonText
+msgid "Change"
+msgstr "Athraigh"
+
+#: notifyBarDontChangeButtonText
+msgid "Don't Change"
+msgstr "Ná hAthraigh"
 
 #: userSelectText
 msgid "Please confirm which user you are changing the password for"
@@ -18744,7 +18781,7 @@ msgstr "Aitheantas na Tuairisce"
 
 #: date.heading
 msgid "Date Submitted"
-msgstr ""
+msgstr "Dáta a Seoladh"
 
 #: noReports.label
 msgid "No crash reports have been submitted."
