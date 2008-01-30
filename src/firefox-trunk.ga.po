@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-28 08:45-0600\n"
+"POT-Creation-Date: 2008-01-30 10:08-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -221,7 +221,8 @@ msgstr "&Oscail Comhad…"
 
 # Ctrl+O for "Oscail" in Main -> Comhad
 #: openFileCmd.commandkey menuOpenAllInTabs.accesskey
-#: generalSecurityMore.accesskey SSLport.accesskey warn.enteringweak.accesskey
+#: generalSecurityMore.accesskey SSLport.accesskey notNowButton.accesskey
+#: warn.enteringweak.accesskey
 msgid "o"
 msgstr "o"
 
@@ -534,7 +535,8 @@ msgid "&Edit"
 msgstr "&Eagar"
 
 # "L" under Main -> Eagar ("C" is Cóipeáil)
-#: undoCmd.label undoCmd.accesskey cmd.edit_undo.label cmd.edit_undo.accesskey
+#: undoCmd.label undoCmd.accesskey editBookmark.undo.label
+#: editBookmark.undo.accessKey cmd.edit_undo.label cmd.edit_undo.accesskey
 #: mnEditUndo.label mnEditUndo.accesskey cmdUndo.label cmdUndo.accesskey
 msgid "&Undo"
 msgstr "Cea&laigh"
@@ -1007,18 +1009,42 @@ msgstr "&Cuir Foclóirí Leis…"
 msgid "Done"
 msgstr "Déanta"
 
-# the "deleteCmd.label" is a keycap and should be "Delete", others ok?
-#: editBookmark.delete.label cmdDeleteNode.label deleteSelectedRules.label
-msgid "Delete"
-msgstr "Scrios"
+#: editBookmark.cancel.label cancel.label CancelBtn findNodesCancel.label
+#: Cancel cancelButton.label button-cancel cancel dialogCancel.label
+#: button-cancel-mac.label button-cancel-unix.label button-cancel-win.label
+#: unknownCancel.label cancelSearch.button cancelButton cancelButtonText CANCEL
+#: CANCEL_LABEL
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: editBookmark.removeBookmark.label editBookmark.removeBookmark.accessKey
+msgid "&Remove Bookmark"
+msgstr ""
+
+#: editBookmark.edit.label editBookmark.edit.accessKey certmgr.edit2.label
+#: certmgr.edit2.accesskey
+msgid "&Edit…"
+msgstr "&Eagar…"
+
+#: identity.unverifiedsite
+msgid "You are connected to an unverified site."
+msgstr ""
+
+#: identity.connectedTo
+msgid "You are connected to"
+msgstr ""
+
+#: identity.runBy
+msgid "which is run by"
+msgstr ""
 
 #: identity.moreInfoLinkText
-msgid "Tell me more about this web site…"
-msgstr "Inis tuilleadh dom maidir leis an suíomh seo…"
+msgid "More Information…"
+msgstr ""
 
-#: downloadMonitor.tooltip
-msgid "Double-click to open downloads window"
-msgstr "Cliceáil faoi dhó chun fuinneog na n-íosluchtuithe a oscailt"
+#: downloadMonitor2.tooltip
+msgid "Click to open downloads window"
+msgstr ""
 
 #: nv_timeout
 msgid "Timed Out"
@@ -1252,15 +1278,15 @@ msgstr "Oscail gach rud i gcluaisíní"
 # Unified Back-/Forward Popup
 #: tabHistory.current
 msgid "Stay on this page"
-msgstr ""
+msgstr "Fan ar an leathanach seo"
 
 #: tabHistory.goBack
 msgid "Go back to this page"
-msgstr ""
+msgstr "Téigh siar chuig an leathanach seo"
 
 #: tabHistory.goForward
 msgid "Go forward to this page"
-msgstr ""
+msgstr "Téigh ar aghaidh chuig an leathanach seo"
 
 #: refreshBlocked.refreshLabel
 msgid "%S prevented this page from automatically reloading."
@@ -1286,35 +1312,16 @@ msgstr "Cruthaigh leabharmharc don leathanach seo"
 msgid ""
 "This website (%S) is offering to store data on your computer for offline use."
 msgstr ""
-
-# Identity information
-#: identity.domainverified.title
-msgid "Location Verified"
-msgstr "Suíomh Fíoraithe"
-
-#: identity.domainverified.body
-msgid "You are currently visiting:"
-msgstr "Faoi láthair tá tú ag féachaint ar:"
-
-#: identity.domainverified.supplemental
-msgid ""
-"Information identifying the owner of this web site may not have been "
-"validated."
-msgstr ""
-"D'fhéadfadh an fhaisnéis a shainaithníonn úinéir an tsuímh Ghréasáin seo a "
-"bheith gan fíorú."
-
-#: identity.identified.title
-msgid "Identity Verified"
-msgstr "Aitheantas fíoraithe"
-
-#: identity.identified.body
-msgid "This web site is owned by:"
-msgstr "Tá an suíomh Gréasáin seo ar úinéireacht ag:"
+"Tá an suíomh Gréasáin seo (%S) ag tairiscint duit sonraí a stóráil ar do "
+"ríomhaire le haghaidh úsáide as líne."
 
 #: identity.identified.verifier
 msgid "Verified by: %S"
 msgstr "Cinntithe ag: %S"
+
+#: identity.identified.verified_by_you
+msgid "You have added a security exception for this site"
+msgstr ""
 
 #: identity.identified.state_and_country
 msgid "%S, %S"
@@ -1325,14 +1332,6 @@ msgstr "%S, %S"
 msgid "%S (%S)"
 msgstr "%S (%S)"
 
-#: identity.unknown.title
-msgid "Identity Unknown"
-msgstr "Aitheantas anaithnid"
-
-#: identity.unknown.body securityNoIdentity
-msgid "This web site does not supply identity information."
-msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena aitheantas."
-
 #: identity.encrypted
 msgid "Your connection to this web site is encrypted to prevent eavesdropping."
 msgstr ""
@@ -1342,6 +1341,14 @@ msgstr ""
 #: identity.unencrypted
 msgid "Your connection to this web site is not encrypted."
 msgstr "Níl do cheangal leis an suíomh Gréasáin seo criptithe."
+
+#: identity.unknown.tooltip securityNoIdentity
+msgid "This web site does not supply identity information."
+msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena aitheantas."
+
+#: identity.ownerUnknown
+msgid "(no information provided)"
+msgstr ""
 
 # Downloads Monitor Panel
 # LOCALIZATION NOTE (activeDownloads, pausedDownloads): Semi-colon list of plural
@@ -1359,6 +1366,19 @@ msgid "One paused download;#1 paused downloads"
 msgstr ""
 "Íosluchtú moillithe amháin;#1 íosluchtú mhoillithe;#1 íosluchtú mhoillithe;#1 "
 "n-íosluchtú mhoillithe;#1 íosluchtú mhoillithe"
+
+# Edit Bookmark UI
+#: editBookmarkPanel.pageBookmarkedTitle
+msgid "Page Bookmarked"
+msgstr ""
+
+#: editBookmarkPanel.pageBookmarkedDescription
+msgid "%S will always remember this page for you."
+msgstr ""
+
+#: editBookmarkPanel.bookmarkedRemovedTitle
+msgid "Bookmark Removed"
+msgstr ""
 
 #: brandMotto
 msgid "Rediscover the Web"
@@ -1494,33 +1514,9 @@ msgstr ""
 msgid "Viewing Feed"
 msgstr "Fotha á Thaispeáint"
 
-#: feedSubscriptionInfo1a
-msgid "This is a &#8220;"
-msgstr "Is &#8220;"
-
-# See feedsubscription2 to see why caps
-#: feedName webFeed
-msgid "feed"
-msgstr "Fotha"
-
-#: feedSubscriptionInfo1b
-msgid "&#8221; of frequently changing content on this site."
-msgstr "&#8221; é seo d'inneachar ar an suíomh seo a athraíonn go minic."
-
-#: feedSubscriptionInfo2
-msgid ""
-"You can subscribe to this feed to receive updates when this content changes."
-msgstr ""
-"Tig leat liostáil leis an bhfotha seo le nuashonruithe a fháil nuair a "
-"athraítear an t-inneachar."
-
 #: feedSubscribeNow subscribeNow
 msgid "Subscribe Now"
 msgstr "Liostáil Anois"
-
-#: subscribeUsing
-msgid "Subscribe to this feed using "
-msgstr "Liostáil leis an bhfotha seo le "
 
 #: feedLiveBookmarks liveBookmarks
 msgid "Live Bookmarks"
@@ -1580,7 +1576,7 @@ msgstr "MB"
 msgid "GB"
 msgstr "GB"
 
-# LOCALIZATION NOTE: The next three strings explains to the user what they're 
+# LOCALIZATION NOTE: The next three strings explains to the user what they're
 # doing.
 # e.g. alwaysUseForVideoPodcasts : "Always use Miro to subscribe to video podcasts."
 # %S = application to use (Miro, iTunes, ...)
@@ -1588,7 +1584,7 @@ msgstr "GB"
 msgid "Always use %S to subscribe to feeds."
 msgstr "Liostáil le fothaí le %S i gcónaí."
 
-#: alwaysUseForPodcasts
+#: alwaysUseForAudioPodcasts
 msgid "Always use %S to subscribe to podcasts."
 msgstr "Liostáil le podchraoltaí le %S i gcónaí."
 
@@ -1600,7 +1596,7 @@ msgstr "Liostáil le podchraoltaí físe le %S i gcónaí."
 msgid "Subscribe to this feed using"
 msgstr "Liostáil leis an bhfotha seo le"
 
-#: subscribePodcastUsing
+#: subscribeAudioPodcastUsing
 msgid "Subscribe to this podcast using"
 msgstr "Liostáil leis an bpodchraoladh seo le"
 
@@ -1608,28 +1604,36 @@ msgstr "Liostáil leis an bpodchraoladh seo le"
 msgid "Subscribe to this video podcast using"
 msgstr "Liostáil leis an bpodchraoladh físe seo le"
 
-# "This is a "xyz" of frequently changing content on this site."
-#: feedsubscription1
-msgid "This is a \"%S\" of frequently changing content on this site."
+#: feedSubscriptionFeed1
+msgid "This is a \"feed\" of frequently changing content on this site."
 msgstr ""
-"%S é seo a thaispeánann inneachar ar an suíomh seo a athraíonn go minic."
 
-#: feedsubscription2
-msgid ""
-"You can subscribe to this %S to receive updates when this content changes."
+#: feedSubscriptionAudioPodcast1
+msgid "This is a \"podcast\" of frequently changing content on this site."
 msgstr ""
-"%S é seo ar féidir leat liostáil leis chun nuashonruithe a fháil nuair a "
+
+#: feedSubscriptionVideoPodcast1
+msgid "This is a \"video podcast\" of frequently changing content on this site."
+msgstr ""
+
+#: feedSubscriptionFeed2
+msgid ""
+"You can subscribe to this feed to receive updates when this content changes."
+msgstr ""
+"Tig leat liostáil leis an bhfotha seo le nuashonruithe a fháil nuair a "
 "athraítear an t-inneachar."
 
-# See feedsubscription2 to see why caps
-#: videoPodcastFeed
-msgid "video podcast"
-msgstr "Podchraoladh físe"
+#: feedSubscriptionAudioPodcast2
+msgid ""
+"You can subscribe to this podcast to receive updates when this content "
+"changes."
+msgstr ""
 
-# See feedsubscription2 to see why caps
-#: audioPodcastFeed
-msgid "podcast"
-msgstr "Podchraoladh"
+#: feedSubscriptionVideoPodcast2
+msgid ""
+"You can subscribe to this video podcast to receive updates when this content "
+"changes."
+msgstr ""
 
 # Protocol Handling
 # "Add %appName (%appDomain) as an application for %protocolType links?"
@@ -1864,7 +1868,7 @@ msgstr "%Spx × %Spx"
 
 #: imageDimensionsScaled mediaDimensionsScaled
 msgid "%Spx × %Spx (scaled × %Spx × %Spx)"
-msgstr ""
+msgstr "%S picteilín × %S picteilín (scálaithe × %S pct × %S pct)"
 
 # LOCALIZATION NOTE: Next two strings are for language name representations
 # %1$S = language name, %2$S = region name
@@ -2726,6 +2730,10 @@ msgstr "Taispeáin gach clib"
 msgid "Load t&his bookmark in the sidebar"
 msgstr "Luc&htaigh an leabharmharc seo sa bharra taoibh"
 
+#: editBookmarkOverlay.choose.label
+msgid "Choose…"
+msgstr ""
+
 #: window.title
 msgid "Choose Folder"
 msgstr "Roghnaigh Fillteán"
@@ -2817,8 +2825,7 @@ msgstr "&Athshlánaigh…"
 msgid "&Choose File…"
 msgstr "&Roghnaigh Comhad…"
 
-#: cmd.select_all.key cbxStateActive.accesskey laterButton.accesskey
-#: warn.leavingsecure.accesskey
+#: cmd.select_all.key cbxStateActive.accesskey warn.leavingsecure.accesskey
 msgid "a"
 msgstr "a"
 
@@ -3593,6 +3600,8 @@ msgstr "Tais&peáin Stair na Nuashonruithe"
 #: offlineAppsList.label
 msgid "The following websites have data installed for offline use:"
 msgstr ""
+"Tá sonraí suiteáilte ag na suíomhanna Gréasáin seo a leanas le haghaidh "
+"úsáide as líne:"
 
 #: offlineAppsList.height
 msgid ""
@@ -3711,9 +3720,9 @@ msgstr "37em"
 msgid "Allow scripts to:"
 msgstr "Ceadaigh scripteanna chun:"
 
-#: moveResizeWindows.label moveResizeWindows.accesskey
-msgid "&Move or resize existing windows"
-msgstr "Fuinneoga reatha a aistriú nó a &méid a athrú"
+#: moveResizeNotAllowed.label
+msgid "Scripts may not move or resize existing windows"
+msgstr ""
 
 #: raiseLowerWindows.label raiseLowerWindows.accesskey
 msgid "&Raise or lower windows"
@@ -3731,13 +3740,47 @@ msgstr "An barra stádais a f&holú"
 msgid "&Change status bar text"
 msgstr "Téa&cs an bharra stádais a athrú"
 
+#: appManager.title
+msgid "Application details"
+msgstr ""
+
+#: appManager.style
+msgid "width: 30em; min-height: 20em;"
+msgstr ""
+
+# LOCALIZATION NOTE
+# in descriptionApplications, %S will be replaced by one of the 3 following strings
+#: descriptionApplications
+msgid "The following applications can be used to handle %S."
+msgstr ""
+
+#: handleProtocol
+msgid "%S links"
+msgstr ""
+
+#: handleWebFeeds
+msgid "Web Feeds"
+msgstr ""
+
+#: handleFile
+msgid "%S content"
+msgstr ""
+
+#: descriptionWebApp
+msgid "This web application is hosted at:"
+msgstr ""
+
+#: descriptionLocalApp
+msgid "This application is located at:"
+msgstr ""
+
 #: typeColumn.label typeColumn.accesskey
 msgid "Content &Type"
 msgstr "Cineál Á&bhar"
 
-#: actionColumn.label actionColumn.accesskey
-msgid "&Application"
-msgstr "&Feidhmchlár"
+#: actionColumn2.label actionColumn2.accesskey
+msgid "&Action"
+msgstr "&Gníomh"
 
 #: clear.label clear.accesskey
 msgid "C&lear"
@@ -4388,13 +4431,6 @@ msgstr ""
 msgid "Accept and Continue"
 msgstr "Glac leo agus lean ar aghaidh"
 
-#: cancel.label CancelBtn findNodesCancel.label Cancel cancelButton.label
-#: button-cancel cancel dialogCancel.label button-cancel-mac.label
-#: button-cancel-unix.label button-cancel-win.label unknownCancel.label
-#: cancelSearch.button cancelButton cancelButtonText CANCEL CANCEL_LABEL
-msgid "Cancel"
-msgstr "Cealaigh"
-
 #: prefWindow.titleGNOME
 msgid "&brandShortName; Preferences"
 msgstr "Sainroghanna &brandShortName;"
@@ -4512,6 +4548,16 @@ msgstr "Iontráil óstainm bailí, le do thoil"
 msgid "Invalid Hostname Entered"
 msgstr "Óstainm neamhbhailí"
 
+#: moveresizepermissionstext
+msgid ""
+"You can specify which web sites are allowed to move or resize windows. Type "
+"the exact address of the site you want to permit and then click Allow."
+msgstr ""
+
+#: moveresizepermissionstitle
+msgid "Exceptions - Moving or Resizing Windows"
+msgstr ""
+
 #: pw_change2empty_in_fips_mode
 msgid ""
 "You are currently in FIPS mode. FIPS requires a non-empty Master Password."
@@ -4551,13 +4597,26 @@ msgstr "Comhad %S"
 msgid "Save File"
 msgstr "Sábháil an Comhad"
 
-#: chooseApp
-msgid "Choose application…"
-msgstr "Roghnaigh feidhmchlár…"
+# LOCALIZATION NOTE (useApp, useDefault): %S = Application name
+#: useApp
+msgid "Use %S"
+msgstr ""
+
+#: useDefault
+msgid "Use %S (default)"
+msgstr ""
+
+#: useOtherApp
+msgid "Use other…"
+msgstr ""
 
 #: fpTitleChooseApp
 msgid "Select Helper Application"
 msgstr "Roghnaigh Feidhmchlár Cabhrach"
+
+#: manageApp
+msgid "Application Details…"
+msgstr ""
 
 #: webFeed
 msgid "Web Feed"
@@ -4575,21 +4634,21 @@ msgstr "Podchraoladh"
 msgid "Always ask"
 msgstr "Fiafraigh díom i gcónaí"
 
-# LOCALIZATION NOTE (pluginName):
+# LOCALIZATION NOTE (usePluginIn):
 # %1$S = plugin name (for example "QuickTime Plugin-in 7.2")
 # %2$S = brandShortName from brand.properties (for example "Minefield")
-#: pluginName
-msgid "%S (in %S)"
-msgstr "%S (i %S)"
+#: usePluginIn
+msgid "Use %S (in %S)"
+msgstr ""
 
 # LOCALIZATION NOTE (previewInApp, liveBookmarksInApp): %S = brandShortName
 #: previewInApp
 msgid "Preview in %S"
 msgstr "Réamhamharc i %S"
 
-#: liveBookmarksInApp
-msgid "Live Bookmarks in %S"
-msgstr "Leabharmharcanna Beo i %S"
+#: addLiveBookmarksInApp
+msgid "Add Live Bookmarks in %S"
+msgstr ""
 
 #: domainColon
 msgid "Domain:"
@@ -4626,13 +4685,15 @@ msgstr "Bain Fianán"
 # ### Offline apps
 #: offlineAppRemoveTitle
 msgid "Remove offline website data"
-msgstr ""
+msgstr "Bain sonraí le haghaidh suíomhanna Gréasáin as líne"
 
 #: offlineAppRemovePrompt
 msgid ""
 "After removing this data, %S will not be available offline.  Are you sure you "
 "want to remove this offline website?"
 msgstr ""
+"Tar éis duit an sonraí seo a bhaint, ní bheidh %S ar fáil as líne. An bhfuil "
+"tú cinnte gur mian leat an suíomh Gréasáin as líne seo a bhaint?"
 
 # LOCALIZATION NOTE:
 # The entities rememberDaysBefore.label and rememberDaysAfter.label appear on a single
@@ -5187,7 +5248,7 @@ msgstr "T&aisce"
 
 #: itemOfflineApps.label itemOfflineApps.accesskey
 msgid "&Offline Website Data"
-msgstr ""
+msgstr "S&onraí Shuíomhanna Gréasáin As Líne"
 
 #: itemDownloads.label itemDownloads.accesskey
 msgid "&Download History"
@@ -7744,7 +7805,7 @@ msgstr "Cóipeáil Sonraí go dtí an Ghearrthaisce"
 msgid "Log install process"
 msgstr "Logáil an próiseas suiteála"
 
-#: Title updateWizard.title restartLaterTitle resumePausedAfterCloseTitle
+#: Title updateWizard.title resumePausedAfterCloseTitle
 msgid "Software Update"
 msgstr "Nuashonrú Bogearraí"
 
@@ -10004,14 +10065,20 @@ msgstr "An &fráma roghnaithe"
 msgid "&Each frame separately"
 msgstr "&Gach fráma go scartha"
 
-#: EnterUserPasswordForRealm
-msgid "Enter username and password for \"%1$S\" at %2$S"
-msgstr "Iontráil ainm úsáideora agus focal faire do \"%1$S\" ag %2$S"
-
-#: EnterUserPasswordForProxy
-msgid "Enter username and password for proxy \"%1$S\" at %2$S"
+# LOCALIZATION NOTE (EnterLoginForRealm, EnterLoginForProxy):
+# %1 is an untrusted string provided by a remote server. It could try to
+# take advantage of sentence structure in order to mislead the user (see
+# bug 244273). %1 should be integrated into the translated sentences as
+# little as possible. %2 is the url of the site being accessed.
+#: EnterLoginForRealm
+msgid ""
+"A username and password are being requested by %2$S. The site says: \"%1$S\""
 msgstr ""
-"Iontráil ainm úsáideora agus focal faire don seachfhreastalaí \"%1$S\" ag %2$S"
+
+#: EnterLoginForProxy
+msgid ""
+"The proxy %2$S is requesting a username and password. The site says: \"%1$S\""
+msgstr ""
 
 #: EnterUserPasswordFor
 msgid "Enter username and password for %1$S"
@@ -10963,6 +11030,11 @@ msgstr "&Colúin…"
 #: cmdInsertNode.label
 msgid "Insert…"
 msgstr "Ionsáigh…"
+
+# the "deleteCmd.label" is a keycap and should be "Delete", others ok?
+#: cmdDeleteNode.label deleteSelectedRules.label
+msgid "Delete"
+msgstr "Scrios"
 
 #: cmdCopyXML.label cmdCopyXML.accesskey
 msgid "Copy &XML"
@@ -11981,7 +12053,8 @@ msgstr "Fíordheimhniú de dhíth"
 msgid "Password Required"
 msgstr "Focal faire de dhíth"
 
-#: OK okButton.label button-accept Ok OK_LABEL crlAutoupdateOk
+#: OK okButton.label button-accept emptySearch.button searchFailed.button Ok
+#: OK_LABEL crlAutoupdateOk
 msgid "OK"
 msgstr "OK"
 
@@ -12006,22 +12079,23 @@ msgid "about:config"
 msgstr "about:config"
 
 # about:config warning page
-#: configWarningTitle.label
-msgid "Be careful, this page is loaded!"
-msgstr "Bí cúramach, tá an leathanach seo lódáilte!"
+# LOCALIZATION NOTE: aboutWarningTitle.label should be attention grabbing and playful
+#: aboutWarningTitle.label
+msgid "This might void your warranty!"
+msgstr ""
 
-#: configWarningText.label
+#: aboutWarningText.label
 msgid ""
-"Changing the values of these advanced settings can be harmful to the "
+"Changing the default values of these advanced settings can be harmful to the "
 "stability, security, and performance of this application. You should only "
 "continue if you are sure of what you are doing."
 msgstr ""
 
-#: configWarningButton.label
+#: aboutWarningButton.label
 msgid "I'll be careful, I promise!"
 msgstr "Geallaim go mbeidh mé cúramach!"
 
-#: configWarningCheckbox.label
+#: aboutWarningCheckbox.label
 msgid "Show this warning next time"
 msgstr "Taispeáin an rabhadh seo an chéad uair eile"
 
@@ -12634,15 +12708,15 @@ msgstr "(Cásíogair)"
 
 #: FoundMatchCount
 msgid "%S match"
-msgstr ""
+msgstr "%S meatseáil"
 
 #: FoundMatchesCount
 msgid "%S matches"
-msgstr ""
+msgstr "%S meatseáil"
 
 #: FoundTooManyMatches
 msgid "More than %S matches"
-msgstr ""
+msgstr "Níos mó ná %S meatseáil"
 
 # see also with "this" and with &
 #: findDialog.title
@@ -12686,7 +12760,7 @@ msgstr "Gach fráma ar _leathanach ar leith"
 
 #: shrinkToFit
 msgid "Ignore Scaling and S_hrink To Fit Page Width"
-msgstr ""
+msgstr "Ná bac le scálú agus crap go leithead an leathanaigh"
 
 #: selectionOnly
 msgid "Print Selection _Only"
@@ -15907,7 +15981,7 @@ msgstr "Oscail an &Fillteán Coinneála"
 
 #: cmd.showMac.label cmd.showMac.accesskey
 msgid "Show in &Finder"
-msgstr ""
+msgstr "Taispeáin sa Finder"
 
 #: cmd.openWith.label cmd.openWith.accesskey
 msgid "Open Wit&h…"
@@ -16677,7 +16751,7 @@ msgstr "Brabhsáil na breiseáin go léir"
 
 #: searchFailed.label
 msgid "&brandShortName; couldn't retrieve add-ons"
-msgstr ""
+msgstr "Níorbh fhéidir le &brandShortName; breiseáin a fháil"
 
 #: recommendedHeader.label
 msgid "Recommended"
@@ -16685,23 +16759,27 @@ msgstr "Molta"
 
 #: recommendedThrobber.label
 msgid "Retrieving recommended add-ons"
-msgstr ""
+msgstr "Breiseáin mholta á bhfáil"
 
 #: searchThrobber.label
 msgid "Searching add-ons"
-msgstr ""
+msgstr "Breiseáin á gcuardach"
 
 #: resetSearch.label
 msgid "Clear Results"
 msgstr "Bánaigh na Torthaí"
 
-#: searchEmpty.label
-msgid "No Matching Add-ons"
-msgstr "Níor Aimsíodh Breiseáin Chomhoiriúnacha"
+#: noSearchResults.label
+msgid "All results are already installed or incompatible."
+msgstr ""
 
-#: searchEmpty.button
-msgid "Ok"
-msgstr "OK"
+#: noRecommendedResults.label
+msgid "All recommendations are already installed or incompatible."
+msgstr ""
+
+#: emptySearch.label
+msgid "No matching add-ons"
+msgstr ""
 
 #: searchResultHomepage.value
 msgid "Learn More"
@@ -16709,7 +16787,7 @@ msgstr "Faigh Tuilleadh Eolais"
 
 #: recommendedResults.label
 msgid "See All Recommended Add-ons"
-msgstr ""
+msgstr "Taispeáin Gach Breiseán Molta"
 
 #: searchResultFailed.label statusFailed
 msgid "Install Failed"
@@ -16947,18 +17025,6 @@ msgstr ""
 "&id=%ITEM_ID%&version=%ITEM_VERSION%&maxAppVersion=%ITEM_MAXAPPVERSION%"
 "&status=%ITEM_STATUS%&appID=%APP_ID%&appVersion=%APP_VERSION%&appOS=%APP_OS%"
 "&appABI=%APP_ABI%&locale=%APP_LOCALE%"
-
-#: statusFormatKBKB progressFormatKBKB
-msgid "#1 of #2 KB"
-msgstr "#1 as #2 KB"
-
-#: statusFormatKBMB progressFormatKBMB
-msgid "#1 KB of #2 MB"
-msgstr "#1 KB as #2 MB"
-
-#: statusFormatMBMB progressFormatMBMB
-msgid "#1 of #2 MB"
-msgstr "#1 as #2 MB"
 
 #: type-32
 msgid "Multiple Extension Package"
@@ -17207,13 +17273,15 @@ msgstr "Tá nuashonruithe nua le fáil le haghaidh do chuid bhreiseán."
 
 #: searchResults
 msgid "See all results (%S)"
-msgstr ""
+msgstr "Taispeáin gach toradh (%S)"
 
 #: eulaHeader
 msgid ""
 "%S requires that you accept the following End User License Agreement before "
 "installation can proceed:"
 msgstr ""
+"Tá %S ag éileamh go nglacfaidh tú leis an gComhaontas Ceadúnais Úsáideora "
+"sular féidir leanúint leis an tsuiteáil:"
 
 #: updateWizard.title
 msgid "&brandShortName; Update"
@@ -18364,6 +18432,18 @@ msgstr "Nuashonrú Le Fáil"
 msgid "New Version Available"
 msgstr "Leagan Nua Le Fáil"
 
+#: progressFormatKBKB
+msgid "#1 of #2 KB"
+msgstr "#1 as #2 KB"
+
+#: progressFormatKBMB
+msgid "#1 KB of #2 MB"
+msgstr "#1 KB as #2 MB"
+
+#: progressFormatMBMB
+msgid "#1 of #2 MB"
+msgstr "#1 as #2 MB"
+
 #: progressFormatUnknownKB
 msgid "#1 KB"
 msgstr "#1 KB"
@@ -18429,13 +18509,13 @@ msgstr "Íosluchtaigh agus Suiteáil Anois >>"
 msgid "Get the new version »"
 msgstr "Faigh an leagan nua >>"
 
+#: notNowButton
+msgid "Not Now"
+msgstr ""
+
 #: neverButton
 msgid "Never"
 msgstr "Riamh"
-
-#: restartLaterMsg
-msgid "The update will be installed the next time %S starts."
-msgstr "Suiteálfar an nuashonrú an chéad uair eile a thosóidh tú %S."
 
 #: resumePausedAfterCloseMessage
 msgid ""
@@ -18738,6 +18818,7 @@ msgstr "An mian leat an focal faire atá stóráilte le haghaidh %S a athrú?"
 #: passwordChangeTextNoUser
 msgid "Would you like to change the stored password for this login?"
 msgstr ""
+"An mian leat focal faire stóráilte an aitheantais logála isteach seo a athrú?"
 
 #: notifyBarChangeButtonText
 msgid "Change"
@@ -18786,7 +18867,7 @@ msgstr "Leabharmharcanna Neamhchomhdaithe"
 
 #: crashes.title
 msgid "Submitted Crash Reports"
-msgstr ""
+msgstr "Tuarascálacha Cliste a Seoladh"
 
 #: id.heading
 msgid "Report ID"
@@ -18798,13 +18879,15 @@ msgstr "Dáta a Seoladh"
 
 #: noReports.label
 msgid "No crash reports have been submitted."
-msgstr ""
+msgstr "Níor seoladh tuarascáil chliste ar bith."
 
 #: noConfig.label
 msgid ""
 "This application has not been configured to display crash reports. The "
 "preference <code>breakpad.reportURL</code> must be set."
 msgstr ""
+"Níl an feidhmchlár seo cumraithe le tuarascálach cliste a thaispeáint. "
+"Caithfear an rogha <code>breakpad.reportURL</code> a shocrú."
 
 #: clearReports.label
 msgid "Remove Reports"
@@ -18816,7 +18899,7 @@ msgstr "An bhfuil tú cinnte?"
 
 #: deleteconfirm.description
 msgid "This will delete all reports and cannot be undone"
-msgstr ""
+msgstr "Scriosfaidh seo gach tuarascáil agus ní féidir é a chealú."
 
 # converted from pseudo-properties .it file
 # This file is in the UTF-8 encoding
@@ -18881,11 +18964,13 @@ msgstr ""
 
 #: ViewReportTitle
 msgid "Report Contents"
-msgstr ""
+msgstr "Inneachar na Tuarascála"
 
 #: CommentGrayText
 msgid "Add a comment.  Note: Comments are publicly visible"
 msgstr ""
+"Cuir nóta tráchta leis. Tabhair faoi deara go bhfuil nótaí tráchta infheicthe "
+"go poiblí."
 
 #: ExtraReportInfo
 msgid ""
@@ -18898,11 +18983,11 @@ msgstr ""
 # LOCALIZATION NOTE (CheckSendReport): The %s is replaced with the vendor name.
 #: CheckSendReport
 msgid "Tell %s about this crash so they can fix it"
-msgstr ""
+msgstr "Inis do %s faoin gcliseadh seo ionas go mbeidh siad in ann é a réiteach"
 
 #: CheckIncludeURL
 msgid "Include the address of the page I was on"
-msgstr ""
+msgstr "Cuir seoladh an leathanaigh ar a raibh mé san áireamh"
 
 #: CheckSendEmail
 msgid "Email me when more information is available"
@@ -18914,11 +18999,11 @@ msgstr "Cuir isteach do sheoladh ríomhphoist anseo"
 
 #: ReportPreSubmit
 msgid "Your crash report will be submitted when you restart."
-msgstr ""
+msgstr "Seolfar do thuarascáil chliste nuair a atosóidh tú an ríomhaire."
 
 #: ReportDuringSubmit
 msgid "Submitting your report and restarting…"
-msgstr ""
+msgstr "Tá do thuarascáil á seoladh agus an ríomhaire á atosú…"
 
 #: ReportSubmitSuccess
 msgid "Report submitted successfully!"
@@ -18926,15 +19011,15 @@ msgstr "Seoladh an tuairisc gan fadhb."
 
 #: ReportSubmitFailed
 msgid "There was a problem submitting your report."
-msgstr ""
+msgstr "Bhí fadhb ann agus do thuarascáil á seoladh."
 
 #: ReportResubmit
 msgid "Resending reports that previously failed to send…"
-msgstr ""
+msgstr "Ag athsheoladh na tuarascálacha a theip ar a seoladh roimhe seo…"
 
 #: Quit
 msgid "Quit without sending"
-msgstr ""
+msgstr "Scoir gan seoladh"
 
 # LOCALIZATION NOTE (Restart): The %s is replaced with the product name.
 #: Restart
@@ -18999,6 +19084,9 @@ msgid ""
 "longer being accepted for this version. Please consider upgrading to a "
 "supported version."
 msgstr ""
+"Ní thacaítear a thuilleadh leis an leagan de %s atá in úsáid agat. Ní "
+"ghlactar le tuarascálacha cliste faoin leagan seo. Smaoinigh faoi uasghrádú a "
+"dhéanamh go leagan a thacaítear leis."
 
 # converted from #defines file
 #: MOZ_LANG_TITLE
@@ -22201,7 +22289,7 @@ msgstr "Níl an teastas bailí ach do na hainmneacha seo a leanas:"
 
 #: certErrorMismatchNoNames
 msgid "The certificate is not valid for any server names."
-msgstr ""
+msgstr "Níl an teastas seo bailí le haghaidh ainm freastalaí ar bith."
 
 #: certErrorExpired
 msgid "The certificate expired on %S."
@@ -22756,10 +22844,6 @@ msgstr "Le síothlú"
 #: certmgr.view2.label certmgr.view2.accesskey
 msgid "&View…"
 msgstr "&Amharc…"
-
-#: certmgr.edit2.label certmgr.edit2.accesskey
-msgid "&Edit…"
-msgstr "&Eagar…"
 
 #: certmgr.editca.label certmgr.editca.accesskey
 msgid "E&dit CA Trust"
@@ -24109,3 +24193,4 @@ msgid "When an OCSP server connection fails, treat the certificate as invalid"
 msgstr ""
 "Nuair a theipeann ar cheangal le freastalaí OCSP, meas go bhfuil an teastas "
 "neamhbhailí"
+
