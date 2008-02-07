@@ -10,7 +10,7 @@ sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/
 sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
 
 # weird bug - see email from Axel with subject "hard to find bug"
-sed -i '/securityOverride.warningText/s/>$//' browser-ga-IE/chrome/overrides/netError.dtd
+sed -i '/securityOverride.warningText/s/">$//' browser-ga-IE/chrome/overrides/netError.dtd
 
 # commandkey problems - don't want any translated - routine now is
 # to leave single letters untranslated in PO and then fix the accesskeys
@@ -18,6 +18,7 @@ sed -i '/securityOverride.warningText/s/>$//' browser-ga-IE/chrome/overrides/net
 sed -i 's/^hideButton.accesskey.*/hideButton.accesskey=F/' toolkit-ga-IE/chrome/mozapps/update/updates.properties
 sed -i 's/certs.ask.accesskey "."/certs.ask.accesskey "d"/; s/certs.auto.accesskey "."/certs.auto.accesskey "u"/' browser-ga-IE/chrome/browser/preferences/advanced.dtd
 sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/' browser-ga-IE/chrome/browser/browser.dtd
+sed -i '/^example.com/s/^/<!-- /' browser-ga-IE/chrome/browser/browser.dtd
 sed -i 's/selectAllCmd.key "."/selectAllCmd.key "A"/' toolkit-ga-IE/chrome/global/editMenuOverlay.dtd
 sed -i '
 s/printCmd.commandkey "."/printCmd.commandkey "P"/
