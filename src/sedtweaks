@@ -4,6 +4,10 @@ echo "Applying sed tweaks..."
 sed -i '/^VK_ALT=/s/.*/VK_ALT=\\u0007/' toolkit-ga-IE/chrome/global-platform/mac/platformKeys.properties
 sed -i '/^monthDate/s/.*/monthDate=#2 #1/' toolkit-ga-IE/chrome/mozapps/downloads/downloads.properties
 
+sed -i 's/credit.contributors2 "contributors"/credit.contributors2 "gcuiditheoirí"/' browser-ga-IE/chrome/browser/credits.dtd
+
+sed -i '/^notifyBarNotNowButtonText/s/=.*$/=Ná Meabhraigh anois/; /^notifyBarChangeButtonAccessKey/s/=.$/=A/; /^notifyBarDontChangeButtonAccessKey/s/=.$/=N/' toolkit-ga-IE/chrome/passwordmgr/passwordmgr.properties
+
 # WINDOW SIZES!
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "50em">/' browser-ga-IE/chrome/browser/preferences/connection.dtd
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/preferences/fonts.dtd
