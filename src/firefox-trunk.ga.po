@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-07 15:38-0600\n"
+"POT-Creation-Date: 2008-02-19 21:38-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -525,6 +525,7 @@ msgstr "Fuinneog &Nua"
 # see also lowercase for "Navigator" command
 #: newNavigatorCmd.key defaultGroupOffAccesskey livemarkGroupOffAccesskey
 #: view.sortBy.name.accesskey nextButtonTextAccesskey neverButton.accesskey
+#: notifyBarNotNowButtonAccessKey
 msgid "N"
 msgstr "N"
 
@@ -1391,25 +1392,10 @@ msgstr "Buíochas ar leith le"
 msgid "Many thanks to our"
 msgstr "Táimid an-bhuíoch dár"
 
-#: credit.prethanks
-msgid "_: credit.prethanks\n"
-msgstr ""
-
-#: credit.friends
-msgid "Friends"
-msgstr "gCairde"
-
-#: credit.and
-msgid "&amp;"
-msgstr "&amp;"
-
-#: credit.contributors
-msgid "Contributors"
-msgstr "dár gCuiditheoirí"
-
-#: credit.postthanks
-msgid "_: credit.postthanks\n"
-msgstr ""
+# leave alone --KPS
+#: credit.contributors2 about.copy.linkTitle license.contrib
+msgid "contributors"
+msgstr "contributors"
 
 # localization credits look like this:
 #
@@ -1877,7 +1863,7 @@ msgstr "%Spx × %Spx"
 
 #: imageDimensionsScaled mediaDimensionsScaled
 msgid "%Spx × %Spx (scaled × %Spx × %Spx)"
-msgstr "%S picteilín × %S picteilín (scálaithe × %S pct × %S pct)"
+msgstr "%Spx × %Spx (scálaithe × %Spx × %Spx)"
 
 # LOCALIZATION NOTE: Next two strings are for language name representations
 # %1$S = language name, %2$S = region name
@@ -3309,9 +3295,9 @@ msgstr "Sórtáil de réir Clibeanna"
 msgid "T"
 msgstr "T"
 
-#: searchByDefault
-msgid "Search in Bookmarks"
-msgstr "Cuardaigh i Leabharmharcanna"
+#: searchBookmarks
+msgid "Search Bookmarks"
+msgstr "Cuardaigh Leabharmharcanna"
 
 #: searchCurrentDefault
 msgid "Search in '%S'"
@@ -4770,25 +4756,6 @@ msgstr ""
 #: tellMaybeForgery.label tellMaybeForgery.accesskey
 msgid "&Tell me if the site I'm visiting is a suspected forgery"
 msgstr "&Inis dom má tá an suíomh ar a bhfuil mé ag amharc ina chamscéim"
-
-#: useDownloadedList.label useDownloadedList.accesskey
-msgid "Check using a &downloaded list of suspected sites"
-msgstr "&Seiceáil le liosta íosluchtaithe de shuíomhanna a bhfuil amhras orthu"
-
-# The entities askThirdParty.label and askThirdPartyAfter.label appear on a
-# single line in preferences as follows:
-#
-# &askThirdParty.label  [ menulist of phishing list providers ]   &askThirdPartyAfter.label;
-#
-#: askThirdParty.label askThirdParty.accesskey
-msgid ""
-"_: \n"
-"Check by &asking"
-msgstr "De&arbhaigh trí mo chead a iarraidh"
-
-#: askThirdPartyAfter.label
-msgid "about each site I visit"
-msgstr "maidir le gach suíomh ar a dtugaim cuairt"
 
 #: passwords.label
 msgid "Passwords"
@@ -8442,6 +8409,14 @@ msgstr ""
 "Teagmhas=%S, ní mholtar úsáid preventCapture(). Úsáid stopPropagation() "
 "caighdeánaithe ag an W3C ina aít."
 
+#: UseOfGetBoxObjectForWarning
+msgid ""
+"Use of getBoxObjectFor() is deprecated. Try to use element."
+"getBoundingClientRect() if possible."
+msgstr ""
+"Tá getBoxObjectFor() i léig. Bain úsáid as element.getBoundingClientRect() "
+"más féidir."
+
 #: UnexpectedCanvasVariantStyle
 msgid ""
 "canvas: an attempt to set strokeStyle or fillStyle to a value that is neither "
@@ -11954,11 +11929,6 @@ msgstr "Ba mhaith leis an suíomh %S fianán atá ann cheana a athrú."
 msgid "Copyright &copy; 1998-2008 by"
 msgstr "Copyright &copy; 1998-2008 by"
 
-# leave alone --KPS
-#: about.copy.linkTitle license.contrib
-msgid "contributors"
-msgstr "contributors"
-
 #: about.copy.afterLink
 msgid "to the Mozilla Project."
 msgstr "to the Mozilla Project."
@@ -12147,13 +12117,10 @@ msgstr "Fainic!  Seans go gcuirfidh tú do bharánta ar neamhní!"
 
 #: aboutWarningText.label
 msgid ""
-"Changing the default values of these advanced settings can be harmful to the "
-"stability, security, and performance of this application. You should only "
-"continue if you are sure of what you are doing."
+"Changing these advanced settings can be harmful to the stability, security, "
+"and performance of this application. You should only continue if you are sure "
+"of what you are doing."
 msgstr ""
-"D'fhéadfadh athrú sna hardroghanna seo dochar a dhéanamh do chobhsaíocht, "
-"shlándáil agus fheidhmíocht an fheidhmchláir seo. Ná lean ar aghaidh muna "
-"bhfuil tú lánchinnte faoi cad tá á dhéanamh agat."
 
 #: aboutWarningButton.label
 msgid "I'll be careful, I promise!"
@@ -16333,14 +16300,6 @@ msgstr ""
 msgid "Open With…"
 msgstr "Oscail Le…"
 
-#: downloadsTitle
-msgid "%S%% of 1 file - Downloads"
-msgstr "%S%% as 1 comhad - Íosluchtú"
-
-#: downloadsTitleMultiple
-msgid "%S%% of %S files - Downloads"
-msgstr "%S%% as %S comhad - Íosluchtú"
-
 # LOCALIZATION NOTE (downloadsTitleFiles, downloadsTitlePercent): Semi-colon list of
 # plural forms. See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
 # #1 number of files; #2 overall download percent (only for downloadsTitlePercent)
@@ -18431,18 +18390,22 @@ msgid "Update:"
 msgstr "Nuashonrú:"
 
 #: finishedBackground.more1
-msgid "Click Restart &brandShortName; Now to install the update now."
+msgid ""
+"_: This string describes the button label defined by restartButton in updates."
+"properties.\n"
+"Click Restart &brandShortName; Now to install the update now."
 msgstr ""
 "Cliceáil Atosaigh &brandShortName; Anois chun an nuashonrú a shuiteáil anois."
 
-#: finishedBackground.more2
+#: finishedBackground.textNotNow
 msgid ""
-"Click Later to close this dialog and continue working. &brandShortName; will "
-"install the update the next time it starts."
+"_: This string describes the button label defined by notNowButton in updates."
+"properties.\n"
+"Click Not Now to close this dialog and continue working. &brandShortName; "
+"will install the update the next time it starts."
 msgstr ""
-"Chun an bosca comhrá seo a dhúnadh agus leanúint den obair, cliceáil \"Níos "
-"Déanaí\"; déanfaidh &brandShortName; an nuashonrú a shuiteáil nuair a "
-"úsáidfear arís é."
+"Chun an dialóg seo a dhúnadh agus leanúint den obair, cliceáil 'Níos Déanaí'; "
+"déanfaidh &brandShortName; an nuashonrú a shuiteáil nuair a úsáidfear arís é."
 
 #: installed.title
 msgid "Update Installed"
@@ -18593,7 +18556,7 @@ msgstr "Íosluchtaigh agus Suiteáil Anois >>"
 msgid "Get the new version »"
 msgstr "Faigh an leagan nua >>"
 
-#: notNowButton
+#: notNowButton notifyBarNotNowButtonText
 msgid "Not Now"
 msgstr "Níos Déanaí"
 
@@ -18994,8 +18957,8 @@ msgid "Are you sure?"
 msgstr "An bhfuil tú cinnte?"
 
 #: deleteconfirm.description
-msgid "This will delete all reports and cannot be undone"
-msgstr "Scriosfaidh seo gach tuarascáil agus ní féidir é a chealú."
+msgid "This will delete all reports and cannot be undone."
+msgstr ""
 
 # converted from pseudo-properties .it file
 # This file is in the UTF-8 encoding
