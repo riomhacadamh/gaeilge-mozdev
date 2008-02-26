@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-20 09:49-0600\n"
+"POT-Creation-Date: 2008-02-22 07:26-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -58,6 +58,64 @@ msgstr ""
 "&#169;1998-2008 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
 "trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
 "Firefox. Gach ceart ar cosaint."
+
+# These strings are used in the about:robots page, which ties in with the
+# robots theme used in the Firefox 3 Beta 2/3 first run pages...
+# https://www.mozilla.com/en-US/firefox/3.0b2/firstrun/
+# https://www.mozilla.com/en-US/firefox/3.0b3/firstrun/
+# They're just meant to be fun and whimsical, with references to some geeky
+# but well-known robots in movies and books. Be creative with translations!
+# Nonsense line from the movie "The Day The Earth Stood Still". No translation needed.
+#: robots.pagetitle
+msgid "Gort! Klaatu barada nikto!"
+msgstr "Gort! Klaatu barada nikto!"
+
+# Movie: Logan's Run... Box (cybog): "Welcome Humans! I am ready for you."
+#: robots.errorTitleText
+msgid "Welcome Humans!"
+msgstr ""
+
+# Movie: The Day The Earth Stood Still. Spoken by Klaatu.
+#: robots.errorShortDescText
+msgid "We have come to visit you in peace and with goodwill!"
+msgstr ""
+
+# Various books by Isaac Asimov. http://en.wikipedia.org/wiki/Three_Laws_of_Robotics
+#: robots.errorLongDesc1
+msgid ""
+"Robots may not injure a human being or, through inaction, allow a human being "
+"to come to harm."
+msgstr ""
+
+# Movie: Blade Runner. Batty: "I've seen things you people wouldn't believe..."
+#: robots.errorLongDesc2
+msgid "Robots have seen things you people wouldn't believe."
+msgstr ""
+
+# Book: Hitchiker's Guide To The Galaxy. What the Sirius Cybernetics Corporation calls robots.
+#: robots.errorLongDesc3
+msgid "Robots are Your Plastic Pal Who's Fun To Be With"
+msgstr ""
+
+# TV: Futurama. Bender's first line is "Bite my shiny metal ass."
+#: robots.errorLongDesc4
+msgid "Robots have shiny metal posteriors which should not be bitten."
+msgstr ""
+
+# TV: Battlestar Galactica (2004 series). From the opening text.
+#: robots.errorTrailerDescText
+msgid "And they have a plan."
+msgstr ""
+
+# TV: Battlestar Galactica (2004 series). Common expletive referring to Cylons.
+#: robots.imgtitle
+msgid "Frakkin' Toasters"
+msgstr ""
+
+# Book: Hitchiker's Guide To The Galaxy. Arthur presses a button and it warns him.
+#: robots.dontpress
+msgid "Please do not press this button again."
+msgstr ""
 
 #: minimizeWindow.key
 msgid "m"
@@ -523,9 +581,9 @@ msgstr "Fuinneog &Nua"
 
 # Ctrl+N is Fuinneog Nua under Main -> Comhad
 # see also lowercase for "Navigator" command
-#: newNavigatorCmd.key defaultGroupOffAccesskey livemarkGroupOffAccesskey
-#: view.sortBy.name.accesskey nextButtonTextAccesskey neverButton.accesskey
-#: notifyBarNotNowButtonAccessKey
+#: newNavigatorCmd.key offlineApps.notNowAccessKey defaultGroupOffAccesskey
+#: livemarkGroupOffAccesskey view.sortBy.name.accesskey nextButtonTextAccesskey
+#: neverButton.accesskey notifyBarNotNowButtonAccessKey
 msgid "N"
 msgstr "N"
 
@@ -664,14 +722,19 @@ msgstr "Taispeáin an Stair Iomlán…"
 msgid "l"
 msgstr "l"
 
+#: urlbar.emptyText
+msgid "Search Bookmarks and History"
+msgstr "Cuardaigh Leabharmharcanna agus Stair"
+
 #: searchFocus.commandkey securityView.privacy.viewCookies.accessKey
 #: focusSearch2.key helpSearch.commandkey
 msgid "k"
 msgstr "k"
 
 #: searchFocus.commandkey2 viewPartialSourceCmd.accesskey
-#: mediaSaveAs2.accesskey view.sortBy.dateAdded.accesskey
-#: sizeMonospace.accesskey notifyBarNeverForSiteButtonAccessKey
+#: offlineApps.neverAccessKey mediaSaveAs2.accesskey
+#: view.sortBy.dateAdded.accesskey sizeMonospace.accesskey
+#: notifyBarNeverForSiteButtonAccessKey
 msgid "e"
 msgstr "l"
 
@@ -1310,10 +1373,33 @@ msgstr "Cruthaigh leabharmharc don leathanach seo"
 # Offline web applications
 #: offlineApps.available
 msgid ""
-"This website (%S) is offering to store data on your computer for offline use."
+"This website (%S) is asking to store data on your computer for offline use."
 msgstr ""
-"Tá an suíomh Gréasáin seo (%S) ag tairiscint duit sonraí a stóráil ar do "
-"ríomhaire le haghaidh úsáide as líne."
+
+#: offlineApps.never notifyBarNeverForSiteButtonText
+msgid "Never for This Site"
+msgstr "Choíche don Suíomh Seo"
+
+#: offlineApps.notNow notNowButton notifyBarNotNowButtonText
+msgid "Not Now"
+msgstr "Níos Déanaí"
+
+#: offlineApps.usage
+msgid ""
+"This website (%S) is now storing more than %SMB of data on your computer for "
+"offline use."
+msgstr ""
+
+#: offlineApps.manageUsage
+msgid "Show settings"
+msgstr "Taispeáin socruithe"
+
+#: offlineApps.manageUsageAccessKey securityTab.accesskey
+#: defaultGroupOnAccesskey cmd_showSuggestions_accesskey saveCmd.key
+#: submitReport.accesskey savePageCmd.commandkey pageInfo.securityTab.accesskey
+#: managedevices.accesskey warn.insecurepost.accesskey
+msgid "S"
+msgstr "S"
 
 #: identity.identified.verifier
 msgid "Verified by: %S"
@@ -1541,7 +1627,7 @@ msgstr "Comhaid mheán"
 
 # # LOCALIZATION NOTE (cityOrStateAndZip):
 # # %1$S is city or state, %2$S is zip
-#: enclosureSizeText
+#: enclosureSizeText offlineAppUsage
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -2365,13 +2451,6 @@ msgstr "Suiteáil Eisínteachtaí nó Téamaí"
 msgid "Security"
 msgstr "Slándáil"
 
-#: securityTab.accesskey defaultGroupOnAccesskey cmd_showSuggestions_accesskey
-#: saveCmd.key submitReport.accesskey savePageCmd.commandkey
-#: pageInfo.securityTab.accesskey managedevices.accesskey
-#: warn.insecurepost.accesskey
-msgid "S"
-msgstr "S"
-
 #: securityHeader pageInfo.securityHeader
 msgid "Security information for this page"
 msgstr "Eolas slándála maidir leis an leathanach seo"
@@ -2715,6 +2794,10 @@ msgstr "Fillteán:"
 #: editBookmarkOverlay.tags.label editBookmarkOverlay.tags.accesskey
 msgid "&Tags:"
 msgstr "&Clibeanna:"
+
+#: editBookmarkOverlay.tagsEmptyText.label
+msgid "Separate tags with commas."
+msgstr "Scar clibeanna le camóga."
 
 #: editBookmarkOverlay.tagsExpanderDown.tooltip
 msgid "Show all tags"
@@ -3190,6 +3273,16 @@ msgstr "(Gan Sonrú)"
 msgid "Bookmarks %S.html"
 msgstr "Leabharmharcanna %S.html"
 
+# #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+# LOCALIZATION NOTE (bookmarksBackupFilename & bookmarksArchiveFilename):
+# %S will be replaced by the current date in ISO 8601 format, YYYY-MM-DD.
+# The resulting string will be suggested as a filename, so make sure that you're
+# only using characters legal for file names. Consider falling back to the
+# en-US value if you have to use non-ascii characters.
+#: bookmarksBackupFilenameJSON bookmarksBackupFilename
+msgid "Bookmarks %S.json"
+msgstr "Leabharmharcanna %S.json"
+
 #: bookmarksBackupTitle
 msgid "Bookmarks backup filename"
 msgstr "Ainm comhaid leabharmharcanna cúltaca"
@@ -3204,6 +3297,14 @@ msgid ""
 msgstr ""
 "Cuirfidh seo na leabharmharcanna cúltaca in áit na leabharmharcanna reatha go "
 "léir. An bhfuil tú cinnte?"
+
+#: bookmarksRestoreAlertTags
+msgid ""
+"This will replace all of your current bookmarks and tags with the backup. Are "
+"you sure?"
+msgstr ""
+"Cuirfidh seo na leabharmharcanna agus clibeanna cúltaca in áit na cinn reatha "
+"go léir. An bhfuil tú cinnte?"
 
 #: bookmarksRestoreTitle
 msgid "Select a bookmarks backup"
@@ -3567,11 +3668,19 @@ msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 msgid "Show U&pdate History"
 msgstr "Tais&peáin Stair na Nuashonruithe"
 
-#: offlineAppsList.label
-msgid "The following websites have data installed for offline use:"
+#: offlineNotify.label offlineNotify.accesskey
+msgid "&Tell me when a website asks to store data for offline use"
 msgstr ""
-"Tá sonraí suiteáilte ag na suíomhanna Gréasáin seo a leanas le haghaidh "
-"úsáide as líne:"
+
+#: offlineNotifyExceptions.label offlineNotifyExceptions.accesskey
+#: exceptions.label exceptions.accesskey passwordExceptions.label
+#: passwordExceptions.accesskey
+msgid "E&xceptions…"
+msgstr "Ei&sceachtaí…"
+
+#: offlineAppsList.label
+msgid "The following websites have stored data for offline use:"
+msgstr ""
 
 #: offlineAppsList.height
 msgid ""
@@ -3827,8 +3936,8 @@ msgid "&Direct connection to the Internet"
 msgstr "Ceangal &díreach leis an Idirlíon"
 
 #: systemTypeRadio.label systemTypeRadio.accesskey
-msgid "Use s&ystem proxy settings"
-msgstr "Úsáid socruithe &seachfhreastalaí an chórais"
+msgid "&Use system proxy settings"
+msgstr "Ú&sáid socruithe seachfhreastalaí an chórais"
 
 #: WPADTypeRadio.label WPADTypeRadio.accesskey
 msgid "Auto-detect proxy settings for this net&work"
@@ -3908,11 +4017,6 @@ msgstr "&Eisceachtaí…"
 #: loadImages.label loadImages.accesskey
 msgid "Load &images automatically"
 msgstr "&Luchtaigh íomhánna go huathoibríoch"
-
-#: exceptions.label exceptions.accesskey passwordExceptions.label
-#: passwordExceptions.accesskey
-msgid "E&xceptions…"
-msgstr "Ei&sceachtaí…"
 
 #: enableJavaScript.label enableJavaScript.accesskey
 msgid "Enable &JavaScript"
@@ -4668,6 +4772,14 @@ msgid ""
 msgstr ""
 "Tar éis duit an sonraí seo a bhaint, ní bheidh %S ar fáil as líne. An bhfuil "
 "tú cinnte gur mian leat an suíomh Gréasáin as líne seo a bhaint?"
+
+#: offlinepermissionstext
+msgid "The following websites are not allowed to store data for offline use:"
+msgstr ""
+
+#: offlinepermissionstitle
+msgid "Offline Data"
+msgstr "Sonraí As Líne"
 
 # LOCALIZATION NOTE:
 # The entities rememberDaysBefore.label and rememberDaysAfter.label appear on a single
@@ -10046,11 +10158,15 @@ msgstr "&Gach fráma go scartha"
 msgid ""
 "A username and password are being requested by %2$S. The site says: \"%1$S\""
 msgstr ""
+"Tá %2$S ag iarraidh ainm úsáideora agus focail fhaire. Deir an suíomh: \"%1$S"
+"\""
 
 #: EnterLoginForProxy
 msgid ""
 "The proxy %2$S is requesting a username and password. The site says: \"%1$S\""
 msgstr ""
+"Tá an seachfhreastalaí %2$S ag iarraidh ainm úsáideora agus focail fhaire. "
+"Deir an suíomh: \"%1$S\""
 
 #: EnterUserPasswordFor
 msgid "Enter username and password for %1$S"
@@ -10798,7 +10914,7 @@ msgstr "Ainm Gnímh:"
 
 #: descBounds.label
 msgid "Bounds:"
-msgstr ""
+msgstr "Cuimsí:"
 
 #: accBoundsX
 msgid "x: $S;"
@@ -10923,6 +11039,9 @@ msgid ""
 "&Input Area (use 'accessible' variable to operate with the selected "
 "accessible and 'output' function to write into 'Output Area' window): "
 msgstr ""
+"Achar &Ionchuir (úsáid an athróg 'accessible' chun oibriú agus an roghnú "
+"inrochtana, agus an fheidhm 'output' chun scríobh san fhuinneog 'Achar "
+"Aschuir'):"
 
 #: txtOutputArea.label txtOutputArea.accesskey
 msgid "&Output Area: "
@@ -16833,11 +16952,11 @@ msgstr "Bánaigh na Torthaí"
 
 #: noSearchResults.label
 msgid "All results are already installed or incompatible."
-msgstr ""
+msgstr "Tá gach toradh suiteáilte cheana féin nó neamh-chomhoiriúnach."
 
 #: noRecommendedResults.label
 msgid "All recommendations are already installed or incompatible."
-msgstr ""
+msgstr "Tá gach moladh suiteáilte cheana féin nó neamh-chomhoiriúnach."
 
 #: emptySearch.label
 msgid "No matching add-ons"
@@ -17076,18 +17195,6 @@ msgstr ""
 msgid "Do you want to disable %S?"
 msgstr "An bhfuil tú ag iarraidh %S a dhíchumasú?"
 
-#: extensions.update.url
-msgid ""
-"https://addons.mozilla.org/update/VersionCheck.php?reqVersion=%REQ_VERSION%"
-"&id=%ITEM_ID%&version=%ITEM_VERSION%&maxAppVersion=%ITEM_MAXAPPVERSION%"
-"&status=%ITEM_STATUS%&appID=%APP_ID%&appVersion=%APP_VERSION%&appOS=%APP_OS%"
-"&appABI=%APP_ABI%&locale=%APP_LOCALE%"
-msgstr ""
-"https://addons.mozilla.org/update/VersionCheck.php?reqVersion=%REQ_VERSION%"
-"&id=%ITEM_ID%&version=%ITEM_VERSION%&maxAppVersion=%ITEM_MAXAPPVERSION%"
-"&status=%ITEM_STATUS%&appID=%APP_ID%&appVersion=%APP_VERSION%&appOS=%APP_OS%"
-"&appABI=%APP_ABI%&locale=%APP_LOCALE%"
-
 #: type-32
 msgid "Multiple Extension Package"
 msgstr "Pacáiste Ileisínteachta"
@@ -17285,6 +17392,10 @@ msgstr "Tá lorg na nuashonruithe do %S críochnaithe"
 #: updateAvailableMsg
 msgid "Version %S is available."
 msgstr "Tá leagan %S ar fáil."
+
+#: newAddonsInstalledMsg
+msgid "%S new add-ons have been installed."
+msgstr ""
 
 #: safeModeMsg
 msgid "All add-ons have been disabled by safe mode."
@@ -18575,10 +18686,6 @@ msgstr "Íosluchtaigh agus Suiteáil Anois >>"
 msgid "Get the new version »"
 msgstr "Faigh an leagan nua >>"
 
-#: notNowButton notifyBarNotNowButtonText
-msgid "Not Now"
-msgstr "Níos Déanaí"
-
 #: neverButton
 msgid "Never"
 msgstr "Riamh"
@@ -18861,10 +18968,6 @@ msgstr "&Ná Meabhraigh anois"
 msgid "Ne&ver for This Site"
 msgstr "C&hoíche don Suíomh Seo"
 
-#: notifyBarNeverForSiteButtonText
-msgid "Never for This Site"
-msgstr "Choíche don Suíomh Seo"
-
 #: rememberButtonText
 msgid "&Remember"
 msgstr "Meabh&raigh"
@@ -18942,6 +19045,14 @@ msgstr "Theip ar luchtú fotha na Leabharmharcanna Beo"
 #: localhost
 msgid "(local files)"
 msgstr "(comhaid logánta)"
+
+#: bookmarksArchiveFilename
+msgid "bookmarks-%S.json"
+msgstr "leabharmharcanna-%S.json"
+
+#: restoreFormatError
+msgid "Unsupported file type."
+msgstr "Ní thacaítear leis an gcineál comhaid."
 
 #: crashes.title
 msgid "Submitted Crash Reports"
@@ -23875,9 +23986,9 @@ msgid "Unknown error"
 msgstr "Earráid anaithnid"
 
 # Add Security Exception dialog
-#: addExceptionBrandedWarning
-msgid "You are about to override how %S identifies sites."
-msgstr "Tá tú ar tí an tslí ina n-aithníonn %S suíomhanna a shárú."
+#: addExceptionBrandedWarning2
+msgid "You are about to override how %S identifies this site."
+msgstr "Tá tú ar tí an tslí ina n-aithníonn %S an suíomh seo a shárú."
 
 #: addExceptionInvalidHeader
 msgid "This site attempts to identity itself with invalid information."
@@ -24275,3 +24386,4 @@ msgid "When an OCSP server connection fails, treat the certificate as invalid"
 msgstr ""
 "Nuair a theipeann ar cheangal le freastalaí OCSP, meas go bhfuil an teastas "
 "neamhbhailí"
+
