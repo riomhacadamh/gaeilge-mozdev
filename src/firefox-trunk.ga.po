@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-10 23:46-0500\n"
+"POT-Creation-Date: 2008-03-22 15:19-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -485,11 +485,6 @@ msgstr "Táscaire Gníomhaíochta"
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
-#: proxyIcon.tooltip
-msgid "Drag and drop this icon to create a link to this page"
-msgstr ""
-"Tarraing agus scaoil an deilbhín seo chun nasc a chruthú don leathanach seo"
-
 # Toolbar items
 #: homeButton.label historyHomeCmd.label VK_HOME
 msgid "Home"
@@ -922,8 +917,8 @@ msgstr "Súmáil &Amach"
 msgid "-"
 msgstr "-"
 
-#: fullZoomResetCmd.commandkey gecko.handlerService.defaultHandlersVersion
-#: UNINST_CHARSET firstdayofweek.default textReset.commandkey CHARSET
+#: fullZoomResetCmd.commandkey UNINST_CHARSET firstdayofweek.default
+#: textReset.commandkey CHARSET
 msgid "0"
 msgstr "0"
 
@@ -1432,7 +1427,7 @@ msgstr "Níl do cheangal leis an suíomh Gréasáin seo criptithe."
 
 #: identity.ownerUnknown2
 msgid "(unknown)"
-msgstr ""
+msgstr "(anaithnid)"
 
 # Downloads Monitor Panel
 # LOCALIZATION NOTE (activeDownloads, pausedDownloads): Semi-colon list of plural
@@ -3803,11 +3798,6 @@ msgstr "Ceadaigh scripteanna chun:"
 msgid "&Move or resize existing windows"
 msgstr "&Fuinneoga reatha a aistriú nó a méid a athrú"
 
-#: moveResizeNotAllowed.label
-msgid "Scripts may not move or resize existing windows"
-msgstr ""
-"Ní cheadaítear do scripteanna fuinneoga reatha a aistriú nó a méid a athrú"
-
 #: raiseLowerWindows.label raiseLowerWindows.accesskey
 msgid "&Raise or lower windows"
 msgstr "Fuinneoga a a&rdú nó a ísliú"
@@ -3936,7 +3926,7 @@ msgid "Configure Proxies to Access the Internet"
 msgstr "Cumraigh Seachfhreastalaí Rochtana Idirlín"
 
 #: noProxyTypeRadio.label noProxyTypeRadio.accesskey
-msgid "No pro&xy"
+msgid "No prox&y"
 msgstr "Gan &seachfhreastalaí"
 
 #: systemTypeRadio.label systemTypeRadio.accesskey
@@ -3968,8 +3958,8 @@ msgid "&Gopher Proxy:"
 msgstr "Seachfhreastalaí &Gopher:"
 
 #: http.label http.accesskey
-msgid "HTTP Prox&y:"
-msgstr "&Seachfhreastalaí HTTP:"
+msgid "&HTTP Proxy:"
+msgstr "Seachfhreastalaí &HTTP:"
 
 #: ssl.label ssl.accesskey
 msgid "&SSL Proxy:"
@@ -4627,19 +4617,6 @@ msgstr "Iontráil óstainm bailí, le do thoil"
 msgid "Invalid Hostname Entered"
 msgstr "Óstainm neamhbhailí"
 
-#: moveresizepermissionstext
-msgid ""
-"You can specify which web sites are allowed to move or resize windows. Type "
-"the exact address of the site you want to permit and then click Allow."
-msgstr ""
-"Is féidir na suíomhanna a bhfuil cead acu fuinneoga a aistriú nó a méid a "
-"athrú a shonrú. Clóscríobh seoladh cruinn an tsuímh a theastaíonn uait a "
-"cheadú agus ansin cliceáil Ceadaigh."
-
-#: moveresizepermissionstitle
-msgid "Exceptions - Moving or Resizing Windows"
-msgstr "Eisceachtaí - Fuinneoga a Aistriú nó a Méid a Athrú"
-
 #: pw_change2empty_in_fips_mode
 msgid ""
 "You are currently in FIPS mode. FIPS requires a non-empty Master Password."
@@ -5068,6 +5045,12 @@ msgid ""
 msgstr ""
 "http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
 
+# see http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# don't change if you don't know what you're doing!
+#: gecko.handlerService.defaultHandlersVersion pluralRule
+msgid "1"
+msgstr "11"
+
 # The default set of protocol handlers for webcal
 #: gecko.handlerService.schemes.webcal.0.name
 msgid "30 Boxes"
@@ -5077,9 +5060,18 @@ msgstr "30 Boxes"
 msgid "http://30boxes.com/external/widget?refer=ff&url=%s"
 msgstr "http://30boxes.com/external/widget?refer=ff&url=%s"
 
+# The default set of protocol handlers for mailto:
+#: gecko.handlerService.schemes.mailto.0.name
+msgid "Yahoo! Mail"
+msgstr "Ríomhphost Yahoo!"
+
+#: gecko.handlerService.schemes.mailto.0.uriTemplate
+msgid "http://compose.mail.yahoo.com/?To=%s"
+msgstr "http://compose.mail.yahoo.com/?To=%s"
+
 #: malware.title2 safeb.blocked.malware.title
 msgid "Reported Attack Site!"
-msgstr ""
+msgstr "Tuairiscíodh gur Suíomh Ionsaithe é seo!"
 
 #: malware.shortDesc
 msgid ""
@@ -5099,13 +5091,15 @@ msgstr ""
 
 #: phishing.title2 safeb.blocked.phishing.title
 msgid "Reported Web Forgery!"
-msgstr ""
+msgstr "Tuairiscíodh gur Falsaíocht Ghréasáin an suíomh seo!"
 
 #: phishing.shortDesc2
 msgid ""
 "The web site at %S has been reported as a web forgery and has been blocked "
 "based on your security preferences."
 msgstr ""
+"Tuairiscíodh gur falsaíocht Ghréasáin é an suíomh %S agus tá cosc curtha air "
+"de bharr do roghanna slándála."
 
 #: phishing.longDesc2 safeb.blocked.phishing.longDesc
 msgid ""
@@ -5174,11 +5168,11 @@ msgstr "Dún an rabhadh"
 
 #: safeb.palm.notforgery.label2
 msgid "This isn't a web forgery…"
-msgstr ""
+msgstr "Ní falsaíocht Ghréasáin é seo…"
 
 #: safeb.palm.report.label
 msgid "Why was this site blocked?"
-msgstr ""
+msgstr "Cén fáth ar cuireadh cosc ar an suíomh seo?"
 
 #: safeb.urlbaricon.tooltip
 msgid "This page might be dangerous; click for details."
@@ -5192,6 +5186,8 @@ msgid ""
 "This web site at <span id='malware_sitename'/> has been reported as an attack "
 "site and has been blocked based on your security preferences."
 msgstr ""
+"Tuairiscíodh gur suíomh ionsaithe é an suíomh Gréasáin <span "
+"id='malware_sitename'/> agus tá cosc curtha air de bharr do roghanna slándála."
 
 #: safeb.blocked.malware.longDesc
 msgid ""
@@ -6348,7 +6344,7 @@ msgstr ""
 
 #: SUMMARY_MAKE_DEAFULT
 msgid "$BrandShortName will be set as your default web browser."
-msgstr ""
+msgstr "Beidh $BrandShortName ina bhrabhsálaí réamhshocraithe."
 
 #: SUMMARY_CLICK
 msgid "Click Install to continue."
@@ -13074,12 +13070,6 @@ msgstr "(gan óstríomhaire)"
 msgid "en-US"
 msgstr "ga-IE"
 
-# see http://developer.mozilla.org/en/docs/Localization_and_Plurals
-# don't change if you don't know what you're doing!
-#: pluralRule
-msgid "1"
-msgstr "11"
-
 #: font.language.group
 msgid "x-western"
 msgstr "x-western"
@@ -16209,7 +16199,7 @@ msgstr "Oscail an &Fillteán Coinneála"
 
 #: cmd.showMac.label cmd.showMac.accesskey
 msgid "Show in &Finder"
-msgstr "Taispeáin sa Finder"
+msgstr "Taispeáin sa &Finder"
 
 #: cmd.openWith.label cmd.openWith.accesskey
 msgid "Open Wit&h…"
@@ -16617,6 +16607,8 @@ msgid ""
 "The file could not be saved because you do not have the proper permissions.  "
 "Choose another save directory."
 msgstr ""
+"Níorbh fhéidir an comhad a shábháil toisc nach bhfuil cead agat scríobh "
+"anseo.  Roghnaigh comhadlann eile."
 
 #: badPermissions.title
 msgid "Invalid Save Permissions"
@@ -17021,7 +17013,7 @@ msgstr "Taispeáin Gach Breiseán Molta"
 
 #: searchResultConnecting.label
 msgid "Connecting…"
-msgstr ""
+msgstr "Ag Ceangal…"
 
 #: searchResultFailed.label statusFailed
 msgid "Install Failed"
@@ -17451,6 +17443,8 @@ msgstr "Tá leagan %S ar fáil."
 #: newAddonsNotificationMsg2
 msgid "%S new add-on has been installed.;%S new add-ons have been installed."
 msgstr ""
+"Suiteáladh %S bhreiseán nua.;Suiteáladh %S bhreiseán nua.;Suiteáladh %S "
+"bhreiseán nua.;Suiteáladh %S mbreiseán nua.;Suiteáladh %S breiseán nua."
 
 #: safeModeMsg
 msgid "All add-ons have been disabled by safe mode."
@@ -18898,7 +18892,7 @@ msgstr ""
 
 #: unverified
 msgid "(Author not verified)"
-msgstr ""
+msgstr "(Údar gan fíorú)"
 
 #: signed
 msgid "(%S)"
