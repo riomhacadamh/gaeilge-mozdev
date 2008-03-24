@@ -22,7 +22,7 @@ bash sedtweaks
 if echo "${1}" | egrep '^browser' > /dev/null
 then
 	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' > aistr.8.txt
-	cat bookmarks-ga.html | iconv -f iso88591 -t utf8 > ${IRISHJAR}/profile/bookmarks.html
+	cp -f bookmarks-ga.html ${IRISHJAR}/profile/bookmarks.html
 	(cd eile; cp -Rf * ../${IRISHJAR};)
 #	cat installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
 	sed -i '/^$/d' ${IRISHJAR}/installer/installer.inc
