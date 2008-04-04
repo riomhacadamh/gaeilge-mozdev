@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-03 09:39-0500\n"
+"POT-Creation-Date: 2008-04-04 13:30-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -29,8 +29,9 @@ msgstr "Admhálacha"
 #: copyright.accesskey copyCmd.key copy.key view.sortBy.visitCount.accesskey
 #: cmd_clearHistory_accesskey copyPref.key copyCmd.commandkey
 #: mismatchCheckNowAccesskey cancelButtonTextAccesskey
-#: notifyBarChangeButtonAccessKey CertDumpAVACountry
-#: exceptionMgr.exceptionButtonAccess changepassword.accesskey
+#: pluginInstallation.close.accesskey notifyBarChangeButtonAccessKey
+#: CertDumpAVACountry exceptionMgr.exceptionButtonAccess
+#: changepassword.accesskey
 msgid "C"
 msgstr "C"
 
@@ -242,7 +243,7 @@ msgid "Hide &brandShortName;"
 msgstr "Folaigh &brandShortName;"
 
 #: hideThisAppCmdMac.commandkey hideOtherAppsCmdMac.commandkey
-#: showAllHistoryCmd.commandkey hideButton.accesskey
+#: showAllHistoryCmd.commandkey accesskey-help hideButton.accesskey
 msgid "H"
 msgstr "H"
 
@@ -306,7 +307,7 @@ msgstr "&Priontáil…"
 msgid "p"
 msgstr "p"
 
-#: import.label import.accesskey cmd.import.label cmd.import.accesskey
+#: import.label import.accesskey
 msgid "&Import…"
 msgstr "&Iompórtáil…"
 
@@ -365,7 +366,8 @@ msgid "Restore"
 msgstr "Athshlánaigh"
 
 #: fullScreenClose.tooltip tabs.close close closeButton.label dialogClose.label
-#: aboutWindowCloseButton closeButton closebutton.label Close
+#: aboutWindowCloseButton closeButton pluginInstallation.close.label
+#: closebutton.label Close
 msgid "Close"
 msgstr "Dún"
 
@@ -911,6 +913,10 @@ msgstr "+"
 msgid "="
 msgstr "="
 
+#: fullZoomEnlargeCmd.commandkey3
+msgid "_: fullZoomEnlargeCmd.commandkey3\n"
+msgstr ""
+
 #: fullZoomReduceCmd.label fullZoomReduceCmd.accesskey fullZoomReduceBtn.label
 #: fullZoomReduceBtn.accesskey
 msgid "Zoom &Out"
@@ -921,15 +927,23 @@ msgstr "Súmáil &Amach"
 msgid "-"
 msgstr "-"
 
-#: fullZoomResetCmd.commandkey UNINST_CHARSET firstdayofweek.default
-#: textReset.commandkey CHARSET
-msgid "0"
-msgstr "0"
+#: fullZoomReduceCmd.commandkey2
+msgid "_: fullZoomReduceCmd.commandkey2\n"
+msgstr ""
 
 #: fullZoomResetCmd.label fullZoomResetCmd.accesskey reset.label
 #: reset.accesskey
 msgid "&Reset"
 msgstr "Athshoc&raigh"
+
+#: fullZoomResetCmd.commandkey UNINST_CHARSET firstdayofweek.default
+#: textReset.commandkey CHARSET
+msgid "0"
+msgstr "0"
+
+#: fullZoomResetCmd.commandkey2
+msgid "_: fullZoomResetCmd.commandkey2\n"
+msgstr ""
 
 #: fullZoomToggleCmd.label fullZoomToggleCmd.accesskey
 msgid "Zoom &Text Only"
@@ -1269,7 +1283,8 @@ msgstr ""
 msgid "Install Missing Plugins…"
 msgstr "Suiteáil na forlíontáin ar iarraidh…"
 
-#: missingpluginsMessage.button.accesskey installButtonTextAccesskey
+#: missingpluginsMessage.button.accesskey accesskey-disclosure
+#: installButtonTextAccesskey
 msgid "I"
 msgstr "I"
 
@@ -2037,10 +2052,9 @@ msgstr "&Epiphany"
 msgid "&Galeon"
 msgstr "&Galeon"
 
-# "C" in main browser window
-#: importFromFile.label importFromFile.accesskey
-msgid "&From File"
-msgstr "Ó &Chomhad"
+#: importFromHTMLFile.label importFromHTMLFile.accesskey
+msgid "&From an HTML File"
+msgstr "Ó &Chomhad HTML"
 
 #: noMigrationSources.label
 msgid ""
@@ -2900,18 +2914,22 @@ msgstr "&Aimsigh i Leabharmharcanna…"
 msgid "F&ind in Current Collection…"
 msgstr "A&imsigh sa Bhailiúchán Reatha…"
 
-#: cmd.export.label cmd.export.accesskey
-msgid "&Export…"
-msgstr "&Easpórtáil…"
+#: cmd.exportHTML.label cmd.exportHTML.accesskey
+msgid "&Export HTML…"
+msgstr "&Easpórtáil HTML…"
+
+#: cmd.importHTML.label cmd.importHTML.accesskey
+msgid "&Import HTML…"
+msgstr "&Iompórtáil HTML…"
 
 #: cmd.backup.label cmd.backup.accesskey certmgr.backup2.label
 #: certmgr.backup2.accesskey
 msgid "&Backup…"
 msgstr "&Cúltaca…"
 
-#: cmd.restore.label cmd.restore.accesskey
-msgid "&Restore…"
-msgstr "&Athshlánaigh…"
+#: cmd.restore2.label cmd.restore2.accesskey
+msgid "&Restore"
+msgstr "&Athshlánaigh"
 
 #: cmd.restoreFromFile.label cmd.restoreFromFile.accesskey
 msgid "&Choose File…"
@@ -3125,7 +3143,7 @@ msgstr "tar éis"
 msgid "in the last"
 msgstr "le"
 
-#: advancedSearch.last_days.label
+#: advancedSearch.last_days.label rememberDaysAfter2.label
 msgid "days"
 msgstr "lá anuas"
 
@@ -3286,7 +3304,7 @@ msgstr "Leabharmharcanna %S.html"
 # The resulting string will be suggested as a filename, so make sure that you're
 # only using characters legal for file names. Consider falling back to the
 # en-US value if you have to use non-ascii characters.
-#: bookmarksBackupFilenameJSON bookmarksBackupFilename
+#: bookmarksBackupFilenameJSON
 msgid "Bookmarks %S.json"
 msgstr "Leabharmharcanna %S.json"
 
@@ -3316,6 +3334,22 @@ msgstr ""
 #: bookmarksRestoreTitle
 msgid "Select a bookmarks backup"
 msgstr "Roghnaigh cóip chúltaca leabharmharcanna"
+
+#: bookmarksRestoreFilterName
+msgid "JSON"
+msgstr "JSON"
+
+#: bookmarksRestoreFilterExtension
+msgid "*.json"
+msgstr "*.json"
+
+#: bookmarksRestoreFormatError
+msgid "Unsupported file type."
+msgstr "Ní thacaítear leis an gcineál comhaid."
+
+#: bookmarksRestoreParseError
+msgid "Unable to process the backup file."
+msgstr "Ní féidir an comhad cúltaca a phróiseáil."
 
 #: headerTextPrefix1
 msgid "Showing"
@@ -3413,6 +3447,10 @@ msgstr "T"
 #: searchBookmarks
 msgid "Search Bookmarks"
 msgstr "Cuardaigh Leabharmharcanna"
+
+#: searchHistory
+msgid "Search History"
+msgstr "Stair an Chuardaigh"
 
 #: searchCurrentDefault
 msgid "Search in '%S'"
@@ -4294,6 +4332,22 @@ msgstr "Ciméarach"
 msgid "Malayalam"
 msgstr "Mailéalamach"
 
+#: font.langGroup.oriya or
+msgid "Oriya"
+msgstr "Oirísis"
+
+#: font.langGroup.telugu te
+msgid "Telugu"
+msgstr "Teileagúilis"
+
+#: font.langGroup.kannada kn
+msgid "Kannada"
+msgstr "Cannadais"
+
+#: font.langGroup.sinhala
+msgid "Sinhala"
+msgstr "Siolóinis"
+
 # Minimum font size
 #: minSize.label minSize.accesskey
 msgid "Minimum f&ont size:"
@@ -4790,10 +4844,6 @@ msgstr "Sonraí As Líne"
 msgid "Keep my &history for at least"
 msgstr "Meabhraig&h leathanaigh ar tugadh cuairt orthu le"
 
-#: rememberDaysAfter.label
-msgid "days."
-msgstr "lá anuas."
-
 #: rememberForms.label rememberForms.accesskey
 msgid "Remember what I enter in &forms and the search bar"
 msgstr ""
@@ -4985,7 +5035,7 @@ msgstr "Tar éi&s dom nasc a oscailt i gcluaisín nua, athraigh chuige láithrea
 msgid "Quit %S"
 msgstr "Scoir %S"
 
-#: restartDialogTitle restartButton
+#: restartDialogTitle restartButton pluginInstallation.restart.label
 msgid "Restart %S"
 msgstr "Atosaigh %S"
 
@@ -6375,7 +6425,7 @@ msgstr ""
 "D'fhéadfadh atosú de do ríomhaire a bheith riachtanach leis an díshuiteáil a "
 "chríochnú."
 
-#: SUMMARY_MAKE_DEAFULT
+#: SUMMARY_MAKE_DEFAULT
 msgid "$BrandShortName will be set as your default web browser."
 msgstr "Beidh $BrandShortName ina bhrabhsálaí réamhshocraithe."
 
@@ -11703,9 +11753,9 @@ msgstr "Tuairisceoir"
 msgid "v0.2"
 msgstr "v0.2"
 
-#: reporterMenu.title reporterMenu.accesskey
-msgid "&Report Broken Web Site"
-msgstr "Seol Tuai&risc ar Shuíomh Briste"
+#: reporterMenu2.title
+msgid "Report Broken Web Site…"
+msgstr "Seol Tuairisc ar Shuíomh Briste…"
 
 #: reporterToolBarButton.title
 msgid "Report Site"
@@ -11715,6 +11765,12 @@ msgstr "Tuairisc ar Shuíomh"
 #: reporterMenu.tooltip
 msgid "Report Broken Web Site"
 msgstr "Seol Tuairisc ar Shuíomh Briste"
+
+#: reporterMenu.accesskey restartAccessKey protocol.checkbox.accesskey
+#: pluginInstallation.restart.accesskey restartButton.accesskey
+#: notifyBarRememberButtonAccessKey resetpassword.accesskey
+msgid "R"
+msgstr "R"
 
 #: reportProblemType
 msgid "Problem Type"
@@ -11856,6 +11912,10 @@ msgstr "Fadhb eile"
 #: reportForm.problem_type.item8.title
 msgid "Disability access"
 msgstr "Rochtain mhíchumais"
+
+#: reportForm.problem_type.item9.title
+msgid "Printed output is wrong"
+msgstr "Tá an t-aschur priontáilte mícheart"
 
 #: reportForm.describe.title reportForm.describe.accesskey
 msgid "&Describe Problem:"
@@ -12679,14 +12739,6 @@ msgstr ""
 
 #: accesskey-cancel
 msgid "_: accesskey-cancel\n"
-msgstr ""
-
-#: accesskey-help
-msgid "_: accesskey-help\n"
-msgstr ""
-
-#: accesskey-disclosure
-msgid "_: accesskey-disclosure\n"
 msgstr ""
 
 # LOCALIZATION NOTE (BadPluginTitle):
@@ -13682,10 +13734,6 @@ msgstr "Casaicis"
 msgid "Greenlandic"
 msgstr "Graonlainnis"
 
-#: kn
-msgid "Kannada"
-msgstr "Cannadais"
-
 # Panu
 #: kok
 msgid "Konkani"
@@ -13856,10 +13904,6 @@ msgstr "Óisibvis"
 msgid "Oromo"
 msgstr "Oraimis"
 
-#: or
-msgid "Oriya"
-msgstr "Oirísis"
-
 #: os
 msgid "Ossetian"
 msgstr "Óiséitis"
@@ -13977,10 +14021,6 @@ msgstr "Sualainnis"
 #: sw
 msgid "Swahili"
 msgstr "Svahaílis"
-
-#: te
-msgid "Telugu"
-msgstr "Teileagúilis"
 
 # have "Táidsíceastáin" in corpus
 #: tg
@@ -15801,6 +15841,18 @@ msgstr "Athchóirigh na Réamhshocruithe"
 msgid "Source of: "
 msgstr "Foinse: "
 
+#: textEnlarge.commandkey3
+msgid "_: textEnlarge.commandkey3\n"
+msgstr ""
+
+#: textReduce.commandkey2
+msgid "_: textReduce.commandkey2\n"
+msgstr ""
+
+#: textReset.commandkey2
+msgid "_: textReset.commandkey2\n"
+msgstr ""
+
 #: goToLineCmd.label goToLineCmd.accesskey
 msgid "&Go to Line…"
 msgstr "&Téigh chuig Líne…"
@@ -16481,6 +16533,11 @@ msgstr "Coiscthe ag na Rialúcháin Tuismitheoirí"
 msgid "Blocked: Download may contain a virus or spyware"
 msgstr ""
 "Cosctha: d'fhéadfadh víreas nó bogearra spiaireachta a bheith san íosluchtú"
+
+# LOCALIZATION NOTE (stateBlockedPolicy): 'Security Zone Policy' should be capitalized 
+#: stateBlockedPolicy
+msgid "This download has been blocked by your Security Zone Policy"
+msgstr "Cuireadh cosc ar an íosluchtú seo de bharr do Pholasaí Slándála"
 
 #: fileDoesNotExistOpenTitle
 msgid "Cannot Open %S"
@@ -17213,11 +17270,6 @@ msgstr "D'aimsigh %S nuashonrú le haghaidh %S breiseán"
 #: restartMessage
 msgid "Restart %S to complete your changes."
 msgstr "Ní mór duit %S a atosú chun na hathruithe a chur i bhfeidhm."
-
-#: restartAccessKey protocol.checkbox.accesskey restartButton.accesskey
-#: notifyBarRememberButtonAccessKey resetpassword.accesskey
-msgid "R"
-msgstr "R"
 
 #: laterButton
 msgid "Later"
@@ -19082,14 +19134,6 @@ msgstr "(comhaid logánta)"
 #: bookmarksArchiveFilename
 msgid "bookmarks-%S.json"
 msgstr "leabharmharcanna-%S.json"
-
-#: restoreFormatError
-msgid "Unsupported file type."
-msgstr "Ní thacaítear leis an gcineál comhaid."
-
-#: restoreParseError
-msgid "Unable to process the backup file."
-msgstr "Ní féidir an comhad cúltaca a phróiseáil."
 
 #: crashes.title
 msgid "Submitted Crash Reports"
@@ -24422,4 +24466,3 @@ msgid "When an OCSP server connection fails, treat the certificate as invalid"
 msgstr ""
 "Nuair a theipeann ar cheangal le freastalaí OCSP, meas go bhfuil an teastas "
 "neamhbhailí"
-
