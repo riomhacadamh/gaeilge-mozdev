@@ -105,6 +105,7 @@ eilecheck : FORCE
 clean :
 	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-1.5.po
 	rm -fR langpack-build-dir
+	rm -f messages.po amo.pot amo-final.po
 
 distclean :
 	$(MAKE) clean
@@ -116,6 +117,24 @@ distclean :
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
 ###########################################################################
+
+# Download messages.po from http://svn.mozilla.org/addons/trunk/site/app/locale/en_US/LC_MESSAGES/messages.po
+amo.pot : messages.po
+	cat messages.po | sed '/^#~/,$$d' > mstripped.po
+	perl AMOfake mstripped.po > $@
+	rm -f mstripped.po
+
+amo-obair.po : amo.pot
+	cpo -q amo-obair.po
+	msgmerge -N -q --backup=off -U $@ amo.pot > /dev/null 2>&1
+	cpo -q amo-obair.po
+	touch $@
+
+# This is the one to attach to the AMO Localization (ga) bug
+amo-final.po : amo-obair.po
+	cat amo-obair.po | sed '/^#~/,$$d' > mstripped.po
+	perl AMOback mstripped.po | sed '/^msgctxt/d' > $@
+	rm -f mstripped.po
 
 obair.po : FORCE
 	sed -i '/tempe/s/^/#/' moznua
