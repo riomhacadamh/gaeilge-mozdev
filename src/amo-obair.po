@@ -42,18 +42,23 @@ msgctxt "a_eula_install"
 msgid "Accept and Install"
 msgstr "Glac Leis agus Suiteáil"
 
-#: views/api/api_addon.thtml:49 views/elements/header.thtml:76
-#: views/elements/header.thtml:82 views/api/api_addon.thtml:48
+#: views/elements/header.thtml:76 views/elements/header.thtml:82
+#: views/api/api_addon.thtml:48
 msgctxt "a_header_public"
 msgid "Public"
 msgstr "Poiblí"
 
-#: views/api/api_addon.thtml:51 views/elements/header.thtml:58
-#: views/elements/header.thtml:75 views/elements/header.thtml:80
-#: views/api/api_addon.thtml:50
+#: views/elements/header.thtml:58 views/elements/header.thtml:75
+#: views/elements/header.thtml:80 views/api/api_addon.thtml:50
 msgctxt "a_header_sandbox"
 msgid "Sandbox"
 msgstr "Bosca Gainimh"
+
+#: views/addons/display.thtml:109 views/elements/addon_listitem.thtml:147
+#: views/elements/feature.thtml:98
+msgctxt "addon_detail_last_updated"
+msgid "Updated %s"
+msgstr "Nuashonraithe %s"
 
 #: views/elements/addon_listitem.thtml:95
 #: views/elements/addon_version_detail.thtml:50
@@ -62,18 +67,18 @@ msgctxt "addon_display_header_version"
 msgid "Version %s"
 msgstr "Leagan %s"
 
-#: views/addons/display.thtml:115 views/elements/addon_listitem.thtml:138
+#: views/addons/display.thtml:124 views/elements/addon_listitem.thtml:138
 #: views/elements/feature.thtml:90
 msgctxt "addon_downloads"
 msgid "downloads"
 msgstr "líon na n-íosluchtuithe"
 
-#: views/addons/display.thtml:119
+#: views/addons/display.thtml:128
 msgctxt "addon_downloads_total"
 msgid "total downloads"
 msgstr "líon iomlán na n-íosluchtuithe"
 
-#: views/addons/display.thtml:114 views/addons/display.thtml:118
+#: views/addons/display.thtml:123 views/addons/display.thtml:127
 #: views/elements/addon_listitem.thtml:138 views/elements/feature.thtml:90
 msgctxt "addon_downloads_weekly"
 msgid "weekly downloads"
@@ -120,17 +125,16 @@ msgid "%1$s is not available for %2$s."
 msgstr "Níl %1$s ar fáil le haghaidh %2$s."
 
 # %1 is the addon name
-#: views/addons/policy.thtml:107 views/addons/previews.thtml:60
-#: views/addons/versions.thtml:99 views/reviews/add.thtml:108
-#: views/reviews/display.thtml:98 views/reviews/review_added.thtml:54
-#: views/addons/versions.thtml:100
+#: views/addons/previews.thtml:60 views/addons/policy.thtml:107
+#: views/addons/versions.thtml:101 views/reviews/display.thtml:98
+#: views/reviews/review_added.thtml:54 views/reviews/add.thtml:108
 #, php-format
 msgctxt "addon_review_a_back_to_addon_x"
 msgid "Back to %1$s..."
 msgstr "Ar ais go %1$s..."
 
 # %1 is the addon name
-#: views/reviews/add.thtml:107 views/reviews/review_added.thtml:53
+#: views/reviews/review_added.thtml:53 views/reviews/add.thtml:107
 #, php-format
 msgctxt "addon_review_a_back_to_reviews"
 msgid "Back to the reviews..."
@@ -244,7 +248,7 @@ msgctxt "addon_review_saved_successfully"
 msgid "Your review was saved successfully. Thanks!"
 msgstr "Sábháladh do léirmheas.  Go raibh maith agat!"
 
-#: views/addons/display.thtml:267 views/addons/display.thtml:270
+#: views/addons/display.thtml:292 views/addons/display.thtml:295
 #: views/reviews/display.thtml:61 views/reviews/display.thtml:64
 #, php-format
 msgctxt "addon_reviewed_by_u_on_d"
@@ -253,39 +257,43 @@ msgstr "ag %1$s ar %2$s"
 
 # %1 is the user, %2 is the (localized) date, %3 is the rating
 #: views/editors/reviews_queue.thtml:57 views/editors/reviews_queue.thtml:68
-#: views/reviews/add.thtml:57 views/reviews/delete.thtml:49
+#: views/reviews/delete.thtml:49 views/reviews/add.thtml:57
 #, php-format
 msgctxt "addon_reviewed_on_x_rated_y"
 msgid "by %1$s on %2$s (rated %3$s)"
 msgstr "ag %1$s ar %2$s (rátáil %3$s)"
 
-#: views/addons/versions.thtml:109 views/addons/versions.thtml:110
-#: views/addons/versions.thtml:111
+#: views/addons/versions.thtml:111 views/addons/versions.thtml:112
 msgctxt "addon_versions_getlatesttext"
 msgid "The most recent version compatible with"
 msgstr "An leagan is déanaí atá comhoiriúnach do"
 
-#: controllers/addons_controller.php:553
+#: views/addons/display.thtml:423
+msgctxt "addons_author_addons_submit"
+msgid "Go"
+msgstr "Téigh"
+
+#: controllers/addons_controller.php:559
 #, php-format
 msgctxt "addons_browse_all_addons"
 msgid "All %1$s"
 msgstr "Gach %1$s"
 
-#: controllers/addons_controller.php:543
+#: controllers/addons_controller.php:549
 #, php-format
 msgctxt "addons_browse_all_addons_title"
 msgid "Browse all %1$s"
 msgstr "Brabhsáil gach %1$s"
 
-#: controllers/addons_controller.php:546
+#: controllers/addons_controller.php:552
 #, php-format
 msgctxt "addons_browse_browse_category"
 msgid "Browse %s"
 msgstr "Brabhsáil %s"
 
-#: webroot/discussions/themes/addons/addon.php:19
 #: webroot/discussions/themes/addons/discussion_form.php:10
 #: webroot/discussions/themes/addons/discussion_form.php:18
+#: webroot/discussions/themes/addons/addon.php:19
 #, php-format
 msgctxt "addons_display_a_discuss"
 msgid "Discuss %s"
@@ -296,7 +304,7 @@ msgctxt "addons_display_add_review"
 msgid "Add a review"
 msgstr "Cuir léirmheas leis"
 
-#: views/addons/display.thtml:294
+#: views/addons/display.thtml:319
 msgctxt "addons_display_advanced_details"
 msgid "Advanced Details"
 msgstr "Mionsonraí Casta"
@@ -306,22 +314,12 @@ msgctxt "addons_display_categories"
 msgid "Categories"
 msgstr "Catagóirí"
 
-#: views/layouts/mozilla.thtml:224
-msgctxt "addons_display_collapse"
-msgid "collapse"
-msgstr "laghdaigh"
-
-#: views/addons/display.thtml:373
+#: views/addons/display.thtml:390
 msgctxt "addons_display_detailed_review"
 msgid "detailed review"
 msgstr "léirmheas mionsonraithe"
 
-#: views/addons/display.thtml:305
-msgctxt "addons_display_developer_home_page"
-msgid "Developer Home Page"
-msgstr "Leathanach Baile Forbróirí"
-
-#: views/addons/display.thtml:356 views/reviews/add.thtml:83
+#: views/addons/display.thtml:373 views/reviews/add.thtml:83
 #: views/reviews/add.thtml:84
 msgctxt "addons_display_dont_like_it"
 msgid "Don't like it"
@@ -332,86 +330,86 @@ msgctxt "addons_display_edit_review"
 msgid "Edit your review"
 msgstr "Cuir do léirmheas in eagar"
 
-#: views/addons/display.thtml:295 views/layouts/mozilla.thtml:224
-msgctxt "addons_display_expand"
-msgid "expand"
-msgstr "leathnaigh"
-
-#: views/addons/display.thtml:142
+#: views/addons/display.thtml:151
 msgctxt "addons_display_has_privacy"
 msgid "This add-on has a privacy policy."
 msgstr "Tá polasaí príobháideachta ag an mbreiseán seo."
 
-#: views/addons/display.thtml:355 views/reviews/add.thtml:81
+#: views/addons/display.thtml:372 views/reviews/add.thtml:81
 #: views/reviews/add.thtml:82
 msgctxt "addons_display_hate_it"
 msgid "Hate it"
 msgstr "Is fuath liom é"
 
-#: views/addons/display.thtml:298
+#: views/addons/display.thtml:322
 msgctxt "addons_display_header_developer_comments"
 msgid "Developer Comments"
 msgstr "Nótaí ón Fhorbróir"
 
-#: webroot/discussions/themes/addons/addon.php:17
 #: webroot/discussions/themes/addons/discussion_form.php:8
+#: webroot/discussions/themes/addons/addon.php:17
 msgctxt "addons_display_header_discussions"
 msgid "Discussions"
 msgstr "Plé"
 
-#: views/addons/display.thtml:246
+#: views/addons/display.thtml:216 views/addons/display.thtml:219
+msgctxt "addons_display_header_homepage"
+msgid "Homepage"
+msgstr "Leathanach Baile"
+
+#: views/addons/display.thtml:271
 msgctxt "addons_display_header_reviews"
 msgid "Reviews"
 msgstr "Léirmheasanna"
 
-#: views/addons/display.thtml:206 views/addons/display.thtml:209
+#: views/addons/display.thtml:231 views/addons/display.thtml:234
 msgctxt "addons_display_header_support"
 msgid "Support"
 msgstr "Tacaíocht"
 
-#: views/addons/display.thtml:357 views/reviews/add.thtml:85
+#: views/addons/display.thtml:374 views/reviews/add.thtml:85
 #: views/reviews/add.thtml:86
 msgctxt "addons_display_like_it"
 msgid "Like it"
 msgstr "Is maith liom é"
 
-#: views/addons/display.thtml:185
+#: views/addons/display.thtml:194
 msgctxt "addons_display_long_description"
 msgid "Long Description"
 msgstr "Cur Síos Fada"
 
-#: views/addons/display.thtml:359 views/reviews/add.thtml:89
+#: views/addons/display.thtml:376 views/reviews/add.thtml:89
 #: views/reviews/add.thtml:90
 msgctxt "addons_display_love_it"
 msgid "Love it"
 msgstr "Is breá liom é"
 
-#: views/addons/display.thtml:155
+#: views/addons/display.thtml:164
 msgctxt "addons_display_more_images"
 msgid "More Images"
 msgstr "Tuilleadh Íomhánna"
 
-#: views/addons/display.thtml:387
+#: views/addons/display.thtml:412
 #, php-format
 msgctxt "addons_display_other_addons_by"
 msgid "Other add-ons by %1$s"
 msgstr "Breiseáin eile scríofa ag %1$s"
 
-#: controllers/addons_controller.php:163 controllers/addons_controller.php:967
-#: webroot/discussions/themes/addons/addon.php:21
+#: controllers/addons_controller.php:167 controllers/addons_controller.php:977
 #: webroot/discussions/themes/addons/discussion_form.php:12
+#: webroot/discussions/themes/addons/addon.php:21
 #, php-format
 msgctxt "addons_display_pagetitle"
 msgid "%s"
 msgstr "%s"
 
-#: views/addons/display.thtml:237
+#: views/addons/display.thtml:262
 #, php-format
 msgctxt "addons_display_paragraph_supportinfoemail"
 msgid "Support for this add-on is provided by the developer at %s"
 msgstr "Soláthraíonn an forbróir ag %s tacaíocht le haghaidh an bhreiseáin seo"
 
-#: views/addons/display.thtml:220
+#: views/addons/display.thtml:245
 #, php-format
 msgctxt "addons_display_paragraph_supportinfoemailurl"
 msgid ""
@@ -421,62 +419,71 @@ msgstr ""
 "Soláthraíonn an forbróir ag %s tacaíocht le haghaidh an bhreiseáin seo, nó "
 "b'fhéidir leat ríomhphoist a sheoladh chuig %s"
 
-#: views/addons/display.thtml:229
+#: views/addons/display.thtml:254
 #, php-format
 msgctxt "addons_display_paragraph_supportinfourl"
 msgid "Support for this add-on is provided by the developer at %s"
 msgstr "Soláthraíonn an forbróir ag %s tacaíocht le haghaidh an bhreiseáin seo"
 
-#: views/addons/display.thtml:353
+#: views/addons/display.thtml:370
 msgctxt "addons_display_rate_it"
 msgid "Rate It"
 msgstr "Rátáil É"
 
-#: views/addons/display.thtml:358 views/reviews/add.thtml:87
+#: views/addons/display.thtml:375 views/reviews/add.thtml:87
 #: views/reviews/add.thtml:88
 msgctxt "addons_display_really_like_it"
 msgid "Really like it"
 msgstr "Tá sé an-mhaith"
 
-#: views/addons/display.thtml:369
+#: views/addons/display.thtml:393 views/addons/display.thtml:396
+msgctxt "addons_display_review_etiquette"
+msgid ""
+"Please do not post bug reports in reviews. We do not make your email address "
+"available to add-on developers and they may need to contact you to help "
+"resolve your issue."
+msgstr ""
+"Ná cuir tuairiscí faoi fhabhtanna i do léirmheas, le do thoil.  Ní chuirimid do sheoladh ríomhphoist ar fáil d'fhorbróirí an bhreiseáin, agus seans go mbeidh orthu dul i dteagmháil leat chun an fhadhb a réiteach."
+
+#: views/addons/display.thtml:386
 msgctxt "addons_display_review_submit"
 msgid "Save"
 msgstr "Sábháil"
 
-#: views/addons/display.thtml:381
+#: views/addons/display.thtml:406
 #, php-format
 msgctxt "addons_display_see_all_addons"
 msgid "See All %1$s Add-ons"
 msgstr "Féach Ar Gach Breiseán %1$s"
 
 # %1 is the number of reviews
-#: views/addons/display.thtml:284
+#: views/addons/display.thtml:309
 #, php-format
 msgctxt "addons_display_see_all_reviews"
 msgid "See all reviews (%1$s)"
 msgstr "Féach ar gach léirmheas (%1$s)"
 
-#: views/addons/display.thtml:194 views/addons/display.thtml:196
+#: views/addons/display.thtml:201 views/addons/display.thtml:203
 msgctxt "addons_display_see_all_versions"
 msgid "See All Versions"
 msgstr "Féach Ar Gach Leagan"
 
-#: views/addons/display.thtml:195
+#: views/addons/display.thtml:202
 msgctxt "addons_display_version_history"
 msgid "Complete Version History"
 msgstr "Stair Iomlán na Leaganacha"
 
-#: views/addons/display.thtml:324 views/addons/versions.thtml:91
+#: views/addons/display.thtml:341 views/addons/versions.thtml:92
 msgctxt "addons_display_view_source"
 msgid "View the source"
 msgstr "Amharc ar fhoinse"
 
-#: views/addons/display.thtml:327
+#: views/addons/display.thtml:344
 msgctxt "addons_display_view_stats"
 msgid "View statistics"
 msgstr "Amharc ar staitisticí"
 
-#: views/addons/display.thtml:346
+#: views/addons/display.thtml:363
 msgctxt "addons_display_what_do_you_think"
 msgid "What do you think?"
 msgstr "Cad é do bharúil?"
@@ -487,21 +494,21 @@ msgid "Works with:"
 msgstr "Oibríonn sé le:"
 
 #: views/addons/display.thtml:68 views/addons/policy.thtml:62
-#: views/elements/addon_discussionheader.thtml:84
 #: views/elements/addon_listitem.thtml:128 views/elements/feature.thtml:79
+#: views/elements/addon_discussionheader.thtml:84
 msgctxt "addons_home_by"
 msgid "by"
 msgstr "le"
 
-#: views/addons/category_landing.thtml:51 views/addons/home.thtml:49
-#: views/addons/searchengines.thtml:54 views/addons/themes_landing.thtml:49
+#: views/addons/home.thtml:49 views/addons/category_landing.thtml:51
+#: views/addons/themes_landing.thtml:49 views/addons/searchengines.thtml:54
 msgctxt "addons_home_feature_head"
 msgid "We Recommend"
 msgstr "Molaimid"
 
-#: controllers/addons_controller.php:76 controllers/addons_controller.php:270
-#: controllers/addons_controller.php:415 controllers/addons_controller.php:637
-#: controllers/addons_controller.php:776 controllers/addons_controller.php:834
+#: controllers/addons_controller.php:80 controllers/addons_controller.php:274
+#: controllers/addons_controller.php:421 controllers/addons_controller.php:645
+#: controllers/addons_controller.php:784 controllers/addons_controller.php:844
 #: controllers/search_controller.php:150
 #, php-format
 msgctxt "addons_home_header_details"
@@ -518,60 +525,56 @@ msgctxt "addons_home_other_applications"
 msgid "Other Applications"
 msgstr "Feidhmchláir Eile"
 
-#: controllers/addons_controller.php:163 controllers/addons_controller.php:229
-#: controllers/addons_controller.php:417 controllers/addons_controller.php:550
-#: controllers/addons_controller.php:635 controllers/addons_controller.php:655
-#: controllers/addons_controller.php:774 controllers/addons_controller.php:832
-#: controllers/addons_controller.php:891 controllers/addons_controller.php:967
-#: controllers/addons_controller.php:1004
-#: controllers/addons_controller.php:1063 controllers/components/amo.php:486
-#: controllers/components/simple_acl.php:81
-#: controllers/developers_controller.php:64
-#: controllers/editors_controller.php:57 controllers/groups_controller.php:65
-#: controllers/groups_controller.php:71 controllers/groups_controller.php:89
-#: controllers/groups_controller.php:111
-#: controllers/localizers_controller.php:72
-#: controllers/pages_controller.php:91 controllers/previews_controller.php:67
+#: controllers/previews_controller.php:67
+#: controllers/statistics_controller.php:60
+#: controllers/addons_controller.php:167 controllers/addons_controller.php:233
+#: controllers/addons_controller.php:423 controllers/addons_controller.php:556
+#: controllers/addons_controller.php:643 controllers/addons_controller.php:663
+#: controllers/addons_controller.php:782 controllers/addons_controller.php:842
+#: controllers/addons_controller.php:901 controllers/addons_controller.php:977
+#: controllers/addons_controller.php:1014
+#: controllers/addons_controller.php:1073
 #: controllers/reviews_controller.php:142
 #: controllers/reviews_controller.php:182
 #: controllers/reviews_controller.php:276
-#: controllers/reviews_controller.php:355
-#: controllers/search_controller.php:126
-#: controllers/statistics_controller.php:60
-#: controllers/users_controller.php:94 controllers/users_controller.php:218
-#: controllers/users_controller.php:314 controllers/users_controller.php:382
-#: controllers/users_controller.php:496
-#: webroot/discussions/themes/addons/addon.php:22
+#: controllers/reviews_controller.php:355 controllers/users_controller.php:90
+#: controllers/users_controller.php:214 controllers/users_controller.php:310
+#: controllers/users_controller.php:378 controllers/users_controller.php:492
+#: controllers/localizers_controller.php:72
+#: controllers/components/simple_acl.php:81 controllers/components/amo.php:486
+#: controllers/editors_controller.php:57 controllers/search_controller.php:126
+#: controllers/developers_controller.php:64
+#: controllers/groups_controller.php:65 controllers/groups_controller.php:71
+#: controllers/groups_controller.php:89 controllers/groups_controller.php:111
+#: controllers/pages_controller.php:91
 #: webroot/discussions/themes/addons/discussion_form.php:13
-#: controllers/users_controller.php:90 controllers/users_controller.php:214
-#: controllers/users_controller.php:310 controllers/users_controller.php:378
-#: controllers/users_controller.php:492
+#: webroot/discussions/themes/addons/addon.php:22
 #, php-format
 msgctxt "addons_home_pagetitle"
 msgid "%1$s Add-ons"
 msgstr "Breiseáin %1$s"
 
-#: views/addons/home.thtml:143
+#: views/addons/home.thtml:144
 msgctxt "addons_home_popular_header"
 msgid "Most Popular:"
 msgstr "Is Mó Éilimh Orthu:"
 
-#: views/addons/home.thtml:135
+#: views/addons/home.thtml:136
 msgctxt "addons_home_recommended_header"
 msgid "We Recommend:"
 msgstr "Molaimid:"
 
-#: views/addons/home.thtml:141 views/addons/home.thtml:150
+#: views/addons/home.thtml:142 views/addons/home.thtml:151
 msgctxt "addons_home_view_all"
 msgid "View all"
 msgstr "Taispeáin uile"
 
-#: views/addons/home.thtml:150
+#: views/addons/home.thtml:151
 msgctxt "addons_home_view_all_popular_title"
 msgid "View all popular add-ons"
 msgstr "Taispeáin na breiseáin is mó éilimh orthu"
 
-#: views/addons/home.thtml:141
+#: views/addons/home.thtml:142
 msgctxt "addons_home_view_all_recommended_title"
 msgid "View all recommended add-ons"
 msgstr "Amharc ar gach breiseán molta"
@@ -657,13 +660,13 @@ msgstr ""
 "sheinm.  Ní ionann forlíontáin agus 'eisínteachtaí', cláir a athraíonn nó a "
 "fheabhsaíonn feidhmiúlacht atá ann cheana."
 
-#: controllers/addons_controller.php:656
+#: controllers/addons_controller.php:664
 #, php-format
 msgctxt "addons_plugins_main_header"
 msgid "Common Plugins for %1$s"
 msgstr "Forlíontáin Choitianta le haghaidh %1$s"
 
-#: controllers/addons_controller.php:655 controllers/components/amo.php:600
+#: controllers/addons_controller.php:663 controllers/components/amo.php:600
 msgctxt "addons_plugins_pagetitle"
 msgid "Plugins"
 msgstr "Forlíontáin"
@@ -687,13 +690,13 @@ msgstr ""
 "dul ar aghaidh leis an tsuiteáil:"
 
 # %1 is the addon name
-#: controllers/addons_controller.php:1003
+#: controllers/addons_controller.php:1013
 #, php-format
 msgctxt "addons_previews_pagetitle"
 msgid "Previews for %s"
 msgstr "Réamhamhairc at %s"
 
-#: views/addons/recommended.thtml:50 controllers/addons_controller.php:899
+#: views/addons/recommended.thtml:50 controllers/addons_controller.php:909
 msgctxt "addons_recommended_introduction"
 msgid ""
 "With so many great add-ons available, there's something for everyone. To get "
@@ -703,15 +706,26 @@ msgstr ""
 "a bhfuil suim agat ann.  Seo duit liosta de na breiseáin is mó éilimh "
 "orthu.  Bain sult as!"
 
-#: controllers/addons_controller.php:891 controllers/addons_controller.php:898
+#: controllers/addons_controller.php:901 controllers/addons_controller.php:908
 msgctxt "addons_recommended_pagetitle"
 msgid "Recommended Add-ons"
 msgstr "Breiseáin Mholta"
 
-#: controllers/addons_controller.php:894
+#: controllers/addons_controller.php:904
 msgctxt "addons_recommended_title"
 msgid "Recommended Add-ons"
 msgstr "Breiseáin Mholta"
+
+#: views/addons/searchengines.thtml:146 views/addons/searchengines.thtml:163
+msgctxt "addons_searchengines_additional_resources"
+msgid "Additional Resources"
+msgstr "Acmhainní Eile"
+
+# link text devmo
+#: views/addons/searchengines.thtml:152 views/addons/searchengines.thtml:168
+msgctxt "addons_searchengines_devmo_link"
+msgid "Mozilla Developer Center"
+msgstr "Lárionad Forbartha Mozilla"
 
 #: views/pages/js_constants.js.thtml:53
 msgctxt "addons_searchengines_error_mozilla_browser_required"
@@ -734,17 +748,59 @@ msgstr ""
 "sula ndéanfaidh tú iarracht eile aon cheann de na forlíontáin chuardaigh "
 "thíos a shuiteáil."
 
-#: controllers/addons_controller.php:634 controllers/addons_controller.php:644
+# %1 is "make your own" link
+# %2 is MDC link
+#: views/addons/searchengines.thtml:149 views/addons/searchengines.thtml:166
+#, php-format
+msgctxt "addons_searchengines_learn_howto"
+msgid "Learn how to %1$s at the %2$s."
+msgstr "Foghlaim conas is féidir %1$s ag %2$s."
+
+# link path to search plugins instructions, relative to devmo
+#: views/addons/searchengines.thtml:151 views/addons/searchengines.thtml:167
+msgctxt "addons_searchengines_makeyourown_href"
+msgid "/en/docs/Creating_OpenSearch_plugins_for_Firefox"
+msgstr "/en/docs/Creating_OpenSearch_plugins_for_Firefox"
+
+# link text for "make your own" (opensearch engine)
+#: views/addons/searchengines.thtml:150 views/addons/searchengines.thtml:167
+msgctxt "addons_searchengines_makeyourown_link"
+msgid "make your own"
+msgstr "do bhreiseán féin a dhéanamh"
+
+# %1 is the link to mycroft.mozdev.org
+#: views/addons/searchengines.thtml:147 views/addons/searchengines.thtml:165
+#, php-format
+msgctxt "addons_searchengines_more"
+msgid "Browse through more search engines at %1$s"
+msgstr "Brabhsáil tuilleadh inneall cuardaigh ag %1$s"
+
+# link text to mycroft.mozdev.org
+#: views/addons/searchengines.thtml:148 views/addons/searchengines.thtml:165
+msgctxt "addons_searchengines_mycroft_link"
+msgid "mycroft.mozdev.org"
+msgstr "mycroft.mozdev.org"
+
+#: controllers/addons_controller.php:642 controllers/addons_controller.php:652
 msgctxt "addons_searchengines_pagetitle"
 msgid "Search Engines"
 msgstr "Innill Chuardaigh"
 
-#: views/addons/versions.thtml:52
+#: views/addons/searchengines.thtml:153 views/addons/searchengines.thtml:170
+msgctxt "addons_searchengines_thanks"
+msgid ""
+"Special thanks to the Mycroft Project for their work on Firefox Search "
+"Engines."
+msgstr ""
+"Táimid an-bhuíoch den Tionscadal Mycroft as a gcuid oibre go léir ar Innill "
+"Chuardaigh Firefox."
+
+#: views/addons/versions.thtml:53
 msgctxt "addons_versions_careful"
 msgid "Be Careful With Old Versions"
 msgstr "Bí Cúramach le Seanleaganacha"
 
-#: views/addons/versions.thtml:53
+#: views/addons/versions.thtml:54
 msgctxt "addons_versions_careful_introduction"
 msgid ""
 "These versions are displayed for reference and testing purposes. You should "
@@ -753,12 +809,12 @@ msgstr ""
 "Taispeántar na leaganacha seo le haghaidh tagartha agus tástála. Ba chóir "
 "duit an leagan is déanaí den bhreiseán a úsáid i gcónaí."
 
-#: views/addons/versions.thtml:49 controllers/addons_controller.php:1071
+#: views/addons/versions.thtml:50 controllers/addons_controller.php:1081
 msgctxt "addons_versions_history"
 msgid "Version History with Changelogs"
 msgstr "Stair na Leaganacha le Logchomhaid Athruithe"
 
-#: controllers/addons_controller.php:1059
+#: controllers/addons_controller.php:1069
 #, php-format
 msgctxt "addons_versions_pagetitle"
 msgid "%1$s Version History"
@@ -920,7 +976,7 @@ msgctxt "category_extra_see_all"
 msgid "See All %1$s"
 msgstr "Taispeáin Gach %1$s"
 
-#: views/pages/credits.thtml:131
+#: views/pages/credits.thtml:139
 #, php-format
 msgctxt "credits_contributing"
 msgid "For information on contributing, please see our %s."
@@ -928,7 +984,7 @@ msgstr ""
 "Le tuilleadh eolais a fháil maidir le conas b'fhéidir leat cabhrú linn, "
 "féach ar ár %s."
 
-#: views/pages/credits.thtml:131
+#: views/pages/credits.thtml:139
 msgctxt "credits_contributing_wikipage"
 msgid "wiki page"
 msgstr "leathanach vicí"
@@ -987,14 +1043,16 @@ msgstr ""
 
 # date format string as used in PHP's strftime():
 # http://php.net/strftime
-#: views/addons/display.thtml:268 views/addons/display.thtml:272
-#: views/addons/rss/versions.thtml:42 views/blog/view.thtml:74
-#: views/editors/reviews_queue.thtml:57 views/editors/reviews_queue.thtml:68
+#: views/blog/view.thtml:74 views/addons/display.thtml:110
+#: views/addons/display.thtml:293 views/addons/display.thtml:297
+#: views/addons/rss/versions.thtml:42 views/users/info.thtml:70
 #: views/elements/addon_listitem.thtml:96
-#: views/elements/addon_version_detail.thtml:50 views/reviews/add.thtml:57
-#: views/reviews/delete.thtml:49 views/reviews/display.thtml:62
+#: views/elements/addon_listitem.thtml:148 views/elements/feature.thtml:99
+#: views/elements/addon_version_detail.thtml:50
+#: views/editors/reviews_queue.thtml:57 views/editors/reviews_queue.thtml:68
+#: views/search/rss/index.thtml:5 views/reviews/display.thtml:62
 #: views/reviews/display.thtml:66 views/reviews/display.thtml:85
-#: views/search/rss/index.thtml:5 views/users/info.thtml:70
+#: views/reviews/delete.thtml:49 views/reviews/add.thtml:57
 #: webroot/discussions/library/Framework/Framework.Functions.php:606
 msgctxt "date"
 msgid "%B %e, %Y"
@@ -1316,20 +1374,20 @@ msgctxt "devcp_author_lookup_remove"
 msgid "Remove"
 msgstr "Bain"
 
-#: views/developers/add_step1.thtml:129 views/developers/add_step2.thtml:161
-#: views/developers/add_step3.thtml:126 views/developers/add_step4.thtml:61
+#: views/developers/add_step2.thtml:161 views/developers/add_step1.thtml:129
+#: views/developers/add_step4.thtml:61 views/developers/add_step3.thtml:126
 msgctxt "devcp_button_cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: views/developers/add_step1.thtml:129 views/developers/add_step2.thtml:161
-#: views/developers/add_step3.thtml:126 views/developers/add_step4.thtml:61
+#: views/developers/add_step2.thtml:161 views/developers/add_step1.thtml:129
+#: views/developers/add_step4.thtml:61 views/developers/add_step3.thtml:126
 msgctxt "devcp_button_cancel_confirm"
 msgid "Are you sure you wish to cancel your submission?"
 msgstr "An bhfuil tú cinnte gur mian leat seoladh do bhreiseáin a chealú?"
 
-#: views/developers/add_step1.thtml:128 views/developers/add_step2.thtml:160
-#: views/developers/add_step3.thtml:125 views/developers/add_step4.thtml:60
+#: views/developers/add_step2.thtml:160 views/developers/add_step1.thtml:128
+#: views/developers/add_step4.thtml:60 views/developers/add_step3.thtml:125
 msgctxt "devcp_button_next"
 msgid "Next"
 msgstr "Ar Aghaidh"
@@ -1647,8 +1705,8 @@ msgid "Featured Add-ons"
 msgstr "Breiseáin Mhór-Le-Rá"
 
 # %1 is the review count
-#: views/elements/developers/editorsmenu.thtml:56
 #: views/elements/developers/editorsqueue.thtml:42
+#: views/elements/developers/editorsmenu.thtml:56
 #, php-format
 msgctxt "devcp_editorsqueue_moderatedreviews"
 msgid "Moderated Reviews (%s)"
@@ -1660,8 +1718,8 @@ msgstr[3] "Léirmheasanna Iniúchta (%s)"
 msgstr[4] "Léirmheasanna Iniúchta (%s)"
 
 # %1 is the nominated addons count
-#: views/elements/developers/editorsmenu.thtml:58
 #: views/elements/developers/editorsqueue.thtml:44
+#: views/elements/developers/editorsmenu.thtml:58
 #, php-format
 msgctxt "devcp_editorsqueue_nominated"
 msgid "Nominated Add-ons (%s)"
@@ -1673,8 +1731,8 @@ msgstr[3] "Breiseáin Ainmnithe (%s)"
 msgstr[4] "Breiseáin Ainmnithe (%s)"
 
 # %1 is the update count
-#: views/elements/developers/editorsmenu.thtml:57
 #: views/elements/developers/editorsqueue.thtml:43
+#: views/elements/developers/editorsmenu.thtml:57
 #, php-format
 msgctxt "devcp_editorsqueue_pendingupdates"
 msgid "Pending Updates (%s)"
@@ -1723,17 +1781,17 @@ msgctxt "devcp_editversion_submit_update"
 msgid "Update"
 msgstr "Nuashonraigh"
 
+#: controllers/previews_controller.php:108
+#: controllers/previews_controller.php:211
+#: controllers/previews_controller.php:312
+#: controllers/statistics_controller.php:139
+#: controllers/statistics_controller.php:329
 #: controllers/developers_controller.php:145
 #: controllers/developers_controller.php:1004
 #: controllers/developers_controller.php:1030
 #: controllers/developers_controller.php:1286
 #: controllers/developers_controller.php:1390
 #: controllers/developers_controller.php:1440
-#: controllers/previews_controller.php:108
-#: controllers/previews_controller.php:211
-#: controllers/previews_controller.php:312
-#: controllers/statistics_controller.php:139
-#: controllers/statistics_controller.php:329
 msgctxt "devcp_error_addon_access_denied"
 msgid "You do not have access to that add-on."
 msgstr "Níl rochtain agat ar an mbreiseán sin."
@@ -2369,12 +2427,12 @@ msgstr ""
 "Má dhéanann tú réamhamharc réamhshocraithe de seo, rachaidh sé in áit an "
 "réamhamhairc réamhshocraithe atá ann faoi láthair."
 
-#: controllers/developers_controller.php:64
-#: controllers/developers_controller.php:79
-#: controllers/developers_controller.php:82
 #: controllers/previews_controller.php:67
 #: controllers/previews_controller.php:79
 #: controllers/previews_controller.php:82
+#: controllers/developers_controller.php:64
+#: controllers/developers_controller.php:79
+#: controllers/developers_controller.php:82
 msgctxt "devcp_pagetitle"
 msgid "Developer Tools"
 msgstr "Uirlisí Forbróra"
@@ -2823,7 +2881,7 @@ msgstr ""
 "Coinnigh na scagairí seo le linn an tseisiúin seo, nó go dtí go nglanfar iad."
 
 # %1 is the queue mode
-#: views/admin/flagged_queue.thtml:75 views/editors/queue.thtml:108
+#: views/editors/queue.thtml:108 views/admin/flagged_queue.thtml:75
 msgctxt "editors_notice_none_found"
 msgid "There are currently no add-ons of this type to review."
 msgstr "Níl aon bhreiseáin den chineál seo le hiniúchadh faoi láthair."
@@ -3213,8 +3271,8 @@ msgctxt "editors_th_additional_info"
 msgid "Additional Information"
 msgstr "Tuilleadh Eolais"
 
-#: views/admin/flagged_queue.thtml:53 views/editors/featured.thtml:62
-#: views/editors/queue.thtml:73
+#: views/editors/featured.thtml:62 views/editors/queue.thtml:73
+#: views/admin/flagged_queue.thtml:53
 msgctxt "editors_th_addon"
 msgid "Add-on"
 msgstr "Breiseán"
@@ -3272,12 +3330,11 @@ msgctxt "editors_x_minutes"
 msgid "%s minutes"
 msgstr "%s nóiméad"
 
-#: views/errors/error401.thtml:50 controllers/components/amo.php:486
-#: controllers/components/amo.php:487 controllers/components/amo.php:488
+#: views/errors/error401.thtml:50 controllers/reviews_controller.php:283
 #: controllers/components/simple_acl.php:81
 #: controllers/components/simple_acl.php:82
-#: controllers/components/simple_acl.php:83
-#: controllers/reviews_controller.php:283
+#: controllers/components/simple_acl.php:83 controllers/components/amo.php:486
+#: controllers/components/amo.php:487 controllers/components/amo.php:488
 msgctxt "error_access_denied"
 msgid "Access Denied"
 msgstr "Cead Rochtana Diúltaithe"
@@ -3287,23 +3344,24 @@ msgctxt "error_access_denied_message"
 msgid "You are not authorized to view this page."
 msgstr "Níl cead agat féachaint ar an leathanach seo."
 
-#: controllers/addons_controller.php:101 controllers/addons_controller.php:154
-#: controllers/addons_controller.php:940 controllers/addons_controller.php:990
-#: controllers/addons_controller.php:994
-#: controllers/developers_controller.php:165
-#: controllers/developers_controller.php:1127
-#: controllers/developers_controller.php:1434
-#: controllers/downloads_controller.php:94
-#: controllers/downloads_controller.php:101
-#: controllers/editors_controller.php:377
 #: controllers/previews_controller.php:115
 #: controllers/previews_controller.php:206
 #: controllers/previews_controller.php:307
+#: controllers/statistics_controller.php:127
+#: controllers/addons_controller.php:105 controllers/addons_controller.php:158
+#: controllers/addons_controller.php:950
+#: controllers/addons_controller.php:1000
+#: controllers/addons_controller.php:1004
 #: controllers/reviews_controller.php:76
 #: controllers/reviews_controller.php:177
 #: controllers/reviews_controller.php:262
 #: controllers/reviews_controller.php:270
-#: controllers/statistics_controller.php:127
+#: controllers/editors_controller.php:377
+#: controllers/downloads_controller.php:94
+#: controllers/downloads_controller.php:101
+#: controllers/developers_controller.php:165
+#: controllers/developers_controller.php:1127
+#: controllers/developers_controller.php:1434
 msgctxt "error_addon_notfound"
 msgid "Add-on not found!"
 msgstr "Breiseán gan aimsiú!"
@@ -3313,27 +3371,27 @@ msgctxt "error_addon_notviewable"
 msgid "This add-on is not viewable here."
 msgstr "Níl an breiseán seo infheicthe anseo."
 
-#: controllers/addons_controller.php:505
+#: controllers/addons_controller.php:511
 msgctxt "error_browse_no_addons"
 msgid "No add-ons in this category!"
 msgstr "Níl aon bhreiseán sa chatagóir seo!"
 
-#: views/developers/add_step2.thtml:117 views/users/register.thtml:60
+#: views/users/register.thtml:60 views/developers/add_step2.thtml:117
 msgctxt "error_email_invalid"
 msgid "This is not a valid email address."
 msgstr "Ní seoladh ríomhphoist bailí é seo."
 
-#: views/admin/users_edit.thtml:62 views/admin/users_edit.thtml:67
-#: views/reviews/add.thtml:74 views/reviews/add.thtml:98
-#: views/users/edit.thtml:59 views/users/edit.thtml:64
 #: views/users/pwreset.thtml:74 views/users/register.thtml:65
 #: views/users/register.thtml:75 views/users/register.thtml:80
+#: views/users/edit.thtml:59 views/users/edit.thtml:64
+#: views/reviews/add.thtml:74 views/reviews/add.thtml:98
+#: views/admin/users_edit.thtml:62 views/admin/users_edit.thtml:67
 msgctxt "error_field_required"
 msgid "This field must not be empty."
 msgstr "Caithfidh tú an réimse seo a líonadh."
 
-#: controllers/editors_controller.php:493 controllers/files_controller.php:75
-#: controllers/files_controller.php:91 controllers/files_controller.php:94
+#: controllers/files_controller.php:75 controllers/files_controller.php:91
+#: controllers/files_controller.php:94 controllers/editors_controller.php:493
 msgctxt "error_file_notfound"
 msgid "File not found!"
 msgstr "Comhad gan aimsiú!"
@@ -3344,8 +3402,8 @@ msgctxt "error_file_x_notfound"
 msgid "File error: %s does not exist."
 msgstr "Earráid chomhaid: níl %s ann."
 
-#: views/reviews/add.thtml:64 views/users/edit.thtml:49
-#: views/users/register.thtml:49 controllers/developers_controller.php:352
+#: views/users/register.thtml:49 views/users/edit.thtml:49
+#: views/reviews/add.thtml:64 controllers/developers_controller.php:352
 #: controllers/developers_controller.php:611
 #: controllers/developers_controller.php:750
 #: controllers/developers_controller.php:758
@@ -3355,9 +3413,9 @@ msgctxt "error_formerrors"
 msgid "There are errors in this form. Please correct them and resubmit."
 msgstr "Tá earráidí san fhoirm seo.  Ceartaigh iad agus seol é arís."
 
-#: views/admin/users_edit.thtml:85 views/developers/add_step2.thtml:112
-#: views/developers/add_step2.thtml:122 views/users/edit.thtml:78
-#: views/users/register.thtml:94
+#: views/users/register.thtml:94 views/users/edit.thtml:78
+#: views/developers/add_step2.thtml:112 views/developers/add_step2.thtml:122
+#: views/admin/users_edit.thtml:85
 msgctxt "error_invalid_url"
 msgid ""
 "This URL has an invalid format. Valid URLs look like http://example.com/"
@@ -3366,15 +3424,13 @@ msgstr ""
 "Tá formáid an URL seo neamhbhailí. Ba chóir dó a bheith cosúil le http://"
 "sampla.com/mo_leathanach."
 
-#: controllers/addons_controller.php:85 controllers/addons_controller.php:88
-#: controllers/addons_controller.php:914 controllers/addons_controller.php:980
-#: controllers/downloads_controller.php:65
+#: controllers/addons_controller.php:89 controllers/addons_controller.php:92
+#: controllers/addons_controller.php:924 controllers/addons_controller.php:990
 #: controllers/reviews_controller.php:70
 #: controllers/reviews_controller.php:171
-#: controllers/reviews_controller.php:255 controllers/users_controller.php:180
-#: controllers/users_controller.php:249 controllers/users_controller.php:466
-#: controllers/users_controller.php:176 controllers/users_controller.php:245
-#: controllers/users_controller.php:462
+#: controllers/reviews_controller.php:255 controllers/users_controller.php:176
+#: controllers/users_controller.php:245 controllers/users_controller.php:462
+#: controllers/downloads_controller.php:65
 #, php-format
 msgctxt "error_missing_argument"
 msgid "Missing argument: %s"
@@ -3390,24 +3446,23 @@ msgctxt "error_preview_notfound"
 msgid "Preview not found!"
 msgstr "Réamhamharc gan aimsiú!"
 
-#: views/addons/display.thtml:363 views/reviews/add.thtml:92
+#: views/addons/display.thtml:380 views/reviews/add.thtml:92
 msgctxt "error_review_rating_required"
 msgid "You must select a rating."
 msgstr "Ní mór duit rátáil a roghnú."
 
-#: controllers/users_controller.php:155 controllers/users_controller.php:151
+#: controllers/users_controller.php:151
 msgctxt "error_user_already_confirmed"
 msgid "This user account is already confirmed."
 msgstr "Tá an cuntas úsáideora seo dearbhaithe cheana."
 
-#: controllers/users_controller.php:197 controllers/users_controller.php:260
 #: controllers/users_controller.php:193 controllers/users_controller.php:256
 msgctxt "error_user_badconfirmationcode"
 msgid "Invalid confirmation code!"
 msgstr "Cód neamhbhailí dearbhaithe!"
 
-#: views/users/edit.thtml:96 views/users/pwreset.thtml:79
-#: views/users/register.thtml:70
+#: views/users/pwreset.thtml:79 views/users/register.thtml:70
+#: views/users/edit.thtml:96
 msgctxt "error_user_confirmpw_nomatch"
 msgid "The passwords did not match."
 msgstr "Ní ionann na focail fhaire."
@@ -3417,16 +3472,15 @@ msgctxt "error_user_email_notunique"
 msgid "This email address is already taken by another user."
 msgstr "Tá an seoladh ríomhphoist seo cláraithe cheana ag úsáideoir eile."
 
-#: views/admin/users_edit.thtml:72 views/users/edit.thtml:69
-#: views/users/register.thtml:85
+#: controllers/users_controller.php:546 controllers/users_controller.php:547
+#: views/users/register.thtml:85 views/users/edit.thtml:69
+#: views/admin/users_edit.thtml:72
 msgctxt "error_user_nickname_notunique"
 msgid "This nickname is already taken."
 msgstr "Tá an leasainm seo cláraithe cheana."
 
-#: views/users/pwreset.thtml:54 controllers/users_controller.php:186
-#: controllers/users_controller.php:255 controllers/users_controller.php:472
-#: controllers/users_controller.php:182 controllers/users_controller.php:251
-#: controllers/users_controller.php:468
+#: views/users/pwreset.thtml:54 controllers/users_controller.php:182
+#: controllers/users_controller.php:251 controllers/users_controller.php:468
 msgctxt "error_user_notfound"
 msgid "User not found!"
 msgstr "Úsáideoir gan aimsiú!"
@@ -3444,8 +3498,8 @@ msgctxt "error_username_or_pw_wrong"
 msgid "Wrong username or password!"
 msgstr "Ainm an úsáideora nó focal faire mícheart!"
 
-#: controllers/developers_controller.php:1281
 #: controllers/editors_controller.php:372
+#: controllers/developers_controller.php:1281
 msgctxt "error_version_notfound"
 msgid "Version not found!"
 msgstr "Leagan gan aimsiú!"
@@ -3455,13 +3509,13 @@ msgctxt "error_wrong_password"
 msgid "Wrong password entered!"
 msgstr "Focal faire mícheart!"
 
-#: views/elements/feature.thtml:106
+#: views/elements/feature.thtml:115
 msgctxt "feature_learnmore"
 msgid "Learn more"
 msgstr "Tuilleadh eolais"
 
 # %1 is the add-on name
-#: views/elements/feature.thtml:107
+#: views/elements/feature.thtml:116
 #, php-format
 msgctxt "feature_learnmore_about_addon"
 msgid "Learn more about %1$s"
@@ -3479,7 +3533,7 @@ msgstr[2] "%1$s léirmheas"
 msgstr[3] "%1$s léirmheas"
 msgstr[4] "%1$s léirmheas"
 
-#: views/elements/feature.thtml:111
+#: views/elements/feature.thtml:120
 msgctxt "feature_view_more_from_category"
 msgid "View more from"
 msgstr "Tuilleadh ó"
@@ -3573,21 +3627,21 @@ msgstr "Ar ais go dtí an Plé"
 
 #: webroot/discussions/themes/addons/comment_form.php:33
 #: webroot/discussions/themes/addons/comment_form.php:35
+#: webroot/discussions/themes/addons/settings_category_edit.php:69
 #: webroot/discussions/themes/addons/discussion_form.php:49
 #: webroot/discussions/themes/addons/discussion_form.php:51
-#: webroot/discussions/themes/addons/settings_category_edit.php:69
-#: webroot/discussions/themes/addons/settings_category_list.php:50
-#: webroot/discussions/themes/addons/settings_category_remove.php:32
 #: webroot/discussions/themes/addons/settings_role_edit.php:83
 #: webroot/discussions/themes/addons/settings_role_list.php:57
+#: webroot/discussions/themes/addons/settings_category_list.php:50
+#: webroot/discussions/themes/addons/settings_category_remove.php:32
 #: webroot/discussions/themes/addons/settings_role_remove.php:33
 msgctxt "forum_cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: webroot/discussions/categories.php:28
 #: webroot/discussions/themes/addons/settings_category_edit.php:16
 #: webroot/discussions/themes/addons/settings_category_remove.php:12
+#: webroot/discussions/categories.php:28
 msgctxt "forum_categories"
 msgid "Forum Categories"
 msgstr "Catagóirí Fóraim"
@@ -3602,10 +3656,10 @@ msgctxt "forum_category_description_notes"
 msgid "Description Notes"
 msgstr "Nótaí: Cur Síos"
 
-#: webroot/discussions/settings.php:58
 #: webroot/discussions/themes/addons/settings_category_edit.php:6
 #: webroot/discussions/themes/addons/settings_category_list.php:14
 #: webroot/discussions/themes/addons/settings_category_remove.php:6
+#: webroot/discussions/settings.php:58
 msgctxt "forum_category_management"
 msgid "Category Management"
 msgstr "Bainisteoireacht na gCatagóirí"
@@ -3685,8 +3739,8 @@ msgctxt "forum_define_new_role"
 msgid "Add new role"
 msgstr "Cuir ról nua leis"
 
-#: webroot/discussions/themes/addons/settings_category_list.php:29
 #: webroot/discussions/themes/addons/settings_role_list.php:31
+#: webroot/discussions/themes/addons/settings_category_list.php:29
 msgctxt "forum_edit"
 msgid "Edit"
 msgstr "Eagar"
@@ -3725,6 +3779,11 @@ msgstr "Earráid"
 msgctxt "forum_get_category_to_edit"
 msgid "Select category to edit"
 msgstr "Roghnaigh catagóir le cur in eagar"
+
+#: webroot/discussions/themes/addons/comments.php:93
+msgctxt "forum_hide_comment"
+msgid "Hide Comment"
+msgstr "Folaigh an Nóta"
 
 #: webroot/discussions/library/Framework/Framework.Functions.php:693
 msgctxt "forum_improper_format"
@@ -3857,10 +3916,10 @@ msgstr[4] "%1$s Freagra"
 
 #: webroot/discussions/themes/addons/settings_category_edit.php:16
 #: webroot/discussions/themes/addons/settings_category_edit.php:26
-#: webroot/discussions/themes/addons/settings_category_remove.php:12
-#: webroot/discussions/themes/addons/settings_category_remove.php:25
 #: webroot/discussions/themes/addons/settings_role_edit.php:15
 #: webroot/discussions/themes/addons/settings_role_edit.php:28
+#: webroot/discussions/themes/addons/settings_category_remove.php:12
+#: webroot/discussions/themes/addons/settings_category_remove.php:25
 #: webroot/discussions/themes/addons/settings_role_remove.php:12
 #: webroot/discussions/themes/addons/settings_role_remove.php:26
 msgctxt "forum_required"
@@ -3899,10 +3958,10 @@ msgctxt "forum_role_icon_notes"
 msgid "Icon Notes"
 msgstr "Nótaí: Deilbhín"
 
-#: webroot/discussions/settings.php:52
 #: webroot/discussions/themes/addons/settings_role_edit.php:6
 #: webroot/discussions/themes/addons/settings_role_list.php:15
 #: webroot/discussions/themes/addons/settings_role_remove.php:6
+#: webroot/discussions/settings.php:52
 msgctxt "forum_role_management"
 msgid "Role Management"
 msgstr "Bainisteoireacht na Ról"
@@ -3954,7 +4013,7 @@ msgctxt "forum_roles_in_category"
 msgid "Roles in Category"
 msgstr "Róil i gCatagóir"
 
-#: views/addons/display.thtml:369
+#: views/addons/display.thtml:386
 #: webroot/discussions/themes/addons/settings_category_edit.php:68
 #: webroot/discussions/themes/addons/settings_role_edit.php:82
 msgctxt "forum_save"
@@ -4101,7 +4160,7 @@ msgctxt "header_navlink_addons"
 msgid "Add-ons"
 msgstr "Breiseáin"
 
-#: views/addons/display.thtml:348 views/elements/developers/myaddons.thtml:65
+#: views/addons/display.thtml:365 views/elements/developers/myaddons.thtml:65
 #: views/elements/header.thtml:145
 msgctxt "header_navlink_login"
 msgid "Log in"
@@ -4122,8 +4181,8 @@ msgctxt "header_navlink_register"
 msgid "Register"
 msgstr "Cláraigh"
 
-#: views/elements/addon_discussionheader.thtml:63
 #: views/elements/addon_listitem.thtml:81 views/elements/feature.thtml:68
+#: views/elements/addon_discussionheader.thtml:63
 #, php-format
 msgctxt "img_preview_of"
 msgid "Preview Image of %s"
@@ -4176,7 +4235,7 @@ msgctxt "langtools_download_langpack"
 msgid "Download Language Pack"
 msgstr "Íosluchtaigh Pacáiste Teanga"
 
-#: views/addons/dictionaries.thtml:59 controllers/addons_controller.php:773
+#: views/addons/dictionaries.thtml:59 controllers/addons_controller.php:781
 #: controllers/components/amo.php:577
 msgctxt "langtools_header_dicts_and_langpacks"
 msgid "Dictionaries & Language Packs"
@@ -4207,7 +4266,8 @@ msgctxt "langtools_tableheader_language"
 msgid "Language"
 msgstr "Teanga"
 
-#: views/elements/addon_list_options.thtml:46
+#: views/users/edit.thtml:72 views/users/edit.thtml:73
+#: views/users/emailchange.thtml:53 views/elements/addon_list_options.thtml:46
 msgctxt "list_sortby_date"
 msgid "Date"
 msgstr "Dáta"
@@ -4249,18 +4309,18 @@ msgstr "Thunderbird"
 
 #: controllers/components/amo.php:555 controllers/components/amo.php:557
 msgctxt "nav_category_dicts_langpacks"
-msgid ""
-msgstr ""
+msgid "Dictionaries & Language Packs"
+msgstr "Foclóirí ⁊ Pacáistí Teanga"
 
 #: controllers/components/amo.php:591 controllers/components/amo.php:593
 msgctxt "nav_category_plugins"
-msgid ""
-msgstr ""
+msgid "Plugins"
+msgstr "Breiseáin"
 
 #: controllers/components/amo.php:561
 msgctxt "nav_category_themes"
-msgid ""
-msgstr ""
+msgid "Themes"
+msgstr "Téamaí"
 
 # In a user list: user 1, user 2, "others"
 #: views/helpers/addons_html.php:207
@@ -4339,18 +4399,18 @@ msgctxt "reviews_header"
 msgid "Reviews for %s"
 msgstr "Léirmheasanna ar %s"
 
-#: controllers/addons_controller.php:275
+#: controllers/addons_controller.php:279
 msgctxt "rss_featuredaddons"
 msgid "Featured Add-ons"
 msgstr "Breiseáin Mhór-Le-Rá"
 
-#: controllers/addons_controller.php:274
-#: controllers/addons_controller.php:1095
+#: controllers/addons_controller.php:278
+#: controllers/addons_controller.php:1105
 msgctxt "rss_newestaddons"
 msgid "Newest Add-ons"
 msgstr "Breiseáin Is Nuaí"
 
-#: controllers/addons_controller.php:1096
+#: controllers/addons_controller.php:1106
 #, php-format
 msgctxt "rss_newestaddons_description"
 msgid "The most recent %s Add-ons"
@@ -4426,27 +4486,27 @@ msgctxt "search_rss_results_for"
 msgid "Search results for: %s"
 msgstr "Torthaí cuardaigh le haghaidh: %s"
 
-#: views/addons/home.thtml:126
+#: views/addons/home.thtml:127
 msgctxt "sidebar_navlink_admin_tools"
 msgid "Admin Tools"
 msgstr "Uirlisí Riaracháin"
 
-#: views/addons/home.thtml:118 views/elements/header.thtml:140
+#: views/addons/home.thtml:119 views/elements/header.thtml:140
 msgctxt "sidebar_navlink_developer_tools"
 msgid "Developer Tools"
 msgstr "Uirlisí Forbróra"
 
-#: views/addons/home.thtml:120
+#: views/addons/home.thtml:121
 msgctxt "sidebar_navlink_editor_tools"
 msgid "Editor Tools"
 msgstr "Uirlisí Eagarthóra"
 
-#: views/addons/home.thtml:116
+#: views/addons/home.thtml:117
 msgctxt "sidebar_navlink_welcome"
 msgid "Welcome"
 msgstr "Fáilte"
 
-#: views/addons/home.thtml:116
+#: views/addons/home.thtml:117
 #, php-format
 msgctxt "sidebar_navlink_welcome_name"
 msgid "Welcome, %s"
@@ -4487,8 +4547,8 @@ msgctxt "sidebar_pitch_theme"
 msgid "Theme"
 msgstr "Téama"
 
-#: views/addons/dictionaries.thtml:88 views/developers/add_step3.thtml:74
-#: views/developers/editversion.thtml:58 views/helpers/localization.php:64
+#: views/addons/dictionaries.thtml:88 views/developers/editversion.thtml:58
+#: views/developers/add_step3.thtml:74 views/helpers/localization.php:64
 #, php-format
 msgctxt "size_kb"
 msgid "%1$s KB"
@@ -5047,12 +5107,13 @@ msgctxt "themes_landing_browse_themes"
 msgid "Browse Themes"
 msgstr "Brabhsáil Téamaí"
 
+#: views/users/edit.thtml:136 views/users/edit.thtml:137
 #: views/users/edit.thtml:81
 msgctxt "user_change_password"
 msgid "Change password"
 msgstr "Athraigh focal faire"
 
-#: controllers/users_controller.php:192 controllers/users_controller.php:188
+#: controllers/users_controller.php:188
 msgctxt "user_confirmationcode_resent"
 msgid "The confirmation code was resent!"
 msgstr "Seoladh an cód dearbhaithe arís!"
@@ -5060,6 +5121,7 @@ msgstr "Seoladh an cód dearbhaithe arís!"
 # This contains the email sent to users when they signed up for a new
 # account:
 # %1 is the confirmation URL, %2 is the current app
+#: views/users/edit.thtml:58 views/users/edit.thtml:59
 #: views/users/email/confirm_plain.thtml:6
 #, php-format
 msgctxt "user_email_confirm_account_nopass"
@@ -5092,6 +5154,36 @@ msgstr ""
 "choimeád.\n"
 "\n"
 "Go raibh maith agat as clárú le Breiseáin %2$s\n"
+"-- Foireann Breiseáin %2$s"
+
+# %1 is the confirmation url, %2 is the application name
+#: views/users/email/emailchange_plain.thtml:6
+#: views/users/email/emailchange_plain.thtml:8
+#, php-format
+msgctxt "user_email_confirm_emailchange"
+msgid ""
+"You requested a change to your email address at %2$s Add-ons.\n"
+"\n"
+"In order to confirm the new address, please click the link below or copy and "
+"paste the whole thing into your browser's location bar:\n"
+"\n"
+"%1$s\n"
+"\n"
+"You have 48 hours to confirm the new address. If you do not want to change "
+"the address anymore, you can just ignore this email.\n"
+"\n"
+"Thanks!\n"
+"-- %2$s Add-ons Staff"
+msgstr ""
+"D'iarr tú do sheoladh ríomhphoist a athrú ag Breiseáin %2$s.\n"
+"\n"
+"Chun an seoladh nua a dhearbhú, cliceáil an nasc thíos nó cóipeáil agus greamaigh é i mbarra suímh do bhrabhsálaí:\n"
+"\n"
+"%1$s\n"
+"\n"
+"Caithfidh tú an seoladh nua a dhearbhú laistigh de thréimhse 48 uair. Mura mian leat an seoladh a athrú, b'fhéidir leat neamhaird a dhéanamh den teachtaireacht seo.\n"
+"\n"
+"Go raibh maith agat!\n"
 "-- Foireann Breiseáin %2$s"
 
 #: controllers/users_controller.php:163 controllers/users_controller.php:159
@@ -5132,19 +5224,46 @@ msgstr ""
 "Go raibh maith agat,\n"
 "-- Foireann Breiseáin %2$s"
 
-#: controllers/users_controller.php:239 controllers/users_controller.php:235
+#: controllers/users_controller.php:235
 #, php-format
 msgctxt "user_email_pwreset_subject"
 msgid "Reset your %s Add-ons password"
 msgstr "Athshocraigh d'Fhocal Faire do Bhreiseáin %s"
 
-#: views/users/edit.thtml:94 views/users/pwreset.thtml:77
-#: views/users/register.thtml:68
+#: views/users/emailchange.thtml:52
+msgctxt "user_emailchange_error"
+msgid "Error!"
+msgstr "Earráid!"
+
+# %1 is the application name
+#: controllers/users_controller.php:479 controllers/users_controller.php:480
+#, php-format
+msgctxt "user_emailchange_subject"
+msgid "Please confirm your email address change at %1$s Add-ons"
+msgstr "Dearbhaigh do sheoladh ríomhphoist nua ag Breiseáin %1$s"
+
+#: views/users/emailchange.thtml:49 views/users/emailchange.thtml:50
+msgctxt "user_emailchange_success"
+msgid "Success!"
+msgstr "D'éirigh leis!"
+
+# %1 is the new email address
+#: views/users/emailchange.thtml:51
+#, php-format
+msgctxt "user_emailchange_successful_description"
+msgid ""
+"Your email address was changed successfully. From now on, please use %1$s to "
+"log in."
+msgstr ""
+"D'éirigh le hathrú do ríomhphoist.  As seo amach, bain úsáid as %1$s chun logáil isteach." 
+
+#: views/users/pwreset.thtml:77 views/users/register.thtml:68
+#: views/users/edit.thtml:94
 msgctxt "user_form_confirmpassword"
 msgid "Confirm password"
 msgstr "Dearbhaigh an focal faire"
 
-#: controllers/users_controller.php:389 controllers/users_controller.php:385
+#: controllers/users_controller.php:385
 #, php-format
 msgctxt "user_form_editprofile"
 msgid "Edit user profile for %s"
@@ -5156,42 +5275,42 @@ msgctxt "user_form_email"
 msgid "Email address"
 msgstr "Seoladh ríomhphoist"
 
-#: views/admin/users_edit.thtml:60 views/users/edit.thtml:57
-#: views/users/register.thtml:73
+#: views/users/register.thtml:73 views/users/edit.thtml:57
+#: views/admin/users_edit.thtml:60
 msgctxt "user_form_firstname"
 msgid "First name"
 msgstr "Ainm"
 
-#: views/admin/users_edit.thtml:75 views/users/edit.thtml:72
-#: views/users/register.thtml:88
+#: views/users/register.thtml:88 views/users/edit.thtml:72
+#: views/admin/users_edit.thtml:75
 msgctxt "user_form_hideemail"
 msgid "Hide email address"
 msgstr "Folaigh seoladh ríomhphoist"
 
-#: views/admin/users_edit.thtml:83 views/users/edit.thtml:76
-#: views/users/register.thtml:92
+#: views/users/register.thtml:92 views/users/edit.thtml:76
+#: views/admin/users_edit.thtml:83
 msgctxt "user_form_homepage"
 msgid "Website URL"
 msgstr "URL an tsuímh Gréasáin"
 
-#: views/admin/users_edit.thtml:65 views/users/edit.thtml:62
-#: views/users/register.thtml:78
+#: views/users/register.thtml:78 views/users/edit.thtml:62
+#: views/admin/users_edit.thtml:65
 msgctxt "user_form_lastname"
 msgid "Last name"
 msgstr "Sloinne"
 
-#: controllers/users_controller.php:317 controllers/users_controller.php:313
+#: controllers/users_controller.php:313
 msgctxt "user_form_login"
 msgid "User Login"
 msgstr "Logáil Isteach"
 
-#: views/users/edit.thtml:89 views/users/pwreset.thtml:72
+#: views/users/pwreset.thtml:72 views/users/edit.thtml:89
 msgctxt "user_form_newpassword"
 msgid "New password"
 msgstr "Focal faire nua"
 
-#: views/admin/users_edit.thtml:70 views/users/edit.thtml:67
-#: views/users/register.thtml:83
+#: views/users/register.thtml:83 views/users/edit.thtml:67
+#: views/admin/users_edit.thtml:70
 msgctxt "user_form_nickname"
 msgid "Nickname"
 msgstr "Leasainm"
@@ -5206,7 +5325,7 @@ msgctxt "user_form_password"
 msgid "Password"
 msgstr "Focal Faire"
 
-#: controllers/users_controller.php:97 controllers/users_controller.php:93
+#: controllers/users_controller.php:93
 msgctxt "user_form_registration"
 msgid "New User Registration"
 msgstr "Clárú Úsáideora Nua"
@@ -5242,14 +5361,14 @@ msgctxt "user_login_register_link"
 msgid "Create a new user account"
 msgstr "Cruthaigh cuntas nua úsáideora"
 
-#: controllers/users_controller.php:451 controllers/users_controller.php:447
+#: controllers/users_controller.php:447
 msgctxt "user_profile_edit_error"
 msgid ""
 "There were errors in the changes you made. Please correct them and resubmit."
 msgstr ""
 "Bhí botúin sna hathruithe a rinne tú.  Ceartaigh iad agus seol iad arís."
 
-#: controllers/users_controller.php:449 controllers/users_controller.php:445
+#: controllers/users_controller.php:445
 msgctxt "user_profile_saved"
 msgid "Profile updated."
 msgstr "Nuashonraíodh an phróifíl."
@@ -5260,7 +5379,7 @@ msgctxt "user_pwreset_for_email"
 msgid "Password reset for %s"
 msgstr "Athshocraíodh an focal faire le haghaidh %s"
 
-#: controllers/users_controller.php:221 controllers/users_controller.php:217
+#: controllers/users_controller.php:217
 msgctxt "user_pwreset_header"
 msgid "Password Reset"
 msgstr "Athshocrú Focail Faire"
@@ -5270,14 +5389,14 @@ msgctxt "user_pwreset_link"
 msgid "Forgot your password?"
 msgstr "An ndearna tú dearmad ar d'fhocal faire?"
 
-#: controllers/users_controller.php:242 controllers/users_controller.php:238
+#: controllers/users_controller.php:238
 msgctxt "user_pwreset_link_sent"
 msgid "The password reset link was sent to your email address."
 msgstr ""
 "Seoladh nasc chuig do sheoladh ríomhphoist lenar féidir d'fhocal faire a "
 "athshocrú."
 
-#: controllers/users_controller.php:288 controllers/users_controller.php:284
+#: controllers/users_controller.php:284
 msgctxt "user_pwreset_okay"
 msgid "Password successfully reset."
 msgstr "D'éirigh le hathshocrú d'fhocail faire."
@@ -5353,12 +5472,11 @@ msgctxt "user_register_welcome"
 msgid "Thanks for registering and welcome to %1$s!"
 msgstr "Go raibh maith agat as clárú agus fáilte romhat go %1$s!"
 
-#: controllers/users_controller.php:204 controllers/users_controller.php:200
+#: controllers/users_controller.php:200
 msgctxt "user_verified_okay"
 msgid "Successfully verified!"
 msgstr "D'éirigh leis an bhfíorú!"
 
-#: controllers/users_controller.php:382 controllers/users_controller.php:383
 #: controllers/users_controller.php:378 controllers/users_controller.php:379
 msgctxt "users_edit_pagetitle"
 msgid "User Account Editing"
@@ -5395,13 +5513,12 @@ msgctxt "users_info_nickname"
 msgid "Nickname"
 msgstr "Leasainm"
 
-#: controllers/users_controller.php:495 controllers/users_controller.php:491
+#: controllers/users_controller.php:491
 #, php-format
 msgctxt "users_info_pagetitle"
 msgid "User Info for %1$s"
 msgstr "Faisnéis maidir le húsáideoir %1$s"
 
-#: controllers/users_controller.php:314 controllers/users_controller.php:316
 #: controllers/users_controller.php:310 controllers/users_controller.php:312
 msgctxt "users_login_pagetitle"
 msgid "User Login"
@@ -5435,74 +5552,27 @@ msgstr ""
 "agat cheana, logáil isteach, nó faigh <a href=\"%1$s\">tuilleadh eolais "
 "faoin bhosca gainimh.</a>"
 
-#: controllers/users_controller.php:218 controllers/users_controller.php:220
 #: controllers/users_controller.php:214 controllers/users_controller.php:216
 msgctxt "users_pwreset_pagetitle"
 msgid "User Password Reset"
 msgstr "Athshocrú Focail Faire"
 
-#: controllers/users_controller.php:94 controllers/users_controller.php:96
 #: controllers/users_controller.php:90 controllers/users_controller.php:92
 msgctxt "users_register_pagetitle"
 msgid "New User Registration"
 msgstr "Clárú Úsáideora Nua"
 
-#: views/addons/display.thtml:207 views/addons/display.thtml:210
-msgctxt "addons_display_header_homepage"
-msgid "Homepage"
-msgstr "Leathanach Baile"
+#~ msgctxt "addons_display_collapse"
+#~ msgid "collapse"
+#~ msgstr "laghdaigh"
 
-#: views/addons/searchengines.thtml:99
-msgctxt "addons_searchengines_additional_resources"
-msgid "Additional Resources"
-msgstr "Acmhainní Eile"
+#~ msgctxt "addons_display_developer_home_page"
+#~ msgid "Developer Home Page"
+#~ msgstr "Leathanach Baile Forbróirí"
 
-# link text devmo
-#: views/addons/searchengines.thtml:105
-msgctxt "addons_searchengines_devmo_link"
-msgid "Mozilla Developer Center"
-msgstr "Lárionad Forbartha Mozilla"
-
-# %1 is "make your own" link
-# %2 is MDC link
-#: views/addons/searchengines.thtml:103
-#, php-format
-msgctxt "addons_searchengines_learn_howto"
-msgid "Learn how to %1$s at the %2$s."
-msgstr "Foghlaim conas is féidir %1$s ag %2$s."
-
-# link path to search plugins instructions, relative to devmo
-#: views/addons/searchengines.thtml:104
-msgctxt "addons_searchengines_makeyourown_href"
-msgid "/en/docs/Creating_OpenSearch_plugins_for_Firefox"
-msgstr "/en/docs/Creating_OpenSearch_plugins_for_Firefox"
-
-# link text for "make your own" (opensearch engine)
-#: views/addons/searchengines.thtml:104
-msgctxt "addons_searchengines_makeyourown_link"
-msgid "make your own"
-msgstr "do bhreiseán féin a dhéanamh"
-
-# %1 is the link to mycroft.mozdev.org
-#: views/addons/searchengines.thtml:102
-#, php-format
-msgctxt "addons_searchengines_more"
-msgid "Browse through more search engines at %1$s"
-msgstr "Brabhsáil tuilleadh inneall cuardaigh ag %1$s"
-
-# link text to mycroft.mozdev.org
-#: views/addons/searchengines.thtml:102
-msgctxt "addons_searchengines_mycroft_link"
-msgid "mycroft.mozdev.org"
-msgstr "mycroft.mozdev.org"
-
-#: views/addons/searchengines.thtml:108
-msgctxt "addons_searchengines_thanks"
-msgid ""
-"Special thanks to the Mycroft Project for their work on Firefox Search "
-"Engines."
-msgstr ""
-"Táimid an-bhuíoch den Tionscadal Mycroft as a gcuid oibre go léir ar Innill Chuardaigh Firefox."
+#~ msgctxt "addons_display_expand"
+#~ msgid "expand"
+#~ msgstr "leathnaigh"
 
 # %1 is the user, %2 is the (localized) date, %3 is the rating
 #~ msgctxt "addon_reviewed_by_u_on_d_rated_x"
