@@ -118,7 +118,18 @@ distclean :
 #   rest relates to maintenance/updates                                   #
 ###########################################################################
 
-# Download messages.po from http://svn.mozilla.org/addons/trunk/site/app/locale/en_US/LC_MESSAGES/messages.po
+# To update AMO site;
+# make messages.po-update
+# make amo-obair.po
+# translate anything missing
+# make amo-final.po
+# If diff looks OK, 
+# make amo-commit
+
+messages.po-update : FORCE
+	rm -f messages.po
+	wget http://svn.mozilla.org/addons/trunk/site/app/locale/en_US/LC_MESSAGES/messages.po
+
 amo.pot : messages.po
 	cat messages.po | sed '/^#~/,$$d' > mstripped.po
 	perl AMOfake mstripped.po > $@
@@ -130,11 +141,17 @@ amo-obair.po : amo.pot
 	cpo -q amo-obair.po
 	touch $@
 
-# This is the one to attach to the AMO Localization (ga) bug
+SVNDIR=/home/kps/seal/amo/ga_IE/LC_MESSAGES/messages.po
 amo-final.po : amo-obair.po
 	cat amo-obair.po | sed '/^#~/,$$d' > mstripped.po
 	perl AMOback mstripped.po | sed '/^msgctxt/d' > $@
 	rm -f mstripped.po
+	diff -u $(SVNDIR) $@
+	chmod 644 $@
+
+amo-commit : FORCE
+	cp -f amo-final.po $(SVNDIR)
+	svn commit -m "Updated Irish translation" $(SVNDIR)
 
 obair.po : FORCE
 	sed -i '/tempe/s/^/#/' moznua
