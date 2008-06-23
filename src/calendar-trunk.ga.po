@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-09 10:03-0500\n"
+"POT-Creation-Date: 2008-06-23 10:35-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -892,6 +892,30 @@ msgstr "7"
 msgid "100&percnt; Completed"
 msgstr "100&percnt; Críochnaithe"
 
+#: priority.level.none newevent.status.none.label
+msgid "Not specified"
+msgstr "Gan sonrú"
+
+#: priority.level.none.accesskey pref.calendar.alarms.playsound.accessKey
+msgid "s"
+msgstr "s"
+
+#: priority.level.low.accesskey calendar.new.server.key
+msgid "L"
+msgstr "L"
+
+# Ctrl+N is Fuinneog Nua under Main -> Comhad
+# see also lowercase for "Navigator" command
+#: priority.level.normal.accesskey event.new.event.key
+#: event.new.event.accesskey
+msgid "N"
+msgstr "N"
+
+#: priority.level.high.accesskey hideThisAppCmdMac.commandkey
+#: hideOtherAppsCmdMac.commandkey
+msgid "H"
+msgstr "H"
+
 # Server Context Menu
 #: calendar.context.newserver.label calendar.context.newserver.accesskey
 msgid "&New Calendar…"
@@ -1163,30 +1187,6 @@ msgstr "Go"
 msgid "Send attendees invitations via email"
 msgstr "Seol cuirí chuig an lucht freastail mar ríomhphost"
 
-#: priority.level.none newevent.status.none.label
-msgid "Not specified"
-msgstr "Gan sonrú"
-
-#: priority.level.none.accesskey pref.calendar.alarms.playsound.accessKey
-msgid "s"
-msgstr "s"
-
-#: priority.level.low.accesskey calendar.new.server.key
-msgid "L"
-msgstr "L"
-
-# Ctrl+N is Fuinneog Nua under Main -> Comhad
-# see also lowercase for "Navigator" command
-#: priority.level.normal.accesskey event.new.event.key
-#: event.new.event.accesskey
-msgid "N"
-msgstr "N"
-
-#: priority.level.high.accesskey hideThisAppCmdMac.commandkey
-#: hideOtherAppsCmdMac.commandkey
-msgid "H"
-msgstr "H"
-
 #: newevent.status.label newevent.status.accesskey
 msgid "&Status"
 msgstr "&Stádas"
@@ -1441,6 +1441,13 @@ msgstr ""
 "Tharla earráid agus an féilire ag %1$S á ullmhú i gcomhair úsáide. Ní bheidh "
 "sé ar fáil."
 
+#: unknownTimezonesError
+msgid ""
+"An error was encountered preparing the calendar located at %1$S for use. The "
+"calendar might refer to unknown timezones. Please install the latest calendar-"
+"timezones.xpi."
+msgstr ""
+
 #: missingCalendarTimezonesError
 msgid "No timezones found! Please install calendar-timezones.xpi."
 msgstr ""
@@ -1502,17 +1509,17 @@ msgstr "Atosaigh %1$S"
 msgid "Quit %1$S"
 msgstr "Scoir ó %1$S"
 
-#: tooltipDate read.only.date.label
+#: tooltipDate
 msgid "Date:"
 msgstr "Dáta:"
 
 # task/todo fields
 # start date time, due date time, task priority number, completed date time
-#: tooltipStart task.from.label
+#: tooltipStart task.from.label read.only.date.start.label
 msgid "Start:"
 msgstr "Tosach:"
 
-#: tooltipDue
+#: tooltipDue summaryDueTaskLabel
 msgid "Due:"
 msgstr "Sprioc:"
 
@@ -2894,6 +2901,10 @@ msgstr "Focail Fhaire"
 msgid "Update"
 msgstr "Nuashonrú"
 
+#: pref.calendar.advanced.encryptionTab.label
+msgid "Encryption"
+msgstr "Criptiúchán"
+
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
 # -
@@ -3026,6 +3037,67 @@ msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 #: pref.calendar.advanced.update.showHistory.accesskey
 msgid "Show &Update History…"
 msgstr "Taispeáin Stair na N&uashonruithe…"
+
+#: pref.calendar.advanced.encryption.protocols.label
+msgid "Protocols"
+msgstr "Prótacail"
+
+#: pref.calendar.advanced.encryption.useSSL3.label
+#: pref.calendar.advanced.encryption.useSSL3.accesskey
+msgid "Use SSL &3.0"
+msgstr "Úsáid SSL &3.0"
+
+#: pref.calendar.advanced.encryption.useTLS1.label
+#: pref.calendar.advanced.encryption.useTLS1.accesskey
+msgid "Use TLS &1.0"
+msgstr "Úsáid TLS &1.0"
+
+# #-#-#-#-#  tmp.XXXXj5AXGE.po (firefox 0.8)  #-#-#-#-#
+# Certs
+#: pref.calendar.advanced.encryption.certificates.label
+msgid "Certificates"
+msgstr "Teastais"
+
+#: pref.calendar.advanced.encryption.certSelection.description
+msgid "When a server requests my personal certificate:"
+msgstr "Nuair atá freastalaí ag iarraidh mo theastas pearsanta:"
+
+#: pref.calendar.advanced.encryption.certs.auto
+msgid "Select one automatically"
+msgstr "Roghnaigh go huathoibríoch"
+
+# Ctrl+i is highlights URL for opening
+#: pref.calendar.advanced.encryption.certs.auto.accesskey
+msgid "l"
+msgstr "l"
+
+#: pref.calendar.advanced.encryption.certs.ask
+msgid "Ask me every time"
+msgstr "Fiafraigh díom i gcónaí"
+
+#: pref.calendar.advanced.encryption.certs.ask.accesskey
+msgid "i"
+msgstr "i"
+
+#: pref.calendar.advanced.encryption.viewCerts.label
+#: pref.calendar.advanced.encryption.viewCerts.accesskey
+msgid "View Certificate&s"
+msgstr "Tai&speáin Teastais"
+
+#: pref.calendar.advanced.encryption.viewCRLs.label
+#: pref.calendar.advanced.encryption.viewCRLs.accesskey
+msgid "&Revocation Lists"
+msgstr "&Liostaí Cúlghairme"
+
+#: pref.calendar.advanced.encryption.verify2.label
+#: pref.calendar.advanced.encryption.verify2.accesskey
+msgid "&Validation"
+msgstr "&Bailíochtú"
+
+#: pref.calendar.advanced.encryption.viewSecurityDevices.label
+#: pref.calendar.advanced.encryption.viewSecurityDevices.accesskey
+msgid "Securit&y Devices"
+msgstr "&Gléasanna Slándála"
 
 #: pref.alarmgoesoff.label
 msgid "When an alarm goes off:"
@@ -5270,84 +5342,10 @@ msgstr "&Teachtaireacht Sábháilte…"
 msgid "&Calendar File…"
 msgstr "&Comhad Féilire…"
 
-# #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
-# ***** BEGIN LICENSE BLOCK *****
-# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
-# -
-# - The contents of this file are subject to the Mozilla Public License Version
-# - 1.1 (the "License"); you may not use this file except in compliance with
-# - the License. You may obtain a copy of the License at
-# - http://www.mozilla.org/MPL/
-# -
-# - Software distributed under the License is distributed on an "AS IS" basis,
-# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# - for the specific language governing rights and limitations under the
-# - License.
-# -
-# - The Original Code is Sun Microsystems code.
-# -
-# - The Initial Developer of the Original Code is Sun Microsystems.
-# - Portions created by the Initial Developer are Copyright (C) 2006
-# - the Initial Developer. All Rights Reserved.
-# -
-# - Contributor(s): Thomas Benisch <thomas.benisch@sun.com>
-# -
-# - Alternatively, the contents of this file may be used under the terms of
-# - either the GNU General Public License Version 2 or later (the "GPL"), or
-# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# - in which case the provisions of the GPL or the LGPL are applicable instead
-# - of those above. If you wish to allow use of your version of this file only
-# - under the terms of either the GPL or the LGPL, and not to allow others to
-# - use your version of this file under the terms of the MPL, indicate your
-# - decision by deleting the provisions above and replace them with the notice
-# - and other provisions required by the LGPL or the GPL. If you do not delete
-# - the provisions above, a recipient may use your version of this file under
-# - the terms of any one of the MPL, the GPL or the LGPL.
-# -
-# - ***** END LICENSE BLOCK *****
-#
-# Calendar Invitations Dialog
-# #-#-#-#-#  chromeprototypessun-lightning.dtd.po (firefox)  #-#-#-#-#
-# ***** BEGIN LICENSE BLOCK *****
-# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
-# -
-# - The contents of this file are subject to the Mozilla Public License Version
-# - 1.1 (the "License"); you may not use this file except in compliance with
-# - the License. You may obtain a copy of the License at
-# - http://www.mozilla.org/MPL/
-# -
-# - Software distributed under the License is distributed on an "AS IS" basis,
-# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# - for the specific language governing rights and limitations under the
-# - License.
-# -
-# - The Original Code is Sun Microsystems code.
-# -
-# - The Initial Developer of the Original Code is Sun Microsystems.
-# - Portions created by the Initial Developer are Copyright (C) 2006
-# - the Initial Developer. All Rights Reserved.
-# -
-# - Contributor(s): Thomas Benisch <thomas.benisch@sun.com>
-# -
-# - Alternatively, the contents of this file may be used under the terms of
-# - either the GNU General Public License Version 2 or later (the "GPL"), or
-# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# - in which case the provisions of the GPL or the LGPL are applicable instead
-# - of those above. If you wish to allow use of your version of this file only
-# - under the terms of either the GPL or the LGPL, and not to allow others to
-# - use your version of this file under the terms of the MPL, indicate your
-# - decision by deleting the provisions above and replace them with the notice
-# - and other provisions required by the LGPL or the GPL. If you do not delete
-# - the provisions above, a recipient may use your version of this file under
-# - the terms of any one of the MPL, the GPL or the LGPL.
-# -
-# - ***** END LICENSE BLOCK *****
-#
 # Messenger Sidebar
-#: lightning.sidebar.invitations.label
-#: calendar.invitations.dialog.invitations.text
-msgid "Invitations"
-msgstr "Cuirí"
+#: lightning.sidebar.invitations.label lightning.sidebar.invitations.accesskey
+msgid "&Invitations"
+msgstr "&Cuirí"
 
 #: lightning.tasks.label lightning.tasks.accesskey lightning.toolbar.task.label
 #: lightning.toolbar.task.accesskey
@@ -5522,6 +5520,84 @@ msgstr "Imeacht Cealaithe: %1$S"
 #: itipCancelBody
 msgid "%1$S has canceled this event: « %2$S »"
 msgstr "Tá an imeacht seo cealaithe ag %1$S: \"%2$S\""
+
+# #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is Sun Microsystems code.
+# -
+# - The Initial Developer of the Original Code is Sun Microsystems.
+# - Portions created by the Initial Developer are Copyright (C) 2006
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s): Thomas Benisch <thomas.benisch@sun.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#
+# Calendar Invitations Dialog
+# #-#-#-#-#  chromeprototypessun-lightning.dtd.po (firefox)  #-#-#-#-#
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is Sun Microsystems code.
+# -
+# - The Initial Developer of the Original Code is Sun Microsystems.
+# - Portions created by the Initial Developer are Copyright (C) 2006
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s): Thomas Benisch <thomas.benisch@sun.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#
+# Messenger Sidebar
+#: calendar.invitations.dialog.invitations.text
+msgid "Invitations"
+msgstr "Cuirí"
 
 #: calendar.invitations.dialog.statusmessage.updating.text
 msgid "Updating list of invitations."
@@ -6100,6 +6176,10 @@ msgstr "Bliain"
 #: timezone.title.label
 msgid "Please Specify the Timezone"
 msgstr "Sonraigh crios ama"
+
+#: read.only.date.end.label
+msgid "End:"
+msgstr "Deireadh:"
 
 #: read.only.reply.label
 msgid "Reply:"
@@ -7023,4 +7103,3 @@ msgstr "Nuashonrú Bogearraí"
 msgid "Sunbird is installing your updates and will start in a few moments..."
 msgstr ""
 "Tá do chuid nuashonruithe á suiteáil ag Sunbird agus tosóidh sé go luath..."
-
