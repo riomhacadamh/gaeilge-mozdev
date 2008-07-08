@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 10:37-0500\n"
+"POT-Creation-Date: 2008-07-08 09:26-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -4990,22 +4990,6 @@ msgstr "Iontráil ainm uathúil don ancaire ainmnithe seo (sprioc)"
 msgid "http://www.seamonkey-project.org/"
 msgstr "http://www.seamonkey-project.org/"
 
-# #-#-#-#-#  tmp.XXXXuzVdpl.po (thunderbird)  #-#-#-#-#
-# We don't have a real property for the REAL short name (Thunderbird), uses thisone temporarily
-# We can't change brandShortName because that's used by non forked thunderbird/seamonkey code
-# where it really needs to be the full name for thunderbird
-#: brandShortName
-msgid "Mail/News"
-msgstr "Thunderbird"
-
-#: brandFullName
-msgid "Mail/News Client"
-msgstr "Mozilla Thunderbird"
-
-#: vendorShortName
-msgid "Mozilla"
-msgstr "Mozilla"
-
 #: searchText
 msgid "Web Search for \"%S\""
 msgstr "Cuardach Idirlín do \"%S\""
@@ -6471,9 +6455,21 @@ msgstr "Scrios Leabhar Seoltaí"
 msgid "Delete Card"
 msgstr "Scrios Cárta"
 
-#: deleteCardsCmd.label
-msgid "Delete Selected Cards"
-msgstr "Scrios Cártaí Roghnaithe"
+#: deleteCardsCmd2.label
+msgid "Delete Cards"
+msgstr "Scrios Cártaí"
+
+#: deleteListCmd.label
+msgid "Delete List"
+msgstr "Scrios Liosta"
+
+#: deleteListsCmd.label
+msgid "Delete Lists"
+msgstr "Scrios Liostaí"
+
+#: deleteItemsCmd.label
+msgid "Delete Items"
+msgstr "Scrios Míreanna"
 
 #: swapFirstNameLastNameCmd.label swapFirstNameLastNameCmd.accesskey
 msgid "S&wap First/Last Name"
@@ -13099,6 +13095,10 @@ msgstr "&Uile"
 msgid "&Thread"
 msgstr "&Snáithe"
 
+#: selectFlaggedCmd.label selectFlaggedCmd.accesskey
+msgid "&Starred Messages"
+msgstr "Teachtaireachtaí &Marcáilte"
+
 #: menuFavoriteFolder.label menuFavoriteFolder.accesskey
 #: folderContextFavoriteFolder.label folderContextFavoriteFolder.accesskey
 msgid "F&avorite Folder"
@@ -14595,6 +14595,26 @@ msgstr "Freagartha"
 msgid "Forwarded"
 msgstr "Curtha ar aghaidh"
 
+#: junkScoreOriginPlugin
+msgid "Plugin"
+msgstr "Forlíontán"
+
+#: junkScoreOriginFilter
+msgid "Filter"
+msgstr "Scagaire"
+
+#: junkScoreOriginWhitelist
+msgid "Whitelist"
+msgstr "Liosta Bán"
+
+#: junkScoreOriginUser
+msgid "User"
+msgstr "Úsáideoir"
+
+#: junkScoreOriginImapFlag
+msgid "IMAP Flag"
+msgstr "Bratach IMAP"
+
 # #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 # for the Tag picker in search and mail views.
 #: tag itemTags.label paneTags.title 15 tagsColumn.label
@@ -14997,8 +15017,8 @@ msgid "&Eudora"
 msgstr "&Eudora"
 
 #: importSource.title
-msgid "Import Settings and Mail Folders From"
-msgstr "Iompórtáil Socruithe agus Fillteáin Ríomhphoist ó:"
+msgid "Import Settings and Mail Folders"
+msgstr "Iompórtáil Socruithe agus Fillteáin Ríomhphoist"
 
 #: importItems.title
 msgid "Items to Import"
@@ -16308,17 +16328,25 @@ msgstr "Líonra &amp; Spás Diosca"
 msgid "Show only dis&play name for people in my address book"
 msgstr "Ná tais&peáin ach an t-ainm taispeána do dhaoine i mo leabhar seoltaí"
 
-# "xxx seconds before marking a message as read", using a number and
-# (markAsReadEnd.label).
-#: markAsRead.label markAsRead.accesskey
-msgid ""
-"_: This will concatenate with\n"
-"&Wait"
-msgstr "&Fan"
+#: autoMarkAsRead.label autoMarkAsRead.accesskey
+msgid "&Automatically mark messages as read"
+msgstr "Marcáil teachtaireachtaí mar léite go h&uathoibríoch"
 
-#: markAsReadEnd.label
-msgid "seconds before marking a message as read"
-msgstr "soicind roimh teachtaireacht a mharcáil mar léite"
+#: markAsReadNoDelay.label markAsReadNoDelay.accesskey
+msgid "Imme&diately on display"
+msgstr "Ar &taispeáint láithreach"
+
+# "After displaying for [___] seconds",
+# using (markAsReadDelay.label) and a number (secondsLabel.label).
+#: markAsReadDelay.label markAsReadDelay.accesskey
+msgid ""
+"_: This will concatenate to\n"
+"Aft&er displaying for"
+msgstr ""
+
+#: secondsLabel.label connectionSeconds.label
+msgid "seconds"
+msgstr "soicind"
 
 #: showFolderColumns.label showFolderColumns.accesskey
 msgid "Show expanded co&lumns in the folder pane"
@@ -16347,10 +16375,6 @@ msgstr "I gcluaisín nua teachtaireachta"
 #: connectionTimeout.label connectionTimeout.accesskey
 msgid "&Connection timeout: "
 msgstr "Teorainn ama an &cheangail: "
-
-#: connectionSeconds.label
-msgid "seconds"
-msgstr "soicind"
 
 #: configEditDesc.label
 msgid "Advanced Configuration"
@@ -16640,9 +16664,13 @@ msgstr "37em"
 msgid "Configure Proxies to Access the Internet"
 msgstr "Cumraigh Seachfhreastalaí Rochtana Idirlín"
 
-#: directTypeRadio.label directTypeRadio.accesskey
-msgid "&Direct connection to the Internet"
-msgstr "Ceangal &díreach leis an Idirlíon"
+#: noProxyTypeRadio.label noProxyTypeRadio.accesskey
+msgid "No prox&y"
+msgstr "Gan &seachfhreastalaí"
+
+#: systemTypeRadio.label systemTypeRadio.accesskey
+msgid "&Use system proxy settings"
+msgstr "Ú&sáid socruithe seachfhreastalaí an chórais"
 
 #: WPADTypeRadio.label WPADTypeRadio.accesskey
 msgid "Auto-detect proxy settings for this net&work"
@@ -17927,9 +17955,17 @@ msgstr "Cathair"
 msgid "Street"
 msgstr "Sráid"
 
-#: 33 34 35 36 37 38 39 40 41 42 43 44 45
+#: 33 34 35 36 37 38 39 40 41 42 43
 msgid "reserved for AB"
 msgstr "curtha in áirithe do AB"
+
+#: 44
+msgid "Junk Score Origin"
+msgstr ""
+
+#: 45
+msgid "Junk Percent"
+msgstr ""
 
 #: 46
 msgid "Attachment Status"
