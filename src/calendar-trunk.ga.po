@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-14 20:55-0500\n"
+"POT-Creation-Date: 2008-07-17 10:04-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -514,7 +514,7 @@ msgid "New Event"
 msgstr "Imeacht Nua"
 
 # the "deleteCmd.label" is a keycap and should be "Delete", others ok?
-#: calendar.delete.button.label imipCancelInvitation.label
+#: calendar.delete.button.label deleteItemLabel imipCancelInvitation.label
 #: reminder.delete.label
 msgid "Delete"
 msgstr "Scrios"
@@ -768,6 +768,18 @@ msgstr "Sain&cheap an Barra Uirlisí…"
 msgid "Main Toolbar"
 msgstr "Príomhbharra Uirlisí"
 
+#: calendar.context.modifyorviewitem.label
+#: calendar.context.modifyorviewitem.accesskey lightning.menupopup.open.label
+#: lightning.menupopup.open.accesskey event.attachments.popup.open.label
+#: event.attachments.popup.open.accesskey
+msgid "&Open"
+msgstr "&Oscail"
+
+#: calendar.context.modifyorviewtask.label
+#: calendar.context.modifyorviewtask.accesskey
+msgid "&Open Task…"
+msgstr "&Oscail Tasc…"
+
 # Context Menu
 #: calendar.context.newevent.label calendar.context.newevent.accesskey
 msgid "&New Event…"
@@ -782,16 +794,40 @@ msgid "&Edit Task…"
 msgstr "Cuir Tasc in &Eagar…"
 
 #: calendar.context.modifyitem.label calendar.context.modifyitem.accesskey
-msgid "&Edit Item"
-msgstr "Cuir &Mír in Eagar"
+msgid "&Edit Item…"
+msgstr "&Cuir Mír in Eagar…"
 
 #: calendar.context.deletetask.label calendar.context.deletetask.accesskey
 msgid "De&lete Task"
 msgstr "&Scrios Tasc"
 
 #: calendar.context.deleteitem.label calendar.context.deleteitem.accesskey
-msgid "De&lete Item"
-msgstr "Scrios &Mír"
+msgid "De&lete"
+msgstr "S&crios"
+
+#: calendar.context.deleteevent.label calendar.context.deleteevent.accesskey
+msgid "De&lete Event"
+msgstr "Scrios &Imeacht"
+
+#: calendar.context.deletethisevent.label
+#: calendar.context.deletethisevent.accesskey
+msgid "&This Event"
+msgstr "An tImeacht &Seo"
+
+#: calendar.context.deletecompleteseries.label
+#: calendar.context.deletecompleteseries.accesskey
+msgid "Complete &Series"
+msgstr "&Sraith Iomlán"
+
+#: calendar.context.deletefutureevents.label
+#: calendar.context.deletefutureevents.accesskey
+msgid "All &Future Events"
+msgstr "Gach imeacht as seo &amach"
+
+#: calendar.context.deletefuturetasks.label
+#: calendar.context.deletefuturetasks.accesskey
+msgid "All &Future Tasks"
+msgstr "Gach tasc as seo &amach"
 
 # "G" under Main -> Eagar
 #: calendar.context.cutevent.label calendar.context.cutevent.accesskey
@@ -1319,7 +1355,7 @@ msgstr "Sábháil Tasc"
 
 #: askSaveMessageEvent
 msgid "Event has not been saved. Do you want to save the event?"
-msgstr "Níl an imeacht sábháilte. An mian leat an imeacht a shábháil?"
+msgstr "Níl an t-imeacht sábháilte. An mian leat an t-imeacht a shábháil?"
 
 #: askSaveMessageTask
 msgid "Task has not been saved. Do you want to save the task?"
@@ -2091,6 +2127,81 @@ msgstr "%1$S uair"
 #: dueInLessThanOneHour
 msgid "< 1 hour"
 msgstr "< 1 uair"
+
+# # LOCALIZATION NOTE (cityOrStateAndZip):
+# # %1$S is city or state, %2$S is zip
+#: monthInYear monthlyOrder yearlyOrder
+msgid "%1$S %2$S"
+msgstr "%1$S %2$S"
+
+# LOCALIZATION NOTE (dayIntervalInMonth):
+# used for display of intervals in the form of 'March 3 - 9, 2008'
+# %1$S will be replaced with name of the month of the start date
+# %2$S will be replaced with the day-index of the start date
+# %3$S will be replaced with the day-index of the end date
+# %4$S will be replaced with the common year of both dates
+#: dayIntervalInMonth
+msgid "%1$S %2$S – %3$S, %4$S"
+msgstr "%2$S – %3$S %1$S, %4$S"
+
+# LOCALIZATION NOTE (dayIntervalBetweenMonths):
+# used for display of intervals in the form 'September 29 - October 5, 2008'
+# %1$S will be replaced with name of the month of the start date
+# %2$S will be replaced with the day-index of the start date
+# %3$S will be replaced with name of the month of the end date
+# %4$S will be replaced with the day-index of the end date
+# %5$S will be replaced with the commmon year of both dates
+#: dayIntervalBetweenMonths
+msgid "%1$S %2$S – %3$S %4$S, %5$S"
+msgstr "%2$S %1$S – %4$S %3$S, %5$S"
+
+# LOCALIZATION NOTE (dayIntervalBetweenYears):
+# used for display of intervals in the form 'December 29, 2008 - January 4, 2009'
+# %1$S will be replaced with name of the month of the start date
+# %2$S will be replaced with the day-index of the start date
+# %3$S will be replaced with the year of the start date
+# %4$S will be replaced with name of the month of the end date
+# %5$S will be replaced with the day-index of the end date
+# %6$S will be replaced with the year of the end date
+#: dayIntervalBetweenYears
+msgid "%1$S %2$S, %3$S – %4$S %5$S, %6$S"
+msgstr "%2$S %1$S, %3$S – %5$S %4$S, %6$S"
+
+# LOCALIZATION NOTE (datetimeIntervalOnSameDay):
+# used for intervals where end is on the same day as start, so we can leave out the
+# end date but still include end time
+# displayed form is '5 Jan 2006 13:00 - 17:00'
+# %1$S will be replaced with the date of the start date
+# %2$S will be replaced with the time of the start date
+# %3$S will be replaced with the time of the end date
+#: datetimeIntervalOnSameDay
+msgid "%1$S %2$S – %3$S"
+msgstr "%1$S %2$S – %3$S"
+
+# LOCALIZATION NOTE (datetimeIntervalOnSeveralDays):
+# used for intervals spanning multiple days by including date and time
+# displayed form is '5 Jan 2006 13:00 - 7 Jan 2006 9:00'
+# %1$S will be replaced with the date of the start date
+# %2$S will be replaced with the time of the start date
+# %3$S will be replaced with the date of the end date
+# %4$S will be replaced with the time of the end date
+#: datetimeIntervalOnSeveralDays
+msgid "%1$S %2$S – %3$S %4$S"
+msgstr "%1$S %2$S – %3$S %4$S"
+
+#: deleteTaskLabel
+msgid "Delete Task"
+msgstr "Scrios Tasc"
+
+# Ctrl+i is highlights URL for opening
+#: deletetaskAccesskey deleteItemAccesskey deleteEventAccesskey
+#: pref.calendar.advanced.encryption.certs.auto.accesskey
+msgid "l"
+msgstr "l"
+
+#: deleteEventLabel
+msgid "Delete Event"
+msgstr "Scrios Imeacht"
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -3182,11 +3293,6 @@ msgstr "Nuair atá freastalaí ag iarraidh mo theastas pearsanta:"
 msgid "Select one automatically"
 msgstr "Roghnaigh go huathoibríoch"
 
-# Ctrl+i is highlights URL for opening
-#: pref.calendar.advanced.encryption.certs.auto.accesskey
-msgid "l"
-msgstr "l"
-
 #: pref.calendar.advanced.encryption.certs.ask
 msgid "Ask me every time"
 msgstr "Fiafraigh díom i gcónaí"
@@ -3690,7 +3796,7 @@ msgstr "Seiceáil i gcónaí"
 
 #: gdata.reminder.action.sms.label
 msgid "Send a Text Message"
-msgstr ""
+msgstr "Seol Teachtaireacht Téacs"
 
 # If you wish to be mentioned as a translator, please make sure your name and
 # email is in the licence block as a contributor. Multiple names are fine too.
@@ -5460,11 +5566,6 @@ msgstr "Tasc…"
 msgid "Calendar…"
 msgstr "Féilire…"
 
-#: lightning.menupopup.open.label lightning.menupopup.open.accesskey
-#: event.attachments.popup.open.label event.attachments.popup.open.accesskey
-msgid "&Open"
-msgstr "&Oscail"
-
 #: lightning.menupopup.open.message.label
 #: lightning.menupopup.open.message.accesskey
 msgid "Saved &Message…"
@@ -5553,6 +5654,23 @@ msgstr "Ríomhphost:"
 msgid "This message contains an invitation to an event."
 msgstr "Tá cuireadh d'imeacht sa teachtaireacht seo."
 
+# today-pane-specific
+#: todaypane.showMinimonth.label todaypane.showMinimonth.accesskey
+msgid "Show &Mini-Month"
+msgstr "Taispeáin &Mion-Mhí"
+
+#: todaypane.showMiniday.label todaypane.showMiniday.accesskey
+msgid "Show Mini-&Day"
+msgstr "Taispeáin Mion-&Lá"
+
+#: todaypane.showNone.label todaypane.showNone.accesskey
+msgid "Show &None"
+msgstr "Ná Taispeáin &Faic"
+
+#: todaypane.showTodayPane.label todaypane.showTodayPane.accesskey
+msgid "Sh&ow Today Pane"
+msgstr "Taispeáin &Pána Inniu"
+
 # Html event display in message
 #: imipHtml.header
 msgid "Event Invitation"
@@ -5580,11 +5698,11 @@ msgstr "Cuireadh an tImeacht Leis an bhFéilire"
 
 #: imipCanceledItem
 msgid "Event has been deleted"
-msgstr "Tá an imeacht scriosta"
+msgstr "Tá an t-imeacht scriosta"
 
 #: imipUpdatedItem
 msgid "Event has been updated"
-msgstr "Tá an imeacht nuashonruithe"
+msgstr "Tá an t-imeacht nuashonruithe"
 
 #: imipBarCancelText
 msgid "This message contains an event cancellation."
@@ -5656,7 +5774,7 @@ msgstr "Imeacht Cealaithe: %1$S"
 
 #: itipCancelBody
 msgid "%1$S has canceled this event: « %2$S »"
-msgstr "Tá an imeacht seo cealaithe ag %1$S: \"%2$S\""
+msgstr "Tá an t-imeacht seo cealaithe ag %1$S: \"%2$S\""
 
 # #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
 # ***** BEGIN LICENSE BLOCK *****
@@ -5838,6 +5956,10 @@ msgstr "&Priontáil"
 #: event.menu.view.toolbars.event.accesskey
 msgid "&Event Toolbar"
 msgstr "Barra Uirlisí &Imeachtaí"
+
+#: event.menu.view.showlink.label event.menu.view.showlink.accesskey
+msgid "Show &Related Link"
+msgstr "Taispeáin Nasc &Gaolta"
 
 # also see with dots (that one is "R" under Main -> Uirlisí)
 #: event.menu.options.label event.menu.options.accesskey
@@ -6032,6 +6154,10 @@ msgstr "&Iatáin:"
 #: event.attachments.popup.removeAll.accesskey
 msgid "Remove &All"
 msgstr "B&ain Uile"
+
+#: event.url.label
+msgid "Related Link:"
+msgstr "Nasc Gaolta:"
 
 #: event.reminder.none.label
 msgid "No reminder "
@@ -6365,6 +6491,10 @@ msgstr "Rannpháirtithe"
 msgid "Documents"
 msgstr "Cáipéisí"
 
+#: read.only.link.label
+msgid "Related Link"
+msgstr "Nasc Gaolta"
+
 #: repeatDetailsRuleDaily1
 msgid "every day"
 msgstr "gach lá"
@@ -6580,7 +6710,7 @@ msgstr "Cuir isteach leathanach Gréasáin, nó suíomh cáipéise."
 # Attach File Dialog
 #: selectAFile
 msgid "Please select the file(s) to attach"
-msgstr ""
+msgstr "Roghnaigh comha(i)d le ceangal"
 
 #: removeCalendarsTitle
 msgid "Remove Attachments"
@@ -6589,12 +6719,6 @@ msgstr "Bain Iatáin"
 #: removeCalendarsText
 msgid "Do you really want to remove %1$S attachments?"
 msgstr "An bhfuil tú cinnte gur mhaith leat %1$S iatán a bhaint?"
-
-# # LOCALIZATION NOTE (cityOrStateAndZip):
-# # %1$S is city or state, %2$S is zip
-#: monthlyOrder yearlyOrder
-msgid "%1$S %2$S"
-msgstr "%1$S %2$S"
 
 # plugins URLs
 #: MOZ_LANGPACK_CREATOR
