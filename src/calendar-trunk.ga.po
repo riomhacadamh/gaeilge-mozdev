@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-10 14:13-0500\n"
+"POT-Creation-Date: 2008-09-24 14:19-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -2130,7 +2130,7 @@ msgstr "< 1 uair"
 
 # # LOCALIZATION NOTE (cityOrStateAndZip):
 # # %1$S is city or state, %2$S is zip
-#: monthInYear monthlyOrder yearlyOrder
+#: monthInYear monthlyOrder
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -2269,15 +2269,15 @@ msgid "No matches found."
 msgstr "Níor aimsíodh aon rud."
 
 # default categories
-#: categories
+#: categories2
 msgid ""
 "Anniversary,Birthday,Business,Calls,Clients,Competition,Customer,Favorites,"
-"Follow up,Gifts,Holidays,Ideas,Issues,Miscellaneous,Personal,Projects,Public "
-"Holiday,Status,Suppliers,Travel,Vacation"
+"Follow up,Gifts,Holidays,Ideas,Issues,Meeting,Miscellaneous,Personal,Projects,"
+"Public Holiday,Status,Suppliers,Travel,Vacation"
 msgstr ""
 "Cothrom Lae,Breithlá,Gnó,Glaonna,Cliaint,Iomaitheoirí,Custaiméir,Ceanáin,Le "
-"Déanamh,Bronntanais,Laethanta Saoire,Smaointe,Fadhbanna,Éagsúil,Pearsanta,"
-"Tionscadail,Lá Saoire Bainc,Stádas,Soláthraithe,Taisteal,Saoire"
+"Déanamh,Bronntanais,Laethanta Saoire,Smaointe,Fadhbanna,Cruinniú,Éagsúil,"
+"Pearsanta,Tionscadail,Lá Saoire Bainc,Stádas,Soláthraithe,Taisteal,Saoire"
 
 #: month.1.Mmm
 msgid "Jan"
@@ -2522,94 +2522,6 @@ msgstr "Meán Oíche"
 #: AllDay
 msgid "All Day"
 msgstr "I Rith an Lae"
-
-#: time.1
-msgid "1:00 AM"
-msgstr "01:00"
-
-#: time.2
-msgid "2:00 AM"
-msgstr "02:00"
-
-#: time.3
-msgid "3:00 AM"
-msgstr "03:00"
-
-#: time.4
-msgid "4:00 AM"
-msgstr "04:00"
-
-#: time.5
-msgid "5:00 AM"
-msgstr "05:00"
-
-#: time.6
-msgid "6:00 AM"
-msgstr "06:00"
-
-#: time.7
-msgid "7:00 AM"
-msgstr "07:00"
-
-#: time.8
-msgid "8:00 AM"
-msgstr "08:00"
-
-#: time.9
-msgid "9:00 AM"
-msgstr "09:00"
-
-#: time.10
-msgid "10:00 AM"
-msgstr "10:00"
-
-#: time.11
-msgid "11:00 AM"
-msgstr "11:00"
-
-#: time.13
-msgid "1:00 PM"
-msgstr "13:00"
-
-#: time.14
-msgid "2:00 PM"
-msgstr "14:00"
-
-#: time.15
-msgid "3:00 PM"
-msgstr "15:00"
-
-#: time.16
-msgid "4:00 PM"
-msgstr "16:00"
-
-#: time.17
-msgid "5:00 PM"
-msgstr "17:00"
-
-#: time.18
-msgid "6:00 PM"
-msgstr "18:00"
-
-#: time.19
-msgid "7:00 PM"
-msgstr "19:00"
-
-#: time.20
-msgid "8:00 PM"
-msgstr "20:00"
-
-#: time.21
-msgid "9:00 PM"
-msgstr "21:00"
-
-#: time.22
-msgid "10:00 PM"
-msgstr "22:00"
-
-#: time.23
-msgid "11:00 PM"
-msgstr "23:00"
 
 #: day.1.Ddd.accesskey
 msgid "S"
@@ -6355,6 +6267,17 @@ msgstr "Gach:"
 msgid "Year(s)"
 msgstr "Bliain"
 
+# LOCALIZATON NOTE
+# Some languages use a preposition when describing dates:
+# Portuguese: 6 de Setembro
+# English: 6 [of] September
+# event.recurrence.pattern.yearly.of.label is "of" in
+# Edit recurrence window -> Recurrence pattern -> Repeat yearly
+#
+#: event.recurrence.pattern.yearly.of.label
+msgid "_: event.recurrence.pattern.yearly.of.label\n"
+msgstr ""
+
 #: event.recurrence.of.label
 msgid "of"
 msgstr "as"
@@ -6719,6 +6642,14 @@ msgstr "Bain Iatáin"
 #: removeCalendarsText
 msgid "Do you really want to remove %1$S attachments?"
 msgstr "An bhfuil tú cinnte gur mhaith leat %1$S iatán a bhaint?"
+
+# Edit recurrence window -> Recurrence pattern -> Repeat yearly
+# %1$S - day of month, %2$S - of, %3$S - month
+# e.g. "6 [of] September"
+# If you don't need %2$S in your locale - please put this on the third place.
+#: yearlyOrder
+msgid "%1$S %3$S %2$S"
+msgstr "%1$S %3$S %2$S"
 
 # plugins URLs
 #: MOZ_LANGPACK_CREATOR
