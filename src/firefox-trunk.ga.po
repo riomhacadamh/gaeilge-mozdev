@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-28 11:24-0500\n"
+"POT-Creation-Date: 2008-10-14 12:30-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -133,6 +133,69 @@ msgstr "Frakkin' Toasters"
 #: robots.dontpress
 msgid "Please do not press this button again."
 msgstr "Please do not press this button again."
+
+# Localization note: It is recommended that okTitle be longer than cancelTitle
+# so that hitting the more prominent button doesn't lead to dataloss (see bug 346264).
+#: restorepage.title restorepage.restoreButton
+msgid "Restore Previous Session"
+msgstr "Athchóirigh an Seisiún Roimhe Seo"
+
+#: restorepage.titletext
+msgid "Your Last &brandShortName; Session Closed Unexpectedly"
+msgstr "Stop do sheisiún dheireanach &brandShortName; gan súil leis"
+
+#: restorepage.shortDesc
+msgid ""
+"You can restore the tabs and windows from your previous session, or start a "
+"new session if they are no longer needed. Our apologies for the inconvenience."
+msgstr ""
+"Is féidir leat na cluaisíní agus na fuinneoga ó do sheisiún dheireanach a "
+"chur ar ais, nó seisiún nua a thosú mura bhfuil siad de dhíth ort a "
+"thuilleadh.  Is oth linn an briseadh seo."
+
+#: restorepage.remedies
+msgid "If &brandShortName; closes repeatedly:"
+msgstr "Má dhúnann &brandShortName; arís agus arís eile:"
+
+#: restorepage.dueToChrome
+msgid "Try disabling any recently added extensions in the Add-ons Manager."
+msgstr ""
+
+#: restorepage.dueToContent
+msgid ""
+"Try restoring your session without any Web pages you suspect might be causing "
+"the crash:"
+msgstr ""
+
+#: restorepage.restore.access reporterMenu.accesskey restartAccessKey
+#: protocol.checkbox.accesskey pluginInstallation.restart.accesskey
+#: restartButton.accesskey notifyBarRememberButtonAccessKey
+msgid "R"
+msgstr "R"
+
+#: restorepage.cancelButton
+msgid "Start New Session"
+msgstr "Tosaigh Seisiún Nua"
+
+#: restorepage.cancel.access contextMenuSearchText.accesskey
+#: offlineApps.manageUsageAccessKey securityTab.accesskey
+#: defaultGroupOnAccesskey cmd_showSuggestions_accesskey saveCmd.key
+#: submitReport.accesskey savePageCmd.commandkey
+msgid "S"
+msgstr "S"
+
+#: restorepage.restoreHeader fullScreenRestore.tooltip
+msgid "Restore"
+msgstr "Athshlánaigh"
+
+#: restorepage.listHeader
+msgid "Windows and Tabs"
+msgstr "Fuinneoga agus Cluaisíní"
+
+# LOCALIZATION NOTE: %S will be replaced with a number.
+#: restorepage.windowLabel
+msgid "Window #&#37;S"
+msgstr "Fuinneog #&#37;S"
 
 #: minimizeWindow.key
 msgid "m"
@@ -374,10 +437,6 @@ msgstr "i"
 msgid "&Full Screen"
 msgstr "Lánscá&ileán"
 
-#: fullScreenRestore.tooltip
-msgid "Restore"
-msgstr "Athshlánaigh"
-
 #: fullScreenClose.tooltip tabs.close close closeButton.label dialogClose.label
 #: aboutWindowCloseButton closeButton pluginInstallation.close.label
 #: closebutton.label Close
@@ -514,8 +573,7 @@ msgid "Display your bookmarks"
 msgstr "Taispeáin do Leabharmharcanna"
 
 #: bookmarksSidebarCmd.accesskey blockImageCmd.accesskey
-#: mediaBlockImage.accesskey tellMaybeForgery.accesskey Byte
-#: loaddevice.browse.accesskey
+#: mediaBlockImage.accesskey Byte loaddevice.browse.accesskey
 msgid "B"
 msgstr "B"
 
@@ -744,8 +802,7 @@ msgid "Search Bookmarks and History"
 msgstr "Cuardaigh Leabharmharcanna agus Stair"
 
 #: searchFocus.commandkey securityView.privacy.viewCookies.accessKey
-#: focusSearch2.key tellMaybeAttackSite.accesskey cmd.search.commandKey
-#: helpSearch.commandkey
+#: focusSearch2.key cmd.search.commandKey helpSearch.commandkey
 msgid "k"
 msgstr "k"
 
@@ -1055,8 +1112,8 @@ msgstr "&Aimsigh sa Leathanach Seo…"
 # Ctrl+F, Ctrl+G as find, find again transcend language?
 # also "Foirmeacha" on "Eolas Leathanaigh"  (so no tweaking needed)
 #: findOnCmd.commandkey cmd.find.key focusSearch1.key
-#: cmdShowFindDialog.accelkey cbxStateFocus.accesskey cmd.find.commandKey
-#: loaddevice.filename.accesskey
+#: cmdShowFindDialog.accelkey cbxStateFocus.accesskey focusFilter.key
+#: cmd.find.commandKey loaddevice.filename.accesskey
 msgid "f"
 msgstr "f"
 
@@ -1159,12 +1216,6 @@ msgstr ""
 #: contextMenuSearchText
 msgid "Search %S for \"%S\""
 msgstr "Cuardaigh %S ar \"%S\""
-
-#: contextMenuSearchText.accesskey offlineApps.manageUsageAccessKey
-#: securityTab.accesskey defaultGroupOnAccesskey cmd_showSuggestions_accesskey
-#: saveCmd.key submitReport.accesskey savePageCmd.commandkey
-msgid "S"
-msgstr "S"
 
 # access key "c" is sedtweaked; see msgid "g"
 #: blockImages mediaBlockImage
@@ -4916,20 +4967,20 @@ msgstr ""
 "Tabhair &rabhadh dom nuair a dhéanann suímh Ghréasáin iarracht breiseáin a "
 "shuiteáil"
 
-# LOCALIZATION NOTE (tellMaybeForgery.label, tellMaybeAttackSite.label):
+# LOCALIZATION NOTE (blockWebForgeries.label, blockAttackSites.label):
 # The methods by which forged (phished) and attack sites will be detected by
 # phishing providers will vary from human review to machine-based heuristics to a
 # combination of both, so it's important that these strings and
 # useDownloadedList.label convey the meaning "reported" (and not something like
 # "known").
 #
-#: tellMaybeAttackSite2.label
-msgid "Block reported attack sites"
-msgstr "Cuir cosc ar shuímh ionsaithe"
+#: blockAttackSites.label blockAttackSites.accesskey
+msgid "Bloc&k reported attack sites"
+msgstr ""
 
-#: tellMaybeForgery2.label
-msgid "Block reported web forgeries"
-msgstr "Cuir cosc ar fhalsaíocht Ghréasáin"
+#: blockWebForgeries.label blockWebForgeries.accesskey
+msgid "&Block reported web forgeries"
+msgstr ""
 
 #: passwords.label
 msgid "Passwords"
@@ -5436,31 +5487,6 @@ msgstr "Taispeáin Moltaí"
 #: cmd_addFoundEngine
 msgid "Add \"%S\""
 msgstr "Cuir \"%S\" Leis"
-
-#: restoredTitle
-msgid "%S - Restore Previous Session"
-msgstr "%S - Athchóirigh an Seisiún Roimhe Seo"
-
-#: restoredMsg
-msgid ""
-"Your last %S session closed unexpectedly. You can restore the tabs and "
-"windows from your previous session, or start a new session if you think the "
-"problem was related to a page you were viewing."
-msgstr ""
-"Stop do sheisiún dheireanach %S gan súil leis. Is féidir leat na cluaisíní "
-"agus na fuinneoga ó do sheisiún dheireanach a chur ar ais, nó seisiún nua a "
-"thosú má cheapann tú go bhfuil baint idir an fhadhb agus an leathanach a "
-"raibh tú ag féachaint air."
-
-# Localization note: It is recommended that okTitle be longer than cancelTitle
-# so that hitting the more prominent button doesn't lead to dataloss (see bug 346264).
-#: okTitle
-msgid "Restore Previous Session"
-msgstr "Athchóirigh an Seisiún Roimhe Seo"
-
-#: cancelTitle
-msgid "Start New Session"
-msgstr "Tosaigh Seisiún Nua"
 
 #: position.label
 msgid "Position:"
@@ -10852,12 +10878,6 @@ msgstr "v0.2"
 msgid "Report Broken Web Site…"
 msgstr "Seol Tuairisc ar Shuíomh Briste…"
 
-#: reporterMenu.accesskey restartAccessKey protocol.checkbox.accesskey
-#: pluginInstallation.restart.accesskey restartButton.accesskey
-#: notifyBarRememberButtonAccessKey
-msgid "R"
-msgstr "R"
-
 #: reportProblemType
 msgid "Problem Type"
 msgstr "An Cineál Faidhbe"
@@ -11867,6 +11887,10 @@ msgstr "&Aimsigh"
 #: findPreviousCmd.label findPreviousCmd.accesskey
 msgid "Find Pre&vious"
 msgstr "&Roimhe Seo"
+
+#: downloadHelperNoneSelected
+msgid "None Selected"
+msgstr "Faic Roghnaithe"
 
 #: lookInMenuList.label lookInMenuList.accesskey
 msgid "&Look in:"
@@ -15898,6 +15922,10 @@ msgstr "Cuiditheoirí:"
 msgid "Visit Home Page"
 msgstr "Féach ar an leathanach baile"
 
+#: errors.title
+msgid "Errors"
+msgstr "Earráidí"
+
 # Default window size for the addon manager in pixels
 #: em.width
 msgid ""
@@ -17098,7 +17126,7 @@ msgstr ""
 
 #: blockedPlugin.label
 msgid "This plugin has been blocked for your protection."
-msgstr ""
+msgstr "Tá cosc curtha ar an bhforlíontán seo le tú a chosaint."
 
 #: pluginLicenseAgreement.label
 msgid "To install %S, you need to agree to the following:"
@@ -17239,10 +17267,6 @@ msgid "&When an OCSP server connection fails, treat the certificate as invalid"
 msgstr ""
 "&Nuair a theipeann ar cheangal le freastalaí OCSP, meas go bhfuil an teastas "
 "neamhbhailí"
-
-#: downloadHelperNoneSelected
-msgid "None Selected"
-msgstr "Faic Roghnaithe"
 
 #: password_not_set
 msgid "(not set)"
@@ -17584,10 +17608,6 @@ msgstr "Cliceáil Críochnaigh chun an phróifíl nua a chruthú."
 msgid "Click Done to create this new profile."
 msgstr "Cliceáil \"Déanta\" chun an phróifíl nua a chruthú."
 
-#: errors.title
-msgid "Errors"
-msgstr "Earráidí"
-
 #: history.title
 msgid "Update History"
 msgstr "Stair na Nuashonruithe"
@@ -17905,67 +17925,6 @@ msgstr "Nuashonrú Le Fáil"
 #: updatesfound_major.title
 msgid "New Version Available"
 msgstr "Leagan Nua Le Fáil"
-
-#: progressFormatKBKB
-msgid "#1 of #2 KB"
-msgstr "#1 as #2 KB"
-
-#: progressFormatKBMB
-msgid "#1 KB of #2 MB"
-msgstr "#1 KB as #2 MB"
-
-#: progressFormatMBMB
-msgid "#1 of #2 MB"
-msgstr "#1 as #2 MB"
-
-#: progressFormatUnknownKB
-msgid "#1 KB"
-msgstr "#1 KB"
-
-# OK
-#: progressFormatUnknownMB
-msgid "#1 MB"
-msgstr "#1 MB"
-
-#: pausedStatus
-msgid "%S downloaded so far"
-msgstr "%S íosluchtaithe go dtí seo"
-
-#: remain
-msgid "remain"
-msgstr "le déanamh"
-
-#: unknownFilesize
-msgid "unknown file size"
-msgstr "comhad nach fios a méide"
-
-#: rateFormatKBSec
-msgid "#1 KB/sec"
-msgstr "#1 KB/soic"
-
-#: rateFormatMBSec
-msgid "#1 MB/sec"
-msgstr "#1 MB/soic"
-
-#: longTimeFormat
-msgid "#1:#2:#3"
-msgstr "#1:#2:#3"
-
-#: shortTimeFormat
-msgid "#2:#3"
-msgstr "#2:#3"
-
-#: rateFormat
-msgid "at #1"
-msgstr "ag #1"
-
-#: progressFormat statusFormat
-msgid "#1#2"
-msgstr "#1#2"
-
-#: timeFormat
-msgid "; #1 #2"
-msgstr "; #1 #2"
 
 #: pausedName
 msgid "Paused downloading %S"
