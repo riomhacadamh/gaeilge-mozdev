@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 12:30-0500\n"
+"POT-Creation-Date: 2008-11-04 07:59-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -17,6 +17,69 @@ msgstr "Minefield"
 #: vendorShortName
 msgid "Mozilla"
 msgstr "Mozilla"
+
+# These strings are used by Firefox's custom about:certerror page,
+# a replacement for the standard security certificate errors produced
+# by NSS/PSM via netError.xhtml.
+#: brandDTD
+msgid "_: brandDTD\n"
+msgstr ""
+
+# Localization note (certerror.introPara1) - The string "#1" will
+# be replaced at runtime with the name of the server to which the user
+# was trying to connect.
+#: certerror.introPara1
+msgid ""
+"You have asked &brandShortName; to connect securely to <b>#1</b>, but we "
+"can't confirm that your connection is secure."
+msgstr ""
+
+#: certerror.introPara2
+msgid ""
+"Normally, when you try to connect securely, sites will present trusted "
+"identification to prove that you are going to the right place. However, this "
+"site's identity can't be verified."
+msgstr ""
+
+#: certerror.whatShouldIDo.heading
+msgid "What Should I Do?"
+msgstr "Cad Ba Chóir Dom a Dhéanamh?"
+
+#: certerror.whatShouldIDo.content
+msgid ""
+"If you usually connect to this site without problems, this error could mean "
+"that someone is trying to impersonate the site, and you shouldn't continue."
+msgstr ""
+
+#: certerror.getMeOutOfHere.label safebrowsing.getMeOutOfHereButton.label
+#: safeb.palm.accept.label securityOverride.getMeOutOfHereButton
+msgid "Get me out of here!"
+msgstr "Ar aghaidh liom as seo!"
+
+#: certerror.expert.heading
+msgid "I Understand the Risks"
+msgstr "Tuigim na Contúirtí"
+
+#: certerror.expert.content
+msgid ""
+"If you understand what's going on, you can tell &brandShortName; to start "
+"trusting this site's identification. <b>Even if you trust the site, this "
+"error could mean that someone is tampering with your connection.</b>"
+msgstr ""
+
+#: certerror.expert.contentPara2
+msgid ""
+"Don't add an exception unless you know there's a good reason why this site "
+"doesn't use trusted identification."
+msgstr ""
+
+#: certerror.addException.label securityOverride.exceptionButtonLabel
+msgid "Add Exception…"
+msgstr "Cruthaigh Eisceacht…"
+
+#: certerror.technical.heading securityView.technical.header
+msgid "Technical Details"
+msgstr "Sonraí Teicniúla"
 
 #: aboutDialog.title
 msgid "About &brandFullName;"
@@ -47,8 +110,9 @@ msgstr "&lt; Maidir le &brandFullName;"
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #: aboutLink.accesskey selectAllCmd.key xpinstallPromptAllowButton.accesskey
 #: refreshBlocked.goButton.accesskey offlineApps.allowAccessKey
-#: addHandlerAddButtonAccesskey selectall.key mediaSaveAs.accesskey
-#: search.scopeHistory.accesskey cmd.about.accesskey
+#: safebrowsing.notAnAttackButton.accessKey addHandlerAddButtonAccesskey
+#: selectall.key mediaSaveAs.accesskey search.scopeHistory.accesskey
+#: cmd.about.accesskey
 msgid "A"
 msgstr "W"
 
@@ -73,6 +137,314 @@ msgstr ""
 "&#169;1998-2008 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
 "trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
 "Firefox. Gach ceart ar cosaint."
+
+#: privatebrowsingpage.tabtitle privatebrowsingpage.pagetitle
+msgid "Private Browsing"
+msgstr "Brabhsáil Phríobháideach"
+
+#: privatebrowsingpage.issueDesc
+msgid "&brandShortName; won't remember any history for this session."
+msgstr ""
+
+#: privatebrowsingpage.longDesc
+msgid ""
+"No history will be recorded by &brandShortName; during this browsing "
+"session.  This includes browser history, search history, download history, "
+"web form history, cookies, and temporary internet files.  However, any files "
+"you download or bookmarks you create will be preserved."
+msgstr ""
+
+#: privatebrowsingpage.clearRecentHistoryDesc
+msgid "You may want to start by also clearing your recent history."
+msgstr ""
+
+#: privatebrowsingpage.recentHistory.label
+#: privatebrowsingpage.recentHistory.accesskey
+msgid "&Clear Recent History"
+msgstr "&Glan an Stair Is Déanaí"
+
+#: privatebrowsingpage.howToStopDesc
+msgid "To stop private browsing, uncheck Tools &gt; Private Browsing."
+msgstr ""
+"Chun brabhsáil phríobháideach a stopadh, díthiceáil Uirlisí &gt; Brabhsáil "
+"Phríobháideach."
+
+#: privatebrowsingpage.footerDesc
+msgid "Enjoy!"
+msgstr "Bain Sult As!"
+
+# "left-to-right" -- leave AS IS --KPS
+#: rights.locale-direction locale.dir
+msgid "ltr"
+msgstr "ltr"
+
+#: rights.pagetitle
+msgid "about:rights"
+msgstr "about:rights"
+
+#: rights.intro-header
+msgid "About Your Rights"
+msgstr "Maidir Le Do Chearta"
+
+#: rights.intro
+msgid ""
+"&brandFullName; is free and open source software, built by a community of "
+"thousands from all over the world. There are a few things you should know:"
+msgstr ""
+"&brandFullName; is free and open source software, built by a community of "
+"thousands from all over the world. There are a few things you should know:"
+
+# Note on pointa / pointb / pointc form:
+# These points each have an embedded link in the HTML, so each point is
+# split into chunks for text before the link, the link text, and the text
+# after the link. If a localized grammar doesn't need the before or after
+# chunk, it can be left blank.
+#
+# Also note the leading/trailing whitespace in strings here, which is
+# deliberate for formatting around the embedded links.
+#: rights.intro-point1a
+msgid "&brandShortName; is made available to you under the terms of the "
+msgstr "&brandShortName; is made available to you under the terms of the "
+
+#: rights.intro-point1b
+msgid "Mozilla Public License"
+msgstr "Mozilla Public License"
+
+#: rights.intro-point1c
+msgid ""
+". This means you may use, copy and distribute &brandShortName; to others.  "
+"You are also welcome to modify the source code of &brandShortName; as you "
+"want to meet your needs. The Mozilla Public License also gives you the right "
+"to distribute your modified versions."
+msgstr ""
+". This means you may use, copy and distribute &brandShortName; to others.  "
+"You are also welcome to modify the source code of &brandShortName; as you "
+"want to meet your needs. The Mozilla Public License also gives you the right "
+"to distribute your modified versions."
+
+#: rights.intro-point2a
+msgid ""
+"Mozilla does not grant you any rights to the Mozilla and Firefox trademarks "
+"or logos. Additional information on Trademarks may be found "
+msgstr ""
+"Mozilla does not grant you any rights to the Mozilla and Firefox trademarks "
+"or logos. Additional information on Trademarks may be found "
+
+#: rights.intro-point2b rights.intro-point3b
+msgid "here"
+msgstr "here"
+
+#: rights.intro-point2c rights.intro-point3c rights.intro-point4c
+#: stopCmd.macCommandKey
+msgid "."
+msgstr "."
+
+# point 3 text for official branded builds
+#: rights.intro-point3a
+msgid "Privacy policies for &vendorShortName;'s products may be found "
+msgstr "Privacy policies for &vendorShortName;'s products may be found "
+
+# point 3 text for unbranded builds
+#: rights.intro-point3-unbranded
+msgid "Any applicable privacy policies for this product should be listed here."
+msgstr "Any applicable privacy policies for this product should be listed here."
+
+# point 4 text for official branded builds
+#: rights.intro-point4a
+msgid ""
+"&brandShortName; also offers optional web site information services, such as "
+"the SafeBrowsing service; however, we cannot guarantee they are 100&#37; "
+"accurate or error-free. More details, including information on how to disable "
+"the services, can be found in the "
+msgstr ""
+"&brandShortName; also offers optional web site information services, such as "
+"the SafeBrowsing service; however, we cannot guarantee they are 100&#37; "
+"accurate or error-free. More details, including information on how to disable "
+"the services, can be found in the "
+
+#: rights.intro-point4b
+msgid "service terms"
+msgstr "service terms"
+
+# point 4 text for unbranded builds
+#: rights.intro-point4a-unbranded
+msgid ""
+"If this product incorporates web services, any applicable service terms for "
+"the service(s) should be linked to the "
+msgstr ""
+"If this product incorporates web services, any applicable service terms for "
+"the service(s) should be linked to the "
+
+#: rights.intro-point4b-unbranded
+msgid "Web Site Services"
+msgstr "Web Site Services"
+
+#: rights.intro-point4c-unbranded
+msgid " section."
+msgstr " section."
+
+#: rights.webservices-header
+msgid "&brandFullName; Web Site Services"
+msgstr "&brandFullName; Web Site Services"
+
+# Note that this paragraph references a couple of entities from
+# preferences/security.dtd, so that we can refer to text the user sees in
+# the UI, without this page being forgotten every time those strings are
+# updated.
+# intro paragraph for branded builds
+#: rights.webservices-a
+msgid ""
+"&brandFullName; uses web site information services (&quot;Services&quot;), "
+"such as the SafeBrowsing service, that are available for your use with this "
+"binary version of &brandShortName; as described below. If you do not want to "
+"use the Services or the terms below are unacceptable, you may disable the "
+"SafeBrowsing service by opening the application preferences, selecting the "
+msgstr ""
+"&brandFullName; uses web site information services (&quot;Services&quot;), "
+"such as the SafeBrowsing service, that are available for your use with this "
+"binary version of &brandShortName; as described below. If you do not want to "
+"use the Services or the terms below are unacceptable, you may disable the "
+"SafeBrowsing service by opening the application preferences, selecting the "
+
+#: rights.webservices-b securityTab paneSecurity.title
+#: pref.security.general.lHeader
+msgid "Security"
+msgstr "Slándáil"
+
+#: rights.webservices-c
+msgid ""
+" section, and unchecking the options for &quot;&blockAttackSites.label;&quot; "
+"and &quot;&blockWebForgeries.label;&quot;"
+msgstr ""
+" section, and unchecking the options for &quot;&blockAttackSites.label;&quot; "
+"and &quot;&blockWebForgeries.label;&quot;"
+
+# intro paragraph for unbranded builds
+#: rights.webservices-unbranded
+msgid ""
+"An overview of the web site services the product incorporates, along with "
+"instructions on how to disable them, if applicable, should be included here."
+msgstr ""
+"An overview of the web site services the product incorporates, along with "
+"instructions on how to disable them, if applicable, should be included here."
+
+# point 1 text for unbranded builds
+#: rights.webservices-term1-unbranded
+msgid "Any applicable service terms for this product should be listed here."
+msgstr "Any applicable service terms for this product should be listed here."
+
+# points 1-7 text for branded builds
+#: rights.webservices-term1
+msgid ""
+"&vendorShortName; and its contributors, licensors and partners work to "
+"provide the most accurate and up-to-date phishing and malware information. "
+"However, they cannot guarantee that this information is comprehensive and "
+"error-free: some risky sites may not be identified and some safe sites may be "
+"identified in error."
+msgstr ""
+"&vendorShortName; and its contributors, licensors and partners work to "
+"provide the most accurate and up-to-date phishing and malware information. "
+"However, they cannot guarantee that this information is comprehensive and "
+"error-free: some risky sites may not be identified and some safe sites may be "
+"identified in error."
+
+#: rights.webservices-term2
+msgid ""
+"&vendorShortName; may discontinue or change the Services at its discretion."
+msgstr ""
+"&vendorShortName; may discontinue or change the Services at its discretion."
+
+#: rights.webservices-term3
+msgid ""
+"You are welcome to use these Services with the accompanying version of "
+"&brandShortName;, and you have all the rights necessary to do so.  "
+"&vendorShortName; and its licensors reserve all other rights in the "
+"Services.  These terms are not intended to limit any rights granted under "
+"open source licenses applicable to &brandShortName; and to corresponding "
+"source code versions of &brandShortName;."
+msgstr ""
+"You are welcome to use these Services with the accompanying version of "
+"&brandShortName;, and you have all the rights necessary to do so.  "
+"&vendorShortName; and its licensors reserve all other rights in the "
+"Services.  These terms are not intended to limit any rights granted under "
+"open source licenses applicable to &brandShortName; and to corresponding "
+"source code versions of &brandShortName;."
+
+#: rights.webservices-term4
+msgid ""
+"The Services are provided &quot;as-is.&quot;  &vendorShortName;, its "
+"contributors, licensors, and distributors, disclaim all warranties, whether "
+"express or implied, including without limitation, warranties that the "
+"Services are merchantable and fit for your particular purposes.  You bear the "
+"entire risk as to selecting the Services for your purposes and as to the "
+"quality and performance of the Services. Some jurisdictions do not allow the "
+"exclusion or limitation of implied warranties, so this disclaimer may not "
+"apply to you."
+msgstr ""
+"The Services are provided &quot;as-is.&quot;  &vendorShortName;, its "
+"contributors, licensors, and distributors, disclaim all warranties, whether "
+"express or implied, including without limitation, warranties that the "
+"Services are merchantable and fit for your particular purposes.  You bear the "
+"entire risk as to selecting the Services for your purposes and as to the "
+"quality and performance of the Services. Some jurisdictions do not allow the "
+"exclusion or limitation of implied warranties, so this disclaimer may not "
+"apply to you."
+
+#: rights.webservices-term5
+msgid ""
+"Except as required by law, &vendorShortName;, its contributors, licensors, "
+"and distributors will not be liable for any indirect, special, incidental, "
+"consequential, punitive, or exemplary damages arising out of or in any way "
+"relating to the use of &brandShortName; and the Services.  The collective "
+"liability under these terms will not exceed $500 (five hundred dollars). Some "
+"jurisdictions do not allow the exclusion or limitation of certain damages, so "
+"this exclusion and limitation may not apply to you."
+msgstr ""
+"Except as required by law, &vendorShortName;, its contributors, licensors, "
+"and distributors will not be liable for any indirect, special, incidental, "
+"consequential, punitive, or exemplary damages arising out of or in any way "
+"relating to the use of &brandShortName; and the Services.  The collective "
+"liability under these terms will not exceed $500 (five hundred dollars). Some "
+"jurisdictions do not allow the exclusion or limitation of certain damages, so "
+"this exclusion and limitation may not apply to you."
+
+#: rights.webservices-term6
+msgid ""
+"&vendorShortName; may update these terms as necessary from time to time. "
+"These terms may not be modified or cancelled without &vendorShortName;'s "
+"written agreement."
+msgstr ""
+"&vendorShortName; may update these terms as necessary from time to time. "
+"These terms may not be modified or cancelled without &vendorShortName;'s "
+"written agreement."
+
+#: rights.webservices-term7
+msgid ""
+"These terms are governed by the laws of the state of California, U.S.A., "
+"excluding its conflict of law provisions. If any portion of these terms is "
+"held to be invalid or unenforceable, the remaining portions will remain in "
+"full force and effect. In the event of a conflict between a translated "
+"version of these terms and the English language version, the English language "
+"version shall control."
+msgstr ""
+"These terms are governed by the laws of the state of California, U.S.A., "
+"excluding its conflict of law provisions. If any portion of these terms is "
+"held to be invalid or unenforceable, the remaining portions will remain in "
+"full force and effect. In the event of a conflict between a translated "
+"version of these terms and the English language version, the English language "
+"version shall control."
+
+#: buttonLabel
+msgid "Know your rights…"
+msgstr ""
+
+#: buttonAccessKey view.sortBy.keyword.accesskey Kilo
+msgid "K"
+msgstr "K"
+
+#: notifyText
+msgid "%S is free and open software from the non-profit Mozilla Foundation."
+msgstr "%S is free and open software from the non-profit Mozilla Foundation."
 
 # These strings are used in the about:robots page, which ties in with the
 # robots theme used in the Firefox 3 Beta 2/3 first run pages...
@@ -134,24 +506,26 @@ msgstr "Frakkin' Toasters"
 msgid "Please do not press this button again."
 msgstr "Please do not press this button again."
 
-# Localization note: It is recommended that okTitle be longer than cancelTitle
-# so that hitting the more prominent button doesn't lead to dataloss (see bug 346264).
-#: restorepage.title restorepage.restoreButton
-msgid "Restore Previous Session"
-msgstr "Athchóirigh an Seisiún Roimhe Seo"
+#: restorepage.tabtitle
+msgid "Restore Session"
+msgstr "Athchóirigh an Seisiún"
 
-#: restorepage.titletext
-msgid "Your Last &brandShortName; Session Closed Unexpectedly"
-msgstr "Stop do sheisiún dheireanach &brandShortName; gan súil leis"
+#: restorepage.pagetitle
+msgid "Would You Like to Restore Your Session?"
+msgstr "An bhfuil fonn ort do sheisiún a athchóiriú?"
 
-#: restorepage.shortDesc
+# LOCALIZATION NOTE: If "closed unexpectedly" sounds too awkward in the translation,
+# you may translate "crash" instead (even though it's IT-speak)
+#: restorepage.issueDesc
 msgid ""
-"You can restore the tabs and windows from your previous session, or start a "
-"new session if they are no longer needed. Our apologies for the inconvenience."
+"Your previous &brandShortName; session closed unexpectedly. We sincerely "
+"apologize for the inconvenience. You can restore the tabs and windows from "
+"your previous session, or start a new session if they are no longer needed."
 msgstr ""
-"Is féidir leat na cluaisíní agus na fuinneoga ó do sheisiún dheireanach a "
-"chur ar ais, nó seisiún nua a thosú mura bhfuil siad de dhíth ort a "
-"thuilleadh.  Is oth linn an briseadh seo."
+"Stop do sheisiún dheireanach &brandShortName; gan súil leis. Tá brón orainn "
+"faoi seo. Is féidir leat na cluaisíní agus na fuinneoga ó do sheisiún "
+"dheireanach a chur ar ais, nó seisiún nua a thosú mura bhfuil siad de dhíth "
+"ort a thuilleadh."
 
 #: restorepage.remedies
 msgid "If &brandShortName; closes repeatedly:"
@@ -166,10 +540,14 @@ msgstr ""
 #: restorepage.dueToContent
 msgid ""
 "Try restoring your session without any Web pages you suspect might be causing "
-"the crash:"
-msgstr ""
-"Bain triail as do sheisiún a athbhunú gan leathanaigh Ghréasáin a cheapann tú "
-"gur iad atá freagrach as an gcliseadh:"
+"the problem:"
+msgstr "Bain triail as do sheisiún a athbhunú gan leathanaigh Ghréasáin a cheapann tú gur iad atá freagrach as an gcliseadh:"
+
+# Localization note: It is recommended that okTitle be longer than cancelTitle
+# so that hitting the more prominent button doesn't lead to dataloss (see bug 346264).
+#: restorepage.restoreButton
+msgid "Restore Previous Session"
+msgstr "Athchóirigh an Seisiún Roimhe Seo"
 
 #: restorepage.restore.access reporterMenu.accesskey restartAccessKey
 #: protocol.checkbox.accesskey pluginInstallation.restart.accesskey
@@ -196,10 +574,10 @@ msgstr "Athshlánaigh"
 msgid "Windows and Tabs"
 msgstr "Fuinneoga agus Cluaisíní"
 
-# LOCALIZATION NOTE: %S will be replaced with a number.
+# LOCALIZATION NOTE: &#37;S will be replaced with a number.
 #: restorepage.windowLabel
-msgid "Window #&#37;S"
-msgstr "Fuinneog #&#37;S"
+msgid "Window &#37;S"
+msgstr "Fuinneog &#37;S"
 
 #: minimizeWindow.key
 msgid "m"
@@ -339,6 +717,13 @@ msgstr "accel,alt"
 #: showAllAppsCmdMac.label
 msgid "Show All"
 msgstr "Taispeáin Gach"
+
+# inside the private browsing mode
+#: mainWindowPrivateBrowsing.titlemodifier
+msgid ""
+"_: This will be appended to the window's title\n"
+"&mainWindow.titlemodifier; (Private Browsing)"
+msgstr "&mainWindow.titlemodifier; (Brabhsáil Phríobháideach)"
 
 # "C" in Main -> Comhad
 # see also "&New Tab"
@@ -530,10 +915,6 @@ msgstr "Athluchtaigh an leathanach reatha"
 msgid "&Stop"
 msgstr "&Stad"
 
-#: stopCmd.macCommandKey
-msgid "."
-msgstr "."
-
 #: stopButton.tooltip
 msgid "Stop loading this page"
 msgstr "Éirigh as an leathanach seo a luchtú"
@@ -555,6 +936,7 @@ msgid "Location"
 msgstr "Suíomh"
 
 #: searchItem.title filter.emptytext searchEndCap.label GopherPromptTitle
+#: search.emptytext
 msgid "Search"
 msgstr "Cuardach"
 
@@ -762,6 +1144,10 @@ msgstr "Sai&nroghanna"
 msgid "Clear &Private Data"
 msgstr "Bánaigh Sonraí &Príobháideacha"
 
+#: privateBrowsingCmd.label privateBrowsingCmd.accesskey
+msgid "Private &Browsing"
+msgstr "&Brabhsáil Phríobháideach"
+
 # "A" in main browser window
 #: viewMenu.label viewMenu.accesskey mnView.label mnView.accesskey
 msgid "&View"
@@ -867,13 +1253,17 @@ msgstr "Ta&ispeáin Sonraí an Leathanaigh"
 msgid "View Frame &Info"
 msgstr "Taispeáin &Eolas Fráma"
 
-#: showImageCmd.label showImageCmd.accesskey
-msgid "&Show Image"
+#: reloadImageCmd.label reloadImageCmd.accesskey
+msgid "&Reload Image"
 msgstr "&Athluchtaigh an Íomhá"
 
 #: viewImageCmd.label viewImageCmd.accesskey
 msgid "View &Image"
 msgstr "&Taispeáin an Íomhá Amháin"
+
+#: viewVideoCmd.label viewVideoCmd.accesskey
+msgid "V&iew Video"
+msgstr "&Féach ar Fhíseán"
 
 # "C" in right click menu
 #: viewBGImageCmd.label viewBGImageCmd.accesskey
@@ -932,9 +1322,25 @@ msgstr "Seol an &Nasc…"
 msgid "Sa&ve Image As…"
 msgstr "Sábháil an Íomhá &Mar…"
 
+#: saveVideoCmd.label saveVideoCmd.accesskey
+msgid "Save &Video As…"
+msgstr "Sábháil an &Físeán Mar…"
+
+#: saveAudioCmd.label saveAudioCmd.accesskey
+msgid "Sa&ve Audio As…"
+msgstr "Sá&bháil an Fhuaim Mar…"
+
 #: sendImageCmd.label sendImageCmd.accesskey
 msgid "Se&nd Image…"
 msgstr "Seol a&n Íomhá…"
+
+#: sendVideoCmd.label sendVideoCmd.accesskey
+msgid "Se&nd Video…"
+msgstr "S&eol an Físeán…"
+
+#: sendAudioCmd.label sendAudioCmd.accesskey
+msgid "Se&nd Audio…"
+msgstr "Seo&l an Fhuaim…"
 
 #: copyLinkCmd.label copyLinkCmd.accesskey
 msgid "Copy Link Loc&ation"
@@ -952,6 +1358,14 @@ msgstr "Cóipeáil Suí&omh na hÍomhá"
 msgid "Cop&y Image"
 msgstr "Cói&peáil an Íomhá"
 
+#: copyVideoURLCmd.label copyVideoURLCmd.accesskey
+msgid "C&opy Video Location"
+msgstr "Cói&peáil Suíomh an Fhíseáin"
+
+#: copyAudioURLCmd.label copyAudioURLCmd.accesskey
+msgid "C&opy Audio Location"
+msgstr "&Cóipeáil Suíomh na Fuaime"
+
 #: metadataCmd.label metadataCmd.accesskey
 msgid "&Properties"
 msgstr "&Airíonna"
@@ -964,6 +1378,30 @@ msgstr "Cóipeáil an S&eoladh Ríomhphoist"
 #: thisFrameMenu.label thisFrameMenu.accesskey
 msgid "T&his Frame"
 msgstr "An F&ráma Seo"
+
+#: mediaPlay.label mediaPlay.accesskey
+msgid "&Play"
+msgstr "&Seinn"
+
+#: mediaPause.label mediaPause.accesskey cmd.pause.label cmd.pause.accesskey
+msgid "&Pause"
+msgstr "Cuir ar &Shos"
+
+#: mediaMute.label mediaMute.accesskey
+msgid "&Mute"
+msgstr "Gan Fuai&m"
+
+#: mediaUnmute.label mediaUnmute.accesskey
+msgid "Un&mute"
+msgstr "Le Fuai&m"
+
+#: mediaShowControls.label mediaShowControls.accesskey
+msgid "Show &Controls"
+msgstr "Taispeáin &Rialtáin"
+
+#: mediaHideControls.label mediaHideControls.accesskey
+msgid "Hide &Controls"
+msgstr "Folaigh &Rialtáin"
 
 #: fullZoomEnlargeCmd.label fullZoomEnlargeCmd.accesskey
 #: fullZoomEnlargeBtn.label fullZoomEnlargeBtn.accesskey
@@ -1179,6 +1617,10 @@ msgstr "Tuilleadh Eolais…"
 msgid "Click to open downloads window"
 msgstr "Cliceáil chun fuinneog na n-íosluchtuithe a oscailt"
 
+#: ctrlTab.search.emptyText
+msgid "Search Tabs"
+msgstr "Cuardaigh Cluaisíní"
+
 #: nv_timeout
 msgid "Timed Out"
 msgstr "Thar Am"
@@ -1334,7 +1776,7 @@ msgid "Install Missing Plugins…"
 msgstr "Suiteáil na forlíontáin ar iarraidh…"
 
 #: missingpluginsMessage.button.accesskey accesskey-disclosure
-#: installButtonTextAccesskey
+#: softBlockedInstallAcceptKey installButtonTextAccesskey
 msgid "I"
 msgstr "I"
 
@@ -1560,6 +2002,64 @@ msgstr "Faic"
 #: geolocation.requestMessage
 msgid "%S wants to know where you are.  Tell them:"
 msgstr "Tá %S ag fiafraí díot cá bhfuil tú. Inis dóibh:"
+
+#: safebrowsing.getMeOutOfHereButton.accessKey generalTab.accesskey Giga
+#: findAgainCmd.key goOnlineButtonAccesskey findAgainCmd.commandkey
+#: downloadButton_major.accesskey exceptionMgr.certlocation.accesskey
+msgid "G"
+msgstr "G"
+
+#: safebrowsing.reportedWebForgery phishing.title2 safeb.blocked.phishing.title
+msgid "Reported Web Forgery!"
+msgstr "Tuairiscíodh gur Falsaíocht Ghréasáin an suíomh seo!"
+
+#: safebrowsing.notAForgeryButton.label safeb.palm.notforgery.label2
+msgid "This isn't a web forgery…"
+msgstr "Ní falsaíocht Ghréasáin é seo…"
+
+#: safebrowsing.notAForgeryButton.accessKey feedTab.accesskey file.accesskey
+#: cmd.context_new_folder.accesskey livemarkGroupOnAccesskey
+#: enableAppUpdate.accesskey reportPhishSiteMenu.accesskey findCmd.key
+#: findOnCmd.commandkey devmgr.button.fips.accesskey
+msgid "F"
+msgstr "F"
+
+#: safebrowsing.reportedAttackSite malware.title2 safeb.blocked.malware.title
+msgid "Reported Attack Site!"
+msgstr "Tuairiscíodh gur Suíomh Ionsaithe é seo!"
+
+#: safebrowsing.notAnAttackButton.label
+msgid "This isn't an attack site…"
+msgstr "Ní suíomh ionsaithe é seo…"
+
+# Private Browsing Confirmation dialog
+# LOCALIZATION NOTE (privateBrowsingMessage): %S will be replaced
+# by the name of the application.
+# LOCALIZATION NOTE (privateBrowsingYesTitle, privateBrowsingNoTitle, privateBrowsingNeverAsk):
+# Access keys are specified by prefixing the desired letter with an ampersand.
+#: privateBrowsingDialogTitle
+msgid "Start Private Browsing"
+msgstr "Tosaigh Brabhsáil Phríobháideach"
+
+#: privateBrowsingMessage
+msgid ""
+"%S will save your current tabs for when you are done with your Private "
+"Browsing session."
+msgstr ""
+
+#: privateBrowsingYesTitle
+msgid "&Start Private Browsing"
+msgstr "To&saigh Brabhsáil Phríobháideach"
+
+#: privateBrowsingNoTitle cancelTitle cmd.cancel.label cmd.cancel.accesskey
+#: cancel.label cancel.accesskey cancelInstall.label cancelInstall.accesskey
+#: cancelUpgrade.label cancelUpgrade.accesskey
+msgid "&Cancel"
+msgstr "&Cealaigh"
+
+#: privateBrowsingNeverAsk
+msgid "&Do not show this message again"
+msgstr "&Ná taispeáin an teachtaireacht seo arís"
 
 #: brandMotto
 msgid "Rediscover the Web"
@@ -2403,12 +2903,6 @@ msgstr "w"
 msgid "General"
 msgstr "Ginearálta"
 
-#: generalTab.accesskey Giga findAgainCmd.key goOnlineButtonAccesskey
-#: findAgainCmd.commandkey downloadButton_major.accesskey
-#: exceptionMgr.certlocation.accesskey
-msgid "G"
-msgstr "G"
-
 #: generalMode
 msgid "Render Mode:"
 msgstr "Mód Rindreála:"
@@ -2495,14 +2989,7 @@ msgstr "Réamhamharc na Meán:"
 msgid "Feeds"
 msgstr "Fothaí"
 
-#: feedTab.accesskey file.accesskey cmd.context_new_folder.accesskey
-#: livemarkGroupOnAccesskey enableAppUpdate.accesskey
-#: reportPhishSiteMenu.accesskey findCmd.key findOnCmd.commandkey
-#: devmgr.button.fips.accesskey
-msgid "F"
-msgstr "F"
-
-#: feedSubscribe feed.subscribe.tooltip
+#: feedSubscribe dialogAcceptLabelAddLivemark feed.subscribe.tooltip
 msgid "Subscribe"
 msgstr "Liostáil"
 
@@ -2541,10 +3028,6 @@ msgstr "Socraigh Fianáin"
 #: permInstall
 msgid "Install Extensions or Themes"
 msgstr "Suiteáil Eisínteachtaí nó Téamaí"
-
-#: securityTab paneSecurity.title pref.security.general.lHeader
-msgid "Security"
-msgstr "Slándáil"
 
 #: securityHeader
 msgid "Security information for this page"
@@ -2599,10 +3082,6 @@ msgstr "Ar shábháil mé focail fhaire le haghaidh an tsuímh seo?"
 #: securityView.privacy.viewPasswords
 msgid "View Saved Passwords"
 msgstr "Taispeáin Focail Fhaire a Sábháladh"
-
-#: securityView.technical.header
-msgid "Technical Details"
-msgstr "Sonraí Teicniúla"
 
 #: pageInfo.page.title
 msgid "Page Info - %S"
@@ -2761,113 +3240,75 @@ msgstr ""
 msgid "About Pop-up Blocking"
 msgstr "Maidir le Cosc Preabfhuinneog"
 
-#: bookmarks.name.label bookmarks.name.accesskey editBookmarkOverlay.name.label
-#: editBookmarkOverlay.name.accesskey
-msgid "&Name:"
-msgstr "Ai&nm:"
-
-#: bookmarks.location.label bookmarks.location.accesskey
-#: editBookmarkOverlay.location.label editBookmarkOverlay.location.accesskey
-msgid "&Location:"
-msgstr "&Suíomh:"
-
-#: bookmarks.keyword.label bookmarks.keyword.accesskey
-#: editBookmarkOverlay.keyword.label editBookmarkOverlay.keyword.accesskey
-msgid "&Keyword:"
-msgstr "&Lorgfhocal:"
-
-#: bookmarks.description.label bookmarks.description.accesskey
-#: editBookmarkOverlay.description.label
-#: editBookmarkOverlay.description.accesskey
-msgid "&Description:"
-msgstr "&Cur Síos:"
-
-#: bookmarks.liveTitlesSeparator.label
-#: editBookmarkOverlay.liveTitlesSeparator.label
-msgid "Live Titles"
-msgstr "Teidil Bheo"
-
-#: bookmarks.createIn.label bookmarks.createIn.accesskey
-msgid "&Create in:"
-msgstr "&Cruthaigh i:"
-
-#: bookmarks.feed_location.label bookmarks.feed_location.accesskey
-#: editBookmarkOverlay.feedLocation.label
-#: editBookmarkOverlay.feedLocation.accesskey
-msgid "&Feed Location:"
-msgstr "Suíomh &Fotha:"
-
-#: bookmarks.site_location.label bookmarks.site_location.accesskey
-#: editBookmarkOverlay.siteLocation.label
-#: editBookmarkOverlay.siteLocation.accesskey
-msgid "&Site Location:"
-msgstr "&Suíomh:"
-
-#: bookmarks.loadInSidebar.label bookmarks.loadInSidebar.accesskey
-msgid "L&oad this bookmark in the sidebar"
-msgstr "Luchtaigh an leabharmharc se&o sa bharra taoibh"
-
-#: bookmarks.expanderDown.tooltip
-#: editBookmarkOverlay.foldersExpanderDown.tooltip
-msgid "Show all the bookmarks folders"
-msgstr "Taispeáin gach fillteán leabharmhairc"
-
-#: bookmarks.expanderUp.tooltip editBookmarkOverlay.expanderUp.tooltip
-#: hideButton
-msgid "Hide"
-msgstr "Folaigh"
-
-#: bookmarks.newFolderButton.label bookmarks.newFolderButton.accesskey
-msgid "N&ew Folder"
-msgstr "Fillteán N&ua"
-
 #: dialogAcceptLabelAddItem addEngineAddButtonLabel
 msgid "Add"
 msgstr "Cuir Leis"
+
+#: dialogAcceptLabelSaveItem dialogAcceptLabelEdit saveButtonLabel
+msgid "Save"
+msgstr "Sábháil"
 
 #: dialogAcceptLabelAddMulti
 msgid "Add Bookmarks"
 msgstr "Cruthaigh Leabharmharcanna"
 
-#: dialogAcceptLabelEdit
-msgid "Save Changes"
-msgstr "Sábháil Athruithe"
-
-#: dialogTitleAddBookmark
-msgid "Add Bookmark"
-msgstr "Cruthaigh Leabharmharc"
+#: dialogTitleAddBookmark newBookmarkDefault
+msgid "New Bookmark"
+msgstr "Leabharmharc Nua"
 
 #: dialogTitleAddLivemark
-msgid "Add Live Bookmark"
-msgstr "Cruthaigh Leabharmharc Beo"
+msgid "Subscribe with Live Bookmark"
+msgstr "Liostáil le Leabharmharc Beo"
 
-#: dialogTitleAddFolder
-msgid "Add Folder"
-msgstr "Cuir Fillteán Leis"
+#: dialogTitleAddFolder newFolderDefault
+msgid "New Folder"
+msgstr "Fillteán Nua"
 
 #: dialogTitleAddMulti
-msgid "Bookmark All Tabs"
-msgstr "Leabharmharcáil Gach Cluaisín"
+msgid "New Bookmarks"
+msgstr "Leabharmharcanna Nua"
 
 #: dialogTitleEdit
 msgid "Properties for \"%S\""
 msgstr "Airíonna \"%S\""
 
-#: newFolderDefault
-msgid "New Folder"
-msgstr "Fillteán Nua"
-
-#: newBookmarkDefault
-msgid "New Bookmark"
-msgstr "Leabharmharc Nua"
-
 #: newLivemarkDefault
 msgid "New Live Bookmark"
 msgstr "Leabharmharc Beo Nua"
 
+#: editBookmarkOverlay.name.label editBookmarkOverlay.name.accesskey
+msgid "&Name:"
+msgstr "Ai&nm:"
+
+#: editBookmarkOverlay.location.label editBookmarkOverlay.location.accesskey
+msgid "&Location:"
+msgstr "&Suíomh:"
+
+#: editBookmarkOverlay.feedLocation.label
+#: editBookmarkOverlay.feedLocation.accesskey
+msgid "&Feed Location:"
+msgstr "Suíomh &Fotha:"
+
+#: editBookmarkOverlay.siteLocation.label
+#: editBookmarkOverlay.siteLocation.accesskey
+msgid "&Site Location:"
+msgstr "&Suíomh:"
+
+#: editBookmarkOverlay.liveTitlesSeparator.label
+msgid "Live Titles"
+msgstr "Teidil Bheo"
+
 #: editBookmarkOverlay.folder.label
 msgid "Folder:"
 msgstr "Fillteán:"
+
+#: editBookmarkOverlay.foldersExpanderDown.tooltip
+msgid "Show all the bookmarks folders"
+msgstr "Taispeáin gach fillteán leabharmhairc"
+
+#: editBookmarkOverlay.expanderUp.tooltip hideButton
+msgid "Hide"
+msgstr "Folaigh"
 
 #: editBookmarkOverlay.tags.label editBookmarkOverlay.tags.accesskey
 msgid "&Tags:"
@@ -2876,6 +3317,15 @@ msgstr "&Clibeanna:"
 #: editBookmarkOverlay.tagsEmptyDesc.label
 msgid "Separate tags with commas"
 msgstr "Scar clibeanna le camóga"
+
+#: editBookmarkOverlay.description.label
+#: editBookmarkOverlay.description.accesskey
+msgid "&Description:"
+msgstr "&Cur Síos:"
+
+#: editBookmarkOverlay.keyword.label editBookmarkOverlay.keyword.accesskey
+msgid "&Keyword:"
+msgstr "&Lorgfhocal:"
 
 #: editBookmarkOverlay.tagsExpanderDown.tooltip
 msgid "Show all tags"
@@ -2889,6 +3339,11 @@ msgstr "Luc&htaigh an leabharmharc seo sa bharra taoibh"
 #: editBookmarkOverlay.choose.label
 msgid "Choose…"
 msgstr "Roghnaigh…"
+
+#: editBookmarkOverlay.newFolderButton.label
+#: editBookmarkOverlay.newFolderButton.accesskey
+msgid "New F&older"
+msgstr "&Fillteán Nua"
 
 #: window.title
 msgid "Choose Folder"
@@ -3483,10 +3938,6 @@ msgstr "Sórtáil de réir Líon Cuairteanna"
 #: view.sortBy.keyword.label
 msgid "Sort by Keyword"
 msgstr "Sórtáil de réir Lorgfhocail"
-
-#: view.sortBy.keyword.accesskey Kilo
-msgid "K"
-msgstr "K"
 
 #: view.sortBy.description.label
 msgid "Sort by Description"
@@ -5092,12 +5543,6 @@ msgstr "Atosaigh %S"
 msgid "&Restart"
 msgstr "&Atosaigh"
 
-#: cancelTitle cmd.cancel.label cmd.cancel.accesskey cancel.label
-#: cancel.accesskey cancelInstall.label cancelInstall.accesskey
-#: cancelUpgrade.label cancelUpgrade.accesskey
-msgid "&Cancel"
-msgstr "&Cealaigh"
-
 #: saveTitle
 msgid "&Save and Quit"
 msgstr "&Sábháil agus Scoir"
@@ -5192,10 +5637,6 @@ msgstr "Gmail"
 msgid "https://mail.google.com/mail/?extsrc=mailto&url=%s"
 msgstr "https://mail.google.com/mail/?extsrc=mailto&url=%s"
 
-#: malware.title2 safeb.blocked.malware.title
-msgid "Reported Attack Site!"
-msgstr "Tuairiscíodh gur Suíomh Ionsaithe é seo!"
-
 #: malware.shortDesc
 msgid ""
 "The web site at %S has been reported as an attack site and has been blocked "
@@ -5216,10 +5657,6 @@ msgstr ""
 "<p>Scaipeann suímh ionsaithe áirithe bogearraí dochracha d'aonturas, ach is "
 "minic suímh a bheith contúirteach i nganfhios dá n-úinéirí agus gan a gcead.</"
 "p>"
-
-#: phishing.title2 safeb.blocked.phishing.title
-msgid "Reported Web Forgery!"
-msgstr "Tuairiscíodh gur Falsaíocht Ghréasáin an suíomh seo!"
 
 #: phishing.shortDesc2
 msgid ""
@@ -5283,10 +5720,6 @@ msgstr "faoi conas a dhéanann &brandShortName; cosaint ort"
 msgid " from phishing attacks."
 msgstr " ó ionsaithe bréagbhrandála."
 
-#: safeb.palm.accept.label securityOverride.getMeOutOfHereButton
-msgid "Get me out of here!"
-msgstr "Ar aghaidh liom as seo!"
-
 #: safeb.palm.accept.statustext
 msgid "Navigate to my home page"
 msgstr "Téigh go dtí mo leathanach baile"
@@ -5298,10 +5731,6 @@ msgstr "Ná bac leis an rabhadh seo"
 #: safeb.palm.decline.statustext
 msgid "Close warning"
 msgstr "Dún an rabhadh"
-
-#: safeb.palm.notforgery.label2
-msgid "This isn't a web forgery…"
-msgstr "Ní falsaíocht Ghréasáin é seo…"
 
 #: safeb.palm.report.label
 msgid "Why was this site blocked?"
@@ -5468,9 +5897,9 @@ msgstr "S&onraí Shuíomhanna Gréasáin As Líne"
 msgid "&Download History"
 msgstr "&Stair an Bhainisteora Íosluchtaithe"
 
-#: itemSessions.label itemSessions.accesskey
-msgid "Authenticated &Sessions"
-msgstr "&Seisiúin Fhíordheimhnithe"
+#: itemActiveLogins.label itemActiveLogins.accesskey
+msgid "Active &Logins"
+msgstr ""
 
 #: cmd_engineManager.label
 msgid "Manage Search Engines…"
@@ -6099,10 +6528,6 @@ msgstr ""
 #: securityOverride.linkText
 msgid "Or you can add an exception…"
 msgstr "Nó is féidir leat eisceacht a chruthú…"
-
-#: securityOverride.exceptionButtonLabel
-msgid "Add Exception…"
-msgstr "Cruthaigh Eisceacht…"
 
 # contents of the <xul:button> tags.  The only language content is the label= field,
 # which uses strings already defined above. The button is included here (instead of
@@ -7723,11 +8148,6 @@ msgstr "Rabhadh: Easpa cuimhne"
 #: LowMemoryMessage
 msgid "A script on this page has been stopped due to a low memory condition."
 msgstr "Stopadh script ar an leathanach seo de bharr easpa cuimhne."
-
-# "left-to-right" -- leave AS IS --KPS
-#: locale.dir
-msgid "ltr"
-msgstr "ltr"
 
 #: 16389
 msgid "An unknown error has occurred (%1$S)"
@@ -9862,7 +10282,7 @@ msgid "&Save DOM As…"
 msgstr "&Sábháil DOM Mar…"
 
 # e.g. "u" in bookmark manager; "c" is "Comhad" always
-#: mnSearch.label mnSearch.accesskey searchtab.label searchtab.accesskey
+#: mnSearch.label mnSearch.accesskey
 msgid "&Search"
 msgstr "C&uardaigh"
 
@@ -10777,7 +11197,7 @@ msgstr "&Aimsigh Rialacha CSS…"
 msgid "New"
 msgstr "Nua"
 
-#: disableSelectedRules.label disableButton
+#: disableSelectedRules.label blocklist.checkbox.label disableButton
 msgid "Disable"
 msgstr "Díchumasaigh"
 
@@ -11721,6 +12141,14 @@ msgstr "Cód Foinseach:"
 msgid "Save Image"
 msgstr "Sábháil an Íomhá"
 
+#: SaveVideoTitle
+msgid "Save Video"
+msgstr "Sábháil an Físeán"
+
+#: SaveAudioTitle
+msgid "Save Audio"
+msgstr "Sábháil an Fhuaim"
+
 #: SaveLinkTitle
 msgid "Save As"
 msgstr "Sábháil Mar"
@@ -11981,10 +12409,6 @@ msgstr "*.xul"
 #: dirTextInputLabel promptNewDirMessage
 msgid "Directory name:"
 msgstr "Ainm comhadlainne:"
-
-#: saveButtonLabel
-msgid "Save"
-msgstr "Sábháil"
 
 #: saveAsLabel
 msgid "Save As:"
@@ -15420,10 +15844,6 @@ msgstr "Ag Tosú…"
 msgid "Scanning for viruses…"
 msgstr "Ag scanadh le haghaidh víreas…"
 
-#: cmd.pause.label cmd.pause.accesskey
-msgid "&Pause"
-msgstr "Cuir ar &Shos"
-
 #: cmd.resume.label cmd.resume.accesskey
 msgid "&Resume"
 msgstr "&Lean"
@@ -15542,6 +15962,8 @@ msgstr ""
 "Déan iarracht eile, le do thoil."
 
 #: quitCancelDownloadsAlertTitle offlineCancelDownloadsAlertTitle
+#: enterPrivateBrowsingCancelDownloadsAlertTitle
+#: leavePrivateBrowsingCancelDownloadsAlertTitle
 msgid "Cancel All Downloads?"
 msgstr "Gach íosluchtú le cealú?"
 
@@ -15589,6 +16011,32 @@ msgstr ""
 "Má théann tú as líne anois, cealófar %S íosluchtú. An bhfuil tú cinnte gur "
 "mian leat dul as líne?"
 
+#: enterPrivateBrowsingCancelDownloadsAlertMsg
+msgid ""
+"If you enter the Private Browsing mode now, 1 download will be canceled. Are "
+"you sure you want to enter the Private Browsing mode?"
+msgstr ""
+"Má thosaíonn tú Brabhsáil Phríobháideach anois, cealófar íosluchtú amháin. An "
+"bhfuil tú cinnte gur mian leat Brabhsáil Phríobháideach a thosú?"
+
+#: enterPrivateBrowsingCancelDownloadsAlertMsgMultiple
+msgid ""
+"If you enter the Private Browsing mode now, %S downloads will be canceled. "
+"Are you sure you want to enter the Private Browsing mode?"
+msgstr ""
+
+#: leavePrivateBrowsingCancelDownloadsAlertMsg
+msgid ""
+"If you leave the Private Browsing mode now, 1 download will be canceled. Are "
+"you sure you want to leave the Private Browsing mode?"
+msgstr ""
+
+#: leavePrivateBrowsingCancelDownloadsAlertMsgMultiple
+msgid ""
+"If you leave the Private Browsing mode now, %S downloads will be canceled. "
+"Are you sure you want to leave the Private Browsing mode?"
+msgstr ""
+
 #: cancelDownloadsOKText
 msgid "Cancel 1 Download"
 msgstr "Cealaigh íosluchtú amháin"
@@ -15608,6 +16056,14 @@ msgstr "Ná Scoir"
 #: dontGoOfflineButton
 msgid "Stay Online"
 msgstr "Fan ar líne"
+
+#: dontEnterPrivateBrowsingButton
+msgid "Don't Enter the Private Browsing Mode"
+msgstr "Ná Tosaigh Brabhsáil Phríobháideach"
+
+#: dontLeavePrivateBrowsingButton
+msgid "Stay in Private Browsing Mode"
+msgstr ""
 
 #: downloadsCompleteTitle
 msgid "Downloads Complete"
@@ -15926,6 +16382,48 @@ msgstr "Cuiditheoirí:"
 msgid "Visit Home Page"
 msgstr "Féach ar an leathanach baile"
 
+#: blocklist.title
+msgid "Add-ons may be causing problems"
+msgstr "D'fhéadfadh breiseáin a bheith freagrach as fadhbanna"
+
+#: blocklist.style
+msgid "width: 45em; height: 30em"
+msgstr "width: 50em; height: 34em"
+
+#: blocklist.summary
+msgid ""
+"&brandShortName; has determined that the following add-ons are known to cause "
+"stability or security problems:"
+msgstr ""
+
+#: blocklist.softblocked
+msgid ""
+"For your protection, it is highly recommended that you restart with these add-"
+"ons disabled."
+msgstr ""
+
+#: blocklist.hardblocked
+msgid ""
+"These add-ons have a high risk of causing stability or security problems and "
+"have been blocked, but a restart is required to disable them completely."
+msgstr ""
+
+#: blocklist.softandhard
+msgid ""
+"The add-ons that have a high risk of causing stability or security problems "
+"have been blocked. The others are lower risk, but it is highly recommended "
+"that you restart with them disabled."
+msgstr ""
+
+#: blocklist.moreinfo moreInfoText
+msgid "More information"
+msgstr "Tuilleadh eolais"
+
+#: blocklist.accept.label blocklist.accept.accesskey cmd.restartApp2.label
+#: cmd.restartApp2.accesskey
+msgid "&Restart &brandShortName;"
+msgstr "&Atosaigh &brandShortName;"
+
 #: errors.title
 msgid "Errors"
 msgstr "Earráidí"
@@ -16002,10 +16500,6 @@ msgstr "&Suiteáil Nuashonruithe"
 #: cmd.installUpdatesAll.tooltip
 msgid "Installs the selected updates"
 msgstr "Suiteálann na nuashonruithe roghnaithe"
-
-#: cmd.restartApp2.label cmd.restartApp2.accesskey
-msgid "&Restart &brandShortName;"
-msgstr "&Atosaigh &brandShortName;"
 
 #: cmd.restartApp2.tooltip
 msgid "Restart &brandShortName; to apply changes"
@@ -16181,6 +16675,10 @@ msgstr "Míreanna breise de dhíth."
 #: blocklisted.label
 msgid "Disabled for your protection."
 msgstr "Díchumasaithe ar mhaithe le do chosaint."
+
+#: softBlocklisted.label
+msgid "Known to cause security or stability issues."
+msgstr ""
 
 #: toBeDisabled.label
 msgid "This add-on will be disabled when &brandShortName; is restarted."
@@ -16365,6 +16863,10 @@ msgstr "400px"
 msgid "Accept and Install…"
 msgstr "Glac Leis agus Suiteáil…"
 
+#: blocklist.blocked.label
+msgid "Blocked"
+msgstr "Coiscthe"
+
 #: aboutWindowTitle aboutAddon
 msgid "About %S"
 msgstr "Maidir le %S"
@@ -16438,10 +16940,6 @@ msgstr "Ní mór duit %S a atosú chun na hathruithe a chur i bhfeidhm."
 #: laterButton
 msgid "Later"
 msgstr "Níos Déanaí"
-
-#: moreInfoText
-msgid "More information"
-msgstr "Tuilleadh eolais"
 
 #: uninstallTitle
 msgid "Uninstall %S"
@@ -16554,30 +17052,29 @@ msgstr ""
 "cineál tógála do %S (%S). Téigh i dteagmháil le húdar na míre seo maidir leis "
 "an bhfadhb, le do thoil."
 
-#: blocklistedInstallTitle
-msgid "This extension is not secure"
-msgstr "Níl an eisínteacht seo sábháilte"
-
-#: blocklistedInstallMsg
-msgid "The extension %S is known to be dangerous, and can't be installed."
+#: blocklistedInstallTitle2
+msgid "This add-on is dangerous to use"
 msgstr ""
-"Glactar leis go bhfuil an eisínteacht %S contúirteach, agus ní féidir í a "
-"shuiteáil."
 
-#: blocklistNotifyTitle2
-msgid "Add-ons may be causing problems"
-msgstr "D'fhéadfadh breiseáin a bheith freagrach as fadhbanna"
-
-#: blocklistNotifyMsg2
+#: blocklistedInstallMsg2
 msgid ""
-"%S has determined that the following add-ons may be unstable or insecure."
+"The add-on %S has a high risk of causing stability or security problems and "
+"can't be installed."
 msgstr ""
-"Tá sé déanta amach ag %S go mb'fhéidir go bhfuil na breiseáin seo a leanas "
-"éagobhsaí nó neamhshlán"
 
-#: blocklistRestartMsg2
-msgid "You should restart %S so that these add-ons can be disabled."
-msgstr "Ba cheart duit %S a atosú chun na breiseáin seo a dhíchumasú."
+#: softBlockedInstallTitle
+msgid "This add-on may be dangerous to use"
+msgstr ""
+
+#: softBlockedInstallMsg
+msgid ""
+"The add-on %S may cause stability or security problems. It is highly "
+"recommended that you do not install it."
+msgstr ""
+
+#: softBlockedInstallAcceptLabel
+msgid "Install Anyway"
+msgstr "Suiteáil é mar sin féin"
 
 #: missingFileTitle
 msgid "Missing File"
@@ -17034,9 +17531,9 @@ msgstr "Feidhmchlár Eile…"
 msgid "Go to the Help Start Page"
 msgstr "Téigh go dtí an Leathanach Tosaigh Chabhrach"
 
-#: searchClose.tooltip
-msgid "Close search results"
-msgstr "Dún torthaí cuardaigh"
+#: searchHeader.label
+msgid "Search results"
+msgstr "Torthaí cuardaigh"
 
 #: toctab.label toctab.accesskey
 msgid "&Contents"
@@ -17952,13 +18449,13 @@ msgstr "Faigh an leagan nua »"
 msgid "Never"
 msgstr "Riamh"
 
-#: resumePausedAfterCloseMessage
+#: resumePausedAfterCloseMsg
 msgid ""
-"You have paused downloading this update. Do you want %S to download the "
-"update in the background while you continue to browse?"
+"You have paused downloading this update. Do you want to download the update "
+"in the background while you continue to use %S?"
 msgstr ""
 "Tá íosluchtú an nuashonraithe seo curtha ar shos agat. An mian leat go n-"
-"íosluchtóidh %S an nuashonrú sa chúlra agus tú ag brabhsáil?"
+"íosluchtófar an nuashonrú sa chúlra agus tú ag brabhsáil le %S?"
 
 #: updateReadyToInstallHeader
 msgid "%S Ready to Install"
@@ -18176,9 +18673,16 @@ msgstr ""
 "Bí i dtuilleamaí Bhainisteoir na bhFocal Faire leis an bhfocal faire seo a "
 "choinneáil i gcuimhne."
 
-#: savePasswordText
-msgid "Do you want %S to remember this password?"
-msgstr "An mian leat go meabhróidh %S an focal faire seo?"
+# 1st string is product name, 2nd is the username for the login, 3rd is the
+# login's hostname. Note that long usernames may be truncated.
+#: saveLoginText
+msgid "Do you want %1$S to remember the password for \"%2$S\" on %3$S?"
+msgstr "An mian leat go meabhróidh %1$S an focal faire do \"%2$S\" ar %3$S?"
+
+# 1st string is product name, 2nd is the login's hostname
+#: saveLoginTextNoUsername
+msgid "Do you want %1$S to remember this password on %2$S?"
+msgstr "An mian leat go meabhróidh %1$S an focal faire seo ar %2$S?"
 
 #: notNowButtonText
 msgid "&Not Now"
@@ -21024,6 +21528,10 @@ msgid ""
 msgstr ""
 "Níl an teastas bailí ach le haghaidh <a id=\"cert_domain_link\" title=\"%1$S"
 "\">%1$S</a>"
+
+#: certErrorMismatchSinglePlain
+msgid "The certificate is only valid for %S"
+msgstr "Níl an teastas bailí ach do %S"
 
 #: certErrorMismatchMultiple
 msgid "The certificate is only valid for the following names:"
