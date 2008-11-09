@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-04 08:00-0600\n"
+"POT-Creation-Date: 2008-11-05 19:52-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -161,7 +161,8 @@ msgid "&Print…"
 msgstr "&Priontáil…"
 
 # G&reamaigh, P&riontáil
-#: printCmd.key ParagraphAbbr.label PropertiesAccessKey printCardViewCmd.key
+#: printCmd.key ParagraphAbbr.label PropertiesAccessKey Home.accesskey
+#: printCardViewCmd.key
 msgid "P"
 msgstr "R"
 
@@ -171,7 +172,7 @@ msgid "&Close"
 msgstr "&Dún"
 
 # ctrl+D is "Dún" under Main -> Comhad
-#: closeCmd.key
+#: closeCmd.key Work.accesskey
 msgid "W"
 msgstr "W"
 
@@ -651,7 +652,7 @@ msgid "&Remove Named Anchors"
 msgstr "Bain Ancai&rí Ainmnithe"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
-#: formatRemoveNamedAnchors.key selectAllCmd.key Address.accesskey
+#: formatRemoveNamedAnchors.key selectAllCmd.key
 #: accountManagerCmdUnix.accesskey saveLabelAccesskey
 msgid "A"
 msgstr "W"
@@ -5824,8 +5825,8 @@ msgid "Add&itional Email:"
 msgstr "Ríomhphost Bre&ise:"
 
 #: PreferMailFormat.label PreferMailFormat.accesskey
-msgid "P&refers to receive messages formatted as:"
-msgstr "Formáid teachtaireachta de &rogha:"
+msgid "Prefers to recei&ve messages formatted as:"
+msgstr "&Formáid teachtaireachta de rogha:"
 
 #: PlainText.label
 msgid "Plain Text"
@@ -5840,12 +5841,16 @@ msgid "&Screen Name:"
 msgstr "Ainm &Scáileáin:"
 
 #: allowRemoteContent.label allowRemoteContent.accesskey
-msgid "Allo&w remote images in HTML mail."
-msgstr "&Ceadaigh cianíomhánna i ríomhphost HTML."
+msgid "Allow &remote images."
+msgstr "Ceadaigh &cianíomhánna."
 
-#: Phones.box
-msgid "Phones"
-msgstr "Fóin"
+#: allowRemoteContent.tooltip
+msgid ""
+"In HTML messages it is possible to embed images from remote sources. Opening "
+"such a message will open a connection to this external source. This may allow "
+"tracking of the message being read. Checking this box will allow such "
+"external embedded images in HTML messages from this contact."
+msgstr ""
 
 #: WorkPhone.label WorkPhone.accesskey
 msgid "Wor&k:"
@@ -5860,24 +5865,20 @@ msgid "Fa&x:"
 msgstr "Fa&cs:"
 
 #: PagerNumber.label PagerNumber.accesskey
-msgid "&Pager:"
+msgid "Pa&ger:"
 msgstr "&Glaoire:"
 
 #: CellularNumber.label CellularNumber.accesskey
 msgid "&Mobile:"
 msgstr "Fó&n Siúil:"
 
-#: Address.tab 1042
-msgid "Address"
-msgstr "Seoladh"
+#: Home.tab
+msgid "Private"
+msgstr "Príobháideach"
 
-# Toolbar items
-#: Home.box home.heading propertyHome headingHome importDialog.homeTitle 1007
-msgid "Home"
-msgstr "Baile"
-
-#: HomeAddress.label HomeAddress.accesskey
-msgid "A&ddress:"
+#: HomeAddress.label HomeAddress.accesskey WorkAddress.label
+#: WorkAddress.accesskey
+msgid "&Address:"
 msgstr "&Seoladh:"
 
 #: HomeAddress2.label
@@ -5888,34 +5889,37 @@ msgstr ""
 msgid "_: HomeAddress2.accesskey\n"
 msgstr ""
 
-#: HomeCity.label HomeCity.accesskey
+#: HomeCity.label HomeCity.accesskey WorkCity.label WorkCity.accesskey
 msgid "Cit&y:"
 msgstr "C&athair:"
 
-#: HomeState.label HomeState.accesskey
+#: HomeState.label HomeState.accesskey WorkState.label WorkState.accesskey
 msgid "&State/Province:"
 msgstr "&Stát/Cúige:"
 
-#: HomeZipCode.label HomeZipCode.accesskey
+#: HomeZipCode.label HomeZipCode.accesskey WorkZipCode.label
+#: WorkZipCode.accesskey
 msgid "&ZIP/Postal Code:"
 msgstr "Cód &Poist:"
 
-#: HomeCountry.label HomeCountry.accesskey
+#: HomeCountry.label HomeCountry.accesskey WorkCountry.label
+#: WorkCountry.accesskey
 msgid "Co&untry:"
 msgstr "&Tír:"
 
-#: HomeWebPage.label HomeWebPage.accesskey
-msgid "&Web Page:"
-msgstr "Leathanach &Gréasáin:"
+#: HomeWebPage.label HomeWebPage.accesskey WorkWebPage.label
+#: WorkWebPage.accesskey
+msgid "W&eb Page:"
+msgstr "L&eathanach Gréasáin:"
 
-#: Work.box work.heading propertyWork headingWork importDialog.workTitle
+#: Work.tab work.heading propertyWork headingWork importDialog.workTitle
 #: mailnews.labels.description.2 1006
 msgid "Work"
 msgstr "Obair"
 
 #: JobTitle.label JobTitle.accesskey
-msgid "Titl&e:"
-msgstr "T&eideal:"
+msgid "T&itle:"
+msgstr "Te&ideal:"
 
 #: Department.label Department.accesskey
 msgid "Depart&ment:"
@@ -5925,10 +5929,6 @@ msgstr "Roi&nn:"
 msgid "&Organization:"
 msgstr "&Eagras:"
 
-#: WorkAddress.label WorkAddress.accesskey
-msgid "Add&ress:"
-msgstr "Seo&ladh:"
-
 #: WorkAddress2.label
 msgid "_: WorkAddress2.label\n"
 msgstr ""
@@ -5936,26 +5936,6 @@ msgstr ""
 #: WorkAddress2.accesskey
 msgid "_: WorkAddress2.accesskey\n"
 msgstr ""
-
-#: WorkCity.label WorkCity.accesskey
-msgid "C&ity:"
-msgstr "Catha&ir:"
-
-#: WorkState.label WorkState.accesskey
-msgid "State/Pro&vince:"
-msgstr "Stát/Cúi&ge:"
-
-#: WorkZipCode.label WorkZipCode.accesskey
-msgid "ZI&P/Postal Code:"
-msgstr "Cód &Poist:"
-
-#: WorkCountry.label WorkCountry.accesskey
-msgid "Cou&ntry:"
-msgstr "Tí&r:"
-
-#: WorkWebPage.label WorkWebPage.accesskey
-msgid "We&b Page:"
-msgstr "&Leathanach Gréasáin:"
 
 #: Other.tab other.heading headingOther
 msgid "Other"
@@ -5998,15 +5978,14 @@ msgstr "Saincheaptha &3:"
 msgid "Custom &4:"
 msgstr "Saincheaptha &4:"
 
-#: Notes.box 2135
-msgid "Notes"
-msgstr "Nótaí"
+#: Notes.label Notes.accesskey
+msgid "&Notes:"
+msgstr "&Nótaí:"
 
-# Ctrl+N is Fuinneog Nua under Main -> Comhad
-# see also lowercase for "Navigator" command
-#: Notes.accesskey newCard.key newMessageCmd2.key
-msgid "N"
-msgstr "N"
+# Toolbar items
+#: home.heading propertyHome headingHome importDialog.homeTitle 1007
+msgid "Home"
+msgstr "Baile"
 
 #: phone.heading headingPhone
 msgid "Phone"
@@ -6190,6 +6169,12 @@ msgstr "Leabhar Seoltaí"
 #: newCard.label newCard.accesskey newCardCmd.label newCardCmd.accesskey
 msgid "Address Book &Card…"
 msgstr "&Cárta sa Leabhar Seoltaí…"
+
+# Ctrl+N is Fuinneog Nua under Main -> Comhad
+# see also lowercase for "Navigator" command
+#: newCard.key newMessageCmd2.key
+msgid "N"
+msgstr "N"
 
 #: newListCmd.label newListCmd.accesskey
 msgid "Mailing &List…"
@@ -9360,6 +9345,10 @@ msgid "Applied filter \"%1$S\" to message from %2$S - %3$S at %4$S"
 msgstr ""
 "Scagaire \"%1$S\" curtha i bhfeidhm ar theachtaireacht ó %2$S - %3$S ar %4$S"
 
+#: filterMissingCustomAction
+msgid "Missing Custom Action"
+msgstr "Gníomh Saincheaptha Ar Iarraidh"
+
 #: filterAction2
 msgid "priority changed"
 msgstr "athraíodh an tosaíocht"
@@ -10593,6 +10582,10 @@ msgstr "Mí Bhreithe"
 #: 2130
 msgid "Birth Day"
 msgstr "Lá Breithe"
+
+#: 2135
+msgid "Notes"
+msgstr "Nótaí"
 
 # Error strings
 #: ImportAlreadyInProgress
@@ -12586,8 +12579,7 @@ msgstr "Seo&l na teachtaireachtaí gan seoladh"
 # #-#-#-#-#  chromemessenger-newsblognewsblog.dtd.po (firefox)  #-#-#-#-#
 # folder pane context menu item
 #: subscribeCmd.label subscribeCmd.accesskey folderContextSubscribe.label
-#: folderContextSubscribe.accesskey folderContextRSSSubscribe.label
-#: folderContextRSSSubscribe.accesskey
+#: folderContextSubscribe.accesskey
 msgid "Su&bscribe…"
 msgstr "Lio&stáil…"
 
@@ -17361,6 +17353,8 @@ msgid ""
 "This directory is already used by the %S account. Please pick a different "
 "directory."
 msgstr ""
+"Tá an chomhadlann seo á húsáid ag cuntas %S cheana. Roghnaigh comhadlann eile "
+"le do thoil."
 
 # Provide default example values for sample email address
 #: exampleEmailUserName
@@ -18611,6 +18605,10 @@ msgstr "Suaitheantas"
 #: 1041
 msgid "X400"
 msgstr "X.400"
+
+#: 1042
+msgid "Address"
+msgstr "Seoladh"
 
 # VCARD_LDAP_MAILER
 # # @name VCARD_LDAP_MAILER
