@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-05 19:52-0600\n"
+"POT-Creation-Date: 2008-11-09 16:22-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -976,7 +976,7 @@ msgid "b"
 msgstr "b"
 
 #: historyButton.label search.scopeHistory.label OrganizerQueryHistory
-#: history.label
+#: history.label historySection.label
 msgid "History"
 msgstr "Stair"
 
@@ -1147,9 +1147,9 @@ msgstr "&Roghanna…"
 msgid "Prefere&nces"
 msgstr "Sai&nroghanna"
 
-#: clearPrivateDataCmd.label clearPrivateDataCmd.accesskey
-msgid "Clear &Private Data"
-msgstr "Bánaigh Sonraí &Príobháideacha"
+#: clearRecentHistoryCmd.label clearRecentHistoryCmd.accesskey
+msgid "Clear Recent &History"
+msgstr ""
 
 #: privateBrowsingCmd.label privateBrowsingCmd.accesskey
 msgid "Private &Browsing"
@@ -1804,13 +1804,13 @@ msgid "Update Plugins…"
 msgstr "Nuashonraigh Forlíontáin…"
 
 # Sanitize
-#: sanitizeWithPromptLabel
-msgid "Clear Private Data…"
-msgstr "Bánaigh Sonraí Príobháideacha…"
+#: sanitizeWithPromptLabel2
+msgid "Clear Recent History…"
+msgstr ""
 
-#: sanitizeButton
-msgid "Clear Private Data Now"
-msgstr "Bánaigh Sonraí Príobháideacha Anois"
+#: sanitizeButton2 sanitizePrefs.title
+msgid "Clear Private Data"
+msgstr "Bánaigh Sonraí Príobháideacha"
 
 # Check for Updates
 #: updatesItem_default updatesItem_defaultFallback
@@ -5871,27 +5871,60 @@ msgstr "Cuir na hAthruithe i bhFeidhm agus Atosaigh"
 msgid "Continue in Safe Mode"
 msgstr "Lean Ar Aghaidh sa Mhód Sábháilteachta"
 
-#: sanitizeDialog.title
-msgid "Clear Private Data"
-msgstr "Bánaigh Sonraí Príobháideacha"
+#: sanitizeDialog2.title
+msgid "Clear Recent History"
+msgstr ""
 
 #: sanitizeItems.label
 msgid "Clear the following items now:"
 msgstr "Bánaigh na míreanna seo a leanas anois:"
 
-#: clearDataSettings.label
-msgid "When I ask &brandShortName; to clear my private data, it should erase:"
+#: clearDataSettings2.label
+msgid "When I quit &brandShortName;, it should automatically clear all:"
 msgstr ""
-"Nuair a fhiafraím de &brandShortName; mo chuid sonraí príobháideacha a "
-"ghlanadh, ba chóir dó a ghlanadh:"
 
-#: itemHistory.label itemHistory.accesskey
-msgid "&Browsing History"
-msgstr "Stair &Bhrabhsála"
+# XXX rearrange entities to match physical layout when l10n isn't an issue
+#: clearDuration.label
+msgid "Remove "
+msgstr ""
 
-#: itemFormSearchHistory.label itemFormSearchHistory.accesskey
-msgid "Saved &Form and Search History"
-msgstr "Stair Shábháilte &Fhoirmeacha agus Staire"
+#: clearDuration.lastHour
+msgid "the last hour"
+msgstr ""
+
+#: clearDuration.last2Hours
+msgid "the last 2 hours"
+msgstr ""
+
+#: clearDuration.last4Hours
+msgid "the last 4 hours"
+msgstr ""
+
+#: clearDuration.today
+msgid "my history for today"
+msgstr ""
+
+#: clearDuration.everything
+msgid "my entire history"
+msgstr ""
+
+# Localization note (clearDuration.suffix) - trailing entity for languages
+# that require it.
+#: clearDuration.suffix
+msgid "_: clearDuration.suffix\n"
+msgstr ""
+
+#: dataSection.label
+msgid "Data"
+msgstr "Sonraí"
+
+#: itemVisitedPages.label itemVisitedPages.accesskey
+msgid "&Visited Pages"
+msgstr ""
+
+#: itemFormSearchEntries.label itemFormSearchEntries.accesskey
+msgid "&Form &amp; Search Entries"
+msgstr ""
 
 #: itemPasswords.label itemPasswords.accesskey
 msgid "Saved &Passwords"
@@ -5901,20 +5934,27 @@ msgstr "&Focail Fhaire a sábháladh"
 msgid "&Cookies"
 msgstr "&Fianáin"
 
-#: itemCache.label itemCache.accesskey
-msgid "C&ache"
-msgstr "T&aisce"
+#: itemWebCache.label itemWebCache.accesskey
+msgid "&Web Cache"
+msgstr "&Taisce Ghréasáin"
 
 #: itemOfflineApps.label itemOfflineApps.accesskey
 msgid "&Offline Website Data"
 msgstr "S&onraí Shuíomhanna Gréasáin As Líne"
 
-#: itemDownloads.label itemDownloads.accesskey
-msgid "&Download History"
-msgstr "&Stair an Bhainisteora Íosluchtaithe"
+#: itemDownloadList.label itemDownloadList.accesskey
+msgid "&Download List"
+msgstr "&Liosta Íosluchtuithe"
 
 #: itemActiveLogins.label itemActiveLogins.accesskey
 msgid "Active &Logins"
+msgstr ""
+
+#: column.width
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"14em"
 msgstr ""
 
 #: cmd_engineManager.label
@@ -6972,38 +7012,6 @@ msgstr ""
 "ríomhaire a atosú.\n"
 "\n"
 "$_CLICK"
-
-#: MUI_TEXT_LICENSE_TITLE
-msgid "License Agreement"
-msgstr "Comhaontú um Cheadúnas"
-
-#: MUI_TEXT_LICENSE_SUBTITLE
-msgid "Please review the license terms before installing $BrandFullNameDA."
-msgstr ""
-"Déan iniúchadh ar choinníollacha an cheadúnais sula suiteálann tú "
-"$BrandFullNameDA."
-
-#: MUI_INNERTEXT_LICENSE_TOP
-msgid "Press Page Down to see the rest of the agreement."
-msgstr "Brúigh \"Page Down\" chun an chuid eile den cheadúnas a léamh."
-
-#: MUI_INNERTEXT_LICENSE_BOTTOM_CHECKBOX
-msgid ""
-"If you accept the terms of the agreement, click the check box below. You must "
-"accept the agreement to install $BrandFullNameDA. $_CLICK"
-msgstr ""
-"Má ghlacann tú le coinníollacha an chomhaontaithe, cliceáil an ticbhosca "
-"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $BrandFullNameDA a "
-"shuiteáil. $_CLICK"
-
-#: MUI_INNERTEXT_LICENSE_BOTTOM_RADIOBUTTONS
-msgid ""
-"If you accept the terms of the agreement, select the first option below. You "
-"must accept the agreement to install $BrandFullNameDA. $_CLICK"
-msgstr ""
-"Má ghlacann tú le coinníollacha an chomhaontaithe, roghnaigh an chéad rogha "
-"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $BrandFullNameDA a "
-"shuiteáil. $_CLICK"
 
 #: MUI_TEXT_COMPONENTS_TITLE
 msgid "Choose Components"
@@ -16040,18 +16048,24 @@ msgid ""
 "If you enter the Private Browsing mode now, %S downloads will be canceled. "
 "Are you sure you want to enter the Private Browsing mode?"
 msgstr ""
+"Má thosaíonn tú Brabhsáil Phríobháideach anois, cealófar %S íosluchtú. An "
+"bhfuil tú cinnte gur mian leat Brabhsáil Phríobháideach a thosú?"
 
 #: leavePrivateBrowsingCancelDownloadsAlertMsg
 msgid ""
 "If you leave the Private Browsing mode now, 1 download will be canceled. Are "
 "you sure you want to leave the Private Browsing mode?"
 msgstr ""
+"Má stopann tú Brabhsáil Phríobháideach anois, cealófar íosluchtú amháin. An "
+"bhfuil tú cinnte gur mian leat Brabhsáil Phríobháideach a stopadh?"
 
 #: leavePrivateBrowsingCancelDownloadsAlertMsgMultiple
 msgid ""
 "If you leave the Private Browsing mode now, %S downloads will be canceled. "
 "Are you sure you want to leave the Private Browsing mode?"
 msgstr ""
+"Má stopann tú Brabhsáil Phríobháideach anois, cealófar %S íosluchtú. An "
+"bhfuil tú cinnte gur mian leat Brabhsáil Phríobháideach a stopadh?"
 
 #: cancelDownloadsOKText
 msgid "Cancel 1 Download"
@@ -18443,7 +18457,7 @@ msgstr "Fiafraigh Ar Ball"
 
 #: noThanksButton
 msgid "No Thanks"
-msgstr ""
+msgstr "Ná Nuashonraigh"
 
 #: updateButton_minor
 msgid "Update %S"
