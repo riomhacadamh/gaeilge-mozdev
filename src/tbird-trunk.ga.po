@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 17:12-0600\n"
+"POT-Creation-Date: 2008-12-08 18:56-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -80,9 +80,9 @@ msgstr "&Fill"
 msgid "&Save"
 msgstr "&Sábháil"
 
-#: saveCmd.key publishCmd.key accountManagerCmdUnix.accesskey
-#: markStarredCmd.key labelForStopButton.accesskey
-#: labelForSearchButton.accesskey
+#: saveCmd.key publishCmd.key digitalSign.certificate.accesskey
+#: accountManagerCmdUnix.accesskey markStarredCmd.key
+#: labelForStopButton.accesskey labelForSearchButton.accesskey
 msgid "S"
 msgstr "S"
 
@@ -1721,7 +1721,8 @@ msgstr ""
 "Scriosfar cealla tábla agus a n-inneachair má laghdaítear méid na rónna nó na "
 "gcolún. An bhfuil tú cinnte go dteastaíonn uait é sin a dhéanamh?"
 
-#: Clear certificate_clear.button
+#: Clear digitalSign.certificate_clear.button
+#: encryption.certificate_clear.button
 msgid "Clear"
 msgstr "Bánaigh"
 
@@ -2901,9 +2902,9 @@ msgstr "p"
 
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
 # cmd_cut_accesskey is sedtweaked
-#: tbar.key editDetailsAccessKey viewDetailsAccessKey getNewMsgCmd.key
-#: nextUnreadThread.key getAllNewMsgCmd.key moveToFolderAgainAccessKey
-#: copyToFolderAgainAccessKey
+#: tbar.key encryption.certificate.accesskey editDetailsAccessKey
+#: viewDetailsAccessKey getNewMsgCmd.key nextUnreadThread.key
+#: getAllNewMsgCmd.key moveToFolderAgainAccessKey copyToFolderAgainAccessKey
 msgid "t"
 msgstr "t"
 
@@ -4566,6 +4567,7 @@ msgid "X"
 msgstr "X"
 
 #: copyCmd.key Contact.accesskey cancelDownloadButton.accesskey
+#: digitalSign.certificate_clear.accesskey
 msgid "C"
 msgstr "C"
 
@@ -5001,6 +5003,11 @@ msgstr ""
 "&#169;1998-2008 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
 "trádmharcanna de chuid Fondúireacht Mozilla iad Mozilla Thunderbird agus "
 "suaitheantais Thunderbird. Gach ceart ar cosaint."
+
+#: cmdCloseMac.commandKey watchThreadMenu.key cmd.close.commandKey
+#: windowClose.key
+msgid "w"
+msgstr "w"
 
 # #-#-#-#-#  tmp.XXXXcCd74t.po (thunderbird)  #-#-#-#-#
 # extracted from am-main.xul
@@ -6760,8 +6767,7 @@ msgstr "DN &bunaidh:"
 msgid "&Find"
 msgstr "&Aimsigh"
 
-#: directorySecure.label directorySecure.accesskey isSecure.label
-#: isSecure.accesskey
+#: directorySecure.label directorySecure.accesskey
 msgid "&Use secure connection (SSL)"
 msgstr "Ú&sáid nasc daingean (SSL)"
 
@@ -7732,7 +7738,7 @@ msgstr "Cuntas speisialta é seo. Níl aon aitheantas comhcheangailte leis."
 msgid "Message Storage"
 msgstr "Stóráil na dTeachtaireachtaí"
 
-#: securityTitle.label prefPanel-smime securityButton.label
+#: securityTitle.label securityTab.label prefPanel-smime securityButton.label
 msgid "Security"
 msgstr "Slándáil"
 
@@ -7752,14 +7758,14 @@ msgstr "Criptiúchán"
 msgid "Default encryption setting when sending messages:"
 msgstr "Socrú criptiúcháin réamhshocraithe le haghaidh seolta teachtaireachtaí:"
 
-#: neverEncrypt.label
-msgid "Never (do not use encryption)"
-msgstr "Ná criptigh riamh"
+#: neverEncrypt.label neverEncrypt.accesskey
+msgid "&Never (do not use encryption)"
+msgstr "&Ná criptigh riamh"
 
-#: alwaysEncryptMessage.label
-msgid "Required (can't send message unless all recipients have certificates)"
+#: alwaysEncryptMessage.label alwaysEncryptMessage.accesskey
+msgid "Req&uired (can't send message unless all recipients have certificates)"
 msgstr ""
-"De dhíth (ní féidir teachtaireacht a sheoladh mura bhfuil teastas ag gach "
+"&De dhíth (ní féidir teachtaireacht a sheoladh mura bhfuil teastas ag gach "
 "faighteoir)"
 
 #: encryptionCert.message
@@ -7768,17 +7774,22 @@ msgstr ""
 "Úsáid an teastas seo chun teachtaireachtaí a sheoltar chugat a chriptiú agus "
 "a dhíchriptiú:"
 
-#: certificate.button
+#: digitalSign.certificate.button encryption.certificate.button
 msgid "Select…"
 msgstr "Roghnaigh…"
+
+#: encryption.certificate_clear.accesskey editMsgAsNewCmd.key
+#: proportionalSize.accesskey
+msgid "e"
+msgstr "l"
 
 #: signingGroupTitle.label
 msgid "Digital Signing"
 msgstr "Síniú Digiteach"
 
-#: signMessage.label
-msgid "Digitally sign messages (by default)"
-msgstr "Sínigh teachtaireachtaí go digiteach (mar réamhshocrú)"
+#: signMessage.label signMessage.accesskey
+msgid "&Digitally sign messages (by default)"
+msgstr "Sínigh teachtaireachtaí go &digiteach (mar réamhshocrú)"
 
 #: signingCert.message
 msgid "Use this certificate to digitally sign messages you send:"
@@ -7791,13 +7802,13 @@ msgstr ""
 msgid "Certificates"
 msgstr "Teastais"
 
-#: managecerts.label managecerts.accesskey
+#: manageCerts.label manageCerts.accesskey
 msgid "&View Certificates"
 msgstr "&Taispeáin Teastais"
 
-#: managedevices.label managedevices.accesskey
-msgid "&Security Devices"
-msgstr "Gléasanna &Slándála"
+#: manageDevices.label manageDevices.accesskey
+msgid "Securit&y Devices"
+msgstr "&Gléasanna Slándála"
 
 # # S/MIME error strings.
 # # Note to localization: %S is a placeholder
@@ -12650,10 +12661,6 @@ msgstr "I&atán"
 msgid "&Edit Message As New"
 msgstr "Cuir in &Eagar Mar Theachtaireacht Nua"
 
-#: editMsgAsNewCmd.key proportionalSize.accesskey
-msgid "e"
-msgstr "l"
-
 #: createFilter.label createFilter.accesskey
 msgid "Cre&ate Filter From Message…"
 msgstr "Cruth&aigh Scagaire ón Teachtaireacht…"
@@ -12687,10 +12694,6 @@ msgstr "Tabhair Neamhaird ar an bh&Foshnáithe"
 #: watchThreadMenu.label watchThreadMenu.accesskey
 msgid "&Watch Thread"
 msgstr "Bí ag &Faire ar an Snáithe"
-
-#: watchThreadMenu.key cmd.close.commandKey windowClose.key
-msgid "w"
-msgstr "w"
 
 #: fileHereMenu.label fileHereMenu.accesskey
 msgid "&File Here"
@@ -14787,67 +14790,67 @@ msgstr "roghnaigh é seo don mháthair"
 # ***** END LICENSE BLOCK *****
 #: toField2.label
 msgid "to "
-msgstr "chuig "
+msgstr "Chuig "
 
 #: fromField2.label
 msgid "from "
-msgstr "ó "
+msgstr "Ó "
 
 #: senderField2.label
 msgid "sender "
-msgstr "seoltóir "
+msgstr "Seoltóir "
 
 #: organizationField2.label
 msgid "organization "
-msgstr "eagras "
+msgstr "Eagras "
 
 #: replyToField2.label
 msgid "reply-to "
-msgstr "freagra-chuig "
+msgstr "Freagra-chuig "
 
 #: subjectField2.label
 msgid "subject "
-msgstr "ábhar "
+msgstr "Ábhar "
 
 #: bccField2.label
 msgid "bcc "
-msgstr "bcc "
+msgstr "Bcc "
 
 #: newsgroupsField2.label
 msgid "newsgroups "
-msgstr "grúpaí-nuachta "
+msgstr "Grúpaí-nuachta "
 
 #: followupToField2.label
 msgid "followup-to "
-msgstr "leanúint-chuig "
+msgstr "Leanúint-chuig "
 
 #: tagsHdr2.label
 msgid "tags "
-msgstr "clibeanna "
+msgstr "Clibeanna "
 
 #: dateField2.label
 msgid "date "
-msgstr "dáta "
+msgstr "Dáta "
 
 #: userAgentField2.label
 msgid "user-agent "
-msgstr "clár-ríomhphoist "
+msgstr "Clár-ríomhphoist "
 
 #: referencesField2.label
 msgid "references "
-msgstr "tagairtí "
+msgstr "Tagairtí "
 
 #: messageIdField2.label
 msgid "message-id "
-msgstr "aitheantas-teachtaireachta "
+msgstr "Aitheantas-teachtaireachta "
 
 #: inReplyToField2.label
 msgid "in-reply-to "
-msgstr "freagra-ar "
+msgstr "Freagra-ar "
 
 #: originalWebsite2.label
 msgid "website "
-msgstr "suíomh-gréasáin "
+msgstr "Suíomh-gréasáin "
 
 #: editMessageDescription.label
 msgid "This is a draft message"
@@ -14855,39 +14858,39 @@ msgstr "Is dréacht é seo"
 
 #: replyButton.label
 msgid "reply…"
-msgstr "freagra…"
+msgstr "Freagair…"
 
 #: forwardButton.label
 msgid "forward…"
-msgstr "cuir ar aghaidh…"
+msgstr "Cuir ar aghaidh…"
 
 #: junkButton.label
 msgid "mark as junk"
-msgstr "marcáil mar dhramhphost"
+msgstr "Marcáil mar dhramhphost"
 
 #: trashButton.tooltiptext
 msgid "delete"
-msgstr "scrios"
+msgstr "Scrios"
 
 #: otherActionsButton.label
 msgid "other actions"
-msgstr "gníomhartha eile"
+msgstr "Gníomhartha eile"
 
 #: saveAsMenuItem.label saveAsMenuItem.accesskey
 msgid "&save as…"
-msgstr "&sábháil mar…"
+msgstr "&Sábháil mar…"
 
 #: viewSourceMenuItem.label viewSourceMenuItem.accesskey
 msgid "&view source…"
-msgstr "&amharc ar fhoinse…"
+msgstr "&Amharc ar fhoinse…"
 
 #: hideDetailsButton.label
 msgid "hide details"
-msgstr "folaigh mionsonraí"
+msgstr "Folaigh mionsonraí"
 
 #: showDetailsButton.label
 msgid "show details"
-msgstr "taispeáin mionsonraí"
+msgstr "Taispeáin mionsonraí"
 
 #: saveAllAttachmentsCmd.label saveAllAttachmentsCmd.accesskey
 msgid "&Save All…"
@@ -15674,10 +15677,6 @@ msgstr "Tar éis taisp&eáint ar feadh"
 #: secondsLabel.label
 msgid "seconds"
 msgstr "soicind"
-
-#: showFolderColumns.label showFolderColumns.accesskey
-msgid "Show expanded co&lumns in the folder pane"
-msgstr "Taispeáin co&lúin fhairsingithe i bpána na bhfillteán"
 
 #: openMsgIn.label
 msgid "Open messages in:"
@@ -19297,7 +19296,7 @@ msgstr "An bhfuil tú cinnte gur mian leat Díshuiteálaí $(^Name) a scor?"
 
 #: SetupCaption
 msgid "$(^Name) Setup"
-msgstr "Socrú $(^Name)"
+msgstr "Suiteáil $(^Name)"
 
 #: UninstallCaption
 msgid "$(^Name) Uninstall"
