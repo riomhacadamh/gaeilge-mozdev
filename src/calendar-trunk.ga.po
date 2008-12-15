@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-12 16:06-0600\n"
+"POT-Creation-Date: 2008-12-15 15:49-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -33,12 +33,11 @@ msgstr "Mozilla"
 msgid "http://www.mozilla.org/projects/calendar/"
 msgstr "http://www.mozilla.org/projects/calendar/"
 
-# LOCALIZATION NOTE (reminderCustomTitle):
-# %1$S = reminderCustomUnit, %2$S = reminderCustomRelation %3$S = reminderCustomOrigin
-# Example: "3 minutes" "before" "the task starts"
-#: reminderCustomTitle
-msgid "%1$S %2$S %3$S"
-msgstr ""
+# # LOCALIZATION NOTE (cityOrStateAndZip):
+# # %1$S is city or state, %2$S is zip
+#: reminderCustomTitle monthlyOrder monthInYear
+msgid "%1$S %2$S"
+msgstr "%1$S %2$S"
 
 #: reminderTitleAtStartEvent
 msgid "The moment the event starts"
@@ -58,39 +57,47 @@ msgstr "Chomh luath is a chríochnaíonn an tasc"
 
 #: reminderCustomUnitMinutes
 msgid "#1 minute;#1 minutes"
-msgstr ""
+msgstr "#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad"
 
 #: reminderCustomUnitHours
 msgid "#1 hour;#1 hours"
-msgstr ""
+msgstr "#1 uair;#1 uair;#1 uaire;#1 n-uaire;#1 uair"
 
 #: reminderCustomUnitDays
 msgid "#1 day;#1 days"
-msgstr ""
+msgstr "#1 lá;#1 lá;#1 lá;#1 lá;#1 lá"
 
-#: reminderCustomRelationBefore newevent.before.label
-msgid "before"
-msgstr "roimh"
+#: reminderCustomOriginBeginBeforeEvent
+msgid "before the event starts"
+msgstr "roimh thús an imeachta"
 
-#: reminderCustomRelationAfter newevent.after.label
-msgid "after"
-msgstr "tar éis"
+#: reminderCustomOriginBeginAfterEvent
+msgid "after the event starts"
+msgstr "tar éis thús an imeachta"
 
-#: reminderCustomOriginBeginEvent reminder.relation.start.label
-msgid "the event starts"
-msgstr "thús an imeachta"
+#: reminderCustomOriginEndBeforeEvent
+msgid "before the event ends"
+msgstr "roimh dheireadh an imeachta"
 
-#: reminderCustomOriginEndEvent reminder.relation.end.label
-msgid "the event ends"
-msgstr "dheireadh an imeachta"
+#: reminderCustomOriginEndAfterEvent
+msgid "after the event ends"
+msgstr "tar éis dheireadh an imeachta"
 
-#: reminderCustomOriginBeginTask
-msgid "the task starts"
-msgstr "tús an taisc"
+#: reminderCustomOriginBeginBeforeTask
+msgid "before the task starts"
+msgstr "roimh thús an taisc"
 
-#: reminderCustomOriginEndTask
-msgid "the task ends"
-msgstr "deireadh an taisc"
+#: reminderCustomOriginBeginAfterTask
+msgid "after the task starts"
+msgstr "tar éis thús an taisc"
+
+#: reminderCustomOriginEndBeforeTask
+msgid "before the task ends"
+msgstr "roimh dheireadh an taisc"
+
+#: reminderCustomOriginEndAfterTask
+msgid "after the task ends"
+msgstr "tar éis dheireadh an taisc"
 
 #: reminderErrorMaxCountReachedEventN
 msgid ""
@@ -1008,6 +1015,14 @@ msgstr "Tharla earráid"
 msgid "Edit Item"
 msgstr "Cuir Mír in Eagar"
 
+#: newevent.before.label reminderCustomRelationBefore
+msgid "before"
+msgstr "roimh"
+
+#: newevent.after.label reminderCustomRelationAfter
+msgid "after"
+msgstr "tar éis"
+
 #: newevent.from.label
 msgid "From"
 msgstr "Ó"
@@ -1799,6 +1814,14 @@ msgstr "Nua"
 msgid "Delete"
 msgstr "Scrios"
 
+#: reminder.relation.start.label reminderCustomOriginBeginEvent
+msgid "the event starts"
+msgstr "thús an imeachta"
+
+#: reminder.relation.end.label reminderCustomOriginEndEvent
+msgid "the event ends"
+msgstr "dheireadh an imeachta"
+
 # "C" is Ionchódú Carachtar…
 #: reminder.add.label reminder.add.accesskey
 msgid "&Add"
@@ -2100,6 +2123,14 @@ msgstr "uair"
 msgid "day"
 msgstr "lá"
 
+#: reminderCustomOriginBeginTask
+msgid "the task starts"
+msgstr "tús an taisc"
+
+#: reminderCustomOriginEndTask
+msgid "the task ends"
+msgstr "deireadh an taisc"
+
 #: reminderErrorMaxCountReachedEvent
 msgid "The selected calendar has a limitation of %1$S reminders per event."
 msgstr "Tá teorainn de %1$S meabhrúchán san imeacht ar an fhéilire roghnaithe."
@@ -2137,12 +2168,6 @@ msgstr "Bain Iatáin"
 #: removeCalendarsText
 msgid "Do you really want to remove %1$S attachments?"
 msgstr "An bhfuil tú cinnte gur mhaith leat %1$S iatán a bhaint?"
-
-# # LOCALIZATION NOTE (cityOrStateAndZip):
-# # %1$S is city or state, %2$S is zip
-#: monthlyOrder monthInYear
-msgid "%1$S %2$S"
-msgstr "%1$S %2$S"
 
 # Edit recurrence window -> Recurrence pattern -> Repeat yearly
 # %1$S - day of month, %2$S - of, %3$S - month
