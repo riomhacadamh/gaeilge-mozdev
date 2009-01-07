@@ -16,14 +16,14 @@
 VERSION=trunk
 CVSDIREC=moz
 ##################################
-CVSFULLPATH=${HOME}/seal/$(CVSDIREC)/l10n/ga-IE
+HGFULLPATH=${HOME}/seal/$(CVSDIREC)/ga-IE
 COMPENDIUM=firefox-$(VERSION).ga.po
 TBCOMPENDIUM=tbird-$(VERSION).ga.po
 CALCOMPENDIUM=calendar-$(VERSION).ga.po
 UTFCOMP=mozilla-$(VERSION).po
 PARALLEL = ${HOME}/gaeilge/diolaim/comp
 
-all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar editor-ga-IE.jar mail-ga-IE.jar calendar-ga-IE.jar minimo-ga-IE.jar
+all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar editor-ga-IE.jar mail-ga-IE.jar calendar-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
 	- perl -w compare-locales.pl extensions-en-US extensions-ga-IE
 	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
@@ -34,7 +34,6 @@ all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-
 	- perl -w compare-locales.pl editor-en-US editor-ga-IE
 	- perl -w compare-locales.pl mail-en-US mail-ga-IE
 	- perl -w compare-locales.pl calendar-en-US calendar-ga-IE
-	- perl -w compare-locales.pl minimo-en-US minimo-ga-IE
 
 $(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM)
 	rm -f $(UTFCOMP)
@@ -44,47 +43,43 @@ $(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM)
 
 browser-ga-IE.jar : $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
-	bash mozdist browser-en-US $(CVSFULLPATH)
+	bash mozdist browser-en-US $(HGFULLPATH)
 
 dom-ga-IE.jar : $(UTFCOMP)
 	bash moznua dom-en-US $(VERSION)
-	bash mozdist dom-en-US $(CVSFULLPATH)
+	bash mozdist dom-en-US $(HGFULLPATH)
 
 extensions-ga-IE.jar : $(UTFCOMP)
 	bash moznua extensions-en-US $(VERSION)
-	bash mozdist extensions-en-US $(CVSFULLPATH)
+	bash mozdist extensions-en-US $(HGFULLPATH)
 
 netwerk-ga-IE.jar : $(UTFCOMP)
 	bash moznua netwerk-en-US $(VERSION)
-	bash mozdist netwerk-en-US $(CVSFULLPATH)
+	bash mozdist netwerk-en-US $(HGFULLPATH)
 
 toolkit-ga-IE.jar : $(UTFCOMP)
 	bash moznua toolkit-en-US $(VERSION)
-	bash mozdist toolkit-en-US $(CVSFULLPATH)
+	bash mozdist toolkit-en-US $(HGFULLPATH)
 
 other-licenses-ga-IE.jar : $(UTFCOMP)
 	bash moznua other-licenses-en-US $(VERSION)
-	bash mozdist other-licenses-en-US $(CVSFULLPATH)
+	bash mozdist other-licenses-en-US $(HGFULLPATH)
 
 security-ga-IE.jar : $(UTFCOMP)
 	bash moznua security-en-US $(VERSION)
-	bash mozdist security-en-US $(CVSFULLPATH)
+	bash mozdist security-en-US $(HGFULLPATH)
 
 editor-ga-IE.jar : $(UTFCOMP)
 	bash moznua editor-en-US $(VERSION)
-	bash mozdist editor-en-US $(CVSFULLPATH)
+	bash mozdist editor-en-US $(HGFULLPATH)
 
 mail-ga-IE.jar : $(UTFCOMP)
 	bash moznua mail-en-US $(VERSION)
-	bash mozdist mail-en-US $(CVSFULLPATH)
+	bash mozdist mail-en-US $(HGFULLPATH)
 
 calendar-ga-IE.jar : $(UTFCOMP)
 	bash moznua calendar-en-US $(VERSION)
-	bash mozdist calendar-en-US $(CVSFULLPATH)
-
-minimo-ga-IE.jar : $(UTFCOMP)
-	bash moznua minimo-en-US $(VERSION)
-	bash mozdist minimo-en-US $(CVSFULLPATH)
+	bash mozdist calendar-en-US $(HGFULLPATH)
 
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
@@ -105,14 +100,14 @@ eilecheck : FORCE
 clean :
 	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-1.5.po
 	rm -fR langpack-build-dir
-	rm -f messages.po amo.pot amo-final.po
+	rm -f messages.po amo.pot amo-final.po amo-final.mo
 
 distclean :
 	$(MAKE) clean
-	rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US minimo-en-US
-	rm -Rf browser-ga-IE dom-ga-IE extensions-ga-IE netwerk-ga-IE toolkit-ga-IE other-licenses-ga-IE security-ga-IE editor-ga-IE mail-ga-IE calendar-ga-IE minimo-ga-IE
-	rm -Rf browser-ga-IEpo dom-ga-IEpo extensions-ga-IEpo netwerk-ga-IEpo toolkit-ga-IEpo other-licenses-ga-IEpo security-ga-IEpo editor-ga-IEpo mail-ga-IEpo calendar-ga-IEpo minimo-ga-IEpo
-	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po calendar-ga-IE.po minimo-ga-IE.po
+	rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US
+	rm -Rf browser-ga-IE dom-ga-IE extensions-ga-IE netwerk-ga-IE toolkit-ga-IE other-licenses-ga-IE security-ga-IE editor-ga-IE mail-ga-IE calendar-ga-IE
+	rm -Rf browser-ga-IEpo dom-ga-IEpo extensions-ga-IEpo netwerk-ga-IEpo toolkit-ga-IEpo other-licenses-ga-IEpo security-ga-IEpo editor-ga-IEpo mail-ga-IEpo calendar-ga-IEpo
+	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po calendar-ga-IE.po
 
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
@@ -122,7 +117,7 @@ distclean :
 # make messages.po-update
 # make amo-obair.po
 # translate anything missing
-# make amo-final.po
+# make amo-final.mo
 # If diff looks OK, 
 # make amo-commit
 
@@ -141,17 +136,22 @@ amo-obair.po : amo.pot
 	cpo -q amo-obair.po
 	touch $@
 
-SVNDIR=/home/kps/seal/amo/ga_IE/LC_MESSAGES/messages.po
+SVNDIR=/home/kps/seal/amo/ga_IE/LC_MESSAGES
 amo-final.po : amo-obair.po
 	cat amo-obair.po | sed '/^#~/,$$d' > mstripped.po
 	perl AMOback mstripped.po | sed '/^msgctxt/d' > $@
 	rm -f mstripped.po
-	diff -u $(SVNDIR) $@
+	-diff -u $(SVNDIR)/messages.po $@
 	chmod 644 $@
 
-amo-commit : FORCE
-	cp -f amo-final.po $(SVNDIR)
-	svn commit -m "Updated Irish translation" $(SVNDIR)
+amo-final.mo : amo-final.po
+	msgfmt -o $@ amo-final.po
+
+amo-commit : amo-final.mo
+	svn update $(SVNDIR)/messages.po $(SVNDIR)/messages.mo
+	msgcat -t UTF-8 amo-final.po > $(SVNDIR)/messages.po
+	cp -f amo-final.mo $(SVNDIR)/messages.mo
+	svn commit -m "Updated Irish translation" $(SVNDIR)/messages.po $(SVNDIR)/messages.mo
 
 obair.po : FORCE
 	sed -i '/tempe/s/^/#/' moznua
@@ -177,9 +177,7 @@ obair.po : FORCE
 	bash mozcat editor-en-US
 	bash moznua mail-en-US $(VERSION)
 	bash mozcat mail-en-US
-	bash moznua minimo-en-US $(VERSION)
-	bash mozcat minimo-en-US
-	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po minimo-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
+	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
 	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
 	msgcat editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
 	sed -i 's/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
