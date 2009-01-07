@@ -1,28 +1,7 @@
 #!/bin/bash
 #  ASCII ONLY
-if [ $# -ne 1 ]
-then
-	echo "Usage: newrelease [-b|-t|-l|-s]"
-	echo "Use -b for 1.8 branch (v. 1.5+), -t for trunk, -l for lightning 0.3, -s for sunbird 0.3"
-	exit
-fi
 PONAME='trunk'
 SRCDIR='moz'
-if [ $1 = "-b" ]
-then
-	PONAME='1.5'
-	SRCDIR='moz1.8'
-fi
-if [ $1 = "-l" ]
-then
-	PONAME='lightning'
-	SRCDIR='moz-lightning'
-fi
-if [ $1 = "-s" ]
-then
-	PONAME='sunbird'
-	SRCDIR='moz-sunbird'
-fi
 
 # commit any outstanding changes to PO files
 cvs commit -m "outstanding changes before sync" firefox-${PONAME}.ga.po tbird-${PONAME}.ga.po calendar-${PONAME}.ga.po
@@ -30,25 +9,54 @@ cvs commit -m "outstanding changes before sync" firefox-${PONAME}.ga.po tbird-${
 
 #  Updates CVS and creates new *en-US files in this dir
 cd ~/gaeilge/gnu/mozilla/gaeilge/src
-rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US minimo-en-US
+rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US
 mkdir -p other-licenses-en-US/branding
 mkdir extensions-en-US security-en-US editor-en-US
 mkdir extensions-en-US/inspector
-cd ~/seal/$SRCDIR/mozilla
-cvs update -d browser calendar dom editor extensions mail minimo netwerk other-licenses security toolkit
+# cd ~/seal/$SRCDIR/mozilla-central
+# hg pull -u
+cd ~/seal/$SRCDIR/ga-IE
+
+# See http://benjamin.smedbergs.us/blog/tag/mozilla-central/
+#  In case there were branches (new heads) created, we just want to stay
+#  on the default branch, and "hg up" accomplishes this
+hg up
+hg pull -u
+cd ~/seal/$SRCDIR/comm-central
+python client.py checkout --cvsroot=':pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot'
+# was a bug in client.py
+#--- a/client.py Thu Sep 04 10:17:39 2008 +0100
+#+++ b/client.py Thu Sep 04 10:16:29 2008 -0500
+#@@ -61,9 +61,9 @@ def do_hg_pull(dir, repository, hg, rev)
+#         check_call_noisy(cmd)
+#     # update to specific revision
+#     if options.verbose:
+#-        cmd = [hg, 'update', '-v', '-r', rev, '-R', fulldir]
+#+        cmd = [hg, 'update', '-v', '-R', fulldir]
+#     else:
+#-        cmd = [hg, 'update', '-r', rev, '-R', fulldir]
+#+        cmd = [hg, 'update', '-R', fulldir]
+
+cd ~/seal/$SRCDIR/comm-central/mozilla
 cp -Rf browser/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US
-cp -Rf calendar/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/calendar-en-US
-cp -Rf minimo/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/minimo-en-US
 cp -Rf dom/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/dom-en-US
 cp -Rf extensions/reporter/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/reporter
 cp -Rf extensions/inspector/resources/locale/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/inspector/resources
 cp -Rf netwerk/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/netwerk-en-US
 cp -Rf toolkit/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/toolkit-en-US
 cp -Rf other-licenses/branding/firefox/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/firefox
-cp -Rf other-licenses/branding/thunderbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/thunderbird
-cp -Rf other-licenses/branding/sunbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/sunbird
 cp -Rf security/manager/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/security-en-US/manager
+
+#cd ~/seal/mozold-cvs/mozilla
+#cvs update -d calendar mail minimo other-licenses
+
+# cd ..  (or, more explicitly...)
+cd ~/seal/$SRCDIR/comm-central
 cp -Rf editor/ui/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/editor-en-US/ui
+cp -Rf calendar/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/calendar-en-US
+#cp -Rf minimo/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/minimo-en-US
+cp -Rf other-licenses/branding/thunderbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/thunderbird
+#cp -Rf other-licenses/branding/sunbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/sunbird
 cp -Rf mail/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US
 
 # HACKS until these files are cleaned up in CVS or translate toolkit works
@@ -56,6 +64,7 @@ sed -i '/^<!-- commenting/d; /<!ENTITY messagesHeader.label/d' ~/gaeilge/gnu/moz
 sed -i 's/credit.translation "/&<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>/' ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US/chrome/messenger/credits.dtd
 # next two lines reinserted into ga-IE dtd after translation
 sed -i '1,2d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/overrides/netError.dtd
+sed -i '1,3d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/browser/aboutCertError.dtd
 
 cd ~/gaeilge/gnu/mozilla/gaeilge/src
 find *-en-US -name 'CVS' | xargs rm -fR
@@ -68,7 +77,6 @@ sed -i "/^CVSDIREC/s/.*/CVSDIREC=$SRCDIR/" makefile
 
 make obair.po
 
-
 cpo -q *${PONAME}.ga.po
-cpo -q *obair.po
+cpo -q cal_obair.po obair.po tb_obair.po
 echo "Run \"make eilecheck\" periodically also"
