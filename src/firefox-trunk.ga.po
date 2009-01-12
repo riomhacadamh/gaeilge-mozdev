@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-18 08:48-0600\n"
+"POT-Creation-Date: 2009-01-12 08:25-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -17,6 +17,10 @@ msgstr "Minefield"
 #: vendorShortName
 msgid "Mozilla"
 msgstr "Mozilla"
+
+#: logoCopyright
+msgid "_: logoCopyright\n"
+msgstr ""
 
 # These strings are used by Firefox's custom about:certerror page,
 # a replacement for the standard security certificate errors produced
@@ -133,49 +137,89 @@ msgstr "leagan"
 msgid "&Close"
 msgstr "&Dún"
 
-#: copyrightInfo
-msgid ""
-"&#169;1998-2008 Contributors. All Rights Reserved. Firefox and the Firefox "
-"logos are trademarks of the Mozilla Foundation.  All rights reserved."
-msgstr ""
-"&#169;1998-2008 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
-"trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
-"Firefox. Gach ceart ar cosaint."
+#: copyrightInfo1
+msgid "&#169;1998-2009 Contributors. All rights reserved. ("
+msgstr "&#169;1998-2009 le lucht déanta a gcion. Gach ceart ar cosaint. ("
 
-#: privatebrowsingpage.tabtitle privatebrowsingpage.pagetitle
+#: licenseLink
+msgid "about:license"
+msgstr "about:license"
+
+#: licenseLinkText
+msgid "Licensing information"
+msgstr "Ceadúnú"
+
+#: copyrightInfo2
+msgid ")."
+msgstr ")."
+
+#: privatebrowsingpage.title
 msgid "Private Browsing"
 msgstr "Brabhsáil Phríobháideach"
+
+#: privatebrowsingpage.title.normal privateBrowsingMessageHeader
+msgid "Would you like to start Private Browsing?"
+msgstr ""
 
 #: privatebrowsingpage.issueDesc
 msgid "&brandShortName; won't remember any history for this session."
 msgstr ""
 
-#: privatebrowsingpage.longDesc
+#: privatebrowsingpage.issueDesc.normal
+msgid "&brandShortName; is not currently in Private Browsing mode."
+msgstr ""
+
+#: privatebrowsingpage.description
 msgid ""
-"No history will be recorded by &brandShortName; during this browsing "
-"session.  This includes browser history, search history, download history, "
-"web form history, cookies, and temporary internet files.  However, any files "
-"you download or bookmarks you create will be preserved."
+"In a Private Browsing session, &brandShortName; won't keep any browser "
+"history, search history, download history, web form history, cookies, or "
+"temporary internet files.  However, files you download and bookmarks you make "
+"will be kept."
 msgstr ""
 
-#: privatebrowsingpage.clearRecentHistoryDesc
-msgid "You may want to start by also clearing your recent history."
+# LOCALIZATION NOTE (privatebrowsingpage.clearRecentHistoryAfter): include a starting space as needed
+#: privatebrowsingpage.clearRecentHistoryBefore
+msgid ""
+"_: include a trailing space as needed\n"
+"You may want to start by also "
 msgstr ""
 
-#: privatebrowsingpage.clearRecentHistory.label
-#: privatebrowsingpage.clearRecentHistory.accesskey
-msgid "&Clear Recent History…"
-msgstr "&Glan an Stair Is Déanaí…"
-
-#: privatebrowsingpage.howToStopDesc
-msgid "To stop private browsing, uncheck Tools &gt; Private Browsing."
+#: privatebrowsingpage.clearRecentHistoryInner
+msgid "clearing your recent history"
 msgstr ""
-"Chun brabhsáil phríobháideach a stopadh, díthiceáil Uirlisí &gt; Brabhsáil "
-"Phríobháideach."
 
-#: privatebrowsingpage.footerDesc
-msgid "Enjoy!"
-msgstr "Bain Sult As!"
+#: privatebrowsingpage.clearRecentHistoryAfter rights.intro-point2c
+#: rights.intro-point3c rights.intro-point4c stopCmd.macCommandKey
+msgid "."
+msgstr "."
+
+#: privatebrowsingpage.startPrivateBrowsing.label
+#: privatebrowsingpage.startPrivateBrowsing.accesskey
+msgid "Start &Private Browsing"
+msgstr ""
+
+#: privatebrowsingpage.howToStop
+msgid ""
+"To stop Private Browsing, select &toolsMenu.label; &gt; &privateBrowsingCmd."
+"stop.label;, or close &brandShortName;."
+msgstr ""
+
+#: privatebrowsingpage.howToStart
+msgid ""
+"To start Private Browsing, you can also select &toolsMenu.label; &gt; "
+"&privateBrowsingCmd.start.label;."
+msgstr ""
+
+#: privatebrowsingpage.moreInfo
+msgid ""
+"While this computer won't have a record of your browsing history, your "
+"internet service provider or employer can still track the pages you visit."
+msgstr ""
+
+#: privatebrowsingpage.learnMore lockPromptInfoButton.label
+#: searchResultHomepage.value
+msgid "Learn More"
+msgstr "Faigh Tuilleadh Eolais"
 
 # "left-to-right" -- leave AS IS --KPS
 #: rights.locale-direction locale.dir
@@ -237,11 +281,6 @@ msgstr ""
 #: rights.intro-point2b rights.intro-point3b
 msgid "here"
 msgstr "here"
-
-#: rights.intro-point2c rights.intro-point3c rights.intro-point4c
-#: stopCmd.macCommandKey
-msgid "."
-msgstr "."
 
 # point 3 text for official branded builds
 #: rights.intro-point3a
@@ -675,7 +714,7 @@ msgstr "/"
 msgid "accel,shift"
 msgstr "accel,shift"
 
-#: openHelpMac.frontendCommandkey
+#: openHelpMac.frontendCommandkey openHelpMac.commandkey
 msgid "?"
 msgstr "?"
 
@@ -886,6 +925,10 @@ msgstr "Leabharmharcáil Gach Cluaisín…"
 msgid "Organize Bookmarks…"
 msgstr "Eagraigh Leabharmharcanna…"
 
+#: bookmarksToolbarChevron.tooltip
+msgid "Show more bookmarks"
+msgstr "Tuilleadh leabharmharcanna"
+
 # "S" under Main -> Gabh and also under right click menu
 #: backCmd.label backCmd.accesskey button-back-unix.label
 #: button-back-unix.accesskey backButton.label backButton.accesskey
@@ -957,7 +1000,8 @@ msgid "Activity Indicator"
 msgstr "Táscaire Gníomhaíochta"
 
 #: bookmarksItem.title bookmarksButton.label 32_opera 32_dogbert 32_seamonkey
-#: 32_phoenix 32_safari bookmarks_title bookmarks_heading
+#: 32_phoenix 32_safari locbar.bookmarks.label bookmarks_title
+#: bookmarks_heading
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
@@ -982,7 +1026,7 @@ msgid "b"
 msgstr "b"
 
 #: historyButton.label search.scopeHistory.label OrganizerQueryHistory
-#: history.label historySection.label
+#: history.label locbar.history.label historySection.label
 msgid "History"
 msgstr "Stair"
 
@@ -1156,9 +1200,21 @@ msgstr "Sai&nroghanna"
 msgid "Clear Recent &History"
 msgstr "Glan an &Stair Is Déanaí"
 
-#: privateBrowsingCmd.label privateBrowsingCmd.accesskey
-msgid "Private &Browsing"
-msgstr "&Brabhsáil Phríobháideach"
+# LOCALIZATION NOTE : These two strings can share an access key beause they never appear together on the menu
+#: privateBrowsingCmd.start.label privateBrowsingCmd.start.accesskey
+msgid "Start Private &Browsing"
+msgstr ""
+
+#: privateBrowsingCmd.stop.label privateBrowsingCmd.stop.accesskey
+msgid "Stop Private &Browsing"
+msgstr ""
+
+# G&reamaigh, P&riontáil
+#: privateBrowsingCmd.commandkey savePageCmd.accesskey2
+#: popupWarningButtonUnix.accesskey permTab.accesskey HTTPport.accesskey
+#: printCmd.commandkey hidePasswordsAccessKey showPasswordsAccessKey
+msgid "P"
+msgstr "R"
 
 # "A" in main browser window
 #: viewMenu.label viewMenu.accesskey mnView.label mnView.accesskey
@@ -1306,13 +1362,6 @@ msgstr "S&eol an Nasc…"
 #: savePageCmd.label savePageCmd.accesskey
 msgid "Save Page &As…"
 msgstr "Sábháil an Leathanach &Mar…"
-
-# G&reamaigh, P&riontáil
-#: savePageCmd.accesskey2 popupWarningButtonUnix.accesskey permTab.accesskey
-#: HTTPport.accesskey printCmd.commandkey hidePasswordsAccessKey
-#: showPasswordsAccessKey
-msgid "P"
-msgstr "R"
 
 #: saveFrameCmd.label saveFrameCmd.accesskey
 msgid "Save &Frame As…"
@@ -2008,7 +2057,7 @@ msgstr "Suíomh beacht (faoi 10 dtroigh)"
 msgid "E"
 msgstr "E"
 
-#: geolocation.nothingLocation
+#: geolocation.nothingLocation locbar.nothing.label
 msgid "Nothing"
 msgstr "Faic"
 
@@ -3944,7 +3993,8 @@ msgstr "Sórtáil de réir Ainm"
 msgid "Sort by Location"
 msgstr "Sórtáil de réir Suímh"
 
-#: view.sortBy.url.accesskey restartLaterButton.accesskey CertDumpAVALocality
+#: view.sortBy.url.accesskey lockPromptInfoButton.accessKey
+#: restartLaterButton.accesskey CertDumpAVALocality
 msgid "L"
 msgstr "L"
 
@@ -4126,6 +4176,19 @@ msgstr "Clib"
 #: bookmarkResultLabel
 msgid "Bookmark"
 msgstr "Leabharmharc"
+
+# LOCALIZATION NOTE (lockPrompt.text)
+# %S will be replaced with the application name.
+#: lockPrompt.title
+msgid "Browser Startup Error"
+msgstr ""
+
+#: lockPrompt.text
+msgid ""
+"The bookmarks and history system will not be functional because one of %S's "
+"files is in use by another application. Some security software can cause this "
+"problem."
+msgstr ""
 
 #: accessibility.label
 msgid "Accessibility"
@@ -5365,6 +5428,18 @@ msgstr ""
 msgid "Offline Data"
 msgstr "Sonraí As Líne"
 
+#: locbar.pre.label locbar.pre.accessKey
+msgid "When using the &location bar, suggest:"
+msgstr ""
+
+#: locbar.post.label
+msgid "_: locbar.post.label\n"
+msgstr ""
+
+#: locbar.both.label
+msgid "History and Bookmarks"
+msgstr "Stair agus Leabharmharcanna"
+
 # LOCALIZATION NOTE:
 # The entities rememberDaysBefore.label and rememberDaysAfter.label appear on a single
 # line in preferences as follows:
@@ -5421,10 +5496,6 @@ msgstr "Sonraí Príobháideacha"
 msgid "Al&ways clear my private data when I close &brandShortName;"
 msgstr "Glan sonraí &príobháideacha agus &brandShortName; á dhúnadh"
 
-#: askBeforeClear.label askBeforeClear.accesskey
-msgid "&Ask me before clearing private data"
-msgstr "Fi&afraigh díom roimh ghlanadh na sonraí príobháideacha"
-
 #: clearDataSettings.label clearDataSettings.accesskey
 msgid "Se&ttings…"
 msgstr "So&cruithe…"
@@ -5432,10 +5503,6 @@ msgstr "So&cruithe…"
 #: clearDataNow.label clearDataNow.accesskey
 msgid "Clear &Now…"
 msgstr "Bánaigh A&nois…"
-
-#: clearDataNow.label2
-msgid "Clear Now"
-msgstr "Bánaigh Anois"
 
 #: warnAddonInstall.label warnAddonInstall.accesskey
 msgid "&Warn me when sites try to install add-ons"
@@ -5890,9 +5957,9 @@ msgid "When I quit &brandShortName;, it should automatically clear all:"
 msgstr ""
 
 # XXX rearrange entities to match physical layout when l10n isn't an issue
-#: clearDuration.label
-msgid "Remove "
-msgstr "Bain "
+#: clearDuration.label clearDuration.accesskey
+msgid "&Remove "
+msgstr "&Bain "
 
 #: clearDuration.lastHour
 msgid "the last hour"
@@ -11823,8 +11890,8 @@ msgid "The site %S wants to modify an existing cookie."
 msgstr "Ba mhaith leis an suíomh %S fianán atá ann cheana a athrú."
 
 #: about.copy.beforeLink
-msgid "Copyright &copy; 1998-2008 by"
-msgstr "Copyright &copy; 1998-2008 by"
+msgid "Copyright &copy; 1998-2009 by"
+msgstr "Cóipcheart &copy; 1998-2009 le"
 
 #: about.copy.afterLink
 msgid "to the Mozilla Project."
@@ -16853,10 +16920,6 @@ msgstr "Tá gach moladh suiteáilte cheana féin nó neamh-chomhoiriúnach."
 msgid "No matching add-ons"
 msgstr "Níor aimsíodh breiseáin chomhoiriúnacha"
 
-#: searchResultHomepage.value
-msgid "Learn More"
-msgstr "Faigh Tuilleadh Eolais"
-
 #: recommendedResults.label
 msgid "See All Recommended Add-ons"
 msgstr "Taispeáin Gach Breiseán Molta"
@@ -18294,13 +18357,29 @@ msgstr ""
 "Níl nuashonruithe ar fáil. Lorg arís iad níos déanaí, nó cumasaigh seiceáil "
 "nuashonruithe uathoibríoch &brandShortName;."
 
+#: manualUpdate.title
+msgid "Unable to Update"
+msgstr "Ní féidir nuashonrú"
+
+#: manualUpdate.desc
+msgid ""
+"A recommended security and stability update is available, but you do not have "
+"the system permissions required to install it. Please contact your system "
+"administrator, or try again from an account that has permission to install "
+"software on this computer."
+msgstr ""
+
+#: manualUpdateGetMsg.label
+msgid "You can always get the latest version of &brandShortName; at:"
+msgstr "Tá an leagan is déanaí de &brandShortName; ar fáil i gcónaí ó:"
+
 #: incompatibleCheck.title
 msgid "Checking Add-on Compatibility"
-msgstr ""
+msgstr "Comhoiriúnacht na mBreiseán á Seiceáil"
 
 #: incompatibleCheck.label
 msgid "Looking for newer versions of your add-ons…"
-msgstr ""
+msgstr "Leaganacha níos nuaí de do bhreiseáin á lorg…"
 
 #: clickHere.label
 msgid "View more information about this update"
@@ -18451,7 +18530,7 @@ msgstr "Mionsonraí breise á lorg, maidir le %S %S…"
 
 #: intro_major_app_and_version
 msgid "Do you want to upgrade to %S %S now?"
-msgstr ""
+msgstr "An bhfuil fonn ort %S %S a shuiteáil anois?"
 
 # LOCALIZATION NOTE: The 1st %S is brandShortName and 2nd %S is update version
 # and the 3rd %S is brandShortName. where update version from the update xml
@@ -19143,6 +19222,14 @@ msgstr "Béarla (SAM)"
 #: brandShortName
 msgid "Firefox"
 msgstr "Firefox"
+
+#: logoCopyright
+msgid ""
+"Firefox and the Firefox logos are trademarks of the Mozilla Foundation. All "
+"rights reserved."
+msgstr ""
+"Is trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
+"Firefox.  Gach ceart ar cosaint."
 
 #: homePageSingleStartMain
 msgid "Firefox Start, a fast home page with built-in search"

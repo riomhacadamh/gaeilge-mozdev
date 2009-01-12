@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-18 08:47-0600\n"
+"POT-Creation-Date: 2009-01-12 08:23-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -59,11 +59,11 @@ msgstr "Chomh luath is a chríochnaíonn an tasc"
 msgid "#1 minute;#1 minutes"
 msgstr "#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad"
 
-#: reminderCustomUnitHours
+#: reminderCustomUnitHours dueInHours
 msgid "#1 hour;#1 hours"
 msgstr "#1 uair;#1 uair;#1 uaire;#1 n-uaire;#1 uair"
 
-#: reminderCustomUnitDays
+#: reminderCustomUnitDays dueInDays
 msgid "#1 day;#1 days"
 msgstr "#1 lá;#1 lá;#1 lá;#1 lá;#1 lá"
 
@@ -1009,8 +1009,8 @@ msgstr "Cealaithe"
 # #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
 # Event status: Tentative, Confirmed, Cancelled
 # ToDo task status: NeedsAction, InProcess, Completed, Cancelled
-#: newevent.status.tentative.label statusTentative
-#: imipAcceptTentativeInvitation.label
+#: newevent.status.tentative.label event.freebusy.legend.busy_tentative
+#: statusTentative imipAcceptTentativeInvitation.label
 msgid "Tentative"
 msgstr "Sealadach"
 
@@ -1831,9 +1831,13 @@ msgstr "Saor"
 msgid "Busy"
 msgstr "Gnóthach"
 
+#: event.freebusy.legend.busy_unavailable
+msgid "Out of Office"
+msgstr "As Láthair ón Oifig"
+
 #: event.freebusy.legend.unknown
-msgid "No information"
-msgstr "Gan eolas"
+msgid "No Information"
+msgstr "Gan Eolas"
 
 # Timezone dialog
 #: timezone.title.label
@@ -3117,33 +3121,6 @@ msgstr "Seachtain Amháin Ar Aghaidh"
 msgid "Go to Today"
 msgstr "Taispeáin Inniu"
 
-# Task tree, "Due In" column.
-#: dueInDays1
-msgid "1 day"
-msgstr "1 lá"
-
-# Used for "2 days"
-#: dueInDays2
-msgid "2 days"
-msgstr "2 lá"
-
-# Used for more than 2 days
-#: dueInDaysN
-msgid "%1$S days"
-msgstr "%1$S lá"
-
-#: dueInHours1
-msgid "1 hour"
-msgstr "1 uair"
-
-#: dueInHours2
-msgid "2 hours"
-msgstr "2 uair"
-
-#: dueInHoursN
-msgid "%1$S hours"
-msgstr "%1$S uair"
-
 #: dueInLessThanOneHour
 msgid "< 1 hour"
 msgstr "< 1 uair"
@@ -3202,6 +3179,33 @@ msgstr "%1$S %2$S – %3$S"
 #: datetimeIntervalOnSeveralDays
 msgid "%1$S %2$S – %3$S %4$S"
 msgstr "%1$S %2$S – %3$S %4$S"
+
+# LOCALIZATION NOTE (datetimeIntervalTaskWithoutDate):
+# used for task without start and due date
+# (showed only in exported calendar in Html format)
+#: datetimeIntervalTaskWithoutDate
+msgid "no start or due date"
+msgstr ""
+
+# LOCALIZATION NOTE (datetimeIntervalTaskWithoutDueDate):
+# used for intervals in task with only start date
+# displayed form is 'start date 5 Jan 2006 13:00'
+# (showed only in exported calendar in Html format)
+# %1$S will be replaced with the date of the start date
+# %2$S will be replaced with the time of the start date
+#: datetimeIntervalTaskWithoutDueDate
+msgid "start date %1$S %2$S"
+msgstr "dáta tosaigh %1$S %2$S"
+
+# LOCALIZATION NOTE (datetimeIntervalTaskWithoutStartDate):
+# used for intervals in task with only due date
+# displayed form is 'due date 5 Jan 2006 13:00'
+# (showed only in exported calendar in Html format)
+# %1$S will be replaced with the date of the due date
+# %2$S will be replaced with the time of the due date
+#: datetimeIntervalTaskWithoutStartDate
+msgid "due date %1$S %2$S"
+msgstr "dáta dlite %1$S %2$S"
 
 #: deleteTaskLabel
 msgid "Delete Task"
@@ -6739,56 +6743,13 @@ msgstr ""
 "<em:contributor>Séamus Ó Ciardhuáin</em:contributor> <em:contributor>Kevin "
 "Scannell</em:contributor> <em:contributor>Brian King</em:contributor>"
 
-# LOCALIZATION NOTE:
-# This file must be saved as UTF8
-# Accesskeys are defined by prefixing the letter that is to be used for the
-# accesskey with an ampersand (e.g. &).
-# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
-# You can use \n to create a newline in the string but only when the string
-# from en-US contains a \n.
-#: OPTIONAL_COMPONENTS_TITLE
-msgid "Choose Optional Components"
-msgstr "Roghnaigh Comhpháirteanna Roghnacha"
+#: CONTEXT_OPTIONS
+msgid "$BrandShortName &Options"
+msgstr "R&oghanna $BrandShortName"
 
-#: OPTIONAL_COMPONENTS_SUBTITLE MUI_TEXT_COMPONENTS_SUBTITLE
-msgid "Choose which features of $(^NameDA) you want to install."
-msgstr "Roghnaigh na gnéithe $(^NameDA) ba mhaith leat suiteáil."
-
-#: OPTIONAL_COMPONENTS_LABEL
-msgid "Optional Components:"
-msgstr "Comhpháirteanna Roghnacha:"
-
-# LOCALIZATION NOTE:
-# This file must be saved as UTF8
-# Accesskeys are defined by prefixing the letter that is to be used for the
-# accesskey with an ampersand (e.g. &).
-# Do not replace ${BrandShortName} or ${BrandFullName} with a custom string.
-# You can use \n to create a newline in the string but only when the string
-# from en-US contains a \n.
-#: APP_DESC
-msgid "Required files for the ${BrandShortName} application"
-msgstr "Comhaid a bhfuil gá leo le haghaidh ${BrandShortName}"
-
-#: DOMI_TITLE
-msgid "DOM Inspector"
-msgstr "Scrúdaitheoir DOM"
-
-#: DOMI_TEXT
-msgid "Inspects the structure and properties of a window and its contents."
-msgstr ""
-"Scrúdaíonn struchtúr agus sainghnéithe fuinneoige agus gach a bhfuil inti."
-
-#: QFA_TITLE
-msgid "Quality Feedback Agent"
-msgstr "Gníomhaire Aiseolais um Cháilíocht"
-
-#: QFA_TEXT
-msgid "Sends information about program crashes to Mozilla."
-msgstr "Cuireann eolas faoi thuairteanna ríomhchlár chuig Mozilla."
-
-#: OPTIONS
-msgid "$(^NameDA) &Options"
-msgstr "R&oghanna $(^NameDA)"
+#: CONTEXT_SAFE_MODE
+msgid "$BrandShortName &Safe Mode"
+msgstr "Mód &Sábháilteachta $BrandShortName"
 
 #: SAFE_MODE
 msgid "Safe Mode"
@@ -6810,37 +6771,45 @@ msgstr "Socrú Aicearraí"
 msgid "Create Program Icons"
 msgstr "Cruthaigh Deilbhíní"
 
+#: SUMMARY_PAGE_TITLE
+msgid "Summary"
+msgstr "Achoimre"
+
+#: SUMMARY_PAGE_SUBTITLE
+msgid "Ready to start installing $BrandShortName"
+msgstr "Réidh chun $BrandShortName a shuiteáil"
+
+#: SUMMARY_INSTALLED_TO
+msgid "$BrandShortName will be installed to the following location:"
+msgstr "Suiteálfar $BrandShortName go dtí an suíomh seo:"
+
+#: SUMMARY_REBOOT_REQUIRED_INSTALL
+msgid "A restart of your computer may be required to complete the installation."
+msgstr ""
+"D'fhéadfadh atosú de do ríomhaire a bheith riachtanach leis an tsuiteáil a "
+"chríochnú."
+
+#: SUMMARY_REBOOT_REQUIRED_UNINSTALL
+msgid "A restart of your computer may be required to complete the uninstall."
+msgstr ""
+"D'fhéadfadh atosú de do ríomhaire a bheith riachtanach leis an díshuiteáil a "
+"chríochnú."
+
+#: SUMMARY_CLICK
+msgid "Click Install to continue."
+msgstr "Cliceáil Suiteáil le dul ar aghaidh."
+
 #: SURVEY_TEXT
-msgid "&Tell us what you thought of ${BrandShortName}"
-msgstr "Noch&t dúinn do bharúil faoi ${BrandShortName}"
+msgid "&Tell us what you thought of $BrandShortName"
+msgstr "&Nocht dúinn do bharúil faoi $BrandShortName"
 
 #: LAUNCH_TEXT
-msgid "&Launch $(^Name) now"
-msgstr "&Tosaigh $(^Name) anois"
-
-#: WARN_APP_RUNNING_INSTALL
-msgid ""
-"$(^Name) must be closed to proceed with the installation.\n"
-"\n"
-"Click \"OK\" to exit $(^Name) automatically and continue."
-msgstr ""
-"Caithfear $(^Name) a dhúnadh roimh an tsuiteáil.\n"
-"\n"
-"Cliceáil \"OK\" chun scoir de $(^Name) go huathoibríoch agus dul ar aghaidh."
-
-#: WARN_APP_RUNNING_UNINSTALL
-msgid ""
-"$(^Name) must be closed to proceed with the uninstall.\n"
-"\n"
-"Click \"OK\" to exit $(^Name) automatically and continue."
-msgstr ""
-"Caithfear $(^Name) a dhúnadh roimh an díshuiteáil.\n"
-"\n"
-"Cliceáil \"OK\" chun scoir de $(^Name) go huathoibríoch agus dul ar aghaidh."
+msgid "&Launch $BrandShortName now"
+msgstr "&Tosaigh $BrandShortName anois"
 
 #: CREATE_ICONS_DESC
-msgid "Create icons for ${BrandShortName}:"
-msgstr "Cruthaigh deilbhíní le haghaidh ${BrandShortName}:"
+msgid "Create icons for $BrandShortName:"
+msgstr "Cruthaigh deilbhíní le haghaidh $BrandShortName:"
 
 #: ICONS_DESKTOP
 msgid "On my &Desktop"
@@ -6854,6 +6823,38 @@ msgstr ""
 #: ICONS_QUICKLAUNCH
 msgid "In my &Quick Launch bar"
 msgstr "I mo Bharra &Mearlainseála"
+
+#: WARN_MANUALLY_CLOSE_APP_INSTALL
+msgid ""
+"$BrandShortName must be closed to proceed with the installation.\n"
+"\n"
+"Please close $BrandShortName to continue."
+msgstr ""
+"Caithfear $BrandShortName a dhúnadh chun dul ar aghaidh leis an tsuiteáil.\n"
+"\n"
+"Dún $BrandShortName chun leanúint ar aghaidh, le do thoil."
+
+#: WARN_MANUALLY_CLOSE_APP_UNINSTALL
+msgid ""
+"$BrandShortName must be closed to proceed with the uninstall.\n"
+"\n"
+"Please close $BrandShortName to continue."
+msgstr ""
+"Caithfear $BrandShortName a dhúnadh roimh an díshuiteáil.\n"
+"\n"
+"Dún $BrandShortName chun dul ar aghaidh."
+
+#: WARN_MANUALLY_CLOSE_APP_LAUNCH
+msgid ""
+"$BrandShortName is already running.\n"
+"\n"
+"Please close $BrandShortName prior to launching the version you have just "
+"installed."
+msgstr ""
+"Tá $BrandShortName ag rith cheana.\n"
+"\n"
+"Dún $BrandShortName sula dtosaíonn tú an leagan atá tú tar éis suiteáil, le "
+"do thoil."
 
 #: WARN_WRITE_ACCESS
 msgid ""
@@ -6875,25 +6876,77 @@ msgstr ""
 "\n"
 "Cliceáil OK chun suíomh eile a roghnú."
 
+#: WARN_MIN_SUPPORTED_OS_MSG
+msgid ""
+"Sorry, $BrandShortName can't be installed. This version of $BrandShortName "
+"requires ${MinSupportedVer} or newer."
+msgstr ""
+"Ní féidir $BrandShortName a shuiteáil. Tá ${MinSupportedVer} nó níos nuaí "
+"riachtanach don leagan seo de $BrandShortName."
+
+#: WARN_RESTART_REQUIRED_UNINSTALL
+msgid ""
+"Your computer must be restarted to complete a previous uninstall of "
+"$BrandShortName. Do you want to reboot now?"
+msgstr ""
+"Ní mór duit do ríomhaire a atosú chun díshuiteáil $BrandShortName a chur i "
+"gcrích. Ar mhaith leat atosú anois?"
+
+#: WARN_RESTART_REQUIRED_UPGRADE
+msgid ""
+"Your computer must be restarted to complete a previous upgrade of "
+"$BrandShortName. Do you want to reboot now?"
+msgstr ""
+"Caithfear do ríomhaire a atosú le huasghrádú roimhe seo de $BrandShortName a "
+"chríochnú. An dteastaíonn uait atosú anois?"
+
+#: ERROR_CREATE_DIRECTORY_PREFIX
+msgid "Error creating directory:"
+msgstr "Earráid agus comhadlann á cruthú:"
+
+#: ERROR_CREATE_DIRECTORY_SUFFIX
+msgid ""
+"Click Cancel to stop the installation or\n"
+"Retry to try again."
+msgstr ""
+"Cliceáil Cealaigh leis an tsuiteáil a stopadh nó\n"
+"Atriail le hiarracht eile a dhéanamh."
+
+#: UN_CONFIRM_PAGE_TITLE
+msgid "Uninstall $BrandFullName"
+msgstr "Díshuiteáil $BrandFullName"
+
+#: UN_CONFIRM_PAGE_SUBTITLE
+msgid "Remove $BrandFullName from your computer."
+msgstr "Bain $BrandShortName de do ríomhaire."
+
+#: UN_CONFIRM_UNINSTALLED_FROM
+msgid "$BrandShortName will be uninstalled from the following location:"
+msgstr "Díshuiteálfar $BrandShortName ón suíomh seo:"
+
+#: UN_CONFIRM_CLICK
+msgid "Click Uninstall to continue."
+msgstr "Cliceáil Díshuiteáil le dul ar aghaidh."
+
+#: BANNER_CHECK_EXISTING
+msgid "Checking existing installation…"
+msgstr "Tá an suiteáil reatha á seiceáil…"
+
 #: STATUS_INSTALL_APP
-msgid "Installing ${BrandShortName}..."
-msgstr "${BrandShortName} á Shuiteáil..."
+msgid "Installing $BrandShortName…"
+msgstr "$BrandShortName á Shuiteáil…"
 
 #: STATUS_INSTALL_LANG
-msgid "Installing Language Files (${AB_CD})..."
-msgstr "Comhaid Teanga (${AB_CD}) á Suiteáil..."
-
-#: STATUS_INSTALL_OPTIONAL
-msgid "Installing Optional Components..."
-msgstr "Comhpháirteanna Roghnacha á Suiteáil..."
+msgid "Installing Language Files (${AB_CD})…"
+msgstr "Comhaid Teanga (${AB_CD}) á Suiteáil…"
 
 #: STATUS_UNINSTALL_MAIN
-msgid "Uninstalling ${BrandShortName}..."
-msgstr "${BrandShortName} á Dhíshuiteáil..."
+msgid "Uninstalling $BrandShortName…"
+msgstr "$BrandShortName á Dhíshuiteáil…"
 
 #: STATUS_CLEANUP
-msgid "A Little Housekeeping..."
-msgstr "Beagán Glantacháin..."
+msgid "A Little Housekeeping…"
+msgstr "Beagán Glantacháin…"
 
 # _DESC strings support approximately 65 characters per line.
 # One line
@@ -6905,21 +6958,12 @@ msgstr ""
 
 # One line
 #: OPTION_STANDARD_DESC
-msgid "${BrandShortName} will be installed with the most common options."
-msgstr "Déanfar ${BrandShortName} a shuiteáil leis na gnáthroghanna."
+msgid "$BrandShortName will be installed with the most common options."
+msgstr "Déanfar $BrandShortName a shuiteáil leis na gnáthroghanna."
 
 #: OPTION_STANDARD_RADIO
 msgid "&Standard"
 msgstr "Gnáth&shuiteáil"
-
-# One line
-#: OPTION_COMPLETE_DESC
-msgid "${BrandShortName} will be installed with all available options."
-msgstr "Suiteálfar ${BrandShortName} le gach rogha atá le fáil."
-
-#: OPTION_COMPLETE_RADIO
-msgid "C&omplete"
-msgstr "I&omlán"
 
 #: OPTION_CUSTOM_DESC
 msgid ""
@@ -6939,19 +6983,20 @@ msgstr "S&ainshuiteáil"
 # This file must be saved as UTF8
 # Accesskeys are defined by prefixing the letter that is to be used for the
 # accesskey with an ampersand (e.g. &).
-# Do not replace $(^NameDA) or $(^Name) with a custom string.
-# Do not change $(^NameDA) to $(^Name) or $(^Name) to $(^NameDA). NameDA allows
-# Name to contain an ampersand (e.g. DA stands for double ampersand) and
-# prevents the letter following the ampersand being used as an accesskey.
+# Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+# custom string and always use the same one as used by the en-US files.
+# $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+# for double ampersand) and prevents the letter following the ampersand from
+# being used as an accesskey.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
 #: MUI_TEXT_WELCOME_INFO_TITLE
-msgid "Welcome to the $(^NameDA) Setup Wizard"
-msgstr "Fáilte go Treoraí Suiteála $(^NameDA)"
+msgid "Welcome to the $BrandFullNameDA Setup Wizard"
+msgstr "Fáilte go dtí Treoraí Suiteála $BrandShortNameDA"
 
 #: MUI_TEXT_WELCOME_INFO_TEXT
 msgid ""
-"This wizard will guide you through the installation of $(^NameDA).\n"
+"This wizard will guide you through the installation of $BrandFullNameDA.\n"
 "\n"
 "It is recommended that you close all other applications before starting "
 "Setup. This will make it possible to update relevant system files without "
@@ -6959,7 +7004,7 @@ msgid ""
 "\n"
 "$_CLICK"
 msgstr ""
-"Déanfaidh an Treoraí seo treorú duit tríd an tsuiteáil de $(^NameDA).\n"
+"Déanfaidh an treoraí seo treorú duit tríd an tsuiteáil de $BrandFullNameDA.\n"
 "\n"
 "Moltar duit gach feidhmchlár eile a dhúnadh sula dtosaíonn tú an Suiteálaí. "
 "Cinnteoidh sé seo gur féidir na comhaid oiriúnacha a nuashonrú gan do "
@@ -6972,26 +7017,31 @@ msgid "License Agreement"
 msgstr "Comhaontú um Cheadúnas"
 
 #: MUI_TEXT_LICENSE_SUBTITLE
-msgid "Please review the license terms before installing $(^NameDA)."
+msgid "Please review the license terms before installing $BrandFullNameDA."
 msgstr ""
-"Déan iniúchadh ar choinníollacha an cheadúnais sula suiteálann tú $(^NameDA)."
+"Déan iniúchadh ar choinníollacha an cheadúnais sula suiteálann tú "
+"$BrandFullNameDA."
 
 #: MUI_INNERTEXT_LICENSE_TOP
 msgid "Press Page Down to see the rest of the agreement."
 msgstr "Brúigh \"Page Down\" chun an chuid eile den cheadúnas a léamh."
 
-#: MUI_INNERTEXT_LICENSE_BOTTOM_RADIOBUTTONS
+#: MUI_INNERTEXT_LICENSE_BOTTOM_CHECKBOX
 msgid ""
-"If you accept the terms of the agreement, select the first option below. You "
-"must accept the agreement to install $(^NameDA). $_CLICK"
+"If you accept the terms of the agreement, click the check box below. You must "
+"accept the agreement to install $BrandFullNameDA. $_CLICK"
 msgstr ""
-"Má ghlacann tú le coinníollacha an chomhaontaithe, roghnaigh an chéad rogha "
-"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $(^NameDA) a "
-"dhíshuiteáil. $_CLICK"
+"Má ghlacann tú le coinníollacha an chomhaontaithe, cliceáil an ticbhosca "
+"thíos. Caithfidh tú glacadh leis an gcomhaontú chun $BrandFullNameDA a "
+"shuiteáil. $_CLICK"
 
 #: MUI_TEXT_COMPONENTS_TITLE
 msgid "Choose Components"
 msgstr "Roghnaigh Comhpháirteanna"
+
+#: MUI_TEXT_COMPONENTS_SUBTITLE
+msgid "Choose which features of $BrandFullNameDA you want to install."
+msgstr "Roghnaigh na gnéithe $BrandFullNameDA ba mhaith leat suiteáil."
 
 #: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_INFO
 msgid "Position your mouse over a component to see its description."
@@ -7002,16 +7052,16 @@ msgid "Choose Install Location"
 msgstr "Roghnaigh Suíomh na Suiteála"
 
 #: MUI_TEXT_DIRECTORY_SUBTITLE
-msgid "Choose the folder in which to install $(^NameDA)."
-msgstr "Roghnaigh an fillteán inar mian leat $(^NameDA) a shuiteáil."
+msgid "Choose the folder in which to install $BrandFullNameDA."
+msgstr "Roghnaigh an fillteán inar mian leat $BrandFullNameDA a shuiteáil."
 
 #: MUI_TEXT_INSTALLING_TITLE
 msgid "Installing"
 msgstr "Á Shuiteáil"
 
 #: MUI_TEXT_INSTALLING_SUBTITLE
-msgid "Please wait while $(^NameDA) is being installed."
-msgstr "Fan go fóill; $(^NameDA) á shuiteáil."
+msgid "Please wait while $BrandFullNameDA is being installed."
+msgstr "Fan fad is atá $BrandFullNameDA á shuiteáil, le do thoil."
 
 #: MUI_TEXT_FINISH_TITLE
 msgid "Installation Complete"
@@ -7034,26 +7084,26 @@ msgid "&Finish"
 msgstr "&Críochnaigh"
 
 #: MUI_TEXT_FINISH_INFO_TITLE
-msgid "Completing the $(^NameDA) Setup Wizard"
-msgstr "Treoraí Suiteála $(^NameDA) á Chríochnú"
+msgid "Completing the $BrandFullNameDA Setup Wizard"
+msgstr "Treoraí Suiteála $BrandFullNameDA ag críochnú"
 
 #: MUI_TEXT_FINISH_INFO_TEXT
 msgid ""
-"$(^NameDA) has been installed on your computer.\n"
+"$BrandFullNameDA has been installed on your computer.\n"
 "\n"
 "Click Finish to close this wizard."
 msgstr ""
-"Suiteáladh $(^NameDA) ar do ríomhaire.\n"
+"Tá $BrandFullNameDA suiteáilte ar do ríomhaire.\n"
 "\n"
-"Cliceáil \"Críochnaigh\" chun an Treoraí seo a dhúnadh."
+"Cliceáil Críochnaigh leis an treoraí seo a dhúnadh."
 
 #: MUI_TEXT_FINISH_INFO_REBOOT
 msgid ""
 "Your computer must be restarted in order to complete the installation of "
-"$(^NameDA). Do you want to reboot now?"
+"$BrandFullNameDA. Do you want to reboot now?"
 msgstr ""
-"Ní mór duit do ríomhaire a atosú chun suiteáil $(^NameDA) a chur i gcrích. Ar "
-"mhaith leat atosú anois?"
+"Caithfear do ríomhaire a atosú le suiteáil $BrandFullNameDA a chríochnú. An "
+"mian leat atosú anois?"
 
 #: MUI_TEXT_FINISH_REBOOTNOW
 msgid "Reboot now"
@@ -7068,9 +7118,10 @@ msgid "Choose Start Menu Folder"
 msgstr "Roghnaigh Fillteán sa Roghchlár Tosaigh"
 
 #: MUI_TEXT_STARTMENU_SUBTITLE
-msgid "Choose a Start Menu folder for the $(^NameDA) shortcuts."
+msgid "Choose a Start Menu folder for the $BrandFullNameDA shortcuts."
 msgstr ""
-"Roghnaigh fillteán sa Roghchlár Tosaigh a gcuirfear aicearraí $(^NameDA) ann."
+"Roghnaigh fillteán sa Roghchlár Tosaigh le haghaidh aicearraí "
+"$BrandFullNameDA."
 
 #: MUI_INNERTEXT_STARTMENU_TOP
 msgid ""
@@ -7081,42 +7132,45 @@ msgstr ""
 "a chruthú. Is féidir freisin fillteán nua a chruthú trí ainm nua a iontráil."
 
 #: MUI_TEXT_ABORTWARNING
-msgid "Are you sure you want to quit $(^Name) Setup?"
-msgstr "An bhfuil tú cinnte gur mian leat Suiteálaí $(^Name) a scor?"
+msgid "Are you sure you want to quit $BrandFullName Setup?"
+msgstr ""
+"An bhfuil tú cinnte go dteastaíonn uait scoir ó Shuiteáil $BrandFullName?"
 
 #: MUI_UNTEXT_WELCOME_INFO_TITLE
-msgid "Welcome to the $(^NameDA) Uninstall Wizard"
-msgstr "Fáilte go Treoraí Díshuiteála $(^NameDA)"
+msgid "Welcome to the $BrandFullNameDA Uninstall Wizard"
+msgstr "Fáilte go Treoraí Díshuiteála $BrandFullNameDA"
 
 #: MUI_UNTEXT_WELCOME_INFO_TEXT
 msgid ""
-"This wizard will guide you through the uninstallation of $(^NameDA).\n"
+"This wizard will guide you through the uninstallation of $BrandFullNameDA.\n"
 "\n"
-"Before starting the uninstallation, make sure $(^NameDA) is not running.\n"
+"Before starting the uninstallation, make sure $BrandFullNameDA is not "
+"running.\n"
 "\n"
 "$_CLICK"
 msgstr ""
-"Déanfaidh an Treoraí seo treorú duit tríd an díshuiteáil de $(^NameDA).\n"
+"Tabharfaidh an treoraí treoir duit trí díshuiteáil $BrandFullNameDA.\n"
 "\n"
-"Bí cinnte nach bhfuil $(^NameDA) ag rith sula dtosaíonn tú an díshuiteáil.\n"
+"Sula dtosaíonn tú an díshuiteáil, bí cinnte nach bhfuil $BrandFullNameDA ag "
+"rith.\n"
 "\n"
 "$_CLICK"
 
 #: MUI_UNTEXT_CONFIRM_TITLE
-msgid "Uninstall $(^NameDA)"
-msgstr "Díshuiteáil $(^NameDA)"
+msgid "Uninstall $BrandFullNameDA"
+msgstr "Díshuiteáil $BrandFullNameDA"
 
 #: MUI_UNTEXT_CONFIRM_SUBTITLE
-msgid "Remove $(^NameDA) from your computer."
-msgstr "Bain $(^NameDA) ó do ríomhaire."
+msgid "Remove $BrandFullNameDA from your computer."
+msgstr "Bain $BrandFullNameDA de do ríomhaire."
 
 #: MUI_UNTEXT_UNINSTALLING_TITLE
 msgid "Uninstalling"
 msgstr "Á Dhíshuiteáil"
 
 #: MUI_UNTEXT_UNINSTALLING_SUBTITLE
-msgid "Please wait while $(^NameDA) is being uninstalled."
-msgstr "Fan go fóill; $(^NameDA) á dhíshuiteáil."
+msgid "Please wait while $BrandFullNameDA is being uninstalled."
+msgstr "Fan fad is atá $BrandFullNameDA á dhíshuiteáil, le do thoil."
 
 #: MUI_UNTEXT_FINISH_TITLE
 msgid "Uninstallation Complete"
@@ -7135,38 +7189,54 @@ msgid "Uninstall was not completed successfully."
 msgstr "Níor éirigh leis an díshuiteáil."
 
 #: MUI_UNTEXT_FINISH_INFO_TITLE
-msgid "Completing the $(^NameDA) Uninstall Wizard"
-msgstr "Treoraí Díshuiteála $(^NameDA) á Chríochnú"
+msgid "Completing the $BrandFullNameDA Uninstall Wizard"
+msgstr "Treoraí Díshuiteála $BrandFullNameDA ag críochnú"
 
 #: MUI_UNTEXT_FINISH_INFO_TEXT
 msgid ""
-"$(^NameDA) has been uninstalled from your computer.\n"
+"$BrandFullNameDA has been uninstalled from your computer.\n"
 "\n"
 "Click Finish to close this wizard."
 msgstr ""
-"Díshuiteáladh $(^NameDA) ó do ríomhaire.\n"
+"Tá $BrandFullNameDA díshuiteáilte ó do ríomhaire.\n"
 "\n"
-"Cliceáil \"Críochnaigh\" chun an Treoraí seo a dhúnadh."
+"Cliceáil Críochnaigh leis an treoraí seo a dhúnadh."
 
 #: MUI_UNTEXT_FINISH_INFO_REBOOT
 msgid ""
 "Your computer must be restarted in order to complete the uninstallation of "
-"$(^NameDA). Do you want to reboot now?"
+"$BrandFullNameDA. Do you want to reboot now?"
 msgstr ""
-"Ní mór duit do ríomhaire a atosú chun díshuiteáil $(^NameDA) a chur i gcrích. "
-"Ar mhaith leat atosú anois?"
+"Caithfear do ríomhaire a atosú le díshuiteáil $BrandFullNameDA a chríochnú. "
+"An mian leat atosú anois?"
 
 #: MUI_UNTEXT_ABORTWARNING
-msgid "Are you sure you want to quit $(^Name) Uninstall?"
-msgstr "An bhfuil tú cinnte gur mian leat Díshuiteálaí $(^Name) a scor?"
+msgid "Are you sure you want to quit $BrandFullName Uninstall?"
+msgstr ""
+"An bhfuil tú cinnte go dteastaíonn uait scoir ó Dhíshuiteáil $BrandFullName?"
 
+# LOCALIZATION NOTE:
+# This file must be saved as UTF8
+# Accesskeys are defined by prefixing the letter that is to be used for the
+# accesskey with an ampersand (e.g. &).
+# Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+# custom string and always use the same one as used by the en-US files.
+# $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+# for double ampersand) and prevents the letter following the ampersand from
+# being used as an accesskey.
+# You can use \n to create a newline in the string but only when the string
+# from en-US contains a \n.
+# Strings that require a space at the end should be enclosed with double
+# quotes and the double quotes will be removed. To add quotes to the beginning
+# and end of a strong enclose the add and additional double quote to the
+# beginning and end of the string (e.g. ""This will include quotes"").
 #: SetupCaption
-msgid "$(^Name) Setup"
-msgstr "Suiteáil $(^Name)"
+msgid "$BrandFullName Setup"
+msgstr "Suiteáil $BrandFullName"
 
 #: UninstallCaption
-msgid "$(^Name) Uninstall"
-msgstr "Díshuiteáil $(^Name)"
+msgid "$BrandFullName Uninstall"
+msgstr "Díshuiteáil $BrandFullName"
 
 #: BackBtn
 msgid "< &Back"
@@ -7218,12 +7288,12 @@ msgstr "Cliceáil \"Díshuiteáil\" chun tosú."
 
 #: LicenseTextRB
 msgid ""
-"Please review the license agreement before installing $(^NameDA). If you "
-"accept all terms of the agreement, select the first option below. $_CLICK"
+"Please review the license agreement before installing $BrandFullNameDA. If "
+"you accept all terms of the agreement, select the first option below. $_CLICK"
 msgstr ""
-"Déan iniúchadh ar an gComhaontú um Cheadúnas sula suiteálann tú $(^NameDA). "
-"Má ghlacann tú le gach coinníoll den chomhaontú, roghnaigh an chéad rogha "
-"thíos. $_CLICK"
+"Léigh an comhaontú um an gceadúnas roimh $BrandFullNameDA a shuiteáil le do "
+"thoil. Má ghlacann tú leis na téarmaí uilig, roghnaigh an chéad rogha thíos. "
+"$_CLICK"
 
 #: ComponentsText
 msgid ""
@@ -7239,20 +7309,19 @@ msgstr "Roghnaigh na comhpháirteanna is mian leat a shuiteáil:"
 
 #: DirText
 msgid ""
-"Setup will install $(^NameDA) in the following folder. To install in a "
+"Setup will install $BrandFullNameDA in the following folder. To install in a "
 "different folder, click Browse and select another folder. $_CLICK"
 msgstr ""
-"Cuirfidh an Suiteálaí $(^NameDA) san fhillteán seo a leanas. Más mian leat "
-"suiteáil i bhfillteán difriúil, cliceáil \"Brabhsáil\" agus roghnaigh "
-"fillteán eile. $_CLICK"
+"Suiteálfar $BrandFullNameDA san fhillteán seo a leanas. Chun é a shuiteáil i "
+"bhfillteán eile, cliceáil Brabhsáil agus roghnaigh fillteán eile. $_CLICK"
 
 #: DirSubText
 msgid "Destination Folder"
 msgstr "Sprioc-Fhillteán"
 
 #: DirBrowseText
-msgid "Select the folder to install $(^NameDA) in:"
-msgstr "Roghnaigh an fillteán inar mian leat $(^NameDA) a shuiteáil:"
+msgid "Select the folder to install $BrandFullNameDA in:"
+msgstr "Roghnaigh an fillteán ina suiteálfar $BrandFullNameDA:"
 
 #: SpaceAvailable
 msgid "\"Space available: \""
@@ -7263,8 +7332,8 @@ msgid "\"Space required: \""
 msgstr "\"Spás de dhíth: \""
 
 #: UninstallingText
-msgid "$(^NameDA) will be uninstalled from the following folder. $_CLICK"
-msgstr "Díshuiteálfar $(^NameDA) ón fhillteán seo a leanas. $_CLICK"
+msgid "$BrandFullNameDA will be uninstalled from the following folder. $_CLICK"
+msgstr "Díshuiteálfar $BrandFullNameDA ón bhfillteán seo. $_CLICK"
 
 #: UninstallingSubText
 msgid "Uninstalling from:"
