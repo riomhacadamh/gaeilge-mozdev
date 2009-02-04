@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-20 09:25-0600\n"
+"POT-Creation-Date: 2009-02-03 23:44-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -99,7 +99,23 @@ msgstr "roimh dheireadh an taisc"
 msgid "after the task ends"
 msgstr "tar éis dheireadh an taisc"
 
-#: reminderErrorMaxCountReachedEventN
+#: reminderDialogOriginBeginEvent
+msgid "the event starts"
+msgstr "thús an imeachta"
+
+#: reminderDialogOriginEndEvent
+msgid "the event ends"
+msgstr "dheireadh an imeachta"
+
+#: reminderDialogOriginBeginTask
+msgid "the task starts"
+msgstr "tús an taisc"
+
+#: reminderDialogOriginEndTask
+msgid "the task ends"
+msgstr "deireadh an taisc"
+
+#: reminderErrorMaxCountReachedEvent
 msgid ""
 "The selected calendar has a limitation of #1 reminder per event.;The selected "
 "calendar has a limitation of #1 reminders per event."
@@ -111,7 +127,7 @@ msgstr ""
 "roghnaithe.;Tá uasteorainn de #1 meabhrúchán an imeacht ar an bhféilire "
 "roghnaithe."
 
-#: reminderErrorMaxCountReachedTaskN
+#: reminderErrorMaxCountReachedTask
 msgid ""
 "The selected calendar has a limitation of #1 reminder per task.;The selected "
 "calendar has a limitation of #1 reminders per task."
@@ -989,14 +1005,6 @@ msgstr "Tharla earráid"
 msgid "Edit Item"
 msgstr "Cuir Mír in Eagar"
 
-#: newevent.before.label reminderCustomRelationBefore
-msgid "before"
-msgstr "roimh"
-
-#: newevent.after.label reminderCustomRelationAfter
-msgid "after"
-msgstr "tar éis"
-
 #: newevent.from.label
 msgid "From"
 msgstr "Ó"
@@ -1523,8 +1531,9 @@ msgstr "go bliantúil"
 #: event.recurrence.pattern.every.label
 #: event.recurrence.pattern.weekly.every.label
 #: event.recurrence.pattern.monthly.every.label
+#: event.recurrence.monthly.every.label
 #: event.recurrence.pattern.yearly.every.month.label
-#: event.recurrence.pattern.yearly.every.weekday.label
+#: event.recurrence.yearly.every.label
 msgid "Every"
 msgstr "Gach"
 
@@ -1548,39 +1557,29 @@ msgstr "Ar:"
 msgid "Month(s)"
 msgstr "Mí"
 
-#: event.recurrence.the.label
-msgid "The"
-msgstr "An"
+#: event.recurrence.monthly.first.label event.recurrence.yearly.first.label
+msgid "The First"
+msgstr ""
 
-#: event.recurrence.repeat.first.label
-#: event.recurrence.pattern.yearly.first.label
-msgid "First"
-msgstr "An Chéad"
+#: event.recurrence.monthly.second.label event.recurrence.yearly.second.label
+msgid "The Second"
+msgstr ""
 
-#: event.recurrence.repeat.second.label
-#: event.recurrence.pattern.yearly.second.label
-msgid "Second"
-msgstr "Dara"
+#: event.recurrence.monthly.third.label event.recurrence.yearly.third.label
+msgid "The Third"
+msgstr ""
 
-#: event.recurrence.repeat.third.label
-#: event.recurrence.pattern.yearly.third.label
-msgid "Third"
-msgstr "Tríú"
+#: event.recurrence.monthly.fourth.label event.recurrence.yearly.fourth.label
+msgid "The Fourth"
+msgstr ""
 
-#: event.recurrence.repeat.fourth.label
-#: event.recurrence.pattern.yearly.fourth.label
-msgid "Fourth"
-msgstr "Ceathrú"
+#: event.recurrence.monthly.fifth.label event.recurrence.yearly.fifth.label
+msgid "The Fifth"
+msgstr ""
 
-#: event.recurrence.repeat.fifth.label
-#: event.recurrence.pattern.yearly.fifth.label
-msgid "Fifth"
-msgstr "Cúigiú"
-
-#: event.recurrence.repeat.last.label
-#: event.recurrence.pattern.yearly.last.label
-msgid "Last"
-msgstr "Deireadh"
+#: event.recurrence.monthly.last.label event.recurrence.yearly.last.label
+msgid "The Last"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.1.label
 #: event.recurrence.pattern.yearly.week.1.label repeatDetailsDay1 day.1.name
@@ -1745,66 +1744,6 @@ msgstr "Athdhéan go dtí"
 msgid "Preview"
 msgstr "Réamhamharc"
 
-#: alarm.units.minutes reminderCustomUnitMinutes calendar.global.units.minutes
-msgid "minutes"
-msgstr "nóiméad"
-
-#: alarm.units.hours reminderCustomUnitHours calendar.global.units.hours
-msgid "hours"
-msgstr "uaire"
-
-#: alarm.units.days reminderCustomUnitDays calendar.global.units.days
-msgid "days"
-msgstr "lá"
-
-# Reminder dialog
-#: reminder.title.label
-msgid "Custom Reminder"
-msgstr "Meabhrúchán Saincheaptha"
-
-#: reminder.dialogtitle.label
-msgid "Set up reminders"
-msgstr "Socraigh meabhrúcháin"
-
-#: reminder.reminderDetails.label
-msgid "Reminder Details"
-msgstr "Mionsonraí an Mheabhrúcháin"
-
-#: reminder.action.label
-msgid "Choose a Reminder Action"
-msgstr "Roghnaigh gníomh meabhrúcháin"
-
-#: reminder.action.alert.label
-msgid "Show an Alert"
-msgstr "Taispeáin airdeall"
-
-#: reminder.action.email.label
-msgid "Send an E-mail"
-msgstr "Seol ríomhphost"
-
-#: reminder.new.label New
-msgid "New"
-msgstr "Nua"
-
-# the "deleteCmd.label" is a keycap and should be "Delete", others ok?
-#: reminder.delete.label deleteItemLabel imipCancelInvitation.label
-#: sunbird.delete.button.label
-msgid "Delete"
-msgstr "Scrios"
-
-#: reminder.relation.start.label reminderCustomOriginBeginEvent
-msgid "the event starts"
-msgstr "thús an imeachta"
-
-#: reminder.relation.end.label reminderCustomOriginEndEvent
-msgid "the event ends"
-msgstr "dheireadh an imeachta"
-
-# "C" is Ionchódú Carachtar…
-#: reminder.add.label reminder.add.accesskey
-msgid "&Add"
-msgstr "Cuir &Leis"
-
 # Attendees page
 #: event.organizer.label
 msgid "Organizer"
@@ -1913,86 +1852,77 @@ msgstr "Cáipéisí"
 msgid "Related Link"
 msgstr "Nasc Gaolta"
 
-#: repeatDetailsRuleDaily1
-msgid "every day"
-msgstr "gach lá"
-
-#: repeatDetailsRuleDaily2
-msgid "every other day"
-msgstr "gach re lá"
-
-#: repeatDetailsRuleDaily3
-msgid "every %1$S days"
-msgstr "gach %1$S lá"
+# LOCALIZATION NOTE (dailyEveryNth):
+# Edit recurrence window -> Recurrence pattern -> Daily repeat rules
+# #1 - number
+# e.g. "every 4 days"
+#: dailyEveryNth
+msgid "every day;every #1 days"
+msgstr ""
 
 #: repeatDetailsRuleDaily4
 msgid "every weekday"
 msgstr "gach lá oibre"
 
-#: repeatDetailsRuleWeekly1
-msgid "every %1$S"
-msgstr "gach %1$S"
+# LOCALIZATION NOTE (weeklyNthOn)
+# Edit recurrence window -> Recurrence pattern -> Weekly repeat rules
+# %1$S - weekday (one or more)
+# #2 - week interval
+# e.g. "every 3 weeks on Tuesday, Wednesday and Thursday
+#: weeklyNthOn
+msgid "every %1$S;every #2 weeks on %1$S"
+msgstr ""
 
-#: repeatDetailsRuleWeekly2
-msgid "every other week on %1$S"
-msgstr "gach dara seachtain ar %1$S"
-
-#: repeatDetailsRuleWeekly3
-msgid "every %1$S weeks on %2$S"
-msgstr "gach %1$S seachtain ar %2$S"
-
-#: repeatDetailsRuleWeekly4
-msgid "every week"
-msgstr "gach seachtain"
-
-#: repeatDetailsRuleWeekly5
-msgid "every other week"
-msgstr "gach dara seachtain"
-
-#: repeatDetailsRuleWeekly6
-msgid "every %1$S weeks"
-msgstr "gach %1$S seachtain"
+# LOCALIZATION NOTE (weeklyNthOn)
+# Edit recurrence window -> Recurrence pattern -> Weekly repeat rules
+# #1 - interval
+# e.g. "every 5 weeks"
+#: weeklyEveryNth
+msgid "every week;every #1 weeks"
+msgstr ""
 
 # leave alone --KPS
 #: repeatDetailsAnd license.and
 msgid "and"
 msgstr "and"
 
-#: repeatDetailsRuleMonthly
-msgid "the %1$S %2$S of every month"
-msgstr "an %1$S %2$S de gach mí"
+# LOCALIZATION NOTE (monthlyNthOfEvery):
+# Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+# %1$S - ordinal
+# %2$S - weekday
+# #3 - interval
+# i.e. "the FIRST MONDAY of every 3 months"
+#: monthlyNthOfEvery
+msgid "the %1$S %2$S of every month;the %1$S %2$S of every #3 months"
+msgstr ""
 
-#: repeatDetailsRuleMonthly2
-msgid "the %1$S %2$S of every other month"
-msgstr "an %1$S %2$S de gach dara mí"
+# LOCALIZATION NOTE (monthlyEveryOfEvery):
+# Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+# %1$S - weekday
+# #2 - interval
+# i.e. "every MONDAY of every 3 months" 
+# more specific: every monday of January, April, July, October
+#: monthlyEveryOfEvery
+msgid "every %1$S of every month;every %1$S of every #2 months"
+msgstr ""
 
-#: repeatDetailsRuleMonthly3
-msgid "the %1$S %2$S of every %3$S month"
-msgstr "an %1$S %2$S de gach %3$S mí"
+# LOCALIZATION NOTE (monthlyDayOfNth):
+# Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+# %1$S - day of month
+# #2 - month interval
+# e.g. "day 3 of every 2 months"
+#: monthlyDayOfNth
+msgid "day %1$S of every month;day %1$S of every #2 months"
+msgstr ""
 
-#: repeatDetailsRuleMonthly4
-msgid "day %1$S of every month"
-msgstr "lá %1$S de gach mí"
-
-#: repeatDetailsRuleMonthly5
-msgid "day %1$S of every other month"
-msgstr "lá %1$S de gach dara mí"
-
-#: repeatDetailsRuleMonthly6
-msgid "day %1$S of every %2$S month"
-msgstr "lá %1$S de gach %2$S mí"
-
-#: repeatDetailsRuleMonthly7
-msgid "the last day of the month"
-msgstr "lá deireanach na míosa"
-
-#: repeatDetailsRuleMonthly8
-msgid "the last day of every other month"
-msgstr "lá deireanach gach dara míosa"
-
-#: repeatDetailsRuleMonthly9
-msgid "the last day of every %1$S month"
-msgstr "lá deireanach gach %1$Sú míosa"
+# LOCALIZATION NOTE (monthlyLastDayOfNth):
+# Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+# %1$S - day of month
+# #2 - month interval
+# e.g. "the last day of every 3 months"
+#: monthlyLastDayOfNth
+msgid "the last day of the month; the last day of every #1 months"
+msgstr ""
 
 #: repeatDetailsOrdinal1
 msgid "first"
@@ -2019,47 +1949,78 @@ msgstr "cúigiú"
 msgid "last"
 msgstr "seo caite"
 
-#: repeatDetailsRuleYearly1
-msgid "every %1$S %2$S"
-msgstr "gach %1$S %2$S"
+# LOCALIZATION NOTE (yearlyNthOn):
+# Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
+# %1$S - month
+# %2$S - day of month
+# #3 - yearly interval
+# e.g. "every 3 years on December 14"
+#: yearlyNthOn
+msgid "every %1$S %2$S;every #3 years on %1$S %2$S"
+msgstr ""
 
-#: repeatDetailsRuleYearly2
-msgid "every other year on %1$S %2$S"
-msgstr "gach dara bliain ar %1$S %2$S"
+# LOCALIZATION NOTE (yearlyNthOnNthOf):
+# Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
+# %1$S - ordinal
+# %2$S - weekday
+# %3$S - month
+# #4 - number
+# e.g. "the second Monday of every March"
+# e.g  "every 3 years the second Monday of March"
+#: yearlyNthOnNthOf
+msgid "the %1$S %2$S of every %3$S;every #4 years on the %1$S %2$S of %3$S"
+msgstr ""
 
-#: repeatDetailsRuleYearly3
-msgid "every %3$S years on %1$S %2$S"
-msgstr "gach %3$S bliana ar %1$S %2$S"
+# LOCALIZATION NOTE (yearlyNthOfNth):
+# Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
+# %1$S - weekday
+# %2$S - month
+# #3 - number
+# e.g. "every Thursday of March"
+# e.g  "every 3 years on every Thursday of March"
+#: yearlyOnEveryNthOfNth
+msgid "every %1$S of %2$S;every #3 years on every %1$S of %2$S"
+msgstr ""
 
-#: repeatDetailsRuleYearly4
-msgid "the %1$S %2$S of %3$S"
-msgstr "an %1$S %2$S de %3$S"
-
-#: repeatDetailsRuleYearly5
-msgid "every other year the %1$S %2$S of %3$S"
-msgstr "gach dara bliain, an %1$S %2$S de %3$S"
-
-#: repeatDetailsRuleYearly6
-msgid "every %4$S years the %1$S %2$S of %3$S"
-msgstr "gach %4$S bliana, an %1$S %2$S de %3$S"
-
-#: repeatDetailsCount
+# LOCALIZATION NOTE (repeatCount):
+# Edit recurrence window -> Recurrence details link on Event/Task dialog window
+# %1%$ - repeatDetailsRule...(see above). This is the first line of the link
+# %2%$ - event start date (e.g. mm/gg/yyyy)
+# %3$S - event start time (e.g. hh:mm (PM/AM))
+# %4$S - event end time (e.g. hh:mm (PM/AM))
+# #5 - event occurence times: number
+# e.g. with repeatDetailsRuleMonthly3:
+# "Occurs the first Sunday of every 3 month
+# only on 1/1/2009"
+# from 5:00 PM to 6:00 PM"
+# "Occurs the first Sunday of every 3 month
+# effective 1/1/2009 for 5 times
+# from 5:00 PM to 6:00 PM"
+#: repeatCount
 msgid ""
 "Occurs %1$S\n"
-"effective %2$S for %3$S times\n"
-"from %4$S to %5$S."
+"effective %2$S for #5 time\n"
+"from %3$S to %4$S.;Occurs %1$S\n"
+"effective %2$S for #5 times\n"
+"from %3$S to %4$S."
 msgstr ""
-"Tarlaíonn %1$S\n"
-"i bhfeidhm ó %2$S go ceann %3$S uaire\n"
-"ó %4$S go %5$S."
 
-#: repeatDetailsCountAllDay
+# LOCALIZATION NOTE (repeatCountAllDay):
+# Edit recurrence window -> Recurrence details link on Event/Task dialog window
+# %1%$ - repeatDetailsRule...(see above). This is the first line of the link
+# %2%$ - event start date (e.g. mm/gg/yyyy)
+# #3 - event occurence times: number
+# e.g. with repeatDetailsRuleMonthly3:
+# "Occurs the first Sunday of every 3 month
+# only on 1/1/2009"
+# "Occurs the first Sunday of every 3 month
+# effective 1/1/2009 for 5 times"
+#: repeatCountAllDay
 msgid ""
 "Occurs %1$S\n"
-"effective %2$S for %3$S times."
+"effective %2$S for #3 time.;Occurs %1$S\n"
+"effective %2$S for #3 times."
 msgstr ""
-"Tarlóidh %1$S\n"
-"%3$S uaire le héifeacht ó %2$S."
 
 #: repeatDetailsUntil
 msgid ""
@@ -2097,37 +2058,12 @@ msgstr ""
 "Tarlóidh %1$S\n"
 "le héifeacht ó %2$S."
 
-#: reminderCustomTitle yearlyOrder2
-msgid "%1$S %2$S %3$S %4$S"
-msgstr "%1$S %2$S %3$S %4$S"
-
-#: reminderCustomUnitMinute calendar.global.units.minute
-msgid "minute"
-msgstr "nóiméad"
-
-#: reminderCustomUnitHour calendar.global.units.hour
-msgid "hour"
-msgstr "uair"
-
-#: reminderCustomUnitDay calendar.global.units.day
-msgid "day"
-msgstr "lá"
-
-#: reminderCustomOriginBeginTask
-msgid "the task starts"
-msgstr "tús an taisc"
-
-#: reminderCustomOriginEndTask
-msgid "the task ends"
-msgstr "deireadh an taisc"
-
-#: reminderErrorMaxCountReachedEvent
-msgid "The selected calendar has a limitation of %1$S reminders per event."
-msgstr "Tá teorainn de %1$S meabhrúchán san imeacht ar an fhéilire roghnaithe."
-
-#: reminderErrorMaxCountReachedTask
-msgid "The selected calendar has a limitation of %1$S reminders per task."
-msgstr "Tá teorainn de %1$S meabhrúchán sa tasc ar an fhéilire roghnaithe."
+# LOCALIZATION NOTE (ruleTooComplex):
+# This string is shown in the reminder details area if our code can't handle the
+# complexity of the recurrence rule yet.
+#: ruleTooComplex
+msgid "Click here for details"
+msgstr ""
 
 #: emailSubjectReply
 msgid "Re: %1$S"
@@ -2166,6 +2102,10 @@ msgstr "An bhfuil tú cinnte gur mhaith leat %1$S iatán a bhaint?"
 #: yearlyOrder
 msgid "%1$S %3$S %2$S"
 msgstr "%1$S %3$S %2$S"
+
+#: yearlyOrder2
+msgid "%1$S %2$S %3$S %4$S"
+msgstr "%1$S %2$S %3$S %4$S"
 
 # #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
 # ***** BEGIN LICENSE BLOCK *****
@@ -2558,6 +2498,10 @@ msgstr "% Críochnaithe:"
 #: tooltipCompleted
 msgid "Completed:"
 msgstr "Críochnaithe:"
+
+#: New
+msgid "New"
+msgstr "Nua"
 
 #: Open
 msgid "Open"
@@ -3228,6 +3172,11 @@ msgstr "Scrios Tasc"
 msgid "l"
 msgstr "l"
 
+# the "deleteCmd.label" is a keycap and should be "Delete", others ok?
+#: deleteItemLabel imipCancelInvitation.label sunbird.delete.button.label
+msgid "Delete"
+msgstr "Scrios"
+
 #: deleteEventLabel
 msgid "Delete Event"
 msgstr "Scrios Imeacht"
@@ -3461,6 +3410,86 @@ msgstr "Meán Oíche"
 msgid "All Day"
 msgstr "I Rith an Lae"
 
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is Sun Microsystems code.
+# -
+# - The Initial Developer of the Original Code is
+# -   Philipp Kewisch <mozilla@kewis.ch>
+# - Portions created by the Initial Developer are Copyright (C) 2008-2009
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s):
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#: reminderdialog.title
+msgid "Set up Reminders"
+msgstr ""
+
+# "C" is Ionchódú Carachtar…
+#: reminder.add.label reminder.add.accesskey
+msgid "&Add"
+msgstr "Cuir &Leis"
+
+#: reminder.reminderDetails.label
+msgid "Reminder Details"
+msgstr "Mionsonraí an Mheabhrúcháin"
+
+#: reminder.action.label
+msgid "Choose a Reminder Action"
+msgstr "Roghnaigh gníomh meabhrúcháin"
+
+#: reminder.relation.before.label
+msgid "before"
+msgstr "roimh"
+
+#: reminder.relation.after.label
+msgid "after"
+msgstr "tar éis"
+
+#: reminder.action.alert.label
+msgid "Show an Alert"
+msgstr "Taispeáin airdeall"
+
+#: reminder.action.email.label
+msgid "Send an E-mail"
+msgstr "Seol ríomhphost"
+
+#: alarm.units.minutes calendar.global.units.minutes
+msgid "minutes"
+msgstr "nóiméad"
+
+#: alarm.units.hours calendar.global.units.hours
+msgid "hours"
+msgstr "uaire"
+
+#: alarm.units.days calendar.global.units.days
+msgid "days"
+msgstr "lá"
+
 #: day.1.Ddd.accesskey
 msgid "S"
 msgstr "S"
@@ -3489,6 +3518,18 @@ msgstr "h"
 #: day.6.Ddd.accesskey sunbird.find.key
 msgid "F"
 msgstr "F"
+
+#: calendar.global.units.minute
+msgid "minute"
+msgstr "nóiméad"
+
+#: calendar.global.units.hour
+msgid "hour"
+msgstr "uair"
+
+#: calendar.global.units.day
+msgid "day"
+msgstr "lá"
 
 #: onedaybackward.tooltip
 msgid "One Day Backward"
@@ -5356,9 +5397,9 @@ msgstr "An Áise/Karachi"
 msgid "Asia/Kashgar"
 msgstr "An Áise/Kashgar"
 
-#: pref.timezone.Asia.Katmandu
-msgid "Asia/Katmandu"
-msgstr "An Áise/Katmandu"
+#: pref.timezone.Asia.Kathmandu
+msgid "Asia/Kathmandu"
+msgstr "An Áise/Kathmandu"
 
 #: pref.timezone.Asia.Krasnoyarsk
 msgid "Asia/Krasnoyarsk"
@@ -7505,7 +7546,8 @@ msgstr "G"
 msgid "Software Update"
 msgstr "Nuashonrú Bogearraí"
 
-#: Info
-msgid "Sunbird is installing your updates and will start in a few moments…"
+#: InfoText
+msgid ""
+"%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few "
+"moments…"
 msgstr ""
-"Tá do chuid nuashonruithe á suiteáil ag Sunbird agus tosóidh sé go luath…"
