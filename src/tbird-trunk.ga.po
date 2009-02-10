@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-10 09:44-0600\n"
+"POT-Creation-Date: 2009-02-10 16:05-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -5337,7 +5337,7 @@ msgstr "Ag feitheamh le hionchur"
 
 #: waitingForRetry
 msgid "Waiting for retry"
-msgstr ""
+msgstr "Ag feitheamh le hatriail"
 
 #: completed Completed
 msgid "Completed"
@@ -5354,6 +5354,34 @@ msgstr "Inné"
 #: monthDate
 msgid "#1 #2"
 msgstr "#1 #2"
+
+# # Strings used by prompt when Quitting while in progress
+#: sendingMessage quitComposeWindowTitle
+msgid "Sending Message"
+msgstr "Teachtaireacht á Seoladh"
+
+# LOCALIZATION NOTE (sendingMessageTo): %S will be replaced by the first name or newsgroup that the message is being sent to.
+#: sendingMessageTo
+msgid "Sending Message to %S"
+msgstr "Teachtaireacht á Seoladh chuig %S"
+
+#: sentMessage
+msgid "Sent Message"
+msgstr "Seoladh an Teachtaireacht"
+
+# LOCALIZATION NOTE (sentMessageTo): %S will be replaced by the first name or newsgroup that the message was sent to.
+#: sentMessageTo
+msgid "Sent Message to %S"
+msgstr "Seoladh Teachtaireacht chuig %S"
+
+#: failedToSendMessage
+msgid "Failed to send message"
+msgstr "Theip ar sheoladh na teachtaireachta"
+
+# LOCALIZATION NOTE (failedToSendMessageTo): %S will be replaced by the first name or newsgroup that the message was being sent to.
+#: failedToSendMessageTo
+msgid "Failed to send message to %S"
+msgstr "Theip ar sheoladh na teachtaireachta chuig %S"
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -11742,11 +11770,6 @@ msgstr "Tá do theachtaireacht sábháilte san fhillteán %1$S ar %2$S."
 msgid "Do not show me this dialog box again."
 msgstr "Ná taispeáin an dialóg seo arís."
 
-# # Strings used by prompt when Quitting while in progress
-#: quitComposeWindowTitle
-msgid "Sending Message"
-msgstr "Teachtaireacht á Seoladh"
-
 # # LOCALIZATION NOTE (quitComposeWindowMessage): don't translate \n
 #: quitComposeWindowMessage2
 msgid ""
@@ -13293,7 +13316,7 @@ msgstr "Cóipeáil an S&eoladh Ríomhphoist"
 msgid "Preferences…"
 msgstr "Sainroghanna…"
 
-#: preferencesCmdMac.commandkey
+#: preferencesCmdMac.commandkey macBiffNotification_separator
 msgid ","
 msgstr ","
 
@@ -14060,6 +14083,22 @@ msgstr "Tá %2$S teachtaireacht nua ag %1$S"
 msgid "%1$S has %2$S new messages"
 msgstr "Tá %2$S teachtaireacht nua ag %1$S"
 
+# LOCALIZATION NOTE(macBiffNotification is Mac only):
+# %1$S is the number of new messages
+# %2$S is a list of names and/or email addresses separated by biffNotification_separator
+# %3$S is the number of new messages not displayed in the biff alert
+#: macBiffNotification_message
+msgid "%1$S new message from %2$S."
+msgstr "%1$S teachtaireacht nua ó %2$S."
+
+#: macBiffNotification_messages
+msgid "%1$S new messages from %2$S."
+msgstr "%1$S teachtaireacht nua ó %2$S."
+
+#: macBiffNotification_messages_extra
+msgid "%1$S new messages from %2$S and %3$S more."
+msgstr "%1$S teachtaireacht nua ó %2$S agus %3$S eile."
+
 # For the Quota tab in the mail folder properties dialog
 #: quotaUsedFree
 msgid "%S of %S KB used"
@@ -14798,6 +14837,10 @@ msgstr "Cuir sa chartlann"
 msgid "reply"
 msgstr "Freagair"
 
+#: hdrReplyAllButton.label
+msgid "reply all"
+msgstr "Freagair cách"
+
 # verb; translate as capital
 #: hdrForwardButton.label
 msgid "forward"
@@ -14805,7 +14848,7 @@ msgstr "Cuir ar aghaidh"
 
 #: hdrJunkButton.label
 msgid "junk"
-msgstr "dramhphost"
+msgstr "Dramhphost"
 
 #: trashButton.tooltiptext
 msgid "delete"
