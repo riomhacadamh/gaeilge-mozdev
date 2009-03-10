@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-12 23:09-0600\n"
+"POT-Creation-Date: 2009-03-09 22:15-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -173,7 +173,7 @@ msgstr "Greamaigh mar &Athfhriotal"
 msgid "&Find and Replace…"
 msgstr "&Aimsigh agus Ionadaigh…"
 
-#: findCmd.key
+#: findCmd.key feeds.wizardLongName.accesskey
 msgid "F"
 msgstr "F"
 
@@ -306,8 +306,9 @@ msgstr "Grea&maigh"
 #: deleteDirectory.label deleteDirectory.accesskey identitiesListDelete.label
 #: identitiesListDelete.accesskey delete.label delete.accesskey
 #: folderContextRemove.label folderContextRemove.accesskey
-#: DeleteHtmlDomain.label DeleteHtmlDomain.accesskey DeletePlainText.label
-#: DeletePlainText.accesskey deleteButton.label deleteButton.accesskey
+#: removeTagButton.label removeTagButton.accesskey DeleteHtmlDomain.label
+#: DeleteHtmlDomain.accesskey DeletePlainText.label DeletePlainText.accesskey
+#: deleteButton.label deleteButton.accesskey
 msgid "&Delete"
 msgstr "&Scrios"
 
@@ -426,7 +427,7 @@ msgstr "&Stíl Téacs"
 msgid "&Bold"
 msgstr "&Trom"
 
-#: styleBoldCmd.key Byte
+#: styleBoldCmd.key addressBookCmd.key Byte
 msgid "B"
 msgstr "B"
 
@@ -4897,9 +4898,11 @@ msgstr ""
 msgid "Know your rights…"
 msgstr "Bíodh do chearta ar eolas agat…"
 
-#: notifyText
-msgid "%S is free and open software from the non-profit Mozilla Foundation."
-msgstr "%S is free and open software from the non-profit Mozilla Foundation."
+# LOCALIZATION NOTE (notifyText): %S will be replaced by brandFullName from brand.properties
+#: notifyRightsText
+msgid ""
+"%S is free and open source software from the non-profit Mozilla Foundation."
+msgstr ""
 
 # #-#-#-#-#  tmp.XXXXcCd74t.po (thunderbird)  #-#-#-#-#
 # extracted from am-main.xul
@@ -5310,7 +5313,7 @@ msgid "f"
 msgstr "f"
 
 #: cmd.search.commandkey quickSearchCmd.key killThreadMenu.key
-#: killSubthreadMenu.key spellCheckInline1.accesskey focusSearch2.key
+#: killSubthreadMenu.key focusSearch2.key
 msgid "k"
 msgstr "k"
 
@@ -11969,7 +11972,7 @@ msgstr "Seo&l Níos Déanaí"
 msgid "Re&wrap"
 msgstr "&Timfhill Arís"
 
-#: editRewrapCmd.key rss.wizardLongName.accesskey
+#: editRewrapCmd.key
 msgid "R"
 msgstr "R"
 
@@ -12076,10 +12079,6 @@ msgstr "Seo&l Cóip Chuig"
 #: fileHereMenu.label
 msgid "File Here"
 msgstr "Comhdaigh Anseo"
-
-#: addressBookCmd.commandkey tagCmd2.key searchTermListButtonsFlexValue
-msgid "2"
-msgstr "2"
 
 #: accountManagerCmd.label accountManagerCmd.accesskey
 msgid "A&ccount Settings…"
@@ -12426,9 +12425,8 @@ msgid "&Starred Messages"
 msgstr "Teachtaireachtaí &Marcáilte"
 
 #: menuFavoriteFolder.label menuFavoriteFolder.accesskey
-#: folderContextFavoriteFolder.label folderContextFavoriteFolder.accesskey
-msgid "F&avorite Folder"
-msgstr "Mo Rogh&a Fillteán"
+msgid "Fa&vorite Folder"
+msgstr "Mo &Rogha Fillteán"
 
 #: folderPropsCmd.label folderPropsCmd.accesskey
 msgid "Pr&operties…"
@@ -12770,8 +12768,7 @@ msgstr "Freag&air Cách"
 msgid "For&ward As"
 msgstr "Seol ar A&ghaidh Mar"
 
-#: forwardAsInline.label forwardAsInline.accesskey inline.label
-#: inline.accesskey
+#: forwardAsInline.label forwardAsInline.accesskey
 msgid "&Inline"
 msgstr "&Inlíne"
 
@@ -12828,6 +12825,10 @@ msgstr "&Cóipeáil Anseo"
 #: tagMenu.label tagMenu.accesskey
 msgid "Ta&g"
 msgstr "Cli&b"
+
+#: tagCmd2.key searchTermListButtonsFlexValue
+msgid "2"
+msgstr "2"
 
 #: tagCmd3.key
 msgid "3"
@@ -13133,6 +13134,10 @@ msgstr "&Cuardach…"
 #: folderContextProperties.label folderContextProperties.accesskey
 msgid "&Properties…"
 msgstr "&Airíonna…"
+
+#: folderContextFavoriteFolder.label folderContextFavoriteFolder.accesskey
+msgid "F&avorite Folder"
+msgstr "Mo Rogh&a Fillteán"
 
 #: folderContextSettings.label folderContextSettings.accesskey
 msgid "S&ettings…"
@@ -14174,7 +14179,7 @@ msgstr "Sábháil Mar…"
 msgid "Detach…"
 msgstr "Díscoir…"
 
-#: deleteLabelAccesskey
+#: deleteLabelAccesskey spellCheckInline1.accesskey
 msgid "E"
 msgstr "E"
 
@@ -14449,6 +14454,15 @@ msgstr "Anailís dramhphoist %S déanta"
 #: processingJunkMessages
 msgid "Processing Junk Messages"
 msgstr "Teachtaireachtaí Dramhphoist á bPróiseáil"
+
+#: fileNotFoundTitle
+msgid "File Not Found"
+msgstr "Comhad Gan Aimsiú"
+
+# LOCALIZATION NOTE(fileNotFoundMsg): %S is the filename
+#: fileNotFoundMsg
+msgid "The file %S does not exist."
+msgstr "Níl comhad %S ann."
 
 # second person direct object pronoun; used in the collapsed header view if
 # the user is in the To or Cc field of a message
@@ -14865,7 +14879,7 @@ msgstr "Socruithe dramhphoist"
 msgid "Offline settings"
 msgstr "Socruithe as líne"
 
-#: rssSectionHdr.label rss.wizardLongName
+#: rssSectionHdr.label
 msgid "RSS News &amp; Blogs"
 msgstr "Nuacht RSS &amp; Blaganna"
 
@@ -15307,10 +15321,6 @@ msgstr "Fillteáin Amháin"
 msgid "Messages Only"
 msgstr "Teachtaireachtaí Amháin"
 
-#: newsblogTitle.label
-msgid "RSS Account Settings"
-msgstr "Socruithe Cuntais RSS"
-
 #: biffStart.label biffStart.accesskey
 msgid "Chec&k for new articles every "
 msgstr "&Lorg altanna nua gach "
@@ -15329,14 +15339,14 @@ msgstr ""
 msgid "&Manage Subscriptions…"
 msgstr "Bainistiú na &Síntiús…"
 
-# entities from defaults/isp/rss.rdf
-#: rss.accountName
-msgid "News &amp; Blogs"
-msgstr "Nuacht &amp; Blaganna"
+# entities from rss.rdf
+#: feeds.accountName feeds.wizardLongName
+msgid "Blogs &amp; News Feeds"
+msgstr "Blaganna &amp; Fothaí Nuachta"
 
-#: rss.wizardShortName
-msgid "RSS"
-msgstr "RSS"
+#: feeds.wizardShortName
+msgid "Feeds"
+msgstr "Fothaí"
 
 # # Strings used in the Account Manager
 #: prefPanel-newsblog
@@ -15361,9 +15371,9 @@ msgid "S&how the article summary instead of loading the web page"
 msgstr "Taispeáin ac&hoimre an ailt in áit an leathanach Gréasáin a íosluchtú"
 
 # Subscription Dialog
-#: newsBlogSubscriptions.label
-msgid "RSS Subscriptions"
-msgstr "Síntiúis RSS"
+#: feedSubscriptions.label
+msgid "Feed Subscriptions"
+msgstr "Síntiúis Fhotha"
 
 #: subscriptionDesc.label
 msgid ""
@@ -15385,9 +15395,9 @@ msgstr "&Iompórtáil"
 msgid "E&xport"
 msgstr "Ea&spórtáil"
 
-#: subscribe-validating
-msgid "Verifying the RSS feed…"
-msgstr "Fotha RSS á fhíorú…"
+#: subscribe-validating-feed
+msgid "Verifying the feed…"
+msgstr "Fotha á fhíorú…"
 
 #: subscribe-cancelSubscription
 msgid "Are you sure you wish to cancel subscribing to the current feed?"
@@ -15399,9 +15409,9 @@ msgstr ""
 msgid "Subscribing to a Feed…"
 msgstr "Ag liostáil le Fotha…"
 
-#: subscribe-noFeedSelected
-msgid "<no RSS feed selected>"
-msgstr "<níl fotha RSS roghnaithe>"
+#: subscribe-noFeedIsSelected
+msgid "<no feed selected>"
+msgstr "<níl aon fhotha roghnaithe>"
 
 #: subscribe-feedAlreadySubscribed
 msgid "You already have a subscription for this feed."
@@ -15419,13 +15429,15 @@ msgstr "Roghnaigh comhad OPML le hiompórtáil"
 msgid "Export feeds as an OPML file"
 msgstr "Easpórtáil fothaí mar chomhad OPML"
 
-#: subscribe-OPMLExportFileTitle
-msgid "Thunderbird OPML Export"
-msgstr "Easpórtáil OPML Thunderbird"
+# # LOCALIZATION NOTE(subscribe-OPMLExportFileDialogTitle): %S is the brandShortName
+#: subscribe-OPMLExportFileDialogTitle
+msgid "%S OPML Export"
+msgstr "Easpórtáil OPML %S"
 
-#: subscribe-OPMLExportFileName
-msgid "MyThunderbirdFeeds.opml"
-msgstr "FothaiThunderbird.opml"
+# # LOCALIZATION NOTE(subscribe-OPMLExportDefaultFileName): %S is the brandShortName
+#: subscribe-OPMLExportDefaultFileName
+msgid "My%SFeeds.opml"
+msgstr "My%SFeeds.opml"
 
 # LOCALIZATION NOTE: %S is the name of the OPML file the user tried to import.
 #: subscribe-errorInvalidOPMLFile
@@ -15451,29 +15463,37 @@ msgstr ""
 "An bhfuil tú cinnte gur mian leat díliostáil ón bhfotha: \n"
 " %S?"
 
-# when downloading new feed items from the subscribe dialog.
-# LOCALIZATION NOTE: Do not translate %d in the following line.
-# The first %S will receive the number of messages received so far;
-# the second %S will receive the total number of messages
-#: subscribe-fetchingFeedItems
-msgid "Downloading feed articles (%S of %S)"
-msgstr "Altanna fotha á n-íosluchtú (%S as %S)"
+# # LOCALIZATION NOTE(subscribe-gettingFeedItems):
+# #  - The first %S is the number of articles processed so far;
+# #  - The second %S is the total number of items
+#: subscribe-gettingFeedItems
+msgid "Downloading feed articles (%S of %S)…"
+msgstr "Altanna fotha á n-íosluchtú (%S as %S)…"
 
 #: newsblog-noNewArticlesForFeed
 msgid "There are no new articles for this feed."
 msgstr "Níl aon alt nua ón bhfotha seo."
 
+#: newsblog-networkErrorTitle
+msgid "Network Error"
+msgstr "Earráid Líonra"
+
 #: newsblog-networkError
 msgid "%S could not be found. Please check the name and try again."
 msgstr "%S gan aimsiú. Deimhnigh an t-ainm agus bain triail eile as."
 
-#: newsblog-invalidFeed
-msgid "%S is not a valid RSS feed."
-msgstr "Ní fotha bailí RSS é %S."
+#: newsblog-feedNotValidTitle
+msgid "Invalid Feed"
+msgstr "Fotha Neamhbhailí"
 
-#: newsblog-getNewMailCheck
-msgid "Checking RSS feeds for new items"
-msgstr "Míreanna nua á lorg ó fhothaí RSS"
+# # LOCALIZATION NOTE(newsblog-feedNotValid): %S is the feed URL
+#: newsblog-feedNotValid
+msgid "%S is not a valid feed."
+msgstr "Ní fotha bailí é %S."
+
+#: newsblog-getNewMsgsCheck
+msgid "Checking feeds for new items…"
+msgstr "Míreanna nua á lorg ó fhothaí…"
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -15802,8 +15822,8 @@ msgstr "Líonra &amp; Spás Diosca"
 
 # General Settings
 #: enableGlodaSearch.label enableGlodaSearch.accesskey
-msgid "Enable Global Search and &Indexer"
-msgstr "Cumasaigh Cuardach Cuimsitheach agus an t&Inneacsóir"
+msgid "&Enable Global Search and Indexer"
+msgstr "Cumasaigh Cuardach Cuimsith&each agus an tInneacsóir"
 
 #: systemDefaults.label
 msgid "System Defaults"
@@ -15811,9 +15831,9 @@ msgstr "Réamhshocrú an Chórais"
 
 #: alwaysCheckDefault.label alwaysCheckDefault.accesskey
 msgid ""
-"A&lways check to see if &brandShortName; is the default mail client on startup"
+"&Always check to see if &brandShortName; is the default mail client on startup"
 msgstr ""
-"Seiceái&l i gcónaí ag am tosaithe an é &brandShortName; an cliant "
+"Seiceáil i gcónaí &ag am tosaithe an é &brandShortName; an cliant "
 "réamhshocraithe ríomhphoist"
 
 #: checkNow.label checkNow.accesskey
@@ -15825,8 +15845,8 @@ msgid "Advanced Configuration"
 msgstr "Cumraíocht Chasta"
 
 #: configEdit.label configEdit.accesskey
-msgid "Confi&g Editor…"
-msgstr "Ea&garthóir Cumraíochta…"
+msgid "&Config Editor…"
+msgstr "Eagarthóir &Cumraíochta…"
 
 #: returnReceiptsInfo.label
 msgid "Determine how &brandShortName; handles return receipts"
@@ -15845,26 +15865,25 @@ msgstr "Léamh"
 msgid "Display"
 msgstr "Taispeáint"
 
-# General Settings
 #: showCondensedAddresses.label showCondensedAddresses.accesskey
-msgid "Show only dis&play name for people in my address book"
-msgstr "Ná tais&peáin ach an t-ainm taispeána do dhaoine i mo leabhar seoltaí"
+msgid "&Show only display name for people in my address book"
+msgstr "Ná tai&speáin ach an t-ainm taispeána do dhaoine i mo leabhar seoltaí"
 
 #: autoMarkAsRead.label autoMarkAsRead.accesskey
 msgid "&Automatically mark messages as read"
 msgstr "Marcáil teachtaireachtaí mar léite go h&uathoibríoch"
 
 #: markAsReadNoDelay.label markAsReadNoDelay.accesskey
-msgid "Imme&diately on display"
-msgstr "Ar &taispeáint láithreach"
+msgid "Immediately &on display"
+msgstr "Ar t&aispeáint láithreach"
 
 # "After displaying for [___] seconds",
 # using (markAsReadDelay.label) and a number (secondsLabel.label).
 #: markAsReadDelay.label markAsReadDelay.accesskey
 msgid ""
 "_: This will concatenate to\n"
-"Aft&er displaying for"
-msgstr "Tar éis taisp&eáint ar feadh"
+"After &displaying for"
+msgstr "Tar éis taispeáint ar fea&dh"
 
 #: secondsLabel.label
 msgid "seconds"
@@ -15875,12 +15894,12 @@ msgid "Open messages in:"
 msgstr "Oscail teachtaireachtaí:"
 
 #: reuseExpRadio0.label reuseExpRadio0.accesskey
-msgid "A new message w&indow"
+msgid "A &new message window"
 msgstr "I bhfuinneog &nua teachtaireachta"
 
 #: reuseExpRadio1.label reuseExpRadio1.accesskey
-msgid "An e&xisting message window"
-msgstr "I bh&fuinneog theachtaireachta atá ann"
+msgid "An &existing message window"
+msgstr "I bhfuinn&eog theachtaireachta atá ann"
 
 #: autoCheck.label
 msgid "Automatically check for updates to:"
@@ -15891,33 +15910,32 @@ msgid "&brandShortName;"
 msgstr "&brandShortName;"
 
 #: enableAddonsUpdate.label enableAddonsUpdate.accesskey
-msgid "Ins&talled Add-ons"
-msgstr "Breiseái&n Shuiteáilte"
+msgid "Installed &Add-ons"
+msgstr "B&reiseáin Shuiteáilte"
 
 #: whenUpdatesFound.label
 msgid "When updates to &brandShortName; are found,"
 msgstr "Agus nuashonruithe do &brandShortName; aimsithe,"
 
 #: modeAskMe.label modeAskMe.accesskey
-msgid "As&k me what I want to do"
-msgstr "Fiafraigh díom &cad atá le déanamh"
+msgid "Ask &me what I want to do"
+msgstr "Fiafraigh díom cad atá l&e déanamh"
 
 #: modeAutomatic.label modeAutomatic.accesskey
-msgid "Auto&matically download and install the update"
+msgid "Automatically &download and install the update"
 msgstr "Íos&luchtaigh agus suiteáil an nuashonrú go huathoibríoch"
 
 #: modeAutoAddonWarn.label modeAutoAddonWarn.accesskey
-msgid "Warn me if this will disable any of my add&-ons"
-msgstr "Tabhair rabhadh dom má tá breiseán &díchumasaithe dá mbarr"
+msgid "&Warn me if this will disable any of my add-ons"
+msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 
 #: showUpdates.label showUpdates.accesskey
-msgid "Show Update Histor&y"
-msgstr "Taispeáin Stair na &Nuashonruithe"
+msgid "&Show Update History"
+msgstr "Tai&speáin Stair na Nuashonruithe"
 
-# Networking and Disk Space
 #: showSettings.label showSettings.accesskey
-msgid "Setti&ngs…"
-msgstr "Soc&ruithe…"
+msgid "&Settings…"
+msgstr "&Socruithe…"
 
 #: proxiesConfigure.label
 msgid "Configure how &brandShortName; connects to the Internet"
@@ -15936,8 +15954,8 @@ msgid "&Offline…"
 msgstr "&As Líne…"
 
 #: offlineCompact.label offlineCompact.accesskey
-msgid "Compact folders when it will sa&ve over"
-msgstr "Dlúthaigh fillteáin má sá&bhálfar níos mó ná"
+msgid "Comp&act folders when it will save over"
+msgstr "Dlúth&aigh fillteáin má sábhálfar níos mó ná"
 
 #: useCacheBefore.label useCacheBefore.accesskey
 msgid "&Use up to"
@@ -15951,20 +15969,21 @@ msgstr "MB spás don taisce"
 msgid "&Clear Now"
 msgstr "&Bánaigh Anois"
 
+# Certificates
 #: viewCertificates.label viewCertificates.accesskey
-msgid "View Certific&ates"
-msgstr "Taispeáin Te&astais"
+msgid "View &Certificates"
+msgstr "Taispeáin Tea&stais"
 
 #: viewCRLs.label viewCRLs.accesskey
-msgid "R&evocation Lists"
-msgstr "Liostaí Cúlghairm&e"
+msgid "&Revocation Lists"
+msgstr "&Liostaí Cúlghairme"
 
 #: validation.label validation.accesskey
-msgid "Vali&dation"
+msgid "&Validation"
 msgstr "&Bailíochtú"
 
 #: viewSecurityDevices.label viewSecurityDevices.accesskey
-msgid "Sec&urity Devices"
+msgid "&Security Devices"
 msgstr "Gléasanna &Slándála"
 
 #: changeAction.title
@@ -16011,16 +16030,20 @@ msgid "&ask me where to save the file"
 msgstr "fi&afraigh díom cá sábhálfar an comhad"
 
 #: forwardMsg.label forwardMsg.accesskey
-msgid "For&ward messages:"
-msgstr "Cuir teachtaireachtaí ar &aghaidh:"
+msgid "&Forward messages:"
+msgstr "Cuir teachtaireachtaí ar a&ghaidh:"
 
-#: asAttachment.label asAttachment.accesskey
-msgid "&As Attachment"
-msgstr "M&ar Iatán"
+#: inline.label
+msgid "Inline"
+msgstr "Inlíne"
+
+#: asAttachment.label
+msgid "As Attachment"
+msgstr "Mar Iatán"
 
 #: addExtension.label addExtension.accesskey
-msgid "add extension to &file name"
-msgstr "cuir iarmhír le h&ainm an chomhaid"
+msgid "add &extension to file name"
+msgstr "cuir iarmhír l&e hainm an chomhaid"
 
 #: font.label font.accesskey
 msgid "Fo&nt:"
@@ -16030,9 +16053,9 @@ msgstr "C&ló:"
 msgid "Si&ze:"
 msgstr "&Méid:"
 
-#: fontColor.label fontColor.accesskey
-msgid "Te&xt Color:"
-msgstr "Dath an Téa&cs:"
+#: fontColor.label fontColor.accesskey textColor.label textColor.accesskey
+msgid "&Text Color:"
+msgstr "Dath an &Téacs:"
 
 #: restoreHTMLDefaults.label restoreHTMLDefaults.accesskey
 msgid "&Restore Defaults"
@@ -16046,26 +16069,22 @@ msgstr "&Ceartaigh litriú sula seolfar é"
 msgid "Enable spell check as you type"
 msgstr "Cumasaigh litriú beo"
 
-#: languagePopup.label languagePopup.accessKey
-msgid "Lan&guage:"
-msgstr "Tean&ga:"
-
 #: downloadDictionaries.label
 msgid "Download More Dictionaries"
 msgstr "Íosluchtaigh Tuilleadh Foclóirí"
 
 #: warnOnSendAccelKey.label warnOnSendAccelKey.accesskey
-msgid "Conf&irm when using keyboard shortcut to send message"
+msgid "&Confirm when using keyboard shortcut to send message"
 msgstr ""
-"De&imhnigh agus aicearra méarchláir á úsáid chun teachtaireacht a sheoladh"
+"Deimhnigh agus ai&cearra méarchláir á úsáid chun teachtaireacht a sheoladh"
 
 #: autoSave.label autoSave.accesskey
-msgid "A&uto Save every"
-msgstr "Sábháil go h&uathoibríoch gach"
+msgid "&Auto Save every"
+msgstr "Sábháil go hu&athoibríoch gach"
 
 #: emailCollectionPicker.label emailCollectionPicker.accesskey
-msgid "Au&tomatically add outgoing e-mail addresses to my:"
-msgstr "Cuir seol&taí ríomhphoist amach go huathoibríoch le mo:"
+msgid "&Automatically add outgoing e-mail addresses to my:"
+msgstr "Cuir seolt&aí ríomhphoist amach go huathoibríoch le mo:"
 
 #: addressingTitle.label
 msgid "Address Autocompletion"
@@ -16076,8 +16095,8 @@ msgid "When addressing messages, look for matching entries in:"
 msgstr "Agus seoltaí á gcur le teachtaireachtaí, lorg iontrálacha oiriúnacha i:"
 
 #: addressingEnable.label addressingEnable.accesskey
-msgid "Local &Address Books"
-msgstr "Le&abhar Seoltaí Logánta"
+msgid "&Local Address Books"
+msgstr "Leabhar Seoltaí &Logánta"
 
 #: directories.label directories.accesskey
 msgid "&Directory Server:"
@@ -16222,10 +16241,6 @@ msgstr "Dathanna"
 msgid "When displaying messages, use the following colors:"
 msgstr "Agus teachtaireachtaí a dtaispeáint, úsáid na dathanna seo:"
 
-#: textColor.label textColor.accesskey
-msgid "&Text Color:"
-msgstr "Dath an &Téacs:"
-
 # LOCALIZATION NOTE : (emoticonsAndStructs.label) 'Emoticons' are also known as 'Smileys', e.g. :-)
 #: convertEmoticons.label convertEmoticons.accesskey
 msgid "&Display emoticons as graphics"
@@ -16237,10 +16252,6 @@ msgid "Tags can be used to categorize and prioritize your messages."
 msgstr ""
 "Is féidir clibeanna a úsáid le catagóirí agus tosaíochtaí a chur le do chuid "
 "teachtaireachtaí."
-
-#: removeTagButton.label removeTagButton.accesskey
-msgid "De&lete"
-msgstr "S&crios"
 
 # Fonts
 #: fontAndEncodingsDescription.label
@@ -16870,24 +16881,24 @@ msgid "M&ove them to the account's &quot;Junk&quot; folder"
 msgstr "B&og go dtí an fillteán &quot;Dramhphost&quot; don chuntas seo iad"
 
 #: manualMarkModeDelete.label manualMarkModeDelete.accesskey
-msgid "Dele&te them"
-msgstr "S&crios iad"
+msgid "&Delete them"
+msgstr "Scrios ia&d"
 
 #: markAsReadOnSpam.label markAsReadOnSpam.accesskey
-msgid "Mar&k messages determined to be Junk as read"
+msgid "&Mark messages determined to be Junk as read"
 msgstr "&Marcáil teachtaireachtaí ar Dramhphost iad mar léite"
 
 #: enableJunkLogging.label enableJunkLogging.accesskey
-msgid "Enable junk filter lo&gging"
-msgstr "Cumasaigh lo&gáil don scagaire dramhphoist"
+msgid "&Enable junk filter logging"
+msgstr "Cumasaigh logáil don scagair&e dramhphoist"
 
 #: openJunkLog.label openJunkLog.accesskey
-msgid "S&how log"
-msgstr "&Taispeáin an logchomhad"
+msgid "&Show log"
+msgstr "Tai&speáin an logchomhad"
 
 #: resetTrainingData.label resetTrainingData.accesskey
-msgid "Reset Training &Data"
-msgstr "Glan na Sonraí &Traenála"
+msgid "&Reset Training Data"
+msgstr "Glan na Son&raí Traenála"
 
 # Phishing Detector
 #: phishingDetector1.intro
@@ -16900,8 +16911,8 @@ msgstr ""
 "chuardach iontu."
 
 #: enablePhishingDetector1.label enablePhishingDetector1.accesskey
-msgid "T&ell me if the message I'm reading is a suspected email scam"
-msgstr "Inis dom má mh&eastar gur camscéim í an teachtaireacht atá á léamh agam"
+msgid "&Tell me if the message I'm reading is a suspected email scam"
+msgstr "Inis dom má mheas&tar gur camscéim í an teachtaireacht atá á léamh agam"
 
 #: useDownloadedList.label useDownloadedList.accesskey
 msgid "&Use a downloaded list of suspected email scams"
@@ -16915,8 +16926,8 @@ msgstr ""
 "mheabhrú."
 
 #: useMasterPassword.label useMasterPassword.accesskey
-msgid "Use a &master password"
-msgstr "Úsáid prío&mhfhocal faire"
+msgid "&Use a master password"
+msgstr "Úsáid &príomhfhocal faire"
 
 #: masterPassword.intro
 msgid ""
@@ -16945,9 +16956,9 @@ msgstr ""
 "logánta iad."
 
 #: antiVirus.label antiVirus.accesskey
-msgid "A&llow anti-virus clients to quarantine individual incoming messages"
+msgid "&Allow anti-virus clients to quarantine individual incoming messages"
 msgstr ""
-"Ceadaigh do ch&liaint fhrithvíris teachtaireachtaí isteach a chur ar coraintín"
+"Ce&adaigh do chliaint fhrithvíris teachtaireachtaí isteach a chur ar coraintín"
 
 #: returnSome.label returnSome.accesskey
 msgid "Allow &return receipts for some messages"
@@ -17304,9 +17315,13 @@ msgstr "Cathair"
 msgid "Street"
 msgstr "Sráid"
 
-#: 33 34 35 36 37 38 39 40 41 42 43
+#: 33 34 35 36 37 38 39 40 41 42
 msgid "reserved for AB"
 msgstr "curtha in áirithe do AB"
+
+#: 43
+msgid "From, To or CC"
+msgstr "Ó, Chuig, nó CC"
 
 #: 44
 msgid "Junk Score Origin"
@@ -18730,6 +18745,22 @@ msgstr "Bhraith an cliant lúb"
 msgid "Referral hop limit exceeded"
 msgstr "Imithe thar teorainn na bpreab atreoraithe"
 
+#: settingsChangePreferences.label
+msgid ""
+"Settings can be changed using the Attachments tab in &brandShortName;'s "
+"Preferences."
+msgstr ""
+"Is féidir socruithe a athrú trí úsáid an chluaisín Iatáin i Sainroghanna "
+"&brandShortName;."
+
+#: settingsChangeOptions.label
+msgid ""
+"Settings can be changed using the Attachments tab in &brandShortName;'s "
+"Options."
+msgstr ""
+"Is féidir socruithe a athrú trí úsáid an chluaisín Iatáin i Roghanna "
+"&brandShortName;."
+
 # plugins URLs
 #: MOZ_LANGPACK_CREATOR
 msgid "mozilla.org"
@@ -19514,4 +19545,3 @@ msgid ""
 msgstr ""
 "Tá do chuid nuashonruithe á suiteáil ag %MOZ_APP_DISPLAYNAME% agus tosóidh sé "
 "go luath…"
-
