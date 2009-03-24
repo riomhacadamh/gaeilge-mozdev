@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-09 22:15-0500\n"
+"POT-Creation-Date: 2009-03-23 20:19-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -517,8 +517,7 @@ msgid "&Remove Named Anchors"
 msgstr "Bain Ancai&rí Ainmnithe"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
-#: formatRemoveNamedAnchors.key selectAllCmd.key
-#: accountManagerCmdUnix.accesskey saveLabelAccesskey
+#: formatRemoveNamedAnchors.key selectAllCmd.key saveLabelAccesskey
 msgid "A"
 msgstr "W"
 
@@ -2228,7 +2227,7 @@ msgstr "Teagmhais JavaScript"
 msgid "Click on an item above to edit its value"
 msgstr "Cliceáil mír thuas chun é a chur in eagar"
 
-#: removeAttribute.label remove.label
+#: removeAttribute.label
 msgid "Remove"
 msgstr "Bain"
 
@@ -3188,7 +3187,7 @@ msgstr "&Cineál an Réimse"
 msgid "Text"
 msgstr "Téacs"
 
-#: password.value treehead.password.label
+#: password.value
 msgid "Password"
 msgstr "Focal Faire"
 
@@ -6916,6 +6915,18 @@ msgstr ""
 "Is féidir leat cóip logánta den chomhadlann seo a íosluchtú ionas go mbeidh "
 "sé ar fáil duit agus tú ag obair as líne."
 
+#: saslMechanism.label saslMechanism.accesskey
+msgid "Login &method: "
+msgstr ""
+
+#: saslOff.label saslOff.accesskey
+msgid "Simp&le"
+msgstr ""
+
+#: saslGSSAPI.label saslGSSAPI.accesskey
+msgid "&Kerberos (GSSAPI)"
+msgstr ""
+
 # Localization note: this is here because the width of the dialog
 # is determined by the width of the base DN box; and that is likely
 # to vary somewhat with the language.
@@ -7855,7 +7866,8 @@ msgstr "Cuntas speisialta é seo. Níl aon aitheantas comhcheangailte leis."
 msgid "Message Storage"
 msgstr "Stóráil na dTeachtaireachtaí"
 
-#: securityTitle.label securityTab.label prefPanel-smime securityButton.label
+#: securityTitle.label securityTab.label prefPanel-smime paneSecurity.title
+#: securityButton.label
 msgid "Security"
 msgstr "Slándáil"
 
@@ -8245,9 +8257,9 @@ msgstr "R-Phost"
 msgid "Newsgroups"
 msgstr "Grúpaí-Nuachta"
 
-#: rss.label
-msgid "RSS Feeds"
-msgstr "Fothaí RSS"
+#: feeds.label feedsSectionHdr.label feeds.wizardShortName
+msgid "Feeds"
+msgstr "Fothaí"
 
 #: checkOnStartup.label checkOnStartup.accesskey
 msgid "&Always perform this check when starting &brandShortName;"
@@ -12901,25 +12913,21 @@ msgstr "Rith na Rialtáin Dramh&phoist"
 msgid "&Open Message"
 msgstr "&Oscail Teachtaireacht"
 
+#: messengerCmd.label messengerCmd.accesskey
+msgid "Mail &amp; &Newsgroups"
+msgstr ""
+
+#: addressBookCmd.label addressBookCmd.accesskey
+msgid "Address &Book"
+msgstr ""
+
 #: addons.label addons.accesskey
-msgid "A&dd-ons"
+msgid "&Add-ons"
 msgstr "&Breiseáin"
 
 #: activitymanager.label activitymanager.accesskey
-msgid "&Activity Manager"
-msgstr "B&ainisteoir Gníomhaíochta"
-
-#: runJunkControls.label runJunkControls.accesskey
-msgid "R&un Junk Mail Controls on Folder"
-msgstr "Rith na Rialtái&n Dramhphoist san Fhillteán"
-
-#: deleteJunk.label deleteJunk.accesskey
-msgid "De&lete Mail Marked as Junk in Folder"
-msgstr "Scrios Post Marcái&lte mar Dhramhphost san Fhillteán"
-
-#: errorConsoleCmd.label errorConsoleCmd.accesskey
-msgid "Error Co&nsole"
-msgstr "Co&nsól Earráide"
+msgid "Acti&vity Manager"
+msgstr ""
 
 #: filtersCmd.label filtersCmd.accesskey
 msgid "Message &Filters…"
@@ -12930,12 +12938,39 @@ msgid "&Run Filters on Folder"
 msgstr "&Rith Scagairí ar an Fhillteán"
 
 #: filtersApplyToSelection.label filtersApplyToSelection.accesskey
-msgid "Run Filters on &Selected Messages"
-msgstr "Rith Scagairí ar na Teachtaireachtaí &Roghnaithe"
+msgid "R&un Filters on Selected Messages"
+msgstr ""
 
 #: filtersApplyToMessage.label filtersApplyToMessage.accesskey
-msgid "Run Filter&s on Message"
-msgstr "Rith &Scagairí ar an Teachtaireacht"
+msgid "R&un Filters on Message"
+msgstr ""
+
+#: runJunkControls.label runJunkControls.accesskey
+msgid "Run Junk Mail &Controls on Folder"
+msgstr ""
+
+#: deleteJunk.label deleteJunk.accesskey
+msgid "&Delete Mail Marked as Junk in Folder"
+msgstr ""
+
+#: importCmd.label importCmd.accesskey
+msgid "I&mport…"
+msgstr "Io&mpórtáil…"
+
+#: errorConsoleCmd.label errorConsoleCmd.accesskey
+msgid "&Error Console"
+msgstr ""
+
+#: accountManagerCmd.label accountManagerCmd.accesskey
+msgid "Account &Settings…"
+msgstr ""
+
+# which is placed under the Edit menu on Unix systems
+#: accountManagerCmdUnix.accesskey
+msgid ""
+"_: belongs to accountManagerCmd.label,\n"
+"A"
+msgstr ""
 
 # Mail Toolbar
 #: getMsgButton.label
@@ -14886,11 +14921,7 @@ msgstr "Socruithe dramhphoist"
 msgid "Offline settings"
 msgstr "Socruithe as líne"
 
-#: rssSectionHdr.label
-msgid "RSS News &amp; Blogs"
-msgstr "Nuacht RSS &amp; Blaganna"
-
-#: subscibeRSS.label
+#: subscribeFeeds.label
 msgid "Manage subscriptions"
 msgstr "Bainistigh síntiúis"
 
@@ -15350,10 +15381,6 @@ msgstr "Bainistiú na &Síntiús…"
 #: feeds.accountName feeds.wizardLongName
 msgid "Blogs &amp; News Feeds"
 msgstr "Blaganna &amp; Fothaí Nuachta"
-
-#: feeds.wizardShortName
-msgid "Feeds"
-msgstr "Fothaí"
 
 # # Strings used in the Account Manager
 #: prefPanel-newsblog
@@ -16748,10 +16775,6 @@ msgstr "width: 58em;"
 msgid "width: 42em; min-height: 38em;"
 msgstr "width: 42em; min-height: 38em;"
 
-#: panePrivacy.title
-msgid "Privacy"
-msgstr "Príobháideachas"
-
 #: html_domainsAddDomainTitle add.htmltitle
 msgid "Add HTML Domain Name"
 msgstr "Cuir Ainm Fearainn HTML Leis"
@@ -16860,6 +16883,22 @@ msgstr "Roghnaigh Fuaim"
 #: alreadyDefault
 msgid "%S is already set as your default mail client."
 msgstr "Is é %S an cliant ríomhphoist réamhshocraithe cheana."
+
+#: returnSome.label returnSome.accesskey
+msgid "Allow &return receipts for some messages"
+msgstr "Ceadaigh admhálacha léite le haghaidh teachtaireachtaí ái&rithe"
+
+#: notInToCc.label notInToCc.accesskey
+msgid "I&f I'm not in the To or Cc of the message:"
+msgstr "Mura bh&fuil mé i \"Chuig:\" nó i \"Cc:\" na teachtaireachta:"
+
+#: outsideDomain.label outsideDomain.accesskey
+msgid "If &the sender is outside my domain:"
+msgstr "Má tá an seol&tóir taobh amuigh de m'fhearann:"
+
+#: otherCases.label otherCases.accesskey
+msgid "In &all other cases:"
+msgstr "I ng&ach cás eile:"
 
 #: itemPhishing.label
 msgid "E-mail Scams"
@@ -16970,22 +17009,6 @@ msgid "&Allow anti-virus clients to quarantine individual incoming messages"
 msgstr ""
 "Ce&adaigh do chliaint fhrithvíris teachtaireachtaí isteach a chur ar coraintín"
 
-#: returnSome.label returnSome.accesskey
-msgid "Allow &return receipts for some messages"
-msgstr "Ceadaigh admhálacha léite le haghaidh teachtaireachtaí ái&rithe"
-
-#: notInToCc.label notInToCc.accesskey
-msgid "I&f I'm not in the To or Cc of the message:"
-msgstr "Mura bh&fuil mé i \"Chuig:\" nó i \"Cc:\" na teachtaireachta:"
-
-#: outsideDomain.label outsideDomain.accesskey
-msgid "If &the sender is outside my domain:"
-msgstr "Má tá an seol&tóir taobh amuigh de m'fhearann:"
-
-#: otherCases.label otherCases.accesskey
-msgid "In &all other cases:"
-msgstr "I ng&ach cás eile:"
-
 #: dialog.title
 msgid "Send Options"
 msgstr "Roghanna Seolta"
@@ -17039,43 +17062,6 @@ msgstr "Fearainn &HTML"
 #: PlainTextTab.label PlainTextTab.accesskey
 msgid "&Plain Text Domains"
 msgstr "Fearainn &Ghnáth-Théacs"
-
-#: windowtitle.label
-msgid "Password Manager"
-msgstr "Bainisteoir na bhFocal Faire"
-
-#: tab.signonsstored.label
-msgid "Passwords Saved"
-msgstr "Focail fhaire a sábháladh"
-
-#: tab.signonsnotstored.label
-msgid "Passwords Never Saved"
-msgstr "Suíomhanna nach sábhálfar focail fhaire uathu"
-
-#: spiel.signonsstored.label
-msgid "Password Manager has saved login information for the following sites:"
-msgstr ""
-"Tá eolas logála isteach sábháilte ag Bainisteoir na bhFocal Faire do na "
-"suíomhanna seo:"
-
-#: spiel.signonsnotstored.label
-msgid ""
-"Password Manager will never save login information for the following sites:"
-msgstr ""
-"Ní shábhálfaidh Bainisteoir na bhFocal Faire eolas logála isteach choíche do "
-"na suíomhanna seo:"
-
-#: treehead.site.label
-msgid "Site"
-msgstr "Suíomh"
-
-#: treehead.username.label
-msgid "Username"
-msgstr "Ainm an Úsáideora"
-
-#: removeall.label
-msgid "Remove All"
-msgstr "Bain Uile"
 
 #: enterValidEmail
 msgid "Please enter a valid email address."
@@ -17330,8 +17316,8 @@ msgid "reserved for AB"
 msgstr "curtha in áirithe do AB"
 
 #: 43
-msgid "From, To or CC"
-msgstr "Ó, Chuig, nó CC"
+msgid "From, To, CC or BCC"
+msgstr ""
 
 #: 44
 msgid "Junk Score Origin"
@@ -17466,6 +17452,10 @@ msgstr "atá i mo leabhar seoltaí"
 #: 17
 msgid "isn't in my address book"
 msgstr "nach bhfuil i mo leabhar seoltaí"
+
+#: 18
+msgid "isn't empty"
+msgstr ""
 
 # these are the fields that get inserted in the search line
 # for "and" searches, this looks like:
@@ -19556,4 +19546,3 @@ msgid ""
 msgstr ""
 "Tá do chuid nuashonruithe á suiteáil ag %MOZ_APP_DISPLAYNAME% agus tosóidh sé "
 "go luath…"
-

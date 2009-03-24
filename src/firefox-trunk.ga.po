@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-09 22:14-0500\n"
+"POT-Creation-Date: 2009-03-23 20:19-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -133,8 +133,8 @@ msgstr "&lt; Maidir le &brandFullName;"
 #: aboutLink.accesskey selectAllCmd.key xpinstallPromptAllowButton.accesskey
 #: refreshBlocked.goButton.accesskey offlineApps.allowAccessKey
 #: safebrowsing.notAnAttackButton.accessKey addHandlerAddButtonAccesskey
-#: selectall.key mediaSaveAs.accesskey search.scopeHistory.accesskey
-#: cmd.about.accesskey askLaterButton.accesskey acceptTermsButton.accesskey
+#: selectall.key mediaSaveAs.accesskey cmd.about.accesskey
+#: askLaterButton.accesskey acceptTermsButton.accesskey
 msgid "A"
 msgstr "W"
 
@@ -209,6 +209,7 @@ msgstr "do stair le déanaí a ghlanadh"
 
 #: privatebrowsingpage.clearRecentHistoryAfter rights.intro-point2c
 #: rights.intro-point3c rights.intro-point4c stopCmd.macCommandKey
+#: rememberActions.post.label dontrememberActions.post.label
 msgid "."
 msgstr "."
 
@@ -512,9 +513,13 @@ msgstr "Bíodh do chearta ar eolas agat…"
 msgid "K"
 msgstr "K"
 
-#: notifyText
-msgid "%S is free and open software from the non-profit Mozilla Foundation."
-msgstr "%S is free and open software from the non-profit Mozilla Foundation."
+# LOCALIZATION NOTE (notifyText): %S will be replaced by brandFullName from brand.properties
+#: notifyRightsText
+msgid ""
+"%S is free and open source software from the non-profit Mozilla Foundation."
+msgstr ""
+"Is saorbhogearra le foinsí oscailte ón Fhondúireacht neamhbhrabúis Mozilla é %"
+"S."
 
 # These strings are used in the about:robots page, which ties in with the
 # robots theme used in the Firefox 3 Beta 2/3 first run pages...
@@ -580,51 +585,39 @@ msgstr "Please do not press this button again."
 msgid "Restore Session"
 msgstr "Athchóirigh an Seisiún"
 
-#: restorepage.pagetitle
-msgid "Would you like to restore your session?"
-msgstr "An bhfuil fonn ort do sheisiún a athchóiriú?"
+# LOCALIZATION NOTE: The title is intended to be apologetic and disarming, expressing dismay
+# and regret that we are unable to restore the session for the user
+#: restorepage.errorTitle
+msgid "Well, this is embarrassing."
+msgstr "Bhuel, cuireann sé seo náire orainn."
 
-# LOCALIZATION NOTE: If "closed unexpectedly" sounds too awkward in the translation,
-# you may translate "crash" instead (even though it's IT-speak)
-#: restorepage.issueDesc
+#: restorepage.problemDesc
 msgid ""
-"Your previous &brandShortName; session closed unexpectedly. We sincerely "
-"apologize for the inconvenience. You can restore the tabs and windows from "
-"your previous session, or start a new session if they are no longer needed."
+"&brandShortName; is having trouble recovering your windows and tabs. This is "
+"usually caused by a recently opened web page."
 msgstr ""
-"Stop do sheisiún dheireanach &brandShortName; gan súil leis. Tá brón orainn "
-"faoi seo. Is féidir leat na cluaisíní agus na fuinneoga ó do sheisiún "
-"dheireanach a chur ar ais, nó seisiún nua a thosú mura bhfuil siad de dhíth "
-"ort a thuilleadh."
 
-#: restorepage.remedies
-msgid "If &brandShortName; closes repeatedly:"
-msgstr "Má dhúnann &brandShortName; arís agus arís eile:"
+#: restorepage.tryThis
+msgid "You can try:"
+msgstr "B'fhéidir leat:"
 
-#: restorepage.dueToChrome
-msgid "Try disabling any recently added extensions in the Add-ons Manager."
+#: restorepage.restoreSome
+msgid "Removing one or more tabs that you think may be causing the problem"
 msgstr ""
-"Bain triail as eisínteachtaí a cuireadh leis le déanaí a dhíchumasú i "
-"mBainisteoir na mBreiseán."
 
-#: restorepage.dueToContent
-msgid ""
-"Try restoring your session without any Web pages you suspect might be causing "
-"the problem:"
-msgstr ""
-"Bain triail as do sheisiún a athbhunú gan leathanaigh Ghréasáin a cheapann tú "
-"gur iad atá freagrach as an gcliseadh:"
+#: restorepage.startNew
+msgid "Starting an entirely new browsing session"
+msgstr "Seisiún úrnua brabhsála a thosú"
 
-# Localization note: It is recommended that okTitle be longer than cancelTitle
-# so that hitting the more prominent button doesn't lead to dataloss (see bug 346264).
-#: restorepage.restoreButton
-msgid "Restore Previous Session"
-msgstr "Athchóirigh an Seisiún Roimhe Seo"
+#: restorepage.tryagainButton restorepage.restoreHeader
+#: fullScreenRestore.tooltip
+msgid "Restore"
+msgstr "Athshlánaigh"
 
 #: restorepage.restore.access editBookmark.removeBookmark.accessKey
-#: reporterMenu.accesskey restartAccessKey protocol.checkbox.accesskey
-#: pluginInstallation.restart.accesskey restartNowButton.accesskey
-#: notifyBarRememberButtonAccessKey
+#: menuRestoreAllWindows.accesskey reporterMenu.accesskey restartAccessKey
+#: protocol.checkbox.accesskey pluginInstallation.restart.accesskey
+#: restartNowButton.accesskey notifyBarRememberButtonAccessKey
 msgid "R"
 msgstr "R"
 
@@ -638,10 +631,6 @@ msgstr "Tosaigh Seisiún Nua"
 #: submitReport.accesskey savePageCmd.commandkey
 msgid "S"
 msgstr "S"
-
-#: restorepage.restoreHeader fullScreenRestore.tooltip
-msgid "Restore"
-msgstr "Athshlánaigh"
 
 #: restorepage.listHeader
 msgid "Windows and Tabs"
@@ -824,10 +813,12 @@ msgstr "Oscail S&uíomh Gréasáin…"
 msgid "&Open File…"
 msgstr "&Oscail Comhad…"
 
-# Ctrl+O for "Oscail" in Main -> Comhad
-#: openFileCmd.commandkey menuOpenAllInTabs.accesskey
-#: geolocation.nothingLocationKey SSLport.accesskey
-msgid "o"
+# -  key should not contain the letters A-F, since these are reserved
+# -  shortcut keys on Linux.
+#: openFileCmd.commandkey bookmarksSidebarGtkCmd.commandkey
+msgid ""
+"_: This command\n"
+"o"
 msgstr "o"
 
 # "L" under Main -> Comhad
@@ -1052,8 +1043,8 @@ msgstr "B"
 msgid "b"
 msgstr "b"
 
-#: historyButton.label search.scopeHistory.label OrganizerQueryHistory
-#: history.label locbar.history.label historySection.label
+#: historyButton.label OrganizerQueryHistory history.label locbar.history.label
+#: historySection.label
 msgid "History"
 msgstr "Stair"
 
@@ -1267,6 +1258,11 @@ msgstr "Sta&ir"
 msgid "Recently Closed Tabs"
 msgstr "Cluaisíní a Dúnadh Le Déanaí"
 
+# LOCALIZATION NOTE (historyUndoWindowMenu): see bug 394759
+#: historyUndoWindowMenu.label
+msgid "Recently Closed Windows"
+msgstr "Fuinneoga a Dúnadh Le Déanaí"
+
 #: showAllHistoryCmd2.label
 msgid "Show All History"
 msgstr "Taispeáin an Stair Iomlán"
@@ -1277,9 +1273,21 @@ msgstr "Taispeáin an Stair Iomlán"
 msgid "l"
 msgstr "l"
 
-#: urlbar.emptyText
+#: urlbar.emptyText urlbar.bookmarkhistory.emptyText
 msgid "Search Bookmarks and History"
 msgstr "Cuardaigh Leabharmharcanna agus Stair"
+
+#: urlbar.bookmark.emptyText searchBookmarks
+msgid "Search Bookmarks"
+msgstr "Cuardaigh Leabharmharcanna"
+
+#: urlbar.history.emptyText searchHistory
+msgid "Search History"
+msgstr "Stair an Chuardaigh"
+
+#: urlbar.none.emptyText
+msgid "Type a Web address"
+msgstr "Clóscríobh seoladh Gréasáin"
 
 #: searchFocus.commandkey securityView.privacy.viewCookies.accessKey
 #: focusSearch2.key cmd.search.commandKey helpSearch.commandkey
@@ -1680,7 +1688,7 @@ msgstr "Cealaigh"
 msgid "&Edit…"
 msgstr "&Eagar…"
 
-#: identity.unverifiedsite2 identity.unknown.tooltip securityNoIdentity
+#: identity.unverifiedsite2 identity.unknown.tooltip
 msgid "This web site does not supply identity information."
 msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena aitheantas."
 
@@ -1888,9 +1896,35 @@ msgstr "Nuashonraigh Forlíontáin…"
 msgid "Clear Recent History…"
 msgstr "Glan an Stair Is Déanaí…"
 
-#: sanitizeButton2 sanitizePrefs.title
-msgid "Clear Private Data"
-msgstr "Bánaigh Sonraí Príobháideacha"
+# LOCALIZATION NOTE (sanitizeDialog2.everything.title): When "Time range to
+# clear" is set to "Everything", the Clear Recent History dialog's title is
+# changed to this.  See UI mockup and comment 11 at bug 480169 -->
+#: sanitizeDialog2.everything.title
+msgid "Clear All History"
+msgstr "Glan an Stair Go Léir"
+
+#: sanitizeButtonOK
+msgid "Clear Now"
+msgstr "Glan Anois"
+
+# LOCALIZATION NOTE (sanitizeEverythingWarning): Warning that appears when "Time
+# range to clear" is set to "Everything" in Clear Recent History dialog.  UI
+# mockup at bug 480169.  This value is a semi-colon list of plural forms.  #1 is
+# replaced with the number of history visits. %S is replaced with the date of
+# the oldest visit.
+# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: sanitizeEverythingWarning
+msgid ""
+"All history will be cleared.  Your history includes one page visit since %S.;"
+"All history will be cleared.  Your history includes #1 page visits since %S."
+msgstr ""
+
+# LOCALIZATION NOTE (sanitizeEverythingNoVisitsWarning): Used in same context
+# as sanitizeEverythingWarning except this is shown instead when there are no
+# visits in the user's history.
+#: sanitizeEverythingNoVisitsWarning
+msgid "All history will be cleared."
+msgstr "Glanfar an stair go léir."
 
 # Check for Updates
 #: updatesItem_default updatesItem_defaultFallback
@@ -1932,6 +1966,30 @@ msgstr "Liostáil leis an leathanach seo…"
 #: menuOpenAllInTabs.label
 msgid "Open All in Tabs"
 msgstr "Oscail gach rud i gcluaisíní"
+
+# Ctrl+O for "Oscail" in Main -> Comhad
+#: menuOpenAllInTabs.accesskey geolocation.dontTellThemKey SSLport.accesskey
+msgid "o"
+msgstr "o"
+
+# LOCALIZATION NOTE (menuRestoreAllWindows, menuUndoCloseWindowLabel, menuUndoCloseWindowSingleTabLabel):
+# see bug 394759
+#: menuRestoreAllWindows.label
+msgid "Restore All Windows"
+msgstr "Athchóirigh Gach Fuinneog"
+
+# LOCALIZATION NOTE (menuUndoCloseWindowLabel): Semi-colon list of plural forms.
+# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 Window Title, #2 Number of tabs
+#: menuUndoCloseWindowLabel
+msgid "#1 (and #2 other tab);#1 (and #2 other tabs)"
+msgstr ""
+"#1 (agus #2 chluaisín eile);#1 (agus #2 chluaisín eile);#1 (agus #2 chluaisín "
+"eile);#1 (agus #2 gcluaisín eile);#1 (agus #2 cluaisín eile)"
+
+#: menuUndoCloseWindowSingleTabLabel
+msgid "#1"
+msgstr "#1"
 
 # Unified Back-/Forward Popup
 #: tabHistory.current
@@ -1977,7 +2035,7 @@ msgstr ""
 msgid "Never for This Site"
 msgstr "Choíche don Suíomh Seo"
 
-#: offlineApps.neverAccessKey mediaSaveAs2.accesskey
+#: offlineApps.neverAccessKey geolocation.tellThemKey mediaSaveAs2.accesskey
 #: view.sortBy.dateAdded.accesskey sizeMonospace.accesskey
 #: notifyBarNeverForSiteButtonAccessKey
 msgid "e"
@@ -2074,26 +2132,17 @@ msgstr ""
 "Leabharmharcanna (#1);Bain Leabharmharcanna (#1)"
 
 # Geolocation UI
-# LOCALIZATION NOTE (exactLocation, neighborhoodLocation): These do not have to be
-# exact value, instead approximations would be fine.
-# examples: Neighborhood (within 2 km)
-# Exact Location (within 3 m)
-#
-#: geolocation.exactLocation
-msgid "Exact Location (within 10 feet)"
-msgstr "Suíomh beacht (faoi 10 dtroigh)"
+#: geolocation.tellThem
+msgid "Tell them"
+msgstr "Inis dóibh"
 
-#: geolocation.exactLocationKey CertDumpPK9Email
-msgid "E"
-msgstr "E"
+#: geolocation.dontTellThem
+msgid "Don't tell them"
+msgstr "Ná hinis dóibh"
 
-#: geolocation.nothingLocation locbar.nothing.label
-msgid "Nothing"
-msgstr "Faic"
-
-#: geolocation.requestMessage
-msgid "%S wants to know where you are.  Tell them:"
-msgstr "Tá %S ag fiafraí díot cá bhfuil tú. Inis dóibh:"
+#: geolocation.siteWantsToKnow
+msgid "%S wants to know your location."
+msgstr ""
 
 #: safebrowsing.getMeOutOfHereButton.accessKey generalTab.accesskey Giga
 #: findAgainCmd.key goOnlineButtonAccesskey findAgainCmd.commandkey
@@ -2111,8 +2160,9 @@ msgstr "Ní falsaíocht Ghréasáin é seo…"
 
 #: safebrowsing.notAForgeryButton.accessKey feedTab.accesskey file.accesskey
 #: cmd.context_new_folder.accesskey livemarkGroupOnAccesskey
-#: enableAppUpdate.accesskey reportPhishSiteMenu.accesskey findCmd.key
-#: findOnCmd.commandkey devmgr.button.fips.accesskey
+#: enableAppUpdate.accesskey historyHeader.pre.accesskey
+#: reportPhishSiteMenu.accesskey findCmd.key findOnCmd.commandkey
+#: devmgr.button.fips.accesskey
 msgid "F"
 msgstr "F"
 
@@ -2202,8 +2252,8 @@ msgstr "min-width: 39em;"
 msgid "You have the following search engines installed:"
 msgstr "Tá na hinnill chuardaigh seo a leanas suiteáilte:"
 
-#: columnLabel.name generalMetaName col.name.label name.label DirColName
-#: validation.crlname.label
+#: columnLabel.name generalMetaName col.name.label clearTimeDuration.nameColumn
+#: name.label DirColName validation.crlname.label
 msgid "Name"
 msgstr "Ainm"
 
@@ -3296,10 +3346,9 @@ msgstr "Adamh"
 msgid "XML"
 msgstr "XML"
 
-#: securityCertText
-msgid "This web site provides a certificate to verify its identity."
-msgstr ""
-"Cuireann an suíomh Gréasáin seo teastas ar fáil lena aitheantas a fhíorú."
+#: securityNoOwner
+msgid "This web site does not supply ownership information."
+msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena úinéirí."
 
 #: securityOneVisit
 msgid "Yes, once"
@@ -3647,7 +3696,7 @@ msgstr "&Bog…"
 msgid "Tags"
 msgstr "Clibeanna"
 
-#: col.lastvisit.label
+#: col.lastvisit.label clearTimeDuration.dateColumn
 msgid "Visit Date"
 msgstr "Dáta Cuairte"
 
@@ -3668,26 +3717,17 @@ msgstr "Cruthaithe"
 msgid "Last Modified"
 msgstr "Athraithe"
 
-#: search.collection.label search.collection.accesskey
-msgid "&Current Collection Only"
-msgstr "Bailiú&chán Reatha Amháin"
-
-#: search.allBookmarks.label search.allBookmarks.accesskey
-#: search.scopeAll.label search.scopeAll.accesskey
-msgid "&All Bookmarks"
-msgstr "G&ach Leabharmharc"
-
 #: search.scopeFolder.label search.scopeFolder.accesskey
-msgid "Selected &Folder"
-msgstr "&Fillteán Roghnaithe"
+msgid "Selected Folde&r"
+msgstr "Fillteán &Roghnaithe"
 
-#: search.scopeMenu.label search.scopeMenu.accesskey
-msgid "Bookmarks &Menu"
-msgstr "Roghchlár na Leabhar&mharcanna"
+#: search.scopeBookmarks.label search.scopeBookmarks.accesskey
+msgid "Boo&kmarks"
+msgstr "Leabharmhar&canna"
 
-#: search.scopeToolbar.label search.scopeToolbar.accesskey
-msgid "Bookmarks &Toolbar"
-msgstr "Ba&rra Leabharmharc"
+#: search.scopeHistory.label search.scopeHistory.accesskey
+msgid "&History"
+msgstr "&Stair"
 
 #: search.scopeBarExpanderDown.tooltip
 msgid "Show search builder"
@@ -3759,6 +3799,7 @@ msgid "in the last"
 msgstr "le"
 
 #: advancedSearch.last_days.label rememberDaysAfter2.label
+#: rememberHistory.post.label
 msgid "days"
 msgstr "lá anuas"
 
@@ -4062,14 +4103,6 @@ msgstr "Sórtáil de réir Clibeanna"
 #: view.sortBy.tags.accesskey detailsAccessKey license.decline.accesskey
 msgid "T"
 msgstr "T"
-
-#: searchBookmarks
-msgid "Search Bookmarks"
-msgstr "Cuardaigh Leabharmharcanna"
-
-#: searchHistory
-msgid "Search History"
-msgstr "Stair an Chuardaigh"
 
 #: searchCurrentDefault
 msgid "Search in '%S'"
@@ -5206,8 +5239,8 @@ msgstr "Sainroghanna &brandShortName;"
 
 # When making changes to prefWindow.styleWin test both Windows Classic and
 # Luna since widget heights are different based on the OS theme
-#: prefWin.styleWin2
-msgid "width: 42em; min-height: 39em;"
+#: prefWin.styleWin3
+msgid "width: 42em; min-height: 37.5em;"
 msgstr "width: 51em; min-height: 47em;"
 
 #: prefWin.styleMac2
@@ -5464,6 +5497,10 @@ msgstr ""
 msgid "Offline Data"
 msgstr "Sonraí As Líne"
 
+#: locationBar.label
+msgid "Location Bar"
+msgstr "Barra Suímh"
+
 #: locbar.pre.label locbar.pre.accessKey
 msgid "When using the &location bar, suggest:"
 msgstr "Agus an barra suímh in úsáid, mo&l:"
@@ -5475,6 +5512,10 @@ msgstr ""
 #: locbar.both.label
 msgid "History and Bookmarks"
 msgstr "Stair agus Leabharmharcanna"
+
+#: locbar.nothing.label
+msgid "Nothing"
+msgstr "Faic"
 
 # LOCALIZATION NOTE:
 # The entities rememberDaysBefore.label and rememberDaysAfter.label appear on a single
@@ -5533,8 +5574,99 @@ msgid "Al&ways clear my private data when I close &brandShortName;"
 msgstr "Glan sonraí &príobháideacha agus &brandShortName; á dhúnadh"
 
 #: clearDataSettings.label clearDataSettings.accesskey
+#: clearOnCloseSettings.label clearOnCloseSettings.accesskey
 msgid "Se&ttings…"
 msgstr "So&cruithe…"
+
+#: historyHeader.pre.label
+msgid "&brandShortName; will:"
+msgstr "Cad is mian leat &brandShortName; a dhéanamh?"
+
+#: historyHeader.remember.label
+msgid "Remember history"
+msgstr "Meabhraigh an stair"
+
+#: historyHeader.dontremember.label
+msgid "Never remember history"
+msgstr "Ná meabhraigh an stair riamh"
+
+#: historyHeader.custom.label
+msgid "Use custom settings for history"
+msgstr "Úsáid socruithe saincheaptha don stair"
+
+#: historyHeader.post.label
+msgid "_: historyHeader.post.label\n"
+msgstr ""
+
+#: rememberDescription.label
+msgid ""
+"&brandShortName; will remember your browsing, download, form and search "
+"history, and keep cookies from Web sites you visit."
+msgstr ""
+
+# LOCALIZATION NOTE (rememberActions.middle.label): include a starting and trailing space as needed
+# LOCALIZATION NOTE (rememberActions.post.label): include a starting space as needed
+#: rememberActions.pre.label
+msgid ""
+"_: include a trailing space as needed\n"
+"You may want to "
+msgstr "B'fhéidir leat "
+
+#: rememberActions.clearHistory.label
+msgid "clear your recent history"
+msgstr "an stair is déanaí a ghlanadh"
+
+#: rememberActions.middle.label
+msgid ", or "
+msgstr ", nó "
+
+#: rememberActions.removeCookies.label
+msgid "remove individual cookies"
+msgstr "fianáin aonair a scriosadh"
+
+#: dontrememberDescription.label
+msgid ""
+"&brandShortName; will use the same settings as private browsing, and will not "
+"remember any history as you browse the Web."
+msgstr ""
+
+# LOCALIZATION NOTE (dontrememberActions.post.label): include a starting space as needed
+#: dontrememberActions.pre.label
+msgid ""
+"_: include a trailing space as needed\n"
+"You may also want to "
+msgstr "B'fhéidir leat freisin "
+
+#: dontrememberActions.clearHistory.label
+msgid "clear all current history"
+msgstr "an stair reatha go léir a ghlanadh"
+
+#: privateBrowsingAutoStart.label privateBrowsingAutoStart.accesskey
+msgid "&Automatically start &brandShortName; in a private browsing session"
+msgstr ""
+"Tos&aigh &brandShortName; i seisiún brabhsála príobháidí go huathoibríoch"
+
+# LOCALIZATION NOTE:
+# The entities rememberHistory.pre.label and rememberHistory.post.label appear on a single
+# line in preferences as follows:
+#
+# &rememberHistory.pre.label  [ textbox for number of days ]  &rememberHistory.post.label;
+#
+#: rememberHistory.pre.label rememberHistory.pre.accesskey
+msgid "Remember my browsing &history for at least"
+msgstr "Meab&hraigh mo stair bhrabhsála le"
+
+#: rememberDownload.label rememberDownload.accesskey
+msgid "Remember &download history"
+msgstr "Meabhraigh stair an &bhainisteora íosluchtaithe"
+
+#: rememberSearchForm.label rememberSearchForm.accesskey
+msgid "Remember search and &form history"
+msgstr ""
+
+#: clearOnClose.label clearOnClose.accesskey
+msgid "Clear history &when &brandShortName; closes"
+msgstr "Glan an stair agus &brandShortName; á &dhúnadh"
 
 #: clearDataNow.label clearDataNow.accesskey
 msgid "Clear &Now…"
@@ -5732,9 +5864,17 @@ msgid ""
 msgstr ""
 "http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
 
+# URL for site-specific search engines
+# TRANSLATION NOTE: {moz:domain} and {searchTerms} are placeholders for the site
+# to be searched and the user's search query. Place them in the appropriate location
+# for your locale's URL but do not translate them.
+#: browser.search.siteSearchURL
+msgid "http://www.google.com/search?hl=en&q=site%3A{moz:domain}+{searchTerms}"
+msgstr "http://www.google.com/search?hl=en&q=site%3A{moz:domain}+{searchTerms}"
+
 #: gecko.handlerService.defaultHandlersVersion
-msgid "2"
-msgstr "2"
+msgid "3"
+msgstr "3"
 
 # The default set of protocol handlers for webcal
 #: gecko.handlerService.schemes.webcal.0.name
@@ -5761,6 +5901,18 @@ msgstr "Gmail"
 #: gecko.handlerService.schemes.mailto.1.uriTemplate
 msgid "https://mail.google.com/mail/?extsrc=mailto&url=%s"
 msgstr "https://mail.google.com/mail/?extsrc=mailto&url=%s"
+
+# The default set of protocol handlers for irc:
+# The default set of protocol handlers for ircs:
+#: gecko.handlerService.schemes.irc.0.name
+#: gecko.handlerService.schemes.ircs.0.name
+msgid "Mibbit"
+msgstr "Mibbit"
+
+#: gecko.handlerService.schemes.irc.0.uriTemplate
+#: gecko.handlerService.schemes.ircs.0.uriTemplate
+msgid "https://www.mibbit.com/?url=%s"
+msgstr "https://www.mibbit.com/?url=%s"
 
 #: malware.shortDesc
 msgid ""
@@ -5980,6 +6132,10 @@ msgstr "Cuir na hAthruithe i bhFeidhm agus Atosaigh"
 msgid "Continue in Safe Mode"
 msgstr "Lean Ar Aghaidh sa Mhód Sábháilteachta"
 
+#: sanitizePrefs2.title
+msgid "Settings for Clearing History"
+msgstr ""
+
 #: sanitizeDialog2.title
 msgid "Clear Recent History"
 msgstr "Glan an Stair Is Déanaí"
@@ -5993,47 +6149,73 @@ msgid "When I quit &brandShortName;, it should automatically clear all:"
 msgstr "Agus mé ag scoir de &brandShortName;, glan iad seo go huathoibríoch:"
 
 # XXX rearrange entities to match physical layout when l10n isn't an issue
-#: clearDuration.label clearDuration.accesskey
-msgid "&Remove "
-msgstr "&Bain "
+# LOCALIZATION NOTE (clearTimeDuration.*): "Time range to clear" dropdown.
+# See UI mockup at bug 480169
+#: clearTimeDuration.label clearTimeDuration.accesskey
+msgid "&Time range to clear: "
+msgstr "Raon ama le glanadh: "
 
-#: clearDuration.lastHour
-msgid "the last hour"
-msgstr "an uair is déanaí"
+#: clearTimeDuration.lastHour
+msgid "Last Hour"
+msgstr "An Uair Is Déanaí"
 
-#: clearDuration.last2Hours
-msgid "the last 2 hours"
-msgstr "an dá uair is déanaí"
+#: clearTimeDuration.last2Hours
+msgid "Last Two Hours"
+msgstr "An Dá Uair Is Déanaí"
 
-#: clearDuration.last4Hours
-msgid "the last 4 hours"
-msgstr "na 4 huaire is déanaí"
+#: clearTimeDuration.last4Hours
+msgid "Last Four Hours"
+msgstr "Na Ceithre hUaire Is Déanaí"
 
-#: clearDuration.today
-msgid "my history for today"
-msgstr "mo stair inniu"
+#: clearTimeDuration.today finduri-AgeInDays-is-0
+msgid "Today"
+msgstr "Inniu"
 
-#: clearDuration.everything
-msgid "my entire history"
-msgstr "mo stair iomlán"
+# LOCALIZATION NOTE (glodaSearchFacet.*) labels specify search constraints.
+# "everything" searches over subject, involves, body, and attachments.
+# "subject" searches only messages subjects.
+# "involves" searches only message to/from/cc/bcc.
+# "to" searches only message to/cc.
+# "from" searches only message using "from" (the message author).
+# "body" searches only message bodies, which does not include message
+# attachment names or the content of the attachments.  Message body
+# basically means a message part with a content-type of text/*.
+#
+#: clearTimeDuration.everything
+msgid "Everything"
+msgstr "Gach Uile Rud"
 
-# Localization note (clearDuration.suffix) - trailing entity for languages
+# Localization note (clearTimeDuration.suffix) - trailing entity for languages
 # that require it.
-#: clearDuration.suffix
-msgid "_: clearDuration.suffix\n"
+#: clearTimeDuration.suffix
+msgid "_: clearTimeDuration.suffix\n"
 msgstr ""
+
+# LOCALIZATION NOTE (detailsProgressiveDisclosure.*): Labels and accesskeys
+# of the "Details" progressive disclosure button.  See UI mockup at bug
+# 480169
+#: detailsProgressiveDisclosure.label detailsProgressiveDisclosure.accesskey
+msgid "D&etails"
+msgstr "&Mionsonraí"
 
 #: dataSection.label
 msgid "Data"
 msgstr "Sonraí"
 
-#: itemVisitedPages.label itemVisitedPages.accesskey
-msgid "&Visited Pages"
-msgstr "&Leathanaigh ar tugadh cuairt orthu"
+# LOCALIZATION NOTE (item*): itemHistoryAndDownloads.* and
+# itemBrowsingHistory.* will never be used at the same time, so they can
+# have the same accesskey.
+#: itemHistoryAndDownloads.label itemHistoryAndDownloads.accesskey
+msgid "&Browsing and Download History"
+msgstr "Stair &Bhrabhsála agus Íosluchtaithe"
 
-#: itemFormSearchEntries.label itemFormSearchEntries.accesskey
-msgid "&Form &amp; Search Entries"
-msgstr "Iontrálacha &Foirme &amp; Cuardaigh"
+#: itemBrowsingHistory.label itemBrowsingHistory.accesskey
+msgid "&Browsing History"
+msgstr "Stair &Bhrabhsála"
+
+#: itemFormSearchHistory.label itemFormSearchHistory.accesskey
+msgid "&Form &amp; Search History"
+msgstr "Stair &Foirmeacha agus Cuardaigh"
 
 #: itemPasswords.label itemPasswords.accesskey
 msgid "Saved &Passwords"
@@ -6043,21 +6225,40 @@ msgstr "&Focail Fhaire a sábháladh"
 msgid "&Cookies"
 msgstr "&Fianáin"
 
-#: itemWebCache.label itemWebCache.accesskey
-msgid "&Web Cache"
-msgstr "&Taisce Ghréasáin"
+#: itemCache.label itemCache.accesskey
+msgid "C&ache"
+msgstr "T&aisce"
 
 #: itemOfflineApps.label itemOfflineApps.accesskey
 msgid "&Offline Website Data"
 msgstr "S&onraí Shuíomhanna Gréasáin As Líne"
 
-#: itemDownloadList.label itemDownloadList.accesskey
-msgid "&Download List"
-msgstr "&Liosta Íosluchtuithe"
+#: itemDownloadHistory.label itemDownloadHistory.accesskey
+msgid "&Download History"
+msgstr "&Stair an Bhainisteora Íosluchtaithe"
 
 #: itemActiveLogins.label itemActiveLogins.accesskey
 msgid "Active &Logins"
 msgstr "&Logálacha isteach Gníomhacha"
+
+#: itemSitePreferences.label itemSitePreferences.accesskey
+msgid "&Site Preferences"
+msgstr "&Sainroghanna an tSuímh"
+
+# that appears when "Time range to clear" is set to "Everything".  See UI
+# mockup at bug 480169
+#: sanitizeEverythingUndoWarning
+msgid ""
+"_: Second warning paragraph\n"
+"This action cannot be undone."
+msgstr ""
+
+#: dialog.width
+msgid ""
+"_: Do not translate this.  Only change the numeric values if you need this "
+"dialogue box to appear bigger.\n"
+"32em"
+msgstr "36em"
 
 #: column.width
 msgid ""
@@ -6188,6 +6389,10 @@ msgstr "Athluchtaigh &Gach Cluaisín"
 #: reloadTab.label reloadTab.accesskey
 msgid "&Reload Tab"
 msgstr "&Athluchtaigh Cluaisín"
+
+#: openTabInNewWindow.label openTabInNewWindow.accesskey
+msgid "Open in a New &Window"
+msgstr "Oscail i bh&Fuinneog Nua"
 
 #: listAllTabs.label
 msgid "List all tabs"
@@ -7633,14 +7838,20 @@ msgstr "Glac Páirt"
 msgid "About Us"
 msgstr "Maidir Linn"
 
-#: Title updateWizard.title resumePausedAfterCloseTitle
-msgid "Software Update"
-msgstr "Nuashonrú Bogearraí"
+# converted from pseudo-properties .it file
+# This file is in the UTF-8 encoding
+# section: [Strings]
+#: TitleText
+msgid "%MOZ_APP_DISPLAYNAME% Update"
+msgstr "Nuashonrú %MOZ_APP_DISPLAYNAME%"
 
-#: Info
-msgid "Firefox is installing your updates and will start in a few moments…"
+#: InfoText
+msgid ""
+"%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few "
+"moments…"
 msgstr ""
-"Tá do chuid nuashonruithe á suiteáil ag Firefox agus tosóidh sé go luath…"
+"Tá do chuid nuashonruithe á suiteáil ag %MOZ_APP_DISPLAYNAME% agus tosóidh sé "
+"go luath…"
 
 #: jump
 msgid "Jump"
@@ -12468,6 +12679,231 @@ msgstr "Spás Solúbtha"
 msgid "Space"
 msgstr "Spás"
 
+#: month.1.Mmm
+msgid "Jan"
+msgstr "Ean"
+
+#: month.2.Mmm
+msgid "Feb"
+msgstr "Fea"
+
+#: month.3.Mmm
+msgid "Mar"
+msgstr "Már"
+
+#: month.4.Mmm
+msgid "Apr"
+msgstr "Aib"
+
+# sedtweaked
+#: month.5.Mmm month.5.name
+msgid "May"
+msgstr "Bealtaine"
+
+#: month.6.Mmm
+msgid "Jun"
+msgstr "Mei"
+
+#: month.7.Mmm
+msgid "Jul"
+msgstr "Iúi"
+
+#: month.8.Mmm
+msgid "Aug"
+msgstr "Lún"
+
+#: month.9.Mmm
+msgid "Sep"
+msgstr "MFó"
+
+#: month.10.Mmm
+msgid "Oct"
+msgstr "DFó"
+
+#: month.11.Mmm
+msgid "Nov"
+msgstr "Sam"
+
+#: month.12.Mmm
+msgid "Dec"
+msgstr "Nol"
+
+#: month.1.name
+msgid "January"
+msgstr "Eanáir"
+
+#: month.2.name
+msgid "February"
+msgstr "Feabhra"
+
+#: month.3.name
+msgid "March"
+msgstr "Márta"
+
+#: month.4.name
+msgid "April"
+msgstr "Aibreán"
+
+#: month.6.name
+msgid "June"
+msgstr "Meitheamh"
+
+#: month.7.name
+msgid "July"
+msgstr "Iúil"
+
+#: month.8.name
+msgid "August"
+msgstr "Lúnasa"
+
+#: month.9.name
+msgid "September"
+msgstr "Meán Fómhair"
+
+#: month.10.name
+msgid "October"
+msgstr "Deireadh Fómhair"
+
+#: month.11.name
+msgid "November"
+msgstr "Samhain"
+
+#: month.12.name
+msgid "December"
+msgstr "Nollaig"
+
+#: day.1.name
+msgid "Sunday"
+msgstr "Domhnach"
+
+#: day.2.name
+msgid "Monday"
+msgstr "Luan"
+
+#: day.3.name
+msgid "Tuesday"
+msgstr "Máirt"
+
+#: day.4.name
+msgid "Wednesday"
+msgstr "Céadaoin"
+
+#: day.5.name
+msgid "Thursday"
+msgstr "Déardaoin"
+
+#: day.6.name
+msgid "Friday"
+msgstr "Aoine"
+
+#: day.7.name
+msgid "Saturday"
+msgstr "Satharn"
+
+#: day.1.Mmm
+msgid "Sun"
+msgstr "Domh"
+
+#: day.2.Mmm
+msgid "Mon"
+msgstr "Luan"
+
+#: day.3.Mmm
+msgid "Tue"
+msgstr "Máir"
+
+#: day.4.Mmm
+msgid "Wed"
+msgstr "Céad"
+
+#: day.5.Mmm
+msgid "Thu"
+msgstr "Déar"
+
+#: day.6.Mmm
+msgid "Fri"
+msgstr "Aoin"
+
+#: day.7.Mmm
+msgid "Sat"
+msgstr "Sath"
+
+# Can someone tell me why were not counting from zero?
+#: day.1.short
+msgid "Su"
+msgstr "Do"
+
+#: day.2.short
+msgid "Mo"
+msgstr "L"
+
+#: day.3.short
+msgid "Tu"
+msgstr "M"
+
+#: day.4.short
+msgid "We"
+msgstr "C"
+
+#: day.5.short
+msgid "Th"
+msgstr "Dé"
+
+#: day.6.short
+msgid "Fr"
+msgstr "A"
+
+#: day.7.short
+msgid "Sa"
+msgstr "S"
+
+#: noon
+msgid "Noon"
+msgstr "Meán Lae"
+
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is OEone Calendar Code, released October 31st, 2001.
+# -
+# - The Initial Developer of the Original Code is
+# - OEone Corporation.
+# - Portions created by the Initial Developer are Copyright (C) 2001
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s): Garth Smedley <garths@oeone.com>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#: midnight
+msgid "Midnight"
+msgstr "Meán Oíche"
+
+#: AllDay
+msgid "All Day"
+msgstr "I Rith an Lae"
+
 #: helpButton.label button-help
 msgid "Help"
 msgstr "Cabhair"
@@ -12855,10 +13291,6 @@ msgstr "Saincheaptha..."
 #: customHeaderFooterPrompt
 msgid "Please enter your custom header/footer text"
 msgstr "Cuir isteach do théacs ceanntáisc/buntáisc féin"
-
-#: finduri-AgeInDays-is-0
-msgid "Today"
-msgstr "Inniu"
 
 #: finduri-AgeInDays-is-1 yesterday
 msgid "Yesterday"
@@ -18376,6 +18808,10 @@ msgstr ""
 "tú ag brabhsáil, fiú má bhíonn roinnt de do chuid Eisínteachtaí agus Téamaí "
 "neamh-chomhoiriúnach ina dhiaidh sin."
 
+#: updateWizard.title resumePausedAfterCloseTitle
+msgid "Software Update"
+msgstr "Nuashonrú Bogearraí"
+
 #: checking.title
 msgid "Checking for Updates"
 msgstr "Nuashonruithe á seiceáil"
@@ -18987,6 +19423,18 @@ msgstr "Ní mheaitseálann na focail fhaire seo a leanas do chuardach:"
 #: UnsortedBookmarksFolderTitle
 msgid "Unsorted Bookmarks"
 msgstr "Leabharmharcanna Gan Sórtáil"
+
+#: finduri-AgeInDays-last-is
+msgid "Last %S days"
+msgstr "An %S lá is déanaí"
+
+#: finduri-AgeInMonths-is-0
+msgid "This month"
+msgstr "An mhí seo"
+
+#: finduri-AgeInMonths-isgreater
+msgid "Older than %S months"
+msgstr "Níos sine ná %S mí"
 
 #: localhost
 msgid "(local files)"
@@ -20795,6 +21243,10 @@ msgstr "CN"
 msgid "UID"
 msgstr "UID"
 
+#: CertDumpPK9Email
+msgid "E"
+msgstr "E"
+
 #: CertDumpAVADN
 msgid "DN"
 msgstr "DN"
@@ -21718,7 +22170,7 @@ msgid "%S uses an invalid security certificate."
 msgstr "Úsáideann %S teastas neamhbhailí slándála."
 
 #: certErrorTrust_SelfSigned
-msgid "The certificate is not trusted because it is self signed."
+msgid "The certificate is not trusted because it is self-signed."
 msgstr "Ní chuirtear muinín sa teastas mar tá sé féinsínithe."
 
 #: certErrorTrust_UnknownIssuer
@@ -23481,4 +23933,3 @@ msgstr "Sonraí faoin uair dheireanach ar theip ar Nuashonrú: "
 #: edit.button
 msgid "Settings"
 msgstr "Socruithe"
-
