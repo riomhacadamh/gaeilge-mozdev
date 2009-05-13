@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-21 10:10-0500\n"
+"POT-Creation-Date: 2009-05-13 15:01-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1978,7 +1978,8 @@ msgid "Open All in Tabs"
 msgstr "Oscail gach rud i gcluaisíní"
 
 # Ctrl+O for "Oscail" in Main -> Comhad
-#: menuOpenAllInTabs.accesskey geolocation.dontTellThemKey SSLport.accesskey
+#: menuOpenAllInTabs.accesskey geolocation.dontShareLocation.accesskey
+#: SSLport.accesskey
 msgid "o"
 msgstr "o"
 
@@ -2045,7 +2046,7 @@ msgstr ""
 msgid "Never for This Site"
 msgstr "Choíche don Suíomh Seo"
 
-#: offlineApps.neverAccessKey geolocation.tellThemKey mediaSaveAs2.accesskey
+#: offlineApps.neverAccessKey mediaSaveAs2.accesskey
 #: view.sortBy.dateAdded.accesskey sizeMonospace.accesskey
 #: notifyBarNeverForSiteButtonAccessKey
 msgid "e"
@@ -2141,14 +2142,22 @@ msgstr ""
 "Bain Leabharmharc;Bain Leabharmharcanna (#1);Bain Leabharmharcanna (#1);Bain "
 "Leabharmharcanna (#1);Bain Leabharmharcanna (#1)"
 
+# #-#-#-#-#  chromebrowserbrowser.properties.po (firefox)  #-#-#-#-#
 # Geolocation UI
-#: geolocation.tellThem
-msgid "Tell them"
-msgstr "Inis dóibh"
+# LOCALIZATION NOTE (geolocation.shareLocation geolocation.dontShareLocation): 
+# If you're having trouble with the word Share, please use Allow and Block in your language.
+#: geolocation.shareLocation permGeo
+msgid "Share Location"
+msgstr "Roinn Suíomh"
 
-#: geolocation.dontTellThem
-msgid "Don't tell them"
-msgstr "Ná hinis dóibh"
+#: geolocation.shareLocation.accesskey cmd.select_all.key
+#: cbxStateActive.accesskey
+msgid "a"
+msgstr "a"
+
+#: geolocation.dontShareLocation
+msgid "Don't Share"
+msgstr "Ná Roinn"
 
 #: geolocation.siteWantsToKnow
 msgid "%S wants to know your location."
@@ -2160,7 +2169,7 @@ msgstr "Tá an láthair ina bhfuil tú á lorg ag %S."
 msgid "G"
 msgstr "G"
 
-#: safebrowsing.reportedWebForgery phishing.title2 safeb.blocked.phishing.title
+#: safebrowsing.reportedWebForgery safeb.blocked.phishing.title
 msgid "Reported Web Forgery!"
 msgstr "Tuairiscíodh gur Falsaíocht Ghréasáin an suíomh seo!"
 
@@ -2170,13 +2179,12 @@ msgstr "Ní falsaíocht Ghréasáin é seo…"
 
 #: safebrowsing.notAForgeryButton.accessKey feedTab.accesskey file.accesskey
 #: cmd.context_new_folder.accesskey livemarkGroupOnAccesskey
-#: enableAppUpdate.accesskey historyHeader.pre.accesskey
-#: reportPhishSiteMenu.accesskey findCmd.key findOnCmd.commandkey
-#: devmgr.button.fips.accesskey
+#: enableAppUpdate.accesskey reportPhishSiteMenu.accesskey findCmd.key
+#: findOnCmd.commandkey devmgr.button.fips.accesskey
 msgid "F"
 msgstr "F"
 
-#: safebrowsing.reportedAttackSite malware.title2 safeb.blocked.malware.title
+#: safebrowsing.reportedAttackSite safeb.blocked.malware.title
 msgid "Reported Attack Site!"
 msgstr "Tuairiscíodh gur Suíomh Ionsaithe é seo!"
 
@@ -3156,6 +3164,10 @@ msgstr "Ceadanna"
 msgid "Use Default"
 msgstr "Úsáid Réamhshocrú"
 
+#: permAskAlways alwaysAsk
+msgid "Always ask"
+msgstr "Fiafraigh díom i gcónaí"
+
 #: permAllowSession canSession
 msgid "Allow for Session"
 msgstr "Ceadaigh don Seisiún"
@@ -3600,10 +3612,6 @@ msgstr "&Athchóirigh"
 #: cmd.restoreFromFile.label cmd.restoreFromFile.accesskey
 msgid "&Choose File…"
 msgstr "&Roghnaigh Comhad…"
-
-#: cmd.select_all.key cbxStateActive.accesskey
-msgid "a"
-msgstr "a"
 
 # for Leathnaigh
 #: cmd.edit_cut.key
@@ -5380,10 +5388,6 @@ msgstr "Podchraoladh Físe"
 msgid "Podcast"
 msgstr "Podchraoladh"
 
-#: alwaysAsk
-msgid "Always ask"
-msgstr "Fiafraigh díom i gcónaí"
-
 # LOCALIZATION NOTE (usePluginIn):
 # %1$S = plugin name (for example "QuickTime Plugin-in 7.2")
 # %2$S = brandShortName from brand.properties (for example "Minefield")
@@ -5460,8 +5464,8 @@ msgid "Location Bar"
 msgstr "Barra Suímh"
 
 #: locbar.pre.label locbar.pre.accessKey
-msgid "When using the &location bar, suggest:"
-msgstr "Agus an barra suímh in úsáid, mo&l:"
+msgid "When &using the location bar, suggest:"
+msgstr "Agus an barra s&uímh in úsáid, mol:"
 
 #: locbar.post.label
 msgid "_: locbar.post.label\n"
@@ -5536,9 +5540,9 @@ msgstr "Glan sonraí &príobháideacha agus &brandShortName; á dhúnadh"
 msgid "Se&ttings…"
 msgstr "So&cruithe…"
 
-#: historyHeader.pre.label
-msgid "&brandShortName; will:"
-msgstr "Cad is mian leat &brandShortName; a dhéanamh?"
+#: historyHeader.pre.label historyHeader.pre.accesskey
+msgid "&brandShortName; &will:"
+msgstr "&Cad is mian leat &brandShortName; a dhéanamh?"
 
 #: historyHeader.remember.label
 msgid "Remember history"
@@ -5617,8 +5621,8 @@ msgstr ""
 # &rememberHistory.pre.label  [ textbox for number of days ]  &rememberHistory.post.label;
 #
 #: rememberHistory.pre.label rememberHistory.pre.accesskey
-msgid "Remember my browsing &history for at least"
-msgstr "Meab&hraigh mo stair bhrabhsála le"
+msgid "Remem&ber my browsing history for at least"
+msgstr "Mea&bhraigh mo stair bhrabhsála le"
 
 #: rememberDownload.label rememberDownload.accesskey
 msgid "Remember &download history"
@@ -5629,8 +5633,8 @@ msgid "Remember search and &form history"
 msgstr "Meabhraigh an stair chuardaigh agus &fhoirme"
 
 #: clearOnClose.label clearOnClose.accesskey
-msgid "Clear history &when &brandShortName; closes"
-msgstr "Glan an stair agus &brandShortName; á &dhúnadh"
+msgid "Clea&r history when &brandShortName; closes"
+msgstr "Glan an stai&r agus &brandShortName; á dhúnadh"
 
 #: clearDataNow.label clearDataNow.accesskey
 msgid "Clear &Now…"
@@ -5882,47 +5886,6 @@ msgstr "Mibbit"
 msgid "https://www.mibbit.com/?url=%s"
 msgstr "https://www.mibbit.com/?url=%s"
 
-#: malware.shortDesc
-msgid ""
-"The web site at %S has been reported as an attack site and has been blocked "
-"based on your security preferences."
-msgstr ""
-"Tuairiscíodh gur suíomh ionsaithe é an suíomh Gréasáin %S agus tá cosc curtha "
-"air de bharr do roghanna slándála."
-
-#: malware.longDesc2
-msgid ""
-"<p>Attack sites try to install programs that steal private information, use "
-"your computer to attack others, or damage your system.</p>\n"
-"<p>Some attack sites intentionally distribute harmful software, but many are "
-"compromised without the knowledge or permission of their owners.</p>"
-msgstr ""
-"<p>Déanann suímh ionsaithe iarracht ríomhchláir a shuiteáil a ghoideann "
-"faisnéis phríobháideach nó a dhéanann dochar do do ríomhaire.</p>\n"
-"<p>Scaipeann suímh ionsaithe áirithe bogearraí dochracha d'aonturas, ach is "
-"minic suímh a bheith contúirteach i nganfhios dá n-úinéirí agus gan a gcead.</"
-"p>"
-
-#: phishing.shortDesc2
-msgid ""
-"The web site at %S has been reported as a web forgery and has been blocked "
-"based on your security preferences."
-msgstr ""
-"Tuairiscíodh gur falsaíocht Ghréasáin é an suíomh %S agus tá cosc curtha air "
-"de bharr do roghanna slándála."
-
-#: phishing.longDesc2 safeb.blocked.phishing.longDesc
-msgid ""
-"<p>Web forgeries are designed to trick you into revealing personal or "
-"financial information by imitating sources you may trust.</p><p>Entering any "
-"information on this web page may result in identity theft or other fraud.</p>"
-msgstr ""
-"<p>Tá falsaíochtaí Gréasáin ceaptha le mearbhall a chur ort le go "
-"dtabharfaidh tú eolas pearsanta nó airgeadais trí aithris a dhéanamh ar "
-"fhoinsí a bhfuil muinín agat astu. </p><p>D'fhéadfadh goid aitheantais nó "
-"calaois eile teacht mar thoradh ar fhaisnéis ar bith a chur isteach sa "
-"leathanach seo.</p>"
-
 #: safeb.palm.warning.title
 msgid "Suspected Web Forgery"
 msgstr "Falsaíocht Ghréasáin"
@@ -6011,6 +5974,18 @@ msgstr ""
 "Tuairiscíodh gur suíomh ionsaithe é an suíomh Gréasáin <span "
 "id='phishing_sitename'/> agus tá cosc curtha air de bharr do roghanna "
 "slándála."
+
+#: safeb.blocked.phishing.longDesc
+msgid ""
+"<p>Web forgeries are designed to trick you into revealing personal or "
+"financial information by imitating sources you may trust.</p><p>Entering any "
+"information on this web page may result in identity theft or other fraud.</p>"
+msgstr ""
+"<p>Tá falsaíochtaí Gréasáin ceaptha le mearbhall a chur ort le go "
+"dtabharfaidh tú eolas pearsanta nó airgeadais trí aithris a dhéanamh ar "
+"fhoinsí a bhfuil muinín agat astu. </p><p>D'fhéadfadh goid aitheantais nó "
+"calaois eile teacht mar thoradh ar fhaisnéis ar bith a chur isteach sa "
+"leathanach seo.</p>"
 
 #: reportPhishSiteMenu.title2
 msgid "Report Web Forgery…"
