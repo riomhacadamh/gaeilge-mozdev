@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-18 07:12-0500\n"
+"POT-Creation-Date: 2009-06-07 19:03-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -2896,7 +2896,7 @@ msgid "a"
 msgstr "a"
 
 # Ctrl+i is highlights URL for opening
-#: close.key forwardMsgCmd.key
+#: close.key replyToListMsgCmd.key forwardMsgCmd.key
 msgid "l"
 msgstr "l"
 
@@ -4942,14 +4942,14 @@ msgid ""
 "_: Do not translate this.  Only change the numeric values if you need this "
 "dialogue box to appear bigger.\n"
 "width: 97ch; height: 49em;"
-msgstr ""
+msgstr "width: 97ch; height: 49em;"
 
 #: accountTree.width
 msgid ""
 "_: Do not translate this.  Only change the numeric values if you need this "
 "dialogue box to appear bigger.\n"
 "width: 31ch;"
-msgstr ""
+msgstr "width: 31ch;"
 
 # #-#-#-#-#  tmp.XXXXkZmjUH.po (thunderbird)  #-#-#-#-#
 # Entities for AccountWizard
@@ -5356,33 +5356,50 @@ msgstr "Inné"
 msgid "#1 #2"
 msgstr "#1 #2"
 
+# LOCALIZATION NOTE sendprogress.dtd Main UI for Send Message Progress Dialog
+#: sendingMessages sendWindow.title
+msgid "Sending Messages"
+msgstr "Teachtaireachtaí á Seoladh"
+
 # # Strings used by prompt when Quitting while in progress
 #: sendingMessage quitComposeWindowTitle
 msgid "Sending Message"
 msgstr "Teachtaireacht á Seoladh"
 
-# LOCALIZATION NOTE (sendingMessageTo): %S will be replaced by the first name or newsgroup that the message is being sent to.
-#: sendingMessageTo
-msgid "Sending Message to %S"
-msgstr "Teachtaireacht á Seoladh chuig %S"
+#: sendingMessageWithSubject
+msgid "Sending Message: %S"
+msgstr "Teachtaireacht á Seoladh: %S"
+
+#: copyMessage
+msgid "Copying message to sent folder"
+msgstr "Teachtaireacht á cóipeáil go fillteán seolta"
 
 #: sentMessage
 msgid "Sent Message"
 msgstr "Seoladh an Teachtaireacht"
 
-# LOCALIZATION NOTE (sentMessageTo): %S will be replaced by the first name or newsgroup that the message was sent to.
-#: sentMessageTo
-msgid "Sent Message to %S"
-msgstr "Seoladh Teachtaireacht chuig %S"
+# LOCALIZATION NOTE (sentMessageWithSubject): %S will be replaced by the subject of the message being sent.
+#: sentMessageWithSubject
+msgid "Sent Message: %S"
+msgstr ""
 
 #: failedToSendMessage
 msgid "Failed to send message"
 msgstr "Theip ar sheoladh na teachtaireachta"
 
-# LOCALIZATION NOTE (failedToSendMessageTo): %S will be replaced by the first name or newsgroup that the message was being sent to.
-#: failedToSendMessageTo
-msgid "Failed to send message to %S"
-msgstr "Theip ar sheoladh na teachtaireachta chuig %S"
+#: failedToCopyMessage
+msgid "Failed to copy message"
+msgstr ""
+
+# LOCALIZATION NOTE (failedToSendMessageWithSubject): %S will be replaced by the subject of the message being sent.
+#: failedToSendMessageWithSubject
+msgid "Failed to send message: %S"
+msgstr "Theip ar sheoladh na teachtaireachta: %S"
+
+# LOCALIZATION NOTE (failedToCopyMessageWithSubject): %S will be replaced by the subject of the message being sent.
+#: failedToCopyMessageWithSubject
+msgid "Failed to copy message: %S"
+msgstr ""
 
 # LOCALIZATION NOTE (autosyncProcessProgress): Do not translate the word "%1$S", "%2$S" and "%3$S" below.
 # Place the word %1$S in your translation where the number of the message being downloaded should appear.
@@ -5467,12 +5484,12 @@ msgstr "Athraíodh ainm an fhillteáin ó #1 go #2"
 
 #: indexing
 msgid "Indexing messages"
-msgstr ""
+msgstr "Teachtaireachtaí á n-innéacsú"
 
 # LOCALIZATION NOTE (indexingFolder): #1 is a folder name
 #: indexingFolder
 msgid "Indexing messages in #1"
-msgstr ""
+msgstr "Teachtaireachtaí i #1 á n-innéacsú"
 
 #: indexingStatusVague
 msgid "Determining which messages to index"
@@ -5490,6 +5507,10 @@ msgstr ""
 #: indexingStatusExact
 msgid "Indexing #1 of #2 message;Indexing #1 of #2 messages (#3% complete)"
 msgstr ""
+"#1 as #2 teachtaireacht á hinnéacsú;#1 as #2 theachtaireacht á hinnéacsú (#3% "
+"críochnaithe);#1 as #2 theachtaireacht á hinnéacsú (#3% críochnaithe);#1 as "
+"#2 dteachtaireacht á hinnéacsú (#3% críochnaithe);#1 as #2 teachtaireacht á "
+"hinnéacsú (#3% críochnaithe)"
 
 # LOCALIZATION NOTE (indexingFolderStatusExact):
 # #1 is the number of the message currently being indexed
@@ -5511,6 +5532,8 @@ msgstr ""
 #: indexedFolderStatus
 msgid "#1 second elapsed;#1 seconds elapsed"
 msgstr ""
+"#1 soicind imithe;#1 shoicind imithe;#1 shoicind imithe;#1 soicind imithe;#1 "
+"soicind imithe"
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -5608,7 +5631,7 @@ msgstr "Ainm Tai&speána:"
 
 #: allowRemoteContent1.label allowRemoteContent1.accesskey
 msgid "Allow &remote content."
-msgstr ""
+msgstr "Ceadaigh ábha&r cianda."
 
 #: allowRemoteContent1.tooltip
 msgid ""
@@ -5617,6 +5640,11 @@ msgid ""
 "tracking of the message being read. Checking this box will allow such "
 "external embedded content in HTML messages from this contact."
 msgstr ""
+"Is féidir ábhar ó chianfhoinsí a leabú i dteachtaireachtaí HTML. Osclófar "
+"nasc chuig an foinse eachtrach seo nuair a osclófar a leithéid de "
+"theachtaireacht. Leis sin, d'fhéadfadh lorg na teachtaireachta atá á léamh a "
+"bheith inleanta. Ceadófar ábhar seachtrach leabaithe den chineál sin i "
+"dteachtaireachtaí HTML ón duine seo sin má chuirtear tic sa bhosca seo."
 
 #: WorkPhone.label WorkPhone.accesskey
 msgid "Wor&k:"
@@ -7295,11 +7323,11 @@ msgstr "&Eile:"
 msgid ""
 "_: OK to translate this, bug #57440\n"
 "&quot;Archives&quot; Folder o&n:"
-msgstr ""
+msgstr "Fillteán &quot;Cartlanna&quot; a&r:"
 
 #: archiveInOtherFolder.label archiveInOtherFolder.accesskey
 msgid "Ot&her:"
-msgstr ""
+msgstr "&Eile:"
 
 #: templatesFolderOn.label templatesFolderOn.accesskey
 msgid ""
@@ -7326,47 +7354,6 @@ msgstr "Coimeád cartlanna teachtaireachta i:"
 #: keepTempltes.label
 msgid "Keep message templates in:"
 msgstr "Coimeád teimpléid i:"
-
-# #-#-#-#-#  chromemessengeram-dsn.properties.po (firefox)  #-#-#-#-#
-# # Strings used in prefs.
-#: pane.title prefPanel-dsn
-msgid "Delivery Status Notification"
-msgstr "Fógairt Stádais Sheachadta"
-
-#: useGlobalPrefs.label useGlobalPrefs.accesskey
-msgid "&Use my global Delivery Status Notification preferences for this account"
-msgstr ""
-"Úsáid mo roghanna &uilíocha Fógartha Stádais Sheachadta le haghaidh an "
-"chuntais seo"
-
-#: useCustomPrefs.label useCustomPrefs.accesskey
-msgid "&Customize Delivery Status Notification for this account"
-msgstr "Sain&cheap Fógairt Stádais Sheachadta le haghaidh an chuntais seo"
-
-#: requestAlways.label requestAlways.accesskey
-msgid "&When sending messages, always request a Delivery Status Notification"
-msgstr ""
-"&Agus teachtaireachtaí á seoladh, iarr Fógairt Stádais Sheachadta i gcónaí"
-
-#: optionTitle.label
-msgid "Ask notification on :"
-msgstr "Lorg fógairt i ndiaidh:"
-
-#: requestOnSucess.label requestOnSucess.accesskey
-msgid "&Success in delivering"
-msgstr "Rath &seachadta"
-
-#: requestOnFailure.label requestOnFailure.accesskey
-msgid "&Failure in delivering"
-msgstr "&Teip sheachadta"
-
-#: requestOnDelay.label requestOnDelay.accesskey
-msgid "&Delay in delivering"
-msgstr "Moill sheacha&dta"
-
-#: requestNever.label requestNever.accesskey
-msgid "&Never receive Delivery Status Notification"
-msgstr "&Ná faigh Fógairt Stádais Sheachadta choíche"
 
 #: identitiesListDesc.label
 msgid "Multiple Identities Support"
@@ -7635,7 +7622,7 @@ msgstr "Sc&rios teachtaireachtaí léite i gcónaí"
 
 #: retentionApplyToFlagged.label retentionApplyToFlagged.accesskey
 msgid "Always &keep starred messages"
-msgstr ""
+msgstr "&Coimeád teachtaireachtaí marcáilte i gcónaí"
 
 #: nntpRemoveBody.label nntpRemoveBody.accesskey
 msgid "&Only message bodies less than"
@@ -7802,7 +7789,7 @@ msgstr "Fá&g teachtaireachtaí ar an bhfreastalaí"
 
 #: headersOnly.label headersOnly.accesskey
 msgid "F&etch headers only"
-msgstr ""
+msgstr "Ná faigh ach na c&eanntásca"
 
 #: deleteByAgeFromServer.label deleteByAgeFromServer.accesskey
 msgid "F&or at most"
@@ -11827,7 +11814,7 @@ msgstr ""
 "na nDréachtaí?"
 
 # # generics string
-#: defaultSubject
+#: defaultSubject noSubject
 msgid "(no subject)"
 msgstr "(gan ábhar)"
 
@@ -11840,18 +11827,22 @@ msgstr "Cuir comha(i)d faoi iamh"
 msgid "Write:"
 msgstr "Scríobh:"
 
-# # String used by the dialog that ask the user to enter a subject
-#: sendMsgTitle sendMessageCheckWindowTitle
-msgid "Send Message"
-msgstr "Seoladh na Teachtaireachta"
-
-#: subjectDlogMessage
-msgid ""
-"You did not specify a subject for this message. If you would like to provide "
-"one, please type it now."
+# # String used by the empty subject dialog
+#: subjectEmptyTitle
+msgid "Subject Reminder"
 msgstr ""
-"Níor shonraigh tú ábhar na teachtaireachta seo. Más mian leat ceann a chur "
-"lei, iontráil anois é le do thoil."
+
+#: subjectEmptyMessage
+msgid "Your message doesn't have a subject."
+msgstr ""
+
+#: sendWithEmptySubjectButton
+msgid "&Send Without Subject"
+msgstr ""
+
+#: cancelSendingButton
+msgid "&Cancel Sending"
+msgstr ""
 
 # # String used by the dialog that informs the user about the newsgroup recipient
 #: recipientDlogMessage
@@ -11929,6 +11920,11 @@ msgstr ""
 #: quitComposeWindowWaitButtonLabel2
 msgid "&Wait"
 msgstr "&Fan"
+
+# # String used by the dialog that ask the user to enter a subject
+#: sendMessageCheckWindowTitle
+msgid "Send Message"
+msgstr "Seoladh na Teachtaireachta"
 
 #: sendMessageCheckLabel
 msgid "Are you sure you are ready to send this message?"
@@ -12302,11 +12298,6 @@ msgstr "Cuir comha(i)d &faoi iamh…"
 #: attachPage.label attachPage.accesskey
 msgid "Attach &Web Page…"
 msgstr "Ceangail Leathanach &Gréasáin…"
-
-# LOCALIZATION NOTE sendprogress.dtd Main UI for Send Message Progress Dialog
-#: sendWindow.title
-msgid "Sending Messages"
-msgstr "Teachtaireachtaí á Seoladh"
 
 #: progress.label
 msgid "Progress:"
@@ -12721,15 +12712,15 @@ msgstr ""
 
 #: viewFeedWebPage.label viewFeedWebPage.accesskey
 msgid "&Web Page"
-msgstr ""
+msgstr "Leathanach &Gréasáin"
 
 #: viewFeedSummary.label viewFeedSummary.accesskey
 msgid "Su&mmary"
-msgstr ""
+msgstr "Achoi&mre"
 
 #: viewFeedSummaryFeedPropsPref.label viewFeedSummaryFeedPropsPref.accesskey
 msgid "&Default Format"
-msgstr ""
+msgstr "Formái&d Réamhshocraithe"
 
 #: viewAttachmentsInlineCmd.label viewAttachmentsInlineCmd.accesskey
 msgid "Display &Attachments Inline"
@@ -12861,6 +12852,11 @@ msgstr "Frea&gair an Grúpa Nuachta"
 #: replyToAllMsgCmd.label replyToAllMsgCmd.accesskey
 msgid "Re&ply to All"
 msgstr "Freag&air Cách"
+
+#: replyToListMsgCmd.label replyToListMsgCmd.accesskey contextReplyList.label
+#: contextReplyList.accesskey
+msgid "Reply to &List"
+msgstr ""
 
 #: forwardAsMenu.label forwardAsMenu.accesskey
 msgid "For&ward As"
@@ -13085,6 +13081,10 @@ msgstr "Freagair"
 msgid "Reply All"
 msgstr "Freagair Cách"
 
+#: replyListButton.label
+msgid "Reply to List"
+msgstr ""
+
 #: forwardButton.label goForwardButton1.label
 msgid "Forward"
 msgstr "Ar Aghaidh"
@@ -13154,6 +13154,10 @@ msgstr "Freagair an teachtaireacht"
 #: replyAllButton.tooltip
 msgid "Reply to sender and all recipients"
 msgstr "Freagair an seoltóir agus gach faighteoir"
+
+#: replyListButton.tooltip
+msgid "Reply to mailing list"
+msgstr ""
 
 #: forwardButton.tooltip
 msgid "Forward selected message"
@@ -13538,7 +13542,7 @@ msgstr ""
 
 #: loadRemoteContentButton3.label
 msgid "Show Remote Content"
-msgstr ""
+msgstr "Taispeáin Ábhar Cianda"
 
 # Phishing Bar
 #: phishingBarMessage2.label
@@ -13666,10 +13670,16 @@ msgstr "Fo-Fhillteán Nua…"
 #: markFolderRead
 msgid "Mark Folder Read;Mark Folders Read"
 msgstr ""
+"Marcáil an Fillteán mar Léite;Marcáil na Fillteáin mar Léite;Marcáil na "
+"Fillteáin mar Léite;Marcáil na Fillteáin mar Léite;Marcáil na Fillteáin mar "
+"Léite"
 
 #: markNewsgroupRead
 msgid "Mark Newsgroup Read;Mark Newsgroups Read"
 msgstr ""
+"Marcáil an Grúpa Nuachta mar Léite;Marcáil na Grúpaí Nuachta mar Léite;"
+"Marcáil na Grúpaí Nuachta mar Léite;Marcáil na Grúpaí Nuachta mar Léite;"
+"Marcáil na Grúpaí Nuachta mar Léite"
 
 #: folderProperties
 msgid "Folder Properties"
@@ -14322,7 +14332,7 @@ msgstr "An bhfuil tú cinnte gur mian leat díliostáil ó %S?"
 
 #: confirmUnsubscribeManyText
 msgid "Are you sure you want to unsubscribe from these newsgroups?"
-msgstr ""
+msgstr "An bhfuil tú cinnte gur mian leat díliostáil ó na grúpaí nuachta seo?"
 
 #: feedNoSummaryTitle
 msgid "No Feed Summary"
@@ -14569,7 +14579,7 @@ msgstr "Fillteáin Dheireanacha"
 
 #: folderPaneHeader_smart smartAccountName
 msgid "Smart Folders"
-msgstr ""
+msgstr "Fillteáin Chliste"
 
 # Copy / Move to Folder Again
 # LOCALIZATION NOTE %1$S is the name of the folder we will move to. moveToFolderAgainAccessKey
@@ -14590,7 +14600,7 @@ msgstr "Cóipeáil go \"%1$S\" Arís"
 # LOCALIZATION NOTE %1$S is the e-mail address of the person we will allow remote content for
 #: alwaysLoadRemoteContentForSender2
 msgid "Always load remote content from %1$S"
-msgstr ""
+msgstr "Luchtaigh ábhar cianda ó %1$S i gcónaí"
 
 #: growlNotification
 msgid "New Mail"
@@ -14644,6 +14654,22 @@ msgstr "Tusa"
 #: whatsNew
 msgid "What's New"
 msgstr "Scéal Scéil"
+
+#: applyToCollapsedMsgsTitle
+msgid "Confirm Delete of Messages in Collapsed Thread(s)"
+msgstr ""
+
+#: applyToCollapsedMsgs
+msgid "Warning - this will delete messages in collapsed thread(s)"
+msgstr ""
+
+#: applyToCollapsedAlwaysAskCheckbox
+msgid "Always ask me before deleting messages in collapsed threads"
+msgstr ""
+
+#: applyNowButton
+msgid "Apply"
+msgstr "Cuir i bhFeidhm"
 
 #: glodaSearch_results_why_body Body
 msgid "Body"
@@ -15170,7 +15196,7 @@ msgid "This is a draft message"
 msgstr "Is dréacht é seo"
 
 # verb; translate as capital
-#: archiveButton.label
+#: archiveButton.label archive.label
 msgid "archive"
 msgstr "Cuir sa chartlann"
 
@@ -15182,6 +15208,10 @@ msgstr "Freagair"
 #: hdrReplyAllButton.label
 msgid "reply all"
 msgstr "Freagair cách"
+
+#: hdrReplyListButton.label
+msgid "reply list"
+msgstr ""
 
 # verb; translate as capital
 #: hdrForwardButton.label
@@ -15470,6 +15500,51 @@ msgstr "A&mhairc Shaincheaptha"
 #: viewVirtualFolder.label viewVirtualFolder.accesskey
 msgid "&Save View as a Folder…"
 msgstr "&Sábháil an tAmharc mar Fhillteán…"
+
+#: window.title
+msgid "Message Summary"
+msgstr ""
+
+#: selectedmessages.label
+msgid "Selected Messages"
+msgstr "Teachtaireachtaí Roghnaithe"
+
+# LOCALIZATION NOTE (selectedNMessages, acrossNThreads): Semi-colon list of plural forms.
+# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 number of threads or solitary messages selected
+# example: 4 conversations
+#: NConversations
+msgid "#1 conversation; #1 conversations"
+msgstr "#1 chomhrá; #1 chomhrá; #1 chomhrá; #1 gcomhrá; #1 comhrá"
+
+#: numMsgs
+msgid "#1 message;#1 messages"
+msgstr ""
+"#1 teachtaireacht;#1 theachtaireacht;#1 theachtaireacht;#1 dteachtaireacht;#1 "
+"teachtaireacht"
+
+#: countUnread
+msgid ", #1 unread;, #1 unread"
+msgstr ""
+
+#: Nmessages
+msgid "(#1 message);(#1 messages)"
+msgstr ""
+"(#1 teachtaireacht);(#1 theachtaireacht);(#1 theachtaireacht);(#1 "
+"dteachtaireacht);(#1 teachtaireacht)"
+
+# thread and multiple message selection summaries
+#: messagesSize
+msgid "These messages take up: #1 #2."
+msgstr ""
+
+#: yesterday
+msgid "yesterday"
+msgstr "inné"
+
+#: noticeText
+msgid "(Note: #1 messages are selected, the first #2 are shown)"
+msgstr ""
 
 #: newFolderDialog.title
 msgid "New Folder"
@@ -15998,7 +16073,7 @@ msgstr "Cumasaigh Cuardach Cuimsith&each agus an tInneacsóir"
 
 #: systemIntegration.label systemIntegration.title
 msgid "System Integration"
-msgstr ""
+msgstr "Comhtháthú Córais"
 
 #: alwaysCheckDefault.label alwaysCheckDefault.accesskey
 msgid ""
@@ -16075,6 +16150,10 @@ msgstr "I bhfuinneog &nua teachtaireachta"
 #: reuseExpRadio1.label reuseExpRadio1.accesskey
 msgid "An &existing message window"
 msgstr "I bhfuinn&eog theachtaireachta atá ann"
+
+#: closeMsgWindowOnDelete.label closeMsgWindowOnDelete.accesskey
+msgid "&Close message window on delete"
+msgstr ""
 
 #: autoCheck.label
 msgid "Automatically check for updates to:"
@@ -16301,7 +16380,7 @@ msgstr ""
 
 #: attachmentReminderOptions.label attachmentReminderOptions.accesskey
 msgid "&Keywords…"
-msgstr ""
+msgstr "&Lorgfhocail…"
 
 #: connectionsDialog.title
 msgid "Connection Settings"
@@ -17049,11 +17128,11 @@ msgstr "Is é %S an cliant ríomhphoist réamhshocraithe cheana."
 # ### Attachment Reminder
 #: attachmentReminderAddDialogTitle
 msgid "Add Keyword"
-msgstr ""
+msgstr "Cuir Lorgfhocal Leis"
 
 #: attachmentReminderAddText attachmentReminderEditText
 msgid "Keyword:"
-msgstr ""
+msgstr "Lorgfhocal:"
 
 #: attachmentReminderEditDialogTitle
 msgid "Edit Keyword"
@@ -17543,7 +17622,7 @@ msgstr "Ardchuardach an Leabhair Sheoltaí"
 
 #: searchIntegration.engineName
 msgid "Spotlight"
-msgstr ""
+msgstr "Spotsolas"
 
 #: searchIntegration.engineName
 msgid "Windows Search"
