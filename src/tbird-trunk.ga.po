@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-13 19:31-0500\n"
+"POT-Creation-Date: 2009-08-17 15:30-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -142,8 +142,8 @@ msgstr "W"
 
 # "E" in main browser window
 #: editMenu.label editMenu.accesskey mapeditMenu.label mapeditMenu.accesskey
-#: editDirectory.label editDirectory.accesskey button.editFeed.label
-#: button.editFeed.accesskey editKeywordButton.label
+#: edit.label edit.accesskey editDirectory.label editDirectory.accesskey
+#: button.editFeed.label button.editFeed.accesskey editKeywordButton.label
 #: editKeywordButton.accesskey editTagButton.label editTagButton.accesskey
 msgid "&Edit"
 msgstr "&Eagar"
@@ -519,7 +519,8 @@ msgid "&Remove Named Anchors"
 msgstr "Bain Ancai&rí Ainmnithe"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
-#: formatRemoveNamedAnchors.key selectAllCmd.key saveLabelAccesskey
+#: formatRemoveNamedAnchors.key selectAllCmd.key addAttachmentButton.accessskey
+#: saveLabelAccesskey certs.ask.accesskey
 msgid "A"
 msgstr "W"
 
@@ -1080,9 +1081,9 @@ msgstr "Tuilleadh Airíonna"
 msgid "Fewer Properties"
 msgstr "Níos Lú Airíonna"
 
-#: None none.value tableCaptionNone.label directoriesNone.label
-#: connectionSecurityType-0.label smtpServer-ConnectionSecurityType-0
-#: minSize.none
+#: None none.value tableCaptionNone.label noEncryption.label
+#: directoriesNone.label connectionSecurityType-0.label
+#: smtpServer-ConnectionSecurityType-0 minSize.none
 msgid "None"
 msgstr "Gan sonrú"
 
@@ -1192,7 +1193,7 @@ msgstr "Seiceáil litrithe críochnaithe."
 msgid "Check Spelling"
 msgstr "Seiceáil Litriú"
 
-#: InputError
+#: InputError finished_with_error
 msgid "Error"
 msgstr "Earráid"
 
@@ -3189,7 +3190,7 @@ msgstr "&Cineál an Réimse"
 msgid "Text"
 msgstr "Téacs"
 
-#: password.value
+#: password.value password.description
 msgid "Password"
 msgstr "Focal Faire"
 
@@ -4915,6 +4916,437 @@ msgstr ""
 "Is saorbhogearra le foinsí oscailte ón Fhondúireacht neamhbhrabúis Mozilla é %"
 "S."
 
+#: welcome.description
+msgid "Quick Account Setup"
+msgstr "Mearshocrú Cuntais"
+
+#: autoconfigWizard.style
+msgid "width: 640px; height: 480px;"
+msgstr "width: 640px; height: 480px;"
+
+#: name.description
+msgid "Your name"
+msgstr "D'ainm"
+
+#: email.description propertyPrimaryEmail emailSectionHdr.label Email 1059
+msgid "Email"
+msgstr "Ríomhphost"
+
+#: next.label next.accesskey
+msgid "&Next &#187;"
+msgstr "&Ar Aghaidh &#187;"
+
+#: back.label back.accesskey
+msgid "&#171; &Back"
+msgstr "&#171; &Siar"
+
+#: accountInformation.label
+msgid "Account Information"
+msgstr "Eolas faoin Chuntas"
+
+#: username.label
+msgid "username"
+msgstr "ainm úsáideora"
+
+#: receivingServer.label
+msgid "receiving"
+msgstr ""
+
+#: sendingServer.label
+msgid "sending"
+msgstr "seoladh"
+
+#: starttls.label starttls connectionSecurityType-2.label
+#: smtpServer-ConnectionSecurityType-2
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+#: sslTls.label ssl_tls connectionSecurityType-3.label
+#: smtpServer-ConnectionSecurityType-3
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+#: imap.label
+msgid "IMAP"
+msgstr "IMAP"
+
+#: pop.label
+msgid "POP"
+msgstr "POP"
+
+#: smtp.label
+msgid "SMTP"
+msgstr "SMTP"
+
+# which will create the account and take the user to the account
+# configuration screen.
+#: createAndEditSettings.label
+msgid ""
+"_: This label is a link\n"
+"Create and Edit Account Settings"
+msgstr ""
+
+#: cancel.label WizardContinue CancelBtn
+msgid "Cancel"
+msgstr "Cealaigh"
+
+# "S" under Main -> Amharc
+# need tweak for right click menu; S = Siar
+#: stop.label stop.accesskey stopFilters.label stopFilters.accesskey
+msgid "&Stop"
+msgstr "&Stad"
+
+# displayed on the button which will re-guess the account configuration,
+# taking into account the settings the user has changed.
+#: retest.label retest.accesskey
+msgid ""
+"_: This is the text that is\n"
+"&Re-test Configuration"
+msgstr "Tástáil an Chum&raíocht Arís"
+
+#: rememberPassword.label rememberPassword.accesskey
+msgid "Re&member password"
+msgstr "&Meabhraigh focal faire"
+
+#: warning.label
+msgid "Warning!"
+msgstr "Rabhadh!"
+
+#: incomingSettings.label
+msgid "Incoming settings:"
+msgstr ""
+
+#: outgoingSettings.label
+msgid "Outgoing settings:"
+msgstr ""
+
+# warning on the incoming server, then the user will need to check a
+# checkbox beside this text before continuing.
+#: confirmIncomingWarning.label confirmIncomingWarning.accesskey
+msgid ""
+"_: If there is a security\n"
+"I &understand the risks."
+msgstr "T&uigim na contúirtí."
+
+# warning on the outgoing server, then the user will need to check a
+# checkbox beside this text before continuing.
+#: confirmOutgoingWarning.label confirmOutgoingWarning.accesskey
+msgid ""
+"_: If there is a security\n"
+"I un&derstand the risks."
+msgstr "Tui&gim na contúirtí."
+
+# on the incoming or outgoing servers, then the page that pops up will
+# have this text in a button to continue by creating the account.
+#: createAccount.label createAccount.accesskey
+msgid ""
+"_: If there is a security warning\n"
+"&Create Account"
+msgstr "&Cruthaigh an Cuntas"
+
+# the incoming or outgoing servers, then the page that pops up will have
+# this text in a button to take you back to the previous page to change
+# the settings and try again.
+#: changeSettings.label changeSettings.accesskey
+msgid ""
+"_: If there is a security warning on\n"
+"Change &Settings"
+msgstr "Athraigh &Socruithe"
+
+#: contactYourProvider.description
+msgid ""
+"&brandShortName; can allow you to get to your mail using the provided "
+"configurations. However, you should contact your administrator or email "
+"provider regarding these improper connections. See the Thunderbird FAQ for "
+"more information."
+msgstr ""
+
+#: insecureServer.tooltip.title
+msgid "Warning! This is an insecure server."
+msgstr ""
+
+#: insecureServer.tooltip.details
+msgid "Click circle for more details."
+msgstr ""
+
+#: insecureClearText.description
+msgid ""
+"Email is sent in clear-text, so your email could be read by attackers, etc. "
+"&brandShortName; will let you get to your mail, but you should really get "
+"your email provider to configure the server with a secure connection."
+msgstr ""
+
+#: insecureSelfSigned.description
+msgid ""
+"The server uses a certificate that we can't trust, so we can't be sure that "
+"someone isn't intercepting the traffic between &brandShortName; and your "
+"server. &brandShortName; will let you get to your mail, but you should really "
+"get your email provider to configure the server with a trusted certificate."
+msgstr ""
+
+#: secureServer.description
+msgid "Congratulations! This is a secure server."
+msgstr "Comhghairdeas! Is freastalaí slán é seo."
+
+# readFromXML.js
+#: no_emailProvider.error
+msgid "The config file XML does not contain an email account configuration."
+msgstr ""
+
+#: outgoing_not_smtp.error
+msgid "The outgoing server must be of type SMTP"
+msgstr ""
+
+# verifyConfig.js
+#: cannot_login.error
+msgid ""
+"Unable to log in at server. Probably wrong configuration, username or "
+"password."
+msgstr ""
+
+# guessConfig.js
+#: cannot_find_server.error
+msgid "Can't find a server"
+msgstr "Ní féidir freastalaí a aimsiú"
+
+# LOCALIZATION NOTE: %1$S will be the name of the app (i.e. ThunderBird), %2$S will be the hostname of the server the user was trying to connect to.
+#: incoming_cleartext_warning
+msgid ""
+"You've setup %1$S to connect to the incoming mail server %2$S, which is an "
+"insecure server."
+msgstr ""
+
+#: incoming_selfsigned_warning
+msgid ""
+"You've setup %1$S to connect securely to the incoming mail server %2$S, but "
+"we can't confirm that your connection is secure."
+msgstr ""
+
+#: outgoing_cleartext_warning
+msgid ""
+"You've setup %1$S to connect to the outgoing mail server %2$S, which is an "
+"insecure server."
+msgstr ""
+
+#: outgoing_selfsigned_warning
+msgid ""
+"You've setup %1$S to connect securely to the outgoing mail server %2$S, but "
+"we can't confirm that your connection is secure."
+msgstr ""
+
+#: selfsigned_details
+msgid ""
+"Normally, a secure mail server will present a trusted certificate to prove "
+"that it is really the server it claims to be. The connection to the mail "
+"server will be encrypted but cannot be validated as being the correct server."
+msgstr ""
+
+#: cleartext_details
+msgid ""
+"Insecure mail servers do not use encrypted connections to protect your "
+"passwords and private information. By connecting to this server you could "
+"expose your password and private information."
+msgstr ""
+
+# LOCALIZATION NOTE(default_server_tag): Used to indicate the default smtp server in the server dropdown list.
+#: default_server_tag
+msgid "(default)"
+msgstr "(réamhshocrú)"
+
+# these are the fields that get inserted in the search line
+# for "and" searches, this looks like:
+#
+# searchAnd0 <attribute> searchAnd1 <operator> searchAnd2 <value> searchAnd4
+#
+# for example, in english this looks like:
+# and the [Sender ] [doesn't contain] [John]
+#
+# TODO: need to special-case the first line (filterindex==0)
+#
+# filter stuff
+#: searching_for_configs searchingMessage
+msgid "Searching…"
+msgstr "Ag cuardach…"
+
+#: manually_edit_config
+msgid "Editing Config"
+msgstr "Cumraíocht á Cur in Eagar"
+
+#: finished_with_success
+msgid "Finished"
+msgstr "Críochnaithe"
+
+# config subtitles
+#: check_preconfig
+msgid "checking for pre-configuration…"
+msgstr "réamhchumraíocht á lorg…"
+
+#: found_preconfig
+msgid "found pre-configuration"
+msgstr "aimsíodh réamhchumraíocht"
+
+#: checking_config
+msgid "checking configuration…"
+msgstr "cumraíocht á seiceáil…"
+
+#: found_config
+msgid "Found configuration of your account"
+msgstr "Aimsíodh cumraíocht do chuntais"
+
+#: checking_mozilla_config
+msgid "checking Mozilla Community configurations…"
+msgstr ""
+
+#: found_isp_config
+msgid "found a configuration"
+msgstr "aimsíodh cumraíocht"
+
+#: probing_config
+msgid "probing configuration…"
+msgstr ""
+
+#: guessing_from_email
+msgid "guessing configuration…"
+msgstr ""
+
+#: config_details_found
+msgid "Your configuration details have been found!"
+msgstr "Aimsíodh mionsonraí do chumraíochta!"
+
+#: config_unverifiable
+msgid "Configuration could not be verified — is the username or password wrong?"
+msgstr ""
+
+#: incoming_found_specify_outgoing
+msgid ""
+"Your incoming server configuration details have been found, please specify "
+"the sending hostname."
+msgstr ""
+
+#: outgoing_found_specify_incoming
+msgid ""
+"Your outgoing server configuration details have been found, please specify "
+"the receiving hostname."
+msgstr ""
+
+#: please_enter_missing_hostnames
+msgid "Could not guess settings — please enter missing hostnames."
+msgstr ""
+
+#: incoming_failed_trying_outgoing
+msgid ""
+"Could not automatically configure incoming server, still trying for outgoing "
+"server."
+msgstr ""
+
+#: outgoing_failed_trying_incoming
+msgid ""
+"Could not automatically configure outgoing server, still trying for incoming "
+"server."
+msgstr ""
+
+#: checking_password
+msgid "Checking password…"
+msgstr "Focal faire á sheiceáil…"
+
+#: password_ok
+msgid "Password ok!"
+msgstr "Focal faire ceart go leor!"
+
+#: user_pass_invalid
+msgid "Username or password invalid"
+msgstr "Ainm úsáideora nó focal faire neamhbhailí"
+
+#: check_server_details
+msgid "Checking server details"
+msgstr "Mionsonraí an fhreastalaí á seiceáil"
+
+#: check_in_server_details
+msgid "Checking incoming server details"
+msgstr ""
+
+#: check_out_server_details
+msgid "Checking outgoing server details"
+msgstr ""
+
+#: error_creating_account
+msgid "Error Creating Account"
+msgstr "Earráid agus Cuntas á Chruthú"
+
+#: incoming_server_exists
+msgid "Incoming server already exists."
+msgstr "Tá an freastalaí isteach ann cheana."
+
+#: no_encryption
+msgid "No encryption"
+msgstr "Gan chriptiú"
+
+#: name.error
+msgid "Please enter your name, as it should be shown to your correspondents."
+msgstr ""
+
+#: email.error
+msgid "Double check this email address!"
+msgstr "Seiceáil an seoladh ríomhphoist seo arís!"
+
+#: password.error
+msgid "Login did not succeed. Please double-check username and password."
+msgstr ""
+
+# sanitizeDatatypes.js
+#: hostname_syntax.error
+msgid ""
+"Hostname is empty or contains forbidden characters. Only letters, numbers, - "
+"and . are allowed."
+msgstr ""
+
+#: alphanumdash.error
+msgid ""
+"String contains unsupported characters. Only letters, numbers, - and _ are "
+"allowed."
+msgstr ""
+
+#: allowed_value.error
+msgid "Supplied value not in allowed list"
+msgstr ""
+
+#: url_scheme.error
+msgid "URL scheme not allowed"
+msgstr ""
+
+#: url_parsing.error
+msgid "URL not recognized"
+msgstr ""
+
+#: string_empty.error
+msgid "You must supply a value for this string"
+msgstr ""
+
+#: boolean.error
+msgid "Not a boolean"
+msgstr ""
+
+#: no_number.error
+msgid "Not a number"
+msgstr ""
+
+#: number_too_large.error
+msgid "Number too large"
+msgstr "Uimhir rómhór"
+
+#: number_too_small.error
+msgid "Number too small"
+msgstr "Uimhir róbheag"
+
+# fetchhttp.js
+#: cannot_contact_server.error
+msgid "Cannot contact server"
+msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí"
+
+#: bad_response_content.error
+msgid "Bad response content"
+msgstr ""
+
 # #-#-#-#-#  tmp.XXXXcCd74t.po (thunderbird)  #-#-#-#-#
 # extracted from am-main.xul
 # #-#-#-#-#  tmp.XXXXYicoAU.po (thunderbird)  #-#-#-#-#
@@ -5114,13 +5546,10 @@ msgstr "&POP"
 msgid "Your existing outgoing server (SMTP), &quot;"
 msgstr "Bainfear úsáid as do fhreastalaí ríomhphoist amach (SMTP), &quot;"
 
-#: haveSmtp1.suffix haveSmtp2.suffix
+#: haveSmtp1.suffix2 haveSmtp2.suffix2
 msgid ""
-"&quot;, will be used. You can modify outgoing server settings by choosing "
-"Account Settings from the Tools menu."
+"&quot;, will be used. You can change outgoing servers in the account settings."
 msgstr ""
-"&quot;. Is féidir socruithe an fhreastalaí amach a mhionathrú trí \"Socruithe "
-"Cuntais\" a roghnú sa roghchlár \"Uirlisí\"."
 
 # Entities for Login page
 #: loginTitle.label
@@ -5171,16 +5600,11 @@ msgstr ""
 msgid "Your outgoing (SMTP) server, &quot;"
 msgstr "Is ionann do fhreastalaí amach (SMTP), &quot;"
 
-# Séamus, don't readd any \" quotes in this msgstr…
-#: haveSmtp3.suffix
+#: haveSmtp3.suffix2
 msgid ""
 "&quot;, is identical to your incoming server, your incoming user name will be "
-"used to access it. You can modify outgoing server settings by choosing "
-"Account Settings from the Tools menu."
+"used to access it. You can change outgoing servers in the account settings."
 msgstr ""
-"&quot;, agus do fhreastalaí isteach. Bainfear úsáid as d'ainm úsáideora "
-"isteach chun é a rochtain. Is féidir socruithe an fhreastalaí amach a "
-"mhionathrú trí \"Socruithe Cuntais\" a roghnú ón roghchlár \"Uirlisí\"."
 
 # Entities for Account name page
 #: accnameTitle.label
@@ -5291,7 +5715,7 @@ msgstr "&Cealaigh"
 msgid "Reco&ver"
 msgstr "Ath&shlánaigh"
 
-#: cmd.retry.label cmd.retry.accesskey imapLoginFailedRetryButton
+#: cmd.retry.label cmd.retry.accesskey mailServerLoginFailedRetryButton
 msgid "&Retry"
 msgstr "&Atriail"
 
@@ -5447,8 +5871,8 @@ msgstr "Á Shioncronú: %S"
 msgid "Deleted #1 message from #2;Deleted #1 messages from #2"
 msgstr ""
 "Scriosadh teachtaireacht amháin ó #2;Scriosadh #1 theachtaireacht ó #2;"
-"Scriosadh #1 theachtaireacht ó #2;Scriosadh #1 dteachtaireacht ó #2;"
-"Scriosadh #1 teachtaireacht ó #2"
+"Scriosadh #1 theachtaireacht ó #2;Scriosadh #1 dteachtaireacht ó #2;Scriosadh "
+"#1 teachtaireacht ó #2"
 
 # LOCALIZATION NOTE (movedMessages): #1 number of messages, #2 and #3: folder names
 #: movedMessages
@@ -5531,15 +5955,18 @@ msgid ""
 "Indexing #1 of #2 message in #4;Indexing #1 of #2 messages in #4 (#3% "
 "complete)"
 msgstr ""
-"#1 as #2 teachtaireacht á hinnéacsú i #4;#1 as #2 theachtaireacht á hinnéacsú  i #4 (#3% "
-"críochnaithe);#1 as #2 theachtaireacht á hinnéacsú i #4 (#3% críochnaithe);#1 as "
-"#2 dteachtaireacht á hinnéacsú i #4 (#3% críochnaithe);#1 as #2 teachtaireacht á "
-"hinnéacsú i #4 (#3% críochnaithe)"
+"#1 as #2 teachtaireacht á hinnéacsú i #4;#1 as #2 theachtaireacht á "
+"hinnéacsú  i #4 (#3% críochnaithe);#1 as #2 theachtaireacht á hinnéacsú i #4 "
+"(#3% críochnaithe);#1 as #2 dteachtaireacht á hinnéacsú i #4 (#3% "
+"críochnaithe);#1 as #2 teachtaireacht á hinnéacsú i #4 (#3% críochnaithe)"
 
 # LOCALIZATION NOTE (indexedFolder): #1 number of messages; #2 folder name
 #: indexedFolder
 msgid "Indexed #1 message in #2;Indexed #1 messages in #2"
-msgstr "Innéacsaíodh #1 teachtaireacht i #2;Innéacsaíodh #1 theachtaireacht i #2;Innéacsaíodh #1 theachtaireacht i #2;Innéacsaíodh #1 dteachtaireacht i #2;Innéacsaíodh #1 teachtaireacht i #2"
+msgstr ""
+"Innéacsaíodh #1 teachtaireacht i #2;Innéacsaíodh #1 theachtaireacht i #2;"
+"Innéacsaíodh #1 theachtaireacht i #2;Innéacsaíodh #1 dteachtaireacht i #2;"
+"Innéacsaíodh #1 teachtaireacht i #2"
 
 # LOCALIZATION NOTE (indexedFolderStatus): #1 number of seconds spent indexing
 #: indexedFolderStatus
@@ -6274,6 +6701,7 @@ msgid "Minimize"
 msgstr "Íoslaghdaigh"
 
 #: minimizeWindow.key moveToFolderAgainCmd.key markAsReadCmd.key
+#: certs.auto.accesskey
 msgid "m"
 msgstr "m"
 
@@ -6436,10 +6864,6 @@ msgstr ""
 msgid "Are you sure you want to delete the selected mailing lists?"
 msgstr ""
 "An bhfuil tú cinnte gur mian leat na liostaí postála roghnaithe a scriosadh?"
-
-#: propertyPrimaryEmail emailSectionHdr.label Email 1059
-msgid "Email"
-msgstr "Ríomhphost"
 
 #: propertyListName
 msgid "List Name"
@@ -7787,14 +8211,6 @@ msgstr "Slá&ndáil an cheangail:"
 msgid "STARTTLS, if available"
 msgstr "STARTTLS, má tá sé ar fáil"
 
-#: connectionSecurityType-2.label smtpServer-ConnectionSecurityType-2
-msgid "STARTTLS"
-msgstr "STARTTLS"
-
-#: connectionSecurityType-3.label smtpServer-ConnectionSecurityType-3
-msgid "SSL/TLS"
-msgstr "SSL/TLS"
-
 #: useSecAuth.label useSecAuth.accesskey
 msgid "Use secure authent&ication"
 msgstr "Úsáid fíordheimhniú da&ingean"
@@ -8930,12 +9346,6 @@ msgstr "&Loga na Scagairí"
 msgid "&Run Now"
 msgstr "&Rith Anois"
 
-# "S" under Main -> Amharc
-# need tweak for right click menu; S = Siar
-#: stopFilters.label stopFilters.accesskey
-msgid "&Stop"
-msgstr "&Stad"
-
 #: folderPickerPrefix.label folderPickerPrefix.accesskey
 msgid "Run sele&cted filter(s) on:"
 msgstr "Rith s&cagairí roghnaithe ar:"
@@ -9023,6 +9433,10 @@ msgstr ""
 #: untitledFilterName
 msgid "Untitled Filter"
 msgstr "Scagaire gan Teideal"
+
+#: matchAllFilterName
+msgid "Match All Messages"
+msgstr "Meaitseáil Gach Teachtaireacht"
 
 #: filterListBackUpMsg
 msgid ""
@@ -9206,6 +9620,14 @@ msgstr "cóipeáilte go fillteán"
 msgid "ignored subthread"
 msgstr "foshnáithe ar a dtugtar neamhaird"
 
+# LOCALIZATION NOTE(filterAutoNameStr)
+# %1$S=Header or item to match, e.g. "From", "Tag", "Age in days", etc.
+# %2$S=Operator, e.g. "Contains", "is", "is greater than", etc.
+# %3$S=Value, e.g. "Steve Jobs", "Important", "42", etc.
+#: filterAutoNameStr
+msgid "%1$S %2$S: %3$S"
+msgstr "%1$S %2$S: %3$S"
+
 #: unreadColumn.label messageUnread
 msgid "Unread"
 msgstr "Gan léamh"
@@ -9243,9 +9665,9 @@ msgstr "Atóg an Comhad Achoimre"
 msgid "Retention Policy"
 msgstr "Polasaí Coinneála"
 
-#: retentionUseDefault.label retentionUseDefault.accesskey
-msgid "Use server &defaults"
-msgstr "Úsái&d réamhshocruithe an fhreastalaí"
+#: retentionUseAccount.label retentionUseAccount.accesskey
+msgid "&Use my account settings"
+msgstr ""
 
 #: retentionDeleteMsg.label retentionDeleteMsg.accesskey
 msgid "Delete &messages more than"
@@ -9319,20 +9741,6 @@ msgstr "Úsáid:"
 #: folderQuotaStatus.label status.label
 msgid "Status:"
 msgstr "Stádas:"
-
-#: imapLoginFailedTitle
-msgid "Login Failed"
-msgstr "Theip ar an Logáil Isteach"
-
-# # @name IMAP_LOGIN_FAILED
-# # @loc None
-#: imapLoginFailed
-msgid "Login to server %S failed."
-msgstr "Theip ar an logáil isteach go dtí an freastalaí %S."
-
-#: imapLoginFailedEnterNewPasswordButton
-msgid "&Enter New Password"
-msgstr "Iontráil &Focal Faire Nua"
 
 #
 # The following are used by the imap code to display progress/status/error messages
@@ -9570,7 +9978,7 @@ msgstr "Aimsíodh fillteán: %S"
 # LOCALIZATION NOTE (Error 5047): Do not translate the word %S below.
 # Place the word "%S" in your translation where the email address
 # or the username should appear
-#: 5047 12543
+#: 5047 smtpEnterPasswordPrompt
 msgid "Enter your password for %S:"
 msgstr "Iontráil d'fhocal faire le haghaidh %S:"
 
@@ -10023,10 +10431,6 @@ msgstr "Ar Aghaidh &gt;"
 #: finish.label
 msgid "Finish"
 msgstr "Críochnaigh"
-
-#: cancel.label WizardContinue CancelBtn
-msgid "Cancel"
-msgstr "Cealaigh"
 
 #: select.label
 msgid "or select the type of material to import:"
@@ -10543,6 +10947,29 @@ msgstr ""
 msgid "For more information, click Help."
 msgstr "Le haghaidh breis eolais, cliceáil Cabhair."
 
+#
+# The following are used by the local mail code to display progress/status/error messages
+#
+#: pop3EnterPasswordPromptTitle
+msgid "Enter your password"
+msgstr "Cuir d'fhocal faire isteach"
+
+# # @name ENTER_PASSWORD_PROMPT
+# # @loc None
+# LOCALIZATION NOTE (passwordPrompt): Do not translate the word %S below.
+# Place the word "%S" in your translation where the email address
+# or the username should appear
+#: pop3EnterPasswordPrompt passwordPrompt
+msgid "Enter your password for %1$S on %2$S:"
+msgstr "Iontráil d'fhocal faire le haghaidh %1$S ar %2$S:"
+
+# LOCALIZATION NOTE(pop3PreviouslyEnteredPasswordIsInvalidPrompt): Do not
+# translate the words "%1$S" and "%2$S" below. Place the word %1$S where the
+# user name should appear, and %2$S where the host name should appear.
+#: pop3PreviouslyEnteredPasswordIsInvalidPrompt
+msgid "Please enter a new password for user %1$S on %2$S:"
+msgstr "Iontráil focal faire nua d'úsáideoir %1$S ar %2$S:"
+
 # The following are used by the local mail code to display progress/status/error messages
 #
 # # @name MK_POP3_OUT_OF_DISK_SPACE
@@ -10684,44 +11111,6 @@ msgid "The DELE command did not succeed. Error marking a message as deleted."
 msgstr ""
 "Níor éirigh leis an ordú DELE. Earráid agus teachtaireacht á marcáil scriosta."
 
-# # @name POP3_ENTER_PASSWORD_PROMPT
-# # @loc None
-# LOCALIZATION NOTE(4016): Do not translate the word "%1$s@%2$s" below.
-# Place the word "%1$s" and "%2$s" where email account name should appear (i.e. john.smith@example.org)
-#: 4017
-msgid "Enter your password for %1$s on %2$s:"
-msgstr "Iontráil d'fhocal faire le haghaidh %1$s ar %2$s:"
-
-# # @name POP3_PREVIOUSLY_ENTERED_PASSWORD_IS_INVALID_ETC
-# # @loc None
-# LOCALIZATION NOTE(4016): Do not translate the word "%s" below. It will receive the message returned by the server.
-# Do not translate "%.100s" and "%.100s". It will receive the email account name.
-#: 4018
-msgid "Please enter a new password for user %.100s on %.100s:"
-msgstr "Iontráil focal faire nua don úsáideoir %.100s ar %.100s:"
-
-# # @name POP3_NO_ANSWER
-# # @loc None
-#: 4019
-msgid "No Answer"
-msgstr "Gan Freagra"
-
-# # @name POP3_ENTER_PASSWORD_PROMPT_TITLE
-# # @loc None
-#: 4020
-msgid "Enter your password:"
-msgstr "Iontráil d'fhocal faire:"
-
-# # @name POP3_FOLDER_FOR_TRASH
-# # @loc None
-#: 4023
-msgid ""
-"The Trash already contained a folder named %s. The folder which you just "
-"deleted can be found in the Trash under the new name %s."
-msgstr ""
-"Bhí fillteán ainmnithe %s sa Bhruscar cheana. Tá an fillteán a scrios tú "
-"curtha sa Bhruscar agus é athainmnithe %s."
-
 # Status - stat failed
 # # @name POP3_STAT
 # # @loc None
@@ -10737,12 +11126,6 @@ msgstr ""
 #: 4025
 msgid "Mail server %S responded:"
 msgstr "D'fhreagair an freastalaí ríomhphoist %S:"
-
-# # @name DELETING_MSGS_STATUS
-# # @loc None
-#: 4026
-msgid "Deleting %S of %S messages"
-msgstr "%S as %S teachtaireacht á scriosadh"
 
 # # @name COPYING_MSGS_STATUS
 # # @loc None
@@ -10773,12 +11156,6 @@ msgstr ""
 #: 4030
 msgid "Mail server does not support secure authentication."
 msgstr "Ní thacaíonn an freastalaí ríomhphoist le fíordheimhniú daingean."
-
-# # @name MOVEMAIL_SPOOL_FILE_LOCKED
-# # @loc None
-#: 4032
-msgid "The mail spool file %S is locked."
-msgstr "Tá an comhad spólála %S faoi ghlas."
 
 # # @name MOVEMAIL_CANT_OPEN_SPOOL_FILE
 # # @loc None
@@ -11457,16 +11834,6 @@ msgstr ""
 "Rabhadh! Tá tú ar tí teachtaireacht %d beart a sheoladh. An bhfuil tú cinnte "
 "gur mian leat é sin a dhéanamh?"
 
-# # @name NS_SMTP_PASSWORD_PROMPT2
-#: 12544
-msgid "Enter your password for %S on %S:"
-msgstr "Iontráil d'fhocal faire le haghaidh %S ar %S:"
-
-# # @name NS_SMTP_CONNECTING_TO_SERVER
-#: 12545
-msgid "Connecting to server…"
-msgstr "Ag dul i dteagmháil leis an bhfreastalaí…"
-
 # # @name NS_MSG_SENDING_MESSAGE
 #: 12550
 msgid "Sending message…"
@@ -11662,11 +12029,6 @@ msgid ""
 msgstr ""
 "Tharla earráid agus ríomhphost á sheoladh: níorbh fhéidir focal faire a fháil "
 "le haghaidh %S. Níor seoladh an teachtaireacht."
-
-# # @name NS_SMTP_PASSWORD_PROMPT_TITLE
-#: 12585
-msgid "SMTP Server Password Required"
-msgstr "Focal faire de dhíth le haghaidh freastalaí SMTP"
 
 # # @name NS_ERROR_SMTP_TEMP_SIZE_EXCEEDED
 #: 12586
@@ -11935,7 +12297,21 @@ msgstr "Ainm nua an iatáin:"
 # #   words that that should trigger an attachment reminder.
 #: mail.compose.attachment_reminder_keywords
 msgid ".doc,.pdf,attachment,attach,attached,attaching,enclosed,CV,cover letter"
-msgstr ".doc,.pdf,iatán,iatáin,t-iatán,hiatáin,m'iatán,d'iatán,ceangaltán,cheangaltán,gceangaltán,ceangaltáin,gceangaltáin,cheangaltáin,iamh,CV,ceangailte"
+msgstr ""
+".doc,.pdf,iatán,iatáin,t-iatán,hiatáin,m'iatán,d'iatán,ceangaltán,cheangaltán,"
+"gceangaltán,ceangaltáin,gceangaltáin,cheangaltáin,iamh,CV,ceangailte"
+
+#: addAttachmentButton
+msgid "Add Attachment…"
+msgstr "Cuir Iatán Leis…"
+
+#: remindLaterButton
+msgid "Remind Me Later"
+msgstr "Cuir i gcuimhne dom níos déanaí"
+
+#: remindLaterButton.accessskey editRewrapCmd.key
+msgid "R"
+msgstr "R"
 
 #: attachmentReminderTitle
 msgid "Attachment Reminder"
@@ -11945,6 +12321,17 @@ msgstr ""
 msgid "Did you forget to add an attachment?"
 msgstr "An ndearna tú dearmad iatán a chur leis?"
 
+# LOCALIZATION NOTE (attachmentReminderKeywordsMsgs): Semi-colon list of plural forms.
+# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 number of keywords
+#: attachmentReminderKeywordsMsgs
+msgid "Found an attachment keyword:;Found #1 attachment keywords:"
+msgstr ""
+
+#: attachmentReminderOptionsMsg
+msgid "Attachment reminder words can be configured in your preferences"
+msgstr ""
+
 #: attachmentReminderYesIForgot
 msgid "Oh, I did!"
 msgstr "Rinne mé dearmad!"
@@ -11952,6 +12339,18 @@ msgstr "Rinne mé dearmad!"
 #: attachmentReminderFalseAlarm
 msgid "No, Send Now"
 msgstr "Ní dhearna, Seol Anois"
+
+# # LOCALIZATION NOTE(smtpEnterPasswordPromptWithUsername): Do not translate the
+# # words %1$S and %2$S. Place the word %1$S where the host name should appear,
+# # and %2$S where the user name should appear.
+#: smtpEnterPasswordPromptWithUsername
+msgid "Enter your password for %2$S on %1$S:"
+msgstr "Iontráil d'fhocal faire le haghaidh %2$S ar %1$S:"
+
+# # @name NS_SMTP_PASSWORD_PROMPT_TITLE
+#: smtpEnterPasswordPromptTitle
+msgid "SMTP Server Password Required"
+msgstr "Focal faire de dhíth le haghaidh freastalaí SMTP"
 
 #: attachImageSource.label attachImageSource.accesskey
 msgid "Attach thi&s image to the message"
@@ -12014,10 +12413,6 @@ msgstr "Seo&l Níos Déanaí"
 #: editRewrapCmd.label editRewrapCmd.accesskey
 msgid "Re&wrap"
 msgstr "&Timfhill Arís"
-
-#: editRewrapCmd.key
-msgid "R"
-msgstr "R"
 
 #: showCompositionToolbarCmd.label showCompositionToolbarCmd.accesskey
 msgid "C&omposition Toolbar"
@@ -13398,7 +13793,7 @@ msgstr "Cén Fáth"
 msgid ""
 "_: provides the numerical\n"
 "Score"
-msgstr ""
+msgstr "Scór"
 
 #: columnChooser.tooltip
 msgid "Click to select columns to display"
@@ -14455,15 +14850,6 @@ msgid "Are you sure you want to delete this saved search?"
 msgstr ""
 "An bhfuil tú cinnte gur mian leat an cuardach sábháilte seo a scriosadh?"
 
-# # @name ENTER_PASSWORD_PROMPT
-# # @loc None
-# LOCALIZATION NOTE (passwordPrompt): Do not translate the word %S below.
-# Place the word "%S" in your translation where the email address
-# or the username should appear
-#: passwordPrompt
-msgid "Enter your password for %1$S on %2$S:"
-msgstr "Iontráil d'fhocal faire le haghaidh %1$S ar %2$S:"
-
 #: openWindowWarningText
 msgid "Opening %S messages may be slow.  Continue?"
 msgstr ""
@@ -14669,6 +15055,20 @@ msgstr "Corp"
 #: glodaSearch_results_why_attachment 1028
 msgid "Attachment"
 msgstr "Iatán"
+
+#: mailServerLoginFailedTitle
+msgid "Login Failed"
+msgstr "Theip ar an Logáil Isteach"
+
+# # @name IMAP_LOGIN_FAILED
+# # @loc None
+#: mailServerLoginFailed
+msgid "Login to server %S failed."
+msgstr "Theip ar an logáil isteach go dtí an freastalaí %S."
+
+#: mailServerLoginFailedEnterNewPasswordButton
+msgid "&Enter New Password"
+msgstr "Iontráil &Focal Faire Nua"
 
 #: migrationWizard.title
 msgid "Import Wizard"
@@ -16210,6 +16610,18 @@ msgstr "MB spás don taisce"
 msgid "&Clear Now"
 msgstr "&Bánaigh Anois"
 
+#: certSelection.description
+msgid "When a server requests my personal certificate:"
+msgstr "Nuair atá freastalaí ag iarraidh mo theastas pearsanta:"
+
+#: certs.auto
+msgid "Select one automatically"
+msgstr "Roghnaigh go huathoibríoch"
+
+#: certs.ask
+msgid "Ask me every time"
+msgstr "Fiafraigh díom i gcónaí"
+
 # Certificates
 #: viewCertificates.label viewCertificates.accesskey
 msgid "View &Certificates"
@@ -17621,21 +18033,6 @@ msgstr ""
 #: 20
 msgid "doesn't match"
 msgstr ""
-
-# these are the fields that get inserted in the search line
-# for "and" searches, this looks like:
-#
-# searchAnd0 <attribute> searchAnd1 <operator> searchAnd2 <value> searchAnd4
-#
-# for example, in english this looks like:
-# and the [Sender ] [doesn't contain] [John]
-#
-# TODO: need to special-case the first line (filterindex==0)
-#
-# filter stuff
-#: searchingMessage
-msgid "Searching…"
-msgstr "Ag cuardach…"
 
 #: moreButtonTooltipText
 msgid "Add a new rule"
