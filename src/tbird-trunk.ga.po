@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-10 07:12-0500\n"
+"POT-Creation-Date: 2009-09-23 08:15-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -5087,17 +5087,13 @@ msgstr "Rabhadh! Freastalaí neamhshlán é seo."
 msgid "Click circle for more details."
 msgstr "Cliceáil ar an gciorcal chun tuilleadh sonraí a fháil."
 
-#: insecureCleartext.description
+#: insecureUnencrypted.description
 msgid ""
-"Email is sent in clear-text, so your email could be read by other people on "
-"the internet. &brandShortName; will let you get to your mail, but you should "
-"really get your email provider to configure the server with a secure "
-"connection."
+"Your email and authentication are sent unencrypted, so your password (and "
+"your message) could easily be read by other people. &brandShortName; will let "
+"you get to your mail, but you should contact your email provider about "
+"configuring the server with a secure connection."
 msgstr ""
-"Seoltar ríomhphost mar ghnáththéacs agus dá bhrí sin d'fhéadfadh daoine eile "
-"ar an idirlíon do chuid ríomhphoist a léamh. Tig leat do chuid ríomhphoist a "
-"fháil le &brandShortName; ach ba cheart duit iarraidh ar do sholáthraí "
-"ríomhphoist ceangal slán leis an bhfreastalaí a chumrú."
 
 #: insecureSelfSigned.description
 msgid ""
@@ -5821,7 +5817,7 @@ msgstr "Cealaithe"
 msgid "Yesterday"
 msgstr "Inné"
 
-#: monthDate
+#: monthDate glodaFacetView.results.message.countLabel.grouping
 msgid "#1 #2"
 msgstr "#1 #2"
 
@@ -10019,29 +10015,33 @@ msgstr "ó:"
 msgid "to:"
 msgstr "chuig:"
 
-# LOCALIZATION NOTE(glodaFacetView.results.message.countLabel): Displays the
-# number of messages displayed in the result area out of the number of
+# LOCALIZATION NOTE(glodaFacetView.results.message.countLabel):
+# This label is displayed above the list of result messages; it tells the user
+# how many messages we are displaying in the list out of the total number of
 # messages in the active set (the set of messages remaining after the
-# application of the facet constraints.)  It takes the following arguments,
-# you do not have to use all of them.
-# #1: The number of messages displayed in the result area.
-# #2: The pluralized form of "messages" (or whatever you provide in
-# glodaFacetView.results.message.countLabelMessagePlurals) as it
-# applies to #1 (the number of messages in the result area.)
-# #3: The number of messages in the active set.
-# #4: The pluralized form of "messages" as it applies to #3.
-#: glodaFacetView.results.message.countLabel
-msgid "Top #1 #2 out of #3"
-msgstr "Barr #1 #2 as #3"
-
-# LOCALIZATION NOTE(glodaFacetView.results.message.countLabelMessagePlurals):
-# The plural forms of "messages" or whatever you choose.  See
-# https://developer.mozilla.org/en/Localization_and_Plurals for details on
-# how this stuff works.
-#: glodaFacetView.results.message.countLabelMessagePlurals
-msgid "message;messages"
+# application of the facet constraints.)
+# The goal of the various sub-parts here is to make a label along the lines of
+# "Top M messages out of N".  Because there are two numbers, this is split
+# into two parts, 'topMessages' for "Top M messages" and 'outOf' for
+# "out of N".  We then use 'grouping' to decide how to combine the two. This
+# was suggested by Rimas Kudelis.
+# LOCALIZATION NOTE(glodaFacetView.results.message.countLabel.topMessages):
+# The first part of the countLabel string (although you can change the order
+# in 'grouping').  This is pluralized using the mechanism described at
+# https://developer.mozilla.org/en/Localization_and_Plurals.  We replace
+# "#1" with the number of messages being shown in the result list.
+#: glodaFacetView.results.message.countLabel.topMessages
+msgid "Top #1 message;Top #1 messages"
 msgstr ""
-"teachtaireacht;theachtaireacht;theachtaireacht;dteachtaireacht;teachtaireacht"
+
+# LOCALIZATION NOTE(glodaFacetView.results.message.countLabel.outOf):
+# The second part of the countLabel string (although you can change the order
+# in 'grouping').  This is pluralized using the mechanism described at
+# https://developer.mozilla.org/en/Localization_and_Plurals.  We replace
+# "#1" with the total number of messagse in the active set.
+#: glodaFacetView.results.message.countLabel.outOf
+msgid "out of #1;out of #1"
+msgstr "as #1;as #1;as #1;as #1;as #1"
 
 # LOCALIZATION NOTE(glodaFacetView.results.message.showAllInList.label): The
 # label for the button/link that causes us to display all of the messages in
@@ -10144,7 +10144,7 @@ msgstr "Iatáin"
 # things.
 #: gloda.message.attr.mailing-list.facetLabel
 msgid "Mail List Involved"
-msgstr "Liosta Ríómhphoist Luaite"
+msgstr "Liosta Ríomhphoist Luaite"
 
 # #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 # for the Tag picker in search and mail views.
@@ -13167,6 +13167,10 @@ msgstr "&Fillteán…"
 msgid "Clos&e Tab"
 msgstr "Dún &Cluaisín"
 
+#: closeOtherTabsCmd.label closeOtherTabsCmd.accesskey
+msgid "C&lose Other Tabs"
+msgstr "Dún C&luaisíní Eile"
+
 #: newVirtualFolderCmd.label newVirtualFolderCmd.accesskey
 msgid "&Saved Search…"
 msgstr "Cuardach &Sábháilte…"
@@ -14357,13 +14361,21 @@ msgstr "Cuir Teagmháil in &Eagar…"
 msgid "&View Contact"
 msgstr "Amharc ar an Teag&mháil"
 
-#: SendMailTo.label SendMailTo.accesskey
-msgid "Compo&se Mail To"
-msgstr "Cum Ríomhpho&st Chuig"
+#: SubscribeToNewsgroup.label SubscribeToNewsgroup.accesskey
+msgid "Subscribe to &Newsgroup"
+msgstr "Liostáil le Grúpa &Nuachta"
+
+#: SendMessageTo.label SendMessageTo.accesskey
+msgid "Compo&se Message To"
+msgstr "&Scríobh Teachtaireacht Chuig"
 
 #: CopyEmailAddress.label CopyEmailAddress.accesskey
 msgid "&Copy Email Address"
 msgstr "&Cóipeáil an Seoladh Ríomhphoist"
+
+#: CopyNewsgroupName.label CopyNewsgroupName.accesskey
+msgid "&Copy Newsgroup Name"
+msgstr "&Cóipeáil Ainm an Ghrúpa Nuachta"
 
 #: CreateFilterFrom.label CreateFilterFrom.accesskey
 msgid "Create &Filter From…"
@@ -18568,9 +18580,9 @@ msgstr "Torthaí"
 msgid "F&ile"
 msgstr "C&omhad"
 
-#: goToFolderButton.label goToFolderButton.accesskey
-msgid "Open Message Folde&r"
-msgstr "Oscail Fillteán Teachtai&reachtaí"
+#: openInFolder.label openInFolder.accesskey
+msgid "Open in Folde&r"
+msgstr "Oscail i bh&Fillteán"
 
 #: saveAsVFButton.label saveAsVFButton.accesskey
 msgid "Sa&ve as Search Folder"
@@ -18804,21 +18816,13 @@ msgstr "Neamhbhailí"
 msgid "Not possible"
 msgstr "Dodhéanta"
 
-#: securityMenu.label securityMenu.accesskey
-msgid "S&ecurity"
-msgstr "S&lándáil"
-
 #: menu_securityEncryptRequire.label menu_securityEncryptRequire.accesskey
 msgid "&Encrypt This Message"
 msgstr "&Criptigh an Teachtaireacht Seo"
 
-#: menu_securityNoEncryption.label menu_securityNoEncryption.accesskey
-msgid "Do &Not Encrypt This Message"
-msgstr "&Ná criptigh an teachtaireacht seo"
-
 #: menu_securitySign.label menu_securitySign.accesskey
-msgid "Digitally &Sign This Message"
-msgstr "&Sínigh an teachtaireacht seo go digiteach"
+msgid "Digitally Sign This &Message"
+msgstr "Sínigh an &teachtaireacht seo go digiteach"
 
 #: menu_securityStatus.label menu_securityStatus.accesskey
 msgid "View Security &Info"
@@ -21046,4 +21050,3 @@ msgid ""
 msgstr ""
 "Tá do chuid nuashonruithe á suiteáil ag %MOZ_APP_DISPLAYNAME% agus tosóidh sé "
 "go luath…"
-
