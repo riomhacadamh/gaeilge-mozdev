@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-23 08:15-0500\n"
+"POT-Creation-Date: 2009-09-23 10:47-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -5094,6 +5094,11 @@ msgid ""
 "you get to your mail, but you should contact your email provider about "
 "configuring the server with a secure connection."
 msgstr ""
+"Seoltar do ríomhphost agus fíordheimhniú gan criptiúchán, agus d'fhéadfadh "
+"daoine eile d'fhocal faire agus do theachtaireacht a léamh go furasta. "
+"Ligfidh  &brandShortName; leat do chuid ríomhphoist a fháil, ach ba cheart "
+"duit iarraidh ar do sholáthraí ríomhphoist an freastalaí a chumrú le ceangal "
+"slán."
 
 #: insecureSelfSigned.description
 msgid ""
@@ -9964,14 +9969,19 @@ msgstr "a bhaineann le #1"
 msgid "tagged:"
 msgstr "clibeáilte:"
 
-# LOCALIZATION NOTE (glodaFacetView.facets.mode.top.moreLabel): The label to
+# LOCALIZATION NOTE (glodaFacetView.facets.mode.top.listAllLabel): The label to
 # use when we are only displaying the top entries for a facet.  When the
 # label is clicked on, it results in us displaying all of the values for that
 # facet.  The value "#1" (if present) is replaced with the total number of
 # values that will be displayed (rather than the number currently hidden).
-#: glodaFacetView.facets.mode.top.moreLabel
-msgid "List all #1"
-msgstr "Taispeáin gach #1"
+# This string supports pluralization.  See
+# https://developer.mozilla.org/en/Localization_and_Plurals for details on
+# how this stuff works.
+#: glodaFacetView.facets.mode.top.listAllLabel
+msgid "List all #1;List all #1"
+msgstr ""
+"Taispeáin an ceann amháin;Taispeáin an dá cheann acu;Taispeáin na #1 cinn acu;"
+"Taispeáin na #1 gcinn acu;Taispeáin na #1 ceann acu"
 
 # LOCALIZATION NOTE (glodaFacetView.facets.included.fallbackLabel): The label to
 # use for groups in a facet that have been explicitly included by the user if
@@ -12784,7 +12794,7 @@ msgstr "An ndearna tú dearmad iatán a chur leis?"
 # #1 number of keywords
 #: attachmentReminderKeywordsMsgs
 msgid "Found an attachment keyword:;Found #1 attachment keywords:"
-msgstr "Aimsíodh eochairfhocal iatáin:;Aimsíodh #1 eochairfhocal iatáin:"
+msgstr "Aimsíodh lorgfhocal iatáin:;Aimsíodh #1 lorgfhocal iatáin:"
 
 #: attachmentReminderOptionsMsg
 msgid "Attachment reminder words can be configured in your preferences"
@@ -16918,7 +16928,9 @@ msgstr "Taispeáint"
 
 #: showCondensedAddresses.label showCondensedAddresses.accesskey
 msgid "&Show only display name for people in my address book"
-msgstr "Ná tai&speáin ach ainm taispeána na ndaoine i mo leabhar seoltaí"
+msgstr ""
+"Ná tai&speáin ach an t-ainm taispeána le haghaidh daoine atá i mo leabhar "
+"seoltaí"
 
 #: autoMarkAsRead.label autoMarkAsRead.accesskey
 msgid "&Automatically mark messages as read"
@@ -16926,7 +16938,7 @@ msgstr "Marcáil teachtaireachtaí mar léite go h&uathoibríoch"
 
 #: markAsReadNoDelay.label markAsReadNoDelay.accesskey
 msgid "Immediately &on display"
-msgstr "Ar t&aispeáint láithreach"
+msgstr "Chomh luath agus a thaispeántar iad"
 
 # "After displaying for [___] seconds",
 # using (markAsReadDelay.label) and a number (secondsLabel.label).
@@ -16946,15 +16958,15 @@ msgstr "Oscail teachtaireachtaí:"
 
 #: openMsgInNewTab.label openMsgInNewTab.accesskey
 msgid "A new &tab"
-msgstr "Cluaisín &nua"
+msgstr "i gcluaisín &nua"
 
 #: reuseExpRadio0.label reuseExpRadio0.accesskey
 msgid "A &new message window"
-msgstr "I bhfuinneog &nua teachtaireachta"
+msgstr "i bhfuinneog &nua teachtaireachta"
 
 #: reuseExpRadio1.label reuseExpRadio1.accesskey
 msgid "An &existing message window"
-msgstr "I bhfuinn&eog theachtaireachta atá ann"
+msgstr "i bhfuinn&eog theachtaireachta atá ann cheana"
 
 #: closeMsgWindowOnDelete.label closeMsgWindowOnDelete.accesskey
 msgid "&Close message window on delete"
@@ -16962,7 +16974,7 @@ msgstr "Dún an fhuinneog thea&chtaireachta tar éis scriosta"
 
 #: autoCheck.label
 msgid "Automatically check for updates to:"
-msgstr "Déan nuashonruithe a lorg go huathoibríoch i gcóir:"
+msgstr "Déan nuashonruithe a lorg go huathoibríoch i gcomhair:"
 
 #: enableAppUpdate.label
 msgid "&brandShortName;"
@@ -17089,7 +17101,7 @@ msgstr "Tá an feidhmchlár seo le fáil ag:"
 
 #: typeColumn.label typeColumn.accesskey
 msgid "Content &Type"
-msgstr "Cineál Á&bhar"
+msgstr "Cineál Á&bhair"
 
 #: actionColumn2.label actionColumn2.accesskey
 msgid "&Action"
@@ -17105,16 +17117,16 @@ msgstr "Fi&afraigh díom cá sábhálfar an comhad i gcónaí"
 
 #: attachmentReminderDialog.title
 msgid "Attachment Reminder Keywords"
-msgstr "Eochairfhocail Mheabhrúcháin Iatáin"
+msgstr "Lorgfhocail Mheabhrúcháin Iatáin"
 
 #: attachKeywordText.label
 msgid ""
 "&brandShortName; will warn you about missing attachments if you're about to "
 "send an e-mail containing one of these keywords."
 msgstr ""
-"Tabhairfaidh &brandShortName; rabhadh duit maidir le iatáin atá ar iarraidh "
-"má tá tú ar tí teachtaireacht a sheoladh ina bhfuil ceann de na "
-"heochairfhocal seo."
+"Tabhairfaidh &brandShortName; rabhadh duit maidir le hiatáin atá ar iarraidh "
+"má tá tú ar tí teachtaireacht a sheoladh ina bhfuil ceann de na lorgfhocail "
+"seo."
 
 #: forwardMsg.label forwardMsg.accesskey
 msgid "&Forward messages:"
@@ -17130,7 +17142,7 @@ msgstr "Mar Iatán"
 
 #: addExtension.label addExtension.accesskey
 msgid "add &extension to file name"
-msgstr "cuir iarmhír l&e hainm an chomhaid"
+msgstr "Cuir iarmhír l&e hainm an chomhaid"
 
 #: font.label font.accesskey
 msgid "Fo&nt:"
@@ -17150,7 +17162,7 @@ msgstr "Athchóirigh na &Réamhshocruithe"
 
 #: spellCheck.label spellCheck.accesskey
 msgid "&Check spelling before sending"
-msgstr "&Ceartaigh litriú sula seolfar é"
+msgstr "&Ceartaigh litriú sula seoltar teachtaireachtaí"
 
 #: spellCheckInline.label
 msgid "Enable spell check as you type"
@@ -17382,7 +17394,7 @@ msgstr "Dathanna"
 
 #: overrideColors.label
 msgid "When displaying messages, use the following colors:"
-msgstr "Agus teachtaireachtaí a dtaispeáint, úsáid na dathanna seo:"
+msgstr "Agus teachtaireachtaí á dtaispeáint, úsáid na dathanna seo:"
 
 # LOCALIZATION NOTE : (emoticonsAndStructs.label) 'Emoticons' are also known as 'Smileys', e.g. :-)
 #: convertEmoticons.label convertEmoticons.accesskey
@@ -18081,7 +18093,7 @@ msgstr "&Agus teachtaireachtaí marcáilte mar dhramhphost agam:"
 
 #: manualMarkModeMove.label manualMarkModeMove.accesskey
 msgid "M&ove them to the account's &quot;Junk&quot; folder"
-msgstr "B&og go dtí an fillteán &quot;Dramhphost&quot; don chuntas seo iad"
+msgstr "B&og go dtí fillteán &quot;Dramhphost&quot; an chuntais seo iad"
 
 #: manualMarkModeDelete.label manualMarkModeDelete.accesskey
 msgid "&Delete them"
@@ -21050,3 +21062,4 @@ msgid ""
 msgstr ""
 "Tá do chuid nuashonruithe á suiteáil ag %MOZ_APP_DISPLAYNAME% agus tosóidh sé "
 "go luath…"
+
