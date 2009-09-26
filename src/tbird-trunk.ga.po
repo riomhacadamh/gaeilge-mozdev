@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-23 20:12-0500\n"
+"POT-Creation-Date: 2009-09-26 10:51-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -9939,14 +9939,6 @@ msgstr "Ag lorg #1"
 msgid "and"
 msgstr "and"
 
-#: glodaFacetView.constraints.query.fulltext.changeToAndLabel
-msgid "require all terms instead"
-msgstr "gach téarma riachtanach ina áit sin"
-
-#: glodaFacetView.constraints.query.fulltext.changeToOrLabel
-msgid "require any of the terms instead"
-msgstr "ceann ar bith de na téarmaí riachtanach ina áit sin"
-
 # LOCALIZATION NOTE(glodaFacetView.constraints.query.initial):
 # The label to display to describe when our base query is not a full-text
 # search.  Additional labels are appended describing each constraint.
@@ -10024,6 +10016,11 @@ msgstr "ó:"
 #: glodaFacetView.result.message.toLabel
 msgid "to:"
 msgstr "chuig:"
+
+# # generics string
+#: glodaFacetView.result.message.noSubject defaultSubject noSubject
+msgid "(no subject)"
+msgstr "(gan ábhar)"
 
 # LOCALIZATION NOTE(glodaFacetView.results.message.countLabel):
 # This label is displayed above the list of result messages; it tells the user
@@ -12602,11 +12599,6 @@ msgstr ""
 "Níor seoladh an teachtaireacht. An bhfuil fonn ort í a shábháil i bhfillteán "
 "na nDréachtaí?"
 
-# # generics string
-#: defaultSubject noSubject
-msgid "(no subject)"
-msgstr "(gan ábhar)"
-
 #: chooseFileToAttach
 msgid "Attach File(s)"
 msgstr "Cuir comha(i)d faoi iamh"
@@ -13934,6 +13926,10 @@ msgstr "Seol freagra chuig liosta"
 msgid "Forward"
 msgstr "Ar Aghaidh"
 
+#: archiveButton.label
+msgid "Archive"
+msgstr "Cuir sa Chartlann"
+
 #: nextButton.label
 msgid "Next"
 msgstr "Ar Aghaidh"
@@ -14011,6 +14007,10 @@ msgstr "Cuir an teachtaireacht roghnaithe ar aghaidh"
 #: fileButton.tooltip
 msgid "File selected message"
 msgstr "Bog an teachtaireacht roghnaithe go fillteán"
+
+#: archiveButton.tooltip
+msgid "Archive selected messages"
+msgstr "Cuir na teachtaireachtaí roghnaithe sa chartlann"
 
 #: nextButton.tooltip
 msgid "Move to the next unread message"
@@ -14293,7 +14293,7 @@ msgstr "Cuir in &Eagar mar Nua…"
 
 #: contextArchive.label contextArchive.accesskey
 msgid "Arc&hive"
-msgstr ""
+msgstr "Cuir sa c&hartlann"
 
 #: contextReplyAll.label contextReplyAll.accesskey
 msgid "Reply to &All"
@@ -14354,9 +14354,9 @@ msgstr "Ní camscéim ríomhphoist é seo."
 msgid "more"
 msgstr "tuilleadh"
 
-#: searchEverywhere.label
-msgid "Search everywhere"
-msgstr "Cuardaigh i ngach áit"
+#: searchAllMessages.label
+msgid "Search all messages"
+msgstr "Cuardaigh gach teachtaireacht"
 
 # Message Header Context Menu
 #: AddToAddressBook.label AddToAddressBook.accesskey
@@ -16655,13 +16655,13 @@ msgstr "Iontráil focal faire le haghaidh rochtain an fhreastalaí nuachta:"
 msgid "News Server Password Required"
 msgstr "Focal Faire an fhreastalaí nuachta de dhíth"
 
-#: downloadingHeaders
-msgid "Downloading %S of %S headers"
-msgstr "%S as %S ceanntásc á íosluchtú"
+#: newNewsgroupHeaders
+msgid "Downloading %S of %S headers for %S"
+msgstr "%S as %S ceanntásc á n-íosluchtú le haghaidh %S"
 
-#: downloadingFilterHeaders
-msgid "Getting headers for filters: %S (%S/%S)"
-msgstr "Ceanntásca á bhfáil le haghaidh scagairí: %S (%S/%S)"
+#: newNewsgroupFilteringHeaders
+msgid "Getting headers for filters: %S (%S/%S) on %S"
+msgstr "Ceanntásca á bhfáil le haghaidh scagairí: %S (%S/%S) ar %S"
 
 #: downloadingArticles
 msgid "Downloading articles %S-%S"
@@ -16670,10 +16670,6 @@ msgstr "Ailt %S-%S á n-íosluchtú"
 #: bytesReceived
 msgid "Downloading newsgroups: %S received (%SKB read at %SKB/sec)"
 msgstr "Grúpaí nuachta á n-íosluchtú: fuarthas %S (%SKB ag %SKB/soic)"
-
-#: checkingForNewNews
-msgid "Checking newsgroup %S of %S on %S for new messages"
-msgstr "Teachtaireachtaí nua á lorg ó ghrúpa nuachta %S as %S ar %S"
 
 #: downloadingArticlesForOffline
 msgid "Downloading articles %S-%S in %S"
@@ -18470,13 +18466,17 @@ msgstr "Scagaire Chuig nó Cc"
 msgid "Subject, To, or Cc filter"
 msgstr "Scagaire Ábhair, Chuig nó Cc"
 
-#: searchBody.label
-msgid "Entire message filter"
-msgstr "Scagaire teachtaireachta iomláin"
+#: searchMsgBody.label
+msgid "Message body filter"
+msgstr ""
 
 #: saveAsVirtualFolder.label
 msgid "Save search as virtual folder"
 msgstr "Sábháil an cuardach mar fhillteán fíorúil"
+
+#: searchSubjectFromOrRecipient.label
+msgid "Subject, From, or Recipient filter"
+msgstr ""
 
 # To make mapit buttons to disappear in the addressbook, specify empty string.  For example:
 # mail.addr_book.mapit_url.format=
