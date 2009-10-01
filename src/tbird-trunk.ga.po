@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 10:51-0500\n"
+"POT-Creation-Date: 2009-09-30 19:17-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -170,6 +170,12 @@ msgstr "Socruithe an tSuímh &Fhoilsithe…"
 #: pasteQuote.accesskey
 msgid "Paste As &Quotation"
 msgstr "Greamaigh mar &Athfhriotal"
+
+# Ctrl+O for "Oscail" in Main -> Comhad
+#: pasteAsQuotationCmd.key ObjectPropertiesAccessKey Photo.accesskey
+#: openMessageWindowCmd.key location1.accesskey
+msgid "o"
+msgstr "o"
 
 #: findCmd.label findCmd.accesskey
 msgid "&Find and Replace…"
@@ -1673,12 +1679,6 @@ msgstr ""
 msgid "%obj% Properties…"
 msgstr "Airíonna %obj%…"
 
-# Ctrl+O for "Oscail" in Main -> Comhad
-#: ObjectPropertiesAccessKey Photo.accesskey openMessageWindowCmd.key
-#: location1.accesskey
-msgid "o"
-msgstr "o"
-
 # LOCALIZATION NOTE (JoinSelectedCells): This variable should contain the "tablejoincells.accesskey"
 # letter as defined in editorOverlay.dtd
 #: JoinSelectedCells
@@ -1795,21 +1795,12 @@ msgstr ""
 "thaispeánfar i mbrabhsálaithe eile le linn luchtú na híomhá nó má tá luchtú "
 "na n-íomhánna díchumasaithe."
 
-#: NoHeadTag
+#: Malformed
 msgid ""
-"The HTML source could not be converted back into the document because the "
-"required <head> tag is missing. Please add it."
+"The source could not be converted back into the document because it is not "
+"valid XHTML."
 msgstr ""
-"Ní féidir an HTML foinseach a thiontú ar ais mar cháipéis toisc go bhfuil an "
-"chlib riachtanach <head> ar iarraidh. Cuir isteach í le do thoil."
-
-#: NoBodyTag
-msgid ""
-"The HTML source could not be converted back into the document because the "
-"required <body> tag is missing. Please add it."
-msgstr ""
-"Ní féidir an HTML foinseach a thiontú ar ais mar cháipéis toisc go bhfuil an "
-"chlib riachtanach <body> ar iarraidh. Cuir isteach í le do thoil."
+"Ní féidir an fhoinse a thiontú ar ais mar cháipéis toisc nach XHTML bailí é."
 
 #: NoLinksToCheck
 msgid "There are no elements with links to check"
@@ -3651,7 +3642,7 @@ msgstr "&Cur Síos:"
 msgid "[New page, not saved yet]"
 msgstr "[Leathanach nua, gan sábháil faoi láthair]"
 
-#: EditHEADSource1.label
+#: EditHEADSource1.label featureConfigurator.advancedUsers.label
 msgid "Advanced users:"
 msgstr "Ardúsáideoirí:"
 
@@ -4628,10 +4619,6 @@ msgstr "&Scoir &brandShortName;"
 msgid "About &brandFullName;"
 msgstr "Maidir le &brandFullName;"
 
-#: credits.label credits.accesskey
-msgid "&Credits"
-msgstr "&Admhálacha"
-
 #: aboutButton.label aboutButton.accesskey
 msgid "&lt; &Back"
 msgstr "&lt; &Siar"
@@ -4654,6 +4641,10 @@ msgstr ""
 msgid "&About"
 msgstr "&Maidir leis"
 
+#: aboutCredits.label aboutCredits.accesskey
+msgid "&Credits"
+msgstr "&Admhálacha"
+
 #: aboutRights.label aboutRights.accesskey
 msgid "Your &Rights"
 msgstr "Do Chea&rta"
@@ -4661,6 +4652,10 @@ msgstr "Do Chea&rta"
 #: aboutContributors.label aboutContributors.accesskey
 msgid "C&ontributors"
 msgstr "C&uiditheoirí"
+
+#: aboutLicense.label aboutLicense.accesskey
+msgid "&License"
+msgstr "&Ceadúnas"
 
 #: cmdCloseMac.commandKey cmd.close.commandkey watchThreadMenu.key
 #: cmd.close.commandKey windowClose.key
@@ -5011,6 +5006,7 @@ msgstr "T&osaigh arís"
 # "S" under Main -> Amharc
 # need tweak for right click menu; S = Siar
 #: stop.label stop.accesskey stopFilters.label stopFilters.accesskey
+#: stopCmd.label stopCmd.accesskey
 msgid "&Stop"
 msgstr "&Stad"
 
@@ -5388,13 +5384,17 @@ msgstr "Droch-inneachar freagartha"
 msgid "Account Settings"
 msgstr "Socruithe Cuntais"
 
-#: addAccountButton.label addAccountButton.accesskey
-msgid "&Add Account…"
-msgstr "&Cuir Cuntas Leis…"
+#: accountActionsButton.label accountActionsButton.accesskey
+msgid "&Account Actions"
+msgstr "Gníomh&artha Cuntais"
 
-#: setDefaultButton.label setDefaultButton.accesskey
-msgid "Set as De&fault"
-msgstr "Socraigh mar &Réamhshocrú"
+#: addMailAccountButton.label addMailAccountButton.accesskey
+msgid "&Add Mail Account…"
+msgstr "Cuir Cunt&as Ríomhphoist Leis…"
+
+#: addOtherAccountButton.label addOtherAccountButton.accesskey
+msgid "Add &Other Account…"
+msgstr "Cuir Cuntas &Eile Leis…"
 
 #: removeButton.label removeButton.accesskey
 msgid "&Remove Account"
@@ -5822,7 +5822,7 @@ msgstr "Cealaithe"
 msgid "Yesterday"
 msgstr "Inné"
 
-#: monthDate glodaFacetView.results.message.countLabel.grouping
+#: monthDate glodaFacetView.results.header.countLabel.grouping
 msgid "#1 #2"
 msgstr "#1 #2"
 
@@ -6399,7 +6399,7 @@ msgstr "Leabhair Sheoltaí"
 #
 # ***** END LICENSE BLOCK *****
 # Title
-#: mailListWindow.title
+#: mailListWindow.title gloda.message.attr.mailing-list.facetNameLabel
 msgid "Mailing List"
 msgstr "Liosta Postála"
 
@@ -6532,7 +6532,7 @@ msgstr "Priontáil Le&abhar Seoltaí…"
 msgid "Delete Address Book"
 msgstr "Scrios Leabhar Seoltaí"
 
-#: deleteContactCmd.label
+#: deleteContactCmd.label deleteContactTitle
 msgid "Delete Contact"
 msgstr "Scrios an Teagmháil"
 
@@ -8074,10 +8074,16 @@ msgstr "Ná seol choíche"
 msgid "To save disk space, do not download:"
 msgstr "Ar mhaithe le spás diosca a spáráil, ná híosluchtaigh:"
 
-#: doNotDownload.label
+#: doNotDownloadNntp.label
 msgid "To save disk space, do not download for offline use:"
 msgstr ""
 "Ar mhaithe spás diosca a spáráil, ná híosluchtaigh le haghaidh úsáide as líne:"
+
+#: doNotDownloadImap.label
+msgid ""
+"To save disk space, downloading messages from the server and keeping local "
+"copies for offline use can be restricted by age or size."
+msgstr ""
 
 #: allFoldersOffline.label allFoldersOffline.accesskey
 msgid "Keep messages f&or this account on this computer"
@@ -8086,6 +8092,10 @@ msgstr "C&oimeád teachtaireachtaí an chuntais seo ar an ríomhaire seo"
 #: offlineNotDownload.label offlineNotDownload.accesskey
 msgid "&Messages larger than"
 msgstr "Teachtaireachtaí níos &mó ná"
+
+#: autosyncNotDownload.label autosyncNotDownload.accesskey
+msgid "Don't download &messages larger than"
+msgstr "Ná híosluchtaigh teachtaireachtaí níos &mó ná"
 
 #: kb.label
 msgid "KB"
@@ -8171,43 +8181,47 @@ msgstr "Sioncronú Teachtaireachtaí"
 msgid "Disk Space"
 msgstr "Spás Diosca"
 
-# LOCALIZATION NOTE: (useAutosyncBefore.label, useAutosyncMiddle.label, useAutosyncAfter.label):
-# The entities useAutosyncBefore.label, useAutosyncMiddle.label, and
-# useAutosyncAfter.label appear on a single line in preferences as follows:
+# LOCALIZATION NOTE: (ageAutosyncBefore.label, ageAutosyncMiddle.label, ageAutosyncAfter.label):
+# The entities ageAutosyncBefore.label, ageAutosyncMiddle.label, and ageAutosyncAfter.label appear
+# on a single line within the scope of useAutosync.ByAge as follows:
 #
-# &useAutosyncBefore.label [textbox for autosync value] &useAutosyncMiddle.label; [dropdown for autosync interval] &useAutosyncAfter.label;
+# &ageAutosyncBefore.label [textbox for autosync value] &ageAutosyncMiddle.label; [dropdown for autosync interval] &ageAutosyncAfter.label;
 #
-#: useAutosyncBefore.label
-msgid "_: useAutosyncBefore.label\n"
-msgstr "Stórálfar"
-
-#: useAutosyncMiddle.label
-msgid "_: useAutosyncMiddle.label\n"
+#: allAutosync.label allAutosync.accesskey
+msgid "Syn&chronize all messages locally regardless of age"
 msgstr ""
 
-#: allInterval.label
-msgid "All"
-msgstr "do ríomhphost go léir"
+#: ageAutosyncBefore.label
+msgid "Synchronize the most recent"
+msgstr "Sioncrónaigh teachtaireachtaí ó na"
 
-#: dayInterval.label
-msgid "Days of"
-msgstr "lá de"
+#: ageAutosync.accesskey
+msgid "z"
+msgstr "z"
 
-#: weekInterval.label
-msgid "Weeks of"
-msgstr "seachtain de"
+#: ageAutosyncMiddle.label
+msgid "_: ageAutosyncMiddle.label\n"
+msgstr ""
 
-#: monthInterval.label
-msgid "Months of"
-msgstr "mí de"
+#: dayAgeInterval.label
+msgid "Days"
+msgstr "Lá"
 
-#: yearInterval.label
-msgid "Years of"
-msgstr "bliain de"
+#: weekAgeInterval.label
+msgid "Weeks"
+msgstr "Seachtain"
 
-#: useAutosyncAfter.label
-msgid "email will be stored on disk"
-msgstr "ríomhphost ar an diosca"
+#: monthAgeInterval.label
+msgid "Months"
+msgstr "Mí"
+
+#: yearAgeInterval.label
+msgid "Years"
+msgstr "Bliain"
+
+#: ageAutosyncAfter.label
+msgid "_: ageAutosyncAfter.label\n"
+msgstr "is déanaí"
 
 #: serverAdvanced.label
 msgid "Advanced Account Settings"
@@ -8716,6 +8730,10 @@ msgstr "&Nótaí Eisiúna"
 msgid "&What's New"
 msgstr "Is &Geal Gach Nua"
 
+#: featureConfiguratorCmd.label featureConfiguratorCmd.accesskey
+msgid "&Migration Assistant"
+msgstr ""
+
 #: openHelp.label openHelp.accesskey
 msgid "&Help Contents"
 msgstr "Áb&har Cabhrach"
@@ -8742,10 +8760,9 @@ msgstr "accel"
 msgid "Check for Updates…"
 msgstr "Lorg Nuashonruithe…"
 
-# "M" under Main -> Cabhair
-#: aboutCmd.label aboutCmd.accesskey
-msgid "&About &brandFullName;"
-msgstr "&Maidir le &brandFullName;"
+#: aboutMenuCmd.label aboutMenuCmd.accesskey
+msgid "&About &brandShortName;"
+msgstr "M&aidir le &brandShortName;"
 
 # #-#-#-#-#  tmp.XXXXqDdwwW.po (thunderbird)  #-#-#-#-#
 # LOCALIZATION NOTE : "Communicator 4.x" is the used for previous versions of Netscape Communicator
@@ -8793,10 +8810,6 @@ msgstr "Admhálacha &brandFullName;"
 msgid "Thunderbirds Are Go!"
 msgstr "Thunderbirds abú!"
 
-#: credit.leads
-msgid "Engineering Leads"
-msgstr "Príomhfhorbróirí Innealtóireachta"
-
 #: credit.thanks
 msgid "Special Thanks To"
 msgstr "Buíochas ar leith le"
@@ -8806,18 +8819,6 @@ msgid "<h3>Translators</h3><ul><li>Name Here</li></ul>"
 msgstr ""
 "<h3>Aistritheoirí</h3><ul><li>Séamus Ó Ciardhuáin</li><li>Kevin Scannell</"
 "li><li>Brian King</li></ul>"
-
-#: credit.theme
-msgid "Theme Design"
-msgstr "Dearadh na dTéamaí"
-
-#: credit.qa
-msgid "Quality Assurance"
-msgstr "Dearbhú Cáilíochta"
-
-#: credit.build
-msgid "Build and Release"
-msgstr "Tógáil agus Scaoileadh Amach"
 
 #: credit.memory
 msgid "In Fond Memory Of"
@@ -8834,6 +8835,46 @@ msgstr "Saincheap Ceanntásca"
 #: newMsgHeader.label newMsgHeader.accesskey
 msgid "&New message header:"
 msgstr "Ceanntásc &nua teachtaireachta:"
+
+# ***** BEGIN LICENSE BLOCK *****
+# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# -
+# - The contents of this file are subject to the Mozilla Public License Version
+# - 1.1 (the "License"); you may not use this file except in compliance with
+# - the License. You may obtain a copy of the License at
+# - http://www.mozilla.org/MPL/
+# -
+# - Software distributed under the License is distributed on an "AS IS" basis,
+# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# - for the specific language governing rights and limitations under the
+# - License.
+# -
+# - The Original Code is Thunderbird Toolbar Customization Overlay.
+# -
+# - The Initial Developer of the Original Code is
+# - Mozilla Messaging, Inc.
+# - Portions created by the Initial Developer are Copyright (C) 2009
+# - the Initial Developer. All Rights Reserved.
+# -
+# - Contributor(s):
+# -   Blake Winton <bwinton@latte.ca>
+# -
+# - Alternatively, the contents of this file may be used under the terms of
+# - either the GNU General Public License Version 2 or later (the "GPL"), or
+# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# - in which case the provisions of the GPL or the LGPL are applicable instead
+# - of those above. If you wish to allow use of your version of this file only
+# - under the terms of either the GPL or the LGPL, and not to allow others to
+# - use your version of this file under the terms of the MPL, indicate your
+# - decision by deleting the provisions above and replace them with the notice
+# - and other provisions required by the LGPL or the GPL. If you do not delete
+# - the provisions above, a recipient may use your version of this file under
+# - the terms of any one of the MPL, the GPL or the LGPL.
+# -
+# - ***** END LICENSE BLOCK *****
+#: iconsBesideText.label
+msgid "Icons beside Text"
+msgstr ""
 
 #: colonInHeaderName
 msgid ""
@@ -8904,6 +8945,10 @@ msgstr "&ceanntásca"
 msgid "&Mark remaining headers as read"
 msgstr "&Marcáil mar léite na ceanntásca atá fágtha"
 
+#: editContactPanelDeleteContact.label editContactPanelDeleteContact.accesskey
+msgid "De&lete"
+msgstr "S&crios"
+
 #: editContactPanelDone.label editContactPanelDone.accesskey
 msgid "&Done"
 msgstr "&Críochnaithe"
@@ -8919,6 +8964,10 @@ msgstr "Cuir Mionsonraí in Eagar"
 #: viewDetailsLabel
 msgid "View Details"
 msgstr "Amharc ar Mhionsonraí"
+
+#: deleteContactMessage
+msgid "Are you sure you want to delete this Contact?"
+msgstr ""
 
 # The following are used by the outlook express import code to display status/error
 # and informational messages
@@ -9247,6 +9296,227 @@ msgstr "ní féidir an súdcheanntásc %S a iompórtáil"
 #: 2025
 msgid "can't find the mailbox \"%S\""
 msgstr "bosca ríomhphoist \"%S\" gan aimsiú"
+
+# Migration Assistant page. It should match featureConfiguratorCmd.label in
+# baseMenuOverlay.dtd
+#: featureConfigurator.title
+msgid ""
+"_: Title for the\n"
+"Migration Assistant"
+msgstr ""
+
+#: featureConfigurator.heading
+msgid ""
+"_: Heading for the page\n"
+"Thunderbird 3 features worth knowing about"
+msgstr ""
+
+# is important: we tried for a tone that promotes the new features (which we
+# believe are good and worth users learning about), but also emphasizing that we
+# think it's important to preserve user choice.
+#: featureConfigurator.para1
+msgid ""
+"_: The tone of this paragraph\n"
+"Thunderbird 3 includes powerful new features which we're quite proud of, and "
+"think most people will love. People's tastes and needs vary, so we made it "
+"easy to control and customize Thunderbird."
+msgstr ""
+
+# that this page is active (the buttons change the UI), and that they can get
+# back to it if they change their mind later.
+#: featureConfigurator.para2
+msgid ""
+"_: This paragraph explains\n"
+"Use this page to configure these new settings. You can always get back to the "
+"Migration Assistant from the Help menu."
+msgstr ""
+
+# IMAP synchronization feature. The words should probably echo the word used
+# in the per-account dialog.
+#: featureConfigurator.imap.heading
+msgid ""
+"_: Heading for the\n"
+"Synchronize IMAP Messages"
+msgstr ""
+
+#: featureConfigurator.imap.status.all
+msgid "All of your IMAP folders are set to &quot;synchronize&quot;."
+msgstr ""
+
+#: featureConfigurator.imap.status.none
+msgid "None of your IMAP folders are set to &quot;synchronize&quot;."
+msgstr ""
+
+#: featureConfigurator.imap.status.some
+msgid "Some of your IMAP folders are set to &quot;synchronize&quot;."
+msgstr ""
+
+# is intended to explain why we've implemented this and picked it as a default.
+#: featureConfigurator.benefits.label
+msgid ""
+"_: The heading here\n"
+"Benefits"
+msgstr ""
+
+# is intended to explain why it might not be the right default for some users.
+#: featureConfigurator.alternative.label
+msgid ""
+"_: The heading here\n"
+"Alternative"
+msgstr ""
+
+#: featureConfigurator.syncBenefits.para
+msgid ""
+"Lets you read your mail when you're not connected to the internet, and lets "
+"you find messages based on the words they contain, not just the subjects and "
+"names."
+msgstr ""
+
+#: featureConfigurator.syncAlternative.para
+msgid ""
+"Thunderbird will download all your mail onto this computer. Turn it off if "
+"you're low on disk space, or you have to pay for network traffic."
+msgstr ""
+
+# lower case is intentional, but may be overriden if that doesn't make sense
+# because of a specific language context.
+#: featureConfigurator.syncAll.button
+msgid ""
+"_: The choice of\n"
+"synchronize all"
+msgstr ""
+
+# lower case is intentional, but may be overriden if that doesn't make sense
+# because of a specific language context.
+#: featureConfigurator.syncNone.button
+msgid ""
+"_: The choice of\n"
+"don't synchronize any"
+msgstr ""
+
+#: featureConfigurator.advancedUsers.para
+msgid "You can also customize it per account and per folder:"
+msgstr ""
+
+#: featureConfigurator.toolbar.heading
+msgid "New toolbar"
+msgstr ""
+
+#: featureConfigurator.toolbar.new.status
+msgid "Using the new toolbar."
+msgstr ""
+
+# word 'original' is chosen deliberately to be neutral, vs. 'old' which in
+# English at least had a negative connotation.
+#: featureConfigurator.toolbar.original.status
+msgid ""
+"_: The\n"
+"Using the original toolbar."
+msgstr ""
+
+#: featureConfigurator.toolbarBenefits.para
+msgid ""
+"A cleaner interface than our previous default, which leaves more room  for "
+"the richer search textbox, as well as add-ons."
+msgstr ""
+
+#: featureConfigurator.toolbarAlternative.para
+msgid ""
+"If you like the old toolbar configuration better, you don't want to re-"
+"customize it, or you don't use the message pane in your layout."
+msgstr ""
+
+# choice of lower case is intentional, but may be overriden if that doesn't make
+# sense because of a specific language context.
+#: featureConfigurator.useOriginalToolbar.button
+msgid ""
+"_: The\n"
+"use original toolbar"
+msgstr ""
+
+# choice of lower case is intentional, but may be overriden if that doesn't make
+# sense because of a specific language context.
+#: featureConfigurator.useNewToolbar.button
+msgid ""
+"_: The\n"
+"use new toolbar"
+msgstr ""
+
+# words here should echo the name of the mode shown in the folder pane.
+#: featureConfigurator.smartFolders.heading
+msgid ""
+"_: The\n"
+"Smart folders mode"
+msgstr ""
+
+# shows that the current mode in the folder pane is the Smart Folders mode.
+#: featureConfigurator.smartFolders.smart.status
+msgid ""
+"_: This\n"
+"Using the &quot;smart folders&quot; mode."
+msgstr ""
+
+# shows that the current mode in the folder pane is not the Smart Folders mode.
+#: featureConfigurator.smartFolders.all.status
+msgid ""
+"_: This\n"
+"Not using the &quot;smart folders&quot; mode."
+msgstr ""
+
+#: featureConfigurator.smartFolderBenefits.para
+msgid ""
+"For users with several accounts, this view groups folders like Inbox "
+"together, so you get a consolidated view of all your mail."
+msgstr ""
+
+#: featureConfigurator.smartFolderAlternative.para
+msgid ""
+"If you like splitting information across accounts then you'll prefer the "
+"&quot;All Folders&quot; mode."
+msgstr ""
+
+# choice of lower case is intentional, but may be overriden if that doesn't make
+# sense because of a specific language context.
+#: featureConfigurator.useSmartFolders.button
+msgid ""
+"_: The\n"
+"use &quot;smart folders&quot; mode"
+msgstr ""
+
+# choice of lower case is intentional, but may be overriden if that doesn't make
+# sense because of a specific language context.
+#: featureConfigurator.useAllFolders.button
+msgid ""
+"_: The\n"
+"use &quot;all folders&quot; mode"
+msgstr ""
+
+#: featureConfigurator.collapsedHeaders.heading
+msgid "Collapsed headers"
+msgstr ""
+
+# of the paragraph before the beginning of the link to the AMO search page.
+#: featureConfigurator.headerParaBeforeLink
+msgid ""
+"_: The part\n"
+"Thunderbird 3 has improved the detailed message header view, including "
+"buttons for message-related actions. There are alternative designs available "
+"as "
+msgstr ""
+
+# the link to the AMO search page.
+#: featureConfigurator.headerParaLinkName
+msgid ""
+"_: The name of\n"
+"add-ons"
+msgstr ""
+
+# the paragraph after the link to the AMO search page.
+#: featureConfigurator.headerParaAfterLink
+msgid ""
+"_: The part of\n"
+"."
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -9891,39 +10161,41 @@ msgstr "Teachtaireachtaí a clibeáladh: #1"
 # in the autocomplete widget to refer to a search for all messages mentioning
 # a particular word (replacing #1).
 #: glodaComplete.messagesMentioning.label
+#: glodaComplete.messagesMentioningMany.label
 msgid "Messages mentioning: #1"
 msgstr "Teachtaireachtaí a luann: #1"
-
-# LOCALIZATION NOTE (glodaComplete.messagesWithAny.label): The label used
-# in the autocomplete widget to refer to a search for all messages mentioning
-# any one of a set of words
-#: glodaComplete.messagesWithAny.label
-msgid "messages with ANY of:"
-msgstr "teachtaireachtaí ina bhfuil AON cheann de:"
-
-# LOCALIZATION NOTE (glodaComplete.messagesWithAll.label): The label used
-# in the autocomplete widget to refer to a search for all messages mentioning
-# all of a set of words
-#: glodaComplete.messagesWithAll.label
-msgid "messages with ALL of:"
-msgstr "teachtaireachtaí ina bhfuil GACH ceann de:"
 
 # faceting sidebar.  Serves as a header both for the checkboxes under it as
 # well for labeled facets with multiple options.
 #: glodaFacetView.filters.label
 msgid ""
 "_: Label at the top of the\n"
-"Filter by:"
-msgstr "Scag de réir:"
+"Filters"
+msgstr ""
+
+# the search results take a long time to appear.
+#: glodaFacetView.loading.label
+msgid ""
+"_: Label that appears when\n"
+"Searching&#8230;"
+msgstr ""
+
+# there are no results that match the search query.
+#: glodaFacetView.empty.label
+msgid ""
+"_: Label that appears when\n"
+"No messages match your search"
+msgstr ""
 
 # of the results list to show more hits.
-#: glodaFacetView.showMore.label
+#: glodaFacetView.pageMore.label
 msgid ""
 "_: Label at the bottom\n"
-"Show more hits"
-msgstr "Tuilleadh"
+"More &#187;"
+msgstr ""
 
-#: glodaFacetView.tab.query.label filter.emptytext labelForSearchButton
+#: glodaFacetView.tab.query.label glodaFacetView.search.label filter.emptytext
+#: labelForSearchButton
 msgid "Search"
 msgstr "Cuardach"
 
@@ -10000,6 +10272,39 @@ msgstr "nach bhfuil ann:"
 msgid "other:"
 msgstr "eile:"
 
+# LOCALIZATION NOTE (glodaFacetView.facets.mustMatchLabel.fallbackLabel): The label
+# to use to restrict a facet by a particular value if there is no explicit
+# attribute "mustMatchLabel" defined.  (The explicit label would be named
+# "gloda.message.attr.ATTRIBUTE.mustMatchLabel".)
+#: glodaFacetView.facets.mustMatchLabel.fallbackLabel
+msgid "must match #1"
+msgstr ""
+
+#: glodaFacetView.facets.mustMatchNoneLabel.fallbackLabel
+msgid "can't have a value"
+msgstr ""
+
+# LOCALIZATION NOTE (glodaFacetView.facets.cantMatchLabel.fallbackLabel): The label
+# to use to restrict a facet by the absence of a particular value if there is
+# no explicit attribute "cantMatchLabel" defined.  (The explicit label would be
+# named "gloda.message.attr.ATTRIBUTE.cantMatchLabel".)
+#: glodaFacetView.facets.cantMatchLabel.fallbackLabel
+msgid "can't match #1"
+msgstr ""
+
+#: glodaFacetView.facets.mustMatchSomeLabel.fallbackLabel
+msgid "must have a value"
+msgstr ""
+
+# LOCALIZATION NOTE (glodaFacetView.facets.mayMatchLabel.fallbackLabel): The label
+# to use to undo the restriction of a facet by a particular value if there is
+# no explicit attribute "mayMatchLabel" defined.  (The explicit label would be
+# named "gloda.message.attr.ATTRIBUTE.mayMatchLabel".)
+#: glodaFacetView.facets.mayMatchLabel.fallbackLabel
+#: glodaFacetView.facets.mayMatchAnyLabel.fallbackLabel
+msgid "remove constraint"
+msgstr ""
+
 # LOCALIZATION NOTE (glodaFacetView.facets.filter.attachmentTypes.allLabel):
 # The label to use when all types of attachments are being displayed.
 #: glodaFacetView.facets.filter.attachmentTypes.allLabel
@@ -10022,45 +10327,45 @@ msgstr "chuig:"
 msgid "(no subject)"
 msgstr "(gan ábhar)"
 
-# LOCALIZATION NOTE(glodaFacetView.results.message.countLabel):
+# LOCALIZATION NOTE(glodaFacetView.results.header.countLabel):
 # This label is displayed above the list of result messages; it tells the user
 # how many messages we are displaying in the list out of the total number of
 # messages in the active set (the set of messages remaining after the
 # application of the facet constraints.)
 # The goal of the various sub-parts here is to make a label along the lines of
-# "Top M messages out of N".  Because there are two numbers, this is split
-# into two parts, 'topMessages' for "Top M messages" and 'outOf' for
-# "out of N".  We then use 'grouping' to decide how to combine the two. This
+# "M of N".  Because there are two numbers, this is split into two parts,
+# 'NMessages' for what in English is just the first number and 'ofN' for the
+# "of N" part.  We then use 'grouping' to decide how to combine the two. This
 # was suggested by Rimas Kudelis.
-# LOCALIZATION NOTE(glodaFacetView.results.message.countLabel.topMessages):
+# LOCALIZATION NOTE(glodaFacetView.results.header.countLabel.NMessages):
 # The first part of the countLabel string (although you can change the order
 # in 'grouping').  This is pluralized using the mechanism described at
 # https://developer.mozilla.org/en/Localization_and_Plurals.  We replace
 # "#1" with the number of messages being shown in the result list.
-#: glodaFacetView.results.message.countLabel.topMessages
-msgid "Top #1 message;Top #1 messages"
-msgstr ""
+#: glodaFacetView.results.header.countLabel.NMessages
+msgid "#1;#1"
+msgstr "#1;#1;#1;#1;#1"
 
-# LOCALIZATION NOTE(glodaFacetView.results.message.countLabel.outOf):
+# LOCALIZATION NOTE(glodaFacetView.results.header.countLabel.ofN):
 # The second part of the countLabel string (although you can change the order
 # in 'grouping').  This is pluralized using the mechanism described at
 # https://developer.mozilla.org/en/Localization_and_Plurals.  We replace
 # "#1" with the total number of messagse in the active set.
-#: glodaFacetView.results.message.countLabel.outOf
-msgid "out of #1;out of #1"
+#: glodaFacetView.results.header.countLabel.ofN
+msgid "of #1;of #1"
 msgstr "as #1;as #1;as #1;as #1;as #1"
 
-# LOCALIZATION NOTE(glodaFacetView.results.message.showAllInList.label): The
+# LOCALIZATION NOTE(glodaFacetView.results.message.openAsList.label): The
 # label for the button/link that causes us to display all of the messages in
 # the active set in a new thread pane display tab, closing the current faceting
 # tab.
-#: glodaFacetView.results.message.showAllInList.label
-msgid "Show all as list"
-msgstr "Taispeáin gach rud i liosta"
+#: glodaFacetView.results.message.openAsList.label
+msgid "Open as list"
+msgstr "Oscail mar liosta"
 
 # LOCALIZATION NOTE(glodaFacetView.results.message.showAllInList.tooltip): The
 # tooltip to display when hovering over the showAllInList label.
-#: glodaFacetView.results.message.showAllInList.tooltip
+#: glodaFacetView.results.message.openAsList.tooltip
 msgid ""
 "Show all of the messages in the active set in a new tab, closing this tab."
 msgstr ""
@@ -10083,43 +10388,60 @@ msgstr "ábharthacht"
 msgid "date"
 msgstr "dáta"
 
-#: glodaFacetView.results.message.andNOthers
-msgid "and #1 other;and #1 others"
-msgstr ""
-"agus ceann eile;agus dhá cheann eile;agus #1 cinn eile;agus #1 gcinn eile;"
-"agus #1 ceann eile"
+#: glodaFacetView.results.message.recipientSeparator
+#: preferencesCmdMac.commandkey macBiffNotification_separator
+msgid ","
+msgstr ","
 
-# LOCALIZATION NOTE (*.facetLabel): These are the labels used to label the facet
-# displays in the global search facet display mechanism.
-# LOCALIZATION NOTE (*.includeLabel): The label to use for the included group
-# in the facet display.  If not provided, we will fall back to
-# "glodaFacetView.facets.included.fallbackLabel".
-# LOCALIZATION NOTE (*.excludeLabel): The label to use for the excluded group
-# in the facet display.  If not provided, we will fall back to
-# "glodaFacetView.facets.excluded.fallbackLabel".
-# LOCALIZATION NOTE (*.remainderLabel): The label to use for the remaining items
-# that are neither part of the included group or the excluded group in the
-# facet display.  If not provided, we will fall back to
-# "glodaFacetView.facets.remainder.fallbackLabel".
+# LOCALIZATION NOTE(glodaFacetView.results.message.andOthers):
+# When a message has too many recipients, we only show the first few and then
+# display this label to express how many are not displayed.  So if a message
+# has 5 recipients, we might only show the first 3, and then use this label
+# to indicate that there are 2 that are not displayed.  This string can be
+# pluralized; see https://developer.mozilla.org/en/Localization_and_Plurals
+# for details on how to do that. Note that in English, we use the "serial
+# comma", but other languages may not need a leading separator there.
+#: glodaFacetView.results.message.andOthers
+msgid ", and #1 other;, and #1 others"
+msgstr ""
+", agus duine amháin eile;, agus beirt eile;, agus #1 fhaighteoir eile;, agus "
+"#1 bhfaighteoir eile;, agus #1 faighteoir eile"
+
+#: gloda.message.attr.account.facetNameLabel accountColumn.label
+msgid "Account"
+msgstr "Cuntas"
+
+#: gloda.message.attr.account.mustMatchLabel
+#: gloda.message.attr.folder.mustMatchLabel
+#: gloda.message.attr.mailing-list.mustMatchLabel
+msgid "must be in #1"
+msgstr ""
+
+#: gloda.message.attr.account.cantMatchLabel
+#: gloda.message.attr.folder.cantMatchLabel
+#: gloda.message.attr.mailing-list.cantMatchLabel
+msgid "can't be in #1"
+msgstr ""
+
 # LOCALIZATION NOTE (gloda.message.attr.folder.*): Stores the message folder in
 # which the message is stored.
-#: gloda.message.attr.folder.facetLabel
-msgid "Mail Folder"
-msgstr "Fillteán Ríomhphoist"
+#: gloda.message.attr.folder.facetNameLabel
+msgid "Folder"
+msgstr "Fillteán"
 
 # LOCALIZATION NOTE (gloda.message.attr.fromMe.*): Stores everyone involved
 # with the message.  This means from/to/cc/bcc.
-#: gloda.message.attr.fromMe.facetLabel
+#: gloda.message.attr.fromMe.facetNameLabel
 msgid "From Me"
 msgstr "Uaim"
 
 # LOCALIZATION NOTE (gloda.message.attr.toMe.*): Stores everyone involved
 # with the message.  This means from/to/cc/bcc.
-#: gloda.message.attr.toMe.facetLabel
+#: gloda.message.attr.toMe.facetNameLabel
 msgid "To Me"
 msgstr "Chugam"
 
-#: gloda.message.attr.involves.facetLabel
+#: gloda.message.attr.involves.facetNameLabel
 msgid "People"
 msgstr "Daoine"
 
@@ -10135,47 +10457,71 @@ msgstr "nach mbaineann le:"
 msgid "other participants:"
 msgstr "rannpháirtithe eile:"
 
-#: gloda.message.attr.date.facetLabel dateColumn.label DATE 1007 Date
+#: gloda.message.attr.involves.mustMatchLabel
+msgid "must involve #1"
+msgstr ""
+
+#: gloda.message.attr.involves.cantMatchLabel
+msgid "can't involve #1"
+msgstr ""
+
+#: gloda.message.attr.date.facetNameLabel dateColumn.label DATE 1007 Date
 msgid "Date"
 msgstr "Dáta"
 
-#: gloda.message.attr.attachmentTypes.facetLabel attachmentColumn.label
+#: gloda.message.attr.attachmentTypes.facetNameLabel attachmentColumn.label
 #: attachments paneAttachments.title
 msgid "Attachments"
 msgstr "Iatáin"
 
-# LOCALIZATION NOTE (gloda.message.attr.mailing-list.*): Stores the mailing
-# lists detected in the message.  This will normally be the e-mail address of
-# the mailing list and only be detected in messages received from the mailing
-# list.  Extensions may contribute additional detected mailing-list-like
-# things.
-#: gloda.message.attr.mailing-list.facetLabel
-msgid "Mail List Involved"
-msgstr "Liosta Ríomhphoist Luaite"
+#: gloda.message.attr.mailing-list.mustMatchSomeLabel
+msgid "must be in a mailing list"
+msgstr ""
+
+#: gloda.message.attr.mailing-list.mustMatchNoneLabel
+msgid "can't be in a mailing list"
+msgstr ""
 
 # #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 # for the Tag picker in search and mail views.
-#: gloda.message.attr.tag.facetLabel tag itemTags.label Tags tagsColumn.label
+#: gloda.message.attr.tag.facetNameLabel tag itemTags.label Tags
+#: tagsColumn.label
 msgid "Tags"
 msgstr "Clibeanna"
 
-#: gloda.message.attr.star.facetLabel starredColumn.label messageHasFlag
+#: gloda.message.attr.tag.mustMatchLabel
+msgid "must be tagged #1"
+msgstr ""
+
+#: gloda.message.attr.tag.cantMatchLabel
+msgid "can't be tagged #1"
+msgstr ""
+
+#: gloda.message.attr.tag.mustMatchSomeLabel
+msgid "must be tagged"
+msgstr ""
+
+#: gloda.message.attr.tag.mustMatchNoneLabel
+msgid "can't be tagged"
+msgstr ""
+
+#: gloda.message.attr.star.facetNameLabel starredColumn.label messageHasFlag
 #: groupFlagged flagged
 msgid "Starred"
 msgstr "Marcáilte"
 
-#: gloda.message.attr.read.facetLabel 5075 readColumn.label read
+#: gloda.message.attr.read.facetNameLabel 5075 readColumn.label read
 msgid "Read"
 msgstr "Léite"
 
 # LOCALIZATION NOTE (gloda.message.attr.repliedTo.*): Stores whether we believe
 # the user has ever replied to the message.  We normally show a little icon in
 # the thread pane when this is the case.
-#: gloda.message.attr.repliedTo.facetLabel
+#: gloda.message.attr.repliedTo.facetNameLabel
 msgid "Replied To"
 msgstr "Freagartha"
 
-#: gloda.message.attr.forwarded.facetLabel forwarded
+#: gloda.message.attr.forwarded.facetNameLabel forwarded
 msgid "Forwarded"
 msgstr "Curtha ar aghaidh"
 
@@ -13115,6 +13461,10 @@ msgstr "Níl Aon Mholadh"
 msgid "&Open"
 msgstr "&Oscail"
 
+#: removeAttachment.label removeAttachment.accesskey
+msgid "Re&move Attachment"
+msgstr ""
+
 #: renameAttachment.label renameAttachment.accesskey
 msgid "&Rename…"
 msgstr "&Athainmnigh…"
@@ -14178,10 +14528,6 @@ msgstr "Faighteoir"
 msgid "Priority"
 msgstr "Tosaíocht"
 
-#: accountColumn.label
-msgid "Account"
-msgstr "Cuntas"
-
 #: statusColumn.label STATUS treehead.status.label Status tree.status
 msgid "Status"
 msgstr "Stádas"
@@ -14391,6 +14737,10 @@ msgstr "&Cóipeáil an Seoladh Ríomhphoist"
 msgid "&Copy Newsgroup Name"
 msgstr "&Cóipeáil Ainm an Ghrúpa Nuachta"
 
+#: CopyNewsgroupURL.label CopyNewsgroupURL.accesskey
+msgid "Copy Newsgroup &URL"
+msgstr "Cóipeáil &URL an Ghrúpa Nuachta"
+
 #: CreateFilterFrom.label CreateFilterFrom.accesskey
 msgid "Create &Filter From…"
 msgstr "Cruthaigh &Scagaire Ó…"
@@ -14407,25 +14757,40 @@ msgstr "Sábháil an &Nasc Mar…"
 msgid "Sa&ve Image As…"
 msgstr "Sábháil an Íomhá &Mar…"
 
+#: cutCmd.label cutCmd.accesskey
+msgid "C&ut"
+msgstr "&Gearr"
+
 #: copyLinkCmd.label copyLinkCmd.accesskey
 msgid "&Copy Link Location"
 msgstr "&Cóipeáil Suíomh an Naisc"
 
 #: copyImageCmd.label copyImageCmd.accesskey
-msgid "C&opy Image Location"
-msgstr "Cóipeáil Suí&omh na hÍomhá"
+msgid "Copy &Image Location"
+msgstr "Cóipeá&il Suíomh na hÍomhá"
 
 #: copyEmailCmd.label copyEmailCmd.accesskey
 msgid "Copy &Email Address"
 msgstr "Cóipeáil an S&eoladh Ríomhphoist"
 
+# "A" under Main -> Amharc ("L" is Níos Lú)
+# see also "Re&load"
+# need a tweak for right click menu, "A" and "L" taken
+#: reloadCmd.label reloadCmd.accesskey
+msgid "&Reload"
+msgstr "&Athluchtaigh"
+
+#: openInBrowser.label openInBrowser.accesskey
+msgid "&Open In Browser"
+msgstr "&Oscail i mBrabhsálaí"
+
+#: openLinkInBrowser.label openLinkInBrowser.accesskey
+msgid "&Open Link In Browser"
+msgstr "&Oscail Nasc i mBrabhsálaí"
+
 #: preferencesCmdMac.label
 msgid "Preferences…"
 msgstr "Sainroghanna…"
-
-#: preferencesCmdMac.commandkey macBiffNotification_separator
-msgid ","
-msgstr ","
 
 #: servicesMenuMac.label
 msgid "Services"
@@ -15124,18 +15489,6 @@ msgstr "An bhfuil tú cinnte gur mian leat díliostáil ó %S?"
 msgid "Are you sure you want to unsubscribe from these newsgroups?"
 msgstr "An bhfuil tú cinnte gur mian leat díliostáil ó na grúpaí nuachta seo?"
 
-#: feedNoSummaryTitle
-msgid "No Feed Summary"
-msgstr "Gan Achoimre ar an bhFotha"
-
-#: feedNoSummaryAlert
-msgid ""
-"This is a news feed in an old format, which does not store the Summary of the "
-"news item. Therefore it cannot be displayed."
-msgstr ""
-"Is fotha nuachta i seanfhormáid é seo, gan achoimre na míre nuachta stóráilte "
-"ann. Mar sin, ní féidir é a thaispeáint."
-
 #: saveLabel
 msgid "Save As…"
 msgstr "Sábháil Mar…"
@@ -15175,6 +15528,13 @@ msgstr ""
 #: deleteAttachmentFailure
 msgid "Failed to delete the selected attachments."
 msgstr "Theip ar scriosadh na n-iatán roghnaithe."
+
+#: emptyAttachment
+msgid ""
+"This attachment appears to be empty.\n"
+"Please check with the person who sent this.\n"
+"Often company firewalls or antivirus programs will destroy attachments."
+msgstr ""
 
 #: 101
 msgid "Unknown Error"
@@ -16004,39 +16364,88 @@ msgid "This is a draft message"
 msgstr "Is dréacht é seo"
 
 # verb; translate as capital
-#: archiveButton.label archive.label
+#: hdrArchiveButton.label archive.label
 msgid "archive"
 msgstr "Cuir sa chartlann"
+
+#: hdrArchiveButton.tooltip
+msgid "archive this message"
+msgstr "Cuir an teachtaireacht seo sa chartlann"
 
 # verb; translate as capital
 #: hdrReplyButton.label
 msgid "reply"
 msgstr "Freagair"
 
+#: hdrReplyButton.tooltip
+msgid "reply to this message"
+msgstr ""
+
 #: hdrReplyAllButton.label
 msgid "reply all"
 msgstr "Freagair cách"
 
+#: hdrReplyAllButton.tooltip
+msgid "reply to sender and all recipients"
+msgstr ""
+
 #: hdrReplyListButton.label
 msgid "reply list"
 msgstr "liosta freagartha"
+
+#: hdrReplyListButton.tooltip
+msgid "reply to mailing list"
+msgstr ""
 
 # verb; translate as capital
 #: hdrForwardButton.label
 msgid "forward"
 msgstr "Cuir ar aghaidh"
 
+#: hdrForwardButton.tooltip
+msgid "forward this message"
+msgstr "Cuir an teachtaireacht seo ar aghaidh"
+
 #: hdrJunkButton.label
 msgid "junk"
 msgstr "Dramhphost"
 
-#: trashButton.tooltiptext
+#: hdrJunkButton.tooltip
+msgid "mark this message as junk"
+msgstr ""
+
+#: hdrTrashButton.label delete.label
 msgid "delete"
 msgstr "Scrios"
+
+#: hdrTrashButton.tooltip
+msgid "delete this message"
+msgstr "Scrios an teachtaireacht seo"
+
+#: hdrViewToolbarShowFull.label hdrViewToolbarShowFull.accesskey
+msgid "Show Icons &and Text"
+msgstr "T&aispeáin Deilbhíní agus Téacs"
+
+#: hdrViewToolbarShowIcons.label hdrViewToolbarShowIcons.accesskey
+msgid "Show &Icons Only"
+msgstr "Ta&ispeáin Deilbhíní Amháin"
+
+#: hdrViewToolbarShowText.label hdrViewToolbarShowText.accesskey
+msgid "Show &Text Only"
+msgstr "&Taispeáin Téacs Amháin"
+
+#: hdrViewToolbarAlwaysReplySender.label
+#: hdrViewToolbarAlwaysReplySender.accesskey
+msgid "Always Show &Reply to Sender"
+msgstr "Taispeáin F&reagra don Seoltóir i gCónaí"
 
 #: otherActionsButton.label
 msgid "other actions"
 msgstr "Gníomhartha eile"
+
+#: otherActionsShowConversation.label otherActionsShowConversation.accesskey
+msgid "show in &conversation"
+msgstr ""
 
 #: otherActionsOpenInNewWindow.label otherActionsOpenInNewWindow.accesskey
 msgid "open in ne&w window"
@@ -16045,6 +16454,14 @@ msgstr "oscail i bhfuinneog &nua"
 #: otherActionsOpenInNewTab.label otherActionsOpenInNewTab.accesskey
 msgid "open in new &tab"
 msgstr "oscail i g&cluasín nua"
+
+#: markAsReadMenuItem.label markAsReadMenuItem.accesskey
+msgid "ma&rk as read"
+msgstr "Ma&rcáil mar Léite"
+
+#: markAsUnreadMenuItem.label markAsUnreadMenuItem.accesskey
+msgid "ma&rk as unread"
+msgstr ""
 
 #: saveAsMenuItem.label saveAsMenuItem.accesskey
 msgid "&save as…"
@@ -16655,13 +17072,20 @@ msgstr "Iontráil focal faire le haghaidh rochtain an fhreastalaí nuachta:"
 msgid "News Server Password Required"
 msgstr "Focal Faire an fhreastalaí nuachta de dhíth"
 
+# LOCALIZATION NOTE (newNewsgroupHeaders): %1$S is the number of the current
+# header being downloaded, %2$S is the number of headers to be downloaded, and
+# %3$S is the newsgroup whose headers are being downloaded.
 #: newNewsgroupHeaders
-msgid "Downloading %S of %S headers for %S"
-msgstr "%S as %S ceanntásc á n-íosluchtú le haghaidh %S"
+msgid "Downloading %1$S of %2$S headers for %3$S"
+msgstr "%1$S as %2$S ceanntásc á n-íosluchtú le haghaidh %3$S"
 
+# LOCALIZATION NOTE (newNewsgroupFilteringHeaders): %1$S is the name of the MIME
+# header being filtered on, %2$S is the number of the current header being
+# downloaded, %3$S is the number of headers to be downloaded, and %4$S is the
+# newsgroup whose headers are being downloaded.
 #: newNewsgroupFilteringHeaders
-msgid "Getting headers for filters: %S (%S/%S) on %S"
-msgstr "Ceanntásca á bhfáil le haghaidh scagairí: %S (%S/%S) ar %S"
+msgid "Getting headers for filters: %1$S (%2$S/%3$S) on %4$S"
+msgstr "Ceanntásca á bhfáil le haghaidh scagairí: %1$S (%2$S/%3$S) ar %4$S"
 
 #: downloadingArticles
 msgid "Downloading articles %S-%S"
