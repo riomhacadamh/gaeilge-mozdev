@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-21 13:22-0500\n"
+"POT-Creation-Date: 2009-11-04 08:10-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -419,6 +419,18 @@ msgstr "Forlíontáin Suiteáilte"
 #: aboutSupport.appBasicsBuildConfig
 msgid "Build Configuration"
 msgstr "Cumraíocht Tógála"
+
+#: aboutSupport.show.label
+msgid "Open Containing Folder"
+msgstr "Oscail an Fillteán ina bhfuil sé"
+
+# variant of aboutSupport.show.label.  This allows us to use the preferred
+# "Finder" terminology on Mac.
+#: aboutSupport.showMac.label
+msgid ""
+"_: This is the Mac-specific\n"
+"Show in Finder"
+msgstr "Taispeáin sa Finder"
 
 #: aboutSupport.modifiedPrefsTitle
 msgid "Modified Preferences"
@@ -1139,6 +1151,10 @@ msgstr "&Athluchtaigh an Íomhá"
 msgid "View &Image"
 msgstr "&Taispeáin an Íomhá Amháin"
 
+#: viewImageInfoCmd.label viewImageInfoCmd.accesskey
+msgid "View Image In&fo"
+msgstr "Taispeáin Eolas &Faoin Íomhá"
+
 #: viewVideoCmd.label viewVideoCmd.accesskey
 msgid "V&iew Video"
 msgstr "&Féach ar Fhíseán"
@@ -1448,7 +1464,7 @@ msgid "&Add Dictionaries…"
 msgstr "&Cuir Foclóirí Leis…"
 
 #: editBookmark.done.label nv_done done.label saveChanges.label
-#: button-finish-mac.label editBookmarkDone.label selectListDone.label
+#: button-finish-mac.label editBookmarkDone.label formHelper.done
 msgid "Done"
 msgstr "Déanta"
 
@@ -1588,6 +1604,30 @@ msgstr "Rinne an suíomh seo (%S) iarracht téama a shuiteáil."
 msgid "a"
 msgstr "a"
 
+#: lwthemePostInstallNotification.message
+msgid "A new theme has been installed."
+msgstr "Suiteáladh téama nua."
+
+#: lwthemePostInstallNotification.undoButton undo
+msgid "Undo"
+msgstr "Cealaigh"
+
+#: lwthemePostInstallNotification.undoButton.accesskey undo.accessKey
+#: outdatedpluginsMessage.updateButton.accesskey
+#: blockedpluginsMessage.searchButton.accesskey cmd.uninstall2.accesskey
+#: updateButton_minor.accesskey
+msgid "U"
+msgstr "U"
+
+#: lwthemePostInstallNotification.manageButton
+msgid "Manage Themes…"
+msgstr "Bainistigh Téamaí…"
+
+#: lwthemePostInstallNotification.manageButton.accesskey mediaTab.accesskey
+#: view.sortBy.lastModified.accesskey Mega loaddevice.modname.accesskey
+msgid "M"
+msgstr "B"
+
 #: popupWarning
 msgid "%S prevented this site from opening a pop-up window."
 msgstr "Níor lig %S don suíomh seo preabfhuinneog a oscailt."
@@ -1637,16 +1677,6 @@ msgstr "Cuirfidh %S cosc ar íomhánna ó %S i gcónaí."
 #: imageAllowedWarning
 msgid "%S will now allow images from %S."
 msgstr "Ceadóidh %S íomhánna ó %S anois."
-
-#: undo
-msgid "Undo"
-msgstr "Cealaigh"
-
-#: undo.accessKey outdatedpluginsMessage.updateButton.accesskey
-#: blockedpluginsMessage.searchButton.accesskey cmd.uninstall2.accesskey
-#: updateButton_minor.accesskey
-msgid "U"
-msgstr "U"
 
 # missing plugin installer
 #: missingpluginsMessage.title
@@ -2736,11 +2766,6 @@ msgstr "Mionsonraí"
 #: mediaTab
 msgid "Media"
 msgstr "Meáin"
-
-#: mediaTab.accesskey view.sortBy.lastModified.accesskey Mega
-#: loaddevice.modname.accesskey
-msgid "M"
-msgstr "B"
 
 #: mediaLocation exceptionMgr.certlocation.url
 msgid "Location:"
@@ -6199,7 +6224,7 @@ msgstr ""
 msgid "Problem loading page"
 msgstr "Fadhb i rith luchtú an leathanaigh"
 
-#: retry.label
+#: retry.label addonsSearchNone.button
 msgid "Try Again"
 msgstr "Déan Iarracht Arís"
 
@@ -22999,6 +23024,14 @@ msgstr "Cuir clibeanna anseo"
 msgid "What would you like to do with"
 msgstr "Cad is mian leat a dhéanamh le"
 
+#: formHelper.previous
+msgid "Previous"
+msgstr "Siar"
+
+#: formHelper.next
+msgid "Next"
+msgstr "Ar Aghaidh"
+
 #: addonsLocal.label
 msgid "Your Add-ons"
 msgstr "Do Bhreiseáin"
@@ -23076,17 +23109,21 @@ msgstr "Níl aon bheiseáin suiteáilte"
 msgid "Searching for add-ons…"
 msgstr "Breiseáin á lorg…"
 
-#: addonsSearchNone.label
+#: addonsSearchNone.search
 msgid "No matches found"
 msgstr "Níor aimsíodh aon rud"
+
+#: addonsSearchNone.recommended
+msgid "No recommended add-ons"
+msgstr "Níl aon bhreiseáin mholta ann"
 
 #: addonsSearchFail.label
 msgid "%S couldn't retrieve add-ons"
 msgstr "Níorbh fhéidir le %S breiseáin a fháil"
 
-#: addonsSearchSuccess.button
-msgid "Clear search"
-msgstr "Glan an cuardach"
+#: addonsSearchSuccess2.button
+msgid "Clear Search"
+msgstr "Glan an Cuardach"
 
 #: addonsConfirmInstall.title
 msgid "Installing Add-on"
@@ -23233,10 +23270,6 @@ msgstr ""
 "Sioncronaigh do ríomhaire agus d'fhón póca le Weave. Saincheap le breiseáin. "
 "Brabhsáil leis an SárBharra, agus neart rudaí eile."
 
-#: nextSteps.title
-msgid "Next Steps"
-msgstr "Na Céad Chéimeanna Eile"
-
 #: sync.title
 msgid "Get Up and Go"
 msgstr "Ar Aghaidh Leat"
@@ -23250,7 +23283,7 @@ msgstr ""
 "leabharmharcanna, stair bhrabhsála, agus eile, ar do ríomhaire agus d'fhón "
 "póca araon."
 
-#: sync.link
+#: sync.linkLabel
 msgid "Get the Weave add-on"
 msgstr "Faigh an breiseán Weave"
 
@@ -23266,13 +23299,9 @@ msgstr ""
 "Bíodh do &brandShortName; féin agat. Saincheap an chéad bhrabhsálaí riamh a "
 "chuireann breiseáin le haghaidh fón póca ar fáil."
 
-#: getPersonal.link
-msgid "Get add-ons for your mobile."
-msgstr "Faigh breiseáin le haghaidh d'fhóin phóca."
-
-#: skip.link
-msgid "Skip all this and surf the Web."
-msgstr "Ná bac leis seo agus scimeáil an Gréasán."
+#: getPersonal.linkLabel
+msgid "Get add-ons for your mobile"
+msgstr "Faigh breiseáin le haghaidh d'fhóin póca"
 
 # intro paragraph for branded builds
 # XXX Edited this section to remove the specific reference to Firefox UI (see bug 514817)
