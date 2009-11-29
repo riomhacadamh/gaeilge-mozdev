@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-04 08:10-0600\n"
+"POT-Creation-Date: 2009-11-19 20:03-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -814,7 +814,7 @@ msgid "Location"
 msgstr "Suíomh"
 
 #: searchItem.title filter.emptytext searchEndCap.label GopherPromptTitle
-#: search.emptytext search.label addonsSearch.label addonType.1024
+#: search.emptytext addonsSearch.label addonType.1024
 msgid "Search"
 msgstr "Cuardach"
 
@@ -4521,7 +4521,7 @@ msgstr "Conair:"
 
 #: props.secure.label
 msgid "Send For:"
-msgstr "Feistigh:"
+msgstr "Le haghaidh:"
 
 #: props.expires.label
 msgid "Expires:"
@@ -15303,7 +15303,7 @@ msgstr "An bhfuil fonn ort an téama \"%1$S\" ó %2$S a shuiteáil?"
 msgid "Install the locale \"%1$S\" from %2$S?"
 msgstr "An bhfuil fonn ort an logchaighdeán \"%1$S\" ó %2$S a shuiteáil?"
 
-#: OK addonsConfirmInstall.install
+#: OK addonsConfirmInstall.install Install
 msgid "Install"
 msgstr "Suiteáil"
 
@@ -18533,7 +18533,7 @@ msgstr ""
 msgid "Remove All Reports"
 msgstr "Bain Gach Tuairisc"
 
-#: deleteconfirm.title
+#: deleteconfirm.title AreYouSure
 msgid "Are you sure?"
 msgstr "An bhfuil tú cinnte?"
 
@@ -23125,6 +23125,10 @@ msgstr "Níorbh fhéidir le %S breiseáin a fháil"
 msgid "Clear Search"
 msgstr "Glan an Cuardach"
 
+#: addonsSearchEngine.description
+msgid "Integrated Search"
+msgstr "Cuardach Comhtháite"
+
 #: addonsConfirmInstall.title
 msgid "Installing Add-on"
 msgstr "Breiseán á Shuiteáil"
@@ -23165,13 +23169,17 @@ msgstr "Tá nuashonrú díchumasaithe"
 msgid "An error occurred"
 msgstr "Tharla earráid"
 
-#: alertAddonsStart
-msgid "Installing addons"
-msgstr "Breiseáin á suiteáil"
+#: downloadsEmpty
+msgid "No downloads"
+msgstr "Gan íosluchtuithe"
 
-#: alertAddonsDone
-msgid "Installation complete"
-msgstr "Suiteáil críochnaithe"
+#: alertAddonsInstalling
+msgid "Installing add-on"
+msgstr "Breiseán á shuiteáil"
+
+#: alertAddonsInstalled
+msgid "Installation complete. Restart required."
+msgstr "Tá an tsuiteáil críochnaithe. Caithfidh tú atosú."
 
 #: alertAddonsFail
 msgid "Installation failed"
@@ -23258,33 +23266,38 @@ msgstr "Tá %S ag iarraidh sonraí a shábháil ar do ríomhaire le húsáid as 
 msgid "Don't Allow"
 msgstr "Ná Ceadaigh"
 
+# Bookmark List
+#: bookmarkList.desktop
+msgid "Desktop Bookmarks"
+msgstr "Leabharmharcanna Deisce"
+
 #: welcome.title
 msgid "Welcome to &brandShortName;"
 msgstr "Fáilte go dtí &brandShortName;"
 
-#: overview.description
+#: intro.description
 msgid ""
-"Sync your PC and mobile with Weave. Customize with add-ons. Surf with the "
-"Awesome Bar and much, much, much more."
+"Synchronize your PC and mobile with Weave Sync. Customize with add-ons. Surf "
+"with the Awesome Bar and much, much, much more."
 msgstr ""
 "Sioncronaigh do ríomhaire agus d'fhón póca le Weave. Saincheap le breiseáin. "
 "Brabhsáil leis an SárBharra, agus neart rudaí eile."
 
-#: sync.title
+#: weave.title
 msgid "Get Up and Go"
 msgstr "Ar Aghaidh Leat"
 
-#: sync.description
+#: weave.description
 msgid ""
-"Get Weave to help break in your &brandShortName;. Share your preferences, "
-"bookmarks, browsing history, and more between your PC and mobile."
+"Get Weave Sync to help break in your Firefox. Share your browsing history, "
+"bookmarks, saved passwords and tabs between your PC and mobile."
 msgstr ""
-"Úsáid chun do &brandShortName; a cheansú. Bíodh do chuid socruithe, "
-"leabharmharcanna, stair bhrabhsála, agus eile, ar do ríomhaire agus d'fhón "
+"Úsáid Weave chun Firefox a cheansú. Bíodh do stair bhrabhsála, "
+"leabharmharcanna, focail fhaire agus cluaisíní ar do ríomhaire agus d'fhón "
 "póca araon."
 
-#: sync.linkLabel
-msgid "Get the Weave add-on"
+#: weave.linkLabel
+msgid "Get the Weave Sync add-on"
 msgstr "Faigh an breiseán Weave"
 
 #: getPersonal.title
@@ -23328,9 +23341,20 @@ msgstr ""
 msgid "_: rights.webservices-c\n"
 msgstr ""
 
-#: about.description
-msgid "Get help and product information"
-msgstr "Faigh cabhair agus eolas faoin táirge"
+# to pickup this string change. Please update netOffline.longDesc too
+#: netOffline2.longDesc
+msgid ""
+"_: <!-- LOCALIZATION NOTE (netOffline2.longDesc) - Workaround to allow the "
+"l10n tools\n"
+"<ul> <li>Try again. &brandShortName; will attempt to open a connection and "
+"reload the page.</li> </ul>"
+msgstr ""
+"<ul> <li>Bain triail eile as. Déanfaidh &brandShortName; iarracht ceangal a "
+"oscailt agus an leathanach a athluchtú.</li> </ul>"
+
+#: netOffline.longDesc
+msgid "&netOffline2.longDesc;"
+msgstr "&netOffline2.longDesc;"
 
 #: showImages.title
 msgid "Show images"
@@ -23340,18 +23364,9 @@ msgstr "Taispeáin íomhánna"
 msgid "Enable JavaScript"
 msgstr "Cumasaigh JavaScript"
 
-#: enableJavaScript.description
-msgid "Most interactive sites use JavaScript"
-msgstr "Úsáideann formhór na suímh idirghníomhach JavaScript"
-
 #: enablePlugins.title
 msgid "Enable Plugins"
 msgstr "Cumasaigh Forlíontáin"
-
-#: enablePlugins.description
-msgid "Plugins are used for special content such as video"
-msgstr ""
-"Úsáidtear forlíontáin le haghaidh inneachar speisialta cosúil le físeáin."
 
 #: privacy.title
 msgid "Privacy &amp; Security"
@@ -23361,28 +23376,13 @@ msgstr "Príobháideacht agus Slándáil"
 msgid "Allow cookies"
 msgstr "Ceadaigh fianáin"
 
-#: allowCookies.description
-msgid "Sites use cookies to identify you and remember your settings"
-msgstr ""
-"Úsáideann suímh fianáin chun tú a aithint agus do chuid socruithe a mheabhrú"
-
-#: clearPrivateData.title
-msgid "Clear recent browsing history"
-msgstr "Glan an stair is déanaí"
-
-#: clearPrivateData.description
-msgid "Your history helps &brandShortName; suggest where you want to go"
-msgstr ""
-"Cabhraíonn do stair le &brandShortName; moltaí a dhéanamh faoi cá ba mhaith "
-"leat dul"
+#: clearPrivateData2.title
+msgid "Clear private data"
+msgstr "Bánaigh sonraí príobháideacha"
 
 #: rememberPasswords.title
 msgid "Remember passwords"
 msgstr "Meabhraigh focail fhaire"
-
-#: language.description
-msgid "Choose your preferred language for &brandShortName;"
-msgstr "Roghnaigh an teanga is fearr leat le haghaidh &brandShortName;"
 
 #: language.auto
 msgid "Auto-detect"
@@ -23396,6 +23396,57 @@ msgstr "Uath-Bhrathadóireacht"
 #: gecko.handlerService.defaultHandlersVersion
 msgid "2"
 msgstr "2"
+
+# converted from pseudo-properties .it file
+# This file is in the UTF-8 encoding
+# section: [Strings]
+#: AppShortName
+msgid "Fennec"
+msgstr "Fennec"
+
+#: AppLongName
+msgid "Mozilla Fennec"
+msgstr "Mozilla Fennec"
+
+#: WindowCaption
+msgid "Mozilla Fennec Setup"
+msgstr "Socrú Mozilla Fennec"
+
+#: InstallTo
+msgid "Install Fennec to"
+msgstr "Suiteáil Fennec i"
+
+#: InstalledSuccessfully
+msgid "Mozilla Fennec has been installed successfully."
+msgstr "D'éirigh le suiteáil Mozilla Fennec."
+
+#: ExtractionError
+msgid "Archive extraction error:"
+msgstr "Earráid agus an chartlann á baint amach:"
+
+#: ThereWereErrors
+msgid "There were errors during installation:"
+msgstr "Tharla earráidí i rith na suiteála:"
+
+#: CreatingUserProfile
+msgid "Creating user profile. Please wait..."
+msgstr "Próifíl úsáideora á cruthú. Fan go fóill..."
+
+#: UninstallCaption
+msgid "Mozilla Fennec Uninstall"
+msgstr "Díshuiteáil Mozilla Fennec"
+
+#: FilesWillBeRemoved
+msgid "All files will be removed from"
+msgstr "Bainfear gach comhad ó"
+
+#: InstallationNotFound
+msgid "Mozilla Fennec installation not found."
+msgstr "Níor aimsíodh suiteáil Mozilla Fennec."
+
+#: UninstalledSuccessfully
+msgid "Mozilla Fennec has been uninstalled successfully."
+msgstr "D'éirigh le díshuiteáil Mozilla Fennec."
 
 # LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
 # your locale code, and link to your translated pages as soon as they're
@@ -23414,11 +23465,11 @@ msgstr "Firefox Soghluaiste"
 msgid "Firefox: Welcome"
 msgstr "Firefox: Fáilte"
 
-# LOCALIZATION NOTE (bookmarks_about):
+# LOCALIZATION NOTE (bookmarks_aboutBrowser):
 # link title for about:fennec
-#: bookmarks_about
-msgid "Firefox: About"
-msgstr "Firefox: Maidir Leis"
+#: bookmarks_aboutBrowser
+msgid "Firefox: About your browser"
+msgstr "Firefox: Maidir le do bhrabhsálaí"
 
 # LOCALIZATION NOTE (bookmarks_weave):
 # link title for https://www.mozilla.com/en-US/mobile/weave
