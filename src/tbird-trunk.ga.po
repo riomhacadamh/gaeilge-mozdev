@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-20 21:40-0600\n"
+"POT-Creation-Date: 2010-03-04 06:45-0600\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -527,7 +527,7 @@ msgstr "Bain Ancai&rí Ainmnithe"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #: formatRemoveNamedAnchors.key selectAllCmd.key addAttachmentButton.accessskey
-#: saveLabelAccesskey certs.ask.accesskey
+#: saveLabelAccesskey xpinstallPromptAllowButton.accesskey certs.ask.accesskey
 msgid "A"
 msgstr "W"
 
@@ -1762,7 +1762,7 @@ msgstr "Bain Gach Stíl Téacs"
 msgid "Discontinue Text Styles"
 msgstr "Stop Stíleanna Téacs"
 
-#: RemoveLinksAccesskey nextUnreadMsgCmd.key
+#: RemoveLinksAccesskey nextUnreadMsgCmd.key xpinstallDisabledButton.accesskey
 msgid "n"
 msgstr "n"
 
@@ -5884,7 +5884,7 @@ msgid "Bringing folder %S up to date"
 msgstr "Fillteán %S á thabhairt cothrom le dáta"
 
 # LOCALIZATION NOTE (autosyncEventDisplayText): %S will be replaced by the account name
-#: autosyncEventDisplayText
+#: autosyncEventDisplayText pop3EventDisplayText
 msgid "%S is up to date"
 msgstr "Tá %S cothrom le dáta"
 
@@ -5901,6 +5901,20 @@ msgstr "Níor íosluchtaíodh teachtaireacht ar bith"
 #: autosyncContextDisplayText
 msgid "Synchronizing: %S"
 msgstr "Á Shioncronú: %S"
+
+# LOCALIZATION NOTE (pop3ProcessDisplayText): %S will be replaced by the account name
+#: pop3EventStartDisplayText
+msgid "checking %S for new messages"
+msgstr ""
+
+# LOCALIZATION NOTE (pop3EventStatusText): #1 will be replaced by total number of downloaded messages
+#: pop3EventStatusText
+msgid "#1 message downloaded;#1 messages downloaded"
+msgstr ""
+
+#: pop3EventStatusTextNoMsgs
+msgid "No messages to download"
+msgstr ""
 
 # Message actions that show up in activity manager
 # LOCALIZATION NOTE (deletedMessages2): #1 number of messages, #2 folder name
@@ -15845,6 +15859,33 @@ msgstr "Tusa"
 msgid "Loading…"
 msgstr "Á Luchtú…"
 
+# LOCALIZATION NOTE (xpinstallPromptWarning):
+# %1$S is replaced by brandShortName, %2$S is replaced by the host name of the
+# site.
+#: xpinstallPromptWarning
+msgid ""
+"%1$S prevented the site (%2$S) from asking you to install software on your "
+"computer."
+msgstr ""
+
+#: xpinstallPromptAllowButton can
+msgid "Allow"
+msgstr "Ceadaigh"
+
+#: xpinstallDisabledMessageLocked
+msgid "Software installation has been disabled by your system administrator."
+msgstr "Tá suiteáil bhogearraí díchumasaithe ag riarthóir do chórais."
+
+#: xpinstallDisabledMessage
+msgid "Software installation is currently disabled. Click Enable and try again."
+msgstr ""
+"Tá suiteáil bhogearraí díchumasaithe faoi láthair. Cliceáil Cumasaigh agus "
+"déan iarracht eile."
+
+#: xpinstallDisabledButton
+msgid "Enable"
+msgstr "Cumasaigh"
+
 #: applyToCollapsedMsgsTitle
 msgid "Confirm Delete of Messages in Collapsed Thread(s)"
 msgstr "Dearbhaigh Scriosadh Teachtaireachtaí i Snáitheanna Leacaithe"
@@ -18475,10 +18516,6 @@ msgstr "Gach cineál ceangail"
 #: AtEndOfSession
 msgid "at end of session"
 msgstr "ag deireadh seisiúin"
-
-#: can
-msgid "Allow"
-msgstr "Ceadaigh"
 
 #: canSession
 msgid "Allow for Session"
