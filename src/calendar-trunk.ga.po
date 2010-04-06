@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-18 10:03-0600\n"
+"POT-Creation-Date: 2010-03-26 11:00-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -214,33 +214,18 @@ msgstr "Cruthaíodh féilire"
 msgid "Your calendar has been created."
 msgstr "Tá d'fhéilire cruthaithe."
 
+#: error.invalidUri
+msgid "Please enter a valid location."
+msgstr "Iontráil suíomh bailí."
+
+#: error.alreadyExists
+msgid "You are already subscribed to the calendar at this location."
+msgstr "Tá tú liostáilte leis an bhféilire ag an suíomh seo cheana."
+
 #: calendar.calendar.label calendar.calendar.accesskey
 #: lightning.toolbar.calendar.label lightning.toolbar.calendar.accesskey
 msgid "&Calendar"
 msgstr "&Féilire"
-
-# see http://developer.mozilla.org/en/docs/Localization_and_Plurals
-# don't change if you don't know what you're doing!
-#: calendar.dayView.key progress.level.100.accesskey
-msgid "1"
-msgstr "11"
-
-# increment this number when anything gets changed in the list below.  This will
-# cause Firefox to re-read these prefs and inject any new handlers into the
-# profile database.  Note that "new" is defined as "has a different URL"; this
-# means that it's not possible to update the name of existing handler, so
-# don't make any spelling errors here.
-#: calendar.weekView.key progress.level.25.accesskey
-msgid "2"
-msgstr "2"
-
-#: calendar.multiweekView.key
-msgid "3"
-msgstr "3"
-
-#: calendar.monthView.key
-msgid "4"
-msgstr "4"
 
 #: calendar.newevent.button.tooltip
 msgid "Create a new event"
@@ -251,6 +236,7 @@ msgid "Create a new task"
 msgstr "Cruthaigh tasc nua"
 
 #: calendar.unifinder.todoitems.label tasksonly taskModeApplicationTitle
+#: tabTitleTasks
 msgid "Tasks"
 msgstr "Tascanna"
 
@@ -384,29 +370,29 @@ msgstr "Oscail amharc míosa"
 msgid "Switch to multiweek view"
 msgstr "Oscail amharc ilseachtaine"
 
-#: calendar.nextday.button.tooltip goNextCmd.day.label
-msgid "Next Day"
-msgstr "An Chéad Lá Eile"
+#: calendar.nextday.label calendar.nextday.accesskey
+msgid "Ne&xt Day"
+msgstr "An &Chéad Lá Eile"
 
-#: calendar.prevday.button.tooltip goPreviousCmd.day.label
-msgid "Previous Day"
-msgstr "An Lá Roimhe Seo"
+#: calendar.prevday.label calendar.prevday.accesskey
+msgid "Previou&s Day"
+msgstr "An Lá Roimhe &Seo"
 
-#: calendar.nextweek.button.tooltip goNextCmd.week.label
-msgid "Next Week"
-msgstr "An Chéad Seachtain Eile"
+#: calendar.nextweek.label calendar.nextweek.accesskey
+msgid "Ne&xt Week"
+msgstr "An &Chéad Seachtain Eile"
 
-#: calendar.prevweek.button.tooltip goPreviousCmd.week.label
-msgid "Previous Week"
-msgstr "An tSeachtain Roimhe Seo"
+#: calendar.prevweek.label calendar.prevweek.accesskey
+msgid "Previou&s Week"
+msgstr "An t&Seachtain Roimhe Seo"
 
-#: calendar.nextmonth.button.tooltip goNextCmd.month.label
-msgid "Next Month"
-msgstr "An Mhí Seo Chugainn"
+#: calendar.nextmonth.label calendar.nextmonth.accesskey
+msgid "Ne&xt Month"
+msgstr "An Mhí Seo &Chugainn"
 
-#: calendar.prevmonth.button.tooltip goPreviousCmd.month.label
-msgid "Previous Month"
-msgstr "An Mhí Roimhe Seo"
+#: calendar.prevmonth.label calendar.prevmonth.accesskey
+msgid "Previou&s Month"
+msgstr "An Mhí Roimhe &Seo"
 
 #: calendar.navigation.nextday.tooltip onedayforward.tooltip
 msgid "One Day Forward"
@@ -486,7 +472,7 @@ msgstr "R&othlaigh an tAmharc"
 msgid " contain"
 msgstr " ina bhfuil"
 
-#: calendar.list.header.label
+#: calendar.list.header.label tabTitleCalendar
 msgid "Calendar"
 msgstr "Féilire"
 
@@ -561,6 +547,10 @@ msgstr "catagóir"
 #: calendar.task-details.repeat.label
 msgid "repeat"
 msgstr "athdhéanamh"
+
+#: calendar.task-details.attachments.label
+msgid "attachments"
+msgstr "iatáin"
 
 #: calendar.task.category.button.tooltip
 msgid "Categorize tasks"
@@ -703,6 +693,15 @@ msgstr "0"
 msgid "25&percnt; Completed"
 msgstr "25&percnt; Críochnaithe"
 
+# increment this number when anything gets changed in the list below.  This will
+# cause Firefox to re-read these prefs and inject any new handlers into the
+# profile database.  Note that "new" is defined as "has a different URL"; this
+# means that it's not possible to update the name of existing handler, so
+# don't make any spelling errors here.
+#: progress.level.25.accesskey
+msgid "2"
+msgstr "2"
+
 #: progress.level.50
 msgid "50&percnt; Completed"
 msgstr "50&percnt; Críochnaithe"
@@ -723,6 +722,12 @@ msgstr "7"
 msgid "100&percnt; Completed"
 msgstr "100&percnt; Críochnaithe"
 
+# see http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# don't change if you don't know what you're doing!
+#: progress.level.100.accesskey
+msgid "1"
+msgstr "11"
+
 #: priority.level.none
 msgid "Not specified"
 msgstr "Gan sonrú"
@@ -731,14 +736,15 @@ msgstr "Gan sonrú"
 msgid "s"
 msgstr "s"
 
-#: priority.level.low.accesskey calendar.new.server.key
+#: priority.level.low.accesskey event.dialog.saveandclose.key
+#: calendar.new.server.key
 msgid "L"
 msgstr "L"
 
 # Ctrl+N is Fuinneog Nua under Main -> Comhad
 # see also lowercase for "Navigator" command
-#: priority.level.normal.accesskey event.new.event.key
-#: event.new.event.accesskey
+#: priority.level.normal.accesskey event.dialog.new.message.key2
+#: event.new.event.key event.new.event.accesskey
 msgid "N"
 msgstr "N"
 
@@ -1080,14 +1086,16 @@ msgstr "Críochnaithe ar"
 msgid "&#37; complete"
 msgstr "&#37; críochnaithe"
 
-#: event.dialog.new.event.key event.edit.event.key event.edit.event.accesskey
-msgid "E"
-msgstr "E"
+#: event.dialog.new.event.key2 event.attendees.accesskey calendar.import.key
+#: lightning.keys.event.new
+msgid "I"
+msgstr "I"
 
-#: event.dialog.new.message.key day.2.Ddd.accesskey minimizeWindow.key
-#: sunbird.monthview.accesskey sunbird.maintoolbar.accesskey Mega
-msgid "M"
-msgstr "B"
+#: event.dialog.new.task.key2 lightning.keys.event.showTasks.key
+#: lightning.keys.todo.new event.delete.event.accesskey
+#: sunbird.dayview.accesskey
+msgid "D"
+msgstr "D"
 
 # ctrl+D is "Dún" under Main -> Comhad
 #: event.dialog.close.key day.4.Ddd.accesskey cmdClose.macKey
@@ -1099,14 +1107,8 @@ msgstr "W"
 msgid "S"
 msgstr "S"
 
-#: event.dialog.delete.key lightning.keys.todo.new event.delete.event.accesskey
-#: sunbird.dayview.accesskey
-msgid "D"
-msgstr "D"
-
 # G&reamaigh, P&riontáil
-#: event.dialog.print.key calendar.print.key goPreviousCmd.accesskey
-#: HTTPport.accesskey
+#: event.dialog.print.key calendar.print.key HTTPport.accesskey
 msgid "P"
 msgstr "R"
 
@@ -1124,7 +1126,8 @@ msgstr "Y"
 msgid "X"
 msgstr "X"
 
-#: event.dialog.copy.key calendar.copy.key
+#: event.dialog.copy.key lightning.keys.event.showCalendar.key
+#: calendar.copy.key
 msgid "C"
 msgstr "C"
 
@@ -1138,13 +1141,7 @@ msgstr "V"
 msgid "A"
 msgstr "W"
 
-# "C" in main browser window
-#: event.menu.file.label event.menu.file.accesskey fileMenu.label
-#: fileMenu.accesskey
-msgid "&File"
-msgstr "&Comhad"
-
-#: event.menu.file.new.label event.menu.file.new.accesskey
+#: event.menu.item.new.label event.menu.item.new.accesskey
 msgid "&New"
 msgstr "&Nua"
 
@@ -1190,35 +1187,43 @@ msgstr "&Nua"
 # -
 # - ***** END LICENSE BLOCK *****
 # Event Menu
-#: event.menu.file.new.event.label event.menu.file.new.event.accesskey
+#: event.menu.item.new.event.label event.menu.item.new.event.accesskey
 msgid "&Event"
 msgstr "&Imeacht"
 
-#: event.menu.file.new.message.label event.menu.file.new.message.accesskey
+#: event.menu.item.new.task.label event.menu.item.new.task.accesskey
+msgid "&Task"
+msgstr "&Tasc"
+
+#: event.menu.item.new.message.label event.menu.item.new.message.accesskey
 msgid "&Message"
 msgstr "&Teachtaireacht"
 
-#: event.menu.file.new.contact.label event.menu.file.new.contact.accesskey
+#: event.menu.item.new.contact.label event.menu.item.new.contact.accesskey
 msgid "Address Book &Contact"
 msgstr "&Teagmháil Leabhair Seoltaí"
 
-#: event.menu.file.close.label event.menu.file.close.accesskey CloseBtn
+#: event.menu.item.close.label event.menu.item.close.accesskey CloseBtn
 msgid "&Close"
 msgstr "&Dún"
 
-#: event.menu.file.save.label event.menu.file.save.accesskey
+#: event.menu.item.save.label event.menu.item.save.accesskey
 msgid "&Save"
 msgstr "&Sábháil"
+
+#: event.menu.item.saveandclose.label event.menu.item.saveandclose.accesskey
+msgid "Save and C&lose"
+msgstr "Sábhái&l agus Dún"
 
 #: event.menu.item.delete.label event.menu.item.delete.accesskey
 msgid "&Delete…"
 msgstr "&Scrios…"
 
-#: event.menu.file.page.setup.label event.menu.file.page.setup.accesskey
+#: event.menu.item.page.setup.label event.menu.item.page.setup.accesskey
 msgid "Page Set&up"
 msgstr "S&ocrú Leathanaigh"
 
-#: event.menu.file.print.label event.menu.file.print.accesskey
+#: event.menu.item.print.label event.menu.item.print.accesskey
 msgid "&Print"
 msgstr "&Priontáil"
 
@@ -1409,10 +1414,6 @@ msgstr "&Féilire:"
 #: event.attendees.label
 msgid "Attendees:"
 msgstr "Rannpháirtithe:"
-
-#: event.attendees.accesskey calendar.import.key lightning.keys.event.new
-msgid "I"
-msgstr "I"
 
 #: event.alldayevent.label event.alldayevent.accesskey
 msgid "All &day Event"
@@ -1890,6 +1891,10 @@ msgstr "Rannpháirtí Roghnach"
 msgid "Chair"
 msgstr "Cathaoirleach"
 
+#: event.attendee.role.nonparticipant
+msgid "Non Participant"
+msgstr ""
+
 # Timezone dialog
 #: timezone.title.label
 msgid "Please Specify the Timezone"
@@ -2238,6 +2243,25 @@ msgstr ""
 msgid "Click here for details"
 msgstr "Cliceáil anseo i gcomhair mionsonraí"
 
+#: itemMenuLabelEvent lightning.toolbar.newevent.label
+msgid "Event"
+msgstr "Teagmhas"
+
+# ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
+# cmd_cut_accesskey is sedtweaked
+#: itemMenuAccesskeyEvent buttons.occurrence.accesskey SOCKSport.accesskey
+msgid "t"
+msgstr "t"
+
+#: itemMenuLabelTask lightning.toolbar.newtask.label
+msgid "Task"
+msgstr "Tasc"
+
+#: itemMenuAccesskeyTask day.3.Ddd.accesskey event.new.todo.key
+#: event.new.todo.accesskey event.delete.tasks.accesskey
+msgid "T"
+msgstr "T"
+
 #: emailSubjectReply
 msgid "Re: %1$S"
 msgstr "Re: %1$S"
@@ -2397,12 +2421,6 @@ msgstr "Eagraí: "
 #: calendar.invitations.list.none.text None imipNoIdentity
 msgid "None"
 msgstr "Gan sonrú"
-
-# ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
-# cmd_cut_accesskey is sedtweaked
-#: buttons.occurrence.accesskey SOCKSport.accesskey
-msgid "t"
-msgstr "t"
 
 # Ctrl+F, Ctrl+G as find, find again transcend language?
 # also "Foirmeacha" on "Eolas Leathanaigh"  (so no tweaking needed)
@@ -3658,10 +3676,10 @@ msgstr "uaire"
 msgid "days"
 msgstr "lá"
 
-#: day.3.Ddd.accesskey event.new.todo.key event.new.todo.accesskey
-#: event.delete.tasks.accesskey
-msgid "T"
-msgstr "T"
+#: day.2.Ddd.accesskey minimizeWindow.key sunbird.monthview.accesskey
+#: sunbird.maintoolbar.accesskey Mega
+msgid "M"
+msgstr "B"
 
 # Ctrl+h = Stair (for now, most other good ones are taken)
 #: day.5.Ddd.accesskey
@@ -3765,10 +3783,6 @@ msgstr "Cúig Seachtaine"
 #: calendar.menu.numberofweeks.6
 msgid "Six Weeks"
 msgstr "Sé Seachtaine"
-
-#: goNextCmd.all.accesskey
-msgid "e"
-msgstr "l"
 
 #: showCurrentView.label showCurrentView.accesskey
 msgid "Current &View"
@@ -6403,14 +6417,6 @@ msgstr "Río&mhphost"
 msgid "&Tasks"
 msgstr "&Tascanna"
 
-#: lightning.toolbar.newevent.label
-msgid "Event"
-msgstr "Teagmhas"
-
-#: lightning.toolbar.newtask.label
-msgid "Task"
-msgstr "Tasc"
-
 #: lightning.toolbar.day.label lightning.toolbar.day.accesskey
 msgid "&Day"
 msgstr "&Lá"
@@ -6643,6 +6649,10 @@ msgstr "O"
 msgid "Edit Selection…"
 msgstr "Cuir an Roghnúchán in Eagar…"
 
+#: event.edit.event.key event.edit.event.accesskey
+msgid "E"
+msgstr "E"
+
 #: event.delete.event
 msgid "Delete Selected Events"
 msgstr "Scrios na hImeachtaí Roghnaithe"
@@ -6724,6 +6734,11 @@ msgstr "Consól &Earráide"
 #: helpMenu.label helpMenu.accesskey helpMenuWin.label helpMenuWin.accesskey
 msgid "&Help"
 msgstr "Cab&hair"
+
+# "C" in main browser window
+#: fileMenu.label fileMenu.accesskey
+msgid "&File"
+msgstr "&Comhad"
 
 # also without dots
 # _this_ is the "R" under Main -> Uirlisí
