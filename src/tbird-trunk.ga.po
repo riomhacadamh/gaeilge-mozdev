@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-26 11:02-0500\n"
+"POT-Creation-Date: 2010-04-05 20:00-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -4625,16 +4625,6 @@ msgstr "&lt; &Siar"
 #: aboutVersion
 msgid "version"
 msgstr "leagan"
-
-#: copyrightText
-msgid ""
-"&#169;1998-2010 Contributors. All Rights Reserved. Mozilla Thunderbird and "
-"the Thunderbird logos are trademarks of the Mozilla Foundation.  All rights "
-"reserved."
-msgstr ""
-"&#169;1998-2010 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
-"trádmharcanna de chuid Fondúireacht Mozilla iad Mozilla Thunderbird agus "
-"suaitheantais Thunderbird. Gach ceart ar cosaint."
 
 #: aboutMenu.label aboutMenu.accesskey
 msgid "&About"
@@ -11139,25 +11129,6 @@ msgstr "Níl cuóta stórais ar bith ar an bhfillteán seo."
 msgid "Application is out of memory."
 msgstr "Tá an feidhmchlár as cuimhne."
 
-# # @name IMAP_AUTH_MECH_NOT_SUPPORTED
-# # @loc None
-# LOCALIZATION NOTE (5101): %S is the server hostname
-#: 5101
-msgid ""
-"The IMAP server %S does not support the selected authentication method. "
-"Please change the 'Authentication method' in the 'Account Settings | Server "
-"settings'."
-msgstr ""
-
-# # @name IMAP_AUTH_MECH_FAILED
-# # @loc None
-# LOCALIZATION NOTE (5102): %S is the server hostname
-#: 5102
-msgid ""
-"All login mechanisms for %S failed. Please check the password or change the "
-"'Authentication method' in the 'Account Settings | Server settings'."
-msgstr ""
-
 # # @name IMAP_COPYING_MESSAGE_OF
 # # @loc None
 # LOCALIZATION NOTE (Error 5103): Do not translate the word "%S" below.
@@ -11167,15 +11138,6 @@ msgstr ""
 #: 5103
 msgid "Copying Message %1$S of %2$S to %3$S"
 msgstr "Teachtaireacht %1$S as %2$S á cóipeáil go %3$S"
-
-# # @name IMAP_AUTH_GSSAPI_FAILED
-# # @loc None
-# LOCALIZATION NOTE (5104): %S is the server hostname
-#: 5104
-msgid ""
-"The Kerberos/GSSAPI ticket was not accepted by the IMAP server %S. Please "
-"check that you are logged in to the Kerberos/GSSAPI realm."
-msgstr ""
 
 # #-#-#-#-#  chromemessengerimapMsgs.properties.po (firefox)  #-#-#-#-#
 # # @name IMAP_MOVE_FOLDER_TO_TRASH
@@ -11219,18 +11181,6 @@ msgstr "Scrios an Fillteán"
 msgid "&Delete Folder"
 msgstr "&Scrios Fillteán"
 
-# # @name IMAP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
-# # @loc None
-# LOCALIZATION NOTE (5109): %S is the server hostname
-#: 5109
-msgid ""
-"The IMAP server %S does not seem to support encrypted passwords. If you just "
-"set up the account, please try changing to 'Password, transmitted insecurely' "
-"as the 'Authentication method' in the 'Account Settings | Server settings'. "
-"If it used to work and now suddenly fails, this is a common scenario how "
-"someone could steal your password."
-msgstr ""
-
 # # @name IMAP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
 # # @loc None
 # LOCALIZATION NOTE (5110): %S is the server hostname
@@ -11251,6 +11201,88 @@ msgid ""
 "The IMAP server %S does not allow plaintext passwords. Please try changing to "
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
 "| Server settings'."
+msgstr ""
+
+# # @name IMAP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
+# # @loc None
+# LOCALIZATION NOTE (5109): %S is the server hostname
+#: 5112
+msgid ""
+"The IMAP server %S does not seem to support encrypted passwords. If you just "
+"set up the account, please try changing to 'Password, transmitted insecurely' "
+"as the 'Authentication method' in the 'Account Settings | Server settings'. "
+"If it used to work and now suddenly fails, this is a common scenario how "
+"someone could steal your password."
+msgstr ""
+
+# # @name IMAP_AUTH_MECH_NOT_SUPPORTED
+# # @loc None
+# LOCALIZATION NOTE (5101): %S is the server hostname
+#: 5113
+msgid ""
+"The IMAP server %S does not support the selected authentication method. "
+"Please change the 'Authentication method' in the 'Account Settings | Server "
+"settings'."
+msgstr ""
+
+# # @name IMAP_AUTH_MECH_FAILED
+# # @loc None
+# LOCALIZATION NOTE (5102): %S is the server hostname
+#: 5114
+msgid ""
+"All login mechanisms for %S failed. Please check the password or change the "
+"'Authentication method' in the 'Account Settings | Server settings'."
+msgstr ""
+
+# # @name IMAP_AUTH_GSSAPI_FAILED
+# # @loc None
+# LOCALIZATION NOTE (5104): %S is the server hostname
+#: 5115
+msgid ""
+"The Kerberos/GSSAPI ticket was not accepted by the IMAP server %S. Please "
+"check that you are logged in to the Kerberos/GSSAPI realm."
+msgstr ""
+
+# # @name IMAP_LOGIN_DISABLED
+# # @loc None
+# LOCALIZATION NOTE (5116): %S is the account name
+#: 5116
+msgid ""
+"You cannot log in to %S because the server doesn't allow plaintext "
+"authentication without STARTTLS or SSL/TLS. Try enabling connection security "
+"or secure authentication in the account settings."
+msgstr ""
+
+# # @name IMAP_SERVER_COMMAND_FAILED
+# # @loc None
+# LOCALIZATION NOTE (5117): 
+# Place the word %1$S in your translation where the name of the account name should appear.
+# Place the word %2$S in your translation where the server response should appear.
+#: 5117
+msgid ""
+"The current command did not succeed. The mail server for account %1$S "
+"responded: %2$S"
+msgstr ""
+
+# # @name IMAP_FOLDER_COMMAND_FAILED
+# # @loc None
+# LOCALIZATION NOTE (5118): Do not translate the word %S below.
+# Place the word %1$S in your translation where the name of the account should appear.
+# Place the word %2$S in your translation where the name of the folder should appear.
+# Place the word %3$S in your translation where the server response should appear.
+#: 5118
+msgid ""
+"The current operation on '%2$S' did not succeed. The mail server for account %"
+"1$S responded: %3$S"
+msgstr ""
+
+# # @name IMAP_SERVER_ALERT
+# # @loc None
+# LOCALIZATION NOTE (5119):
+# Place the word %1$S in your translation where the name of the account should appear.
+# Place the word %2$S in your translation where the alert from the server should appear.
+#: 5119
+msgid "Alert from account %1$S: %2$S"
 msgstr ""
 
 #: importDialog.windowTitle
@@ -12058,24 +12090,6 @@ msgstr ""
 "Tá an fillteán seo á phróiseáil. Fan go mbeidh an phróiseáil críochnaithe "
 "roimh theachtaireachtaí a fháil."
 
-# Authentication server caps and pref don't match
-# # @name POP3_AUTH_MECH_NOT_SUPPORTED
-# # @loc None
-#: 4030
-msgid ""
-"The server does not support the selected authentication method. Please change "
-"the 'Authentication method' in the 'Account Settings | Server settings'."
-msgstr ""
-
-# Status - Could not log in to GSSAPI, and it was the only method
-# # @name POP3_GSSAPI_FAILURE
-# # @loc None
-#: 4031
-msgid ""
-"The Kerberos/GSSAPI ticket was not accepted by the POP server. Please check "
-"that you are logged in to the Kerberos/GSSAPI realm."
-msgstr ""
-
 # # @name MOVEMAIL_CANT_OPEN_SPOOL_FILE
 # # @loc None
 #: 4033
@@ -12222,6 +12236,24 @@ msgid ""
 "This POP3 server does not allow plaintext passwords. Please try changing to "
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
 "| Server settings'."
+msgstr ""
+
+# Authentication server caps and pref don't match
+# # @name POP3_AUTH_MECH_NOT_SUPPORTED
+# # @loc None
+#: 4051
+msgid ""
+"The server does not support the selected authentication method. Please change "
+"the 'Authentication method' in the 'Account Settings | Server settings'."
+msgstr ""
+
+# Status - Could not log in to GSSAPI, and it was the only method
+# # @name POP3_GSSAPI_FAILURE
+# # @loc None
+#: 4052
+msgid ""
+"The Kerberos/GSSAPI ticket was not accepted by the POP server. Please check "
+"that you are logged in to the Kerberos/GSSAPI realm."
 msgstr ""
 
 #: sendPage.label sendPage.accesskey
@@ -12897,38 +12929,6 @@ msgstr ""
 "Tharla earráid agus ríomhphost á sheoladh. D'fhreagair an freastalaí: %1$s. "
 "Seiceáil faighteoir na teachtaireachta %2$s agus déan iarracht eile."
 
-# # @name NS_ERROR_SMTP_AUTH_FAILURE
-#: 12576
-msgid ""
-"Unable to authenticate to SMTP server %S. Please check the password, and "
-"verify the 'Authentication method' in 'Account Settings | Outgoing server "
-"(SMTP)'."
-msgstr ""
-
-# # @name NS_ERROR_SMTP_AUTH_GSSAPI
-#: 12579
-msgid ""
-"The Kerberos/GSSAPI ticket was not accepted by the SMTP server %S. Please "
-"check that you are logged in to the Kerberos/GSSAPI realm."
-msgstr ""
-
-# # @name NS_ERROR_SMTP_AUTH_MECH_NOT_SUPPORTED
-#: 12580
-msgid ""
-"The SMTP server %S does not support the selected authentication method. "
-"Please change the 'Authentication method' in the 'Account Settings | Outgoing "
-"Server (SMTP)'."
-msgstr ""
-
-# # @name NS_ERROR_SMTP_AUTH_NOT_SUPPORTED
-#: 12581
-msgid ""
-"Unable to authenticate to SMTP server %S. It does not support authentication "
-"(SMTP-AUTH) but you have chosen to use authentication. Please change the "
-"'Authentication method' to 'None' in the 'Account Settings | Outgoing Server "
-"(SMTP)' or contact your email service provider for instructions."
-msgstr ""
-
 # # @name NS_ERROR_STARTTLS_FAILED_EHLO_STARTTLS
 #: 12582
 msgid ""
@@ -13068,6 +13068,38 @@ msgid ""
 "The SMTP server %S does not allow plaintext passwords. Please try changing to "
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
 "| Server settings'."
+msgstr ""
+
+# # @name NS_ERROR_SMTP_AUTH_FAILURE
+#: 12597
+msgid ""
+"Unable to authenticate to SMTP server %S. Please check the password, and "
+"verify the 'Authentication method' in 'Account Settings | Outgoing server "
+"(SMTP)'."
+msgstr ""
+
+# # @name NS_ERROR_SMTP_AUTH_GSSAPI
+#: 12598
+msgid ""
+"The Kerberos/GSSAPI ticket was not accepted by the SMTP server %S. Please "
+"check that you are logged in to the Kerberos/GSSAPI realm."
+msgstr ""
+
+# # @name NS_ERROR_SMTP_AUTH_MECH_NOT_SUPPORTED
+#: 12599
+msgid ""
+"The SMTP server %S does not support the selected authentication method. "
+"Please change the 'Authentication method' in the 'Account Settings | Outgoing "
+"Server (SMTP)'."
+msgstr ""
+
+# # @name NS_ERROR_SMTP_AUTH_NOT_SUPPORTED
+#: 12600
+msgid ""
+"Unable to authenticate to SMTP server %S. It does not support authentication "
+"(SMTP-AUTH) but you have chosen to use authentication. Please change the "
+"'Authentication method' to 'None' in the 'Account Settings | Outgoing Server "
+"(SMTP)' or contact your email service provider for instructions."
 msgstr ""
 
 # # Strings use for the save message dialog shown when the user close a message compose window
@@ -14578,7 +14610,8 @@ msgstr "Oscail i g&Cluaisín Nua"
 msgid "&New Subfolder…"
 msgstr "Fo-Fhillteán &Nua…"
 
-#: folderContextRename.label folderContextRename.accesskey
+#: folderContextRename.label folderContextRename.accesskey accept.label
+#: accept.accesskey
 msgid "&Rename"
 msgstr "&Athainmnigh"
 

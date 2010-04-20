@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-26 11:04-0500\n"
+"POT-Creation-Date: 2010-04-05 20:01-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -335,10 +335,11 @@ msgid "Restore"
 msgstr "Athchóirigh"
 
 #: restorepage.restore.access editBookmark.removeBookmark.accessKey
-#: menuRestoreAllTabs.accesskey menuRestoreAllWindows.accesskey
-#: geolocation.remember.accesskey reporterMenu.accesskey restartAccessKey
-#: protocol.checkbox.accesskey pluginInstallation.restart.accesskey
-#: restartNowButton.accesskey notifyBarRememberButtonAccessKey
+#: crashedpluginsMessage.reloadButton.accesskey menuRestoreAllTabs.accesskey
+#: menuRestoreAllWindows.accesskey geolocation.remember.accesskey
+#: reporterMenu.accesskey restartAccessKey protocol.checkbox.accesskey
+#: pluginInstallation.restart.accesskey restartNowButton.accesskey
+#: notifyBarRememberButtonAccessKey
 msgid "R"
 msgstr "R"
 
@@ -347,6 +348,7 @@ msgid "Start New Session"
 msgstr "Tosaigh Seisiún Nua"
 
 #: restorepage.cancel.access contextMenuSearchText.accesskey
+#: crashedpluginsMessage.submitButton.accesskey
 #: offlineApps.manageUsageAccessKey securityTab.accesskey
 #: defaultGroupOnAccesskey cmd_showSuggestions_accesskey submitReport.accesskey
 #: savePageCmd.commandkey
@@ -1717,6 +1719,24 @@ msgstr ""
 msgid "Details…"
 msgstr "Mionsonraí…"
 
+#: crashedpluginsMessage.title
+msgid "The %S plugin has crashed."
+msgstr "Thuairteáil an breiseán %S."
+
+#: crashedpluginsMessage.reloadButton.label
+msgid "Reload page"
+msgstr "Athluchtaigh an leathanach"
+
+#: crashedpluginsMessage.submitButton.label
+msgid "Submit a crash report"
+msgstr "Seol tuairisc ar thuairteáil"
+
+# LOCALIZATION NOTE (geolocation.learnMore): Use the unicode ellipsis char, \u2026,
+# or use "..." if \u2026 doesn't suit traditions in your locale.
+#: crashedpluginsMessage.learnMore geolocation.learnMore
+msgid "Learn More…"
+msgstr "Tuilleadh Eolais…"
+
 # Sanitize
 #: sanitizeWithPromptLabel2
 msgid "Clear Recent History…"
@@ -1964,12 +1984,6 @@ msgstr "Ná Ceadaigh"
 #: geolocation.siteWantsToKnow
 msgid "%S wants to know your location."
 msgstr "Tá an láthair ina bhfuil tú á lorg ag %S."
-
-# LOCALIZATION NOTE (geolocation.learnMore): Use the unicode ellipsis char, \u2026,
-# or use "..." if \u2026 doesn't suit traditions in your locale.
-#: geolocation.learnMore
-msgid "Learn More…"
-msgstr "Tuilleadh Eolais…"
 
 #: geolocation.remember
 msgid "Remember for this site"
@@ -4017,6 +4031,10 @@ msgstr ""
 #: checkNow.label checkNow.accesskey
 msgid "Check &Now"
 msgstr "Seiceáil A&nois"
+
+#: submitCrashes.label submitCrashes.accesskey
+msgid "&Submit crash reports"
+msgstr "&Seol tuairiscí ar thuairteáil"
 
 #: networkTab.label
 msgid "Network"
@@ -10501,7 +10519,7 @@ msgid "Report A Broken Web Site"
 msgstr "Seol Tuairisc ar Shuíomh Briste"
 
 #: privacyNotice.label reportForm.privacyPolicy.title
-#: aboutPage.privacyPolicy.label
+#: aboutPage.privacyPolicy.label firstrun.privacy
 msgid "Privacy Policy"
 msgstr "Polasaí Príobháideachta"
 
@@ -16935,8 +16953,8 @@ msgid ""
 "&brandShortName; can check if there are compatible versions of these add-ons "
 "available."
 msgstr ""
-"Is féidir le &brandShortName; leaganacha comhoiriúnacha de na breiseáin "
-"seo a lorg."
+"Is féidir le &brandShortName; leaganacha comhoiriúnacha de na breiseáin seo a "
+"lorg."
 
 #: checking.wizard.title
 msgid "Checking for Compatible Add-ons"
@@ -17276,6 +17294,49 @@ msgstr ""
 #: blockedPlugin.label
 msgid "This plugin has been blocked for your protection."
 msgstr "Tá cosc curtha ar an bhforlíontán seo le tú a chosaint."
+
+# LOCALIZATION NOTE (reloadPlugin.middle): avoid leading/trailing spaces, this text is a link
+# LOCALIZATION NOTE (reloadPlugin.post): include a starting space as needed
+#: reloadPlugin.pre
+msgid ""
+"_: include a trailing space as needed\n"
+" reloadPlugin.pre\n"
+msgstr ""
+
+#: reloadPlugin.middle
+msgid "Reload the page"
+msgstr "Athluchtaigh an leathanach"
+
+#: reloadPlugin.post
+msgid " to try again."
+msgstr " chun triail eile a bhaint as."
+
+#: report.please
+msgid ""
+"_: This and the other report.* strings should be as short as possible, "
+"ideally 2-3 words.\n"
+"Send crash report"
+msgstr "Seol tuairisc ar thuairteáil"
+
+#: report.submitting
+msgid "Sending report…"
+msgstr "Tuairisc á seoladh…"
+
+#: report.submitted
+msgid "Crash report sent."
+msgstr "Tuairisc seolta."
+
+#: report.disabled
+msgid "Crash reporting disabled."
+msgstr "Tuairiscí díchumasaithe."
+
+#: report.failed
+msgid "Submission failed."
+msgstr "Theip ar sheoladh."
+
+#: report.unavailable
+msgid "No report available."
+msgstr "Níl aon tuairisc ann."
 
 #: pluginLicenseAgreement.label
 msgid "To install %S, you need to agree to the following:"
@@ -18791,12 +18852,20 @@ msgstr "Thunderbird"
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
+#: logoTrademark
+msgid ""
+"Mozilla Thunderbird and the Thunderbird logos are trademarks of the Mozilla "
+"Foundation."
+msgstr ""
+"Is trádmharcanna de chuid Fondúireacht Mozilla iad Mozilla Thunderbird agus "
+"suaitheantais Thunderbird."
+
 #: SSL_ERROR_EXPORT_ONLY_SERVER
 msgid ""
 "Unable to communicate securely.  Peer does not support high-grade encryption."
 msgstr ""
-"Ní féidir cumarsáid shlán a dhéanamh. Ní thacaíonn an comhghleacaí le criptiúchán "
-"ardghráid."
+"Ní féidir cumarsáid shlán a dhéanamh. Ní thacaíonn an comhghleacaí le "
+"criptiúchán ardghráid."
 
 #: SSL_ERROR_US_ONLY_SERVER
 msgid ""
@@ -18823,8 +18892,8 @@ msgstr ""
 msgid ""
 "Unable to communicate securely with peer: peers's certificate was rejected."
 msgstr ""
-"Ní féidir cumarsáid shlán a dhéanamh leis an gcomhghleacaí: diúltaíodh le teastas an "
-"chomhghleacaí."
+"Ní féidir cumarsáid shlán a dhéanamh leis an gcomhghleacaí: diúltaíodh le "
+"teastas an chomhghleacaí."
 
 #: SSL_ERROR_BAD_CLIENT
 msgid "The server has encountered bad data from the client."
@@ -18841,7 +18910,8 @@ msgstr "Ní thacaítear leis an gcineál teastais."
 #: SSL_ERROR_UNSUPPORTED_VERSION
 msgid "Peer using unsupported version of security protocol."
 msgstr ""
-"Tá an comhghleacaí ag úsáid leagan den phrótacal slándála nach dtacaítear leis."
+"Tá an comhghleacaí ag úsáid leagan den phrótacal slándála nach dtacaítear "
+"leis."
 
 #: SSL_ERROR_WRONG_CERTIFICATE
 msgid ""
@@ -18857,13 +18927,14 @@ msgid ""
 "Unable to communicate securely with peer: requested domain name does not "
 "match the server's certificate."
 msgstr ""
-"Ní féidir cumarsáid shlán a dhéanamh leis an gcomhghleacaí: ní oireann an t-ainm "
-"fearann iarrtha do theastas an fhreastalaí."
+"Ní féidir cumarsáid shlán a dhéanamh leis an gcomhghleacaí: ní oireann an t-"
+"ainm fearann iarrtha do theastas an fhreastalaí."
 
 #: SSL_ERROR_SSL2_DISABLED
 msgid "Peer only supports SSL version 2, which is locally disabled."
 msgstr ""
-"Ní thacaíonn an comhghleacaí ach le SSL leagan 2, rud atá díchumasaithe go logánta."
+"Ní thacaíonn an comhghleacaí ach le SSL leagan 2, rud atá díchumasaithe go "
+"logánta."
 
 #: SSL_ERROR_BAD_MAC_READ
 msgid "SSL received a record with an incorrect Message Authentication Code."
@@ -18871,7 +18942,8 @@ msgstr "Fuair SSL taifead le Cód Fíordheimhnithe Teachtaireachta mícheart."
 
 #: SSL_ERROR_BAD_MAC_ALERT
 msgid "SSL peer reports incorrect Message Authentication Code."
-msgstr "Tuairiscíonn an comhghleacaí SSL Cód Fíordheimhnithe Teachtaireachta mícheart."
+msgstr ""
+"Tuairiscíonn an comhghleacaí SSL Cód Fíordheimhnithe Teachtaireachta mícheart."
 
 #: SSL_ERROR_BAD_CERT_ALERT
 msgid "SSL peer cannot verify your certificate."
@@ -18879,11 +18951,13 @@ msgstr "Ní féidir leis an gcomhghleacaí SSL do theastas a fhíorú."
 
 #: SSL_ERROR_REVOKED_CERT_ALERT
 msgid "SSL peer rejected your certificate as revoked."
-msgstr "Dhiúltaigh an comhghleacaí SSL le do theastas toisc é a bheith cúlghairthe."
+msgstr ""
+"Dhiúltaigh an comhghleacaí SSL le do theastas toisc é a bheith cúlghairthe."
 
 #: SSL_ERROR_EXPIRED_CERT_ALERT
 msgid "SSL peer rejected your certificate as expired."
-msgstr "Dhiúltaigh an comhghleacaí SSL le do theastas toisc é a bheith as feidhm."
+msgstr ""
+"Dhiúltaigh an comhghleacaí SSL le do theastas toisc é a bheith as feidhm."
 
 #: SSL_ERROR_SSL_DISABLED
 msgid "Cannot connect: SSL is disabled."
@@ -19074,12 +19148,14 @@ msgstr "Tá an ceangal seo dúnta ag an gcomhghleacaí SSL."
 #: SSL_ERROR_HANDSHAKE_UNEXPECTED_ALERT
 msgid "SSL peer was not expecting a handshake message it received."
 msgstr ""
-"Ní raibh an comhghleacaí SSL ag súil le teachtaireacht chumarsáide tionscantaí a fuarthas."
+"Ní raibh an comhghleacaí SSL ag súil le teachtaireacht chumarsáide "
+"tionscantaí a fuarthas."
 
 #: SSL_ERROR_DECOMPRESSION_FAILURE_ALERT
 msgid ""
 "SSL peer was unable to successfully decompress an SSL record it received."
-msgstr "Ní raibh an comhghleacaí SSL in ann taifead SSL a fuair sé a dhí-chomhbhrú."
+msgstr ""
+"Ní raibh an comhghleacaí SSL in ann taifead SSL a fuair sé a dhí-chomhbhrú."
 
 #: SSL_ERROR_HANDSHAKE_FAILURE_ALERT
 msgid ""
@@ -19101,7 +19177,8 @@ msgstr "Ní thacaíonn an comhghleacaí SSL le teastais den chineáil a fuair s�
 #: SSL_ERROR_CERTIFICATE_UNKNOWN_ALERT
 msgid "SSL peer had some unspecified issue with the certificate it received."
 msgstr ""
-"Bhí deacracht nach sonraítear ag an gcomhghleacaí SSL leis an teastas a fuair sé."
+"Bhí deacracht nach sonraítear ag an gcomhghleacaí SSL leis an teastas a fuair "
+"sé."
 
 #: SSL_ERROR_GENERATE_RANDOM_FAILURE
 msgid "SSL experienced a failure of its random number generator."
@@ -19115,7 +19192,8 @@ msgstr ""
 
 #: SSL_ERROR_EXTRACT_PUBLIC_KEY_FAILURE
 msgid "SSL was unable to extract the public key from the peer's certificate."
-msgstr "Ní raibh SSL in ann an eochair phoiblí a fháil ó theastas an chomhghleacaí."
+msgstr ""
+"Ní raibh SSL in ann an eochair phoiblí a fháil ó theastas an chomhghleacaí."
 
 # "teip" as noun here
 #: SSL_ERROR_SERVER_KEY_EXCHANGE_FAILURE
@@ -19127,8 +19205,8 @@ msgstr ""
 #: SSL_ERROR_CLIENT_KEY_EXCHANGE_FAILURE
 msgid "Unspecified failure while processing SSL Client Key Exchange handshake."
 msgstr ""
-"Teip neamhshonraithe le linn próiseála cumarsáide tionscantaí Malartú Eochrach "
-"Cliaint SSL."
+"Teip neamhshonraithe le linn próiseála cumarsáide tionscantaí Malartú "
+"Eochrach Cliaint SSL."
 
 #: SSL_ERROR_ENCRYPTION_FAILURE
 msgid "Bulk data encryption algorithm failed in selected cipher suite."
@@ -19217,7 +19295,8 @@ msgstr ""
 
 #: SSL_ERROR_BAD_HANDSHAKE_HASH_VALUE
 msgid "Received incorrect handshakes hash values from peer."
-msgstr "Fuarthas luachanna haise mícheart i gcumarsáid thionscantach ón gcomhghleacaí."
+msgstr ""
+"Fuarthas luachanna haise mícheart i gcumarsáid thionscantach ón gcomhghleacaí."
 
 #: SSL_ERROR_CERT_KEA_MISMATCH
 msgid ""
@@ -19250,8 +19329,8 @@ msgstr "Fuair an comhghleacaí taifead SSL a bhí níos faide ná atá ceadaithe
 #: SSL_ERROR_UNKNOWN_CA_ALERT
 msgid "Peer does not recognize and trust the CA that issued your certificate."
 msgstr ""
-"Ní aithníonn an comhghleacaí an t-údáras deimhniúcháin a d'eisigh do theastas agus "
-"níl muinín aige as."
+"Ní aithníonn an comhghleacaí an t-údáras deimhniúcháin a d'eisigh do theastas "
+"agus níl muinín aige as."
 
 #: SSL_ERROR_ACCESS_DENIED_ALERT
 msgid "Peer received a valid certificate, but access was denied."
@@ -19259,22 +19338,25 @@ msgstr "Fuair an comhghleacaí teastas bailí ach diúltaíodh le rochtain."
 
 #: SSL_ERROR_DECODE_ERROR_ALERT
 msgid "Peer could not decode an SSL handshake message."
-msgstr "Níorbh fhéidir leis an gcomhghleacaí cumarsáid thionscantach SSL a dhíchodú."
+msgstr ""
+"Níorbh fhéidir leis an gcomhghleacaí cumarsáid thionscantach SSL a dhíchodú."
 
 #: SSL_ERROR_DECRYPT_ERROR_ALERT
 msgid "Peer reports failure of signature verification or key exchange."
-msgstr "Tuairiscíonn an comhghleacaí gur theip ar fhíorú sínithe nó malartú eochrach."
+msgstr ""
+"Tuairiscíonn an comhghleacaí gur theip ar fhíorú sínithe nó malartú eochrach."
 
 #: SSL_ERROR_EXPORT_RESTRICTION_ALERT
 msgid "Peer reports negotiation not in compliance with export regulations."
 msgstr ""
-"Deir an comhghleacaí nach n-oireann an idirbheartaíocht le rialúcháin easpórtála."
+"Deir an comhghleacaí nach n-oireann an idirbheartaíocht le rialúcháin "
+"easpórtála."
 
 #: SSL_ERROR_PROTOCOL_VERSION_ALERT
 msgid "Peer reports incompatible or unsupported protocol version."
 msgstr ""
-"Deir an comhghleacaí gur leagan prótacail neamhchomhoiriúnach, nó nach dtacaítear "
-"leis, atá ann."
+"Deir an comhghleacaí gur leagan prótacail neamhchomhoiriúnach, nó nach "
+"dtacaítear leis, atá ann."
 
 #: SSL_ERROR_INSUFFICIENT_SECURITY_ALERT
 msgid "Server requires ciphers more secure than those supported by client."
@@ -19293,7 +19375,8 @@ msgstr "Chealaigh an úsáideoir comhghleacaí an chumarsáid thionscantach."
 #: SSL_ERROR_NO_RENEGOTIATION_ALERT
 msgid "Peer does not permit renegotiation of SSL security parameters."
 msgstr ""
-"Ní cheadaíonn an comhghleacaí athréiteach a dhéanamh ar pharaiméadair shlándála SSL."
+"Ní cheadaíonn an comhghleacaí athréiteach a dhéanamh ar pharaiméadair "
+"shlándála SSL."
 
 #: SSL_ERROR_SERVER_CACHE_NOT_CONFIGURED
 msgid "SSL server cache not configured and not disabled for this socket."
@@ -19302,11 +19385,13 @@ msgstr ""
 
 #: SSL_ERROR_UNSUPPORTED_EXTENSION_ALERT
 msgid "SSL peer does not support requested TLS hello extension."
-msgstr "Ní thacaíonn an comhghleacaí SSL leis an eisínteacht TLS hello a iarradh."
+msgstr ""
+"Ní thacaíonn an comhghleacaí SSL leis an eisínteacht TLS hello a iarradh."
 
 #: SSL_ERROR_CERTIFICATE_UNOBTAINABLE_ALERT
 msgid "SSL peer could not obtain your certificate from the supplied URL."
-msgstr "Níorbh fhéidir leis an gcomhghleacaí SSL do theastas a fháil ón URL sonraithe."
+msgstr ""
+"Níorbh fhéidir leis an gcomhghleacaí SSL do theastas a fháil ón URL sonraithe."
 
 #: SSL_ERROR_UNRECOGNIZED_NAME_ALERT
 msgid "SSL peer has no certificate for the requested DNS name."
@@ -19406,14 +19491,14 @@ msgstr "leabharlann slándála: theip ar leithdháileadh cuimhne"
 #: SEC_ERROR_UNTRUSTED_ISSUER
 msgid "Peer's certificate issuer has been marked as not trusted by the user."
 msgstr ""
-"Tá eisitheoir theastas an chomhghleacaí marcáilte mar cheann nach gcuireann an "
-"úsáideoir muinín ann."
+"Tá eisitheoir theastas an chomhghleacaí marcáilte mar cheann nach gcuireann "
+"an úsáideoir muinín ann."
 
 #: SEC_ERROR_UNTRUSTED_CERT
 msgid "Peer's certificate has been marked as not trusted by the user."
 msgstr ""
-"Tá teastas an chomhghleacaí marcáilte mar cheann nach gcuireann an úsáideoir muinín "
-"ann."
+"Tá teastas an chomhghleacaí marcáilte mar cheann nach gcuireann an úsáideoir "
+"muinín ann."
 
 #: SEC_ERROR_DUPLICATE_CERT
 msgid "Certificate already exists in your database."
@@ -20078,12 +20163,12 @@ msgstr "Mozilla.org"
 # 32  bytes long after conversion to UTF8
 #: LibraryDescription
 msgid "PSM Internal Crypto Services"
-msgstr "Seirbhísí inmheánacha criptiúcháin PSM"
+msgstr "Seirbhísí Inmheán Cript PSM"
 
 # 32 bytes long after conversion to UTF8
 #: TokenDescription
 msgid "Generic Crypto Services"
-msgstr "Seirbhísí cineálacha criptiúcháin"
+msgstr "Seirbhísí Ginear. Cript."
 
 # 32 bytes long after conversion to UTF8
 #: PrivateTokenDescription InternalToken
@@ -20104,12 +20189,12 @@ msgstr "Eochracha príobháideacha PSM"
 # 32
 #: Fips140TokenDescription
 msgid "Software Security Device (FIPS)"
-msgstr "Gléas Slándala Bogearraí (FIPS)"
+msgstr "Gléas Slándála Bog. (FIPS)"
 
 # 64
 #: Fips140SlotDescription
 msgid "FIPS 140 Cryptographic, Key and Certificate Services"
-msgstr "Seirbhísí Cripteagrafaíochta, Eochrach agus Teastais FIPS 140"
+msgstr "Seirbhísí Cript., Eochrach agus Teastais FIPS 140"
 
 # Strings for the cert picker dialog
 #: VerifySSLClient
@@ -22973,7 +23058,7 @@ msgstr "Cruthaigh eisceacht bhuan"
 msgid "About &brandShortName;"
 msgstr "Maidir le &brandShortName;"
 
-#: aboutPage.faq.label
+#: aboutPage.faq.label firstrun.faq
 msgid "FAQ"
 msgstr "Ceisteanna Coitianta"
 
@@ -22993,9 +23078,9 @@ msgstr "Nótaí Eisiúna"
 msgid "&#169;1998-2009 Contributors. All rights reserved. ("
 msgstr "&#169;1998-2009 le lucht déanta a gcion. Gach ceart ar cosaint. ("
 
-#: aboutHome.start
-msgid "Start"
-msgstr "Tosach"
+#: aboutHome.header
+msgid "<span>&brandShortName; </span><span id='header-suffix'>Start</span>"
+msgstr "<span>Tosú </span><span id='header-suffix'>&brandShortName;</span>"
 
 #: aboutHome.recentTabs
 msgid "Your tabs from last time"
@@ -23005,9 +23090,9 @@ msgstr "Do chuid cluaisíní ón seisiún roimhe seo"
 msgid "Tabs from your other computers"
 msgstr "Cluaisíní ó ríomhairí eile"
 
-#: aboutHome.recommendedAddons
-msgid "Add-ons for your Firefox"
-msgstr "Breiseáin le haghaidh Firefox"
+#: aboutHome.recommendedAddons2
+msgid "Add-ons for your &brandShortName;"
+msgstr "Breiseáin do &brandShortName;"
 
 #: aboutHome.aboutMozilla
 msgid "About Mozilla"
@@ -23148,7 +23233,7 @@ msgstr "Oscail an Nasc i gCluaisín Nua"
 
 #: addonsLocalNone.label
 msgid "No add-ons installed"
-msgstr "Níl aon bheiseáin suiteáilte"
+msgstr "Níl aon bhreiseáin suiteáilte"
 
 #: addonsSearchStart.label
 msgid "Searching for add-ons…"
@@ -23183,7 +23268,9 @@ msgstr "Tá go leor breiseán ag addons.mozilla.org"
 # #1 total number of add-ons that match the search terms
 #: addonsSearchMore.label
 msgid "Show result;Show all #1 results"
-msgstr "Taispeáin an toradh;Taispeáin an dá thoradh;Taispeáin na #1 thoradh;Taispeáin na #1 dtoradh;Taispeáin na #1 toradh"
+msgstr ""
+"Taispeáin an toradh;Taispeáin an dá thoradh;Taispeáin na #1 thoradh;Taispeáin "
+"na #1 dtoradh;Taispeáin na #1 toradh"
 
 # LOCALIZATION NOTE (addonsSearchMore.description): Semi-colon list of plural forms.
 # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
@@ -23277,7 +23364,8 @@ msgstr "Atosaigh chun na hathruithe a chur i gcrích."
 
 #: notificationRestart.update
 msgid "Add-ons updated. Restart to complete changes."
-msgstr "Nuashonraíodh na breiseáin. Atosaigh chun na hathruithe a chur i gcrích."
+msgstr ""
+"Nuashonraíodh na breiseáin. Atosaigh chun na hathruithe a chur i gcrích."
 
 #: notificationRestart.button
 msgid "Restart"
@@ -23349,20 +23437,28 @@ msgstr "Leabharmharcanna Deisce"
 # #1 number of tabs (must be greater than 1)
 #: tabs.closeWarning
 msgid "NOT USED;You are about to close #1 tabs. Continue?"
-msgstr "NOT USED;Tá tú ar tí #1 chluaisín a dhúnadh. An bhfuil tú cinnte?;Tá tú ar tí #1 chluaisín a dhúnadh. An bhfuil tú cinnte?;Tá tú ar tí #1 gcluaisín a dhúnadh. An bhfuil tú cinnte?;Tá tú ar tí #1 cluaisín a dhúnadh. An bhfuil tú cinnte?"
+msgstr ""
+"NOT USED;Tá tú ar tí #1 chluaisín a dhúnadh. An bhfuil tú cinnte?;Tá tú ar tí "
+"#1 chluaisín a dhúnadh. An bhfuil tú cinnte?;Tá tú ar tí #1 gcluaisín a "
+"dhúnadh. An bhfuil tú cinnte?;Tá tú ar tí #1 cluaisín a dhúnadh. An bhfuil tú "
+"cinnte?"
 
-# Homepage
-#: homepage.custom
-msgid "Custom"
-msgstr "Saincheaptha"
+#: homepage.custom2
+msgid "Custom Page"
+msgstr "Leathanach Saincheaptha"
+
+# Page Actions
+#: pageactions.saveas.pdf
+msgid "Save As PDF"
+msgstr "Sábháil Mar PDF"
 
 #: pageactions.password.forget
 msgid "Forget Password"
-msgstr ""
+msgstr "Déan Dearmad ar Fhocal Faire"
 
 #: pageactions.reset
 msgid "Clear Site Preferences"
-msgstr ""
+msgstr "Bánaigh Sainroghanna an tSuímh"
 
 #: pageactions.popup
 msgid "Popups"
@@ -23384,50 +23480,58 @@ msgstr "Teaghrán"
 msgid "Boolean"
 msgstr "Boole"
 
-#: welcome.title
+#: firstrun.title
 msgid "Welcome to &brandShortName;"
 msgstr "Fáilte go dtí &brandShortName;"
 
-#: intro.description
+#: firstrun.heading
 msgid ""
-"Synchronize your PC and mobile with Weave Sync. Customize with add-ons. Surf "
-"with the Awesome Bar and much, much, much more."
+"To help get you started, here are some of the most popular features and add-"
+"ons to help you get the most out of &brandShortName;."
 msgstr ""
-"Sioncronaigh do ríomhaire agus d'fhón póca le Weave. Saincheap le breiseáin. "
-"Brabhsáil leis an SárBharra, agus neart rudaí eile."
 
-#: weave.title
-msgid "Get Up and Go"
-msgstr "Ar Aghaidh Leat"
+#: firstrun.recommended
+msgid "Recommended:"
+msgstr "Molta:"
 
-#: weave.description
+#: firstrun.weave.title
+msgid "Get Weave Sync"
+msgstr ""
+
+#: firstrun.weave.description
 msgid ""
-"Get Weave Sync to help break in your Firefox. Share your browsing history, "
-"bookmarks, saved passwords and tabs between your PC and mobile."
+"Share your &brandShortName; history, passwords, bookmarks &amp; tabs between "
+"your desktop &amp; mobile"
 msgstr ""
-"Úsáid Weave chun Firefox a cheansú. Bíodh do stair bhrabhsála, "
-"leabharmharcanna, focail fhaire agus cluaisíní ar do ríomhaire agus d'fhón "
-"póca araon."
+"Bíodh do stair bhrabhsála &brandShortName;, leabharmharcanna, focail fhaire "
+"agus cluaisíní ar do ríomhaire agus d'fhón póca araon"
 
-#: weave.linkLabel
-msgid "Get the Weave Sync add-on"
-msgstr "Faigh an breiseán Weave"
+#: firstrun.starter.title
+msgid "Get the Starter Kit Collection"
+msgstr ""
 
-#: getPersonal.title
-msgid "Get Personal"
-msgstr "Bí Pearsanta"
-
-#: getPersonal.description
+#: firstrun.starter.description
 msgid ""
-"Make &brandShortName; your own. Customize the first ever browser to offer add-"
-"ons for mobile."
+"Install these recommended add-ons to enhance your &brandShortName; experience"
 msgstr ""
-"Bíodh do &brandShortName; féin agat. Saincheap an chéad bhrabhsálaí riamh a "
-"chuireann breiseáin le haghaidh fón póca ar fáil."
 
-#: getPersonal.linkLabel
-msgid "Get add-ons for your mobile"
-msgstr "Faigh breiseáin le haghaidh d'fhóin póca"
+#: firstrun.tour.title
+msgid "Take a Tour"
+msgstr "Tabhair Turas"
+
+#: firstrun.tour.description
+msgid ""
+"Watch this clip to familiarize yourself with how to get around and locate "
+"cool features"
+msgstr ""
+
+#: firstrun.features
+msgid "See More Features"
+msgstr "Tuilleadh Gnéithe"
+
+#: firstrun.follow
+msgid "Follow us on:"
+msgstr "Bí dár leanúint ar:"
 
 # intro paragraph for branded builds
 # XXX Edited this section to remove the specific reference to Firefox UI (see bug 514817)
@@ -23526,8 +23630,8 @@ msgid "Start page"
 msgstr "Leathanach tosaigh"
 
 #: homepage.none
-msgid "Blank"
-msgstr "Bán"
+msgid "Blank Page"
+msgstr "Leathanach Folamh"
 
 #: homepage.default
 msgid "&brandShortName; Start"
@@ -23536,10 +23640,6 @@ msgstr "Leathanach tosaigh &brandShortName;"
 #: homepage.currentpage
 msgid "Use Current Page"
 msgstr "Úsáid an Leathanach Reatha"
-
-#: homepage.custom
-msgid "Custom Page"
-msgstr "Leathanach Saincheaptha"
 
 # increment this number when anything gets changed in the list below.  This will
 # cause Firefox to re-read these prefs and inject any new handlers into the
@@ -23641,3 +23741,9 @@ msgstr "Firefox: saincheap le breiseáin"
 #: bookmarks_support
 msgid "Firefox: Support"
 msgstr "Firefox: Tacaíocht"
+
+# LOCALIZATION NOTE (bookmarks_aboutHome):
+# link title for about:home
+#: bookmarks_aboutHome
+msgid "Firefox Start"
+msgstr "Leathanach Tosaigh Firefox"
