@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-26 11:00-0500\n"
+"POT-Creation-Date: 2010-04-20 06:37-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -12,7 +12,7 @@ msgstr ""
 
 # # LOCALIZATION NOTE (cityOrStateAndZip):
 # # %1$S is city or state, %2$S is zip
-#: reminderCustomTitle monthlyOrder monthInYear
+#: reminderCustomTitle monthlyOrder monthInYear datetimeIntervalOnSameDateTime
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -235,8 +235,8 @@ msgstr "Cruthaigh imeacht nua"
 msgid "Create a new task"
 msgstr "Cruthaigh tasc nua"
 
-#: calendar.unifinder.todoitems.label tasksonly taskModeApplicationTitle
-#: tabTitleTasks
+#: calendar.unifinder.todoitems.label calendar.print.tasks.label tasksonly
+#: taskModeApplicationTitle tabTitleTasks
 msgid "Tasks"
 msgstr "Tascanna"
 
@@ -995,9 +995,17 @@ msgstr "Leagan Amach"
 msgid "What to Print"
 msgstr "Le Priontáil"
 
-#: calendar.print.currentview.label
-msgid "Events in current view"
-msgstr "Imeachtaí san amharc reatha"
+#: calendar.print.currentView2.label
+msgid "Current view"
+msgstr "Amharc reatha"
+
+#: calendar.print.selectedEventsAndTasks.label
+msgid "Selected events/tasks"
+msgstr "Imeachtaí/tascanna roghnaithe"
+
+#: calendar.print.events.label eventsonly
+msgid "Events"
+msgstr "Imeachtaí"
 
 #: calendar.print.selected.label
 msgid "Selected events"
@@ -1019,6 +1027,18 @@ msgstr "Chuig:"
 msgid "Print Settings"
 msgstr "Socruithe Priontála"
 
+#: calendar.print.optionsGroup.label prefWindow.titleWin
+msgid "Options"
+msgstr "Roghanna"
+
+#: calendar.print.taskswithnoduedate.label tasksWithNoDueDate
+msgid "Tasks with no due date"
+msgstr "Tascanna gan spriocdháta"
+
+#: calendar.print.completedtasks.label
+msgid "Completed tasks"
+msgstr "Tascanna críochnaithe"
+
 #: calendar.error.code
 msgid "Error code:"
 msgstr "Cód earráide:"
@@ -1030,6 +1050,26 @@ msgstr "Cur Síos:"
 #: calendar.error.title genericErrorTitle
 msgid "An error has occurred"
 msgstr "Tharla earráid"
+
+#: event.attendee.role.required
+msgid "Required Attendee"
+msgstr "Rannpháirtí Riachtanach"
+
+#: event.attendee.role.optional
+msgid "Optional Attendee"
+msgstr "Rannpháirtí Roghnach"
+
+#: event.attendee.role.nonparticipant
+msgid "Non Participant"
+msgstr "Neamh-rannpháirtí"
+
+#: event.attendee.role.chair
+msgid "Chair"
+msgstr "Cathaoirleach"
+
+#: event.attendee.role.unknown
+msgid "Unknown Attendee (%1$S)"
+msgstr "Rannpháirtí Anaithnid (%1$S)"
 
 #: event.title.label
 msgid "Edit Item"
@@ -1878,22 +1918,6 @@ msgstr "As Láthair ón Oifig"
 #: event.freebusy.legend.unknown
 msgid "No Information"
 msgstr "Gan Eolas"
-
-#: event.attendee.role.required
-msgid "Required Attendee"
-msgstr "Rannpháirtí Riachtanach"
-
-#: event.attendee.role.optional
-msgid "Optional Attendee"
-msgstr "Rannpháirtí Roghnach"
-
-#: event.attendee.role.chair
-msgid "Chair"
-msgstr "Cathaoirleach"
-
-#: event.attendee.role.nonparticipant
-msgid "Non Participant"
-msgstr ""
 
 # Timezone dialog
 #: timezone.title.label
@@ -3047,6 +3071,10 @@ msgstr "Logánta (SQLite)"
 msgid "When"
 msgstr "Cathain"
 
+#: htmlTaskCompleted
+msgid "%1$S (completed)"
+msgstr ""
+
 #: addCategory pref.categories.add.title
 msgid "Add Category"
 msgstr "Cuir Catagóir Leis"
@@ -3054,10 +3082,6 @@ msgstr "Cuir Catagóir Leis"
 #: yesterday
 msgid "Yesterday"
 msgstr "Inné"
-
-#: eventsonly
-msgid "Events"
-msgstr "Imeachtaí"
 
 #: eventsandtasks
 msgid "Events and Tasks"
@@ -4325,10 +4349,6 @@ msgstr "Nuashonraigh Socruithe"
 #: pref.autorefresh.label pref.autorefresh.accesskey
 msgid "&Refresh calendars every"
 msgstr "&Athnuaigh féilirí gach"
-
-#: prefWindow.titleWin
-msgid "Options"
-msgstr "Roghanna"
 
 #: prefWindow.titleGNOME
 msgid "&brandShortName; Preferences"

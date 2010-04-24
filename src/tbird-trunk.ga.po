@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-05 20:00-0500\n"
+"POT-Creation-Date: 2010-04-20 06:39-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -173,7 +173,7 @@ msgstr "Greamaigh mar &Athfhriotal"
 
 # Ctrl+O for "Oscail" in Main -> Comhad
 #: pasteAsQuotationCmd.key ObjectPropertiesAccessKey Photo.accesskey
-#: openMessageWindowCmd.key location1.accesskey
+#: openMessageWindowCmd.key openConversationCmd.key location1.accesskey
 msgid "o"
 msgstr "o"
 
@@ -4976,6 +4976,21 @@ msgstr "POP"
 msgid "SMTP"
 msgstr "SMTP"
 
+#: imap.description
+msgid "IMAP - Access folders and messages from multiple computers"
+msgstr ""
+"IMAP - Faigh do chuid fillteán agus teachtaireachtaí ó ríomhairí éagsúla"
+
+#: pop.description
+msgid "POP - Download all messages onto this computer, folders are local only"
+msgstr ""
+"POP - Íosluchtaigh teachtaireachtaí go dtí an ríomhaire seo, fillteáin "
+"logánta amháin"
+
+#: recommended-appendix.label recommended
+msgid "(recommended)"
+msgstr "(molta)"
+
 #: manualSetup.label manualSetup.accesskey
 msgid "Manual &Setup…"
 msgstr "&Socrú De Láimh…"
@@ -5165,40 +5180,43 @@ msgstr "(réamhshocrú)"
 # LOCALIZATION NOTE(looking_up_settings_disk): Referring to Thunderbird installation folder on user's harddisk. %1$S will be the brandShortName.
 #: looking_up_settings_disk
 msgid "Looking up configuration: %1$S installation"
-msgstr ""
+msgstr "Cumraíocht á lorg: Suiteáil %1$S"
 
 #: looking_up_settings_isp
 msgid "Looking up configuration: Email provider"
-msgstr ""
+msgstr "Cumraíocht á lorg: Soláthraí ríomhphoist"
 
 # LOCALIZATION NOTE(looking_up_settings_db): Do not translate or replace Mozilla. It stands for the public project mozilla.org, not Mozilla Messaging. The database is a generic, public domain facility usable by any client.
 #: looking_up_settings_db
 msgid "Looking up configuration: Mozilla ISP database"
-msgstr ""
+msgstr "Cumraíocht á lorg: Bunachar sonraí soláthraithe Mozilla"
 
 # LOCALIZATION NOTE(looking_up_settings_guess): We are checking common server names like pop., pop3., smtp., mail., without knowing whether they exist or really serve this email account. If a server responds, we try to talk to it via POP/IMAP/SMTP protocols and query its capabilities. If that succeeds, we assume we found a configuration. Of course, it may still be wrong, but it often works.
 #: looking_up_settings_guess
 msgid "Looking up configuration: Trying common server names"
-msgstr ""
+msgstr "Cumraíocht á lorg: Ainmneacha coitianta"
 
 # LOCALIZATION NOTE(found_settings_disk): Referring to Thunderbird installation folder on user's harddisk. %1$S will be the brandShortName.
 #: found_settings_disk
 msgid "The following settings were found on: %1$S installation"
-msgstr ""
+msgstr "Aimsíodh na socruithe seo a leanas ó: Suiteáil %1$S"
 
 #: found_settings_isp
 msgid "The following settings were found from: Email provider"
-msgstr ""
+msgstr "Aimsíodh na socruithe seo a leanas ó: Soláthraí ríomhphoist"
 
 # LOCALIZATION NOTE(found_settings_db): Do not translate or replace Mozilla. It stands for the public project mozilla.org, not Mozilla Messaging. The database is a generic, public domain facility usable by any client.
 #: found_settings_db
 msgid "The following settings were found from: Mozilla ISP database"
 msgstr ""
+"Aimsíodh na socruithe seo a leanas ó: Bunachar sonraí soláthraithe Mozilla"
 
 # LOCALIZATION NOTE(found_settings_guess): We tried common mail server names and we found a mail server and talked to it and it responded properly, so we think we found a suitable configuration, but we are only about 80% certain that it is the correct setting for this email address. There's a chance that email address may not actually be served by this server and it won't work, or that there is a better server.
 #: found_settings_guess
 msgid "The following settings were found by trying common server names"
 msgstr ""
+"Aimsíodh na socruithe seo a leanas trí thriail a bhaint as ainmneacha "
+"freastalaí coitianta"
 
 # LOCALIZATION NOTE(failed_to_find_settings): %1$S will be the brandShortName.
 #: failed_to_find_settings
@@ -5923,16 +5941,19 @@ msgstr "Á Shioncronú: %S"
 # LOCALIZATION NOTE (pop3ProcessDisplayText): %S will be replaced by the account name
 #: pop3EventStartDisplayText
 msgid "checking %S for new messages"
-msgstr ""
+msgstr "ag lorg teachtaireachtaí nua do %S"
 
 # LOCALIZATION NOTE (pop3EventStatusText): #1 will be replaced by total number of downloaded messages
 #: pop3EventStatusText
 msgid "#1 message downloaded;#1 messages downloaded"
 msgstr ""
+"Íosluchtaíodh #1 teachtaireacht;Íosluchtaíodh #1 theachtaireacht;"
+"Íosluchtaíodh #1 theachtaireacht;Íosluchtaíodh #1 dteachtaireacht;"
+"Íosluchtaíodh #1 teachtaireacht"
 
 #: pop3EventStatusTextNoMsgs
 msgid "No messages to download"
-msgstr ""
+msgstr "Níl aon teachtaireachtaí le híosluchtú"
 
 # Message actions that show up in activity manager
 # LOCALIZATION NOTE (deletedMessages2): #1 number of messages, #2 folder name
@@ -5969,10 +5990,19 @@ msgstr "ó #1 go #2"
 msgid "Deleted folder #1"
 msgstr "Scriosadh fillteán #1"
 
+#: emptiedTrash
+msgid "Emptied Trash"
+msgstr "Folmhaíodh an Bruscar"
+
 # LOCALIZATION NOTE (movedFolder): #1 and #2 are folder names
 #: movedFolder
 msgid "Moved folder #1 into folder #2"
-msgstr "Bogadh fillteán #1 isteach i bhfillteán #2"
+msgstr "Cuireadh fillteán #1 isteach i bhfillteán #2"
+
+# LOCALIZATION NOTE (movedFolderToTrash): #1 is the folder name
+#: movedFolderToTrash
+msgid "Moved folder #1 to Trash"
+msgstr "Cuireadh fillteán #1 sa Bhruscar"
 
 # LOCALIZATION NOTE (copiedFolder): #1 and #2 are folder names
 #: copiedFolder
@@ -7821,7 +7851,7 @@ msgstr "Slándáil an Cheangail: "
 
 #: authMethod.label
 msgid "Authentication method: "
-msgstr ""
+msgstr "Modh fíordheimhnithe: "
 
 # #-#-#-#-#  tmp.XXXXQZmrER.po (thunderbird)  #-#-#-#-#
 # extracted from am-copies.xul
@@ -7840,6 +7870,16 @@ msgstr "Cuir cói&p i:"
 #: fccReplyFollowsParent.label fccReplyFollowsParent.accesskey
 msgid "Pla&ce replies in the folder of the message being replied to"
 msgstr "&Cuir freagraí i bhfillteán na teachtaireachta atá á freagairt"
+
+#: ccAddress.label ccAddress.accesskey
+msgid ""
+"_: do not translate \"Cc\" in below line\n"
+"&Cc these email addresses:"
+msgstr "&Cc na seoltaí ríomhphoist seo:"
+
+#: ccAddressList.emptytext bccAddressList.emptytext
+msgid "Separate addresses with commas"
+msgstr "Seoltaí scartha ag camóga"
 
 #: bccAddress.label bccAddress.accesskey
 msgid ""
@@ -8391,7 +8431,7 @@ msgstr "STARTTLS, má tá sé ar fáil"
 
 #: authMethod.label authMethod.accesskey
 msgid "Authent&ication method:"
-msgstr ""
+msgstr "Modh fíordhe&imhnithe:"
 
 #: leaveOnServer.label leaveOnServer.accesskey
 msgid "Leave messa&ges on server"
@@ -9509,21 +9549,21 @@ msgstr "úsáid an barra nua uirlisí"
 msgid ""
 "_: The\n"
 "Unified Folders mode"
-msgstr ""
+msgstr "Mód Fillteán Aontaithe"
 
 # shows that the current mode in the folder pane is the Unified Folders mode.
 #: featureConfigurator.unifiedFolders.smart.status
 msgid ""
 "_: This\n"
 "Using the &quot;unified folders&quot; mode."
-msgstr ""
+msgstr "Tá tú ag úsáid &quot;fillteáin aontaithe&quot;."
 
 # shows that the current mode in the folder pane is not the Unified Folders mode.
 #: featureConfigurator.unifiedFolders.all.status
 msgid ""
 "_: This\n"
 "Not using the &quot;unified folders&quot; mode."
-msgstr ""
+msgstr "Níl tú ag úsáid &quot;fillteáin aontaithe&quot;."
 
 #: featureConfigurator.unifiedFolderBenefits.para
 msgid ""
@@ -9548,7 +9588,7 @@ msgstr ""
 msgid ""
 "_: The\n"
 "use &quot;unified folders&quot; mode"
-msgstr ""
+msgstr "Úsáid mód &quot;fillteáin aontaithe&quot;"
 
 # choice of lower case is intentional, but may be overriden if that doesn't make
 # sense because of a specific language context.
@@ -11192,6 +11232,11 @@ msgid ""
 "used to work and now suddenly fails, please contact your email administrator "
 "or provider."
 msgstr ""
+"Dealraíonn sé nach dtacaíonn freastalaí IMAP %S le focail fhaire chriptithe. "
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
+"'Gnáthfhocal faire' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, téigh "
+"i dteagmháil le do riarthóir ríomhphoist nó le do sholáthraí seirbhíse."
 
 # # @name IMAP_AUTH_CHANGE_PLAIN_TO_ENCRYPT
 # # @loc None
@@ -11202,6 +11247,9 @@ msgid ""
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
 "| Server settings'."
 msgstr ""
+"Ní ghlacann freastalaí IMAP %S le focail fhaire ghnáth-théacs. Bain triail as "
+"'Focal faire criptithe' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'."
 
 # # @name IMAP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
 # # @loc None
@@ -11214,6 +11262,10 @@ msgid ""
 "If it used to work and now suddenly fails, this is a common scenario how "
 "someone could steal your password."
 msgstr ""
+"Dealraíonn sé nach dtacaíonn freastalaí IMAP %S le focail fhaire chriptithe. "
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
+"'Focal faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
 
 # # @name IMAP_AUTH_MECH_NOT_SUPPORTED
 # # @loc None
@@ -11224,6 +11276,9 @@ msgid ""
 "Please change the 'Authentication method' in the 'Account Settings | Server "
 "settings'."
 msgstr ""
+"Ní thacaíonn freastalaí IMAP %S leis an modh roghnaithe fíordheimhnithe.  "
+"Athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Socruithe an "
+"fhreastalaí'."
 
 # # @name IMAP_AUTH_MECH_FAILED
 # # @loc None
@@ -11233,6 +11288,7 @@ msgid ""
 "All login mechanisms for %S failed. Please check the password or change the "
 "'Authentication method' in the 'Account Settings | Server settings'."
 msgstr ""
+"Theip ar gach modh logála isteach ar %S.  Seiceáil an focal faire nó athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Socruithe an fhreastalaí'."
 
 # # @name IMAP_AUTH_GSSAPI_FAILED
 # # @loc None
@@ -11242,6 +11298,8 @@ msgid ""
 "The Kerberos/GSSAPI ticket was not accepted by the IMAP server %S. Please "
 "check that you are logged in to the Kerberos/GSSAPI realm."
 msgstr ""
+"Níor ghlac freastalaí IMAP %S leis an ticéad Kerberos/GSSAPI. Bí cinnte go "
+"bhfuil tú logáilte isteach san fhearann Kerberos/GSSAPI."
 
 # # @name IMAP_LOGIN_DISABLED
 # # @loc None
@@ -11252,6 +11310,9 @@ msgid ""
 "authentication without STARTTLS or SSL/TLS. Try enabling connection security "
 "or secure authentication in the account settings."
 msgstr ""
+"Ní féidir leat logáil isteach i %S toisc nach gceadaíonn an freastalaí "
+"fíordheimhniú gnáth-théacs gan STARTTLS nó SSL/TLS. Bain triail as slándáil "
+"cheangail nó fíordheimhniú slán a chumasú i socruithe an chuntais."
 
 # # @name IMAP_SERVER_COMMAND_FAILED
 # # @loc None
@@ -11263,6 +11324,8 @@ msgid ""
 "The current command did not succeed. The mail server for account %1$S "
 "responded: %2$S"
 msgstr ""
+"Níor éirigh leis an ordú reatha. D'fhreagair an freastalaí ríomhphoist do "
+"chuntas %1$S: %2$S"
 
 # # @name IMAP_FOLDER_COMMAND_FAILED
 # # @loc None
@@ -11275,6 +11338,8 @@ msgid ""
 "The current operation on '%2$S' did not succeed. The mail server for account %"
 "1$S responded: %3$S"
 msgstr ""
+"Níor éirigh leis an oibríocht reatha ar '%2$S'. D'fhreagair an freastalaí "
+"ríomhphoist do chuntas %1$S: %3$S"
 
 # # @name IMAP_SERVER_ALERT
 # # @loc None
@@ -11283,7 +11348,7 @@ msgstr ""
 # Place the word %2$S in your translation where the alert from the server should appear.
 #: 5119
 msgid "Alert from account %1$S: %2$S"
-msgstr ""
+msgstr "Airdeall ó chuntas %1$S: %2$S"
 
 #: importDialog.windowTitle
 msgid "Import"
@@ -12206,6 +12271,8 @@ msgid ""
 "Internal state error during POP3 server authentication. This is an internal, "
 "unexpected error in the application, please report it as bug."
 msgstr ""
+"Earráid inmheánach le linn fíordheimhnithe freastalaí POP3. Is earráid "
+"inmheánach gan súil léi í seo, déan tuairisc uirthi mar fhabht, le do thoil."
 
 # # @name POP3_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
 # # @loc None
@@ -12217,6 +12284,10 @@ msgid ""
 "If it used to work and now suddenly fails, this is a common scenario how "
 "someone could steal your password."
 msgstr ""
+"Dealraíonn sé nach dtacaíonn an freastalaí POP3 seo le focail fhaire chriptithe. "
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
+"'Focal faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
 
 # # @name POP3_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
 # # @loc None
@@ -12228,6 +12299,11 @@ msgid ""
 "used to work and now suddenly fails, please contact your email administrator "
 "or provider."
 msgstr ""
+"Dealraíonn sé nach dtacaíonn an freastalaí POP3 seo le focail fhaire chriptithe. "
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
+"'Gnáthfhocal faire' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, téigh "
+"i dteagmháil le do riarthóir ríomhphoist nó le do sholáthraí seirbhíse."
 
 # # @name POP3_AUTH_CHANGE_PLAIN_TO_ENCRYPT
 # # @loc None
@@ -12237,6 +12313,9 @@ msgid ""
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
 "| Server settings'."
 msgstr ""
+"Ní ghlacann an freastalaí POP3 seo le focail fhaire ghnáth-théacs. Bain triail as "
+"'Focal faire criptithe' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'."
 
 # Authentication server caps and pref don't match
 # # @name POP3_AUTH_MECH_NOT_SUPPORTED
@@ -12246,6 +12325,9 @@ msgid ""
 "The server does not support the selected authentication method. Please change "
 "the 'Authentication method' in the 'Account Settings | Server settings'."
 msgstr ""
+"Ní thacaíonn an freastalaí leis an modh roghnaithe fíordheimhnithe.  "
+"Athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Socruithe an "
+"fhreastalaí'."
 
 # Status - Could not log in to GSSAPI, and it was the only method
 # # @name POP3_GSSAPI_FAILURE
@@ -12255,6 +12337,8 @@ msgid ""
 "The Kerberos/GSSAPI ticket was not accepted by the POP server. Please check "
 "that you are logged in to the Kerberos/GSSAPI realm."
 msgstr ""
+"Níor ghlac an freastalaí POP leis an ticéad Kerberos/GSSAPI. Bí cinnte go "
+"bhfuil tú logáilte isteach san fhearann Kerberos/GSSAPI."
 
 #: sendPage.label sendPage.accesskey
 msgid "Send Pa&ge…"
@@ -12531,10 +12615,6 @@ msgid ""
 msgstr ""
 "D'úsáid tú formáidiú (m.sh. dathanna), áfach, nach dtiontófar go gnáth-théacs."
 
-#: recommended
-msgid "(recommended)"
-msgstr "(molta)"
-
 #
 # The following are used by the compose back end
 #
@@ -12542,13 +12622,15 @@ msgstr "(molta)"
 # # %S will be replaced with the name of file that could not be opened
 #: unableToOpenFile
 msgid "Unable to open the file %S."
-msgstr ""
+msgstr "Ní féidir comhad %S a oscailt."
 
 #: unableToOpenTmpFile
 msgid ""
 "Unable to open the temporary file %S. Check your 'Temporary Directory' "
 "setting."
 msgstr ""
+"Níorbh fhéidir comhad sealadach %S a oscailt. Féach ar an socrú 'Comhadlann "
+"Shealadach'."
 
 # # @name NS_MSG_UNABLE_TO_SAVE_TEMPLATE
 #: 12502
@@ -13051,6 +13133,10 @@ msgid ""
 "If it used to work and now suddenly fails, this is a common scenario how "
 "someone could steal your password."
 msgstr ""
+"Dealraíonn sé nach dtacaíonn freastalaí SMTP %S le focail fhaire chriptithe. "
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
+"'Focal faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
 
 # # @name NS_ERROR_SMTP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
 #: 12595
@@ -13061,6 +13147,11 @@ msgid ""
 "used to work and now suddenly fails, please contact your email administrator "
 "or provider."
 msgstr ""
+"Dealraíonn sé nach dtacaíonn freastalaí SMTP %S le focail fhaire chriptithe. "
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
+"'Gnáthfhocal faire' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, téigh "
+"i dteagmháil le do riarthóir ríomhphoist nó le do sholáthraí seirbhíse."
 
 # # @name NS_ERROR_SMTP_AUTH_CHANGE_PLAIN_TO_ENCRYPT
 #: 12596
@@ -13069,6 +13160,9 @@ msgid ""
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
 "| Server settings'."
 msgstr ""
+"Ní ghlacann freastalaí SMTP %S le focail fhaire ghnáth-théacs. Bain triail as "
+"'Focal faire criptithe' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Socruithe an fhreastalaí'."
 
 # # @name NS_ERROR_SMTP_AUTH_FAILURE
 #: 12597
@@ -13077,6 +13171,9 @@ msgid ""
 "verify the 'Authentication method' in 'Account Settings | Outgoing server "
 "(SMTP)'."
 msgstr ""
+"Níorbh fhéidir fíordheimhniú le freastalaí SMTP %S. Seiceáil an focal faire "
+"agus an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí amach "
+"(SMTP)'."
 
 # # @name NS_ERROR_SMTP_AUTH_GSSAPI
 #: 12598
@@ -13084,6 +13181,8 @@ msgid ""
 "The Kerberos/GSSAPI ticket was not accepted by the SMTP server %S. Please "
 "check that you are logged in to the Kerberos/GSSAPI realm."
 msgstr ""
+"Níor ghlac freastalaí SMTP %S leis an ticéad Kerberos/GSSAPI. Bí cinnte go "
+"bhfuil tú logáilte isteach san fhearann Kerberos/GSSAPI."
 
 # # @name NS_ERROR_SMTP_AUTH_MECH_NOT_SUPPORTED
 #: 12599
@@ -13092,6 +13191,8 @@ msgid ""
 "Please change the 'Authentication method' in the 'Account Settings | Outgoing "
 "Server (SMTP)'."
 msgstr ""
+"Ní thacaíonn freastalaí SMTP %S leis an modh roghnaithe fíordheimhnithe.  "
+"Athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí Amach (SMTP)'."
 
 # # @name NS_ERROR_SMTP_AUTH_NOT_SUPPORTED
 #: 12600
@@ -13101,6 +13202,8 @@ msgid ""
 "'Authentication method' to 'None' in the 'Account Settings | Outgoing Server "
 "(SMTP)' or contact your email service provider for instructions."
 msgstr ""
+"Níorbh fhéidir fíordheimhniú le freastalaí SMTP %S. Ní thacaíonn sé le fíordheimhniú (SMTP-AUTH) ach tá tú ag iarraidh fíordheimhniú a úsáid.  Bain triail as 'Gan sonrú' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí Amach "
+"(SMTP)' nó téigh i dteagmháil le do sholáthraí seirbhíse ríomhphoist le haghaidh treoracha."
 
 # # Strings use for the save message dialog shown when the user close a message compose window
 #: saveDlogTitle SaveDialogTitle
@@ -13198,6 +13301,7 @@ msgstr "Scríobh Teachtaireachta"
 msgid ""
 "An error occurred while creating a message compose window. Please try again."
 msgstr ""
+"Tharla earráid agus fuinneog an chumadóra á cruthú. Bain triail eile as."
 
 # # LOCALIZATION NOTE (SaveDialogMsg): %1$S is folder name, %2$S is host name
 #: SaveDialogMsg
@@ -13924,7 +14028,7 @@ msgstr "&Fillteáin"
 
 #: unifiedFolders.label unifiedFolders.accesskey
 msgid "U&nified"
-msgstr ""
+msgstr "Ao&ntaithe"
 
 #: unreadFolders.label unreadFolders.accesskey unreadMsgsCmd.label
 #: unreadMsgsCmd.accesskey viewUnread.label viewUnread.accesskey
@@ -14348,6 +14452,10 @@ msgstr "Rith na Rialtáin Dramh&phoist"
 #: openMessageWindowCmd.label openMessageWindowCmd.accesskey
 msgid "&Open Message"
 msgstr "&Oscail Teachtaireacht"
+
+#: openConversationCmd.label openConversationCmd.accesskey
+msgid "Open in Conver&sation"
+msgstr "O&scail i gComhrá"
 
 #: openFeedMessage.label openFeedMessage.accesskey
 msgid "&Open Feed Message"
@@ -14799,14 +14907,17 @@ msgstr "Cliceáil chun sórtáil de réir ord fála"
 msgid "Click to sort by attachments"
 msgstr "Cliceáil chun sórtáil de réir iatán"
 
-# Thread Pane Context Menu
 #: contextOpenNewWindow.label contextOpenNewWindow.accesskey
 msgid "Open Message in New &Window"
-msgstr "Oscail &Teachtaireacht i bhFuinneog Nua"
+msgstr "Oscail &Teachtaireacht i bh&Fuinneog Nua"
 
 #: contextOpenNewTab.label contextOpenNewTab.accesskey
 msgid "Open Message in New &Tab"
-msgstr "Oscail &Teachtaireacht i gCluaisín Nua"
+msgstr "Oscail Teachtaireacht i g&Cluaisín Nua"
+
+#: contextOpenConversation.label contextOpenConversation.accesskey
+msgid "Ope&n Message in Conversation"
+msgstr "Oscail Teachtaireacht i gComh&rá"
 
 #: contextEditAsNew.label contextEditAsNew.accesskey
 msgid "&Edit As New…"
@@ -14869,6 +14980,24 @@ msgstr "Tabhair neamhaird ar rabhadh"
 #: reportPhishingError1.label
 msgid "This message doesn't appear to be a scam."
 msgstr "Ní camscéim ríomhphoist é seo."
+
+# MDN Bar
+#: mdnBarMessage.label
+msgid ""
+"The sender of this message has asked to be notified when you read this "
+"message. Do you wish to notify the sender?"
+msgstr ""
+"D'iarr seoltóir na teachtaireachta seo go seolfaí fógra chuige nuair a "
+"léifidh tú an teachtaireacht. An bhfuil fonn ort fógra a thabhairt don "
+"seoltóir?"
+
+#: mdnBarIgnoreButton.label
+msgid "Ignore Request"
+msgstr "Déan Neamhaird De"
+
+#: mdnBarSendButton.label
+msgid "Send Receipt"
+msgstr "Seol Admháil Léite"
 
 # Message Header Button Box (to show hidden email addresses)
 #: more.label
@@ -15396,39 +15525,39 @@ msgstr ""
 # Account Settings - Both Incoming and SMTP server
 #: authNo
 msgid "No authentication"
-msgstr ""
+msgstr "Gan fíordheimhniú"
 
 #: authOld
 msgid "Password, original method (insecure)"
-msgstr ""
+msgstr "Focal faire, modh bunúsach (neamhshlán)"
 
 #: authPasswordCleartextInsecurely
 msgid "Password, transmitted insecurely"
-msgstr ""
+msgstr "Focal faire, seolta go neamhshlán"
 
 #: authPasswordCleartextViaSSL
 msgid "Normal password"
-msgstr ""
+msgstr "Gnáthfhocal faire"
 
 #: authPasswordEncrypted
 msgid "Encrypted password"
-msgstr ""
+msgstr "Focal faire criptithe"
 
 #: authKerberos
 msgid "Kerberos / GSSAPI"
-msgstr ""
+msgstr "Kerberos / GSSAPI"
 
 #: authNTLM
 msgid "NTLM"
-msgstr ""
+msgstr "NTLM"
 
 #: authAnySecure
 msgid "Any secure method (deprecated)"
-msgstr ""
+msgstr "Aon mhodh slán (i léig)"
 
 #: authAny
 msgid "Any method (insecure)"
-msgstr ""
+msgstr "Modh ar bith (neamhshlán)"
 
 #: serverType-nntp
 msgid "News Server (NNTP)"
@@ -15942,7 +16071,7 @@ msgstr "Fillteáin Dheireanacha"
 
 #: folderPaneModeHeader_smart unifiedAccountName
 msgid "Unified Folders"
-msgstr ""
+msgstr "Fillteáin Aontaithe"
 
 # Copy / Move to Folder Again
 # LOCALIZATION NOTE %1$S is the name of the folder we will move to. moveToFolderAgainAccessKey
@@ -16035,6 +16164,8 @@ msgid ""
 "%1$S prevented the site (%2$S) from asking you to install software on your "
 "computer."
 msgstr ""
+"Stop %1$S an suíomh (%2$S) ó bheith ag iarraidh ort bogearraí a shuiteáil ar "
+"do ríomhaire."
 
 #: xpinstallPromptAllowButton can
 msgid "Allow"
@@ -16690,9 +16821,9 @@ msgstr "Taispeáin F&reagra don Seoltóir i gCónaí"
 msgid "other actions"
 msgstr "Gníomhartha eile"
 
-#: otherActionsShowConversation.label otherActionsShowConversation.accesskey
-msgid "show in &conversation"
-msgstr "taispeáin sa &chomhrá"
+#: otherActionsOpenConversation.label otherActionsOpenConversation.accesskey
+msgid "open in &conversation"
+msgstr "oscail i g&comhrá"
 
 #: otherActionsOpenInNewWindow.label otherActionsOpenInNewWindow.accesskey
 msgid "open in ne&w window"
@@ -16838,26 +16969,6 @@ msgid ""
 msgstr ""
 "A failure occurred. A proper return receipt could not be generated or sent to "
 "you."
-
-#: MsgMdnWishToSend
-msgid ""
-"The sender of this message has asked to be notified when you read this "
-"message.\n"
-"\n"
-"Do you wish to notify the sender?"
-msgstr ""
-"D'iarr seoltóir na teachtaireachta seo go seolfaí fógra chuige nuair a léann "
-"tú an teachtaireacht.\n"
-"\n"
-"An bhfuil ort a thabhairt don seoltóir?"
-
-#: MsgMdnIgnoreRequest
-msgid "Ignore Request"
-msgstr "Déan Neamhaird De"
-
-#: MsgMdnSendReceipt
-msgid "Send Receipt"
-msgstr "Seol Admháil Léite"
 
 # LOCALIZATION NOTE : Do not translate the word "%S" below.
 #: MsgMdnMsgSentTo
@@ -17045,7 +17156,7 @@ msgstr "Teachtaireachtaí Amháin"
 
 #: accept.label accept.accesskey
 msgid "C&reate Folder"
-msgstr ""
+msgstr "C&ruthaigh Fillteán"
 
 #: biffStart.label biffStart.accesskey
 msgid "Chec&k for new articles every "
@@ -19164,7 +19275,7 @@ msgstr "http://maps.google.com/maps?q=@A1%20@A2%20@CI%20@ST%20@ZI%20@CO"
 
 #: mailnews.messageid_browser.url
 msgid "http://groups.google.com/search?as_umsgid=%mid"
-msgstr ""
+msgstr "http://groups.google.com/search?as_umsgid=%mid"
 
 # Recognize non-standard versions of "Re:" in subjects from localized versions of MS Outlook et al.
 # Specify a comma-separated list without spaces. For example: mailnews.localizedRe=AW,SV
