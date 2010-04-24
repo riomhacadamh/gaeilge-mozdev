@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Applying sed tweaks..."
+FULLPATH="${1}"   # passed on from mozdist
 
 sed -i '/^VK_ALT=/s/.*/VK_ALT=\\u0007/' toolkit-ga-IE/chrome/global-platform/mac/platformKeys.properties
 sed -i '/^monthDate/s/.*/monthDate=#2 #1/' toolkit-ga-IE/chrome/mozapps/downloads/downloads.properties
@@ -7,7 +8,15 @@ sed -i '/^monthDate/s/.*/monthDate=#2 #1/' toolkit-ga-IE/chrome/mozapps/download
 sed -i 's/credit.contributors2 "contributors"/credit.contributors2 "gcuiditheoirí"/' browser-ga-IE/chrome/browser/credits.dtd
 
 # comments in this file before this field.   need to increment now and again
-sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=1/' browser-ga-IE/chrome/browser-region/region.properties
+sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=2/' browser-ga-IE/chrome/browser-region/region.properties
+sed -i 's/name=Mibbit/name = Mibbit/' browser-ga-IE/chrome/browser-region/region.properties
+sed -i '/mibbit\.com/s/late=https/late = https/' browser-ga-IE/chrome/browser-region/region.properties
+sed -i '/The default set of protocol handlers for irc:/s/.*/\n&/' browser-ga-IE/chrome/browser-region/region.properties
+if [ ! "${FULLPATH}" = "${HOME}/seal/moz-1.9.2/ga-IE" ]
+then
+	sed -i '1s/.*/# LOCALIZATION NOTE: REVIEW_REQUIRED\n# Please do not commit any changes to this file without a review from\n# the l10n-drivers team (this includes en-US). In order to get one,\n# please file a bug, add the "productization" keyword and CC l10n@mozilla.com.\n\n&/' browser-ga-IE/chrome/browser-region/region.properties
+fi
+
 
 sed -i '/^notifyBarNotNowButtonText/s/=.*$/=Ná Meabhraigh anois/; /^notifyBarChangeButtonAccessKey/s/=.$/=A/; /^notifyBarDontChangeButtonAccessKey/s/=.$/=N/' toolkit-ga-IE/chrome/passwordmgr/passwordmgr.properties
 
@@ -17,7 +26,7 @@ sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/
 sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
 
 # weird bug - see email from Axel with subject "hard to find bug"
-sed -i '/securityOverride.warningText/s/">$//' browser-ga-IE/chrome/overrides/netError.dtd
+sed -i '/securityOverride.warningText/s/">$//' browser-ga-IE/chrome/overrides/netError.dtd mail-ga-IE/chrome/overrides/netError.dtd mobile-ga-IE/chrome/overrides/netError.dtd
 
 # commandkey problems - don't want any translated - routine now is
 # to leave single letters untranslated in PO and then fix the accesskeys
@@ -95,6 +104,7 @@ sed -i 's/progress.level.100.accesskey "11"/progress.level.100.accesskey "1"/' c
 sed -i 's/^likelyTimezone.*/likelyTimezone=Europe\/Dublin/' calendar-ga-IE/chrome/calendar/calendar.properties
 sed -i 's/^last1=.*/last1=seo caite/; s/^last2=.*/last2=seo caite/' calendar-ga-IE/chrome/calendar/calendar.properties
 sed -i 's/event\.recurrence\.of\.label .*/event.recurrence.of.label "de">/' calendar-ga-IE/chrome/calendar/calendar-event-dialog.dtd
+sed -i '/^pluralForWeekdays=/s/.*/pluralForWeekdays=false/' calendar-ga-IE/chrome/calendar/calendar-event-dialog.properties
 sed -i '
 s/day.1.Ddd.accesskey "."/day.1.Ddd.accesskey "D"/
 s/day.2.Ddd.accesskey "."/day.2.Ddd.accesskey "L"/

@@ -17,43 +17,47 @@ PACK=`echo "${1}" | sed 's/-en-US//'`
 CVSFULLPATH="${2}"
 rm -fR "${IRISHJAR}"
 mkdir "${IRISHJAR}"
-po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
-bash sedtweaks
+PYTHONPATH="/home/kps/seal/installed-local/translate-toolkit-0.9" po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
+bash sedtweaks "${2}"
 if echo "${1}" | egrep '^browser' > /dev/null
 then
 	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' > aistr.8.txt
 	cp -f bookmarks-ga.html ${IRISHJAR}/profile/bookmarks.html
 	(cd eile; cp -Rf * ../${IRISHJAR};)
-#	cat installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
-	sed -i '/^$/d' ${IRISHJAR}/installer/installer.inc
-	sed -i 's/BTN_NO .*/BTN_NO \&Ná déan/; s/BTN_YES .*/BTN_YES \&Déan/' ${IRISHJAR}/installer/installer.inc
 	sed -i '/MOZ_LANGPACK_CONTRIBUTORS/r aistr.8.txt' ${IRISHJAR}/defines.inc
 	sed -i '/^# /d' ${IRISHJAR}/defines.inc
 	rm -f aistr.8.txt
 	sed -i '1s/.*/<!ENTITY % brandDTD SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n%brandDTD;\n\n&/' ${IRISHJAR}/chrome/overrides/netError.dtd
 	sed -i '1s/.*/<!ENTITY % brandDTD\n    SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n  %brandDTD;\n\n&/' ${IRISHJAR}/chrome/browser/aboutCertError.dtd
 	cat aistr.txt | sed 's/.*/<li>&<\/li>/' | tr -d "\n" | LC_ALL=C sed 's/^/<!ENTITY credit.translation "<h3>Aistritheoirí<\/h3><ul>/; s/$/<\/ul>">\n/' > aistr.8.txt
-	sed -i '/^-->/r aistr.8.txt' browser-ga-IE/chrome/browser/credits.dtd
+	sed -i '/^-->/r aistr.8.txt' ${IRISHJAR}/chrome/browser/credits.dtd
 	rm -f aistr.8.txt
-	sed -i '/>Name Here</s/.*/<!ENTITY credit.translation\n  "<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>">/' browser-ga-IE/chrome/browser/credits.dtd
-	sed -i '/^<!ENTITY credit.translation "">/d' browser-ga-IE/chrome/browser/credits.dtd
+	sed -i '/>Name Here</s/.*/<!ENTITY credit.translation\n  "<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>">/' ${IRISHJAR}/chrome/browser/credits.dtd
+	sed -i '/^<!ENTITY credit.translation "">/d' ${IRISHJAR}/chrome/browser/credits.dtd
 
 fi
 if echo "${1}" | egrep '^toolkit' > /dev/null
 then
 	(cd eile-tk; cp -Rf * ../${IRISHJAR})
 fi
+if echo "${1}" | egrep '^mobile' > /dev/null
+then
+	(cd eile-mob; cp -Rf * ../${IRISHJAR})
+fi
 if echo "${1}" | egrep '^mail' > /dev/null
 then
 #	cp tbird-credits.html ${IRISHJAR}/chrome/messenger/credits.html
 #	cp tbird-start.html ${IRISHJAR}/chrome/messenger/start.html
 	cp tbird-defines.inc ${IRISHJAR}/defines.inc
-	cat tb-installer-ga.inc | iconv -f iso-8859-1 -t utf8 > ${IRISHJAR}/installer/installer.inc
-#	sed -i '/^$/d' ${IRISHJAR}/installer/installer.inc
+	cp -f tb-installer-ga.inc ${IRISHJAR}/installer/installer.inc
 fi
 if echo "${1}" | egrep '^calendar' > /dev/null
 then
 	cp sunbird-l10n.js ${IRISHJAR}
+fi
+if echo "${1}" | egrep '^mobile' > /dev/null
+then
+	sed -i '1s/.*/<!ENTITY % brandDTD\n    SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n  %brandDTD;\n\n&/' ${IRISHJAR}/chrome/aboutCertError.dtd
 fi
 #rm -f "${IRISHJAR}.jar"
 #jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
