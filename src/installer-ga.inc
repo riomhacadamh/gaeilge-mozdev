@@ -3,143 +3,143 @@
 # This file is in the UTF-8 encoding
 
 # Installer keys (don't translate strings in $$)
-#define SETUP_TITLE Suiteáil $ProductShortName$
-#define SETUP_WELCOME Fáilte chuig %s
-#define SETUP_MESSAGE0 Tá tú ar tí %s a shuiteáil.
-#define SETUP_MESSAGE1 Moltar go láidir duit scoir de gach clár Windows sula gcuirfidh tú an Suiteálaí seo ar siúl.
-#define SETUP_MESSAGE1_UNIX Moltar go láidir duit scoir de gach sampla de %s sula gcuirfidh tú an Suiteálaí seo ar siúl.
-#define SETUP_MESSAGE2 Gliogáil 'Cealaigh' chun scoir den tsuiteáil, agus dún ansin a bhfuil de chláracha ar siúl agat anois. Gliogáil 'Ar aghaidh' chun leanúint den tsuiteáil.
-#define SETUP_MESSAGE3 Gliogáil 'Ar aghaidh' chun leanúint de %s a shuiteáil.
+#define SETUP_TITLE SuiteÃ¡il $ProductShortName$
+#define SETUP_WELCOME FÃ¡ilte chuig %s
+#define SETUP_MESSAGE0 TÃ¡ tÃº ar tÃ­ %s a shuiteÃ¡il.
+#define SETUP_MESSAGE1 Moltar go lÃ¡idir duit scoir de gach clÃ¡r Windows sula gcuirfidh tÃº an SuiteÃ¡laÃ­ seo ar siÃºl.
+#define SETUP_MESSAGE1_UNIX Moltar go lÃ¡idir duit scoir de gach sampla de %s sula gcuirfidh tÃº an SuiteÃ¡laÃ­ seo ar siÃºl.
+#define SETUP_MESSAGE2 GliogÃ¡il 'Cealaigh' chun scoir den tsuiteÃ¡il, agus dÃºn ansin a bhfuil de chlÃ¡racha ar siÃºl agat anois. GliogÃ¡il 'Ar aghaidh' chun leanÃºint den tsuiteÃ¡il.
+#define SETUP_MESSAGE3 GliogÃ¡il 'Ar aghaidh' chun leanÃºint de %s a shuiteÃ¡il.
 
-#define LICENSE_TITLE Comhaontú um an gCeadúnas Earra Bhoig
-#define LICENSE_SUBTITLE Téarmaí agus coinníollacha úsáide an phacáiste seo.
-#define LICENSE_MESSAGE0 Léigh an comhaontú um cheadúnas earra bhoig seo a leanas, le do thoil.  Úsáid an barra scrollála chun an chuid eile den chomhaontú seo a léamh.
-#define LICENSE_ACCEPT &Táim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
-#define LICENSE_DECLINE &Nílim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
+#define LICENSE_TITLE ComhaontÃº um an gCeadÃºnas Earra Bhoig
+#define LICENSE_SUBTITLE TÃ©armaÃ­ agus coinnÃ­ollacha ÃºsÃ¡ide an phacÃ¡iste seo.
+#define LICENSE_MESSAGE0 LÃ©igh an comhaontÃº um cheadÃºnas earra bhoig seo a leanas, le do thoil.  ÃšsÃ¡id an barra scrollÃ¡la chun an chuid eile den chomhaontÃº seo a lÃ©amh.
+#define LICENSE_ACCEPT &TÃ¡im toilteanach glacadh le coinnÃ­ollacha an ChomhaontÃº um CheadÃºnas.
+#define LICENSE_DECLINE &NÃ­lim toilteanach glacadh le coinnÃ­ollacha an ChomhaontÃº um CheadÃºnas.
 
-#define SETUP_TYPE_TITLE An Modh Suiteála is Roghain Leatsa
-#define SETUP_TYPE_SUBTITLE Roghanna suiteála an phacáiste seo.
-#define SETUP_TYPE_MESSAGE0 Roghnaigh an cineál suiteála is fearr leat, agus gliogáil 'Ar aghaidh' ina dhiaidh sin.
-#define SETUP_TYPE_EXISTING Tá ábhar a bhaineann le Firefox arna shuiteáil cheana féin san fhillteán a roghnaigh tú. Chun %s a dhealú ina iomláine, brúigh an cnaipe 'Dealaigh Fillteán'. Níor cheart go gcuirfí isteach ná amach ar do shocruithe reatha Firefox. Nó is féidir leat an cnaipe 'Cealaigh' a bhrú agus áit eile a roghnú lena shuiteáil.
+#define SETUP_TYPE_TITLE An Modh SuiteÃ¡la is Roghain Leatsa
+#define SETUP_TYPE_SUBTITLE Roghanna suiteÃ¡la an phacÃ¡iste seo.
+#define SETUP_TYPE_MESSAGE0 Roghnaigh an cineÃ¡l suiteÃ¡la is fearr leat, agus gliogÃ¡il 'Ar aghaidh' ina dhiaidh sin.
+#define SETUP_TYPE_EXISTING TÃ¡ Ã¡bhar a bhaineann le Firefox arna shuiteÃ¡il cheana fÃ©in san fhillteÃ¡n a roghnaigh tÃº. Chun %s a dhealÃº ina iomlÃ¡ine, brÃºigh an cnaipe 'Dealaigh FillteÃ¡n'. NÃ­or cheart go gcuirfÃ­ isteach nÃ¡ amach ar do shocruithe reatha Firefox. NÃ³ is fÃ©idir leat an cnaipe 'Cealaigh' a bhrÃº agus Ã¡it eile a roghnÃº lena shuiteÃ¡il.
 
 # &Ampersand is used to select a shortcut key
-#define TYPE_STANDARD Gnáth&shuiteáil
-#define TYPE_STANDARD_DESC Déanfar an Brabhsálaí a shuiteáil leis na gnáthroghanna.
+#define TYPE_STANDARD GnÃ¡th&shuiteÃ¡il
+#define TYPE_STANDARD_DESC DÃ©anfar an BrabhsÃ¡laÃ­ a shuiteÃ¡il leis na gnÃ¡throghanna.
 
-#define TYPE_CUSTOM S&ainshuiteáil
-#define TYPE_CUSTOM_DESC Is féidir leat roghanna ar leith a shannadh lena suiteáil. Níl an rogha seo molta ach amháin d'úsaideoirí a bhfuil taithí mhaith acu ar an ábhar.
+#define TYPE_CUSTOM S&ainshuiteÃ¡il
+#define TYPE_CUSTOM_DESC Is fÃ©idir leat roghanna ar leith a shannadh lena suiteÃ¡il. NÃ­l an rogha seo molta ach amhÃ¡in d'ÃºsaideoirÃ­ a bhfuil taithÃ­ mhaith acu ar an Ã¡bhar.
 
-#define SELECT_TITLE Roghnú Comhpháirteanna
-#define SELECT_SUBTITLE Comhpháirteanna breise a chuireann le cumas $ProductShortName$.
-#define SELECT_MESSAGE0 Roghnaigh na comhpháirteanna breise is mian leat a shuiteáil, agus gliogáil 'Ar aghaidh' ina dhiaidh sin.
+#define SELECT_TITLE RoghnÃº ComhphÃ¡irteanna
+#define SELECT_SUBTITLE ComhphÃ¡irteanna breise a chuireann le cumas $ProductShortName$.
+#define SELECT_MESSAGE0 Roghnaigh na comhphÃ¡irteanna breise is mian leat a shuiteÃ¡il, agus gliogÃ¡il 'Ar aghaidh' ina dhiaidh sin.
 
-#define LOCATION_TITLE Fillteán Suiteála
-#define LOCATION_SUBTITLE An áit ina ndéanfar $ProductShortName$ a shuiteáil.
-#define LOCATION_MESSAGE0 Déanfar $ProductShortName$ a shuiteáil san fhillteán thíos:
+#define LOCATION_TITLE FillteÃ¡n SuiteÃ¡la
+#define LOCATION_SUBTITLE An Ã¡it ina ndÃ©anfar $ProductShortName$ a shuiteÃ¡il.
+#define LOCATION_MESSAGE0 DÃ©anfar $ProductShortName$ a shuiteÃ¡il san fhillteÃ¡n thÃ­os:
 
-#define UPGRADE_TITLE Uasghrádú
-#define UPGRADE_SUBTITLE Cuireann le cumas $ProductShortName$ a suiteáladh cheana.
-#define UPGRADE_CLEANUP Aimsíodh $ProductNameInternal$ suiteáilte cheana san fhillteán a roghnaíodh.
+#define UPGRADE_TITLE UasghrÃ¡dÃº
+#define UPGRADE_SUBTITLE Cuireann le cumas $ProductShortName$ a suiteÃ¡ladh cheana.
+#define UPGRADE_CLEANUP AimsÃ­odh $ProductNameInternal$ suiteÃ¡ilte cheana san fhillteÃ¡n a roghnaÃ­odh.
 
-#define UPGRADE_CLEAN Suiteáil as Úr a Dhéanamh
-#define UPGRADE_CLEAN_MSG Scriosfaidh Suiteáil as Úr gach a bhfuil san fhillteán suiteála!  Caillfear comhpháirteanna tríú páirtí ar bith a suiteáladh cheana. Is é fáth go moltar é sin, chun fadhbanna comhoiriúnaithe a sheachaint. (XXXben)
-#define UPGRADE_OVER Más é do rogha gan Suiteáil as Úr a dhéanamh, ní scriosfar comhpháirteanna tríú páirtí ar bith a suiteáladh cheana, rud a d'fhéadfadh tionchar gan choinne a imirt ar oibriú an ábhair amach anseo.
-#define UPGRADE_OVER_WINDIR Ní féidir Uasghrádú Saor ó Bhaol a dhéanamh, maidir le $ProductNameInternal$ , toisc gur istigh i bhfillteán Windows atá an clár suiteáilte. Moltar duit fillteán eile a roghnú chun $ProductNameInternal$ a shuiteáil ann.
+#define UPGRADE_CLEAN SuiteÃ¡il as Ãšr a DhÃ©anamh
+#define UPGRADE_CLEAN_MSG Scriosfaidh SuiteÃ¡il as Ãšr gach a bhfuil san fhillteÃ¡n suiteÃ¡la!  Caillfear comhphÃ¡irteanna trÃ­Ãº pÃ¡irtÃ­ ar bith a suiteÃ¡ladh cheana. Is Ã© fÃ¡th go moltar Ã© sin, chun fadhbanna comhoiriÃºnaithe a sheachaint. (XXXben)
+#define UPGRADE_OVER MÃ¡s Ã© do rogha gan SuiteÃ¡il as Ãšr a dhÃ©anamh, nÃ­ scriosfar comhphÃ¡irteanna trÃ­Ãº pÃ¡irtÃ­ ar bith a suiteÃ¡ladh cheana, rud a d'fhÃ©adfadh tionchar gan choinne a imirt ar oibriÃº an Ã¡bhair amach anseo.
+#define UPGRADE_OVER_WINDIR NÃ­ fÃ©idir UasghrÃ¡dÃº Saor Ã³ Bhaol a dhÃ©anamh, maidir le $ProductNameInternal$ , toisc gur istigh i bhfillteÃ¡n Windows atÃ¡ an clÃ¡r suiteÃ¡ilte. Moltar duit fillteÃ¡n eile a roghnÃº chun $ProductNameInternal$ a shuiteÃ¡il ann.
 
-#define ADD_TITLE Suiteáil $ProductShortName$ - Roghnú na gComhpháirteanna Breise
-#define ADD_MESSAGE0 Roghnaigh nó bánaigh na comhpháirteanna breise is mian leat a shuiteáil.
+#define ADD_TITLE SuiteÃ¡il $ProductShortName$ - RoghnÃº na gComhphÃ¡irteanna Breise
+#define ADD_MESSAGE0 Roghnaigh nÃ³ bÃ¡naigh na comhphÃ¡irteanna breise is mian leat a shuiteÃ¡il.
 
-#define WININT_TITLE Socrú Aicearraí
-#define WININT_SUBTITLE Cruthaigh Deilbhíní
-#define WININT_MESSAGE0 Cruthaigh deilbhíní i gcomhair $ProductShortName$:
+#define WININT_TITLE SocrÃº AicearraÃ­
+#define WININT_SUBTITLE Cruthaigh DeilbhÃ­nÃ­
+#define WININT_MESSAGE0 Cruthaigh deilbhÃ­nÃ­ i gcomhair $ProductShortName$:
 
 #define WININT_DESKTOP Ar an Deasc agamsa
-#define WININT_START San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)
-#define WININT_QUICKL I mo Bharra Mearlainseála
+#define WININT_START San fhillteÃ¡n 'An RoghchlÃ¡r Tosaigh/RÃ­omhchlÃ¡ir' (Start Menu Programs)
+#define WININT_QUICKL I mo Bharra MearlainseÃ¡la
 
-#define USE_AS_DEFAULT Úsáid %s mar mo Rogha Brabhsálaí.
+#define USE_AS_DEFAULT ÃšsÃ¡id %s mar mo Rogha BrabhsÃ¡laÃ­.
 
-#define WININT_PFOLDER_TITLE Suiteáil $ProductShortName$ - Roghnaigh Fillteán Ríomhchlár
-#define WININT_PFOLDER_MESSAGE0 Cuirfidh an Suiteálaí deilbhíní isteach san Fhillteán Ríomhchlár a luaitear thíos. Is féidir leat fillteán nua a chruthú, nó ceann a roghnú ar liosta na bhFillteán Reatha. Gliogáil 'Ar aghaidh' chun leanúint ar aghaidh.
+#define WININT_PFOLDER_TITLE SuiteÃ¡il $ProductShortName$ - Roghnaigh FillteÃ¡n RÃ­omhchlÃ¡r
+#define WININT_PFOLDER_MESSAGE0 Cuirfidh an SuiteÃ¡laÃ­ deilbhÃ­nÃ­ isteach san FhillteÃ¡n RÃ­omhchlÃ¡r a luaitear thÃ­os. Is fÃ©idir leat fillteÃ¡n nua a chruthÃº, nÃ³ ceann a roghnÃº ar liosta na bhFillteÃ¡n Reatha. GliogÃ¡il 'Ar aghaidh' chun leanÃºint ar aghaidh.
 
-#define ADDL_OPTIONS_TITLE Suiteáil $ProductShortName$ - Roghanna Breise
-#define ADDL_OPTIONS_MSG1 Roghnaigh an rogha seo a leanas más mian leat comhaid suiteála a luchtú go dtí do ríomhaire féin. Cuirfidh sé sin ar do chumas an Suiteálaí a athrith gan na comhaid a athluchtú. Déanfar comhaid a shábháil de réir na conaire thíos.
+#define ADDL_OPTIONS_TITLE SuiteÃ¡il $ProductShortName$ - Roghanna Breise
+#define ADDL_OPTIONS_MSG1 Roghnaigh an rogha seo a leanas mÃ¡s mian leat comhaid suiteÃ¡la a luchtÃº go dtÃ­ do rÃ­omhaire fÃ©in. Cuirfidh sÃ© sin ar do chumas an SuiteÃ¡laÃ­ a athrith gan na comhaid a athluchtÃº. DÃ©anfar comhaid a shÃ¡bhÃ¡il de rÃ©ir na conaire thÃ­os.
 
-#define ADV_SETTINGS_TITLE Suiteáil $ProductShortName$ - Socruithe Casta
-#define ADV_SETTINGS_MSG I gcás go n-éilíonn do nasc Idirlín seachfhreastalaí, iontráil ainm do fhreastalaí agus eolas poirt anseo. Muna n-éilíonn, fág bán na réimsí sin.
+#define ADV_SETTINGS_TITLE SuiteÃ¡il $ProductShortName$ - Socruithe Casta
+#define ADV_SETTINGS_MSG I gcÃ¡s go n-Ã©ilÃ­onn do nasc IdirlÃ­n seachfhreastalaÃ­, iontrÃ¡il ainm do fhreastalaÃ­ agus eolas poirt anseo. Muna n-Ã©ilÃ­onn, fÃ¡g bÃ¡n na rÃ©imsÃ­ sin.
 
 #define START_TITLE Achoimre
-#define START_SUBTITLE Réidh chun $ProductShortName$ a shuiteáil.
-#define START_INSTALL Déanfaidh an Suiteálaí na comhpháirteanna seo a leanas a shuiteáil:
-#define START_DOWNLOAD Déanfaidh an Suiteálaí na comhpháirteanna seo a leanas a luchtú agus a shuiteáil:
-#define START_MESSAGE0 Gliogáil 'Ar aghaidh' chun leanúint ar aghaidh.
+#define START_SUBTITLE RÃ©idh chun $ProductShortName$ a shuiteÃ¡il.
+#define START_INSTALL DÃ©anfaidh an SuiteÃ¡laÃ­ na comhphÃ¡irteanna seo a leanas a shuiteÃ¡il:
+#define START_DOWNLOAD DÃ©anfaidh an SuiteÃ¡laÃ­ na comhphÃ¡irteanna seo a leanas a luchtÃº agus a shuiteÃ¡il:
+#define START_MESSAGE0 GliogÃ¡il 'Ar aghaidh' chun leanÃºint ar aghaidh.
 
-#define DL_TITLE Luchtú
-#define DL_SUBTITLE Tá na comhpháirteanna a theastaíonn á luchtú...
-#define DL_BLURB Tá comhaid suiteála $ProductShortName$ á luchtú ag an Suiteálaí.
-#define DL_FILENAME Luchtú ar siúl:
+#define DL_TITLE LuchtÃº
+#define DL_SUBTITLE TÃ¡ na comhphÃ¡irteanna a theastaÃ­onn Ã¡ luchtÃº...
+#define DL_BLURB TÃ¡ comhaid suiteÃ¡la $ProductShortName$ Ã¡ luchtÃº ag an SuiteÃ¡laÃ­.
+#define DL_FILENAME LuchtÃº ar siÃºl:
 #define DL_TIMELEFT Aga fanta:
 
-#define INSTALL_TITLE Á Shuiteáil
-#define INSTALL_SUBTITLE $ProductShortName$ á shuiteáil...
-#define INSTALL_BLURB Tá comhaid an fheidhmchláir á shuiteáil ag an Suiteálaí.
-#define INSTALL_STATUSFILE Comhad á ullmhú:
-#define INSTALL_STATUSCOMP Á shuiteáil anois:
+#define INSTALL_TITLE Ã ShuiteÃ¡il
+#define INSTALL_SUBTITLE $ProductShortName$ Ã¡ shuiteÃ¡il...
+#define INSTALL_BLURB TÃ¡ comhaid an fheidhmchlÃ¡ir Ã¡ shuiteÃ¡il ag an SuiteÃ¡laÃ­.
+#define INSTALL_STATUSFILE Comhad Ã¡ ullmhÃº:
+#define INSTALL_STATUSCOMP Ã shuiteÃ¡il anois:
 
-#define COMPLETE_TITLE Suiteáil arna Cur i gCrích
-#define COMPLETE_MESSAGE0 Suiteáil %s curtha i gcrích.
-#define COMPLETE_MESSAGE1 Gliogáil 'Críochnaigh' chun an tsuiteáil a chur i gcrích.
-#define COMPLETE_LAUNCH Lainseáil %s anois.
+#define COMPLETE_TITLE SuiteÃ¡il arna Cur i gCrÃ­ch
+#define COMPLETE_MESSAGE0 SuiteÃ¡il %s curtha i gcrÃ­ch.
+#define COMPLETE_MESSAGE1 GliogÃ¡il 'CrÃ­ochnaigh' chun an tsuiteÃ¡il a chur i gcrÃ­ch.
+#define COMPLETE_LAUNCH LainseÃ¡il %s anois.
 
-#define DL2_TITLE $ProductShortName$ - Luchtú
-#define DL2_MESSAGE0 Tá na comhaid a theastaíonn á luchtú ag an Suiteálaí i láthair na huaire. Seans go nglacfaidh sé sin roinnt ama, ag brath ar luas do naisc idirlín.
-#define DL2_RETRY Theip ar roinnt comhad faoi thástáil CRC. Déanfar iad a athluchtú. Ní dhéanfar ach comhaid ar theip orthu a athluchtú.
+#define DL2_TITLE $ProductShortName$ - LuchtÃº
+#define DL2_MESSAGE0 TÃ¡ na comhaid a theastaÃ­onn Ã¡ luchtÃº ag an SuiteÃ¡laÃ­ i lÃ¡thair na huaire. Seans go nglacfaidh sÃ© sin roinnt ama, ag brath ar luas do naisc idirlÃ­n.
+#define DL2_RETRY Theip ar roinnt comhad faoi thÃ¡stÃ¡il CRC. DÃ©anfar iad a athluchtÃº. NÃ­ dhÃ©anfar ach comhaid ar theip orthu a athluchtÃº.
 
-#define CLOSE_CHECK Luchtaíodh $ProductShortName$ mar ba chóir. Is gá $ProductShortName$ a dhúnadh anois, chun leanúint den suiteáil. Gliogáil 'OK' chun scoir go huathoibríoch de $ProductShortName$ agus luí isteach ar a shuiteáil.
-#define CLOSE_CHECK2 Is gá $ProductNameInternal$ a dhúnadh chun leanúint den suiteáil.  Gliogáil 'OK' chun scoir go huathoibríoch de $ProductNameInternal$ agus luí isteach ar a shuiteáil.
-#define CLOSE_WAIT $ProductNameInternal$ á dhúnadh anois. Bíodh foighne agat...
+#define CLOSE_CHECK LuchtaÃ­odh $ProductShortName$ mar ba chÃ³ir. Is gÃ¡ $ProductShortName$ a dhÃºnadh anois, chun leanÃºint den suiteÃ¡il. GliogÃ¡il 'OK' chun scoir go huathoibrÃ­och de $ProductShortName$ agus luÃ­ isteach ar a shuiteÃ¡il.
+#define CLOSE_CHECK2 Is gÃ¡ $ProductNameInternal$ a dhÃºnadh chun leanÃºint den suiteÃ¡il.  GliogÃ¡il 'OK' chun scoir go huathoibrÃ­och de $ProductNameInternal$ agus luÃ­ isteach ar a shuiteÃ¡il.
+#define CLOSE_WAIT $ProductNameInternal$ Ã¡ dhÃºnadh anois. BÃ­odh foighne agat...
 
-#define XPCOM_SHORT COM Ilárdán
-#define BROWSER_SHORT Brabhsálaí $ProductShortName$
+#define XPCOM_SHORT COM IlÃ¡rdÃ¡n
+#define BROWSER_SHORT BrabhsÃ¡laÃ­ $ProductShortName$
 #define HELP_SHORT Cabhair le $ProductShortName$
-#define UNINSTALL_SHORT Díshuiteálaí $CompanyName$
-#define LANGPACK_TITLE Pacáiste Teanga
+#define UNINSTALL_SHORT DÃ­shuiteÃ¡laÃ­ $CompanyName$
+#define LANGPACK_TITLE PacÃ¡iste Teanga
 
-#define ADT_SHORT Uirlisí Forbróra
-#define ADT_LONG Cigire Cáipéisí - uirlis le haghaidh forbróirí idirlín
+#define ADT_SHORT UirlisÃ­ ForbrÃ³ra
+#define ADT_LONG Cigire CÃ¡ipÃ©isÃ­ - uirlis le haghaidh forbrÃ³irÃ­ idirlÃ­n
 
-#define QFA_SHORT Gníomhaire Aiseolais um Cháilíocht
-#define QFA_LONG Le haghaidh tuairiscí maidir le tuairteanna $ProductShortName$
+#define QFA_SHORT GnÃ­omhaire Aiseolais um ChÃ¡ilÃ­ocht
+#define QFA_LONG Le haghaidh tuairiscÃ­ maidir le tuairteanna $ProductShortName$
 
-#define RPT_SHORT Tuairisceoir na Suímh Ghréasáin
-#define RPT_LONG Le haghaidh tuairiscí maidir le fadhbanna comhoiriúnachta i suímh gréasáin
+#define RPT_SHORT Tuairisceoir na SuÃ­mh GhrÃ©asÃ¡in
+#define RPT_LONG Le haghaidh tuairiscÃ­ maidir le fadhbanna comhoiriÃºnachta i suÃ­mh grÃ©asÃ¡in
 
-#define CORE_PREPARING Suiteáil á hullmhú. Fan go fóill, le do thoil...
-#define INST_UNINST Tá an Díshuiteálaí á shuiteáil. Fan go fóill, le do thoil...
+#define CORE_PREPARING SuiteÃ¡il Ã¡ hullmhÃº. Fan go fÃ³ill, le do thoil...
+#define INST_UNINST TÃ¡ an DÃ­shuiteÃ¡laÃ­ Ã¡ shuiteÃ¡il. Fan go fÃ³ill, le do thoil...
 
-#define MSG_UNFINISHED_DL Níor tháinig deireadh ceart ar íosluchtú na gcomhad riachtanach ag ceann de na seisiúin suiteála roimhe seo. Ar mhaith leat úsáid a bhaint as na comhaid a híosluchtaíodh cheana le hathíosluchtú a sheachaint?
-#define MSG_UNFINISHED_INSTALL Níor tháinig deireadh ceart ar shuiteáil na gcomhad riachtanach ag ceann de na seisiúin suiteála roimhe seo. Ar mhaith leat úsáid a bhaint as na comhaid a híosluchtaíodh cheana le hathíosluchtú a sheachaint?
-#define MSG_CORRUPTED Bhraith an Suiteálaí go bhfuil na comhaid seo leanas taobh istigh den tsuiteáil seo curtha ó mhaith:%sNí mór duit cóip eile de Shuiteálaí $ProductShortName$ a fháil le dul ar aghaidh leis an tsuiteáil.
-#define MSG_CORRUPTED_AUTO Bhraith an Suiteálaí go bhfuil cartlann taobh istigh den tsuiteáil seo curtha ó mhaith.  Ní mór duit cóip eile de Shuiteálaí $ProductShortName$ a fháil le dul ar aghaidh leis an tsuiteáil.
-#define MSG_TOO_MANY_CRC An iomarca teipeanna ag íosluchtú. Cuirfear an tsuiteáil ar ceal. Na comhaid a híosluchtaíodh cheana, ní scriosfar iad. An chéad uair eile a rithfear an tsuiteáil, cuirfear na comhaid seo san áireamh.
-#define MSG_TOO_MANY_NETWORK An iomarca earráidí líonra ag iarraidh %s a íosluchtú.  Tiocfaidh sos leis an tsuiteáil anois.  Gliogáil 'Lean' le triail eile a bhaint as íosluchtú na gcomhad.
-#define MSG_VERIFYING Sláine na gcartlann á fíorú, bí ag fanacht leat...
-#define MSG_UNDEFINED Earráid nár míníodh
+#define MSG_UNFINISHED_DL NÃ­or thÃ¡inig deireadh ceart ar Ã­osluchtÃº na gcomhad riachtanach ag ceann de na seisiÃºin suiteÃ¡la roimhe seo. Ar mhaith leat ÃºsÃ¡id a bhaint as na comhaid a hÃ­osluchtaÃ­odh cheana le hathÃ­osluchtÃº a sheachaint?
+#define MSG_UNFINISHED_INSTALL NÃ­or thÃ¡inig deireadh ceart ar shuiteÃ¡il na gcomhad riachtanach ag ceann de na seisiÃºin suiteÃ¡la roimhe seo. Ar mhaith leat ÃºsÃ¡id a bhaint as na comhaid a hÃ­osluchtaÃ­odh cheana le hathÃ­osluchtÃº a sheachaint?
+#define MSG_CORRUPTED Bhraith an SuiteÃ¡laÃ­ go bhfuil na comhaid seo leanas taobh istigh den tsuiteÃ¡il seo curtha Ã³ mhaith:%sNÃ­ mÃ³r duit cÃ³ip eile de ShuiteÃ¡laÃ­ $ProductShortName$ a fhÃ¡il le dul ar aghaidh leis an tsuiteÃ¡il.
+#define MSG_CORRUPTED_AUTO Bhraith an SuiteÃ¡laÃ­ go bhfuil cartlann taobh istigh den tsuiteÃ¡il seo curtha Ã³ mhaith.  NÃ­ mÃ³r duit cÃ³ip eile de ShuiteÃ¡laÃ­ $ProductShortName$ a fhÃ¡il le dul ar aghaidh leis an tsuiteÃ¡il.
+#define MSG_TOO_MANY_CRC An iomarca teipeanna ag Ã­osluchtÃº. Cuirfear an tsuiteÃ¡il ar ceal. Na comhaid a hÃ­osluchtaÃ­odh cheana, nÃ­ scriosfar iad. An chÃ©ad uair eile a rithfear an tsuiteÃ¡il, cuirfear na comhaid seo san Ã¡ireamh.
+#define MSG_TOO_MANY_NETWORK An iomarca earrÃ¡idÃ­ lÃ­onra ag iarraidh %s a Ã­osluchtÃº.  Tiocfaidh sos leis an tsuiteÃ¡il anois.  GliogÃ¡il 'Lean' le triail eile a bhaint as Ã­osluchtÃº na gcomhad.
+#define MSG_VERIFYING SlÃ¡ine na gcartlann Ã¡ fÃ­orÃº, bÃ­ ag fanacht leat...
+#define MSG_UNDEFINED EarrÃ¡id nÃ¡r mÃ­nÃ­odh
 #define MSG_OOM As cuimhne!
 #define MSG_STATUS_DL %s ag %.2f KB/soic (%u KB as %u KB luchtaithe)
-#define MSG_COMPLETED %d%% curtha i gcrích
+#define MSG_COMPLETED %d%% curtha i gcrÃ­ch
 #define MSG_REQUIRED (Riachtanach)
-#define MSG_CANCELING An tsuiteáil á cur ar ceal, bí ag fanacht leat...
-#define MSG_ERROR_UNCOMPRESS Earráid dí-chomhbhrúite an chomhaid %s: %d
-#define MSG_USAGE Úsáid: %s [roghanna]\n	Is féidir le cinn ar bith de na roghanna seo a leanas a bheith i [roghanna]:\n		-h: An t-eolas cabhrach seo.\n		-a [conair]: Conair eile le haghaidh cuardach na gcartlanna.\n		-app [aitheantas_feidhmchláir]: Aitheantas an fheidhmchláir atá ag tosú an tSuiteálaí (suiteáileanna roinnte)\n		-app_path [feidhmchlár]: Síneann seo (conair iomlán) i dtreo chomhad samplach an fheidhmchláir (suiteáileanna roinnte)\n	*	-dd [conair]: Comhadlann suiteála molta (suiteáileanna roinnte)\n	*	-greLocal: Suiteálfar GRE i gcomhadlann an fheidhmchláir.\n	*	-greShared: Suiteálfar GRE i gcomhadlann dhomhanda roinnte (de ghnáth)\n			c:\program files\common files\mozilla.org\GRE\n		-reg_path [conair]: An áit i gClárlann (Registry) Windows ina chuirfear iontráileacha (suiteáileanna roinnte).\n		-f: Suiteálfar suiteálaí GRE (suiteáleanna roinnte), ach oibreoidh sé seo\n			le haghaidh suiteálaithe eile freisin.\n		-greForce: Íosluchtálfar, rithfear agus suiteálfar 'Component GRE'.  Leis seo,\n			rithfear suiteálaí GRE leis an rogha '-f' sa chaoi nach mbacfar   \n			leis an loighic atá ag GRE chun cinneadh a dhéanamh ar shuiteáil.\n		-n [ainm comhaid]: Ainm mháthairphróisis an tSuiteálaí.\n	*	-ma: Rith an Suiteálaí ina mhód uathoibríoch.\n	*	-ms: Rith an Suiteálaí ina mhód tostach.\n		-ira: Tabhair neamhaird ar na ranna [RunAppX]\n		-ispf: Tabhair neamhaird ar na ranna [Program FolderX]\n			a thaispeánann fillteán aicearraí an Roghchláir Tosaigh ag deireadh na suiteála.\n	*	-showBanner: Taispeáin an íomhá brataí sna dialóga dul chun cinn don íosluchtú agus suiteáil\n	*	-hideBanner: Ná taispeáin an íomhá brataí sna dialóga dul chun cinn don íosluchtú agus suiteáil\n	*	-cleanupOnUpgrade: Déan seiceáil an bhfuil an t-úsáideoir ag uasghrádú (.i. ag suiteáil\n		in áit seanleagan den táirge). Má tá:\n			* Gnáthmhód: Fiafraigh den úsáideoir conas leanadh ar aghaidh\n			* Gach mód eile: Glac leis go dteastaíonn leis an t-úsáideoir glanadh a dhéanamh.\n	*	-noCleanupOnUpgrade: Ná déan seiceáil an bhfuil an t-úsáideoir ag uasghrádú (.i. ag  \n		suiteáil in áit seanleagan den táirge). Leis seo, beidh an ghné ghlantacháin díchumasaithe.\n\n	* Ciallaíonn seo go sáróidh sé config.ini
-#define MSG_USE_FTP Úsáid &FTP chun comhaid a íosluchtú
-#define MSG_USE_HTTP Úsáid &HTTP chun comhaid a íosluchtú
-#define MSG_SAVE_LOCALLY &Sábháil comhaid an tsuiteálaithe go logánta
-#define MSG_DL_PAUSED Tháinig fadhb ghréasáin roimh an Díshuiteálaí agus tá sos curtha leis an íosluchtú. Má tá do cheangal gréasáin tar éis briseadh, gliogáil 'Lean' nuair a bheidh an cheangal gréasáin athbhunaithe.
-#define MSG_NOT_ADMIN Bhraith an Suiteálaí nach bhfuil primhléidí cuí an Riarthóra agat ar an ríomhaire seo. Moltar go mór duit gan leanadh le suiteáil $ProductShortName$, ar eagla nach n-oibreoidh sé i gceart.  Ar mhaith leat leanadh ar aghaidh ar aon nós?
-#define MSG_NOT_ADMIN_AUTO Bhraith an Suiteálaí nach bhfuil primhléidí cuí an Riarthóra agat ar an ríomhaire seo. Ní féidir leis an Suiteálaí leanadh le suiteáil $ProductShortName$.
+#define MSG_CANCELING An tsuiteÃ¡il Ã¡ cur ar ceal, bÃ­ ag fanacht leat...
+#define MSG_ERROR_UNCOMPRESS EarrÃ¡id dÃ­-chomhbhrÃºite an chomhaid %s: %d
+#define MSG_USAGE ÃšsÃ¡id: %s [roghanna]\n	Is fÃ©idir le cinn ar bith de na roghanna seo a leanas a bheith i [roghanna]:\n		-h: An t-eolas cabhrach seo.\n		-a [conair]: Conair eile le haghaidh cuardach na gcartlanna.\n		-app [aitheantas_feidhmchlÃ¡ir]: Aitheantas an fheidhmchlÃ¡ir atÃ¡ ag tosÃº an tSuiteÃ¡laÃ­ (suiteÃ¡ileanna roinnte)\n		-app_path [feidhmchlÃ¡r]: SÃ­neann seo (conair iomlÃ¡n) i dtreo chomhad samplach an fheidhmchlÃ¡ir (suiteÃ¡ileanna roinnte)\n	*	-dd [conair]: Comhadlann suiteÃ¡la molta (suiteÃ¡ileanna roinnte)\n	*	-greLocal: SuiteÃ¡lfar GRE i gcomhadlann an fheidhmchlÃ¡ir.\n	*	-greShared: SuiteÃ¡lfar GRE i gcomhadlann dhomhanda roinnte (de ghnÃ¡th)\n			c:\program files\common files\mozilla.org\GRE\n		-reg_path [conair]: An Ã¡it i gClÃ¡rlann (Registry) Windows ina chuirfear iontrÃ¡ileacha (suiteÃ¡ileanna roinnte).\n		-f: SuiteÃ¡lfar suiteÃ¡laÃ­ GRE (suiteÃ¡leanna roinnte), ach oibreoidh sÃ© seo\n			le haghaidh suiteÃ¡laithe eile freisin.\n		-greForce: ÃosluchtÃ¡lfar, rithfear agus suiteÃ¡lfar 'Component GRE'.  Leis seo,\n			rithfear suiteÃ¡laÃ­ GRE leis an rogha '-f' sa chaoi nach mbacfar   \n			leis an loighic atÃ¡ ag GRE chun cinneadh a dhÃ©anamh ar shuiteÃ¡il.\n		-n [ainm comhaid]: Ainm mhÃ¡thairphrÃ³isis an tSuiteÃ¡laÃ­.\n	*	-ma: Rith an SuiteÃ¡laÃ­ ina mhÃ³d uathoibrÃ­och.\n	*	-ms: Rith an SuiteÃ¡laÃ­ ina mhÃ³d tostach.\n		-ira: Tabhair neamhaird ar na ranna [RunAppX]\n		-ispf: Tabhair neamhaird ar na ranna [Program FolderX]\n			a thaispeÃ¡nann fillteÃ¡n aicearraÃ­ an RoghchlÃ¡ir Tosaigh ag deireadh na suiteÃ¡la.\n	*	-showBanner: TaispeÃ¡in an Ã­omhÃ¡ brataÃ­ sna dialÃ³ga dul chun cinn don Ã­osluchtÃº agus suiteÃ¡il\n	*	-hideBanner: NÃ¡ taispeÃ¡in an Ã­omhÃ¡ brataÃ­ sna dialÃ³ga dul chun cinn don Ã­osluchtÃº agus suiteÃ¡il\n	*	-cleanupOnUpgrade: DÃ©an seiceÃ¡il an bhfuil an t-ÃºsÃ¡ideoir ag uasghrÃ¡dÃº (.i. ag suiteÃ¡il\n		in Ã¡it seanleagan den tÃ¡irge). MÃ¡ tÃ¡:\n			* GnÃ¡thmhÃ³d: Fiafraigh den ÃºsÃ¡ideoir conas leanadh ar aghaidh\n			* Gach mÃ³d eile: Glac leis go dteastaÃ­onn leis an t-ÃºsÃ¡ideoir glanadh a dhÃ©anamh.\n	*	-noCleanupOnUpgrade: NÃ¡ dÃ©an seiceÃ¡il an bhfuil an t-ÃºsÃ¡ideoir ag uasghrÃ¡dÃº (.i. ag  \n		suiteÃ¡il in Ã¡it seanleagan den tÃ¡irge). Leis seo, beidh an ghnÃ© ghlantachÃ¡in dÃ­chumasaithe.\n\n	* CiallaÃ­onn seo go sÃ¡rÃ³idh sÃ© config.ini
+#define MSG_USE_FTP ÃšsÃ¡id &FTP chun comhaid a Ã­osluchtÃº
+#define MSG_USE_HTTP ÃšsÃ¡id &HTTP chun comhaid a Ã­osluchtÃº
+#define MSG_SAVE_LOCALLY &SÃ¡bhÃ¡il comhaid an tsuiteÃ¡laithe go logÃ¡nta
+#define MSG_DL_PAUSED ThÃ¡inig fadhb ghrÃ©asÃ¡in roimh an DÃ­shuiteÃ¡laÃ­ agus tÃ¡ sos curtha leis an Ã­osluchtÃº. MÃ¡ tÃ¡ do cheangal grÃ©asÃ¡in tar Ã©is briseadh, gliogÃ¡il 'Lean' nuair a bheidh an cheangal grÃ©asÃ¡in athbhunaithe.
+#define MSG_NOT_ADMIN Bhraith an SuiteÃ¡laÃ­ nach bhfuil primhlÃ©idÃ­ cuÃ­ an RiarthÃ³ra agat ar an rÃ­omhaire seo. Moltar go mÃ³r duit gan leanadh le suiteÃ¡il $ProductShortName$, ar eagla nach n-oibreoidh sÃ© i gceart.  Ar mhaith leat leanadh ar aghaidh ar aon nÃ³s?
+#define MSG_NOT_ADMIN_AUTO Bhraith an SuiteÃ¡laÃ­ nach bhfuil primhlÃ©idÃ­ cuÃ­ an RiarthÃ³ra agat ar an rÃ­omhaire seo. NÃ­ fÃ©idir leis an SuiteÃ¡laÃ­ leanadh le suiteÃ¡il $ProductShortName$.
 
-#define UNINST_RUNNING Tugtar faoi deara go bhfuil $ProductNameInternal$ ag rith faoi láthair.  Cuir stop le $ProductNameInternal$ roimh leanúint. Gliogáil 'OK' chun $ProductNameInternal$ a stopadh go huathoibríoch agus leanadh leis an díshuiteáil.
+#define UNINST_RUNNING Tugtar faoi deara go bhfuil $ProductNameInternal$ ag rith faoi lÃ¡thair.  Cuir stop le $ProductNameInternal$ roimh leanÃºint. GliogÃ¡il 'OK' chun $ProductNameInternal$ a stopadh go huathoibrÃ­och agus leanadh leis an dÃ­shuiteÃ¡il.
 #define UNINST_SHUTDOWN Ag stopadh $ProductNameInternal$.  Fan bomaite...
 
 #define UNINST_FONT MS Sans Serif
@@ -155,39 +155,39 @@
 #  CHINESEBIG5_CHARSET = 136
 #  OEM_CHARSET 255
 
-#define UNINST_TITLE Díshuiteálaí $ProductName$
-#define UNINST_MESSAGE0 An bhfuil tú cinnte gur mian leat %s agus a gcomhpháirteanna a bhaint ina n-iomláine?
-#define BTN_UNINST Dísh&uiteáil
+#define UNINST_TITLE DÃ­shuiteÃ¡laÃ­ $ProductName$
+#define UNINST_MESSAGE0 An bhfuil tÃº cinnte gur mian leat %s agus a gcomhphÃ¡irteanna a bhaint ina n-iomlÃ¡ine?
+#define BTN_UNINST DÃ­sh&uiteÃ¡il
 #define BTN_CANCEL &Cealaigh
-#define BTN_MESSAGE1 Bhraith an Díshuiteálaí nach bhfuil an comhad roinnte seo a leanas in úsáid ag ríomhchlár ar bith. Má bhaintear an comhad roinnte agus é fós ag teastáil ó ríomhchlár éigin, tá baol ann nach n-oibreoidh an ríomhchlár sin feasta. An bhfuil tú cinnte go dteastaíonn uait an comhad roinnte seo a bhaint den chóras?
-#define BTN_MESSAGE2 Ní dhéanfar aon dochar do do chóras má fhágtar an comhad seo air. Mura bhfuil tú cinnte faoi, moltar duit gan an comhad roinnte a bhaint den chóras.
+#define BTN_MESSAGE1 Bhraith an DÃ­shuiteÃ¡laÃ­ nach bhfuil an comhad roinnte seo a leanas in ÃºsÃ¡id ag rÃ­omhchlÃ¡r ar bith. MÃ¡ bhaintear an comhad roinnte agus Ã© fÃ³s ag teastÃ¡il Ã³ rÃ­omhchlÃ¡r Ã©igin, tÃ¡ baol ann nach n-oibreoidh an rÃ­omhchlÃ¡r sin feasta. An bhfuil tÃº cinnte go dteastaÃ­onn uait an comhad roinnte seo a bhaint den chÃ³ras?
+#define BTN_MESSAGE2 NÃ­ dhÃ©anfar aon dochar do do chÃ³ras mÃ¡ fhÃ¡gtar an comhad seo air. Mura bhfuil tÃº cinnte faoi, moltar duit gan an comhad roinnte a bhaint den chÃ³ras.
 #define BTN_FILENAME Ainm an chomhaid:
-#define BTN_NO &Ná déan
-#define BTN_NOTOALL Ná déan &ceann ar bith
-#define BTN_YES &Déan
-#define BTN_YESTOALL Déan iad go léir
+#define BTN_NO &NÃ¡ dÃ©an
+#define BTN_NOTOALL NÃ¡ dÃ©an &ceann ar bith
+#define BTN_YES &DÃ©an
+#define BTN_YESTOALL DÃ©an iad go lÃ©ir
 
-#define ERROR_DLL_LOAD Níorbh fhéidir %s a luchtú
-#define ERROR_STRING_LOAD Níorbh fhéidir aitheantas na hacmhainne teaghráin %d a luchtú
+#define ERROR_DLL_LOAD NÃ­orbh fhÃ©idir %s a luchtÃº
+#define ERROR_STRING_LOAD NÃ­orbh fhÃ©idir aitheantas na hacmhainne teaghrÃ¡in %d a luchtÃº
 #define ERROR_STRING_NULL Fuarthas pointeoir neamhnitheach.
-#define ERROR_GLOBALALLOC Earráid leithdháilte cuimhne.
+#define ERROR_GLOBALALLOC EarrÃ¡id leithdhÃ¡ilte cuimhne.
 #define ERROR_FAILED Theip ar %s.
-#define ERROR_DIALOG_CREATE Níorbh fhéidir an dialóg %s a chrúthú.
+#define ERROR_DIALOG_CREATE NÃ­orbh fhÃ©idir an dialÃ³g %s a chrÃºthÃº.
 #define DLGQUITTITLE Ceist
-#define DLGQUITMSG An bhfuil tú cinnte gur mian leat cealú?
+#define DLGQUITMSG An bhfuil tÃº cinnte gur mian leat cealÃº?
 #define ERROR_GET_SYSTEM_DIRECTORY_FAILED Theip ar GetSystemDirectory().
 #define ERROR_GET_WINDOWS_DIRECTORY_FAILED Theip ar GetWindowsDirectory().
-#define ERROR_CREATE_TEMP_DIR Níor éirigh leis an Díshuiteálaí an chomhadlann TEMP a chruthú: %s
-#define ERROR_SETUP_REQUIREMENT Tá Windows95 nó córas oibriúcháin níos déanaí ná é de dhíth! Tá an Díshuiteálaí ag scoir...
+#define ERROR_CREATE_TEMP_DIR NÃ­or Ã©irigh leis an DÃ­shuiteÃ¡laÃ­ an chomhadlann TEMP a chruthÃº: %s
+#define ERROR_SETUP_REQUIREMENT TÃ¡ Windows95 nÃ³ cÃ³ras oibriÃºchÃ¡in nÃ­os dÃ©anaÃ­ nÃ¡ Ã© de dhÃ­th! TÃ¡ an DÃ­shuiteÃ¡laÃ­ ag scoir...
 #define MB_WARNING_STR Rabhadh
-#define ERROR_UNINSTALL_LOG_FOLDER Níor aimsíodh an fillteán loga díshuiteála:%s
+#define ERROR_UNINSTALL_LOG_FOLDER NÃ­or aimsÃ­odh an fillteÃ¡n loga dÃ­shuiteÃ¡la:%s
 #define MB_MESSAGE_STR Teachtaireacht
 #define DLG_REMOVE_FILE_TITLE Bain an Comhad?
 #define ERROR_GETVERSION Theip ar GetVersionEx()!
 #define MB_ATTENTION_STR Aire
-#define MSG_FORCE_QUIT_PROCESS Bhraith an Díshuiteálaí go bhfuil %s (%s) fós ag rith. Gliogáil 'OK' chun %s a stopadh agus leanadh leis an tsuiteáil. Nó úsáid Bainisteoir na dTascanna Windows chun %s a stopadh, agus gliogáil 'OK' ina dhiaidh sin chun leanadh leis an díshuiteáil.
-#define MSG_FORCE_QUIT_PROCESS_FAILED Stopfaidh an Díshuiteálaí anois. Ní féidir leis an Díshuiteálaí leanúint toisc go bhfuil %s (%s) fós ag rith. Bain triail as %s a stopadh de lámh le Bainisteoir na dTascanna Windows, agus ansin rith an Díshuiteálaí arís.
-#define MSG_DELETE_INSTALLATION_PATH Níor díshuiteáladh gach comhad ón gcomhadlann suiteála:\n\n  %s\n\nAr mhaith leat an chomhadlann seo a bhaint ina hiomláine?
-#define MSG_INSTALLATION_PATH_WITHIN_WINDIR Bhraith an Díshuiteálaí go bhfuil conair shuiteála $ProductNameInternal$ lonnaithe i bhfo-fhillteán i d'fhillteán Windows. Ní dhéanfaidh an Díshuiteálaí iarracht an suiteáil seo a bhaint de bharr an bhaoil atá ann go mbainfear cuid de chomhaid riachtanacha an chórais.
+#define MSG_FORCE_QUIT_PROCESS Bhraith an DÃ­shuiteÃ¡laÃ­ go bhfuil %s (%s) fÃ³s ag rith. GliogÃ¡il 'OK' chun %s a stopadh agus leanadh leis an tsuiteÃ¡il. NÃ³ ÃºsÃ¡id Bainisteoir na dTascanna Windows chun %s a stopadh, agus gliogÃ¡il 'OK' ina dhiaidh sin chun leanadh leis an dÃ­shuiteÃ¡il.
+#define MSG_FORCE_QUIT_PROCESS_FAILED Stopfaidh an DÃ­shuiteÃ¡laÃ­ anois. NÃ­ fÃ©idir leis an DÃ­shuiteÃ¡laÃ­ leanÃºint toisc go bhfuil %s (%s) fÃ³s ag rith. Bain triail as %s a stopadh de lÃ¡mh le Bainisteoir na dTascanna Windows, agus ansin rith an DÃ­shuiteÃ¡laÃ­ arÃ­s.
+#define MSG_DELETE_INSTALLATION_PATH NÃ­or dÃ­shuiteÃ¡ladh gach comhad Ã³n gcomhadlann suiteÃ¡la:\n\n  %s\n\nAr mhaith leat an chomhadlann seo a bhaint ina hiomlÃ¡ine?
+#define MSG_INSTALLATION_PATH_WITHIN_WINDIR Bhraith an DÃ­shuiteÃ¡laÃ­ go bhfuil conair shuiteÃ¡la $ProductNameInternal$ lonnaithe i bhfo-fhillteÃ¡n i d'fhillteÃ¡n Windows. NÃ­ dhÃ©anfaidh an DÃ­shuiteÃ¡laÃ­ iarracht an suiteÃ¡il seo a bhaint de bharr an bhaoil atÃ¡ ann go mbainfear cuid de chomhaid riachtanacha an chÃ³rais.
 
 #unfilter emptyLines
