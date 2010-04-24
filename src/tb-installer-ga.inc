@@ -1,84 +1,84 @@
 # This file is in the UTF-8 encoding. It is *not*
 # a Java .properties file and does *not* use \escapes
 
-Welcome_Title=Suiteáil $ProductShortName$
-Welcome_MessageWelcome=Fáilte chuig %s
-Welcome_Message0=Tá tú ar tí %s $Version$ a shuiteáil.
-Welcome_Message1=Moltar go láidir duit scoir de gach clár Windows sula gcuirfidh tú an Suiteálaí seo ar siúl.
-Welcome_Message2=Gliogáil 'Cealaigh' chun scoir den tsuiteáil, agus dún ansin a bhfuil de chláracha ar siúl agat anois. Gliogáil 'Ar aghaidh' chun leanúint den tsuiteáil.
-Welcome_Message3=Gliogáil 'Ar aghaidh' chun leanúint de %s $Version$ a shuiteáil.
+Welcome_Title=SuiteÃ¡il $ProductShortName$
+Welcome_MessageWelcome=FÃ¡ilte chuig %s
+Welcome_Message0=TÃ¡ tÃº ar tÃ­ %s $Version$ a shuiteÃ¡il.
+Welcome_Message1=Moltar go lÃ¡idir duit scoir de gach clÃ¡r Windows sula gcuirfidh tÃº an SuiteÃ¡laÃ­ seo ar siÃºl.
+Welcome_Message2=GliogÃ¡il 'Cealaigh' chun scoir den tsuiteÃ¡il, agus dÃºn ansin a bhfuil de chlÃ¡racha ar siÃºl agat anois. GliogÃ¡il 'Ar aghaidh' chun leanÃºint den tsuiteÃ¡il.
+Welcome_Message3=GliogÃ¡il 'Ar aghaidh' chun leanÃºint de %s $Version$ a shuiteÃ¡il.
 
-License_Title=Comhaontú um an gCeadúnas Earra Bhoig
-License_SubTitle=Téarmaí agus coinníollacha úsáide an bhogearra seo.
-License_Message0=Léigh an comhaontú um cheadúnas earra bhoig seo a leanas, le do thoil. Úsáid an barra scrollála chun an chuid eile den chomhaontú seo a léamh.
-License_Accept=&Táim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
-License_Decline=&Nílim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúnas.
+License_Title=ComhaontÃº um an gCeadÃºnas Earra Bhoig
+License_SubTitle=TÃ©armaÃ­ agus coinnÃ­ollacha ÃºsÃ¡ide an bhogearra seo.
+License_Message0=LÃ©igh an comhaontÃº um cheadÃºnas earra bhoig seo a leanas, le do thoil. ÃšsÃ¡id an barra scrollÃ¡la chun an chuid eile den chomhaontÃº seo a lÃ©amh.
+License_Accept=&TÃ¡im toilteanach glacadh le coinnÃ­ollacha an ChomhaontÃº um CheadÃºnas.
+License_Decline=&NÃ­lim toilteanach glacadh le coinnÃ­ollacha an ChomhaontÃº um CheadÃºnas.
 
-Type_Title=Modh Suiteála
-Type_SubTitle=Roghanna suiteála an phacáiste seo.
-Type_Message0=Roghnaigh an cineál suiteála is fearr leat, agus gliogáil 'Ar aghaidh' ina dhiaidh sin.
+Type_Title=Modh SuiteÃ¡la
+Type_SubTitle=Roghanna suiteÃ¡la an phacÃ¡iste seo.
+Type_Message0=Roghnaigh an cineÃ¡l suiteÃ¡la is fearr leat, agus gliogÃ¡il 'Ar aghaidh' ina dhiaidh sin.
 
-Standard_Short=Gnáth&shuiteáil
-Standard_Long=Déanfar Thunderbird a shuiteáil leis na gnáthroghanna.
+Standard_Short=GnÃ¡th&shuiteÃ¡il
+Standard_Long=DÃ©anfar Thunderbird a shuiteÃ¡il leis na gnÃ¡throghanna.
 
-Custom_Short=S&ainshuiteáil
-Custom_Long=Is féidir leat roghanna ar leith a shannadh lena suiteáil. Níl an rogha seo molta ach amháin d'úsaideoirí a bhfuil taithí mhaith acu ar an ábhar.
+Custom_Short=S&ainshuiteÃ¡il
+Custom_Long=Is fÃ©idir leat roghanna ar leith a shannadh lena suiteÃ¡il. NÃ­l an rogha seo molta ach amhÃ¡in d'ÃºsaideoirÃ­ a bhfuil taithÃ­ mhaith acu ar an Ã¡bhar.
 
-Select_Title=Roghnú Comhpháirteanna
-Select_SubTitle=Comhpháirteanna breise a chuireann le cumas $ProductShortName$.
-Select_Message0=Roghnaigh na comhpháirteanna breise is mian leat a shuiteáil, agus gliogáil 'Ar aghaidh' ina dhiaidh sin.
+Select_Title=RoghnÃº ComhphÃ¡irteanna
+Select_SubTitle=ComhphÃ¡irteanna breise a chuireann le cumas $ProductShortName$.
+Select_Message0=Roghnaigh na comhphÃ¡irteanna breise is mian leat a shuiteÃ¡il, agus gliogÃ¡il 'Ar aghaidh' ina dhiaidh sin.
 
-Path_Title=Fillteán Suiteála
-Path_SubTitle=An áit ina shuiteálfar $ProductShortName$.
-Path_Message0=Suiteálfar $ProductShortName$ san fhillteán thíos:
+Path_Title=FillteÃ¡n SuiteÃ¡la
+Path_SubTitle=An Ã¡it ina shuiteÃ¡lfar $ProductShortName$.
+Path_Message0=SuiteÃ¡lfar $ProductShortName$ san fhillteÃ¡n thÃ­os:
 
-Integration_Title=Socrú Aicearraí
-Integration_SubTitle=Cruthaigh Deilbhíní
-Integration_Message0=Cruthaigh deilbhíní i gcomhair $ProductShortName$:
+Integration_Title=SocrÃº AicearraÃ­
+Integration_SubTitle=Cruthaigh DeilbhÃ­nÃ­
+Integration_Message0=Cruthaigh deilbhÃ­nÃ­ i gcomhair $ProductShortName$:
 
 Integration_Desktop=Ar an Deasc agamsa
-Integration_StartMenu=San fhillteán 'An Roghchlár Tosaigh/Ríomhchláir' (Start Menu Programs)
-Integration_QuickLaunch=I mo Bharra Mearlainseála
+Integration_StartMenu=San fhillteÃ¡n 'An RoghchlÃ¡r Tosaigh/RÃ­omhchlÃ¡ir' (Start Menu Programs)
+Integration_QuickLaunch=I mo Bharra MearlainseÃ¡la
 
-SelectFolder_Title=Suiteáil $ProductShortName$ - Roghnaigh Fillteán Ríomhchlár
-SelectFolder_Message0=Cuirfidh an Suiteálaí deilbhíní isteach san Fhillteán Ríomhchlár a luaitear thíos. Is féidir leat fillteán nua a chruthú, nó ceann a roghnú ar liosta na bhFillteán Reatha. Gliogáil 'Ar aghaidh' chun leanúint ar aghaidh.
+SelectFolder_Title=SuiteÃ¡il $ProductShortName$ - Roghnaigh FillteÃ¡n RÃ­omhchlÃ¡r
+SelectFolder_Message0=Cuirfidh an SuiteÃ¡laÃ­ deilbhÃ­nÃ­ isteach san FhillteÃ¡n RÃ­omhchlÃ¡r a luaitear thÃ­os. Is fÃ©idir leat fillteÃ¡n nua a chruthÃº, nÃ³ ceann a roghnÃº ar liosta na bhFillteÃ¡n Reatha. GliogÃ¡il 'Ar aghaidh' chun leanÃºint ar aghaidh.
 
-Advanced_Title=Suiteáil $ProductShortName$ - Socruithe Casta
-Advanced_Message0=I gcás go n-éilíonn do nasc Idirlín seachfhreastalaí, iontráil ainm do fhreastalaí agus eolas poirt anseo. Muna n-éilíonn, fág bán na réimsí sin.
+Advanced_Title=SuiteÃ¡il $ProductShortName$ - Socruithe Casta
+Advanced_Message0=I gcÃ¡s go n-Ã©ilÃ­onn do nasc IdirlÃ­n seachfhreastalaÃ­, iontrÃ¡il ainm do fhreastalaÃ­ agus eolas poirt anseo. Muna n-Ã©ilÃ­onn, fÃ¡g bÃ¡n na rÃ©imsÃ­ sin.
 
 Install_Title=Achoimre
-Install_SubTitle=Réidh chun $ProductShortName$ a shuiteáil.
-Install_MessageInstall=Déanfaidh an Suiteálaí na comhpháirteanna seo a leanas a shuiteáil:
-Install_MessageDownload=Déanfaidh an Suiteálaí na comhpháirteanna seo a leanas a luchtú agus a shuiteáil:
-Install_Message0=Gliogáil 'Ar aghaidh' chun leanúint ar aghaidh.
+Install_SubTitle=RÃ©idh chun $ProductShortName$ a shuiteÃ¡il.
+Install_MessageInstall=DÃ©anfaidh an SuiteÃ¡laÃ­ na comhphÃ¡irteanna seo a leanas a shuiteÃ¡il:
+Install_MessageDownload=DÃ©anfaidh an SuiteÃ¡laÃ­ na comhphÃ¡irteanna seo a leanas a luchtÃº agus a shuiteÃ¡il:
+Install_Message0=GliogÃ¡il 'Ar aghaidh' chun leanÃºint ar aghaidh.
 
-Downloading_Title=Íosluchtú
-Downloading_SubTitle=Tá na comhpháirteanna a theastaíonn á n-íosluchtú...
-Downloading_Blurb=Tá comhaid suiteála $ProductShortName$ á n-íosluchtú ag an Suiteálaí.
-Downloading_FileName=Íosluchtú ar siúl:
+Downloading_Title=ÃosluchtÃº
+Downloading_SubTitle=TÃ¡ na comhphÃ¡irteanna a theastaÃ­onn Ã¡ n-Ã­osluchtÃº...
+Downloading_Blurb=TÃ¡ comhaid suiteÃ¡la $ProductShortName$ Ã¡ n-Ã­osluchtÃº ag an SuiteÃ¡laÃ­.
+Downloading_FileName=ÃosluchtÃº ar siÃºl:
 Downloading_Time=Aga fanta:
 
-Installing_Title=Á Shuiteáil
-Installing_SubTitle=$ProductShortName$ á shuiteáil...
-Installing_Blurb=Tá comhaid an fheidhmchláir á shuiteáil ag an Suiteálaí.
-Installing_Status=Comhad á ullmhú:
-Installing_Component=Á shuiteáil anois:
+Installing_Title=Ã ShuiteÃ¡il
+Installing_SubTitle=$ProductShortName$ Ã¡ shuiteÃ¡il...
+Installing_Blurb=TÃ¡ comhaid an fheidhmchlÃ¡ir Ã¡ shuiteÃ¡il ag an SuiteÃ¡laÃ­.
+Installing_Status=Comhad Ã¡ ullmhÃº:
+Installing_Component=Ã shuiteÃ¡il anois:
 
-Success_Title=Suiteáil Críochnaithe
-Success_Header=Suiteáil Críochnaithe
-Success_Message0=D'éirigh le suiteáil %s $Version$.
-Success_Message1= Gliogáil 'Críochnaigh' chun an tsuiteáil a chríochnú.
+Success_Title=SuiteÃ¡il CrÃ­ochnaithe
+Success_Header=SuiteÃ¡il CrÃ­ochnaithe
+Success_Message0=D'Ã©irigh le suiteÃ¡il %s $Version$.
+Success_Message1= GliogÃ¡il 'CrÃ­ochnaigh' chun an tsuiteÃ¡il a chrÃ­ochnÃº.
 Success_Launch=Tosaigh %s $Version$ anois.
 
-Check_Message=Íosuchtaíodh $ProductShortName$ mar ba chóir. Is gá $ProductShortName$ a dhúnadh anois chun leanúint den suiteáil. Gliogáil 'OK' chun scoir go huathoibríoch de $ProductShortName$ agus luí isteach ar a shuiteáil.
-Check_FullMessage=Is gá $ProductNameInternal$ a dhúnadh chun leanúint den suiteáil.  Gliogáil 'OK' chun scoir go huathoibríoch de $ProductNameInternal$ agus luí isteach ar a shuiteáil.
-Check_Wait=$ProductNameInternal$ á dhúnadh anois. Bíodh foighne agat...
+Check_Message=ÃosuchtaÃ­odh $ProductShortName$ mar ba chÃ³ir. Is gÃ¡ $ProductShortName$ a dhÃºnadh anois chun leanÃºint den suiteÃ¡il. GliogÃ¡il 'OK' chun scoir go huathoibrÃ­och de $ProductShortName$ agus luÃ­ isteach ar a shuiteÃ¡il.
+Check_FullMessage=Is gÃ¡ $ProductNameInternal$ a dhÃºnadh chun leanÃºint den suiteÃ¡il.  GliogÃ¡il 'OK' chun scoir go huathoibrÃ­och de $ProductNameInternal$ agus luÃ­ isteach ar a shuiteÃ¡il.
+Check_Wait=$ProductNameInternal$ Ã¡ dhÃºnadh anois. BÃ­odh foighne agat...
 
-Component_XPCOM=COM Ilárdán
+Component_XPCOM=COM IlÃ¡rdÃ¡n
 Component_Mail=$ProductName$
-Component_Offline=Tacaíocht d'Oibriú As Líne
-Component_Offline_Long=Cuireann seo tacaíocht d'oibriú as líne le Ríomhphost $ProductName$.
-Component_RSS=Tacaíocht RSS
-Component_RSS_Long=Cuireann seo tacaíocht do RSS le $ProductName$.
-Component_QFA=Gníomhaire Aiseolais um Cháilíocht
-Component_QFA_Long=Le haghaidh tuairiscí maidir le tuairteanna $ProductShortName$
+Component_Offline=TacaÃ­ocht d'OibriÃº As LÃ­ne
+Component_Offline_Long=Cuireann seo tacaÃ­ocht d'oibriÃº as lÃ­ne le RÃ­omhphost $ProductName$.
+Component_RSS=TacaÃ­ocht RSS
+Component_RSS_Long=Cuireann seo tacaÃ­ocht do RSS le $ProductName$.
+Component_QFA=GnÃ­omhaire Aiseolais um ChÃ¡ilÃ­ocht
+Component_QFA_Long=Le haghaidh tuairiscÃ­ maidir le tuairteanna $ProductShortName$
