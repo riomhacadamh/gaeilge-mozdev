@@ -20,26 +20,6 @@ Your feedback on our translation work so far would be greatly appreciated. Some 
 Please post to the <a href="http://gaeilge.mozdev.org/list.html">mailing list</a> if you have any bug reports.
 </p>
 
-<h3>Firefox XPI Instructions</h3>
-<p>
-For those who wish to use the language pack installer, instead of a full build:
-<ol>
-    <li>First you will need to install the <a href="http://www.mozilla.org/products/firefox/">latest Firefox release</a>.
-    <li>Start up Firefox after installation, and find the XPI 
-	<a href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/win32/xpi/">here</a>.
-	<li>Scroll to tbe bottom of the page and select your platform, Linux, Mac or Windows.
-	<li>Scroll until you find the Irish XPI file "ga-IE.xpi" and click on it to install the language pack. 
-    <li>Shut down Firefox.
-    <li>Restart Firefox. Shutdown again.
-    <li>Open up a command prompt/shell, go to the Firefox install directory and type:<br>
-    <i>firefox -UILocale ga-IE</i><br>
-    Then hit [ENTER].
-</ol>
-<br>
-Step 6 may not be needed.
-If you are uncomfortable with using the command prompt you can install the Locale switcher extension...
-</p>
-
 <h3>Locale-Switcher Extension</h3>
 <p>
 The Locale switcher extension makes changing languages easier by listing your installed languages under your Tools menu.  Good for folks working with the XPI version and still need English to fall back on.
@@ -47,46 +27,3 @@ The Locale switcher extension makes changing languages easier by listing your in
 Download this extension from:
 <a href="https://addons.mozilla.org/firefox/356/">https://addons.mozilla.org/firefox/356/</a>
 </p>
-
-<!-- Everything from here down I extracted from pages linking the XPI's 
-for other languages on mozdev.org.  The plain link above
-to the xpi file is all that was given in the original
-installation.html template.  The (working) link below that I
-had on borel is at the bottom of this page-->
-
-<!-- XPInstall Scripts -->
-<script language="javascript" type="text/javascript">
-<!--
-function triggerURL(url) {
-   if (!InstallTrigger.updateEnabled())
-      	return false; 
-   else
-        InstallTrigger.startSoftwareUpdate(url); 
-}
-
-function instWarning(xpi, lastinstalledlocale)
-{
- if (navigator.userAgent.indexOf('Gecko') == -1)
-     alert ("This package is designed to be installed on Mozilla Gecko "+
-            "compatible browsers. "+
-            "Browse to ftp.mozilla.org to download locally this file and "+
-            "install it later on a Mozilla Gecko compatible browser.");
- else if (!InstallTrigger.enabled())
-     alert ("The installation of this package requres you to enable "+
-            "online installations from the preferences.");
- else {
-      document.cookie = 'lastinstalledlocale=' + escape(lastinstalledlocale);
-      InstallTrigger.install(xpi);
-      }
-}
-
-function setTBcookie (CookieTxt)
-{ document.cookie = 'TBlangpack=' + escape(CookieTxt); }
-//-->
-</script>
-
-
-<!--
-<a href="index.html" onClick="javascript: xpi = {'Irish Mozilla Firefox Language Pack': 'http://borel.slu.edu/mozilla/langpack-ga-IE.xpi'}; instWarning(xpi,'ga-IE');">installable language pack (for development only!)</a>
-<hr/>
--->
