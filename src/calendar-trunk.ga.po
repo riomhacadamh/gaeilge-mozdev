@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-20 06:37-0500\n"
+"POT-Creation-Date: 2010-04-24 16:57-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -12,7 +12,8 @@ msgstr ""
 
 # # LOCALIZATION NOTE (cityOrStateAndZip):
 # # %1$S is city or state, %2$S is zip
-#: reminderCustomTitle monthlyOrder monthInYear datetimeIntervalOnSameDateTime
+#: reminderCustomTitle ordinalWeekdayOrder monthlyOrder monthInYear
+#: datetimeIntervalOnSameDateTime
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -2027,21 +2028,22 @@ msgstr ""
 msgid "and"
 msgstr "and"
 
-# LOCALIZATION NOTE (monthlyNthOfEveryNounclass...):
+# LOCALIZATION NOTE (monthlyRuleNthOfEveryNounclass...):
 # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
-# Translate these strings according to noun class/gender of weekday (%2$S) 
+# Translate these strings according to noun class/gender of weekday (%2$S)
 # set in 'repeadDetailsDay...Nounclass' strings.
 # Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
 # Add others strings with suffix 3, 4,... for others noun classes if your
 # language need them. In this case, corresponding strings must be added for
-# others rule strings with 'Nounclass...' suffix and corresponding values 
-# "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings. 
-# %1$S - ordinal with article and noun class/gender corresponding to weekday
-# %2$S - weekday
-# #3 - interval
-# i.e. "the FIRST MONDAY of every 3 months"
-#: monthlyNthOfEveryNounclass1 monthlyNthOfEveryNounclass2
-msgid "%1$S %2$S of every month;%1$S %2$S of every #3 months"
+# others rule strings with 'Nounclass...' suffix and corresponding values
+# "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
+# %1$S - list of weekdays with ordinal, article and noun class/gender
+# (ordinal and weekday of every element in the list follow the order
+# and the rule of ordinalWeekdayOrder string)
+# #2 - interval
+# e.g. "the first Monday and the last Friday of every 3 months"
+#: monthlyRuleNthOfEveryNounclass1 monthlyRuleNthOfEveryNounclass2
+msgid "%1$S of every month;%1$S of every #2 months"
 msgstr ""
 
 # LOCALIZATION NOTE (monthlyEveryOfEvery):

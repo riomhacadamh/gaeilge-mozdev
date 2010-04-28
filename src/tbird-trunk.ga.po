@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-20 06:39-0500\n"
+"POT-Creation-Date: 2010-04-24 17:00-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -452,7 +452,7 @@ msgstr "I"
 msgid "&Underline"
 msgstr "&Líne Faoi"
 
-#: styleUnderlineCmd.key
+#: styleUnderlineCmd.key lwthemePostInstallNotification.undoButton.accesskey
 msgid "U"
 msgstr "U"
 
@@ -2887,6 +2887,7 @@ msgid "d"
 msgstr "d"
 
 #: selectall.key selectThreadCmd.key archiveMsgCmd.key
+#: lwthemeInstallRequest.allowButton.accesskey
 msgid "a"
 msgstr "a"
 
@@ -3303,7 +3304,7 @@ msgstr "Siombailí Coitianta"
 msgid "Insert"
 msgstr "Ionsáigh"
 
-#: closeButton.label
+#: closeButton.label featureConfigurator.closeButton
 msgid "Close"
 msgstr "Dún"
 
@@ -3641,7 +3642,7 @@ msgstr "&Cur Síos:"
 msgid "[New page, not saved yet]"
 msgstr "[Leathanach nua, gan sábháil faoi láthair]"
 
-#: EditHEADSource1.label featureConfigurator.advancedUsers.label
+#: EditHEADSource1.label
 msgid "Advanced users:"
 msgstr "Ardúsáideoirí:"
 
@@ -5410,6 +5411,29 @@ msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí"
 msgid "Bad response content"
 msgstr "Droch-inneachar freagartha"
 
+# verifyConfig.js
+# LOCALIZATION NOTE(auth_failed_generic.error): The login failed (server refused to allow the user in), but the server did not give any meaningful error message. This is a common case when the user entered a wrong password or is otherwise not allowed.
+#: auth_failed_generic.error
+msgid "Login failed. Are username/email address and password correct?"
+msgstr ""
+"Theip ar logáil isteach. An bhfuil an t-ainm úsáideora agus an focal faire "
+"ceart?"
+
+# LOCALIZATION NOTE(auth_failed_with_reason.error): The login failed (server refused to allow the user in), and the server gave an error message which we can present to the user. This is a common case when the user entered a wrong password or is otherwise not allowed. %1$S will be the IMAP/POP3/SMTP server hostname. %2$S will be the error message from the server (usually in the local language where the server is or in English).
+#: auth_failed_with_reason.error
+msgid "Login failed. The server %1$S said: %2$S"
+msgstr "Theip ar logáil isteach. Dúirt freastalaí %1$S: %2$S"
+
+# LOCALIZATION NOTE(verification_failed.error): We had some other error, not during authentication with the server, but at earlier points, e.g. locally or we entirely failed to contact the given server, and we unfortunately have no detailed error message.
+#: verification_failed.error
+msgid "Login verification failed for an unknown reason."
+msgstr "Theip ar logáil isteach agus níl a fhios againn cén fáth."
+
+# LOCALIZATION NOTE(verification_failed_with_exception.error): We had some other error, not during authentication with the server, but at earlier points, e.g. locally or we entirely failed to contact the given server, and we have an error message. %1$S will be an error message, possibly in English
+#: verification_failed_with_exception.error
+msgid "Login verification failed with message: %1$S"
+msgstr "Theip ar logáil isteach le teachtaireacht: %1$S"
+
 # #-#-#-#-#  tmp.XXXXcCd74t.po (thunderbird)  #-#-#-#-#
 # extracted from am-main.xul
 # #-#-#-#-#  tmp.XXXXYicoAU.po (thunderbird)  #-#-#-#-#
@@ -5815,8 +5839,7 @@ msgstr "Baineann míreanna críochnaithe, cealaithe, nó teipthe ón liosta"
 msgid "f"
 msgstr "f"
 
-#: cmd.search.commandkey quickSearchCmd.key killThreadMenu.key
-#: killSubthreadMenu.key focusSearch2.key
+#: cmd.search.commandkey quickSearchCmd.key focusSearch2.key
 msgid "k"
 msgstr "k"
 
@@ -6564,7 +6587,8 @@ msgstr "Eolaire L&DAP…"
 msgid "&Message"
 msgstr "&Teachtaireacht"
 
-#: newMessageCmd.key newMessage.key Mega
+#: newMessageCmd.key newMessage.key
+#: lwthemePostInstallNotification.manageButton.accesskey Mega
 msgid "M"
 msgstr "B"
 
@@ -9381,252 +9405,247 @@ msgstr "ní féidir an súdcheanntásc %S a iompórtáil"
 msgid "can't find the mailbox \"%S\""
 msgstr "bosca ríomhphoist \"%S\" gan aimsiú"
 
-# Migration Assistant page. It should match featureConfiguratorCmd.label in
-# baseMenuOverlay.dtd
 #: featureConfigurator.title
 msgid ""
-"_: Title for the\n"
+"_: Title for the Migration Assistant page. It should match "
+"featureConfiguratorCmd.label in baseMenuOverlay.dtd\n"
 "Migration Assistant"
 msgstr "Cúntóir Ascnaimh"
 
-#: featureConfigurator.heading
+#: featureConfigurator.heading1
 msgid ""
 "_: Heading for the page\n"
-"Thunderbird 3 features worth knowing about"
-msgstr "Gnéithe i Thunderbird 3 ar fiú iad a bheith ar eolas agat"
+"New &brandShortName; features worth knowing about"
+msgstr "Gnéithe &brandShortName; ar fiú iad a bheith ar eolas agat"
 
-# is important: we tried for a tone that promotes the new features (which we
-# believe are good and worth users learning about), but also emphasizing that we
-# think it's important to preserve user choice.
-#: featureConfigurator.para1
+#: featureConfigurator.para.1
 msgid ""
-"_: The tone of this paragraph\n"
-"Thunderbird 3 includes powerful new features which we're quite proud of, and "
-"think most people will love. People's tastes and needs vary, so we made it "
-"easy to control and customize Thunderbird."
+"_: The tone of this paragraph is important: we tried for a tone that promotes "
+"the new features (which we believe are good and worth users learning about), "
+"but also emphasizing that we think it's important to preserve user choice.\n"
+"This new version of &brandShortName; includes powerful new features which "
+"we're quite proud of, and think most people will love. People's tastes and "
+"needs vary, so we made it easy to control and customize &brandShortName;."
 msgstr ""
-"Tá gnéithe nua cumhachta i Thunderbird 3 atáimid bródúil astu agus ceapaimid "
-"go dtaitneoidh siad le beagnach gach uile duine. Bíonn riachtanais agus "
-"mianta éagsúla ag daoine agus mar sin tá Thunderbird furasta le rialú agus le "
-"saincheapadh."
+"Tá gnéithe nua cumhachta i &brandShortName; atáimid bródúil astu agus "
+"ceapaimid go dtaitneoidh siad le beagnach gach uile duine. Bíonn riachtanais "
+"agus mianta éagsúla ag daoine agus mar sin tá &brandShortName; furasta le "
+"rialú agus le saincheapadh."
 
-# that this page is active (the buttons change the UI), and that they can get
-# back to it if they change their mind later.
-#: featureConfigurator.para2
+#: featureConfigurator.para.2
 msgid ""
-"_: This paragraph explains\n"
+"_: This paragraph explains that this page is active (the buttons change the "
+"UI), and that they can get back to it if they change their mind later.\n"
 "Use this page to configure these new settings. You can always get back to the "
 "Migration Assistant from the Help menu."
 msgstr ""
 "Úsáid an leathanach seo leis na socruithe seo a chumrú. Is féidir leat "
 "filleadh ar an gCuntóir Ascnaimh ón roghchlár \"Cabhair\"."
 
-# IMAP synchronization feature. The words should probably echo the word used
-# in the per-account dialog.
-#: featureConfigurator.imap.heading
-msgid ""
-"_: Heading for the\n"
-"Synchronize IMAP Messages"
-msgstr "Sioncronaigh teachtaireachtaí IMAP"
-
-#: featureConfigurator.imap.status.all
-msgid "All of your IMAP folders are set to &quot;synchronize&quot;."
-msgstr "Tá d'fhillteáin IMAP go léir socraithe go &quot;sioncronú&quot;."
-
-#: featureConfigurator.imap.status.none
-msgid "None of your IMAP folders are set to &quot;synchronize&quot;."
-msgstr "Níl d'fhillteáin IMAP socraithe le &quot;sioncronú&quot;."
-
-#: featureConfigurator.imap.status.some
-msgid "Some of your IMAP folders are set to &quot;synchronize&quot;."
-msgstr "Tá cuid de d'fhillteáin IMAP socraithe le &quot;sioncronú&quot;."
-
-# is intended to explain why we've implemented this and picked it as a default.
-#: featureConfigurator.benefits.label
-msgid ""
-"_: The heading here\n"
-"Benefits"
-msgstr "Buntáistí"
-
-# is intended to explain why it might not be the right default for some users.
-#: featureConfigurator.alternative.label
-msgid ""
-"_: The heading here\n"
-"Alternative"
-msgstr "Rogha Eile"
-
-#: featureConfigurator.syncBenefits.para
-msgid ""
-"Lets you read your mail when you're not connected to the internet, and lets "
-"you find messages based on the words they contain, not just the subjects and "
-"names."
-msgstr ""
-"Cuireann sé seo ar do chumas do chuid ríomhphoist a léamh gan a bheith "
-"ceangailte leis an idirlíon, agus teachtaireachtaí a aimsiú de réir na "
-"bhfocal iontu chomh maith leis na hábhair agus na hainmneacha iontu."
-
-#: featureConfigurator.syncAlternative.para
-msgid ""
-"Thunderbird will download all your mail onto this computer. Turn it off if "
-"you're low on disk space, or you have to pay for network traffic."
-msgstr ""
-"Íosluchtóidh Thunderbird do chuid ríomhphoist go léir go dtí an ríomhaire "
-"seo. Ná húsáid é seo má tá spás diosca gann, nó má bhíonn ort íoc as trácht "
-"líonra."
-
-# lower case is intentional, but may be overriden if that doesn't make sense
-# because of a specific language context.
-#: featureConfigurator.syncAll.button
-msgid ""
-"_: The choice of\n"
-"synchronize all"
-msgstr "sioncronaigh gach rud"
-
-# lower case is intentional, but may be overriden if that doesn't make sense
-# because of a specific language context.
-#: featureConfigurator.syncNone.button
-msgid ""
-"_: The choice of\n"
-"don't synchronize any"
-msgstr "ná sioncronaigh faic"
-
-#: featureConfigurator.advancedUsers.para
-msgid "You can also customize it per account and per folder:"
-msgstr ""
-"Is féidir leat freisin é a shaincheap de réir cuntais agus de réir fillteáin."
-
 #: featureConfigurator.toolbar.heading
-msgid "New toolbar"
-msgstr "Barra nua uirlisí"
+msgid "New Message Toolbar"
+msgstr "Barra Uirlisí do Theachtaireachtaí Nua"
 
 #: featureConfigurator.toolbar.new.status
-msgid "Using the new toolbar."
-msgstr "Úsáid an bharra nua uirlisí."
+msgid "Message Buttons Toolbar"
+msgstr "Barra na gCnaipí Teachtaireachta"
 
-# word 'original' is chosen deliberately to be neutral, vs. 'old' which in
-# English at least had a negative connotation.
+#: featureConfigurator.toolbar.new.status.explanation
+msgid "A clean toolbar with all your messaging buttons at your fingertips."
+msgstr ""
+"Barra uirlisí glan a bhfuil do chnaipí teachtaireachta go léir ar bharra na "
+"méar agat."
+
 #: featureConfigurator.toolbar.original.status
 msgid ""
-"_: The\n"
-"Using the original toolbar."
-msgstr "Úsáid an tseanbharra uirlisí."
+"_: The word 'original' is chosen deliberately to be neutral, vs. 'old' which "
+"in English at least had a negative connotation.\n"
+"Keep your original Toolbar buttons"
+msgstr "Coinnigh na cnaipí Barra Uirlisí a bhí agat"
+
+#: featureConfigurator.toolbar.original.status.explanation
+msgid "Keep any custom toolbar buttons in addition to the new Message Buttons."
+msgstr ""
+"Coinnigh aon chnaipí saincheaptha chomh maith leis na cnaipí nua "
+"teachtaireachta."
 
 #: featureConfigurator.toolbarBenefits.para
 msgid ""
-"A cleaner interface than our previous default, which leaves more room  for "
-"the richer search textbox, as well as add-ons."
+"Message actions such as reply and forward have moved from the toolbar and "
+"onto the message header itself. This ties the action buttons directly to the "
+"message, which leaves more room in the toolbar for the richer search textbox, "
+"as well as add-ons."
 msgstr ""
-"Comhéadan níos deise ná an réamhshocrú a bhíodh againn, agus dá bhrí sin "
-"tuilleadh spáis don bhosca cuardaigh níos fearr, chomh maith le breiseáin."
+"Bogadh gníomhartha teachtaireachta, mar shampla 'freagra' agus 'cuir ar aghaidh' ón bharra uirlisí go dtí ceanntásc na teachtaireachta féin.  Ceanglaíonn sé seo na gníomhartha go díreach leis an teachtaireacht, agus fágann sé tuilleadh spáis ar an mbarra uirlisí le haghaidh breiseán agus bosca cuardaigh feabhsaithe."
 
-#: featureConfigurator.toolbarAlternative.para
+#: featureConfigurator.addOn.installing
 msgid ""
-"If you like the old toolbar configuration better, you don't want to re-"
-"customize it, or you don't use the message pane in your layout."
-msgstr ""
-"Más fearr leat seanchumraíocht an bharra uirlisí, nó mura theastaíonn uait é "
-"a athshaincheapadh, nó mura úsáideann tú an pána teachtaireachta i do leagan "
-"amach."
+"_: The text to display while installing the addon.\n"
+"Installing…"
+msgstr "Á Shuiteáil…"
 
-# choice of lower case is intentional, but may be overriden if that doesn't make
-# sense because of a specific language context.
-#: featureConfigurator.useOriginalToolbar.button
+#: featureConfigurator.addOn.installed
 msgid ""
-"_: The\n"
-"use original toolbar"
-msgstr "Úsáid an seanbharra uirlisí"
+"_: The text to display after the user installs the addon from the "
+"configurator.\n"
+"Installed"
+msgstr "Suiteáilte"
 
-# choice of lower case is intentional, but may be overriden if that doesn't make
-# sense because of a specific language context.
-#: featureConfigurator.useNewToolbar.button
+#: featureConfigurator.addOn.alreadyInstalled
 msgid ""
-"_: The\n"
-"use new toolbar"
-msgstr "úsáid an barra nua uirlisí"
-
-# words here should echo the name of the mode shown in the folder pane.
-#: featureConfigurator.unifiedFolders.heading
-msgid ""
-"_: The\n"
-"Unified Folders mode"
-msgstr "Mód Fillteán Aontaithe"
-
-# shows that the current mode in the folder pane is the Unified Folders mode.
-#: featureConfigurator.unifiedFolders.smart.status
-msgid ""
-"_: This\n"
-"Using the &quot;unified folders&quot; mode."
-msgstr "Tá tú ag úsáid &quot;fillteáin aontaithe&quot;."
-
-# shows that the current mode in the folder pane is not the Unified Folders mode.
-#: featureConfigurator.unifiedFolders.all.status
-msgid ""
-"_: This\n"
-"Not using the &quot;unified folders&quot; mode."
-msgstr "Níl tú ag úsáid &quot;fillteáin aontaithe&quot;."
-
-#: featureConfigurator.unifiedFolderBenefits.para
-msgid ""
-"For users with several accounts, this view groups folders like Inbox "
-"together, so you get a consolidated view of all your mail."
-msgstr ""
-"D'úsáideoirí le cuntais éagsúla, cuireann an t-amharc seo fillteáin mar "
-"\"Bosca Isteach\" le chéile sa chaoi go bhfeiceann tú amharc comhdhlúite de "
-"do chuid ríomhphoist."
-
-#: featureConfigurator.unifiedFolderAlternative.para
-msgid ""
-"If you like splitting information across accounts then you'll prefer the "
-"&quot;All Folders&quot; mode."
-msgstr ""
-"Más mian leat faisnéis a roinnt idir cúntais, b'fhearr leat an mód &quot;Gach "
-"Fillteán&quot;."
-
-# choice of lower case is intentional, but may be overriden if that doesn't make
-# sense because of a specific language context.
-#: featureConfigurator.useUnifiedFolders.button
-msgid ""
-"_: The\n"
-"use &quot;unified folders&quot; mode"
-msgstr "Úsáid mód &quot;fillteáin aontaithe&quot;"
-
-# choice of lower case is intentional, but may be overriden if that doesn't make
-# sense because of a specific language context.
-#: featureConfigurator.useAllFolders.button
-msgid ""
-"_: The\n"
-"use &quot;all folders&quot; mode"
-msgstr "Úsáid mód &quot;gach fillteán&quot;"
+"_: The label to display when the addon is already installed.\n"
+"This extension is already installed."
+msgstr "Tá an breiseán seo suiteáilte cheana."
 
 #: featureConfigurator.collapsedHeaders.heading
-msgid "Collapsed headers"
-msgstr "Ceanntásca leacaithe"
-
-# of the paragraph before the beginning of the link to the AMO search page.
-#: featureConfigurator.headerParaBeforeLink
 msgid ""
-"_: The part\n"
-"Thunderbird 3 has improved the detailed message header view, including "
-"buttons for message-related actions. There are alternative designs available "
-"as "
+"_: The heading for the Compact Header page.\n"
+"Compact Header"
+msgstr "Ceanntásc Gonta"
+
+#: featureConfigurator.collapsedHeaders.para.weak
+msgid ""
+"_: The paragraph to display if the user hadn't previously used the collapsed "
+"headers feature.\n"
+"The compact message reader view has been moved into its own extension where "
+"it is now getting much more attention and options."
 msgstr ""
-"Tá an t-amharc mionsonraithe ar ceanntásca na dteachtaireachtaí feabhsaithe i "
-"Thunderbird 3, agus cnaipí curtha leis le haghaidh gníomhartha a bhaineann le "
-"teachtaireachtaí. Tá dearaí eile le fáil mar "
+"Cuireadh an léitheoir ceanntásc gonta ina bhreiseán féin, áit a bhfuil sé ag fáil tuilleadh suntais agus roghanna nua."
 
-# the link to the AMO search page.
-#: featureConfigurator.headerParaLinkName
+#: featureConfigurator.collapsedHeaders.para.strong
 msgid ""
-"_: The name of\n"
-"add-ons"
-msgstr "bhreiseáin"
+"_: The paragraph to display if the user had previously used the collapsed "
+"headers feature.\n"
+"We noticed that you were using the compact message reader header.  This "
+"function has moved into its own extension and we recommend you install it "
+"here if you would like to continue using it."
+msgstr ""
+"Thugamar faoi deara go raibh tú ag baint úsáide as an léitheoir ceanntásc gonta.  Bogadh an fheidhm seo go dtí a bhreiseán féin, agus molaimid duit an breiseán seo a shuiteáil más mian leat an fheidhm a úsáid amach anseo."
 
-# the paragraph after the link to the AMO search page.
-#: featureConfigurator.headerParaAfterLink
+#: featureConfigurator.collapsedHeaders.install
 msgid ""
-"_: The part of\n"
-"."
-msgstr "."
+"_: The text for the button that will install the Compact Headers addon.\n"
+"Install Compact Header…"
+msgstr "Suiteáil Ceanntásc Gonta…"
+
+#: featureConfigurator.folderColumns.heading
+msgid ""
+"_: The heading for the Folder Columns page.\n"
+"Advanced Folder Columns"
+msgstr ""
+"Colúin Fhillteáin Sa Bhreis"
+
+#: featureConfigurator.folderColumns.para.weak
+msgid ""
+"_: The paragraph to display if the user hadn't previously used the folder "
+"columns feature.\n"
+"The Extra Folder Columns extension replaces what was initially an advanced "
+"preference.  To keep tabs on the exact count of messages and disk space each "
+"folder is using you'll want to install this extension."
+msgstr ""
+
+#: featureConfigurator.folderColumns.para.strong
+msgid ""
+"_: The paragraph to display if the user had previously used the folder "
+"columns feature.\n"
+"We noticed that you were using the Advanced Folder columns.  This feature has "
+"moved into its own extension, and we recommend you install here."
+msgstr ""
+"Thugamar faoi deara go raibh tú ag baint úsáid as na colúin bhreise fhillteán. Bogadh an ghné seo go dtí a bhreiseán féin, agus molaimid duit é a shuiteáil anseo."
+
+#: featureConfigurator.folderColumns.install
+msgid ""
+"_: The text for the button that will install the Extra Folder Columns addon.\n"
+"Install Extra Columns…"
+msgstr "Suiteáil Colúin Bhreise…"
+
+#: featureConfigurator.autoSync.heading
+msgid ""
+"_: The heading for the Disk space page.\n"
+"Disk space"
+msgstr "Spás diosca"
+
+#: featureConfigurator.autoSync.para
+msgid ""
+"_: The paragraph that explains why the user would want to turn on autosync.\n"
+"This new version of &brandShortName; comes with a new and better search "
+"functionality.  To experience this new search you'll need to synchronize your "
+"email messages."
+msgstr ""
+
+#: featureConfigurator.autoSync.on
+msgid ""
+"_: The label for the radio button for synchronizing all the accounts.\n"
+"Synchronize"
+msgstr "Sioncrónaigh"
+
+#: featureConfigurator.autoSync.on.explanation
+msgid "You'll see faster message loading and better search results."
+msgstr ""
+"Luchtóidh do chuid teachtaireachtaí níos tapúla agus gheobhaidh tú torthaí "
+"níos fearr ar do chuardaigh."
+
+#: featureConfigurator.autoSync.off
+msgid ""
+"_: The label for the radio button that will synchronize none of the "
+"accounts.\n"
+"Do not Synchronize"
+msgstr "Ná Sioncrónaigh"
+
+#: featureConfigurator.autoSync.off.explanation
+msgid "This will mean slower message loading and incomplete search results."
+msgstr ""
+"Luchtóidh do chuid teachtaireachtaí níos moille agus beidh torthaí níos measa "
+"ar do chuardaigh."
+
+#: featureConfigurator.autoSync.some
+msgid ""
+"_: The label for the radio button that will let you customize the synchronize "
+"for each account.\n"
+"Per Account Synchronization"
+msgstr "Sioncrónú de réir Cuntas"
+
+#: featureConfigurator.autoSync.some.explanation
+msgid "Customize your synchronization needs per account and folder."
+msgstr ""
+"Roghnaigh socruithe sioncrónaithe ar leith ar gach cuntas agus fillteán."
+
+#: featureConfigurator.diskSpace.currentSize
+msgid ""
+"_: The label for the current amount of disk space your accounts are "
+"consuming.\n"
+"Your current total email usage:"
+msgstr "Úsáid iomlán ríomhphoist faoi láthair:"
+
+#: featureConfigurator.diskSpace.freeSpace
+msgid ""
+"_: The label for the current amount of free space available on your hard "
+"disk.\n"
+"Free Space:"
+msgstr "Spás Saor:"
+
+#: featureConfigurator.diskSpace.requireSpace
+msgid ""
+"_: The label for the required amount of free space to synchronize all of your "
+"IMAP accounts.\n"
+"Required:"
+msgstr "Riachtanach:"
+
+#: featureConfigurator.diskSpace.warning
+msgid ""
+"_: The label shown when your estimated available hard disk space if you chose "
+"autosync would be less than 50MB or if we estimate turning on autosync would "
+"use more than 50% of your free space.\n"
+"You're running low on space!"
+msgstr "Tá an diosca ag éirí lán!"
+
+#: featureConfigurator.previousButton previousButton.label
+msgid "Previous"
+msgstr "Siar"
+
+#: featureConfigurator.nextButton nextButton.label
+msgid "Next"
+msgstr "Ar Aghaidh"
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -10171,13 +10190,25 @@ msgstr ""
 "(tabharfar neamhaird ar shocruithe ionchódú na gcarachtar sna "
 "teachtaireachtaí féin agus ar bhrath uathoibríoch)"
 
-#: folderRebuildSummaryFile.label folderRebuildSummaryFile.accesskey
-msgid "&Rebuild Index"
-msgstr "&Atóg an tInnéacs"
-
-#: folderRebuildSummaryFileTip.label
-msgid "Rebuild Summary File"
+#: folderRebuildSummaryFileTip2.label
+msgid "Rebuild Summary File Index"
 msgstr "Atóg an Comhad Achoimre"
+
+#: folderRebuildSummaryFile2.label folderRebuildSummaryFile2.accesskey
+msgid "&Repair Folder"
+msgstr "&Deisigh an Fillteán"
+
+#: folderRebuildSummaryFile.explanation
+msgid ""
+"Sometimes the folder index (.msf) file becomes damaged and messages may "
+"appear missing or deleted messages continue showing; repairing the folder may "
+"fix these issues."
+msgstr ""
+"Uaireanta, déantar dochar don chomhad innéacs (.msf) san fhillteán sa chaoi nach bhfeicfidh tú teachtaireachtaí áirithe agus feicfidh tú cinn eile tar éis dóibh a bheith scriosta.  Is féidir na fadhbanna seo a réiteach tríd an fillteán a dheisiú."
+
+#: folderIncludeInGlobalSearch.label folderIncludeInGlobalSearch.accesskey
+msgid "Include messages in this folder in &Global Search results"
+msgstr "Cuir teachtaireachtaí as an bhfillteán seo san áireamh sa &Chuardach Cuimsitheach"
 
 #: retention.label
 msgid "Retention Policy"
@@ -10207,9 +10238,9 @@ msgstr "Coim&eád teachtaireachtaí marcáilte i gcónaí"
 msgid "Synchronization"
 msgstr "Sioncrónú"
 
-#: folderCheckForNewMessages.label folderCheckForNewMessages.accesskey
-msgid "&Check this folder for new messages"
-msgstr "Lorg tea&chtaireachtaí nua san fhillteán seo"
+#: folderCheckForNewMessages2.label folderCheckForNewMessages2.accesskey
+msgid "When getting new messages for this a&ccount, always check this folder"
+msgstr "Sei&ceáil an fillteán seo i gcónaí agus teachtaireachtaí nua á bhfáil don chuntas seo"
 
 #: offlineFolder.check.label offlineFolder.check.accesskey
 msgid "&Select this folder for offline use"
@@ -11263,9 +11294,10 @@ msgid ""
 "someone could steal your password."
 msgstr ""
 "Dealraíonn sé nach dtacaíonn freastalaí IMAP %S le focail fhaire chriptithe. "
-"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
-"'Focal faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
-"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as 'Focal "
+"faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an "
+"Chuntais | Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl "
+"anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
 
 # # @name IMAP_AUTH_MECH_NOT_SUPPORTED
 # # @loc None
@@ -11288,7 +11320,9 @@ msgid ""
 "All login mechanisms for %S failed. Please check the password or change the "
 "'Authentication method' in the 'Account Settings | Server settings'."
 msgstr ""
-"Theip ar gach modh logála isteach ar %S.  Seiceáil an focal faire nó athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Socruithe an fhreastalaí'."
+"Theip ar gach modh logála isteach ar %S.  Seiceáil an focal faire nó athraigh "
+"an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Socruithe an "
+"fhreastalaí'."
 
 # # @name IMAP_AUTH_GSSAPI_FAILED
 # # @loc None
@@ -12284,10 +12318,12 @@ msgid ""
 "If it used to work and now suddenly fails, this is a common scenario how "
 "someone could steal your password."
 msgstr ""
-"Dealraíonn sé nach dtacaíonn an freastalaí POP3 seo le focail fhaire chriptithe. "
-"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
-"'Focal faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
-"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
+"Dealraíonn sé nach dtacaíonn an freastalaí POP3 seo le focail fhaire "
+"chriptithe. Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail "
+"as 'Focal faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i "
+"'Socruithe an Chuntais | Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe "
+"seo ach níl anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire "
+"a ghoid."
 
 # # @name POP3_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
 # # @loc None
@@ -12299,9 +12335,9 @@ msgid ""
 "used to work and now suddenly fails, please contact your email administrator "
 "or provider."
 msgstr ""
-"Dealraíonn sé nach dtacaíonn an freastalaí POP3 seo le focail fhaire chriptithe. "
-"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
-"'Gnáthfhocal faire' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Dealraíonn sé nach dtacaíonn an freastalaí POP3 seo le focail fhaire "
+"chriptithe. Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail "
+"as 'Gnáthfhocal faire' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
 "Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, téigh "
 "i dteagmháil le do riarthóir ríomhphoist nó le do sholáthraí seirbhíse."
 
@@ -12313,9 +12349,9 @@ msgid ""
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
 "| Server settings'."
 msgstr ""
-"Ní ghlacann an freastalaí POP3 seo le focail fhaire ghnáth-théacs. Bain triail as "
-"'Focal faire criptithe' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
-"Socruithe an fhreastalaí'."
+"Ní ghlacann an freastalaí POP3 seo le focail fhaire ghnáth-théacs. Bain "
+"triail as 'Focal faire criptithe' mar 'Modh fíordheimhnithe' i 'Socruithe an "
+"Chuntais | Socruithe an fhreastalaí'."
 
 # Authentication server caps and pref don't match
 # # @name POP3_AUTH_MECH_NOT_SUPPORTED
@@ -12325,8 +12361,8 @@ msgid ""
 "The server does not support the selected authentication method. Please change "
 "the 'Authentication method' in the 'Account Settings | Server settings'."
 msgstr ""
-"Ní thacaíonn an freastalaí leis an modh roghnaithe fíordheimhnithe.  "
-"Athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Socruithe an "
+"Ní thacaíonn an freastalaí leis an modh roghnaithe fíordheimhnithe.  Athraigh "
+"an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Socruithe an "
 "fhreastalaí'."
 
 # Status - Could not log in to GSSAPI, and it was the only method
@@ -13134,9 +13170,10 @@ msgid ""
 "someone could steal your password."
 msgstr ""
 "Dealraíonn sé nach dtacaíonn freastalaí SMTP %S le focail fhaire chriptithe. "
-"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
-"'Focal faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
-"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
+"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as 'Focal "
+"faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an "
+"Chuntais | Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl "
+"anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
 
 # # @name NS_ERROR_SMTP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
 #: 12595
@@ -13192,7 +13229,8 @@ msgid ""
 "Server (SMTP)'."
 msgstr ""
 "Ní thacaíonn freastalaí SMTP %S leis an modh roghnaithe fíordheimhnithe.  "
-"Athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí Amach (SMTP)'."
+"Athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí "
+"Amach (SMTP)'."
 
 # # @name NS_ERROR_SMTP_AUTH_NOT_SUPPORTED
 #: 12600
@@ -13202,8 +13240,11 @@ msgid ""
 "'Authentication method' to 'None' in the 'Account Settings | Outgoing Server "
 "(SMTP)' or contact your email service provider for instructions."
 msgstr ""
-"Níorbh fhéidir fíordheimhniú le freastalaí SMTP %S. Ní thacaíonn sé le fíordheimhniú (SMTP-AUTH) ach tá tú ag iarraidh fíordheimhniú a úsáid.  Bain triail as 'Gan sonrú' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí Amach "
-"(SMTP)' nó téigh i dteagmháil le do sholáthraí seirbhíse ríomhphoist le haghaidh treoracha."
+"Níorbh fhéidir fíordheimhniú le freastalaí SMTP %S. Ní thacaíonn sé le "
+"fíordheimhniú (SMTP-AUTH) ach tá tú ag iarraidh fíordheimhniú a úsáid.  Bain "
+"triail as 'Gan sonrú' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
+"Freastalaí Amach (SMTP)' nó téigh i dteagmháil le do sholáthraí seirbhíse "
+"ríomhphoist le haghaidh treoracha."
 
 # # Strings use for the save message dialog shown when the user close a message compose window
 #: saveDlogTitle SaveDialogTitle
@@ -14355,6 +14396,16 @@ msgstr "Bog &Arís"
 msgid "&Ignore Thread"
 msgstr "Tabhair Neamha&ird ar an Snáithe"
 
+# Quick Search Bar
+# This is actually the key used for the global message search box; we have
+# not changed
+#
+#: killThreadMenu.key killSubthreadMenu.key quickSearchCmd.key
+msgid ""
+"_: \n"
+"k"
+msgstr "k"
+
 #: killSubthreadMenu.label killSubthreadMenu.accesskey
 msgid "Ignore &Subthread"
 msgstr "Tabhair Neamhaird ar an bh&Foshnáithe"
@@ -14561,14 +14612,6 @@ msgstr "Ar Aghaidh"
 #: archiveButton.label
 msgid "Archive"
 msgstr "Cuir sa Chartlann"
-
-#: nextButton.label
-msgid "Next"
-msgstr "Ar Aghaidh"
-
-#: previousButton.label
-msgid "Previous"
-msgstr "Siar"
 
 # Toolbar
 #: backButton1.label
@@ -14939,6 +14982,71 @@ msgstr "C&uir ar Aghaidh mar Iatáin"
 msgid "&Save As…"
 msgstr "&Sábháil Mar…"
 
+# Thread Pane Column Picker
+# This option in the thread pane column picker causes us to reset the
+# customizations for the thread pane columns in this folder to their default.
+#
+#: columnPicker.resetToInbox.label
+msgid ""
+"_: \n"
+"Reset columns to default"
+msgstr "Fill ar cholúin réamhshocraithe"
+
+# This option in the thread pane column picker pops up a sub-menu containing
+# the "columnPicker.applyToFolder.label" and
+# "columnPicker.applyToFolderAndChildren.label" options.  This item indicates
+# a desire to apply the currently displayed set of columns to some other
+# folder(s).  The sub-menu items indicate whether we want to apply it to just
+# a folder or also its children.
+#
+#: columnPicker.applyTo.label
+msgid ""
+"_: \n"
+"Apply columns to…"
+msgstr "Cuir colúin i bhfeidhm ar…"
+
+# This option in the thread pane column picker is found on a sub-menu beneath
+# the "columnPicker.applyTo.label" alongside
+# "columnPicker.applyToFolderAndChildren.label".  It indicates a desire to
+# apply the currently display thread pane column settings to a single folder
+# that the user selects using the same widget as the move to/copy to
+# mechanism (via a series of popups).
+#
+#: columnPicker.applyToFolder.label
+msgid ""
+"_: \n"
+"Folder…"
+msgstr "Fillteán…"
+
+# This option in the thread pane column picker is found on a sub-menu beneath
+# the "columnPicker.applyTo.label" alongside
+# "columnPicker.applyToFolder.label".  It indicates a desire to
+# apply the currently display thread pane column settings to a folder and all
+# of its descendents.  The user selects the folder using the same widget as the
+# move to/copy to mechanism (via a series of popups).
+#
+#: columnPicker.applyToFolderAndChildren.label
+msgid ""
+"_: \n"
+"Folder and its children…"
+msgstr "Fillteán agus fofhillteáin…"
+
+# This is used in the folder selection widget for the
+# "columnPicker.applyToFolder.label" and
+# "columnPicker.applyToFolderAndChildren.label" menu options.  Whenever
+# a folder has children, it results in a menu popup; the first menu item
+# in that popup is given this label to indicate that that folder should be
+# selected.  For example, if folder "A" has two children, "B" and "C", then
+# when the user hovers over "A", a new popup menu will be displayed whose
+# items are "This folder", "B", and "C".  This is the equivalent of the
+# "File here" option for the move to/copy to widge.t
+#
+#: columnPicker.thisFolder.label
+msgid ""
+"_: \n"
+"This folder"
+msgstr "An fillteán seo"
+
 #: contextPlay.label contextPlay.accesskey play.label play.accesskey
 msgid "&Play"
 msgstr "&Seinn"
@@ -14999,14 +15107,37 @@ msgstr "Déan Neamhaird De"
 msgid "Send Receipt"
 msgstr "Seol Admháil Léite"
 
-# Message Header Button Box (to show hidden email addresses)
-#: more.label
-msgid "more"
-msgstr "tuilleadh"
+# This is the base of the empty text for the global search box.  We replace
+# #1 with the contents of the appropriate
+# searchAllMessages.keyLabel2.* value for the platform.
+# The goal is to convey to the user that typing in the box will allow them
+# to search for messages globally and that there is a hotkey they can press
+# to get to the box faster.  If the global indexer is disabled, the search
+# box will be collapsed and the user will never see this message.
+#
+#: searchAllMessages.label.base
+msgid ""
+"_: \n"
+"Search all messages… #1"
+msgstr "Cuardaigh gach teachtaireacht… #1"
 
-#: searchAllMessages.label
-msgid "Search all messages"
-msgstr "Cuardaigh gach teachtaireacht"
+# LOCALIZATION NOTE (searchAllMessages.keyLabel.nonmac):
+# The description of the key-binding to get into the global search box on
+# windows and linux (which use the control key).  We use the key defined in
+# the quickSearchCmd.key entity defined above, the letter should match it.
+#
+#: searchAllMessages.keyLabel2.nonmac
+msgid "&lt;Ctrl+K&gt;"
+msgstr "&lt;Ctrl+K&gt;"
+
+# LOCALIZATION NOTE (searchAllMessages.keyLabel.mac):
+# The description of the key-binding to get into the global search box on mac
+# systems.  We use the key defined in the quickSearchCmd.key entity defined
+# above, the letter should match it.
+#
+#: searchAllMessages.keyLabel2.mac
+msgid "&lt;&#x2318;K&gt;"
+msgstr "&lt;&#x2318;K&gt;"
 
 # Message Header Context Menu
 #: AddToAddressBook.label AddToAddressBook.accesskey
@@ -16145,6 +16276,18 @@ msgstr "Comhad Folamh"
 msgid "The file %S is empty."
 msgstr "Tá comhad %S folamh."
 
+# LOCALIZATION NOTE (headerMoreAddrs): semicolon separated list of plural
+# forms of the word "more" as used after the number of addresses
+# currently hidden while displaying a header such as "to", "cc", or "bcc"
+# in the message header box.  English has two identical forms here, so it will
+# construct strings that look like (for example) "1 more" or "20 more".
+# <http://developer.mozilla.org/en/docs/Localization_and_Plurals> has details
+# on this mechanism.
+#: headerMoreAddrs
+msgid "#1 more;#1 more"
+msgstr ""
+"Ceann amháin eile;#1 cheann eile;#1 cinn eile;#1 gcinn eile;#1 ceann eile"
+
 # second person direct object pronoun; used in the collapsed header view if
 # the user is in the To or Cc field of a message
 #: headertoFieldYou headerfromFieldYou headerreply-toFieldYou headerccFieldYou
@@ -16167,7 +16310,7 @@ msgstr ""
 "Stop %1$S an suíomh (%2$S) ó bheith ag iarraidh ort bogearraí a shuiteáil ar "
 "do ríomhaire."
 
-#: xpinstallPromptAllowButton can
+#: xpinstallPromptAllowButton lwthemeInstallRequest.allowButton can
 msgid "Allow"
 msgstr "Ceadaigh"
 
@@ -16220,6 +16363,67 @@ msgstr "Iontráil &Focal Faire Nua"
 #: extensions.{972ce4c6-7e08-4474-a285-3208198ce6fd}.description
 msgid "The default theme."
 msgstr "An téama réamhshocraithe."
+
+# LOCALIZATION NOTE (threadPane.columnPicker.confirmFolder.noChildren.title):
+# When the user selects a folder to apply the currently displayed columns to
+# via the "columnPicker.applyToFolder.label" menu option, this is the title of
+# the confirmation dialog used to verify they selected the correct folder.  This
+# is the case in which we apply the columns only to the folder and not to any of
+# its children.
+# LOCALIZATION NOTE (threadPane.columnPicker.confirmFolder.withChildren.title):
+# When the user selects a folder to apply the currently displayed columns to via
+# the "columnPicker.applyToFolderAndChildren.label" menu option, this is the
+# title of the confirmation dialog used to verify they selected the correct
+# folder.  This is the case in which we apply the columns to the folder and all
+# of its children.
+#: threadPane.columnPicker.confirmFolder.noChildren.title
+#: threadPane.columnPicker.confirmFolder.withChildren.title
+msgid "Apply Changes?"
+msgstr "Cuir Athruithe i bhFeidhm?"
+
+# LOCALIZATION NOTE (threadPane.columnPicker.confirmFolder.noChildren.message):
+# When the user selects a folder to apply the currently displayed columns to
+# via the "columnPicker.applyToFolder.label" menu option, this is the text of
+# the confirmation dialog used to verify they selected the correct folder.  The
+# string '%S' is replaced with the name of the folder the user selected in
+# order to help them confirm they picked what they thought they picked.  This
+# is the case in which we apply the columns only to the folder and not to any of
+# its children.
+#: threadPane.columnPicker.confirmFolder.noChildren.message
+msgid "Apply the current folder's columns to %S?"
+msgstr "An bhfuil fonn ort colúin an fhillteáin reatha a chur i bhfeidhm ar %S?"
+
+# LOCALIZATION NOTE (threadPane.columnPicker.confirmFolder.withChildren.message):
+# When the user selects a folder to apply the currently displayed columns to via
+# the "columnPicker.applyToFolderAndChildren.label" menu option, this is the
+# text of the confirmation dialog used to verify they selected the correct
+# folder.  The string '%S' is replaced with the name of the folder the user
+# selected in order to help them confirm they picked what they thought they
+# picked.  This is the case in which we apply the columns to the folder and all
+# of its children.
+#: threadPane.columnPicker.confirmFolder.withChildren.message
+msgid "Apply the current folder's columns to %S and its children?"
+msgstr ""
+"An bhfuil fonn ort colúin an fhillteáin reatha a chur i bhfeidhm ar %S agus "
+"an t-ábhar atá ann?"
+
+# LOCALIZATION NOTE (lwthemeInstallRequest.message): %S will be replaced with
+# the host name of the site.
+#: lwthemeInstallRequest.message
+msgid "This site (%S) attempted to install a theme."
+msgstr "Rinne an suíomh seo (%S) iarracht téama a shuiteáil."
+
+#: lwthemePostInstallNotification.message
+msgid "A new theme has been installed."
+msgstr "Suiteáladh téama nua."
+
+#: lwthemePostInstallNotification.undoButton
+msgid "Undo"
+msgstr "Cealaigh"
+
+#: lwthemePostInstallNotification.manageButton
+msgid "Manage Themes…"
+msgstr "Bainistigh Téamaí…"
 
 #: migrationWizard.title
 msgid "Import Wizard"
@@ -19224,41 +19428,304 @@ msgstr "Earráid agus aitheantas á chruthú"
 msgid "Choose a file"
 msgstr "Roghnaigh comhad"
 
-#: searchSubject.label
-msgid "Subject filter"
-msgstr "Scagaire Ábhair"
+# The label to display for the "View... Toolbars..." menu item that controls
+# whether the quick filter bar is visible.
+#
+# The access key for the "View... Toolbars..." menu item label that controls
+# whether the quick filter bar is visible.
+#
+#: quickFilterBar.toggleBarVisibility.menu.label
+#: quickFilterBar.toggleBarVisibility.menu.accesskey
+msgid ""
+"_: \n"
+" \n"
+"&Quick Filter Bar"
+msgstr "Barra &Mearscagairí"
 
-#: searchFrom.label
-msgid "From filter"
-msgstr "Scagaire Ó"
+# The tooltip to display when hovering over the button on the tab bar that
+# toggles the visibility of the quick filter bar.
+#
+#: quickFilterBar.toggleBarVisibility.button.tooltip
+msgid ""
+"_: \n"
+"Toggle the quick filter bar"
+msgstr "Scoránaigh an barra mearscagairí"
 
-#: searchFromOrSubject.label
-msgid "Subject or From filter"
-msgstr "Scagaire Ábhair nó Ó"
+# The tooltip to display when the user hovers over the sticky button
+# (currently displayed as a push-pin).  When active, the sticky button
+# causes the current filter settings to be retained when the user changes
+# folders or opens new tabs.  (When inactive, only the state of the text
+# filters are propagated between folder changes and when opening new tabs.)
+#
+#: quickFilterBar.sticky.tooltip
+msgid ""
+"_: \n"
+"Keep filters applied when switching folders"
+msgstr ""
 
-#: searchRecipient.label
-msgid "To or Cc filter"
-msgstr "Scagaire Chuig nó Cc"
+# The text to display on the quick filter bar, labeling it.  This should
+# ideally be as short as possible.
+#
+#: quickFilterBar.barLabel.label
+msgid ""
+"_: \n"
+"Quick Filter:"
+msgstr "Mearscagaire:"
 
-#: searchRecipientOrSubject.label
-msgid "Subject, To, or Cc filter"
-msgstr "Scagaire Ábhair, Chuig nó Cc"
+# The label for the filter button that causes us to filter results to only
+# include unread messages.
+#
+#: quickFilterBar.unread.label
+msgid ""
+"_: \n"
+"Unread"
+msgstr "Neamhléite"
 
-#: searchMsgBody.label
-msgid "Message body filter"
-msgstr "Scagaire coirp theachtaireachta"
+# The tooltip for the filter button that causes us to filter results to only
+# include unread messages.
+#
+#: quickFilterBar.unread.tooltip
+msgid ""
+"_: \n"
+"Show only unread messages"
+msgstr "Taispeáin teachtaireachtaí neamhléite amháin"
 
-#: saveAsVirtualFolder.label
-msgid "Save search as virtual folder"
-msgstr "Sábháil an cuardach mar fhillteán fíorúil"
+# The label for the filter button that causes us to filter results to only
+# include messages that have been starred/flagged.
+#
+#: quickFilterBar.starred.label
+msgid ""
+"_: \n"
+"Starred"
+msgstr "Marcáilte"
 
-#: searchSubjectFromOrRecipient.label
-msgid "Subject, From, or Recipient filter"
-msgstr "Scagaire Ábhair, Ó nó Faighteoir"
+# The tooltip for the filter button that causes us to filter results to only
+# include messages that have been starred/flagged.
+#
+#: quickFilterBar.starred.tooltip
+msgid ""
+"_: \n"
+"Show only starred messages"
+msgstr "Taispeáin teachtaireachtaí marcáilte amháin"
 
-#: searchEntireMessage.label
-msgid "Entire message filter"
-msgstr "Scagaire teachtaireachta iomláine"
+# The label for the filter button that causes us to filter results to only
+# include messages from contacts in one of the user's non-remote address
+# books.
+#
+#: quickFilterBar.inaddrbook.label
+msgid ""
+"_: \n"
+"Contact"
+msgstr "Teagmháil"
+
+# The tooltip for the filter button that causes us to filter results to only
+# include messages from contacts in one of the user's non-remote address
+# books.
+#
+#: quickFilterBar.inaddrbook.tooltip
+msgid ""
+"_: \n"
+"Show only messages from people in your address book"
+msgstr ""
+"Ná taispeáin ach teachtaireachtaí a tháinig ó dhaoine i mo leabhar seoltaí"
+
+# The label for the filter button that causes us to filter results to only
+# include messages with at least one tag on them.
+#
+#: quickFilterBar.tags.label
+msgid ""
+"_: \n"
+"Tags"
+msgstr "Clibeanna"
+
+# The tooltip for the filter button that causes us to filter results to only
+# include messages with at least one tag on them.
+#
+#: quickFilterBar.tags.tooltip
+msgid ""
+"_: \n"
+"Show only messages with tags on them"
+msgstr "Ná taispeáin ach teachtaireachtaí a bhfuil clibeanna orthu"
+
+# The label for the filter button that causes us to filter results to only
+# include messages with attachments.
+#
+#: quickFilterBar.attachment.label
+msgid ""
+"_: \n"
+"Attachment"
+msgstr "Iatán"
+
+# The tooltip for the filter button that causes us to filter results to only
+# include messages with attachments.
+#
+#: quickFilterBar.attachment.tooltip
+msgid ""
+"_: \n"
+"Show only messages with attachments"
+msgstr "Ná taispeáin ach teachtaireachtaí a bhfuil iatáin acu"
+
+# This is used to populate the results box; it either displays the
+# number of messages found using this string, that there are no messages
+# (using quickFilterBar.resultsLabel.none), or the box is hidden.
+# This is a pluralizable string used to express the number of messages in
+# the results.  We replace the '#1' with the number of messages, otherwise
+# see the following URL For more information:
+# https://developer.mozilla.org/En/Localization_and_Plurals
+#
+#: quickFilterBar.resultsLabel.some.formatString
+msgid ""
+"_: \n"
+"#1 message;#1 messages"
+msgstr ""
+"#1 teachtaireacht;#1 theachtaireacht;#1 theachtaireacht;#1 dteachtaireacht;#1 "
+"teachtaireacht"
+
+# The contents of the results box when there is a filter active but there
+# are no messages matching the filter.
+#
+#: quickFilterBar.resultsLabel.none
+msgid ""
+"_: \n"
+"No results"
+msgstr "Gan torthaí"
+
+# The minimum width, in pixels, of the results label.  Please size this
+# so that a 3 or 4 digit number of messages in the results can be displayed
+# without growing the size of the box.  You can tell this has been
+# accomplished if adding a filter constraint that changes the displayed
+# string to your "no results" string does not result in any changes to the
+# size of the text box to the label's right.  (If your string for
+# "no results" is longer than the "#### messages" case, then size for that.
+#
+#: quickFilterBar.resultsLabel.minWidth
+msgid ""
+"_: \n"
+"100"
+msgstr "100"
+
+# This is the base of the empty text for the text search box.  We replace
+# #1 with the contents of the appropriate
+# quickFilterBar.textbox.emptyText.keyLabel.* value for the platform.
+# The goal is to convey to the user that typing in the box will filter
+# the messages and that there is a hotkey they can press to get to the
+# box faster.
+#
+#: quickFilterBar.textbox.emptyText.base
+msgid ""
+"_: \n"
+"Filter these messages... #1"
+msgstr ""
+"Scag na teachtaireachtaí seo... #1"
+
+# The description of the key-binding to get into the box on windows and
+# linux (which use the control key).  We use the keybinding for cmd_find
+# used by the find-in-message mechanism, so that's the letter to indicate
+# if you don't use 'f' for your localization.
+#
+#: quickFilterBar.textbox.emptyText.keyLabel.nonmac
+msgid ""
+"_: \n"
+"&lt;Ctrl+F&gt;"
+msgstr "&lt;Ctrl+F&gt;"
+
+# LOCALIZATION NOTE (quickFilterBar.textbox.emptyText.keyLabel.mac):
+# The description of the key-binding to get into the box on mac systems.
+# We use the keybinding for cmd_find used by the find-in-message mechanism,
+# so that's the letter to indicate  if you don't use 'f' for your
+# localization.
+#
+#: quickFilterBar.textbox.emptyText.keyLabel1.mac
+msgid "&lt;&#x2318;F&gt;"
+msgstr "&lt;&#x2318;F&gt;"
+
+# The number of pixels for the ideal width of the quick filter box textbox.
+# Choose this value so that the emptyText fits nicely with a little bit of
+# extra whitespace.
+#
+#: quickFilterBar.textbox.idealWidth
+msgid ""
+"_: \n"
+"320"
+msgstr "320"
+
+# The minimum width of the quick filter textbox in pixels.  This is the size
+# which we should refuse to flex below.  When we hit this size, the buttons
+# with labels will have their labels collapsed.
+#
+#: quickFilterBar.textbox.minWidth
+msgid ""
+"_: \n"
+"280"
+msgstr "280"
+
+# This label explains what the sender/recipients/subject/body buttons do.
+# This string should ideally be kept short because the label and the text
+# filter buttons share their bar (that appears when there is text in the text
+# filter box) with the list of tags when the tag filter is active, and the
+# tag sub-bar wants as much space as possible.  (Overflow is handled by an
+# arrow scroll box.)
+#
+#: quickFilterBar.textFilter.explanation.label
+msgid ""
+"_: \n"
+"Filter messages by:"
+msgstr "Scag teachtaireachtaí de réir:"
+
+# The button label that toggles whether the text filter searches the message
+# sender for the string.
+#
+#: quickFilterBar.textFilter.sender.label
+msgid ""
+"_: \n"
+"Sender"
+msgstr "Seoltóir"
+
+# The button label that toggles whether the text filter searches the message
+# recipients (to, cc) for the string.
+#
+#: quickFilterBar.textFilter.recipients.label
+msgid ""
+"_: \n"
+"Recipients"
+msgstr "Faighteoirí"
+
+# The button label that toggles whether the text filter searches the message
+# subject for the string.
+#
+#: quickFilterBar.textFilter.subject.label
+msgid ""
+"_: \n"
+"Subject"
+msgstr "Ábhar"
+
+# The button label that toggles whether the text filter searches the message
+# body for the string.
+#
+#: quickFilterBar.textFilter.body.label
+msgid ""
+"_: \n"
+"Body"
+msgstr "Corp"
+
+# The first line of the panel popup that tells the user we found no matches
+# but we can convert to a global search for them.
+#
+#: quickFilterBar.glodaUpsell.continueSearch
+msgid ""
+"_: \n"
+"Continue this search across all folders"
+msgstr "Lean ar aghaidh leis an gcuardach seo i ngach fillteán"
+
+# The second line of the panel popup that tells the user we found no matches.
+# This line will have #1 replaced with what the user has typed so far.
+#
+#: quickFilterBar.glodaUpsell.pressEnterAndCurrent
+msgid ""
+"_: \n"
+"Press 'Enter' again to continue your search for: #1"
+msgstr ""
+"Brúigh 'Enter' arís chun cuardach eile a dhéanamh ar: #1"
 
 # To make mapit buttons to disappear in the addressbook, specify empty string.  For example:
 # mail.addr_book.mapit_url.format=
@@ -20381,6 +20848,50 @@ msgid ""
 msgstr ""
 "&Cuardach ar líne (beidh na torthaí cothrom le dáta le haghaidh fillteán IMAP "
 "agus Nuachta ach beidh oscailt an fhillteáin níos moille)"
+
+#
+# The following are used by the windows live mail import code to display status/error
+# and informational messages
+#
+# Short name of import module
+# # @name WMIMPORT_NAME
+# # @loc None
+# # LOCALIZATION NOTE (2000): DONT_TRANSLATE
+#: 2000
+msgid "Windows Live Mail"
+msgstr "Ríomhphost Windows Live"
+
+# Description of import module
+# # @name WMIMPORT_DESCRIPTION
+# # @loc None
+# # LOCALIZATION NOTE (2001): In this item, don't translate "Windows Live Mail"
+#: 2001
+msgid "Windows Live Mail settings"
+msgstr "Socruithe Ríomhphoist Windows Live"
+
+# Success message
+# # @name WMIMPORT_MAILBOX_SUCCESS
+# # @loc None
+# # LOCALIZATION NOTE (2002): In this item, don't translate "%1$S" or "%2$d"
+# # The variable %1$S will contain the name of the Mailbox
+# # The variable %2$d will contain the number of messages
+#: 2002
+msgid "Mailbox %1$S, imported %2$d messages"
+msgstr "Bosca ríomhphoist %1$S, iompórtáladh %2$d teachtaireacht"
+
+# Default name of imported addressbook
+# # @name WMIMPORT_DEFAULT_NAME
+# # @loc None
+#: 2006
+msgid "Windows Live Mail Address Book"
+msgstr "Leabhar Seoltaí Ríomhphoist Windows Live"
+
+# Autofind description
+# # @name WMIMPORT_AUTOFIND
+# # @loc None
+#: 2007
+msgid "Windows Live Mail address book (windows address book)"
+msgstr "Leabhar seoltaí ríomhphoist Windows Live (leabhar seoltaí Windows)"
 
 # The following two strings are used when prompting the user for authentication
 # information:
