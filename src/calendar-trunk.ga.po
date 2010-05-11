@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-04 10:23-0500\n"
+"POT-Creation-Date: 2010-05-09 10:04-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -729,7 +729,7 @@ msgstr "100&percnt; Críochnaithe"
 msgid "1"
 msgstr "11"
 
-#: priority.level.none
+#: priority.level.none newevent.todoStatus.none.label
 msgid "Not specified"
 msgstr "Gan sonrú"
 
@@ -1092,15 +1092,21 @@ msgstr "Cuir in iúl don lucht freastail"
 msgid "&Status"
 msgstr "&Stádas"
 
-#: newevent.status.none.label newevent.status.none.accesskey
+#: newevent.eventStatus.none.label newevent.eventStatus.none.accesskey
 #: event.menu.options.priority.notspecified.label
 #: event.menu.options.priority.notspecified.accesskey
 msgid "N&ot specified"
 msgstr "Gan s&onrú"
 
-#: newevent.status.cancelled.label newevent.status.cancelled.accesskey
-msgid "Ca&ncelled"
+#: newevent.eventStatus.cancelled.label
+#: newevent.eventStatus.cancelled.accesskey
+msgid "Ca&nceled"
 msgstr "&Cealaithe"
+
+#: newevent.todoStatus.cancelled.label eventStatusCancelled todoStatusCancelled
+#: taskDetailsStatusCancelled
+msgid "Canceled"
+msgstr "Cealaithe"
 
 #: newevent.status.tentative.label newevent.status.tentative.accesskey
 msgid "&Tentative"
@@ -1534,10 +1540,6 @@ msgstr "0 nóiméad roimhe"
 msgid "5 minutes before"
 msgstr "5 nóiméad roimhe"
 
-#: event.reminder.10minutes.before.label
-msgid "10 minutes before"
-msgstr "10 nóiméad roimhe"
-
 #: event.reminder.15minutes.before.label
 msgid "15 minutes before"
 msgstr "15 nóiméad roimhe"
@@ -1545,10 +1547,6 @@ msgstr "15 nóiméad roimhe"
 #: event.reminder.30minutes.before.label
 msgid "30 minutes before"
 msgstr "30 nóiméad roimhe"
-
-#: event.reminder.45minutes.before.label
-msgid "45 minutes before"
-msgstr "45 nóiméad roimhe"
 
 #: event.reminder.1hour.before.label
 msgid "1 hour before"
@@ -1558,13 +1556,9 @@ msgstr "Uair an chloig roimhe"
 msgid "2 hours before"
 msgstr "2 uair an chloig roimhe"
 
-#: event.reminder.5hours.before.label
-msgid "5 hours before"
-msgstr "5 uaire an chloig roimhe"
-
-#: event.reminder.15hours.before.label
-msgid "15 hours before"
-msgstr "15 uaire an chloig roimhe"
+#: event.reminder.12hours.before.label
+msgid "12 hours before"
+msgstr "12 uair an chloig roimhe"
 
 #: event.reminder.1day.before.label
 msgid "1 day before"
@@ -2273,20 +2267,14 @@ msgstr "Cliceáil anseo i gcomhair mionsonraí"
 msgid "Event"
 msgstr "Teagmhas"
 
-# ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
-# cmd_cut_accesskey is sedtweaked
-#: itemMenuAccesskeyEvent buttons.occurrence.accesskey SOCKSport.accesskey
-msgid "t"
-msgstr "t"
+#: itemMenuAccesskeyEvent2 itemMenuAccesskeyTask2 day.6.Ddd.accesskey
+#: sunbird.find.key
+msgid "F"
+msgstr "F"
 
 #: itemMenuLabelTask lightning.toolbar.newtask.label
 msgid "Task"
 msgstr "Tasc"
-
-#: itemMenuAccesskeyTask day.3.Ddd.accesskey event.new.todo.key
-#: event.new.todo.accesskey event.delete.tasks.accesskey
-msgid "T"
-msgstr "T"
 
 #: emailSubjectReply
 msgid "Re: %1$S"
@@ -2444,9 +2432,19 @@ msgstr "Suíomh: "
 msgid "Organizer: "
 msgstr "Eagraí: "
 
+#: calendar.invitations.list.attendee.text
+msgid "Attendee: "
+msgstr "Rannpháirtí: "
+
 #: calendar.invitations.list.none.text None imipNoIdentity
 msgid "None"
 msgstr "Gan sonrú"
+
+# ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
+# cmd_cut_accesskey is sedtweaked
+#: buttons.occurrence.accesskey SOCKSport.accesskey
+msgid "t"
+msgstr "t"
 
 # Ctrl+F, Ctrl+G as find, find again transcend language?
 # also "Foirmeacha" on "Eolas Leathanaigh"  (so no tweaking needed)
@@ -2558,10 +2556,6 @@ msgstr "Féilire Gan Teideal"
 #: statusConfirmed
 msgid "Confirmed"
 msgstr "Cinntithe"
-
-#: statusCancelled taskDetailsStatusCancelled
-msgid "Cancelled"
-msgstr "Cealaithe"
 
 #: mediumPriority
 msgid "Medium"
@@ -3075,7 +3069,7 @@ msgstr "Cathain"
 
 #: htmlTaskCompleted
 msgid "%1$S (completed)"
-msgstr ""
+msgstr "%1$S (críochnaithe)"
 
 #: addCategory pref.categories.add.title
 msgid "Add Category"
@@ -3707,14 +3701,15 @@ msgstr "lá"
 msgid "M"
 msgstr "B"
 
+#: day.3.Ddd.accesskey event.new.todo.key event.new.todo.accesskey
+#: event.delete.tasks.accesskey
+msgid "T"
+msgstr "T"
+
 # Ctrl+h = Stair (for now, most other good ones are taken)
 #: day.5.Ddd.accesskey
 msgid "h"
 msgstr "h"
-
-#: day.6.Ddd.accesskey sunbird.find.key
-msgid "F"
-msgstr "F"
 
 #: calendar.global.units.minute
 msgid "minute"
@@ -6355,6 +6350,27 @@ msgstr "An Áise/Kolkata"
 msgid "America/Argentina/Salta"
 msgstr "Meiriceá/An Airgintín/Salta"
 
+# added with 0.1.2010i
+#: pref.timezone.America.Matamoros
+msgid "America/Matamoros"
+msgstr "Meiriceá/Matamoros"
+
+#: pref.timezone.America.Ojinaga
+msgid "America/Ojinaga"
+msgstr "Meiriceá/Ojinaga"
+
+#: pref.timezone.America.Santa_Isabel
+msgid "America/Santa Isabel"
+msgstr "Meiriceá/Santa Isabel"
+
+#: pref.timezone.Antarctica.Macquarie
+msgid "Antarctica/Macquarie"
+msgstr "An Antartaice/Macquarie"
+
+#: pref.timezone.Asia.Novokuznetsk
+msgid "Asia/Novokuznetsk"
+msgstr "An Áise/Novokuznetsk"
+
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
 # -
@@ -6574,6 +6590,10 @@ msgstr "An bhfuil fonn ort fógra ríomhphoist a sheoladh anois?"
 #: imipSendMail.Outlook2000CompatMode.text
 msgid "Support Outlook 2000 and Outlook 2002/XP"
 msgstr "Tacaigh le Outlook 2000 agus Outlook 2002/XP"
+
+#: imipNoCalendarAvailable
+msgid "There are no writable calendars available."
+msgstr "Níl aon fhéilirí inscríofa ar fáil."
 
 #: itipReplySubject
 msgid "Event Invitation Reply: %1$S"
