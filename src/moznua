@@ -49,12 +49,14 @@ do
 	if $MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
 	then
 		echo "merged fine." > /dev/null
+		pocat "${FILENAMEBASE}.po" > ${TEMPPOT}  # these lines clean it up - only important, as far as I know, for mail-en-US/chrome/messenger/featureConfigurator.dtd
+		mv ${TEMPPOT} "${FILENAMEBASE}.po"
 	else
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		$MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
-##	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
-##	sed -i '/^msgid "contains"/s/.*/#: 0\n&/' tempe.po
-##	mv tempe.po ${FILENAMEBASE}.po
+#	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
+#	sed -i '/^msgid "contains"/s/.*/#: 0\n&/' tempe.po
+#	mv tempe.po ${FILENAMEBASE}.po
 	rm -f ${TEMPPOT} ${pofile}
 done
