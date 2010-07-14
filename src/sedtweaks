@@ -35,6 +35,12 @@ sed -i 's/^hideButton.accesskey.*/hideButton.accesskey=F/' toolkit-ga-IE/chrome/
 sed -i 's/certs.ask.accesskey "."/certs.ask.accesskey "d"/; s/certs.auto.accesskey "."/certs.auto.accesskey "u"/' browser-ga-IE/chrome/browser/preferences/advanced.dtd
 sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/' browser-ga-IE/chrome/browser/browser.dtd
 sed -i '/^example.com/s/^/<!-- /' browser-ga-IE/chrome/browser/browser.dtd
+sed -i 's/mediaSaveAs.accesskey "."/mediaSaveAs.accesskey "S"/' browser-ga-IE/chrome/browser/pageInfo.dtd
+sed -i 's/mediaTab.accesskey "."/mediaTab.accesskey "M"/' browser-ga-IE/chrome/browser/pageInfo.dtd
+sed -i 's/generalSecurityDetails.accesskey "."/generalSecurityDetails.accesskey "M"/' browser-ga-IE/chrome/browser/pageInfo.dtd
+sed -i 's/permTab.accesskey "."/permTab.accesskey "C"/' browser-ga-IE/chrome/browser/pageInfo.dtd
+sed -i 's/feedSubscribe.accesskey "."/feedSubscribe.accesskey "L"/' browser-ga-IE/chrome/browser/pageInfo.dtd
+sed -i 's/clearTimeDuration.accesskey "."/clearTimeDuration.accesskey "R"/' browser-ga-IE/chrome/browser/sanitize.dtd
 sed -i 's/selectAllCmd.key "."/selectAllCmd.key "A"/' toolkit-ga-IE/chrome/global/editMenuOverlay.dtd
 sed -i '
 s/printCmd.commandkey "."/printCmd.commandkey "P"/
@@ -142,6 +148,11 @@ sed -i '
 s/inspectReturnNew.label "[^"]*"/inspectReturnNew.label "i bhfuinneog nua"/
 ' extensions-ga-IE/inspector/resources/viewers/jsObject.dtd
 
+sed -i 's/exceptionMgr.certstatus.accesskey "."/exceptionMgr.certstatus.accesskey "A"/' security-ga-IE/manager/chrome/pippki/certManager.dtd
+sed -i 's/loaddevice.modname.accesskey "."/loaddevice.modname.accesskey "A"/' security-ga-IE/manager/chrome/pippki/deviceManager.dtd
+sed -i 's/loaddevice.filename.accesskey "."/loaddevice.filename.accesskey "c"/' security-ga-IE/manager/chrome/pippki/deviceManager.dtd
+
+sed -i 's/cmd.about.accesskey "."/cmd.about.accesskey "M"/' toolkit-ga-IE/chrome/mozapps/extensions/extensions.dtd
 # still need these two with latest translate toolkit
 sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
 LC_ALL=C sed -i '
