@@ -15,6 +15,7 @@ if [ $# -ne 1 ]; then
  	exit
 fi
 IRISHJAR=`echo "${1}" | sed 's/en-US/ga-IE/'`
+rm -Rf gatemp
 mkdir gatemp
 find "${IRISHJAR}po" -name '*.po' | 
 while read pofile
@@ -24,4 +25,3 @@ do
 done
 #msgcat -t "ISO-8859-1" gatemp/*.po > ${IRISHJAR}.po 
 msgcat -t "UTF-8" gatemp/*.po > ${IRISHJAR}.po 
-rm -Rf gatemp
