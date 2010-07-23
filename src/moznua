@@ -25,7 +25,8 @@ MSGMERGE="msgmerge -N"
 # MSGMERGE="msgmerge"
 rm -Rf "${IRISHPREF}po"
 mkdir "${IRISHPREF}po"
-PYTHONPATH="/home/kps/seal/installed-local/translate-toolkit-0.9" moz2po -P --progress=verbose -i "${1}" -o "${IRISHPREF}po"
+#PYTHONPATH="/home/kps/seal/installed-local/translate-toolkit-0.9" moz2po -P --progress=verbose -i "${1}" -o "${IRISHPREF}po"
+moz2po -P --progress=verbose -i "${1}" -o "${IRISHPREF}po"
 if [ $1 = "dom-en-US" ]
 then
         sed -i 's/image.*cannot/image \\"%S\\" cannot/' "${IRISHPREF}po/chrome/layout/MediaDocument.properties.pot"
@@ -36,7 +37,7 @@ then
 fi
 if [ $1 = "toolkit-en-US" ]
 then
-        sed -i '/^#: VK_SHIFT/{N; s/msgid .*/msgid "\\\\u0005"/}; /^#: VK_META/{N; s/msgid .*/msgid "\\\\u0011"/}; /^#: VK_ALT/{N; s/msgid .*/msgid "\\\\u0007"/}; /^#: VK_CONTROL/{N; s/msgid .*/msgid "\\\\u0006"/}' ${IRISHPREF}po/chrome/global-platform/mac/platformKeys.properties.pot
+#       sed -i '/^#: VK_SHIFT/{N; s/msgid .*/msgid "\\\\u0005"/}; /^#: VK_META/{N; s/msgid .*/msgid "\\\\u0011"/}; /^#: VK_ALT/{N; s/msgid .*/msgid "\\\\u0007"/}; /^#: VK_CONTROL/{N; s/msgid .*/msgid "\\\\u0006"/}' ${IRISHPREF}po/chrome/global-platform/mac/platformKeys.properties.pot
         rm -f ${IRISHPREF}po/chrome/mozapps/help/*.xhtml.pot
 fi
 find "${IRISHPREF}po" -name '*.pot' |
@@ -55,8 +56,8 @@ do
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		$MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1
 	fi
-#	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
-#	sed -i '/^msgid "contains"/s/.*/#: 0\n&/' tempe.po
-#	mv tempe.po ${FILENAMEBASE}.po
+###	Pofake ${FILENAMEBASE}.po | msgcat --no-wrap - > tempe.po
+###	sed -i '/^msgid "contains"/s/.*/#: 0\n&/' tempe.po
+###	mv tempe.po ${FILENAMEBASE}.po
 	rm -f ${TEMPPOT} ${pofile}
 done
