@@ -13,8 +13,8 @@
 #CVSDIREC=moz
 #VERSION=1.5
 #CVSDIREC=moz1.8
-VERSION=3.6
-CVSDIREC=moz-1.9.2
+VERSION=4.0
+CVSDIREC=moz-2.0
 ##################################
 HGFULLPATH=${HOME}/seal/$(CVSDIREC)/ga-IE
 GDFULLPATH=${HOME}/seal/$(CVSDIREC)/gd-GB
@@ -114,7 +114,7 @@ eilecheck : FORCE
 
 
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-1.5.po
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-?.?.po *ga-IE.po
 	rm -fR langpack-build-dir
 	rm -f messages.po amo.pot amo-final.po amo-final.mo
 
@@ -178,7 +178,7 @@ amo-commit : amo-obair.mo
 	cp -f amo-obair.mo $(SVNDIR)/messages.mo
 	svn commit -m "Updated Irish translation" $(SVNDIR)/messages.po $(SVNDIR)/messages.mo
 
-# like obair.po, but browser only; now defunct
+# like obair.po, but browser only
 b-obair.po : FORCE
 	sed -i '/tempe/s/^/#/' moznua
 	rm -f $(UTFCOMP)
@@ -197,12 +197,9 @@ b-obair.po : FORCE
 	bash mozcat other-licenses-en-US
 	bash moznua security-en-US $(VERSION)
 	bash mozcat security-en-US
-	bash moznua mobile-en-US $(VERSION)
-	bash mozcat mobile-en-US
-	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po mobile-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
+	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | sed '1,/validation.dtd/d; /browser-ga-IE.po.*\\n"$$/,/security-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
 	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
 	sed -i '/tempe/s/^#//' moznua
-	sed -i '1d' obair.po
 
 obair.po : FORCE
 	sed -i '/tempe/s/^/#/' moznua
@@ -230,7 +227,7 @@ obair.po : FORCE
 	bash mozcat mail-en-US
 	bash moznua mobile-en-US $(VERSION)
 	bash mozcat mobile-en-US
-	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po mobile-ga-IE.po | tr '\007' '!' | sed '/^msgid "Norwegian Bok/s/.*/msgid "Norwegian Bokmål"/; /^msgid "!"/s/.*/msgid "\\\\u0007"/; /msgid "Volap/s/.*/msgid "Volapük"/; /msgid ".Spx /s/ .. / × /; /browser-ga-IE.po/,/security-ga-IE.po/d; /^.Project-Id/s/thunderbird/firefox/; /trunk.ga.po/d; 1s/^#, fuzzy//' > obair.po
+	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | sed '1,/validation.dtd/d; /browser-ga-IE.po.*\\n"$$/,/security-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
 	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
 	msgcat editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
 	sed -i 's/msgstr "39em"/msgstr "47em"/; s/msgstr "43em"/msgstr "51em"/; s/msgstr "Firefox Soghluaiste"/msgstr "Fón Póca"/; s/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
