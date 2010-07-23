@@ -1,0 +1,40 @@
+<?php
+    // The $body_* variables are for compatibility with pre-existing css
+    // the $page_title value should be translated
+    $page_title = 'Tá Firefox Nuashonraithe';
+    $body_id    = 'whatsnew';
+    $body_class = 'portal-page ff2-final';
+
+    $extra_headers = <<<EXTRA_HEADERS
+    <link rel="stylesheet" type="text/css" href="{$config['static_prefix']}/style/tignish/whatsnew-page.css" media="screen" />
+EXTRA_HEADERS;
+
+    @include_once "{$config['file_root']}/{$lang}/includes/header-portal-pages.inc.php";
+?>
+
+<div id="main-feature">
+        <h2 id="main-feature-title">Tá an Leagan Is Déanaí de Firefox 2 Nuashonraithe agat.</h2>
+        <p id="main-feature-contents"><em>Níl aon nuashonrú eile</em> ar Firefox 2 pleanáilte againn.</p>
+</div>
+
+<div id="main-content">
+        <h3>Deireadh é seo le Firefox 2… Go maire Firefox 3! </h3>
+        <p>Níl sé leagtha amach ag Mozilla tuilleadh nuashonruithe slándála agus cobhsaíochta a dhéanamh ar Firefox 2, agus molaimid duit <a href="/<?=$lang?>/firefox/">Firefox 3 a shuiteáil</a> chomh luath agus is féidir. Tá sé saor in aisce, agus coinneofar do chuid leabharmharcanna agus socruithe.</p>
+        <p>Chomh maith leis sin, <strong>ní bheidh an tSeirbhís um Dhíonadh in aghaidh Bréagbhrandála ar fáil a thuilleadh d'úsáideoirí Firefox 2</strong>. Mar chuid de Firefox 3, tá Seirbhís um Dhíonadh in aghaidh Bréagbhrandála agus Bogearraí Mailíseacha ar fáil, saor in aisce, a chosnaíonn thú in aghaidh camscéimeanna agus ionsaithe ar líne.</p>
+</div>
+
+<div id="sidebar">
+        <script type="text/javascript" src="/js/download.js"></script>
+        <?php
+                $_options = array('ancillary_links' => true, 'layout' => 'sidebar', 'download_parent_override' => 'sidebar');
+                echo $firefoxDetails->getDownloadBlockForLocale($lang, $_options);
+        ?>
+</div>
+
+
+<?php
+    $extra_footers = <<<EXTRA_FOOTERS
+    <script type="text/javascript" src="/js/whats-new-page.js"></script>
+EXTRA_FOOTERS;
+    @include_once "{$config['file_root']}/{$lang}/includes/footer-portal-pages.inc.php";
+?>

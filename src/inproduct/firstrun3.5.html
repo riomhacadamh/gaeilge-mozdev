@@ -1,0 +1,72 @@
+<?php
+
+// L10n: Page title to be translated below
+$page_title = "Fáilte go Firefox";
+
+
+@include_once "{$config['file_root']}/includes/headers/3.5/firstrun.inc.php";
+@include_once "{$config['file_root']}/{$lang}/includes/header-portal-pages.inc.php";
+
+
+// L10n: Translate the following HTML chunks, don't forget the alt="Welcome to Firefox 3" attribute for the image, this is
+// useful for blind people to know what the image is about.
+?>
+
+
+<div id="main-feature">
+
+
+    <h2>
+    <span>Fáilte go</span>
+    <img src="/<?=$lang?>/img/tignish/firstrun/welcome-3-5.png" alt="Fáilte go Firefox 3.5" id="main-title" />
+    </h2>
+
+    <p>Go raibh maith agat as Firefox 3.5 a íosluchtú - an leagan is gasta, is sláine, agus is cliste de Firefox fós.
+    <a href="/<?=$lang?>/firefox/central/">Bain sult as!</a></p>
+
+
+</div>
+
+
+
+<div id="main-content">
+<div id="sub-features">
+    <div class="sub-feature" id="open-video">
+        <div class="mozilla-video-scaler">
+            <div class="mozilla-video-control">
+                <video id="video" src="http://videos.mozilla.org/firefox3.5/welcome.ogg"></video>
+            </div>
+        </div>
+
+
+        <h3>Breathnaigh air seo!</h3>
+        <p>Is é Firefox 3.5 an chéad bhrabhsálaí a thacaíonn le formáidí oscailte físe, sa chaoi gur féidir scannáin a chomhtháthú le leathanaigh dhinimiciúla an lae inniu, gan bhreiseán ar leith. Ar aghaidh leat agus bain triail as!</p>
+
+
+    </div>
+
+    <div class="sub-feature" id="sumo">
+
+        <h3>Ceisteanna?</h3>
+        <p class="first">Tá neart freagraí ar ár Suíomh Tacaíochta, chomh maith le comhrá beo (i mBéarla amháin) le treoir a thabhairt duit faoi rud ar bith casta.</p>
+        <p><a href="http://support.mozilla.com/" class="blocklevel">Téigh chuig Tacaíocht Firefox</a></p>
+
+    </div>
+
+    <div class="sub-feature" id="addons">
+
+
+        <h3>Mo Bhrabhsálaí Féin</h3>
+        <p class="first">Tá na mílte breiseán saor in aisce ann lenar féidir Firefox a oiriúnú do na rudaí is maith leat ar an nGréasán.</p>
+        <p><a href="https://addons.mozilla.org" class="blocklevel">Brabhsáil Breiseáin</a></p>
+
+
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+
+
+<?php
+    @include_once "{$config['file_root']}/{$lang}/includes/footer-portal-pages.inc.php";
+?>

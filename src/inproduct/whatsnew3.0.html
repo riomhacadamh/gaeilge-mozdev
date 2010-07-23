@@ -1,0 +1,54 @@
+<?php
+    // The $body_* variables are for compatibility with pre-existing css
+    $page_title = 'Tá Firefox Nuashonraithe';
+    $body_id    = 'whatsnew';
+    $body_class = 'portal-page';
+
+    $extra_headers = <<<EXTRA_HEADERS
+    <link rel="stylesheet" type="text/css" href="/style/tignish/whatsnew-page.css" media="screen" />
+	<script type="text/javascript" src="/js/whats-new-page.js"></script>
+EXTRA_HEADERS;
+    $extra_feature = <<<EXTRA_FEATURE
+<div id="tab-close"><p>Cliceáil an cnaipe dúnta ar an gcluaisín seo chun dul go dtí do leathanach baile</p></div>
+EXTRA_FEATURE;
+
+    @include_once "{$config['file_root']}/{$lang}/includes/header-portal-pages.inc.php";
+?>
+
+<div id="main-feature">
+	<h2 id="main-feature-title">Tá an Leagan Is Déanaí de Firefox Nuashonraithe agat.</h2>
+	<p id="main-feature-contents">Go raibh maith agat! Beidh tú níos sábháilte ar líne leis an nuashonrú seo.</p>
+	<script type="text/javascript">// <![CDATA[
+	//localization note: message 1 will display the version number at the end
+	//of the string, hence the trailing space
+	//ex: You’re now running Firefox 3.1
+
+	var userversion = '<?=LATEST_FIREFOX_VERSION?>';
+	var message1 = 'Leagan Firefox atá agat anois: ';
+	var message2 = 'De bharr cúrsaí slándála, moltar duit an leagan <a href="/<?=$lang?>/firefox/">is déanaí</a> a shuiteáil.';
+
+	whatsNewMessage();
+	// ]]></script>
+</div>
+
+<div id="main-content">
+	<div>
+		<h3>Firefox: An Brabhsálaí Is Sábháilte</h3>
+	    <p>Tá comhphobal saineolaithe ar fud an domhain ag obair linn gach lá chun na bagairtí slándála is déanaí a aithint agus a chur ar neamhní. Is é do shlándáil an chloch is mó ar ár bpaidrín! <a href="/<?=$lang?>/firefox/security/">Tuilleadh eolais faoinár bpróiseas slándála</a></p>
+	</div>
+	<div>
+		<h3>Déan Níos Mó Le Firefox</h3>
+		<p>Féach ar ár leathanach Tús Maith chun foghlaim conas is féidir an leas is fearr a bhaint as Firefox. <a href="/<?=$lang?>/firefox/central/">Déan Níos Mó Le Firefox</a></p>
+	</div>
+	<div>
+		<h3>Cuir Litreoir le Firefox</h3>
+        <p><a href="https://addons.mozilla.org/firefox/3090/">Suiteáil GaelSpell anois</a></p>
+	</div>
+
+	<p class="changelog">Chun tuilleadh eolais a fháil faoi gach rud nua sa leagan seo, <a href="../releasenotes/">féach ar na nótaí eisiúna</a>.</p>
+</div>
+
+
+<?php
+    @include_once "{$config['file_root']}/{$lang}/includes/footer-portal-pages.inc.php";
+?>

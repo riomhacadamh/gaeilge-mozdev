@@ -1,0 +1,42 @@
+<?php
+    // The $body_* variables are for compatibility with pre-existing css
+    $page_title = 'Mozilla | Fáilte go Firefox!';
+    $body_id    = 'firstrun';
+    $body_class = 'portal-page';
+    @include_once "{$config['file_root']}/{$lang}/includes/header-portal-pages.inc.php";
+?>
+
+<div id="tab-close">
+Brúigh ar an cnaipe dúnta ar an cluaisín seo chun dul chuig do leathanach baile.
+</div>
+
+<script type="text/javascript"> loadFirstRunInstallImage(); </script>
+
+<div class="portal-box">
+<div class="portal-box-interior">
+
+<div class="portal-box-header">
+    <h1>Fáilte go Firefox!</h1>
+
+    <p>Tá tú ar tí foghlaim cén fáth ar athraigh na milliúin daoine ar fud an domhain go Firefox leis an sult is mó a bhaint as a gcuairt ar líne.</p>
+</div>
+
+<div class="portal-box-contents">
+
+    <p>Mothaigh an éagsúlacht. Tá Firefox forbartha agus tacaithe ag <a href="/<?=$lang?>/firefox/about/">Mozilla</a>, comhphobal domhanda ag obair le chéile chun an Gréasán a fheabhsú do chách.</p>
+
+    <p><a href="/<?=$lang?>/firefox/central/">Foghlaim níos mó faoi ghnéithe Firefox</a>, nó lean na
+    treoracha ar bharr an leathanaigh seo chun an cluaisín seo a dhúnadh agus téigh go díreach go dtí do leathanach baile.</p>
+
+    <!--Note: below is only for locales that *DO NOT* ship with a dictionary  --> 
+    <h3>Cuir GaelSpell le Firefox</h3>
+    <p><a href="https://addons.mozilla.org/firefox/3090/">Suiteáil GaelSpell anois</a></p>
+
+
+</div> <!-- end .portal-box-contents  -->
+</div> <!-- end .portal-box-interior  -->
+</div> <!-- end .portal-box  -->
+
+<?php
+    @include_once "{$config['file_root']}/{$lang}/includes/footer-portal-pages.inc.php";
+?>

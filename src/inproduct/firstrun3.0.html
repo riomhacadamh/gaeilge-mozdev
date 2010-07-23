@@ -1,0 +1,36 @@
+<?php
+    // The $body_* variables are for compatibility with pre-existing css
+    $page_title = 'Fáilte go Firefox';
+    $body_id    = 'firstrun';
+    $body_class = 'portal-page';
+    
+    $extra_headers = <<<EXTRA_HEADERS
+    <link rel="stylesheet" type="text/css" href="/style/tignish/firstrun-page.css" media="screen" />
+EXTRA_HEADERS;
+    $extra_feature = <<<EXTRA_FEATURE
+<div id="tab-close"><p>Cliceáil ar an gcnaipe Dún ar an gcluaisín seo chun dul chuig do leathanach baile</p></div>
+EXTRA_FEATURE;
+
+    @include_once "{$config['file_root']}/{$lang}/includes/header-portal-pages.inc.php";
+?>
+
+<div id="main-feature">
+	<h2><img src="/<?=$lang?>/img/3-welcome-firstrun.png" alt="Fáilte go Firefox 3"/></h2>
+	<p>Go raibh maith agat as Firefox 3 a íosluchtú - an leagan is sláine, is tapa agus is in-saincheaptha de Firefox fós. Le tús a chur le brabhsáil, níl le déanamh ach an cluaisín seo a dhúnadh mar a thaispeántar thuas.</p>
+</div>
+
+<div id="main-content">
+	<div>
+		<h3>Le Tuilleadh a Fhoghlaim</h3>
+		<p>An bhfuil tú ag smaoineamh faoi cad a dhéanfaidh tú anois? Tá liosta de shuíomhanna molta ar ár leathanach Tús Maith, chomh maith le tuilleadh eolais maidir le Firefox. <a href="/<?=$lang?>/firefox/central/">Téigh chuig Tús Maith</a></p>
+	</div>
+	<div>
+		<h3>Ceisteanna?</h3>
+		<p>Tá neart freagraí ar ár leathanach tacaíochta, chomh maith le comhrá beo le treoir a thabhairt duit faoi rud ar bith casta. <a href="http://support.mozilla.com/<?=$lang?>/kb/">Téigh chuig Tacaíocht</a></p>
+	</div>
+</div>
+
+
+<?php
+    @include_once "{$config['file_root']}/{$lang}/includes/footer-portal-pages.inc.php";
+?>
