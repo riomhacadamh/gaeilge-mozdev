@@ -17,7 +17,8 @@ PACK=`echo "${1}" | sed 's/-en-US//'`
 CVSFULLPATH="${2}"
 rm -fR "${IRISHJAR}"
 mkdir "${IRISHJAR}"
-PYTHONPATH="/home/kps/seal/installed-local/translate-toolkit-0.9" po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
+#PYTHONPATH="/home/kps/seal/installed-local/translate-toolkit-0.9" po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
+po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
 bash sedtweaks "${2}"
 if echo "${1}" | egrep '^browser' > /dev/null
 then
