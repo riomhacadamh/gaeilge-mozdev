@@ -1,0 +1,56 @@
+#!/bin/bash
+#  ASCII ONLY
+PONAME='4.0'
+SRCDIR='moz-2.0'
+
+# commit any outstanding changes to PO file
+cvs commit -m "outstanding changes before sync" firefox-trunk.ga.po
+
+
+#  Updates CVS and creates new *en-US files in this dir
+cd ~/gaeilge/gnu/mozilla/gaeilge/src
+rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US
+mkdir -p other-licenses-en-US/branding
+mkdir extensions-en-US security-en-US
+mkdir extensions-en-US/inspector
+
+cd ~/seal/$SRCDIR/ga-IE
+# See http://benjamin.smedbergs.us/blog/tag/mozilla-central/
+#  In case there were branches (new heads) created, we just want to stay
+#  on the default branch, and "hg up" accomplishes this
+hg up
+hg pull -u
+
+cd ~/seal/$SRCDIR/mozilla-central
+hg up
+hg pull -u
+
+cp -Rf browser/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US
+cp -Rf dom/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/dom-en-US
+cp -Rf extensions/reporter/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/reporter
+cp -Rf extensions/inspector/resources/locale/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/inspector/resources
+cp -Rf netwerk/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/netwerk-en-US
+cp -Rf toolkit/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/toolkit-en-US
+cp -Rf other-licenses/branding/firefox/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/firefox
+cp -Rf security/manager/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/security-en-US/manager
+
+# next two lines reinserted into ga-IE dtd after translation
+sed -i '1,2d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/overrides/netError.dtd
+sed -i '1,3d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/browser/aboutCertError.dtd
+
+cd ~/gaeilge/gnu/mozilla/gaeilge/src
+find *-en-US -name 'CVS' | xargs rm -fR
+
+# set up variables in makefile; need "VERSION" correct
+# before translation starts since moznua needs it
+sed -i "/^VERSION/s/.*/VERSION=$PONAME/" makefile
+sed -i "/^CVSDIREC/s/.*/CVSDIREC=$SRCDIR/" makefile
+
+
+make b-obair.po
+
+cpo -q firefox-${PONAME}.ga.po
+cpo -q obair.po
+
+echo "Finish translating the obair files, copy to firefox-trunk.ga.po"
+echo "Then cp firefox-trunk.ga.po to mozilla-4.0.po; make browserall"
