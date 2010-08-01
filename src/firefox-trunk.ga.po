@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-27 10:35-0500\n"
+"POT-Creation-Date: 2010-08-01 11:19-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -994,6 +994,10 @@ msgstr "&Scrúdaigh"
 msgid "I"
 msgstr "I"
 
+#: inspectPanelTitle.label
+msgid "HTML"
+msgstr "HTML"
+
 #: inspectButton.label inspectButton.accesskey
 msgid "&Inspect"
 msgstr "&Scrúdaigh"
@@ -1202,6 +1206,10 @@ msgstr "Barraí Taoibh"
 #: appMenuHelp.label helpButton.label button-help
 msgid "Help"
 msgstr "Cabhair"
+
+#: developerMenu.label detail.creator.label
+msgid "Developer"
+msgstr "Forbróir"
 
 # Ctrl+i is highlights URL for opening
 #: openCmd.commandkey certs.auto.accesskey focus1.commandkey
@@ -1908,7 +1916,7 @@ msgstr "O"
 # LOCALIZATION NOTE (addonError-1, addonError-2, addonError-3, addonError-4, addonErrorIncompatible, addonErrorBlocklisted):
 # #1 is the add-on name, #2 is the host name, #3 is the application name
 # #4 is the application version
-#. # LOCALIZATION NOTE (addonError-1, addonError-2, addonError-3, addonError-4, addonErrorIncompatible, addonErrorBlocklisted):
+#. # LOCALIZATION NOTE (addonError-1, addonError-2, addonError-3, addonError-4):
 #. # #1 is the add-on name, #2 is the host name, #3 is the application name
 #. # #4 is the application version
 #: addonError-1
@@ -1934,10 +1942,39 @@ msgstr ""
 "ndealraíonn sé go bhfuil sé truaillithe."
 
 #: addonError-4
+msgctxt "addonError-4"
 msgid "#1 could not be installed because #3 cannot modify the needed file."
 msgstr ""
 "Níorbh fhéidir #1 a shuiteáil toisc nach bhfuil #3 in ann comhad riachtanach "
 "a athrú."
+
+#. # LOCALIZATION NOTE (addonLocalError-1, addonLocalError-2, addonLocalError-3, addonLocalError-4, addonErrorIncompatible, addonErrorBlocklisted):
+#. # #1 is the add-on name, #3 is the application name, #4 is the application version
+#: addonLocalError-1
+msgid "This add-on could not be installed because of a filesystem error."
+msgstr ""
+"Níorbh fhéidir an breiseán seo a shuiteáil de bharr earráide sa chóras comhad."
+
+#: addonLocalError-2
+msgid ""
+"This add-on could not be installed because it does not match the add-on #3 "
+"expected."
+msgstr ""
+"Níorbh fhéidir an breiseán seo a shuiteáil toisc nach raibh sé comhoiriúnach "
+"don bhreiseán a raibh #3 ag súil leis."
+
+#: addonLocalError-3
+msgid "This add-on could not be installed because it appears to be corrupt."
+msgstr ""
+"Níorbh fhéidir an breiseán a shuiteáil toisc go ndealraíonn sé go bhfuil sé "
+"truaillithe."
+
+#: addonLocalError-4
+msgctxt "addonLocalError-4"
+msgid "#1 could not be installed because #3 cannot modify the needed file."
+msgstr ""
+"Níorbh fhéidir #1 a shuiteáil toisc nach bhfuil #3 in ann an comhad "
+"riachtanach a athrú."
 
 #: addonErrorIncompatible
 msgid "#1 could not be installed because it is not compatible with #3 #4."
@@ -6197,6 +6234,10 @@ msgstr "Taispeáin an &barra cluaisíní i gcónaí"
 msgid "When I open a link in a new tab, &switch to it immediately"
 msgstr "Tar éi&s dom nasc a oscailt i gcluaisín nua, athraigh chuige láithreach"
 
+#: showTabsInTaskbar.label showTabsInTaskbar.accesskey
+msgid "Show tab previews in the Windows tas&kbar"
+msgstr "Taispeáin réamhamharc ar chluaisíní sa tas&cbharra Windows"
+
 #: quitDialogTitle
 msgid "Quit %S"
 msgstr "Scoir %S"
@@ -7769,6 +7810,10 @@ msgstr "Críochnaithe ar %S"
 #: testpilot.studiesWindow.canceledStudy
 msgid "(You canceled this study)"
 msgstr "(Chealaigh tú an staidéar seo)"
+
+#: testpilot.studiesWindow.missedStudy
+msgid "(You missed this study)"
+msgstr "(Lig tú an staidéar seo thart)"
 
 #: testpilot.studiesWindow.willStart
 msgid "Will start on %S"
@@ -18540,21 +18585,9 @@ msgstr "M&aidir Leis"
 msgid "&Enable"
 msgstr "&Cumasaigh"
 
-#: cmd.enableAddon.tooltip
-msgid "Enable this add-on"
-msgstr "Cumasaigh an breiseán seo"
-
 #: cmd.disableAddon.label cmd.disableAddon.accesskey
 msgid "&Disable"
 msgstr "&Díchumasaigh"
-
-#: cmd.disableAddon.tooltip
-msgid "Disable this add-on"
-msgstr "Díchumasaigh an breiseán seo"
-
-#: cmd.uninstallAddon.tooltip
-msgid "Uninstall this add-on"
-msgstr "Díshuiteáil an breiseán seo"
 
 #: cmd.showPreferences.tooltip
 msgctxt "cmd.showPreferences.tooltip"
@@ -18578,10 +18611,6 @@ msgstr "Leagan"
 #: detail.updated.label
 msgid "Updated"
 msgstr "Nuashonraithe"
-
-#: detail.creator.label
-msgid "Developer"
-msgstr "Forbróir"
 
 #: detail.homepage.label
 msgctxt "detail.homepage.label"
@@ -18802,11 +18831,10 @@ msgstr "Earráid le linn suiteála"
 msgid "Install cancelled"
 msgstr "Cealaíodh an tsuiteáil"
 
-# LOCALIZATION NOTE: %1$S is the addon name, %2$S is brand name
 #. #LOCALIZATION NOTE: %1$S is the addon name, %2$S is brand name
-#: restartToEnable
-msgid "%1$% will be enabled after you restart %2$S"
-msgstr "Beidh %1$% cumasaithe tar éis duit %2$S a atosú"
+#: restartToEnable2
+msgid "%1$S will be enabled after you restart %2$S"
+msgstr "Beidh %1$S cumasaithe tar éis duit %2$S a atosú"
 
 #: restartToDisable
 msgid "%1$S will be disabled after you restart %2$S"
@@ -18819,6 +18847,30 @@ msgstr "Beidh %1$% bainte tar éis duit %2$S a atosú"
 #: restartToUpgrade
 msgid "%1$S will be updated after you restart %2$S"
 msgstr "Beidh %1$% nuashonraithe tar éis duit %2$S a atosú"
+
+#: uninstallAddonTooltip
+msgid "Uninstall this add-on"
+msgstr "Díshuiteáil an breiseán seo"
+
+#: uninstallAddonRestartRequiredTooltip
+msgid "Uninstall this add-on (restart required)"
+msgstr "Díshuiteáil an breiseán seo (atosú de dhíth)"
+
+#: enableAddonTooltip
+msgid "Enable this add-on"
+msgstr "Cumasaigh an breiseán seo"
+
+#: enableAddonRestartRequiredTooltip
+msgid "Enable this add-on (restart required)"
+msgstr "Cumasaigh an breiseán seo (atosú de dhíth)"
+
+#: disableAddonTooltip
+msgid "Disable this add-on"
+msgstr "Díchumasaigh an breiseán seo"
+
+#: disableAddonRestartRequiredTooltip
+msgid "Disable this add-on (restart required)"
+msgstr "Díchumasaigh an breiseán seo (atosú de dhíth)"
 
 #: updateWizard.title
 msgid "&brandShortName; Update"
