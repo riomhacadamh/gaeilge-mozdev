@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 11:19-0500\n"
+"POT-Creation-Date: 2010-08-01 11:57-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -361,6 +361,7 @@ msgstr "Tosaigh Seisiún Nua"
 
 #: restorepage.cancel.access securityTab.accesskey
 #: cmd_showSuggestions_accesskey submitReport.accesskey savePageCmd.commandkey
+#: error.sync.tryAgainButton.accesskey
 msgid "S"
 msgstr "S"
 
@@ -473,7 +474,7 @@ msgstr "Fabh&tcheartú"
 msgid "Check for Updates…"
 msgstr "Lorg Nuashonruithe…"
 
-#: preferencesCmdMac.label
+#: preferencesCmdMac.label error.login.prefs.label
 msgid "Preferences…"
 msgstr "Sainroghanna…"
 
@@ -2054,7 +2055,7 @@ msgstr "Sainroghanna"
 
 # G&reamaigh, P&riontáil
 #: popupWarningButtonUnix.accesskey permTab.accesskey HTTPport.accesskey
-#: printCmd.commandkey
+#: printCmd.commandkey error.login.prefs.accesskey
 msgid "P"
 msgstr "R"
 
@@ -20286,7 +20287,7 @@ msgstr "Ná Nuashonraigh"
 msgid "Update %S"
 msgstr "Nuashonraigh %S"
 
-#: updateButton_minor.accesskey
+#: updateButton_minor.accesskey error.sync.needUpdate.accesskey
 msgid "U"
 msgstr "U"
 
@@ -25441,7 +25442,9 @@ msgstr "Comhad faoi ghlas"
 msgid "No space left on device"
 msgstr "Níl spás fágtha ar an ngléas"
 
-#: writeFileUnknownError
+#. #-#-#-#-#  services-ga-IE.po (firefox)  #-#-#-#-#
+#. # this is the fallback, if we hit an error we didn't bother to localize
+#: writeFileUnknownError error.reason.unknown
 msgid "Unknown error"
 msgstr "Earráid anaithnid"
 
@@ -25655,3 +25658,189 @@ msgstr "Sonraí faoin uair dheireanach ar theip ar Nuashonrú: "
 #: edit.button
 msgid "Settings"
 msgstr "Socruithe"
+
+#: error.login.reason.network
+msgid "Failed to connect to the server"
+msgstr "Theip ar cheangal leis an bhfreastalaí"
+
+#: error.login.reason.passphrase
+msgid "Wrong secret phrase"
+msgstr "Frása faire mícheart"
+
+#: error.login.reason.password
+msgid "Incorrect username or password"
+msgstr "Ainm úsáideora nó focal faire mícheart"
+
+#: error.login.reason.no_password
+msgid "No saved password to use"
+msgstr "Níl aon fhocal faire i dtaisce le húsáid"
+
+#: error.login.reason.no_passphrase
+msgid "No saved secret phrase to use"
+msgstr "Níl aon fhrása faire sábháilte le húsáid"
+
+#: error.login.reason.server
+msgid "Server incorrectly configured"
+msgstr "Tá cumraíocht an fhreastalaí mícheart"
+
+#: error.sync.failed_partial
+msgid "One or more data types could not be synced"
+msgstr "Níorbh fhéidir cineál nó cineálacha sonraí a shioncrónú"
+
+#: invalid-captcha
+msgid "Incorrect words, try again"
+msgstr "Focail mhíchearta, bain triail eile as"
+
+#: weak-password
+msgid "Use a stronger password"
+msgstr "Úsáid focal faire níos láidre"
+
+#: change.passphrase.ppSameAsPassphrase
+msgid "The secret phrase cannot be the same as your current secret phrase"
+msgstr "Níl cead agat an frása faire céanna a úsáid arís"
+
+#: change.passphrase.ppSameAsPassword
+msgid "The secret phrase cannot be the same as your password"
+msgstr "Níl cead agat d'fhocal faire a úsáid mar fhrása faire"
+
+#: change.passphrase.ppSameAsUsername
+msgid "The secret phrase cannot be the same as your user name"
+msgstr "Níl cead agat d'ainm úsáideora a úsáid mar fhrása faire"
+
+#: change.passphrase.mismatch
+msgid "The phrases entered do not match"
+msgstr "Ní ionann na frásaí a iontráladh"
+
+#: change.passphrase.tooShort
+msgid "The secret phrase entered is too short"
+msgstr "Tá an frása faire róghearr"
+
+#: change.password.pwSameAsPassphrase
+msgid "Password can't match secret phrase"
+msgstr "Níl cead agat do fhrása faire a úsáid mar fhocal faire"
+
+#: change.password.pwSameAsPassword
+msgid "Password can't match current password"
+msgstr "Níl cead agat an focal faire céanna a úsáid"
+
+#: change.password.pwSameAsUsername
+msgid "Password can't match your user name"
+msgstr "Níl cead agat d'ainm úsáideora a úsáid mar fhocal faire"
+
+#: change.password.mismatch
+msgid "The passwords entered do not match"
+msgstr "Ní ionann na focail fhaire a iontráladh"
+
+#: change.password.tooShort
+msgid "The password entered is too short"
+msgstr "Tá an focal faire róghearr"
+
+#. # %1: the user name (Ed), %2: the app name (Firefox), %3: the operating system (Android)
+#: client.name2
+msgid "%1$S's %2$S on %3$S"
+msgstr "%2$S %1$S ar %3$S"
+
+#. # %S is the date and time at which the last sync successfully completed
+#: lastSync.label
+msgid "Last Update: %S"
+msgstr "Nuashonraithe: %S"
+
+#: lastSyncInProgress.label
+msgid "Last Update: in progress…"
+msgstr "Nuashonrú: ar siúl…"
+
+#. # %S is the username logged in
+#: connected.label
+msgid "Connected: %S"
+msgstr "Ceangailte: %S"
+
+#: disconnected.label
+msgid "Disconnected"
+msgstr "Dícheangailte"
+
+#: connecting.label
+msgid "Connecting…"
+msgstr "Á Cheangal…"
+
+#: mobile.label
+msgid "Mobile Bookmarks"
+msgstr "Leabharmharcanna Soghluaiste"
+
+#: remote.pending.label
+msgid "Remote tabs are being synced…"
+msgstr "Cluaisíní cianda á sioncrónú…"
+
+#: remote.missing.label
+msgid "Sync your other computers again to access their tabs"
+msgstr "Sioncrónaigh do ríomhairí eile arís chun a gcuid cluaisíní a fháil"
+
+#: remote.opened.label
+msgid "All remote tabs are already open"
+msgstr "Tá gach cluaisín cianda oscailte cheana"
+
+#: remote.notification.label
+msgid "Recent desktop tabs will be available once they sync"
+msgstr ""
+
+#: error.login.title
+msgid "Error While Signing In"
+msgstr "Tharla earráid le linn logála isteach"
+
+#: error.login.description
+msgid "Sync encountered an error while connecting: %1$S.  Please try again."
+msgstr "Tharla earráid agus ceangal á bhunú: %1$S.  Bain triail eile as."
+
+#. # should decide if we're going to show this
+#: error.logout.title
+msgid "Error While Signing Out"
+msgstr "Tharla earráid le linn logála amach"
+
+#: error.logout.description
+msgid ""
+"Sync encountered an error while connecting.  It's probably ok, and you don't "
+"have to do anything about it."
+msgstr ""
+"Tharla earráid agus ceangal á bhunú.  Is dócha go bhfuil gach rud ceart go "
+"leor agus ní gá duit aon rud a dhéanamh."
+
+#: error.sync.title
+msgid "Error While Syncing"
+msgstr "Tharla earráid le linn sioncrónaithe"
+
+#: error.sync.description
+msgid ""
+"Sync encountered an error while syncing: %1$S.  Sync will automatically retry "
+"this action."
+msgstr ""
+"Tharla earráid le linn sioncrónaithe: %1$S.  Déanfaidh Sync iarracht eile go "
+"huathoibríoch."
+
+#: error.sync.no_node_found
+msgid ""
+"The Sync server is a little busy right now, but you don't need to do anything "
+"about it.  We'll start syncing your data as soon as we can!"
+msgstr ""
+"Tá an freastalaí Sync measartha gnóthach faoi láthair, ach ní gá duit aon rud "
+"a dhéanamh.   Sioncrónóimid do chuid sonraí chomh luath agus is féidir linn!"
+
+#: error.sync.no_node_found.title
+msgid "Sync Delay"
+msgstr "Moill ar Sync"
+
+#: error.sync.needUpdate.description
+msgid "You need to update Firefox Sync to continue syncing your data."
+msgstr ""
+"Caithfidh tú nuashonrú a dhéanamh ar Firefox Sync chun dul ar aghaidh le "
+"sioncrónú do chuid sonraí."
+
+#: error.sync.needUpdate.label
+msgid "Update Firefox Sync"
+msgstr "Nuashonraigh Firefox Sync"
+
+#: error.sync.tryAgainButton.label
+msgid "Sync Now"
+msgstr "Sioncrónaigh Anois"
+
+#: tabs.fromOtherComputers.label
+msgid "Tabs From Other Computers"
+msgstr "Cluaisíní ó Ríomhairí Eile"
