@@ -37,8 +37,8 @@ all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-
 	- perl -w compare-locales.pl calendar-en-US calendar-ga-IE
 	- perl -w compare-locales.pl mobile-en-US mobile-ga-IE
 
-# copy firefox-3.6.ga.po to mozilla-3.6.po first
-browserall : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar mobile-ga-IE.jar
+# copy firefox-4.0.ga.po to mozilla-4.0.po first
+browserall : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar services-ga-IE.jar
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
 	- perl -w compare-locales.pl extensions-en-US extensions-ga-IE
 	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
@@ -46,7 +46,7 @@ browserall : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar
 	- perl -w compare-locales.pl browser-en-US browser-ga-IE
 	- perl -w compare-locales.pl other-licenses-en-US other-licenses-ga-IE
 	- perl -w compare-locales.pl security-en-US security-ga-IE
-	- perl -w compare-locales.pl mobile-en-US mobile-ga-IE
+	- perl -w compare-locales.pl services-en-US services-ga-IE
 
 $(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM)
 	rm -f $(UTFCOMP)
@@ -80,6 +80,10 @@ other-licenses-ga-IE.jar : FORCE
 security-ga-IE.jar : FORCE
 	bash moznua security-en-US $(VERSION)
 	bash mozdist security-en-US $(HGFULLPATH)
+
+services-ga-IE.jar : FORCE
+	bash moznua services-en-US $(VERSION)
+	bash mozdist services-en-US $(HGFULLPATH)
 
 mobile-ga-IE.jar : FORCE
 	bash moznua mobile-en-US $(VERSION)
@@ -121,10 +125,10 @@ clean :
 
 distclean :
 	$(MAKE) clean
-	rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US mobile-en-US
-	rm -Rf browser-ga-IE dom-ga-IE extensions-ga-IE netwerk-ga-IE toolkit-ga-IE other-licenses-ga-IE security-ga-IE editor-ga-IE mail-ga-IE calendar-ga-IE mobile-ga-IE
-	rm -Rf browser-ga-IEpo dom-ga-IEpo extensions-ga-IEpo netwerk-ga-IEpo toolkit-ga-IEpo other-licenses-ga-IEpo security-ga-IEpo editor-ga-IEpo mail-ga-IEpo calendar-ga-IEpo mobile-ga-IEpo
-	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po calendar-ga-IE.po mobila-ga-IE.po
+	rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US mobile-en-US services-en-US
+	rm -Rf browser-ga-IE dom-ga-IE extensions-ga-IE netwerk-ga-IE toolkit-ga-IE other-licenses-ga-IE security-ga-IE editor-ga-IE mail-ga-IE calendar-ga-IE mobile-ga-IE services-ga-IE
+	rm -Rf browser-ga-IEpo dom-ga-IEpo extensions-ga-IEpo netwerk-ga-IEpo toolkit-ga-IEpo other-licenses-ga-IEpo security-ga-IEpo editor-ga-IEpo mail-ga-IEpo calendar-ga-IEpo mobile-ga-IEpo services-ga-IEpo
+	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po calendar-ga-IE.po mobile-ga-IE.po services-ga-IE.po
 
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
@@ -198,7 +202,9 @@ b-obair.po : FORCE
 	bash mozcat other-licenses-en-US
 	bash moznua security-en-US $(VERSION)
 	bash mozcat security-en-US
-	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | sed '1,/validation.dtd/d; /browser-ga-IE.po.*\\n"$$/,/security-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
+	bash moznua services-en-US $(VERSION)
+	bash mozcat services-en-US
+	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po services-ga-IE.po | sed '1,/validation.dtd/d; /browser-ga-IE.po.*\\n"$$/,/security-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
 	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
 	sed -i '/tempe/s/^#//' moznua
 
