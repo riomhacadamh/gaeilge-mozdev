@@ -9,9 +9,9 @@ cvs commit -m "outstanding changes before sync" firefox-trunk.ga.po
 
 #  Updates CVS and creates new *en-US files in this dir
 cd ~/gaeilge/gnu/mozilla/gaeilge/src
-rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US
+rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US services-en-US
 mkdir -p other-licenses-en-US/branding
-mkdir extensions-en-US security-en-US
+mkdir extensions-en-US security-en-US services-en-US
 mkdir extensions-en-US/inspector
 
 cd ~/seal/$SRCDIR/ga-IE
@@ -33,6 +33,7 @@ cp -Rf netwerk/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/netwerk-en-US
 cp -Rf toolkit/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/toolkit-en-US
 cp -Rf other-licenses/branding/firefox/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/firefox
 cp -Rf security/manager/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/security-en-US/manager
+cp -Rf services/sync/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/services-en-US/sync
 
 # next two lines reinserted into ga-IE dtd after translation
 sed -i '1,2d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/overrides/netError.dtd
