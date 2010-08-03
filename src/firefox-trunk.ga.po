@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-01 11:57-0500\n"
+"POT-Creation-Date: 2010-08-02 19:35-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -379,6 +379,43 @@ msgstr "Fuinneoga agus Cluaisíní"
 #: restorepage.windowLabel
 msgid "Window &#37;S"
 msgstr "Fuinneog &#37;S"
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowseraboutSyncTabs.dtd.po (firefox)  #-#-#-#-#
+#. Keep this in sync with syncTabsMenu.label from browser.dtd
+#. #-#-#-#-#  chromebrowserbrowser.dtd.po (firefox)  #-#-#-#-#
+#. This appears in the history menu
+#: tabs.otherComputers.label syncTabsMenu.label tabs.fromOtherComputers.label
+msgid "Tabs From Other Computers"
+msgstr "Cluaisíní ó Ríomhairí Eile"
+
+#: tabs.searchText.label
+msgid "Type here to find tabs…"
+msgstr "Clóscríobh anseo chun cluaisíní a aimsiú…"
+
+#. LOCALIZATION NOTE (tabs.context.openTab.accesskey, tabs.context.openMultipleTabs.accesskey):
+#. Only one of these will show at a time (based on selection), so reusing accesskey is ok.
+#: tabs.context.openTab.label tabs.context.openTab.accesskey
+msgid "&Open This Tab"
+msgstr "&Oscail an Cluaisín Seo"
+
+#: tabs.context.openMultipleTabs.label tabs.context.openMultipleTabs.accesskey
+msgid "&Open Selected Tabs"
+msgstr "&Oscail na Cluaisíní Roghnaithe"
+
+#: tabs.context.bookmarkSingleTab.label
+#: tabs.context.bookmarkSingleTab.accesskey
+msgid "&Bookmark This Tab…"
+msgstr "Cruthaigh Lea&bharmharc don Chluaisín Seo…"
+
+#: tabs.context.bookmarkMultipleTabs.label
+#: tabs.context.bookmarkMultipleTabs.accesskey
+msgid "&Bookmark Selected Tabs…"
+msgstr "Cruthaigh Lea&bharmharc do na Cluaisíní Roghnaithe…"
+
+#: tabs.context.refreshList.label tabs.context.refreshList.accesskey
+msgid "&Refresh List"
+msgstr "&Athnuaigh an Liosta"
 
 #: minimizeWindow.key
 msgid "m"
@@ -1063,8 +1100,8 @@ msgstr "Z"
 msgid "&Redo"
 msgstr "Ath&fheidhmigh"
 
-# Ctrl+Y = Athfheidhmigh, transcending language
 #: redoCmd.key
+msgctxt "redoCmd.key"
 msgid "Y"
 msgstr "Y"
 
@@ -1766,6 +1803,44 @@ msgstr "Cuardaigh Cluaisíní"
 #: tabsToolbar.label
 msgid "Browser tabs"
 msgstr "Cluaisíní brabhsálaí"
+
+#. #-#-#-#-#  chromebrowserpreferencespreferences.dtd.po (firefox)  #-#-#-#-#
+#. This should match syncBrand.shortName.label in ../syncBrand.dtd
+#: syncBrand.shortName.label paneSync.title
+msgid "Sync"
+msgstr "Sync"
+
+#: syncMenu.label
+msgid "&syncBrand.shortName.label;"
+msgstr "&syncBrand.shortName.label;"
+
+#. LOCALIZATION NOTE (sync.menu.accesskey): This is part of the tools menu, so
+#. don't use a conflicting access key
+#: syncMenu.accesskey
+msgctxt "syncMenu.accesskey"
+msgid "Y"
+msgstr "Y"
+
+#: syncSetup.label
+msgid "Set Up &syncBrand.shortName.label;…"
+msgstr "Socraigh &syncBrand.shortName.label;…"
+
+#: syncSetup.accesskey
+msgctxt "syncSetup.accesskey"
+msgid "Y"
+msgstr "Y"
+
+#: syncLogInItem.label syncLogInItem.accesskey
+msgid "&Connect"
+msgstr "&Ceangail"
+
+#: syncLogOutItem.label syncLogOutItem.accesskey
+msgid "&Disconnect"
+msgstr "&Dícheangail"
+
+#: syncSyncNowItem.label syncSyncNowItem.accesskey
+msgid "&Sync Now"
+msgstr "&Sioncrónaigh Anois"
 
 #: nv_timeout
 msgid "Timed Out"
@@ -4823,7 +4898,11 @@ msgstr "MB spás don taisce"
 msgid "&Clear Now"
 msgstr "&Bánaigh Anois"
 
-#: updateTab.label validation.crl.autoupdate.time.label1
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserpreferencessync.dtd.po (firefox)  #-#-#-#-#
+#. Login error feedback
+#: updateTab.label updatePass.label addon.update.postfix
+#: validation.crl.autoupdate.time.label1
 msgid "Update"
 msgstr "Nuashonrú"
 
@@ -5993,6 +6072,27 @@ msgstr ""
 msgid "Offline Data"
 msgstr "Sonraí As Líne"
 
+#. #### Syncing
+#: connect.label
+msgid "Connect"
+msgstr "Ceangail"
+
+#: disconnect.label
+msgid "Disconnect"
+msgstr "Dícheangail"
+
+#: differentAccount.title
+msgid "Use a Different Account?"
+msgstr "An bhfuil fonn ort cuntas eile a úsáid?"
+
+#: differentAccount.label
+msgid "This will reset all of your Sync account information and preferences."
+msgstr ""
+
+#: differentAccountConfirm.label
+msgid "Reset All Information"
+msgstr "Athshocraigh an fhaisnéis go léir"
+
 #: history.label
 msgctxt "history.label"
 msgid "History"
@@ -6212,6 +6312,113 @@ msgid ""
 msgstr ""
 "Roghnaigh Leabharmharc mar Leathanach Baile duit féin. Má tá fillteán "
 "roghnaithe agat, osclófar na leabharmharcanna san fhillteán sin i gcluaisíní."
+
+#. The page shown when not logged in...
+#: setupButton.label setupButton.accesskey
+msgid "&Set Up &syncBrand.fullName.label;"
+msgstr "&Socraigh &syncBrand.fullName.label;"
+
+#: weaveDesc.label
+msgid ""
+"&syncBrand.fullName.label; lets you access your history, bookmarks, passwords "
+"and open tabs across all your devices."
+msgstr ""
+"Le &syncBrand.fullName.label; is féidir leat do stair, leabharmharcanna, "
+"focail fhaire agus cluaisíní a rochtain ar gach gléas atá agat."
+
+#. The page shown when logged in...
+#: accountGroupboxCaption.label
+msgid "&syncBrand.fullName.label; Account"
+msgstr "Cuntas &syncBrand.fullName.label;"
+
+#: currentUser.label
+msgid "Current User:"
+msgstr "Úsáideoir Reatha:"
+
+#. #-#-#-#-#  security-ga-IE.po (firefox)  #-#-#-#-#
+#. Values for resetpassword.xul
+#: resetPass.label Reset resetPasswordButtonLabel
+msgid "Reset"
+msgstr "Bánaigh"
+
+#. Manage Account
+#: manageAccount.label manageAccount.accesskey
+msgid "Manage &Account"
+msgstr "Bainistigh Do &Chuntas"
+
+#: changePassword.label change.password.acceptButton
+msgid "Change Password"
+msgstr "Athraigh an Focal Faire"
+
+#: changePassphrase.label change.passphrase.acceptButton
+msgid "Change Secret Phrase"
+msgstr "Athraigh an Frása Faire"
+
+#: resetSync.label
+msgid "Reset Sync"
+msgstr "Athshocraigh Sync"
+
+#: differentAccount.label
+msgid "Use a Different Account"
+msgstr "Úsáid Cuntais Eile"
+
+#. Sync Settings
+#: syncPrefsCaption.label
+msgid "Browser Sync"
+msgstr "Sioncrónú Brabhsálaí"
+
+#: syncComputerName.label syncComputerName.accesskey
+msgid "&Computer Name:"
+msgstr "&Ainm an Ríomhaire:"
+
+#: syncModeSwitchDesc.label syncModeSwitchDesc.accesskey
+msgid "&brandShortName; &will: "
+msgstr "Cad is mian leat &brandShortName; a dhéanamh?"
+
+#: syncEverything.label
+msgid "Sync Everything"
+msgstr "Sioncrónaigh Gach Rud"
+
+#: customSync.label
+msgid "Use my custom settings"
+msgstr "Úsáid socruithe saincheaptha"
+
+#: syncEverythingDescription.label
+msgid ""
+"Your bookmarks, history, passwords, preferences, and tabs will be synced."
+msgstr ""
+"Beidh do chuid leabharmharcanna, stair, focail fhaire, sainroghanna, agus "
+"cluaisíní sioncrónaithe."
+
+#: syncItem.bookmarks.label syncItem.bookmarks.accesskey
+msgid "Sync Book&marks"
+msgstr "Sioncrónaigh Leabhar&mharcanna"
+
+#: syncItem.tabs.label syncItem.tabs.accesskey
+msgid "Sync &Tabs"
+msgstr "Sioncrónaigh &Cluaisíní"
+
+#: syncItem.history.label syncItem.history.accesskey
+msgid "Sync Histo&ry"
+msgstr "Sioncrónaigh Stai&r"
+
+#: syncItem.passwords.label syncItem.passwords.accesskey
+msgid "Sync &Passwords"
+msgstr "Sioncrónaigh &Focail Fhaire"
+
+#: syncItem.prefs.label syncItem.prefs.accesskey
+msgid "&Sync Preferences"
+msgstr "&Sioncrónaigh Sainroghanna"
+
+#. #-#-#-#-#  chromebrowserpreferencessync.dtd.po (firefox)  #-#-#-#-#
+#. Footer stuff
+#: prefs.tosLink.label setup.tosLink.label
+msgid "Terms of Service"
+msgstr "Téarmaí Seirbhíse"
+
+#: prefs.ppLink.label setup.ppLink.label testpilot.welcomePage.privacyPolicy
+msgid "Privacy Policy"
+msgstr "Polasaí Príobháideachta"
 
 #: newWindowsAsTabs.label newWindowsAsTabs.accesskey
 msgid "Open new windows in a new &tab instead"
@@ -6880,11 +7087,403 @@ msgstr ""
 "\n"
 "Foinse: %S"
 
+#: syncBrand.fullName.label
+msgid "Firefox Sync"
+msgstr "Firefox Sync"
+
+#. # LOCALIZATION NOTE (change.password.title): This (and associated change.password/passphrase) are used when the user elects to change their password.
+#: change.password.title
+msgid "Change your Password"
+msgstr "Athraigh d'Fhocal Faire"
+
+#: change.password.status.active
+msgid "Changing your password…"
+msgstr "Focal faire á athrú…"
+
+#: change.password.status.success
+msgid "Your password has been changed."
+msgstr "Athraíodh d'fhocal faire."
+
+#: change.password.status.error
+msgid "There was an error changing your password."
+msgstr "Tharla earráid agus d'fhocal faire á athrú."
+
+#: change.password.introText
+msgid ""
+"Your password must be at least 8 characters long.  It cannot be the same as "
+"either your user name or your secret phrase."
+msgstr ""
+
+#: change.password.warningText
+msgid ""
+"Note: All of your other devices will be unable to connect to your account "
+"once you change this password."
+msgstr ""
+
+#: change.passphrase.title
+msgid "Change your Secret Phrase"
+msgstr "Athraigh do Fhrása Faire"
+
+#: change.passphrase.label
+msgid "Changing secret phrase and uploading local data, please wait…"
+msgstr "Frása faire á athrú agus sonraí logánta á n-uasluchtú, fan go fóill…"
+
+#: change.passphrase.error
+msgid "There was an error while changing your secret phrase!"
+msgstr "Tharla earráid agus do fhrása faire á athrú!"
+
+#: change.passphrase.success
+msgid "Your secret phrase was successfully changed!"
+msgstr "D'éirigh le hathrú do fhrása faire!"
+
+#. # LOCALIZATION NOTE (change.passphrase.introText) "Sync" should match &syncBrand.shortName.label; from syncBrand.dtd
+#: change.passphrase.introText
+msgid ""
+"Your secret phrase must be at least 12 characters long.  Sync uses this "
+"phrase as part of encrypting your data."
+msgstr ""
+
+#. # LOCALIZATION NOTE (change.passphrase.introText2) "Firefox Sync" should match syncBrand.fullName.label from syncBrand.dtd
+#: change.passphrase.introText2
+msgid ""
+"You may wish to write this down, as this is never sent over the Internet and "
+"is not backed up or synced by Firefox Sync for your security."
+msgstr ""
+
+#. # LOCALIZATION NOTE (change.passphrase.warningText) "Sync" should match &syncBrand.shortName.label; from syncBrand.dtd
+#: change.passphrase.warningText
+msgid ""
+"Note: This will erase all data stored on the Sync server and upload new data "
+"secured by this phrase. Your other devices will not sync until the secret "
+"phrase is entered for that device."
+msgstr ""
+
+#. # LOCALIZATION NOTE (new.password.title): This (and associated new.password/passphrase) are used on a second computer when it detects that your password or passphrase has been changed on a different device.
+#: new.password.title
+msgctxt "new.password.title"
+msgid "Update Password"
+msgstr "Nuashonraigh an Focal Faire"
+
+#: new.password.introText
+msgid "Your password was rejected by the server, please update your password."
+msgstr "Diúltaigh an freastalaí d'fhocal faire, nuashonraigh é anois."
+
+#: new.password.label
+msgid "Enter your new password"
+msgstr "Iontráil focal faire nua"
+
+#: new.password.confirm
+msgid "Confirm your new password"
+msgstr "Dearbhaigh an focal faire nua"
+
+#: new.password.acceptButton
+msgctxt "new.password.acceptButton"
+msgid "Update Password"
+msgstr "Nuashonraigh an Focal Faire"
+
+#: new.password.status.incorrect
+msgid "Password incorrect, please try again."
+msgstr "Focal faire mícheart, bain triail eile as."
+
+#: new.passphrase.title
+msgctxt "new.passphrase.title"
+msgid "Update Secret Phrase"
+msgstr "Nuashonraigh an Frása Faire"
+
+#: new.passphrase.introText
+msgid "Your secret phrase has changed, please enter your new secret phrase"
+msgstr "Athraíodh do fhrása faire, iontráil an frása faire nua"
+
+#: new.passphrase.label
+msgid "New secret phrase"
+msgstr "Frása faire nua"
+
+#: new.passphrase.confirm
+msgid "Confirm secret phrase"
+msgstr "Dearbhaigh an frása faire"
+
+#: new.passphrase.acceptButton
+msgctxt "new.passphrase.acceptButton"
+msgid "Update Secret Phrase"
+msgstr "Nuashonraigh an Frása Faire"
+
+#: new.passphrase.status.incorrect
+msgid "Secret phrase incorrect, please try again."
+msgstr "Frása faire mícheart, bain triail eile as."
+
+#: accountSetupTitle.label
+msgid "&syncBrand.fullName.label; Setup"
+msgstr "Socrú &syncBrand.fullName.label;"
+
+#. First page of the wizard
+#: setup.choicePage.title.label
+msgid "Have you used &syncBrand.fullName.label; before?"
+msgstr "Ar bhain tú úsáid as &syncBrand.fullName.label; riamh?"
+
+#: setup.choicePage.new.label
+msgid "I've never used &syncBrand.shortName.label; before"
+msgstr "Níor bhain mé úsáid as &syncBrand.fullName.label; riamh"
+
+#: setup.choicePage.existing.label
+msgid "I'm already using &syncBrand.shortName.label; on another computer"
+msgstr "Tá mé ag baint úsáide as &syncBrand.fullName.label; ar ríomhaire eile"
+
+#. New Account AND Existing Account
+#: connectTo.label
+msgid "Connect to"
+msgstr "Ceangail le"
+
+#: serverType.main.label
+msgid "&syncBrand.fullName.label; Server"
+msgstr "Freastalaí &syncBrand.fullName.label;"
+
+#: serverType.custom.label
+msgid "Use a custom server"
+msgstr "Úsáid freastalaí saincheaptha"
+
+#: signIn.username.label signIn.username.accesskey
+msgid "&User Name"
+msgstr "&Ainm Úsáideora"
+
+#: signIn.password.label signIn.password.accesskey
+msgid "&Password"
+msgstr "&Focal Faire"
+
+#: signIn.serverURL.label signIn.serverURL.accesskey
+msgid "Server UR&L"
+msgstr "UR&L an Fhreastalaí"
+
+#. New Account Page 1: Basic Account Info
+#: setup.newAccountPage.title.label
+msgid "Create your &syncBrand.shortName.label; Account"
+msgstr "Cruthaigh do Chuntas &syncBrand.shortName.label;"
+
+#: setup.confirmPassword.label setup.confirmPassword.accesskey
+msgid "Confir&m Password"
+msgstr "Dear&bhaigh an Focal Faire"
+
+#: setup.emailAddress.label setup.emailAddress.accesskey
+msgid "&Email Address"
+msgstr "S&eoladh Ríomhphoist"
+
+#. LOCALIZATION NOTE: tosAgree1, tosLink, tosAgree2, ppLink, tosAgree3 are
+#. joined with implicit white space, so spaces in the strings aren't necessary
+#: setup.tosAgree1.label setup.tosAgree1.accesskey
+msgid "I &agree to the"
+msgstr "Gl&acaim leis na"
+
+#: setup.tosAgree2.label
+msgid "and the"
+msgstr "agus an"
+
+#: setup.tosAgree3.label
+msgctxt "setup.tosAgree3.labelsetup.tosAgree3.label"
+msgid ""
+msgstr ""
+
+#: setup.tosAgree2.accesskey
+msgctxt "setup.tosAgree2.accesskey"
+msgid ""
+msgstr ""
+
+#. New Account Page 2: Passphrase Entry
+#: setup.newPPPage.title.label
+msgid "Enter your Secret Phrase"
+msgstr "Iontráil do Fhrása Faire"
+
+#: passphraseDesc.label
+msgid ""
+"Please enter a secret phrase. This will be used to encrypt all your data so "
+"only you can access it. It is never stored on the server, so don't lose this!"
+msgstr ""
+
+#: passphraseDesc2.label
+msgid ""
+"This must be at least 12 characters long and cannot match your account "
+"password."
+msgstr ""
+
+#: passphraseEntry.label passphraseEntry.accesskey
+msgid "&Secret Phrase"
+msgstr "Frá&sa Faire"
+
+#: passphraseConfirm.label passphraseConfirm.accesskey
+msgid "Confir&m"
+msgstr "Dear&bhaigh"
+
+#. New Account Page 3: Sync Type Options
+#: setup.newAccountPrefs2.title.label
+msgid "Browser Sync Preferences"
+msgstr "Sainroghanna Sync"
+
+#. New Account Page 4: Captcha
+#: setup.captchaPage.title.label
+msgid "Please confirm you're not a robot ;)"
+msgstr "Dearbhaigh nach róbat thú, le do thoil ;)"
+
+#. Existing Account Page 1: Login
+#: setup.existingAccount.title.label
+msgid "Enter Account Information"
+msgstr "Iontráil d'Fhaisnéis Chuntais"
+
+#: resetPassword.label
+msgid "Reset Password"
+msgstr "Athshocraigh Focal Faire"
+
+#: connecting.label
+msgid "Connecting…"
+msgstr "Á Cheangal…"
+
+#. Existing Account Page 2: Passphrase
+#: passphraseGroupbox.label
+msgid "Enter Secret Phrase"
+msgstr "Iontráil Frása Faire"
+
+#: passphraseDesc3.label
+msgid ""
+"Please enter your secret phrase. This must be the same secret phrase that you "
+"used to encrypt your data."
+msgstr ""
+
+#: passphraseHelp.label
+msgid ""
+"Your secret phrase is at least 12 characters long and is not your password. "
+"You can find your saved secret phrase by going to your other computer and "
+"checking the Saved Passwords under Security. If you still cannot get the "
+"correct secret phrase, you can choose to reset it, but you will lose any data "
+"stored on the server."
+msgstr ""
+
+#: verifying.label
+msgid "Verifying…"
+msgstr "Á Dheimhniú…"
+
+#. New & Existing Account: Merge Options
+#: setup.mergeChoicePage.title.label
+msgid "How do you want to start off?"
+msgstr "Cad é ba mhaith leat a dhéanamh ar dtús?"
+
+#: choice.merge.main.label
+msgid "Merge this computer's data with your &syncBrand.shortName.label; data"
+msgstr ""
+"Cumaisc na sonraí ar an ríomhaire seo le do chuid sonraí &syncBrand.shortName."
+"label;"
+
+#: choice.merge.recommend.label
+msgid "This option is strongly recommended by Mozilla for all users."
+msgstr "Molann Mozilla an rogha seo go láidir do gach úsáideoir."
+
+#: choice.client.main.label
+msgid ""
+"Replace all data on this computer with your &syncBrand.fullName.label; data"
+msgstr ""
+"Cuir do chuid sonraí &syncBrand.fullName.label; in áit na sonraí ar an "
+"ríomhaire seo"
+
+#: choice.server.main.label
+msgid "Replace all other devices with your local data"
+msgstr "Cuir na sonraí logánta in áit na sonraí ar gach gléas eile"
+
+#. New & Existing Account: Confirm Merge Options
+#: confirm.caption.label
+msgid "Confirm your choice"
+msgstr "Dearbhaigh do rogha"
+
+#: confirm.merge.label
+msgid ""
+"You have chosen to merge your data on this computer with the data on your "
+"other devices running &syncBrand.fullName.label;."
+msgstr ""
+
+#: confirm.client.label
+msgid ""
+"All &brandShortName; data on this computer will be deleted, including the "
+"following:"
+msgstr ""
+"Scriosfar na sonraí &brandShortName; go léir ar an ríomhaire seo, na sonraí "
+"seo a leanas san áireamh:"
+
+#: confirm.client.moreinfo.label
+msgid ""
+"&brandShortName; will then copy your &syncBrand.fullName.label; data to this "
+"computer."
+msgstr ""
+"Cóipeálfaidh &brandShortName; do chuid sonraí &syncBrand.fullName.label; go "
+"dtí an ríomhaire seo."
+
+#: confirm.client.warning.label
+msgid ""
+"WARNING: This will result in all &brandShortName; data on this computer being "
+"replaced!"
+msgstr "RABHADH: Scriosfar na sonraí &brandShortName; go léir ón ríomhaire seo!"
+
+#: confirm.server.label
+msgid "The following devices will be overwritten with your local data:"
+msgstr ""
+
+#: confirm.server.warning.label
+msgid ""
+"WARNING: Your local data will replace all &brandShortName; data on these "
+"devices!"
+msgstr ""
+"RABHADH: Cuirfear do chuid sonraí logánta in áit na sonraí &brandShortName; "
+"go léir ar na gléasanna seo!"
+
+#. New & Existing Account: Setup Complete
+#: setup.successPage.title.label
+msgid "Setup Complete!"
+msgstr "Tá an socrú críochnaithe!"
+
+#: setup.successPage.desc.label
+msgid ""
+"Congratulations! &brandShortName; is now set up to automatically sync your "
+"information. Don't forget to install &syncBrand.fullName.label; on all your "
+"devices. You can now continue using &brandShortName;."
+msgstr ""
+
+#: cancelSetup.label
+msgid "Cancel Setup"
+msgstr "Cealaigh an Socrú"
+
+#: errorCreatingAccount.title
+msgid "Error Creating Account"
+msgstr "Earráid agus Cuntas á Chruthú"
+
+#: invalidEmail.label
+msgid "Invalid email address"
+msgstr "Seoladh ríomhphoist neamhbhailí"
+
+#: serverInvalid.label
+msgid "Please enter a valid server URL"
+msgstr ""
+
+#: usernameNotAvailable.label
+msgid "Already in use"
+msgstr "In úsáid cheana"
+
+#. # LOCALIZATION NOTE (additionalClients.label, bookmarkCount.label, historyCount.label, passwordCount.label).
+#. # We'll fix the lack of PluralForms in bug 583661.
+#: additionalClients.label
+msgid "and %S additional devices"
+msgstr "agus %S gléas eile"
+
+#: bookmarkCount.label
+msgid "%S bookmarks"
+msgstr "%S leabharmharc"
+
+#: historyCount.label
+msgid "%S days of history"
+msgstr "%S lá staire"
+
+#: passwordCount.label
+msgid "%S passwords"
+msgstr "%S focal faire"
+
 #: closeTab.label tabs.closeTab
 msgid "Close Tab"
 msgstr "Dún Cluaisín"
 
-#: tabs.loading loading.label
+#: tabs.loading
 msgid "Loading…"
 msgstr "Á Luchtú…"
 
@@ -7996,10 +8595,6 @@ msgid "The icon will pop up a notification when a study needs your attention."
 msgstr ""
 "Taispeánfaidh an deilbhín fógra nuair a chaithfidh tú aire a thabhairt do "
 "staidéar."
-
-#: testpilot.welcomePage.privacyPolicy
-msgid "Privacy Policy"
-msgstr "Polasaí Príobháideachta"
 
 #: testpilot.welcomePage.legalNotices
 msgid "Legal Notices"
@@ -10232,12 +10827,6 @@ msgstr ""
 #: PEAnonBoxNotAlone
 msgid "Did not expect anonymous box."
 msgstr "Ní rabhthas ag súil le bosca gan ainm."
-
-#. #-#-#-#-#  security-ga-IE.po (firefox)  #-#-#-#-#
-#. Values for resetpassword.xul
-#: Reset resetPasswordButtonLabel
-msgid "Reset"
-msgstr "Bánaigh"
 
 #: Submit
 msgid "Submit Query"
@@ -14050,6 +14639,11 @@ msgstr "Ná taispeáin an teachtaireacht seo i rith an tseisiúin seo."
 #: undoCmd.label undoCmd.accesskey
 msgid "&Undo"
 msgstr "Cea&laigh"
+
+# Ctrl+Y = Athfheidhmigh, transcending language
+#: redoCmd.key
+msgid "Y"
+msgstr "Y"
 
 #: cutCmd.key
 msgid "X"
@@ -18507,9 +19101,27 @@ msgstr "Bainisteoir na mBreiseán"
 msgid "Search all add-ons"
 msgstr "Cuardaigh na breiseáin go léir"
 
+#: loading.label
+msgctxt "loading.label"
+msgid "Loading…"
+msgstr "Á Luchtú…"
+
 #: listEmpty.installed.label
 msgid "You don't have any add-ons of this type installed"
 msgstr "Níl aon bhreiseán den chineál seo suiteáilte agat"
+
+#: listEmpty.availableUpdates.label
+msgctxt "listEmpty.availableUpdates.label"
+msgid "No updates found"
+msgstr "Ní bhfuarthas nuashonruithe"
+
+#: listEmpty.recentUpdates.label
+msgid "You haven't recently updated any add-ons"
+msgstr "Ní raibh aon bhreiseáin nuashonraithe agat le déanaí"
+
+#: listEmpty.findUpdates.label
+msgid "Check For Updates"
+msgstr "Lorg Nuashonruithe"
 
 #: listEmpty.search.label
 msgid "Could not find any matching add-ons"
@@ -18536,11 +19148,26 @@ msgstr "Téamaí"
 msgid "Plugins"
 msgstr "Forlíontáin"
 
-# addon updates
+#: view.recentUpdates.label header-recentUpdates
+msgid "Recent Updates"
+msgstr "Nuashonruithe Le Déanaí"
+
+#: view.availableUpdates.label header-availableUpdates
+msgid "Available Updates"
+msgstr "Nuashonruithe Ar Fáil"
+
 #. addon updates
-#: updates.updateNow.label
-msgid "Update add-ons"
-msgstr "Nuashonraigh breiseáin"
+#: updates.updateAddonsNow.label updates.updateAddonsNow.accesskey
+msgid "&Update Add-ons Now"
+msgstr "N&uashonraigh Breiseáin Anois"
+
+#: updates.viewUpdates.label updates.viewUpdates.accesskey
+msgid "&View Recent Updates"
+msgstr "&Féach ar Nuashonruithe Le Déanaí"
+
+#: updates.backgroudUpdateCheck.label updates.backgroudUpdateCheck.accesskey
+msgid "&Check for Updates Automatically"
+msgstr "&Cuardaigh Nuashonruithe go hUathoibríoch"
 
 #: updates.updating.label
 msgid "Updating add-ons"
@@ -18560,8 +19187,13 @@ msgid "Restart now to complete installation"
 msgstr "Atosaigh anois chun an tsuiteáil a chur i gcrích"
 
 #: updates.noneFound.label
+msgctxt "updates.noneFound.label"
 msgid "No updates found"
-msgstr "Níor aimsíodh nuashonruithe"
+msgstr "Ní bhfuarthas nuashonruithe"
+
+#: updates.manualUpdatesFound.label
+msgid "View Available Updates"
+msgstr "Féach ar Nuashonruithe Ar Fáil"
 
 # addon actions
 #. addon actions
@@ -18602,6 +19234,22 @@ msgstr "Gla&c Páirt"
 #: cmd.contribute.tooltip
 msgid "Contribute to the development of this add-on"
 msgstr "Glac páirt i bhforbairt an bhreiseáin seo"
+
+#: cmd.showReleaseNotes.label
+msgid "Show Release Notes"
+msgstr "Taispeáin na Nótaí Eisiúna"
+
+#: cmd.showReleaseNotes.tooltip
+msgid "Show the release notes for this update"
+msgstr "Taispeáin na nótaí eisiúna don nuashonrú seo"
+
+#: cmd.hideReleaseNotes.label
+msgid "Hide Release Notes"
+msgstr "Folaigh na Nótaí Eisiúna"
+
+#: cmd.hideReleaseNotes.tooltip
+msgid "Hide the release notes for this update"
+msgstr "Folaigh na nótaí eisiúna don nuashonrú seo"
 
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. detail view
@@ -18739,9 +19387,30 @@ msgstr "Atosaigh anois chun an tsuiteáil a chur i gcrích"
 msgid "Install this add-on"
 msgstr "Suiteáil an breiseán seo"
 
+#: addon.updateNow.label
+msgid "Update Now"
+msgstr "Nuashonraigh Anois"
+
+#: addon.updateNow.tooltip
+msgid "Install the update for this add-on"
+msgstr "Suiteáil an nuashonrú don bhreiseán seo"
+
 #: addon.checkingForUpdates.label
 msgid "Checking for updates…"
 msgstr "Nuashonruithe á lorg…"
+
+#: addon.releaseNotes.label
+msgid "Release Notes:"
+msgstr "Nótaí Eisiúna:"
+
+#: addon.loadingReleaseNotes.label
+msgctxt "addon.loadingReleaseNotes.label"
+msgid "Loading…"
+msgstr "Á Luchtú…"
+
+#: addon.errorLoadingReleaseNotes.label
+msgid "Sorry, but there was an error loading the release notes."
+msgstr "Tá brón orm, ach tharla earráid agus na nótaí eisiúna á luchtú."
 
 #: addon.createdBy.label
 msgid "By "
@@ -25758,10 +26427,6 @@ msgstr "Ceangailte: %S"
 msgid "Disconnected"
 msgstr "Dícheangailte"
 
-#: connecting.label
-msgid "Connecting…"
-msgstr "Á Cheangal…"
-
 #: mobile.label
 msgid "Mobile Bookmarks"
 msgstr "Leabharmharcanna Soghluaiste"
@@ -25840,7 +26505,3 @@ msgstr "Nuashonraigh Firefox Sync"
 #: error.sync.tryAgainButton.label
 msgid "Sync Now"
 msgstr "Sioncrónaigh Anois"
-
-#: tabs.fromOtherComputers.label
-msgid "Tabs From Other Computers"
-msgstr "Cluaisíní ó Ríomhairí Eile"
