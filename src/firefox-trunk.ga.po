@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-12 15:51-0500\n"
+"POT-Creation-Date: 2010-08-14 10:16-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -355,16 +355,6 @@ msgstr "Athchóirigh"
 #: notifyBarRememberButtonAccessKey
 msgid "R"
 msgstr "R"
-
-#: restorepage.cancelButton
-msgid "Start New Session"
-msgstr "Tosaigh Seisiún Nua"
-
-#: restorepage.cancel.access securityTab.accesskey
-#: cmd_showSuggestions_accesskey submitReport.accesskey savePageCmd.commandkey
-#: error.sync.tryAgainButton.accesskey
-msgid "S"
-msgstr "S"
 
 #: restorepage.restoreHeader
 msgctxt "restorepage.restoreHeader"
@@ -922,13 +912,13 @@ msgctxt "homeButton.label"
 msgid "Home"
 msgstr "Baile"
 
-#: tabViewButton.label
-msgid "Tab Sets"
-msgstr "Tacair Chluaisíní"
+#: tabViewButton2.label
+msgid "Tab Groups"
+msgstr "Grúpaí Cluaisíní"
 
-#: tabViewButton.tooltip
-msgid "Open a visual tab interface"
-msgstr ""
+#: tabViewButton2.tooltip
+msgid "Group Your Tabs"
+msgstr "Grúpáil Do Chluaisíní"
 
 #: bookmarksButton.label bookmarksButton.accesskey
 msgctxt "bookmarksButton.label bookmarksButton.accesskey"
@@ -1201,9 +1191,9 @@ msgstr "R"
 msgid "&View"
 msgstr "&Amharc"
 
-#: showTabView.label showTabView.accesskey
-msgid "Tab&View"
-msgstr "Amharc &Cluaisíní"
+#: showTabView2.label showTabView2.accesskey
+msgid "&Group Your Tabs…"
+msgstr "&Grúpáil Do Chluaisíní…"
 
 # "U" under Main -> Amharc
 #: viewToolbarsMenu.label viewToolbarsMenu.accesskey
@@ -2768,9 +2758,9 @@ msgid "Search %S"
 msgstr "Cuardaigh %S"
 
 #. # TabView
-#: tabView.title
-msgid "%S Tab Sets"
-msgstr "Tacair Chluaisíní %S"
+#: tabView2.title
+msgid "%S - Group Your Tabs"
+msgstr "%S - Grúpáil Do Chluaisíní"
 
 #: extensions.{972ce4c6-7e08-4474-a285-3208198ce6fd}.name
 msgid "Default"
@@ -3923,6 +3913,11 @@ msgstr "Suiteáil Eisínteachtaí nó Téamaí"
 #: pref.security.general.lHeader
 msgid "Security"
 msgstr "Slándáil"
+
+#: securityTab.accesskey cmd_showSuggestions_accesskey submitReport.accesskey
+#: savePageCmd.commandkey error.sync.tryAgainButton.accesskey
+msgid "S"
+msgstr "S"
 
 #: securityHeader
 msgid "Security information for this page"
@@ -6576,13 +6571,10 @@ msgstr "Google"
 msgid "http://fusion.google.com/add?feedurl=%s"
 msgstr "http://fusion.google.com/add?feedurl=%s"
 
-# Keyword URL (for location bar searches)
 #. # Keyword URL (for location bar searches)
 #: keyword.URL
-msgid ""
-"http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
-msgstr ""
-"http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
+msgid "http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&q="
+msgstr "http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&q="
 
 # URL for site-specific search engines
 # TRANSLATION NOTE: {moz:domain} and {searchTerms} are placeholders for the site
@@ -8331,9 +8323,17 @@ msgctxt "testpilot.settings.label"
 msgid "Settings"
 msgstr "Socruithe"
 
-#: testpilot.settings.notifyMeWhen.label
-msgid "Notify me when"
-msgstr "Cuir in iúl dom"
+#: testpilot.settings.dataSubmission.label
+msgid "Data Submission"
+msgstr "Seoladh Sonraí"
+
+#: testpilot.settings.notifications.label
+msgid "Notifications"
+msgstr "Fógraí"
+
+#: testpilot.settings.notifyWhen.label
+msgid "Notify me when…"
+msgstr "Cuir in iúl dom…"
 
 #: testpilot.settings.readyToSubmit.label
 msgid "A study is ready to submit"
@@ -8351,9 +8351,9 @@ msgstr "Nuair a bheidh torthaí nua ag staidéar"
 msgid "Automatically submit my data (don't ask me)"
 msgstr "Seol mo chuid sonraí go huathoibríoch (ná fiafraigh díom)"
 
-#: testpilot.allStudies.label
-msgid "All Your User Studies"
-msgstr "Do Staidéir Úsáideora Go Léir"
+#: testpilot.allYourStudies.label
+msgid "All Your User Studies…"
+msgstr "Do Chuid Staidéar Go Léir…"
 
 #: testpilot.about.label
 msgid "About Test Pilot"
@@ -8415,6 +8415,11 @@ msgstr "Chuir Firefox aoibhneas orm de bharr…"
 #: testpilot.sad.label
 msgid "Firefox Made Me Sad Because…"
 msgstr "Chuir Firefox brón orm de bharr…"
+
+#. # description for add-on manager
+#: extensions.testpilot@labs.mozilla.com.description
+msgid "Help make Firefox better by running user studies."
+msgstr "Cabhraigh linn Firefox a fheabhsú trí pháirt a ghlacadh i staidéar úsáideora."
 
 # common
 #. # common
@@ -13703,6 +13708,15 @@ msgstr "Ainm"
 #: aboutSupport.modifiedPrefsValue valueColumn.label devmgr.details.title2
 msgid "Value"
 msgstr "Luach"
+
+#: aboutSupport.graphicsTitle
+msgid "Graphics"
+msgstr "Grafaic"
+
+#. LOCALIZATION NOTE In the following string, "Direct2D" is a proper noun and should not be translated
+#: aboutSupport.graphicsDirect2DEnabled
+msgid "Direct2D Enabled"
+msgstr "Direct2D Cumasaithe"
 
 #: aboutSupport.installationHistoryTitle
 msgid "Installation History"
