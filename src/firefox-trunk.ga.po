@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-04 23:15-0500\n"
+"POT-Creation-Date: 2010-10-14 10:08-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1092,6 +1092,11 @@ msgctxt "bookmarksMenuButton.tooltip"
 msgid "Display your bookmarks"
 msgstr "Taispeáin do leabharmharcanna"
 
+#: bookmarksMenuButton.unsorted.label
+msgctxt "bookmarksMenuButton.unsorted.label"
+msgid "Unsorted Bookmarks"
+msgstr "Leabharmharcanna Gan Sórtáil"
+
 #: viewBookmarksSidebar.label
 msgid "Show in Sidebar"
 msgstr "Taispeáin sa Bharra Taoibh"
@@ -1261,10 +1266,10 @@ msgstr "N"
 msgid "&Edit"
 msgstr "&Eagar"
 
+# "L" under Main -> Eagar ("C" is Cóipeáil)
 #: undoCmd.label undoCmd.accesskey
-msgctxt "undoCmd.label undoCmd.accesskey"
 msgid "&Undo"
-msgstr "&Cealaigh"
+msgstr "Cea&laigh"
 
 # Ctrl+Z = Cealaigh, transcending language
 #: undoCmd.key
@@ -1442,7 +1447,8 @@ msgstr "Barraí Taoibh"
 msgid "Find…"
 msgstr "Aimsigh…"
 
-#: appMenuUnsorted.label UnsortedBookmarksFolderTitle
+#: appMenuUnsorted.label
+msgctxt "appMenuUnsorted.label"
 msgid "Unsorted Bookmarks"
 msgstr "Leabharmharcanna Gan Sórtáil"
 
@@ -1989,15 +1995,6 @@ msgstr "Déanta"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: editBookmark.undo.label editBookmark.undo.accessKey
-msgctxt "editBookmark.undo.label editBookmark.undo.accessKey"
-msgid "&Undo"
-msgstr "&Cealaigh"
-
-#: editBookmark.edit.label editBookmark.edit.accessKey
-msgid "&Edit…"
-msgstr "&Eagar…"
-
 #: identity.unverifiedsite2 identity.unknown.tooltip
 msgid "This web site does not supply identity information."
 msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena aitheantas."
@@ -2170,15 +2167,22 @@ msgstr "n"
 #. # Also see https://bugzilla.mozilla.org/show_bug.cgi?id=570012 for mockups
 #: addonDownloading
 msgid "Add-on downloading;Add-ons downloading"
-msgstr "Breiseán á íosluchtú;Breiseáin á n-íosluchtú;Breiseáin á n-íosluchtú;Breiseáin á n-íosluchtú;Breiseáin á n-íosluchtú"
+msgstr ""
+"Breiseán á íosluchtú;Breiseáin á n-íosluchtú;Breiseáin á n-íosluchtú;"
+"Breiseáin á n-íosluchtú;Breiseáin á n-íosluchtú"
 
 #: addonDownloadCancelled
 msgid "Add-on download cancelled.;Add-on downloads cancelled."
-msgstr "Cealaíodh íosluchtú an bhreiseáin.;Cealaíodh íosluchtú na mbreiseán.;Cealaíodh íosluchtú na mbreiseán.;Cealaíodh íosluchtú na mbreiseán.;Cealaíodh íosluchtú na mbreiseán."
+msgstr ""
+"Cealaíodh íosluchtú an bhreiseáin.;Cealaíodh íosluchtú na mbreiseán.;"
+"Cealaíodh íosluchtú na mbreiseán.;Cealaíodh íosluchtú na mbreiseán.;Cealaíodh "
+"íosluchtú na mbreiseán."
 
 #: addonDownloadRestart
 msgid "Restart Download;Restart Downloads"
-msgstr "Atosaigh an tÍosluchtú;Atosaigh na hÍosluchtuithe;Atosaigh na hÍosluchtuithe;Atosaigh na hÍosluchtuithe;Atosaigh na hÍosluchtuithe"
+msgstr ""
+"Atosaigh an tÍosluchtú;Atosaigh na hÍosluchtuithe;Atosaigh na hÍosluchtuithe;"
+"Atosaigh na hÍosluchtuithe;Atosaigh na hÍosluchtuithe"
 
 #: addonDownloadRestart.accessKey
 msgctxt "addonDownloadRestart.accessKey"
@@ -6861,16 +6865,16 @@ msgstr "Google"
 msgid "Yahoo"
 msgstr "Yahoo.co.uk"
 
-# These are the default web service based feed readers
 #. # This is the default set of web based feed handlers shown in the reader
 #. # selection UI
 #: browser.contentHandlers.types.0.title
-msgid "Bloglines"
-msgstr "Bloglines"
+msgctxt "browser.contentHandlers.types.0.title"
+msgid "Google"
+msgstr "Google"
 
 #: browser.contentHandlers.types.0.uri
-msgid "http://www.bloglines.com/login?r=/sub/%s"
-msgstr "http://www.bloglines.com/login?r=/sub/%s"
+msgid "http://fusion.google.com/add?feedurl=%s"
+msgstr "http://fusion.google.com/add?feedurl=%s"
 
 # keep compatibility with FF3.6 region.properties, else need to file bug :(
 #: browser.contentHandlers.types.1.title
@@ -6880,15 +6884,6 @@ msgstr "My Yahoo"
 #: browser.contentHandlers.types.1.uri
 msgid "http://add.my.yahoo.com/rss?url=%s"
 msgstr "http://add.my.yahoo.com/rss?url=%s"
-
-#: browser.contentHandlers.types.2.title
-msgctxt "browser.contentHandlers.types.2.title"
-msgid "Google"
-msgstr "Google"
-
-#: browser.contentHandlers.types.2.uri
-msgid "http://fusion.google.com/add?feedurl=%s"
-msgstr "http://fusion.google.com/add?feedurl=%s"
 
 # URL for site-specific search engines
 # TRANSLATION NOTE: {moz:domain} and {searchTerms} are placeholders for the site
@@ -6994,8 +6989,8 @@ msgid ""
 "which fraudulent web pages and emails are used to imitate sources you may "
 "trust. You can find out more about "
 msgstr ""
-"Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar \"bréagbhrandáil"
-"\", ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist chalaoiseacha chun "
+"Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar “bréagbhrandáil”, "
+"ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist chalaoiseacha chun "
 "aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín agat astu. Is "
 "féidir tuilleadh a léamh "
 
@@ -7694,7 +7689,9 @@ msgstr "Bain"
 
 #: quota.treeCaption.label
 msgid "Uncheck items to stop syncing them and free up space on the server."
-msgstr "Bain tic ó mhír chun éirí as bheith á sioncrónú agus spás a oscailt ar an bhfreastalaí."
+msgstr ""
+"Bain tic ó mhír chun éirí as bheith á sioncrónú agus spás a oscailt ar an "
+"bhfreastalaí."
 
 #. # LOCALIZATION NOTE (quota.removal.label): %S is a list of engines that will be
 #. # disabled and whose data will be removed once the user confirms.
@@ -7744,11 +7741,11 @@ msgstr "Ar bhain tú úsáid as &syncBrand.fullName.label; riamh?"
 
 #: setup.choicePage.new.label
 msgid "I've never used &syncBrand.shortName.label; before"
-msgstr "Níor bhain mé úsáid as &syncBrand.fullName.label; riamh"
+msgstr "Níor bhain mé úsáid as &syncBrand.shortName.label; riamh"
 
 #: setup.choicePage.existing.label
 msgid "I'm already using &syncBrand.shortName.label; on another computer"
-msgstr "Tá mé ag baint úsáide as &syncBrand.fullName.label; ar ríomhaire eile"
+msgstr "Tá mé ag baint úsáide as &syncBrand.shortName.label; ar ríomhaire eile"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. New Account AND Existing Account
@@ -7868,7 +7865,17 @@ msgstr "Iontráil d'Fhaisnéis Chuntais"
 msgid "Reset Password"
 msgstr "Athshocraigh Focal Faire"
 
-#: connecting.label
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowsertabbrowser.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE: the following strings can be used in the tab title or
+#. # location bar to represent various states as a web page loads:
+#. # tabs.connecting = Firefox is sending a HTTP connection request
+#. # tabs.encryptingConnection = Firefox is sending a HTTPS connection request
+#. # tabs.searching = Firefox is searching for something (Awesomebar or Web search)
+#. # tabs.loading = Firefox is loading the web page
+#. # tabs.waiting = Firefox is waiting for a web resource to load
+#. # tabs.downloading = Firefox is downloading a file for a helper application (PDF)
+#: connecting.label tabs.connecting
 msgid "Connecting…"
 msgstr "Á Cheangal…"
 
@@ -7882,7 +7889,9 @@ msgid ""
 "The Sync Key was generated for you, or you entered your own, when you first "
 "signed up for &syncBrand.fullName.label;. It is not the same as your password."
 msgstr ""
-"Cruthaíodh an Eochair Sync ar do shon, nó chuir tú do cheann féin isteach, nuair a chláraigh tú le &syncBrand.fullName.label;. Ní hionann é agus d'fhocal faire."
+"Cruthaíodh an Eochair Sync ar do shon, nó chuir tú do cheann féin isteach, "
+"nuair a chláraigh tú le &syncBrand.fullName.label;. Ní hionann é agus "
+"d'fhocal faire."
 
 #: existingSyncKeyHelp.description
 msgid ""
@@ -7891,6 +7900,10 @@ msgid ""
 "Key, you can choose to reset it, but you will lose any data stored on the "
 "server."
 msgstr ""
+"Is féidir d'Eochair Sync a fháil ar ais ar do ríomhaire eile, sna Focail "
+"Fhaire Shábháilte faoi “Slándáil”. Mura bhfuil tú in ann an Eochair a aimsiú "
+"fós, is féidir leat í a athshocrú, ach caillfidh tú aon sonraí atá ar an "
+"bhfreastalaí."
 
 #: lostSyncKey.label
 msgid "I have lost my Sync Key"
@@ -7938,6 +7951,8 @@ msgid ""
 "&syncBrand.fullName.label; will now merge all this computer's browser data "
 "into your Sync account."
 msgstr ""
+"Cumascfaidh &syncBrand.fullName.label; na sonraí go léir ar an ríomhaire seo "
+"le do chuntas Sync."
 
 #: confirm.client.label
 msgid ""
@@ -8049,13 +8064,15 @@ msgstr ""
 
 #: newAccount.change.label
 msgid "You can choose exactly what to sync by selecting Sync Options below."
-msgstr ""
+msgstr "Roghnaigh na rudaí is mian leat sioncrónú faoi Roghanna Sync thíos."
 
 #: resetClient.change.label
 msgid ""
 "Firefox Sync will now merge all this computer's browser data into your Sync "
 "account."
 msgstr ""
+"Cumascfaidh Firefox Sync na sonraí go léir ar an ríomhaire seo le do chuntas "
+"Sync."
 
 #: wipeClient.change.label
 msgid ""
@@ -8077,9 +8094,25 @@ msgstr ""
 msgid "Close Tab"
 msgstr "Dún Cluaisín"
 
+#: tabs.encryptingConnection
+msgid "Securing connection…"
+msgstr "Ceangal á dhaingniú…"
+
+#: tabs.searching
+msgid "Searching…"
+msgstr "Á Chuardach…"
+
 #: tabs.loading
 msgid "Loading…"
 msgstr "Á Luchtú…"
+
+#: tabs.waiting
+msgid "Waiting…"
+msgstr "Ag Feitheamh…"
+
+#: tabs.downloading progress.downloading
+msgid "Downloading…"
+msgstr "Á Íosluchtú…"
 
 #: tabs.closeWarningTitle
 msgid "Confirm close"
@@ -8106,6 +8139,10 @@ msgstr "Cluaisín nua"
 #: tabview.groupItem.defaultName
 msgid "Name this tab group…"
 msgstr "Cuir ainm ar an ngrúpa cluaisíní seo…"
+
+#: tabview.groupItem.undoCloseGroup
+msgid "Undo Close Group"
+msgstr "Cealaigh Dúnadh an Ghrúpa"
 
 #: tabview.search.otherWindowTabs
 msgid "Tabs from other windows"
@@ -8680,7 +8717,7 @@ msgstr ""
 "<p>D'fhéadfadh goid aitheantais nó calaois eile teacht mar thoradh ar "
 "fhaisnéis phearsanta ar bith a chur isteach sa leathanach seo.</p> "
 "<p>Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar "
-"\"bréagbhrandáil\", ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist "
+"“bréagbhrandáil”, ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist "
 "chalaoiseacha chun aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín "
 "agat astu.</p>"
 
@@ -10851,6 +10888,8 @@ msgid ""
 "This page is asking you to confirm that you want to leave - data you have "
 "entered may not be saved."
 msgstr ""
+"Tá an leathanach seo ag fiafraí díot an bhfuil tú cinnte gur mian leat fágáil "
+"- d'fhéadfaí nár sábháladh na sonraí a chuir tú isteach."
 
 #: OnBeforeUnloadStayButton
 msgid "Stay on Page"
@@ -11013,11 +11052,11 @@ msgstr "Cuir isteach URL."
 
 #: FormValidationPatternMismatch
 msgid "Please match the requested format."
-msgstr ""
+msgstr "Ní mór duit an fhormáid iarrtha a úsáid."
 
 #: FormValidationPatternMismatchWithTitle
 msgid "Please match the requested format: %S."
-msgstr ""
+msgstr "Ní mór duit an fhormáid iarrtha a úsáid: %S."
 
 #: UseOfDocumentWidthWarning
 msgid ""
@@ -13597,6 +13636,10 @@ msgid ""
 "Some of them might be confusing. Some are for diagnostic purposes only.<br/> "
 "And some are omitted because they require query strings."
 msgstr ""
+"Seo é liosta de leathanaigh “about”, mar áis tagartha.<br/> \n"
+"Seans go gcuirfeadh cuid acu mearbhall ort.  Úsáidtear cuid acu le haghaidh "
+"tástála amháin.<br/> Agus ligeadh cuid acu ar lár toisc go dteastaíonn "
+"teaghráin iarratais uathu."
 
 #: about.version
 msgid "version"
@@ -13983,6 +14026,13 @@ msgid ""
 "locations returned by our service providers are estimates only and neither we "
 "nor our service providers guarantee the accuracy of the locations provided."
 msgstr ""
+"&vendorShortName; and its contributors, licensors and partners work to "
+"provide the most accurate and up-to-date Services.  However, we cannot "
+"guarantee that this information is comprehensive and error-free.  For "
+"example, the Safe Browsing Service may not identify some risky sites and may "
+"identify some safe sites in error and the Location Aware Service all "
+"locations returned by our service providers are estimates only and neither we "
+"nor our service providers guarantee the accuracy of the locations provided."
 
 #: rights.webservices-term2
 msgid ""
@@ -13999,6 +14049,12 @@ msgid ""
 "open source licenses applicable to &brandShortName; and to corresponding "
 "source code versions of &brandShortName;."
 msgstr ""
+"You are welcome to use these Services with the accompanying version of "
+"&brandShortName;, and &vendorShortName; grants you its rights to do so.  "
+"&vendorShortName; and its licensors reserve all other rights in the "
+"Services.  These terms are not intended to limit any rights granted under "
+"open source licenses applicable to &brandShortName; and to corresponding "
+"source code versions of &brandShortName;."
 
 #: rights.webservices-term4
 msgid ""
@@ -14194,6 +14250,23 @@ msgstr "Cóipeáil gach rud go dtí an Ghearrthaisce"
 msgid "GPU Accelerated Windows"
 msgstr ""
 
+#. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
+#. # The %1 here is a placeholder, leave unchanged, it will get replaced by the driver version string.
+#: tryNewerDriverVersion
+msgid ""
+"Blocked on your graphics driver. Try updating your graphics driver to version "
+"%1 or newer."
+msgstr ""
+"Chuir thiománaí do chárta grafaice cosc air. Bain triail as leagan %1 nó níos "
+"nuaí den tiománaí."
+
+#. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
+#: blockedGraphicsCard
+msgid "Blocked on your graphics card because of unresolved driver issues."
+msgstr ""
+"Chuir tiománaí do chárta grafaice cosc air mar gheall ar fhadhbanna gan "
+"réiteach leis an tiománaí."
+
 #: direct2DEnabled
 msgid "Direct2D Enabled"
 msgstr "Direct2D Cumasaithe"
@@ -14204,31 +14277,31 @@ msgstr "DirectWrite Cumasaithe"
 
 #: adapterDescription
 msgid "Adapter Description"
-msgstr ""
+msgstr "Cur Síos ar an gCuibheoir"
 
 #: adapterVendorID
 msgid "Vendor ID"
-msgstr ""
+msgstr "Aitheantas Díoltóra"
 
 #: adapterDeviceID
 msgid "Device ID"
-msgstr ""
+msgstr "Aitheantas Gléis"
 
 #: adapterDrivers
 msgid "Adapter Drivers"
-msgstr ""
+msgstr "Tiománaithe Cuibheora"
 
 #: adapterRAM
 msgid "Adapter RAM"
-msgstr ""
+msgstr "RAM an Chuibheora"
 
 #: driverVersion
 msgid "Driver Version"
-msgstr ""
+msgstr "Leagan an Tiománaí"
 
 #: driverDate
 msgid "Driver Date"
-msgstr ""
+msgstr "Dáta an Tiománaí"
 
 #: action.switchToTab.label
 msgid "Switch to tab"
@@ -14424,7 +14497,7 @@ msgstr "Deir an leathanach ag %S:"
 
 #: ScriptDialogLabel
 msgid "Prevent this page from creating additional dialogs"
-msgstr ""
+msgstr "Ná lig don leathanach seo tuilleadh dialóg a chruthú"
 
 #: ScriptDialogPreventTitle
 msgid "Confirm Dialog Preference"
@@ -15202,11 +15275,6 @@ msgstr ""
 msgid "Don't show this message again during this session."
 msgstr "Ná taispeáin an teachtaireacht seo i rith an tseisiúin seo."
 
-# "L" under Main -> Eagar ("C" is Cóipeáil)
-#: undoCmd.label undoCmd.accesskey
-msgid "&Undo"
-msgstr "Cea&laigh"
-
 # Ctrl+Y = Athfheidhmigh, transcending language
 #: redoCmd.key
 msgid "Y"
@@ -15666,7 +15734,7 @@ msgstr "Scrúdaigh: %S"
 
 #: saveBodies.label
 msgid "Log Request and Response Bodies"
-msgstr ""
+msgstr "Cuir Corp an Iarratais agus an Fhreagra sa Logchomhad"
 
 #: saveBodies.accesskey restartLaterButton.accesskey CertDumpAVALocality
 msgid "L"
@@ -15741,6 +15809,20 @@ msgstr "%Sms"
 #: NetworkPanel.imageSizeDeltaDurationMS
 msgid "%Sx%Spx, Δ%Sms"
 msgstr "%S×%Spct, Δ%Sms"
+
+#. # LOCALIZATION NOTE (NetworkPanel.responseBodyUnableToDisplay.content):
+#. #
+#. # This string is displayed within the response body section of the NetworkPanel
+#. # if the content type of the network request can't be displayed in the
+#. # NetworkPanel. E.g. any kind of text is easy to display, but some audio or
+#. # flash data received from the server can't be displayed.
+#. #
+#. # The %S is replaced by the content type, that can't be displayed, examples are
+#. #  o application/x-shockwave-flash
+#. #  o music/crescendo
+#: NetworkPanel.responseBodyUnableToDisplay.content
+msgid "Unable to display responses of type \"%S\""
+msgstr "Ní féidir freagraí de chineál \"%S\" a thaispeáint"
 
 #: ConsoleAPIDisabled
 msgid ""
@@ -18641,6 +18723,10 @@ msgstr "Corp an Fhreagra"
 msgid "Cached Data"
 msgstr "Sonraí i dTaisce"
 
+#: networkPanel.responseBodyUnknownType
+msgid "Unknown Content Type"
+msgstr "Cineál Anaithnid Ábhair"
+
 #: networkPanel.responseNoBody
 msgid "No Response Body"
 msgstr "Gan Corp Freagra"
@@ -18880,10 +18966,6 @@ msgstr "Suiteáil"
 #: progress.queued
 msgid "Queued"
 msgstr "Ciúáilte"
-
-#: progress.downloading
-msgid "Downloading…"
-msgstr "Á Íosluchtú…"
 
 #: progress.downloaded installDownloaded
 msgid "Downloaded"
@@ -19881,12 +19963,14 @@ msgstr ""
 #. global warnings
 #: warning.safemode.label
 msgid "All add-ons have been disabled by safe mode."
-msgstr ""
+msgstr "Tá gach Breiseán díchumasaithe sa Mhód Sábháilteachta."
 
 #: warning.checkcompatibility.label
 msgid ""
 "Add-on compatibility checking is disabled. You may have incompatible add-ons."
 msgstr ""
+"Tá seiceáil chomhoiriúnacht na mBreiseán díchumasaithe. D'fhéadfadh Breiseáin "
+"neamh-chomhoiriúnacha a bheith agat."
 
 #: warning.checkcompatibility.enable.label
 msgctxt "warning.checkcompatibility.enable.label"
@@ -19895,7 +19979,7 @@ msgstr "Cumasaigh"
 
 #: warning.checkcompatibility.enable.tooltip
 msgid "Enable add-on compatibility checking"
-msgstr ""
+msgstr "Cumasaigh seiceáil chomhoiriúnacht na mbreiseán"
 
 #: warning.updatesecurity.label
 msgid ""
@@ -19991,7 +20075,7 @@ msgstr "Suiteáil Nuashonruithe"
 
 #: updates.updateSelected.tooltip
 msgid "Install available updates in this list"
-msgstr ""
+msgstr "Suiteáil na nuashonruithe atá ar fáil sa liosta seo"
 
 #. addon actions
 #: cmd.showDetails.label cmd.showDetails.accesskey
@@ -20086,6 +20170,8 @@ msgid ""
 "When you're connected to the internet, this pane will feature \n"
 "some of the best and most popular add-ons for you to try out."
 msgstr ""
+"Nuair a bhíonn tú ceangailte leis an Idirlíon, taispeántar cuid de \n"
+"na breiseáin is fearr agus is mó éilimh orthu sa phána seo."
 
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. detail view
@@ -20119,7 +20205,7 @@ msgstr "Nuashonruithe Uathoibríocha"
 
 #: detail.updateDefault.tooltip
 msgid "Automatically install updates only if that's the default"
-msgstr ""
+msgstr "Suiteáil nuashonruithe go huathoibríoch más é sin an réamhshocrú"
 
 #: detail.updateAutomatic.tooltip
 msgid "Automatically install updates"
@@ -20186,11 +20272,11 @@ msgstr "Sórtáil de réir dáta nuashonraithe"
 
 #: sort.relevance.label
 msgid "Best match"
-msgstr ""
+msgstr "Is comhoiriúnaí"
 
 #: sort.relevance.tooltip
 msgid "Sort by relevance"
-msgstr ""
+msgstr "Sórtáil de réir ábharthachta"
 
 #: sort.price.label
 msgid "Price"
@@ -20276,7 +20362,7 @@ msgstr "Suiteáil an nuashonrú don bhreiseán seo"
 
 #: addon.includeUpdate.label
 msgid "Include in Update"
-msgstr ""
+msgstr "Cuir san áireamh sa nuashonrú"
 
 #: addon.updateAvailable.label
 msgid "An update is available"
@@ -20338,7 +20424,7 @@ msgstr "%S Nuashonraithe"
 #: notification.incompatible
 msgctxt "notification.incompatible"
 msgid "%1$S is incompatible with %2$S %3$S."
-msgstr ""
+msgstr "Níl %1$S comhoiriúnach le %2$S %3$S."
 
 #. #LOCALIZATION NOTE (notification.blocked) %1$S is the add-on name
 #: notification.blocked
@@ -20366,7 +20452,7 @@ msgstr "Tuilleadh Eolais"
 #: notification.outdated
 msgctxt "notification.outdated"
 msgid "An important update is available for %1$S."
-msgstr ""
+msgstr "Tá nuashonrú tábhachtach ar fáil le haghaidh %1$S."
 
 #: notification.outdated.link
 msgctxt "notification.outdated.link"
@@ -20377,41 +20463,41 @@ msgstr "Nuashonraigh Anois"
 #: notification.enable
 msgctxt "notification.enable"
 msgid "%1$S will be enabled after you restart %2$S."
-msgstr ""
+msgstr "Beidh %1$S cumasaithe tar éis duit %2$S atosú."
 
 #. #LOCALIZATION NOTE (notification.disable) %1$S is the add-on name, %2$S is brand name
 #: notification.disable
 msgctxt "notification.disable"
 msgid "%1$S will be disabled after you restart %2$S."
-msgstr ""
+msgstr "Beidh %1$S díchumasaithe tar éis duit %2$S a atosú."
 
 #. #LOCALIZATION NOTE (notification.install) %1$S is the add-on name, %2$S is brand name
 #: notification.install
 msgctxt "notification.install"
 msgid "%1$S will be installed after you restart %2$S."
-msgstr ""
+msgstr "Beidh %1$S suiteáilte tar éis duit %2$S a atosú."
 
 #. #LOCALIZATION NOTE (notification.uninstall) %1$S is the add-on name, %2$S is brand name
 #: notification.uninstall
 msgctxt "notification.uninstall"
 msgid "%1$S will be uninstalled after you restart %2$S."
-msgstr ""
+msgstr "Beidh %1$S díshuiteáilte tar éis duit %2$S a atosú."
 
 #. #LOCALIZATION NOTE (notification.upgrade) %1$S is the add-on name, %2$S is brand name
 #: notification.upgrade
 msgctxt "notification.upgrade"
 msgid "%1$S will be updated after you restart %2$S."
-msgstr ""
+msgstr "Beidh %1$S nuashonraithe tar éis duit %2$S a atosú."
 
 #. #LOCALIZATION NOTE (notification.downloadError) %1$S is the add-on name. Not yet implemented - see https://bug593535.bugzilla.mozilla.org/attachment.cgi?id=475403
 #: notification.downloadError
 msgid "There was an error downloading %1$S."
-msgstr ""
+msgstr "Tharla earráid agus %1$S á íosluchtú."
 
 #: notification.downloadError.retry
 msgctxt "notification.downloadError.retry"
 msgid "Try again"
-msgstr ""
+msgstr "Déan iarracht arís"
 
 #: notification.downloadError.retry.tooltip
 msgid "Try downloading this add-on again"
@@ -20420,12 +20506,12 @@ msgstr ""
 #. #LOCALIZATION NOTE (notification.installError) %1$S is the add-on name. Not yet implemented - see https://bug593535.bugzilla.mozilla.org/attachment.cgi?id=475403
 #: notification.installError
 msgid "There was an error installing %1$S."
-msgstr ""
+msgstr "Tharla earráid agus %1$S á shuiteáil."
 
 #: notification.installError.retry
 msgctxt "notification.installError.retry"
 msgid "Try again"
-msgstr ""
+msgstr "Déan iarracht arís"
 
 #: notification.installError.retry.tooltip
 msgid "Try downloading and installing this add-on again"
@@ -20434,7 +20520,7 @@ msgstr ""
 #. #LOCALIZATION NOTE (contributionAmount) %S is the currency amount recommended for contributions
 #: contributionAmount
 msgid "Suggested Donation: %S"
-msgstr ""
+msgstr "Deontas Molta: %S"
 
 #: installDownloadFailed
 msgid "Error downloading"
@@ -20464,7 +20550,7 @@ msgstr "Cealaíodh an tsuiteáil"
 #: details.notification.incompatible
 msgctxt "details.notification.incompatible"
 msgid "%1$S is incompatible with %2$S %3$S."
-msgstr ""
+msgstr "Níl %1$S comhoiriúnach le %2$S %3$S."
 
 #. #LOCALIZATION NOTE (details.notification.blocked) %1$S is the add-on name
 #: details.notification.blocked
@@ -20560,7 +20646,9 @@ msgstr "Díchumasaigh an breiseán seo (atosú de dhíth)"
 #. #LOCALIZATION NOTE (showAllSearchResults) #1 is the total number of search results
 #: showAllSearchResults
 msgid "See one result;See all #1 results"
-msgstr "Féach ar an toradh amháin;Féach ar an #1 thoradh;Féach ar an #1 thoradh ar fad;Féach ar an #1 dtoradh ar fad;Féach ar an #1 toradh ar fad"
+msgstr ""
+"Féach ar an toradh amháin;Féach ar an #1 thoradh;Féach ar an #1 thoradh ar "
+"fad;Féach ar an #1 dtoradh ar fad;Féach ar an #1 toradh ar fad"
 
 #. #LOCALIZATION NOTE (addon.purchase.label) displayed on a button in the list
 #. # view, %S is the price of the add-on including currency symbol
@@ -21683,6 +21771,12 @@ msgstr ""
 "shuiteáil. Téigh i dteagmháil le riarthóir do chórais, nó déan iarracht eile "
 "ó chuntas le cead suiteála bogearraí ar an ríomhaire seo."
 
+#: manualUpdate.space.desc
+msgid ""
+"A recommended security and stability update is available, but you do \n"
+"not have enough space to install it."
+msgstr ""
+
 #: manualUpdateGetMsg.label
 msgid "You can always get the latest version of &brandShortName; at:"
 msgstr "Tá an leagan is déanaí de &brandShortName; ar fáil i gcónaí ó:"
@@ -22416,6 +22510,10 @@ msgstr "Roghchlár na Leabharmharcanna"
 #: BookmarksToolbarFolderTitle
 msgid "Bookmarks Toolbar"
 msgstr "Barra Leabharmharc"
+
+#: UnsortedBookmarksFolderTitle
+msgid "Unsorted Bookmarks"
+msgstr "Leabharmharcanna Gan Sórtáil"
 
 #: finduri-AgeInDays-is
 msgid "%S days ago"
