@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-14 10:08-0500\n"
+"POT-Creation-Date: 2010-11-02 07:10-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -857,7 +857,7 @@ msgid "Bookmarks Toolbar Items"
 msgstr "Rudaí ar an Bharra Leabharmharc"
 
 #: addonBarCmd.label addonBarCmd.accesskey
-msgid "Add-on &Bar"
+msgid "&Add-on Bar"
 msgstr "&Barra na mBreiseán"
 
 # "F" under Main -> Amharc
@@ -979,10 +979,6 @@ msgstr "&Ar Aghaidh"
 #: forwardButton.tooltip cmd.forward.tooltip
 msgid "Go forward one page"
 msgstr "Leathanach amháin ar aghaidh"
-
-#: backForwardMenu.tooltip
-msgid "Recent pages"
-msgstr "Leathanaigh le déanaí"
 
 # "A" under Main -> Amharc ("L" is Níos Lú)
 # see also "Re&load"
@@ -1307,7 +1303,6 @@ msgstr "&Cóipeáil"
 #. Context Menu
 #: copyCmd.key view.sortBy.visitCount.accesskey copyPref.key copyCmd.commandkey
 #: pluginInstallation.close.accesskey CertDumpAVACountry
-#: exceptionMgr.exceptionButtonAccess
 msgid "C"
 msgstr "C"
 
@@ -1452,7 +1447,15 @@ msgctxt "appMenuUnsorted.label"
 msgid "Unsorted Bookmarks"
 msgstr "Leabharmharcanna Gan Sórtáil"
 
-#: appMenuWebDeveloper.label
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (btnPageWebDeveloper):
+#. #
+#. # This is used as the text of the "Web Developer" button on the toolbar. It
+#. # shows or hides messages that the web developer inserted on the page for
+#. # debugging purposes, using calls such console.log() and console.error(). You
+#. # may wish to localize this as "Page" if that is clearer in your locale. See
+#. # bug 601667 for more information.
+#: appMenuWebDeveloper.label btnPageWebDeveloper
 msgid "Web Developer"
 msgstr "Forbróir Gréasáin"
 
@@ -3371,61 +3374,6 @@ msgstr "Cuir Feidhmchlár Leis"
 msgid "%S has already been added as an application for %S links."
 msgstr "Tá %S in úsáid cheana mar fheidhmchlár le haghaidh nasc %S."
 
-# e.g. "u" in bookmark manager; "c" is "Comhad" always
-#: find.label find.accesskey search.label search.accesskey filter.label
-#: filter.accesskey
-msgid "&Search:"
-msgstr "C&uardaigh:"
-
-#: expand.label expand.accesskey
-msgid "&Expand"
-msgstr "&Leathnaigh"
-
-#: collapse.label collapse.accesskey
-msgid "&Collapse"
-msgstr "&Laghdaigh"
-
-#: byDate.label byDate.accesskey
-msgid "By &Date"
-msgstr "De réir &Dáta"
-
-#: bySite.label bySite.accesskey
-msgid "By &Site"
-msgstr "De réir &Suíomh"
-
-#: view.label view.accesskey
-msgid "Vie&w"
-msgstr "A&mharc"
-
-#: byMostVisited.label byMostVisited.accesskey
-msgid "By Most &Visited"
-msgstr "De réir líon &Cuairteanna"
-
-#: byLastVisited.label byLastVisited.accesskey
-msgid "By &Last Visited"
-msgstr "De réir na Cuairte is &Déanaí"
-
-#: byDayAndSite.label byDayAndSite.accesskey
-msgid "By Da&te and Site"
-msgstr "De réir Dá&ta agus Suímh"
-
-#: openLinkInWindow.label openLinkInWindow.accesskey cmd.open.label
-#: cmd.open.accesskey
-msgid "&Open"
-msgstr "&Oscail"
-
-#: openInNewTab.label openInNewTab.accesskey
-msgid "Open in New &Tab"
-msgstr "Oscail i g&Cluaisín Nua"
-
-#: openInNewWindow.label openInNewWindow.accesskey
-msgid "Open in New &Window"
-msgstr "Oscail i bh&Fuinneog Nua"
-
-#: copyLink.label copyLink.accesskey
-msgid "&Copy Link Location"
-msgstr "&Cóipeáil Suíomh an Naisc"
-
 #. # LOCALIZATION NOTE  (style.selectorLabel): Used in the Inspector style panel
 #. #  to label a CSS Selector.
 #: style.selectorLabel
@@ -4720,6 +4668,10 @@ msgstr "&Scrios an Leathanach Seo"
 msgid "&Forget About This Site"
 msgstr "&Déan Dearmad ar an Suíomh Seo"
 
+#: cmd.open.label cmd.open.accesskey
+msgid "&Open"
+msgstr "&Oscail"
+
 #: cmd.open_window.label cmd.open_window.accesskey
 msgid "Open in a &New Window"
 msgstr "Oscail i bhFuinneog &Nua"
@@ -4797,6 +4749,15 @@ msgstr "Cruthaithe"
 msgid "Last Modified"
 msgstr "Athraithe"
 
+#: search.label search.accesskey
+msgctxt "search.label search.accesskey"
+msgid "&Search:"
+msgstr "&Cuardaigh:"
+
+#: search.in.label
+msgid "Search in:"
+msgstr "Cuardaigh i:"
+
 #: search.scopeFolder.label search.scopeFolder.accesskey
 msgid "Selected Folde&r"
 msgstr "Fillteán &Roghnaithe"
@@ -4860,6 +4821,35 @@ msgstr "Réamhamharc"
 #: detailsPane.selectAnItemText.description
 msgid "Select an item to view and edit its properties"
 msgstr "Roghnaigh mír le taispeáint agus cuir a hairíonna in eagar"
+
+#: find.label find.accesskey
+msgctxt "find.label find.accesskey"
+msgid "&Search:"
+msgstr ""
+
+#: view.label view.accesskey
+msgid "Vie&w"
+msgstr "A&mharc"
+
+#: byDate.label byDate.accesskey
+msgid "By &Date"
+msgstr "De réir &Dáta"
+
+#: bySite.label bySite.accesskey
+msgid "By &Site"
+msgstr "De réir &Suíomh"
+
+#: byMostVisited.label byMostVisited.accesskey
+msgid "By Most &Visited"
+msgstr "De réir líon &Cuairteanna"
+
+#: byLastVisited.label byLastVisited.accesskey
+msgid "By &Last Visited"
+msgstr "De réir na Cuairte is &Déanaí"
+
+#: byDayAndSite.label byDayAndSite.accesskey
+msgid "By Da&te and Site"
+msgstr "De réir Dá&ta agus Suímh"
 
 #: deleteHost
 msgid "Delete all from %S"
@@ -5782,6 +5772,11 @@ msgstr "As Feidhm:"
 #: window.title
 msgid "Cookies"
 msgstr "Fianáin"
+
+# e.g. "u" in bookmark manager; "c" is "Comhad" always
+#: filter.label filter.accesskey
+msgid "&Search:"
+msgstr "C&uardaigh:"
 
 #: fontsDialog.title
 msgid "Fonts"
@@ -6865,6 +6860,10 @@ msgstr "Google"
 msgid "Yahoo"
 msgstr "Yahoo.co.uk"
 
+#: browser.search.order.3
+msgid "Bing"
+msgstr ""
+
 #. # This is the default set of web based feed handlers shown in the reader
 #. # selection UI
 #: browser.contentHandlers.types.0.title
@@ -6989,10 +6988,10 @@ msgid ""
 "which fraudulent web pages and emails are used to imitate sources you may "
 "trust. You can find out more about "
 msgstr ""
-"Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar “bréagbhrandáil”, "
-"ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist chalaoiseacha chun "
-"aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín agat astu. Is "
-"féidir tuilleadh a léamh "
+"Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar "
+"“bréagbhrandáil”, ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist "
+"chalaoiseacha chun aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín "
+"agat astu. Is féidir tuilleadh a léamh "
 
 #: safeb.palm.message.p2.linkText
 msgid "how &brandShortName; protects you"
@@ -11054,6 +11053,7 @@ msgstr "Cuir isteach URL."
 msgid "Please match the requested format."
 msgstr "Ní mór duit an fhormáid iarrtha a úsáid."
 
+#. # LOCALIZATION NOTE (FormValidationPatternMismatchWithTitle): %S is the (possibly truncated) title attribute value.
 #: FormValidationPatternMismatchWithTitle
 msgid "Please match the requested format: %S."
 msgstr "Ní mór duit an fhormáid iarrtha a úsáid: %S."
@@ -15642,6 +15642,14 @@ msgstr "JS"
 msgid "Log JavaScript exceptions"
 msgstr "Logáil eisceachtaí JavaScript"
 
+#. # LOCALIZATION NOTE (tipPageWebDeveloper):
+#. #
+#. # This is used as the text of the tool tip for the "Web Developer" button on
+#. # the toolbar.
+#: tipPageWebDeveloper
+msgid "Log messages sent to the \"console\" object"
+msgstr ""
+
 #: btnConsoleErrors
 msgid "Errors"
 msgstr "Earráidí"
@@ -15689,6 +15697,14 @@ msgstr "Consól Logánta"
 #: clearConsoleCmd.label
 msgid "Clear Console"
 msgstr "Bánaigh an Consól"
+
+#. # LOCALIZATION NOTE (btnClear):
+#. #
+#. # This is used as the text of the "Clear" button for the toolbar. It clears the
+#. # contents of the console.
+#: btnClear
+msgid "Clear"
+msgstr "Bánaigh"
 
 #: stringFilter
 msgid "Filter"
@@ -20110,11 +20126,11 @@ msgstr "&Díchumasaigh"
 
 #: cmd.enableTheme.label cmd.enableTheme.accesskey
 msgid "&Wear Theme"
-msgstr ""
+msgstr "Úsáid an &téama"
 
 #: cmd.disableTheme.label cmd.disableTheme.accesskey
 msgid "Stop &Wearing Theme"
-msgstr ""
+msgstr "&Ná húsáid an téama a thuilleadh"
 
 #: cmd.showPreferencesWin.tooltip
 msgctxt "cmd.showPreferencesWin.tooltip"
@@ -20222,7 +20238,7 @@ msgstr "Leathanach Baile"
 
 #: detail.repository
 msgid "Add-on Profile"
-msgstr ""
+msgstr "Próifíl an Bhreiseáin"
 
 #: detail.checkForUpdates.label detail.checkForUpdates.accesskey
 msgid "Check &for Updates"
@@ -20384,6 +20400,24 @@ msgstr "Tá brón orm, ach tharla earráid agus na nótaí eisiúna á luchtú."
 #: addon.createdBy.label
 msgid "By "
 msgstr "Le "
+
+#: eula.title
+msgid "End-User License Agreement"
+msgstr "Comhaontú Ceadúnais"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: eula.width
+msgid "560px"
+msgstr "560px"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: eula.height
+msgid "400px"
+msgstr "400px"
+
+#: eula.accept
+msgid "Accept and Install…"
+msgstr "Glac Leis agus Suiteáil…"
 
 #. #LOCALIZATION NOTE (aboutWindowTitle) %S is the addon name
 #: aboutWindowTitle
@@ -20666,6 +20700,13 @@ msgstr ""
 #: cmd.purchaseAddon.label
 msgctxt "cmd.purchaseAddon.label"
 msgid "Purchase for %S…"
+msgstr ""
+
+#. #LOCALIZATION NOTE (eulaHeader) %S is name of the add-on asking the user to agree to the EULA
+#: eulaHeader
+msgid ""
+"%S requires that you accept the following End User License Agreement before "
+"installation can proceed:"
 msgstr ""
 
 #: updateWizard.title
@@ -22866,11 +22907,11 @@ msgstr "Mozilla"
 
 #: trademarkInfo.part1
 msgid "Firefox and the Firefox logos are trademarks of the Mozilla Foundation."
-msgstr ""
+msgstr "Is trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais Firefox."
 
 #: trademarkInfo.part2
 msgid "Some of the trademarks used under license from The Charlton Company."
-msgstr ""
+msgstr "Tá roinnt cearta trádmharc á n-úsáid faoi cheadúnas ón Charlton Company."
 
 #: homePageSingleStartMain
 msgid "Firefox Start, a fast home page with built-in search"
@@ -26211,9 +26252,9 @@ msgstr "Cuir Ei&sceacht Leis…"
 msgid "Add Security Exception"
 msgstr "Cuir Eisceacht Slándála Leis"
 
-#: exceptionMgr.exceptionButton
-msgid "Confirm Security Exception"
-msgstr "Dearbhaigh Eisceacht Slándála"
+#: exceptionMgr.exceptionButton.label exceptionMgr.exceptionButton.accesskey
+msgid "&Confirm Security Exception"
+msgstr "&Dearbhaigh an Eisceacht Slándála"
 
 #: exceptionMgr.supplementalWarning
 msgid ""
