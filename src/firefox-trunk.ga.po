@@ -1,13 +1,8 @@
-#. #-#-#-#-#  services-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  syncerrors.properties.po (firefox)  #-#-#-#-#
-#. extracted from services-en-US/sync/errors.properties
-#. #-#-#-#-#  syncsync.properties.po (firefox)  #-#-#-#-#
-#. extracted from services-en-US/sync/sync.properties
 msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-06 23:51-0500\n"
+"POT-Creation-Date: 2010-12-10 15:07-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -2064,6 +2059,10 @@ msgstr "&Sioncrónaigh Anois"
 msgctxt "syncToolbarButton.label"
 msgid "Sync"
 msgstr "Sync"
+
+#: addonBarCloseButton.tooltip
+msgid "Close Add-on Bar"
+msgstr "Dún Barra na mBreiseán"
 
 #: nv_timeout
 msgid "Timed Out"
@@ -6425,8 +6424,9 @@ msgstr "Sonraí As Líne"
 msgid "Your cache is currently using %1$S %2$S of disk space"
 msgstr "Tá do thaisce ag úsáid %1$S %2$S ar an diosca faoi láthair"
 
+#. #-#-#-#-#  chromebrowserpreferencespreferences.properties.po (firefox)  #-#-#-#-#
 #. #### Syncing
-#: connect.label
+#: connect.label button.connect.label
 msgid "Connect"
 msgstr "Ceangail"
 
@@ -7710,9 +7710,9 @@ msgstr ""
 msgid "Create a New Account"
 msgstr "Cruthaigh Cuntas Nua"
 
-#: button.haveAccount.label
-msgid "I Have a &syncBrand.fullName.label; Account"
-msgstr "Tá cuntas &syncBrand.fullName.label; agam"
+#: setup.haveAccount.label
+msgid "I already have a &syncBrand.fullName.label; account."
+msgstr "Tá cuntas &syncBrand.fullName.label; agam cheana."
 
 #: setup.choicePage.title.label
 msgid "Have you used &syncBrand.fullName.label; before?"
@@ -7736,21 +7736,21 @@ msgstr "Freastalaí"
 msgid "&syncBrand.fullName.label; Server"
 msgstr "Freastalaí &syncBrand.fullName.label;"
 
-#: serverType.custom.label
-msgid "Use a custom server"
-msgstr "Úsáid freastalaí saincheaptha"
+#: serverType.custom2.label
+msgid "Use a custom server…"
+msgstr "Úsáid freastalaí saincheaptha…"
 
-#: signIn.account.label signIn.account.accesskey
-msgid "&Email Address / User Name"
-msgstr "&Seoladh Ríomhphoist / Ainm Úsáideora"
+#: signIn.account2.label signIn.account2.accesskey
+msgid "&Account"
+msgstr "&Cuntas"
 
 #: signIn.password.label signIn.password.accesskey
 msgid "&Password"
 msgstr "&Focal Faire"
 
-#: signIn.serverURL.label signIn.serverURL.accesskey
-msgid "Server UR&L"
-msgstr "UR&L an Fhreastalaí"
+#: signIn.syncKey.label signIn.syncKey.accesskey
+msgid "Sync &Key"
+msgstr "&Eochair Sync"
 
 #. New Account Page 1: Basic Account Info
 #: setup.newAccountDetailsPage.title.label
@@ -7827,62 +7827,82 @@ msgstr "&Sábháil…"
 msgid "Please Confirm You're Not a Robot"
 msgstr "Deimhnigh nach róbat thú"
 
-#. Existing Account Page 1: Login
-#: setup.existingAccount.title.label
-msgid "Enter Account Information"
-msgstr "Iontráil d'Fhaisnéis Chuntais"
+#. Existing Account Page 1: Add Device (incl. Add a Device dialog strings)
+#: addDevice.title.label
+msgid "Add a Device"
+msgstr "Cuir Gléas Leis"
+
+#: addDevice.showMeHow.label
+msgid "Show me how."
+msgstr "Taispeáin dom."
+
+#: addDevice.dontHaveDevice.label
+msgid "I don't have the device with me"
+msgstr "Níl an gléas liom faoi láthair."
+
+#: addDevice.setup.description.label
+msgid ""
+"To activate, go to &syncBrand.shortName.label; Options on your other device "
+"and select &#x0022;Add a Device&#x0022;."
+msgstr ""
+
+#: addDevice.setup.enterCode.label
+msgid "Then, enter this code:"
+msgstr "Ansin, cuir an cód seo isteach:"
+
+#: addDevice.dialog.description.label
+msgid ""
+"To activate your new device, go to &syncBrand.shortName.label; Options on the "
+"device and select &#x0022;Connect.&#x0022;"
+msgstr ""
+
+#: addDevice.dialog.enterCode.label
+msgid "Enter the code that the device provides:"
+msgstr ""
+
+#: addDevice.dialog.tryAgain.label
+msgid "Please try again."
+msgstr "Bain triail as arís."
+
+#: addDevice.dialog.successful.label
+msgid ""
+"The device has been successfully added. The initial synchronization can "
+"several minutes and will finish in the background."
+msgstr ""
+
+#: addDevice.dialog.syncKey.label
+msgid ""
+"To activate your device you will need to enter your Sync Key. Please print or "
+"save this key and take it with you."
+msgstr ""
+
+#: addDevice.dialog.connected.label
+msgid "Device Connected"
+msgstr "Gléas Ceangailte"
+
+#. Existing Account Page 2: Manual Login
+#: setup.signInPage.title.label
+msgid "Sign In"
+msgstr "Sínigh Isteach"
+
+#: existingSyncKey.description
+msgid ""
+"You can get a copy of your Sync Key by going to &syncBrand.shortName.label; "
+"Options on your other device, and selecting  &#x0022;My Sync Key&#x0022; "
+"under &#x0022;Manage Account&#x0022;."
+msgstr ""
+
+#: verifying.label
+msgid "Verifying…"
+msgstr "Á Dheimhniú…"
 
 #: resetPassword.label
 msgid "Reset Password"
 msgstr "Athshocraigh Focal Faire"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  chromebrowsertabbrowser.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE: the following strings can be used in the tab title or
-#. # location bar to represent various states as a web page loads:
-#. # tabs.connecting = Firefox is sending a HTTP connection request
-#. # tabs.encryptingConnection = Firefox is sending a HTTPS connection request
-#. # tabs.searching = Firefox is searching for something (Awesomebar or Web search)
-#. # tabs.loading = Firefox is loading the web page
-#. # tabs.waiting = Firefox is waiting for a web resource to load
-#. # tabs.downloading = Firefox is downloading a file for a helper application (PDF)
-#: connecting.label tabs.connecting
-msgid "Connecting…"
-msgstr "Á Cheangal…"
-
-#. Existing Account Page 2: Sync Key
-#: setup.existingSyncKeyPage.title
-msgid "Please Enter Your Sync Key"
-msgstr "Cuir isteach d'Eochair Sync"
-
-#: setup.existingSyncKeyPage.description
-msgid ""
-"The Sync Key was generated for you, or you entered your own, when you first "
-"signed up for &syncBrand.fullName.label;. It is not the same as your password."
-msgstr ""
-"Cruthaíodh an Eochair Sync ar do shon, nó chuir tú do cheann féin isteach, "
-"nuair a chláraigh tú le &syncBrand.fullName.label;. Ní hionann é agus "
-"d'fhocal faire."
-
-#: existingSyncKeyHelp.description
-msgid ""
-"You can find your saved Sync Key by going to your other computer and checking "
-"the Saved Passwords under Security. If you still cannot get the correct Sync "
-"Key, you can choose to reset it, but you will lose any data stored on the "
-"server."
-msgstr ""
-"Is féidir d'Eochair Sync a fháil ar ais ar do ríomhaire eile, sna Focail "
-"Fhaire Shábháilte faoi “Slándáil”. Mura bhfuil tú in ann an Eochair a aimsiú "
-"fós, is féidir leat í a athshocrú, ach caillfidh tú aon sonraí atá ar an "
-"bhfreastalaí."
-
 #: lostSyncKey.label
 msgid "I have lost my Sync Key"
 msgstr "Chaill mé m'Eochair Sync"
-
-#: verifying.label
-msgid "Verifying…"
-msgstr "Á Dheimhniú…"
 
 #. #-#-#-#-#  chromebrowsersyncSetup.dtd.po (firefox)  #-#-#-#-#
 #. Sync Options
@@ -8050,6 +8070,19 @@ msgstr ""
 #: closeTab.label tabs.closeTab
 msgid "Close Tab"
 msgstr "Dún Cluaisín"
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE: the following strings can be used in the tab title or
+#. # location bar to represent various states as a web page loads:
+#. # tabs.connecting = Firefox is sending a HTTP connection request
+#. # tabs.encryptingConnection = Firefox is sending a HTTPS connection request
+#. # tabs.searching = Firefox is searching for something (Awesomebar or Web search)
+#. # tabs.loading = Firefox is loading the web page
+#. # tabs.waiting = Firefox is waiting for a web resource to load
+#. # tabs.downloading = Firefox is downloading a file for a helper application (PDF)
+#: tabs.connecting connecting.label
+msgid "Connecting…"
+msgstr "Á Cheangal…"
 
 #: tabs.encryptingConnection
 msgid "Securing connection…"
@@ -19950,11 +19983,20 @@ msgstr "&Lorg Nuashonruithe"
 msgid "&View Recent Updates"
 msgstr "&Féach ar Nuashonruithe Le Déanaí"
 
+#. This menu item
+#. is a checkbox that toggles the default global behavior for add-on update
+#. checking.
 #: updates.updateAddonsAutomatically.label
 #: updates.updateAddonsAutomatically.accesskey
 msgid "Update &Add-ons Automatically"
 msgstr "Nuashonraigh &Breiseáin go hUathoibríoch"
 
+#. LOCALIZATION NOTE (updates.resetUpdatesToAutomatic.label, updates.resetUpdatesToManual.label):
+#. Specific addons can have custom update checking behaviors ("Manually",
+#. "Automatically", "Use default global behavior"). These menu items reset the
+#. update checking behavior for all add-ons to the default global behavior
+#. (which itself is either "Automatically" or "Manually", controlled by the
+#. updates.updateAddonsAutomatically.label menu item).
 #: updates.resetUpdatesToAutomatic.label
 #: updates.resetUpdatesToAutomatic.accesskey
 msgid "&Reset All Add-ons to Update Automatically"
@@ -20456,10 +20498,10 @@ msgstr "Déan iarracht arís"
 msgid "Try downloading and installing this add-on again"
 msgstr "Déan iarracht eile an breiseán seo a íosluchtú agus a shuiteáil"
 
-#. #LOCALIZATION NOTE (contributionAmount) %S is the currency amount recommended for contributions
-#: contributionAmount
-msgid "Suggested Donation: %S"
-msgstr "Deontas Molta: %S"
+#. #LOCALIZATION NOTE (contributionAmount2) %S is the currency amount recommended for contributions
+#: contributionAmount2
+msgid "Suggested Contribution: %S"
+msgstr ""
 
 #: installDownloadFailed
 msgid "Error downloading"
@@ -27462,26 +27504,23 @@ msgstr "Úsáid focal faire níos láidre"
 #: change.synckey.sameAsSyncKey
 msgid "The new Sync Key cannot be the same as your Sync Key"
 msgstr ""
-"Ní cheadaítear Eochair nua Sync a úsáid atá mar an gcéanna le "
-"d'Eochair Sync"
+"Ní cheadaítear Eochair nua Sync a úsáid atá mar an gcéanna le d'Eochair Sync"
 
 #: change.synckey.sameAsPassword
 msgid "The Sync Key cannot be the same as your password"
 msgstr ""
-"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le d'fhocal "
-"faire"
+"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le d'fhocal faire"
 
 #: change.synckey.sameAsUsername
 msgid "The Sync Key cannot be the same as your user name"
 msgstr ""
-"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le d'ainm "
-"úsáideora"
+"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le d'ainm úsáideora"
 
 #: change.synckey.sameAsEmail
 msgid "The Sync Key cannot be the same as your email address"
 msgstr ""
-"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le do "
-"sheoladh ríomhphost"
+"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le do sheoladh "
+"ríomhphost"
 
 #: change.synckey.tooShort
 msgid "The Sync Key entered is too short"
@@ -27648,4 +27687,3 @@ msgstr ""
 msgctxt "error.sync.viewQuotaButton.accesskey"
 msgid "V"
 msgstr "F"
-
