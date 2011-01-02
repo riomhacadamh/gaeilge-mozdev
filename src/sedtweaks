@@ -8,6 +8,7 @@ sed -i '/^monthDate/s/.*/monthDate=#2 #1/' toolkit-ga-IE/chrome/mozapps/download
 sed -i 's/credit.contributors2 "contributors"/credit.contributors2 "gcuiditheoirí"/' browser-ga-IE/chrome/browser/credits.dtd
 
 # comments in this file before this field.   need to increment now and again
+sed -i '/=Bing/d' browser-ga-IE/chrome/browser-region/region.properties
 sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=2/' browser-ga-IE/chrome/browser-region/region.properties
 sed -i 's/name=Mibbit/name = Mibbit/' browser-ga-IE/chrome/browser-region/region.properties
 sed -i '/mibbit\.com/s/late=https/late = https/' browser-ga-IE/chrome/browser-region/region.properties
@@ -156,22 +157,23 @@ sed -i 's/cmd.about.accesskey "."/cmd.about.accesskey "M"/' toolkit-ga-IE/chrome
 # still need these two with latest translate toolkit
 sed -i '/^VK_HOME/s/.*/VK_HOME=Home/' toolkit-ga-IE/chrome/global/keys.properties
 LC_ALL=C sed -i '
-/^ar=/s/.*/ar=Araibis/
-/^bn=/s/.*/bn=Beangáilis/
-/^el=/s/.*/el=Gréigis/
-/^gu=/s/.*/gu=Gúisearáitis/
-/^he=/s/.*/he=Eabhrais/
-/^hy=/s/.*/hy=Airméinis/
-/^ja=/s/.*/ja=Seapáinis/
-/^ka=/s/.*/ka=Seoirsis/
-/^ko=/s/.*/ko=Cóiréis/
-/^ml=/s/.*/ml=Mailéalaimis/
-/^ru=/s/.*/ru=Rúisis/
-/^ta=/s/.*/ta=Tamailis/
-/^th=/s/.*/th=Téalainnis/
-/^tr=/s/.*/tr=Tuircis/
-/^uk=/s/.*/uk=Úcráinis/
-/^zh=/s/.*/zh=Sínis/
+/^ar *=/s/.*/ar = Araibis/
+/^bn *=/s/.*/bn = Beangáilis/
+/^el *=/s/.*/el = Gréigis/
+/^gu *=/s/.*/gu = Gúisearáitis/
+/^he *=/s/.*/he = Eabhrais/
+/^hy *=/s/.*/hy = Airméinis/
+/^ja *=/s/.*/ja = Seapáinis/
+/^ka *=/s/.*/ka = Seoirsis/
+/^km *=/s/.*/km = Ciméiris/
+/^ko *=/s/.*/ko = Cóiréis/
+/^ml *=/s/.*/ml = Mailéalaimis/
+/^ru *=/s/.*/ru = Rúisis/
+/^ta *=/s/.*/ta = Tamailis/
+/^th *=/s/.*/th = Téalainnis/
+/^tr *=/s/.*/tr = Tuircis/
+/^uk *=/s/.*/uk = Úcráinis/
+/^zh *=/s/.*/zh = Sínis/
 ' toolkit-ga-IE/chrome/global/languageNames.properties
 
 sed -i '
