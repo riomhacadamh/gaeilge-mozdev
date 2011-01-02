@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-02 13:53-0500\n"
+"POT-Creation-Date: 2011-01-02 15:18-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -59,6 +59,7 @@ msgstr ""
 "gciallaíonn an earráid seo go bhfuil duine éigin ag iarraidh aithris a "
 "dhéanamh ar an suíomh, agus ní chóir duit leanúint ar aghaidh."
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # Phishing/Malware Notification Bar.
 #. # LOCALIZATION NOTE (notAForgery, notAnAttack)
@@ -157,16 +158,19 @@ msgstr "Maidir leis an gCeadúnas"
 msgid "End User Rights"
 msgstr "Cearta an Úsáideora"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowseraboutDialog.dtd.po (firefox)  #-#-#-#-#
 #. This is a link title that links to http://www.mozilla.com/legal/privacy/.
 #: bottomLinks.privacy prefs.ppLink.label setup.ppLink.label
-#: testpilot.welcomePage.privacyPolicy
+#: testpilot.welcomePage.privacyPolicy aboutPage.privacyPolicy.label
+#: firstrun.privacy
 msgid "Privacy Policy"
 msgstr "Polasaí Príobháideachta"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. try to make the localized text short (see bug 596813 for screenshots).
 #: update.checkingForUpdates addon.checkingForUpdates.label
+#: addonUpdate.checking
 msgid "Checking for updates…"
 msgstr "Nuashonruithe á lorg…"
 
@@ -245,7 +249,8 @@ msgstr "Tosach <span>&brandShortName;</span>"
 #. #-#-#-#-#  chromemozappsextensionsextensions.dtd.po (firefox)  #-#-#-#-#
 #. categories / views
 #: abouthome.searchEngineButton.label searchItem.title filter.emptytext
-#: searchEndCap.label view.search.label search.emptytext
+#: searchEndCap.label view.search.label search.emptytext addonsSearch.label
+#: addonType.1024 empty.label
 msgid "Search"
 msgstr "Cuardach"
 
@@ -255,7 +260,7 @@ msgstr "Cuardach Casta"
 
 #: abouthome.searchEngineLinks.preferences popupWarningButtonUnix
 #: collection.prefs.label btnPrefs preferencesDefaultTitleMac.title
-#: cmd.showPreferencesUnix.label
+#: cmd.showPreferencesUnix.label prefsHeader.label
 msgid "Preferences"
 msgstr "Sainroghanna"
 
@@ -320,6 +325,7 @@ msgid "clearing your recent history"
 msgstr "do stair le déanaí a ghlanadh"
 
 #: privatebrowsingpage.clearRecentHistoryAfter stopCmd.macCommandKey
+#: aboutPage.licenseLinkSuffix
 msgid "."
 msgstr "."
 
@@ -359,6 +365,7 @@ msgstr ""
 "leathanaigh a thugann tú cuairt orthu."
 
 #: privatebrowsingpage.learnMore lockPromptInfoButton.label
+#: addonsWhatAre.button sync.update.button
 msgid "Learn More"
 msgstr "Faigh Tuilleadh Eolais"
 
@@ -899,7 +906,7 @@ msgstr "Athchóirigh"
 #: fullScreenClose.tooltip tabs.close testpilot.notification.close.tooltip
 #: close closeButton.label close.button dialogClose.label
 #: aboutWindowCloseButton closeButton pluginInstallation.close.label
-#: closebutton.label Close
+#: closebutton.label Close sync.update.close
 msgid "Close"
 msgstr "Dún"
 
@@ -1015,7 +1022,7 @@ msgstr "Priontáil an leathanach seo"
 msgid "Back/Forward"
 msgstr "Siar/Ar Aghaidh"
 
-#: locationItem.title col.url.label
+#: locationItem.title col.url.label pageactions.geo
 msgid "Location"
 msgstr "Suíomh"
 
@@ -1110,7 +1117,7 @@ msgid "i"
 msgstr "i"
 
 #: historyButton.label OrganizerQueryHistory historySection.label
-#: collection.history.label
+#: collection.history.label historyHeader.label
 msgid "History"
 msgstr "Stair"
 
@@ -1420,7 +1427,7 @@ msgstr "H"
 msgid "Edit"
 msgstr "Eagar"
 
-#: appMenuCustomize.label
+#: appMenuCustomize.label firstrun.addons2.title
 msgid "Customize"
 msgstr "Saincheap"
 
@@ -1835,15 +1842,15 @@ msgstr "Oscail fuinneog nua"
 msgid "Close sidebar"
 msgstr "Dún an barra taoibh"
 
-#: cutButton.tooltip
+#: cutButton.tooltip cut.label
 msgid "Cut"
 msgstr "Gearr"
 
-#: copyButton.tooltip copyCmd.label
+#: copyButton.tooltip copyCmd.label copy.label
 msgid "Copy"
 msgstr "Cóipeáil"
 
-#: pasteButton.tooltip
+#: pasteButton.tooltip paste.label
 msgid "Paste"
 msgstr "Greamaigh"
 
@@ -1981,14 +1988,14 @@ msgid "&Add Dictionaries…"
 msgstr "&Cuir Foclóirí Leis…"
 
 #: editBookmark.done.label nv_done button.syncOptionsDone.label
-#: saveChanges.label button-finish-mac.label
+#: saveChanges.label button-finish-mac.label done.label
 msgid "Done"
 msgstr "Déanta"
 
 #: editBookmark.cancel.label addonDownloadCancelTooltip
 #: button.syncOptionsCancel.label CancelBtn Cancel cancelButton.label
 #: button-cancel dialogCancel.label unknownCancel.label progress.cancel.tooltip
-#: cancelButtonText
+#: cancelButtonText addonsSearchStart.button cancel.label sync.setup.cancel
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -2103,6 +2110,8 @@ msgstr "S"
 msgid "[Folder Name]"
 msgstr "[Ainm Fillteáin]"
 
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # XPInstall
 #: xpinstallPromptWarning
 msgid ""
 "%S prevented this site (%S) from asking you to install software on your "
@@ -2134,7 +2143,7 @@ msgstr ""
 "Tá suiteáil bhogearraí díchumasaithe faoi láthair. Cliceáil Cumasaigh agus "
 "déan iarracht eile."
 
-#: xpinstallDisabledButton
+#: xpinstallDisabledButton addonEnable.label
 msgid "Enable"
 msgstr "Cumasaigh"
 
@@ -2219,9 +2228,13 @@ msgstr "O"
 # LOCALIZATION NOTE (addonError-1, addonError-2, addonError-3, addonError-4, addonErrorIncompatible, addonErrorBlocklisted):
 # #1 is the add-on name, #2 is the host name, #3 is the application name
 # #4 is the application version
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (addonError-1, addonError-2, addonError-3, addonError-4):
 #. # #1 is the add-on name, #2 is the host name, #3 is the application name
 #. # #4 is the application version
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (addonError-1, addonError-2, addonError-3, addonError-4):
+#. # #1 is the add-on name, #2 is the add-on host, #3 is the application name
 #: addonError-1
 msgid ""
 "The add-on could not be downloaded because of a connection failure on #2."
@@ -2314,7 +2327,7 @@ msgstr "a"
 msgid "A new theme has been installed."
 msgstr "Suiteáladh téama nua."
 
-#: lwthemePostInstallNotification.undoButton
+#: lwthemePostInstallNotification.undoButton notificationDisconnect.button
 msgid "Undo"
 msgstr "Cealaigh"
 
@@ -2348,6 +2361,8 @@ msgctxt "lwthemeNeedsRestart.accesskey"
 msgid "R"
 msgstr "A"
 
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # Popup Blocker
 #: popupWarning
 msgid "%S prevented this site from opening a pop-up window."
 msgstr "Níor lig %S don suíomh seo preabfhuinneog a oscailt."
@@ -2357,7 +2372,7 @@ msgid "%S prevented this site from opening %S pop-up windows."
 msgstr "Níor lig %S don suíomh seo %S preabfhuinneog a oscailt."
 
 #: popupWarningButton prefWindow.titleWin preferencesDefaultTitleWin.title
-#: optionsGroup.label cmd.showPreferencesWin.label
+#: optionsGroup.label cmd.showPreferencesWin.label addonOptions.label
 msgid "Options"
 msgstr "Roghanna"
 
@@ -2508,13 +2523,14 @@ msgstr "Glanfar an stair go léir."
 msgid "All selected items will be cleared."
 msgstr "Glanfar gach mír roghnaithe."
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # Check for Updates in the About Dialog - button labels and accesskeys
 #. # LOCALIZATION NOTE - all of the following update buttons labels will only be
 #. # displayed one at a time. So, if a button is displayed nothing else will
 #. # be displayed alongside of the button. The button when displayed is located
 #. # directly under the Firefox version in the about dialog (see bug 596813 for
 #. # screenshots).
-#: update.checkInsideButton.label
+#: update.checkInsideButton.label aboutPage.checkForUpdates.button
 msgid "Check for Updates"
 msgstr "Lorg Nuashonruithe"
 
@@ -2717,6 +2733,8 @@ msgstr ""
 "Tá an suíomh Gréasáin seo (%1$S) ag iarraidh níos mó ná %2$S MB de sonraí a "
 "stóráil ar do ríomhaire le haghaidh úsáide as líne."
 
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # Site Identity
 #: identity.identified.verifier
 msgid "Verified by: %S"
 msgstr "Cinntithe ag: %S"
@@ -2774,8 +2792,9 @@ msgstr ""
 "n-íosluchtú mhoillithe;#1 íosluchtú mhoillithe"
 
 # Edit Bookmark UI
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # Edit Bookmark UI
-#: editBookmarkPanel.pageBookmarkedTitle
+#: editBookmarkPanel.pageBookmarkedTitle bookmarkPopup.label
 msgid "Page Bookmarked"
 msgstr "Cruthaíodh Leabharmharc"
 
@@ -3035,7 +3054,7 @@ msgstr "Tá na hinnill chuardaigh seo a leanas suiteáilte:"
 #. #-#-#-#-#  chromemozappsextensionsextensions.dtd.po (firefox)  #-#-#-#-#
 #. list sorting
 #: columnLabel.name generalMetaName col.name.label clearTimeDuration.nameColumn
-#: DirColName name.label sort.name.label validation.crlname.label
+#: DirColName name.label sort.name.label validation.crlname.label addpref.name
 msgid "Name"
 msgstr "Ainm"
 
@@ -3799,7 +3818,7 @@ msgid "Choose File…"
 msgstr "Roghnaigh Comhad…"
 
 # see also with &
-#: newTab.label tabs.emptyTabTitle
+#: newTab.label tabs.emptyTabTitle newtab.label
 msgid "New Tab"
 msgstr "Cluaisín Nua"
 
@@ -3819,7 +3838,7 @@ msgstr "Oscail Suíomh Gréasáin"
 msgid "Open in:"
 msgstr "Oscail i:"
 
-#: openBtn.label open openButtonLabel
+#: openBtn.label open openButtonLabel downloadOpen2.label
 msgid "Open"
 msgstr "Oscail"
 
@@ -3926,11 +3945,11 @@ msgstr "Athraithe:"
 msgid "Encoding:"
 msgstr "Ionchódú:"
 
-#: generalMetaContent paneContent.title
+#: generalMetaContent paneContent.title content.title
 msgid "Content"
 msgstr "Ábhar"
 
-#: generalSecurityDetails devmgr.details.title
+#: generalSecurityDetails devmgr.details.title sync.details
 msgid "Details"
 msgstr "Mionsonraí"
 
@@ -4189,11 +4208,11 @@ msgstr "%S:"
 msgid "Not specified"
 msgstr "Gan sonrú"
 
-#: yes browsewithcaret.checkButtonLabel yesButton
+#: yes browsewithcaret.checkButtonLabel yesButton checkbox.yes.label
 msgid "Yes"
 msgstr "Tá"
 
-#: no noButtonLabel noButton
+#: no noButtonLabel noButton checkbox.no.label
 msgid "No"
 msgstr "Níl"
 
@@ -4684,7 +4703,7 @@ msgid "Import and backup your bookmarks"
 msgstr "Iompórtáil agus déan cúltaca ar leabharmharcanna"
 
 # Toolbar
-#: backCmd.label backButton
+#: backCmd.label backButton back.label
 msgid "Back"
 msgstr "Siar"
 
@@ -4692,7 +4711,7 @@ msgstr "Siar"
 msgid "Go back"
 msgstr "Siar"
 
-#: forwardCmd.label
+#: forwardCmd.label forward.label
 msgid "Forward"
 msgstr "Ar Aghaidh"
 
@@ -4997,7 +5016,8 @@ msgstr "Clibeanna Is Déanaí"
 #. #-#-#-#-#  chromemozappsdownloadsdownloads.properties.po (firefox)  #-#-#-#-#
 #. # Desktop folder name for downloaded files
 #: OrganizerQueryDownloads downloads.label downloadsFolderName downloads.title
-#: downloadsFolder detail.numberOfDownloads.label
+#: downloadsFolder detail.numberOfDownloads.label downloadsHeader.label
+#: alertDownloads
 msgid "Downloads"
 msgstr "Íosluchtú"
 
@@ -5123,7 +5143,7 @@ msgstr "Cumraigh conas a cheanglófar &brandShortName; leis an Idirlíon"
 msgid "S&ettings…"
 msgstr "Socruith&e…"
 
-#: offlineStorage.label
+#: offlineStorage.label pageactions.offline-app
 msgid "Offline Storage"
 msgstr "Stóras As Líne"
 
@@ -5157,7 +5177,7 @@ msgstr "&Sáraigh bainistíocht uathoibríoch na taisce"
 #. "<Addon name> <1.1> Update". It is fine to use constructs like brackets if
 #. necessary
 #: updateTab.label updatePass.label update.button addon.update.postfix
-#: validation.crl.autoupdate.time.label1
+#: validation.crl.autoupdate.time.label1 addonsUpdate.label
 msgid "Update"
 msgstr "Nuashonrú"
 
@@ -5986,7 +6006,10 @@ msgstr "&Roghnaigh…"
 msgid "&Always ask me where to save files"
 msgstr "Fi&afraigh díom cá sábhálfar an comhad i gcónaí"
 
-#: addonsMgr.label installFromFile.filterName
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowser.properties.po (firefox)  #-#-#-#-#
+#. # Alerts
+#: addonsMgr.label installFromFile.filterName addonsHeader.label alertAddons
 msgid "Add-ons"
 msgstr "Breiseáin"
 
@@ -6075,9 +6098,10 @@ msgstr "Príobháideachas"
 msgid "Advanced"
 msgstr "Ardroghanna"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowserpreferencespreferences.dtd.po (firefox)  #-#-#-#-#
 #. This should match syncBrand.shortName.label in ../syncBrand.dtd
-#: paneSync.title syncBrand.shortName.label
+#: paneSync.title syncBrand.shortName.label sync.title
 msgid "Sync"
 msgstr "Sync"
 
@@ -6197,7 +6221,7 @@ msgstr "%1$S  [%2$S]"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #### Downloads
-#: desktopFolderName displayNameDesktop
+#: desktopFolderName displayNameDesktop desktopHeader.label
 msgid "Desktop"
 msgstr "Deasc"
 
@@ -6279,6 +6303,7 @@ msgstr "Cuir Leabharmharcanna Beo i %S"
 #. # identifier from the local updates.xml for displaying update history
 #. # example: MyApplication (20081022033543)
 #: typeDescriptionWithType installErrorItemFormat updateFullName
+#: identity.identified.title_with_country
 msgid "%S (%S)"
 msgstr "%S (%S)"
 
@@ -6345,7 +6370,7 @@ msgstr "Tá do thaisce ag úsáid %1$S %2$S ar an diosca faoi láthair"
 msgid "Connect"
 msgstr "Ceangail"
 
-#: disconnect.label
+#: disconnect.label sync.disconnect
 msgid "Disconnect"
 msgstr "Dícheangail"
 
@@ -6389,7 +6414,7 @@ msgctxt "locbar.history.label"
 msgid "History"
 msgstr "Stair"
 
-#: locbar.bookmarks.label collection.bookmarks.label
+#: locbar.bookmarks.label collection.bookmarks.label bookmarksHeader.label
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
@@ -6606,7 +6631,7 @@ msgstr "Cuntas Reatha:"
 
 #. #-#-#-#-#  security-ga-IE.po (firefox)  #-#-#-#-#
 #. Values for resetpassword.xul
-#: resetPass.label Reset resetPasswordButtonLabel
+#: resetPass.label Reset resetPasswordButtonLabel reset.label
 msgid "Reset"
 msgstr "Bánaigh"
 
@@ -6772,7 +6797,7 @@ msgctxt "browser.contentHandlers.types.0.title"
 msgid "Google"
 msgstr "Google"
 
-#: browser.contentHandlers.types.0.uri
+#: browser.contentHandlers.types.0.uri browser.contentHandlers.types.1.uri
 msgid "http://fusion.google.com/add?feedurl=%s"
 msgstr "http://fusion.google.com/add?feedurl=%s"
 
@@ -6781,7 +6806,7 @@ msgstr "http://fusion.google.com/add?feedurl=%s"
 msgid "My Yahoo!"
 msgstr "My Yahoo"
 
-#: browser.contentHandlers.types.1.uri
+#: browser.contentHandlers.types.1.uri browser.contentHandlers.types.0.uri
 msgid "http://add.my.yahoo.com/rss?url=%s"
 msgstr "http://add.my.yahoo.com/rss?url=%s"
 
@@ -7298,7 +7323,7 @@ msgstr "%S &Roghanna"
 msgid "%S &Safe Mode"
 msgstr "%S Mód &Slán"
 
-#: setDefaultBrowserTitle
+#: setDefaultBrowserTitle defaultBrowser.title
 msgid "Default Browser"
 msgstr "Brabhsálaí Réamhshocraithe"
 
@@ -7340,7 +7365,7 @@ msgstr ""
 "\n"
 "Foinse: %S"
 
-#: syncBrand.fullName.label
+#: syncBrand.fullName.label sync.update.title
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
@@ -7983,7 +8008,7 @@ msgstr ""
 "Cuirfidh Firefox Sync na sonraí ar an ríomhaire seo in áit na sonraí i do "
 "chuntas Sync."
 
-#: closeTab.label tabs.closeTab
+#: closeTab.label tabs.closeTab closetab.label
 msgid "Close Tab"
 msgstr "Dún Cluaisín"
 
@@ -8020,6 +8045,8 @@ msgstr "Ag Feitheamh…"
 msgid "Downloading…"
 msgstr "Á Íosluchtú…"
 
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # Closing Tabs
 #: tabs.closeWarningTitle
 msgid "Confirm close"
 msgstr "Dearbhaigh"
@@ -8030,7 +8057,7 @@ msgstr ""
 "Tá tú ar tí %S cluaisín a dhúnadh. An bhfuil tú cinnte go dteastaíonn uait "
 "leanúint ar aghaidh?"
 
-#: tabs.closeButtonMultiple
+#: tabs.closeButtonMultiple tabs.closeButton
 msgid "Close tabs"
 msgstr "Dún cluaisíní"
 
@@ -8246,6 +8273,8 @@ msgstr ""
 #. #LOCALIZATION NOTE (externalProtocolUnknown): The following string is shown if the application name can't be determined
 #. #-#-#-#-#  dom-ga-IE.po (firefox)  #-#-#-#-#
 #. #LOCALIZATION NOTE (externalProtocolUnknown): The following string is shown if the application name can't be determined
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. #LOCALIZATION NOTE (externalProtocolUnknown): The following string is shown if the application name can't be determined
 #: externalProtocolUnknown VerifyUnknown
 msgid "<Unknown>"
 msgstr "<Anaithnid>"
@@ -8282,11 +8311,13 @@ msgstr ""
 "Tá polasaí slándála inneachair ag an leathanach seo a chuireann bac ar é a "
 "bheith leabaithe mar seo."
 
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. %brandDTD;
 #: loadError.label
 msgid "Problem loading page"
 msgstr "Fadhb i rith luchtú an leathanaigh"
 
-#: retry.label
+#: retry.label addonsSearchNone.button
 msgid "Try Again"
 msgstr "Déan Iarracht Arís"
 
@@ -8647,10 +8678,16 @@ msgstr ""
 msgid "Or you can add an exception…"
 msgstr "Nó is féidir leat eisceacht a chruthú…"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. <!-- LOCALIZATION NOTE (securityOverride.warningContent) - Do not translate the
 #. contents of the <button> tags. It uses strings already defined above. The
 #. button is included here (instead of netError.xhtml) because it exposes
 #. functionality specific to firefox.
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. <!-- LOCALIZATION NOTE (securityOverride.warningContent) - Do not translate the
+#. contents of the <xul:button> tags.  The only language content is the label= field,
+#. which uses strings already defined above. The button is included here (instead of
+#. netError.xhtml) because it exposes functionality specific to firefox.
 #: securityOverride.warningContent
 msgid ""
 "<p>You should not add an exception if you are using an internet connection "
@@ -10789,7 +10826,7 @@ msgstr ""
 msgid "Scripts may not close windows that were not opened by script."
 msgstr "Níl cead ag scripteanna fuinneoga nár oscail siad a dhúnadh."
 
-#: OnBeforeUnloadTitle deleteconfirm.title
+#: OnBeforeUnloadTitle deleteconfirm.title AreYouSure
 msgid "Are you sure?"
 msgstr "An bhfuil tú cinnte?"
 
@@ -14131,6 +14168,7 @@ msgid "Name"
 msgstr "Ainm"
 
 #: aboutSupport.modifiedPrefsValue valueColumn.label devmgr.details.title2
+#: addpref.value
 msgid "Value"
 msgstr "Luach"
 
@@ -14380,6 +14418,7 @@ msgstr "Focal faire de dhíth"
 #. #
 #. OK Cancel Buttons
 #: OK okButton.label button-accept okButton Ok crlAutoupdateOk
+#: addonsSearchFail.button ok.label
 msgid "OK"
 msgstr "OK"
 
@@ -14607,6 +14646,7 @@ msgstr "Ní uimhir é an téacs a chuir tú isteach."
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. ***** BEGIN LICENSE BLOCK *****
 #. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
 #. -
@@ -14643,19 +14683,19 @@ msgstr "Ní uimhir é an téacs a chuir tú isteach."
 #. - the terms of any one of the MPL, the GPL or the LGPL.
 #. -
 #. - ***** END LICENSE BLOCK *****
-#: errorConsole.title
+#: errorConsole.title consoleHeader.label
 msgid "Error Console"
 msgstr "Consól Earráide"
 
-#: errFile.label
+#: errFile.label consoleErrFile.label
 msgid "Source File:"
 msgstr "Comhad Foinse:"
 
-#: errLine.label
+#: errLine.label consoleErrLine.label
 msgid "Line:"
 msgstr "Líne:"
 
-#: errColumn.label
+#: errColumn.label consoleErrColumn.label
 msgid "Column:"
 msgstr "Colún:"
 
@@ -14699,6 +14739,8 @@ msgstr "Ord Sórtála ó &Chríoch > Thús"
 msgid "d"
 msgstr "d"
 
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # Error Console
 #: typeError
 msgid "Error:"
 msgstr "Earráid:"
@@ -14723,11 +14765,11 @@ msgstr "Líne: %S, Colún: %S"
 msgid "Source Code:"
 msgstr "Cód Foinseach:"
 
-#: SaveImageTitle
+#: SaveImageTitle contextSaveImage.label
 msgid "Save Image"
 msgstr "Sábháil an Íomhá"
 
-#: SaveVideoTitle
+#: SaveVideoTitle contextSaveVideo.label
 msgid "Save Video"
 msgstr "Sábháil an Físeán"
 
@@ -15474,7 +15516,7 @@ msgstr "Treo"
 msgid "The text you entered was not found."
 msgstr "Ní raibh an téacs a bhí curtha agat faighte."
 
-#: notFoundTitle
+#: notFoundTitle downloadShow2.label
 msgid "Find"
 msgstr "Aimsigh"
 
@@ -15558,7 +15600,7 @@ msgstr "Logáil eisceachtaí JavaScript"
 msgid "Log messages sent to the \"console\" object"
 msgstr "Teachtaireachtaí logála seolta go dtí an oibiacht \"consól\""
 
-#: btnConsoleErrors
+#: btnConsoleErrors consoleErrors.label
 msgid "Errors"
 msgstr "Earráidí"
 
@@ -15574,7 +15616,7 @@ msgstr "Eolas"
 msgid "Log calls to console.info()"
 msgstr "Logáil glaonna ar console.info()"
 
-#: btnConsoleWarnings
+#: btnConsoleWarnings consoleWarnings.label
 msgid "Warnings"
 msgstr "Rabhaidh"
 
@@ -15606,11 +15648,12 @@ msgstr "Consól Logánta"
 msgid "Clear Console"
 msgstr "Bánaigh an Consól"
 
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (btnClear):
 #. #
 #. # This is used as the text of the "Clear" button for the toolbar. It clears the
 #. # contents of the console.
-#: btnClear
+#: btnClear consoleClear.label clearPrivateData.button
 msgid "Clear"
 msgstr "Bánaigh"
 
@@ -15669,7 +15712,7 @@ msgctxt "copyCmd.accesskey"
 msgid "C"
 msgstr "C"
 
-#: selectAllCmd.label
+#: selectAllCmd.label selectAll.label
 msgid "Select All"
 msgstr "Roghnaigh Uile"
 
@@ -16808,9 +16851,10 @@ msgstr "Sórtáilte de réir %COLNAME%"
 
 # LOCALIZATION NOTE (intl.ellipsis): Use the unicode ellipsis char, \u2026,
 # or use "..." unless \u2026 doesn't suit traditions in your locale.
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (intl.ellipsis): Use the unicode ellipsis char, \u2026,
 #. # or use "..." if \u2026 doesn't suit traditions in your locale.
-#: intl.ellipsis
+#: intl.ellipsis consoleEvaluate.label
 msgid "…"
 msgstr "…"
 
@@ -18443,7 +18487,7 @@ msgstr "&Teangacha"
 msgid "Restore Column Order"
 msgstr "Athchóirigh Ord na gColún"
 
-#: playButton.playLabel
+#: playButton.playLabel contextPlayMedia.label
 msgid "Play"
 msgstr "Seinn"
 
@@ -18830,7 +18874,7 @@ msgstr "An bhfuil fonn ort an téama \"%1$S\" ó %2$S a shuiteáil?"
 msgid "Install the locale \"%1$S\" from %2$S?"
 msgstr "An bhfuil fonn ort an logchaighdeán \"%1$S\" ó %2$S a shuiteáil?"
 
-#: OK addon.install.label
+#: OK addon.install.label addonsConfirmInstall.install Install
 msgid "Install"
 msgstr "Suiteáil"
 
@@ -19316,11 +19360,16 @@ msgstr "Am anaithnid fágtha"
 # LOCALIZATION NOTE (doneStatus): — is the "em dash" (long dash)
 # #1 download size for FINISHED or download state; #2 host (e.g., eTLD + 1, IP)
 # examples: 1.1 MB — website2.com; Canceled — 222.net
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (doneStatus): — is the "em dash" (long dash)
 #. # #1 download size for FINISHED or download state; #2 host (e.g., eTLD + 1, IP)
 #. # #2 can also be doneScheme or doneFileScheme for special URIs like file:
 #. # examples: 1.1 MB — website2.com; Canceled — 222.net
-#: doneStatus
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # Download Manager
+#. # LOCALIZATION NOTE (Status): — is the "em dash" (long dash)
+#. # #1 download size for FINISHED or download state; #2 host (e.g., eTLD + 1, IP)
+#: doneStatus downloadsStatus
 msgid "#1 — #2"
 msgstr "#1 — #2"
 
@@ -19330,7 +19379,7 @@ msgctxt "doneSize"
 msgid "#1 #2"
 msgstr "#1 #2"
 
-#: doneSizeUnknown
+#: doneSizeUnknown downloadsUnknownSize
 msgid "Unknown size"
 msgstr "Méid anaithnid"
 
@@ -19374,9 +19423,10 @@ msgstr ""
 msgid "This download has been blocked by your Security Zone Policy"
 msgstr "Cuireadh cosc ar an íosluchtú seo de bharr do Pholasaí Slándála"
 
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromemozappsdownloadsdownloads.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (yesterday): Displayed time for files finished yesterday
-#: yesterday finduri-AgeInDays-is-1
+#: yesterday finduri-AgeInDays-is-1 donwloadsYesterday
 msgid "Yesterday"
 msgstr "Inné"
 
@@ -19777,11 +19827,11 @@ msgstr "Tuilleadh eolais"
 msgid "&Restart &brandShortName;"
 msgstr "&Atosaigh &brandShortName;"
 
-#: blocklist.blocked.label
+#: blocklist.blocked.label addonBlocked.blocked
 msgid "Blocked"
 msgstr "Coiscthe"
 
-#: blocklist.checkbox.label
+#: blocklist.checkbox.label addonDisable.label
 msgid "Disable"
 msgstr "Díchumasaigh"
 
@@ -19870,7 +19920,7 @@ msgid "Enable add-on update security checking"
 msgstr "Cumasaigh seiceáil slándála nuashonrú na mbreiseán"
 
 # View labels
-#: view.discover.label
+#: view.discover.label addonsRepo.label
 msgid "Get Add-ons"
 msgstr "Faigh Breiseáin"
 
@@ -20032,10 +20082,11 @@ msgstr "Folaigh na Nótaí Eisiúna"
 msgid "Hide the release notes for this update"
 msgstr "Folaigh na nótaí eisiúna don nuashonrú seo"
 
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. discovery view
 #. LOCALIZATION NOTE (discover.title,discover.description,discover.footer):
 #. Displayed in the center of the Get Add-ons view, see bug 601143 for mockups.
-#: discover.title
+#: discover.title addonsWhatAre.label
 msgid "What are Add-ons?"
 msgstr "Cad is Breiseán ann?"
 
@@ -20796,7 +20847,7 @@ msgstr "C"
 msgid "Finished checking %S"
 msgstr "%S arna sheiceáil"
 
-#: downloadingPrefix
+#: downloadingPrefix alertDownloadsStart
 msgid "Downloading: %S"
 msgstr "%S á íosluchtú"
 
@@ -21068,7 +21119,7 @@ msgstr "Tá suiteáil na bhforlíontán críochnaithe."
 msgid "Installed"
 msgstr "Suiteáilte"
 
-#: pluginInstallationSummary.failed crlAutoupdateFailed
+#: pluginInstallationSummary.failed crlAutoupdateFailed downloadFailed.label
 msgid "Failed"
 msgstr "Teipthe"
 
@@ -22049,7 +22100,7 @@ msgstr "Suiteáilte ar: %S"
 msgid "Install Failed"
 msgstr "Theip ar Shuiteáil"
 
-#: pauseButtonResume
+#: pauseButtonResume downloadResume.label
 msgid "Resume"
 msgstr "Lean"
 
@@ -22303,7 +22354,7 @@ msgstr "Ní shábhálfar focail fhaire le haghaidh na suíomhanna seo a leanas:"
 msgid "Username"
 msgstr "Ainm an Úsáideora"
 
-#: treehead.password.label
+#: treehead.password.label pageactions.password sync.password
 msgid "Password"
 msgstr "Focal Faire"
 
@@ -22474,7 +22525,7 @@ msgstr "(comhaid logánta)"
 msgid "bookmarks-%S.json"
 msgstr "bookmarks-%S.json"
 
-#: addEngineConfirmTitle
+#: addEngineConfirmTitle pageactions.search.addNew
 msgid "Add Search Engine"
 msgstr "Inneall Cuardaigh Nua"
 
@@ -27423,6 +27474,1188 @@ msgstr "Sonraí faoin uair dheireanach ar theip ar Nuashonrú: "
 msgid "Settings"
 msgstr "Socruithe"
 
+#: certerror.addTemporaryException.label
+msgid "Visit site"
+msgstr ""
+
+#: certerror.addPermanentException.label
+msgid "Add permanent exception"
+msgstr ""
+
+#: aboutPage.title about.title
+msgid "About &brandShortName;"
+msgstr ""
+
+#: aboutPage.faq.label firstrun.faq
+msgid "FAQ"
+msgstr ""
+
+#: aboutPage.support.label
+msgid "Support"
+msgstr ""
+
+#: aboutPage.rights.label
+msgid "Know Your Rights"
+msgstr ""
+
+#: aboutPage.relNotes.label
+msgid "Release Notes"
+msgstr ""
+
+#: aboutPage.credits.label
+msgid "Credits"
+msgstr ""
+
+#: aboutPage.checkForUpdates.checking
+msgid "Looking for updates…"
+msgstr ""
+
+#: aboutPage.checkForUpdates.none
+msgid "No updates available"
+msgstr ""
+
+#: aboutPage.checkForUpdates.found
+msgid "Update available"
+msgstr ""
+
+#. LOCALIZATION NOTE:
+#. These strings are concatenated in order. Unneeded strings may be left blank.
+#: aboutPage.licenseLink
+msgid "Licensing information"
+msgstr ""
+
+#: aboutHome.header
+msgid "<span>&brandShortName; </span><span id='header-suffix'>Start</span>"
+msgstr ""
+
+#: aboutHome.recentTabs
+msgid "Your tabs from last time"
+msgstr ""
+
+#: aboutHome.remoteTabs
+msgid "Tabs from your other computers"
+msgstr ""
+
+#: aboutHome.recommendedAddons2
+msgid "Add-ons for your &brandShortName;"
+msgstr ""
+
+#: aboutHome.giveFeedback
+msgid "Give Feedback"
+msgstr ""
+
+#: aboutHome.openAllTabs
+msgid "Open all in tabs"
+msgstr ""
+
+#: aboutHome.noTabs
+msgid "No tabs from last time"
+msgstr ""
+
+#: aboutHome.noAddons addonsSearchNone.recommended
+msgid "No recommended add-ons"
+msgstr ""
+
+#: urlbar.emptytext
+msgid "Enter Search or Address"
+msgstr ""
+
+#: reload.label
+msgid "Reload"
+msgstr "Athluchtaigh"
+
+#: stop.label
+msgid "Stop"
+msgstr "Stad"
+
+#: go.label
+msgid "Go"
+msgstr "Ar Aghaidh"
+
+#: star.label
+msgid "Star"
+msgstr ""
+
+#: copyAll.label
+msgid "Copy All"
+msgstr ""
+
+#: copylink.label
+msgid "Copy Link Location"
+msgstr ""
+
+#: delete.label
+msgctxt "delete.label"
+msgid "Delete"
+msgstr ""
+
+#: noSuggestions.label
+msgid "(No suggestions)"
+msgstr ""
+
+#: addToDictionary.label
+msgid "Add to Dictionary"
+msgstr ""
+
+#: inputMethod.label
+msgid "Select Input Method"
+msgstr ""
+
+#: allPagesHeader.label
+msgid "All Pages"
+msgstr ""
+
+#: editBookmarkDone.label
+msgctxt "editBookmarkDone.label"
+msgid "Done"
+msgstr ""
+
+#: editBookmarkTags.label
+msgid "Add tags here"
+msgstr ""
+
+#: selectHelper.done
+msgctxt "selectHelper.done"
+msgid "Done"
+msgstr ""
+
+#: addonsLocal.label
+msgid "Your Add-ons"
+msgstr ""
+
+#: addonsRecommended.label
+msgctxt "addonsRecommended.label"
+msgid "Recommended"
+msgstr ""
+
+#: addonsSearch2.emptytext
+msgid "Search Catalog"
+msgstr ""
+
+#: addonsSearch.recommended
+msgctxt "addonsSearch.recommended"
+msgid "Recommended"
+msgstr ""
+
+#: addonInstall2.label
+msgid "Add to &brandShortName;"
+msgstr ""
+
+#: addonUninstall.label
+msgid "Uninstall"
+msgstr ""
+
+#: addonCancel.label
+msgctxt "addonCancel.label"
+msgid "Cancel"
+msgstr ""
+
+#: addonShowPage.label
+msgctxt "addonShowPage.label"
+msgid "Go to Page"
+msgstr ""
+
+#: downloadShowPage.label
+msgctxt "downloadShowPage.label"
+msgid "Go to Page"
+msgstr ""
+
+#: downloadCancel.label
+msgctxt "downloadCancel.label"
+msgid "Cancel"
+msgstr ""
+
+#: downloadPause.label
+msgctxt "downloadPause.label"
+msgid "Pause"
+msgstr ""
+
+#: downloadRetry.label
+msgid "Retry"
+msgstr ""
+
+#: downloadRemove.label
+msgctxt "downloadRemove.label"
+msgid "Remove"
+msgstr ""
+
+#: downloadDelete.label
+msgctxt "downloadDelete.label"
+msgid "Delete"
+msgstr ""
+
+#: noResults.label
+msgid "No results"
+msgstr ""
+
+#: allBookmarks.label
+msgid "See all bookmarks"
+msgstr ""
+
+#: bookmarkRemove.label
+msgctxt "bookmarkRemove.label"
+msgid "Remove"
+msgstr ""
+
+#: bookmarkEdit.label
+msgctxt "bookmarkEdit.label"
+msgid "Edit"
+msgstr ""
+
+#: identity.connectedTo2
+msgid "Connected to"
+msgstr ""
+
+#. Localization note (identity.runBy2)
+#. The layout of the identity dialog prevents combining this into a single string with
+#. substitution variables.  If it is difficult to translate the sense of the string
+#. with that structure, consider a translation which ignores the preceding domain and
+#. just addresses the organization to follow, e.g. "This site is run by "
+#: identity.runBy2
+msgid "run by"
+msgstr ""
+
+#: consoleAll.label
+msgid "All"
+msgstr ""
+
+#: consoleMessages.label
+msgid "Messages"
+msgstr ""
+
+#: consoleCodeEval.label
+msgid "Code:"
+msgstr ""
+
+#: contextOpenInNewTab.label
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: contextSaveLink.label
+msgid "Save Link"
+msgstr ""
+
+#: contextShareLink.label
+msgid "Share Link"
+msgstr ""
+
+#: contextShareImage.label
+msgid "Share Image"
+msgstr ""
+
+#: contextShareVideo.label
+msgid "Share Video"
+msgstr ""
+
+#: contextPauseMedia.label
+msgctxt "contextPauseMedia.label"
+msgid "Pause"
+msgstr ""
+
+#: contextFullScreen.label
+msgid "Full Screen"
+msgstr ""
+
+#: contextEditBookmark.label
+msgctxt "contextEditBookmark.label"
+msgid "Edit"
+msgstr ""
+
+#: contextRemoveBookmark.label
+msgctxt "contextRemoveBookmark.label"
+msgid "Remove"
+msgstr ""
+
+#. #-#-#-#-#  chromebrowser.properties.po (firefox)  #-#-#-#-#
+#. # Page Actions
+#: pageactions.saveas.pdf
+msgid "Save As PDF"
+msgstr ""
+
+#: pageactions.share.page
+msgid "Share Page"
+msgstr ""
+
+#: pageactions.password.forget
+msgid "Forget Password"
+msgstr ""
+
+#: pageactions.reset
+msgid "Clear Site Preferences"
+msgstr ""
+
+#: pageactions.findInPage
+msgid "Find In Page"
+msgstr ""
+
+#: selectHelper.emptytext
+msgid "Filter List"
+msgstr ""
+
+#: appMenu.siteOptions
+msgid "Site Options"
+msgstr ""
+
+#. # Add-on Manager
+#: addonsLocalNone.label
+msgid "No add-ons installed"
+msgstr ""
+
+#: addonsSearchStart.label
+msgid "Searching for add-ons…"
+msgstr ""
+
+#: addonsSearchNone.search
+msgid "No matches found"
+msgstr "Níor aimsíodh aon rud"
+
+#: addonsSearchFail.label
+msgid "%S couldn't retrieve add-ons"
+msgstr ""
+
+#: addonsSearchSuccess2.button
+msgid "Clear Search"
+msgstr ""
+
+#: addonsBrowseAll.label
+msgid "Browse all add-ons"
+msgstr ""
+
+#: addonsBrowseAll.description
+msgid "addons.mozilla.org has many to explore"
+msgstr ""
+
+#: addonsBrowseAll.seeMore
+msgid "See More Add-ons"
+msgstr ""
+
+#: addonsBrowseAll.browseSite
+msgid "Browse Site"
+msgstr ""
+
+#. # LOCALIZATION NOTE (addonsSearchMore.label): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # #1 total number of add-ons that match the search terms
+#: addonsSearchMore.label
+msgid "Show result;Show all #1 results"
+msgstr ""
+
+#. # LOCALIZATION NOTE (addonsSearchMore.description): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # #1 number of search results currently visible
+#: addonsSearchMore.description
+msgid ""
+"If this result isn't what you're looking for, try this;If these #1 results "
+"aren't what you're looking for, try this"
+msgstr ""
+
+#. # LOCALIZATION NOTE (addonsWhatAre.description):
+#. # #1 is the application name
+#: addonsWhatAre.description
+msgid ""
+"Add-ons are applications that let you personalize #1 with extra functionality "
+"or style. You can make #1 your own."
+msgstr ""
+
+#: addonsSearchEngine.description
+msgid "Integrated Search"
+msgstr ""
+
+#: addonsConfirmInstall.title
+msgid "Installing Add-on"
+msgstr ""
+
+#: addonType.2
+msgid "Extension"
+msgstr ""
+
+#: addonType.4
+msgid "Theme"
+msgstr ""
+
+#: addonType.8
+msgid "Locale"
+msgstr ""
+
+#: addonUpdate.updating
+msgid "Updating to %S"
+msgstr ""
+
+#: addonUpdate.updated
+msgid "Updated to %S"
+msgstr ""
+
+#: addonUpdate.compatibility
+msgid "A compatibility update has been applied"
+msgstr ""
+
+#: addonUpdate.noupdate
+msgid "No updates were found"
+msgstr ""
+
+#: addonUpdate.notsupported
+msgid "Updates not supported"
+msgstr ""
+
+#: addonUpdate.disabled
+msgid "Updates are disabled"
+msgstr ""
+
+#: addonUpdate.error
+msgid "An error occurred"
+msgstr ""
+
+#: addonBlocked.softBlocked
+msgid "Known to cause security or stability issues"
+msgstr ""
+
+#: addonBlocked.outdated
+msgid "Out of date"
+msgstr ""
+
+#. # LOCALIZATION NOTE (Time): #1 left time for UNFINISHED, total time for FINISHED
+#: downloadsTime
+msgid "— #1"
+msgstr ""
+
+#. # LOCALIZATION NOTE (KnownSize): #1 size number; #2 size unit
+#: downloadsKnownSize
+msgctxt "downloadsKnownSize"
+msgid "#1 #2"
+msgstr ""
+
+#. # LOCALIZATION NOTE (MonthDate): #1 month name; #2 date number; e.g., January 22
+#: downloadsMonthDate
+msgctxt "downloadsMonthDate"
+msgid "#1 #2"
+msgstr ""
+
+#: downloadsEmpty
+msgid "No downloads"
+msgstr ""
+
+#: downloadsDeleteTitle
+msgid "Delete File"
+msgstr ""
+
+#: alertAddonsDownloading
+msgid "Downloading add-on"
+msgstr ""
+
+#: alertAddonsInstalling
+msgid "Installing add-on"
+msgstr ""
+
+#: alertAddonsInstalled
+msgid "Installation complete. Restart required."
+msgstr ""
+
+#: alertAddonsInstalledNoRestart
+msgid "Installation complete"
+msgstr ""
+
+#: alertAddonsFail
+msgid "Installation failed"
+msgstr ""
+
+#: alertLockScreen
+msgid "Screen Orientation"
+msgstr ""
+
+#: alertLockScreen.locked
+msgid "Locked"
+msgstr ""
+
+#: alertLockScreen.unlocked
+msgid "Unlocked"
+msgstr ""
+
+#. # LOCALIZATION NOTE (alertAddonsDisabled): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # #1 number of add-ons
+#: alertAddonsDisabled
+msgid ""
+"#1 incompatible add-on was disabled;#1 incompatible add-ons were disabled"
+msgstr ""
+
+#: alertDownloadsDone
+msgid "%S has finished downloading"
+msgstr ""
+
+#: alertCantOpenDownload
+msgid "Can't open file. Tap to save it."
+msgstr ""
+
+#: alertDownloadsSize
+msgid "Download too big"
+msgstr ""
+
+#: alertDownloadsNoSpace
+msgid "Not enough storage space"
+msgstr ""
+
+#. # Notifications
+#: notificationRestart.normal
+msgid "Restart to complete changes."
+msgstr ""
+
+#: notificationRestart.update
+msgid "Add-ons updated. Restart to complete changes."
+msgstr ""
+
+#: notificationRestart.blocked
+msgid "Unsafe add-ons installed. Restart to disable."
+msgstr ""
+
+#: notificationRestart.button
+msgid "Restart"
+msgstr ""
+
+#: popupButtonAllowOnce
+msgid "Show"
+msgstr "Taispeáin"
+
+#: popupButtonAlwaysAllow2
+msgid "Always Show"
+msgstr ""
+
+#: popupButtonNeverWarn2
+msgid "Never Show"
+msgstr ""
+
+#: identity.identified.verified_by_you
+msgid "You have added a security exception for this site"
+msgstr ""
+
+#: identity.encrypted2
+msgid "Encrypted"
+msgstr ""
+
+#: identity.unencrypted2
+msgid "Not encrypted"
+msgstr ""
+
+#. # Geolocation UI
+#: geolocation.allow
+msgid "Share"
+msgstr ""
+
+#: geolocation.dontAllow
+msgid "Don't share"
+msgstr ""
+
+#: geolocation.siteWantsTo
+msgid "%S wants your location."
+msgstr ""
+
+#. # Desktop notification UI
+#: desktop-notification.allow
+msgctxt "desktop-notification.allow"
+msgid "Allow"
+msgstr ""
+
+#: desktop-notification.dontAllow
+msgid "Don't allow"
+msgstr ""
+
+#: desktop-notification.siteWantsTo
+msgid "%S wants use notifications."
+msgstr ""
+
+#. # New Tab Popup
+#. # LOCALIZATION NOTE (newtabpopup): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # #1 number of tabs
+#: newtabpopup.opened
+msgid "New tab opened;#1 new tabs opened"
+msgstr ""
+
+#. # Offline web applications
+#: offlineApps.available
+msgid "%S wants to store data on your computer for offline use."
+msgstr ""
+
+#: offlineApps.never
+msgid "Don't Allow"
+msgstr ""
+
+#. # Bookmark List
+#: bookmarkList.desktop
+msgid "Desktop Bookmarks"
+msgstr ""
+
+#. # LOCALIZATION NOTE (tabs.closeWarning): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # #1 number of tabs (must be greater than 1)
+#: tabs.closeWarning
+msgid "NOT USED;You are about to close #1 tabs. Continue?"
+msgstr ""
+
+#: tabs.crashWarningTitle
+msgid "Sorry!"
+msgstr ""
+
+#: tabs.crashWarningMsg
+msgid "Something went wrong while displaying a web page."
+msgstr ""
+
+#: tabs.crashSubmitReport
+msgid "Send Mozilla a crash report"
+msgstr ""
+
+#: tabs.crashClose
+msgid "Close tab"
+msgstr ""
+
+#: tabs.crashReload
+msgid "Reload tab"
+msgstr ""
+
+#. # Homepage
+#. # LOCALIZATION NOTE: homepage.custom2 is the text displayed on the selector button if
+#. # the user selects a webpage to be the startpage. We can't display the entire URL
+#. # or webpage title on the menulist
+#: homepage.custom2
+msgid "Custom Page"
+msgstr ""
+
+#: pageactions.popup
+msgid "Popups"
+msgstr ""
+
+#. # Open Search
+#: opensearch.searchWith
+msgid "Search With:"
+msgstr ""
+
+#: opensearch.searchFor
+msgid "Search for \"%S\""
+msgstr ""
+
+#. # Open in Another App
+#. # LOCALIZATION NOTE: openinapp.specific is the text displayed if there is a single external app
+#. # %S is the name of the app, like "YouTube" or "Picassa"
+#: openinapp.specific
+msgid "Open in %S App"
+msgstr ""
+
+#: openinapp.general
+msgid "Open in Another App"
+msgstr ""
+
+#. # Clear Private Data
+#: clearPrivateData.title
+msgid "Clear Private Data"
+msgstr ""
+
+#: clearPrivateData.message
+msgid ""
+"Delete your browsing history and settings, including passwords and cookies?"
+msgstr ""
+
+#: newpref.label
+msgid "Add a New Preference"
+msgstr ""
+
+#: integer.label
+msgid "Integer"
+msgstr ""
+
+#: string.label
+msgid "String"
+msgstr ""
+
+#: boolean.label
+msgid "Boolean"
+msgstr ""
+
+#: feedbackHeader.label
+msgid "Beta Tester Tools"
+msgstr ""
+
+#: feedback.communicate.title
+msgid "Communicate to Us!"
+msgstr ""
+
+#: feedback.feedback.title
+msgid "Give feedback"
+msgstr ""
+
+#: feedback.feedback.good
+msgid "Good"
+msgstr ""
+
+#: feedback.feedback.bad
+msgid "Bad"
+msgstr ""
+
+#: feedback.information.title
+msgid "More Information"
+msgstr ""
+
+#: feedback.about.title
+msgid "About this Beta"
+msgstr ""
+
+#: feedback.about.button about.button
+msgid "Go to Page"
+msgstr ""
+
+#: feedback.tools.title
+msgid "Tools"
+msgstr ""
+
+#: feedback.forceCompat.title
+msgid "Force add-ons compatibility"
+msgstr ""
+
+#: feedback.errorConsole.title
+msgid "Enable the Error Console"
+msgstr ""
+
+#: firstrun.title
+msgctxt "firstrun.title"
+msgid "Welcome to &brandShortName;"
+msgstr ""
+
+#: firstrun.heading2
+msgctxt "firstrun.heading2"
+msgid "Welcome to &brandShortName;"
+msgstr ""
+
+#: firstrun.sync2.title
+msgid "Sync Up"
+msgstr ""
+
+#: firstrun.sync2.description
+msgid ""
+"Login with your Sync account info and share your history, passwords, "
+"bookmarks &amp; tabs between your desktop and mobile"
+msgstr ""
+
+#: firstrun.addons2.description
+msgid ""
+"Discover and install add-ons to add new functionality to your &brandShortName;"
+msgstr ""
+
+#: firstrun.home2.title
+msgid "Browse"
+msgstr "Brabhsáil"
+
+#: firstrun.home2.description
+msgid ""
+"Skip all this and go to your personalized Start page to start browsing the web"
+msgstr ""
+
+#: firstrun.features
+msgid "See More Features"
+msgstr ""
+
+#: firstrun.follow
+msgid "Follow us on:"
+msgstr ""
+
+#. LOCALIZATION NOTE (geolocation.learnMore): Use the
+#. unicode ellipsis char, \u2026,
+#. or use "..." unless \u2026 doesn't suit traditions in your
+#. locale.
+#: geolocation.learnMore
+msgid "Learn More…"
+msgstr ""
+
+#: netOffline.overrideLongDesc
+msgid ""
+"<ul> \n"
+"<li>Try again. &brandShortName; will attempt to open a connection and reload "
+"the page.</li> \n"
+"</ul>"
+msgstr ""
+
+#. # 1st string is product name, 2nd is the username for the login, 3rd is the
+#. #   login's hostname. Note that long usernames may be truncated.
+#: saveLoginText
+msgid "Do you want %1$S to remember the password for \"%2$S\" on %3$S?"
+msgstr ""
+
+#. # 1st string is product name, 2nd is the login's hostname
+#: saveLoginTextNoUsername
+msgid "Do you want %1$S to remember this password on %2$S?"
+msgstr ""
+
+#: notifyBarNotNowButtonAccessKey
+msgctxt "notifyBarNotNowButtonAccessKeynotifyBarNotNowButtonAccessKey"
+msgid ""
+msgstr ""
+
+#: notifyBarNeverForSiteButtonText
+msgid "Never"
+msgstr ""
+
+#: notifyBarNeverForSiteButtonAccessKey
+msgctxt "notifyBarNeverForSiteButtonAccessKey"
+msgid ""
+msgstr ""
+
+#: notifyBarRememberButtonText
+msgid "Remember"
+msgstr ""
+
+#: notifyBarRememberButtonAccessKey
+msgctxt "notifyBarRememberButtonAccessKey"
+msgid ""
+msgstr ""
+
+#: passwordChangeText
+msgid "Would you like to change the stored password for %S?"
+msgstr ""
+
+#: passwordChangeTextNoUser
+msgid "Would you like to change the stored password for this login?"
+msgstr ""
+
+#: notifyBarChangeButtonText
+msgid "Change"
+msgstr ""
+
+#: notifyBarChangeButtonAccessKey
+msgctxt "notifyBarChangeButtonAccessKey"
+msgid ""
+msgstr ""
+
+#: notifyBarDontChangeButtonAccessKey
+msgctxt "notifyBarDontChangeButtonAccessKey"
+msgid ""
+msgstr ""
+
+#: reflowZoom.title
+msgid "Reformat text on zoom"
+msgstr ""
+
+#: showImages.title
+msgid "Show images"
+msgstr ""
+
+#: enableJavaScript.title
+msgid "Enable JavaScript"
+msgstr ""
+
+#: enablePlugins.title
+msgid "Enable Plugins"
+msgstr ""
+
+#: privacy.title
+msgid "Privacy &amp; Security"
+msgstr ""
+
+#: allowCookies.title
+msgid "Allow cookies"
+msgstr ""
+
+#: clearPrivateData2.title
+msgid "Clear private data"
+msgstr ""
+
+#: rememberPasswords.title
+msgid "Remember passwords"
+msgstr ""
+
+#: language.title
+msgid "Language"
+msgstr ""
+
+#: language.auto
+msgid "Auto-detect"
+msgstr ""
+
+#: defaultBrowser.description
+msgid "Make &brandShortName; your default browser"
+msgstr ""
+
+#: homepage.title
+msgid "Start page"
+msgstr ""
+
+#: homepage.none
+msgid "Blank Page"
+msgstr ""
+
+#: homepage.default
+msgid "&brandShortName; Start"
+msgstr ""
+
+#: homepage.currentpage
+msgid "Use Current Page"
+msgstr ""
+
+#. # This is the default set of web based feed handlers shown in the reader
+#. # selection UI
+#: browser.contentHandlers.types.0.title
+msgid "My Yahoo"
+msgstr ""
+
+#: browser.contentHandlers.types.1.title
+msgctxt "browser.contentHandlers.types.1.title"
+msgid "Google"
+msgstr ""
+
+#. # Keyword URL (for location bar searches)
+#: keyword.URL
+msgid ""
+"http://www.google.com/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q="
+msgstr ""
+
+# increment this number when anything gets changed in the list below.  This will
+# cause Firefox to re-read these prefs and inject any new handlers into the
+# profile database.  Note that "new" is defined as "has a different URL"; this
+# means that it's not possible to update the name of existing handler, so
+# don't make any spelling errors here.
+#. # increment this number when anything gets changed in the list below.  This will
+#. # cause Firefox to re-read these prefs and inject any new handlers into the
+#. # profile database.  Note that "new" is defined as "has a different URL"; this
+#. # means that it's not possible to update the name of existing handler, so
+#. # don't make any spelling errors here.
+#: gecko.handlerService.defaultHandlersVersion
+msgid "2"
+msgstr "2"
+
+#: gecko.handlerService.schemes.mailto.0.uriTemplate
+msgid "http://compose.mail.yahoo.com/?To=%s"
+msgstr ""
+
+#: sync.notconnected notconnected.label
+msgid "Not connected"
+msgstr ""
+
+#: sync.connect
+msgctxt "sync.connect"
+msgid "Connect"
+msgstr ""
+
+#: sync.connected
+msgid "Connected"
+msgstr ""
+
+#: sync.synchronize
+msgid "Enable Sync"
+msgstr ""
+
+#: sync.deviceName
+msgid "This device"
+msgstr ""
+
+#: sync.syncNow error.sync.tryAgainButton.label
+msgid "Sync Now"
+msgstr "Sioncrónaigh Anois"
+
+#: sync.setup.title
+msgid "Connect to Sync"
+msgstr ""
+
+#: sync.setup.jpake
+msgid ""
+"From a Firefox Sync-connected computer, go to Sync options and select &#x0022;"
+"Add a device&#x0022;"
+msgstr ""
+
+#: sync.fallback
+msgid "I'm not near my computer…"
+msgstr ""
+
+#: sync.setup.manual
+msgid "Enter your Sync account information"
+msgstr ""
+
+# Entities for Account name page
+#: sync.account
+msgid "Account Name"
+msgstr "Ainm an Chuntais"
+
+#: sync.syncKey
+msgid "Sync Key"
+msgstr ""
+
+#: sync.customServer
+msgid "Use custom server"
+msgstr ""
+
+#: sync.serverURL
+msgid "Server URL"
+msgstr ""
+
+#: sync.setup.connect
+msgctxt "sync.setup.connect"
+msgid "Connect"
+msgstr ""
+
+#. # %S is the date and time at which the last sync successfully completed
+#: lastSync.label
+msgid "Last update: %S"
+msgstr ""
+
+#: lastSyncInProgress.label
+msgid "Last update: in progress…"
+msgstr ""
+
+#. # %S is the username logged in
+#: account.label
+msgid "Account: %S"
+msgstr ""
+
+#: notificationDisconnect.label
+msgid "Your Firefox Sync account has been removed"
+msgstr ""
+
+#. # LOCALIZATION NOTE (sync.clientUpdate, sync.remoteUpdate):
+#. # #1 is the "application name"
+#. # #2 is the "version"
+#: sync.update.client
+msgid ""
+"#1 #2 is not compatible with the latest version of Firefox Sync. Please "
+"update to the latest version."
+msgstr ""
+
+#: sync.update.remote
+msgid ""
+"#1 #2 is not compatible with older versions of Firefox Sync. Please update "
+"Firefox on your other computer(s)."
+msgstr ""
+
+#. # converted from pseudo-properties .it file
+#. # This file is in the UTF-8 encoding
+#. # section: [Strings]
+#. # LOCALIZATION NOTE (CrashReporterProductErrorText2): %s is replaced with another string containing detailed information.
+#: CrashReporterProductErrorText2
+msgid ""
+"Firefox has crashed. Unfortunately the crash reporter is unable to submit a "
+"crash report.\n"
+"\n"
+"Details: %s"
+msgstr ""
+
+#: CrashReporterDescriptionText2
+msgid ""
+"Firefox has crashed. Your tabs will be listed on the Firefox Start page when "
+"you restart.\n"
+"\n"
+"Please help us fix the problem!"
+msgstr ""
+
+#. # LOCALIZATION NOTE (CheckSendReport): The %s is replaced with the vendor name.
+#: CheckSendReport
+msgid "Send %s a crash report"
+msgstr ""
+
+#: CheckIncludeURL
+msgid "Include the page address"
+msgstr ""
+
+#: Quit2
+msgid "Quit Firefox"
+msgstr ""
+
+#: Restart
+msgid "Restart Firefox"
+msgstr ""
+
+#. # converted from pseudo-properties .it file
+#. # This file is in the UTF-8 encoding
+#. # section: [Strings]
+#: AppShortName
+msgid "%MOZ_APP_DISPLAYNAME%"
+msgstr ""
+
+#: AppLongName
+msgid "Mozilla %MOZ_APP_DISPLAYNAME%"
+msgstr ""
+
+#: WindowCaption
+msgid "Mozilla %MOZ_APP_DISPLAYNAME% Setup"
+msgstr ""
+
+#: InstallTo
+msgid "Install %MOZ_APP_DISPLAYNAME% to"
+msgstr ""
+
+#: InstalledSuccessfully
+msgid "Mozilla %MOZ_APP_DISPLAYNAME% has been installed successfully."
+msgstr ""
+
+#: ExtractionError
+msgid "Archive extraction error:"
+msgstr ""
+
+#: ThereWereErrors
+msgid "There were errors during installation:"
+msgstr ""
+
+#: CreatingUserProfile
+msgid "Creating user profile. Please wait..."
+msgstr ""
+
+#: UninstallCaption
+msgid "Mozilla %MOZ_APP_DISPLAYNAME% Uninstall"
+msgstr ""
+
+#: FilesWillBeRemoved
+msgid "All files will be removed from"
+msgstr ""
+
+#: InstallationNotFound
+msgid "Mozilla %MOZ_APP_DISPLAYNAME% installation not found."
+msgstr ""
+
+#: UninstalledSuccessfully
+msgid "Mozilla %MOZ_APP_DISPLAYNAME% has been uninstalled successfully."
+msgstr ""
+
+# LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
+# your locale code, and link to your translated pages as soon as they're
+# live.
+# LOCALIZATION NOTE: Some of these URLs are currently 404s, but should be coming
+# online shortly.
+# LOCALIZATION NOTE (bookmarks_title):
+# title for the folder that will contains the default bookmarks
+#. # LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
+#. # your locale code, and link to your translated pages as soon as they're 
+#. # live.
+#. # LOCALIZATION NOTE: Some of these URLs are currently 404s, but should be coming
+#. # online shortly.
+#. # LOCALIZATION NOTE (bookmarks_title):
+#. # title for the folder that will contains the default bookmarks
+#: bookmarks_title
+msgid "Mobile"
+msgstr "Fón Póca"
+
+#. # LOCALIZATION NOTE (bookmarks_welcome):
+#. # link title for about:firstrun
+#: bookmarks_welcome
+msgid "Firefox: Welcome"
+msgstr ""
+
+#. # LOCALIZATION NOTE (bookmarks_aboutBrowser):
+#. # link title for about:fennec
+#: bookmarks_aboutBrowser
+msgid "Firefox: About your browser"
+msgstr ""
+
+#. # LOCALIZATION NOTE (bookmarks_addons):
+#. # link title for https://addons.mozilla.org/en-US/mobile
+#: bookmarks_addons
+msgid "Firefox: Customize with add-ons"
+msgstr ""
+
+#. # LOCALIZATION NOTE (bookmarks_support):
+#. # link title for https://mobile.support.mozilla.com
+#: bookmarks_support
+msgid "Firefox: Support"
+msgstr ""
+
+#. # LOCALIZATION NOTE (bookmarks_aboutHome):
+#. # link title for about:home
+#: bookmarks_aboutHome
+msgid "Firefox Start"
+msgstr ""
+
 #: error.login.reason.network
 msgid "Failed to connect to the server"
 msgstr "Theip ar cheangal leis an bhfreastalaí"
@@ -27619,10 +28852,6 @@ msgstr ""
 #: error.sync.needUpdate.label
 msgid "Update Firefox Sync"
 msgstr "Nuashonraigh Firefox Sync"
-
-#: error.sync.tryAgainButton.label
-msgid "Sync Now"
-msgstr "Sioncrónaigh Anois"
 
 #: warning.sync.quota.label
 msgid "Approaching Server Quota"
