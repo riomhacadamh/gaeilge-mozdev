@@ -9,11 +9,7 @@
 
 #  these vars are needed both for the install AND for the translation
 #  process (including build of obair.po during newrelease)
-#VERSION=trunk
-#CVSDIREC=moz
-#VERSION=1.5
-#CVSDIREC=moz1.8
-VERSION=4.0
+VERSION=trunk
 CVSDIREC=moz-2.0
 ##################################
 HGFULLPATH=${HOME}/seal/$(CVSDIREC)/ga-IE
@@ -24,82 +20,51 @@ CALCOMPENDIUM=calendar-$(VERSION).ga.po
 UTFCOMP=mozilla-$(VERSION).po
 PARALLEL = ${HOME}/gaeilge/diolaim/comp
 
-all : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar editor-ga-IE.jar mail-ga-IE.jar calendar-ga-IE.jar mobile-ga-IE.jar
+# retranslate (moznua) all English source files into Irish and copy to 
+# the correct mercurial repo (mozdist)
+all : $(UTFCOMP)
+	bash moznua browser-en-US $(VERSION)
+	bash mozdist browser-en-US $(HGFULLPATH)
+	bash moznua dom-en-US $(VERSION)
+	bash mozdist dom-en-US $(HGFULLPATH)
+	bash moznua netwerk-en-US $(VERSION)
+	bash mozdist netwerk-en-US $(HGFULLPATH)
+	bash moznua toolkit-en-US $(VERSION)
+	bash mozdist toolkit-en-US $(HGFULLPATH)
+	bash moznua other-licenses-en-US $(VERSION)
+	bash mozdist other-licenses-en-US $(HGFULLPATH)
+	bash moznua security-en-US $(VERSION)
+	bash mozdist security-en-US $(HGFULLPATH)
+	bash moznua services-en-US $(VERSION)
+	bash mozdist services-en-US $(HGFULLPATH)
+	bash moznua embedding-en-US $(VERSION)
+	bash mozdist embedding-en-US $(HGFULLPATH)
+	bash moznua mobile-en-US $(VERSION)
+	bash mozdist mobile-en-US $(HGFULLPATH)
+	bash moznua editor-en-US $(VERSION)
+	bash mozdist editor-en-US $(HGFULLPATH)
+	bash moznua mail-en-US $(VERSION)
+	bash mozdist mail-en-US $(HGFULLPATH)
+	bash moznua calendar-en-US $(VERSION)
+	bash mozdist calendar-en-US $(HGFULLPATH)
 	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
-	- perl -w compare-locales.pl extensions-en-US extensions-ga-IE
-	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
-	- perl -w compare-locales.pl dom-en-US dom-ga-IE
-	- perl -w compare-locales.pl browser-en-US browser-ga-IE
-	- perl -w compare-locales.pl other-licenses-en-US other-licenses-ga-IE
-	- perl -w compare-locales.pl security-en-US security-ga-IE
-	- perl -w compare-locales.pl editor-en-US editor-ga-IE
-	- perl -w compare-locales.pl mail-en-US mail-ga-IE
-	- perl -w compare-locales.pl calendar-en-US calendar-ga-IE
-	- perl -w compare-locales.pl mobile-en-US mobile-ga-IE
-
-# copy firefox-4.0.ga.po to mozilla-4.0.po first
-browserall : browser-ga-IE.jar toolkit-ga-IE.jar netwerk-ga-IE.jar dom-ga-IE.jar other-licenses-ga-IE.jar security-ga-IE.jar extensions-ga-IE.jar services-ga-IE.jar
-	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
-	- perl -w compare-locales.pl extensions-en-US extensions-ga-IE
 	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
 	- perl -w compare-locales.pl dom-en-US dom-ga-IE
 	- perl -w compare-locales.pl browser-en-US browser-ga-IE
 	- perl -w compare-locales.pl other-licenses-en-US other-licenses-ga-IE
 	- perl -w compare-locales.pl security-en-US security-ga-IE
 	- perl -w compare-locales.pl services-en-US services-ga-IE
+	- perl -w compare-locales.pl embedding-en-US embedding-ga-IE
+	- perl -w compare-locales.pl editor-en-US editor-ga-IE
+	- perl -w compare-locales.pl mail-en-US mail-ga-IE
+	- perl -w compare-locales.pl calendar-en-US calendar-ga-IE
+	- perl -w compare-locales.pl mobile-en-US mobile-ga-IE
 
 $(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM)
 	rm -f $(UTFCOMP)
 	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM) > $(UTFCOMP)
 	chmod 444 $(UTFCOMP)
 
-browser-ga-IE.jar : FORCE
-	bash moznua browser-en-US $(VERSION)
-	bash mozdist browser-en-US $(HGFULLPATH)
-
-dom-ga-IE.jar : FORCE
-	bash moznua dom-en-US $(VERSION)
-	bash mozdist dom-en-US $(HGFULLPATH)
-
-extensions-ga-IE.jar : FORCE
-	bash moznua extensions-en-US $(VERSION)
-	bash mozdist extensions-en-US $(HGFULLPATH)
-
-netwerk-ga-IE.jar : FORCE
-	bash moznua netwerk-en-US $(VERSION)
-	bash mozdist netwerk-en-US $(HGFULLPATH)
-
-toolkit-ga-IE.jar : FORCE
-	bash moznua toolkit-en-US $(VERSION)
-	bash mozdist toolkit-en-US $(HGFULLPATH)
-
-other-licenses-ga-IE.jar : FORCE
-	bash moznua other-licenses-en-US $(VERSION)
-	bash mozdist other-licenses-en-US $(HGFULLPATH)
-
-security-ga-IE.jar : FORCE
-	bash moznua security-en-US $(VERSION)
-	bash mozdist security-en-US $(HGFULLPATH)
-
-services-ga-IE.jar : FORCE
-	bash moznua services-en-US $(VERSION)
-	bash mozdist services-en-US $(HGFULLPATH)
-
-mobile-ga-IE.jar : FORCE
-	bash moznua mobile-en-US $(VERSION)
-	bash mozdist mobile-en-US $(HGFULLPATH)
-
-editor-ga-IE.jar : FORCE
-	bash moznua editor-en-US $(VERSION)
-	bash mozdist editor-en-US $(HGFULLPATH)
-
-mail-ga-IE.jar : FORCE
-	bash moznua mail-en-US $(VERSION)
-	bash mozdist mail-en-US $(HGFULLPATH)
-
-calendar-ga-IE.jar : FORCE
-	bash moznua calendar-en-US $(VERSION)
-	bash mozdist calendar-en-US $(HGFULLPATH)
 
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
@@ -125,10 +90,10 @@ clean :
 
 distclean :
 	$(MAKE) clean
-	rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US mobile-en-US services-en-US
-	rm -Rf browser-ga-IE dom-ga-IE extensions-ga-IE netwerk-ga-IE toolkit-ga-IE other-licenses-ga-IE security-ga-IE editor-ga-IE mail-ga-IE calendar-ga-IE mobile-ga-IE services-ga-IE
-	rm -Rf browser-ga-IEpo dom-ga-IEpo extensions-ga-IEpo netwerk-ga-IEpo toolkit-ga-IEpo other-licenses-ga-IEpo security-ga-IEpo editor-ga-IEpo mail-ga-IEpo calendar-ga-IEpo mobile-ga-IEpo services-ga-IEpo
-	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po calendar-ga-IE.po mobile-ga-IE.po services-ga-IE.po
+	rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US mobile-en-US services-en-US embedding-en-US
+	rm -Rf browser-ga-IE dom-ga-IE extensions-ga-IE netwerk-ga-IE toolkit-ga-IE other-licenses-ga-IE security-ga-IE editor-ga-IE mail-ga-IE calendar-ga-IE mobile-ga-IE services-ga-IE embedding-ga-IE
+	rm -Rf browser-ga-IEpo dom-ga-IEpo extensions-ga-IEpo netwerk-ga-IEpo toolkit-ga-IEpo other-licenses-ga-IEpo security-ga-IEpo editor-ga-IEpo mail-ga-IEpo calendar-ga-IEpo mobile-ga-IEpo services-ga-IEpo embedding-ga-IEpo
+	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po calendar-ga-IE.po mobile-ga-IE.po services-ga-IE.po embedding-ga-IE.po
 
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
@@ -177,23 +142,26 @@ amodiff : FORCE
 amo-obair.mo : amo-obair.po
 	msgfmt -o $@ amo-obair.po
 
-amo-commit : amo-obair.mo
-	svn update $(SVNDIR)/messages.po $(SVNDIR)/messages.mo
-	msgcat -t UTF-8 amo-obair.po > $(SVNDIR)/messages.po
-	cp -f amo-obair.mo $(SVNDIR)/messages.mo
-	svn commit -m "Updated Irish translation" $(SVNDIR)/messages.po $(SVNDIR)/messages.mo
+amo-javascript.mo : amo-javascript.po
+	msgfmt -o $@ amo-javascript.po
 
-# like obair.po, but browser only
-b-obair.po : FORCE
-	sed -i '/tempe/s/^/#/' moznua
-	rm -f $(UTFCOMP)
-	cp -f firefox-$(VERSION).ga.po $(UTFCOMP)
+amo-commit : amo-obair.mo amo-javascript.mo
+	svn update $(SVNDIR)/messages.po $(SVNDIR)/messages.mo $(SVNDIR)/javascript.po $(SVNDIR)/javascript.mo
+	msgcat -t UTF-8 amo-obair.po > $(SVNDIR)/messages.po
+	msgcat -t UTF-8 amo-javascript.po > $(SVNDIR)/javascript.po
+	cp -f amo-obair.mo $(SVNDIR)/messages.mo
+	cp -f amo-javascript.mo $(SVNDIR)/javascript.mo
+	svn commit -m "Updated Irish translation" $(SVNDIR)/messages.po $(SVNDIR)/messages.mo $(SVNDIR)/javascript.po $(SVNDIR)/javascript.mo
+
+# only made from inside the "newrelease" scripts, so ok to FORCE
+obair.po : FORCE
+	$(MAKE) $(UTFCOMP)
 	bash moznua browser-en-US $(VERSION)
 	bash mozcat browser-en-US
+	bash moznua calendar-en-US $(VERSION)
+	bash mozcat calendar-en-US
 	bash moznua dom-en-US $(VERSION)
 	bash mozcat dom-en-US
-	bash moznua extensions-en-US $(VERSION)
-	bash mozcat extensions-en-US
 	bash moznua netwerk-en-US $(VERSION)
 	bash mozcat netwerk-en-US
 	bash moznua toolkit-en-US $(VERSION)
@@ -204,44 +172,25 @@ b-obair.po : FORCE
 	bash mozcat security-en-US
 	bash moznua services-en-US $(VERSION)
 	bash mozcat services-en-US
-	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po services-ga-IE.po | sed '1,/validation.dtd/d; /browser-ga-IE.po.*\\n"$$/,/security-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
-	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
-	sed -i '/tempe/s/^#//' moznua
-
-obair.po : FORCE
-	sed -i '/tempe/s/^/#/' moznua
-	rm -f $(UTFCOMP)
-	$(MAKE) $(UTFCOMP)
-	bash moznua browser-en-US $(VERSION)
-	bash mozcat browser-en-US
-	bash moznua calendar-en-US $(VERSION)
-	bash mozcat calendar-en-US
-	bash moznua dom-en-US $(VERSION)
-	bash mozcat dom-en-US
-	bash moznua extensions-en-US $(VERSION)
-	bash mozcat extensions-en-US
-	bash moznua netwerk-en-US $(VERSION)
-	bash mozcat netwerk-en-US
-	bash moznua toolkit-en-US $(VERSION)
-	bash mozcat toolkit-en-US
-	bash moznua other-licenses-en-US $(VERSION)
-	bash mozcat other-licenses-en-US
-	bash moznua security-en-US $(VERSION)
-	bash mozcat security-en-US
+	bash moznua embedding-en-US $(VERSION)
+	bash mozcat embedding-en-US
 	bash moznua editor-en-US $(VERSION)
 	bash mozcat editor-en-US
 	bash moznua mail-en-US $(VERSION)
 	bash mozcat mail-en-US
 	bash moznua mobile-en-US $(VERSION)
 	bash mozcat mobile-en-US
-	msgcat browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po | sed '1,/validation.dtd/d; /browser-ga-IE.po.*\\n"$$/,/security-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
+	msgcat browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po mobile-ga-IE.po embedding-ga-IE.po services-ga-IE.po | sed '1,/^#\..*sync.properties$$/d; /browser-ga-IE.po.*\\n"$$/,/services-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
 	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
 	msgcat editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
 	sed -i 's/msgstr "39em"/msgstr "47em"/; s/msgstr "43em"/msgstr "51em"/; s/msgstr "Firefox Soghluaiste"/msgstr "Fón Póca"/; s/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
+	sed -i '1,/^"Project-Id-Version: /d' tb_obair.po
+	sed -i '1s/.*/msgid ""\nmsgstr ""\n"Project-Id-Version: thunderbird\\n"\n&/' tb_obair.po
+#	sed -i '3,/updaterupdater.ini.po.*\\n"$$/d' tb_obair.po
 	msgcat calendar-ga-IE.po > cal_obair.po
 	sed -i 's/msgstr "End"/msgstr "Críoch"/; s/msgstr "Chuig"/msgstr "Go"/; s/msgstr "lá anuas"/msgstr "lá"/; s/msgstr "seachtain anuas"/msgstr "seachtain"/; s/msgstr "mí anuas"/msgstr "mí"/' cal_obair.po
-	sed -i '/tempe/s/^#//' moznua
-	sed -i '1d' obair.po
-#	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po
+	sed -i '1,/^"Project-Id-Version: /d' cal_obair.po
+	sed -i '1s/.*/msgid ""\nmsgstr ""\n"Project-Id-Version: sunbird\\n"\n&/' cal_obair.po
+	rm -f browser-ga-IE.po calendar-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po mobile-ga-IE.po services-ga-IE.po embedding-ga-IE.po
 
 FORCE :
