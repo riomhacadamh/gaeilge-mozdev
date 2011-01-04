@@ -1,11 +1,10 @@
 #!/bin/bash
 #  ASCII ONLY
-PONAME='3.6'
+PONAME='stable'
 SRCDIR='moz-1.9.2'
 
 # commit any outstanding changes to PO files
-cvs commit -m "outstanding changes before sync" firefox-3.6.ga.po tbird-trunk.ga.po calendar-trunk.ga.po
-
+cvs commit -m "outstanding changes before sync" firefox-stable.ga.po tbird-stable.ga.po calendar-stable.ga.po
 
 #  Updates CVS and creates new *en-US files in this dir
 cd ~/gaeilge/gnu/mozilla/gaeilge/src
@@ -95,5 +94,5 @@ cpo -q cal_obair.po obair.po tb_obair.po
 echo "Run \"make eilecheck\" periodically also"
 
 echo "Finish translating the obair files,"
-echo "copy to firefox-3.6.ga.po, calendar-trunk.ga.po, tbird-trunk.ga.po"
-echo "Then make mozilla-3.6.po; make"
+echo "copy to firefox-stable.ga.po, calendar-stable.ga.po, tbird-stable.ga.po"
+echo "Then do a 'make' to build Irish dtd/properties and copy to hg"
