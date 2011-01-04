@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: firefox\n"
+"Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-12 13:39-0500\n"
+"POT-Creation-Date: 2011-01-04 00:48-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -12,8 +12,10 @@ msgstr ""
 
 # # LOCALIZATION NOTE (cityOrStateAndZip):
 # # %1$S is city or state, %2$S is zip
-#: reminderCustomTitle ordinalWeekdayOrder monthlyOrder monthInYear
-#: datetimeIntervalOnSameDateTime
+#. # LOCALIZATION NOTE (reminderCustomTitle):
+#. # %1$S = reminderCustomUnit, %2$S = reminderCustomOrigin
+#. # Example: "3 minutes" "before the task starts"
+#: reminderCustomTitle
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -37,10 +39,14 @@ msgstr "Chomh luath is a chríochnaíonn an tasc"
 msgid "#1 minute;#1 minutes"
 msgstr "#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad"
 
-#: reminderCustomUnitHours dueInHours
-msgid "#1 hour;#1 hours"
-msgstr "#1 uair;#1 uair;#1 uaire;#1 n-uaire;#1 uair"
+#: reminderCustomUnitHours
+msgid "#1 hour;#1 hours "
+msgstr ""
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Task tree, "Due In" column.
+#. # LOCALIZATION NOTE (dueInDays, dueInHours): Semi-colon list of plural
+#. # forms. See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
 #: reminderCustomUnitDays dueInDays
 msgid "#1 day;#1 days"
 msgstr "#1 lá;#1 lá;#1 lá;#1 lá;#1 lá"
@@ -76,22 +82,6 @@ msgstr "roimh dheireadh an taisc"
 #: reminderCustomOriginEndAfterTask
 msgid "after the task ends"
 msgstr "tar éis dheireadh an taisc"
-
-#: reminderDialogOriginBeginEvent
-msgid "the event starts"
-msgstr "thús an imeachta"
-
-#: reminderDialogOriginEndEvent
-msgid "the event ends"
-msgstr "dheireadh an imeachta"
-
-#: reminderDialogOriginBeginTask
-msgid "the task starts"
-msgstr "tús an taisc"
-
-#: reminderDialogOriginEndTask
-msgid "the task ends"
-msgstr "deireadh an taisc"
 
 #: reminderErrorMaxCountReachedEvent
 msgid ""
@@ -150,10 +140,46 @@ msgstr ""
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Mozilla Calendar Code.
+#. -
+#. - The Initial Developer of the Original Code is Simon Paquet.
+#. - Portions created by the Initial Developer are Copyright (C) 2005
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: wizard.title
 msgid "Create New Calendar"
 msgstr "Cruthaigh Féilire Nua"
 
+#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. Account Central page
 #: wizard.label lightning.acctCentral.newCalendar.label
 msgid "Create a new calendar"
 msgstr "Cruthaigh féilire nua"
@@ -223,6 +249,55 @@ msgstr "Iontráil suíomh bailí."
 msgid "You are already subscribed to the calendar at this location."
 msgstr "Tá tú liostáilte leis an bhféilire ag an suíomh seo cheana."
 
+#. #-#-#-#-#  chromecalendarcalendar.dtd.po (firefox)  #-#-#-#-#
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is OEone Calendar Code, released October 31st, 2001.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Garth Smedley <garths@oeone.com>
+#. -   Mike Potter <mikep@oeone.com>
+#. -   Chris Charabaruk <coldacid@meldstar.com>
+#. -   ArentJan Banck <ajbanck@planet.nl>
+#. -   Eric Belhaire <belhaire@ief.u-psud.fr>
+#. -   Matthew Willis <mattwillis@gmail.com>
+#. -   Simon Paquet <bugzilla@babylonsounds.com>
+#. -   Stefan Sitter <ssitter@gmail.com>
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. -   Diego Mira David <diegomd86@gmail.com>
+#. -   Eduardo Teruo Katayama <eduardo@ime.usp.br>
+#. -   Glaucus Augustus Grecco Cardoso <glaucus@ime.usp.br>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. General
 #: calendar.calendar.label calendar.calendar.accesskey
 #: lightning.toolbar.calendar.label lightning.toolbar.calendar.accesskey
 msgid "&Calendar"
@@ -236,10 +311,10 @@ msgstr "Cruthaigh imeacht nua"
 msgid "Create a new task"
 msgstr "Cruthaigh tasc nua"
 
-#: calendar.unifinder.todoitems.label calendar.print.tasks.label tasksonly
-#: taskModeApplicationTitle tabTitleTasks
+#: calendar.unifinder.todoitems.label
+msgctxt "calendar.unifinder.todoitems.label"
 msgid "Tasks"
-msgstr "Tascanna"
+msgstr ""
 
 #: calendar.unifinder.showcompletedtodos.label
 msgid "Show completed Tasks"
@@ -297,6 +372,8 @@ msgstr "Déanta"
 msgid "Priority"
 msgstr "Tosaíocht"
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Used in created html code for list layout print and html export
 #: calendar.unifinder.tree.title.label htmlPrefixTitle
 msgid "Title"
 msgstr "Teideal"
@@ -318,8 +395,7 @@ msgstr "Críoch"
 msgid "Due"
 msgstr "Spriocdháta"
 
-#: calendar.unifinder.tree.completeddate.label statusCompleted
-#: taskDetailsStatusCompleted Completed
+#: calendar.unifinder.tree.completeddate.label Completed
 msgid "Completed"
 msgstr "Críochnaithe"
 
@@ -419,7 +495,9 @@ msgstr "Mí Amháin Ar Aghaidh"
 msgid "One Month Back"
 msgstr "Mí Amháin Siar"
 
-#: calendar.newevent.button.label newEvent newEventDialog
+#. #-#-#-#-#  chromecalendarcalendar-event-dialog.properties.po (firefox)  #-#-#-#-#
+#. # differences between the dialog for an Event or a Task
+#: calendar.newevent.button.label newEvent
 msgid "New Event"
 msgstr "Imeacht Nua"
 
@@ -473,6 +551,8 @@ msgstr "R&othlaigh an tAmharc"
 msgid " contain"
 msgstr " ina bhfuil"
 
+#. #-#-#-#-#  chromelightninglightning.properties.po (firefox)  #-#-#-#-#
+#. # Tab titles
 #: calendar.list.header.label tabTitleCalendar
 msgid "Calendar"
 msgstr "Féilire"
@@ -513,6 +593,20 @@ msgstr "Tascanna &Críochnaithe"
 msgid "Inco&mplete Tasks"
 msgstr "Tascanna Nea&mhiomlána"
 
+#. <!-- LOCALIZATION NOTE(calendar.task.filter.current.label)
+#. "Current Tasks" will show all tasks, except those with a start date set
+#. that is after today and after the selected date. If a task repeats, a
+#. separate entry will be shown for each of the occurrences that happen on or
+#. before today (or the selected date, whichever is later).
+#: calendar.task.filter.current.label calendar.task.filter.current.accesskey
+msgid "C&urrent Tasks"
+msgstr ""
+
+#: calendar.task.filter.repeating.label
+#: calendar.task.filter.repeating.accesskey
+msgid "&Repeating Tasks"
+msgstr ""
+
 #: calendar.task-details.title.label
 msgid "title"
 msgstr "teideal"
@@ -525,17 +619,20 @@ msgstr "ó"
 msgid "priority"
 msgstr "tosaíocht"
 
-#: calendar.task-details.priority.low.label priority.level.low lowPriority
+#: calendar.task-details.priority.low.label
+msgctxt "calendar.task-details.priority.low.label"
 msgid "Low"
-msgstr "Íseal"
+msgstr ""
 
-#: calendar.task-details.priority.normal.label priority.level.normal
+#: calendar.task-details.priority.normal.label
+msgctxt "calendar.task-details.priority.normal.label"
 msgid "Normal"
-msgstr "Gnách"
+msgstr ""
 
-#: calendar.task-details.priority.high.label priority.level.high highPriority
+#: calendar.task-details.priority.high.label
+msgctxt "calendar.task-details.priority.high.label"
 msgid "High"
-msgstr "Ard"
+msgstr ""
 
 #: calendar.task-details.status.label
 msgid "status"
@@ -566,10 +663,15 @@ msgid "Change the priority"
 msgstr "Athraigh an tosaíocht"
 
 # Statusbar
+#. Statusbar
 #: statusText.label
 msgid "Document: Done"
 msgstr "Cáipéis: Críochnaithe"
 
+#. #-#-#-#-#  chromecalendarcalendar.dtd.po (firefox)  #-#-#-#-#
+#. Context Menu
+#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. Open menu popup in File menu
 #: calendar.context.modifyorviewitem.label
 #: calendar.context.modifyorviewitem.accesskey
 #: event.attachments.popup.open.label event.attachments.popup.open.accesskey
@@ -664,6 +766,7 @@ msgid "&Today Pane"
 msgstr "&Pána an Lae Inniu"
 
 # Task Context Menu
+#. Task Context Menu
 #: calendar.context.progress.label calendar.context.progress.accesskey
 msgid "&Progress"
 msgstr "&Dul Chun Cinn"
@@ -673,6 +776,7 @@ msgid "P&riority"
 msgstr "&Tosaíocht"
 
 # =percent sign
+#. =percent sign
 #: percnt
 msgid "&#38;#37;"
 msgstr "&#38;#37;"
@@ -699,7 +803,7 @@ msgstr "25&percnt; Críochnaithe"
 # profile database.  Note that "new" is defined as "has a different URL"; this
 # means that it's not possible to update the name of existing handler, so
 # don't make any spelling errors here.
-#: progress.level.25.accesskey
+#: progress.level.25.accesskey day.2.number
 msgid "2"
 msgstr "2"
 
@@ -707,7 +811,7 @@ msgstr "2"
 msgid "50&percnt; Completed"
 msgstr "50&percnt; Críochnaithe"
 
-#: progress.level.50.accesskey
+#: progress.level.50.accesskey day.5.number
 msgid "5"
 msgstr "5"
 
@@ -715,7 +819,7 @@ msgstr "5"
 msgid "75&percnt; Completed"
 msgstr "75&percnt; Críochnaithe"
 
-#: progress.level.75.accesskey
+#: progress.level.75.accesskey day.7.number
 msgid "7"
 msgstr "7"
 
@@ -725,7 +829,9 @@ msgstr "100&percnt; Críochnaithe"
 
 # see http://developer.mozilla.org/en/docs/Localization_and_Plurals
 # don't change if you don't know what you're doing!
-#: progress.level.100.accesskey
+#. #-#-#-#-#  chromecalendardateFormat.properties.po (firefox)  #-#-#-#-#
+#. # Localizable day's date
+#: progress.level.100.accesskey day.1.number
 msgid "1"
 msgstr "11"
 
@@ -737,24 +843,38 @@ msgstr "Gan sonrú"
 msgid "s"
 msgstr "s"
 
+#: priority.level.low
+msgctxt "priority.level.low"
+msgid "Low"
+msgstr ""
+
 #: priority.level.low.accesskey event.dialog.saveandclose.key
 #: calendar.new.server.key
 msgid "L"
 msgstr "L"
 
+#: priority.level.normal
+msgctxt "priority.level.normal"
+msgid "Normal"
+msgstr ""
+
 # Ctrl+N is Fuinneog Nua under Main -> Comhad
 # see also lowercase for "Navigator" command
 #: priority.level.normal.accesskey event.dialog.new.message.key2
-#: event.new.event.key event.new.event.accesskey
 msgid "N"
 msgstr "N"
 
-#: priority.level.high.accesskey hideThisAppCmdMac.commandkey
-#: hideOtherAppsCmdMac.commandkey
+#: priority.level.high
+msgctxt "priority.level.high"
+msgid "High"
+msgstr ""
+
+#: priority.level.high.accesskey
 msgid "H"
 msgstr "H"
 
 # Server Context Menu
+#. Server Context Menu
 #: calendar.context.newserver.label calendar.context.newserver.accesskey
 msgid "&New Calendar…"
 msgstr "Féilire &Nua…"
@@ -798,6 +918,8 @@ msgstr "n"
 msgid "v"
 msgstr "v"
 
+#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. New menu popup in File menu
 #: calendar.context.convertmenu.event.label
 #: calendar.context.convertmenu.event.accesskey
 #: lightning.menupopup.new.event.label lightning.menupopup.new.event.accesskey
@@ -829,15 +951,16 @@ msgstr "&Liosta Féilirí"
 msgid "&Filter Tasks"
 msgstr "&Scag Tascanna"
 
-#: calendar.alarm.location.label calendarproperties.location.label
-#: read.only.location.label tooltipLocation imipHtml.location
+#. Calendar Alarm Dialog
+#: calendar.alarm.location.label
+msgctxt "calendar.alarm.location.label"
 msgid "Location:"
-msgstr "Suíomh:"
+msgstr ""
 
-# Error reporting
-#: calendar.alarm.details.label calendar.error.detail
+#: calendar.alarm.details.label
+msgctxt "calendar.alarm.details.label"
 msgid "Details…"
-msgstr "Mionsonraí…"
+msgstr ""
 
 #: calendar.alarm.snoozefor.label
 msgid "Snooze for"
@@ -891,14 +1014,18 @@ msgstr "2 Uair"
 msgid "1 Day"
 msgstr "1 Lá"
 
+#. Calendar Server Dialog
 #: calendar.server.dialog.title.edit
 msgid "Edit Calendar"
 msgstr "Cuir Féilire in Eagar"
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # event calendar name
 #: calendar.server.dialog.name.label tooltipCalName
 msgid "Calendar Name:"
 msgstr "Ainm an Fhéilire:"
 
+#. Calendar Properties
 #: calendarproperties.color.label
 msgid "Color:"
 msgstr "Dath:"
@@ -907,6 +1034,8 @@ msgstr "Dath:"
 msgid "iCalendar (ICS)"
 msgstr "iCalendar (ICS)"
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Providers
 #: calendarproperties.caldav.label caldavName
 msgid "CalDAV"
 msgstr "CalDAV"
@@ -918,6 +1047,11 @@ msgstr "Sun Java System Calendar Server (WCAP)"
 #: calendarproperties.format.label
 msgid "Format:"
 msgstr "Formáid:"
+
+#: calendarproperties.location.label
+msgctxt "calendarproperties.location.label"
+msgid "Location:"
+msgstr ""
 
 #: calendarproperties.name.label
 msgid "Name:"
@@ -932,8 +1066,8 @@ msgid "Show Alarms"
 msgstr "Taispeáin Aláraim"
 
 #: calendarproperties.cache.label
-msgid "Cache (EXPERIMENTAL, requires restart)"
-msgstr "Taisce (trialach; atosú riachtanach)"
+msgid "Cache (EXPERIMENTAL)"
+msgstr ""
 
 #: calendarproperties.enabled.label
 msgid "Switch this calendar on"
@@ -953,6 +1087,7 @@ msgid "&Unsubscribe"
 msgstr "&Díliostáil"
 
 # Calendar Publish Dialog
+#. Calendar Publish Dialog
 #: calendar.publish.dialog.title
 msgid "Publish Calendar"
 msgstr "Foilsigh Féilire"
@@ -974,15 +1109,19 @@ msgid "Something like http://www.myserver.com/webdav/test.ics"
 msgstr "Rud éigin cosúil le http://www.myserver.com/webdav/test.ics"
 
 # Select Calendar Dialog
+#. Select Calendar Dialog
 #: calendar.select.dialog.title
 msgid "Select Calendar"
 msgstr "Roghnaigh Féilire"
 
 # Calendar Printing
+#. Calendar Printing
 #: calendar.print.window.title
 msgid "Print A Calendar"
 msgstr "Priontáil Féilire"
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Tooltips of events or todos
 #: calendar.print.title.label read.only.title.label tooltipTitle
 #: imipHtml.summary
 msgid "Title:"
@@ -1004,6 +1143,13 @@ msgstr "Amharc reatha"
 msgid "Selected events/tasks"
 msgstr "Imeachtaí/tascanna roghnaithe"
 
+#: calendar.print.tasks.label
+msgctxt "calendar.print.tasks.label"
+msgid "Tasks"
+msgstr ""
+
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. #Today pane
 #: calendar.print.events.label eventsonly
 msgid "Events"
 msgstr "Imeachtaí"
@@ -1028,6 +1174,46 @@ msgstr "Chuig:"
 msgid "Print Settings"
 msgstr "Socruithe Priontála"
 
+#. #-#-#-#-#  chromecalendarpreferencespreferences.dtd.po (firefox)  #-#-#-#-#
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is OEone Calendar Code, released October 31st, 2001.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Mike Potter <mikep@oeone.com>
+#. -   ArentJan Banck <ajbanck@planet.nl>
+#. -   Eric Belhaire <belhaire@ief.u-psud.fr>
+#. -   Matthew Willis <mattwillis@gmail.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: calendar.print.optionsGroup.label prefWindow.titleWin
 msgid "Options"
 msgstr "Roghanna"
@@ -1040,14 +1226,24 @@ msgstr "Tascanna gan spriocdháta"
 msgid "Completed tasks"
 msgstr "Tascanna críochnaithe"
 
+#. Error reporting
+#: calendar.error.detail
+msgctxt "calendar.error.detail"
+msgid "Details…"
+msgstr ""
+
 #: calendar.error.code
 msgid "Error code:"
 msgstr "Cód earráide:"
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. #spaces needed at the end of the following lines
 #: calendar.error.description eventDescription imipHtml.description
 msgid "Description:"
 msgstr "Cur Síos:"
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Remote calendar errors
 #: calendar.error.title genericErrorTitle
 msgid "An error has occurred"
 msgstr "Tharla earráid"
@@ -1072,9 +1268,59 @@ msgstr "Cathaoirleach"
 msgid "Unknown Attendee (%1$S)"
 msgstr "Rannpháirtí Anaithnid (%1$S)"
 
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is OEone Calendar Code, released October 31st, 2001.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Cédric Corazza <cedric.corazza@wanadoo.fr>
+#. -   Michael Buettner <michael.buettner@sun.com>
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. -   Stefan Sitter <ssitter@gmail.com>
+#. -   Martin Schroeder <mschroeder@mozilla.x-home.org>
+#. -   Hubert Gajewski <hubert@hubertgajewski.com>, Aviary.pl
+#. -   Fred Jendrzejewski <fred.jen@web.de>
+#. -   Simon Vaillancourt <simon.at.orcl@gmail.com>
+#. -   Gianfranco Balza <bv1578@gmail.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: event.title.label
 msgid "Edit Item"
 msgstr "Cuir Mír in Eagar"
+
+#: event.dialog.keepDurationButton.tooltip
+msgctxt ""
+"event.dialog.keepDurationButton.tooltipevent.dialog.keepDurationButton.tooltip"
+msgid ""
+msgstr ""
 
 #: newevent.from.label
 msgid "From"
@@ -1093,18 +1339,16 @@ msgid "&Status"
 msgstr "&Stádas"
 
 #: newevent.eventStatus.none.label newevent.eventStatus.none.accesskey
-#: event.menu.options.priority.notspecified.label
-#: event.menu.options.priority.notspecified.accesskey
+msgctxt "newevent.eventStatus.none.label newevent.eventStatus.none.accesskey"
 msgid "N&ot specified"
-msgstr "Gan s&onrú"
+msgstr ""
 
 #: newevent.eventStatus.cancelled.label
 #: newevent.eventStatus.cancelled.accesskey
 msgid "Ca&nceled"
 msgstr "&Cealaithe"
 
-#: newevent.todoStatus.cancelled.label eventStatusCancelled todoStatusCancelled
-#: taskDetailsStatusCancelled
+#: newevent.todoStatus.cancelled.label
 msgid "Canceled"
 msgstr "Cealaithe"
 
@@ -1116,8 +1360,7 @@ msgstr "&Sealadach"
 msgid "&Confirmed"
 msgstr "&Deimhnithe"
 
-#: newevent.status.needsaction.label statusNeedsAction
-#: taskDetailsStatusNeedsAction
+#: newevent.status.needsaction.label
 msgid "Needs Action"
 msgstr "Gníomhú De Dhíth"
 
@@ -1129,24 +1372,24 @@ msgstr "Idir Lámha"
 msgid "Completed on"
 msgstr "Críochnaithe ar"
 
+#. The following entity is for New Task dialog only
 #: newtodo.percentcomplete.label
 msgid "&#37; complete"
 msgstr "&#37; críochnaithe"
 
-#: event.dialog.new.event.key2 event.attendees.accesskey calendar.import.key
-#: lightning.keys.event.new
+#. Keyboard Shortcuts
+#: event.dialog.new.event.key2
+msgctxt "event.dialog.new.event.key2"
 msgid "I"
-msgstr "I"
+msgstr ""
 
-#: event.dialog.new.task.key2 lightning.keys.event.showTasks.key
-#: lightning.keys.todo.new event.delete.event.accesskey
+#: event.dialog.new.task.key2 event.delete.event.accesskey
 #: sunbird.dayview.accesskey
 msgid "D"
 msgstr "D"
 
 # ctrl+D is "Dún" under Main -> Comhad
 #: event.dialog.close.key day.4.Ddd.accesskey cmdClose.macKey
-#: sunbird.weekview.accesskey sunbird.close.key
 msgid "W"
 msgstr "W"
 
@@ -1173,6 +1416,8 @@ msgstr "Y"
 msgid "X"
 msgstr "X"
 
+#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. Lightning specific keybindings
 #: event.dialog.copy.key lightning.keys.event.showCalendar.key
 #: calendar.copy.key
 msgid "C"
@@ -1188,6 +1433,7 @@ msgstr "V"
 msgid "A"
 msgstr "W"
 
+#. Menubar
 #: event.menu.item.new.label event.menu.item.new.accesskey
 msgid "&New"
 msgstr "&Nua"
@@ -1310,6 +1556,8 @@ msgid "&Event Toolbar"
 msgstr "Barra Uirlisí &Imeachtaí"
 
 # Oiriúnaigh
+#. #-#-#-#-#  chromesunbirdsunbird.dtd.po (firefox)  #-#-#-#-#
+#. customizable toolbars
 #: event.menu.view.toolbars.customize.label
 #: event.menu.view.toolbars.customize.accesskey calendar.menu.customize.label
 #: calendar.menu.customize.accesskey sunbird.context.customize.label
@@ -1328,15 +1576,16 @@ msgstr "&Roghanna"
 
 #: event.menu.options.attachments.label
 #: event.menu.options.attachments.accesskey
-#: event.attachments.popup.attachPage.label
-#: event.attachments.popup.attachPage.accesskey
+msgctxt ""
+"event.menu.options.attachments.label event.menu.options.attachments.accesskey"
 msgid "Attach &Webpage…"
-msgstr "Ceangail &Leathanach Gréasáin…"
+msgstr ""
 
 #: event.menu.options.attendees.label event.menu.options.attendees.accesskey
-#: event.invite.attendees.label event.invite.attendees.accesskey
+msgctxt ""
+"event.menu.options.attendees.label event.menu.options.attendees.accesskey"
 msgid "&Invite Attendees…"
-msgstr "Tabhair Cuireadh Do &Rannpháirtithe…"
+msgstr ""
 
 #: event.menu.options.spellcheck.label event.menu.options.spellcheck.accesskey
 msgid "C&heck Spelling…"
@@ -1358,6 +1607,14 @@ msgstr "Crios &Ama"
 #: event.menu.options.priority2.label event.menu.options.priority2.accesskey
 msgid "Priorit&y"
 msgstr "T&osaíocht"
+
+#: event.menu.options.priority.notspecified.label
+#: event.menu.options.priority.notspecified.accesskey
+msgctxt ""
+"event.menu.options.priority.notspecified.label event.menu.options.priority."
+"notspecified.accesskey"
+msgid "N&ot specified"
+msgstr ""
 
 #: event.menu.options.priority.low.label
 #: event.menu.options.priority.low.accesskey
@@ -1407,6 +1664,11 @@ msgstr "&Gnóthach"
 msgid "&Free"
 msgstr "&Saor"
 
+#: event.invite.attendees.label event.invite.attendees.accesskey
+msgctxt "event.invite.attendees.label event.invite.attendees.accesskey"
+msgid "&Invite Attendees…"
+msgstr ""
+
 #: event.email.attendees.label event.email.attendees.accesskey
 msgid "Compose E-Mail to &All Attendees…"
 msgstr "Cum ríomhphost chuig an lucht freastail &go léir…"
@@ -1417,6 +1679,7 @@ msgid "Compose E-Mail to &Undecided Attendees…"
 msgstr "Cum ríomhphost chuig an lucht freastail &neamhdhearbhaithe…"
 
 # Toolbar
+#. Toolbar
 #: event.toolbar.save.label
 msgid "Save and Close"
 msgstr "Sábháil agus Dún"
@@ -1426,9 +1689,10 @@ msgstr "Sábháil agus Dún"
 msgid "Delete"
 msgstr "Scrios"
 
-#: event.toolbar.attendees.label invite.title.label
+#: event.toolbar.attendees.label
+msgctxt "event.toolbar.attendees.label"
 msgid "Invite Attendees"
-msgstr "Tabhair Cuireadh Do Rannpháirtithe"
+msgstr ""
 
 #: event.toolbar.spellcheck.label
 msgid "Spellcheck"
@@ -1442,6 +1706,7 @@ msgstr "Príobháideachas"
 msgid "Attach"
 msgstr "Ceangail"
 
+#. Main page
 #: event.title.textbox.label event.title.textbox.accesskey
 msgid "&Title:"
 msgstr "&Teideal:"
@@ -1462,6 +1727,11 @@ msgstr "&Féilire:"
 msgid "Attendees:"
 msgstr "Rannpháirtithe:"
 
+#: event.attendees.accesskey
+msgctxt "event.attendees.accesskey"
+msgid "I"
+msgstr ""
+
 #: event.alldayevent.label event.alldayevent.accesskey
 msgid "All &day Event"
 msgstr "Imeacht ar fea&dh an lae"
@@ -1472,7 +1742,7 @@ msgstr "&Tús:"
 
 # task/todo fields
 # start date time, due date time, task priority number, completed date time
-#: task.from.label tooltipStart eventDetailsStartDate
+#: task.from.label
 msgid "Start:"
 msgstr "Tosach:"
 
@@ -1519,6 +1789,14 @@ msgstr "&Bain"
 #: event.attachments.popup.removeAll.accesskey
 msgid "Remove &All"
 msgstr "B&ain Uile"
+
+#: event.attachments.popup.attachPage.label
+#: event.attachments.popup.attachPage.accesskey
+msgctxt ""
+"event.attachments.popup.attachPage.label event.attachments.popup.attachPage."
+"accesskey"
+msgid "Attach &Webpage…"
+msgstr ""
 
 #: event.url.label
 msgid "Related Link:"
@@ -1572,14 +1850,16 @@ msgstr "2 lá roimhe"
 msgid "1 week before"
 msgstr "Seachtain roimhe"
 
-#: event.reminder.custom.label event.repeat.custom.label
+#: event.reminder.custom.label
+msgctxt "event.reminder.custom.label"
 msgid "Custom…"
-msgstr "Saincheap…"
+msgstr ""
 
 #: event.reminder.multiple.label
 msgid "Multiple Reminders…"
 msgstr "Meabhrúcháin iolracha…"
 
+#. Recurrence dialog
 #: recurrence.title.label
 msgid "Edit Recurrence"
 msgstr "Cuir Atarlú in Eagar"
@@ -1613,6 +1893,11 @@ msgstr "Míosúil"
 msgid "Yearly"
 msgstr "Bliantúil"
 
+#: event.repeat.custom.label
+msgctxt "event.repeat.custom.label"
+msgid "Custom…"
+msgstr ""
+
 # Recurrence page
 #: event.recurrence.pattern.label
 msgid "Recurrence pattern"
@@ -1639,13 +1924,9 @@ msgid "annually"
 msgstr "go bliantúil"
 
 #: event.recurrence.pattern.every.label
-#: event.recurrence.pattern.weekly.every.label
-#: event.recurrence.pattern.monthly.every.label
-#: event.recurrence.monthly.every.label
-#: event.recurrence.pattern.yearly.every.month.label
-#: event.recurrence.yearly.every.label
+msgctxt "event.recurrence.pattern.every.label"
 msgid "Every"
-msgstr "Gach"
+msgstr ""
 
 #: repeat.units.days.both
 msgid "Day(s)"
@@ -1655,6 +1936,11 @@ msgstr "Lá"
 msgid "Every weekday"
 msgstr "Gach lá oibre"
 
+#: event.recurrence.pattern.weekly.every.label
+msgctxt "event.recurrence.pattern.weekly.every.label"
+msgid "Every"
+msgstr ""
+
 #: repeat.units.weeks.both
 msgid "Week(s)"
 msgstr "Seachtain"
@@ -1663,75 +1949,84 @@ msgstr "Seachtain"
 msgid "On:"
 msgstr "Ar:"
 
+#: event.recurrence.pattern.monthly.every.label
+msgctxt "event.recurrence.pattern.monthly.every.label"
+msgid "Every"
+msgstr ""
+
 #: repeat.units.months.both
 msgid "Month(s)"
 msgstr "Mí"
 
-#: event.recurrence.monthly.first.label event.recurrence.yearly.first.label
+#: event.recurrence.monthly.every.label
+msgctxt "event.recurrence.monthly.every.label"
+msgid "Every"
+msgstr ""
+
+#: event.recurrence.monthly.first.label
+msgctxt "event.recurrence.monthly.first.label"
 msgid "The First"
-msgstr "An Chéad"
+msgstr ""
 
-#: event.recurrence.monthly.second.label event.recurrence.yearly.second.label
+#: event.recurrence.monthly.second.label
+msgctxt "event.recurrence.monthly.second.label"
 msgid "The Second"
-msgstr "An Dara"
+msgstr ""
 
-#: event.recurrence.monthly.third.label event.recurrence.yearly.third.label
+#: event.recurrence.monthly.third.label
+msgctxt "event.recurrence.monthly.third.label"
 msgid "The Third"
-msgstr "An Tríú"
+msgstr ""
 
-#: event.recurrence.monthly.fourth.label event.recurrence.yearly.fourth.label
+#: event.recurrence.monthly.fourth.label
+msgctxt "event.recurrence.monthly.fourth.label"
 msgid "The Fourth"
-msgstr "An Ceathrú"
+msgstr ""
 
-#: event.recurrence.monthly.fifth.label event.recurrence.yearly.fifth.label
+#: event.recurrence.monthly.fifth.label
+msgctxt "event.recurrence.monthly.fifth.label"
 msgid "The Fifth"
-msgstr "An Cúigiú"
+msgstr ""
 
-#: event.recurrence.monthly.last.label event.recurrence.yearly.last.label
+#: event.recurrence.monthly.last.label
+msgctxt "event.recurrence.monthly.last.label"
 msgid "The Last"
-msgstr "An Deireadh"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.1.label
-#: event.recurrence.pattern.yearly.week.1.label repeatDetailsDay1
-#: repeatDetailsDay1Plural day.1.name
+msgctxt "event.recurrence.pattern.monthly.week.1.label"
 msgid "Sunday"
-msgstr "Domhnach"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.2.label
-#: event.recurrence.pattern.yearly.week.2.label repeatDetailsDay2
-#: repeatDetailsDay2Plural day.2.name
+msgctxt "event.recurrence.pattern.monthly.week.2.label"
 msgid "Monday"
-msgstr "Luan"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.3.label
-#: event.recurrence.pattern.yearly.week.3.label repeatDetailsDay3
-#: repeatDetailsDay3Plural day.3.name
+msgctxt "event.recurrence.pattern.monthly.week.3.label"
 msgid "Tuesday"
-msgstr "Máirt"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.4.label
-#: event.recurrence.pattern.yearly.week.4.label repeatDetailsDay4
-#: repeatDetailsDay4Plural day.4.name
+msgctxt "event.recurrence.pattern.monthly.week.4.label"
 msgid "Wednesday"
-msgstr "Céadaoin"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.5.label
-#: event.recurrence.pattern.yearly.week.5.label repeatDetailsDay5
-#: repeatDetailsDay5Plural day.5.name
+msgctxt "event.recurrence.pattern.monthly.week.5.label"
 msgid "Thursday"
-msgstr "Déardaoin"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.6.label
-#: event.recurrence.pattern.yearly.week.6.label repeatDetailsDay6
-#: repeatDetailsDay6Plural day.6.name
+msgctxt "event.recurrence.pattern.monthly.week.6.label"
 msgid "Friday"
-msgstr "Aoine"
+msgstr ""
 
 #: event.recurrence.pattern.monthly.week.7.label
-#: event.recurrence.pattern.yearly.week.7.label repeatDetailsDay7
-#: repeatDetailsDay7Plural day.7.name
+msgctxt "event.recurrence.pattern.monthly.week.7.label"
 msgid "Saturday"
-msgstr "Satharn"
+msgstr ""
 
 #: event.recurrence.repeat.dayofmonth.label
 msgid "Day of the month"
@@ -1749,93 +2044,215 @@ msgstr "Gach:"
 msgid "Year(s)"
 msgstr "Bliain"
 
-# LOCALIZATON NOTE
-# Some languages use a preposition when describing dates:
-# Portuguese: 6 de Setembro
-# English: 6 [of] September
-# event.recurrence.pattern.yearly.of.label is "of" in
-# Edit recurrence window -> Recurrence pattern -> Repeat yearly
-#
+#: event.recurrence.pattern.yearly.every.month.label
+msgctxt "event.recurrence.pattern.yearly.every.month.label"
+msgid "Every"
+msgstr ""
+
+#. LOCALIZATON NOTE
+#. Some languages use a preposition when describing dates:
+#. Portuguese: 6 de Setembro
+#. English: 6 [of] September
+#. event.recurrence.pattern.yearly.of.label is "of" in
+#. Edit recurrence window -> Recurrence pattern -> Repeat yearly
 #: event.recurrence.pattern.yearly.of.label
-msgid "_: event.recurrence.pattern.yearly.of.label\n"
+msgctxt "event.recurrence.pattern.yearly.of.label"
+msgid ""
 msgstr ""
 
 #: event.recurrence.pattern.yearly.month.1.label
-#: event.recurrence.pattern.yearly.month2.1.label repeatDetailsMonth1
-#: month.1.name
+msgctxt "event.recurrence.pattern.yearly.month.1.label"
 msgid "January"
-msgstr "Eanáir"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.2.label
-#: event.recurrence.pattern.yearly.month2.2.label repeatDetailsMonth2
-#: month.2.name
+msgctxt "event.recurrence.pattern.yearly.month.2.label"
 msgid "February"
-msgstr "Feabhra"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.3.label
-#: event.recurrence.pattern.yearly.month2.3.label repeatDetailsMonth3
-#: month.3.name
+msgctxt "event.recurrence.pattern.yearly.month.3.label"
 msgid "March"
-msgstr "Márta"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.4.label
-#: event.recurrence.pattern.yearly.month2.4.label repeatDetailsMonth4
-#: month.4.name
+msgctxt "event.recurrence.pattern.yearly.month.4.label"
 msgid "April"
-msgstr "Aibreán"
+msgstr ""
 
-# sedtweaked
 #: event.recurrence.pattern.yearly.month.5.label
-#: event.recurrence.pattern.yearly.month2.5.label repeatDetailsMonth5
-#: month.5.Mmm month.5.name
+msgctxt "event.recurrence.pattern.yearly.month.5.label"
 msgid "May"
-msgstr "Bealtaine"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.6.label
-#: event.recurrence.pattern.yearly.month2.6.label repeatDetailsMonth6
-#: month.6.name
+msgctxt "event.recurrence.pattern.yearly.month.6.label"
 msgid "June"
-msgstr "Meitheamh"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.7.label
-#: event.recurrence.pattern.yearly.month2.7.label repeatDetailsMonth7
-#: month.7.name
+msgctxt "event.recurrence.pattern.yearly.month.7.label"
 msgid "July"
-msgstr "Iúil"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.8.label
-#: event.recurrence.pattern.yearly.month2.8.label repeatDetailsMonth8
-#: month.8.name
+msgctxt "event.recurrence.pattern.yearly.month.8.label"
 msgid "August"
-msgstr "Lúnasa"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.9.label
-#: event.recurrence.pattern.yearly.month2.9.label repeatDetailsMonth9
-#: month.9.name
+msgctxt "event.recurrence.pattern.yearly.month.9.label"
 msgid "September"
-msgstr "Meán Fómhair"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.10.label
-#: event.recurrence.pattern.yearly.month2.10.label repeatDetailsMonth10
-#: month.10.name
+msgctxt "event.recurrence.pattern.yearly.month.10.label"
 msgid "October"
-msgstr "Deireadh Fómhair"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.11.label
-#: event.recurrence.pattern.yearly.month2.11.label repeatDetailsMonth11
-#: month.11.name
+msgctxt "event.recurrence.pattern.yearly.month.11.label"
 msgid "November"
-msgstr "Samhain"
+msgstr ""
 
 #: event.recurrence.pattern.yearly.month.12.label
-#: event.recurrence.pattern.yearly.month2.12.label repeatDetailsMonth12
-#: month.12.name
+msgctxt "event.recurrence.pattern.yearly.month.12.label"
 msgid "December"
-msgstr "Nollaig"
+msgstr ""
+
+#: event.recurrence.yearly.every.label
+msgctxt "event.recurrence.yearly.every.label"
+msgid "Every"
+msgstr ""
+
+#: event.recurrence.yearly.first.label
+msgctxt "event.recurrence.yearly.first.label"
+msgid "The First"
+msgstr ""
+
+#: event.recurrence.yearly.second.label
+msgctxt "event.recurrence.yearly.second.label"
+msgid "The Second"
+msgstr ""
+
+#: event.recurrence.yearly.third.label
+msgctxt "event.recurrence.yearly.third.label"
+msgid "The Third"
+msgstr ""
+
+#: event.recurrence.yearly.fourth.label
+msgctxt "event.recurrence.yearly.fourth.label"
+msgid "The Fourth"
+msgstr ""
+
+#: event.recurrence.yearly.fifth.label
+msgctxt "event.recurrence.yearly.fifth.label"
+msgid "The Fifth"
+msgstr ""
+
+#: event.recurrence.yearly.last.label
+msgctxt "event.recurrence.yearly.last.label"
+msgid "The Last"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.week.1.label
+msgctxt "event.recurrence.pattern.yearly.week.1.label"
+msgid "Sunday"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.week.2.label
+msgctxt "event.recurrence.pattern.yearly.week.2.label"
+msgid "Monday"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.week.3.label
+msgctxt "event.recurrence.pattern.yearly.week.3.label"
+msgid "Tuesday"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.week.4.label
+msgctxt "event.recurrence.pattern.yearly.week.4.label"
+msgid "Wednesday"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.week.5.label
+msgctxt "event.recurrence.pattern.yearly.week.5.label"
+msgid "Thursday"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.week.6.label
+msgctxt "event.recurrence.pattern.yearly.week.6.label"
+msgid "Friday"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.week.7.label
+msgctxt "event.recurrence.pattern.yearly.week.7.label"
+msgid "Saturday"
+msgstr ""
 
 #: event.recurrence.of.label
 msgid "of"
 msgstr "as"
+
+#: event.recurrence.pattern.yearly.month2.1.label
+msgctxt "event.recurrence.pattern.yearly.month2.1.label"
+msgid "January"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.2.label
+msgctxt "event.recurrence.pattern.yearly.month2.2.label"
+msgid "February"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.3.label
+msgctxt "event.recurrence.pattern.yearly.month2.3.label"
+msgid "March"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.4.label
+msgctxt "event.recurrence.pattern.yearly.month2.4.label"
+msgid "April"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.5.label
+msgctxt "event.recurrence.pattern.yearly.month2.5.label"
+msgid "May"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.6.label
+msgctxt "event.recurrence.pattern.yearly.month2.6.label"
+msgid "June"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.7.label
+msgctxt "event.recurrence.pattern.yearly.month2.7.label"
+msgid "July"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.8.label
+msgctxt "event.recurrence.pattern.yearly.month2.8.label"
+msgid "August"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.9.label
+msgctxt "event.recurrence.pattern.yearly.month2.9.label"
+msgid "September"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.10.label
+msgctxt "event.recurrence.pattern.yearly.month2.10.label"
+msgid "October"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.11.label
+msgctxt "event.recurrence.pattern.yearly.month2.11.label"
+msgid "November"
+msgstr ""
+
+#: event.recurrence.pattern.yearly.month2.12.label
+msgctxt "event.recurrence.pattern.yearly.month2.12.label"
+msgid "December"
+msgstr ""
 
 #: event.recurrence.range.label
 msgid "Range of recurrence"
@@ -1860,6 +2277,12 @@ msgstr "Athdhéan go dtí"
 #: event.recurrence.preview.label
 msgid "Preview"
 msgstr "Réamhamharc"
+
+#. Attendees dialog
+#: invite.title.label
+msgctxt "invite.title.label"
+msgid "Invite Attendees"
+msgstr ""
 
 # Attendees page
 #: event.organizer.label
@@ -1901,6 +2324,9 @@ msgstr "Gnóthach"
 # #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
 # Event status: Tentative, Confirmed, Cancelled
 # ToDo task status: NeedsAction, InProcess, Completed, Cancelled
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Event status: Tentative, Confirmed, Cancelled
+#. # ToDo task status: NeedsAction, InProcess, Completed, Cancelled
 #: event.freebusy.legend.busy_tentative statusTentative
 #: imipAcceptTentativeInvitation.label
 msgid "Tentative"
@@ -1915,10 +2341,98 @@ msgid "No Information"
 msgstr "Gan Eolas"
 
 # Timezone dialog
+#. Timezone dialog
 #: timezone.title.label
 msgid "Please Specify the Timezone"
 msgstr "Sonraigh crios ama"
 
+#. #-#-#-#-#  chromecalendarcalendar-event-dialog.dtd.po (firefox)  #-#-#-#-#
+#. Read-Only dialog
+#. #-#-#-#-#  chromecalendarpreferencesadvanced.dtd.po (firefox)  #-#-#-#-#
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Thunderbird Preferences System
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Scott MacGregor
+#. - Portions created by the Initial Developer are Copyright (C) 2005
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Matthew Willis <lilmatt@mozilla.com>
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. WARNING! This file contains UTF-8 encoded characters!
+#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
+#. - your editor isn't using UTF-8 encoding and may munge up the document!
+#. #-#-#-#-#  chromecalendarpreferencesviews.dtd.po (firefox)  #-#-#-#-#
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is OEone Calendar Code, released October 31st, 2001.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Mike Potter <mikep@oeone.com>
+#. -   ArentJan Banck <ajbanck@planet.nl>
+#. -   Eric Belhaire <belhaire@ief.u-psud.fr>
+#. -   Matthew Willis <mattwillis@gmail.com>
+#. -   Cédric Corazza <cedric.corazza@wanadoo.fr>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. WARNING! This file contains UTF-8 encoded characters!
+#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
+#. - your editor isn't using UTF-8 encoding and may munge up the document!
 #: read.only.general.label pref.calendar.advanced.generalTab.label
 #: paneGeneral.title pref.calendar.view.allview.caption
 msgid "General"
@@ -1927,6 +2441,10 @@ msgstr "Ginearálta"
 #: read.only.repeat.label
 msgid "Repeat:"
 msgstr "Athdhéan:"
+
+#: read.only.location.label tooltipLocation imipHtml.location
+msgid "Location:"
+msgstr "Suíomh:"
 
 #: read.only.category.label
 msgid "Category:"
@@ -1981,6 +2499,10 @@ msgstr "Nasc Gaolta"
 # Edit recurrence window -> Recurrence pattern -> Daily repeat rules
 # #1 - number
 # e.g. "every 4 days"
+#. # LOCALIZATION NOTE (dailyEveryNth):
+#. # Edit recurrence window -> Recurrence pattern -> Daily repeat rules
+#. # #1 - number
+#. # e.g. "every 4 days"
 #: dailyEveryNth
 msgid "every day;every #1 days"
 msgstr "gach lá;gach dara lá;gach #1 lá;gach #1 lá;gach #1 lá"
@@ -1989,76 +2511,211 @@ msgstr "gach lá;gach dara lá;gach #1 lá;gach #1 lá;gach #1 lá"
 msgid "every weekday"
 msgstr "gach lá oibre"
 
-# LOCALIZATION NOTE (weeklyNthOn)
-# Edit recurrence window -> Recurrence pattern -> Weekly repeat rules
-# %1$S - weekday (one or more)
-# #2 - week interval
-# e.g. "every 3 weeks on Tuesday, Wednesday and Thursday
-#: weeklyNthOnNounclass1 weeklyNthOnNounclass2
+#. # LOCALIZATION NOTE (weeklyNthOnNounclass...)
+#. # Edit recurrence window -> Recurrence pattern -> Weekly repeat rules
+#. # Translate these strings according to noun class/gender of weekday (%1$S)
+#. # set in 'repeadDetailsDay...Nounclass' strings.
+#. # Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
+#. # Add others strings with suffix 3, 4,... for others noun classes if your
+#. # language need them. In this case, corresponding strings must be added for
+#. # others rule strings with 'Nounclass...' suffix and corresponding values
+#. # "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
+#. # %1$S - weekday (one or more)
+#. # #2 - week interval
+#. # e.g. "every 3 weeks on Tuesday, Wednesday and Thursday
+#: weeklyNthOnNounclass1
+msgctxt "weeklyNthOnNounclass1"
 msgid "every %1$S;every #2 weeks on %1$S"
 msgstr ""
-"gach %1$S;gach #2 sheachtain ar %1$S;gach #2 seachtaine ar %1$S;gach #2 "
-"seachtaine ar %1$S;gach #2 seachtain ar %1$S"
+
+#: weeklyNthOnNounclass2
+msgctxt "weeklyNthOnNounclass2"
+msgid "every %1$S;every #2 weeks on %1$S"
+msgstr ""
 
 # LOCALIZATION NOTE (weeklyNthOn)
 # Edit recurrence window -> Recurrence pattern -> Weekly repeat rules
 # #1 - interval
 # e.g. "every 5 weeks"
+#. # LOCALIZATION NOTE (weeklyEveryNth):
+#. # Edit recurrence window -> Recurrence pattern -> Weekly repeat rules
+#. # #1 - interval
+#. # e.g. "every 5 weeks"
 #: weeklyEveryNth
 msgid "every week;every #1 weeks"
 msgstr ""
 "gach seachtain;gach #2 sheachtain;gach #2 seachtaine;gach #2 seachtaine;gach "
 "#2 seachtain"
 
-#: repeatDetailsDay1Nounclass repeatDetailsDay2Nounclass
-#: repeatDetailsDay3Nounclass repeatDetailsDay4Nounclass
-#: repeatDetailsDay5Nounclass repeatDetailsDay6Nounclass
+#. # LOCALIZATION NOTE ('repeatDetailsDay...' and 'repeatDetailsDay...Nounclass'):
+#. # Week days names and week days noun classes (feminine/masculine grammatical
+#. # gender) for languages that need different localization when weekdays nouns
+#. # have different noun classes (genders).
+#. # For every weekday, in 'repeatDetailsDay...Nounclass' strings write:
+#. #   "nounclass1"     for languages with grammatical genders -> MASCULINE gender;
+#. #                    for languages with noun classes -> a noun class;
+#. #                    for languages without noun classes or grammatical gender.
+#. #
+#. #   "nounclass2"     for languages with grammatical genders -> FEMININE gender;
+#. #                    for languages with noun classes -> a different noun class.
+#. #
+#. #   "nounclass3", "nounclass4" and so on for languages that need more than two
+#. #                    noun classes for weekdays. In this case add corresponding
+#. #                    rule string with "Nounclass..." suffix and ordinal string
+#. #                    "repeatOrdinalxNounclass..."
+#. # Will be used rule strings with "Nounclass..." suffix corresponding to the
+#. # following strings if there is a weekday in the rule string.
+#: repeatDetailsDay1
+msgctxt "repeatDetailsDay1"
+msgid "Sunday"
+msgstr ""
+
+#: repeatDetailsDay1Nounclass
+msgctxt "repeatDetailsDay1Nounclass"
+msgid "nounclass1"
+msgstr ""
+
+#: repeatDetailsDay2
+msgctxt "repeatDetailsDay2"
+msgid "Monday"
+msgstr ""
+
+#: repeatDetailsDay2Nounclass
+msgctxt "repeatDetailsDay2Nounclass"
+msgid "nounclass1"
+msgstr ""
+
+#: repeatDetailsDay3
+msgctxt "repeatDetailsDay3"
+msgid "Tuesday"
+msgstr ""
+
+#: repeatDetailsDay3Nounclass
+msgctxt "repeatDetailsDay3Nounclass"
+msgid "nounclass1"
+msgstr ""
+
+#: repeatDetailsDay4
+msgctxt "repeatDetailsDay4"
+msgid "Wednesday"
+msgstr ""
+
+#: repeatDetailsDay4Nounclass
+msgctxt "repeatDetailsDay4Nounclass"
+msgid "nounclass1"
+msgstr ""
+
+#: repeatDetailsDay5
+msgctxt "repeatDetailsDay5"
+msgid "Thursday"
+msgstr ""
+
+#: repeatDetailsDay5Nounclass
+msgctxt "repeatDetailsDay5Nounclass"
+msgid "nounclass1"
+msgstr ""
+
+#: repeatDetailsDay6
+msgctxt "repeatDetailsDay6"
+msgid "Friday"
+msgstr ""
+
+#: repeatDetailsDay6Nounclass
+msgctxt "repeatDetailsDay6Nounclass"
+msgid "nounclass1"
+msgstr ""
+
+#: repeatDetailsDay7
+msgctxt "repeatDetailsDay7"
+msgid "Saturday"
+msgstr ""
+
 #: repeatDetailsDay7Nounclass
+msgctxt "repeatDetailsDay7Nounclass"
 msgid "nounclass1"
 msgstr ""
 
 # leave alone --KPS
+#. #-#-#-#-#  chromecalendarcalendar-event-dialog.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (repeatDetailsAnd)
+#. # Used to show a number of weekdays in a list
+#. # i.e. "Sunday, Monday, Tuesday " + and + " Wednesday"
 #: repeatDetailsAnd license.and
 msgid "and"
 msgstr "and"
 
-# LOCALIZATION NOTE (monthlyRuleNthOfEveryNounclass...):
-# Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
-# Translate these strings according to noun class/gender of weekday (%2$S)
-# set in 'repeadDetailsDay...Nounclass' strings.
-# Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
-# Add others strings with suffix 3, 4,... for others noun classes if your
-# language need them. In this case, corresponding strings must be added for
-# others rule strings with 'Nounclass...' suffix and corresponding values
-# "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
-# %1$S - list of weekdays with ordinal, article and noun class/gender
-# (ordinal and weekday of every element in the list follow the order
-# and the rule of ordinalWeekdayOrder string)
-# #2 - interval
-# e.g. "the first Monday and the last Friday of every 3 months"
-#: monthlyRuleNthOfEveryNounclass1 monthlyRuleNthOfEveryNounclass2
+#. # LOCALIZATION NOTE (monthlyRuleNthOfEveryNounclass...):
+#. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+#. # Translate these strings according to noun class/gender of weekday (%2$S)
+#. # set in 'repeadDetailsDay...Nounclass' strings.
+#. # Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
+#. # Add others strings with suffix 3, 4,... for others noun classes if your
+#. # language need them. In this case, corresponding strings must be added for
+#. # others rule strings with 'Nounclass...' suffix and corresponding values
+#. # "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
+#. # %1$S - list of weekdays with ordinal, article and noun class/gender
+#. #        (ordinal and weekday of every element in the list follow the order
+#. #         and the rule of ordinalWeekdayOrder string)
+#. # #2 - interval
+#. # e.g. "the first Monday and the last Friday of every 3 months"
+#: monthlyRuleNthOfEveryNounclass1
+msgctxt "monthlyRuleNthOfEveryNounclass1"
 msgid "%1$S of every month;%1$S of every #2 months"
 msgstr ""
-"%1$S de gach mí;%1$S de gach dara mí;%1$S de gach #2ú mí;%1$S de gach #2ú mí;%"
-"1$S de gach #2ú mí"
 
-# LOCALIZATION NOTE (monthlyEveryOfEvery):
-# Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
-# %1$S - weekday
-# #2 - interval
-# i.e. "every MONDAY of every 3 months"
-# more specific: every monday of January, April, July, October
-#: monthlyEveryOfEveryNounclass1 monthlyEveryOfEveryNounclass2
+#: monthlyRuleNthOfEveryNounclass2
+msgctxt "monthlyRuleNthOfEveryNounclass2"
+msgid "%1$S of every month;%1$S of every #2 months"
+msgstr ""
+
+#. # LOCALIZATION NOTE (ordinalWeekdayOrder):
+#. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+#. # This string allows to change the order of the elements "ordinal" and
+#. # "weekday" (or to insert a word between them) for the argument %1$S of the
+#. # string monthlyRuleNthOfEveryNounclass...
+#. # Without changing this string, the order is that one required from most
+#. # languages: ordinal + weekday (e.g. "'the first' 'Monday' of every 2 months").
+#. # %1$S - ordinal with article
+#. # %2$S - weekday noun
+#. # e.g. "'the first' 'Monday'"
+#: ordinalWeekdayOrder
+msgctxt "ordinalWeekdayOrder"
+msgid "%1$S %2$S"
+msgstr ""
+
+#. # LOCALIZATION NOTE (monthlyEveryOfEveryNounclass...):
+#. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+#. # Translate these strings according to noun class/gender of weekday (%1$S)
+#. # set in 'repeadDetailsDay...Nounclass' strings.
+#. # Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
+#. # Add others strings with suffix 3, 4,... for others noun classes if your
+#. # language need them. In this case, corresponding strings must be added for
+#. # others rule strings with 'Nounclass...' suffix and corresponding values
+#. # "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
+#. # %1$S - list of single weekdays and/or weekdays with ordinal, article and
+#. #        noun class/gender when rule contains also specific day in the month
+#. # #2 - interval
+#. # e.g. "every Monday, Tuesday and the second Sunday of every month"
+#: monthlyEveryOfEveryNounclass1
+msgctxt "monthlyEveryOfEveryNounclass1"
 msgid "every %1$S of every month;every %1$S of every #2 months"
 msgstr ""
-"gach %1$S de gach mí;gach %1$S de gach dara mí;gach %1$S de gach #2ú mí;gach %"
-"1$S de gach #2ú mí;gach %1$S de gach #2ú mí"
+
+#: monthlyEveryOfEveryNounclass2
+msgctxt "monthlyEveryOfEveryNounclass2"
+msgid "every %1$S of every month;every %1$S of every #2 months"
+msgstr ""
 
 # LOCALIZATION NOTE (monthlyDayOfNth):
 # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
 # %1$S - day of month
 # #2 - month interval
 # e.g. "day 3 of every 2 months"
+#. # LOCALIZATION NOTE (monthlyDayOfNth):
+#. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+#. # %1$S - day of month
+#. # #2 - month interval
+#. # e.g. "day 3 of every 2 months"
 #: monthlyDayOfNth
 msgid "day %1$S of every month;day %1$S of every #2 months"
 msgstr ""
@@ -2070,6 +2727,11 @@ msgstr ""
 # %1$S - day of month
 # #2 - month interval
 # e.g. "the last day of every 3 months"
+#. # LOCALIZATION NOTE (monthlyLastDayOfNth):
+#. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+#. # %1$S - day of month
+#. # #2 - month interval
+#. # e.g. "the last day of every 3 months"
 #: monthlyLastDayOfNth
 msgid "the last day of the month; the last day of every #1 months"
 msgstr ""
@@ -2080,45 +2742,85 @@ msgstr ""
 # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
 # #2 - month interval
 # e.g. "every day of the month every 4 months"
+#. # LOCALIZATION NOTE (monthlyEveryDayOfNth):
+#. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
+#. # #2 - month interval
+#. # e.g. "every day of the month every 4 months"
 #: monthlyEveryDayOfNth
 msgid "every day of every month;every day of the month every #2 months"
 msgstr ""
 "gach lá de gach mí;gach lá den mhí gach re mí;gach lá den mhí gach #2 mhí;"
 "gach lá den mhí gach #2 mí;gach lá den mhí gach #2 mí"
 
-# LOCALIZATION NOTE (repeatOrdinal...Nounclass...):
-# Ordinal numbers nouns for every noun class (grammatical genders) of weekdays
-# considered in 'repeatDetailsDayxNounclass' strings. For languages that need
-# localization according to genders or noun classes.
-# Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
-# Add 'repeatOrdinal...Nounclass' strings with suffix 3, 4 and so on for
-# languages with more than two noun classes for weekdays. In this case 
-# must be added corresponding rule strings with 'Nounclass...' suffix and 
-# corresponding values "nounclass..." must be written in
-# 'repeatDetailsDayxNounclass' strings.
-#: repeatOrdinal1Nounclass1 repeatOrdinal1Nounclass2
+#. # LOCALIZATION NOTE (repeatOrdinal...Nounclass...):
+#. # Ordinal numbers nouns for every noun class (grammatical genders) of weekdays
+#. # considered in 'repeatDetailsDayxNounclass' strings. For languages that need
+#. # localization according to genders or noun classes.
+#. # Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
+#. # Add 'repeatOrdinal...Nounclass' strings with suffix 3, 4 and so on for
+#. # languages with more than two noun classes for weekdays. In this case
+#. # must be added corresponding rule strings with 'Nounclass...' suffix and
+#. # corresponding values "nounclass..." must be written in
+#. # 'repeatDetailsDayxNounclass' strings.
+#: repeatOrdinal1Nounclass1
+msgctxt "repeatOrdinal1Nounclass1"
 msgid "the first"
-msgstr "an chéad"
+msgstr ""
 
-#: repeatOrdinal2Nounclass1 repeatOrdinal2Nounclass2
+#: repeatOrdinal2Nounclass1
+msgctxt "repeatOrdinal2Nounclass1"
 msgid "the second"
-msgstr "an dara"
+msgstr ""
 
-#: repeatOrdinal3Nounclass1 repeatOrdinal3Nounclass2
+#: repeatOrdinal3Nounclass1
+msgctxt "repeatOrdinal3Nounclass1"
 msgid "the third"
-msgstr "an tríú"
+msgstr ""
 
-#: repeatOrdinal4Nounclass1 repeatOrdinal4Nounclass2
+#: repeatOrdinal4Nounclass1
+msgctxt "repeatOrdinal4Nounclass1"
 msgid "the fourth"
-msgstr "an cheathrú"
+msgstr ""
 
-#: repeatOrdinal5Nounclass1 repeatOrdinal5Nounclass2
+#: repeatOrdinal5Nounclass1
+msgctxt "repeatOrdinal5Nounclass1"
 msgid "the fifth"
-msgstr "an cúigiú"
+msgstr ""
 
-#: repeatOrdinal-1Nounclass1 repeatOrdinal-1Nounclass2
+#: repeatOrdinal-1Nounclass1
+msgctxt "repeatOrdinal-1Nounclass1"
 msgid "the last"
-msgstr "an ceann deiridh"
+msgstr ""
+
+#: repeatOrdinal1Nounclass2
+msgctxt "repeatOrdinal1Nounclass2"
+msgid "the first"
+msgstr ""
+
+#: repeatOrdinal2Nounclass2
+msgctxt "repeatOrdinal2Nounclass2"
+msgid "the second"
+msgstr ""
+
+#: repeatOrdinal3Nounclass2
+msgctxt "repeatOrdinal3Nounclass2"
+msgid "the third"
+msgstr ""
+
+#: repeatOrdinal4Nounclass2
+msgctxt "repeatOrdinal4Nounclass2"
+msgid "the fourth"
+msgstr ""
+
+#: repeatOrdinal5Nounclass2
+msgctxt "repeatOrdinal5Nounclass2"
+msgid "the fifth"
+msgstr ""
+
+#: repeatOrdinal-1Nounclass2
+msgctxt "repeatOrdinal-1Nounclass2"
+msgid "the last"
+msgstr ""
 
 # LOCALIZATION NOTE (yearlyNthOn):
 # Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
@@ -2126,47 +2828,115 @@ msgstr "an ceann deiridh"
 # %2$S - day of month
 # #3 - yearly interval
 # e.g. "every 3 years on December 14"
+#. # LOCALIZATION NOTE (yearlyNthOn):
+#. # Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
+#. # %1$S - month
+#. # %2$S - day of month
+#. # #3 - yearly interval
+#. # e.g. "every 3 years on December 14"
 #: yearlyNthOn
 msgid "every %1$S %2$S;every #3 years on %1$S %2$S"
 msgstr ""
 "ar %2$S %1$S gach bliain;ar %2$S %1$S gach dara bliain;ar %2$S %1$S gach #3ú "
 "bliain;ar %2$S %1$S gach #3ú bliain;ar %2$S %1$S gach #3ú bliain"
 
-# LOCALIZATION NOTE (yearlyNthOnNthOfNounclass...):
-# Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
-# Translate these strings according to noun class/gender of weekday (%2$S) 
-# set in 'repeadDetailsDay...Nounclass' strings.
-# Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
-# Add others strings with suffix 3, 4,... for others noun classes if your
-# language need them. In this case, corresponding strings must be added for
-# others rule strings with 'Nounclass...' suffix and corresponding values 
-# "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
-# %1$S - ordinal with article and noun class/gender corresponding to weekday
-# %2$S - weekday
-# %3$S - month
-# #4 - yearly interval
-# e.g. "the second Monday of every March"
-# e.g  "every 3 years the second Monday of March"
-#: yearlyNthOnNthOfNounclass1 yearlyNthOnNthOfNounclass2
+#. # LOCALIZATION NOTE (yearlyNthOnNthOfNounclass...):
+#. # Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
+#. # Translate these strings according to noun class/gender of weekday (%2$S)
+#. # set in 'repeadDetailsDay...Nounclass' strings.
+#. # Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
+#. # Add others strings with suffix 3, 4,... for others noun classes if your
+#. # language need them. In this case, corresponding strings must be added for
+#. # others rule strings with 'Nounclass...' suffix and corresponding values
+#. # "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
+#. # %1$S - ordinal with article and noun class/gender corresponding to weekday
+#. # %2$S - weekday
+#. # %3$S - month
+#. # #4 - yearly interval
+#. # e.g. "the second Monday of every March"
+#. # e.g  "every 3 years the second Monday of March"
+#: yearlyNthOnNthOfNounclass1
+msgctxt "yearlyNthOnNthOfNounclass1"
 msgid "%1$S %2$S of every %3$S;every #4 years on %1$S %2$S of %3$S"
 msgstr ""
-"%1$S %2$S de gach %3$S;gach dara bliain ar %1$S %2$S de %3$S;gach #4ú bliain "
-"ar %1$S %2$S de %3$S;gach #4ú bliain ar %1$S %2$S de %3$S;gach #4ú bliain ar %"
-"1$S %2$S de %3$S"
 
-# LOCALIZATION NOTE (yearlyNthOfNth):
-# Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
-# %1$S - weekday
-# %2$S - month
-# #3 - number
-# e.g. "every Thursday of March"
-# e.g  "every 3 years on every Thursday of March"
-#: yearlyOnEveryNthOfNthNounclass1 yearlyOnEveryNthOfNthNounclass2
+#: yearlyNthOnNthOfNounclass2
+msgctxt "yearlyNthOnNthOfNounclass2"
+msgid "%1$S %2$S of every %3$S;every #4 years on %1$S %2$S of %3$S"
+msgstr ""
+
+#. # LOCALIZATION NOTE (yearlyOnEveryNthOfNthNounclass1):
+#. # Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
+#. # Translate these strings according to noun class/gender of weekday (%1$S)
+#. # set in 'repeadDetailsDay...Nounclass' strings.
+#. # Nounclass1 <-> Masculine gender; Nounclass2 <-> Feminine gender.
+#. # Add others strings with suffix 3, 4,... for others noun classes if your
+#. # language need them. In this case, corresponding strings must be added for
+#. # others rule strings with 'Nounclass...' suffix and corresponding values
+#. # "nounclass..." must be written in 'repeatDetailsDayxNounclass' strings.
+#. # %1$S - weekday
+#. # %2$S - month
+#. # #3 - yearly interval
+#. # e.g. "every Thursday of March"
+#. # e.g  "every 3 years on every Thursday of March"
+#: yearlyOnEveryNthOfNthNounclass1
+msgctxt "yearlyOnEveryNthOfNthNounclass1"
 msgid "every %1$S of %2$S;every #3 years on every %1$S of %2$S"
 msgstr ""
-"gach %1$S de %2$S;gach dara bliain ar gach %1$S de %2$S;gach #3ú bliain ar "
-"gach %1$S de %2$S;gach #3ú bliain ar gach %1$S de %2$S;gach #3ú bliain ar "
-"gach %1$S de %2$S"
+
+#: yearlyOnEveryNthOfNthNounclass2
+msgctxt "yearlyOnEveryNthOfNthNounclass2"
+msgid "every %1$S of %2$S;every #3 years on every %1$S of %2$S"
+msgstr ""
+
+#: repeatDetailsMonth1 month.1.name
+msgid "January"
+msgstr "Eanáir"
+
+#: repeatDetailsMonth2 month.2.name
+msgid "February"
+msgstr "Feabhra"
+
+#: repeatDetailsMonth3 month.3.name
+msgid "March"
+msgstr "Márta"
+
+#: repeatDetailsMonth4 month.4.name
+msgid "April"
+msgstr "Aibreán"
+
+# sedtweaked
+#: repeatDetailsMonth5 month.5.name
+msgid "May"
+msgstr "Bealtaine"
+
+#: repeatDetailsMonth6 month.6.name
+msgid "June"
+msgstr "Meitheamh"
+
+#: repeatDetailsMonth7 month.7.name
+msgid "July"
+msgstr "Iúil"
+
+#: repeatDetailsMonth8 month.8.name
+msgid "August"
+msgstr "Lúnasa"
+
+#: repeatDetailsMonth9 month.9.name
+msgid "September"
+msgstr "Meán Fómhair"
+
+#: repeatDetailsMonth10 month.10.name
+msgid "October"
+msgstr "Deireadh Fómhair"
+
+#: repeatDetailsMonth11 month.11.name
+msgid "November"
+msgstr "Samhain"
+
+#: repeatDetailsMonth12 month.12.name
+msgid "December"
+msgstr "Nollaig"
 
 # LOCALIZATION NOTE (repeatCount):
 # Edit recurrence window -> Recurrence details link on Event/Task dialog window
@@ -2182,6 +2952,20 @@ msgstr ""
 # "Occurs the first Sunday of every 3 month
 # effective 1/1/2009 for 5 times
 # from 5:00 PM to 6:00 PM"
+#. # LOCALIZATION NOTE (repeatCount):
+#. # Edit recurrence window -> Recurrence details link on Event/Task dialog window
+#. # %1%$ - A rule string (see above). This is the first line of the link
+#. # %2%$ - event start date (e.g. mm/gg/yyyy)
+#. # %3$S - event start time (e.g. hh:mm (PM/AM))
+#. # %4$S - event end time (e.g. hh:mm (PM/AM))
+#. # #5 - event occurence times: number
+#. # e.g. with monthlyRuleNthOfEvery:
+#. # "Occurs the first Sunday of every 3 month
+#. #  only on 1/1/2009"
+#. #  from 5:00 PM to 6:00 PM"
+#. # "Occurs the first Sunday of every 3 month
+#. #  effective 1/1/2009 for 5 times
+#. #  from 5:00 PM to 6:00 PM"
 #: repeatCount
 msgid ""
 "Occurs %1$S\n"
@@ -2212,6 +2996,16 @@ msgstr ""
 # only on 1/1/2009"
 # "Occurs the first Sunday of every 3 month
 # effective 1/1/2009 for 5 times"
+#. # LOCALIZATION NOTE (repeatCountAllDay):
+#. # Edit recurrence window -> Recurrence details link on Event/Task dialog window
+#. # %1%$ - A rule string (see above). This is the first line of the link
+#. # %2%$ - event start date (e.g. mm/gg/yyyy)
+#. # #3 - event occurence times: number
+#. # e.g. with monthlyRuleNthOfEvery:
+#. # "Occurs the first Sunday of every 3 month
+#. #  only on 1/1/2009"
+#. # "Occurs the first Sunday of every 3 month
+#. #  effective 1/1/2009 for 5 times"
 #: repeatCountAllDay
 msgid ""
 "Occurs %1$S\n"
@@ -2225,6 +3019,17 @@ msgstr ""
 "i bhfeidhm #3 n-uaire ó %2$S.;Tarlaíonn %1$S\n"
 "i bhfeidhm #3 uair ó %2$S."
 
+#. # LOCALIZATION NOTE (repeatDetailsUntil):
+#. # Edit recurrence window -> Recurrence details link on Event/Task dialog window
+#. # %1%$ - A rule string (see above). This is the first line of the link
+#. # %2%$ - event start date (e.g. mm/gg/yyyy)
+#. # %3$S - event end date (e.g. mm/gg/yyyy)
+#. # %4$S - event start time (e.g. hh:mm (PM/AM))
+#. # %5$S - event end time (e.g. hh:mm (PM/AM))
+#. # e.g. with weeklyNthOn:
+#. # "Occurs every 2 weeks on Sunday and Friday
+#. #  effective 1/1/2009 until 1/1/2010
+#. #  from 5:00 PM to 6:00 PM"
 #: repeatDetailsUntil
 msgid ""
 "Occurs %1$S\n"
@@ -2235,6 +3040,14 @@ msgstr ""
 "i bhfeidhm ó %2$S go %3$S\n"
 "ó %4$S go %5$S."
 
+#. # LOCALIZATION NOTE (repeatDetailsUntilAllDay):
+#. # Edit recurrence window -> Recurrence details link on Event/Task dialog window
+#. # %1%$ - A rule string (see above). This is the first line of the link
+#. # %2%$ - event start date (e.g. mm/gg/yyyy)
+#. # %3$S - event end date (e.g. mm/gg/yyyy)
+#. # e.g. with monthlyDayOfNth and all day event:
+#. # "Occurs day 3 of every 5 month
+#. #  effective 1/1/2009 until 1/1/2010"
 #: repeatDetailsUntilAllDay
 msgid ""
 "Occurs %1$S\n"
@@ -2243,6 +3056,16 @@ msgstr ""
 "Tarlóidh %1$S\n"
 "le héifeacht ó %2$S go %3$S."
 
+#. # LOCALIZATION NOTE (repeatDetailsInfinite):
+#. # Edit recurrence window -> Recurrence details link on Event/Task dialog window
+#. # %1%$ - A rule string (see above). This is the first line of the link
+#. # %2%$ - event start date (e.g. mm/gg/yyyy)
+#. # %3$S - event start time (e.g. hh:mm (PM/AM))
+#. # %4$S - event end time (e.g. hh:mm (PM/AM))
+#. # e.g. with monthlyDayOfNth:
+#. # "Occurs day 3 of every 5 month
+#. #  effective 1/1/2009
+#. #  from 5:00 PM to 6:00 PM"
 #: repeatDetailsInfinite
 msgid ""
 "Occurs %1$S\n"
@@ -2253,6 +3076,13 @@ msgstr ""
 "i bhfeidhm ó %2$S\n"
 "ó %3$S go %4$S."
 
+#. # LOCALIZATION NOTE (repeatDetailsInfiniteAllDay):
+#. # Edit recurrence window -> Recurrence details link on Event/Task dialog window
+#. # %1%$ - A rule string (see above). This is the first line of the link
+#. # %2%$ - event start date (e.g. mm/gg/yyyy)
+#. # e.g. with monthlyDayOfNth and all day event:
+#. # "Occurs day 3 of every 5 month
+#. #  effective 1/1/2009"
 #: repeatDetailsInfiniteAllDay
 msgid ""
 "Occurs %1$S\n"
@@ -2261,31 +3091,39 @@ msgstr ""
 "Tarlóidh %1$S\n"
 "le héifeacht ó %2$S."
 
-# LOCALIZATION NOTE (ruleTooComplex):
-# This string is shown in the reminder details area if our code can't handle the
-# complexity of the recurrence rule yet.
+#. # LOCALIZATION NOTE (ruleTooComplex):
+#. # This string is shown in the reminder details area if our code can't handle the
+#. # complexity of the recurrence rule yet.
 #: ruleTooComplex
 msgid "Click here for details"
 msgstr "Cliceáil anseo i gcomhair mionsonraí"
 
+#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. Toolbar write button
 #: itemMenuLabelEvent lightning.toolbar.newevent.label
 msgid "Event"
 msgstr "Teagmhas"
 
-#: itemMenuAccesskeyEvent2 itemMenuAccesskeyTask2 day.6.Ddd.accesskey
-#: sunbird.find.key
+#: itemMenuAccesskeyEvent2
+msgctxt "itemMenuAccesskeyEvent2"
 msgid "F"
-msgstr "F"
+msgstr ""
 
 #: itemMenuLabelTask lightning.toolbar.newtask.label
 msgid "Task"
 msgstr "Tasc"
+
+#: itemMenuAccesskeyTask2
+msgctxt "itemMenuAccesskeyTask2"
+msgid "F"
+msgstr ""
 
 #: emailSubjectReply
 msgid "Re: %1$S"
 msgstr "Re: %1$S"
 
 # Link Location Dialog
+#. # Link Location Dialog
 #: specifyLinkLocation
 msgid "Please specify the link location"
 msgstr "Sonraigh suíomh an naisc, le do thoil"
@@ -2299,6 +3137,7 @@ msgid "Due:"
 msgstr "Sprioc:"
 
 # Attach File Dialog
+#. # Attach File Dialog
 #: selectAFile
 msgid "Please select the file(s) to attach"
 msgstr "Roghnaigh comha(i)d le ceangal"
@@ -2311,21 +3150,98 @@ msgstr "Bain Iatáin"
 msgid "Do you really want to remove %1$S attachments?"
 msgstr "An bhfuil tú cinnte gur mhaith leat %1$S iatán a bhaint?"
 
+#. # Recurrence Dialog Widget Order
+#. # LOCALIZATION NOTE: You can change the order of below params
+#. # Edit recurrence window -> Recurrence pattern -> Repeat monthly
+#. # %1$S - ordinal with article, %2$S - weekday
+#. # e.g. "the First Saturday"
+#: monthlyOrder
+msgctxt "monthlyOrder"
+msgid "%1$S %2$S"
+msgstr ""
+
 # Edit recurrence window -> Recurrence pattern -> Repeat yearly
 # %1$S - day of month, %2$S - of, %3$S - month
 # e.g. "6 [of] September"
 # If you don't need %2$S in your locale - please put this on the third place.
+#. # Edit recurrence window -> Recurrence pattern -> Repeat yearly
+#. # %1$S - day of month, %2$S - of, %3$S - month
+#. # e.g. "6 [of] September"
+#. # If you don't need %2$S in your locale - please put this on the third place.
 #: yearlyOrder
 msgid "%1$S %3$S %2$S"
 msgstr "%1$S %3$S %2$S"
 
+#. # Edit recurrence window -> Recurrence pattern -> Repeat yearly
+#. # %1$S - ordinal with article, %2$S - weekday, %3$S  - of, %4$S - month
+#. # e.g. "the First Saturday of September"
+#. # If you don't need %3$S in your locale - please put this on the third place.
 #: yearlyOrder2
 msgid "%1$S %2$S %3$S %4$S"
 msgstr "%1$S %2$S %3$S %4$S"
 
+#. # LOCALIZATION NOTE (pluralForWeekdays):
+#. # This string allows to set the use of weekdays nouns in plural form for
+#. # languages that need them in sentences like "every Monday" or "every Sunday
+#. # of March" etc.
+#. # Rule strings involved by this setting are:
+#. # - weeklyNthOn   (only the first part) e.g. "every Sunday"
+#. # - monthlyEveryOfEvery
+#. #     e.g. "every Monday of every month;every Monday every 2 months"
+#. # - yearlyOnEveryNthOfNth
+#. #     e.g. "every Friday of March;every 2 years on every Friday of March"
+#. # In your local write:
+#. #  "true"    if sentences like those above need weekday in plural form;
+#. #  "false"   if sentences like those above don't need weekday in plural form;
 #: pluralForWeekdays
 msgid "false"
 msgstr "bréagach"
+
+#. # LOCALIZATION NOTE (repeatDetailsDayxxxPlural):
+#. # Edit recurrence window -> Recurrence details link on Event/Task dialog window
+#. # Weekdays in plural form used inside sentences like "every Monday" or
+#. # "every Sunday of May" etc. for languages that need them.
+#. # These plurals will be used inside the following rule strings only if string
+#. # 'pluralForWeekdays' (see above) is set to "true":
+#. # - weeklyNthOn   (only the first part) e.g. "every Sunday"
+#. # - monthlyEveryOfEvery
+#. #     e.g. "every Monday of every month;every Monday every 2 months"
+#. # - yearlyOnEveryNthOfNth
+#. #     e.g. "every Friday of March;every 2 years on every Friday of March"
+#: repeatDetailsDay1Plural
+msgctxt "repeatDetailsDay1Plural"
+msgid "Sunday"
+msgstr ""
+
+#: repeatDetailsDay2Plural
+msgctxt "repeatDetailsDay2Plural"
+msgid "Monday"
+msgstr ""
+
+#: repeatDetailsDay3Plural
+msgctxt "repeatDetailsDay3Plural"
+msgid "Tuesday"
+msgstr ""
+
+#: repeatDetailsDay4Plural
+msgctxt "repeatDetailsDay4Plural"
+msgid "Wednesday"
+msgstr ""
+
+#: repeatDetailsDay5Plural
+msgctxt "repeatDetailsDay5Plural"
+msgid "Thursday"
+msgstr ""
+
+#: repeatDetailsDay6Plural
+msgctxt "repeatDetailsDay6Plural"
+msgid "Friday"
+msgstr ""
+
+#: repeatDetailsDay7Plural
+msgctxt "repeatDetailsDay7Plural"
+msgid "Saturday"
+msgstr ""
 
 # #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
 # ***** BEGIN LICENSE BLOCK *****
@@ -2401,6 +3317,41 @@ msgstr "bréagach"
 # - ***** END LICENSE BLOCK *****
 #
 # Messenger Sidebar
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Sun Microsystems code.
+#. -
+#. - The Initial Developer of the Original Code is Sun Microsystems.
+#. - Portions created by the Initial Developer are Copyright (C) 2006
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s): Thomas Benisch <thomas.benisch@sun.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. Calendar Invitations Dialog
 #: calendar.invitations.dialog.invitations.text
 msgid "Invitations"
 msgstr "Cuirí"
@@ -2413,6 +3364,8 @@ msgstr "Tá liosta na gcuirí á nuashonrú."
 msgid "No unconfirmed invitations found."
 msgstr "Níor aimsíodh aon chuireadh neamhdhaingnithe."
 
+#. #-#-#-#-#  chromecalendarcalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
+#. Calendar Invitations List
 #: calendar.invitations.list.accept.button.label imipAcceptInvitation.label
 msgid "Accept"
 msgstr "Glac Leis"
@@ -2447,6 +3400,42 @@ msgstr "Gan sonrú"
 
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
 # cmd_cut_accesskey is sedtweaked
+#. #-#-#-#-#  chromecalendarcalendar-occurrence-prompt.dtd.po (firefox)  #-#-#-#-#
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Sun Microsystems code.
+#. -
+#. - The Initial Developer of the Original Code is
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. - Portions created by the Initial Developer are Copyright (C) 2008
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: buttons.occurrence.accesskey SOCKSport.accesskey
 msgid "t"
 msgstr "t"
@@ -2466,8 +3455,8 @@ msgid "is a repeating event"
 msgstr "imeacht a athdhéantar"
 
 #: header.isrepeating.task.label
-msgid "is a repeating task"
-msgstr "tasc a athdhéantar"
+msgid "is a repeating task "
+msgstr ""
 
 #: windowtitle.event.delete
 msgid "Delete Repeating Event"
@@ -2509,13 +3498,29 @@ msgstr "Scrios gach tarlú"
 msgid "Edit all occurrences"
 msgstr "Cuir gach tarlú in eagar"
 
+#. # Misc. strings in JS
+#. # LOCALIZATION NOTE (PrintPreviewWindowTitle):
+#. #    %1$S will be replaced with the title of a html frame
 #: PrintPreviewWindowTitle
 msgid "Print Preview of %1$S"
 msgstr "Réamhamharc Priontála %1$S"
 
-#: Untitled eventUntitled
+#: Untitled
+msgctxt "Untitled"
 msgid "Untitled"
-msgstr "Gan Teideal"
+msgstr ""
+
+#. # Default name for new events
+#: newEvent
+msgctxt "newEvent"
+msgid "New Event"
+msgstr ""
+
+#. # Titles for the event/task dialog
+#: newEventDialog
+msgctxt "newEventDialog"
+msgid "New Event"
+msgstr ""
 
 #: editEventDialog
 msgid "Edit Event"
@@ -2526,6 +3531,7 @@ msgid "Edit Task"
 msgstr "Cuir Tasc in Eagar"
 
 # Do you want to save changes?
+#. # Do you want to save changes?
 #: askSaveTitleEvent
 msgid "Save Event"
 msgstr "Sábháil Imeacht"
@@ -2543,17 +3549,28 @@ msgid "Task has not been saved. Do you want to save the task?"
 msgstr "Níl an tasc sábháilte. An bhfuil fonn ort an tasc a shábháil?"
 
 # Event Dialog Warnings
-#: warningNegativeDuration
+#. # Event Dialog Warnings
+#: warningEndBeforeStart
 msgid "The end date you entered occurs before the start date"
 msgstr ""
 "Tá an dáta críochnaithe a chuir tú isteach níos luaithe ná an dáta tosaithe."
 
+#: warningStartAfterEnd
+msgid "The start date you entered occurs after the end date"
+msgstr ""
+
+#: warningUntilBeforeStart
+msgid "The until date you entered occurs before the start date"
+msgstr ""
+
 # Toolbar items
+#. # The name of the calendar provided with the application by default
 #: homeCalendarName
 msgid "Home"
 msgstr "Baile"
 
 # The name given to a calendar if an opened calendar has an empty filename
+#. # The name given to a calendar if an opened calendar has an empty filename
 #: untitledCalendarName
 msgid "Untitled Calendar"
 msgstr "Féilire Gan Teideal"
@@ -2562,9 +3579,38 @@ msgstr "Féilire Gan Teideal"
 msgid "Confirmed"
 msgstr "Cinntithe"
 
+#: eventStatusCancelled
+msgctxt "eventStatusCancelled"
+msgid "Canceled"
+msgstr ""
+
+#: todoStatusCancelled
+msgctxt "todoStatusCancelled"
+msgid "Canceled"
+msgstr ""
+
+#: statusNeedsAction
+msgctxt "statusNeedsAction"
+msgid "Needs Action"
+msgstr ""
+
+#: statusCompleted
+msgctxt "statusCompleted"
+msgid "Completed"
+msgstr ""
+
+#. # Task priority, these should match the priority.level.* labels in calendar.dtd
+#: highPriority
+msgid "High"
+msgstr "Ard"
+
 #: mediumPriority
 msgid "Medium"
 msgstr "Measartha"
+
+#: lowPriority
+msgid "Low"
+msgstr "Íseal"
 
 #: importPrompt
 msgid "Which calendar do you want to import these items into?"
@@ -2581,6 +3627,9 @@ msgstr "Cén féilire is mian leat a fhoilsiú?"
 # LOCALIZATION NOTE (importItemsFailed):
 # %1$S will be replaced with number of failed items
 # %2$S will be replaced with last error code / error string
+#. # LOCALIZATION NOTE (importItemsFailed):
+#. #    %1$S will be replaced with number of failed items
+#. #    %2$S will be replaced with last error code / error string
 #: importItemsFailed
 msgid "%1$S items failed to import. The last error was: %2$S"
 msgstr "Theip ar iompórtáil %1$S mír. Earráid dheireanach: %2$S"
@@ -2603,10 +3652,16 @@ msgstr "MozillaCalEvents"
 msgid "Mozilla Calendar"
 msgstr "Féilire Mozilla"
 
+#. # LOCALIZATION NOTE (timezoneError):
+#. # used for an error message like 'An unknown and undefined timezone was found while reading c:\Mycalendarfile.ics'
+#. #    %1$S will be replaced with the path to a file
 #: timezoneError
 msgid "An unknown and undefined timezone was found while reading %1$S."
 msgstr "Fuarthas crios ama anaithnid gan sainmhíniú agus %1$S á léamh."
 
+#. # LOCALIZATION NOTE (duplicateError):
+#. #    %1$S will be replaced with number of duplicate items
+#. #    %2$S will be replaced with a file path pointing to a calendar
 #: duplicateError
 msgid ""
 "%1$S item(s) were ignored since they exist in both the destination calendar "
@@ -2639,6 +3694,7 @@ msgstr ""
 "Níor aimsíodh criosanna ama! Suiteáil calendar-timezones.xpi le do thoil."
 
 # Sample: Unknown timezone "USPacific" in "Dentist Appt".  Using the 'floating' local timezone instead: 2008/02/28 14:00:00
+#. # Sample: Unknown timezone "USPacific" in "Dentist Appt".  Using the 'floating' local timezone instead: 2008/02/28 14:00:00
 #: unknownTimezoneInItem
 msgid ""
 "Unknown timezone \"%1$S\" in \"%2$S\".  Treated as 'floating' local timezone "
@@ -2663,6 +3719,9 @@ msgstr ""
 msgid "Unsubscribe from Calendar"
 msgstr "Díliostáil ón Fhéilire"
 
+#. # LOCALIZATION NOTE (unsubscribeCalendarMessage):
+#. # used for an message like 'Are you sure you want to unsubscribe from calendar "Home"?'
+#. #    %1$S will be replaced with the name of a calendar
 #: unsubscribeCalendarMessage
 msgid "Are you sure you want to unsubscribe from calendar \"%1$S\"?"
 msgstr "An bhfuil tú cinnte gur mian leat díliostáil ó fhéilire \"%1$S\"?"
@@ -2672,6 +3731,7 @@ msgid "Week %1$S"
 msgstr "Seachtain %1$S"
 
 # Used to format the Multiweek's labels, ie Weeks 2 - 7
+#. # Used to format the Multiweek's labels, ie Weeks 2 - 7
 #: WeeksTitle
 msgid "Weeks %1$S-%2$S"
 msgstr "Seachtainí %1$S-%2$S"
@@ -2679,10 +3739,16 @@ msgstr "Seachtainí %1$S-%2$S"
 # Error strings
 # # @name UID_NOT_FOUND
 # # @loc none
+#. # Error strings
+#. ## @name UID_NOT_FOUND
+#. ## @loc none
 #: tooNewSchemaErrorBoxTitle
 msgid "Your calendar data isn't compatible with this version of %1$S"
 msgstr "Níl do chuid sonraí comhoiriúnach leis an leagan seo de %1$S"
 
+#. # LOCALIZATION NOTE (tooNewSchemaErrorBoxTextLightning):
+#. #    %1$S will be replaced with the name of the calendar application e.g. 'Lightning'
+#. #    %2$S will be replaced with the name of the host application 'calendar'
 #: tooNewSchemaErrorBoxTextLightning
 msgid ""
 "The calendar data in your profile was updated by a newer version of %1$S, and "
@@ -2693,6 +3759,9 @@ msgstr ""
 "agus is é is dóichí go gcaillfear nó go dtruaillfear na sonraí má leantar ar "
 "aghaidh. Déanfar %1$S a dhíchumasú anois agus %2$S a atosú."
 
+#. # LOCALIZATION NOTE (tooNewSchemaErrorBoxTextSunbird):
+#. #    %1$S will be replaced with the name of the calendar application e.g. 'Sunbird'
+#. #    %2$S will be replaced with the name of the host application 'calendar'
 #: tooNewSchemaErrorBoxTextSunbird
 msgid ""
 "The calendar data in your profile was updated by a newer version of %1$S, and "
@@ -2703,21 +3772,42 @@ msgstr ""
 "agus is é is dóichí go gcaillfear nó go dtruaillfear na sonraí má leantar ar "
 "aghaidh. Stopfaidh %1$S anois."
 
+#. # LOCALIZATION NOTE (tooNewSchemaButtonRestart):
+#. #    %1$S will be replaced with the name of the host application 'Calendar'
 #: tooNewSchemaButtonRestart
 msgid "Restart %1$S"
 msgstr "Atosaigh %1$S"
 
+#. # LOCALIZATION NOTE (tooNewSchemaButtonQuit):
+#. #    %1$S will be replaced with the name of the host application 'Calendar'
 #: tooNewSchemaButtonQuit
 msgid "Quit %1$S"
 msgstr "Scoir %1$S"
 
+#. # List of events or todos (unifinder)
+#: eventUntitled
+msgctxt "eventUntitled"
+msgid "Untitled"
+msgstr ""
+
+#. # event date, usually an interval, such as
+#. #  Date: 7:00--8:00 Thu 9 Oct 2011
+#. #  Date: Thu 9 Oct 2000 -- Fri 10 Oct 2000
 #: tooltipDate
 msgid "Date:"
 msgstr "Dáta:"
 
+#. # event status: tentative, confirmed, cancelled
 #: tooltipStatus
 msgid "Status:"
 msgstr "Stádas:"
+
+#. # task/todo fields
+#. # start date time, due date time, task priority number, completed date time
+#: tooltipStart
+msgctxt "tooltipStart"
+msgid "Start:"
+msgstr ""
 
 #: tooltipPercent
 msgid "% Complete:"
@@ -2727,6 +3817,7 @@ msgstr "% Críochnaithe:"
 msgid "Completed:"
 msgstr "Críochnaithe:"
 
+#. #File commands and dialogs
 #: New
 msgid "New"
 msgstr "Nua"
@@ -2745,6 +3836,8 @@ msgstr "Easpórtáil"
 
 # Filters for export/import/open file picker.  %1$S will be replaced with
 # wildmat used to filter files by extension, such as (*.html; *.htm).
+#. # Filters for export/import/open file picker.  %1$S will be replaced with
+#. # wildmat used to filter files by extension, such as (*.html; *.htm).
 #: filterIcs
 msgid "iCalendar (%1$S)"
 msgstr "iCalendar (%1$S)"
@@ -2781,6 +3874,9 @@ msgstr ""
 "Theip ar fhoilsiú an chomhaid fhéilire.\n"
 "Cód stádais: 0x%1$S"
 
+#. # LOCALIZATION NOTE (readOnlyMode):
+#. # used for an message like 'There has been an error reading data for calendar: Home. It has been...'
+#. #    %1$S will be replaced with the name of a calendar
 #: readOnlyMode
 msgid ""
 "There has been an error reading data for calendar: %1$S. It has been placed "
@@ -2791,6 +3887,9 @@ msgstr ""
 "inléite amháin, mar is dócha go gcaillfear sonraí má athraítear an féilire. "
 "Is féidir leat an socrú seo a athrú ach \"Cuir Féilire in Eagar\" a roghnú."
 
+#. # LOCALIZATION NOTE (disabledMode):
+#. # used for an message like 'There has been an error reading data for calendar: Home. It has been...'
+#. #    %1$S will be replaced with the name of a calendar
 #: disabledMode
 msgid ""
 "There has been an error reading data for calendar: %1$S. It has been disabled "
@@ -2799,6 +3898,9 @@ msgstr ""
 "Tharla earráid agus sonraí á léamh don fhéilire %1$S. Tá sé díchumasaithe go "
 "dtí go mbeidh a úsáid slán."
 
+#. # LOCALIZATION NOTE (minorError):
+#. # used for an message like 'There has been an error reading data for calendar: Home. However this...'
+#. #    %1$S will be replaced with the name of a calendar
 #: minorError
 msgid ""
 "There has been an error reading data for calendar: %1$S.  However, this error "
@@ -2808,6 +3910,9 @@ msgstr ""
 "mionearráid í agus mar sin déanfaidh an feidhmchlár iarracht leanúint ar "
 "aghaidh."
 
+#. # LOCALIZATION NOTE (stillReadOnlyError):
+#. # used for an message like 'There has been an error reading data for calendar: Home.'
+#. #    %1$S will be replaced with the name of a calendar
 #: stillReadOnlyError
 msgid "There has been an error reading data for calendar: %1$S."
 msgstr "Tharla earráid agus sonraí á léamh don fhéilire: %1$S."
@@ -2886,6 +3991,46 @@ msgstr "Tharla earráid agus an cuireadh á sheoladh."
 msgid "An error occurred when sending the response."
 msgstr "Tharla earráid agus an freagra á sheoladh."
 
+#: caldavRequestStatusCode
+msgid "Status Code: %1$S"
+msgstr ""
+
+#: caldavRequestStatusCodeStringGeneric
+msgid "The request cannot be processed."
+msgstr ""
+
+#: caldavRequestStatusCodeString400
+msgid "The request contains bad syntax and cannot be processed."
+msgstr ""
+
+#: caldavRequestStatusCodeString403
+msgid "The user lacks the required permission to perform the request."
+msgstr ""
+
+#: caldavRequestStatusCodeString404
+msgid "Resource not found."
+msgstr ""
+
+#: caldavRequestStatusCodeString409
+msgid "Resource conflict."
+msgstr ""
+
+#: caldavRequestStatusCodeString412
+msgid "Precondition failed."
+msgstr ""
+
+#: caldavRequestStatusCodeString500
+msgid "Internal server error."
+msgstr ""
+
+#: caldavRequestStatusCodeString502
+msgid "Bad gateway (Proxy configuration?)."
+msgstr ""
+
+#: caldavRequestStatusCodeString503
+msgid "Internal server error (Temporary server outage?)."
+msgstr ""
+
 # LOCALIZATION NOTE (likelyTimezone):
 # Translators, please put the most likely timezone(s) where the people using
 # your locale will be.  Use the Olson ZoneInfo timezone name *in English*,
@@ -2913,6 +4058,33 @@ msgstr "Tharla earráid agus an freagra á sheoladh."
 # Australia/Brisbane likelier than Antarctica/DumontDUrville
 # Australia/Sydney likelier than Australia/Currie or Australia/Hobart
 # Pacific/Auckland likelier than Antarctica/McMurdo
+#. # LOCALIZATION NOTE (likelyTimezone):
+#. #   Translators, please put the most likely timezone(s) where the people using
+#. #   your locale will be.  Use the Olson ZoneInfo timezone name *in English*,
+#. #   ie "Europe/Paris", (continent or ocean)/(largest city in timezone).
+#. #   Order does not matter, except if two historically different zones now match,
+#. #   such as America/New_York and America/Toronto, will only find first listed.
+#. #   (Particularly needed to guess the most relevant timezones if there are
+#. #    similar timezones at the same June/December GMT offsets with alphabetically
+#. #    earlier ZoneInfo timezone names.  Sample explanations for English below.)
+#. # for english-US:
+#. #   America/Los_Angeles likelier than America/Dawson
+#. #   America/New_York    likelier than America/Detroit (NY for US-EasternTime)
+#. # for english:
+#. #   Europe/London   likelier than Atlantic/Canary
+#. #   Europe/Paris    likelier than Africa/Ceuta (for WestEuropeanTime)
+#. #   America/Halifax likelier than America/Glace_Bay (Canada-AtlanticTime)
+#. #   America/Mexico_City likelier than America/Cancun
+#. #   America/Argentina/Buenos_Aires likelier than America/Araguaina
+#. #   America/Sao_Paolo (may not recognize: summer-time dates change every year)
+#. #   Asia/Singapore  likelier than Antarctica/Casey
+#. #   Asia/Tokyo      likelier than Asia/Dili
+#. #   Africa/Lagos likelier than Africa/Algiers (for WestAfricanTime)
+#. #   Africa/Johannesburg likelier than Africa/Blantyre (for SouthAfricanStdTime)
+#. #   Africa/Nairobi likelier than Africa/Addis_Ababa (for EastAfricanTime)
+#. #   Australia/Brisbane likelier than Antarctica/DumontDUrville
+#. #   Australia/Sydney likelier than Australia/Currie or Australia/Hobart
+#. #   Pacific/Auckland likelier than Antarctica/McMurdo
 #: likelyTimezone
 msgid ""
 "America/New_York, America/Chicago, America/Denver, America/Phoenix, America/"
@@ -2941,6 +4113,24 @@ msgstr "Europe/Dublin, Europe/London"
 # /etc/timezone or /etc/sysconfig/clock contains ZoneInfo timezone id).
 # - Windows: turning off "Automatically adjust clock for daylight saving time"
 # can also trigger this warning.
+#. # Guessed Timezone errors and warnings.
+#. # Testing note:
+#. # * remove preference for calendar.timezone.default in userprofile/prefs.js
+#. # * repeat
+#. #   - set OS timezone to a city (windows: click right on clock in taskbar)
+#. #   - restart: sunbird -jsconsole
+#. #   - observe guess in error console and verify whether guessed timezone city
+#. #     makes sense for OS city.
+#. #
+#. # 'Warning: Operating system timezone "E. South America Standard Time"
+#. #  no longer matches ZoneInfo timezone "America/Sao_Paulo".'
+#. # Testing notes:
+#. # - Brasil DST change dates are set every year by decree, so likely out of sync.
+#. # - Only appears on OSes from which timezone can be obtained
+#. #   (windows; or TZ env var, /etc/localtime target path, or line in
+#. #    /etc/timezone or /etc/sysconfig/clock contains ZoneInfo timezone id).
+#. # - Windows: turning off "Automatically adjust clock for daylight saving time"
+#. #   can also trigger this warning.
 #: WarningOSTZNoMatch
 msgid ""
 "Warning: Operating system timezone \"%1$S\"\n"
@@ -2954,12 +4144,19 @@ msgstr ""
 # OS uses different version of ZoneInfo database which has a timezone name
 # that is not included in our current ZoneInfo database (or if the mapping
 # mapping from windows to ZoneInfo timezone ids does).
+#. # "Skipping Operating System timezone 'Pacific/New_Country'."
+#. # Testing note: not easily testable.  May occur someday if (non-windows)
+#. # OS uses different version of ZoneInfo database which has a timezone name
+#. # that is not included in our current ZoneInfo database (or if the mapping
+#. # mapping from windows to ZoneInfo timezone ids does).
 #: SkippingOSTimezone
 msgid "Skipping Operating System timezone '%1$S'."
 msgstr "Neamhaird á tabhairt ar an gcrios ama córais '%1$S'."
 
 # "Skipping locale timezone 'America/New_Yawk'."
 # Testing note: Skipping occurs if a likelyTimezone id is unknown or misspelled.
+#. # "Skipping locale timezone 'America/New_Yawk'."
+#. # Testing note: Skipping occurs if a likelyTimezone id is unknown or misspelled.
 #: SkippingLocaleTimezone
 msgid "Skipping locale timezone '%1$S'."
 msgstr "Neamhaird á tabhairt ar an gcrios ama logchaighdeáin '%1$S'."
@@ -2967,6 +4164,9 @@ msgstr "Neamhaird á tabhairt ar an gcrios ama logchaighdeáin '%1$S'."
 # Testing note: "No match" timezones include Bucharest on W2k.
 # Brazil timezones may be "No match" (change every year, so often out of date,
 # and changes are often more than a week different).
+#. # Testing note: "No match" timezones include Bucharest on W2k.
+#. # Brazil timezones may be "No match" (change every year, so often out of date,
+#. # and changes are often more than a week different).
 #: warningUsingFloatingTZNoMatch
 msgid ""
 "Warning: Using \"floating\" timezone.\n"
@@ -2981,6 +4181,11 @@ msgstr ""
 # [rfc2445 summer daylight saving shift rules for timezone]
 # This ZoneInfo timezone almost matches/seems to match..."
 # This ZoneInfo timezone was chosen based on ... "
+#. # "Warning:  Using guessed timezone
+#. #    America/New York (UTC-0500/-0400).
+#. #    [rfc2445 summer daylight saving shift rules for timezone]
+#. #  This ZoneInfo timezone almost matches/seems to match..."
+#. #  This ZoneInfo timezone was chosen based on ... "
 #: WarningUsingGuessedTZ
 msgid ""
 "Warning:  Using guessed timezone\n"
@@ -2994,6 +4199,7 @@ msgstr ""
 "%4$S"
 
 # Testing note: "Almost match" timezones include Cairo on W2k.
+#. # Testing note: "Almost match" timezones include Cairo on W2k.
 #: TZAlmostMatchesOSDifferAtMostAWeek
 msgid ""
 "This ZoneInfo timezone almost matches the operating system timezone.\n"
@@ -3018,6 +4224,9 @@ msgstr ""
 "Is cosúil go gcomhoiriúnaíonn an crios ama seo le crios ama an chórais i "
 "mbliana."
 
+#. # LOCALIZATION NOTE (TZFromOS):
+#. # used for a display of a chosen timezone
+#. #    %1$S will be replaced with the name of a timezone
 #: TZFromOS
 msgid ""
 "This ZoneInfo timezone was chosen based on the operating system timezone\n"
@@ -3027,6 +4236,7 @@ msgstr ""
 "chórais \"%1$S\"."
 
 # Localization note (TZFromLocale): Substitute name of your locale language.
+#. # Localization note (TZFromLocale): Substitute name of your locale language.
 #: TZFromLocale
 msgid ""
 "This ZoneInfo timezone was chosen based on matching the operating system\n"
@@ -3044,6 +4254,7 @@ msgstr ""
 "a chomhoiriúint leis na criosanna ama aitheanta in ord aibítreach a n-"
 "aitheantóirí creasa ama."
 
+#. # Print Layout
 #: formatListName
 msgid "List"
 msgstr "Liosta"
@@ -3076,6 +4287,48 @@ msgstr "Cathain"
 msgid "%1$S (completed)"
 msgstr "%1$S (críochnaithe)"
 
+#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Categories
+#. #-#-#-#-#  chromecalendarpreferencescategories.dtd.po (firefox)  #-#-#-#-#
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Mozilla Calendar Preferences
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Matthew Willis
+#. - Portions created by the Initial Developer are Copyright (C) 2006
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Cédric Corazza <cedric.corazza@wanadoo.fr>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. WARNING! This file contains UTF-8 encoded characters!
+#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
+#. - your editor isn't using UTF-8 encoding and may munge up the document!
 #: addCategory pref.categories.add.title
 msgid "Add Category"
 msgstr "Cuir Catagóir Leis"
@@ -3088,6 +4341,10 @@ msgstr "Inné"
 msgid "Events and Tasks"
 msgstr "Imeachtaí agus Tascanna"
 
+#: tasksonly
+msgid "Tasks"
+msgstr "Tascanna"
+
 #: shortcalendarweek
 msgid "CW"
 msgstr "SF"
@@ -3096,17 +4353,30 @@ msgstr "SF"
 msgid "Go"
 msgstr "Ar Aghaidh"
 
-# Some languages have different conjugations of 'next' and 'last'.  If yours
-# does not, simply repeat the value.  This will be used with day names, as in
-# 'next Sunday'.
-#: next1 next2
+#. # Some languages have different conjugations of 'next' and 'last'.  If yours
+#. # does not, simply repeat the value.  This will be used with day names, as in
+#. # 'next Sunday'.
+#: next1
+msgctxt "next1"
 msgid "next"
-msgstr "seo chugainn"
+msgstr ""
 
-#: last1 last2
+#: next2
+msgctxt "next2"
+msgid "next"
+msgstr ""
+
+#: last1
+msgctxt "last1"
 msgid "last"
-msgstr "deireadh"
+msgstr ""
 
+#: last2
+msgctxt "last2"
+msgid "last"
+msgstr ""
+
+#. # Master Password
 #: changeMasterPassword
 msgid "Change Master Password…"
 msgstr "Athraigh Príomhfhocal Faire…"
@@ -3122,8 +4392,14 @@ msgstr ""
 msgid "Password Change Failed"
 msgstr "Theip ar athrú an fhocail faire."
 
-# Check for Updates
-#: updatesItem_default updatesItem_defaultFallback
+#. # Check for Updates     (SUNBIRD_ONLY)
+#: updatesItem_default
+msgctxt "updatesItem_default"
+msgid "Check for Updates…"
+msgstr "Lorg Nuashonruithe…"
+
+#: updatesItem_defaultFallback
+msgctxt "updatesItem_defaultFallback"
 msgid "Check for Updates…"
 msgstr "Lorg Nuashonruithe…"
 
@@ -3143,30 +4419,51 @@ msgstr "Lean le híosluchtú %S…"
 msgid "Resume Downloading Update…"
 msgstr "Lean le híosluchtú an nuashonraithe…"
 
-#: updatesItem_pending updatesItem_pendingFallback
+#: updatesItem_pending
+msgctxt "updatesItem_pending"
+msgid "Apply Downloaded Update Now…"
+msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois…"
+
+#: updatesItem_pendingFallback
+msgctxt "updatesItem_pendingFallback"
 msgid "Apply Downloaded Update Now…"
 msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois…"
 
 # Alarm Dialog
 # LOCALIZATION NOTE (alarmWindowTitle.label): Semi-colon list of plural
 # forms. See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # Alarm Dialog
+#. # LOCALIZATION NOTE (alarmWindowTitle.label): Semi-colon list of plural
+#. # forms. See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
 #: alarmWindowTitle.label
 msgid "#1 Reminder;#1 Reminders"
 msgstr ""
 "#1 Mheabhrúchán;#1 Mheabhrúchán;#1 Mheabhrúchán;#1 Meabhrúchán;#1 Meabhrúchán"
 
+#. # LOCALIZATION NOTE (alarmStarts):
+#. # used for a display the start of an alarm like 'Starts:  Thu 2 Oct 2008 13:21'
+#. #    %1$S will be replaced with a date-time
 #: alarmStarts
 msgid "Starts: %1$S"
 msgstr "Tús: %1$S"
 
+#. # LOCALIZATION NOTE (alarmTodayAt):
+#. # used for a display the date-time of an alarm like 'Today at Thu 2 Oct 2008 13:21'
+#. #    %1$S will be replaced with a date-time
 #: alarmTodayAt
 msgid "Today at %1$S"
 msgstr "Inniu ag %1$S"
 
+#. # LOCALIZATION NOTE (alarmTomorrowAt):
+#. # used for a display the date-time of an alarm like 'Tomorrow at Thu 2 Oct 2008 13:21'
+#. #    %1$S will be replaced with a date-time
 #: alarmTomorrowAt
 msgid "Tomorrow at %1$S"
 msgstr "Amárach ag %1$S"
 
+#. # LOCALIZATION NOTE (alarmYesterdayAt):
+#. # used for a display the date-time of an alarm like 'Yesterday at Thu 2 Oct 2008 13:21'
+#. #    %1$S will be replaced with a date-time
 #: alarmYesterdayAt
 msgid "Yesterday at %1$S"
 msgstr "Inné ag %1$S"
@@ -3175,6 +4472,10 @@ msgstr "Inné ag %1$S"
 # LOCALIZATION NOTE: These strings do not get displayed. They are only visible
 # when exporting an item with i.e a DISPLAY alarm, that doesn't have a
 # description set, or an EMAIL alarm that doesn't have a summary set.
+#. # Alarm interface strings
+#. # LOCALIZATION NOTE: These strings do not get displayed. They are only visible
+#. # when exporting an item with i.e a DISPLAY alarm, that doesn't have a
+#. # description set, or an EMAIL alarm that doesn't have a summary set.
 #: alarmDefaultDescription
 msgid "Default Mozilla Description"
 msgstr "Cur Síos Réamhshocraithe Mozilla"
@@ -3183,6 +4484,7 @@ msgstr "Cur Síos Réamhshocraithe Mozilla"
 msgid "Default Mozilla Summary"
 msgstr "Achoimre Réamhshocraithe Mozilla"
 
+#. # offline support strings (SUNBIRD ONLY)
 #: offlineTooltip
 msgid "You are currently offline."
 msgstr "Tá tú as líne faoi láthair."
@@ -3191,38 +4493,76 @@ msgstr "Tá tú as líne faoi láthair."
 msgid "You are currently online."
 msgstr "Tá tú ar líne faoi láthair."
 
+#: taskDetailsStatusNeedsAction
+msgctxt "taskDetailsStatusNeedsAction"
+msgid "Needs Action"
+msgstr ""
+
+#. # LOCALIZATION NOTE (taskDetailsStatusInProgress):
+#. # used for a display of how much of a task is completed '25% Complete'
+#. #    %1$S will be replaced with the number of percentage completed
 #: taskDetailsStatusInProgress
 msgid "%1$S%% Complete"
 msgstr "%1$S%% Críochnaithe"
 
+#: taskDetailsStatusCompleted
+msgctxt "taskDetailsStatusCompleted"
+msgid "Completed"
+msgstr ""
+
+#. # LOCALIZATION NOTE (taskDetailsStatusCompletedOn):
+#. # used for a display of completion date like 'Completed on Thu 2 Oct 2008 13:21'
+#. #    %1$S will be replaced with the completion date-time of the task
 #: taskDetailsStatusCompletedOn
 msgid "Completed on %1$S"
 msgstr "Críochnaithe ar %1$S"
+
+#: taskDetailsStatusCancelled
+msgctxt "taskDetailsStatusCancelled"
+msgid "Canceled"
+msgstr ""
 
 #: gettingCalendarInfoCommon
 msgid "Checking Calendars…"
 msgstr "Féilirí á Seiceáil…"
 
+#. # LOCALIZATION NOTE (gettingCalendarInfoDetail):
+#. # used for a progress-display of processed like 'Checking Calendar 5 of 10'
+#. #    %1$S will be replaced with the index of the currently processed calendar
+#. #    %2$S will be replaced with the total numbers of calendars
 #: gettingCalendarInfoDetail
 msgid "Checking Calendar %1$S of %2$S"
 msgstr "Féilire %1$S de %2$S á seiceáil"
 
+#. # LOCALIZATION NOTE (errorCode):
+#. #    %1$S will be replaced with the number of an error code
 #: errorCode
 msgid "Error code: %1$S"
 msgstr "Cód earráide: %1$S"
 
+#. # LOCALIZATION NOTE (errorDescription):
+#. #    %1$S will be replaced with the description of an error
 #: errorDescription
 msgid "Description: %1$S"
 msgstr "Cur Síos: %1$S"
 
+#. # LOCALIZATION NOTE (errorWriting):
+#. # used for an message like 'An error occurred when writing to the calendar Home!'
+#. #    %1$S will be replaced with the name of a calendar
 #: errorWriting
 msgid "An error occurred when writing to the calendar %1$S!"
 msgstr "Tharla earráid agus féilire %1$S á scríobh!"
 
+#. # LOCALIZATION NOTE (tooltipCalendarDisabled):
+#. # used for an alert-message like 'The calendar Home is momentarily not available'
+#. #    %1$S will be replaced with the name of a calendar
 #: tooltipCalendarDisabled
 msgid "The calendar %1$S is momentarily not available"
 msgstr "Níl féilire %1$S ar fáil faoi láthair"
 
+#. # LOCALIZATION NOTE (tooltipCalendarReadOnly):
+#. # used for an message like 'The calendar Home is readonly'
+#. #    %1$S will be replaced with the name of a calendar
 #: tooltipCalendarReadOnly
 msgid "The calendar %1$S is readonly"
 msgstr "Tá féilire %1$S inléite amháin"
@@ -3239,6 +4579,11 @@ msgstr "Roghnaigh Féilire Inscríofa"
 msgid "Please Select a Calendar that Supports Tasks"
 msgstr "Roghnaigh féilire a thacaíonn le tascanna le do thoil"
 
+#: eventDetailsStartDate
+msgctxt "eventDetailsStartDate"
+msgid "Start:"
+msgstr ""
+
 #: eventDetailsEndDate
 msgid "End:"
 msgstr "Deireadh:"
@@ -3253,14 +4598,25 @@ msgstr "Dáta Dlite:"
 
 # # LOCALIZATION NOTE (cityAndStateNoZip):
 # # %1$S is city, %2$S is state
+#. # LOCALIZATION NOTE (datetimeWithTimezone):
+#. # used for a display of a date-time with timezone 'Thu 2 Oct 2008 13:21', Europe/Paris
+#. #    %1$S will be replaced with the completion date-time
+#. #    %2$S will be replaced with the name of the timezone
 #: datetimeWithTimezone
 msgid "%1$S, %2$S"
 msgstr "%1$S, %2$S"
 
+#. # LOCALIZATION NOTE (singleLongCalendarWeek):
+#. # used for display of calendar weeks in short form like 'Calendar Week 43'
+#. #    %1$S will be replaced with the index of the week
 #: singleLongCalendarWeek
 msgid "Calendar Week: %1$S"
 msgstr "Seachtain an Fhéilire: %1$S"
 
+#. # LOCALIZATION NOTE (severalLongCalendarWeeks):
+#. # used for display of calendar weeks in short form like 'Calendar Weeks 43 - 45'
+#. #    %1$S will be replaced with the index of the start-week
+#. #    %2$S will be replaced with the index of the end-week
 #: severalLongCalendarWeeks
 msgid "Calendar Weeks %1$S-%2$S"
 msgstr "Seachtainí an Fhéilire %1$S-%2$S"
@@ -3268,6 +4624,9 @@ msgstr "Seachtainí an Fhéilire %1$S-%2$S"
 # LOCALIZATION NOTE (shortCalendarWeek):
 # used for display of calendar weeks in short form like 'CW 43'
 # %1$S will be replaced with the index of the week
+#. # LOCALIZATION NOTE (singleShortCalendarWeek):
+#. # used for display of calendar weeks in short form like 'CW 43'
+#. #    %1$S will be replaced with the index of the week
 #: singleShortCalendarWeek
 msgid "CW: %1$S"
 msgstr "SF: %1$S"
@@ -3276,13 +4635,30 @@ msgstr "SF: %1$S"
 # used for display of calendar weeks in short form like 'CWs 43 - 45'
 # %1$S will be replaced with the index of the start-week
 # %2$S will be replaced with the index of the end-week
+#. # LOCALIZATION NOTE (severalShortCalendarWeeks):
+#. # used for display of calendar weeks in short form like 'CWs 43 - 45'
+#. #    %1$S will be replaced with the index of the start-week
+#. #    %2$S will be replaced with the index of the end-week
 #: severalShortCalendarWeeks
 msgid "CWs: %1$S-%2$S"
 msgstr "SF: %1$S-%2$S"
 
+#: dueInHours
+msgid "#1 hour;#1 hours"
+msgstr "#1 uair;#1 uair;#1 uaire;#1 n-uaire;#1 uair"
+
 #: dueInLessThanOneHour
 msgid "< 1 hour"
 msgstr "< 1 uair"
+
+#. # LOCALIZATION NOTE (monthInYear):
+#. # used for display of Month-dates like 'December 2008'
+#. #    %1$S will be replaced with name of the month
+#. #    %2$S will be replaced with the year
+#: monthInYear
+msgctxt "monthInYear"
+msgid "%1$S %2$S"
+msgstr ""
 
 # LOCALIZATION NOTE (dayIntervalInMonth):
 # used for display of intervals in the form of 'March 3 - 9, 2008'
@@ -3290,6 +4666,12 @@ msgstr "< 1 uair"
 # %2$S will be replaced with the day-index of the start date
 # %3$S will be replaced with the day-index of the end date
 # %4$S will be replaced with the common year of both dates
+#. # LOCALIZATION NOTE (dayIntervalInMonth):
+#. # used for display of intervals in the form of 'March 3 - 9, 2008'
+#. #    %1$S will be replaced with name of the month of the start date
+#. #    %2$S will be replaced with the day-index of the start date
+#. #    %3$S will be replaced with the day-index of the end date
+#. #    %4$S will be replaced with the common year of both dates
 #: dayIntervalInMonth
 msgid "%1$S %2$S – %3$S, %4$S"
 msgstr "%2$S – %3$S %1$S, %4$S"
@@ -3301,6 +4683,13 @@ msgstr "%2$S – %3$S %1$S, %4$S"
 # %3$S will be replaced with name of the month of the end date
 # %4$S will be replaced with the day-index of the end date
 # %5$S will be replaced with the commmon year of both dates
+#. # LOCALIZATION NOTE (dayIntervalBetweenMonths):
+#. # used for display of intervals in the form 'September 29 - October 5, 2008'
+#. #    %1$S will be replaced with name of the month of the start date
+#. #    %2$S will be replaced with the day-index of the start date
+#. #    %3$S will be replaced with name of the month of the end date
+#. #    %4$S will be replaced with the day-index of the end date
+#. #    %5$S will be replaced with the commmon year of both dates
 #: dayIntervalBetweenMonths
 msgid "%1$S %2$S – %3$S %4$S, %5$S"
 msgstr "%2$S %1$S – %4$S %3$S, %5$S"
@@ -3313,9 +4702,27 @@ msgstr "%2$S %1$S – %4$S %3$S, %5$S"
 # %4$S will be replaced with name of the month of the end date
 # %5$S will be replaced with the day-index of the end date
 # %6$S will be replaced with the year of the end date
+#. # LOCALIZATION NOTE (dayIntervalBetweenYears):
+#. # used for display of intervals in the form 'December 29, 2008 - January 4, 2009'
+#. #    %1$S will be replaced with name of the month of the start date
+#. #    %2$S will be replaced with the day-index of the start date
+#. #    %3$S will be replaced with the year of the start date
+#. #    %4$S will be replaced with name of the month of the end date
+#. #    %5$S will be replaced with the day-index of the end date
+#. #    %6$S will be replaced with the year of the end date
 #: dayIntervalBetweenYears
 msgid "%1$S %2$S, %3$S – %4$S %5$S, %6$S"
 msgstr "%2$S %1$S, %3$S – %5$S %4$S, %6$S"
+
+#. # LOCALIZATION NOTE (datetimeIntervalOnSameDateTime):
+#. # used for intervals where end is equals to start
+#. # displayed form is '5 Jan 2006 13:00'
+#. #    %1$S will be replaced with the date of the start date
+#. #    %2$S will be replaced with the time of the start date
+#: datetimeIntervalOnSameDateTime
+msgctxt "datetimeIntervalOnSameDateTime"
+msgid "%1$S %2$S"
+msgstr ""
 
 # LOCALIZATION NOTE (datetimeIntervalOnSameDay):
 # used for intervals where end is on the same day as start, so we can leave out the
@@ -3324,6 +4731,13 @@ msgstr "%2$S %1$S, %3$S – %5$S %4$S, %6$S"
 # %1$S will be replaced with the date of the start date
 # %2$S will be replaced with the time of the start date
 # %3$S will be replaced with the time of the end date
+#. # LOCALIZATION NOTE (datetimeIntervalOnSameDay):
+#. # used for intervals where end is on the same day as start, so we can leave out the
+#. # end date but still include end time
+#. # displayed form is '5 Jan 2006 13:00 - 17:00'
+#. #    %1$S will be replaced with the date of the start date
+#. #    %2$S will be replaced with the time of the start date
+#. #    %3$S will be replaced with the time of the end date
 #: datetimeIntervalOnSameDay
 msgid "%1$S %2$S – %3$S"
 msgstr "%1$S %2$S – %3$S"
@@ -3335,6 +4749,13 @@ msgstr "%1$S %2$S – %3$S"
 # %2$S will be replaced with the time of the start date
 # %3$S will be replaced with the date of the end date
 # %4$S will be replaced with the time of the end date
+#. # LOCALIZATION NOTE (datetimeIntervalOnSeveralDays):
+#. # used for intervals spanning multiple days by including date and time
+#. # displayed form is '5 Jan 2006 13:00 - 7 Jan 2006 9:00'
+#. #    %1$S will be replaced with the date of the start date
+#. #    %2$S will be replaced with the time of the start date
+#. #    %3$S will be replaced with the date of the end date
+#. #    %4$S will be replaced with the time of the end date
 #: datetimeIntervalOnSeveralDays
 msgid "%1$S %2$S – %3$S %4$S"
 msgstr "%1$S %2$S – %3$S %4$S"
@@ -3342,6 +4763,9 @@ msgstr "%1$S %2$S – %3$S %4$S"
 # LOCALIZATION NOTE (datetimeIntervalTaskWithoutDate):
 # used for task without start and due date
 # (showed only in exported calendar in Html format)
+#. # LOCALIZATION NOTE (datetimeIntervalTaskWithoutDate):
+#. # used for task without start and due date
+#. # (showed only in exported calendar in Html format)
 #: datetimeIntervalTaskWithoutDate
 msgid "no start or due date"
 msgstr "Níl dáta tosaithe ná spriocdháta ann"
@@ -3352,6 +4776,12 @@ msgstr "Níl dáta tosaithe ná spriocdháta ann"
 # (showed only in exported calendar in Html format)
 # %1$S will be replaced with the date of the start date
 # %2$S will be replaced with the time of the start date
+#. # LOCALIZATION NOTE (datetimeIntervalTaskWithoutDueDate):
+#. # used for intervals in task with only start date
+#. # displayed form is 'start date 5 Jan 2006 13:00'
+#. # (showed only in exported calendar in Html format)
+#. #    %1$S will be replaced with the date of the start date
+#. #    %2$S will be replaced with the time of the start date
 #: datetimeIntervalTaskWithoutDueDate
 msgid "start date %1$S %2$S"
 msgstr "dáta tosaigh %1$S %2$S"
@@ -3362,6 +4792,12 @@ msgstr "dáta tosaigh %1$S %2$S"
 # (showed only in exported calendar in Html format)
 # %1$S will be replaced with the date of the due date
 # %2$S will be replaced with the time of the due date
+#. # LOCALIZATION NOTE (datetimeIntervalTaskWithoutStartDate):
+#. # used for intervals in task with only due date
+#. # displayed form is 'due date 5 Jan 2006 13:00'
+#. # (showed only in exported calendar in Html format)
+#. #    %1$S will be replaced with the date of the due date
+#. #    %2$S will be replaced with the time of the due date
 #: datetimeIntervalTaskWithoutStartDate
 msgid "due date %1$S %2$S"
 msgstr "dáta dlite %1$S %2$S"
@@ -3374,15 +4810,19 @@ msgstr "Scrios Tasc"
 msgid "Do you really want to delete this Task?"
 msgstr "An bhfuil tú cinnte gur mhaith leat an Tasc seo a scriosadh?"
 
-# Ctrl+i is highlights URL for opening
-#: deleteTaskAccesskey deleteItemAccesskey deleteEventAccesskey
-#: pref.calendar.advanced.encryption.certs.auto.accesskey
+#: deleteTaskAccesskey
+msgctxt "deleteTaskAccesskey"
 msgid "l"
-msgstr "l"
+msgstr ""
 
 #: deleteItemMessage
 msgid "Do you really want to delete this Item?"
 msgstr "An bhfuil tú cinnte gur mhaith leat an Mhír seo a scriosadh?"
+
+#: deleteItemAccesskey
+msgctxt "deleteItemAccesskey"
+msgid "l"
+msgstr ""
 
 #: deleteEventLabel
 msgid "Delete Event"
@@ -3391,6 +4831,11 @@ msgstr "Scrios Imeacht"
 #: deleteEventMessage
 msgid "Do you really want to delete this Event?"
 msgstr "An bhfuil tú cinnte gur mhaith leat an tImeacht seo a scriosadh?"
+
+#: deleteEventAccesskey
+msgctxt "deleteEventAccesskey"
+msgid "l"
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -3429,6 +4874,42 @@ msgstr "An bhfuil tú cinnte gur mhaith leat an tImeacht seo a scriosadh?"
 # - ***** END LICENSE BLOCK *****
 #
 # Calendar Subscriptions Dialog
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Sun Microsystems code.
+#. -
+#. - The Initial Developer of the Original Code is Sun Microsystems.
+#. - Portions created by the Initial Developer are Copyright (C) 2008
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Thomas Benisch <thomas.benisch@sun.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. Calendar Subscriptions Dialog
 #: calendar.subscriptions.dialog.title
 msgid "Subscribe Calendars"
 msgstr "Liostáil le Féilirí"
@@ -3463,6 +4944,7 @@ msgid "No matches found."
 msgstr "Níor aimsíodh aon rud."
 
 # default categories
+#. # default categories
 #: categories2
 msgid ""
 "Anniversary,Birthday,Business,Calls,Clients,Competition,Customer,Favorites,"
@@ -3488,6 +4970,11 @@ msgstr "Már"
 #: month.4.Mmm
 msgid "Apr"
 msgstr "Aib"
+
+#: month.5.Mmm
+msgctxt "month.5.Mmm"
+msgid "May"
+msgstr "Bea"
 
 #: month.6.Mmm
 msgid "Jun"
@@ -3517,6 +5004,43 @@ msgstr "Sam"
 msgid "Dec"
 msgstr "Nol"
 
+#: month.5.name
+msgctxt "month.5.name"
+msgid "May"
+msgstr "Bealtaine"
+
+#: day.1.name
+msgid "Sunday"
+msgstr "Domhnach"
+
+#: day.2.name
+msgid "Monday"
+msgstr "Luan"
+
+#: day.3.name
+msgid "Tuesday"
+msgstr "Máirt"
+
+#: day.4.name
+msgid "Wednesday"
+msgstr "Céadaoin"
+
+#: day.5.name
+msgid "Thursday"
+msgstr "Déardaoin"
+
+#: day.6.name
+msgid "Friday"
+msgstr "Aoine"
+
+#: day.7.name
+msgid "Saturday"
+msgstr "Satharn"
+
+#. #-#-#-#-#  chromecalendarglobal.dtd.po (firefox)  #-#-#-#-#
+#. Day Names
+#. LOCALIZATION NOTE : Accesskeys for day.1.Ddd to day.7.Ddd are currently
+#. only used in Preferences > Views > Workweek groupbox
 #: day.1.Mmm day.1.Ddd
 msgid "Sun"
 msgstr "Domh"
@@ -3546,6 +5070,7 @@ msgid "Sat"
 msgstr "Sath"
 
 # Can someone tell me why were not counting from zero?
+#. # Can someone tell me why we're not counting from zero?
 #: day.1.short
 msgid "Su"
 msgstr "Do"
@@ -3573,6 +5098,114 @@ msgstr "A"
 #: day.7.short
 msgid "Sa"
 msgstr "S"
+
+#: day.3.number
+msgid "3"
+msgstr "3"
+
+#: day.4.number
+msgid "4"
+msgstr "4"
+
+#: day.6.number
+msgid "6"
+msgstr "6"
+
+#: day.8.number
+msgid "8"
+msgstr "8"
+
+#: day.9.number
+msgid "9"
+msgstr "9"
+
+#: day.10.number
+msgid "10"
+msgstr ""
+
+#: day.11.number
+msgid "11"
+msgstr ""
+
+#: day.12.number
+msgid "12"
+msgstr ""
+
+#: day.13.number
+msgid "13"
+msgstr ""
+
+#: day.14.number
+msgid "14"
+msgstr ""
+
+#: day.15.number
+msgid "15"
+msgstr ""
+
+#: day.16.number
+msgid "16"
+msgstr ""
+
+#: day.17.number
+msgid "17"
+msgstr ""
+
+#: day.18.number
+msgid "18"
+msgstr ""
+
+#: day.19.number
+msgid "19"
+msgstr ""
+
+#: day.20.number
+msgid "20"
+msgstr ""
+
+#: day.21.number
+msgid "21"
+msgstr ""
+
+#: day.22.number
+msgid "22"
+msgstr ""
+
+#: day.23.number
+msgid "23"
+msgstr ""
+
+#: day.24.number
+msgid "24"
+msgstr ""
+
+#: day.25.number
+msgid "25"
+msgstr ""
+
+#: day.26.number
+msgid "26"
+msgstr ""
+
+#: day.27.number
+msgid "27"
+msgstr ""
+
+#: day.28.number
+msgid "28"
+msgstr ""
+
+#: day.29.number
+msgid "29"
+msgstr ""
+
+#: day.30.number
+msgid "30"
+msgstr ""
+
+#: day.31.number
+msgid "31"
+msgstr ""
 
 #: noon time.noon
 msgid "Noon"
@@ -3613,6 +5246,42 @@ msgstr "Meán Lae"
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. #-#-#-#-#  chromecalendarglobal.dtd.po (firefox)  #-#-#-#-#
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is OEone Calendar Code, released October 31st, 2001.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s): Garth Smedley <garths@oeone.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: midnight time.midnight
 msgid "Midnight"
 msgstr "Meán Oíche"
@@ -3620,6 +5289,10 @@ msgstr "Meán Oíche"
 #: AllDay
 msgid "All Day"
 msgstr "I Rith an Lae"
+
+#: Repeating
+msgid "(Repeating)"
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -3656,6 +5329,41 @@ msgstr "I Rith an Lae"
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Sun Microsystems code.
+#. -
+#. - The Initial Developer of the Original Code is
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. - Portions created by the Initial Developer are Copyright (C) 2008-2009
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: reminderdialog.title
 msgid "Set up Reminders"
 msgstr "Socraigh Meabhrúcháin"
@@ -3701,13 +5409,11 @@ msgstr "uaire"
 msgid "days"
 msgstr "lá"
 
-#: day.2.Ddd.accesskey minimizeWindow.key sunbird.monthview.accesskey
-#: sunbird.maintoolbar.accesskey Mega
+#: day.2.Ddd.accesskey minimizeWindow.key Mega
 msgid "M"
 msgstr "B"
 
-#: day.3.Ddd.accesskey event.new.todo.key event.new.todo.accesskey
-#: event.delete.tasks.accesskey
+#: day.3.Ddd.accesskey event.delete.tasks.accesskey
 msgid "T"
 msgstr "T"
 
@@ -3716,6 +5422,11 @@ msgstr "T"
 msgid "h"
 msgstr "h"
 
+#: day.6.Ddd.accesskey sunbird.find.key
+msgid "F"
+msgstr "F"
+
+#. Units
 #: calendar.global.units.minute
 msgid "minute"
 msgstr "nóiméad"
@@ -3736,13 +5447,74 @@ msgstr "Lá Amháin Siar"
 msgid "Show events for selected day"
 msgstr "Taispeáin imeachtaí an lae roghnaithe"
 
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is OEone Calendar Code, released October 31st, 2001.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s): Garth Smedley <garths@oeone.com>
+#. -                 Mike Potter <mikep@oeone.com>
+#. -                 Chris Charabaruk <coldacid@meldstar.com>
+#. -                 Matthew Willis <mattwillis@gmail.com>
+#. -                 Stefan Sitter <ssitter@googlemail.com>
+#. -                 Berend Cornelius <berend.cornelius@sun.com>
+#. -                 Philipp Kewisch <mozilla@kewis.ch>
+#. -                 Simon Paquet <bugzilla@babylonsounds.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. Event Menu
 #: event.new.event
 msgid "New Event…"
 msgstr "Imeacht Nua…"
 
-#: event.new.todo
+#: event.new.event.key
+msgctxt "event.new.event.key"
+msgid "N"
+msgstr ""
+
+#: event.new.event.accesskey
+msgctxt "event.new.event.accesskey"
+msgid "N"
+msgstr ""
+
+#: event.new.task
 msgid "New Task…"
 msgstr "Tasc Nua…"
+
+#: event.new.task.key Kilo
+msgid "K"
+msgstr "K"
+
+#: event.new.task.accesskey
+msgid "k"
+msgstr "k"
 
 #: calendar.new.server.label calendar.new.server.accesskey
 msgid "New Ca&lendar…"
@@ -3756,6 +5528,10 @@ msgstr "&Priontáil…"
 #: calendar.import.label calendar.import.accesskey
 msgid "&Import…"
 msgstr "&Iompórtáil…"
+
+#: calendar.import.key lightning.keys.event.new
+msgid "I"
+msgstr "I"
 
 #: calendar.export.label calendar.export.accesskey
 msgid "&Export…"
@@ -3849,6 +5625,41 @@ msgstr "Airíonna an &Fhéilire…"
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Calendar migration code.
+#. -
+#. - The Initial Developer of the Original Code is
+#. -   Joey Minta <jminta@gmail.com>
+#. - Portions created by the Initial Developer are Copyright (C) 2006
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: migration.title
 msgid "&brandFullName;: Data Import"
 msgstr "&brandFullName;: Iompórtáil Sonraí"
@@ -3882,6 +5693,8 @@ msgstr "%1$S á tiontú..."
 
 # The next two lines are duplicated from migration.dtd until there is branding
 # for lightning
+#. # The next two lines are duplicated from migration.dtd until there is branding
+#. # for lightning
 #: migrationTitle
 msgid "%1$S: Data Import"
 msgstr "%1$S: Iompórtáil Sonraí"
@@ -3963,6 +5776,7 @@ msgstr "Criptiúchán"
 # - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
 # - your editor isn't using UTF-8 encoding and may munge up the document!
 #
+#. General
 #: pref.calendar.advanced.showConnections.label
 #: pref.calendar.advanced.showConnections.accesskey
 msgid "C&onnection Settings…"
@@ -3985,6 +5799,7 @@ msgid "g"
 msgstr "C"
 
 # Passwords
+#. Passwords
 #: pref.calendar.advanced.savedPasswords.intro
 msgid ""
 "&brandShortName; can remember password information for all of your calendars "
@@ -4016,6 +5831,7 @@ msgstr "Athraigh an &Príomhfhocal Faire…"
 msgid "&View Saved Passwords…"
 msgstr "&Taispeáin Focail Fhaire a Sábháladh…"
 
+#. Update
 #: pref.calendar.advanced.update.autoCheck.label
 msgid "Automatically check for updates to:"
 msgstr "Déan nuashonruithe a lorg go huathoibríoch i gcomhair:"
@@ -4057,6 +5873,7 @@ msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 msgid "Show &Update History…"
 msgstr "Taispeáin Stair na N&uashonruithe…"
 
+#. Encryption
 #: pref.calendar.advanced.encryption.protocols.label
 msgid "Protocols"
 msgstr "Prótacail"
@@ -4084,6 +5901,11 @@ msgstr "Nuair atá freastalaí ag iarraidh mo theastas pearsanta:"
 #: pref.calendar.advanced.encryption.certs.auto
 msgid "Select one automatically"
 msgstr "Roghnaigh go huathoibríoch"
+
+# Ctrl+i is highlights URL for opening
+#: pref.calendar.advanced.encryption.certs.auto.accesskey
+msgid "l"
+msgstr "l"
 
 #: pref.calendar.advanced.encryption.certs.ask
 msgid "Ask me every time"
@@ -4113,6 +5935,45 @@ msgstr "&Bailíochtú"
 msgid "Securit&y Devices"
 msgstr "&Gléasanna Slándála"
 
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Mozilla Calendar Preferences
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Matthew Willis
+#. - Portions created by the Initial Developer are Copyright (C) 2006
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Cédric Corazza <cedric.corazza@wanadoo.fr>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. WARNING! This file contains UTF-8 encoded characters!
+#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
+#. - your editor isn't using UTF-8 encoding and may munge up the document!
 #: pref.alarmgoesoff.label
 msgid "When an alarm goes off:"
 msgstr "Nuair a thabharfar aláram:"
@@ -4167,11 +6028,11 @@ msgstr "Aláram réamhshocraithe do th&ascanna:"
 
 #: pref.alarm.on
 msgid "On"
-msgstr "Ar Siúl"
+msgstr "Ann"
 
 #: pref.alarm.off
 msgid "Off"
-msgstr "Múchta"
+msgstr "As"
 
 #: pref.defalarmlen4events.label pref.defalarmlen4events.accesskey
 msgid "Defa&ult time an alarm goes off before an event:"
@@ -4231,17 +6092,54 @@ msgstr "Rabhadh: Ainm dúblach"
 msgid "You must enter a category name."
 msgstr "Caithfidh tú ainm a chur ar an chatagóir."
 
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is the Firefox Preferences System.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Ben Goodger.
+#. - Portions created by the Initial Developer are Copyright (C) 2005
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. WARNING! This file contains UTF-8 encoded characters!
+#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
+#. - your editor isn't using UTF-8 encoding and may munge up the document!
 #: connectionsDialog.title
 msgid "Connection Settings"
 msgstr "Socruithe Ceangail"
 
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
 #: window.width
-msgid ""
-"_: Do not translate this.  Only change the numeric values if you need this "
-"dialogue box to appear bigger.\n"
-"37em"
+msgid "37em"
 msgstr "37em"
 
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
 #: window.macWidth
 msgid "39em"
 msgstr "39em"
@@ -4316,6 +6214,45 @@ msgstr "Sampla: .mozilla.org, .net.nz, 192.168.1.0/24"
 msgid "Use this pro&xy server for all protocols"
 msgstr "Úsái&d an seachfhreastalaí seo do gach prótacal"
 
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Mozilla Calendar Preferences
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Matthew Willis
+#. - Portions created by the Initial Developer are Copyright (C) 2006
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Cédric Corazza <cedric.corazza@wanadoo.fr>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. WARNING! This file contains UTF-8 encoded characters!
+#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
+#. - your editor isn't using UTF-8 encoding and may munge up the document!
 #: pref.mainbox.label
 msgid "General Settings"
 msgstr "Socruithe Ghinearálta"
@@ -4352,14 +6289,17 @@ msgstr "&Athnuaigh féilirí gach"
 msgid "&brandShortName; Preferences"
 msgstr "Sainroghanna &brandShortName;"
 
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
 #: prefWindow.styleWin
 msgid "width: 47em; height: 37em;"
 msgstr "width: 52em; height: 41em;"
 
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
 #: prefWindow.styleMac
 msgid "width: 47em;"
 msgstr "width: 58em;"
 
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
 #: prefWindow.styleGNOME
 msgid "width: 47em; height: 34.5em;"
 msgstr "width: 52em; height: 37.5em;"
@@ -4423,6 +6363,46 @@ msgstr "Ardroghanna"
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Mozilla Calendar Preferences
+#. -
+#. - The Initial Developer of the Original Code is
+#. - OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Mike Potter <mikep@oeone.com>
+#. -   ArentJan Banck <ajbanck@planet.nl>
+#. -   Eric Belhaire <belhaire@ief.u-psud.fr>
+#. -   Matthew Willis <lilmatt@mozilla.com>
+#. -   Daniel Boelzle <daniel.boelzle@sun.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: pref.calendar.timezones.list.caption
 msgid "Select the closest city in your timezone:"
 msgstr "Roghnaigh an chathair is gaire i do chrios ama:"
@@ -4537,6 +6517,41 @@ msgstr "6 seachtaine"
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Google Calendar Provider code.
+#. -
+#. - The Initial Developer of the Original Code is
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. - Portions created by the Initial Developer are Copyright (C) 2006
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: gdata-provider.label
 msgid "Google Calendar"
 msgstr "Féilire Google"
@@ -4586,6 +6601,15 @@ msgstr "Seol Teachtaireacht Téacs"
 # that the phrase "Google Calendar" should be localized just as it is on the
 # localized versions of the Google Calendar UI.
 # Extension Manager strings
+#. # If you wish to be mentioned as a translator, please make sure your name and
+#. # email is in the licence block as a contributor. Multiple names are fine too.
+#. # extension information.
+#. # When localizing, please keep in mind that these strings had to be approved by
+#. # the Google Brand Features Team. Be sure to make clear that this extension is
+#. # *FOR* Google Calendar and not *BY* Google. Also, it was explicitly stated,
+#. # that the phrase "Google Calendar" should be localized just as it is on the
+#. # localized versions of the Google Calendar UI.
+#. # Extension Manager strings
 #: extensions.{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}.description
 msgid "Allows bidirectional access to Google Calendar"
 msgstr "Ceadaíonn seo rochtain dhéthreoch do Féilire Google"
@@ -4594,11 +6618,13 @@ msgstr "Ceadaíonn seo rochtain dhéthreoch do Féilire Google"
 msgid "Provider for Google Calendar"
 msgstr "Soláthraí Google Calendar"
 
+#. # Dialog strings
 #: loginDialogTitle
 msgid "Google Calendar Login"
 msgstr "Logáil isteach Fhéilire Google"
 
 # args: host
+#. # args: host
 #: accessingServerFailedError.text
 msgid "Cannot access server %1$S!"
 msgstr "Ní féidir freastalaí %1$S a rochtain!"
@@ -4612,6 +6638,7 @@ msgid "The user is denied access."
 msgstr "Tá rochtain diúltaithe don úsáideoir."
 
 # args: host
+#. # args: host
 #: noHttpsConfirmation.text
 msgid ""
 "Insecure login on %1$S!\n"
@@ -4629,6 +6656,7 @@ msgid "Warning!"
 msgstr "Rabhadh!"
 
 # args: host, prodId, serverVersion, wcapVersion
+#. # args: host, prodId, serverVersion, wcapVersion
 #: insufficientWcapVersionConfirmation.text
 msgid ""
 "Server %1$S (%2$S, v%3$S, WCAP v%4$S) doesn't support a sufficient WCAP "
@@ -4690,6 +6718,41 @@ msgstr "Faoi Rún"
 # - the terms of any one of the MPL, the GPL or the LGPL.
 # -
 # - ***** END LICENSE BLOCK *****
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Sun Microsystems code.
+#. -
+#. - The Initial Developer of the Original Code is
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. - Portions created by the Initial Developer are Copyright (C) 2008
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: providerUninstall.title
 msgid "Uninstall a Provider"
 msgstr "Díshuiteáil Soláthraí"
@@ -4719,6 +6782,7 @@ msgstr ""
 "díshuiteáil ó féilirí an tsoláthraí seo."
 
 # extension:
+#. # extension:
 #: extensions.calendar-timezones@mozilla.org.name
 msgid "Timezone Definitions for Mozilla Calendar"
 msgstr "Sainmhínithe criosanna ama i gcomhair Fhéilire Mozilla"
@@ -4740,6 +6804,10 @@ msgstr "Am Logánta"
 msgid "UTC/GMT"
 msgstr "AUL/MAG"
 
+#. # I've derived this list out of timezones.dtd
+#. # - replaced '_' with ' ' on value side
+#. # - corrected 'St xyz' to 'St. xyz'
+#. # timezone names:
 #: pref.timezone.Africa.Abidjan
 msgid "Africa/Abidjan"
 msgstr "An Afraic/Abidjan"
@@ -6313,6 +8381,7 @@ msgid "Pacific/Wallis"
 msgstr "An tAigéan Ciúin/Bhailís"
 
 # the following have been missing
+#. # the following have been missing
 #: pref.timezone.America.Indiana.Tell_City
 msgid "America/Indiana/Tell City"
 msgstr "Meiriceá/Indiana/Tell City"
@@ -6334,6 +8403,7 @@ msgid "America/St. Barthelemy"
 msgstr "Meiriceá/Saint Barthelemy"
 
 # added with 0.1.2008d:
+#. # added with 0.1.2008d:
 #: pref.timezone.America.Argentina.San_Luis
 msgid "America/Argentina/San Luis"
 msgstr "Meiriceá/An Airgintín/San Luis"
@@ -6351,11 +8421,13 @@ msgid "Asia/Kolkata"
 msgstr "An Áise/Kolkata"
 
 # added with 0.1.2008i:
+#. # added with 0.1.2008i:
 #: pref.timezone.America.Argentina.Salta
 msgid "America/Argentina/Salta"
 msgstr "Meiriceá/An Airgintín/Salta"
 
 # added with 0.1.2010i
+#. # added with 0.1.2010i
 #: pref.timezone.America.Matamoros
 msgid "America/Matamoros"
 msgstr "Meiriceá/Matamoros"
@@ -6414,8 +8486,52 @@ msgstr "An Áise/Novokuznetsk"
 # - ***** END LICENSE BLOCK *****
 #
 # Tools menu
-#: lightning.taskLabel extensions.{e2fda1a4-762b-4020-b5ad-a41df1933103}.name
-#: brandShortName
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is calendar views.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Oracle Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2005
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Mike Shaver <shaver@mozilla.org>
+#. -   Simon Paquet <bugzilla@babylonsounds.com>
+#. -   Matthew Willis <mattwillis@mac.com>
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. -   Martin Schroeder <mschroeder@mozilla.x-home.org>
+#. -   Berend Cornelius <berend.cornelius@sun.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#. WARNING! This file contains UTF-8 encoded characters!
+#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
+#. - your editor isn't using UTF-8 encoding and may munge up the document!
+#. Tools menu
+#: lightning.taskLabel
 msgid "Lightning"
 msgstr "Lightning"
 
@@ -6435,6 +8551,7 @@ msgid "&Calendar File…"
 msgstr "&Comhad Féilire…"
 
 # View Menu
+#. View Menu
 #: lightning.menu.view.calendar.label lightning.menu.view.calendar.accesskey
 msgid "Cale&ndar"
 msgstr "&Féilire"
@@ -6444,10 +8561,12 @@ msgid "Tas&ks"
 msgstr "Tas&canna"
 
 # Events and Tasks menu
+#. Events and Tasks menu
 #: lightning.menu.eventtask.label lightning.menu.eventtask.accesskey
 msgid "Eve&nts and Tasks"
 msgstr "I&meachtaí agus Tascanna"
 
+#. Mode Toolbar
 #: lightning.toolbar.mail.label lightning.toolbar.mail.accesskey
 msgid "&Mail"
 msgstr "Río&mhphost"
@@ -6456,6 +8575,7 @@ msgstr "Río&mhphost"
 msgid "&Tasks"
 msgstr "&Tascanna"
 
+#. Messenger Toolbar
 #: lightning.toolbar.day.label lightning.toolbar.day.accesskey
 msgid "&Day"
 msgstr "&Lá"
@@ -6473,6 +8593,7 @@ msgid "&Month"
 msgstr "&Mí"
 
 # properties dialog, calendar creation wizard
+#. properties dialog, calendar creation wizard
 #: lightning.calendarproperties.showevents.inagenda.label
 msgid "Show Events in Today Pane"
 msgstr "Taispeáin Imeachtaí i bPána Inniu"
@@ -6487,11 +8608,24 @@ msgstr "Ríomhphost:"
 
 # #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
 # iMIP Bar (meeting support)
+#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. iMIP Bar (meeting support)
 #: lightning.imipbar.description imipBarRequestText
 msgid "This message contains an invitation to an event."
 msgstr "Tá cuireadh d'imeacht sa teachtaireacht seo."
 
+#: lightning.keys.event.showTasks.key
+msgctxt "lightning.keys.event.showTasks.key"
+msgid "D"
+msgstr ""
+
+#: lightning.keys.todo.new
+msgctxt "lightning.keys.todo.new"
+msgid "D"
+msgstr ""
+
 # today-pane-specific
+#. today-pane-specific
 #: todaypane.showMinimonth.label todaypane.showMinimonth.accesskey
 msgid "Show &Mini-Month"
 msgstr "Taispeáin &Mion-Mhí"
@@ -6512,11 +8646,35 @@ msgstr "Taispeáin &Pána Inniu"
 msgid "Today Pane"
 msgstr "Pána Inniu"
 
+#. # addon description:
+#: extensions.{e2fda1a4-762b-4020-b5ad-a41df1933103}.name
+msgctxt "extensions.{e2fda1a4-762b-4020-b5ad-a41df1933103}.name"
+msgid "Lightning"
+msgstr ""
+
 #: extensions.{e2fda1a4-762b-4020-b5ad-a41df1933103}.description
 msgid "An integrated calendar for Thunderbird"
 msgstr "Féilire comhtháite le haghaidh Thunderbird"
 
+#. # Lightning branding
+#: brandShortName
+msgctxt "brandShortName"
+msgid "Lightning"
+msgstr ""
+
+#. # Task mode title
+#: taskModeApplicationTitle
+msgctxt "taskModeApplicationTitle"
+msgid "Tasks"
+msgstr ""
+
+#: tabTitleTasks
+msgctxt "tabTitleTasks"
+msgid "Tasks"
+msgstr ""
+
 # Html event display in message
+#. # Html event display in message
 #: imipHtml.header
 msgid "Event Invitation"
 msgstr "Cuireadh Imeachta"
@@ -6632,6 +8790,43 @@ msgstr "Tá an t-imeacht seo cealaithe ag %1$S: \"%2$S\""
 msgid "Invitations: %1$S"
 msgstr "Cuirí: %1$S"
 
+#. -*- Mode: HTML; tab-width: 20; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+#. - ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License
+#. - Version 1.1 (the "License"); you may not use this file except in
+#. - compliance with the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Mozilla Firefox about dialog.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Blake Ross (blaker@netscape.com).
+#. - Portions created by the Initial Developer are Copyright (C) 2002
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s): Matthew Willis <mattwillis@gmail.com>
+#. -                 Ehsan Akhgari <ehsan.akhgari@gmail.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: aboutDialog.title
 msgid "About &brandFullName;"
 msgstr "Maidir le &brandFullName;"
@@ -6650,13 +8845,11 @@ msgstr "leagan"
 
 #: copyrightText
 msgid ""
-"&#169;1998-2010 Contributors. All rights reserved. Mozilla Sunbird, Sunbird, "
-"and the Sunbird logos are trademarks of the Mozilla Foundation. All rights "
-"reserved."
+"&#169;1998-2010 Contributors. All rights \n"
+"reserved. Mozilla Sunbird, Sunbird, and the \n"
+"Sunbird logos are trademarks of the Mozilla \n"
+"Foundation. All rights reserved."
 msgstr ""
-"&#169;1998-2010 le lucht déanta a gcion. Gach ceart ar cosaint. Is "
-"trádmharcanna de chuid Fondúireacht Mozilla iad Mozilla Sunbird, Sunbird, "
-"agus suaitheantais Sunbird. Gach ceart ar cosaint."
 
 #: brandMotto
 msgid "it's about time"
@@ -6666,20 +8859,61 @@ msgstr "díreach in am"
 msgid "Special Thanks To"
 msgstr "Buíochas ar leith le"
 
-# localization credits look like this:
-#
-# <!ENTITY credit.translation
-# "<h3>Translators</h3><ul><li>Name Here</li></ul>">
-#
-# Séamus, please leave untranslated - will be filled in by build scripts
+#. localization credits look like this:
+#. <!ENTITY credit.translation
+#. "<h3>Translators</h3><ul><li>Name Here</li></ul>">
 #: credit.translation
-msgid "_: credit.translation\n"
+msgctxt "credit.translation"
+msgid ""
 msgstr ""
 
 #: credit.powered
 msgid "Powered by"
 msgstr "Á Chumhachtú ag"
 
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is OEone Calendar Code, released October 31st, 2001.   -
+#. -
+#. - The Initial Developer of the Original Code is
+#. -   OEone Corporation.
+#. - Portions created by the Initial Developer are Copyright (C) 2001
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   Garth Smedley <garths@oeone.com>
+#. -   Mike Potter <mikep@oeone.com>
+#. -   Chris Charabaruk <coldacid@meldstar.com>
+#. -   Matthew Willis <mattwillis@gmail.com>
+#. -   Stefan Sitter <ssitter@googlemail.com>
+#. -   Berend Cornelius <berend.cornelius@sun.com>
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. -   Simon Paquet <bugzilla@babylonsounds.com>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: calendar.open.file.label calendar.open.file.accesskey
 msgid "&Open Calendar File…"
 msgstr "&Oscail Comhad Féilire…"
@@ -6692,9 +8926,15 @@ msgstr "O"
 msgid "Edit Selection…"
 msgstr "Cuir an Roghnúchán in Eagar…"
 
-#: event.edit.event.key event.edit.event.accesskey
+#: event.edit.event.key
+msgctxt "event.edit.event.key"
 msgid "E"
-msgstr "E"
+msgstr ""
+
+#: event.edit.event.accesskey
+msgctxt "event.edit.event.accesskey"
+msgid "E"
+msgstr ""
 
 #: event.delete.event
 msgid "Delete Selected Events"
@@ -6774,7 +9014,15 @@ msgstr "&Uirlisí"
 msgid "Error &Console"
 msgstr "Consól &Earráide"
 
-#: helpMenu.label helpMenu.accesskey helpMenuWin.label helpMenuWin.accesskey
+#: helpMenu.label helpMenu.accesskey
+msgctxt "helpMenu.label helpMenu.accesskey"
+msgid "&Help"
+msgstr "Cab&hair"
+
+#. LOCALIZATION NOTE some localizations of Windows use "?"
+#. for the help button in the menubar but Gnome does not.
+#: helpMenuWin.label helpMenuWin.accesskey
+msgctxt "helpMenuWin.label helpMenuWin.accesskey"
 msgid "&Help"
 msgstr "Cab&hair"
 
@@ -6801,9 +9049,10 @@ msgstr "Sainroghanna…"
 msgid ","
 msgstr ","
 
-#: preferencesCmdMac.modifiers hideThisAppCmdMac.modifiers
+#: preferencesCmdMac.modifiers
+msgctxt "preferencesCmdMac.modifiers"
 msgid "accel"
-msgstr "accel"
+msgstr ""
 
 #: releaseCmd.label releaseCmd.accesskey
 msgid "&Release Notes"
@@ -6818,6 +9067,7 @@ msgstr "&Maidir le &brandFullName;"
 msgid "Check f&or Updates…"
 msgstr "L&org Nuashonruithe…"
 
+#. Mac OS X "Window" menu items
 #: windowMenu.label
 msgid "Window"
 msgstr "Fuinneog"
@@ -6867,6 +9117,7 @@ msgstr "Súmáil"
 msgid "Bring All to Front"
 msgstr "Tabhair an tIomlán chun Tosaigh"
 
+#. Mac OS X Application menu items
 #: servicesMenuMac.label
 msgid "Services"
 msgstr "Seirbhísí"
@@ -6875,9 +9126,24 @@ msgstr "Seirbhísí"
 msgid "Hide &brandShortName;"
 msgstr "Folaigh &brandShortName;"
 
+#: hideThisAppCmdMac.commandkey
+msgctxt "hideThisAppCmdMac.commandkey"
+msgid "H"
+msgstr "H"
+
+#: hideThisAppCmdMac.modifiers
+msgctxt "hideThisAppCmdMac.modifiers"
+msgid "accel"
+msgstr ""
+
 #: hideOtherAppsCmdMac.label
 msgid "Hide Others"
 msgstr "Folaigh Cinn Eile"
+
+#: hideOtherAppsCmdMac.commandkey
+msgctxt "hideOtherAppsCmdMac.commandkey"
+msgid "H"
+msgstr "H"
 
 #: hideOtherAppsCmdMac.modifiers
 msgid "accel,alt"
@@ -6887,21 +9153,59 @@ msgstr "accel,alt"
 msgid "Show All"
 msgstr "Taispeáin Gach"
 
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Sun Microsystems code.
+#. -
+#. - The Initial Developer of the Original Code is
+#. -   Philipp Kewisch <mozilla@kewis.ch>
+#. - Portions created by the Initial Developer are Copyright (C) 2008
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either the GNU General Public License Version 2 or later (the "GPL"), or
+#. - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the LGPL or the GPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
 #: sunbird.choosedate.button.tooltip
 msgid "Choose date to go to"
 msgstr "Roghnaigh dáta le hoscailt"
 
-#: sunbird.cut.button.tooltip sunbird.cut.button.label
+#: sunbird.cut.button.tooltip
+msgctxt "sunbird.cut.button.tooltip"
 msgid "Cut"
-msgstr "Gearr"
+msgstr ""
 
-#: sunbird.copy.button.tooltip sunbird.copy.button.label
+#: sunbird.copy.button.tooltip
+msgctxt "sunbird.copy.button.tooltip"
 msgid "Copy"
-msgstr "Cóipeáil"
+msgstr ""
 
-#: sunbird.paste.button.tooltip sunbird.paste.button.label
+#: sunbird.paste.button.tooltip
+msgctxt "sunbird.paste.button.tooltip"
 msgid "Paste"
-msgstr "Greamaigh"
+msgstr ""
 
 #: sunbird.print.button.tooltip
 msgid "Print calendar"
@@ -6943,6 +9247,21 @@ msgstr "Cuir an t-imeacht roghnaithe in eagar"
 msgid "Choose Date"
 msgstr "Roghnaigh Dáta"
 
+#: sunbird.cut.button.label
+msgctxt "sunbird.cut.button.label"
+msgid "Cut"
+msgstr ""
+
+#: sunbird.copy.button.label
+msgctxt "sunbird.copy.button.label"
+msgid "Copy"
+msgstr ""
+
+#: sunbird.paste.button.label
+msgctxt "sunbird.paste.button.label"
+msgid "Paste"
+msgstr ""
+
 #: sunbird.remotereload.button.label
 msgid "Reload"
 msgstr "Athluchtaigh"
@@ -6971,6 +9290,16 @@ msgstr "Amharc Seachtaine"
 msgid "Month View"
 msgstr "Amharc Míosa"
 
+#: sunbird.weekview.accesskey
+msgctxt "sunbird.weekview.accesskey"
+msgid "W"
+msgstr ""
+
+#: sunbird.monthview.accesskey
+msgctxt "sunbird.monthview.accesskey"
+msgid "M"
+msgstr ""
+
 # Ctrl+"U" is Foinse
 #: sunbird.multiweekview.accesskey
 msgid "u"
@@ -6983,6 +9312,11 @@ msgstr "Dáta"
 #: sunbird.listofcalendarstab.label
 msgid "Calendars"
 msgstr "Féilirí"
+
+#: sunbird.close.key
+msgctxt "sunbird.close.key"
+msgid "W"
+msgstr ""
 
 #: sunbird.menu.numberofweeks.label sunbird.menu.numberofweeks.accesskey
 msgid "&Number of Weeks"
@@ -7020,6 +9354,12 @@ msgstr "Sain&cheap an Barra Uirlisí…"
 msgid "Main Toolbar"
 msgstr "Príomhbharra Uirlisí"
 
+#: sunbird.maintoolbar.accesskey
+msgctxt "sunbird.maintoolbar.accesskey"
+msgid "M"
+msgstr ""
+
+#. Sunbird Help
 #: sunbird.help.label sunbird.help.accesskey
 msgid "&Help Contents"
 msgstr "Áb&har Cabhrach"
@@ -7031,6 +9371,8 @@ msgstr "mozilla.org"
 
 # If non-English locales wish to credit multiple contributors, uncomment this
 # variable definition and use the format specified.
+#. # If non-English locales wish to credit multiple contributors, uncomment this
+#. # variable definition and use the format specified.
 #: MOZ_LANGPACK_CONTRIBUTORS
 msgid ""
 "<em:contributor>Joe Solon</em:contributor> <em:contributor>Suzy Solon</em:"
@@ -7039,6 +9381,17 @@ msgstr ""
 "<em:contributor>Séamus Ó Ciardhuáin</em:contributor> <em:contributor>Kevin "
 "Scannell</em:contributor> <em:contributor>Brian King</em:contributor>"
 
+#. # LOCALIZATION NOTE:
+#. # This file must be saved as UTF8
+#. # Accesskeys are defined by prefixing the letter that is to be used for the
+#. # accesskey with an ampersand (e.g. &).
+#. # Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+#. # custom string and always use the same one as used by the en-US files.
+#. # $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+#. # for double ampersand) and prevents the letter following the ampersand from
+#. # being used as an accesskey.
+#. # You can use \n to create a newline in the string but only when the string
+#. # from en-US contains a \n.
 #: CONTEXT_OPTIONS
 msgid "$BrandShortName &Options"
 msgstr "R&oghanna $BrandShortName"
@@ -7246,6 +9599,8 @@ msgstr "Beagán Glantacháin…"
 
 # _DESC strings support approximately 65 characters per line.
 # One line
+#. # _DESC strings support approximately 65 characters per line.
+#. # One line
 #: OPTIONS_SUMMARY
 msgid "Choose the type of setup you prefer, then click Next."
 msgstr ""
@@ -7253,6 +9608,7 @@ msgstr ""
 "dhiaidh sin."
 
 # One line
+#. # One line
 #: OPTION_STANDARD_DESC
 msgid "$BrandShortName will be installed with the most common options."
 msgstr "Déanfar $BrandShortName a shuiteáil leis na gnáthroghanna."
@@ -7261,6 +9617,7 @@ msgstr "Déanfar $BrandShortName a shuiteáil leis na gnáthroghanna."
 msgid "&Standard"
 msgstr "Gnáth&shuiteáil"
 
+#. # Two lines
 #: OPTION_CUSTOM_DESC
 msgid ""
 "You may choose individual options to be installed. Recommended for "
@@ -7286,6 +9643,19 @@ msgstr "S&ainshuiteáil"
 # being used as an accesskey.
 # You can use \n to create a newline in the string but only when the string
 # from en-US contains a \n.
+#. # To make the l10n tinderboxen see changes to this file you can change a value
+#. # name by adding - to the end of the name followed by chars (e.g. Branding-2).
+#. # LOCALIZATION NOTE:
+#. # This file must be saved as UTF8
+#. # Accesskeys are defined by prefixing the letter that is to be used for the
+#. # accesskey with an ampersand (e.g. &).
+#. # Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+#. # custom string and always use the same one as used by the en-US files.
+#. # $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+#. # for double ampersand) and prevents the letter following the ampersand from
+#. # being used as an accesskey.
+#. # You can use \n to create a newline in the string but only when the string
+#. # from en-US contains a \n.
 #: MUI_TEXT_WELCOME_INFO_TITLE
 msgid "Welcome to the $BrandFullNameDA Setup Wizard"
 msgstr "Fáilte go dtí Treoraí Suiteála $BrandShortNameDA"
@@ -7526,6 +9896,21 @@ msgstr ""
 # quotes and the double quotes will be removed. To add quotes to the beginning
 # and end of a strong enclose the add and additional double quote to the
 # beginning and end of the string (e.g. ""This will include quotes"").
+#. # LOCALIZATION NOTE:
+#. # This file must be saved as UTF8
+#. # Accesskeys are defined by prefixing the letter that is to be used for the
+#. # accesskey with an ampersand (e.g. &).
+#. # Do not replace $BrandShortName, $BrandFullName, or $BrandFullNameDA with a
+#. # custom string and always use the same one as used by the en-US files.
+#. # $BrandFullNameDA allows the string to contain an ampersand (e.g. DA stands
+#. # for double ampersand) and prevents the letter following the ampersand from
+#. # being used as an accesskey.
+#. # You can use \n to create a newline in the string but only when the string
+#. # from en-US contains a \n.
+#. # Strings that require a space at the end should be enclosed with double
+#. # quotes and the double quotes will be removed. To add quotes to the beginning
+#. # and end of a strong enclose the add and additional double quote to the
+#. # beginning and end of the string (e.g. ""This will include quotes"").
 #: SetupCaption
 msgid "$BrandFullName Setup"
 msgstr "Suiteáil $BrandFullName"
@@ -7635,15 +10020,14 @@ msgstr "Díshuiteálfar $BrandFullNameDA ón bhfillteán seo. $_CLICK"
 msgid "Uninstalling from:"
 msgstr "Á dhíshuiteáil ó:"
 
-# correct to have only single escape in translation
 #: FileError
 msgid ""
-"Error opening file for writing: \\r\n"
-"\\r\n"
-"$0\\r\n"
-"\\r\n"
-"Click Abort to stop the installation,\\r\n"
-"Retry to try again, or\\r\n"
+"Error opening file for writing: \r\n"
+"\r\n"
+"$0\r\n"
+"\r\n"
+"Click Abort to stop the installation,\r\n"
+"Retry to try again, or\r\n"
 "Ignore to skip this file."
 msgstr ""
 "Earráid agus comhad á scríobh: \r\n"
@@ -7654,14 +10038,13 @@ msgstr ""
 "\"Retry\" chun iarracht eile a dhéanamh, nó\r\n"
 "\"Ignore\" chun neamhaird a dhéanamh den chomhad seo."
 
-# correct to have only single escape in translation
 #: FileError_NoIgnore
 msgid ""
-"Error opening file for writing: \\r\n"
-"\\r\n"
-"$0\\r\n"
-"\\r\n"
-"Click Retry to try again, or\\r\n"
+"Error opening file for writing: \r\n"
+"\r\n"
+"$0\r\n"
+"\r\n"
+"Click Retry to try again, or\r\n"
 "Cancel to stop the installation."
 msgstr ""
 "Earráid agus comhad á scríobh: \r\n"
@@ -7787,10 +10170,6 @@ msgstr "Cóipeáil Sonraí go dtí an Ghearrthaisce"
 msgid "Log install process"
 msgstr "Logáil an próiseas suiteála"
 
-#: Kilo
-msgid "K"
-msgstr "K"
-
 #: Giga
 msgid "G"
 msgstr "G"
@@ -7798,6 +10177,9 @@ msgstr "G"
 # converted from pseudo-properties .it file
 # This file is in the UTF-8 encoding
 # section: [Strings]
+#. # converted from pseudo-properties .it file
+#. # This file is in the UTF-8 encoding
+#. # section: [Strings]
 #: TitleText
 msgid "%MOZ_APP_DISPLAYNAME% Update"
 msgstr "Nuashonrú %MOZ_APP_DISPLAYNAME%"
@@ -7807,5 +10189,5 @@ msgid ""
 "%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few "
 "moments…"
 msgstr ""
-"Nuashonruithe á suiteáil ag %MOZ_APP_DISPLAYNAME% agus tosóidh sé "
+"Tá do chuid nuashonruithe á suiteáil ag %MOZ_APP_DISPLAYNAME% agus tosóidh sé "
 "go luath…"
