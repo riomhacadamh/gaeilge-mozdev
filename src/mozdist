@@ -61,6 +61,8 @@ if echo "${1}" | egrep '^mobile' > /dev/null
 then
 	sed -i '1s/.*/<!ENTITY % brandDTD\n    SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n  %brandDTD;\n\n&/' ${IRISHJAR}/chrome/aboutCertError.dtd
 fi
+# eile-* dirs contain CVS metadata, wipe those out
+find ${IRISHJAR} -name 'CVS' | xargs rm -fR
 #rm -f "${IRISHJAR}.jar"
 #jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
 mv -f "${IRISHJAR}" "${PACK}"
