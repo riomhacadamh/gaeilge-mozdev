@@ -17,58 +17,69 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? 3 : "
 "4\n"
 
-#: apps/addons/buttons.py:154
+#: apps/addons/buttons.py:157
 msgid "Download Now"
 msgstr "Íosluchtaigh Anois"
 
-#: apps/addons/buttons.py:156 templates/global/menu_links.html:16
+#: apps/addons/buttons.py:159 templates/global/menu_links.html:16
 msgid "Download"
 msgstr "Íosluchtaigh"
 
 #. L10n: please keep &nbsp; in the string so &rarr; does not wrap.
 #. please keep &nbsp; in the string so the &rarr; does not wrap
-#: apps/addons/buttons.py:160 apps/addons/buttons.py:167
+#: apps/addons/buttons.py:163 apps/addons/buttons.py:170
 #: apps/discovery/templates/discovery/addons/detail.html:20
 msgid "Continue to Download&nbsp;&rarr;"
 msgstr "Leathanach Íosluchtaithe&nbsp;&rarr;"
 
-#: apps/addons/buttons.py:163
+#: apps/addons/buttons.py:166
 msgid "Accept and Download"
 msgstr "Glac Leis agus Íosluchtaigh"
 
-#: apps/addons/buttons.py:183
+#: apps/addons/buttons.py:186
 msgctxt "install_button"
 msgid "Featured"
 msgstr "Mór-Le-Rá"
 
-#: apps/addons/buttons.py:188
+#: apps/addons/buttons.py:191
 msgctxt "install_button"
 msgid "Not Reviewed"
 msgstr "Gan Léirmheas"
 
-#: apps/addons/buttons.py:194
+#: apps/addons/buttons.py:197
 msgctxt "install_button"
 msgid "Self Hosted"
 msgstr "Féinóstáilte"
 
 #. L10n: please keep &nbsp; in the string so the &rarr; does not wrap
-#: apps/addons/buttons.py:199
+#: apps/addons/buttons.py:202
 msgid "Continue to Website&nbsp;&rarr;"
 msgstr "Ar aghaidh go dtí an suíomh Gréasáin&nbsp;&rarr;"
 
-#: apps/addons/buttons.py:207
+#: apps/addons/buttons.py:209
+msgctxt "install_button"
+msgid "Experimental"
+msgstr "Turgnamhach"
+
+#: apps/addons/buttons.py:216
 msgid "Add to {0}"
 msgstr "Cuir le {0}"
 
-#: apps/addons/forms.py:30
+#: apps/addons/forms.py:34
 msgid "This add-on name is already in use. Please choose another."
 msgstr "Tá an t-ainm breiseáin in úsáid cheana. Roghnaigh ainm eile."
 
-#: apps/addons/forms.py:110
-msgid "The tag '{0}' isn't allowed"
-msgstr "Ní cheadaítear clib '{0}'"
+#. L10n: {0} is a single tag or a comma-separated list of tags.
+#: apps/addons/forms.py:100
+msgid "Invalid tag: {0}"
+msgid_plural "Invalid tags: {0}"
+msgstr[0] "Clib neamhbhailí: {0}"
+msgstr[1] "Clibeanna neamhbhailí: {0}"
+msgstr[2] "Clibeanna neamhbhailí: {0}"
+msgstr[3] "Clibeanna neamhbhailí: {0}"
+msgstr[4] "Clibeanna neamhbhailí: {0}"
 
-#: apps/addons/forms.py:114
+#: apps/addons/forms.py:105
 msgid "You have {0} too many tags."
 msgid_plural "You have {0} too many tags."
 msgstr[0] ""
@@ -77,7 +88,7 @@ msgstr[2] ""
 msgstr[3] ""
 msgstr[4] ""
 
-#: apps/addons/forms.py:121
+#: apps/addons/forms.py:110
 msgid "All tags must be at least {0} character."
 msgid_plural "All tags must be at least {0} characters."
 msgstr[0] ""
@@ -86,91 +97,89 @@ msgstr[2] ""
 msgstr[3] ""
 msgstr[4] ""
 
-#: apps/addons/forms.py:134
+#: apps/addons/forms.py:123
 msgid "This slug is already in use."
 msgstr "Tá an sluga seo in úsáid cheana."
 
-#: apps/addons/forms.py:143
-msgid "You can only have {0} category."
-msgid_plural "You can only have {0} categories."
-msgstr[0] "Ní cheadaítear ach {0} chatagóir."
-msgstr[1] "Ní cheadaítear ach {0} chatagóir."
-msgstr[2] "Ní cheadaítear ach {0} chatagóir."
-msgstr[3] "Ní cheadaítear ach {0} gcatagóir."
-msgstr[4] "Ní cheadaítear ach {0} catagóir."
+#: apps/addons/forms.py:159
+msgid "You can have only {0} category."
+msgid_plural "You can have only {0} categories."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
-#: apps/addons/forms.py:202 apps/bandwagon/forms.py:172
-msgid "Icons must be either PNG or JPG."
-msgstr "Ní mór do dheilbhíní a bheith PNG nó JPG."
+#: apps/addons/forms.py:167
+msgid ""
+"The miscellaneous category cannot be combined with additional categories."
+msgstr "Ní féidir an chatagóir Éagsúil a chur le chéile le catagóirí breise."
 
-#: apps/addons/forms.py:205
-msgid "Icons cannot be animated."
-msgstr "Ní cheadaítear deilbhíní beo."
-
-#: apps/addons/forms.py:210 apps/bandwagon/forms.py:177 apps/users/forms.py:204
-msgid "Please use images smaller than %dMB."
-msgstr "Úsáid íomhánna níos lú ná %dMB le do thoil."
-
-#: apps/addons/forms.py:240
+#: apps/addons/forms.py:275
 msgid ""
 "Before changing your default locale you must have a name, summary, and "
 "description in that locale. You are missing %s."
 msgstr ""
+"Sular féidir leat an logchaighdeán réamhshocraithe a athrú, tá ainm, "
+"achoimre, agus cur síos sa teanga sin de dhíth. Tá %s ar iarraidh."
 
-#: apps/addons/forms.py:351
-msgid "Id is required."
+#: apps/addons/forms.py:387
+msgid "ID is required."
 msgstr "Tá aitheantas riachtanach."
 
-#: apps/addons/forms.py:370
+#: apps/addons/forms.py:406
 msgid "Unknown application guid."
 msgstr "Feidhmchlár anaithnid."
 
-#: apps/addons/helpers.py:34
+#: apps/addons/helpers.py:35
 msgid "Not Reviewed"
 msgstr "Gan Léirmheas"
 
-#: apps/addons/helpers.py:34 apps/addons/views.py:251
+#: apps/addons/helpers.py:35 apps/addons/views.py:248
 #: apps/bandwagon/views.py:76 apps/browse/views.py:170 apps/browse/views.py:293
 msgid "Featured"
 msgstr "Mór-Le-Rá"
 
-#: apps/addons/helpers.py:35
+#: apps/addons/helpers.py:36
 msgid "Self Hosted"
 msgstr "Féinóstáilte"
 
-#: apps/addons/models.py:192
+#: apps/addons/models.py:195
 msgid "Users have the option of contributing more or less than this amount."
 msgstr "Beidh úsáideoirí in ann níos mó nó níos lú ná an méid seo a thabhairt."
 
-#: apps/addons/models.py:201
+#: apps/addons/models.py:204
 msgid "Users will always be asked in the Add-ons Manager (Firefox 4 and above)"
 msgstr ""
 "Cuirfear ceist ar úsáideoirí i gcónaí i mBainisteoir na mBreiseán (Firefox 4 "
 "agus níos déanaí)"
 
-#: apps/addons/views.py:252 apps/bandwagon/views.py:77
+#: apps/addons/views.py:249 apps/bandwagon/views.py:77
 msgid "Popular"
 msgstr "Is Mó Éilimh"
 
-#: apps/addons/views.py:253 apps/bandwagon/views.py:79 apps/browse/views.py:171
+#: apps/addons/views.py:250 apps/bandwagon/views.py:79 apps/browse/views.py:171
 #: apps/browse/views.py:208 apps/browse/views.py:335
 #: apps/browse/templates/browse/themes.html:6
 msgid "Recently Added"
 msgstr "Curtha Leis Le Déanaí"
 
-#: apps/addons/views.py:254
+#: apps/addons/views.py:251
 msgid "Recently Updated"
 msgstr "Nuashonraithe Le Déanaí"
 
 # %1 is an add-on name.
-#. L10n: {0} is an add-on name.
-#: apps/addons/views.py:400
+#: apps/addons/views.py:402
 msgid "Contribution for {0}"
 msgstr "Deontais le haghaidh {0}"
 
-#: apps/addons/views.py:492
+#: apps/addons/views.py:494
 msgid "Abuse reported."
 msgstr "Rinneadh tuairisc ar dhrochúsáid."
+
+#: apps/addons/widgets.py:48
+msgid "My add-on doesn't fit into any of the categories"
+msgstr "Níl aon chatagóir oiriúnach do mo bhreiseán seo"
 
 #: apps/addons/templates/addons/author_other_addons.html:4
 msgid "Other add-ons by %(author)s"
@@ -208,10 +217,22 @@ msgid "View privacy policy"
 msgstr "Féach ar an bpolasaí príobháideachta"
 
 #: apps/addons/templates/addons/button.html:79
-msgid "This add-on has not been reviewed by Mozilla."
-msgstr "Níl léirmheas déanta ag Mozilla ar an mbreiseán seo."
+msgid ""
+"This add-on has not been reviewed by Mozilla. <a href=\"%(url)s\">Learn more</"
+"a>"
+msgstr ""
+"Níl léirmheas déanta ar an mbreiseán seo ag Mozilla. <a href=\"%(url)s"
+"\">Tuilleadh eolais</a>"
 
-#: apps/addons/templates/addons/button.html:81
+#: apps/addons/templates/addons/button.html:84
+msgid ""
+"This add-on has been preliminarily reviewed by Mozilla. <a href=\"%(url)s"
+"\">Learn more</a>"
+msgstr ""
+"Rinne Mozilla réamhscrúdú ar an mbreiseán seo. <a href=\"%(url)s\">Tuilleadh "
+"eolais</a>"
+
+#: apps/addons/templates/addons/button.html:89
 msgid ""
 "This add-on is hosted on the developer's own website and has not been "
 "reviewed by Mozilla."
@@ -273,7 +294,7 @@ msgstr ""
 "leat Firefox a fheabhsú agus a chur in oiriúint duit féin."
 
 #: apps/addons/templates/addons/collections_teaser.html:33
-#: apps/amo/__init__.py:163 apps/browse/templates/browse/themes.html:17
+#: apps/amo/__init__.py:168 apps/browse/templates/browse/themes.html:17
 #: apps/browse/templates/browse/themes.html:33
 #: apps/browse/templates/browse/themes.html:38
 #: apps/browse/templates/browse/themes.html:40
@@ -308,75 +329,64 @@ msgid "Like these? Find more add-ons in the {0} collection."
 msgstr ""
 "An dtaitníonn siad seo leat?  Aimsigh tuilleadh breiseán i mbailiúchán {0}."
 
-#. {0} is a number
-#: apps/addons/templates/addons/contribution.html:7
+#: apps/addons/templates/addons/contribution.html:10
 msgid ""
-"Help the developer of this add-on raise {0} to support its continued "
-"development."
+"The developer of this add-on asks that you help support its continued "
+"development by making a small contribution."
 msgstr ""
+"Tacaigh le forbairt leanúnach an bhreiseáin seo trí dheontas beag a thabhairt "
+"do na forbróirí."
 
-#. title for the amount of money a developer has raised
-#: apps/addons/templates/addons/contribution.html:14
-msgid "Raised"
-msgstr "Bailithe"
+#: apps/addons/templates/addons/contribution.html:13
+msgid ""
+"The developer of this add-on asks that you show your support by making a "
+"donation to the <a href=\"%(charity_url)s\">%(charity_name)s</a>."
+msgstr "Tá forbróir an bhreiseáin seo ag iarraidh go dtacóidh tú leis trí dheontas a thabhairt do <a href=\"%(charity_url)s\">%(charity_name)s</a>."
 
-#. {0} is a number, {1} is a user count
 #: apps/addons/templates/addons/contribution.html:18
-msgid "<span class=\"money\">{0}</span> from {1} users"
-msgstr "<span class=\"money\">{0}</span> ó {1} úsáideoir"
+msgid ""
+"The developer of this add-on asks that you show your support by making a "
+"small contribution to <a href=\"%(charity_url)s\">%(charity_name)s</a>."
+msgstr "Tá forbróir an bhreiseáin seo ag iarraidh go dtacóidh tú leis trí dheontas beag a thabhairt do <a href=\"%(charity_url)s\">%(charity_name)s</a>."
 
-#. title for the amount of money a developer would like to raise
-#: apps/addons/templates/addons/contribution.html:28
-msgid "Goal"
-msgstr "Cuspóir"
-
-#. {0} is a number, {1} is a username
 #: apps/addons/templates/addons/contribution.html:32
-msgid "<span class=\"money\">{0}</span> by {1}"
-msgstr "<span class=\"money\">{0}</span> le {1}"
-
-#: apps/addons/templates/addons/contribution.html:33
-msgid "%b %d"
-msgstr "%d %b"
-
-#: apps/addons/templates/addons/contribution.html:51
 msgid "Contribute"
 msgstr "Tabhair deontas"
 
 # This is a separator between the graphical [contribute] button and the 
 # graphical [download now] button
 #. Click Contribute button OR Install button
-#: apps/addons/templates/addons/contribution.html:56
+#: apps/addons/templates/addons/contribution.html:37
 #: apps/devhub/templates/devhub/addons/ajax_compat_update.html:35
 #: apps/devhub/templates/devhub/addons/profile.html:44
-#: apps/devhub/templates/devhub/addons/listing/delete_form.html:20
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:116
-#: apps/devhub/templates/devhub/includes/addon_edit_details.html:82
-#: apps/devhub/templates/devhub/includes/addon_edit_media.html:78
+#: apps/devhub/templates/devhub/addons/listing/delete_form.html:22
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:127
+#: apps/devhub/templates/devhub/includes/addon_edit_details.html:84
+#: apps/devhub/templates/devhub/includes/addon_edit_media.html:129
 #: apps/devhub/templates/devhub/includes/addon_edit_support.html:78
 #: apps/devhub/templates/devhub/includes/addon_edit_technical.html:99
-#: apps/devhub/templates/devhub/versions/edit.html:128
-#: apps/devhub/templates/devhub/versions/list.html:158
-#: apps/devhub/templates/devhub/versions/list.html:181
-#: apps/devhub/templates/devhub/versions/list.html:212
-#: apps/translations/templates/translations/trans-menu.html:37
+#: apps/devhub/templates/devhub/versions/edit.html:127
+#: apps/devhub/templates/devhub/versions/list.html:186
+#: apps/devhub/templates/devhub/versions/list.html:214
+#: apps/devhub/templates/devhub/versions/list.html:245
+#: apps/translations/templates/translations/trans-menu.html:38
 msgid "or"
 msgstr "nó"
 
-#: apps/addons/templates/addons/contribution.html:64
+#: apps/addons/templates/addons/contribution.html:45
 msgid "Suggested Contribution: {0}"
 msgstr "Deontas Molta: {0}"
 
-#: apps/addons/templates/addons/contribution.html:69
+#: apps/addons/templates/addons/contribution.html:50
 #: apps/amo/templates/amo/recaptcha.html:21
 msgid "What's this?"
 msgstr "Cad é seo?"
 
-#: apps/addons/templates/addons/contribution.html:79
+#: apps/addons/templates/addons/contribution.html:60
 msgid "Make a Contribution"
 msgstr "Tabhair Deontas"
 
-#: apps/addons/templates/addons/contribution.html:81
+#: apps/addons/templates/addons/contribution.html:64
 msgid ""
 "Help support the continued development of <strong>%(addon_name)s</strong> by "
 "making a small contribution through <a href=\"%(paypal_url)s\">Paypal</a>."
@@ -384,36 +394,50 @@ msgstr ""
 "Tacaigh le forbairt leanúnach <strong>%(addon_name)s</strong> trí dheontas "
 "beag a thabhairt do na forbróirí trí <a href=\"%(paypal_url)s\">Paypal</a>."
 
-#: apps/addons/templates/addons/contribution.html:88
+#: apps/addons/templates/addons/contribution.html:70
+msgid ""
+"To show your support for <b>%(addon_name)s</b>, the developer asks that you "
+"make a donation to the <a href=\"%(charity_url)s\">%(charity_name)s</a> "
+"through <a href=\"%(paypal_url)s\">Paypal</a>."
+msgstr "Chun do thacaíocht do <b>%(addon_name)s</b> a léiriú, tá an forbróir ag iarraidh go dtabharfaidh tú deontas do <a href=\"%(charity_url)s\">%(charity_name)s</a> trí <a href=\"%(paypal_url)s\">Paypal</a>."
+
+#: apps/addons/templates/addons/contribution.html:76
+msgid ""
+"To show your support for <b>%(addon_name)s</b>, the developer asks that you "
+"make a small contribution to <a href=\"%(charity_url)s\">%(charity_name)s</a> "
+"through <a href=\"%(paypal_url)s\">Paypal</a>."
+msgstr "Chun do thacaíocht do <b>%(addon_name)s</b> a léiriú, tá an forbróir ag iarraidh go dtabharfaidh tú deontas beag do <a href=\"%(charity_url)s\">%(charity_name)s</a> trí <a href=\"%(paypal_url)s\">Paypal</a>."
+
+#: apps/addons/templates/addons/contribution.html:85
 msgid "How much would you like to contribute?"
 msgstr "Cá mhéad atá tú ag iarraidh tabhairt?"
 
-#: apps/addons/templates/addons/contribution.html:91
+#: apps/addons/templates/addons/contribution.html:88
 msgid "The maximum contribution amount is {0}."
 msgstr "Is é {0} an deontas is mó a cheadaítear."
 
 #. {1} is a currency amount (e.g., $5.00)
-#: apps/addons/templates/addons/contribution.html:100
+#: apps/addons/templates/addons/contribution.html:97
 msgid "A one-time suggested contribution of {0}"
 msgstr "Moltar deontas aonuaire de {0}"
 
 #. {0} is a currency symbol (e.g., $),
 #. {1} is an amount input field
-#: apps/addons/templates/addons/contribution.html:110
+#: apps/addons/templates/addons/contribution.html:107
 msgid "A one-time contribution of {0} {1}"
 msgstr "Deontas aonuaire de {0} {1}"
 
 #. {0} is a currency symbol (e.g., $),
 #. {1} is an amount input field
-#: apps/addons/templates/addons/contribution.html:120
+#: apps/addons/templates/addons/contribution.html:117
 msgid "A regular monthly contribution of {0} {1}"
 msgstr "Deontas míosúil de {0} {1}"
 
-#: apps/addons/templates/addons/contribution.html:127
+#: apps/addons/templates/addons/contribution.html:124
 msgid "Leave a comment or request with your contribution."
 msgstr "Cuir nóta nó iarratas le do dheontas."
 
-#: apps/addons/templates/addons/contribution.html:129
+#: apps/addons/templates/addons/contribution.html:126
 #: apps/bandwagon/templates/bandwagon/ajax_new.html:20
 #: apps/bandwagon/templates/bandwagon/includes/addedit.html:36
 #: apps/devhub/templates/devhub/includes/addons_create_profile.html:12
@@ -422,15 +446,28 @@ msgstr "Cuir nóta nó iarratas le do dheontas."
 msgid "(optional)"
 msgstr "(roghnach)"
 
-#: apps/addons/templates/addons/contribution.html:134
+#: apps/addons/templates/addons/contribution.html:131
 msgid "Make Contribution"
 msgstr "Tabhair Deontas"
 
-#: apps/addons/templates/addons/contribution.html:136
+#: apps/addons/templates/addons/contribution.html:133
 msgid "No Thanks"
 msgstr "Níl, GRMA"
 
-#: apps/addons/templates/addons/contribution.html:147
+#: apps/addons/templates/addons/contribution.html:146
+msgid ""
+"The developer of this add-on would like you to consider making a donation to "
+"the <a href=\"%(charity_url)s\">%(charity_name)s</a> if you enjoy using it."
+msgstr "Tá forbróir an bhreiseáin seo ag iarraidh go dtabharfaidh tú deontas do <a href=\"%(charity_url)s\">%(charity_name)s</a> má bhaineann tú taitneamh as."
+
+#: apps/addons/templates/addons/contribution.html:152
+msgid ""
+"The developer of this add-on would like you to consider making a small "
+"contribution to <a href=\"%(charity_url)s\">%(charity_name)s</a> if you enjoy "
+"using it."
+msgstr "Tá forbróir an bhreiseáin seo ag iarraidh go dtabharfaidh tú deontas beag do <a href=\"%(charity_url)s\">%(charity_name)s</a> má bhaineann tú taitneamh as."
+
+#: apps/addons/templates/addons/contribution.html:159
 msgid ""
 "Mozilla is committed to supporting a vibrant and healthy developer ecosystem. "
 "Your optional contribution helps sustain further development of this add-on."
@@ -444,79 +481,77 @@ msgstr ""
 msgid "by"
 msgstr "le"
 
-#: apps/addons/templates/addons/details.html:53
-#: apps/addons/templates/addons/developers.html:23
-msgid ""
-"The developer of this add-on asks that you help support its continued "
-"development by making a small contribution."
-msgstr ""
+#: apps/addons/templates/addons/details.html:47
+msgid "No restart required"
+msgstr "Ní gá atosú"
 
-#: apps/addons/templates/addons/details.html:60
-#: apps/addons/templates/addons/personas_detail.html:32
+#. This is a caption for a table. {0} is an add-on name.
+#: apps/addons/templates/addons/details.html:65
+#: apps/addons/templates/addons/personas_detail.html:33
 msgid "Add-on Information for {0}"
 msgstr "Eolas faoi Bhreiseán {0}"
 
-#: apps/addons/templates/addons/details.html:64
-#: apps/addons/templates/addons/personas_detail.html:36 apps/browse/views.py:50
-#: apps/browse/views.py:295 apps/devhub/views.py:75
+#: apps/addons/templates/addons/details.html:69
+#: apps/addons/templates/addons/personas_detail.html:37 apps/browse/views.py:50
+#: apps/browse/views.py:295 apps/devhub/views.py:79
 msgid "Updated"
 msgstr "Nuashonraithe"
 
-#: apps/addons/templates/addons/details.html:72
+#: apps/addons/templates/addons/details.html:77
 #: apps/devhub/templates/devhub/includes/addon_edit_support.html:42
 #: apps/discovery/templates/discovery/addons/detail.html:67
 msgid "Website"
 msgstr "Suíomh Gréasáin"
 
-#: apps/addons/templates/addons/details.html:81
+#: apps/addons/templates/addons/details.html:86
 msgid "Works with"
 msgstr "Oibríonn sé le"
 
-#: apps/addons/templates/addons/details.html:88
-#: apps/addons/templates/addons/personas_detail.html:48 apps/search/forms.py:31
+#: apps/addons/templates/addons/details.html:93
+#: apps/addons/templates/addons/personas_detail.html:49 apps/search/forms.py:31
 msgctxt "advanced_search_form_rating"
 msgid "Rating"
 msgstr "Rátáil"
 
-#: apps/addons/templates/addons/details.html:93
+#: apps/addons/templates/addons/details.html:98
 msgctxt "list_sortby_downloads"
 msgid "Downloads"
 msgstr "Líon na nÍosluchtuithe"
 
-#: apps/addons/templates/addons/details.html:100
+#: apps/addons/templates/addons/details.html:105
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:55
 msgid "View Statistics"
 msgstr "Amharc ar Staitisticí"
 
-#: apps/addons/templates/addons/details.html:136
+#: apps/addons/templates/addons/details.html:141
 msgid "More about this add-on"
 msgstr "Tuilleadh eolais faoin bhreiseán seo"
 
-#: apps/addons/templates/addons/details.html:145
+#: apps/addons/templates/addons/details.html:150
 msgid "Image Gallery"
 msgstr "Gailearaí Íomhánna"
 
-#: apps/addons/templates/addons/details.html:155
+#: apps/addons/templates/addons/details.html:160
 msgctxt "addons_display_developer_comments"
 msgid "Developer Comments"
 msgstr "Nótaí ón Fhorbróir"
 
-#: apps/addons/templates/addons/details.html:164
+#: apps/addons/templates/addons/details.html:169
 msgid "Beta Channel"
 msgstr "Cainéal Béite"
 
-#: apps/addons/templates/addons/details.html:167
+#: apps/addons/templates/addons/details.html:172
 msgid ""
 "The Beta Channel lets you test an experimental new version of this add-on "
 "before it's released to the general public. Once you install the beta "
 "version, you will continue to get updates from this channel."
 msgstr ""
 
-#: apps/addons/templates/addons/details.html:172
+#: apps/addons/templates/addons/details.html:177
 msgid "Install beta version"
 msgstr "Suiteáil leagan béite"
 
-#: apps/addons/templates/addons/details.html:176
+#: apps/addons/templates/addons/details.html:181
 msgid ""
 "<strong>Caution:</strong> Beta versions of this add-on have not been reviewed "
 "by Mozilla. Once you install a beta version you will continue to receive beta "
@@ -524,16 +559,16 @@ msgid ""
 "default version from the link above."
 msgstr ""
 
-#: apps/addons/templates/addons/details.html:185
+#: apps/addons/templates/addons/details.html:190
 msgid "Version {0}:"
 msgstr "Leagan {0}:"
 
-#: apps/addons/templates/addons/details.html:204
+#: apps/addons/templates/addons/details.html:209
 msgctxt "addons_display_release_notes"
 msgid "Release Notes"
 msgstr "Nótaí Eisiúna"
 
-#: apps/addons/templates/addons/details.html:220
+#: apps/addons/templates/addons/details.html:225
 msgid "Meet the Developer"
 msgid_plural "Meet the Developers"
 msgstr[0] "Téigh in aithne ar an bhforbróir"
@@ -543,56 +578,58 @@ msgstr[3] "Téigh in aithne ar na forbróirí"
 msgstr[4] "Téigh in aithne ar na forbróirí"
 
 # {0} is an add-on name.
-#: apps/addons/templates/addons/details.html:228
+#: apps/addons/templates/addons/details.html:233
 msgid "Learn why {0} was created and find out what's next for this add-on."
 msgstr ""
+"Cén fáth a raibh {0} cruthaithe, agus céard atá i ndán don bhreiseán seo."
 
-#: apps/addons/templates/addons/details.html:233
+#: apps/addons/templates/addons/details.html:238
 msgid "Meet the Developers"
 msgstr "Téigh in aitheantas ar na Forbróirí"
 
 # {0} is a a person's name
-#: apps/addons/templates/addons/details.html:235
+#: apps/addons/templates/addons/details.html:240
 msgid "Meet {0}"
 msgstr "Téigh in aithne ar {0}"
 
-#: apps/addons/templates/addons/details.html:253
+#. {0} is the name of a category
+#: apps/addons/templates/addons/details.html:259
 msgid "See All {0} Add-ons"
-msgstr ""
+msgstr "Féach ar gach breiseán {0}"
 
-#: apps/addons/templates/addons/details.html:273
+#: apps/addons/templates/addons/details.html:279
 msgid "Need help with this add-on?"
 msgstr "An dteastaíonn uait cabhair leis an mbreiseán seo?"
 
-#: apps/addons/templates/addons/details.html:286
+#: apps/addons/templates/addons/details.html:292
 msgid "E-mail your question"
 msgstr "Seol do cheist trí ríomhphost"
 
-#: apps/addons/templates/addons/details.html:290
+#: apps/addons/templates/addons/details.html:296
 msgid "Visit the support site"
 msgstr "Féach ar an suíomh tacaíochta"
 
-#: apps/addons/templates/addons/details.html:307
+#: apps/addons/templates/addons/details.html:313
 msgid "Often used with&hellip;"
 msgstr "Úsáidte go minic le&hellip;"
 
-#: apps/addons/templates/addons/details.html:322
+#: apps/addons/templates/addons/details.html:328
 msgid "Related Collections"
 msgstr "Bailiúcháin Ghaolmhara"
 
-#: apps/addons/templates/addons/details.html:325
+#: apps/addons/templates/addons/details.html:331
 msgid "This add-on is not yet in any collections."
 msgstr "Níl an breiseán seo in aon bhailiúchán go dtí seo."
 
 #: apps/addons/templates/addons/developers.html:5
-#: apps/addons/templates/addons/developers.html:40
+#: apps/addons/templates/addons/developers.html:39
 msgid "Thank you for installing {0}"
 msgstr "Go raibh maith agat as {0} a shuiteáil"
 
 # %1 is an add-on name.
 #: apps/addons/templates/addons/developers.html:7
+#: apps/addons/templates/addons/developers.html:45
 #: apps/addons/templates/addons/developers.html:46
-#: apps/addons/templates/addons/developers.html:47
 msgid "Meet the {0} Developer"
 msgstr "Téigh in aithne ar fhorbróir {0}"
 
@@ -602,30 +639,30 @@ msgid ""
 "this add-on by making a small contribution."
 msgstr ""
 
-#: apps/addons/templates/addons/developers.html:63
-#: apps/addons/templates/addons/developers.html:123
+#: apps/addons/templates/addons/developers.html:62
+#: apps/addons/templates/addons/developers.html:122
 #: apps/users/templates/users/edit.html:130
 #: apps/users/templates/users/profile.html:16
 msgid "No Photo"
 msgstr "Gan Grianghraf"
 
-#: apps/addons/templates/addons/developers.html:77
+#: apps/addons/templates/addons/developers.html:76
 msgid "Who is {0}"
 msgstr "Cé hé/hí {0}"
 
 # %1 is an add-on name.
 #. {0} is the name of the add-on
-#: apps/addons/templates/addons/developers.html:81
-#: apps/addons/templates/addons/developers.html:150
+#: apps/addons/templates/addons/developers.html:80
+#: apps/addons/templates/addons/developers.html:149
 msgid "Why was {0} created?"
 msgstr "Cén fáth ar cruthaíodh {0}?"
 
 # %1 is an add-on name.
 #. {0} is the name of the add-on
-#: apps/addons/templates/addons/developers.html:85
-#: apps/addons/templates/addons/developers.html:155
+#: apps/addons/templates/addons/developers.html:84
+#: apps/addons/templates/addons/developers.html:154
 msgid "What's next for {0}"
-msgstr ""
+msgstr "Céard atá i ndán do {0}"
 
 #. {0} is the name of the Addon
 #. {0} is the name of the add-on
@@ -667,11 +704,11 @@ msgstr "Ar ais go dtí {0}..."
 
 # {0} is the application the user is browsing.  Examples:  Thunderbird, Firefox,
 # Sunbird
-#: apps/addons/templates/addons/home.html:3 apps/amo/helpers.py:175
+#: apps/addons/templates/addons/home.html:3 apps/amo/helpers.py:182
 msgid "Add-ons for {0}"
 msgstr "Breiseáin le haghaidh {0}"
 
-#: apps/addons/templates/addons/home.html:12
+#: apps/addons/templates/addons/home.html:8
 msgid "<strong>%(count)s</strong><span>add-on downloaded</span>"
 msgid_plural "<strong>%(count)s</strong><span>add-ons downloaded</span>"
 msgstr[0] "<strong>%(count)s</strong><span>bhreiseán íosluchtaithe</span>"
@@ -680,41 +717,41 @@ msgstr[2] "<strong>%(count)s</strong><span>bhreiseán íosluchtaithe</span>"
 msgstr[3] "<strong>%(count)s</strong><span>mbreiseán íosluchtaithe</span>"
 msgstr[4] "<strong>%(count)s</strong><span>breiseán íosluchtaithe</span>"
 
-#: apps/addons/templates/addons/home.html:26
+#: apps/addons/templates/addons/home.html:34
 msgid "View all featured add-ons"
 msgstr "Féach ar gach breiseán mór-le-rá"
 
-#: apps/addons/templates/addons/home.html:31
+#: apps/addons/templates/addons/home.html:39
 msgid "View all popular add-ons"
 msgstr "Taispeáin na breiseáin is mó éilimh orthu"
 
-#: apps/addons/templates/addons/home.html:36
+#: apps/addons/templates/addons/home.html:44
 msgid "View all newly created add-ons"
 msgstr "Féach ar na breiseáin is nuaí"
 
-#: apps/addons/templates/addons/home.html:41
+#: apps/addons/templates/addons/home.html:49
 msgid "View all recently updated add-ons"
 msgstr "Féach ar na breiseáin nuashonraithe le déanaí"
 
-#: apps/addons/templates/addons/home.html:54
+#: apps/addons/templates/addons/home.html:62
 msgid "Browse Mobile Add-ons"
 msgstr "Brabhsáil Breiseáin Shoghluaiste"
 
-#: apps/addons/templates/addons/home.html:56
+#: apps/addons/templates/addons/home.html:64
 msgid "Browse Add-ons"
 msgstr "Brabhsáil Breiseáin"
 
-#: apps/addons/templates/addons/home.html:79
+#: apps/addons/templates/addons/home.html:87
 msgctxt "addons_home_browse_subscribe"
 msgid "Subscribe"
 msgstr "Liostáil"
 
-#: apps/addons/templates/addons/home.html:93
+#: apps/addons/templates/addons/home.html:101
 msgctxt "addons_home_collections"
 msgid "Collections"
 msgstr "Bailiúcháin"
 
-#: apps/addons/templates/addons/home.html:95
+#: apps/addons/templates/addons/home.html:103
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:144
 msgid ""
 "Collections are groups of related add-ons that anyone can create and share."
@@ -722,30 +759,30 @@ msgstr ""
 "Is éard atá i mBailiúchán ná grúpa de bhreiseáin cosúil le chéile is féidir "
 "le héinne cruthú agus scaipeadh."
 
-#: apps/addons/templates/addons/home.html:99
+#: apps/addons/templates/addons/home.html:107
 #: apps/bandwagon/templates/bandwagon/collection_listing.html:5
 msgid "Popular Collections"
 msgstr "Bailiúcháin is mó éilimh orthu"
 
-#: apps/addons/templates/addons/home.html:110
+#: apps/addons/templates/addons/home.html:118
 msgid "Popular Tags"
 msgstr "Clibeanna Coitianta"
 
-#: apps/addons/templates/addons/home.html:118
+#: apps/addons/templates/addons/home.html:126
 msgid "View Top 100 Tags"
 msgstr "Féach ar na 100 clib is coitianta"
 
-#: apps/addons/templates/addons/home.html:125
+#: apps/addons/templates/addons/home.html:133
 msgid "Build a {0} Add-on"
 msgstr "Tóg Breiseán {0}"
 
-#: apps/addons/templates/addons/home.html:126
+#: apps/addons/templates/addons/home.html:134
 msgid "Find all the tools and resources you need to make your first add-on."
 msgstr ""
 "Aimsigh na huirlisí agus na hacmhainní a bheidh de dhíth ort chun do chéad "
 "bhreiseán a chruthú."
 
-#: apps/addons/templates/addons/home.html:127
+#: apps/addons/templates/addons/home.html:135
 msgid "Visit the Developer Hub"
 msgstr "Déan cuairt ar an Lárionad Forbartha"
 
@@ -754,9 +791,9 @@ msgid "Source Code License for {addon}"
 msgstr "Ceadúnas an chóid fhoinsigh le haghaidh {addon}"
 
 #: apps/addons/templates/addons/license.html:13
-#: apps/addons/templates/addons/personas_detail.html:60
-#: apps/devhub/templates/devhub/includes/license_form.html:3
-#: apps/devhub/templates/devhub/versions/edit.html:84
+#: apps/addons/templates/addons/personas_detail.html:61
+#: apps/devhub/templates/devhub/includes/license_form.html:5
+#: apps/devhub/templates/devhub/versions/edit.html:89
 msgid "License"
 msgstr "Ceadúnas"
 
@@ -784,6 +821,8 @@ msgid ""
 "<b>Performance warning:</b> Installing this add-on can slow down Firefox's "
 "start-up by <b>%(amount)s%%</b>."
 msgstr ""
+"<b>Rabhadh luais:</b> Má shuiteálann tú an breiseán seo, seans go mbeidh tosú "
+"Firefox <b>%(amount)s%%</b> níos moille."
 
 #: apps/addons/templates/addons/performance_note.html:14
 #: apps/addons/templates/addons/performance_note.html:27
@@ -795,6 +834,8 @@ msgid ""
 "Installing this add-on can slow down Firefox's start-up by <b>%(amount)s%%</"
 "b>."
 msgstr ""
+"Má shuiteálann tú an breiseán seo, seans go mbeidh tosú "
+"Firefox <b>%(amount)s%%</b> níos moille."
 
 #. {0} is a date.
 #: apps/addons/templates/addons/persona_preview.html:11
@@ -824,35 +865,35 @@ msgstr "le {0} ar {1}"
 msgid "Not yet rated"
 msgstr "Gan rátáil fós"
 
-#: apps/addons/templates/addons/personas_detail.html:43
+#: apps/addons/templates/addons/personas_detail.html:44
 msgid "Artist"
 msgstr "Ealaíontóir"
 
-#: apps/addons/templates/addons/personas_detail.html:52
+#: apps/addons/templates/addons/personas_detail.html:53
 #: apps/stats/helpers.py:35 apps/stats/templates/stats/overview.html:20
 msgid "Daily Users"
 msgstr "Úsáideoirí Laethúla"
 
 #. {0} is a category name, such as Nature
-#: apps/addons/templates/addons/personas_detail.html:88
+#: apps/addons/templates/addons/personas_detail.html:89
 msgid "More {0} Personas"
 msgstr "Tuilleadh Pearsantachtaí {0}"
 
 #. {0} is a category name, such as Nature
-#: apps/addons/templates/addons/personas_detail.html:95
+#: apps/addons/templates/addons/personas_detail.html:96
 msgid "See all {0} Personas"
 msgstr "Féach ar gach Pearsantacht {0}"
 
-#: apps/addons/templates/addons/personas_detail.html:103
+#: apps/addons/templates/addons/personas_detail.html:104
 msgid "More by this Artist"
 msgstr "Tuilleadh ón Ealaíontóir seo"
 
-#: apps/addons/templates/addons/personas_detail.html:109
+#: apps/addons/templates/addons/personas_detail.html:110
 msgid "See all Personas by this Artist"
 msgstr "Gach Pearsantacht ón Ealaíontóir seo"
 
-#: apps/addons/templates/addons/personas_detail.html:129
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:70
+#: apps/addons/templates/addons/personas_detail.html:130
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:71
 #: apps/search/templates/search/results.html:58 templates/categories.html:7
 msgid "Categories"
 msgstr "Catagóirí"
@@ -862,6 +903,8 @@ msgid ""
 "To install this add-on and thousands more, <b>get Firefox</b>, a free and "
 "open web browser from Mozilla."
 msgstr ""
+"Chun an breiseán seo agus na mílte eile a úsáid, <b>faigh Firefox</b>, "
+"brabhsálaí oscailte agus saor in aisce ó Mhozilla."
 
 #: apps/addons/templates/addons/popups.html:20
 #: apps/addons/templates/addons/popups.html:51
@@ -880,12 +923,19 @@ msgid ""
 "the Tools menu.</li> <li>Click the Install button, and locate/select the file "
 "you downloaded and click \"OK\".</li> </ol>"
 msgstr ""
+"<strong>Conas a Shuiteáil in Thunderbird</strong> <ol> <li>Íosluchtaigh agus "
+"sábháil an comhad ar do dhiosca crua.</li> <li>In Mozilla Thunderbird, oscail "
+"'Breiseáin' ón roghchlár 'Uirlisí'.</li> <li>Cliceáil an cnaipe 'Suiteáil', "
+"agus roghnaigh an comhad a d'íosluchtaigh tú agus cliceáil \"OK\".</li> </ol>"
 
 #: apps/addons/templates/addons/popups.html:40
 msgid ""
 "To install this Persona, <b>get Thunderbird</b>, a free and open source email "
 "client from Mozilla Messaging and install the Personas Plus add-on."
 msgstr ""
+"Chun an Phearsantacht a shuiteáil, <b>faigh Thunderbird</b>, clár ríomhphoist "
+"oscailte agus saor in aisce ó Mozilla Messaging agus suiteáil an breiseán "
+"Personas Plus."
 
 #: apps/addons/templates/addons/popups.html:45
 msgid "Learn more about Thunderbird"
@@ -896,10 +946,12 @@ msgid ""
 "To install this Persona and thousands more, <b>get Firefox</b>, a free and "
 "open web browser from Mozilla."
 msgstr ""
+"Chun an Phearsantacht seo agus na mílte eile a úsáid, <b>faigh Firefox</b>, "
+"brabhsálaí oscailte agus saor in aisce ó Mhozilla."
 
 #: apps/addons/templates/addons/popups.html:59
 msgid "This add-on has not been updated to work with your version of %(app)s."
-msgstr ""
+msgstr "Níl an breiseán seo comhoiriúnach leis an leagan de %(app)s atá agat."
 
 #: apps/addons/templates/addons/popups.html:62
 msgid "Install Anyway"
@@ -910,6 +962,8 @@ msgid ""
 "This add-on requires %(app)s {new_version}. You are currently using %(app)s "
 "{old_version}."
 msgstr ""
+"Teastaíonn ón bhreiseán seo leagan {new_version} de %(app)s. Tá leagan "
+"{old_version} agat faoi láthair."
 
 #. {0} is an app name, like Firefox.
 #: apps/addons/templates/addons/popups.html:74
@@ -927,12 +981,17 @@ msgid ""
 "This Persona requires %(app)s %(new_version)s. You are currently using %(app)"
 "s {old_version}."
 msgstr ""
+"Teastaíonn ón Phearsantacht seo leagan %(new_version) de %(app)s. Tá leagan "
+"{old_version} agat faoi láthair."
 
 #: apps/addons/templates/addons/popups.html:100
 msgid ""
 "<strong>Caution:</strong> This add-on has not been reviewed by Mozilla. Be "
 "careful when installing third-party software that might harm your computer."
 msgstr ""
+"<strong>Fainic:</strong> Níl léirmheas déanta ar an mbreiseán seo ag "
+"Mozilla.  Bí cúramach nuair a shuiteálann tú bogearraí tríú páirtí a "
+"dhéanfadh dochar do do ríomhaire."
 
 #: apps/addons/templates/addons/popups.html:111
 msgid ""
@@ -940,6 +999,9 @@ msgid ""
 "website and has not been reviewed by Mozilla. Be careful when installing "
 "third-party software that might harm your computer."
 msgstr ""
+"<strong>Fainic:</strong> Tá an breiseán seo óstáilte ar shuíomh an fhorbróra féin agus níl léirmheas déanta air ag "
+"Mozilla.  Bí cúramach nuair a shuiteálann tú bogearraí tríú páirtí a "
+"dhéanfadh dochar do do ríomhaire."
 
 #: apps/addons/templates/addons/popups.html:116
 msgid "Continue to Website"
@@ -950,6 +1012,8 @@ msgid ""
 "<strong>Please note:</strong> This add-on is not compatible with your "
 "operating system."
 msgstr ""
+"<strong>Nóta:</strong> Níl an breiseán seo comhoiriúnach le do chóras "
+"oibriúcháin."
 
 #. {0} is the name of the Addon
 #: apps/addons/templates/addons/privacy.html:5
@@ -959,7 +1023,7 @@ msgstr "Polasaí Príobháideachta le haghaidh {0}"
 #. The Privacy Policy for this addon
 #: apps/addons/templates/addons/privacy.html:17
 #: apps/addons/templates/addons/privacy.html:27
-#: apps/devhub/templates/devhub/includes/policy_form.html:16
+#: apps/devhub/templates/devhub/includes/policy_form.html:19
 #: templates/global/footer.html:16
 msgid "Privacy Policy"
 msgstr "Polasaí Príobháideachta"
@@ -986,6 +1050,10 @@ msgid ""
 "has security or privacy issues, please use the form below to describe your "
 "concerns. Please do not use this form for any other reason."
 msgstr ""
+"Má cheapann tú go dtagann an breiseán seo salach ar <a href=\"%(url)s\">ár "
+"bpolasaithe</a> nó má tá imní ort maidir le slándáil nó príobháideacht, bain "
+"úsáid as an bhfoirm thíos agus déan cur síos ar an bhfadhb. Ná húsáid an "
+"fhoirm seo ar aon chúis eile."
 
 #: apps/addons/templates/addons/report_abuse.html:24
 #: apps/users/templates/users/report_abuse.html:20
@@ -995,25 +1063,25 @@ msgstr "Seol Tuairisc"
 #: apps/addons/templates/addons/report_abuse.html:26
 #: apps/devhub/templates/devhub/addons/ajax_compat_update.html:36
 #: apps/devhub/templates/devhub/addons/profile.html:46
-#: apps/devhub/templates/devhub/addons/listing/delete_form.html:20
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:119
-#: apps/devhub/templates/devhub/includes/addon_edit_details.html:85
-#: apps/devhub/templates/devhub/includes/addon_edit_media.html:81
+#: apps/devhub/templates/devhub/addons/listing/delete_form.html:22
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:130
+#: apps/devhub/templates/devhub/includes/addon_edit_details.html:87
+#: apps/devhub/templates/devhub/includes/addon_edit_media.html:132
 #: apps/devhub/templates/devhub/includes/addon_edit_support.html:81
 #: apps/devhub/templates/devhub/includes/addon_edit_technical.html:102
-#: apps/devhub/templates/devhub/versions/edit.html:129
-#: apps/devhub/templates/devhub/versions/edit.html:173
-#: apps/devhub/templates/devhub/versions/edit.html:181
-#: apps/devhub/templates/devhub/versions/list.html:158
-#: apps/devhub/templates/devhub/versions/list.html:181
-#: apps/translations/templates/translations/trans-menu.html:37
+#: apps/devhub/templates/devhub/versions/add_file_modal.html:46
+#: apps/devhub/templates/devhub/versions/add_file_modal.html:54
+#: apps/devhub/templates/devhub/versions/edit.html:128
+#: apps/devhub/templates/devhub/versions/list.html:186
+#: apps/devhub/templates/devhub/versions/list.html:214
+#: apps/translations/templates/translations/trans-menu.html:38
 #: apps/users/templates/users/report_abuse.html:22
 msgid "Cancel"
 msgstr "Cealaigh"
 
 #: apps/addons/templates/addons/report_abuse_full.html:3
 msgid "Report abuse for {0}"
-msgstr ""
+msgstr "Déan tuairisc ar dhrochúsáid {0}"
 
 #: apps/addons/templates/addons/review_add_box.html:4
 msgid "What do you think?"
@@ -1056,6 +1124,8 @@ msgid ""
 "See the <a href=\"%(support)s\">support section</a> to find out where to get "
 "assistance for this add-on."
 msgstr ""
+"Féach ar an <a href=\"%(support)s\">Leathanach Tacaíochta</a> chun cabhair "
+"leis an mbreiseán seo a fháil."
 
 #: apps/addons/templates/addons/review_add_box.html:39
 msgid "Review Guidelines"
@@ -1090,11 +1160,27 @@ msgstr[2] "Taispeáin na %(cnt)s léirmheas ar an mbreiseán seo"
 msgstr[3] "Taispeáin na %(cnt)s léirmheas ar an mbreiseán seo"
 msgstr[4] "Taispeáin na %(cnt)s léirmheas ar an mbreiseán seo"
 
-#: apps/addons/templates/addons/support_addon.html:5
+#: apps/addons/templates/addons/support_addon.html:10
+msgid ""
+"Support this add-on: <a href=\"%(url)s\">Contribute %(amt)s</a> to the %"
+"(charity_name)s"
+msgstr ""
+"Tacaigh leis an mbreiseán seo: <a href=\"%(url)s\">Tabhair %(amt)s</a> do %"
+"(charity_name)s"
+
+#: apps/addons/templates/addons/support_addon.html:14
+msgid ""
+"Support this add-on: <a href=\"%(url)s\">Contribute %(amt)s</a> to %"
+"(charity_name)s"
+msgstr ""
+"Tacaigh leis an mbreiseán seo: <a href=\"%(url)s\">Tabhair %(amt)s</a> do %"
+"(charity_name)s"
+
+#: apps/addons/templates/addons/support_addon.html:19
 msgid "Support this add-on: <a href=\"%(url)s\">Contribute %(amt)s</a>"
 msgstr "Tacaigh leis an mbreiseán seo: <a href=\"%(url)s\">Tabhair %(amt)s</a>"
 
-#: apps/addons/templates/addons/support_addon.html:10
+#: apps/addons/templates/addons/support_addon.html:24
 msgid "Support this add-on"
 msgstr "Tacaigh leis an mbreiseán seo"
 
@@ -1134,24 +1220,24 @@ msgid "Incomplete"
 msgstr "Neamhiomlán"
 
 #: apps/amo/__init__.py:91
-msgid "Not reviewed"
-msgstr "Gan léirmheas"
+msgid "Awaiting Preliminary Review"
+msgstr "Ag Fanacht le Réamhscrúdú"
 
 #: apps/amo/__init__.py:92
 msgid "Pending approval"
-msgstr ""
+msgstr "Ag fanacht le formheas"
 
 #: apps/amo/__init__.py:93
-msgid "Nominated to be public"
-msgstr ""
+msgid "Awaiting Full Review"
+msgstr "Ag Fanacht le Léirmheas Iomlán"
 
 #: apps/amo/__init__.py:94
-msgid "Public"
-msgstr "Poiblí"
+msgid "Fully Reviewed"
+msgstr "Scrúdú Iomlán Déanta"
 
 #: apps/amo/__init__.py:95
-msgid "Disabled by Admins"
-msgstr "Díchumasaithe ag Riarthóir"
+msgid "Disabled by Mozilla"
+msgstr "Díchumasaithe ag Mozilla"
 
 #: apps/amo/__init__.py:96
 msgid "Listed"
@@ -1162,27 +1248,27 @@ msgid "Beta"
 msgstr "Béite"
 
 #: apps/amo/__init__.py:98
-msgid "Preliminarily reviewed"
-msgstr "Réamhscrúdú déanta"
+msgid "Preliminarily Reviewed"
+msgstr "Réamhscrúdú Déanta"
 
 #: apps/amo/__init__.py:100
-msgid "Preliminarily reviewed and awaiting full review"
-msgstr "Réamhscrúdú déanta; fanacht le scrúdú iomlán"
+msgid "Preliminarily Reviewed and Awaiting Full Review"
+msgstr "Réamhscrúdú Déanta, ag fanacht le Scrúdú Iomlán anois"
 
 #: apps/amo/__init__.py:102
 msgid "Pending a review choice"
 msgstr "Fanacht le rogha de stíl léirmheasa"
 
-#: apps/amo/__init__.py:120
+#: apps/amo/__init__.py:125
 msgid "Full"
 msgstr "Scrúdú Iomlán"
 
 # preliminary review
-#: apps/amo/__init__.py:121
+#: apps/amo/__init__.py:126
 msgid "Preliminary"
 msgstr "Réamhscrúdú"
 
-#: apps/amo/__init__.py:130
+#: apps/amo/__init__.py:135
 #: apps/bandwagon/templates/bandwagon/edit_contributors.html:9
 #: apps/bandwagon/templates/bandwagon/edit_contributors.html:12
 #: apps/bandwagon/templates/bandwagon/edit_contributors.html:17
@@ -1190,49 +1276,49 @@ msgstr "Réamhscrúdú"
 msgid "Owner"
 msgstr "Úinéir"
 
-#: apps/amo/__init__.py:131
+#: apps/amo/__init__.py:136
 msgid "Developer"
 msgstr "Forbróir"
 
-#: apps/amo/__init__.py:132
+#: apps/amo/__init__.py:137
 msgid "Viewer"
 msgstr "Breathnóir"
 
-#: apps/amo/__init__.py:149 apps/amo/__init__.py:161 apps/amo/__init__.py:319
+#: apps/amo/__init__.py:154 apps/amo/__init__.py:166 apps/amo/__init__.py:327
 #: apps/search/forms.py:68
 msgid "Any"
 msgstr "Ar bith"
 
-#: apps/amo/__init__.py:150
+#: apps/amo/__init__.py:155
 msgid "Extension"
 msgstr "Eisínteacht"
 
-#: apps/amo/__init__.py:151
+#: apps/amo/__init__.py:156
 msgid "Theme"
 msgstr "Téama"
 
-#: apps/amo/__init__.py:152 apps/browse/templates/browse/language_tools.html:39
+#: apps/amo/__init__.py:157 apps/browse/templates/browse/language_tools.html:39
 msgid "Dictionary"
 msgstr "Foclóir"
 
-#: apps/amo/__init__.py:153
+#: apps/amo/__init__.py:158
 msgid "Search Engine"
 msgstr "Inneall Cuardaigh"
 
-#: apps/amo/__init__.py:154
+#: apps/amo/__init__.py:159
 msgid "Plugin"
 msgstr "Forlíontán"
 
-#: apps/amo/__init__.py:155
+#: apps/amo/__init__.py:160
 msgid "Language Pack (Application)"
 msgstr "Pacáiste Teanga (Feidhmchlár)"
 
-#: apps/amo/__init__.py:156
+#: apps/amo/__init__.py:161
 msgid "Persona"
 msgstr "Pearsantacht"
 
 # Plural in this context means many of the add-on type
-#: apps/amo/__init__.py:162 apps/browse/feeds.py:67 apps/browse/feeds.py:80
+#: apps/amo/__init__.py:167 apps/browse/feeds.py:67 apps/browse/feeds.py:80
 #: apps/browse/templates/browse/base_listing.html:7
 #: apps/browse/templates/browse/category_landing.html:15
 #: apps/browse/templates/browse/creatured.html:9
@@ -1244,26 +1330,26 @@ msgid "Extensions"
 msgstr "Eisínteachtaí"
 
 # Plural in this context means many of the add-on type
-#: apps/amo/__init__.py:164
+#: apps/amo/__init__.py:169
 msgid "Dictionaries"
 msgstr "Foclóirí"
 
-#: apps/amo/__init__.py:165 apps/browse/feeds.py:178
+#: apps/amo/__init__.py:170 apps/browse/feeds.py:178
 #: apps/browse/templates/browse/search_tools.html:4
 #: templates/global/menu_links.html:34
 msgid "Search Tools"
 msgstr "Uirlisí Cuardaigh"
 
-#: apps/amo/__init__.py:166
+#: apps/amo/__init__.py:171
 msgid "Plugins"
 msgstr "Forlíontáin"
 
 # Plural in this context means many of the add-on type
-#: apps/amo/__init__.py:167
+#: apps/amo/__init__.py:172
 msgid "Language Packs (Application)"
 msgstr "Pacáistí Teanga (Feidhmchlár)"
 
-#: apps/amo/__init__.py:168 apps/browse/templates/browse/personas/base.html:5
+#: apps/amo/__init__.py:173 apps/browse/templates/browse/personas/base.html:5
 #: apps/browse/templates/browse/personas/base.html:19
 #: apps/browse/templates/browse/personas/category_landing.html:21
 #: apps/browse/templates/browse/personas/category_landing.html:36
@@ -1274,155 +1360,155 @@ msgstr "Pacáistí Teanga (Feidhmchlár)"
 msgid "Personas"
 msgstr "Pearsantachtaí"
 
-#: apps/amo/__init__.py:217 templates/global/footer.html:6
+#: apps/amo/__init__.py:225 templates/global/footer.html:6
 #: templates/global/header.html:7
 msgid "Firefox"
 msgstr "Firefox"
 
-#: apps/amo/__init__.py:233
+#: apps/amo/__init__.py:241
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: apps/amo/__init__.py:247
+#: apps/amo/__init__.py:255
 msgid "SeaMonkey"
 msgstr "SeaMonkey"
 
-#: apps/amo/__init__.py:262
+#: apps/amo/__init__.py:270
 msgid "Sunbird"
 msgstr "Sunbird"
 
-#: apps/amo/__init__.py:275 templates/global/menu_links.html:13
+#: apps/amo/__init__.py:283 templates/global/menu_links.html:13
 msgid "Mobile"
 msgstr "Soghluaiste"
 
-#: apps/amo/__init__.py:294
+#: apps/amo/__init__.py:302
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: apps/amo/__init__.py:327 apps/search/views.py:72
-msgid "All"
-msgstr "Uile"
+#: apps/amo/__init__.py:335
+msgid "All Platforms"
+msgstr "Gach Ardán"
 
-#: apps/amo/__init__.py:334 apps/stats/templates/stats/os.html:32
+#: apps/amo/__init__.py:342 apps/stats/templates/stats/os.html:32
 msgid "Linux"
 msgstr "Linux"
 
-#: apps/amo/__init__.py:341
+#: apps/amo/__init__.py:349
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: apps/amo/__init__.py:348
+#: apps/amo/__init__.py:356
 msgid "BSD"
 msgstr "BSD"
 
 # 99% sure this is the OS
-#: apps/amo/__init__.py:355 apps/stats/templates/stats/os.html:22
+#: apps/amo/__init__.py:363 apps/stats/templates/stats/os.html:22
 msgid "Windows"
 msgstr "Windows"
 
-#: apps/amo/__init__.py:362
+#: apps/amo/__init__.py:370
 msgid "Solaris"
 msgstr "Solaris"
 
-#: apps/amo/__init__.py:413 apps/amo/helpers.py:280 apps/devhub/forms.py:114
-#: apps/devhub/forms.py:124
+#: apps/amo/__init__.py:421 apps/amo/helpers.py:287 apps/devhub/forms.py:116
+#: apps/devhub/forms.py:126
 msgid "Custom License"
 msgstr "Ceadúnas Saincheaptha"
 
-#: apps/amo/__init__.py:420
+#: apps/amo/__init__.py:428
 msgid "Mozilla Public License, version 1.1"
 msgstr "Ceadúnas Poiblí Mozilla, leagan 1.1"
 
-#: apps/amo/__init__.py:427
+#: apps/amo/__init__.py:435
 msgid "GNU General Public License, version 2.0"
 msgstr "GNU General Public License, leagan 2.0"
 
-#: apps/amo/__init__.py:434
+#: apps/amo/__init__.py:442
 msgid "GNU General Public License, version 3.0"
 msgstr "GNU General Public License, leagan 3.0"
 
-#: apps/amo/__init__.py:448
+#: apps/amo/__init__.py:456
 msgid "GNU Lesser General Public License, version 3.0"
 msgstr "GNU Lesser General Public License, leagan 3.0"
 
-#: apps/amo/__init__.py:455
+#: apps/amo/__init__.py:463
 msgid "MIT/X11 License"
 msgstr "Ceadúnas MIT/X11"
 
-#: apps/amo/__init__.py:462
+#: apps/amo/__init__.py:470
 msgid "BSD License"
 msgstr "Ceadúnas BSD"
 
-#: apps/amo/__init__.py:469
+#: apps/amo/__init__.py:477
 msgid "All Rights Reserved"
 msgstr "Gach Ceart Ar Cosaint"
 
-#: apps/amo/__init__.py:478
+#: apps/amo/__init__.py:486
 msgid "Creative Commons Attribution-Noncommercial-Share Alike 3.0"
-msgstr ""
+msgstr "Creative Commons Attribution-Noncommercial-Share Alike 3.0"
 
-#: apps/amo/__init__.py:479 apps/amo/templates/amo/license_link.html:10
+#: apps/amo/__init__.py:487 apps/amo/templates/amo/license_link.html:10
 msgid "Some rights reserved"
-msgstr ""
+msgstr "Cearta áirithe ar cosaint"
 
-#: apps/amo/__init__.py:499
+#: apps/amo/__init__.py:507
 msgid "Only ask on this add-on's page and developer profile"
 msgstr ""
 
-#: apps/amo/__init__.py:500
+#: apps/amo/__init__.py:508
 msgid "Ask after users start downloading this add-on"
 msgstr ""
 
-#: apps/amo/__init__.py:501
+#: apps/amo/__init__.py:509
 msgid "Ask before users can download this add-on"
 msgstr ""
 
-#: apps/amo/context_processors.py:39
+#: apps/amo/context_processors.py:40
 msgid "View Profile"
 msgstr "Féach ar Phróifíl"
 
-#: apps/amo/context_processors.py:42 apps/users/templates/users/profile.html:35
+#: apps/amo/context_processors.py:43 apps/users/templates/users/profile.html:35
 msgid "Edit Profile"
 msgstr "Cuir Próifíl in Eagar"
 
-#: apps/amo/context_processors.py:45 apps/devhub/helpers.py:49
-#: apps/devhub/helpers.py:51 apps/devhub/templates/devhub/base.html:31
+#: apps/amo/context_processors.py:46 apps/devhub/helpers.py:56
+#: apps/devhub/helpers.py:58 apps/devhub/templates/devhub/base.html:41
 msgid "My Add-ons"
 msgstr "Mo Chuid Breiseán"
 
-#: apps/amo/context_processors.py:49
-#: apps/discovery/templates/discovery/pane.html:54
+#: apps/amo/context_processors.py:50
+#: apps/discovery/templates/discovery/pane.html:53
 #: apps/users/templates/users/profile.html:96
 msgid "My Collections"
 msgstr "Mo Chuid Bailiúchán"
 
-#: apps/amo/context_processors.py:53
+#: apps/amo/context_processors.py:54
 msgid "My Favorites"
 msgstr "Na Breiseáin Is Ansa Liom"
 
-#: apps/amo/context_processors.py:58
+#: apps/amo/context_processors.py:59
 msgid "Log out"
 msgstr "Logáil amach"
 
-#: apps/amo/context_processors.py:62 apps/devhub/helpers.py:26
-#: apps/devhub/helpers.py:46 templates/footer.html:6
+#: apps/amo/context_processors.py:63 apps/devhub/helpers.py:33
+#: apps/devhub/helpers.py:53 templates/footer.html:6
 #: templates/global/menu_links.html:38
 msgid "Developer Hub"
 msgstr "Lárionad Forbartha"
 
-#: apps/amo/context_processors.py:65
+#: apps/amo/context_processors.py:66 apps/editors/helpers.py:15
 msgid "Editor Tools"
 msgstr "Uirlisí Eagarthóra"
 
-#: apps/amo/context_processors.py:68
+#: apps/amo/context_processors.py:69
 msgid "Localizer Tools"
 msgstr "Uirlisí d'Aistritheoirí"
 
-#: apps/amo/context_processors.py:71
+#: apps/amo/context_processors.py:72
 msgid "Admin Tools"
 msgstr "Uirlisí Riaracháin"
 
-#: apps/amo/helpers.py:101 apps/bandwagon/templates/bandwagon/add.html:9
+#: apps/amo/helpers.py:108 apps/bandwagon/templates/bandwagon/add.html:9
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:15
 #: apps/bandwagon/templates/bandwagon/collection_listing.html:20
 #: apps/bandwagon/templates/bandwagon/collection_listing.html:28
@@ -1437,19 +1523,19 @@ msgstr "Uirlisí Riaracháin"
 msgid "Collections"
 msgstr "Bailiúcháin"
 
-#: apps/amo/helpers.py:110 apps/browse/templates/browse/language_tools.html:3
+#: apps/amo/helpers.py:117 apps/browse/templates/browse/language_tools.html:3
 #: apps/browse/templates/browse/language_tools.html:28
 #: apps/browse/templates/browse/language_tools.html:29
 msgid "Dictionaries & Language Packs"
 msgstr "Foclóirí agus Pacáistí Teanga"
 
-#: apps/amo/helpers.py:177 apps/bandwagon/templates/bandwagon/edit.html:33
+#: apps/amo/helpers.py:184 apps/bandwagon/templates/bandwagon/edit.html:33
 #: templates/global/menu_links.html:26
 msgid "Add-ons"
 msgstr "Breiseáin"
 
 #. L10n: relative time in the past, like '4 days ago'
-#: apps/amo/helpers.py:308
+#: apps/amo/helpers.py:315
 msgid "{0} ago"
 msgstr "{0} ó shin"
 
@@ -1470,13 +1556,13 @@ msgid "Categories edited for {addon}."
 msgstr "Cuireadh catagóirí {addon} in eagar."
 
 #: apps/amo/log.py:36
-msgid "{0.name}({1}) added to {addon}."
-msgstr "Cuireadh {0.name}({1}) le {addon}."
+msgid "{0.name} ({1}) added to {addon}."
+msgstr "Cuireadh {0.name} ({1}) le {addon}."
 
 #. L10n: {0} is the user being removed, {1} is their role.
 #: apps/amo/log.py:43
-msgid "{0.name}({1}) removed from {addon}."
-msgstr "Baineadh {0.name}({1}) ó {addon}."
+msgid "{0.name} ({1}) removed from {addon}."
+msgstr "Baineadh {0.name} ({1}) ó {addon}."
 
 #: apps/amo/log.py:49
 msgid "Contributions for {addon}."
@@ -1484,24 +1570,24 @@ msgstr "Deontais le haghaidh {addon}."
 
 #: apps/amo/log.py:54
 msgid "{addon} set inactive."
-msgstr ""
+msgstr "Díghníomhachtaíodh {addon}."
 
 #: apps/amo/log.py:60
 msgid "{addon} activated."
-msgstr ""
+msgstr "Gníomhachtaíodh {addon}."
 
 #: apps/amo/log.py:67
 msgid "Stats set public for {addon}."
-msgstr ""
+msgstr "Tá na staitisticí le haghaidh {addon} poiblí anois."
 
 #: apps/amo/log.py:74
 msgid "{addon} stats set to private."
-msgstr ""
+msgstr "Tá na staitisticí le haghaidh {addon} príobháideach anois."
 
 #. L10n: {0} is the status
 #: apps/amo/log.py:82
 msgid "{addon} status changed to {0}."
-msgstr ""
+msgstr "Tá stádas {addon} {0} anois."
 
 #: apps/amo/log.py:89
 msgid "Preview added to {addon}."
@@ -1530,11 +1616,11 @@ msgstr "Scriosadh leagan {0} de {addon}."
 
 #: apps/amo/log.py:125
 msgid "File {0.name} added to {version} of {addon}."
-msgstr ""
+msgstr "Cuireadh comhad {0.name} le leagan {version} de {addon}."
 
 #: apps/amo/log.py:135
 msgid "File {0} deleted from {version} of {addon}."
-msgstr ""
+msgstr "Scriosadh comhad {0} ó leagan {version} de {addon}."
 
 #: apps/amo/log.py:141
 msgid "{addon} {version} approved."
@@ -1564,15 +1650,15 @@ msgstr "Baineadh clib {tag} ó {addon}."
 
 #: apps/amo/log.py:180
 msgid "{addon} added to {collection}."
-msgstr ""
+msgstr "Cuireadh {addon} le {collection}."
 
 #: apps/amo/log.py:185
 msgid "{addon} removed from {collection}."
-msgstr ""
+msgstr "Baineadh {addon} ó {collection}."
 
 #: apps/amo/log.py:190
 msgid "{review} for {addon} written."
-msgstr ""
+msgstr "{review} scríofa faoi {addon}."
 
 #. L10n: {0} is a category name.
 #: apps/amo/log.py:197
@@ -1596,7 +1682,7 @@ msgstr ""
 #. app
 #: apps/amo/log.py:222
 msgid "{addon} {version} now supports {0} {1.min}-{1.max}."
-msgstr ""
+msgstr "Tacaíonn {addon} {version} le {0} {1.min}-{1.max} anois."
 
 #. L10n: {0} is a user, {1} is their role
 #: apps/amo/log.py:229
@@ -1605,27 +1691,31 @@ msgstr ""
 
 #: apps/amo/log.py:236
 msgid "{addon} is now licensed under {0.name}."
-msgstr ""
+msgstr "Tá {addon} ar fáil faoi cheadúnas {0.name} anois."
 
 #: apps/amo/log.py:241
 msgid "{addon} policy changed."
-msgstr ""
+msgstr "Athraíodh polasaí {addon}."
+
+#: apps/amo/log.py:246
+msgid "{addon} icon changed."
+msgstr "Athraíodh deilbhín {addon}."
 
 #. abbreviation of 'previous'
 #: apps/amo/templates/amo/paginator.html:6
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:32
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:46
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:59
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:72
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:31
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:45
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:58
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:71
 msgid "Prev"
 msgstr "Roimhe Seo"
 
 #: apps/amo/templates/amo/paginator.html:26
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:34
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:48
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:61
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:74
-#: apps/discovery/templates/discovery/pane.html:78
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:33
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:47
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:60
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:73
+#: apps/discovery/templates/discovery/pane.html:77
 #: apps/discovery/templates/discovery/addons/detail.html:36
 msgid "Next"
 msgstr "Ar Aghaidh"
@@ -1678,11 +1768,11 @@ msgstr "Sonraí neamhbhailí: {0}"
 
 #: apps/api/handlers.py:61
 msgid "Add-on did not validate: %s"
-msgstr ""
+msgstr "Theip ar bhailíochtú an bhreiseáin: %s"
 
 #: apps/api/views.py:182
 msgid "Not implemented yet."
-msgstr ""
+msgstr "Níl sé seo ar fáil fós."
 
 #: apps/api/templates/oauth/challenge.html:3
 #: apps/api/templates/oauth/challenge.html:6
@@ -1691,7 +1781,7 @@ msgstr "OAuth riachtanach"
 
 #: apps/api/templates/piston/authorize_token.html:3
 msgid "Authorize access to your data"
-msgstr ""
+msgstr "Údaraigh rochtain ar do chuid sonraí"
 
 #: apps/api/templates/piston/authorize_token.html:6
 #: apps/api/templates/piston/request_token_ready.html:3
@@ -1793,7 +1883,7 @@ msgstr "Mise amháin atá in ann an bailiúchán seo a fheiceáil."
 
 #: apps/bandwagon/forms.py:19
 msgid "Anybody can view this collection."
-msgstr ""
+msgstr "Is féidir le haon duine an bailiúchán seo a fheiceáil."
 
 #: apps/bandwagon/forms.py:120
 msgid "Give your collection a name."
@@ -1818,6 +1908,14 @@ msgstr "Deilbhín"
 #: apps/bandwagon/forms.py:162
 msgid "This url is already in use by another collection"
 msgstr "Tá an URL seo in úsáid ag bailiúchán eile cheana"
+
+#: apps/bandwagon/forms.py:172 apps/devhub/views.py:655
+msgid "Icons must be either PNG or JPG."
+msgstr "Ní mór do dheilbhíní a bheith PNG nó JPG."
+
+#: apps/bandwagon/forms.py:177 apps/devhub/views.py:662 apps/users/forms.py:204
+msgid "Please use images smaller than %dMB."
+msgstr "Úsáid íomhánna níos lú ná %dMB le do thoil."
 
 #: apps/bandwagon/helpers.py:41
 msgid "Remove from Favorites"
@@ -1871,8 +1969,8 @@ msgid "Popularity"
 msgstr "Éileamh"
 
 #: apps/bandwagon/views.py:139 apps/browse/views.py:49 apps/browse/views.py:294
-#: apps/devhub/views.py:74
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:18
+#: apps/devhub/views.py:78
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:19
 #: apps/users/templates/users/vcard.html:7
 msgid "Name"
 msgstr "Ainm"
@@ -1886,6 +1984,8 @@ msgid ""
 "Your new collection is shown below. You can <a href=\"%(url)s\">edit "
 "additional settings</a> if you'd like."
 msgstr ""
+"Feicfidh tú do bhailiúchán nua thíos. Is féidir leat <a href=\"%(url)s\">socruithe "
+"breise a chur in eagar</a> más mian leat."
 
 #: apps/bandwagon/views.py:368
 msgid "Collection updated!"
@@ -1938,12 +2038,13 @@ msgstr "Ainm:"
 #: apps/bandwagon/templates/bandwagon/ajax_new.html:16
 #: apps/bandwagon/templates/bandwagon/edit.html:17
 #: apps/bandwagon/templates/bandwagon/includes/addedit.html:19
-#: apps/devhub/templates/devhub/addons/submit/describe.html:26
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:8
+#: apps/devhub/templates/devhub/addons/submit/describe.html:30
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:9
 #: apps/devhub/templates/devhub/includes/addon_edit_details.html:8
 #: apps/devhub/templates/devhub/includes/addon_edit_media.html:10
 #: apps/devhub/templates/devhub/includes/addon_edit_support.html:8
 #: apps/devhub/templates/devhub/includes/addon_edit_technical.html:8
+#: templates/qunit.html:117
 msgid "Edit"
 msgstr "Eagar"
 
@@ -1956,13 +2057,13 @@ msgstr "nó <a id=\"collections-new-cancel\" href=\"#\">Cealaigh</a>"
 msgid "To rate collections, you must have an add-ons account."
 msgstr ""
 
-#: apps/bandwagon/templates/bandwagon/barometer.html:21 templates/base.html:108
+#: apps/bandwagon/templates/bandwagon/barometer.html:21 templates/base.html:113
 msgid "Create an Add-ons Account"
 msgstr "Cruthaigh Cuntas Breiseán"
 
-#: apps/bandwagon/templates/bandwagon/barometer.html:24 templates/base.html:111
+#: apps/bandwagon/templates/bandwagon/barometer.html:24 templates/base.html:116
 msgid "or <a href=\"%(login)s\">log in to your current account</a>"
-msgstr ""
+msgstr "nó <a href=\"%(login)s\">logáil isteach má tá cuntas agat cheana</a>"
 
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:5
 msgid "{0} :: Collections"
@@ -2002,7 +2103,7 @@ msgstr "Déan Bailiúchán Poiblí De"
 
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:85
 msgid "Learn about collections"
-msgstr ""
+msgstr "Tuilleadh eolais faoi bhailiúcháin"
 
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:92
 msgid "More Options:"
@@ -2036,7 +2137,7 @@ msgstr[3] "%(num)s mBreiseán sa Bhailiúchán seo"
 msgstr[4] "%(num)s Breiseán sa Bhailiúchán seo"
 
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:132
-#: templates/amo_footer.html:20 templates/includes/lang_switcher.html:10
+#: templates/amo_footer.html:19 templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "Téigh"
 
@@ -2058,7 +2159,7 @@ msgstr "Tuilleadh ón Úsáideoir seo"
 
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:175
 msgid "See all collections by this user"
-msgstr ""
+msgstr "Féach ar gach bailiúchán a chruthaigh an t-úsáideoir seo"
 
 #: apps/bandwagon/templates/bandwagon/collection_detail.html:181
 #: apps/bandwagon/templates/bandwagon/includes/collection_sidebar.html:37
@@ -2138,7 +2239,7 @@ msgstr "le {0}"
 #: apps/bandwagon/templates/bandwagon/collection_widgets.html:4
 #: apps/bandwagon/templates/bandwagon/collection_widgets.html:5
 msgid "Stop Following"
-msgstr ""
+msgstr "Ná lean a thuilleadh"
 
 #: apps/bandwagon/templates/bandwagon/collection_widgets.html:4
 #: apps/bandwagon/templates/bandwagon/collection_widgets.html:5
@@ -2156,8 +2257,8 @@ msgid "Delete {0}"
 msgstr "Scrios {0}"
 
 #: apps/bandwagon/templates/bandwagon/delete.html:11
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:11
-#: apps/devhub/templates/devhub/versions/list.html:90
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:14
+#: apps/devhub/templates/devhub/versions/list.html:95
 msgid "Delete"
 msgstr "Scrios"
 
@@ -2184,16 +2285,16 @@ msgstr "Rannpháirtithe agus Tuilleadh"
 #: apps/bandwagon/templates/bandwagon/edit.html:66
 #: apps/bandwagon/templates/bandwagon/edit.html:81
 #: apps/devhub/templates/devhub/addons/ajax_compat_update.html:35
-#: apps/devhub/templates/devhub/addons/owner.html:45
-#: apps/devhub/templates/devhub/addons/payments.html:98
+#: apps/devhub/templates/devhub/addons/owner.html:53
+#: apps/devhub/templates/devhub/addons/payments.html:112
 #: apps/devhub/templates/devhub/addons/profile.html:41
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:116
-#: apps/devhub/templates/devhub/includes/addon_edit_details.html:82
-#: apps/devhub/templates/devhub/includes/addon_edit_media.html:78
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:127
+#: apps/devhub/templates/devhub/includes/addon_edit_details.html:84
+#: apps/devhub/templates/devhub/includes/addon_edit_media.html:129
 #: apps/devhub/templates/devhub/includes/addon_edit_support.html:78
 #: apps/devhub/templates/devhub/includes/addon_edit_technical.html:99
-#: apps/devhub/templates/devhub/versions/edit.html:128
-#: apps/translations/templates/translations/trans-menu.html:35
+#: apps/devhub/templates/devhub/versions/edit.html:127
+#: apps/translations/templates/translations/trans-menu.html:36
 msgid "Save Changes"
 msgstr "Sábháil na hAthruithe"
 
@@ -2236,7 +2337,7 @@ msgstr "Ról"
 
 #: apps/bandwagon/templates/bandwagon/edit_contributors.html:51
 msgid "Enter the email address of the contributor to add"
-msgstr ""
+msgstr "Cuir isteach seoladh ríomhphoist an rannpháirtí is mian leat cur leis"
 
 #: apps/bandwagon/templates/bandwagon/edit_contributors.html:53
 msgid "Add Contributor"
@@ -2255,11 +2356,12 @@ msgid ""
 "<b>Warning:</b> By changing the owner of this collection, you will no longer "
 "be able to edit it. You will only be able to add and remove add-ons from it."
 msgstr ""
+"<b>Rabhadh:</b> Má athraíonn tú úinéir an bhailiúcháin seo, ní bheidh tú in ann é a chur in eagar amach anseo.  Beidh tú in ann breiseáin a chur leis nó a bhaint uaidh amháin."
 
 #: apps/bandwagon/templates/bandwagon/edit_contributors.html:82
-#: apps/devhub/templates/devhub/addons/submit/describe.html:52
-#: apps/devhub/templates/devhub/addons/submit/license.html:51
-#: apps/devhub/templates/devhub/addons/submit/media.html:58
+#: apps/devhub/templates/devhub/addons/submit/describe.html:66
+#: apps/devhub/templates/devhub/addons/submit/license.html:53
+#: apps/devhub/templates/devhub/addons/submit/media.html:97
 #: apps/devhub/templates/devhub/addons/submit/upload.html:37
 msgid "Continue"
 msgstr "Lean ar aghaidh"
@@ -2314,7 +2416,7 @@ msgid ""
 msgstr ""
 
 #: apps/bandwagon/templates/bandwagon/includes/addon_selector.html:17
-#: apps/devhub/templates/devhub/addons/activity.html:51
+#: apps/devhub/templates/devhub/addons/activity.html:58
 #: apps/perf/templates/perf/index.html:38
 msgid "Add-on"
 msgstr "Breiseán"
@@ -2326,7 +2428,7 @@ msgstr "Nóta"
 
 #: apps/bandwagon/templates/bandwagon/includes/addon_selector.html:26
 msgid "Enter the name of the add-on to include"
-msgstr ""
+msgstr "Cuir isteach ainm an bhreiseáin le cur leis"
 
 #: apps/bandwagon/templates/bandwagon/includes/addon_selector.html:28
 msgid "Add to Collection"
@@ -2377,6 +2479,7 @@ msgstr "Breiseáin Mhór-Le-Rá :: %s"
 msgid ""
 "Here's a few of our favorite add-ons to help you get started customizing %s."
 msgstr ""
+"Seo duit roinnt de na breiseáin is ansa linn sa chaoi go mbeidh tú in ann %s a chur in oiriúint duit féin."
 
 #. L10n: %s is a category name.
 #: apps/browse/feeds.py:128
@@ -2391,16 +2494,16 @@ msgstr "Uirlisí cuardaigh agus eisínteachtaí a bhaineann le cuardach"
 msgid "Search tools"
 msgstr "Uirlisí cuardaigh"
 
-#: apps/browse/views.py:51 apps/browse/views.py:296 apps/devhub/views.py:76
+#: apps/browse/views.py:51 apps/browse/views.py:296 apps/devhub/views.py:80
 msgid "Created"
 msgstr "Cruthaithe"
 
-#: apps/browse/views.py:52 apps/browse/views.py:297 apps/devhub/views.py:77
+#: apps/browse/views.py:52 apps/browse/views.py:297 apps/devhub/views.py:81
 #: apps/stats/helpers.py:23 apps/stats/templates/stats/overview.html:13
 msgid "Downloads"
 msgstr "Íosluchtuithe"
 
-#: apps/browse/views.py:53 apps/browse/views.py:298 apps/devhub/views.py:78
+#: apps/browse/views.py:53 apps/browse/views.py:298 apps/devhub/views.py:82
 #: apps/discovery/templates/discovery/addons/detail.html:53
 msgid "Rating"
 msgstr "Rátáil"
@@ -2442,7 +2545,7 @@ msgstr ""
 #: apps/browse/templates/browse/featured.html:4
 #: apps/browse/templates/browse/featured.html:12
 #: apps/browse/templates/browse/featured.html:13
-#: apps/discovery/templates/discovery/pane.html:89
+#: apps/discovery/templates/discovery/pane.html:88
 #: templates/global/menu_links.html:30
 msgid "Featured Add-ons"
 msgstr "Breiseáin Mhór-Le-Rá"
@@ -2511,7 +2614,6 @@ msgstr "Íosluchtaigh Pacáiste Teanga"
 
 # {0} is a number
 #: apps/browse/templates/browse/language_tools.html:17
-#: apps/versions/templates/versions/version.html:9
 msgid "{0} KB"
 msgstr "{0} kB"
 
@@ -2573,6 +2675,9 @@ msgid ""
 "Creating_OpenSearch_plugins_for_Firefox\">Make your own</a> at the <a href="
 "\"https://developer.mozilla.org/\">Mozilla Developer Center</a>"
 msgstr ""
+"<a href=\"https://developer.mozilla.org/en/"
+"Creating_OpenSearch_plugins_for_Firefox\">Déan do bhreiseán cuardaigh féin</a> ag <a href="
+"\"https://developer.mozilla.org/\">Lárionad Forbartha Mozilla</a>"
 
 #. {0} is a translated theme name like "Nature" or "Sports"
 #: apps/browse/templates/browse/themes.html:14
@@ -2625,43 +2730,44 @@ msgstr "Pearsantachtaí ag Teacht Chun Cinn"
 
 #: apps/browse/templates/browse/personas/category_landing.html:76
 msgid "View All Up & Coming"
-msgstr ""
+msgstr "Féach ar gach ceann atá ag teacht chun cinn"
 
-#: apps/devhub/forms.py:55
+#: apps/devhub/forms.py:57
 msgid "Must have at least one owner."
 msgstr "Ní mór úinéir amháin a bheith ann."
 
-#: apps/devhub/forms.py:58
+#: apps/devhub/forms.py:60
 msgid "At least one author must be listed."
 msgstr "Ní mór údar amháin a bheith ann."
 
-#: apps/devhub/forms.py:62
+#: apps/devhub/forms.py:64
 msgid "An author can only be listed once."
 msgstr "Ní féidir údar a thaispeáint ach uair amháin."
 
-#: apps/devhub/forms.py:79
+#: apps/devhub/forms.py:81
 msgid "Password incorrect."
 msgstr "Focal faire mícheart."
 
-#: apps/devhub/forms.py:98 apps/devhub/templates/devhub/versions/edit.html:89
+#: apps/devhub/forms.py:100 apps/devhub/templates/devhub/versions/edit.html:94
+#: apps/editors/templates/editors/base.html:30
 msgid "Details"
 msgstr "Mionsonraí"
 
-#: apps/devhub/forms.py:106
+#: apps/devhub/forms.py:108
 msgid "Other"
 msgstr "Eile"
 
-#: apps/devhub/forms.py:113
+#: apps/devhub/forms.py:115
 msgid "What is your license's name?"
 msgstr "Cad é ainm do cheadúnais?"
 
-#: apps/devhub/forms.py:116
+#: apps/devhub/forms.py:118
 msgid "Provide the text of your license."
-msgstr ""
+msgstr "Tabhair uait téacs an cheadúnais."
 
-#: apps/devhub/forms.py:132
+#: apps/devhub/forms.py:134
 msgid "License text is required when choosing Other."
-msgstr ""
+msgstr "Caithfidh tú téacs an cheadúnais a sholáthar má roghnaíonn tú 'Eile'."
 
 #: apps/devhub/forms.py:149
 msgid "This add-on has an End User License Agreement"
@@ -2673,71 +2779,101 @@ msgstr ""
 
 #: apps/devhub/forms.py:154
 msgid "This add-on has a Privacy Policy"
-msgstr ""
+msgstr "Tá Polasaí Príobháideachta ag an mbreiseán seo"
 
-#: apps/devhub/forms.py:157
+#: apps/devhub/forms.py:156
 msgid "Please specify your add-on's Privacy Policy:"
-msgstr ""
+msgstr "Cuir isteach Polasaí Príobháideachta do bhreiseáin:"
+
+#: apps/devhub/forms.py:177
+msgid "Why did you make this add-on?"
+msgstr "Cén fáth ar chruthaigh tú an breiseán seo?"
 
 #: apps/devhub/forms.py:180
-msgid "Why did you make this add-on?"
-msgstr ""
-
-#: apps/devhub/forms.py:183
 msgid "What's next for this add-on?"
-msgstr ""
+msgstr "Céard atá i ndán don bhreiseán seo?"
 
-#: apps/devhub/forms.py:203
+#: apps/devhub/forms.py:208
 msgid "The developers of this add-on"
-msgstr ""
+msgstr "Forbróirí an bhreiseáin seo"
 
-#: apps/devhub/forms.py:204
+#: apps/devhub/forms.py:209
 msgid "The Mozilla Foundation"
-msgstr ""
+msgstr "Fondúireacht Mozilla"
 
-#: apps/devhub/forms.py:205
+#: apps/devhub/forms.py:210
 msgid "An organization of my choice"
 msgstr "Mo rogha eagraíochta"
 
-#: apps/devhub/forms.py:246
-msgid "Please enter a suggested amount less than ${0}."
-msgstr ""
+#: apps/devhub/forms.py:251
+msgid "Please enter a suggested amount greater than 0."
+msgstr "Cuir isteach deontas molta, níos mó ná 0."
 
-#: apps/devhub/forms.py:255
+#: apps/devhub/forms.py:254
+msgid "Please enter a suggested amount less than ${0}."
+msgstr "Cuir isteach deontas molta, níos lú ná ${0}."
+
+#: apps/devhub/forms.py:263
 msgid "PayPal ID required to accept contributions."
 msgstr ""
 
-#: apps/devhub/forms.py:261
+#: apps/devhub/forms.py:269
 msgid "Could not validate PayPal id."
-msgstr ""
+msgstr "Níorbh fhéidir an t-aitheantas PayPal a dhearbhú."
 
-#: apps/devhub/forms.py:312
+#: apps/devhub/forms.py:320
 msgid "Invalid version range."
-msgstr ""
+msgstr "Raon neamhbhailí leaganacha."
 
-#: apps/devhub/forms.py:336
+#: apps/devhub/forms.py:344
 msgid "Need at least one compatible application."
 msgstr ""
 
-#: apps/devhub/forms.py:347
+#: apps/devhub/forms.py:355 apps/devhub/forms.py:389
 msgid "There was an error with your upload. Please try again."
-msgstr ""
+msgstr "Bhí earráid leis an uasluchtú. Bain triail eile as."
 
-#: apps/devhub/forms.py:372
+#: apps/devhub/forms.py:382
 msgid "Version %s already exists"
-msgstr ""
+msgstr "Tá leagan %s ann cheana"
 
-#: apps/devhub/forms.py:391
+#: apps/devhub/forms.py:413
 msgid "You cannot upload any more files for this version."
 msgstr ""
 
-#: apps/devhub/forms.py:397
+#: apps/devhub/forms.py:419
 msgid "Version doesn't match"
 msgstr ""
 
-#: apps/devhub/forms.py:437
+#: apps/devhub/forms.py:455
+msgid "The platfom All cannot be combined with specific platforms."
+msgstr ""
+
+#: apps/devhub/forms.py:460
 msgid "A platform can only be chosen once."
 msgstr "Ní féidir ardán a roghnú ach uair amháin."
+
+# {0} is a number
+#. L10n: first parameter is the number of errors
+#: apps/devhub/helpers.py:130
+msgid "{0} error"
+msgid_plural "{0} errors"
+msgstr[0] "{0} earráid"
+msgstr[1] "{0} earráid"
+msgstr[2] "{0} earráid"
+msgstr[3] "{0} n-earráid"
+msgstr[4] "{0} earráid"
+
+# {0} is a number
+#. L10n: first parameter is the number of warnings
+#: apps/devhub/helpers.py:133
+msgid "{0} warning"
+msgid_plural "{0} warnings"
+msgstr[0] "{0} rabhadh"
+msgstr[1] "{0} rabhadh"
+msgstr[2] "{0} rabhadh"
+msgstr[3] "{0} rabhadh"
+msgstr[4] "{0} rabhadh"
 
 #: apps/devhub/models.py:211
 msgid "Review"
@@ -2747,134 +2883,143 @@ msgstr "Léirmheas"
 msgid "Version %s"
 msgstr "Leagan %s"
 
-#: apps/devhub/views.py:140
+#: apps/devhub/views.py:144
 msgid "All My Add-ons"
 msgstr "Mo Bhreiseáin Go Léir"
 
-#: apps/devhub/views.py:159
+#: apps/devhub/views.py:163
 msgid "All Activity"
 msgstr "An Ghníomhaíocht Go Léir"
 
-#: apps/devhub/views.py:160
+#: apps/devhub/views.py:164
 msgid "Add-on Updates"
-msgstr ""
+msgstr "Nuashonruithe Breiseán"
 
-#: apps/devhub/views.py:161
+#: apps/devhub/views.py:165
 msgid "Add-on Status"
 msgstr "Stádas an Bhreiseáin"
 
-#: apps/devhub/views.py:162
+#: apps/devhub/views.py:166
 msgid "User Collections"
 msgstr "Bailiúcháin Úsáideoira"
 
-#: apps/devhub/views.py:163
+#: apps/devhub/views.py:167
 msgid "User Reviews"
 msgstr "Léirmheasanna ó Úsáideoirí"
 
-#: apps/devhub/views.py:256
+#: apps/devhub/views.py:260
 msgid "Add-on deleted."
 msgstr "Scriosadh an breiseán."
 
-#: apps/devhub/views.py:260
+#: apps/devhub/views.py:264
 msgid "Password was incorrect. Add-on was not deleted."
 msgstr "Focal faire mícheart.  Níor scriosadh an breiseán."
 
-#: apps/devhub/views.py:360 apps/devhub/views.py:387
+#: apps/devhub/views.py:363 apps/devhub/views.py:390 apps/devhub/views.py:440
+#: apps/devhub/views.py:705
 msgid "Changes successfully saved."
 msgstr "Sábháladh na hathruithe."
 
-#: apps/devhub/views.py:393
+#: apps/devhub/views.py:396
 msgid "There were errors in your submission."
 msgstr "Bhí earráidí sa bhreiséan a sheol tú."
 
-#: apps/devhub/views.py:588
+#: apps/devhub/views.py:658
+msgid "Icons cannot be animated."
+msgstr "Ní cheadaítear deilbhíní beo."
+
+#: apps/devhub/views.py:665
+msgid "There was an error uploading your preview."
+msgstr "Tharla earráid agus do réamhamharc á uasluchtú."
+
+#: apps/devhub/views.py:718
 msgid "Version %s deleted."
 msgstr "Scriosadh leagan %s."
 
-#: apps/devhub/views.py:835
+#: apps/devhub/views.py:989
 msgid "Preliminary Review Requested."
 msgstr "Iarradh Réamhscrúdú."
 
-#: apps/devhub/views.py:836
+#: apps/devhub/views.py:990
 msgid "Full Review Requested."
 msgstr "Iarradh Scrúdú Iomlán."
 
-#: apps/devhub/templates/devhub/base.html:12
+#: apps/devhub/templates/devhub/base.html:20
 msgid "Return to the Add-on Developer Hub"
 msgstr "Ar ais go dtí an Lárionad Forbartha"
 
-#: apps/devhub/templates/devhub/base.html:14
-msgid "Add-on <strong>Developer Hub</strong>"
-msgstr "<strong>Lárionad Forbartha</strong>"
+#: apps/devhub/templates/devhub/base.html:23
+msgid "<small>Add-on</small> <strong>Developer Hub</strong>"
+msgstr ""
 
-#: apps/devhub/templates/devhub/base.html:21
+#: apps/devhub/templates/devhub/base.html:31
 msgid "Back to Add-ons"
 msgstr "Ar ais go dtí na Breiseáin"
 
-#: apps/devhub/templates/devhub/base.html:37
+#: apps/devhub/templates/devhub/base.html:47
 msgid "more add-ons..."
 msgstr "tuilleadh breiseán..."
 
-#: apps/devhub/templates/devhub/base.html:44
+#: apps/devhub/templates/devhub/base.html:54
 #: apps/devhub/templates/devhub/addons/dashboard.html:59
 #: apps/devhub/templates/devhub/addons/submit/base.html:3
 msgid "Submit a New Add-on"
 msgstr "Seol Breiseán Nua"
 
-#: apps/devhub/templates/devhub/base.html:49
+#: apps/devhub/templates/devhub/base.html:59
 msgid "Documentation"
 msgstr "Doiciméadú"
 
-#: apps/devhub/templates/devhub/base.html:52
+#: apps/devhub/templates/devhub/base.html:62
 #: apps/devhub/templates/devhub/addons/submit/sidebar.html:10
 msgid "Getting Started"
 msgstr "Tús Maith"
 
-#: apps/devhub/templates/devhub/base.html:54
+#: apps/devhub/templates/devhub/base.html:64
 msgid "Add-on Policies"
 msgstr "Polasaithe Breiseán"
 
-#: apps/devhub/templates/devhub/base.html:56
+#: apps/devhub/templates/devhub/base.html:66
 msgid "Case Studies"
 msgstr "Cás-Staidéir"
 
-#: apps/devhub/templates/devhub/base.html:58
+#: apps/devhub/templates/devhub/base.html:68
 msgid "How-to Library"
 msgstr "Leabharlann Teagaisc"
 
-#: apps/devhub/templates/devhub/base.html:60
+#: apps/devhub/templates/devhub/base.html:70
 msgid "API & Language Reference"
 msgstr "Leathanach Tagartha API agus Teanga"
 
-#: apps/devhub/templates/devhub/base.html:64 templates/user_login.html:5
+#: apps/devhub/templates/devhub/base.html:74 templates/user_login.html:5
 msgid "Tools"
 msgstr "Uirlisí"
 
-#: apps/devhub/templates/devhub/base.html:67
+#: apps/devhub/templates/devhub/base.html:77
 msgid "Add-on Packager"
 msgstr "Pacaisteoir Breiseán"
 
-#: apps/devhub/templates/devhub/base.html:69
+#: apps/devhub/templates/devhub/base.html:79
 msgid "Add-on Validator"
 msgstr "Bailíochtóir Breiseán"
 
-#: apps/devhub/templates/devhub/base.html:71
+#: apps/devhub/templates/devhub/base.html:81
 msgid "Development Add-ons"
 msgstr "Breiseáin Fhorbartha"
 
-#: apps/devhub/templates/devhub/base.html:75
+#: apps/devhub/templates/devhub/base.html:85
 msgid "Community"
 msgstr "Comhphobal"
 
-#: apps/devhub/templates/devhub/base.html:78
+#: apps/devhub/templates/devhub/base.html:88
 msgid "Add-ons Blog"
 msgstr "Blag Breiseán"
 
-#: apps/devhub/templates/devhub/base.html:80
+#: apps/devhub/templates/devhub/base.html:90
 msgid "Add-ons Forum"
 msgstr "Fóram Breiseán"
 
-#: apps/devhub/templates/devhub/base.html:82
+#: apps/devhub/templates/devhub/base.html:92
 msgid "about:addons Newsletter"
 msgstr "Nuachtlitir about:addons"
 
@@ -2893,38 +3038,44 @@ msgstr "Cuardaigh"
 #. first parameter is a filename like lorem-ipsum-1.0.2.xpi
 #: apps/devhub/templates/devhub/validation.html:4
 msgid "Validation Results for {0}"
-msgstr ""
+msgstr "Torthaí Bailíochtaithe le haghaidh {0}"
 
 #: apps/devhub/templates/devhub/addons/activity.html:4
-#: apps/devhub/templates/devhub/addons/activity.html:14
+#: apps/devhub/templates/devhub/addons/activity.html:20
 msgid "Recent Activity for My Add-ons"
 msgstr "Gníomhaíocht Is Déanaí le haghaidh mo chuid Breiseán"
 
-#: apps/devhub/templates/devhub/addons/activity.html:13
+#: apps/devhub/templates/devhub/addons/activity.html:14
+#: apps/devhub/templates/devhub/addons/activity.html:19
 #: apps/devhub/templates/devhub/addons/dashboard.html:63
 msgid "Recent Activity"
 msgstr "Gníomhaíocht Is Déanaí"
 
-#: apps/devhub/templates/devhub/addons/activity.html:25
+#. first parameter is the name of an Addon
+#: apps/devhub/templates/devhub/addons/activity.html:17
+msgid "Recent Activity for {0}"
+msgstr "Gníomhaíocht Is Déanaí le haghaidh {0}"
+
+#: apps/devhub/templates/devhub/addons/activity.html:32
 msgid ""
 "<time datetime=\"%(iso)s\" title=\"%(pretty)s\">%(ago)s</time> by %(user)s"
 msgstr ""
 "<time datetime=\"%(iso)s\" title=\"%(pretty)s\">%(ago)s</time> ag %(user)s"
 
-#: apps/devhub/templates/devhub/addons/activity.html:36
+#: apps/devhub/templates/devhub/addons/activity.html:43
 #: apps/search/templates/search/no_results.html:4
 msgid "No results found."
 msgstr "Níor aimsíodh aon rud."
 
-#: apps/devhub/templates/devhub/addons/activity.html:48
+#: apps/devhub/templates/devhub/addons/activity.html:55
 msgid "Refine Activity"
-msgstr ""
+msgstr "Scag Gníomhaíocht"
 
-#: apps/devhub/templates/devhub/addons/activity.html:61
+#: apps/devhub/templates/devhub/addons/activity.html:68
 msgid "Activity"
 msgstr "Gníomhaíocht"
 
-#: apps/devhub/templates/devhub/addons/activity.html:72
+#: apps/devhub/templates/devhub/addons/activity.html:79
 #: apps/devhub/templates/devhub/addons/dashboard.html:64
 #: apps/devhub/templates/devhub/addons/dashboard.html:65
 msgid "Subscribe to this feed"
@@ -2953,7 +3104,7 @@ msgid "View and update application compatibility ranges."
 msgstr ""
 
 #: apps/devhub/templates/devhub/addons/ajax_compat_status.html:6
-#: apps/devhub/templates/devhub/versions/edit.html:43
+#: apps/devhub/templates/devhub/versions/edit.html:44
 msgid "Compatibility"
 msgstr "Comhoiriúnacht"
 
@@ -2962,7 +3113,7 @@ msgid "Update Compatibility"
 msgstr "Nuashonraigh Comhoiriúnacht"
 
 #: apps/devhub/templates/devhub/addons/ajax_compat_update.html:4
-#: apps/devhub/templates/devhub/versions/edit.html:44
+#: apps/devhub/templates/devhub/versions/edit.html:45
 msgid ""
 "Adjusting application information here will allow users to install your add-"
 "on even if the install manifest in the package indicates that the add-on is "
@@ -2979,7 +3130,7 @@ msgid "Supported Versions"
 msgstr "Leaganacha a dTacaítear Leo"
 
 #: apps/devhub/templates/devhub/addons/ajax_compat_update.html:31
-#: apps/devhub/templates/devhub/versions/edit.html:61
+#: apps/devhub/templates/devhub/versions/edit.html:63
 msgid "Add Another Application&hellip;"
 msgstr "Cuir Feidhmchlár Eile Leis&hellip;"
 
@@ -3021,133 +3172,154 @@ msgid "None"
 msgstr "Faic"
 
 #: apps/devhub/templates/devhub/addons/owner.html:3
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:46
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:53
 #: apps/devhub/templates/devhub/includes/addons_edit_nav.html:3
 msgid "Manage Authors & License"
 msgstr "Bainistigh Údair agus Ceadúnas"
 
-#: apps/devhub/templates/devhub/addons/owner.html:21
+#: apps/devhub/templates/devhub/addons/owner.html:27
 msgid "Authors"
 msgstr "Údair"
 
+#: apps/devhub/templates/devhub/addons/owner.html:28
+msgid "About author roles"
+msgstr ""
+
+#: apps/devhub/templates/devhub/addons/owner.html:72
+msgid ""
+"Add-ons can have any number of authors with 3 possible roles: <ul> "
+"<li><b>Owner:</b> Can manage all aspects of the add-on's listing, including "
+"adding and removing other authors</li> <li><b>Developer:</b> Can manage all "
+"aspects of the add-on's listing, except for adding and removing other authors "
+"and managing payments</li> <li><b>Viewer:</b> Can view the add-on's settings "
+"and statistics, but cannot make any changes</li> </ul>"
+msgstr ""
+
+#: apps/devhub/templates/devhub/addons/owner.html:80
+#: apps/devhub/templates/devhub/versions/list.html:245
+msgid "Close"
+msgstr "Dún"
+
 #: apps/devhub/templates/devhub/addons/payments.html:3
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:48
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:55
 #: apps/devhub/templates/devhub/includes/addons_edit_nav.html:5
 msgid "Manage Payments"
 msgstr "Bainistigh Íocaíochtaí"
 
-#: apps/devhub/templates/devhub/addons/payments.html:16
+#: apps/devhub/templates/devhub/addons/payments.html:22
+msgid "Payments are only available for fully reviewed add-ons."
+msgstr ""
+
+#: apps/devhub/templates/devhub/addons/payments.html:29
 msgid "You are currently requesting <b>contributions</b> from users"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/payments.html:19
+#: apps/devhub/templates/devhub/addons/payments.html:32
 msgid "Disable Contributions"
 msgstr "Díchumasaigh Deontais"
 
-#: apps/devhub/templates/devhub/addons/payments.html:24
-#: apps/devhub/templates/devhub/addons/payments.html:38
+#: apps/devhub/templates/devhub/addons/payments.html:37
+#: apps/devhub/templates/devhub/addons/payments.html:51
 #: apps/stats/helpers.py:67
 msgid "Contributions"
 msgstr "Deontais"
 
-#: apps/devhub/templates/devhub/addons/payments.html:25
+#: apps/devhub/templates/devhub/addons/payments.html:38
 msgid ""
 "Voluntary contributions provide a way for users to support your add-on "
 "financially. With contributions, you can:"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/payments.html:27
+#: apps/devhub/templates/devhub/addons/payments.html:40
 msgid "Ask for contributions in most places your add-on appears"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/payments.html:28
+#: apps/devhub/templates/devhub/addons/payments.html:41
 msgid "Allow users to make payments with a credit card or PayPal account"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/payments.html:29
+#: apps/devhub/templates/devhub/addons/payments.html:42
 msgid ""
 "Receive contributions in your PayPal account or send them to an organization "
 "of your choice"
 msgstr ""
 "Glac le deontais i do chuntas PayPal, nó seol chuig do rogha eagraíochta iad"
 
-#: apps/devhub/templates/devhub/addons/payments.html:32
-msgid "Set Up Contributions"
-msgstr "Socraigh Deontais"
-
-#: apps/devhub/templates/devhub/addons/payments.html:38
+#: apps/devhub/templates/devhub/addons/payments.html:45
+#: apps/devhub/templates/devhub/addons/payments.html:51
 msgid "Set up Contributions"
 msgstr "Socraigh Deontais"
 
-#: apps/devhub/templates/devhub/addons/payments.html:39
+#: apps/devhub/templates/devhub/addons/payments.html:52
 msgid ""
 "Fill in the fields below to begin asking for voluntary contributions from "
 "users."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/payments.html:46
+#: apps/devhub/templates/devhub/addons/payments.html:59
 msgid "Who will receive contributions to this add-on?"
 msgstr "Cé a gheobhaidh deontais don bhreiseán seo?"
 
-#: apps/devhub/templates/devhub/addons/payments.html:51
+#: apps/devhub/templates/devhub/addons/payments.html:64
 msgid "What is the name of the organization?"
 msgstr "Cad é ainm na heagraíochta?"
 
-#: apps/devhub/templates/devhub/addons/payments.html:54
+#: apps/devhub/templates/devhub/addons/payments.html:67
 msgid "What is the URL of the organization?"
 msgstr "Cad é URL na heagraíochta?"
 
-#: apps/devhub/templates/devhub/addons/payments.html:57
+#: apps/devhub/templates/devhub/addons/payments.html:70
 msgid "What is the PayPal ID of the organization?"
 msgstr "Cad é aitheantas PayPal na heagraíochta?"
 
-#: apps/devhub/templates/devhub/addons/payments.html:63
+#: apps/devhub/templates/devhub/addons/payments.html:76
 msgid "What is your PayPal ID?"
 msgstr "Cad é d'aitheantas PayPal?"
 
-#: apps/devhub/templates/devhub/addons/payments.html:64
+#: apps/devhub/templates/devhub/addons/payments.html:77
 msgid "Sign up for Paypal"
 msgstr "Cláraigh le PayPal"
 
-#: apps/devhub/templates/devhub/addons/payments.html:68
+#: apps/devhub/templates/devhub/addons/payments.html:81
 msgid "What is your suggested contribution?"
 msgstr "Cad é an deontas molta?"
 
-#: apps/devhub/templates/devhub/addons/payments.html:70
+#: apps/devhub/templates/devhub/addons/payments.html:83
 msgid "(Example: 3.99)"
 msgstr "(Sampla: 3.99)"
 
-#: apps/devhub/templates/devhub/addons/payments.html:74
+#: apps/devhub/templates/devhub/addons/payments.html:87
 msgid "When should users be asked for contributions?"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/payments.html:79
+#: apps/devhub/templates/devhub/addons/payments.html:92
 msgid "Send a thank-you note?"
-msgstr ""
+msgstr "An bhfuil tú ag iarraidh litir bhuíochais a sheoladh?"
 
-#: apps/devhub/templates/devhub/addons/payments.html:82
+#: apps/devhub/templates/devhub/addons/payments.html:95
 msgid ""
 "We'll automatically email users who contribute to your add-on with this "
 "message."
 msgstr ""
+"Seolfaimid an teachtaireacht seo go huathoibríoch chuig úsáideoirí a thacaíonn le do bhreiseán."
 
-#: apps/devhub/templates/devhub/addons/payments.html:84
+#: apps/devhub/templates/devhub/addons/payments.html:97
 msgid ""
 "We recommend thanking the user and telling them how much you appreciate their "
 "support. You might also want to tell them about what's next for your add-on "
 "and about any other add-ons you've made for them to try."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/payments.html:98
+#: apps/devhub/templates/devhub/addons/payments.html:112
 msgid "Activate Contributions"
 msgstr "Cumasaigh Deontais"
 
-#: apps/devhub/templates/devhub/addons/payments.html:100
+#: apps/devhub/templates/devhub/addons/payments.html:114
 msgid "or <a id=\"setup-cancel\" href=\"#\">Cancel</a>"
 msgstr "nó <a id=\"setup-cancel\" href=\"#\">Cealaigh</a>"
 
 #: apps/devhub/templates/devhub/addons/profile.html:3
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:47
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:54
 #: apps/devhub/templates/devhub/includes/addons_edit_nav.html:4
 msgid "Manage Developer Profile"
 msgstr "Bainistigh do Phróifíl Fhorbróra"
@@ -3167,6 +3339,8 @@ msgid ""
 "Your <a href=\"%(url)s\">developer profile</a> is currently <strong>public</"
 "strong>."
 msgstr ""
+"Tá do <a href=\"%(url)s\">phróifíl fhorbróra</a> <strong>poiblí</"
+"strong> faoi láthair."
 
 #: apps/devhub/templates/devhub/addons/profile.html:33
 msgid "Remove Profile"
@@ -3177,50 +3351,46 @@ msgid "Create Profile"
 msgstr "Cruthaigh Próifíl"
 
 #: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:5
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:36
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:35
 msgid "General Tests"
 msgstr "Tástáil Ghinearálta"
 
 #: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:9
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:50
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:49
 msgid "Security Tests"
 msgstr "Tástálacha Slándála"
 
 #: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:13
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:63
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:62
 msgid "Localization Tests"
 msgstr "Tástálacha Logánaithe"
 
 #: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:17
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:76
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:75
 msgid "Extension Tests"
 msgstr "Tástálacha Eisínteachtaí"
 
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:23
-msgid "Revalidate"
-msgstr "Athbhailíochtaigh"
-
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:33
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:47
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:60
-#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:73
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:32
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:46
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:59
+#: apps/devhub/templates/devhub/addons/includes/validation_test_results.html:72
 msgid "Top"
 msgstr "Barr"
 
 #: apps/devhub/templates/devhub/addons/listing/delete_form.html:3
-#: apps/devhub/templates/devhub/addons/listing/delete_form.html:19
-#: apps/devhub/templates/devhub/versions/list.html:70
+#: apps/devhub/templates/devhub/addons/listing/delete_form.html:21
+#: apps/devhub/templates/devhub/versions/list.html:73
 msgid "Delete Add-on"
 msgstr "Scrios Breiseán"
 
-#: apps/devhub/templates/devhub/addons/listing/delete_form.html:5
+#: apps/devhub/templates/devhub/addons/listing/delete_form.html:6
 msgid ""
 "Deleting your add-on will permanently remove it from the site and prevent its "
 "GUID from being submitted ever again, even by you. The existing users of your "
 "add-on will remain on this update channel and never receive updates again."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/listing/delete_form.html:14
+#: apps/devhub/templates/devhub/addons/listing/delete_form.html:16
 msgid "Enter your password to confirm your decision:"
 msgstr ""
 
@@ -3228,58 +3398,58 @@ msgstr ""
 msgid "Actions"
 msgstr "Gníomhartha"
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:6
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:7
 msgid "Resume the submission process for this add-on."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:7
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:8
 msgid "Resume"
 msgstr "Atosaigh"
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:11
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:14
 msgid "Delete this add-on."
 msgstr "Scrios an breiseán seo."
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:19
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:24
 msgid "Edit details about this add-on's listing."
 msgstr "Cuir mionsonraí an bhreiseáin seo in eagar."
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:20
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:25
 msgid "Edit Listing"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:24
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:29
 msgid "Upload a new version of this add-on."
 msgstr "Uasluchtaigh leagan nua den bhreiseán seo."
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:25
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:30
 msgid "New Version"
 msgstr "Leagan Nua"
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:38
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:45
 msgid "Daily statistics on downloads and users."
 msgstr "Staitisticí laethúla ar líon íosluchtuithe agus úsáideoirí."
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:39
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:46
 #: apps/stats/templates/stats/stats.html:19
 msgid "Statistics"
 msgstr "Staitisticí"
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:43
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:50
 msgid "More"
 msgstr "Tuilleadh"
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:49
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:56
 #: apps/devhub/templates/devhub/includes/addons_edit_nav.html:6
 msgid "Manage Status & Versions"
 msgstr "Bainistigh Stádas agus Leaganacha"
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:55
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:62
 #: apps/devhub/templates/devhub/includes/addons_edit_nav.html:19
 msgid "View Add-on Listing"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/listing/item_actions.html:56
+#: apps/devhub/templates/devhub/addons/listing/item_actions.html:63
 #: apps/devhub/templates/devhub/includes/addons_edit_nav.html:21
 msgid "View Recent Changes"
 msgstr ""
@@ -3294,127 +3464,144 @@ msgstr ""
 msgid "Status:"
 msgstr "Stádas:"
 
-#: apps/devhub/templates/devhub/addons/listing/items.html:31
+#: apps/devhub/templates/devhub/addons/listing/items.html:32
 #: apps/stats/templates/stats/statuses.html:27
 msgid "Disabled"
 msgstr "Díchumasaithe"
 
-#: apps/devhub/templates/devhub/addons/listing/items.html:33
-msgid "Active"
-msgstr "Gníomhach"
-
-#: apps/devhub/templates/devhub/addons/listing/items.html:35
-msgid "and <span class=\"status-%(status_key)s\">%(status_value)s</span>"
-msgstr "agus <span class=\"status-%(status_key)s\">%(status_value)s</span>"
-
 #. {0} is the number of active users.
 #: apps/devhub/templates/devhub/addons/listing/macros.html:25
-msgid "<strong>{0}</strong> active users"
+msgid "<strong>{0}</strong> active user"
 msgid_plural "<strong>{0}</strong> active users"
-msgstr[0] "<strong>{0}</strong> úsáideoir gníomhach"
-msgstr[1] "<strong>{0}</strong> úsáideoir gníomhach"
-msgstr[2] "<strong>{0}</strong> úsáideoir gníomhach"
-msgstr[3] "<strong>{0}</strong> n-úsáideoir gníomhach"
-msgstr[4] "<strong>{0}</strong> úsáideoir gníomhach"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: apps/devhub/templates/devhub/addons/submit/base.html:11
 msgid "Submit Add-on"
 msgstr "Seol Breiseán"
 
-#: apps/devhub/templates/devhub/addons/submit/describe.html:6
-msgid "Step 3. Describe your addon"
-msgstr "Céim 3. Déan cur síos ar do bhreiseán"
+#: apps/devhub/templates/devhub/addons/submit/describe.html:4
+msgid "Step 3"
+msgstr "Céim 3"
 
-#: apps/devhub/templates/devhub/addons/submit/describe.html:10
+#: apps/devhub/templates/devhub/addons/submit/describe.html:7
+msgid "Step 3. Describe Your Add-on"
+msgstr "Céim 3. Déan Cur Síos ar do Bhreiseán"
+
+#: apps/devhub/templates/devhub/addons/submit/describe.html:11
 msgid "Your add-on's name and version:"
 msgstr "Ainm agus leagan do bhreiseáin:"
 
-#: apps/devhub/templates/devhub/addons/submit/describe.html:20
+#: apps/devhub/templates/devhub/addons/submit/describe.html:21
 msgid "Your add-on's detail page will be:"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/describe.html:31
+#: apps/devhub/templates/devhub/addons/submit/describe.html:25
+msgid "Please use only letters, numbers, and dashes in your URL."
+msgstr "Ná húsáid ach litreacha, uimhreacha, agus fleiscíní i do URL."
+
+#: apps/devhub/templates/devhub/addons/submit/describe.html:35
 msgid "Provide a brief summary of your add-on:"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/describe.html:35
+#: apps/devhub/templates/devhub/addons/submit/describe.html:39
 msgid "This summary will be shown with your add-on in listings and searches."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/describe.html:45
-msgid "Select 1 or 2 categories that best describe your add-on:"
+#: apps/devhub/templates/devhub/addons/submit/describe.html:56
+msgid "Provide a more detailed description of your add-on:"
+msgstr ""
+
+#: apps/devhub/templates/devhub/addons/submit/describe.html:60
+msgid "The description will appear on your add-on's detail page."
 msgstr ""
 
 #: apps/devhub/templates/devhub/addons/submit/done.html:4
-msgid "You're all set!"
+msgid "Submission Complete"
+msgstr ""
+
+#: apps/devhub/templates/devhub/addons/submit/done.html:8
+#: apps/devhub/templates/devhub/addons/submit/sidebar.html:16
+msgid "You're done!"
 msgstr "Tá tú críochnaithe!"
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:7
+#: apps/devhub/templates/devhub/addons/submit/done.html:11
 msgid "Your add-on has been submitted to the Preliminary Review queue."
 msgstr "Cuireadh do bhreiseán sa chiú le haghaidh Réamhscrúdaithe."
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:11
+#: apps/devhub/templates/devhub/addons/submit/done.html:15
 msgid "Your add-on has been submitted to the Full Review queue."
 msgstr "Cuireadh do bhreiseán sa chiú le haghaidh Scrúdaithe Iomláin."
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:17
+#: apps/devhub/templates/devhub/addons/submit/done.html:21
 msgid ""
 "You'll receive an email once your add-on has been reviewed by an editor. In "
 "the meantime, you and your friends can install the add-on directly from its "
 "details page:"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:28
+#: apps/devhub/templates/devhub/addons/submit/done.html:32
 msgid "Next steps:"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:33
+#: apps/devhub/templates/devhub/addons/submit/done.html:37
 msgid ""
 "<a href=\"{0}\">Upload</a> another platform-specific file to this version."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:36
+#: apps/devhub/templates/devhub/addons/submit/done.html:40
 msgid ""
 "Provide more details about your add-on by <a href=\"{0}\">editing its "
 "listing</a>."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:38
+#: apps/devhub/templates/devhub/addons/submit/done.html:42
 msgid ""
 "Tell your users why you created this add-on in your <a href=\"{0}\">Developer "
 "Profile</a>."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:39
+#: apps/devhub/templates/devhub/addons/submit/done.html:43
 msgid ""
 "View and subscribe to your add-on's <a href=\"{0}\">activity feed</a> to stay "
 "updated on reviews, collections, and more."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/done.html:40
+#: apps/devhub/templates/devhub/addons/submit/done.html:44
 msgid "View approximate review queue <a href=\"{0}\">wait times</a>."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/license.html:5
+#: apps/devhub/templates/devhub/addons/submit/license.html:4
+msgid "Step 5"
+msgstr "Céim 5"
+
+#: apps/devhub/templates/devhub/addons/submit/license.html:7
 msgid "Step 5. Select a License"
 msgstr "Céim 5. Roghnaigh Ceadúnas"
 
-#: apps/devhub/templates/devhub/addons/submit/license.html:6
+#: apps/devhub/templates/devhub/addons/submit/license.html:8
 msgid ""
 "We require all add-ons to indicate the terms under which their source code is "
 "licensed. Please select a license from the list below or enter a custom "
 "license."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/license.html:13
+#: apps/devhub/templates/devhub/addons/submit/license.html:15
 msgid "Select a license for your add-on:"
 msgstr "Roghnaigh ceadúnas le haghaidh do bhreiseáin:"
 
-#: apps/devhub/templates/devhub/addons/submit/media.html:7
+#: apps/devhub/templates/devhub/addons/submit/media.html:5
+msgid "Step 4"
+msgstr "Céim 4"
+
+#: apps/devhub/templates/devhub/addons/submit/media.html:9
 msgid "Step 4. Add Images"
 msgstr "Céim 4. Cuir Íomhánna Leis"
 
-#: apps/devhub/templates/devhub/addons/submit/media.html:9
+#: apps/devhub/templates/devhub/addons/submit/media.html:11
 msgid ""
 "Custom icons and screenshots draw attention to your add-on and help users "
 "understand what it does. We strongly recommend uploading a custom icon, as in "
@@ -3422,44 +3609,58 @@ msgid ""
 msgstr ""
 
 #. The size of the icon
-#: apps/devhub/templates/devhub/addons/submit/media.html:24
+#: apps/devhub/templates/devhub/addons/submit/media.html:30
 #: apps/devhub/templates/devhub/includes/addon_edit_media.html:33
 msgid "32x32px"
 msgstr "32x32pct"
 
-#: apps/devhub/templates/devhub/addons/submit/media.html:26
+#: apps/devhub/templates/devhub/addons/submit/media.html:32
 #: apps/devhub/templates/devhub/includes/addon_edit_media.html:35
 msgid "Used in listings of add-ons, like search results and featured add-ons."
 msgstr ""
 
 #. The size of the icon
-#: apps/devhub/templates/devhub/addons/submit/media.html:34
+#: apps/devhub/templates/devhub/addons/submit/media.html:40
 #: apps/devhub/templates/devhub/includes/addon_edit_media.html:44
 msgid "64x64px"
 msgstr "64x64pct"
 
-#: apps/devhub/templates/devhub/addons/submit/media.html:36
+#: apps/devhub/templates/devhub/addons/submit/media.html:42
 #: apps/devhub/templates/devhub/includes/addon_edit_media.html:46
 msgid "Used in add-on detail pages."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/media.html:43
+#: apps/devhub/templates/devhub/addons/submit/media.html:49
 #: apps/devhub/templates/devhub/includes/addon_edit_media.html:53
 msgid "Upload a Custom Icon..."
-msgstr ""
+msgstr "Uasluchtaigh Deilbhín Saincheaptha..."
 
-#: apps/devhub/templates/devhub/addons/submit/media.html:47
-#: apps/devhub/templates/devhub/includes/addon_edit_media.html:57
+#: apps/devhub/templates/devhub/addons/submit/media.html:54
+#: apps/devhub/templates/devhub/includes/addon_edit_media.html:61
 msgid "PNG and JPG supported. Icons resized to 64x64 pixels if larger."
 msgstr ""
 "Tacaítear le PNG agus JPG. Athrófar méid an deilbhín go 64x64 má tá sé níos "
 "mó."
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:6
+#: apps/devhub/templates/devhub/addons/submit/media.html:77
+#: apps/devhub/templates/devhub/includes/addon_edit_media.html:97
+msgid "Please provide a caption for this screenshot:"
+msgstr ""
+
+#: apps/devhub/templates/devhub/addons/submit/media.html:89
+#: apps/devhub/templates/devhub/includes/addon_edit_media.html:110
+msgid "Add a Screenshot..."
+msgstr "Cuir Grianghraf den Scáileán leis..."
+
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:5
+msgid "Step 6"
+msgstr "Céim 6"
+
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:8
 msgid "Step 6. Select a Review Process"
 msgstr "Céim 6. Roghnaigh Próiseas Athbhreithnithe"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:8
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:10
 msgid ""
 "All add-ons hosted in our gallery must be reviewed by an editor before they "
 "appear in categories or search results. While waiting for review, your add-on "
@@ -3467,67 +3668,67 @@ msgid ""
 "process below that best fits your add-on."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:22
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:24
 msgid "Full Review"
 msgstr "Scrúdú Iomlán"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:24
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:26
 msgid ""
 "A complete review of your add-on's source and functionality. <a href=\"%(url)s"
 "\">Learn more&hellip;</a>"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:30
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:32
 msgid "Appropriate for polished add-ons"
 msgstr "Oiriúnach do bhreiseáin snasta"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:31
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:33
 msgid "Review should take place within 10 days"
 msgstr "Is dócha go ndéanfar an scrúdú taobh istigh de 10 lá"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:32
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:34
 msgid "Review of subsequent versions within 5 days"
 msgstr "Déanfar scrúdú ar leaganacha nua taobh istigh de 5 lá"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:33
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:35
 msgid "Warning-free installation and no feature limitations"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:37
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:39
 msgid "Choose Full Review"
 msgstr "Roghnaigh Scrúdú Iomlán"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:44
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:46
 msgid "Preliminary Review"
 msgstr "Réamhscrúdú"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:46
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:48
 msgid ""
 "A faster review of your add-on's source for any major problems. <a href=\"%"
 "(url)s\">Learn more&hellip;</a>"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:52
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:54
 msgid "Appropriate for experimental add-ons"
 msgstr "Oiriúnach do bhreiseáin thurgnamhacha"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:53
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:55
 msgid "Review should take place within 3 days"
 msgstr "Is dócha go ndéanfar an scrúdú taobh istigh de 3 lá"
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:54
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:56
 msgid "Some feature limitations"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:55
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:57
 msgid "Binary and obfuscated add-ons ineligible"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:56
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:58
 msgid "Cannot request Full Review for 10 days"
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/select-review.html:60
+#: apps/devhub/templates/devhub/addons/submit/select-review.html:62
 msgid "Choose Preliminary Review"
 msgstr "Roghnaigh Réamhscrúdú"
 
@@ -3554,10 +3755,6 @@ msgstr "Roghnaigh ceadúnas"
 #: apps/devhub/templates/devhub/addons/submit/sidebar.html:15
 msgid "Select a review process"
 msgstr "Roghnaigh próiseas scrúdaithe"
-
-#: apps/devhub/templates/devhub/addons/submit/sidebar.html:16
-msgid "You're done!"
-msgstr "Tá tú críochnaithe!"
 
 #: apps/devhub/templates/devhub/addons/submit/start.html:4
 msgid "Step 1. Getting Started"
@@ -3598,84 +3795,80 @@ msgstr "Glacaim leis an gComhaontú"
 msgid "or <a href=\"{0}\">Cancel</a>"
 msgstr "nó <a href=\"{0}\">Cealaigh</a>"
 
-#: apps/devhub/templates/devhub/addons/submit/upload.html:5
+#: apps/devhub/templates/devhub/addons/submit/upload.html:4
 msgid "Step 2. Upload Your Add-on"
 msgstr "Céim 2. Uasluchtaigh Do Bhreiseán"
 
-#: apps/devhub/templates/devhub/addons/submit/upload.html:7
+#: apps/devhub/templates/devhub/addons/submit/upload.html:6
 msgid ""
 "Use the fields below to upload your add-on package and select any platform "
 "restrictions. After upload, a series of automated validation tests will be "
 "run on your file."
 msgstr ""
 
-#: apps/devhub/templates/devhub/addons/submit/upload.html:14
+#: apps/devhub/templates/devhub/addons/submit/upload.html:13
 msgid "Select Add-on to Upload..."
 msgstr "Roghnaigh Breiseán le hUasluchtú..."
 
-#: apps/devhub/templates/devhub/addons/submit/upload.html:18
+#: apps/devhub/templates/devhub/addons/submit/upload.html:16
 msgid "We accept .xpi, .jar, and .xml files."
 msgstr "Glacaimid le comhaid .xpi, .jar, agus .xml."
 
-#: apps/devhub/templates/devhub/addons/submit/upload.html:31
-#: apps/devhub/templates/devhub/versions/edit.html:146
-msgid "Select the target platform for this file."
-msgstr "Roghnaigh ardán le haghaidh an chomhaid seo."
+#: apps/devhub/templates/devhub/addons/submit/upload.html:30
+#: apps/devhub/templates/devhub/versions/add_file_modal.html:18
+msgid "Select the target platform(s) for this file."
+msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:5
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:6
 msgid "Basic Information"
 msgstr "Buneolas"
 
 #. {0} is the addon name
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:15
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:16
 msgid "Basic Information for {0}"
 msgstr "Buneolas le haghaidh {0}"
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:30
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:31
 msgid "Add-on URL"
 msgstr "URL an Bhreiseáin"
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:31
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:32
 msgid "Choose a short, unique URL slug for your add-on."
 msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:41
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:42
 msgid "View Listing"
 msgstr "Féach ar Leathanach an Bhreiseáin"
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:48
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:49
 msgid "Summary"
 msgstr "Achoimre"
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:50
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:51
 msgid ""
 "A short explanation of your add-on's basic functionality that is displayed in "
 "search and browse listings, as well as at the top of your add-on's details "
 "page."
 msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:71
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:72
 msgid ""
 "Categories are the primary way users browse through add-ons. Choose any that "
 "fit your add-on's functionality for the most exposure."
 msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:77
-msgid "Select <b>up to 2</b> categories for this add-on."
-msgstr ""
-
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:89
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:100
 #: apps/search/templates/search/results.html:61
 msgid "Tags"
 msgstr "Clibeanna"
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:90
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:101
 msgid ""
 "Tags help users find your add-on and should be short descriptors such as "
 "tabs, toolbar, or twitter. You may have a maximum of {0} tags."
 msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:99
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:110
 msgid "Comma-separated, minimum of {0} character."
 msgid_plural "Comma-separated, minimum of {0} characters."
 msgstr[0] "Scartha ag camóga, {0} carachtar ar a laghad."
@@ -3684,7 +3877,7 @@ msgstr[2] "Scartha ag camóga, {0} carachtar ar a laghad."
 msgstr[3] "Scartha ag camóga, {0} carachtar ar a laghad."
 msgstr[4] "Scartha ag camóga, {0} carachtar ar a laghad."
 
-#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:102
+#: apps/devhub/templates/devhub/includes/addon_edit_basic.html:113
 msgid "Example: pop, hen, yum. Limit 20."
 msgstr "Sampla: pop, hen, yum. Uasmhéid 20."
 
@@ -3702,24 +3895,24 @@ msgid ""
 "information. This field is only displayed on the add-on's details page."
 msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addon_edit_details.html:42
+#: apps/devhub/templates/devhub/includes/addon_edit_details.html:44
 msgid "Default Locale"
 msgstr "Logchaighdeán Réamhshocraithe"
 
-#: apps/devhub/templates/devhub/includes/addon_edit_details.html:43
+#: apps/devhub/templates/devhub/includes/addon_edit_details.html:45
 msgid ""
 "Information about your add-on is displayed in this locale unless you override "
 "it with a locale-specific translation."
 msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addon_edit_details.html:58
+#: apps/devhub/templates/devhub/includes/addon_edit_details.html:60
 #: apps/users/templates/users/edit.html:121
 #: apps/users/templates/users/register.html:28
 #: apps/users/templates/users/vcard.html:25
 msgid "Homepage"
 msgstr "Leathanach Baile"
 
-#: apps/devhub/templates/devhub/includes/addon_edit_details.html:60
+#: apps/devhub/templates/devhub/includes/addon_edit_details.html:62
 msgid ""
 "If your add-on has another homepage, enter its address here. If your website "
 "is localized into other languages multiple translations of this field can be "
@@ -3743,6 +3936,10 @@ msgid ""
 "Upload an icon for your add-on or choose from one of ours. The icon is "
 "displayed nearly everywhere your add-on is. Uploaded images must be one of "
 "the following image types: .png, .jpg, .gif"
+msgstr ""
+
+#: apps/devhub/templates/devhub/includes/addon_edit_media.html:78
+msgid "Screenshots"
 msgstr ""
 
 #: apps/devhub/templates/devhub/includes/addon_edit_support.html:5
@@ -3885,8 +4082,14 @@ msgid ""
 "forward to."
 msgstr ""
 
-#: apps/devhub/templates/devhub/includes/addons_edit_nav.html:23
+#: apps/devhub/templates/devhub/includes/addons_edit_nav.html:24
 msgid "View Statistics Dashboard"
+msgstr ""
+
+#: apps/devhub/templates/devhub/includes/license_form.html:6
+msgid ""
+"Please choose a license appropriate for the rights you grant on your source "
+"code."
 msgstr ""
 
 #. {0} is a list of HTML tags.
@@ -3895,12 +4098,37 @@ msgid "Allowed HTML: {0}"
 msgstr "HTML inghlactha: {0}"
 
 #: apps/devhub/templates/devhub/includes/macros.html:13
-msgid "Some HTML supported"
-msgstr "Glactar le roinnt HTML"
+msgid "Some HTML supported."
+msgstr ""
 
 #: apps/devhub/templates/devhub/includes/macros.html:62
 msgid "Remove this application"
 msgstr "Bain an feidhmchlár seo"
+
+#. {0} is the maximum number of add-on categories allowed.
+#. {1} is the application name.
+#: apps/devhub/templates/devhub/includes/macros.html:72
+msgid "Select <b>up to {0}</b> {1} category for this add-on:"
+msgid_plural "Select <b>up to {0}</b> {1} categories for this add-on:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+
+#: apps/devhub/templates/devhub/includes/policy_form.html:4
+msgid ""
+"Users will be required to accept the following End-User License Agreement "
+"(EULA) prior to installing your add-on. The presence of a EULA significantly "
+"affects the number of downloads an add-on receives. Please note that a EULA "
+"is not the same as a code license, such as the GPL or MPL."
+msgstr ""
+
+#: apps/devhub/templates/devhub/includes/policy_form.html:20
+msgid ""
+"If your add-on transmits any data from the user's computer, a privacy policy "
+"is required that explains what data is sent and how it is used."
+msgstr ""
 
 #: apps/devhub/templates/devhub/includes/version_file.html:20
 msgid "This file will be deleted on save."
@@ -3909,6 +4137,24 @@ msgstr ""
 #: apps/devhub/templates/devhub/includes/version_file.html:23
 msgid "Undo"
 msgstr "Cealaigh"
+
+#: apps/devhub/templates/devhub/versions/add_file_modal.html:7
+msgid ""
+"Files added to reviewed versions must be reviewed before they will be "
+"available for download."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/add_file_modal.html:15
+msgid "Select the target platform for this file."
+msgstr "Roghnaigh ardán le haghaidh an chomhaid seo."
+
+#: apps/devhub/templates/devhub/versions/add_file_modal.html:27
+msgid "Select a File"
+msgstr "Roghnaigh Comhad"
+
+#: apps/devhub/templates/devhub/versions/add_file_modal.html:31
+msgid "Your add-on should end with .xpi or .jar."
+msgstr "Ba chóir iarmhír .xpi nó .jar a bheith ar ainm do bhreiseáin."
 
 #: apps/devhub/templates/devhub/versions/edit.html:5
 msgid "Manage Version {0}"
@@ -3925,65 +4171,71 @@ msgstr "Stádas agus Leaganacha"
 msgid "Manage {0}"
 msgstr "Bainistigh {0}"
 
-#: apps/devhub/templates/devhub/versions/edit.html:25
+#: apps/devhub/templates/devhub/versions/edit.html:26
 msgid "Files"
 msgstr "Comhaid:"
 
-#: apps/devhub/templates/devhub/versions/edit.html:37
+#: apps/devhub/templates/devhub/versions/edit.html:38
 msgid "Upload Another File"
 msgstr "Uasluchtaigh Comhad Eile"
 
-#: apps/devhub/templates/devhub/versions/edit.html:70
+#: apps/devhub/templates/devhub/versions/edit.html:73
 msgid "Release Notes"
 msgstr "Nótaí Eisiúna"
 
-#: apps/devhub/templates/devhub/versions/edit.html:94
+#: apps/devhub/templates/devhub/versions/edit.html:74
+msgid ""
+"Information about changes in this release, new features, known bugs, and "
+"other useful information specific to this release/version. This information "
+"is also shown in the Add-ons Manager when updating."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/edit.html:99
 msgid "Approval Status"
 msgstr "Stádas Ceadaithe"
 
-#: apps/devhub/templates/devhub/versions/edit.html:99
-msgid ""
-"File %(file)s (%(platform)s) created on %(created)s and changed to %(status)s "
-"on %(status_date)s"
-msgstr ""
-
-#: apps/devhub/templates/devhub/versions/edit.html:114
+#: apps/devhub/templates/devhub/versions/edit.html:113
 msgid "Notes for Reviewers"
 msgstr ""
 
-#: apps/devhub/templates/devhub/versions/edit.html:136
-msgid "Upload a New File"
-msgstr "Uasluchtaigh Comhad Nua"
-
-#: apps/devhub/templates/devhub/versions/edit.html:139
+#: apps/devhub/templates/devhub/versions/edit.html:114
 msgid ""
-"Files added to reviewed versions must be reviewed before they will be "
-"available for download."
+"Optionally, enter any information that may be useful to the Editor reviewing "
+"this add-on, such as test account information."
 msgstr ""
 
-#: apps/devhub/templates/devhub/versions/edit.html:154
-msgid "Select a File"
-msgstr "Roghnaigh Comhad"
+#: apps/devhub/templates/devhub/versions/edit.html:133
+msgid "Upload a new file"
+msgstr ""
 
-#: apps/devhub/templates/devhub/versions/edit.html:158
-msgid "Your add-on should end with .xpi or .jar."
-msgstr "Ba chóir iarmhír .xpi nó .jar a bheith ar ainm do bhreiseáin."
-
-#: apps/devhub/templates/devhub/versions/edit.html:180
+#: apps/devhub/templates/devhub/versions/edit.html:135
 msgid "Add File"
 msgstr "Cuir Comhad Leis"
+
+#: apps/devhub/templates/devhub/versions/file_status_message.html:2
+msgid ""
+"File %(file_id)s (%(platform)s) created on %(created)s and changed to %"
+"(status)s on %(status_date)s"
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/file_status_message.html:7
+msgid ""
+"File %(file_id)s (%(platform)s) created on %(created)s and changed to %"
+"(status)s"
+msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:16
 msgid "Current Status"
 msgstr "Stádas Reatha"
 
 #: apps/devhub/templates/devhub/versions/list.html:20
-msgid "This add-on has been <b>disabled</b>."
-msgstr "Tá an breiseán seo <b>díchumasaithe</b>."
+msgid "You have <b>disabled</b> this add-on."
+msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:21
 msgid ""
-"Your add-on is disabled and will not show up in our gallery or update service."
+"Your add-on's listing is disabled and is not showing anywhere in our gallery "
+"or update service. You may re-enable it at any time below."
 msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:23
@@ -4000,33 +4252,57 @@ msgstr "Tá an breiseán seo <b>ag fanacht le réamhscrúdú</b>."
 
 #: apps/devhub/templates/devhub/versions/list.html:27
 #: apps/devhub/templates/devhub/versions/list.html:30
-#: apps/devhub/templates/devhub/versions/list.html:33
-#: apps/devhub/templates/devhub/versions/list.html:36
-#: apps/devhub/templates/devhub/versions/list.html:39
-#: apps/devhub/templates/devhub/versions/list.html:42
-msgid "ASK FLIGTAR"
-msgstr "CUIR CEIST AR FLIGTAR"
+msgid ""
+"You will receive an email when the review is complete. Until then, your add-"
+"on is not listed in our gallery but can be accessed directly from its details "
+"page."
+msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:29
 msgid "This add-on is <b>awaiting full review</b>."
 msgstr "Tá an breiseán seo <b>ag fanacht le scrúdú iomlán</b>."
 
 #: apps/devhub/templates/devhub/versions/list.html:32
-msgid "This add-on has been <b>fully approved</b>."
+msgid "This add-on has been <b>fully reviewed</b>."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:33
+msgid ""
+"Your add-on is displayed in our gallery and users are receiving automatic "
+"updates."
 msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:35
-msgid "This add-on has been <b>disabled by the admins</b>."
-msgstr "Bhí an breiseán seo <b>díchumasaithe ag na riarthóirí</b>."
+msgid "This add-on has been <b>disabled by Mozilla</b>."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:36
+msgid ""
+"Your add-on was disabled by a site administrator and is no longer shown in "
+"our gallery. If you have any questions, please email amo-admins@mozilla.org."
+msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:38
-msgid "This add-on has been <b>preliminarily approved</b>."
+msgid "This add-on has been <b>preliminarily reviewed</b>."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:39
+msgid ""
+"Your add-on is displayed in our gallery as experimental and users are "
+"receiving automatic updates. Some features are unavailable to your add-on."
 msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:41
 msgid ""
-"This add-on has been <b>preliminarily approved</b> and is <b>awaiting full "
-"review</b>."
+"This add-on has been <b>preliminarily reviewed</b> and is <i>awaiting full "
+"review</i>."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:42
+msgid ""
+"You will receive an email when the full review is complete. Until then, your "
+"add-on is displayed in our gallery as experimental and users are receiving "
+"automatic updates. Some features are unavailable to your add-on."
 msgstr ""
 
 #: apps/devhub/templates/devhub/versions/list.html:44
@@ -4037,74 +4313,78 @@ msgstr "Roghnaigh an cineál scrúdaithe atá uait."
 msgid ""
 "All add-ons hosted in our gallery must now be reviewed by an editor. If you "
 "wish to continue hosting your add-on, please select a review process from the "
-"choices below. <a href=\"%(url)s\">Learn more about the review choices.</a>"
+"choices below."
 msgstr ""
 
-#: apps/devhub/templates/devhub/versions/list.html:53
+#: apps/devhub/templates/devhub/versions/list.html:49
+msgid "Learn more"
+msgstr "Tuilleadh eolais"
+
+#: apps/devhub/templates/devhub/versions/list.html:54
 msgid "Request Full Review"
 msgstr "Iarr Scrúdú Iomlán"
 
-#: apps/devhub/templates/devhub/versions/list.html:54
+#: apps/devhub/templates/devhub/versions/list.html:55
 msgid "Request Preliminary Review"
 msgstr "Iarr Réamhscrúdú"
 
-#: apps/devhub/templates/devhub/versions/list.html:63
-#: apps/devhub/templates/devhub/versions/list.html:189
-#: apps/devhub/templates/devhub/versions/list.html:211
+#: apps/devhub/templates/devhub/versions/list.html:64
+#: apps/devhub/templates/devhub/versions/list.html:222
+#: apps/devhub/templates/devhub/versions/list.html:244
 msgid "Cancel Review Request"
 msgstr "Cuir an Scrúdú Ar Ceal"
 
-#: apps/devhub/templates/devhub/versions/list.html:66
+#: apps/devhub/templates/devhub/versions/list.html:69
 msgid "Enable Add-on"
 msgstr "Cumasaigh an Breiseán"
 
-#: apps/devhub/templates/devhub/versions/list.html:68
-#: apps/devhub/templates/devhub/versions/list.html:165
-#: apps/devhub/templates/devhub/versions/list.html:180
+#: apps/devhub/templates/devhub/versions/list.html:71
+#: apps/devhub/templates/devhub/versions/list.html:198
+#: apps/devhub/templates/devhub/versions/list.html:213
 msgid "Disable Add-on"
 msgstr "Díchumasaigh an Breiseán"
 
-#: apps/devhub/templates/devhub/versions/list.html:74
+#: apps/devhub/templates/devhub/versions/list.html:78
 msgid "Displayed version: {0}"
 msgstr "Leagan ar taispeáint: {0}"
 
-#: apps/devhub/templates/devhub/versions/list.html:81
+#: apps/devhub/templates/devhub/versions/list.html:85
 msgid "Version History"
 msgstr "Stair na Leaganacha"
 
-#: apps/devhub/templates/devhub/versions/list.html:86
+#: apps/devhub/templates/devhub/versions/list.html:91
 msgid "Version"
 msgstr "Leagan"
 
-#: apps/devhub/templates/devhub/versions/list.html:87
+#: apps/devhub/templates/devhub/versions/list.html:92
 msgid "Submitted"
 msgstr "Seolta"
 
-#: apps/devhub/templates/devhub/versions/list.html:88
+#: apps/devhub/templates/devhub/versions/list.html:93
 msgid "Status"
 msgstr "Stádas"
 
 # Header for a column in a table
-#: apps/devhub/templates/devhub/versions/list.html:89
+#: apps/devhub/templates/devhub/versions/list.html:94
 msgid "Validation"
 msgstr "Bailíochtú"
 
-#: apps/devhub/templates/devhub/versions/list.html:94
+#: apps/devhub/templates/devhub/versions/list.html:99
 msgid "Upload a New Version"
 msgstr "Uasluchtaigh Leagan Nua"
 
-#: apps/devhub/templates/devhub/versions/list.html:102
+#: apps/devhub/templates/devhub/versions/list.html:107
 msgid "Edit this version"
 msgstr "Cuir an leagan seo in eagar"
 
-#: apps/devhub/templates/devhub/versions/list.html:103
+#: apps/devhub/templates/devhub/versions/list.html:108
 #: apps/versions/templates/versions/version.html:5
 msgctxt "addon_display_header_version"
 msgid "Version {0}"
 msgstr "Leagan {0}"
 
 #. {0} is the number of files, {1} is the status
-#: apps/devhub/templates/devhub/versions/list.html:115
+#: apps/devhub/templates/devhub/versions/list.html:120
 msgid "{0} file is {1}"
 msgid_plural "{0} files are {1}"
 msgstr[0] "Tá {0} chomhad {1}"
@@ -4113,45 +4393,67 @@ msgstr[2] "Tá {0} chomhad {1}"
 msgstr[3] "Tá {0} gcomhad {1}"
 msgstr[4] "Tá {0} comhad {1}"
 
-#: apps/devhub/templates/devhub/versions/list.html:148
-#: apps/devhub/templates/devhub/versions/list.html:157
+#: apps/devhub/templates/devhub/versions/list.html:124
+msgid "0 files"
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:136
+msgid "Not validated."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:138
+msgid "Validate now."
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:170
+msgid "Delete Version {version}"
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:172
+msgid ""
+"Deleting this version will permanently delete: <ul> <li id=\"del-files\"></"
+"li> <li id=\"del-reviews\"></li> </ul> Are you sure you wish to delete this "
+"version?"
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:185
 msgid "Delete Version"
 msgstr "Scrios Leagan"
 
-#: apps/devhub/templates/devhub/versions/list.html:150
-msgid "Deleting your add-on version will remove it from the site."
+#: apps/devhub/templates/devhub/versions/list.html:191
+msgid "Add a new Version"
 msgstr ""
 
-#: apps/devhub/templates/devhub/versions/list.html:167
+#: apps/devhub/templates/devhub/versions/list.html:193
+msgid "Add Version"
+msgstr ""
+
+#: apps/devhub/templates/devhub/versions/list.html:200
 msgid ""
 "Disabling your add-on will prevent it from appearing anywhere in our gallery "
 "and will stop users from receiving automatic updates."
 msgstr ""
 
-#: apps/devhub/templates/devhub/versions/list.html:173
+#: apps/devhub/templates/devhub/versions/list.html:206
 msgid "Are you sure you wish to disable your add-on?"
 msgstr "An bhfuil tú cinnte gur mhaith leat do bhreiseán a dhíchumasú?"
 
-#: apps/devhub/templates/devhub/versions/list.html:192
+#: apps/devhub/templates/devhub/versions/list.html:225
 msgid ""
 "Canceling your review request will leave your add-on as preliminarily "
 "reviewed."
 msgstr ""
 
-#: apps/devhub/templates/devhub/versions/list.html:197
+#: apps/devhub/templates/devhub/versions/list.html:230
 msgid ""
 "Canceling your review request will mark your add-on incomplete. If you do not "
 "complete your add-on after several days by re-requesting review, it will be "
 "deleted."
 msgstr ""
 
-#: apps/devhub/templates/devhub/versions/list.html:205
+#: apps/devhub/templates/devhub/versions/list.html:238
 msgid "Are you sure you wish to cancel your review request?"
 msgstr "An bhfuil tú cinnte gur mhaith leat an scrúdú a chur ar ceal?"
-
-#: apps/devhub/templates/devhub/versions/list.html:212
-msgid "Close"
-msgstr "Dún"
 
 #: apps/discovery/modules.py:82
 msgid "Save cash and have fun with these shopping add-ons"
@@ -4182,50 +4484,50 @@ msgstr ""
 msgid "Learn More"
 msgstr "Tuilleadh Eolais"
 
-#: apps/discovery/templates/discovery/pane.html:49 templates/user_login.html:36
+#: apps/discovery/templates/discovery/pane.html:48 templates/user_login.html:36
 msgid "Welcome, {0}"
 msgstr "Fáilte romhat a {0}"
 
-#: apps/discovery/templates/discovery/pane.html:51
+#: apps/discovery/templates/discovery/pane.html:50
 msgid "My Profile"
 msgstr "Mo Phróifíl"
 
-#: apps/discovery/templates/discovery/pane.html:59
+#: apps/discovery/templates/discovery/pane.html:58
 msgid ""
 "Thanks for using %(app)s and supporting <a href=\"%(url)s\">Mozilla's "
 "mission</a>!"
 msgstr ""
 
-#: apps/discovery/templates/discovery/pane.html:65
-msgid "Add-ons downloaded"
-msgstr "Breiseáin íosluchtaithe"
+#: apps/discovery/templates/discovery/pane.html:64
+msgid "Add-ons downloaded:"
+msgstr ""
 
-#: apps/discovery/templates/discovery/pane.html:77
+#: apps/discovery/templates/discovery/pane.html:76
 #: apps/discovery/templates/discovery/addons/detail.html:35
 msgid "Previous"
 msgstr "Roimhe Seo"
 
-#: apps/discovery/templates/discovery/pane.html:100
+#: apps/discovery/templates/discovery/pane.html:97
 msgid "Top Add-ons"
 msgstr ""
 
-#: apps/discovery/templates/discovery/pane.html:104
+#: apps/discovery/templates/discovery/pane.html:100
 msgid "See all"
 msgstr "Féach uile"
 
-#: apps/discovery/templates/discovery/pane.html:108
+#: apps/discovery/templates/discovery/pane.html:104
 msgid "More ways to customize"
 msgstr ""
 
-#: apps/discovery/templates/discovery/pane.html:111
+#: apps/discovery/templates/discovery/pane.html:107
 msgid "Browse all add-ons"
 msgstr "Brabhsáil gach breiseán"
 
-#: apps/discovery/templates/discovery/pane.html:115
+#: apps/discovery/templates/discovery/pane.html:111
 msgid "See all themes and Personas"
 msgstr "Féach ar na téamaí agus Pearsantachtaí go léir"
 
-#: apps/discovery/templates/discovery/pane.html:122
+#: apps/discovery/templates/discovery/pane.html:118
 msgid "Need help with an add-on? <a href=\"#\"><strong>Get support</strong></a>"
 msgstr ""
 
@@ -4251,27 +4553,72 @@ msgstr ""
 msgid "Rock Your Firefox Featured Add-on"
 msgstr "Breiseán Curtha Ar Taispeáint Ar Rock Your Firefox"
 
-#: apps/files/utils.py:109
+#: apps/editors/templates/editors/base.html:14
+msgid "Queues"
+msgstr "Ciúnna"
+
+#: apps/editors/templates/editors/base.html:17
+msgid "Full Reviews"
+msgstr ""
+
+#: apps/editors/templates/editors/base.html:19
+msgid "Pending Reviews"
+msgstr ""
+
+#: apps/editors/templates/editors/base.html:21
+msgid "Preliminary Reviews"
+msgstr ""
+
+#: apps/editors/templates/editors/base.html:23
+msgid "Moderated Reviews"
+msgstr ""
+
+#: apps/editors/templates/editors/base.html:27
+#: templates/global/menu_links.html:6
+msgid "Performance"
+msgstr "Feidhmíocht"
+
+#: apps/editors/templates/editors/base.html:32
+msgid "Charts"
+msgstr "Cairteacha"
+
+#: apps/editors/templates/editors/base.html:36
+msgid "Logs"
+msgstr "Logchomhaid"
+
+#: apps/editors/templates/editors/base.html:39
+msgid "Review Log"
+msgstr "Logchomhad Iniúchta"
+
+#: apps/editors/templates/editors/base.html:41
+msgid "Event Log"
+msgstr "Logchomhad Imeachtaí"
+
+#: apps/editors/templates/editors/base.html:45
+msgid "Announcement"
+msgstr ""
+
+#: apps/files/utils.py:125
 msgid "Could not parse %s."
 msgstr "Níorbh fhéidir %s a pharsáil."
 
-#: apps/files/utils.py:128
+#: apps/files/utils.py:144
 msgid "Invalid archive."
 msgstr "Cartlann neamhbhailí."
 
-#: apps/files/utils.py:135
+#: apps/files/utils.py:151
 msgid "Could not parse install.rdf."
 msgstr "Níorbh fhéidir install.rdf a pharsáil."
 
-#: apps/files/utils.py:140
-msgid "UUID doesn't match add-on"
+#: apps/files/utils.py:156
+msgid "UUID doesn't match add-on."
 msgstr ""
 
-#: apps/files/utils.py:142
+#: apps/files/utils.py:160
 msgid "Duplicate UUID found."
 msgstr ""
 
-#: apps/files/utils.py:146
+#: apps/files/utils.py:175
 msgid "<em:type> doesn't match add-on"
 msgstr ""
 
@@ -4486,18 +4833,46 @@ msgid ""
 msgstr ""
 
 #: apps/pages/templates/pages/faq.html:177
-msgid "How much do add-ons cost to purchase?"
+msgid ""
+"What does it mean if an add-on is \"experimental\" or \"preliminarily reviewed"
+"\"?"
 msgstr ""
 
 #: apps/pages/templates/pages/faq.html:178
+msgid ""
+"Experimental add-ons have been checked by our editors to make sure they don't "
+"have security problems, but they may still have bugs or not work properly. "
+"Use caution when installing experimental add-ons and uninstall the add-on "
+"immediately if you notice problems. <a href=\"%(url)s\">Learn more about our "
+"review process</a></dd>"
+msgstr ""
+
+#: apps/pages/templates/pages/faq.html:186
+msgid "What does it mean if an add-on is \"not reviewed\"?"
+msgstr ""
+
+#: apps/pages/templates/pages/faq.html:187
+msgid ""
+"While all add-ons publicly available in our gallery are reviewed by an "
+"editor, you may receive a direct link to an add-on that hasn't yet been "
+"reviewed. Use caution when installing these add-ons, as they could harm your "
+"computer or violate your privacy. We recommend that you only install reviewed "
+"add-ons. <a href=\"%(url)s\">Learn more about our review process</a></dd>"
+msgstr ""
+
+#: apps/pages/templates/pages/faq.html:196
+msgid "How much do add-ons cost to purchase?"
+msgstr ""
+
+#: apps/pages/templates/pages/faq.html:197
 msgid "Add-ons hosted in our gallery are free unless clearly marked otherwise."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:181
+#: apps/pages/templates/pages/faq.html:200
 msgid "What does it mean when an add-on asks for contributions?"
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:182
+#: apps/pages/templates/pages/faq.html:201
 msgid ""
 "Some add-on authors request users who enjoy an add-on to contribute to its "
 "development by making a monetary contribution. These contributions go "
@@ -4505,11 +4880,11 @@ msgid ""
 "profit Mozilla Foundation."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:187
+#: apps/pages/templates/pages/faq.html:206
 msgid "What are beta add-ons?"
 msgstr "Cad is Breiseán Béite ann?"
 
-#: apps/pages/templates/pages/faq.html:189
+#: apps/pages/templates/pages/faq.html:208
 msgid ""
 "Beta add-ons are unreviewed versions which represent the latest work of an "
 "add-on author. While different authors have different standards for beta code "
@@ -4517,7 +4892,7 @@ msgid ""
 "general add-on releases."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:193
+#: apps/pages/templates/pages/faq.html:212
 msgid ""
 "Please note that when you install an add-on from the \"Beta Version\" section "
 "of an add-on's listing, you will continue to receive updates for that add-on "
@@ -4525,11 +4900,11 @@ msgid ""
 "releases are unreviewed by Mozilla and may harm your computer."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:200
+#: apps/pages/templates/pages/faq.html:219
 msgid "How do I report an inappropriate or spam user review?"
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:201
+#: apps/pages/templates/pages/faq.html:220
 msgid ""
 "To report a user review of an add-on, log in with your account and visit the "
 "add-on's reviews page. Find the review you wish to report, click \"Report "
@@ -4537,19 +4912,19 @@ msgid ""
 "review and take appropriate action."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:206
+#: apps/pages/templates/pages/faq.html:225
 msgid "How do I report a bug or contact the Mozilla Add-ons team?"
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:207
+#: apps/pages/templates/pages/faq.html:226
 msgid "Please visit our <a href=\"%(contact_url)s\">Contact page</a>."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:210
+#: apps/pages/templates/pages/faq.html:229
 msgid "What is a Source Code License?"
 msgstr "Cad is Ceadúnas Cóid Fhoinsigh ann?"
 
-#: apps/pages/templates/pages/faq.html:211
+#: apps/pages/templates/pages/faq.html:230
 msgid ""
 "The source code used to create an add-on is an exclusive copyright of the add-"
 "on author, unless otherwise declared in a source code license. Many add-ons "
@@ -4559,41 +4934,41 @@ msgid ""
 "source licenses like the GPL or BSD licenses instead of making up their own."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:220
+#: apps/pages/templates/pages/faq.html:239
 msgid ""
 "Firefox and other Mozilla software are <a href=\"%(url)s\">open source</a>."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:228
+#: apps/pages/templates/pages/faq.html:247
 msgid "Collections and Favorites"
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:231
+#: apps/pages/templates/pages/faq.html:250
 msgid "What is a collection?"
 msgstr "Cad is Bailiúchán ann?"
 
-#: apps/pages/templates/pages/faq.html:232
+#: apps/pages/templates/pages/faq.html:251
 msgid "Collections are groups of related add-ons created by users to share."
 msgstr ""
 "Is éard atá i mBailiúchán ná grúpa de bhreiseáin cosúil le chéile cruthaithe "
 "ag úsáideoirí."
 
-#: apps/pages/templates/pages/faq.html:234
+#: apps/pages/templates/pages/faq.html:253
 msgid "What is the My Favorites collection?"
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:235
+#: apps/pages/templates/pages/faq.html:254
 msgid ""
 "Favorite add-ons are add-ons that you have bookmarked to easily get back to "
 "later. You can add an add-on to your favorites collection by clicking \"Add "
 "to favorites\" on its details page."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:237
+#: apps/pages/templates/pages/faq.html:256
 msgid "What is the Add-on Collector?"
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:238
+#: apps/pages/templates/pages/faq.html:257
 msgid ""
 "The <a href=\"%(collector_url)s\">Add-on Collector</a> is an add-on that "
 "helps you stay connected to your watched collections and manage the add-ons "
@@ -4602,15 +4977,15 @@ msgid ""
 "(collector_faq)s\">Collector FAQ</a>."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:249 templates/global/menu_links.html:37
+#: apps/pages/templates/pages/faq.html:268 templates/global/menu_links.html:37
 msgid "Mobile Add-ons"
 msgstr "Breiseáin Shoghluaiste"
 
-#: apps/pages/templates/pages/faq.html:252
+#: apps/pages/templates/pages/faq.html:271
 msgid "What are mobile add-ons?"
 msgstr "Cad is Breiseán Soghluaiste ann?"
 
-#: apps/pages/templates/pages/faq.html:253
+#: apps/pages/templates/pages/faq.html:272
 msgid ""
 "Mobile add-ons work with <a href=\"%(mobile_url)s\">Firefox for Mobile</a> "
 "and add or modify functionality just like desktop add-ons. You can find add-"
@@ -4618,34 +4993,22 @@ msgid ""
 "\">gallery</a>."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:260
-msgid "Can I install add-ons on my mobile device from my desktop?"
-msgstr ""
-
-#: apps/pages/templates/pages/faq.html:261
-msgid ""
-"Yes! Just head over to the <a href=\"%(gallery_url)s\">mobile gallery</a> on "
-"your desktop and use the Add to Mobile buttons. Then install the <a href=\"%"
-"(collector_url)s\">Add-on Collector</a> on your mobile device and it will "
-"sync the add-ons you've selected to your mobile device."
-msgstr ""
-
-#: apps/pages/templates/pages/faq.html:271
+#: apps/pages/templates/pages/faq.html:292
 msgid "Developer Topics"
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:272
+#: apps/pages/templates/pages/faq.html:293
 msgid ""
 "Please see our <a href=\"%(faq_url)s\">Developer FAQ</a> and <a href=\"%"
 "(hub_url)s\">Developer Hub</a> for answers to add-on developer-related "
 "questions."
 msgstr ""
 
-#: apps/pages/templates/pages/faq.html:278
+#: apps/pages/templates/pages/faq.html:299
 msgid "Still have questions?"
 msgstr "Ceisteanna agat orainn fós?"
 
-#: apps/pages/templates/pages/faq.html:279
+#: apps/pages/templates/pages/faq.html:300
 msgid ""
 "For general Firefox support, visit our <a href=\"%(sumo_url)s\">support "
 "website</a>. For general add-on and website questions, visit our <a href=\"%"
@@ -4728,23 +5091,23 @@ msgstr "Rátáilte %d as 5 réiltín"
 msgid "Rated %s out of 5 stars"
 msgstr "Rátáilte %s as 5 réiltín"
 
-#: apps/reviews/models.py:124
+#: apps/reviews/models.py:107
 msgid "Spam or otherwise non-review content"
 msgstr "Turscar nó ábhar nach mbaineann le léirmheas"
 
-#: apps/reviews/models.py:125
+#: apps/reviews/models.py:108
 msgid "Inappropriate language/dialog"
 msgstr "Plé/focail mhí-oiriúnacha"
 
-#: apps/reviews/models.py:126
+#: apps/reviews/models.py:109
 msgid "Misplaced bug report or support request"
 msgstr "Tuairisc ar fhabht nó iarratas ar thacaíocht as áit"
 
-#: apps/reviews/models.py:127
+#: apps/reviews/models.py:110
 msgid "Other (please specify)"
 msgstr "Cúis eile (sonraigh, le do thoil)"
 
-#: apps/reviews/views.py:93
+#: apps/reviews/views.py:92
 msgid "Thanks; this review has been flagged for editor approval."
 msgstr ""
 "Go raibh maith agat; cuireadh bratach leis an léirmheas seo agus déanfaidh "
@@ -5080,6 +5443,10 @@ msgstr "{0} - {1} as {2} toradh ar taispeáint"
 msgid "All Versions"
 msgstr "Gach Leagan"
 
+#: apps/search/views.py:72
+msgid "All"
+msgstr "Uile"
+
 #: apps/search/templates/search/collections.html:5
 msgid "Collection Search Results for {0}"
 msgstr ""
@@ -5235,7 +5602,7 @@ msgstr "de réir Córais Oibriúcháin"
 msgid "by Add-on Status"
 msgstr "de réir Stádas an Bhreiseáin"
 
-#: apps/stats/models.py:248
+#: apps/stats/models.py:249
 msgid "Thanks for contributing to {addon_name}"
 msgstr "Go raibh maith agat as tacú le {addon_name}"
 
@@ -5514,7 +5881,7 @@ msgid ""
 "your changes before switching locales?"
 msgstr ""
 
-#: apps/translations/templates/translations/trans-menu.html:36
+#: apps/translations/templates/translations/trans-menu.html:37
 msgid "Discard Changes"
 msgstr "Ná Sábháil na hAthruithe"
 
@@ -5990,11 +6357,11 @@ msgstr[4] "%(num)s Breiseán"
 msgid "Average rating for their Add-ons"
 msgstr ""
 
-#: apps/versions/feeds.py:26
+#: apps/versions/feeds.py:27
 msgid "%s Version History"
 msgstr "Stair na Leaganacha %s"
 
-#: apps/versions/feeds.py:34
+#: apps/versions/feeds.py:35
 msgid "Version History with Changelogs"
 msgstr "Stair na Leaganacha le Logchomhaid Athruithe"
 
@@ -6045,7 +6412,7 @@ msgid ""
 "always use the <a href=\"%(url)s\">latest version</a> of an add-on."
 msgstr ""
 
-#: templates/amo_footer.html:12 templates/includes/lang_switcher.html:2
+#: templates/amo_footer.html:11 templates/includes/lang_switcher.html:2
 msgid "Other languages"
 msgstr ""
 
@@ -6058,25 +6425,25 @@ msgstr "Breiseáin Mozilla"
 msgid "{0} Add-ons"
 msgstr ""
 
-#: templates/base.html:40
+#: templates/base.html:41
 msgid ""
 "Some features are temporarily disabled while we perform website maintenance. "
 "We'll be back to full capacity shortly."
 msgstr ""
 
-#: templates/base.html:51 templates/global/header.html:8
+#: templates/base.html:52 templates/global/header.html:8
 msgid "visit <span>mozilla.org</span>"
 msgstr "féach ar <span>mozilla.org</span>"
 
-#: templates/base.html:58
+#: templates/base.html:59
 msgid "Find add-ons for other applications"
 msgstr "Aimsigh breiseáin le haghaidh feidhmchlár eile"
 
-#: templates/base.html:60
+#: templates/base.html:61
 msgid "Other Applications"
 msgstr "Feidhmchláir Eile"
 
-#: templates/base.html:104
+#: templates/base.html:109
 msgid "To create your own collections, you must have a Mozilla Add-ons account."
 msgstr ""
 
@@ -6194,10 +6561,6 @@ msgstr "Gnéithe"
 msgid "Security"
 msgstr "Slándáil"
 
-#: templates/global/menu_links.html:6
-msgid "Performance"
-msgstr "Feidhmíocht"
-
 #: templates/global/menu_links.html:7
 msgid "Customization"
 msgstr "Saincheapadh"
@@ -6294,7 +6657,7 @@ msgstr "riachtanach"
 msgid "Not Found"
 msgstr "Gan Aimsiú"
 
-#: apps/amo/templates/amo/404.lhtml:7
+#: apps/amo/templates/amo/404.lhtml:6
 msgid ""
 "<h1>We're sorry, but we can't find what you're looking for.</h1> <p> The page "
 "or file you requested wasn't found on our site. It's possible that you "
@@ -6463,6 +6826,106 @@ msgid ""
 "volunteers from the community and a dedicated AMO team. A list of significant "
 "contributors can be found on our <a href=\"%(url)s\"> Site Credits</a> page."
 msgstr ""
+
+#~ msgid "The tag '{0}' isn't allowed"
+#~ msgstr "Ní cheadaítear clib '{0}'"
+
+#~ msgid "You can only have {0} category."
+#~ msgid_plural "You can only have {0} categories."
+#~ msgstr[0] "Ní cheadaítear ach {0} chatagóir."
+#~ msgstr[1] "Ní cheadaítear ach {0} chatagóir."
+#~ msgstr[2] "Ní cheadaítear ach {0} chatagóir."
+#~ msgstr[3] "Ní cheadaítear ach {0} gcatagóir."
+#~ msgstr[4] "Ní cheadaítear ach {0} catagóir."
+
+#~ msgid "Id is required."
+#~ msgstr "Tá aitheantas riachtanach."
+
+#~ msgid "This add-on has not been reviewed by Mozilla."
+#~ msgstr "Níl léirmheas déanta ag Mozilla ar an mbreiseán seo."
+
+#~ msgid "Raised"
+#~ msgstr "Bailithe"
+
+#~ msgid "<span class=\"money\">{0}</span> from {1} users"
+#~ msgstr "<span class=\"money\">{0}</span> ó {1} úsáideoir"
+
+#~ msgid "Goal"
+#~ msgstr "Cuspóir"
+
+#~ msgid "<span class=\"money\">{0}</span> by {1}"
+#~ msgstr "<span class=\"money\">{0}</span> le {1}"
+
+#~ msgid "%b %d"
+#~ msgstr "%d %b"
+
+#~ msgid "Not reviewed"
+#~ msgstr "Gan léirmheas"
+
+#~ msgid "Public"
+#~ msgstr "Poiblí"
+
+#~ msgid "Disabled by Admins"
+#~ msgstr "Díchumasaithe ag Riarthóir"
+
+#~ msgid "Preliminarily reviewed"
+#~ msgstr "Réamhscrúdú déanta"
+
+#~ msgid "Preliminarily reviewed and awaiting full review"
+#~ msgstr "Réamhscrúdú déanta; fanacht le scrúdú iomlán"
+
+#~ msgid "{0.name}({1}) added to {addon}."
+#~ msgstr "Cuireadh {0.name}({1}) le {addon}."
+
+#~ msgid "{0.name}({1}) removed from {addon}."
+#~ msgstr "Baineadh {0.name}({1}) ó {addon}."
+
+#~ msgid "Add-on <strong>Developer Hub</strong>"
+#~ msgstr "<strong>Lárionad Forbartha</strong>"
+
+#~ msgid "Set Up Contributions"
+#~ msgstr "Socraigh Deontais"
+
+#~ msgid "Revalidate"
+#~ msgstr "Athbhailíochtaigh"
+
+#~ msgid "Active"
+#~ msgstr "Gníomhach"
+
+#~ msgid "and <span class=\"status-%(status_key)s\">%(status_value)s</span>"
+#~ msgstr "agus <span class=\"status-%(status_key)s\">%(status_value)s</span>"
+
+#~ msgid "<strong>{0}</strong> active users"
+#~ msgid_plural "<strong>{0}</strong> active users"
+#~ msgstr[0] "<strong>{0}</strong> úsáideoir gníomhach"
+#~ msgstr[1] "<strong>{0}</strong> úsáideoir gníomhach"
+#~ msgstr[2] "<strong>{0}</strong> úsáideoir gníomhach"
+#~ msgstr[3] "<strong>{0}</strong> n-úsáideoir gníomhach"
+#~ msgstr[4] "<strong>{0}</strong> úsáideoir gníomhach"
+
+#~ msgid "Step 3. Describe your addon"
+#~ msgstr "Céim 3. Déan cur síos ar do bhreiseán"
+
+#~ msgid "You're all set!"
+#~ msgstr "Tá tú críochnaithe!"
+
+#~ msgid "Some HTML supported"
+#~ msgstr "Glactar le roinnt HTML"
+
+#~ msgid "Upload a New File"
+#~ msgstr "Uasluchtaigh Comhad Nua"
+
+#~ msgid "This add-on has been <b>disabled</b>."
+#~ msgstr "Tá an breiseán seo <b>díchumasaithe</b>."
+
+#~ msgid "ASK FLIGTAR"
+#~ msgstr "CUIR CEIST AR FLIGTAR"
+
+#~ msgid "This add-on has been <b>disabled by the admins</b>."
+#~ msgstr "Bhí an breiseán seo <b>díchumasaithe ag na riarthóirí</b>."
+
+#~ msgid "Add-ons downloaded"
+#~ msgstr "Breiseáin íosluchtaithe"
 
 #~ msgid " %B %e, %Y"
 #~ msgstr " %e %B %Y"
@@ -8556,9 +9019,6 @@ msgstr ""
 #~ msgid "Characters used: %1$s / %2$s"
 #~ msgstr "Carachtair a úsáideadh: %1$s / %2$s"
 
-#~ msgid "Charts"
-#~ msgstr "Cairteacha"
-
 #~ msgid "Check Availability"
 #~ msgstr "Féach an bhfuil sé ar fáil"
 
@@ -9286,9 +9746,6 @@ msgstr ""
 #~ msgid "Event"
 #~ msgstr "Imeacht"
 
-#~ msgid "Event Log"
-#~ msgstr "Logchomhad Imeachtaí"
-
 #~ msgctxt "editorcp_logs_page_heading"
 #~ msgid "Event Log"
 #~ msgstr "Logchomhad Imeachtaí"
@@ -9922,9 +10379,6 @@ msgstr ""
 #~ msgid "Learn More&hellip;"
 #~ msgstr "Tuilleadh Eolais&hellip;"
 
-#~ msgid "Learn more"
-#~ msgstr "Tuilleadh eolais"
-
 # %1 is the add-on name
 #~ msgid "Learn more about %1$s"
 #~ msgstr "Tuilleadh eolais faoi %1$s"
@@ -10043,9 +10497,6 @@ msgstr ""
 
 #~ msgid "Log in to like this link"
 #~ msgstr "Logáil isteach chun cur in iúl gur maith leat an nasc seo"
-
-#~ msgid "Logs"
-#~ msgstr "Logchomhaid"
 
 #~ msgid "Looking for a plugin not listed here?"
 #~ msgstr "An bhfuil tú ag lorg forlíontán nach bhfuil anseo?"
@@ -10956,9 +11407,6 @@ msgstr ""
 #~ msgid "Push to Public"
 #~ msgstr "Cuir ar an taobh Poiblí"
 
-#~ msgid "Queues"
-#~ msgstr "Ciúnna"
-
 #~ msgctxt "list_sortby_rating"
 #~ msgid "Rating"
 #~ msgstr "Rátáil"
@@ -11186,9 +11634,6 @@ msgstr ""
 
 #~ msgid "Review Comments"
 #~ msgstr "Nótaí ón Eagarthóir"
-
-#~ msgid "Review Log"
-#~ msgstr "Logchomhad Iniúchta"
 
 #~ msgctxt "editorcp_reviewlog_page_heading"
 #~ msgid "Review Log"
@@ -19055,7 +19500,7 @@ msgstr ""
 #~ "resubmit.."
 #~ msgstr ""
 #~ "Bhí earráidí i do chuid athruithe. Ceartaigh iad agus bain triail eile "
-#~ "as..."
+#~ "as.."
 
 #~ msgctxt "a_install"
 #~ msgid "Install Now %s"
