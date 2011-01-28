@@ -23,48 +23,12 @@ PARALLEL = ${HOME}/gaeilge/diolaim/comp
 # retranslate (moznua) all English source files into Irish and copy to 
 # the correct mercurial repo (mozdist)
 all : $(UTFCOMP)
-	bash moznua browser-en-US $(VERSION)
-	bash mozdist browser-en-US $(HGFULLPATH)
-	bash moznua dom-en-US $(VERSION)
-	bash mozdist dom-en-US $(HGFULLPATH)
-	bash moznua netwerk-en-US $(VERSION)
-	bash mozdist netwerk-en-US $(HGFULLPATH)
-	bash moznua toolkit-en-US $(VERSION)
-	bash mozdist toolkit-en-US $(HGFULLPATH)
-	bash moznua other-licenses-en-US $(VERSION)
-	bash mozdist other-licenses-en-US $(HGFULLPATH)
-	bash moznua security-en-US $(VERSION)
-	bash mozdist security-en-US $(HGFULLPATH)
-	bash moznua services-en-US $(VERSION)
-	bash mozdist services-en-US $(HGFULLPATH)
-	bash moznua embedding-en-US $(VERSION)
-	bash mozdist embedding-en-US $(HGFULLPATH)
-	bash moznua mobile-en-US $(VERSION)
-	bash mozdist mobile-en-US $(HGFULLPATH)
-	bash moznua editor-en-US $(VERSION)
-	bash mozdist editor-en-US $(HGFULLPATH)
-	bash moznua mail-en-US $(VERSION)
-	bash mozdist mail-en-US $(HGFULLPATH)
-	bash moznua calendar-en-US $(VERSION)
-	bash mozdist calendar-en-US $(HGFULLPATH)
-	- perl -w compare-locales.pl toolkit-en-US toolkit-ga-IE
-	- perl -w compare-locales.pl netwerk-en-US netwerk-ga-IE
-	- perl -w compare-locales.pl dom-en-US dom-ga-IE
-	- perl -w compare-locales.pl browser-en-US browser-ga-IE
-	- perl -w compare-locales.pl other-licenses-en-US other-licenses-ga-IE
-	- perl -w compare-locales.pl security-en-US security-ga-IE
-	- perl -w compare-locales.pl services-en-US services-ga-IE
-	- perl -w compare-locales.pl embedding-en-US embedding-ga-IE
-	- perl -w compare-locales.pl editor-en-US editor-ga-IE
-	- perl -w compare-locales.pl mail-en-US mail-ga-IE
-	- perl -w compare-locales.pl calendar-en-US calendar-ga-IE
-	- perl -w compare-locales.pl mobile-en-US mobile-ga-IE
+	cat $(VERSION).txt | while read x; do bash moznua $$x-en-US $(VERSION); bash mozdist $$x-en-US $(HGFULLPATH); done
 
 $(UTFCOMP) : $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM)
 	rm -f $(UTFCOMP)
 	msgcat --use-first $(COMPENDIUM) $(TBCOMPENDIUM) $(CALCOMPENDIUM) > $(UTFCOMP)
 	chmod 444 $(UTFCOMP)
-
 
 topwords : FORCE
 	cat /usr/local/share/crubadan/ga/FREQ | sed 's/^ *[0-9]* //' | sed '1000,$$d' > ./freqtemp.txt
@@ -83,17 +47,14 @@ eilecheck : FORCE
 
 
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-?.?.po *ga-IE.po
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-?.?.po *ga-IE.po amo-javascript.mo mozilla-stable.po
 	rm -fR langpack-build-dir
 	rm -f messages.po amo.pot amo-final.po amo-final.mo amo-obair.mo
 	rm -Rf gatemp
 
 distclean :
 	$(MAKE) clean
-	rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US mobile-en-US services-en-US embedding-en-US
-	rm -Rf browser-ga-IE dom-ga-IE extensions-ga-IE netwerk-ga-IE toolkit-ga-IE other-licenses-ga-IE security-ga-IE editor-ga-IE mail-ga-IE calendar-ga-IE mobile-ga-IE services-ga-IE embedding-ga-IE
-	rm -Rf browser-ga-IEpo dom-ga-IEpo extensions-ga-IEpo netwerk-ga-IEpo toolkit-ga-IEpo other-licenses-ga-IEpo security-ga-IEpo editor-ga-IEpo mail-ga-IEpo calendar-ga-IEpo mobile-ga-IEpo services-ga-IEpo embedding-ga-IEpo
-	rm -f browser-ga-IE.po dom-ga-IE.po extensions-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po calendar-ga-IE.po mobile-ga-IE.po services-ga-IE.po embedding-ga-IE.po
+	cat $(VERSION).txt | while read x; do rm -Rf $$x-en-US $$x-ga-IE $$x-ga-IEpo; rm -f $$x-ga-IE.po; done
 
 ###########################################################################
 #   rest relates to maintenance/updates                                   #
@@ -156,31 +117,8 @@ amo-commit : amo-obair.mo amo-javascript.mo
 # only made from inside the "newrelease" scripts, so ok to FORCE
 obair.po : FORCE
 	$(MAKE) $(UTFCOMP)
-	bash moznua browser-en-US $(VERSION)
-	bash mozcat browser-en-US
-	bash moznua calendar-en-US $(VERSION)
-	bash mozcat calendar-en-US
-	bash moznua dom-en-US $(VERSION)
-	bash mozcat dom-en-US
-	bash moznua netwerk-en-US $(VERSION)
-	bash mozcat netwerk-en-US
-	bash moznua toolkit-en-US $(VERSION)
-	bash mozcat toolkit-en-US
-	bash moznua other-licenses-en-US $(VERSION)
-	bash mozcat other-licenses-en-US
-	bash moznua security-en-US $(VERSION)
-	bash mozcat security-en-US
-	bash moznua services-en-US $(VERSION)
-	bash mozcat services-en-US
-	bash moznua embedding-en-US $(VERSION)
-	bash mozcat embedding-en-US
-	bash moznua editor-en-US $(VERSION)
-	bash mozcat editor-en-US
-	bash moznua mail-en-US $(VERSION)
-	bash mozcat mail-en-US
-	bash moznua mobile-en-US $(VERSION)
-	bash mozcat mobile-en-US
-	msgcat browser-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po mobile-ga-IE.po embedding-ga-IE.po services-ga-IE.po | sed '1,/^#\..*sync.properties$$/d; /browser-ga-IE.po.*\\n"$$/,/services-ga-IE.po.*\\n"$$/d; 1,3d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
+	cat $(VERSION).txt | while read x; do bash moznua $$x-en-US $(VERSION); bash mozcat $$x-en-US; done
+	cat $(VERSION).txt | egrep -v '^(calendar|editor|mail)$$' | sed 's/$$/-ga-IE.po/' | xargs msgcat | sed '1,/^#, fuzzy/d; /browser-ga-IE.po.*\\n"$$/,/toolkit-ga-IE.po.*\\n"$$/d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
 	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
 	msgcat editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
 	sed -i 's/msgstr "39em"/msgstr "47em"/; s/msgstr "43em"/msgstr "51em"/; s/msgstr "Firefox Soghluaiste"/msgstr "Fón Póca"/; s/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
@@ -191,6 +129,6 @@ obair.po : FORCE
 	sed -i 's/msgstr "End"/msgstr "Críoch"/; s/msgstr "Chuig"/msgstr "Go"/; s/msgstr "lá anuas"/msgstr "lá"/; s/msgstr "seachtain anuas"/msgstr "seachtain"/; s/msgstr "mí anuas"/msgstr "mí"/' cal_obair.po
 	sed -i '1,/^"Project-Id-Version: /d' cal_obair.po
 	sed -i '1s/.*/msgid ""\nmsgstr ""\n"Project-Id-Version: sunbird\\n"\n&/' cal_obair.po
-	rm -f browser-ga-IE.po calendar-ga-IE.po dom-ga-IE.po netwerk-ga-IE.po toolkit-ga-IE.po other-licenses-ga-IE.po security-ga-IE.po editor-ga-IE.po mail-ga-IE.po mobile-ga-IE.po services-ga-IE.po embedding-ga-IE.po
+#	cat trunk.txt | while read x; do rm -f $$x-ga-IE.po; done
 
 FORCE :

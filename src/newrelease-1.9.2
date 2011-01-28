@@ -1,14 +1,21 @@
 #!/bin/bash
 #  ASCII ONLY
+# Danger- translate toolkit has changed since
+# last sync of the 1.9.2 ga-IE repo, so running this script
+# and then doing "make" will introduce lots of tiny changes on
+# what is supposed to be a stable branch.... so don't run this!
+# structure is interesting and useful though for the future when 
+# we do have a new stable branch to maintain separately (4.0.x vs. 4.1 dev?)
+exit
 PONAME='stable'
 SRCDIR='moz-1.9.2'
 
 # commit any outstanding changes to PO files
-cvs commit -m "outstanding changes before sync" firefox-stable.ga.po tbird-stable.ga.po calendar-stable.ga.po
+cvs commit -m "outstanding changes before sync" firefox-${PONAME}.ga.po tbird-${PONAME}.ga.po calendar-${PONAME}.ga.po
 
 #  Updates CVS and creates new *en-US files in this dir
 cd ~/gaeilge/gnu/mozilla/gaeilge/src
-rm -Rf browser-en-US dom-en-US extensions-en-US netwerk-en-US toolkit-en-US other-licenses-en-US security-en-US editor-en-US mail-en-US calendar-en-US mobile-en-US
+cat stable.txt | sed 's/$/-en-US/' | xargs rm -Rf
 mkdir -p other-licenses-en-US/branding
 mkdir extensions-en-US security-en-US editor-en-US
 mkdir extensions-en-US/inspector
@@ -31,6 +38,8 @@ hg up
 hg pull -u
 
 cd ~/seal/$SRCDIR/comm-1.9.2
+hg up
+hg pull -u
 python client.py checkout --cvsroot=':pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot'
 # was a bug in client.py
 #--- a/client.py Thu Sep 04 10:17:39 2008 +0100
@@ -49,7 +58,7 @@ cd ~/seal/$SRCDIR/mozilla-1.9.2
 cp -Rf browser/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US
 cp -Rf dom/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/dom-en-US
 cp -Rf extensions/reporter/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/reporter
-cp -Rf extensions/inspector/resources/locale/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/inspector/resources
+#cp -Rf extensions/inspector/resources/locale/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/extensions-en-US/inspector/resources
 cp -Rf netwerk/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/netwerk-en-US
 cp -Rf toolkit/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/toolkit-en-US
 cp -Rf other-licenses/branding/firefox/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/firefox
@@ -57,9 +66,6 @@ cp -Rf security/manager/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/security
 
 cd ~/seal/$SRCDIR/mobile-1.1
 cp -Rf locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/mobile-en-US
-
-#cd ~/seal/mozold-cvs/mozilla
-#cvs update -d calendar mail minimo other-licenses
 
 # cd ..  (or, more explicitly...)
 cd ~/seal/$SRCDIR/comm-1.9.2
@@ -70,22 +76,19 @@ cp -Rf other-licenses/branding/thunderbird/locales/en-US ~/gaeilge/gnu/mozilla/g
 #cp -Rf other-licenses/branding/sunbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/sunbird
 cp -Rf mail/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US
 
-# HACKS until these files are cleaned up in CVS or translate toolkit works
-sed -i '/^<!-- commenting/d; /<!ENTITY messagesHeader.label/d' ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US/chrome/messenger/subscribe.dtd
-sed -i 's/credit.translation "/&<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>/' ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US/chrome/messenger/credits.dtd
-# next two lines reinserted into ga-IE dtd after translation
-sed -i '1,2d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/overrides/netError.dtd
-sed -i '1,3d' ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US/chrome/browser/aboutCertError.dtd
-sed -i '1,3d' ~/gaeilge/gnu/mozilla/gaeilge/src/mobile-en-US/chrome/aboutCertError.dtd
-
 cd ~/gaeilge/gnu/mozilla/gaeilge/src
-find *-en-US -name 'CVS' | xargs rm -fR
+# HACKS until these files are cleaned up in CVS or translate toolkit works
+sed -i '/^<!-- commenting/d; /<!ENTITY messagesHeader.label/d' mail-en-US/chrome/messenger/subscribe.dtd
+sed -i 's/credit.translation "/&<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>/' mail-en-US/chrome/messenger/credits.dtd
+# next two lines reinserted into ga-IE dtd after translation
+sed -i '1,2d' browser-en-US/chrome/overrides/netError.dtd
+sed -i '1,3d' browser-en-US/chrome/browser/aboutCertError.dtd
+sed -i '1,3d' mobile-en-US/chrome/aboutCertError.dtd
 
 # set up variables in makefile; need "VERSION" correct
 # before translation starts since moznua needs it
 sed -i "/^VERSION/s/.*/VERSION=$PONAME/" makefile
 sed -i "/^CVSDIREC/s/.*/CVSDIREC=$SRCDIR/" makefile
-
 
 make obair.po
 
@@ -94,5 +97,5 @@ cpo -q cal_obair.po obair.po tb_obair.po
 echo "Run \"make eilecheck\" periodically also"
 
 echo "Finish translating the obair files,"
-echo "copy to firefox-stable.ga.po, calendar-stable.ga.po, tbird-stable.ga.po"
+echo "copy to firefox-${PONAME}.ga.po, calendar-${PONAME}.ga.po, tbird-${PONAME}.ga.po"
 echo "Then do a 'make' to build Irish dtd/properties and copy to hg"
