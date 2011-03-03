@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-11 08:54-0500\n"
+"POT-Creation-Date: 2011-03-03 12:56-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -239,11 +239,6 @@ msgstr ""
 #: abouthome.pageTitle
 msgid "&brandFullName; Start Page"
 msgstr "Leathanach Tosaigh &brandFullName;"
-
-#. brandShortName must be in a <span/>
-#: abouthome.brandStart
-msgid "<span>&brandShortName;</span> Start"
-msgstr "Tosach <span>&brandShortName;</span>"
 
 # all of these look good as verbs as of 8 Feb 2011
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
@@ -3041,6 +3036,13 @@ msgstr ""
 #. # menu will always be accessible via the "Web Developer" menu.
 #. # This is not a string to translate; it just controls whether the menu shows
 #. # up in the Firefox button. If users frequently use the "Character Encoding"
+#. # menu, set this to "true". Otherwise, you can leave it as "false".
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (browser.menu.showCharacterEncoding): Set to the string
+#. # "true" (spelled and capitalized exactly that way) to show the "Character
+#. # Encoding" menu in the site menu. Any other value will hide it. Without this
+#. # setting, the "Character Encoding" menu must be enabled via Preferences.
+#. # This is not a string to translate. If users frequently use the "Character Encoding"
 #. # menu, set this to "true". Otherwise, you can leave it as "false".
 #: browser.menu.showCharacterEncoding VerifiedFalse
 msgid "false"
@@ -5918,7 +5920,7 @@ msgid "&Allow pages to choose their own fonts, instead of my selections above"
 msgstr ""
 "T&abhair cead do leathanaigh a gclónna féin a roghnú, in áit mo roghanna thuas"
 
-#: languages.customize.Charset.grouplabel
+#: languages.customize.Charset.grouplabel pageactions.charEncoding
 msgid "Character Encoding"
 msgstr "Ionchódú Carachtar"
 
@@ -10824,7 +10826,7 @@ msgstr "Stop an script"
 msgid "Debug script"
 msgstr "Dífhabhtaigh an script"
 
-#: WaitForScriptButton Continue
+#: WaitForScriptButton continue_label Continue
 msgid "Continue"
 msgstr "Ar Aghaidh"
 
@@ -13474,6 +13476,14 @@ msgstr "Tuairisc ar thuairteáil á seoladh\\u2026"
 msgid "Exit"
 msgstr "Scoir"
 
+#: incompatable_device
+msgid ""
+"&brandShortName; does not support this device and you may experience \n"
+"problems."
+msgstr ""
+"Ní thacaíonn &brandShortName; leis an ngléas seo agus seans go mbeidh \n"
+"fadhbanna agat."
+
 #: certerror.addTemporaryException.label
 msgid "Visit site"
 msgstr "Déan cuairt ar shuíomh"
@@ -13563,6 +13573,18 @@ msgstr "Níl aon chluaisíní ann ón uair roimhe seo"
 #: aboutHome.noAddons addonsSearchNone.recommended
 msgid "No recommended add-ons"
 msgstr "Gan breiseáin mholta"
+
+#. LOCALIZATION NOTE: 'Firefox Spark' is the official name of the promotion/constest and should not be translated
+#: aboutHome.promoLabel
+msgid "Firefox Spark"
+msgstr "Firefox Spark"
+
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromeaboutHome.dtd.po (firefox)  #-#-#-#-#
+#. LOCALIZATION NOTE: 'Play' should be translated in the context of 'playing a game' and not 'playing a video'
+#: aboutHome.promoButton contextPlayMedia.label playButton.playLabel
+msgid "Play"
+msgstr "Seinn"
 
 #: urlbar.emptytext
 msgid "Enter Search or Address"
@@ -13907,10 +13929,6 @@ msgstr "Sábháil an Físeán"
 msgid "Share Video"
 msgstr "Comhroinn an Físeán"
 
-#: contextPlayMedia.label playButton.playLabel
-msgid "Play"
-msgstr "Seinn"
-
 #: contextPauseMedia.label
 msgctxt "contextPauseMedia.label"
 msgid "Pause"
@@ -13955,11 +13973,6 @@ msgstr "Aimsigh sa Leathanach"
 #: pageactions.search.addNew addEngineConfirmTitle
 msgid "Add Search Engine"
 msgstr "Inneall Cuardaigh Nua"
-
-# pretty sure Filter is a verb here... not "Liosta Scagairí"
-#: selectHelper.emptytext
-msgid "Filter List"
-msgstr "Scag an Liosta"
 
 #: appMenu.siteOptions
 msgid "Site Options"
@@ -14335,7 +14348,7 @@ msgid "Don't allow"
 msgstr "Ná ceadaigh"
 
 #: desktopNotification.siteWantsTo
-msgid "%S wants use notifications."
+msgid "%S wants to use notifications."
 msgstr "Teastaíonn ó %S fograí a úsáid."
 
 #. # New Tab Popup
@@ -14450,6 +14463,12 @@ msgid ""
 msgstr ""
 "An bhfuil fonn ort do stair brabhsála agus do chuid socruithe a scriosadh, "
 "focail fhaire agus fianáin san áireamh?"
+
+#. # LOCALIZATION NOTE (intl.charsetmenu.browser.static): Set to a series of comma separated
+#. # values for charsets that the user can select from in the Character Encoding menu.
+#: intl.charsetmenu.browser.static
+msgid "iso-8859-1,utf-8,x-gbk,big5,iso-2022-jp,shift_jis,euc-jp"
+msgstr "iso-8859-1,utf-8,x-gbk,big5,iso-2022-jp,shift_jis,euc-jp"
 
 #: newpref.label
 msgid "Add a New Preference"
@@ -14779,6 +14798,10 @@ msgstr "Tosach &brandShortName;"
 #: homepage.currentpage
 msgid "Use Current Page"
 msgstr "Úsáid an Leathanach Reatha"
+
+#: showCharset.title
+msgid "Show Character Encoding"
+msgstr "Taispeáin an tIonchódú Carachtar"
 
 #. # This is the default set of web based feed handlers shown in the reader
 #. # selection UI
@@ -28384,6 +28407,8 @@ msgctxt "acceptTermsButton.accesskey"
 msgid "A"
 msgstr "A"
 
+#. # NOTE: The restartLaterButton string is also used in
+#. # mozapps/extensions/content/blocklist.js
 #: restartLaterButton
 msgid "Restart Later"
 msgstr "Atosaigh Ar Ball"
@@ -29035,4 +29060,3 @@ msgstr ""
 #: MOZ_LANG_TITLE
 msgid "English (US)"
 msgstr "Béarla (SAM)"
-
