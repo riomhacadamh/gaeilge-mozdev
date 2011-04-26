@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-11 08:52-0500\n"
+"POT-Creation-Date: 2011-03-03 12:55-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -658,6 +658,14 @@ msgstr "athdhéanamh"
 msgid "attachments"
 msgstr "iatáin"
 
+#: calendar.task-details.start.label
+msgid "start date"
+msgstr ""
+
+#: calendar.task-details.due.label
+msgid "due date"
+msgstr ""
+
 #: calendar.task.category.button.tooltip
 msgid "Categorize tasks"
 msgstr "Catagóirigh tascanna"
@@ -701,45 +709,13 @@ msgstr "Imeacht &Nua…"
 msgid "New Tas&k…"
 msgstr "Tas&c Nua…"
 
-#: calendar.context.modifytask.label calendar.context.modifytask.accesskey
-msgid "&Edit Task…"
-msgstr "Cuir Tasc in &Eagar…"
-
-#: calendar.context.modifyitem.label calendar.context.modifyitem.accesskey
-msgid "&Edit Item…"
-msgstr "&Cuir Mír in Eagar…"
-
 #: calendar.context.deletetask.label calendar.context.deletetask.accesskey
 msgid "De&lete Task"
 msgstr "&Scrios Tasc"
 
-#: calendar.context.deleteitem.label calendar.context.deleteitem.accesskey
-msgid "De&lete"
-msgstr "S&crios"
-
 #: calendar.context.deleteevent.label calendar.context.deleteevent.accesskey
 msgid "De&lete Event"
 msgstr "Scrios &Imeacht"
-
-#: calendar.context.deletethisevent.label
-#: calendar.context.deletethisevent.accesskey
-msgid "&This Event"
-msgstr "An tImeacht &Seo"
-
-#: calendar.context.deletecompleteseries.label
-#: calendar.context.deletecompleteseries.accesskey
-msgid "Complete &Series"
-msgstr "&Sraith Iomlán"
-
-#: calendar.context.deletefutureevents.label
-#: calendar.context.deletefutureevents.accesskey
-msgid "All &Future Events"
-msgstr "Gach imeacht as seo &amach"
-
-#: calendar.context.deletefuturetasks.label
-#: calendar.context.deletefuturetasks.accesskey
-msgid "All &Future Tasks"
-msgstr "Gach tasc as seo &amach"
 
 # "G" under Main -> Eagar
 #: calendar.context.cutevent.label calendar.context.cutevent.accesskey
@@ -762,16 +738,22 @@ msgstr "&Cóipeáil"
 msgid "&Paste"
 msgstr "G&reamaigh"
 
-# "U" under Main -> Eagar, analogue of English
-#: calendar.context.selectall.label calendar.context.selectall.accesskey
-#: event.menu.edit.select.all.label event.menu.edit.select.all.accesskey
-#: calendar.selectall.label calendar.selectall.accesskey
-msgid "Select &All"
-msgstr "Roghnaigh &Uile"
-
 #: calendar.context.button.label calendar.context.button.accesskey
 msgid "&Today Pane"
 msgstr "&Pána an Lae Inniu"
+
+#: calendar.context.attendance.menu.label
+#: calendar.context.attendance.menu.accesskey
+msgid "Atten&dance"
+msgstr ""
+
+#: calendar.context.attendance.occurrence.label
+msgid "This Occurrence"
+msgstr ""
+
+#: calendar.context.attendance.all.label
+msgid "All Occurrences"
+msgstr ""
 
 # Task Context Menu
 #. Task Context Menu
@@ -880,6 +862,13 @@ msgstr "Ard"
 #: priority.level.high.accesskey
 msgid "H"
 msgstr "H"
+
+#. Task View
+#. Note that the above *.context.* strings are currently used for the other
+#. task action buttons
+#: calendar.taskview.delete.label calendar.taskview.delete.accesskey
+msgid "De&lete"
+msgstr "S&crios"
 
 # Server Context Menu
 #. Server Context Menu
@@ -1563,6 +1552,12 @@ msgstr "Cea&laigh"
 #: calendar.redo.label calendar.redo.accesskey
 msgid "&Redo"
 msgstr "Ath&fheidhmigh"
+
+# "U" under Main -> Eagar, analogue of English
+#: event.menu.edit.select.all.label event.menu.edit.select.all.accesskey
+#: calendar.selectall.label calendar.selectall.accesskey
+msgid "Select &All"
+msgstr "Roghnaigh &Uile"
 
 # "A" in main browser window
 #: event.menu.view.label event.menu.view.accesskey viewMenu.label
@@ -2462,6 +2457,24 @@ msgstr "Sonraigh crios ama"
 #: paneGeneral.title pref.calendar.view.allview.caption
 msgid "General"
 msgstr "Ginearálta"
+
+#: read.only.event.start.label
+msgctxt "read.only.event.start.label"
+msgid "Start Date:"
+msgstr ""
+
+#: read.only.task.start.label
+msgctxt "read.only.task.start.label"
+msgid "Start Date:"
+msgstr ""
+
+#: read.only.event.end.label
+msgid "End Date:"
+msgstr ""
+
+#: read.only.task.due.label
+msgid "Due Date:"
+msgstr "Dáta Dlite:"
 
 #: read.only.repeat.label
 msgid "Repeat:"
@@ -4633,14 +4646,6 @@ msgstr "Tús:"
 #: eventDetailsEndDate
 msgid "End:"
 msgstr "Deireadh:"
-
-#: taskDetailsStartDate
-msgid "Start Date:"
-msgstr "Dáta Tosaigh:"
-
-#: taskDetailsEndDate
-msgid "Due Date:"
-msgstr "Dáta Dlite:"
 
 # # LOCALIZATION NOTE (cityAndStateNoZip):
 # # %1$S is city, %2$S is state
@@ -8657,6 +8662,23 @@ msgstr "An Antartaice/Macquarie"
 #: pref.timezone.Asia.Novokuznetsk
 msgid "Asia/Novokuznetsk"
 msgstr "An Áise/Novokuznetsk"
+
+#. #added with 0.1.2011b
+#: pref.timezone.America.Bahia_Banderas
+msgid "America/Bahia Banderas"
+msgstr ""
+
+#: pref.timezone.America.North_Dakota.Beulah
+msgid "America/North Dakota/Beulah"
+msgstr ""
+
+#: pref.timezone.Pacific.Chuuk
+msgid "Pacific/Chuuk"
+msgstr ""
+
+#: pref.timezone.Pacific.Pohnpei
+msgid "Pacific/Pohnpei"
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
