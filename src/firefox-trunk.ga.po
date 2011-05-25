@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-22 22:57-0500\n"
+"POT-Creation-Date: 2011-05-24 16:07-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -419,8 +419,8 @@ msgstr ""
 "le do sholáthraí seirbhíse Idirlín nó d'fhostóir bheith ag breathnú ar na "
 "leathanaigh a thugann tú cuairt orthu."
 
-#: privatebrowsingpage.learnMore lockPromptInfoButton.label
-#: addonsWhatAre.button sync.update.button
+#: privatebrowsingpage.learnMore syncPromoNotification.learnMoreLinkText
+#: lockPromptInfoButton.label addonsWhatAre.button sync.update.button
 msgid "Learn More"
 msgstr "Faigh Tuilleadh Eolais"
 
@@ -657,7 +657,10 @@ msgstr "Tabhair an tIomlán chun Tosaigh"
 msgid "Zoom"
 msgstr "Súmáil"
 
-#: windowMenu.label
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (webConsolePositionWindow): When this option is selected the
+#. # Web Console interface is displayed in a floating panel.
+#: windowMenu.label webConsolePositionWindow
 msgid "Window"
 msgstr "Fuinneog"
 
@@ -992,7 +995,6 @@ msgid "Subscribe to This Page…"
 msgstr "Liostáil leis an Leathanach Seo…"
 
 #: addCurPagesCmd.label
-msgctxt "addCurPagesCmd.label"
 msgid "Bookmark All Tabs…"
 msgstr "Leabharmharcáil Gach Cluaisín…"
 
@@ -1000,10 +1002,10 @@ msgstr "Leabharmharcáil Gach Cluaisín…"
 msgid "Show All Bookmarks"
 msgstr "Taispeáin Gach Leabharmharc"
 
-#: bookmarkAllCmd.label
-msgctxt "bookmarkAllCmd.label"
-msgid "Bookmark All Tabs…"
-msgstr "Leabharmharcáil Gach Cluaisín…"
+#: unsortedBookmarksCmd.label
+msgctxt "unsortedBookmarksCmd.label"
+msgid "Unsorted Bookmarks"
+msgstr "Leabharmharcanna Gan Sórtáil"
 
 #: bookmarksToolbarChevron.tooltip
 msgid "Show more bookmarks"
@@ -1223,6 +1225,10 @@ msgctxt "addons.commandkey"
 msgid "A"
 msgstr "A"
 
+#: webDeveloperMenu.label webDeveloperMenu.accesskey
+msgid "&Web Developer"
+msgstr "&Forbróir Gréasáin"
+
 #: errorConsoleCmd.label errorConsoleCmd.accesskey
 msgid "Error &Console"
 msgstr "Consól &Earráide"
@@ -1250,11 +1256,33 @@ msgstr "&Scrúdaigh"
 msgid "I"
 msgstr "I"
 
+#. This menu item label appears
+#. -  in the Tools menu. See bug 653093.
+#. -  The Scratchpad is intended to provide a simple text editor for creating
+#. -  and evaluating bits of JavaScript code for the purposes of function
+#. -  prototyping, experimentation and convenient scripting.
+#. -
+#. -  It's quite possible that you won't have a good analogue for the word
+#. -  "Scratchpad" in your locale. You should feel free to find a close
+#. -  approximation to it or choose a word (or words) that means
+#. -  "simple discardable text editor".
+#: scratchpad.label scratchpad.accesskey
+msgid "&Scratchpad"
+msgstr "&Ceap Breacaireachta"
+
+#: scratchpad.keycode
+msgid "VK_F4"
+msgstr "VK_F4"
+
+#: scratchpad.keytext VK_F4
+msgid "F4"
+msgstr "F4"
+
 #: inspectPanelTitle.label
 msgid "HTML"
 msgstr "HTML"
 
-#: inspectButton.label inspectButton.accesskey
+#: inspectButton.label inspectButton.accesskey inspect.label inspect.accesskey
 msgid "&Inspect"
 msgstr "&Scrúdaigh"
 
@@ -1289,13 +1317,18 @@ msgstr "Stíl"
 msgid "&Object"
 msgstr "&Réad"
 
+#: getMoreDevtoolsCmd.label getMoreDevtoolsCmd.accesskey
+msgid "Get &More Tools"
+msgstr "Faigh &Tuilleadh Uirlisí"
+
 # "C" in main browser window
 #: fileMenu.label fileMenu.accesskey
 msgid "&File"
 msgstr "&Comhad"
 
 # "N" under Main -> Comhad
-#: newNavigatorCmd.label newNavigatorCmd.accesskey
+#: newNavigatorCmd.label newNavigatorCmd.accesskey newWindowCmd.label
+#: newWindowCmd.accesskey
 msgid "&New Window"
 msgstr "Fuinneog &Nua"
 
@@ -1307,7 +1340,7 @@ msgid "N"
 msgstr "N"
 
 # "E" in main browser window
-#: editMenu.label editMenu.accesskey edit.label edit.accesskey
+#: editMenu.label editMenu.accesskey
 msgid "&Edit"
 msgstr "&Eagar"
 
@@ -1518,7 +1551,7 @@ msgid "Getting Started"
 msgstr "Tús Maith"
 
 # Ctrl+i is highlights URL for opening
-#: openCmd.commandkey certs.auto.accesskey focus1.commandkey
+#: openCmd.commandkey certs.auto.accesskey display.key focus1.commandkey
 #: goToLineCmd.commandkey
 msgid "l"
 msgstr "l"
@@ -1589,6 +1622,7 @@ msgid "&Show Only This Frame"
 msgstr "Ná Tai&speáin ach an Fráma Seo"
 
 #: reloadCmd.commandkey cmd.context_sortby_name.accesskey FTPport.accesskey
+#: run.key
 msgid "r"
 msgstr "r"
 
@@ -1851,8 +1885,12 @@ msgctxt "fullZoomReduceCmd.commandkey2"
 msgid ""
 msgstr ""
 
-#: fullZoomResetCmd.label fullZoomResetCmd.accesskey reset.label
-#: reset.accesskey
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserscratchpad.dtd.po (firefox)  #-#-#-#-#
+#. This command allows the developer
+#. -  to reset/clear the global object of the environment where the code executes.
+#: fullZoomResetCmd.label fullZoomResetCmd.accesskey resetContext.label
+#: resetContext.accesskey reset.label reset.accesskey
 msgid "&Reset"
 msgstr "Athshoc&raigh"
 
@@ -2115,7 +2153,10 @@ msgstr "/"
 msgid "Timed Out"
 msgstr "Thar Am"
 
-#: openFile
+#. #-#-#-#-#  chromebrowserscratchpad.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE  (openFile.title): This is the file picker title, when you
+#. # open a file from Scratchpad.
+#: openFile openFile.title
 msgid "Open File"
 msgstr "Oscail Comhad"
 
@@ -2150,8 +2191,6 @@ msgstr "S"
 msgid "[Folder Name]"
 msgstr "[Ainm Fillteáin]"
 
-#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
-#. # XPInstall
 #: xpinstallPromptWarning
 msgid ""
 "%S prevented this site (%S) from asking you to install software on your "
@@ -2187,7 +2226,8 @@ msgstr ""
 msgid "Enable"
 msgstr "Cumasaigh"
 
-#: xpinstallDisabledButton.accesskey dirTextInputAccesskey
+#: xpinstallDisabledButton.accesskey newWindowCmd.commandkey
+#: dirTextInputAccesskey
 msgid "n"
 msgstr "n"
 
@@ -2534,10 +2574,10 @@ msgctxt "crashedpluginsMessage.learnMore"
 msgid "Learn More…"
 msgstr "Tuilleadh Eolais…"
 
-#: carbonFailurePluginsMessage.title
-msgid "This page requires a plugin that can only run in 32-bit mode"
+#: carbonFailurePluginsMessage.message
+msgid "This page asks to use a plugin that can only run in 32-bit mode"
 msgstr ""
-"Tá breiseán ag teastáil don leathanach seo nach féidir a rith ach sa mhód 32 "
+"Tá an leathanach seo ag iarraidh breiseán nach féidir a rith ach sa mhód 32 "
 "giotán"
 
 #: carbonFailurePluginsMessage.restartButton.label
@@ -2920,7 +2960,7 @@ msgstr "Cliceáil anseo i gcomhair mionsonraí"
 #. # Geolocation UI
 #. # LOCALIZATION NOTE (geolocation.shareLocation geolocation.dontShareLocation geolocation.alwaysShare geolocation.neverShare): 
 #. #If you're having trouble with the word Share, please use Allow and Block in your language.
-#: geolocation.shareLocation permGeo
+#: geolocation.shareLocation permGeo geo.label
 msgid "Share Location"
 msgstr "Ceadaigh"
 
@@ -2935,6 +2975,7 @@ msgstr "Ná Ceadaigh"
 
 # Ctrl+O for "Oscail" in Main -> Comhad
 #: geolocation.dontShareLocation.accesskey SSLport.accesskey
+#: openFileCmd.commandkey
 msgid "o"
 msgstr "o"
 
@@ -2986,8 +3027,9 @@ msgid "This isn't a web forgery…"
 msgstr "Ní falsaíocht Ghréasáin é seo…"
 
 #: safebrowsing.notAForgeryButton.accessKey feedTab.accesskey
-#: enableAppUpdate.accesskey reportPhishSiteMenu.accesskey
-#: devmgr.button.fips.accesskey findCmd.key findOnCmd.commandkey
+#: cmd.context_new_folder.accesskey enableAppUpdate.accesskey
+#: reportPhishSiteMenu.accesskey devmgr.button.fips.accesskey findCmd.key
+#: findOnCmd.commandkey
 msgid "F"
 msgstr "F"
 
@@ -3108,6 +3150,21 @@ msgstr "Atosaigh"
 #: browser.menu.showCharacterEncoding VerifiedFalse
 msgid "false"
 msgstr "bréagach"
+
+#. # LOCALIZATION NOTE (syncPromoNotification.bookmarks.label): This appears in
+#. # the add bookmark star panel.  %S will be replaced by syncBrandShortName.
+#: syncPromoNotification.bookmarks.label
+msgid "You can access your bookmarks on all your devices with %S."
+msgstr ""
+"Le %S is féidir leat do chuid leabharmharcanna a rochtain ar gach gléas atá "
+"agat."
+
+#. # LOCALIZATION NOTE (syncPromoNotification.passwords.label): This appears in
+#. # the remember password panel.  %S will be replaced by syncBrandShortName.
+#: syncPromoNotification.passwords.label
+msgid "You can access your passwords on all your devices with %S."
+msgstr ""
+"Le %S is féidir leat do chuid focal faire a rochtain ar gach gléas atá agat."
 
 #: engineManager.title
 msgid "Manage Search Engine List"
@@ -3265,12 +3322,17 @@ msgstr "Comhaid mheán"
 #. # occupied by the engine, %2$K the corresponding unit (e.g. kB) as defined in
 #. # the download manager.
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromemozappsupdateupdates.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE:
 #. # %1$S is the add-on name
 #. # Example: My Addon
 #. # %2$S is the add-on version.
 #. # Example: 2.1.5
+#. #-#-#-#-#  chromeplacesplaces.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (finduri-MonthYear):
+#. # %1$S is the month name, %2$S is the year (4 digits format).
 #: enclosureSizeText offlineAppUsage quota.sizeValueUnit.label addonLabel
+#: finduri-MonthYear
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -3433,10 +3495,6 @@ msgstr "Iompórtáil comhad leabharmharc ó:"
 msgid "&Microsoft Internet Explorer"
 msgstr "&Microsoft Internet Explorer"
 
-#: importFromPhoenix.label importFromPhoenix.accesskey
-msgid "Firefox 0.8, Firebird or &Phoenix"
-msgstr "Firefox 0.8, Firebird nó &Phoenix"
-
 #: importFromNothing.label importFromNothing.accesskey
 msgid "&Don't import anything"
 msgstr "&Ná hiompórtáil rud ar bith"
@@ -3445,43 +3503,13 @@ msgstr "&Ná hiompórtáil rud ar bith"
 msgid "&Netscape 6, 7 or Mozilla 1.x"
 msgstr "&Netscape 6, 7 nó Mozilla 1.x"
 
-# update notifications: new update page
-# plugins URLs
-#: importFromNetscape4.label importFromNetscape4.accesskey
-msgid "Netscape &4.x"
-msgstr "Netscape &4.x"
-
 #: importFromOpera.label importFromOpera.accesskey
 msgid "&Opera"
 msgstr "&Opera"
 
-#: importFromCamino.label importFromCamino.accesskey
-msgid "&Camino"
-msgstr "&Camino"
-
 #: importFromSafari.label importFromSafari.accesskey
 msgid "&Safari"
 msgstr "&Safari"
-
-#: importFromOmniWeb.label importFromOmniWeb.accesskey
-msgid "Omni&Web"
-msgstr "Omni&Web"
-
-#: importFromICab.label importFromICab.accesskey
-msgid "&iCab"
-msgstr "&iCab"
-
-#: importFromKonqueror.label importFromKonqueror.accesskey
-msgid "&Konqueror"
-msgstr "&Konqueror"
-
-#: importFromEpiphany.label importFromEpiphany.accesskey
-msgid "&Epiphany"
-msgstr "&Epiphany"
-
-#: importFromGaleon.label importFromGaleon.accesskey
-msgid "&Galeon"
-msgstr "&Galeon"
 
 #: importFromHTMLFile.label importFromHTMLFile.accesskey
 msgid "&From an HTML File"
@@ -3550,13 +3578,6 @@ msgid "Netscape 6/7/Mozilla"
 msgstr "Netscape 6/7/Mozilla"
 
 # trade name, do not translate
-# update notifications: new update page
-# plugins URLs
-#: sourceNameDogbert
-msgid "Netscape 4"
-msgstr "Netscape 4"
-
-# trade name, do not translate
 #: sourceNameOpera
 msgid "Opera"
 msgstr "Opera"
@@ -3564,35 +3585,6 @@ msgstr "Opera"
 #: sourceNameSafari
 msgid "Safari"
 msgstr "Safari"
-
-# trade name, do not translate
-#: sourceNameOmniWeb
-msgid "OmniWeb"
-msgstr "OmniWeb"
-
-#: sourceNameCamino
-msgid "Camino"
-msgstr "Camino"
-
-# trade name, do not translate
-#: sourceNameICab
-msgid "iCab"
-msgstr "iCab"
-
-# trade name, do not translate
-#: sourceNameKonqueror
-msgid "Konqueror"
-msgstr "Konqueror"
-
-# trade name, do not translate
-#: sourceNameEpiphany
-msgid "Epiphany"
-msgstr "Epiphany"
-
-# trade name, do not translate
-#: sourceNameGaleon
-msgid "Galeon"
-msgstr "Galeon"
 
 #: importedBookmarksFolder
 msgid "From %S"
@@ -3610,10 +3602,6 @@ msgstr "Cuardaigh ar %S"
 msgid ""
 "Type \"%S <search query>\" in the Location Bar to perform a search on %S."
 msgstr "Iontráil \"%S <lorgfhocail>\" i mBarra na Suíomh chun %S a chuardach."
-
-#: importedDogbertBookmarksTitle
-msgid "From Netscape 4"
-msgstr "Ó Netscape 4"
 
 #: importedSeamonkeyBookmarksTitle
 msgid "From Netscape 6/7/Mozilla"
@@ -3641,28 +3629,13 @@ msgctxt "1_opera"
 msgid "Preferences"
 msgstr "Sainroghanna"
 
-#: 1_dogbert
-msgctxt "1_dogbert"
-msgid "Preferences"
-msgstr "Sainroghanna"
-
 #: 1_seamonkey
 msgctxt "1_seamonkey"
 msgid "Preferences"
 msgstr "Sainroghanna"
 
-#: 1_phoenix
-msgctxt "1_phoenix"
-msgid "Preferences"
-msgstr "Sainroghanna"
-
 #: 1_safari
 msgctxt "1_safari"
-msgid "Preferences"
-msgstr "Sainroghanna"
-
-#: 1_macie
-msgctxt "1_macie"
 msgid "Preferences"
 msgstr "Sainroghanna"
 
@@ -3676,28 +3649,13 @@ msgctxt "2_opera"
 msgid "Cookies"
 msgstr "Fianáin"
 
-#: 2_dogbert
-msgctxt "2_dogbert"
-msgid "Cookies"
-msgstr "Fianáin"
-
 #: 2_seamonkey
 msgctxt "2_seamonkey"
 msgid "Cookies"
 msgstr "Fianáin"
 
-#: 2_phoenix
-msgctxt "2_phoenix"
-msgid "Cookies"
-msgstr "Fianáin"
-
 #: 2_safari
 msgctxt "2_safari"
-msgid "Cookies"
-msgstr "Fianáin"
-
-#: 2_macie
-msgctxt "2_macie"
 msgid "Cookies"
 msgstr "Fianáin"
 
@@ -3711,28 +3669,13 @@ msgctxt "4_opera"
 msgid "Browsing History"
 msgstr "Stair Bhrabhsála"
 
-#: 4_dogbert
-msgctxt "4_dogbert"
-msgid "Browsing History"
-msgstr "Stair Bhrabhsála"
-
 #: 4_seamonkey
 msgctxt "4_seamonkey"
 msgid "Browsing History"
 msgstr "Stair Bhrabhsála"
 
-#: 4_phoenix
-msgctxt "4_phoenix"
-msgid "Browsing History"
-msgstr "Stair Bhrabhsála"
-
 #: 4_safari
 msgctxt "4_safari"
-msgid "Browsing History"
-msgstr "Stair Bhrabhsála"
-
-#: 4_macie
-msgctxt "4_macie"
 msgid "Browsing History"
 msgstr "Stair Bhrabhsála"
 
@@ -3746,28 +3689,13 @@ msgctxt "8_opera"
 msgid "Saved Form History"
 msgstr "Stair na Faisnéise Sábháilte ó Fhoirmeacha"
 
-#: 8_dogbert
-msgctxt "8_dogbert"
-msgid "Saved Form History"
-msgstr "Stair na Faisnéise Sábháilte ó Fhoirmeacha"
-
 #: 8_seamonkey
 msgctxt "8_seamonkey"
 msgid "Saved Form History"
 msgstr "Stair na Faisnéise Sábháilte ó Fhoirmeacha"
 
-#: 8_phoenix
-msgctxt "8_phoenix"
-msgid "Saved Form History"
-msgstr "Stair na Faisnéise Sábháilte ó Fhoirmeacha"
-
 #: 8_safari
 msgctxt "8_safari"
-msgid "Saved Form History"
-msgstr "Stair na Faisnéise Sábháilte ó Fhoirmeacha"
-
-#: 8_macie
-msgctxt "8_macie"
 msgid "Saved Form History"
 msgstr "Stair na Faisnéise Sábháilte ó Fhoirmeacha"
 
@@ -3781,18 +3709,8 @@ msgctxt "16_opera"
 msgid "Saved Passwords"
 msgstr "Focail Fhaire a sábháladh"
 
-#: 16_dogbert
-msgctxt "16_dogbert"
-msgid "Saved Passwords"
-msgstr "Focail Fhaire a sábháladh"
-
 #: 16_seamonkey
 msgctxt "16_seamonkey"
-msgid "Saved Passwords"
-msgstr "Focail Fhaire a sábháladh"
-
-#: 16_phoenix
-msgctxt "16_phoenix"
 msgid "Saved Passwords"
 msgstr "Focail Fhaire a sábháladh"
 
@@ -3801,13 +3719,7 @@ msgctxt "16_safari"
 msgid "Saved Passwords"
 msgstr "Focail Fhaire a sábháladh"
 
-#: 16_macie
-msgctxt "16_macie"
-msgid "Saved Passwords"
-msgstr "Focail Fhaire a sábháladh"
-
 #: 32_ie
-msgctxt "32_ie"
 msgid "Favorites"
 msgstr "Ceanáin"
 
@@ -3816,18 +3728,8 @@ msgctxt "32_opera"
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
-#: 32_dogbert
-msgctxt "32_dogbert"
-msgid "Bookmarks"
-msgstr "Leabharmharcanna"
-
 #: 32_seamonkey
 msgctxt "32_seamonkey"
-msgid "Bookmarks"
-msgstr "Leabharmharcanna"
-
-#: 32_phoenix
-msgctxt "32_phoenix"
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
@@ -3835,11 +3737,6 @@ msgstr "Leabharmharcanna"
 msgctxt "32_safari"
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
-
-#: 32_macie
-msgctxt "32_macie"
-msgid "Favorites"
-msgstr "Ceanáin"
 
 #: 64_ie
 msgctxt "64_ie"
@@ -3851,28 +3748,13 @@ msgctxt "64_opera"
 msgid "Other Data"
 msgstr "Sonraí Eile"
 
-#: 64_dogbert
-msgctxt "64_dogbert"
-msgid "Other Data"
-msgstr "Sonraí Eile"
-
 #: 64_seamonkey
 msgctxt "64_seamonkey"
 msgid "Other Data"
 msgstr "Sonraí Eile"
 
-#: 64_phoenix
-msgctxt "64_phoenix"
-msgid "Other Data"
-msgstr "Sonraí Eile"
-
 #: 64_safari
 msgctxt "64_safari"
-msgid "Other Data"
-msgstr "Sonraí Eile"
-
-#: 64_macie
-msgctxt "64_macie"
 msgid "Other Data"
 msgstr "Sonraí Eile"
 
@@ -4145,15 +4027,15 @@ msgstr "Fiafraigh díom i gcónaí"
 #. # the terms of any one of the MPL, the GPL or the LGPL.
 #. #
 #. # ***** END LICENSE BLOCK *****
-#: permAllow can Yes
+#: permAllow permission.allow can Yes
 msgid "Allow"
 msgstr "Ceadaigh"
 
-#: permAllowSession canSession
+#: permAllowSession permission.allowForSession canSession
 msgid "Allow for Session"
 msgstr "Ceadaigh don Seisiún"
 
-#: permBlock cannot
+#: permBlock permission.block cannot
 msgid "Block"
 msgstr "Coisc"
 
@@ -4165,11 +4047,11 @@ msgstr "Ceadanna le haghaidh:"
 msgid "Load Images"
 msgstr "Luchtaigh Íomhánna"
 
-#: permPopup
+#: permPopup popup.label
 msgid "Open Pop-up Windows"
 msgstr "Oscail Preabfhuinneoga"
 
-#: permCookie
+#: permCookie cookie.label
 msgid "Set Cookies"
 msgstr "Socraigh Fianáin"
 
@@ -4177,7 +4059,10 @@ msgstr "Socraigh Fianáin"
 msgid "Install Extensions or Themes"
 msgstr "Suiteáil Eisínteachtaí nó Téamaí"
 
-#: permIndexedDB
+#. #-#-#-#-#  chromebrowserpreferencesaboutPermissions.dtd.po (firefox)  #-#-#-#-#
+#. This is describing indexedDB storage
+#. using the same language used for the permIndexedDB string in browser/pageInfo.dtd
+#: permIndexedDB indexedDB.label
 msgid "Maintain Offline Storage"
 msgstr "Coinnigh Stóras As Líne"
 
@@ -4243,7 +4128,7 @@ msgid "View Cookies"
 msgstr "Féach ar Fhianáin"
 
 #: securityView.privacy.viewCookies.accessKey focusSearch2.key
-#: cmd.search.commandKey helpSearch.commandkey
+#: webConsoleCmd.commandkey cmd.search.commandKey helpSearch.commandkey
 msgid "k"
 msgstr "k"
 
@@ -4488,10 +4373,6 @@ msgstr "Suíomh &Fotha:"
 msgid "&Site Location:"
 msgstr "&Suíomh:"
 
-#: editBookmarkOverlay.liveTitlesSeparator.label
-msgid "Live Titles"
-msgstr "Teidil Bheo"
-
 #: editBookmarkOverlay.folder.label
 msgid "Folder:"
 msgstr "Fillteán:"
@@ -4573,11 +4454,6 @@ msgstr "&Eagraigh"
 #: organize.tooltip
 msgid "Organize your bookmarks"
 msgstr "Eagraigh leabharmharcanna"
-
-#: file.accesskey
-msgctxt "file.accesskey"
-msgid "F"
-msgstr "F"
 
 #: cmd.close.key windowClose.key closeWindow.key closeCmd.commandkey
 #: cmd.close.commandKey
@@ -4686,11 +4562,6 @@ msgstr "&Leabharmharc Nua…"
 msgid "New F&older…"
 msgstr "&Fillteán Nua…"
 
-#: cmd.context_new_folder.accesskey
-msgctxt "cmd.context_new_folder.accesskey"
-msgid "F"
-msgstr "F"
-
 #: cmd.new_separator.label cmd.new_separator.accesskey
 msgid "New &Separator"
 msgstr "&Deighilteoir Nua"
@@ -4698,10 +4569,6 @@ msgstr "&Deighilteoir Nua"
 #: cmd.reloadLivebookmark.label cmd.reloadLivebookmark.accesskey
 msgid "&Reload Live Bookmark"
 msgstr "Athluchtaigh &Leabharmharc Beo"
-
-#: cmd.reloadMicrosummary.label cmd.reloadMicrosummary.accesskey
-msgid "&Reload Live Title"
-msgstr "Athluchtaigh &Teideal Beo"
 
 #: cmd.moveBookmarks.label cmd.moveBookmarks.accesskey
 msgid "&Move…"
@@ -4755,7 +4622,8 @@ msgstr "Leabharmhar&canna"
 msgid "&History"
 msgstr "&Stair"
 
-#: saveSearch.label saveSearch.accesskey Save
+#: saveSearch.label saveSearch.accesskey saveFileCmd.label
+#: saveFileCmd.accesskey Save
 msgid "&Save"
 msgstr "&Sábháil"
 
@@ -4774,18 +4642,9 @@ msgstr "&Iompórtáil agus Cúltaca"
 msgid "Import and backup your bookmarks"
 msgstr "Iompórtáil agus déan cúltaca ar leabharmharcanna"
 
-# Toolbar
-#: backCmd.label back.label backButton
-msgid "Back"
-msgstr "Siar"
-
 #: backButton.tooltip
 msgid "Go back"
 msgstr "Siar"
-
-#: forwardCmd.label forward.label
-msgid "Forward"
-msgstr "Ar Aghaidh"
 
 #: forwardButton.tooltip
 msgid "Go forward"
@@ -4798,10 +4657,6 @@ msgstr "Níos &Mó"
 #: detailsPane.less.label detailsPane.less.accesskey
 msgid "L&ess"
 msgstr "Níos &Lú"
-
-#: detailsPane.noPreviewAvailable.label preview.label
-msgid "Preview"
-msgstr "Réamhamharc"
 
 #: detailsPane.selectAnItemText.description
 msgid "Select an item to view and edit its properties"
@@ -4835,14 +4690,6 @@ msgstr "De réir na Cuairte is &Déanaí"
 #: byDayAndSite.label byDayAndSite.accesskey
 msgid "By Da&te and Site"
 msgstr "De réir Dá&ta agus Suímh"
-
-#: deleteHost
-msgid "Delete all from %S"
-msgstr "Scrios uile as %S"
-
-#: deleteDomain
-msgid "Delete entire domain %S"
-msgstr "Scrios an fearann %S ina iomláine"
 
 #: load-js-data-url-error
 msgid ""
@@ -5140,6 +4987,78 @@ msgctxt "lockPromptInfoButton.accessKey"
 msgid "L"
 msgstr "L"
 
+#: permissionsManager.title
+msgid "Permissions Manager"
+msgstr "Bainisteoir na gCeadanna"
+
+#: sites.search
+msgid "Search Sites"
+msgstr "Cuardaigh Suímh"
+
+#: sites.allSites
+msgid "All Sites"
+msgstr "Gach Suíomh"
+
+#. LOCALIZATION NOTE (permissions.header.start, permissions.header.end): These strings
+#. surround the host name of the site to make the header for the permissions page.
+#. example: "Permissions for mozilla.org"
+#: header.site.start
+msgid "Permissions for"
+msgstr "Ceadanna ar"
+
+#: header.site.end
+msgctxt "header.site.end"
+msgid ""
+msgstr ""
+
+#: header.defaults
+msgid "Default Permissions for All Sites"
+msgstr "Ceadanna Réamhshocraithe ar Gach Suíomh"
+
+#: permissions.forgetSite
+msgid "Forget About This Site"
+msgstr "Déan Dearmad ar an Suíomh Seo"
+
+#: permission.alwaysAsk
+msgid "Always Ask"
+msgstr "Fiafraigh Díom i gCónaí"
+
+#: password.label
+msgid "Store Passwords"
+msgstr "Sábháil Focail Fhaire"
+
+#: password.manage
+msgid "Manage Passwords…"
+msgstr "Bainistigh Focail Fhaire…"
+
+#: cookie.clear
+msgid "Clear Cookies"
+msgstr "Glan Fianáin"
+
+#: cookie.manage
+msgid "Manage Cookies…"
+msgstr "Bainistigh Fianáin…"
+
+#: cookie.clearAll
+msgid "Clear All Cookies"
+msgstr "Glan Gach Fianán"
+
+#. # LOCALIZATION NOTE (visitCount): #1 is the number of history visits for a site
+#: visitCount
+msgid "#1 visit;#1 visits"
+msgstr "#1 chuairt;#1 chuairt;#1 chuairt;#1 gcuairt;#1 cuairt"
+
+#: passwordsCount
+msgid ""
+"#1 password is stored for this web site.;#1 passwords are stored for this web "
+"site."
+msgstr ""
+
+#: cookiesCount
+msgid ""
+"#1 cookie is set for this web site.;#1 cookies are set for this web site."
+msgstr ""
+
 #: accessibility.label
 msgid "Accessibility"
 msgstr "Inrochtaineacht"
@@ -5242,14 +5161,19 @@ msgstr "&Sáraigh bainistíocht uathoibríoch na taisce"
 #. #-#-#-#-#  chromebrowserpreferencessync.dtd.po (firefox)  #-#-#-#-#
 #. The page shown when logged in...
 #. Login error feedback
+#. #-#-#-#-#  chromebrowserscratchpad.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE  (propertyPanel.updateButton.label): Used in the Property
+#. # Panel that is opened by the Scratchpad window when inspecting an object. This
+#. # is the Update button label.
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromemozappsextensionsextensions.dtd.po (firefox)  #-#-#-#-#
 #. This is used in the available
 #. updates list to signify that an item is an update, in the form
 #. "<Addon name> <1.1> Update". It is fine to use constructs like brackets if
 #. necessary
-#: updateTab.label updatePass.label addonsUpdate.label
-#: validation.crl.autoupdate.time.label1 update.button addon.update.postfix
+#: updateTab.label updatePass.label propertyPanel.updateButton.label
+#: addonsUpdate.label validation.crl.autoupdate.time.label1 update.button
+#: addon.update.postfix
 msgid "Update"
 msgstr "Nuashonrú"
 
@@ -5354,7 +5278,7 @@ msgstr "Roghnaigh go huathoibríoch"
 msgid "Ask me every time"
 msgstr "Fiafraigh díom i gcónaí"
 
-#: certs.ask.accesskey
+#: certs.ask.accesskey inspect.key
 msgid "i"
 msgstr "i"
 
@@ -5691,7 +5615,7 @@ msgstr "&Casta…"
 msgid "&Colors…"
 msgstr "&Dathanna…"
 
-#: languages.label languages.customize.Header view.locales.label
+#: languages.label languages.customize.Header type.locale.name
 msgid "Languages"
 msgstr "Teangacha"
 
@@ -6709,7 +6633,7 @@ msgstr "Féach ar Chuóta"
 msgid "Change Password"
 msgstr "Athraigh an Focal Faire"
 
-#: mySyncKey.label
+#: mySyncKey.label change.synckey2.title
 msgid "My Sync Key"
 msgstr "M'Eochair Sync"
 
@@ -7318,6 +7242,137 @@ msgstr "31em"
 msgid "14em"
 msgstr "16em"
 
+#. LOCALIZATION NOTE : FILE This file contains the Scratchpad window strings
+#. LOCALIZATION NOTE : FILE Do not translate commandkeys
+#. LOCALIZATION NOTE (scratchpad.title):
+#. -  The Scratchpad is intended to provide a simple text editor for creating
+#. -  and evaluating bits of JavaScript code for the purposes of function
+#. -  prototyping, experimentation and convenient scripting.
+#. -
+#. -  It's quite possible that you won't have a good analogue for the word
+#. -  "Scratchpad" in your locale. You should feel free to find a close
+#. -  approximation to it or choose a word (or words) that means
+#. -  "simple discardable text editor".
+#: window.title
+msgid "Scratchpad"
+msgstr "Ceap Breacaireachta"
+
+#: saveFileCmd.commandkey
+msgid "s"
+msgstr "s"
+
+#: saveFileAsCmd.label saveFileAsCmd.accesskey
+msgid "Save &As…"
+msgstr "Sábháil M&ar…"
+
+# Ctrl+Y = Athfheidhmigh, transcending language
+#: redoCmd.key
+msgid "Y"
+msgstr "Y"
+
+#: cutCmd.key
+msgid "X"
+msgstr "X"
+
+#: run.label run.accesskey
+msgid "&Run"
+msgstr "&Rith"
+
+#: display.label display.accesskey
+msgid "&Display"
+msgstr "&Taispeáin"
+
+#. LOCALIZATION NOTE (environmentMenu.label, accesskey): This menu item was
+#. -  renamed from "Context" to avoid confusion with the right-click context
+#. -  menu in the text area. It refers to the JavaScript Environment (or context)
+#. -  the user is evaluating against. I.e., Content (current tab) or Chrome
+#. -  (browser).
+#: environmentMenu.label environmentMenu.accesskey
+msgid "E&nvironment"
+msgstr "Ti&mpeallacht"
+
+#: contentContext.label contentContext.accesskey
+msgid "&Content"
+msgstr "Á&bhar"
+
+#. LOCALIZATION NOTE (browserContext.label, accesskey): This menu item is used
+#. -  to select an execution environment for the browser window itself as opposed
+#. -  to content. This is a feature for browser and addon developers and only
+#. -  enabled via the devtools.chrome.enabled preference. Formerly, this label
+#. -  was called "Chrome".
+#: browserContext.label browserContext.accesskey
+msgid "&Browser"
+msgstr "&Brabhsálaí"
+
+#: executeMenu.label executeMenu.accesskey
+msgid "E&xecute"
+msgstr "Ri&th"
+
+#: errorConsoleCmd.commandkey cmd.close2.commandKey
+msgid "j"
+msgstr "j"
+
+#. This is some placeholder text
+#. -  that appears when the Scratchpad's text area is empty and unfocused.
+#. -  It should be a one-line JavaScript comment, i.e., preceded by '//'
+#: textbox.placeholder1
+msgid ""
+"// Enter some JavaScript, select it, right click and select Run, Inspect or "
+"Display."
+msgstr ""
+
+#: propertyPanel.updateButton.accesskey error.sync.needUpdate.accesskey
+#: update.accesskey updateButton_minor.accesskey notifyBarUpdateButtonAccessKey
+msgid "U"
+msgstr "U"
+
+#. # LOCALIZATION NOTE  (export.fileOverwriteConfirmation): This is displayed when
+#. # the user attempts to save to an already existing file.
+#: export.fileOverwriteConfirmation
+msgid "File exists. Overwrite?"
+msgstr "Tá an comhad ann cheana. Forscríobh?"
+
+#. # LOCALIZATION NOTE  (browserWindow.unavailable): This error message is shown
+#. # when Scratchpad does not find any recently active window of navigator:browser
+#. # type.
+#: browserWindow.unavailable
+msgid "Scratchpad cannot find any browser window to execute the code in."
+msgstr ""
+
+#. # LOCALIZATION NOTE  (openFile.failed): This is the message displayed when file
+#. # open fails.
+#: openFile.failed
+msgid "Failed to read the file."
+msgstr "Níorbh fhéidir an comhad a léamh."
+
+#. # LOCALIZATION NOTE  (saveFileAs): This is the file picker title, when you save
+#. # a file in Scratchpad.
+#: saveFileAs
+msgid "Save File As"
+msgstr "Sábháil an Comhad Mar"
+
+#. # LOCALIZATION NOTE  (saveFile.failed): This is the message displayed when file
+#. # save fails.
+#: saveFile.failed
+msgid "The file save operation failed."
+msgstr "Níorbh fhéidir an comhad a shábháil."
+
+#. # LOCALIZATION NOTE  (scratchpadIntro): This is a multi-line comment explaining
+#. # how to use the Scratchpad. Note that this should be a valid JavaScript
+#. # comment inside /* and */.
+#: scratchpadIntro
+msgid ""
+"/*\n"
+" * This is a JavaScript Scratchpad.\n"
+" *\n"
+" * Enter some JavaScript, then Right Click or choose from the Execute Menu:\n"
+" * 1. Run to evaluate the selected text,\n"
+" * 2. Inspect to bring up an Object Inspector on the result, or,\n"
+" * 3. Display to insert the result in a comment after the selection.\n"
+" */\n"
+"\n"
+msgstr ""
+
 #: cmd_engineManager.label
 msgid "Manage Search Engines…"
 msgstr "Bainistigh Innill Chuardaigh…"
@@ -7359,6 +7414,10 @@ msgstr "Láraithe"
 #: stretch.label
 msgid "Stretch"
 msgstr "Sínte"
+
+#: preview.label
+msgid "Preview"
+msgstr "Réamhamharc"
 
 #: color.label colorGroup.label
 msgid "Color:"
@@ -7409,20 +7468,6 @@ msgstr "Deasc Firefox.bmp"
 msgid "Saving Picture…"
 msgstr "Pictiúr á Shábháil…"
 
-#: addMicsumGenConfirmTitle
-msgid "Add Microsummary Generator"
-msgstr "Cuir Gineadóir Miontuairisce Leis"
-
-#: addMicsumGenConfirmText
-msgid ""
-"Add the following microsummary generator?\n"
-"\n"
-"Source: %S"
-msgstr ""
-"An bhfuil fonn ort an gineadóir miontuairisce seo a chur leis?\n"
-"\n"
-"Foinse: %S"
-
 #: syncBrand.fullName.label sync.update.title
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
@@ -7459,10 +7504,6 @@ msgid ""
 msgstr ""
 "Fainic: Ní bheidh do ghléasanna eile in ann ceangal le do chuntas tar éis "
 "duit an focal faire seo a athrú."
-
-#: change.synckey.title
-msgid "Change your Sync Key"
-msgstr "Athraigh d'Eochair Sync"
 
 #: change.synckey.acceptButton
 msgid "Change Sync Key"
@@ -7814,9 +7855,9 @@ msgstr ""
 msgid "Your Sync &Key"
 msgstr "D'Eo&chair Sync"
 
-#: syncKeyGenerate.label
-msgid "Generate"
-msgstr "Cruthaigh"
+#: syncGenerateNewKey.label
+msgid "Generate a new key"
+msgstr "Gin eochair nua"
 
 #: syncKeyBackup.description
 msgid ""
@@ -8048,6 +8089,10 @@ msgstr ""
 #: save.synckey.title
 msgid "Save Sync Key"
 msgstr "Sábháil an Eochair Sync"
+
+#: save.default.label
+msgid "Firefox Sync Key.html"
+msgstr "Eochair Firefox Sync.html"
 
 #: newAccount.action.label
 msgid ""
@@ -9454,10 +9499,6 @@ msgstr "R&oghanna $BrandShortName"
 msgid "$BrandShortName &Safe Mode"
 msgstr "Mód &Sábháilteachta $BrandShortName"
 
-#: SAFE_MODE
-msgid "Safe Mode"
-msgstr "Mód Slán"
-
 #: OPTIONS_PAGE_TITLE
 msgid "Setup Type"
 msgstr "Modh Suiteála"
@@ -10273,10 +10314,9 @@ msgstr ""
 msgid "Latest Headlines"
 msgstr "Na Cinnlínte Is Déanaí"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (firefox_heading):
 #. # Firefox links folder name
-#: firefox_heading brandFullName
+#: firefox_heading
 msgid "Mozilla Firefox"
 msgstr "Mozilla Firefox"
 
@@ -11105,22 +11145,6 @@ msgstr "Ní mór duit an fhormáid iarrtha a úsáid."
 msgid "Please match the requested format: %S."
 msgstr "Ní mór duit an fhormáid iarrtha a úsáid: %S."
 
-#: UseOfDocumentWidthWarning
-msgid ""
-"Non-standard document.width was used. Use standard document.body.clientWidth "
-"instead."
-msgstr ""
-"Úsáideadh athróg neamhchaighdeánach document.width.  Ba chóir document.body."
-"clientWidth a úsáid."
-
-#: UseOfDocumentHeightWarning
-msgid ""
-"Non-standard document.height was used. Use standard document.body."
-"clientHeight instead."
-msgstr ""
-"Úsáideadh athróg neamhchaighdeánach document.height.  Ba chóir document.body."
-"clientHeight a úsáid."
-
 # "left-to-right" -- leave AS IS --KPS
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. rights.locale-direction instead of the usual local.dir entity, so RTL can skip translating page.
@@ -11221,6 +11245,10 @@ msgstr "Fuarthas \"%1$S\" taobh istigh de @import gan súil leis."
 msgid "end of @media or @-moz-document rule"
 msgstr "deireadh le riail @media nó @-moz-document"
 
+#: PEGroupRuleNestedAtRule
+msgid "%1$S rule not allowed within @media or @-moz-document rule."
+msgstr ""
+
 #: PEMozDocRuleBadFunc
 msgid ""
 "Expected url(), url-prefix(), or domain() in @-moz-document rule but found '%1"
@@ -11232,6 +11260,11 @@ msgstr ""
 #: PEMozDocRuleNotURI
 msgid "Expected URI in @-moz-document rule but found '%1$S'."
 msgstr "Bhíothas ag súil le URI i riail @-moz-document ach fuarthas \"%1$S\"."
+
+#: PEMozDocRuleNotString
+msgid ""
+"Expected string in @-moz-document rule regexp() function but found '%1$S'."
+msgstr ""
 
 #: PEAtNSPrefixEOF
 msgid "namespace prefix in @namespace rule"
@@ -13511,6 +13544,10 @@ msgstr "á luchtú"
 msgid "installing libraries\\u2026"
 msgstr "leabharlanna á suiteáil\\u2026"
 
+#: splash_firstrun
+msgid "Setting up &brandShortName;\\u2026"
+msgstr "&brandShortName; á shocrú\\u2026"
+
 # Android string - need to backslash escape any apostrophes in msgstr
 #: incompatable_cpu_error
 msgid ""
@@ -13675,21 +13712,18 @@ msgstr "Níl aon chluaisíní ann ón uair roimhe seo"
 msgid "No recommended add-ons"
 msgstr "Gan breiseáin mholta"
 
-#. LOCALIZATION NOTE: 'Firefox Spark' is the official name of the promotion/constest and should not be translated
-#: aboutHome.promoLabel
-msgid "Firefox Spark"
-msgstr "Firefox Spark"
-
-#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  chromeaboutHome.dtd.po (firefox)  #-#-#-#-#
-#. LOCALIZATION NOTE: 'Play' should be translated in the context of 'playing a game' and not 'playing a video'
-#: aboutHome.promoButton contextPlayMedia.label playButton.playLabel
-msgid "Play"
-msgstr "Seinn"
-
 #: urlbar.emptytext
 msgid "Enter Search or Address"
 msgstr "Cuir Ábhar Cuardaigh nó Seoladh isteach"
+
+# Toolbar
+#: back.label backButton
+msgid "Back"
+msgstr "Siar"
+
+#: forward.label
+msgid "Forward"
+msgstr "Ar Aghaidh"
 
 #: reload.label
 msgid "Reload"
@@ -14033,6 +14067,10 @@ msgstr "Sábháil an Físeán"
 #: contextShareVideo.label
 msgid "Share Video"
 msgstr "Comhroinn an Físeán"
+
+#: contextPlayMedia.label playButton.playLabel
+msgid "Play"
+msgstr "Seinn"
 
 #: contextPauseMedia.label
 msgctxt "contextPauseMedia.label"
@@ -14417,6 +14455,21 @@ msgstr "Taispeáin I gCónaí"
 msgid "Never Show"
 msgstr "Ná Taispeáin Riamh"
 
+#. # XPInstall
+#: xpinstallPromptWarning2
+msgid ""
+"%S prevented this site (%S) from asking you to install software on your "
+"device."
+msgstr ""
+"Stop %S an suíomh seo (%S) ó bheith ag iarraidh ort bogearraí a shuiteáil ar "
+"do ghléas."
+
+#: xpinstallDisabledMessage2
+msgid "Software installation is currently disabled. Press Enable and try again."
+msgstr ""
+"Tá suiteáil bhogearraí díchumasaithe faoi láthair. Cliceáil Cumasaigh agus "
+"déan iarracht eile."
+
 #: identity.identified.verified_by_you
 msgid "You have added a security exception for this site"
 msgstr "Chuir tú eisceacht slándála leis an suíomh seo"
@@ -14438,7 +14491,7 @@ msgstr "Roinn"
 msgid "Don't share"
 msgstr "Ná roinn"
 
-#: geolocation.siteWantsTo
+#: geolocation.wantsTo
 msgid "%S wants your location."
 msgstr "Tá an láthair ina bhfuil tú á lorg ag %S."
 
@@ -14452,7 +14505,7 @@ msgstr "Ceadaigh"
 msgid "Don't allow"
 msgstr "Ná ceadaigh"
 
-#: desktopNotification.siteWantsTo
+#: desktopNotification.wantsTo
 msgid "%S wants to use notifications."
 msgstr "Teastaíonn ó %S fograí a úsáid."
 
@@ -14477,14 +14530,45 @@ msgid "Warning:"
 msgstr "Rabhadh:"
 
 #. # Offline web applications
-#: offlineApps.available
-msgid "%S wants to store data on your computer for offline use."
+#: offlineApps.available2
+msgctxt "offlineApps.available2"
+msgid "%S wants to store data on your device for offline use."
 msgstr ""
-"Tá %S ag iarraidh sonraí a stóráil ar do ríomhaire le haghaidh úsáide as líne."
+"Tá %S ag iarraidh sonraí a stóráil ar do ghléas le haghaidh úsáide as líne."
 
 #: offlineApps.never
+msgctxt "offlineApps.never"
 msgid "Don't Allow"
 msgstr "Ná Ceadaigh"
+
+#. # New-style ContentPermissionPrompt values
+#: offlineApps.dontAllow
+msgctxt "offlineApps.dontAllow"
+msgid "Don't Allow"
+msgstr "Ná Ceadaigh"
+
+#: offlineApps.wantsTo
+msgctxt "offlineApps.wantsTo"
+msgid "%S wants to store data on your device for offline use."
+msgstr ""
+"Tá %S ag iarraidh sonraí a stóráil ar do ghléas le haghaidh úsáide as líne."
+
+#. # IndexedDB Quota increases
+#: indexedDBQuota.allow
+msgctxt "indexedDBQuota.allow"
+msgid "Allow"
+msgstr "Ceadaigh"
+
+#: indexedDBQuota.dontAllow
+msgctxt "indexedDBQuota.dontAllow"
+msgid "Don't Allow"
+msgstr "Ná Ceadaigh"
+
+#: indexedDBQuota.wantsTo
+msgid "%S wants to store a lot of data on your device for offline use."
+msgstr ""
+"Tá %S ag iarraidh go leor sonraí a stóráil ar do ghléas le haghaidh úsáide as "
+"líne."
 
 #. # Bookmark List
 #: bookmarkList.desktop
@@ -15270,6 +15354,10 @@ msgstr "Scríobhadh %1$S"
 msgid "Waiting for %1$S…"
 msgstr "Ag feitheamh le %1$S…"
 
+#: 11
+msgid "Looked up %1$S…"
+msgstr ""
+
 #: 27
 msgid "Beginning FTP transaction…"
 msgstr "Tús á chur le hidirbheartaíocht FTP…"
@@ -15341,43 +15429,16 @@ msgstr ""
 "Tá tú ar tí logáil isteach sa suíomh \"%1$S\" leis an ainm úsáideora \"%2$S\"."
 
 #: brandShortName
-msgid "Firefox"
-msgstr "Firefox"
-
-#: vendorShortName
-msgid "Mozilla"
-msgstr "Mozilla"
-
-#: trademarkInfo.part1
-msgid "Firefox and the Firefox logos are trademarks of the Mozilla Foundation."
-msgstr ""
-"Is trádmharcanna de chuid Fondúireacht Mozilla iad Firefox agus suaitheantais "
-"Firefox."
-
-#: homePageSingleStartMain
-msgid "Firefox Start, a fast home page with built-in search"
-msgstr "Firefox Start, leathanach baile tapaidh le cuardach ionsuite"
-
-# expand homePageSingleStartMainURL=http://en-us.start.mozilla.com/firefox?client=firefox-a&rls=__MOZ_DISTRIBUTION_ID_UNQUOTED__:__AB_CD__:official
-#: homePageImport
-msgid "Import your home page from %S"
-msgstr "Iompórtáil do leathanach baile ó %S"
-
-#: homePageMigrationPageTitle
-msgid "Home Page Selection"
-msgstr "Roghnú an Leathanaigh Bhaile"
-
-#: homePageMigrationDescription
-msgid "Please select the home page you wish to use:"
-msgstr "Roghnaigh an leathanach baile atá uait, le do thoil:"
-
-#: brandShortName
 msgid "Sunbird"
 msgstr "Sunbird"
 
 #: brandFullName
 msgid "Mozilla Sunbird"
 msgstr "Mozilla Sunbird"
+
+#: vendorShortName
+msgid "Mozilla"
+msgstr "Mozilla"
 
 #. # LOCALIZATION NOTE (releaseNotesURL):
 #. #   For nightly builds, direct the user to an appropriate, yet non-version
@@ -17123,7 +17184,7 @@ msgstr "Eochair phoiblí an aonáin ainmnithe"
 msgid "Subject Unique ID"
 msgstr "Aitheantas uathúil an aonáin ainmnithe"
 
-#: CertDumpExtensions aboutSupport.extensionsTitle view.features.label
+#: CertDumpExtensions aboutSupport.extensionsTitle type.extension.name
 msgid "Extensions"
 msgstr "Eisínteachtaí"
 
@@ -20118,9 +20179,13 @@ msgstr "Eochair Mhícheart Sync"
 msgid "Incorrect account name or password"
 msgstr "Ainm cuntais nó focal faire mícheart"
 
-#: error.login.reason.no_password
-msgid "No saved password to use"
-msgstr "Níl aon fhocal faire i dtaisce le húsáid"
+#: error.login.reason.no_username
+msgid "Missing account name"
+msgstr "Ainm an chuntais ar iarraidh"
+
+#: error.login.reason.no_password2
+msgid "Missing password"
+msgstr "Focal faire ar iarraidh"
 
 #: error.login.reason.no_synckey
 msgid "No saved Sync Key to use"
@@ -20297,11 +20362,6 @@ msgstr ""
 #: error.sync.needUpdate.label
 msgid "Update Firefox Sync"
 msgstr "Nuashonraigh Firefox Sync"
-
-#: error.sync.needUpdate.accesskey update.accesskey
-#: updateButton_minor.accesskey notifyBarUpdateButtonAccessKey
-msgid "U"
-msgstr "U"
 
 #: warning.sync.quota.label
 msgid "Approaching Server Quota"
@@ -21023,21 +21083,26 @@ msgid "GPU Accelerated Windows"
 msgstr "Windows luathaithe le próiseálaí grafaice"
 
 #. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
-#. # The %1 here is a placeholder, leave unchanged, it will get replaced by the driver version string.
-#: tryNewerDriverVersion
-msgid ""
-"Blocked on your graphics driver. Try updating your graphics driver to version "
-"%1 or newer."
+#: blockedDriver
+msgid "Blocked for your graphics driver version."
 msgstr ""
-"Chuir thiománaí do chárta grafaice cosc air. Bain triail as leagan %1 nó níos "
-"nuaí den tiománaí."
+
+#. # LOCALIZATION NOTE The %S here is a placeholder, leave unchanged, it will get replaced by the driver version string.
+#: tryNewerDriver
+msgid ""
+"Blocked for your graphics driver version. Try updating your graphics driver "
+"to version %S or newer."
+msgstr ""
 
 #. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
-#: blockedGraphicsCard
-msgid "Blocked on your graphics card because of unresolved driver issues."
+#: blockedGfxCard
+msgid "Blocked for your graphics card because of unresolved driver issues."
 msgstr ""
-"Chuir tiománaí do chárta grafaice cosc air mar gheall ar fhadhbanna gan "
-"réiteach leis an tiománaí."
+
+#. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
+#: blockedOSVersion
+msgid "Blocked for your operating system version."
+msgstr ""
 
 #: direct2DEnabled
 msgid "Direct2D Enabled"
@@ -21046,6 +21111,14 @@ msgstr "Direct2D Cumasaithe"
 #: directWriteEnabled
 msgid "DirectWrite Enabled"
 msgstr "DirectWrite Cumasaithe"
+
+#: clearTypeParameters
+msgid "ClearType Parameters"
+msgstr "Paraiméadair ClearType"
+
+#: clearTypeParametersNotFound
+msgid "ClearType parameters not found"
+msgstr "Paraiméadair ClearType gan aimsiú"
 
 #: adapterDescription
 msgid "Adapter Description"
@@ -21897,15 +21970,6 @@ msgstr ""
 msgid "Don't show this message again during this session."
 msgstr "Ná taispeáin an teachtaireacht seo i rith an tseisiúin seo."
 
-# Ctrl+Y = Athfheidhmigh, transcending language
-#: redoCmd.key
-msgid "Y"
-msgstr "Y"
-
-#: cutCmd.key
-msgid "X"
-msgstr "X"
-
 #: findCmd.label findCmd.accesskey
 msgid "&Find"
 msgstr "&Aimsigh"
@@ -21995,9 +22059,9 @@ msgstr "Ainm comhadlainne:"
 msgid "Save"
 msgstr "Sábháil"
 
-#: saveAsLabel
-msgid "Save As:"
-msgstr "Sábháil Mar:"
+#: formatLabel
+msgid "Format:"
+msgstr "Formáid:"
 
 #: errorOpenFileDoesntExistTitle
 msgctxt "errorOpenFileDoesntExistTitle"
@@ -22406,6 +22470,57 @@ msgstr ""
 "Tá comhéadán logála an Chonsóil Ghréasáin (console.log, console.info, console."
 "warn, console.error) díchumasaithe ag script ar an leathanach seo."
 
+#. # LOCALIZATION NOTE (webConsolePosition): The label shown for the menu which
+#. # allows the user to toggle between the Web Console positioning types.
+#: webConsolePosition
+msgid "Position"
+msgstr "Ionad"
+
+#. # LOCALIZATION NOTE (webConsolePositionTooltip): The tooltip shown when the user
+#. # hovers the Position button in the Web Console toolbar.
+#: webConsolePositionTooltip
+msgid "Position the Web Console above or below the document"
+msgstr "Cuir an Consól Gréasáin lastuas nó laistíos den cháipéis"
+
+#. # LOCALIZATION NOTE (webConsolePositionAbove): When this option is selected the
+#. # Web Console interface is displayed above the web page.
+#: webConsolePositionAbove
+msgid "Above"
+msgstr "Lastuas"
+
+#. # LOCALIZATION NOTE (webConsolePositionBelow): When this option is selected the
+#. # Web Console interface is displayed below the web page.
+#: webConsolePositionBelow
+msgid "Below"
+msgstr "Laistíos"
+
+#. # LOCALIZATION NOTE (webConsoleOwnWindowTitle): The Web Console floating panel
+#. # title.
+#: webConsoleOwnWindowTitle
+msgid "Web Console"
+msgstr "Consól Gréasáin"
+
+#. # LOCALIZATION NOTE (Autocomplete.label):
+#. # The autocomplete popup panel label/title.
+#: Autocomplete.label
+msgid "Autocomplete popup"
+msgstr ""
+
+#. # LOCALIZATION NOTE (stacktrace.anonymousFunction):
+#. # This string is used to display JavaScript functions that have no given name -
+#. # they are said to be anonymous. See stacktrace.outputMessage.
+#: stacktrace.anonymousFunction
+msgid "<anonymous>"
+msgstr "<gan ainm>"
+
+#. # LOCALIZATION NOTE (stacktrace.outputMessage):
+#. # This string is used in the Web Console output to identify a web developer call
+#. # to console.trace(). The stack trace of JavaScript function calls is displayed.
+#. # In this minimal message we only show the last call.
+#: stacktrace.outputMessage
+msgid "Stack trace from %S, function %S, line %S."
+msgstr ""
+
 # #-#-#-#-#  ga-IE.po (firefox 0.8)  #-#-#-#-#
 # #-#-#-#-#  tmp.XXXXgm6QQt.po (firefox 0.8)  #-#-#-#-#
 # all.js
@@ -22534,10 +22649,6 @@ msgstr "F2"
 #: VK_F3
 msgid "F3"
 msgstr "F3"
-
-#: VK_F4
-msgid "F4"
-msgstr "F4"
 
 #: VK_F5
 msgid "F5"
@@ -25652,10 +25763,6 @@ msgstr "Cóipeáil &Nasc Íosluchtaithe"
 msgid "R&emove From List"
 msgstr "&Bain den Liosta"
 
-#: cmd.close2.commandKey
-msgid "j"
-msgstr "j"
-
 #: cmd.clearList.label cmd.clearList.accesskey
 msgid "&Clear List"
 msgstr "&Glan an Liosta"
@@ -26465,17 +26572,16 @@ msgstr "Cumasaigh"
 msgid "Enable add-on update security checking"
 msgstr "Cumasaigh seiceáil slándála nuashonrú na mbreiseán"
 
-#: view.searchengines.label
-msgid "Search Engines"
-msgstr "Innill Chuardaigh"
+#. global informations
+#: info.plugincheck.label
+msgctxt "info.plugincheck.label"
+msgid "Check to see if your plugins are up to date"
+msgstr "Seiceáil an bhfuil do chuid forlíontán cothrom le dáta"
 
-#: view.appearance2.label
-msgid "Appearance"
-msgstr "Cuma"
-
-#: view.plugins.label
-msgid "Plugins"
-msgstr "Forlíontáin"
+#: info.plugincheck.tooltip
+msgctxt "info.plugincheck.tooltip"
+msgid "Check to see if your plugins are up to date"
+msgstr "Seiceáil an bhfuil do chuid forlíontán cothrom le dáta"
 
 #: view.recentUpdates.label
 msgid "Recent Updates"
@@ -27159,6 +27265,14 @@ msgstr ""
 "Éilíonn %S go nglacfá leis an gComhaontú Ceadúnas Bogearra seo sular féidir "
 "dul ar aghaidh leis an tsuiteáil:"
 
+#: type.theme.name
+msgid "Appearance"
+msgstr "Cuma"
+
+#: type.plugin.name
+msgid "Plugins"
+msgstr "Forlíontáin"
+
 #: updateWizard.title
 msgid "&brandShortName; Update"
 msgstr "Nuashonrú &brandShortName;"
@@ -27555,21 +27669,25 @@ msgstr ""
 "Ní mór &brandShortName; a atosú chun an forlíontán (na forlíontáin) a chur ag "
 "obair."
 
-#: missingPlugin.label
-msgid "Click here to download plugin."
-msgstr "Cliceáil anseo chun an forlíontán a íosluchtú."
-
-#: disabledPlugin.label
-msgid ""
-"The plugin for this content has been disabled. Click here to manage your "
-"plugins."
+#: missingPlugin
+msgid "A plugin is needed to display this content."
 msgstr ""
-"Tá an forlíontán le haghaidh inneachair seo díchumasaithe. Cliceáil anseo "
-"chun do chuid forlíontán a bhainistiú."
+
+#: disabledPlugin
+msgid "This plugin is disabled."
+msgstr "Tá an forlíontán seo díchumasaithe."
 
 #: blockedPlugin.label
 msgid "This plugin has been blocked for your protection."
 msgstr "Tá cosc curtha ar an bhforlíontán seo le tú a chosaint."
+
+#: installPlugin
+msgid "Install plugin…"
+msgstr "Suiteáil forlíontán…"
+
+#: managePlugins
+msgid "Manage plugins…"
+msgstr "Bainistigh forlíontáin…"
 
 #. include a trailing space as needed
 #. LOCALIZATION NOTE (reloadPlugin.middle): avoid leading/trailing spaces, this text is a link
