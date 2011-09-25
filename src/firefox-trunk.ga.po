@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-19 09:33-0500\n"
+"POT-Creation-Date: 2011-08-16 19:17-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -282,7 +282,7 @@ msgstr ""
 #. example: You are currently on the _Stable_ update channel.
 #: channel.description.start
 msgid "You are currently on the "
-msgstr "Tá tá ar an gcainéal "
+msgstr "Tá tú ar an gcainéal "
 
 #: channel.description.end
 msgid " update channel. "
@@ -1012,6 +1012,14 @@ msgstr "&Ar Aghaidh"
 msgid "Go forward one page"
 msgstr "Leathanach amháin ar aghaidh"
 
+#: backForwardButtonMenu.tooltip
+msgid "Right-click or pull down to show history"
+msgstr "Deaschliceáil nó tarraing anuas chun an stair a thaispeáint"
+
+#: backForwardButtonMenuMac.tooltip
+msgid "Pull down to show history"
+msgstr "Tarraing anuas chun an stair a thaispeáint"
+
 # "A" under Main -> Amharc ("L" is Níos Lú)
 # see also "Re&load"
 # need a tweak for right click menu, "A" and "L" taken
@@ -1526,6 +1534,7 @@ msgstr "Téigh go cluaisín:"
 #. Mac:  Cmd+K (cross platform binding)
 #. Cmd+Opt+F (platform convention)
 #. Win:  Ctrl+K (cross platform binding)
+#. Ctrl+E (IE compat)
 #. We support Ctrl+K on all platforms now and advertise it in the menu since it is
 #. our standard - it is a "safe" choice since it is near no harmful keys like "W" as
 #. "E" is. People mourning the loss of Ctrl+K for emacs compat can switch their GTK
@@ -1536,6 +1545,11 @@ msgstr "Téigh go cluaisín:"
 msgctxt "searchFocus.commandkey"
 msgid "k"
 msgstr "k"
+
+#: searchFocus.commandkey2
+msgctxt "searchFocus.commandkey2"
+msgid "e"
+msgstr "e"
 
 #: searchFocusUnix.commandkey
 msgctxt "searchFocusUnix.commandkey"
@@ -2031,7 +2045,7 @@ msgstr "Déanta"
 #: button.syncOptionsCancel.label CancelBtn addonsSearchStart.button
 #: cancel.label cancel sync.setup.cancel Cancel cancelButton.label
 #: button-cancel dialogCancel.label unknownCancel.label progress.cancel.tooltip
-#: cancelButtonText
+#: cancelButton cancelButtonText
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -3138,7 +3152,7 @@ msgid ""
 "Would you like to help improve %1$S by automatically reporting memory usage, "
 "performance, and responsiveness to %2$S?"
 msgstr ""
-"Ar mhaith leat cabhrú linn feabhas a chur ar %1$S trí thuairiscí "
+"An bhfuil fonn ort cabhrú linn feabhas a chur ar %1$S trí thuairiscí "
 "uathoibríocha a dhéanamh ar úsáid chuimhne, luas, agus freagracht do %2$S?"
 
 #: telemetryLinkLabel
@@ -3183,6 +3197,7 @@ msgstr "Tá na hinnill chuardaigh seo a leanas suiteáilte:"
 #. list sorting
 #: columnLabel.name generalMetaName col.name.label clearTimeDuration.nameColumn
 #: addpref.name DirColName validation.crlname.label name.label sort.name.label
+#: select.name
 msgid "Name"
 msgstr "Ainm"
 
@@ -3321,6 +3336,8 @@ msgstr "Comhaid mheán"
 #. # occupied by the engine, %2$K the corresponding unit (e.g. kB) as defined in
 #. # the download manager.
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromemozappsextensionsnewaddon.properties.po (firefox)  #-#-#-#-#
+#. #LOCALIZATION NOTE (name) %1$S is the add-on name, %2$S is the add-on version
 #. #-#-#-#-#  chromemozappsupdateupdates.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE:
 #. # %1$S is the add-on name
@@ -3330,7 +3347,7 @@ msgstr "Comhaid mheán"
 #. #-#-#-#-#  chromeplacesplaces.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (finduri-MonthYear):
 #. # %1$S is the month name, %2$S is the year (4 digits format).
-#: enclosureSizeText offlineAppUsage quota.sizeValueUnit.label addonLabel
+#: enclosureSizeText offlineAppUsage quota.sizeValueUnit.label name addonLabel
 #: finduri-MonthYear
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
@@ -3769,7 +3786,7 @@ msgstr "Oscail i:"
 msgid "Open"
 msgstr "Oscail"
 
-#: chooseFileDialogTitle
+#: chooseFileDialogTitle choose_file
 msgid "Choose File"
 msgstr "Roghnaigh Comhad"
 
@@ -5073,8 +5090,8 @@ msgid "Use s&mooth scrolling"
 msgstr "Úsáid &mínscrollú"
 
 #: allowHWAccel.label allowHWAccel.accesskey
-msgid "Use &hardware acceleration when available"
-msgstr "Úsáid luasg&héarú crua-earraí más féidir"
+msgid "Use ha&rdware acceleration when available"
+msgstr "Úsáid luasghéa&rú crua-earraí más féidir"
 
 #: checkSpelling.label checkSpelling.accesskey
 msgid "Check my spelling as I &type"
@@ -5177,8 +5194,8 @@ msgid "Add-o&ns"
 msgstr "Breiseái&n"
 
 #: enableSearchUpdate.label enableSearchUpdate.accesskey
-msgid "Searc&h Engines"
-msgstr "Innill C&huardaigh"
+msgid "Search &Engines"
+msgstr "&Innill Chuardaigh"
 
 #: whenUpdatesFound.label
 msgid "When updates to &brandShortName; are found:"
@@ -5941,6 +5958,10 @@ msgstr "Taispeáin leathanach folamh"
 msgid "Show my windows and tabs from last time"
 msgstr "Taispeáin mo chuid fuinneog agus cluaisíní ón seisiún roimhe seo"
 
+#: restoreOnDemand.label restoreOnDemand.accesskey
+msgid "Don’t &load tabs until selected"
+msgstr "Ná &luchtaigh cluaisíní go dtí go mbeidh siad roghnaithe"
+
 #: homepage.label homepage.accesskey
 msgid "Home &Page:"
 msgstr "Leathanach &Baile:"
@@ -6336,18 +6357,23 @@ msgstr "Sonraí As Líne"
 msgid "Your cache is currently using %1$S %2$S of disk space"
 msgstr "Tá do thaisce ag úsáid %1$S %2$S ar an diosca faoi láthair"
 
-#: stopUsingAccount.title
-msgid "Do you want to stop using this account?"
-msgstr "An bhfuil tú ag iarraidh an cuntas seo a dhúnadh?"
+#: syncUnlink.title
+msgid "Do you want to unlink your device?"
+msgstr "An bhfuil fonn ort do ghléas a dhínascadh?"
 
-#: differentAccount.label
-msgid "This will reset all of your Sync account information and preferences."
+#: syncUnlink.label
+msgid ""
+"This device will no longer be associated with your Sync account. All of your "
+"personal data, both on this device and in your Sync account, will remain "
+"intact."
 msgstr ""
-"Athshocraíonn sé seo faisnéis do chuntais Sync agus do chuid sainroghanna."
+"Ní bheidh aon bhaint idir an gléas seo agus do chuntas Sync a thuilleadh. "
+"Beidh do chuid sonraí pearsanta go léir slán sábháilte, ar an ngléas seo agus "
+"i do chuntas Sync chomh maith."
 
-#: differentAccountConfirm.label
-msgid "Reset All Information"
-msgstr "Athshocraigh an fhaisnéis go léir"
+#: syncUnlinkConfirm.label
+msgid "Unlink"
+msgstr "Dínasc"
 
 #: tracking.label
 msgid "Tracking"
@@ -6605,17 +6631,17 @@ msgstr "Bainistigh Do &Chuntas"
 msgid "View Quota"
 msgstr "Féach ar Chuóta"
 
-#: changePassword.label change.password.acceptButton
-msgid "Change Password"
-msgstr "Athraigh an Focal Faire"
+#: changePassword2.label
+msgid "Change Password…"
+msgstr "Athraigh an Focal Faire…"
 
 #: mySyncKey.label change.synckey2.title
 msgid "My Sync Key"
 msgstr "M'Eochair Sync"
 
-#: resetSync.label
-msgid "Reset Sync"
-msgstr "Athshocraigh Sync"
+#: resetSync2.label
+msgid "Reset Sync…"
+msgstr "Athshocraigh Sync…"
 
 #. #-#-#-#-#  chromebrowsersyncSetup.dtd.po (firefox)  #-#-#-#-#
 #. Existing Account Page 1: Add Device (incl. Add a Device dialog strings)
@@ -6653,9 +6679,9 @@ msgstr "&Sainroghanna"
 msgid "&Computer Name:"
 msgstr "&Ainm an Ríomhaire:"
 
-#: deactivateDevice.label
-msgid "Deactivate This Device"
-msgstr "Díghníomhachtaigh an Gléas Seo"
+#: unlinkDevice.label
+msgid "Unlink This Device"
+msgstr "Dínasc an Gléas Seo"
 
 #. #-#-#-#-#  chromebrowserpreferencessync.dtd.po (firefox)  #-#-#-#-#
 #. Footer stuff
@@ -7283,17 +7309,6 @@ msgstr "Ri&th"
 msgid "j"
 msgstr "j"
 
-#. This is some placeholder text
-#. -  that appears when the Scratchpad's text area is empty and unfocused.
-#. -  It should be a one-line JavaScript comment, i.e., preceded by '//'
-#: textbox.placeholder1
-msgid ""
-"// Enter some JavaScript, select it, right click and select Run, Inspect or "
-"Display."
-msgstr ""
-"// Cuir roinnt JavaScript isteach, roghnaigh é, cliceáil ar dheis, ansin "
-"roghnaigh Rith, Scrúdaigh, nó Taispeáin."
-
 #: propertyPanel.updateButton.accesskey error.sync.needUpdate.accesskey
 #: update.accesskey updateButton_minor.accesskey notifyBarUpdateButtonAccessKey
 msgid "U"
@@ -7461,6 +7476,10 @@ msgstr "Firefox Sync"
 #: change.password.title
 msgid "Change your Password"
 msgstr "Athraigh d'Fhocal Faire"
+
+#: change.password.acceptButton
+msgid "Change Password"
+msgstr "Athraigh an Focal Faire"
 
 #: change.password.status.active
 msgid "Changing your password…"
@@ -8175,10 +8194,6 @@ msgstr "Dún cluaisíní"
 msgid "Warn me when I attempt to close multiple tabs"
 msgstr "Tabhair rabhadh dom más ag iarraidh cluaisíní iomadúla a dhúnadh"
 
-#: tabview.groupItem.newTabButton
-msgid "New tab"
-msgstr "Cluaisín nua"
-
 #: tabview.groupItem.defaultName
 msgid "Name this tab group…"
 msgstr "Cuir ainm ar an ngrúpa cluaisíní seo…"
@@ -8190,6 +8205,13 @@ msgstr "Cealaigh Dúnadh an Ghrúpa"
 #: tabview.search.otherWindowTabs
 msgid "Tabs from other windows"
 msgstr "Cluaisíní ó fhuinneoga eile"
+
+#: tabview.notification.sessionStore
+msgid ""
+"Tabs and groups will automatically be restored the next time you start %S."
+msgstr ""
+"Déanfar athchóiriú ar do chuid cluaisíní agus grúpaí go huathoibríoch an "
+"chéad uair eile a thosóidh tú %S."
 
 #: taskbar.tasks.newTab.label
 msgid "Open new tab"
@@ -8484,12 +8506,16 @@ msgid ""
 "that &brandShortName; is permitted to access the Web.</li> \n"
 "</ul>"
 msgstr ""
-"<ul> <li>Scrúdaigh an seoladh le haghaidh botún cosúil le <strong>ww</strong>."
-"sampla.com in áit <strong>www</strong>.sampla.com</li> <li>Mura bhfuil tú in "
-"ann leathanach ar bith a luchtú, déan seiceáil ar cheangal líonra do "
-"ríomhaire.</li>  <li>Má tá do ríomhaire nó do líonra á chosaint ag balla "
-"dóiteáin nó seachfhreastalaí, cinntigh go bhfuil cead ag &brandShortName; an "
-"Gréasán a rochtain.</li></ul>"
+"<ul> \n"
+"<li>Scrúdaigh an seoladh le haghaidh botún cosúil le \n"
+"<strong>ww</strong>.sampla.com in áit \n"
+"<strong>www</strong>.sampla.com</li> \n"
+"<li>Mura bhfuil tú in ann leathanach ar bith a luchtú, déan seiceáil ar "
+"cheangal líonra do ríomhaire.</li> \n"
+"<li>Má tá do ríomhaire nó do líonra á chosaint ag balla dóiteáin nó "
+"seachfhreastalaí, cinntigh \n"
+"go bhfuil cead ag &brandShortName; an Gréasán a rochtain.</li> \n"
+"</ul>"
 
 #: fileNotFound.title
 msgid "File not found"
@@ -8553,8 +8579,8 @@ msgid ""
 "</ul>"
 msgstr ""
 "<ul> \n"
-"<li>Brúigh &quot;Déan Iarracht Arís&quot; chun dul ar líne agus an "
-"leathanach a luchtú arís.</li> \n"
+"<li>Brúigh &quot;Déan Iarracht Arís&quot; chun dul ar líne agus an leathanach "
+"a luchtú arís.</li> \n"
 "</ul>"
 
 #: contentEncodingError.title
@@ -8762,7 +8788,7 @@ msgstr ""
 "href='http://www.stopbadware.org/home/reviewinfo' >athbhreithniú a iarraidh</"
 "a>.</p>"
 
-#: phishingBlocked.title
+#: phishingBlocked.title safeb.blocked.phishingPage.title2
 msgid "Suspected Web Forgery!"
 msgstr "Falsaíocht Ghréasáin!"
 
@@ -8804,7 +8830,8 @@ msgid ""
 "to inform them of this problem.</li></ul>"
 msgstr ""
 "<p>An leathanach atá tú ag iarraidh a amharc, ní féidir é a thaispeáint toisc "
-"gur tharla earráid agus na sonraí á seoladh.</p><ul><li>Téigh i dteagmháil le húinéir an tsuímh agus inis dóibh faoin fhadhb seo.</li></ul>"
+"gur tharla earráid agus na sonraí á seoladh.</p><ul><li>Téigh i dteagmháil le "
+"húinéir an tsuímh agus inis dóibh faoin fhadhb seo.</li></ul>"
 
 #. #-#-#-#-#  dom-ga-IE.po (firefox)  #-#-#-#-#
 #. Error messages that are likely to be overridden by applications go in this
@@ -11011,7 +11038,7 @@ msgid ""
 "addEventListener() method. For more help http://developer.mozilla.org/en/docs/"
 "DOM:element.addEventListener"
 msgstr ""
-"Ní moltar captureEvents() a úsáid a thuilleadh. Chun do chuid cóid a "
+"Ní mholtar captureEvents() a úsáid a thuilleadh. Chun do chuid cóid a "
 "uasghrádú, úsáid an modh DOM 2 addEventListener(). Le haghaidh tuilleadh "
 "cabhrach, téigh chuig http://developer.mozilla.org/en/docs/DOM:element."
 "addEventListener"
@@ -11022,7 +11049,7 @@ msgid ""
 "removeEventListener() method. For more help http://developer.mozilla.org/en/"
 "docs/DOM:element.removeEventListener"
 msgstr ""
-"Ní moltar releaseEvents() a úsáid a thuilleadh. Chun do chuid cóid a "
+"Ní mholtar releaseEvents() a úsáid a thuilleadh. Chun do chuid cóid a "
 "uasghrádú, úsáid an modh DOM 2  removeEventListener(). Le haghaidh tuilleadh "
 "cabhrach, téigh chuig http://developer.mozilla.org/en/docs/DOM:element."
 "removeEventListener"
@@ -11033,7 +11060,7 @@ msgid ""
 "dispatchEvent() method. For more help http://developer.mozilla.org/en/docs/"
 "DOM:element.dispatchEvent"
 msgstr ""
-"Ní moltar routeEvent() a úsáid a thuilleadh. Chun do chuid cóid a uasghrádú, "
+"Ní mholtar routeEvent() a úsáid a thuilleadh. Chun do chuid cóid a uasghrádú, "
 "úsáid an modh DOM 2  dispatchEvent(). Le haghaidh tuilleadh cabhrach, téigh "
 "chuig http://developer.mozilla.org/en/docs/DOM:element.dispatchEvent"
 
@@ -11059,7 +11086,7 @@ msgid ""
 "XMLHttpRequest object. For more help https://developer.mozilla.org/en/"
 "XMLHttpRequest"
 msgstr ""
-"Ní moltar Document.load() a úsáid a thuilleadh. Chun do chuid cóid a "
+"Ní mholtar Document.load() a úsáid a thuilleadh. Chun do chuid cóid a "
 "uasghrádú, úsáid an réad DOM XMLHttpRequest. Le haghaidh tuilleadh cabhrach, "
 "féach ar https://developer.mozilla.org/en/XMLHttpRequest"
 
@@ -11148,150 +11175,174 @@ msgstr "Ní mór duit an fhormáid iarrtha a úsáid: %S."
 
 #: GetAttributeNodeWarning
 msgid "Use of getAttributeNode() is deprecated. Use getAttribute() instead."
-msgstr "Ní mholtar getAttributeNode() a úsáid a thuilleadh. Bain úsáid as getAttribute() ina ionad."
+msgstr ""
+"Ní mholtar getAttributeNode() a úsáid a thuilleadh. Bain úsáid as getAttribute"
+"() ina ionad."
 
 #: SetAttributeNodeWarning
 msgid "Use of setAttributeNode() is deprecated. Use setAttribute() instead."
-msgstr "Ní mholtar setAttributeNode() a úsáid a thuilleadh. Bain úsáid as setAttribute() ina ionad."
+msgstr ""
+"Ní mholtar setAttributeNode() a úsáid a thuilleadh. Bain úsáid as setAttribute"
+"() ina ionad."
 
 #: GetAttributeNodeNSWarning
 msgid "Use of getAttributeNodeNS() is deprecated. Use getAttributeNS() instead."
 msgstr ""
-"Ní mholtar getAttributeNodeNS() a úsáid a thuilleadh. Bain úsáid as getAttributeNS() ina ionad."
+"Ní mholtar getAttributeNodeNS() a úsáid a thuilleadh. Bain úsáid as "
+"getAttributeNS() ina ionad."
 
 #: SetAttributeNodeNSWarning
 msgid "Use of setAttributeNodeNS() is deprecated. Use setAttributeNS() instead."
 msgstr ""
-"Ní mholtar setAttributeNodeNS() a úsáid a thuilleadh. Bain úsáid as setAttributeNS() ina ionad."
+"Ní mholtar setAttributeNodeNS() a úsáid a thuilleadh. Bain úsáid as "
+"setAttributeNS() ina ionad."
 
 #: RemoveAttributeNodeWarning
 msgid ""
 "Use of removeAttributeNode() is deprecated. Use removeAttribute() instead."
 msgstr ""
-"Ní mholtar removeAttributeNode() a úsáid a thuilleadh. Bain úsáid as removeAttribute() ina ionad."
+"Ní mholtar removeAttributeNode() a úsáid a thuilleadh. Bain úsáid as "
+"removeAttribute() ina ionad."
 
 #: CreateAttributeWarning
 msgid ""
 "Use of document.createAttribute() is deprecated. Use element.setAttribute() "
 "instead."
 msgstr ""
-"Ní mholtar document.createAttribute() a úsáid a thuilleadh. Bain úsáid as element.setAttribute() "
-"ina ionad."
+"Ní mholtar document.createAttribute() a úsáid a thuilleadh. Bain úsáid as "
+"element.setAttribute() ina ionad."
 
 #: CreateAttributeNSWarning
 msgid ""
 "Use of document.createAttributeNS() is deprecated. Use element.setAttributeNS"
 "() instead."
 msgstr ""
-"Ní mholtar document.createAttributeNS() a úsáid a thuilleadh. Bain úsáid as element.setAttributeNS"
-"() ina ionad."
+"Ní mholtar document.createAttributeNS() a úsáid a thuilleadh. Bain úsáid as "
+"element.setAttributeNS() ina ionad."
 
 #: SpecifiedWarning
 msgid ""
 "Use of attributes' specified attribute is deprecated. It always returns true."
 msgstr ""
-"Moltar gan aitreabúid sonraithe de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé 'true' i gcónaí."
+"Moltar gan aitreabúid sonraithe de chuid aitreabúide a úsáid a thuilleadh. "
+"Athfhilleann sé 'true' i gcónaí."
 
 #: OwnerElementWarning
 msgid "Use of attributes' ownerElement attribute is deprecated."
 msgstr ""
-"Moltar gan aitreabúid 'ownerElement' de chuid aitreabúide a úsáid a thuilleadh."
+"Moltar gan aitreabúid 'ownerElement' de chuid aitreabúide a úsáid a "
+"thuilleadh."
 
 #: NodeNameWarning
 msgid "Use of attributes' nodeName attribute is deprecated. Use name instead."
 msgstr ""
-"Moltar gan aitreabúid 'nodeName' de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'name' ina ionad."
+"Moltar gan aitreabúid 'nodeName' de chuid aitreabúide a úsáid a thuilleadh. "
+"Úsáid 'name' ina ionad."
 
 #: NodeValueWarning
 msgid "Use of attributes' nodeValue attribute is deprecated. Use value instead."
 msgstr ""
-"Moltar gan aitreabúid 'nodeValue' de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan aitreabúid 'nodeValue' de chuid aitreabúide a úsáid a thuilleadh. "
+"Úsáid 'value' ina ionad."
 
 #: NodeTypeWarning
 msgid ""
 "Use of attributes' nodeType attribute is deprecated. It always returns 2."
 msgstr ""
-"Moltar gan aitreabúid 'nodeType' de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé 2 i gcónaí."
+"Moltar gan aitreabúid 'nodeType' de chuid aitreabúide a úsáid a thuilleadh. "
+"Athfhilleann sé 2 i gcónaí."
 
 #: ParentNodeWarning
 msgid ""
 "Use of attributes' parentNode attribute is deprecated. It always returns null."
 msgstr ""
-"Moltar gan aitreabúid 'parentNode' de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé null i gcónaí."
+"Moltar gan aitreabúid 'parentNode' de chuid aitreabúide a úsáid a thuilleadh. "
+"Athfhilleann sé null i gcónaí."
 
 #: ChildNodesWarning
 msgid ""
 "Use of attributes' childNodes attribute is deprecated. It always returns null."
 msgstr ""
-"Moltar gan aitreabúid 'childNodes' de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé null i gcónaí."
+"Moltar gan aitreabúid 'childNodes' de chuid aitreabúide a úsáid a thuilleadh. "
+"Athfhilleann sé null i gcónaí."
 
 #: HasChildNodesWarning
 msgid ""
 "Use of attributes' hasChildNodes() is deprecated. It always returns false."
 msgstr ""
-"Moltar gan hasChildNodes() de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé false i gcónaí."
+"Moltar gan hasChildNodes() de chuid aitreabúide a úsáid a thuilleadh. "
+"Athfhilleann sé false i gcónaí."
 
 #: HasAttributesWarning
 msgid ""
 "Use of attributes' hasAttributes() is deprecated. It always returns false."
 msgstr ""
-"Moltar gan hasAttributes() de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé false i gcónaí."
+"Moltar gan hasAttributes() de chuid aitreabúide a úsáid a thuilleadh. "
+"Athfhilleann sé false i gcónaí."
 
 #: FirstChildWarning
 msgid ""
 "Use of attributes' firstChild attribute is deprecated. Use value instead."
 msgstr ""
-"Moltar gan aitreabúid 'firstChild' de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan aitreabúid 'firstChild' de chuid aitreabúide a úsáid a thuilleadh. "
+"Úsáid 'value' ina ionad."
 
 #: LastChildWarning
 msgid "Use of attributes' lastChild attribute is deprecated. Use value instead."
 msgstr ""
-"Moltar gan aitreabúid 'lastChild' de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan aitreabúid 'lastChild' de chuid aitreabúide a úsáid a thuilleadh. "
+"Úsáid 'value' ina ionad."
 
 #: PreviousSiblingWarning
 msgid ""
 "Use of attributes' previousSibling attribute is deprecated. It always returns "
 "null."
 msgstr ""
-"Moltar gan aitreabúid 'previousSibling' de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé null i gcónaí."
+"Moltar gan aitreabúid 'previousSibling' de chuid aitreabúide a úsáid a "
+"thuilleadh. Athfhilleann sé null i gcónaí."
 
 #: NextSiblingWarning
 msgid ""
 "Use of attributes' nextSibling attribute is deprecated. It always returns "
 "null."
 msgstr ""
-"Moltar gan aitreabúid 'nextSibling' de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé null i gcónaí."
+"Moltar gan aitreabúid 'nextSibling' de chuid aitreabúide a úsáid a "
+"thuilleadh. Athfhilleann sé null i gcónaí."
 
 #: AttributesWarning
 msgid ""
 "Use of attributes' attributes attribute is deprecated. It always returns null."
 msgstr ""
-"Moltar gan aitreabúid 'attributes' de chuid aitreabúide a úsáid a thuilleadh. Athfhilleann sé null i gcónaí."
+"Moltar gan aitreabúid 'attributes' de chuid aitreabúide a úsáid a thuilleadh. "
+"Athfhilleann sé null i gcónaí."
 
 #: InsertBeforeWarning
 msgid "Use of attributes' insertBefore() is deprecated. Use value instead."
 msgstr ""
-"Moltar gan insertBefore() de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan insertBefore() de chuid aitreabúide a úsáid a thuilleadh. Úsáid "
+"'value' ina ionad."
 
 #: ReplaceChildWarning
 msgid "Use of attributes' replaceChild() is deprecated. Use value instead."
 msgstr ""
-"Moltar gan replaceChild() de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan replaceChild() de chuid aitreabúide a úsáid a thuilleadh. Úsáid "
+"'value' ina ionad."
 
 #: RemoveChildWarning
 msgid "Use of attributes' removeChild() is deprecated. Use value instead."
 msgstr ""
-"Moltar gan removeChild() de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan removeChild() de chuid aitreabúide a úsáid a thuilleadh. Úsáid "
+"'value' ina ionad."
 
 #: AppendChildWarning
 msgid "Use of attributes' appendChild() is deprecated. Use value instead."
 msgstr ""
-"Moltar gan appendChild() de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan appendChild() de chuid aitreabúide a úsáid a thuilleadh. Úsáid "
+"'value' ina ionad."
 
 #: CloneNodeWarning
 msgid "Use of attributes' cloneNode() is deprecated."
-msgstr ""
-"Moltar gan clodeNode() de chuid aitreabúide a úsáid a thuilleadh."
+msgstr "Moltar gan clodeNode() de chuid aitreabúide a úsáid a thuilleadh."
 
 #: OwnerDocumentWarning
 msgid "Use of attributes' ownerDocument attribute is deprecated."
@@ -11300,30 +11351,48 @@ msgstr ""
 
 #: NormalizeWarning
 msgid "Use of attributes' normalize() is deprecated."
-msgstr ""
-"Moltar gan normalize() de chuid aitreabúide a úsáid a thuilleadh."
+msgstr "Moltar gan normalize() de chuid aitreabúide a úsáid a thuilleadh."
 
 #: IsSupportedWarning
 msgid "Use of attributes' isSupported() is deprecated."
-msgstr ""
-"Moltar gan isSupported() de chuid aitreabúide a úsáid a thuilleadh."
+msgstr "Moltar gan isSupported() de chuid aitreabúide a úsáid a thuilleadh."
 
 #: IsEqualNodeWarning
 msgid "Use of attributes' isEqualNode() is deprecated."
-msgstr ""
-"Moltar gan isEqualNode() de chuid aitreabúide a úsáid a thuilleadh."
+msgstr "Moltar gan isEqualNode() de chuid aitreabúide a úsáid a thuilleadh."
 
 #: TextContentWarning
 msgid ""
 "Use of attributes' textContent attribute is deprecated. Use value instead."
 msgstr ""
-"Moltar gan aitreabúid 'textContent' de chuid aitreabúide a úsáid a thuilleadh. Úsáid 'value' ina ionad."
+"Moltar gan aitreabúid 'textContent' de chuid aitreabúide a úsáid a "
+"thuilleadh. Úsáid 'value' ina ionad."
 
 #: EnablePrivilegeWarning
 msgid ""
 "Use of enablePrivilege is deprecated.  Please use code that runs with the "
 "system principal (e.g. an extension) instead."
 msgstr ""
+"Ní mholtar enablePrivilege a úsáid a thuilleadh. Bain úsáid as cód a ritheann "
+"leis an 'system principal' (m.sh. eisínteacht) ina ionad."
+
+#: nsIJSONDecodeDeprecatedWarning
+msgid "nsIJSON.decode is deprecated.  Please use JSON.parse instead."
+msgstr ""
+"Ní mholtar nsIJSON.decode a úsáid a thuilleadh. Bain úsáid as JSON.parse ina "
+"ionad."
+
+#: nsIJSONEncodeDeprecatedWarning
+msgid "nsIJSON.encode is deprecated.  Please use JSON.stringify instead."
+msgstr ""
+"Ní mholtar nsIJSON.encode a úsáid a thuilleadh. Bain úsáid as JSON.stringify "
+"ina ionad."
+
+#: nsIDOMWindowInternalWarning
+msgid "Use of nsIDOMWindowInternal is deprecated. Use nsIDOMWindow instead."
+msgstr ""
+"Ní mholtar nsIDOMWindowInternal a úsáid a thuilleadh. Bain úsáid as "
+"nsIDOMWindow ina ionad."
 
 # "left-to-right" -- leave AS IS --KPS
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
@@ -13751,7 +13820,7 @@ msgid "Include page address"
 msgstr "Cuir seoladh an leathanaigh san áireamh"
 
 # Android string - need to backslash escape any apostrophes in msgstr
-#: crash_restart_label
+#: crash_restart_label restartButton
 msgid "Restart &brandShortName;"
 msgstr "Atosaigh &brandShortName;"
 
@@ -13763,6 +13832,14 @@ msgstr "Tuairisc ar thuairteáil á seoladh\\u2026"
 #: exit_label exit.label
 msgid "Exit"
 msgstr "Scoir"
+
+#: launcher_shortcuts_title
+msgid "&brandShortName; Web Apps"
+msgstr "Feidhmchláir Ghréasáin &brandShortName;"
+
+#: launcher_shortcuts_empty
+msgid "No web apps were found"
+msgstr "Níor aimsíodh aon fheidhmchláir Ghréasáin"
 
 #: certerror.addTemporaryException.label
 msgid "Visit site"
@@ -13887,6 +13964,10 @@ msgstr "Ar Aghaidh"
 msgid "Star"
 msgstr "Réiltín"
 
+#: showTabs.label
+msgid "Show Tabs"
+msgstr "Taispeáin Cluaisíní"
+
 #: copyAll.label
 msgid "Copy All"
 msgstr "Cóipeáil Uile"
@@ -13894,6 +13975,10 @@ msgstr "Cóipeáil Uile"
 #: copylink.label
 msgid "Copy Link Location"
 msgstr "Cóipeáil Suíomh an Naisc"
+
+#: pasteAndGo.label
+msgid "Paste &amp; Go"
+msgstr "Greamaigh agus Téigh"
 
 #: delete.label
 msgctxt "delete.label"
@@ -14041,6 +14126,11 @@ msgstr "Bain"
 msgctxt "bookmarkEdit.label"
 msgid "Edit"
 msgstr "Eagar"
+
+#: bookmarkShortcut.label
+msgctxt "bookmarkShortcut.label"
+msgid "Add to Home Screen"
+msgstr "Cuir leis an Scáileán Baile"
 
 #: identity.connectedTo2
 msgid "Connected to"
@@ -14194,6 +14284,10 @@ msgstr "Sábháil an Nasc"
 msgid "Save Image"
 msgstr "Sábháil an Íomhá"
 
+#: contextCopyLink.label
+msgid "Copy Link"
+msgstr "Cóipeáil an Nasc"
+
 #: contextShareLink.label
 msgid "Share Link"
 msgstr "Comhroinn an Nasc"
@@ -14237,6 +14331,11 @@ msgctxt "contextRemoveBookmark.label"
 msgid "Remove"
 msgstr "Bain"
 
+#: contextShortcutBookmark.label
+msgctxt "contextShortcutBookmark.label"
+msgid "Add to Home Screen"
+msgstr "Cuir leis an Scáileán Baile"
+
 #. #-#-#-#-#  chromebrowser.properties.po (firefox)  #-#-#-#-#
 #. # Page Actions
 #: pageactions.saveas.pdf
@@ -14266,6 +14365,10 @@ msgstr "Aimsigh sa Leathanach"
 #: pageactions.search.addNew addEngineConfirmTitle
 msgid "Add Search Engine"
 msgstr "Inneall Cuardaigh Nua"
+
+#: pageactions.webapps.install
+msgid "Install as App"
+msgstr "Suiteáil mar Fheidhmchlár"
 
 #: appMenu.siteOptions
 msgid "Site Options"
@@ -14861,21 +14964,13 @@ msgstr "Go Maith"
 msgid "Bad"
 msgstr "Go Dona"
 
-#: feedback.information.title
-msgid "More Information"
-msgstr "Tuilleadh Eolais"
-
-#: feedback.about.title
-msgid "About this Beta"
-msgstr "Maidir leis an leagan béite seo"
-
-#: feedback.about.button about.button
-msgid "Go to Page"
-msgstr "Téigh go Leathanach"
-
 #: feedback.tools.title
 msgid "Tools"
 msgstr "Uirlisí"
+
+#: feedback.allowTelemetry.title
+msgid "Send performance data"
+msgstr "Seol sonraí feidhmíochta"
 
 #: feedback.forceCompat.title
 msgid "Force add-ons compatibility"
@@ -14924,6 +15019,33 @@ msgstr "Earráid agus teanga á suiteáil"
 msgid "Learn More…"
 msgstr "Tuilleadh Eolais…"
 
+#: connectionFailure.longDesc
+msgctxt "connectionFailure.longDesc"
+msgid "&sharedLongDesc2;"
+msgstr "&sharedLongDesc2;"
+
+#: dnsNotFound.longDesc2
+msgid ""
+"<ul> \n"
+"<li>Check the address for typing errors such as \n"
+"<strong>ww</strong>.example.com instead of \n"
+"<strong>www</strong>.example.com</li> \n"
+"<li>If you are unable to load any pages, check your device's data or Wi-Fi "
+"connection.</li> \n"
+"</ul>"
+msgstr ""
+"<ul> \n"
+"<li>Scrúdaigh an seoladh le haghaidh botún cosúil le \n"
+"<strong>ww</strong>.sampla.com in áit \n"
+"<strong>www</strong>.sampla.com</li> \n"
+"<li>Mura bhfuil tú in ann leathanach ar bith a luchtú, déan seiceáil ar do cheangal líonra nó do cheangal gan sreang.</li> \n"
+"</ul>"
+
+#: netInterrupt.longDesc
+msgctxt "netInterrupt.longDesc"
+msgid "&sharedLongDesc2;"
+msgstr "&sharedLongDesc2;"
+
 #: netOffline.longDesc2
 msgid ""
 "<ul> \n"
@@ -14934,6 +15056,46 @@ msgstr ""
 "<ul> \n"
 "<li>Déan iarracht eile. Iarrfaidh &brandShortName; ceangal a oscailt agus an "
 "leathanach a athluchtú.</li> \n"
+"</ul>"
+
+#: netReset.longDesc
+msgctxt "netReset.longDesc"
+msgid "&sharedLongDesc2;"
+msgstr "&sharedLongDesc2;"
+
+#: netTimeout.longDesc
+msgctxt "netTimeout.longDesc"
+msgid "&sharedLongDesc2;"
+msgstr "&sharedLongDesc2;"
+
+#: proxyResolveFailure.longDesc2
+msgid ""
+"<ul> \n"
+"<li>Check the proxy settings to make sure that they are correct.</li> \n"
+"<li>Check to make sure your device has a working data or Wi-Fi connection.</"
+"li> \n"
+"</ul>"
+msgstr ""
+"<ul> \n"
+"<li>Cinntigh go bhfuil na socruithe seachfhreastalaí ceart.</li> \n"
+"<li>Cinntigh go bhfuil ceangal líonra nó ceangal gan sreang do ríomhaire ag "
+"obair.</li> \n"
+"</ul>"
+
+#: sharedLongDesc2
+msgid ""
+"<ul> \n"
+"<li>The site could be temporarily unavailable or too busy. Try again in a few "
+"moments.</li> \n"
+"<li>If you are unable to load any pages, check your mobile device's data or "
+"Wi-Fi connection.</li> \n"
+"</ul>"
+msgstr ""
+"<ul> \n"
+"<li>D'fhéadfadh an suíomh bheith gan fáil nó ró-ghnóthach go sealadach. Bain "
+"triail eile as ar ball beag.</li> \n"
+"<li>Mura bhfuil tú in ann leathanach ar bith a luchtú, déan seiceáil ar "
+"cheangal líonra nó ceangal gan sreang do ghléis shoghluaiste.</li> \n"
 "</ul>"
 
 #: rememberValue
@@ -15071,6 +15233,29 @@ msgstr ""
 msgid "The following passwords match your search:"
 msgstr "Meaitseálann na focail fhaire seo a leanas do chuardach:"
 
+#: safeb.blocked.phishingPage.shortDesc2
+msgid ""
+"Entering any personal information on this page may result in identity theft "
+"or other fraud."
+msgstr ""
+"Má chuireann tú aon fhaisnéis phearsanta isteach ar an leathanach seo, "
+"d'fhéadfadh a bheith goid aitheantas nó calaois eile mar thoradh air."
+
+#: safeb.blocked.phishingPage.longDesc2
+msgid ""
+"<p>These types of web forgeries are used in scams known as phishing attacks, "
+"in which fraudulent web pages and emails are used to imitate sources you may "
+"trust.</p>"
+msgstr ""
+"<p>Úsáidtear suímh den chineál seo i gcamscéimeanna ar a dtugtar "
+"\"bréagbhrandáil\", ina gcruthaíonn coirpigh leathanaigh agus ríomhphoist "
+"chalaoiseacha chun aithris a dhéanamh ar fhoinsí dlisteanacha a bhfuil muinín "
+"agat astu.</p>"
+
+#: about.button
+msgid "Go to Page"
+msgstr "Téigh go Leathanach"
+
 #: reflowZoom.title
 msgid "Reformat text on zoom"
 msgstr "Athfhormáidigh an téacs tar éis súmála"
@@ -15083,10 +15268,6 @@ msgstr "Taispeáin íomhánna"
 msgid "Enable JavaScript"
 msgstr "Cumasaigh JavaScript"
 
-#: enablePlugins.title
-msgid "Enable Plugins"
-msgstr "Cumasaigh Forlíontáin"
-
 #: privacy.title
 msgid "Privacy &amp; Security"
 msgstr "Príobháideacht agus Slándáil"
@@ -15098,6 +15279,10 @@ msgstr "Ceadaigh fianáin"
 #: doNotTrack.title
 msgid "Tell sites not to track me"
 msgstr "Inis do shuímh gan a bheith do mo lorg"
+
+#: masterPassword.title
+msgid "Use master password"
+msgstr "Úsáid príomhfhocal faire"
 
 #: clearPrivateData2.title
 msgid "Clear private data"
@@ -15135,9 +15320,9 @@ msgstr "Tosach &brandShortName;"
 msgid "Use Current Page"
 msgstr "Úsáid an Leathanach Reatha"
 
-#: showCharset.title
-msgid "Show Character Encoding"
-msgstr "Taispeáin an tIonchódú Carachtar"
+#: showCharsetEncoding.title
+msgid "Show character encoding"
+msgstr "Taispeáin an t-ionchódú carachtar"
 
 #. # This is the default set of web based feed handlers shown in the reader
 #. # selection UI
@@ -15308,6 +15493,30 @@ msgstr "Bain triail eile as"
 #: sync.setup.manual
 msgid "Manual setup"
 msgstr "Socrú de láimh"
+
+#: webapps.title.placeholder
+msgid "Enter a title"
+msgstr "Cuir teideal isteach"
+
+#: webapps.permissions
+msgid "Allow access:"
+msgstr "Tabhair rochtain:"
+
+#: webapps.perm.geolocation
+msgid "Location-aware browsing"
+msgstr "Brabhsáil láthair-eolach"
+
+#: webapps.perm.offline
+msgid "Offline data storage"
+msgstr "Stóras as líne"
+
+#: webapps.perm.notifications
+msgid "Desktop notifications"
+msgstr "Fógairt deisce"
+
+#: webapps.perm.requestedHint
+msgid "(requested)"
+msgstr "(iarrtha)"
 
 #. # converted from pseudo-properties .it file
 #. # This file is in the UTF-8 encoding
@@ -21147,6 +21356,10 @@ msgstr "Cumraíocht Tógála"
 msgid "User Agent"
 msgstr "Gníomhaire Úsáideora"
 
+#: aboutSupport.appBasicsCrashIDs
+msgid "Crash Reports"
+msgstr "Tuairiscí ar Thuairteáil"
+
 #: aboutSupport.show.label
 msgid "Open Containing Folder"
 msgstr "Oscail an Fillteán ina bhfuil sé"
@@ -21194,7 +21407,7 @@ msgstr "Windows luathaithe le próiseálaí grafaice"
 #. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
 #: blockedDriver
 msgid "Blocked for your graphics driver version."
-msgstr ""
+msgstr "Chuir thiománaí do chárta grafaice cosc air."
 
 #. # LOCALIZATION NOTE The %S here is a placeholder, leave unchanged, it will get replaced by the driver version string.
 #: tryNewerDriver
@@ -21202,6 +21415,8 @@ msgid ""
 "Blocked for your graphics driver version. Try updating your graphics driver "
 "to version %S or newer."
 msgstr ""
+"Chuir thiománaí do chárta grafaice cosc air. Bain triail as leagan %S nó níos "
+"nuaí den tiománaí."
 
 #. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
 #: blockedGfxCard
@@ -21258,6 +21473,38 @@ msgstr "Leagan an Tiománaí"
 #: driverDate
 msgid "Driver Date"
 msgstr "Dáta an Tiománaí"
+
+#: adapterDescription2
+msgid "Adapter Description (GPU #2) "
+msgstr "Cur Síos ar an gCuibheoir (GPU #2) "
+
+#: adapterVendorID2
+msgid "Vendor ID (GPU #2) "
+msgstr "Aitheantas Díoltóra (GPU #2) "
+
+#: adapterDeviceID2
+msgid "Device ID (GPU #2)"
+msgstr "Aitheantas Gléis (GPU #2)"
+
+#: adapterDrivers2
+msgid "Adapter Drivers (GPU #2)"
+msgstr "Tiománaithe Cuibheora (GPU #2)"
+
+#: adapterRAM2
+msgid "Adapter RAM (GPU #2)"
+msgstr "RAM an Chuibheora (GPU #2)"
+
+#: driverVersion2
+msgid "Driver Version (GPU #2)"
+msgstr "Leagan an Tiománaí (GPU #2)"
+
+#: driverDate2
+msgid "Driver Date (GPU #2)"
+msgstr "Dáta an Tiománaí (GPU #2)"
+
+#: isGPU2Active
+msgid "GPU #2 Active"
+msgstr "GPU #2 Gníomhach"
 
 #: webglRenderer
 msgid "WebGL Renderer"
@@ -26489,6 +26736,11 @@ msgstr "Ceadanna Sábhála Neamhbhailí"
 msgid "Select Download Folder"
 msgstr "Roghnaigh Fillteán an Íosluchtaithe"
 
+#. # LOCALIZATION NOTE (fileSizeWithType): first %S is type, second %S is size, and third %S is unit
+#: fileSizeWithType
+msgid "%1S (%2S %3S)"
+msgstr "%1S (%2S %3S)"
+
 # LOCALIZATION NOTE (wpsDefaultOS2): OS/2 only, WPS refers to the Workplace Shell and should probably not be translated
 #. # LOCALIZATION NOTE (wpsDefaultOS2): OS/2 only, WPS refers to the Workplace Shell and should probably not be translated
 #: wpsDefaultOS2
@@ -27393,6 +27645,213 @@ msgstr "Cuma"
 #: type.plugin.name
 msgid "Plugins"
 msgstr "Forlíontáin"
+
+#: title
+msgid "Install Add-on"
+msgstr "Breiseán a Shuiteáil"
+
+#: intro
+msgid ""
+"Another program on your computer would like to modify \n"
+"&brandShortName; with the following add-on:"
+msgstr ""
+"Ba mhaith le ríomhchlár eile ar do ríomhaire &brandShortName; \n"
+"a athrú leis an mbreiseán seo a leanas:"
+
+#: warning warningPrimary.label
+msgid "Install add-ons only from authors whom you trust."
+msgstr ""
+"Is fearr gan ach breiseáin ó fhoinse a bhfuil muinín agat aisti a shuiteáil."
+
+#: allow
+msgid "Allow this installation"
+msgstr "Ceadaigh an tsuiteáil seo"
+
+#: later
+msgid ""
+"You can always change your mind at any time by going \n"
+"to the Add-ons Manager."
+msgstr ""
+"Is féidir leat teacht ar athchomhairle amach anseo \n"
+"le Bainisteoir na mBreiseán."
+
+#: restartMessage
+msgid "You must restart &brandShortName; to finish installing this add-on."
+msgstr ""
+"Ní mór duit &brandShortName; a atosú chun suiteáil an bhreiseáin seo a chur i "
+"gcrích."
+
+#. #LOCALIZATION NOTE (author) %S is the author of the add-on
+#: author
+msgid "By %S"
+msgstr "Le %S"
+
+#. #LOCALIZATION NOTE (location) %S is the path the add-on is installed in
+#: location
+msgid "Location: %S"
+msgstr "Suíomh: %S"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: upgrade.style
+msgid "width: 93ch; height: 448px;"
+msgstr "width: 93ch; height: 448px;"
+
+#: checking.heading
+msgid "Checking Your Add-ons"
+msgstr "Do Chuid Breiseán á Seiceáil"
+
+#: checking.progress.label
+msgid ""
+"Checking your add-ons for compatibility with this version of &brandShortName;."
+msgstr ""
+"Tá do chuid breiseán á scrúdú, maidir lena gcomhoiriúnacht leis an leagan seo "
+"de &brandShortName;."
+
+#: select.heading
+msgctxt "select.heading"
+msgid "Select Your Add-ons"
+msgstr "Roghnaigh Do Chuid Breiseán"
+
+#. The term used for "third parties"
+#. here should match the string source.other in selectAddons.properties.
+#: select.description
+msgctxt "select.description"
+msgid ""
+"Make &brandShortName; even faster by disabling add-ons you no longer use. Add-"
+"ons already installed by third parties will be disabled automatically unless "
+"you select them below."
+msgstr ""
+
+#: select.keep
+msgid "Keep"
+msgstr "Coinnigh"
+
+#. Should be a width wide enough for
+#. the string in select.keep above.
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: select.keep.style
+msgid "width: 6ch;"
+msgstr "width: 6ch;"
+
+#: select.action
+msgid "Action"
+msgstr "Gníomh"
+
+#. Should be a width wide enough for
+#. the action strings in selectAddons.properties or brandShortName.
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: select.action.style
+msgid "width: 35ch;"
+msgstr "width: 35ch;"
+
+#: select.source
+msgid "Installed By"
+msgstr "Suiteáilte Ag"
+
+#. Should be a width small enough so
+#. the source column still has enough room for the source strings in
+#. selectAddons.properties.
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: select.name.style
+msgid "width: 33ch;"
+msgstr "width: 33ch;"
+
+#: confirm.heading
+msgctxt "confirm.heading"
+msgid "Select Your Add-ons"
+msgstr "Roghnaigh Do Chuid Breiseán"
+
+#. The term used for "third parties"
+#. here should match the string source.other in selectAddons.properties.
+#: confirm.description
+msgctxt "confirm.description"
+msgid ""
+"Make &brandShortName; even faster by disabling add-ons you no longer use. Add-"
+"ons already installed by third parties will be disabled automatically unless "
+"you select them below."
+msgstr ""
+
+#: action.disable.heading
+msgid "The following add-ons will be disabled:"
+msgstr "Díchumasófar na breiseáin seo a leanas:"
+
+#: action.incompatible.heading
+msgid ""
+"The following add-ons are disabled, but will be enabled as soon as they are "
+"compatible:"
+msgstr ""
+
+#: action.update.heading
+msgid "The following add-ons will be updated:"
+msgstr "Déanfar nuashonrú ar na breiseáin seo a leanas:"
+
+#: action.enable.heading
+msgid "The following add-ons will be enabled:"
+msgstr "Cumasófar na breiseáin seo a leanas:"
+
+#: update.heading
+msgid "Updating Your Add-ons"
+msgstr "Do Chuid Breiseán á Nuashonrú"
+
+#: update.progress.label
+msgid "Downloading and installing updates for your selected add-ons."
+msgstr ""
+
+#: errors.heading
+msgid "&brandShortName; could not update some of your add-ons."
+msgstr "Níorbh fhéidir le &brandShortName; cuid de na breiseáin a nuashonrú."
+
+#: errors.description
+msgid ""
+"Installing updates for some of your add-ons failed. &brandShortName; will "
+"automatically try to update them again later."
+msgstr ""
+
+#: footer.label
+msgid "You can always change your add-ons by going to the Add-ons Manager."
+msgstr ""
+"Is féidir leat do chuid breiseán a athrú am ar bith le Bainisteoir na "
+"mBreiseán."
+
+#: next.label
+msgid "Next"
+msgstr "Ar Aghaidh"
+
+#. #LOCALIZATION NOTE (source.profile) add-ons installed by the user, this may be
+#. # translated as "You" or "User" depending on the locale
+#: source.profile
+msgid "You"
+msgstr "Tusa"
+
+#. #LOCALIZATION NOTE (source.other) add-ons installed by other applications
+#. # installed on the computer
+#: source.other
+msgid "Third Party"
+msgstr "Tríú Páirtí"
+
+#: action.enabled
+msgid "Will be enabled"
+msgstr "Beidh sé cumasaithe"
+
+#: action.disabled
+msgid "Will be disabled"
+msgstr "Beidh sé díchumasaithe"
+
+#: action.autoupdate
+msgid "Will be updated to be compatible"
+msgstr ""
+
+#: action.incompatible
+msgid "Will be enabled when compatible"
+msgstr "Beidh sé cumasaithe nuair a bheidh sé comhoiriúnach"
+
+#: action.neededupdate
+msgid "Update to make compatible"
+msgstr ""
+
+#: action.unneededupdate
+msgid "Optional update"
+msgstr "Nuashonrú roghnach"
 
 #: updateWizard.title
 msgid "&brandShortName; Update"
@@ -28921,11 +29380,6 @@ msgstr "Suiteáil Bhogearraí"
 #: dialog.style
 msgid "width: 45em"
 msgstr "width: 50em"
-
-#: warningPrimary.label
-msgid "Install add-ons only from authors whom you trust."
-msgstr ""
-"Is fearr gan ach breiseáin ó fhoinse a bhfuil muinín agat aisti a shuiteáil."
 
 #: warningSecondary.label
 msgid "Malicious software can damage your computer or violate your privacy."
