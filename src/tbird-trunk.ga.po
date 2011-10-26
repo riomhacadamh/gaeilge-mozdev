@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-26 09:28-0500\n"
+"POT-Creation-Date: 2011-09-27 15:45-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -30,8 +30,8 @@ msgstr "Luchtaigh an leathanach seo sa bhrabhsálaí"
 
 #. File menu items
 #: exportToTextCmd.label exportToTextCmd.accesskey
-msgid "Export to &Text…"
-msgstr "Easpórtáil mar &Théacs…"
+msgid "E&xport to Text…"
+msgstr "Ea&spórtáil mar Théacs…"
 
 #: previewCmd.label previewCmd.accesskey
 msgid "Bro&wse Page"
@@ -224,8 +224,8 @@ msgid "&Recent Pages"
 msgstr "Leathanaigh Dhei&reanacha"
 
 #: fileRevert.label fileRevert.accesskey
-msgid "Re&vert"
-msgstr "&Fill"
+msgid "Rever&t"
+msgstr "Fi&ll"
 
 #: saveCmd.label saveCmd.accesskey
 msgid "&Save"
@@ -236,8 +236,7 @@ msgctxt "saveCmd.key"
 msgid "S"
 msgstr "S"
 
-#: saveAsCmd.label saveAsCmd.accesskey saveAsAttachmentCmd.label
-#: saveAsAttachmentCmd.accesskey
+#: saveAsCmd.label saveAsCmd.accesskey
 msgid "Save &As…"
 msgstr "Sábháil M&ar…"
 
@@ -257,21 +256,6 @@ msgstr "Foilsig&h Mar…"
 #: saveAsChangeEncodingCmd.label saveAsChangeEncodingCmd.accesskey
 msgid "Save And Change Character &Encoding"
 msgstr "Sábháil agus Athraigh &Ionchódú na gCarachtar"
-
-# "L" under Main -> Comhad
-#: printSetupCmd.label printSetupCmd.accesskey
-msgid "Page Set&up…"
-msgstr "Socrú &Leathanaigh…"
-
-# "P" under Main -> Comhad
-#: printCmd.label printCmd.accesskey
-msgid "&Print…"
-msgstr "&Priontáil…"
-
-# G&reamaigh, P&riontáil
-#: printCmd.key PropertiesAccessKey Home.accesskey printContactCmd.key
-msgid "P"
-msgstr "R"
 
 # "E" in main browser window
 #. #-#-#-#-#  editor-ga-IE.po (firefox)  #-#-#-#-#
@@ -520,7 +504,7 @@ msgstr "B"
 msgid "&Italic"
 msgstr "&Iodálach"
 
-#: styleItalicCmd.key
+#: styleItalicCmd.key missingpluginsMessage.button.accesskey
 msgid "I"
 msgstr "I"
 
@@ -589,7 +573,8 @@ msgid "Table or Cell &Background Color…"
 msgstr "Dath Cúlra an Tá&bla nó na Cille…"
 
 # Ctrl+Y = Athfheidhmigh, transcending language
-#: formatRemoveStyles.key redoCmd.key
+#: formatRemoveStyles.key redoCmd.key getAllNewMessagesCmd.key
+#: telemetryYesButtonAccessKey
 msgid "Y"
 msgstr "Y"
 
@@ -608,6 +593,7 @@ msgstr "Bain Ancai&rí Ainmnithe"
 #. which is placed under the Edit menu on Unix systems
 #: formatRemoveNamedAnchors.key selectAllCmd.key addAttachmentButton.accessskey
 #: accountManagerCmdUnix.accesskey certs.ask.accesskey
+#: testpilot.notification.accessKey.allStudies
 msgid "A"
 msgstr "W"
 
@@ -1192,10 +1178,14 @@ msgstr "Foilsiú"
 #. #  as they will be replaced using JavaScript
 #. #
 #: No smtpServer-SecureAuthentication-Type-false StatusNo
+#: telemetryNoButtonLabel
 msgid "No"
 msgstr "Níl"
 
-#: Save save.label saveButton.label
+#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromemessengermsgHdrViewOverlay.dtd.po (firefox)  #-#-#-#-#
+#. Attachment toolbar items
+#: Save save.label saveButton.label saveAttachmentButton1.label
 msgid "Save"
 msgstr "Sábháil"
 
@@ -1214,6 +1204,11 @@ msgstr "Tuilleadh Airíonna"
 #: FewerProperties
 msgid "Fewer Properties"
 msgstr "Níos Lú Airíonna"
+
+# G&reamaigh, P&riontáil
+#: PropertiesAccessKey Home.accesskey printContactCmd.key printCmd.key
+msgid "P"
+msgstr "R"
 
 #. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromemessengeraccountCreation.dtd.po (firefox)  #-#-#-#-#
@@ -1951,7 +1946,8 @@ msgstr "Cmd+"
 msgid "Del"
 msgstr "Del"
 
-#: Delete deleteAddrBookCard.label deleteButton.label deleteLabel
+#: Delete deleteAddrBookCard.label deleteLabel hdrTrashButton1.label
+#: deleteButton.label
 msgid "Delete"
 msgstr "Scrios"
 
@@ -2816,7 +2812,7 @@ msgstr "Athraíonn seo spásanna in aice a chéile go deighilteoir amháin"
 msgid "Advanced &Edit…"
 msgstr "&Eagarthóireacht Chasta…"
 
-#: AdvancedEditButton.tooltip
+#: AdvancedEditButton.tooltip LinkAdvancedEditButton.tooltip
 msgid "Add or modify HTML attributes, style attributes, and JavaScript"
 msgstr "Cuir tréithe HTML, tréithe stíle nó JavaScript leis, nó athraigh iad"
 
@@ -2840,14 +2836,13 @@ msgstr ""
 "Athraigh idir URL coibhneasta agus dearbh-URL. Chun é seo a athrú, ní mór "
 "duit an leathanach a shábháil ar dtús."
 
-# Shared by Link and Image dialogs
 #. Shared by Link and Image dialogs
 #: LinkURLEditField.label LinkURLEditField.accessKey
 msgid ""
-"Enter a web page &location, a local file, or select a Named Anchor or Heading "
+"Enter a &web page location, a local file, or select a Named Anchor or Heading "
 "from the popup list:"
 msgstr ""
-"Iontrái&l suíomh Gréasáin nó comhad logánta, nó roghnaigh Ancaire Ainmnithe "
+"Iontráil suíomh &Gréasáin nó comhad logánta, nó roghnaigh Ancaire Ainmnithe "
 "nó Ceanntásc ón liosta aníos:"
 
 # ***** BEGIN LICENSE BLOCK *****
@@ -3030,7 +3025,7 @@ msgstr "Socruithe"
 msgid "&Type"
 msgstr "&Cineál"
 
-#: submit.value
+#: submit.value testpilot.submit
 msgid "Submit"
 msgstr "Seol"
 
@@ -3932,6 +3927,10 @@ msgstr "Imlíne &sholadach:"
 msgid "Show &border around linked image"
 msgstr "Taispeáin &imlíne timpeall na híomhá nasctha"
 
+#: LinkAdvancedEditButton.label LinkAdvancedEditButton.accessKey
+msgid "&Link Advanced Edit…"
+msgstr "Ardeagraíocht &Naisc…"
+
 #: imageLocationTab.label locationColumn.label
 msgid "Location"
 msgstr "Suíomh"
@@ -4182,7 +4181,11 @@ msgstr "Siombailí Coitianta"
 msgid "Insert"
 msgstr "Ionsáigh"
 
+#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  feedbackmain.dtd.po (firefox)  #-#-#-#-#
+#. notification
 #: closeButton.label featureConfigurator.closeButton
+#: testpilot.notification.close.tooltip
 msgid "Close"
 msgstr "Dún"
 
@@ -6135,6 +6138,7 @@ msgstr "X"
 
 #: copyCmd.key Contact.accesskey cancelDownloadButton.accesskey
 #: digitalSign.certificate_clear.accesskey
+#: testpilot.notification.accessKey.cancel
 msgid "C"
 msgstr "C"
 
@@ -6244,8 +6248,9 @@ msgstr "Maidir leis an gCeadúnas"
 msgid "End User Rights"
 msgstr "Cearta an Úsáideora"
 
+#. #-#-#-#-#  chromemessengeraboutDialog.dtd.po (firefox)  #-#-#-#-#
 #. This is a link title that links to http://www.mozilla.com/legal/privacy/.
-#: bottomLinks.privacy
+#: bottomLinks.privacy testpilot.welcomePage.privacyPolicy
 msgid "Privacy Policy"
 msgstr "Polasaí Príobháideachta"
 
@@ -7395,29 +7400,24 @@ msgstr "Treoraí na gCuntas"
 msgid "width: 40em; height: 38em;"
 msgstr "width: 44em; height: 42em;"
 
-# Entities for Account Type page
 #. Entities for Account Type page
-#: accountSetupInfo.label
-msgid ""
-"In order to receive messages, you first need to set up a Mail or Newsgroup "
-"account."
-msgstr ""
-"Chun teachtaireachtaí a fháil, ní mór duit cuntas Ríomhphoist nó Nuachta a "
-"chruthú ar dtús."
+#: accountSetupInfo2.label
+msgid "In order to receive messages, you first need to set up an account."
+msgstr "Chun teachtaireachtaí a fháil, ní mór duit cuntas a chruthú ar dtús."
 
 #: accountTypeTitle.label
 msgid "New Account Setup"
 msgstr "Cruthú Cuntais Nua"
 
-#: accountTypeDesc.label
+#: accountTypeDesc2.label
 msgid ""
-"This Wizard will collect the information necessary to set up a Mail or "
-"Newsgroup account. If you do not know the information requested, please "
-"contact your System Administrator or Internet Service Provider."
+"This Wizard will collect the information necessary to set up an account. If "
+"you do not know the information requested, please contact your System "
+"Administrator or Internet Service Provider."
 msgstr ""
-"Baileoidh an Treoraí seo an fhaisnéis atá riachtanach chun cuntas ríomhphoist "
-"nó nuachta a chruthú. Mura bhfuil an fhaisnéis iarrtha ar eolas agat, téigh i "
-"dteagmháil le do Riarthóir Córais nó le do Sholáthraí Seirbhísí Idirlín."
+"Baileoidh an Treoraí seo an fhaisnéis atá riachtanach chun cuntas a chruthú. "
+"Mura bhfuil an fhaisnéis iarrtha ar eolas agat, téigh i dteagmháil le do "
+"Riarthóir Córais nó le do Sholáthraí Seirbhísí Idirlín."
 
 #: accountTypeDirections.label
 msgid "Select the type of account you would like to set up:"
@@ -7742,7 +7742,7 @@ msgstr "&Atriail"
 msgid "R&emove From List"
 msgstr "&Bain den Liosta"
 
-#: cmd.close2Unix.commandkey
+#: cmd.close2Unix.commandkey getNewMessagesCmd.key
 msgid "y"
 msgstr "y"
 
@@ -8650,42 +8650,6 @@ msgstr "C&uir le Cc:"
 msgid "Add to &Bcc:"
 msgstr "Cuir le &Bcc:"
 
-#. #-#-#-#-#  chromemessengeraddressbookabDirTreeOverlay.dtd.po (firefox)  #-#-#-#-#
-#. ***** BEGIN LICENSE BLOCK *****
-#. Version: MPL 1.1/GPL 2.0/LGPL 2.1
-#. The contents of this file are subject to the Mozilla Public License Version
-#. 1.1 (the "License"); you may not use this file except in compliance with
-#. the License. You may obtain a copy of the License at
-#. http://www.mozilla.org/MPL/
-#. Software distributed under the License is distributed on an "AS IS" basis,
-#. WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-#. for the specific language governing rights and limitations under the
-#. License.
-#. The Original Code is Mozilla Communicator client code, released
-#. March 31, 1998.
-#. The Initial Developer of the Original Code is
-#. Netscape Communications Corporation.
-#. Portions created by the Initial Developer are Copyright (C) 1998-1999
-#. the Initial Developer. All Rights Reserved.
-#. Contributor(s):
-#. Alternatively, the contents of this file may be used under the terms of
-#. either the GNU General Public License Version 2 or later (the "GPL"), or
-#. the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-#. in which case the provisions of the GPL or the LGPL are applicable instead
-#. of those above. If you wish to allow use of your version of this file only
-#. under the terms of either the GPL or the LGPL, and not to allow others to
-#. use your version of this file under the terms of the MPL, indicate your
-#. decision by deleting the provisions above and replace them with the notice
-#. and other provisions required by the GPL or the LGPL. If you do not delete
-#. the provisions above, a recipient may use your version of this file under
-#. the terms of any one of the MPL, the GPL or the LGPL.
-#. ***** END LICENSE BLOCK *****
-#. #-#-#-#-#  chromemessengeraddressbookabMainWindow.dtd.po (firefox)  #-#-#-#-#
-#. Dir Tree header
-#: dirTreeHeader.label
-msgid "Address Books"
-msgstr "Leabhair Sheoltaí"
-
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
 #
@@ -8845,7 +8809,7 @@ msgstr "&Teagmháil Leabhair Seoltaí…"
 
 # Ctrl+N is Fuinneog Nua under Main -> Comhad
 # see also lowercase for "Navigator" command
-#: newContact.key newMessageCmd2.key
+#: newContact.key newMessageCmd2.key telemetryNoButtonAccessKey
 msgid "N"
 msgstr "N"
 
@@ -8867,7 +8831,8 @@ msgid "&Message"
 msgstr "&Teachtaireacht"
 
 #: newMessageCmd.key newMessage.key
-#: lwthemePostInstallNotification.manageButton.accesskey Mega
+#: lwthemePostInstallNotification.manageButton.accesskey
+#: testpilot.notification.accessKey.moreInfo Mega
 msgid "M"
 msgstr "B"
 
@@ -8876,6 +8841,11 @@ msgstr "B"
 #: osxAddressBook.label osxAddressBook.accesskey
 msgid "Use Mac &OS X Address Book"
 msgstr "Úsáid Leabhar Seoltaí Mac &OS X"
+
+# "L" under Main -> Comhad
+#: printSetupCmd.label printSetupCmd.accesskey
+msgid "Page Set&up…"
+msgstr "Socrú &Leathanaigh…"
 
 #: printPreviewContactCmd.label printPreviewContactCmd.accesskey
 msgid "Print Pre&view Contact"
@@ -8933,6 +8903,12 @@ msgstr "A&iríonna…"
 #: propertiesCmd.key sizeMono.accesskey
 msgid "i"
 msgstr "i"
+
+#. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
+#. View Menu
+#: menubarCmd.label menubarCmd.accesskey
+msgid "&Menu Bar"
+msgstr "&Barra Roghchláir"
 
 #: showAbToolbarCmd.label showAbToolbarCmd.accesskey
 msgid "Address B&ook Toolbar"
@@ -9059,6 +9035,11 @@ msgstr "Seol teachtaireacht mheandarach nó déan comhrá"
 #: deleteButton2.tooltip
 msgid "Delete selected item"
 msgstr "Scrios an mhír roghnaithe"
+
+#. Dir Tree header
+#: dirTreeHeader.label
+msgid "Address Books"
+msgstr "Leabhair Sheoltaí"
 
 # Search Bar
 #. Search Bar
@@ -10399,7 +10380,7 @@ msgstr "Iontráil eolaire á macasamhlú: %S"
 msgid "Download Now"
 msgstr "Íosluchtaigh Anois"
 
-#: downloadButton.accesskey
+#: downloadButton.accesskey testpilot.notification.accessKey.alwaysSubmit
 msgid "D"
 msgstr "D"
 
@@ -10786,6 +10767,10 @@ msgstr ""
 #: replyTo.label replyTo.accesskey
 msgid "Reply-to Addre&ss:"
 msgstr "&Seoladh Freagartha (Reply-to):"
+
+#: replyTo.placeholder
+msgid "Recipients will reply to this other address"
+msgstr "Seolfaidh faighteoirí freagraí chuig an seoladh seo"
 
 #: organization.label organization.accesskey
 msgid "&Organization:"
@@ -11362,7 +11347,11 @@ msgctxt "digitalSign.certificate.button"
 msgid "Select…"
 msgstr "Roghnaigh…"
 
+#. #-#-#-#-#  feedbackmain.properties.po (firefox)  #-#-#-#-#
+#. # modules/notifications.js - doorhanger notification button shortcut keys
 #: digitalSign.certificate.accesskey markStarredCmd.key
+#: crashedpluginsMessage.submitButton.accesskey
+#: testpilot.notification.accessKey.submit
 msgid "S"
 msgstr "S"
 
@@ -11918,7 +11907,6 @@ msgid "Saved Files"
 msgstr "Comhaid Shábháilte"
 
 #: editContactPanelDeleteContact.label editContactPanelDeleteContact.accesskey
-#: deleteAttachmentCmd.label deleteAttachmentCmd.accesskey
 msgid "De&lete"
 msgstr "S&crios"
 
@@ -12898,7 +12886,7 @@ msgstr "width: 100ch;"
 msgid "F&ilter name:"
 msgstr "A&inm an scagaire:"
 
-#: junk.label junkButton.label itemJunk.label
+#: junk.label hdrJunkButton1.label itemJunk.label
 msgid "Junk"
 msgstr "Dramhphost"
 
@@ -17512,13 +17500,6 @@ msgstr "Cuid de Theachtaireacht Faoi Iamh"
 msgid "#1 attachment;#1 attachments"
 msgstr "#1 iatán;#1 iatán;#1 iatán;#1 n-iatán;#1 iatán"
 
-#. # LOCALIZATION NOTE (attachmentNameAndSize): This is the format for a single
-#. # item in the attachment list. %1$S is the attachment's filename, and %2$S is
-#. # the attachment's size
-#: attachmentNameAndSize
-msgid "%1$S (%2$S)"
-msgstr "%1$S (%2$S)"
-
 # # String used by the Initialization Error dialog
 #. ## String used by the Initialization Error dialog
 #: initErrorDlogTitle
@@ -17648,7 +17629,6 @@ msgid "Remind Me Later"
 msgstr "Cuir i gcuimhne dom níos déanaí"
 
 #: remindLaterButton.accessskey editRewrapCmd.key
-#: addonInstallRestartButton.accesskey
 msgid "R"
 msgstr "R"
 
@@ -17774,6 +17754,12 @@ msgstr "Seo&l Níos Déanaí"
 msgctxt "sendLaterCmd.keycode"
 msgid "VK_RETURN"
 msgstr "VK_RETURN"
+
+# "P" under Main -> Comhad
+#: printCmd.label printCmd.accesskey otherActionsPrint1.label
+#: otherActionsPrint1.accesskey
+msgid "&Print…"
+msgstr "&Priontáil…"
 
 #: undoCmd.label undoCmd.accesskey
 msgctxt "undoCmd.label undoCmd.accesskey"
@@ -18451,7 +18437,6 @@ msgstr "Athdhéan Marcáil Gach Rud mar Léite"
 
 # #-#-#-#-#  tmp.XXXXmuwX0P.po (thunderbird)  #-#-#-#-#
 # View Menu
-#. View Menu
 #: showMessengerToolbarCmd.label showMessengerToolbarCmd.accesskey
 msgid "Mail T&oolbar"
 msgstr "Príomhbharra &Uirlisí"
@@ -19199,11 +19184,11 @@ msgstr "&Socruithe an Chuntais…"
 msgid "Get Mail"
 msgstr "Faigh R-phost"
 
-#: replyButton.label reply
+#: replyButton.label reply hdrReplyButton1.label
 msgid "Reply"
 msgstr "Freagair"
 
-#: replyAllButton.label
+#: replyAllButton.label hdrReplyAllButton1.label
 msgid "Reply All"
 msgstr "Freagair Cách"
 
@@ -19216,7 +19201,7 @@ msgctxt "forwardButton.label"
 msgid "Forward"
 msgstr "Seol Ar Aghaidh"
 
-#: archiveButton.label
+#: archiveButton.label hdrArchiveButton1.label
 msgid "Archive"
 msgstr "Cuir sa Chartlann"
 
@@ -19230,6 +19215,16 @@ msgctxt "goForwardButton1.label"
 msgid "Forward"
 msgstr "Ar Aghaidh"
 
+#: deleteItem.title
+msgctxt "deleteItem.title"
+msgid "Delete"
+msgstr "Scrios"
+
+#: deleteButton.label
+msgctxt "deleteButton.label"
+msgid "Delete"
+msgstr "Scrios"
+
 #: undeleteButton.label
 msgid "Undelete"
 msgstr "Díscrios"
@@ -19241,6 +19236,16 @@ msgstr "Marcáil"
 #: throbberItem.title
 msgid "Activity Indicator"
 msgstr "Táscaire Gníomhaíochta"
+
+#: junkItem.title
+msgctxt "junkItem.title"
+msgid "Junk"
+msgstr "Dramhphost"
+
+#: junkButton.label
+msgctxt "junkButton.label"
+msgid "Junk"
+msgstr "Dramhphost"
 
 #: notJunkButton.label
 msgctxt "notJunkButton.label"
@@ -19290,11 +19295,11 @@ msgstr "Cruthaigh teachtaireacht nua"
 msgid "Reply to the message"
 msgstr "Freagair an teachtaireacht"
 
-#: replyAllButton.tooltip
+#: replyAllButton.tooltip hdrReplyAllButton1.tooltip
 msgid "Reply to sender and all recipients"
 msgstr "Freagair an seoltóir agus gach faighteoir"
 
-#: replyListButton.tooltip
+#: replyListButton.tooltip hdrReplyListButton1.tooltip
 msgid "Reply to mailing list"
 msgstr "Seol freagra chuig liosta ríomhphoist"
 
@@ -19384,6 +19389,7 @@ msgid "&Get Messages"
 msgstr "Fai&gh Teachtaireachtaí"
 
 #: folderContextOpenNewTab.label folderContextOpenNewTab.accesskey
+#: otherActionsOpenInNewTab1.label otherActionsOpenInNewTab1.accesskey
 msgid "Open in New &Tab"
 msgstr "Oscail i g&Cluaisín Nua"
 
@@ -19694,7 +19700,8 @@ msgctxt "contextCopyMsgMenu.label contextCopyMsgMenu.accesskey"
 msgid "&Copy To"
 msgstr "&Cóipeáil Go"
 
-#: contextSaveAs.label contextSaveAs.accesskey
+#: contextSaveAs.label contextSaveAs.accesskey saveAsAttachmentCmd.label
+#: saveAsAttachmentCmd.accesskey
 msgid "&Save As…"
 msgstr "&Sábháil Mar…"
 
@@ -20399,7 +20406,7 @@ msgstr "Leacaithe"
 msgid "<not specified>"
 msgstr "<gan sonrú>"
 
-#: smtpServer-SecureAuthentication-Type-true StatusYes
+#: smtpServer-SecureAuthentication-Type-true StatusYes telemetryYesButtonLabel
 msgid "Yes"
 msgstr "Tá"
 
@@ -21449,6 +21456,11 @@ msgstr ""
 msgid "Restart Now"
 msgstr "Atosaigh Anois"
 
+#: addonInstallRestartButton.accesskey
+msgctxt "addonInstallRestartButton.accesskey"
+msgid "R"
+msgstr "R"
+
 #: addonInstallManage
 msgid "Open Add-ons Manager"
 msgstr "Oscail Bainisteoir na mBreiseán"
@@ -21742,6 +21754,95 @@ msgstr "Uasghrádaigh Anois"
 msgctxt "update.restart.upgradeButton.accesskey"
 msgid "U"
 msgstr "U"
+
+# missing plugin installer
+#. # missing plugin installer
+#: missingpluginsMessage.title
+msgid "Additional plugins are required to display all the media on this page."
+msgstr ""
+"Tá forlíontáin eile ag teastáil chun na meáin uile ar an leathanach seo a "
+"thaispeáint."
+
+#: missingpluginsMessage.button.label
+msgid "Install Missing Plugins…"
+msgstr "Suiteáil na forlíontáin ar iarraidh…"
+
+#: outdatedpluginsMessage.title
+msgid "Some plugins used by this page are out of date."
+msgstr "Tá cuid de na forlíontáin a úsáideann an leathanach seo as dáta."
+
+#: outdatedpluginsMessage.updateButton.label
+msgctxt "outdatedpluginsMessage.updateButton.label"
+msgid "Update Plugins…"
+msgstr "Nuashonraigh Forlíontáin…"
+
+#: outdatedpluginsMessage.updateButton.accesskey
+msgctxt "outdatedpluginsMessage.updateButton.accesskey"
+msgid "U"
+msgstr "U"
+
+#: blockedpluginsMessage.title
+msgid ""
+"Some plugins required by this page have been blocked for your protection."
+msgstr ""
+"Tá cosc curtha ar fhorlíontáin áirithe atá ag teastáil ón leathanach seo le "
+"tú a chosaint."
+
+# Error reporting
+#: blockedpluginsMessage.infoButton.label
+msgid "Details…"
+msgstr "Mionsonraí…"
+
+#: blockedpluginsMessage.infoButton.accesskey
+msgctxt "blockedpluginsMessage.infoButton.accesskey"
+msgid "D"
+msgstr "D"
+
+#: blockedpluginsMessage.searchButton.label
+msgctxt "blockedpluginsMessage.searchButton.label"
+msgid "Update Plugins…"
+msgstr "Nuashonraigh Forlíontáin…"
+
+#: blockedpluginsMessage.searchButton.accesskey
+msgctxt "blockedpluginsMessage.searchButton.accesskey"
+msgid "U"
+msgstr "U"
+
+#: crashedpluginsMessage.title
+msgid "The %S plugin has crashed."
+msgstr "Thuairteáil forlíontán %S."
+
+#: crashedpluginsMessage.reloadButton.label
+msgid "Reload page"
+msgstr "Athluchtaigh an leathanach"
+
+#: crashedpluginsMessage.reloadButton.accesskey
+msgctxt "crashedpluginsMessage.reloadButton.accesskey"
+msgid "R"
+msgstr "R"
+
+#: crashedpluginsMessage.submitButton.label
+msgid "Submit a crash report"
+msgstr "Seol tuairisc ar thuairteáil"
+
+#: crashedpluginsMessage.learnMore
+msgid "Learn More…"
+msgstr "Tuilleadh Eolais…"
+
+#: carbonFailurePluginsMessage.message
+msgid "This page asks to use a plugin that can only run in 32-bit mode"
+msgstr ""
+"Tá an leathanach seo ag iarraidh breiseán nach féidir a rith ach sa mhód 32 "
+"giotán"
+
+#: carbonFailurePluginsMessage.restartButton.label
+msgid "Restart in 32-bit mode"
+msgstr "Atosaigh sa mhód 32-giotán"
+
+#: carbonFailurePluginsMessage.restartButton.accesskey
+msgctxt "carbonFailurePluginsMessage.restartButton.accesskey"
+msgid "R"
+msgstr "A"
 
 #: migrationWizard.title
 msgid "Import Wizard"
@@ -22367,42 +22468,6 @@ msgstr "Bainistigh síntiúis"
 msgid "choose this for the parent"
 msgstr "roghnaigh é seo don mháthair"
 
-# ***** BEGIN LICENSE BLOCK *****
-# Version: MPL 1.1/GPL 2.0/LGPL 2.1
-#
-# The contents of this file are subject to the Mozilla Public License Version
-# 1.1 (the "License"); you may not use this file except in compliance with
-# the License. You may obtain a copy of the License at
-# http://www.mozilla.org/MPL/
-#
-# Software distributed under the License is distributed on an "AS IS" basis,
-# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# for the specific language governing rights and limitations under the
-# License.
-#
-# The Original Code is Mozilla Communicator client code, released
-# March 31, 1998.
-#
-# The Initial Developer of the Original Code is
-# Netscape Communications Corporation.
-# Portions created by the Initial Developer are Copyright (C) 1998-1999
-# the Initial Developer. All Rights Reserved.
-#
-# Contributor(s):
-#
-# Alternatively, the contents of this file may be used under the terms of
-# either the GNU General Public License Version 2 or later (the "GPL"), or
-# the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# in which case the provisions of the GPL or the LGPL are applicable instead
-# of those above. If you wish to allow use of your version of this file only
-# under the terms of either the GPL or the LGPL, and not to allow others to
-# use your version of this file under the terms of the MPL, indicate your
-# decision by deleting the provisions above and replace them with the notice
-# and other provisions required by the GPL or the LGPL. If you do not delete
-# the provisions above, a recipient may use your version of this file under
-# the terms of any one of the MPL, the GPL or the LGPL.
-#
-# ***** END LICENSE BLOCK *****
 #. ***** BEGIN LICENSE BLOCK *****
 #. Version: MPL 1.1/GPL 2.0/LGPL 2.1
 #. The contents of this file are subject to the Mozilla Public License Version
@@ -22432,135 +22497,108 @@ msgstr "roghnaigh é seo don mháthair"
 #. the provisions above, a recipient may use your version of this file under
 #. the terms of any one of the MPL, the GPL or the LGPL.
 #. ***** END LICENSE BLOCK *****
-#: toField2.label
-msgid "to "
+#: toField3.label
+msgid "To "
 msgstr "Chuig "
 
-#: fromField2.label
-msgid "from "
+#: fromField3.label
+msgid "From "
 msgstr "Ó "
 
-#: senderField2.label
-msgid "sender "
+#: senderField3.label
+msgid "Sender "
 msgstr "Seoltóir "
 
-#: organizationField2.label
-msgid "organization "
+#: organizationField3.label
+msgid "Organization "
 msgstr "Eagras "
 
-#: replyToField2.label
-msgid "reply-to "
-msgstr "Freagra-chuig "
+#: replyToField3.label
+msgid "Reply to "
+msgstr "Freagra chuig "
 
-#: subjectField2.label
-msgid "subject "
+#: subjectField3.label
+msgid "Subject "
 msgstr "Ábhar "
 
-#: bccField2.label
-msgid "bcc "
+#: ccField3.label
+msgid "Cc "
+msgstr "Cc "
+
+#: bccField3.label
+msgid "Bcc "
 msgstr "Bcc "
 
-#: newsgroupsField2.label
-msgid "newsgroups "
-msgstr "Grúpaí-nuachta "
+#: newsgroupsField3.label
+msgid "Newsgroups "
+msgstr "Grúpaí nuachta "
 
-#: followupToField2.label
-msgid "followup-to "
-msgstr "Leanúint-chuig "
+#: followupToField3.label
+msgid "Followup to "
+msgstr "Leanúint chuig "
 
-#: tagsHdr2.label
-msgid "tags "
+#: tagsHdr3.label
+msgid "Tags "
 msgstr "Clibeanna "
 
-#: dateField2.label
-msgid "date "
+#: dateField3.label
+msgid "Date "
 msgstr "Dáta "
 
-#: userAgentField2.label
-msgid "user-agent "
-msgstr "Clár-ríomhphoist "
+#: userAgentField3.label
+msgid "User agent "
+msgstr "Clár ríomhphoist "
 
-#: referencesField2.label
-msgid "references "
+#: referencesField3.label
+msgid "References "
 msgstr "Tagairtí "
 
-#: messageIdField2.label
-msgid "message-id "
-msgstr "Aitheantas-teachtaireachta "
+#: messageIdField3.label
+msgid "Message ID "
+msgstr "Aitheantas na Teachtaireachta "
 
-#: inReplyToField2.label
-msgid "in-reply-to "
-msgstr "Freagra-ar "
+#: inReplyToField3.label
+msgid "In reply to "
+msgstr "I bhfreagra ar "
 
-#: originalWebsite2.label
-msgid "website "
-msgstr "Suíomh-gréasáin "
+#: originalWebsite3.label
+msgid "Website "
+msgstr "Suíomh Gréasáin "
 
 #: editMessageDescription.label
 msgid "This is a draft message"
 msgstr "Is dréacht é seo"
 
-# verb; translate as capital
-#: hdrArchiveButton.label archive.label
-msgid "archive"
-msgstr "Cuir sa chartlann"
-
-#: hdrArchiveButton.tooltip
-msgid "archive this message"
+#: hdrArchiveButton1.tooltip
+msgid "Archive this message"
 msgstr "Cuir an teachtaireacht seo sa chartlann"
 
-#: hdrSmartReplyButton.label
-msgid "smart reply"
-msgstr "freagra cliste"
+#: hdrSmartReplyButton1.label
+msgid "Smart Reply"
+msgstr "Freagra Cliste"
 
-# verb; translate as capital
-#: hdrReplyButton.label
-msgid "reply"
-msgstr "Freagair"
-
-#: hdrReplyButton.tooltip
-msgid "reply to this message"
+#: hdrReplyButton1.tooltip
+msgid "Reply to this message"
 msgstr "Freagair an teachtaireacht seo"
 
-#: hdrReplyAllButton.label
-msgid "reply all"
-msgstr "Freagair cách"
+#: hdrReplyListButton1.label
+msgid "Reply List"
+msgstr "Freagra Chuig Liosta"
 
-#: hdrReplyAllButton.tooltip
-msgid "reply to sender and all recipients"
-msgstr "Freagra chuig an seoltóir agus gach faighteoir"
+#: hdrForwardButton1.label
+msgid "Forward"
+msgstr "Ar Aghaidh"
 
-#: hdrReplyListButton.label
-msgid "reply list"
-msgstr "Freagair liosta"
-
-#: hdrReplyListButton.tooltip
-msgid "reply to mailing list"
-msgstr "Freagra chuig an liosta ríomhphoist"
-
-# verb; translate as capital
-#: hdrForwardButton.label
-msgid "forward"
-msgstr "Cuir ar aghaidh"
-
-#: hdrForwardButton.tooltip
-msgid "forward this message"
+#: hdrForwardButton1.tooltip
+msgid "Forward this message"
 msgstr "Cuir an teachtaireacht seo ar aghaidh"
 
-#: hdrJunkButton.label
-msgid "junk"
-msgstr "Dramhphost"
-
-#: hdrJunkButton.tooltip
-msgid "mark this message as junk"
+#: hdrJunkButton1.tooltip
+msgid "Mark this message as junk"
 msgstr "Marcáil an teachtaireacht seo mar dhramhphost"
 
-#: hdrTrashButton.label delete.label
-msgid "delete"
-msgstr "Scrios"
-
-#: hdrTrashButton.tooltip
-msgid "delete this message"
+#: hdrTrashButton1.tooltip
+msgid "Delete this message"
 msgstr "Scrios an teachtaireacht seo"
 
 #: hdrViewToolbarShowFull.label hdrViewToolbarShowFull.accesskey
@@ -22580,46 +22618,41 @@ msgstr "&Taispeáin Téacs Amháin"
 msgid "Always Show &Reply to Sender"
 msgstr "Taispeáin F&reagra don Seoltóir i gCónaí"
 
-#: otherActionsButton.label
-msgid "other actions"
-msgstr "Gníomhartha eile"
+#: otherActionsButton1.label
+msgid "Other Actions"
+msgstr "Gníomhartha Eile"
 
-#: otherActionsOpenConversation.label otherActionsOpenConversation.accesskey
-msgid "open in &conversation"
-msgstr "Oscail i g&comhrá"
+#: otherActionsOpenConversation1.label otherActionsOpenConversation1.accesskey
+msgid "Open in &Conversation"
+msgstr "Oscail i g&Comhrá"
 
-#: otherActionsOpenInNewWindow.label otherActionsOpenInNewWindow.accesskey
-msgid "open in ne&w window"
-msgstr "Oscail i bhfuinneog &nua"
+#: otherActionsOpenInNewWindow1.label otherActionsOpenInNewWindow1.accesskey
+msgid "Open in New &Window"
+msgstr "Oscail i bh&Fuinneog Nua"
 
-#: otherActionsOpenInNewTab.label otherActionsOpenInNewTab.accesskey
-msgid "open in new &tab"
-msgstr "Oscail i g&cluasín nua"
+#: markAsReadMenuItem1.label markAsReadMenuItem1.accesskey
+msgid "Mark as &Read"
+msgstr "Marcáil \"&Léite\""
 
-#: markAsReadMenuItem.label markAsReadMenuItem.accesskey
-msgid "ma&rk as read"
-msgstr "Ma&rcáil léite"
+#: markAsUnreadMenuItem1.label markAsUnreadMenuItem1.accesskey
+msgid "Ma&rk as Unread"
+msgstr "Ma&rcáil \"Neamhléite\""
 
-#: markAsUnreadMenuItem.label markAsUnreadMenuItem.accesskey
-msgid "ma&rk as unread"
-msgstr "Ma&rcáil gan léamh"
+#: saveAsMenuItem1.label saveAsMenuItem1.accesskey
+msgid "&Save as…"
+msgstr "&Sábháil mar…"
 
-#: saveAsMenuItem.label saveAsMenuItem.accesskey
-msgctxt "saveAsMenuItem.label saveAsMenuItem.accesskey"
-msgid "&save as…"
-msgstr "&Sábháil Mar…"
-
-#: viewSourceMenuItem.label viewSourceMenuItem.accesskey
-msgid "&view source"
-msgstr "&Taispeáin foinse"
-
-#: otherActionsPrint.label otherActionsPrint.accesskey
-msgid "&print…"
-msgstr "&Priontáil…"
+#: viewSourceMenuItem1.label viewSourceMenuItem1.accesskey
+msgid "&View Source"
+msgstr "&Amharc ar Fhoinse"
 
 #: detachAttachmentCmd.label detachAttachmentCmd.accesskey
-msgid "De&tach…"
-msgstr "Dí&cheangail…"
+msgid "&Detach…"
+msgstr "&Díscoir…"
+
+#: deleteAttachmentCmd.label deleteAttachmentCmd.accesskey
+msgid "D&elete"
+msgstr "S&crios"
 
 #: openAllAttachmentsCmd.label openAllAttachmentsCmd.accesskey
 msgid "&Open All…"
@@ -22637,55 +22670,17 @@ msgstr "&Díscoir Uile…"
 msgid "D&elete All…"
 msgstr "S&crios Uile…"
 
-#. Attachment toolbar items
-#: saveAttachmentButton.label
-msgid "save"
-msgstr "Sábháil"
+#: saveAttachmentButton1.tooltip
+msgid "Save the attached file"
+msgstr "Sábháil an comhad ceangailte"
 
-#: saveAttachmentButton.tooltip
-msgid "save the attached file"
-msgstr "Sábháil an t-iatán"
+#: saveAllAttachmentsButton1.label
+msgid "Save All"
+msgstr "Sábháil Uile"
 
-#: saveAllAttachmentsButton.label
-msgid "save all"
-msgstr "Sábháil uile"
-
-#: saveAllAttachmentsButton.tooltip
-msgid "save all the attached files"
-msgstr "Sábháil gach iatán"
-
-#: openAttachmentMenuItem.label openAttachmentMenuItem.accesskey
-msgid "&open"
-msgstr "&Oscail"
-
-#: saveAsAttachmentMenuItem.label saveAsAttachmentMenuItem.accesskey
-msgctxt "saveAsAttachmentMenuItem.label saveAsAttachmentMenuItem.accesskey"
-msgid "&save as…"
-msgstr "&Sábháil Mar…"
-
-#: detachAttachmentMenuItem.label detachAttachmentMenuItem.accesskey
-msgid "&detach…"
-msgstr "&Dícheangail…"
-
-#: deleteAttachmentMenuItem.label deleteAttachmentMenuItem.accesskey
-msgid "d&elete"
-msgstr "S&crios"
-
-#: openAllAttachmentsMenuItem.label openAllAttachmentsMenuItem.accesskey
-msgid "&open all…"
-msgstr "&Oscail uile…"
-
-#: saveAllAttachmentsMenuItem.label saveAllAttachmentsMenuItem.accesskey
-msgid "&save all…"
-msgstr "&Sábháil uile…"
-
-#: detachAllAttachmentsMenuItem.label detachAllAttachmentsMenuItem.accesskey
-msgid "&detach all…"
-msgstr "&Dícheangail uile…"
-
-#: deleteAllAttachmentsMenuItem.label deleteAllAttachmentsMenuItem.accesskey
-msgid "d&elete all…"
-msgstr "S&crios uile…"
+#: saveAllAttachmentsButton1.tooltip
+msgid "Save all the attached files"
+msgstr "Sábháil na comhaid cheangailte go léir"
 
 #: CopyMessageId.label
 msgid "Copy Message-ID"
@@ -23698,8 +23693,16 @@ msgstr "Léamh &amp; Taispeáint"
 msgid "Network &amp; Disk Space"
 msgstr "Líonra &amp; Spás Diosca"
 
-# General Settings
 #. General Settings
+#: submitTelemetry.label submitTelemetry.accesskey
+msgid "Submit &Performance Data"
+msgstr "Seol Sonraí &Feidhmíochta"
+
+#: telemetryInfoLink.label
+msgid "More information about Telemetry"
+msgstr "Tuilleadh eolais faoi Theiliméadracht"
+
+# General Settings
 #: enableGlodaSearch.label enableGlodaSearch.accesskey
 msgid "&Enable Global Search and Indexer"
 msgstr "Cumasaigh Cuardach Cuimsith&each agus an tInneacsóir"
@@ -26554,6 +26557,21 @@ msgstr "Oscail leabhar seoltaí"
 msgid "Open your address book."
 msgstr "Oscail do leabhar seoltaí."
 
+#. # Telemetry prompt
+#. # LOCALIZATION NOTE (telemetryText): %1$S will be replaced by brandFullName,
+#. # and %2$S by the value of the toolkit.telemetry.server_owner preference.
+#: telemetryText
+msgid ""
+"Would you like to help improve %1$S by automatically reporting memory usage, "
+"performance, and responsiveness to %2$S?"
+msgstr ""
+"An bhfuil fonn ort cabhrú linn feabhas a chur ar %1$S trí thuairiscí "
+"uathoibríocha a dhéanamh ar úsáid chuimhne, luas, agus freagracht do %2$S?"
+
+#: telemetryLinkLabel
+msgid "Learn More"
+msgstr "Faigh Tuilleadh Eolais"
+
 #: yesterday
 msgid "yesterday"
 msgstr "inné"
@@ -27667,6 +27685,521 @@ msgstr ""
 "<em:contributor>Séamus Ó Ciardhuáin</em:contributor> <em:contributor>Kevin "
 "Scannell</em:contributor> <em:contributor>Brian King</em:contributor>"
 
+#: testpilot.brand.label
+msgid "Test Pilot"
+msgstr "Test Pilot"
+
+#. browser window: menu and status bar
+#: testpilot.settings.label
+msgctxt "testpilot.settings.label"
+msgid "Settings"
+msgstr "Socruithe"
+
+#: testpilot.settings.dataSubmission.label
+msgid "Data Submission"
+msgstr "Seoladh Sonraí"
+
+#: testpilot.settings.notifications.label
+msgid "Notifications"
+msgstr "Fógraí"
+
+#: testpilot.settings.notifyWhen.label
+msgid "Notify me when…"
+msgstr "Cuir in iúl dom…"
+
+#: testpilot.settings.readyToSubmit.label
+msgid "A study is ready to submit"
+msgstr "Nuair a bheidh staidéar réidh le seoladh"
+
+#: testpilot.settings.newStudy.label
+msgid "There's a new study"
+msgstr "Nuair a bheidh staidéar nua ann"
+
+#: testpilot.settings.hasNewResults.label
+msgid "A study has new results"
+msgstr "Nuair a bheidh torthaí nua ag staidéar"
+
+#: testpilot.settings.alwaysSubmitData.shortLabel
+msgid "Always submit my data (don't ask me)"
+msgstr "Seol mo chuid sonraí i gcónaí (ná fiafraigh díom)"
+
+#: testpilot.allYourStudies.label
+msgid "All Your User Studies…"
+msgstr "Do Chuid Staidéar Go Léir…"
+
+#: testpilot.about.label
+msgid "About Test Pilot"
+msgstr "Maidir le Test Pilot"
+
+# all studies window
+#. all studies window
+#: testpilot.studiesWindow.title
+msgid "Your Test Pilot Studies"
+msgstr "Do Chuid Staidéar Test Pilot"
+
+#: testpilot.studiesWindow.currentStudies.label
+msgid "Current Studies"
+msgstr "Staidéir Reatha"
+
+#: testpilot.studiesWindow.finishedStudies.label
+msgid "Finished Studies"
+msgstr "Staidéir Chríochnaithe"
+
+#: testpilot.studiesWindow.studyFindings.label
+msgid "Study Findings"
+msgstr "Torthaí an Staidéir"
+
+#: testpilot.studiesWindow.settings.label
+msgctxt "testpilot.studiesWindow.settings.label"
+msgid "Settings"
+msgstr "Socruithe"
+
+#: testpilot.studiesWindow.stillLoadingMessage
+msgid "Loading, please wait…"
+msgstr "Á luchtú, fan go fóill…"
+
+# raw data dialog
+#. raw data dialog
+#: testpilot.rawDataWindow.title
+msgid "Test Pilot: Raw Data"
+msgstr "Test Pilot: Amhshonraí"
+
+# #-#-#-#-#  feedbackmain.dtd.po (firefox)  #-#-#-#-#
+# Firefox 4 beta version UI
+# #-#-#-#-#  feedbackmain.properties.po (firefox)  #-#-#-#-#
+# Feedback button menu
+#. #-#-#-#-#  feedbackmain.dtd.po (firefox)  #-#-#-#-#
+#. Firefox 4 beta version UI
+#. #-#-#-#-#  feedbackmain.properties.po (firefox)  #-#-#-#-#
+#. # Feedback button menu
+#: testpilot.enable.label testpilot.turnOn
+msgid "Turn On User Studies"
+msgstr "Cuir Staidéir Úsáideora Ar Siúl"
+
+#: testpilot.feedbackbutton.label
+msgid "Feedback"
+msgstr "Aiseolas"
+
+#: testpilot.happy.label
+msgid "Firefox Made Me Happy Because…"
+msgstr "Chuir Firefox aoibhneas orm de bharr…"
+
+#: testpilot.sad.label
+msgid "Firefox Made Me Sad Because…"
+msgstr "Chuir Firefox brón orm de bharr…"
+
+#: testpilot.happy.thunderbirdLabel
+msgid "Thunderbird Made Me Happy Because…"
+msgstr "Chuir Thunderbird aoibhneas orm de bharr…"
+
+#: testpilot.sad.thunderbirdLabel
+msgid "Thunderbird Made Me Sad Because…"
+msgstr "Chuir Thunderbird brón orm de bharr…"
+
+#: testpilot.broken.label
+msgid "Report this website as broken…"
+msgstr "Seol tuairisc go bhfuil an suíomh seo briste…"
+
+#: testpilot.idea.label
+msgid "Give us a suggestion…"
+msgstr "Seol moladh chugainn…"
+
+#. # description for add-on manager
+#: extensions.tbtestpilot@labs.mozilla.com.description
+msgid "Help make Thunderbird better by running user studies."
+msgstr ""
+"Cabhraigh linn Thunderbird a fheabhsú trí pháirt a ghlacadh i staidéar "
+"úsáideora."
+
+# common
+#. # common
+#: testpilot.fullBrandName
+msgid "Mozilla Labs Test Pilot"
+msgstr "Saotharlann Mozilla - Test Pilot"
+
+#: testpilot.moreInfo
+msgid "More Info"
+msgstr "Eolas Breise"
+
+#: testpilot.takeSurvey
+msgid "Take the Survey"
+msgstr "Glac páirt sa suirbhé"
+
+#: testpilot.turnOff
+msgid "Turn Off User Studies"
+msgstr "Stop Staidéir Úsáideora"
+
+# studies window
+#. # studies window
+#: testpilot.studiesWindow.noStudies
+msgid ""
+"We are working on a new study now; it will knock on your door soon! Stay "
+"Tuned!"
+msgstr "Tá staidéar nua idir lámha againn faoi láthair; beidh sé leat go luath!"
+
+#: testpilot.studiesWindow.uploading
+msgid "Uploading…"
+msgstr "Á Uasluchtú…"
+
+#: testpilot.studiesWindow.unableToReachServer
+msgid "Unable to reach Mozilla; please try again later."
+msgstr "Ní féidir ceangal a bhunú le Mozilla; bain triail eile as amach anseo."
+
+#: testpilot.studiesWindow.thanksForContributing
+msgid "Thanks for contributing!"
+msgstr "Go raibh maith agat as páirt a ghlacadh!"
+
+#: testpilot.studiesWindow.finishedOn
+msgid "Finished on %S"
+msgstr "Críochnaithe ar %S"
+
+#: testpilot.studiesWindow.canceledStudy
+msgid "(You canceled this study)"
+msgstr "(Chealaigh tú an staidéar seo)"
+
+#: testpilot.studiesWindow.missedStudy
+msgid "(You missed this study)"
+msgstr "(Lig tú an staidéar seo thart)"
+
+#: testpilot.studiesWindow.willStart
+msgid "Will start on %S"
+msgstr "Tosóidh sé ar %S"
+
+#: testpilot.studiesWindow.gatheringData
+msgid "Currently gathering data."
+msgstr "Sonraí á mbailiú faoi láthair."
+
+#: testpilot.studiesWindow.willFinish
+msgid "Will finish on %S"
+msgstr "Críochnóidh sé ar %S"
+
+#: testpilot.studiesWindow.proposeStudy
+msgid "Propose your own study"
+msgstr "Mol do staidéar féin"
+
+# for pages
+#. # for pages
+#: testpilot.page.commentsAndDiscussions
+msgid "Comments & Discussions »"
+msgstr "Trácht agus Plé »"
+
+#: testpilot.page.proposeATest
+msgid "Propose a Test »"
+msgstr "Mol Tástáil »"
+
+#: testpilot.page.testpilotOnTwitter
+msgid "@MozTestPilot on Twitter »"
+msgstr "@MozTestPilot ar Twitter »"
+
+# status page
+#. # status page
+#: testpilot.statusPage.uploadingData
+msgid "Now uploading data…"
+msgstr "Sonraí á n-uasluchtú anois…"
+
+#: testpilot.statusPage.uploadErrorMsg
+msgid ""
+"Oops! There was an error connecting to the Mozilla servers.  Maybe your "
+"network connection is down?"
+msgstr ""
+"Tharla earráid agus ceangal á bhunú leis na freastalaithe Mozilla.  B'fhéidir "
+"go bhfuil fadhb ann le do cheangal líonra?"
+
+#: testpilot.statusPage.willRetry
+msgid "Test Pilot will retry automatically, so it's OK to close this page now."
+msgstr ""
+"Déanfaidh Test Pilot iarracht eile go huathoibríoch, mar sin is féidir leat "
+"an leathanach seo a dhúnadh anois."
+
+#: testpilot.statusPage.endedAlready
+msgid "(It has already ended and you should not be seeing this page)"
+msgstr ""
+"(Tá sé críochnaithe cheana agus ní cóir go bhfuil tú ag féachaint ar an "
+"leathanach seo)"
+
+#: testpilot.statusPage.todayAt
+msgid "today, at %S"
+msgstr "inniu, ag %S"
+
+#: testpilot.statusPage.endOn
+msgid "on %S"
+msgstr "ar %S"
+
+# LOCALIZATION NOTE (numExtensions): Semi-colon list of plural forms.
+# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 = number of extensions
+# example: "2 extensions"
+#. # LOCALIZATION NOTE (numExtensions): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # #1 = number of extensions
+#. # example: "2 extensions"
+#: testpilot.statusPage.numExtensions
+msgid "#1 extension;#1 extensions"
+msgstr ""
+"#1 eisínteacht;#1 eisínteacht;#1 eisínteacht;#1 n-eisínteacht;#1 eisínteacht"
+
+#: testpilot.statusPage.recursEveryNumberOfDays
+msgid "This test recurs every %S days. Each time it completes:"
+msgstr "Atarlaíonn an triail seo gach %S lá. Gach uair a chríochnaíonn sé:"
+
+#: testpilot.statusPage.askMeBeforeSubmitData
+msgid "Ask me whether I want to submit my data."
+msgstr "Fiafraigh díom ar mhaith liom mo chuid sonraí a sheoladh."
+
+#: testpilot.statusPage.alwaysSubmitData
+msgid "Always submit my data, and don't ask me about it."
+msgstr "Seol mo chuid sonraí i gcónaí agus ná fiafraigh díom faoi."
+
+#: testpilot.statusPage.neverSubmitData
+msgid "Never submit my data, and don't ask me about it."
+msgstr "Ná seol mo chuid sonraí riamh, agus ná fiafraigh díom faoi."
+
+#: testpilot.statusPage.loading
+msgctxt "testpilot.statusPage.loading"
+msgid "Loading, please wait a moment…"
+msgstr "Á luchtú, fan go fóill…"
+
+# quit page
+#. # quit page
+#: testpilot.quitPage.aboutToQuit
+msgid "You are about to quit the \"%S\" study."
+msgstr "Tá tú ar tí éirí as an staidéar \"%S\"."
+
+#: testpilot.quitPage.optionalMessage
+msgid ""
+"(Optional) If you have a minute, please let us know why you have chosen to "
+"quit the study."
+msgstr ""
+"(Roghnach) Má tá am saor agat, cuir in iúl dúinn cén fáth ar éirigh tú as an "
+"staidéar."
+
+#: testpilot.quitPage.reason
+msgid "Reason:"
+msgstr "Fáth:"
+
+#: testpilot.quitPage.recurringStudy
+msgid ""
+"This is a recurring study. Normally we will let you know the next time we run "
+"the study.  If you never want to hear about this study again, check the box "
+"below:"
+msgstr ""
+"Is staidéar atarlaithe é seo.  De ghnáth, cuirfimid in iúl duit an chéad uair "
+"eile a dhéanfaimid an staidéar.  Mura mian leat cloisteáil uainn faoin "
+"staidéar seo, cuir tic sa bhosca thíos:"
+
+#: testpilot.quitPage.quitForever
+msgid "Quit this recurring study."
+msgstr "Éirigh as an staidéar atarlaithe seo."
+
+#: testpilot.quitPage.quitStudy
+msgid "Quit the Study »"
+msgstr "Éirigh as an Staidéar »"
+
+# welcome page
+#. # welcome page
+#: testpilot.welcomePage.thankYou
+msgid "Thank You for Joining the Test Pilot Team!"
+msgstr "Go raibh maith agat as bheith linn ar Fhoireann Test Pilot!"
+
+# LOCALIZATION NOTE (getting_started):
+# link title for http://en-US.www.mozilla.com/en-US/firefox/central/
+#: testpilot.welcomePage.gettingStarted
+msgid "Getting Started"
+msgstr "Tús Maith"
+
+#: testpilot.welcomePage.pleaseTake
+msgid "Please take the"
+msgstr "Glac páirt sa"
+
+#: testpilot.welcomePage.backgroundSurvey
+msgid "Pilot Background Survey"
+msgstr "Suirbhé Cúlra Test Pilot"
+
+#: testpilot.welcomePage.clickToOpenStudiesWindow
+msgid "Click here to see the studies that are currently running."
+msgstr "Cliceáil anseo chun na staidéir atá ar siúl faoi láthair a fheiceáil."
+
+#: testpilot.welcomePage.testpilotAddon
+msgid "Test Pilot Add-on"
+msgstr "Breiseán Test Pilot"
+
+#: testpilot.welcomePage.iconExplanation
+msgid "« look for this icon in the bottom right of the mail window."
+msgstr ""
+"« lorg an deilbhín seo ag bun na fuinneoige ríomhphoist ar thaobh na láimhe "
+"deise."
+
+#: testpilot.welcomePage.iconExplanation2
+msgid "« look for this icon in the Tools menu."
+msgstr "« lorg an deilbhín seo sa roghchlár Uirlisí."
+
+#: testpilot.welcomePage.moreIconExplanation
+msgid "You can click on it to get the main Test Pilot menu."
+msgstr "Is féidir é a chliceáil chun príomhroghchlár Test Pilot a oscailt."
+
+#: testpilot.welcomePage.moreIconExplanation2
+msgid ""
+"Use the sub-menu to see what Test Pilot studies are running on your computer "
+"and to set your preferences."
+msgstr ""
+"Gheobhaidh tú liosta de na staidéir Test Pilot atá ar siúl ar do ríomhaire san fho-roghchlár."
+
+#: testpilot.welcomePage.notificationInfo
+msgid "The icon will pop up a notification when a study needs your attention."
+msgstr ""
+"Taispeánfaidh an deilbhín fógra nuair a chaithfidh tú aire a thabhairt do "
+"staidéar."
+
+#: testpilot.welcomePage.notificationInfo2
+msgid ""
+"The icon will appear and pop up a notification when a study needs your "
+"attention."
+msgstr ""
+"Feicfidh tú an deilbhín seo agus fógra nuair a chaithfidh tú aire a thabhairt "
+"do staidéar."
+
+#: testpilot.welcomePage.legalNotices
+msgid "Legal Notices"
+msgstr "Fógraí Dlí"
+
+# survey page
+#. # survey page
+#: testpilot.surveyPage.saveAnswers
+msgid "Save Answers"
+msgstr "Sábháil Freagraí"
+
+#: testpilot.surveyPage.submitAnswers
+msgid "Submit Answers"
+msgstr "Seol Freagraí"
+
+#: testpilot.surveyPage.changeAnswers
+msgid "Change Answers"
+msgstr "Athraigh Freagraí"
+
+#: testpilot.surveyPage.loading
+msgctxt "testpilot.surveyPage.loading"
+msgid "Loading, please wait a moment…"
+msgstr "Á luchtú, fan go fóill…"
+
+#: testpilot.surveyPage.thankYouForFinishingSurvey
+msgid ""
+"Thank you for finishing this survey. Your answers will be uploaded along with "
+"the next set of experimental data."
+msgstr ""
+"Go raibh maith agat as an tsuirbhé seo a chríochnú. Uasluchtófar do chuid "
+"freagraí maraon leis an chéad tacar eile de shonraí turgnamhacha."
+
+#: testpilot.surveyPage.reviewOrChangeYourAnswers
+msgid ""
+"If you would like to review or change your answers, you can do so at any time "
+"using the button below."
+msgstr ""
+"Más mian leat do chuid freagraí a athbhreithniú nó a athrú, is féidir é seo a "
+"dhéanamh am ar bith leis an gcnaipe thíos."
+
+# modules/task.js
+#. # modules/task.js
+#: testpilot.finishedTask.finishedStudy
+msgid "Excellent! You finished the \"%S\" Study!"
+msgstr "Go hiontach!  Chríochnaigh tú an staidéar \"%S\"!"
+
+#: testpilot.finishedTask.allRelatedDataDeleted
+msgid "All data related to this study has been removed from your computer."
+msgstr ""
+"Scriosadh na sonraí go léir a bhain leis an staidéar seo ó do ríomhaire."
+
+# modules/setup.js
+#. # modules/setup.js
+#: testpilot.notification.update
+msgid "Update…"
+msgstr "Nuashonraigh…"
+
+#: testpilot.notification.thankYouForUploadingData
+msgid "Thanks!"
+msgstr "GRMA!"
+
+#: testpilot.notification.thankYouForUploadingData.message
+msgid "Thank you for uploading your data."
+msgstr "Go raibh maith agat as do chuid sonraí a uasluchtú."
+
+#: testpilot.notification.readyToSubmit
+msgid "Ready to Submit"
+msgstr "Réidh le Seoladh"
+
+#: testpilot.notification.readyToSubmit.message
+msgid ""
+"The Test Pilot \"%S\" study is finished gathering data and is ready to submit."
+msgstr ""
+"Tá an staidéar Test Pilot \"%S\" críochnaithe agus tá sé réidh do chuid "
+"sonraí a sheoladh."
+
+#: testpilot.notification.newTestPilotStudy
+msgid "New Test Pilot Study"
+msgstr "Staidéar Nua Test Pilot"
+
+#: testpilot.notification.newTestPilotStudy.pre.message
+msgid "The Test Pilot \"%S\" study is about to begin."
+msgstr "Tá an staidéar Test Pilot \"%S\" ar tí tosú."
+
+#: testpilot.notification.newTestPilotSurvey
+msgid "New Test Pilot Survey"
+msgstr "Suirbhé Nua Test Pilot"
+
+#: testpilot.notification.newTestPilotSurvey.message
+msgid "The Test Pilot \"%S\" survey is available."
+msgstr "Tá an suirbhé Test Pilot \"%S\" ar fáil."
+
+#: testpilot.notification.newTestPilotResults
+msgid "New Test Pilot Results"
+msgstr "Torthaí Nua Test Pilot"
+
+#: testpilot.notification.newTestPilotResults.message
+msgid "New results are now available for the Test Pilot \"%S\" study."
+msgstr "Tá torthaí nua don staidéar Test Pilot \"%S\" ar fáil anois."
+
+#: testpilot.notification.autoUploadedData
+msgid "Thank you!"
+msgstr "Go raibh maith agat!"
+
+#: testpilot.notification.autoUploadedData.message
+msgid ""
+"The Test Pilot \"%S\" study is completed and your data has been submitted!"
+msgstr ""
+"Tá an staidéar Test Pilot \"%S\" críochnaithe agus seoladh do chuid sonraí!"
+
+#: testpilot.notification.extensionUpdate
+msgid "Extension Update"
+msgstr "Nuashonrú Eisínteachta"
+
+#: testpilot.notification.extensionUpdate.message
+msgid ""
+"One of your studies requires a newer version of Test Pilot. You can get the "
+"latest version using the Add-ons window."
+msgstr ""
+"Tá leagan níos nuaí de Test Pilot de dhíth le haghaidh ceann de do chuid "
+"staidéar. Is féidir an leagan is nuaí a fháil trí fhuinneog na mbreiseán."
+
+#. # modules/setup.js - doorhanger notification buttons
+#: testpilot.notification.cancelLabel
+msgid "Cancel Study"
+msgstr "Cealaigh Staidéar"
+
+#: testpilot.notification.alwaysSubmitLabel
+msgid "Don't Ask, Always Submit"
+msgstr "Ná Fiafraigh, Seol i gCónaí"
+
+#: testpilot.notification.dontShowNewLabel
+msgid "Don't Notify Me of New Studies"
+msgstr "Ná cuir in iúl dom nuair a bheidh staidéar nua ann"
+
+#: testpilot.notification.seeAllStudiesLabel
+msgid "See All User Studies"
+msgstr "Na Staidéir Úsáideora Go Léir"
+
+#: testpilot.notification.seeYourData
+msgid "See Your Data"
+msgstr "Do Chuid Sonraí"
+
 # LOCALIZATION NOTE:
 # This file must be saved as UTF8
 # Accesskeys are defined by prefixing the letter that is to be used for the
@@ -27711,10 +28244,6 @@ msgstr "R&oghanna $BrandShortName"
 #: CONTEXT_SAFE_MODE
 msgid "$BrandShortName &Safe Mode"
 msgstr "Mód &Sábháilteachta $BrandShortName"
-
-#: SAFE_MODE
-msgid "Safe Mode"
-msgstr "Mód Slán"
 
 #: OPTIONS_PAGE_TITLE
 msgid "Setup Type"

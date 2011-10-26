@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-26 09:29-0500\n"
+"POT-Creation-Date: 2011-09-27 15:46-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -535,8 +535,9 @@ msgstr "R"
 msgid "Start New Session"
 msgstr "Tosaigh Seisiún Nua"
 
-#: restorepage.cancel.access securityTab.accesskey
-#: cmd_showSuggestions_accesskey error.sync.tryAgainButton.accesskey
+#: restorepage.cancel.access confirmNavigationAway.buttonStayAccesskey
+#: securityTab.accesskey cmd_showSuggestions_accesskey
+#: style.highlighter.accesskey error.sync.tryAgainButton.accesskey
 #: savePageCmd.commandkey
 msgid "S"
 msgstr "S"
@@ -1245,6 +1246,15 @@ msgstr "&Scrúdaigh"
 msgid "I"
 msgstr "I"
 
+#: inspectContextMenu.label
+msgid "Inspect Element"
+msgstr "Scrúdaigh Eilimint"
+
+#: inspectContextMenu.accesskey
+msgctxt "inspectContextMenu.accesskey"
+msgid "Q"
+msgstr "Q"
+
 #. This menu item label appears
 #. -  in the Tools menu. See bug 653093.
 #. -  The Scratchpad is intended to provide a simple text editor for creating
@@ -1267,7 +1277,12 @@ msgstr "VK_F4"
 msgid "F4"
 msgstr "F4"
 
-#: inspectPanelTitle.label
+#. #-#-#-#-#  chromebrowserinspector.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (htmlPanel): Used in the Inspector tool's openInspectorUI
+#. # method when registering the HTML panel.
+#. # LOCALIZATION NOTE (htmlPanel.label): This is a lable for a button that
+#. # activates the Web Developer->Inspect UI's HTML Tree Panel.
+#: inspectPanelTitle.label htmlPanel.label
 msgid "HTML"
 msgstr "HTML"
 
@@ -1456,8 +1471,12 @@ msgstr "Baile"
 msgid "Show All History"
 msgstr "Taispeáin an Stair Iomlán"
 
-#: showAllHistoryCmd.commandkey cmd_clearHistory_accesskey accesskey-help
-#: hideButton.accesskey
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserinspector.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (htmlPanel.accesskey): The key bound to the HTML panel's
+#. # toolbar button.
+#: showAllHistoryCmd.commandkey htmlPanel.accesskey cmd_clearHistory_accesskey
+#: accesskey-help hideButton.accesskey
 msgid "H"
 msgstr "H"
 
@@ -1515,7 +1534,7 @@ msgid "l"
 msgstr "l"
 
 #: urlbar.placeholder
-msgid "Go to a Web Site"
+msgid "Go to a Website"
 msgstr "Téigh go Suíomh Gréasáin"
 
 #: urlbar.accesskey
@@ -1940,6 +1959,7 @@ msgid "Quit &brandShortName;"
 msgstr "Scoir &brandShortName;"
 
 #: quitApplicationCmdMac.key
+msgctxt "quitApplicationCmdMac.key"
 msgid "Q"
 msgstr "Q"
 
@@ -1969,8 +1989,8 @@ msgid "&Basic Page Style"
 msgstr "Stíl Leathanaigh &Bhunúsach"
 
 #: pageReportIcon.tooltip
-msgid "Change pop-up blocking settings for this web site"
-msgstr "Athraigh socruithe blocála preabtha don suíomh Gréasáin seo"
+msgid "Change pop-up blocking settings for this website"
+msgstr "Athraigh socruithe do phreabfhuinneoga ón suíomh Gréasáin seo"
 
 #: allowPopups.accesskey
 msgctxt "allowPopups.accesskey"
@@ -2050,7 +2070,7 @@ msgid "Cancel"
 msgstr "Cealaigh"
 
 #: identity.unverifiedsite2 identity.unknown.tooltip
-msgid "This web site does not supply identity information."
+msgid "This website does not supply identity information."
 msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena aitheantas."
 
 #: identity.connectedTo
@@ -2821,13 +2841,13 @@ msgid "%S, %S"
 msgstr "%S, %S"
 
 #: identity.encrypted
-msgid "Your connection to this web site is encrypted to prevent eavesdropping."
+msgid "Your connection to this website is encrypted to prevent eavesdropping."
 msgstr ""
 "Tá do cheangal leis an suíomh Gréasáin seo criptithe le bac a chur ar "
 "chúléisteacht."
 
 #: identity.unencrypted
-msgid "Your connection to this web site is not encrypted."
+msgid "Your connection to this website is not encrypted."
 msgstr "Níl do cheangal leis an suíomh Gréasáin seo criptithe."
 
 #: identity.mixed_content
@@ -3145,15 +3165,17 @@ msgid "Learn More"
 msgstr "Tuilleadh Eolais"
 
 #. # Telemetry prompt
-#. # LOCALIZATION NOTE (telemetryText): %1$S will be replaced by brandFullName,
+#. # LOCALIZATION NOTE (telemetryPrompt): %1$S will be replaced by brandFullName,
 #. # and %2$S by the value of the toolkit.telemetry.server_owner preference.
-#: telemetryText
+#: telemetryPrompt
 msgid ""
-"Would you like to help improve %1$S by automatically reporting memory usage, "
-"performance, and responsiveness to %2$S?"
+"Will you help improve %1$S by sending anonymous information about "
+"performance, hardware characteristics, feature usage, and browser "
+"customizations to %2$S?"
 msgstr ""
-"An bhfuil fonn ort cabhrú linn feabhas a chur ar %1$S trí thuairiscí "
-"uathoibríocha a dhéanamh ar úsáid chuimhne, luas, agus freagracht do %2$S?"
+"An bhfuil fonn ort cabhrú linn feabhas a chur ar %1$S trí thuairiscí gan ainm "
+"maidir le luas an bhrabhsálaí, airíonna crua-earra, úsáid gnéithe, agus "
+"saincheapadh a sheoladh chuig %2$S?"
 
 #: telemetryLinkLabel
 msgctxt "telemetryLinkLabel"
@@ -3459,6 +3481,36 @@ msgstr "Cuir Feidhmchlár Leis"
 #: protocolHandlerRegistered
 msgid "%S has already been added as an application for %S links."
 msgstr "Tá %S in úsáid cheana mar fheidhmchlár le haghaidh nasc %S."
+
+#. # LOCALIZATION NOTE (confirmNavigationAway): Used in the Inspector tool, when
+#. # the user tries to navigate away from a web page, to confirm the change of
+#. # page.
+#: confirmNavigationAway.message
+msgid ""
+"Leaving this page will close the Inspector and the changes you have made will "
+"be lost."
+msgstr ""
+"Má fhagann tú an leathanach seo, dúnfar an Scrúdaitheoir agus caillfidh tú na "
+"hathruithe a rinne tú."
+
+#: confirmNavigationAway.buttonLeave OnBeforeUnloadLeaveButton
+msgid "Leave Page"
+msgstr "Fág an Leathanach"
+
+#: confirmNavigationAway.buttonLeaveAccesskey CertDumpAVALocality
+#: saveBodies.accesskey restartLaterButton.accesskey
+msgid "L"
+msgstr "L"
+
+#: confirmNavigationAway.buttonStay OnBeforeUnloadStayButton
+msgid "Stay on Page"
+msgstr "Fan Anseo"
+
+#. # LOCALIZATION NOTE (htmlPanel.tooltiptext): The text that appears when a user
+#. # hovers over the HTML panel's toolbar button.
+#: htmlPanel.tooltiptext
+msgid "HTML panel"
+msgstr "Painéal HTML"
 
 #: migrationWizard.title
 msgid "Import Wizard"
@@ -4084,7 +4136,7 @@ msgid "Unknown"
 msgstr "Anaithnid"
 
 #: securityView.identity.header
-msgid "Web Site Identity"
+msgid "Website Identity"
 msgstr "Aitheantas an tSuímh Ghréasáin"
 
 #: securityView.identity.owner
@@ -4092,7 +4144,7 @@ msgid "Owner:"
 msgstr "Úinéir:"
 
 #: securityView.identity.domain
-msgid "Web site:"
+msgid "Website:"
 msgstr "Suíomh Gréasáin:"
 
 #: securityView.identity.verifier
@@ -4104,11 +4156,11 @@ msgid "Privacy &amp; History"
 msgstr "Príobháideacht agus Stair"
 
 #: securityView.privacy.history
-msgid "Have I visited this web site prior to today?"
+msgid "Have I visited this website prior to today?"
 msgstr "An ndearna mé cuairt ar an suíomh seo roimh inniu?"
 
 #: securityView.privacy.cookies
-msgid "Is this web site storing information (cookies) on my computer?"
+msgid "Is this website storing information (cookies) on my computer?"
 msgstr ""
 "An bhfuil an suíomh Gréasáin seo ag stóráil faisnéise (fianáin) ar mo "
 "ríomhaire?"
@@ -4123,7 +4175,7 @@ msgid "k"
 msgstr "k"
 
 #: securityView.privacy.passwords
-msgid "Have I saved any passwords for this web site?"
+msgid "Have I saved any passwords for this website?"
 msgstr "An bhfuil focail fhaire sábháilte agam le haghaidh an tsuímh seo?"
 
 #: securityView.privacy.viewPasswords
@@ -4167,7 +4219,7 @@ msgstr "Fís"
 msgid "Audio"
 msgstr "Fuaim"
 
-#: mediaBGImg
+#: mediaBGImg group.Background
 msgid "Background"
 msgstr "Cúlra"
 
@@ -4248,7 +4300,7 @@ msgstr "Meitea (%S clib)"
 
 #: generalSiteIdentity
 msgid ""
-"This web site is owned by %S\n"
+"This website is owned by %S\n"
 "This has been verified by %S"
 msgstr ""
 "Is le %S an suíomh Gréasáin seo\n"
@@ -4267,7 +4319,7 @@ msgid "XML"
 msgstr "XML"
 
 #: securityNoOwner
-msgid "This web site does not supply ownership information."
+msgid "This website does not supply ownership information."
 msgstr "Ní sholáthraíonn an suíomh seo faisnéis maidir lena úinéirí."
 
 #: securityOneVisit
@@ -4284,8 +4336,8 @@ msgstr "%S uaire"
 #. #   %1$S = size (in bytes or megabytes, ...)
 #. #   %2$S = unit of measure (bytes, KB, MB, ...)
 #: indexedDBUsage
-msgid "This web site is using %1$S %2$S"
-msgstr "Tá an suíomh seo ag baint úsáide as %1$S %2$S"
+msgid "This website is using %1$S %2$S"
+msgstr "Tá an suíomh Gréasáin seo ag úsáid %1$S %2$S"
 
 #: dialogAcceptLabelAddItem addEngineAddButtonLabel
 msgid "Add"
@@ -4811,6 +4863,10 @@ msgstr "Cuardaigh Leabharmharcanna"
 msgid "Search History"
 msgstr "Stair an Chuardaigh"
 
+#: searchDownloads
+msgid "Search Downloads"
+msgstr "Cuardaigh Íosluchtuithe"
+
 #: searchCurrentDefault
 msgid "Search in '%S'"
 msgstr "Cuardaigh i \"%S\""
@@ -5040,8 +5096,8 @@ msgstr "#1 chuairt;#1 chuairt;#1 chuairt;#1 gcuairt;#1 cuairt"
 
 #: passwordsCount
 msgid ""
-"#1 password is stored for this web site.;#1 passwords are stored for this web "
-"site."
+"#1 password is stored for this website.;#1 passwords are stored for this "
+"website."
 msgstr ""
 "Tá #1 fhocal faire sábháilte le haghaidh an tsuímh Ghréasáin seo.;Tá #1 "
 "fhocal faire sábháilte le haghaidh an tsuímh Ghréasáin seo.;Tá #1 fhocal "
@@ -5050,8 +5106,7 @@ msgstr ""
 "haghaidh an tsuímh Ghréasáin seo."
 
 #: cookiesCount
-msgid ""
-"#1 cookie is set for this web site.;#1 cookies are set for this web site."
+msgid "#1 cookie is set for this website.;#1 cookies are set for this website."
 msgstr ""
 "Tá #1 fhianán socraithe le haghaidh an tsuímh Ghréasáin seo.;Tá #1 fhianán "
 "socraithe le haghaidh an tsuímh Ghréasáin seo.;Tá #1 fhianán socraithe le "
@@ -5072,10 +5127,10 @@ msgid "Search for te&xt when I start typing"
 msgstr "Cuardaigh &téacs nuair a thosóidh mé ag clóscríobh"
 
 #: blockAutoRefresh.label blockAutoRefresh.accesskey
-msgid "Warn me when we&b sites try to redirect or reload the page"
+msgid "Warn me when we&bsites try to redirect or reload the page"
 msgstr ""
 "Ta&bhair rabhadh dom nuair a dhéanann suímh Ghréasáin iarracht leathanach a "
-"athluchtú nó a atreorú."
+"athluchtú nó a atreorú"
 
 #: browsing.label
 msgid "Browsing"
@@ -5974,9 +6029,9 @@ msgstr "Úsáid an Leathanach &Reatha"
 msgid "Use Current Pages"
 msgstr "Úsáid na Leathanaigh Reatha"
 
-#: useBookmark.label useBookmark.accesskey
-msgid "Use &Bookmark"
-msgstr "Úsáid Lea&bharmharc"
+#: chooseBookmark.label chooseBookmark.accesskey
+msgid "Use &Bookmark…"
+msgstr "Úsáid Lea&bharmharc…"
 
 #: restoreDefault.label restoreDefault.accesskey
 msgid "&Restore to Default"
@@ -6042,7 +6097,7 @@ msgid "R&emove All Sites"
 msgstr "Scrios na Suímh Uil&e"
 
 #: address.label address.accesskey
-msgid "A&ddress of web site:"
+msgid "A&ddress of website:"
 msgstr "Seola&dh an tsuímh Ghréasáin:"
 
 #: block.label block.accesskey
@@ -6122,13 +6177,13 @@ msgstr "Réamhshocraithe (%S)"
 #. #### Permissions Manager
 #: cookiepermissionstext
 msgid ""
-"You can specify which web sites are always or never allowed to use cookies.  "
+"You can specify which websites are always or never allowed to use cookies.  "
 "Type the exact address of the site you want to manage and then click Block, "
 "Allow for Session, or Allow."
 msgstr ""
-"Is féidir na suímh a bhfuil nó nach bhfuil cead acu fianáin a úsáid a shonrú. "
-"Clóscríobh seoladh cruinn an tsuímh a theastaíonn a bhainistiú agus ansin "
-"cliceáil Coisc, Ceadaigh don Seisiún, nó Ceadaigh."
+"Is féidir na suímh a bhfuil nó nach bhfuil cead acu fianáin a úsáid a "
+"shonrú. Clóbhuail seoladh cruinn an tsuímh a theastaíonn a bhainistiú agus "
+"ansin cliceáil Coisc, Ceadaigh don Seisiún, nó Ceadaigh."
 
 #: cookiepermissionstitle
 msgid "Exceptions - Cookies"
@@ -6136,8 +6191,8 @@ msgstr "Eisceachtaí - Fianán"
 
 #: addonspermissionstext
 msgid ""
-"You can specify which web sites are allowed to install add-ons. Type the "
-"exact address of the site you want to allow and then click Allow."
+"You can specify which websites are allowed to install add-ons. Type the exact "
+"address of the site you want to allow and then click Allow."
 msgstr ""
 "Is féidir na suímh a bhfuil cead acu breiseáin a shuiteáil a shonrú. "
 "Clóscríobh seoladh cruinn an tsuímh a theastaíonn uait a cheadú agus ansin "
@@ -6149,7 +6204,7 @@ msgstr "Suíomhanna Ceadaithe - Suiteáil Bhreiseán"
 
 #: popuppermissionstext
 msgid ""
-"You can specify which web sites are allowed to open pop-up windows. Type the "
+"You can specify which websites are allowed to open pop-up windows. Type the "
 "exact address of the site you want to allow and then click Allow."
 msgstr ""
 "Is féidir na suímh a bhfuil cead acu preabfhuinneoga a oscailt a shonrú. "
@@ -6162,7 +6217,7 @@ msgstr "Suíomhanna ceadaithe chun preabfhuinneoga a oscailt"
 
 #: imagepermissionstext
 msgid ""
-"You can specify which web sites are allowed to load images. Type the exact "
+"You can specify which websites are allowed to load images. Type the exact "
 "address of the site you want to manage and then click Block or Allow."
 msgstr ""
 "Is féidir na suímh a bhfuil cead acu íomhánna a luchtú a shonrú. Clóscríobh "
@@ -6380,7 +6435,7 @@ msgid "Tracking"
 msgstr "Rianú"
 
 #: doNotTrack.label doNotTrack.accesskey
-msgid "Tell web sites I &do not want to be tracked"
+msgid "Tell websites I &do not want to be tracked"
 msgstr "Cuir in iúl &do shuímh Ghréasáin gan mé a rianú"
 
 #: history.label
@@ -6470,7 +6525,7 @@ msgstr ""
 #: rememberDescription.label
 msgid ""
 "&brandShortName; will remember your browsing, download, form and search "
-"history, and keep cookies from Web sites you visit."
+"history, and keep cookies from websites you visit."
 msgstr ""
 "Meabhróidh &brandShortName; do stair bhrabhsála, íosluchtaithe, fhoirme agus "
 "chuardaigh, agus coimeádfaidh sé fianáin ó na suímh Gréasáin a thugann tú "
@@ -6635,9 +6690,9 @@ msgstr "Féach ar Chuóta"
 msgid "Change Password…"
 msgstr "Athraigh an Focal Faire…"
 
-#: mySyncKey.label change.synckey2.title
-msgid "My Sync Key"
-msgstr "M'Eochair Sync"
+#: myRecoveryKey.label change.recoverykey.title
+msgid "My Recovery Key"
+msgstr "M'Eochair Athshlánaithe"
 
 #: resetSync2.label
 msgid "Reset Sync…"
@@ -7468,11 +7523,128 @@ msgstr "Deasc Firefox.bmp"
 msgid "Saving Picture…"
 msgstr "Pictiúr á Shábháil…"
 
+#. This is the label for the checkbox
+#. -  that specifies whether the styles that are not from the user's stylesheet
+#. -  should be displayed or not.
+#: userStylesLabel
+msgid "Only user styles"
+msgstr "Stíleanna an úsáideora amháin"
+
+#. This is the label for the path of
+#. -  the highlighted element in the web page. This path is based on the document
+#. -  tree.
+#: lookingAtLabel
+msgid "Looking at:"
+msgstr "Féachaint ar:"
+
+#. For each style property
+#. -  the user can hover it and get a help link button which allows one to
+#. -  quickly jump to the documentation from the Mozilla Developer Network site.
+#. -  This is the link title shown in the hover tooltip.
+#: helpLinkTitle
+msgid "Read the documentation for this property"
+msgstr "Léigh an doiciméadú don airí seo"
+
+#. # LOCALIZATION NOTE (panelTitle): This is the panel title
+#: panelTitle
+msgid "Style Inspector"
+msgstr "Scrúdaitheoir Stíle"
+
+#. # LOCALIZATION NOTE (property.numberOfMatchedSelectors): For each style property the
+#. # panel shows the number of selectors which match the currently selected
+#. # element, counted from all stylesheets in the web page inspected.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: property.numberOfMatchedSelectors
+msgid "1 matched selector;#1 matched selectors"
+msgstr ""
+"1 roghnóir comhoiriúnach;#1 roghnóir comhoiriúnach;#1 roghnóir comhoiriúnach;"
+"#1 roghnóir comhoiriúnach;#1 roghnóir comhoiriúnach"
+
+#. # LOCALIZATION NOTE (property.numberOfUnmatchedSelectors): For each style
+#. # property the panel shows the number of selectors which do not match the
+#. # currently selected element, counted from all stylesheets in the web page
+#. # inspected.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: property.numberOfUnmatchedSelectors
+msgid "1 unmatched selector;#1 unmatched selectors"
+msgstr ""
+"1 roghnóir neamh-chomhoiriúnach;#1 roghnóir neamh-chomhoiriúnach;#1 roghnóir "
+"neamh-chomhoiriúnach;#1 roghnóir neamh-chomhoiriúnach;#1 roghnóir neamh-"
+"chomhoiriúnach"
+
+#. # LOCALIZATION NOTE (rule.status): For each style property the panel shows
+#. # the rules which hold that specific property. For every rule, the rule status
+#. # is also displayed: a rule can be the best match, a match, a parent match, or a
+#. # rule did not match the element the user has highlighted.
+#: rule.status.BEST
+msgid "Best Match"
+msgstr "Is Comhoiriúnaí"
+
+#: rule.status.MATCHED
+msgid "Matched"
+msgstr "Comhoiriúnaithe"
+
+#: rule.status.PARENT_MATCH
+msgid "Parent Match"
+msgstr "Comhoiriúnach le Tuismitheoir"
+
+#: rule.status.UNMATCHED
+msgid "Unmatched"
+msgstr "Neamh-comhoiriúnach"
+
+#. # LOCALIZATION NOTE (rule.sourceElement, rule.sourceInline): For each
+#. # style property the panel shows the rules which hold that specific property.
+#. # For every rule, the rule source is also displayed: a rule can come from a
+#. # file, from the same page (inline), or from the element itself (element).
+#: rule.sourceInline
+msgid "inline"
+msgstr "inlíne"
+
+#: rule.sourceElement
+msgid "element"
+msgstr "eilimint"
+
+#. # LOCALIZATION NOTE (group): Style properties are displayed in categories and
+#. # these are the category names.
+#: group.Text_Fonts_and_Color
+msgid "Text, Fonts & Color"
+msgstr "Téacs, Clónna agus Dath"
+
+#: group.Dimensions
+msgid "Dimensions"
+msgstr "Toisí"
+
+#: group.Positioning_and_Page_Flow
+msgid "Positioning and Page Flow"
+msgstr "Leagan Amach agus Sreabhadh an Leathanaigh"
+
+#: group.Borders
+msgid "Borders"
+msgstr "Imill"
+
+#: group.Lists
+msgid "Lists"
+msgstr "Liostaí"
+
+#: group.Effects_and_Other
+msgid "Effects and Other"
+msgstr "Maisíochtaí agus Eile"
+
+#. # LOCALIZATION NOTE (style.highlighter.button): These strings are used inside
+#. # html tree of the highlighter for the style inspector button
+#: style.highlighter.button.label
+msgid "Style"
+msgstr "Stíl"
+
+#: style.highlighter.button.tooltip
+msgid "Inspect element styles"
+msgstr "Scrúdaigh stíleanna eilimintí"
+
 #: syncBrand.fullName.label sync.update.title
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
-#. # LOCALIZATION NOTE (change.password.title): This (and associated change.password/passphrase) are used when the user elects to change their password.
+#. #LOCALIZATION NOTE (change.password.title): This (and associated change.password/passphrase) are used when the user elects to change their password.
 #: change.password.title
 msgid "Change your Password"
 msgstr "Athraigh d'Fhocal Faire"
@@ -7493,13 +7665,13 @@ msgstr "Athraíodh d'fhocal faire."
 msgid "There was an error changing your password."
 msgstr "Tharla earráid agus d'fhocal faire á athrú."
 
-#: change.password2.introText
+#: change.password3.introText
 msgid ""
 "Your password must be at least 8 characters long.  It cannot be the same as "
-"either your user name or your Sync Key."
+"either your user name or your Recovery Key."
 msgstr ""
 "Ní mór 8 gcarachtar a bheith san fhocal faire ar a laghad.  Níl cead agat "
-"d'ainm úsáideora ná d'eochair Sync a úsáid mar fhocal faire."
+"d'ainm úsáideora ná d'Eochair Athshlánaithe a úsáid mar fhocal faire."
 
 #: change.password.warningText
 msgid ""
@@ -7509,25 +7681,23 @@ msgstr ""
 "Fainic: Ní bheidh do ghléasanna eile in ann ceangal le do chuntas tar éis "
 "duit an focal faire seo a athrú."
 
-#: change.synckey.acceptButton
-msgid "Change Sync Key"
-msgstr "Athraigh Eochair Sync"
+#: change.recoverykey.acceptButton
+msgid "Change Recovery Key"
+msgstr "Athraigh an Eochair Athshlánaithe"
 
-#: change.synckey.label
-msgid "Changing Sync Key and uploading local data, please wait…"
-msgstr "Eochair Sync á athrú agus sonraí logánta á n-uasluchtú, fan go fóill…"
+#: change.recoverykey.label
+msgid "Changing Recovery Key and uploading local data, please wait…"
+msgstr ""
+"Eochair Athshlánaithe á hathrú agus sonraí logánta á n-uasluchtú, fan go "
+"fóill…"
 
-#: change.synckey2.error
-msgid "There was an error while changing your Sync Key!"
-msgstr "Tharla earráid agus d'Eochair Sync á athrú!"
+#: change.recoverykey.error
+msgid "There was an error while changing your Recovery Key!"
+msgstr "Tharla earráid agus d'Eochair Athshlánaithe á hathrú!"
 
-#: change.synckey2.success
-msgid "Your Sync Key was successfully changed!"
-msgstr "D'éirigh le hathrú d'Eochair Sync!"
-
-#: change.synckey.introText
-msgid "Firefox Cares About Your Privacy"
-msgstr "Tá do phríobháideacht tábhachtach dúinn"
+#: change.recoverykey.success
+msgid "Your Recovery Key was successfully changed!"
+msgstr "D'éirigh le hathrú d'Eochair Athshlánaithe!"
 
 #: change.synckey.introText2
 msgid ""
@@ -7537,21 +7707,21 @@ msgstr ""
 "Le do phríobháideacht a chinntiú, uasluchtófar do chuid sonraí i bhfoirm "
 "chriptithe. Ní uasluchtófar an eochair dhíchriptithe riamh."
 
-#. # LOCALIZATION NOTE (change.synckey2.warningText) "Sync" should match &syncBrand.shortName.label; from syncBrand.dtd
-#: change.synckey2.warningText
+#. # LOCALIZATION NOTE (change.recoverykey.warningText) "Sync" should match &syncBrand.shortName.label; from syncBrand.dtd
+#: change.recoverykey.warningText
 msgid ""
 "Note: Changing this will erase all data stored on the Sync server and upload "
-"new data secured by this Sync Key. Your other devices will not sync until the "
-"new Sync Key is entered for that device."
+"new data secured by this Recovery Key. Your other devices will not sync until "
+"the new Recovery Key is entered for that device."
 msgstr ""
 "Nóta: Má athraíonn tú é seo, léirscriosfar na sonraí go léir ar an "
-"bhfreastalaí Sync agus uasluchtófar sonraí nua cosanta ag an Eochair seo. Ní "
-"shioncrónóidh do ghléasanna eile go dtí go gcuirfidh tú an Eochair nua iontu "
-"freisin."
+"bhfreastalaí Sync agus uasluchtófar sonraí nua cosanta ag an Eochair "
+"Athshlánaithe seo. Ní shioncrónóidh do ghléasanna eile go dtí go gcuirfidh tú "
+"an Eochair Athshlánaithe nua iontu freisin."
 
-#: new.synckey.label
-msgid "Your Sync Key"
-msgstr "D'Eochair Sync"
+#: new.recoverykey.label
+msgid "Your Recovery Key"
+msgstr "D'Eochair Athshlánaithe"
 
 #. # LOCALIZATION NOTE (new.password.title): This (and associated new.password/passphrase) are used on a second computer when it detects that your password or passphrase has been changed on a different device.
 #: new.password.title
@@ -7580,25 +7750,23 @@ msgstr "Nuashonraigh an Focal Faire"
 msgid "Password incorrect, please try again."
 msgstr "Focal faire mícheart, bain triail eile as."
 
-#: new.synckey.title
-msgctxt "new.synckey.title"
-msgid "Update Sync Key"
-msgstr "Nuashonraigh Eochair Sync"
+#: new.recoverykey.title
+msgctxt "new.recoverykey.title"
+msgid "Update Recovery Key"
+msgstr "Nuashonraigh an Eochair Athshlánaithe"
 
-#: new.synckey2.introText
+#: new.recoverykey.introText
 msgid ""
-"Your Sync Key was changed using another device, please enter your updated "
-"Sync Key."
-msgstr "Athraíodh d'Eochair Sync ar ghléas eile; cuir an Eochair nua isteach."
+"Your Recovery Key was changed using another device, please enter your updated "
+"Recovery Key."
+msgstr ""
+"Athraíodh d'Eochair Athshlánaithe ar ghléas eile, cuir d'Eochair "
+"Athshlánaithe nua isteach."
 
-#: new.synckey.acceptButton
-msgctxt "new.synckey.acceptButton"
-msgid "Update Sync Key"
-msgstr "Nuashonraigh Eochair Sync"
-
-#: new.synckey.status.incorrect
-msgid "Sync Key incorrect, please try again."
-msgstr "Eochair Sync mhícheart, bain triail eile as."
+#: new.recoverykey.acceptButton
+msgctxt "new.recoverykey.acceptButton"
+msgid "Update Recovery Key"
+msgstr "Nuashonraigh an Eochair Athshlánaithe"
 
 #: syncKey.page.title
 msgid "Your &syncBrand.fullName.label; Key"
@@ -7803,9 +7971,9 @@ msgstr "&Cuntas"
 msgid "&Password"
 msgstr "&Focal Faire"
 
-#: signIn.syncKey.label signIn.syncKey.accesskey
-msgid "Sync &Key"
-msgstr "&Eochair Sync"
+#: signIn.recoveryKey.label signIn.recoveryKey.accesskey
+msgid "Recovery &Key"
+msgstr "&Eochair Athshlánaithe"
 
 #. New Account Page 1: Basic Account Info
 #: setup.newAccountDetailsPage.title.label
@@ -7845,37 +8013,37 @@ msgid ""
 msgstr ""
 
 #. New Account Page 2: Sync Key
-#: setup.newSyncKeyPage.title.label
+#: setup.newRecoveryKeyPage.title.label
 msgid "&brandShortName; Cares About Your Privacy"
 msgstr "&brandShortName;: Tá do phríobháideacht tábhachtach dúinn"
 
-#: setup.newSyncKeyPage.description.label
+#: setup.newRecoveryKeyPage.description.label
 msgid ""
 "To ensure your total privacy, all of your data is encrypted prior to being "
-"uploaded. The Sync Key which is necessary to decrypt your data is not "
+"uploaded. The Recovery Key which is necessary to decrypt your data is not "
 "uploaded."
 msgstr ""
-"Le do phríobháideacht a chinntiú, uasluchtófar do chuid sonraí i bhfoirm "
-"chriptithe. Ní uasluchtófar an eochair Sync a úsáidtear chun do sonraí a "
-"dhíchriptiú."
+"Le do phríobháideacht a chinntiú go hiomlán, uasluchtófar do chuid sonraí i "
+"bhfoirm chriptithe. Ní uasluchtófar an Eochair Athshlánaithe a úsáidtear chun "
+"do chuid sonraí a dhíchriptiú."
 
-#: syncKeyEntry.label syncKeyEntry.accesskey
-msgid "Your Sync &Key"
-msgstr "D'Eo&chair Sync"
+#: recoveryKeyEntry.label recoveryKeyEntry.accesskey
+msgid "Your Recovery &Key"
+msgstr "D'&Eochair Athshlánaithe"
 
 #: syncGenerateNewKey.label
 msgid "Generate a new key"
 msgstr "Gin eochair nua"
 
-#: syncKeyBackup.description
+#: recoveryKeyBackup.description
 msgid ""
-"Your Sync Key is required to access &syncBrand.fullName.label; on other "
-"machines. Please create a backup copy. We cannot help you recover your Sync "
-"Key."
+"Your Recovery Key is required to access &syncBrand.fullName.label; on other "
+"machines. Please create a backup copy. We cannot help you recover your "
+"Recovery Key."
 msgstr ""
-"Teastaíonn uait an Eochair Sync chun &syncBrand.fullName.label; a rochtain ó "
-"ríomhairí eile.  Déan cúltaca di - ní bheimid in ann d'Eochair Sync a fháil "
-"ar ais má chailleann tú í."
+"Teastaíonn uait d'Eochair Athshlánaithe chun &syncBrand.fullName.label; a "
+"rochtain ó ríomhairí eile.  Déan cúltaca di - ní bheimid in ann d'Eochair "
+"Athshlánaithe a fháil ar ais má chailleann tú í."
 
 #: button.syncKeyBackup.save.label button.syncKeyBackup.save.accesskey
 msgid "&Save…"
@@ -7930,13 +8098,13 @@ msgstr ""
 "D'éirigh le cur leis an ghléis. D'fhéadfadh an chéadshioncronú leanúint ar "
 "feadh cúpla nóiméad agus críochnóidh sé sa chúlra."
 
-#: addDevice.dialog.syncKey.label
+#: addDevice.dialog.recoveryKey.label
 msgid ""
-"To activate your device you will need to enter your Sync Key. Please print or "
-"save this key and take it with you."
+"To activate your device you will need to enter your Recovery Key. Please "
+"print or save this key and take it with you."
 msgstr ""
-"Chun do ghléas a ghníomhachtú, caithfidh tú d'Eochair Sync a chur isteach. "
-"Priontáil nó sábháil an eochair seo agus beir leat é."
+"Chun do ghléas a ghníomhachtú, caithfidh tú d'Eochair Athshlánaithe a chur "
+"isteach. Priontáil nó sábháil an eochair seo agus beir leat é."
 
 #: addDevice.dialog.connected.label
 msgid "Device Connected"
@@ -7947,15 +8115,15 @@ msgstr "Gléas Ceangailte"
 msgid "Sign In"
 msgstr "Sínigh Isteach"
 
-#: existingSyncKey.description
+#: existingRecoveryKey.description
 msgid ""
-"You can get a copy of your Sync Key by going to &syncBrand.shortName.label; "
-"Options on your other device, and selecting  &#x0022;My Sync Key&#x0022; "
-"under &#x0022;Manage Account&#x0022;."
+"You can get a copy of your Recovery Key by going to &syncBrand.shortName."
+"label; Options on your other device, and selecting  &#x0022;My Recovery "
+"Key&#x0022; under &#x0022;Manage Account&#x0022;."
 msgstr ""
-"Is féidir leat cóip de d'Eochair Shioncronaithe a fháil trí dul go dtí "
+"Is féidir leat cóip de d'Eochair Athshlánaithe a fháil trí dul go dtí "
 "&syncBrand.shortName.label; Roghanna ar do ghléas eile, agus &#x0022;"
-"M'Eochair Shioncronaithe&#x0022; a roghnú faoi &#x0022;Bainistiú "
+"M'Eochair Athshlánaithe&#x0022; a roghnú faoi &#x0022;Bainistiú "
 "Cuntais&#x0022;."
 
 #: verifying.label
@@ -8094,13 +8262,13 @@ msgstr ""
 "#1 fhocal faire;#1 fhocal faire;#1 fhocal faire;#1 bhfocal faire;#1 focal "
 "faire"
 
-#: save.synckey.title
-msgid "Save Sync Key"
-msgstr "Sábháil an Eochair Sync"
+#: save.recoverykey.title
+msgid "Save Recovery Key"
+msgstr "Sábháil an Eochair Athshlánaithe"
 
-#: save.default.label
-msgid "Firefox Sync Key.html"
-msgstr "Eochair Firefox Sync.html"
+#: save.recoverykey.defaultfilename
+msgid "Firefox Recovery Key.html"
+msgstr "Firefox Recovery Key.html"
 
 #: newAccount.action.label
 msgid ""
@@ -8162,7 +8330,7 @@ msgstr "Ceangal á dhaingniú…"
 msgid "Searching…"
 msgstr "Á Chuardach…"
 
-#: tabs.loading
+#: tabs.loading loading
 msgid "Loading…"
 msgstr "Á Luchtú…"
 
@@ -8429,7 +8597,7 @@ msgstr ""
 
 #: phishingBlocked
 msgid ""
-"The web site at %S has been reported as a web forgery designed to trick users "
+"The website at %S has been reported as a web forgery designed to trick users "
 "into sharing personal or financial information."
 msgstr ""
 "Gach seans gur dearadh suíomh Gréasáin %S chun faisnéis phearsanta nó "
@@ -8717,16 +8885,18 @@ msgid ""
 "<ul> \n"
 "<li>The page you are trying to view can not be shown because the authenticity "
 "of the received data could not be verified.</li> \n"
-"<li>Please contact the web site owners to inform them of this problem. "
+"<li>Please contact the website owners to inform them of this problem. "
 "Alternatively, use the command found in the help menu to report this broken "
 "site.</li> \n"
 "</ul>"
 msgstr ""
-"<ul> <li>Ní féidir an leathanach atá tú ag iarraidh amharc air a thaispeáint "
-"toisc nach féidir fírinne na sonraí a fuarthas a fhíordheimhniú.</li> "
+"<ul> \n"
+"<li>Ní féidir an leathanach atá tú ag iarraidh amharc air a thaispeáint toisc "
+"nach féidir fírinne na sonraí a fuarthas a fhíordheimhniú.</li> \n"
 "<li>Téigh i dteagmháil le húinéirí an tsuímh Ghréasáin leis an fhadhb seo a "
 "chur in iúl dóibh le do thoil, nó úsáid an t-ordú ar an roghchlár \"Cabhair\" "
-"chun tuairisc faoin suíomh briste seo a sheoladh.</li> </ul>"
+"chun tuairisc faoin suíomh briste seo a sheoladh.</li> \n"
+"</ul>"
 
 #: nssBadCert.title
 msgctxt "nssBadCert.title"
@@ -8777,7 +8947,7 @@ msgstr "Suíomh Amhrasta Ionsaithe!"
 msgid ""
 "<p>Attack sites try to install programs that steal private information, use "
 "your computer to attack others, or damage your system.</p> \n"
-"<p>Web site owners who believe their site has been reported as an attack site "
+"<p>Website owners who believe their site has been reported as an attack site "
 "in error may <a href='http://www.stopbadware.org/home/reviewinfo' >request a "
 "review</a>.</p>"
 msgstr ""
@@ -8785,7 +8955,7 @@ msgstr ""
 "phríobháideach, a úsáideann do ríomhaire le cinn eile a ionsaí, nó a dhéanann "
 "dochar do do ríomhaire.</p> <p>Tig le húinéirí suíomhanna Gréasáin a "
 "chreideann gur tuairiscíodh go mícheart gur suímh ionsaithe iad <a "
-"href='http://www.stopbadware.org/home/reviewinfo' >athbhreithniú a iarraidh</"
+"href='http://www.stopbadware.org/home/reviewinfo'>athbhreithniú a iarraidh</"
 "a>.</p>"
 
 #: phishingBlocked.title safeb.blocked.phishingPage.title2
@@ -11008,14 +11178,6 @@ msgstr ""
 "Tá an leathanach seo ag fiafraí díot an bhfuil tú cinnte gur mian leat fágáil "
 "- d'fhéadfaí nár sábháladh na sonraí a chuir tú isteach."
 
-#: OnBeforeUnloadStayButton
-msgid "Stay on Page"
-msgstr "Fan Anseo"
-
-#: OnBeforeUnloadLeaveButton
-msgid "Leave Page"
-msgstr "Fág an Leathanach"
-
 #: DocumentAllUsed
 msgid ""
 "Non-standard document.all property was used. Use W3C standard document."
@@ -11393,6 +11555,44 @@ msgid "Use of nsIDOMWindowInternal is deprecated. Use nsIDOMWindow instead."
 msgstr ""
 "Ní mholtar nsIDOMWindowInternal a úsáid a thuilleadh. Bain úsáid as "
 "nsIDOMWindow ina ionad."
+
+#: IsSameNodeWarning
+msgid ""
+"Use of isSameNode is deprecated.  Please use A == B to test for equality "
+"instead."
+msgstr ""
+"Ní mholtar isSameNode a úsáid a thuilleadh. Bain úsáid as A == B ina ionad."
+
+#: ReplaceWholeTextWarning
+msgid ""
+"Use of replaceWholeText is deprecated. Please call normalize() on the parent "
+"and set the data attribute, or use textContent instead."
+msgstr ""
+"Ní mholtar replaceWholeText a úsáid a thuilleadh. Bain úsáid as normalize() ar an máthair agus socraigh an aitreabúid, nó bain úsáid as textContent."
+
+#: XmlEncodingWarning
+msgid "Use of xmlEncoding is deprecated."
+msgstr "Ní mholtar xmlEncoding a úsáid a thuilleadh."
+
+#: XmlVersionWarning
+msgid "Use of xmlVersion is deprecated."
+msgstr "Ní mholtar xmlVersion a úsáid a thuilleadh."
+
+#: InputEncodingWarning
+msgid "Use of inputEncoding is deprecated."
+msgstr "Ní mholtar inputEncoding a úsáid a thuilleadh."
+
+#: XmlStandaloneWarning
+msgid "Use of xmlStandalone is deprecated."
+msgstr "Ní mholtar xmlStandalone a úsáid a thuilleadh."
+
+#: IsElementContentWhitespaceWarning
+msgid "Use of isElementContentWhitespaceWarning is deprecated."
+msgstr "Ní mholtar isElementContentWhitespaceWarning a úsáid a thuilleadh."
+
+#: GlobalStorageWarning
+msgid "Use of globalStorage is deprecated. Please use localStorage instead."
+msgstr "Ní mholtar globalStorage a úsáid a thuilleadh. Bain úsáid as localStorage ina ionad."
 
 # "left-to-right" -- leave AS IS --KPS
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
@@ -11905,6 +12105,10 @@ msgstr "Brabhsáil…"
 msgid "File Upload"
 msgstr "Uasluchtaigh Comhaid"
 
+#: MediaUpload
+msgid "Media Upload"
+msgstr "Uasluchtú Meán"
+
 #. # LOCALIZATION NOTE (IsIndexPromptWithSpace): The last character of the string 
 #. # should be a space (U+0020) in most locales. The prompt is followed by an 
 #. # input field. The space needs be escaped in the property file to avoid 
@@ -12003,33 +12207,6 @@ msgstr ""
 "Tá an \"y\" deireanach den aitreabúid \"coords\" den chlib <area shape=\"poly"
 "\"> ar iarraidh (\"x1,y1,x2,y2 …\" an fhormáid cheart)."
 
-# The contents of this file are subject to the Netscape Public
-# License Version 1.1 (the "License"); you may not use this file
-# except in compliance with the License. You may obtain a copy of
-# the License at http://www.mozilla.org/NPL/
-#
-# Software distributed under the License is distributed on an "AS
-# IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
-# implied. See the License for the specific language governing
-# rights and limitations under the License.
-#
-# The Original Code is mozilla.org code.
-#
-# The Initial Developer of the Original Code is Netscape
-# Communications Corporation. Portions created by Netscape are
-# Copyright (C) 1998 Netscape Communications Corporation. All
-# Rights Reserved.
-#
-# Contributor(s):
-# Blake Ross <blakeross@telocity.com> (Original Author)
-# Morten Nilsen <morten@nilsen.com>
-# Christian Biesinger <cbiesinger@web.de>
-# LOCALIZATION NOTE (ImageTitleWithDimensionsAndFile): first %S is filename, second %S is type, third %S is width and fourth %S is height
-# LOCALIZATION NOTE (ImageTitleWithoutDimensions): first %S is filename, second %S is type
-# LOCALIZATION NOTE (ImageTitleWithDimensions): first %S is type, second %S is width and third %S is height
-# LOCALIZATION NOTE (ImageTitleWithNeitherDimensionsNorFile): first %S is type
-# LOCALIZATION NOTE (MediaTitleWithFile): first %S is filename, second %S is type
-# LOCALIZATION NOTE (MediaTitleWithNoInfo): first %S is type
 #. #LOCALIZATION NOTE (ImageTitleWithDimensionsAndFile): first %S is filename, second %S is type, third %S is width and fourth %S is height
 #. #LOCALIZATION NOTE (ImageTitleWithoutDimensions): first %S is filename, second %S is type
 #. #LOCALIZATION NOTE (ImageTitleWithDimensions): first %S is type, second %S is width and third %S is height
@@ -12037,17 +12214,16 @@ msgstr ""
 #. #LOCALIZATION NOTE (MediaTitleWithFile): first %S is filename, second %S is type
 #. #LOCALIZATION NOTE (MediaTitleWithNoInfo): first %S is type
 #: ImageTitleWithDimensionsAndFile
-msgid "%S (%S Image, %Sx%S pixels)"
-msgstr "%S (Íomhá %S, %Sx%S picteilín)"
+msgid "%S (%S Image, %S × %S pixels)"
+msgstr "%S (Íomhá %S, %S × %S picteilín)"
 
 #: ImageTitleWithoutDimensions
 msgid "%S (%S Image)"
 msgstr "%S (Íomhá %S)"
 
-# first variable will be something like PNG, JPG
 #: ImageTitleWithDimensions
-msgid "(%S Image, %Sx%S pixels)"
-msgstr "(Íomhá %S, %Sx%S picteilín)"
+msgid "(%S Image, %S × %S pixels)"
+msgstr "(Íomhá %S, %S × %S picteilín)"
 
 # variable will be something like PNG, JPG
 #: ImageTitleWithNeitherDimensionsNorFile
@@ -12964,13 +13140,13 @@ msgstr ""
 #: nssFailure2.longDesc
 msgid ""
 "<p>The page you are trying to view can not be shown because the authenticity "
-"of the received data could not be verified.</p><ul><li>Please contact the web "
-"site owners to inform them of this problem.</li></ul>"
+"of the received data could not be verified.</p><ul><li>Please contact the "
+"website owners to inform them of this problem.</li></ul>"
 msgstr ""
 "<p>Ní féidir an leathanach atá tú ag iarraidh amharc air a thaispeáint toisc "
 "nach féidir fírinne na sonraí a fuarthas a fhíordheimhniú.</p><ul><li>Téigh i "
 "dteagmháil le húinéirí an tsuímh Ghréasáin leis an fhadhb seo a chur in iúl "
-"dóibh le do thoil.</li> </ul>"
+"dóibh le do thoil.</li></ul>"
 
 #: nssBadCert.longDesc2
 msgid ""
@@ -13764,14 +13940,6 @@ msgstr "Bhí earráid ann agus stílbhileog á luchtú: %S"
 msgid "Error during XSLT transformation: %S"
 msgstr "Earráid i rith trasfhoirmithe XSLT: %S"
 
-#: splash_screen_loading setPassword.meter.loading
-msgid "Loading"
-msgstr "Á Luchtú"
-
-#: splash_screen_installing_libs
-msgid "Installing libraries\\u2026"
-msgstr "Leabharlanna á suiteáil\\u2026"
-
 #: splash_firstrun
 msgid "Setting up &brandShortName;\\u2026"
 msgstr "&brandShortName; á shocrú\\u2026"
@@ -13935,6 +14103,27 @@ msgstr "Gan breiseáin mholta"
 msgid "Change Language"
 msgstr "Athraigh an Teanga"
 
+#: aboutHome.getInBeforeBeta
+msgid "Get in before Beta."
+msgstr "Bí linn roimh Bhéite."
+
+#: aboutHome.tryAurora
+msgid "Try Firefox Aurora and help shape the future of Firefox."
+msgstr ""
+"Bain triail as Firefox Aurora agus téigh i bhfeidhm ar thodhchaí Firefox."
+
+#. LOCALIZATION NOTE:
+#. (aboutHome.downloadAurora): First line of a multi-line button. Treat as a title.
+#: aboutHome.downloadAurora
+msgid "Download Aurora"
+msgstr "Íosluchtaigh Aurora"
+
+#. LOCALIZATION NOTE:
+#. (aboutHome.forAndroid): Second line of a multi-line button. Treat as a subtitle.
+#: aboutHome.forAndroid
+msgid "for Android"
+msgstr "le haghaidh Android"
+
 #: urlbar.emptytext
 msgid "Enter Search or Address"
 msgstr "Cuir Ábhar Cuardaigh nó Seoladh isteach"
@@ -14091,7 +14280,7 @@ msgstr "Sos"
 msgid "Resume"
 msgstr "Lean"
 
-#: downloadRetry.label
+#: downloadRetry.label addonsSearchFail.retryButton
 msgid "Retry"
 msgstr "Atriail"
 
@@ -14276,10 +14465,6 @@ msgstr "Colún:"
 msgid "Open Link in New Tab"
 msgstr "Oscail an Nasc i gCluaisín Nua"
 
-#: contextSaveLink.label
-msgid "Save Link"
-msgstr "Sábháil an Nasc"
-
 #: contextSaveImage.label SaveImageTitle
 msgid "Save Image"
 msgstr "Sábháil an Íomhá"
@@ -14287,6 +14472,18 @@ msgstr "Sábháil an Íomhá"
 #: contextCopyLink.label
 msgid "Copy Link"
 msgstr "Cóipeáil an Nasc"
+
+#: contextCopyEmail.label
+msgid "Copy Email Address"
+msgstr "Cóipeáil an Seoladh Ríomhphoist"
+
+#: contextCopyPhone.label
+msgid "Copy Phone Number"
+msgstr "Cóipeáil an Uimhir Theileafóin"
+
+#: contextCopyImageLocation.label
+msgid "Copy Image Location"
+msgstr "Cóipeáil Suíomh na hÍomhá"
 
 #: contextShareLink.label
 msgid "Share Link"
@@ -14366,10 +14563,6 @@ msgstr "Aimsigh sa Leathanach"
 msgid "Add Search Engine"
 msgstr "Inneall Cuardaigh Nua"
 
-#: pageactions.webapps.install
-msgid "Install as App"
-msgstr "Suiteáil mar Fheidhmchlár"
-
 #: appMenu.siteOptions
 msgid "Site Options"
 msgstr "Roghanna an tSuímh"
@@ -14390,53 +14583,6 @@ msgstr "Níor aimsíodh aon rud"
 #: addonsSearchFail.label
 msgid "%S couldn't retrieve add-ons"
 msgstr "Níorbh fhéidir le %S na breiseáin a fháil"
-
-#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  chromeglobaldialogOverlay.dtd.po (firefox)  #-#-#-#-#
-#. -*- Mode: HTML -*-
-#. # ***** BEGIN LICENSE BLOCK *****
-#. # Version: MPL 1.1/GPL 2.0/LGPL 2.1
-#. #
-#. # The contents of this file are subject to the Mozilla Public License Version
-#. # 1.1 (the "License"); you may not use this file except in compliance with
-#. # the License. You may obtain a copy of the License at
-#. # http://www.mozilla.org/MPL/
-#. #
-#. # Software distributed under the License is distributed on an "AS IS" basis,
-#. # WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-#. # for the specific language governing rights and limitations under the
-#. # License.
-#. #
-#. # The Original Code is mozilla.org toolkit.
-#. #
-#. # The Initial Developer of the Original Code is
-#. # Netscape Communications Corporation.
-#. # Portions created by the Initial Developer are Copyright (C) 2002
-#. # the Initial Developer. All Rights Reserved.
-#. #
-#. # Contributor(s):
-#. #
-#. # Alternatively, the contents of this file may be used under the terms of
-#. # either the GNU General Public License Version 2 or later (the "GPL"), or
-#. # the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-#. # in which case the provisions of the GPL or the LGPL are applicable instead
-#. # of those above. If you wish to allow use of your version of this file only
-#. # under the terms of either the GPL or the LGPL, and not to allow others to
-#. # use your version of this file under the terms of the MPL, indicate your
-#. # decision by deleting the provisions above and replace them with the notice
-#. # and other provisions required by the GPL or the LGPL. If you do not delete
-#. # the provisions above, a recipient may use your version of this file under
-#. # the terms of any one of the MPL, the GPL or the LGPL.
-#. #
-#. # ***** END LICENSE BLOCK *****
-#. #
-#. # WARNING!!! This file is obsoleted by the dialog.xml widget
-#. #
-#. OK Cancel Buttons
-#: addonsSearchFail.button ok.label crlAutoupdateOk OK okButton.label
-#: button-accept okButton Ok
-msgid "OK"
-msgstr "OK"
 
 #: addonsSearchSuccess2.button
 msgid "Clear Search"
@@ -14597,7 +14743,7 @@ msgstr "#1 #2"
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromemozappsdownloadsdownloads.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (yesterday): Displayed time for files finished yesterday
-#: donwloadsYesterday yesterday finduri-AgeInDays-is-1
+#: downloadsYesterday yesterday finduri-AgeInDays-is-1
 msgid "Yesterday"
 msgstr "Inné"
 
@@ -14823,6 +14969,21 @@ msgstr ""
 "Tá %S ag iarraidh go leor sonraí a stóráil ar do ghléas le haghaidh úsáide as "
 "líne."
 
+#. # Open Web Apps management API
+#: openWebappsManage.allow
+msgctxt "openWebappsManage.allow"
+msgid "Allow"
+msgstr "Ceadaigh"
+
+#: openWebappsManage.dontAllow
+msgctxt "openWebappsManage.dontAllow"
+msgid "Don't Allow"
+msgstr "Ná Ceadaigh"
+
+#: openWebappsManage.wantsTo
+msgid "%S wants to manage applications on your device."
+msgstr "Tá %S ag iarraidh feidhmchlár a bhainistiú ar do ghléas."
+
 #. # Bookmark List
 #: bookmarkList.desktop
 msgid "Desktop Bookmarks"
@@ -14873,6 +15034,10 @@ msgstr "Focal Faire"
 #: pageactions.desktop-notification
 msgid "Web Notifications"
 msgstr "Fógraí Gréasáin"
+
+#: pageactions.openWebappsManage
+msgid "Manage Web Apps"
+msgstr "Bainistigh Feidhmchláir Ghréasáin"
 
 #. # Open Search
 #: opensearch.searchWith
@@ -15325,6 +15490,56 @@ msgstr "Úsáid an Leathanach Reatha"
 msgid "Show character encoding"
 msgstr "Taispeáin an t-ionchódú carachtar"
 
+#: actionbar.default
+msgid "&brandShortName; Settings"
+msgstr "Socruithe &brandShortName;"
+
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromeglobaldialogOverlay.dtd.po (firefox)  #-#-#-#-#
+#. -*- Mode: HTML -*-
+#. # ***** BEGIN LICENSE BLOCK *****
+#. # Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. #
+#. # The contents of this file are subject to the Mozilla Public License Version
+#. # 1.1 (the "License"); you may not use this file except in compliance with
+#. # the License. You may obtain a copy of the License at
+#. # http://www.mozilla.org/MPL/
+#. #
+#. # Software distributed under the License is distributed on an "AS IS" basis,
+#. # WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. # for the specific language governing rights and limitations under the
+#. # License.
+#. #
+#. # The Original Code is mozilla.org toolkit.
+#. #
+#. # The Initial Developer of the Original Code is
+#. # Netscape Communications Corporation.
+#. # Portions created by the Initial Developer are Copyright (C) 2002
+#. # the Initial Developer. All Rights Reserved.
+#. #
+#. # Contributor(s):
+#. #
+#. # Alternatively, the contents of this file may be used under the terms of
+#. # either the GNU General Public License Version 2 or later (the "GPL"), or
+#. # the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. # in which case the provisions of the GPL or the LGPL are applicable instead
+#. # of those above. If you wish to allow use of your version of this file only
+#. # under the terms of either the GPL or the LGPL, and not to allow others to
+#. # use your version of this file under the terms of the MPL, indicate your
+#. # decision by deleting the provisions above and replace them with the notice
+#. # and other provisions required by the GPL or the LGPL. If you do not delete
+#. # the provisions above, a recipient may use your version of this file under
+#. # the terms of any one of the MPL, the GPL or the LGPL.
+#. #
+#. # ***** END LICENSE BLOCK *****
+#. #
+#. # WARNING!!! This file is obsoleted by the dialog.xml widget
+#. #
+#. OK Cancel Buttons
+#: ok.label crlAutoupdateOk OK okButton.label button-accept okButton Ok
+msgid "OK"
+msgstr "OK"
+
 #. # This is the default set of web based feed handlers shown in the reader
 #. # selection UI
 #: browser.contentHandlers.types.0.title
@@ -15374,10 +15589,6 @@ msgstr "Ceangail"
 msgid "Connected"
 msgstr "Ceangailte"
 
-#: sync.synchronize
-msgid "Enable Sync"
-msgstr "Cumasaigh Sync"
-
 #: sync.deviceName
 msgid "This device"
 msgstr "An gléas seo"
@@ -15415,9 +15626,9 @@ msgstr "Cuir faisnéis do chuntais Sync isteach"
 msgid "Account Name"
 msgstr "Ainm an Chuntais"
 
-#: sync.syncKey
-msgid "Sync Key"
-msgstr "Eochair Sync"
+#: sync.recoveryKey
+msgid "Recovery Key"
+msgstr "Eochair Athshlánaithe"
 
 #: sync.customServer
 msgid "Use custom server"
@@ -15495,6 +15706,10 @@ msgstr "Bain triail eile as"
 msgid "Manual setup"
 msgstr "Socrú de láimh"
 
+#: sync.message.notabs
+msgid "No tabs from your other computers."
+msgstr "Níl aon chluaisíní ar ríomhairí eile."
+
 #: webapps.title.placeholder
 msgid "Enter a title"
 msgstr "Cuir teideal isteach"
@@ -15518,6 +15733,10 @@ msgstr "Fógairt deisce"
 #: webapps.perm.requestedHint
 msgid "(requested)"
 msgstr "(iarrtha)"
+
+#: webapps.add-homescreen
+msgid "Add to home screen"
+msgstr "Cuir leis an scáileán baile é"
 
 #. # converted from pseudo-properties .it file
 #. # This file is in the UTF-8 encoding
@@ -17413,10 +17632,6 @@ msgstr "Cineál agus luach na haitreabúide"
 msgid "ST"
 msgstr "ST"
 
-#: CertDumpAVALocality saveBodies.accesskey restartLaterButton.accesskey
-msgid "L"
-msgstr "L"
-
 #: CertDumpAVAOrg okButton.accesskey
 msgid "O"
 msgstr "O"
@@ -18740,7 +18955,7 @@ msgstr ""
 
 #: EnterSecureMessage
 msgid ""
-"You have requested an encrypted page. The web site has identified itself "
+"You have requested an encrypted page. The website has identified itself "
 "correctly, and information you see or enter on this page can't easily be read "
 "by a third party."
 msgstr ""
@@ -18750,7 +18965,7 @@ msgstr ""
 
 #: WeakSecureMessage
 msgid ""
-"You have requested a page that uses low-grade encryption. The web site has "
+"You have requested a page that uses low-grade encryption. The website has "
 "identified itself correctly, but information you see or enter on this page "
 "could be read by a third party. "
 msgstr ""
@@ -18991,7 +19206,7 @@ msgid "Edit CA certificate trust settings"
 msgstr "Cuir socruithe muiníne do theastais na nÚdarás Deimhniúcháin in eagar"
 
 #: certmgr.editsslcert.title
-msgid "Edit web site certificate trust settings"
+msgid "Edit website certificate trust settings"
 msgstr "Cuir socruithe muiníne na dteastas ó shuímh Ghréasáin in eagar"
 
 #: certmgr.editcert.edittrust
@@ -18999,7 +19214,7 @@ msgid "Edit trust settings:"
 msgstr "Cuir socruithe muiníne in eagar:"
 
 #: certmgr.editcert.trustssl
-msgid "This certificate can identify web sites."
+msgid "This certificate can identify websites."
 msgstr "Is féidir leis an teastas seo suímh Ghréasáin a shainaithint."
 
 #: certmgr.editcert.trustemail
@@ -19352,6 +19567,10 @@ msgstr "Focal Faire Nua (Arís):"
 msgid "Password quality meter"
 msgstr "Tomhais ar cháilíocht fhocail faire"
 
+#: setPassword.meter.loading
+msgid "Loading"
+msgstr "Á Luchtú"
+
 #: resetPassword.title resetPasswordConfirmationTitle
 msgid "Reset Master Password"
 msgstr "Bánaigh an Príomhfhocal Faire"
@@ -19421,7 +19640,7 @@ msgid "You have been asked to trust a new Certificate Authority (CA)."
 msgstr "Iarrtar ort muinín a bheith agat as Údarás Deimhniúcháin nua."
 
 #: downloadCert.trustSSL
-msgid "Trust this CA to identify web sites."
+msgid "Trust this CA to identify websites."
 msgstr ""
 "Tá muinín agat as an údarás deimhniúcháin seo chun suímh Ghréasáin a "
 "shainaithint."
@@ -19892,28 +20111,27 @@ msgstr "Eagras: \"%S\""
 msgid "Issued Under: \"%S\""
 msgstr "Eisithe Faoi: \"%S\""
 
-# Page Info
 #. #Page Info
 #: pageInfo_SiteNotVerified
-msgid "Web Site Identity Not Verified"
+msgid "Website Identity Not Verified"
 msgstr "Níl aitheantas an tsuímh Ghréasáin fíoraithe."
 
 #: pageInfo_WebSiteVerified
-msgid "Web Site Identity Verified"
+msgid "Website Identity Verified"
 msgstr "Tá aitheantas an tsuímh Ghréasáin fíoraithe."
 
 #: pageInfo_Identity_Verified
 msgid ""
-"The web site %S supports authentication for the page you are viewing. The "
-"identity of this web site has been verified by %S, a certificate authority "
-"you trust for this purpose."
+"The website %S supports authentication for the page you are viewing. The "
+"identity of this website has been verified by %S, a certificate authority you "
+"trust for this purpose."
 msgstr ""
 "Tacaíonn an suíomh %S le fíordheimhniúchán don leathanach ar a bhfuil tú ag "
 "féachaint. Tá aitheantas an tsuímh seo deimhnithe ag %S, údarás deimhniúcháin "
 "a bhfuil muinín agat as le haghaidh an ghnó seo."
 
 #: pageInfo_ViewCertificate
-msgid "View the security certificate that verifies this web site's identity."
+msgid "View the security certificate that verifies this website's identity."
 msgstr ""
 "Taispeáin an teastas slándála a fhíoraíonn aitheantas an tsuímh Ghréasáin seo."
 
@@ -19922,8 +20140,7 @@ msgid "Connection Not Encrypted"
 msgstr "Níl an ceangal criptithe"
 
 #: pageInfo_Privacy_None1
-msgid ""
-"The web site %S does not support encryption for the page you are viewing."
+msgid "The website %S does not support encryption for the page you are viewing."
 msgstr ""
 "Ní thacaíonn an suíomh Gréasáin %S le criptiúchán don leathanach a bhfuil tú "
 "ag amharc air."
@@ -19973,7 +20190,7 @@ msgstr ""
 
 #: pageInfo_Privacy_Weak1
 msgid ""
-"The web site %S is using low-grade encryption for the page you are viewing."
+"The website %S is using low-grade encryption for the page you are viewing."
 msgstr ""
 "Tá an suíomh %S ag úsáid criptiúcháin de ghrád íseal don leathanach ar a "
 "bhfuil tú ag amharc."
@@ -20508,9 +20725,9 @@ msgstr "Socruithe"
 msgid "Failed to connect to the server"
 msgstr "Theip ar cheangal leis an bhfreastalaí"
 
-#: error.login.reason.synckey
-msgid "Wrong Sync Key"
-msgstr "Eochair Mhícheart Sync"
+#: error.login.reason.recoverykey
+msgid "Wrong Recovery Key"
+msgstr "Eochair Athshlánaithe Mhícheart"
 
 #: error.login.reason.account
 msgid "Incorrect account name or password"
@@ -20524,9 +20741,9 @@ msgstr "Ainm an chuntais ar iarraidh"
 msgid "Missing password"
 msgstr "Focal faire ar iarraidh"
 
-#: error.login.reason.no_synckey
-msgid "No saved Sync Key to use"
-msgstr "Níl Eochair Sync sábháilte le húsáid"
+#: error.login.reason.no_recoverykey
+msgid "No saved Recovery Key to use"
+msgstr "Níl aon Eochair Athshlánaithe ann"
 
 #: error.login.reason.server
 msgid "Server incorrectly configured"
@@ -20536,6 +20753,13 @@ msgstr "Tá cumraíocht an fhreastalaí mícheart"
 msgid "One or more data types could not be synced"
 msgstr "Níorbh fhéidir cineál nó cineálacha sonraí a shioncrónú"
 
+#: error.sync.reason.server_maintenance
+msgid ""
+"Firefox Sync server maintenance is underway, syncing will resume "
+"automatically."
+msgstr ""
+"Tá freastalaí Firefox Sync faoi chóiriú; atosóidh sioncrónú go huathoibríoch."
+
 #: invalid-captcha
 msgid "Incorrect words, try again"
 msgstr "Focail mhíchearta, bain triail eile as"
@@ -20544,34 +20768,9 @@ msgstr "Focail mhíchearta, bain triail eile as"
 msgid "Use a stronger password"
 msgstr "Úsáid focal faire níos láidre"
 
-#: change.synckey.sameAsSyncKey
-msgid "The new Sync Key cannot be the same as your Sync Key"
-msgstr ""
-"Ní cheadaítear Eochair nua Sync a úsáid atá mar an gcéanna le d'Eochair Sync"
-
-#: change.synckey.sameAsPassword
-msgid "The Sync Key cannot be the same as your password"
-msgstr ""
-"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le d'fhocal faire"
-
-#: change.synckey.sameAsUsername
-msgid "The Sync Key cannot be the same as your user name"
-msgstr ""
-"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le d'ainm úsáideora"
-
-#: change.synckey.sameAsEmail
-msgid "The Sync Key cannot be the same as your email address"
-msgstr ""
-"Ní cheadaítear Eochair Sync a úsáid atá mar an gcéanna le do sheoladh "
-"ríomhphost"
-
-#: change.synckey.tooShort
-msgid "The Sync Key entered is too short"
-msgstr "Tá an Eochair Sync róghairid"
-
-#: change.password.pwSameAsSyncKey
-msgid "Password can't match your Sync Key"
-msgstr "Ní féidir leis an bhfocal faire d'Eochair Sync a mheaitseáil"
+#: change.password.pwSameAsRecoveryKey
+msgid "Password can't match your Recovery Key"
+msgstr "Ní féidir leis an bhfocal faire d'Eochair Athshlánaithe a mheaitseáil"
 
 #: change.password.pwSameAsPassword
 msgid "Password can't match current password"
@@ -20650,6 +20849,13 @@ msgid ""
 msgstr ""
 "Tharla earráid le linn sioncrónaithe: %1$S.  Déanfaidh Sync iarracht eile go "
 "huathoibríoch."
+
+#: error.sync.prolonged_failure
+msgid ""
+"Sync has not been able to complete during the last %1$S days. Please check "
+"your network settings."
+msgstr ""
+"Níl aon sioncrónú déanta le %1$S lá anuas. Féach ar shocruithe do líonra."
 
 #: error.sync.no_node_found
 msgid ""
@@ -21014,8 +21220,8 @@ msgstr ""
 "the service(s) should be linked to the "
 
 #: rights.intro-point4b-unbranded
-msgid "Web Site Services"
-msgstr "Web Site Services"
+msgid "Website Services"
+msgstr "Website Services"
 
 #: rights.intro-point4c-unbranded
 msgid " section."
@@ -21162,14 +21368,13 @@ msgstr "Double click on the geo.enabled preference"
 msgid "Location-Aware Browsing is now disabled"
 msgstr "Location-Aware Browsing is now disabled"
 
-# intro paragraph for unbranded builds
 #. intro paragraph for unbranded builds
 #: rights.webservices-unbranded
 msgid ""
-"An overview of the web site services the product incorporates, along with "
+"An overview of the website services the product incorporates, along with "
 "instructions on how to disable them, if applicable, should be included here."
 msgstr ""
-"An overview of the web site services the product incorporates, along with "
+"An overview of the website services the product incorporates, along with "
 "instructions on how to disable them, if applicable, should be included here."
 
 # point 1 text for unbranded builds
@@ -21305,8 +21510,7 @@ msgid ""
 "  This page contains technical information that might be useful when you're \n"
 "trying to solve a problem. If you are looking for answers to common "
 "questions \n"
-"about &brandShortName;, check out our <a id='supportLink'>support web site</"
-"a>."
+"about &brandShortName;, check out our <a id='supportLink'>support website</a>."
 msgstr ""
 "Ar an leathanach seo tá eolas teicniúil a d'fhéadfadh a bheith úsáideach agus "
 "tú ag iarraidh fadhb a réiteach. Má tá freagraí á lorg agat ar cheisteanna "
@@ -21360,6 +21564,10 @@ msgstr "Gníomhaire Úsáideora"
 #: aboutSupport.appBasicsCrashIDs
 msgid "Crash Reports"
 msgstr "Tuairiscí ar Thuairteáil"
+
+#: aboutSupport.appBasicsMemoryUse
+msgid "Memory Use"
+msgstr "Úsáid Chuimhne"
 
 #: aboutSupport.show.label
 msgid "Open Containing Folder"
@@ -21429,7 +21637,7 @@ msgstr ""
 #. # LOCALIZATION NOTE The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
 #: blockedOSVersion
 msgid "Blocked for your operating system version."
-msgstr ""
+msgstr "Níl sé ar fáil ar do chóras oibriúcháin."
 
 #: direct2DEnabled
 msgid "Direct2D Enabled"
@@ -22840,6 +23048,34 @@ msgid ""
 msgstr ""
 "Tá comhéadán logála an Chonsóil Ghréasáin (console.log, console.info, console."
 "warn, console.error) díchumasaithe ag script ar an leathanach seo."
+
+#. # LOCALIZATION NOTE (inspectStyle.nullObjectPassed):
+#. # This message is returned when a null object is passed in to inspectstyle()
+#: inspectStyle.nullObjectPassed
+msgid "Object is null"
+msgstr "Réad nialasach"
+
+#. # LOCALIZATION NOTE (inspectStyle.mustBeDomNode):
+#. # This message is returned when a non-DOM node is passed in to inspectstyle()
+#: inspectStyle.mustBeDomNode
+msgid "Object must be a valid DOM node"
+msgstr "Ní mór don réad bheith ina nód bailí DOM"
+
+#. # LOCALIZATION NOTE (inspectStyle.nodeHasNoStyleProps):
+#. # This message is returned when an unstyleable object is passed in to inspectstyle()
+#: inspectStyle.nodeHasNoStyleProps
+msgid "Object cannot be styled"
+msgstr "Ní féidir stíl a chur ar an réad"
+
+#. # LOCALIZATION NOTE (inspectStyle.styleInspectorNotEnabled):
+#. # This message is returned when devtools.styleinspector.enabled is not set to
+#. # true
+#: inspectStyle.styleInspectorNotEnabled
+msgid ""
+"The style inspector is not enabled. Please set the option devtools."
+"styleinspector.enabled to true in about:config to use this command."
+msgstr ""
+"Níl an scrúdaitheoir stíle cumasaithe. Cuir an luach 'true' leis an rogha devtools.styleinspector.enabled in about:config chun an t-ordú seo a úsáid."
 
 #. # LOCALIZATION NOTE (webConsolePosition): The label shown for the menu which
 #. # allows the user to toggle between the Web Console positioning types.
@@ -26737,10 +26973,10 @@ msgstr "Ceadanna Sábhála Neamhbhailí"
 msgid "Select Download Folder"
 msgstr "Roghnaigh Fillteán an Íosluchtaithe"
 
-#. # LOCALIZATION NOTE (fileSizeWithType): first %S is type, second %S is size, and third %S is unit
-#: fileSizeWithType
-msgid "%1S (%2S %3S)"
-msgstr "%1S (%2S %3S)"
+#. # LOCALIZATION NOTE (orderedFileSizeWithType): first %S is type, second %S is size, and third %S is unit
+#: orderedFileSizeWithType
+msgid "%1$S (%2$S %3$S)"
+msgstr "%1$S (%2$S %3$S)"
 
 # LOCALIZATION NOTE (wpsDefaultOS2): OS/2 only, WPS refers to the Workplace Shell and should probably not be translated
 #. # LOCALIZATION NOTE (wpsDefaultOS2): OS/2 only, WPS refers to the Workplace Shell and should probably not be translated
@@ -27721,7 +27957,7 @@ msgid ""
 "Make &brandShortName; even faster by disabling add-ons you no longer use. Add-"
 "ons already installed by third parties will be disabled automatically unless "
 "you select them below."
-msgstr ""
+msgstr "Beidh &brandShortName; níos tapúla má dhíchumasaíonn tú breiseáin nach n-úsáideann tú a thuilleadh. Díchumasófar breiseáin a bhí suiteáilte ag tríú páirtí go huathoibríoch mura bhfuil siad roghnaithe thíos."
 
 #: select.keep
 msgid "Keep"
@@ -27770,7 +28006,7 @@ msgid ""
 "Make &brandShortName; even faster by disabling add-ons you no longer use. Add-"
 "ons already installed by third parties will be disabled automatically unless "
 "you select them below."
-msgstr ""
+msgstr "Beidh &brandShortName; níos tapúla má dhíchumasaíonn tú breiseáin nach n-úsáideann tú a thuilleadh. Díchumasófar breiseáin a bhí suiteáilte ag tríú páirtí go huathoibríoch mura bhfuil siad roghnaithe thíos."
 
 #: action.disable.heading
 msgid "The following add-ons will be disabled:"
@@ -27781,6 +28017,7 @@ msgid ""
 "The following add-ons are disabled, but will be enabled as soon as they are "
 "compatible:"
 msgstr ""
+"Tá na breiseáin seo a leanas díchumasaithe, ach beidh siad cumasaithe chomh luath agus a bheidh siad comhoiriúnach:"
 
 #: action.update.heading
 msgid "The following add-ons will be updated:"
@@ -27797,6 +28034,8 @@ msgstr "Do Chuid Breiseán á Nuashonrú"
 #: update.progress.label
 msgid "Downloading and installing updates for your selected add-ons."
 msgstr ""
+"Nuashonruithe á n-íosluchtú agus á suiteáil le haghaidh na mbreiseán "
+"roghnaithe."
 
 #: errors.heading
 msgid "&brandShortName; could not update some of your add-ons."
@@ -27807,6 +28046,7 @@ msgid ""
 "Installing updates for some of your add-ons failed. &brandShortName; will "
 "automatically try to update them again later."
 msgstr ""
+"Theip ar shuiteáil roinnt breiseán. Déanfaidh &brandShortName; iarracht iad a nuashonrú arís ar ball."
 
 #: footer.label
 msgid "You can always change your add-ons by going to the Add-ons Manager."
@@ -27824,6 +28064,13 @@ msgstr "Ar Aghaidh"
 msgid "You"
 msgstr "Tusa"
 
+#. #LOCALIZATION NOTE (source.bundled) add-ons shipped with the application, and thus
+#. # treated as installed by the user. This may be
+#. # translated as "You" or "User" depending on the locale
+#: source.bundled
+msgid "You (Bundled)"
+msgstr "Tusa (Cuachta)"
+
 #. #LOCALIZATION NOTE (source.other) add-ons installed by other applications
 #. # installed on the computer
 #: source.other
@@ -27840,7 +28087,7 @@ msgstr "Beidh sé díchumasaithe"
 
 #: action.autoupdate
 msgid "Will be updated to be compatible"
-msgstr ""
+msgstr "Beidh sé nuashonraithe le bheith comhoiriúnach"
 
 #: action.incompatible
 msgid "Will be enabled when compatible"
@@ -27848,7 +28095,7 @@ msgstr "Beidh sé cumasaithe nuair a bheidh sé comhoiriúnach"
 
 #: action.neededupdate
 msgid "Update to make compatible"
-msgstr ""
+msgstr "Nuashonraigh le bheith comhoiriúnach"
 
 #: action.unneededupdate
 msgid "Optional update"
@@ -27926,7 +28173,7 @@ msgstr ""
 "díchumasaithe faoi láthair. Tig leat an rogha seo a athrú thíos."
 
 #: found.enableXPInstall.label found.enableXPInstall.accesskey
-msgid "&Allow web sites to install software"
+msgid "&Allow websites to install software"
 msgstr "T&abhair cead do shuímh Ghréasáin bogearraí a shuiteáil"
 
 #: installing.wizard.title
