@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-03 17:37-0500\n"
+"POT-Creation-Date: 2011-12-22 10:20-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -157,6 +157,35 @@ msgstr "Fi&ll"
 #: publishSettings.label publishSettings.accesskey
 msgid "Pu&blishing Site Settings…"
 msgstr "Socruithe an tSuímh &Fhoilsithe…"
+
+#. #-#-#-#-#  editor-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  uichromecomposereditingOverlay.dtd.po (firefox)  #-#-#-#-#
+#. Toolbar buttons/items
+#: newToolbarCmd.label new.label new
+msgid "New"
+msgstr "Nua"
+
+#: newToolbarCmd.tooltip
+msgid "Create a new Composer page"
+msgstr "Cruthaigh leathanach nua Cumadóra"
+
+#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
+#. # msgHdrViewOverlay.js
+#: openToolbarCmd.label open.label openLabel
+msgid "Open"
+msgstr "Oscail"
+
+#: openToolbarCmd.tooltip
+msgid "Open a local file"
+msgstr "Oscail comhad logánta"
+
+#: saveToolbarCmd.tooltip
+msgid "Save file to a local location"
+msgstr "Sábháil comhad i suíomh logánta"
+
+#: publishToolbarCmd.tooltip
+msgid "Upload file to a remote location"
+msgstr "Uasluchtaigh comhad go suíomh cianda"
 
 #: editorWindow.titlemodifiermenuseparator titleSeparator.label
 msgid " - "
@@ -847,12 +876,12 @@ msgstr "Cill i&na Dhiaidh"
 #. #-#-#-#-#  editor-ga-IE.po (firefox)  #-#-#-#-#
 #. Delete SubMenu
 #: tableDeleteMenu.label tableDeleteMenu.accesskey deleteCmd.label
-#: deleteCmd.accesskey deleteDirectory.label deleteDirectory.accesskey
-#: identitiesListDelete.label identitiesListDelete.accesskey
-#: folderContextRemove.label folderContextRemove.accesskey
-#: removeKeywordButton.label removeKeywordButton.accesskey
-#: removeTagButton.label removeTagButton.accesskey deleteButton.label
-#: deleteButton.accesskey
+#: deleteCmd.accesskey deleteAddrBookCard.label deleteAddrBookCard.accesskey
+#: deleteDirectory.label deleteDirectory.accesskey identitiesListDelete.label
+#: identitiesListDelete.accesskey folderContextRemove.label
+#: folderContextRemove.accesskey removeKeywordButton.label
+#: removeKeywordButton.accesskey removeTagButton.label
+#: removeTagButton.accesskey deleteButton.label deleteButton.accesskey
 msgid "&Delete"
 msgstr "&Scrios"
 
@@ -890,32 +919,6 @@ msgstr "Barra Roghchláir"
 #: formatToolbar.tooltip
 msgid "Formatting Toolbar"
 msgstr "Barra Uirlisí Formáidithe"
-
-#: newToolbarCmd.label new.label new
-msgid "New"
-msgstr "Nua"
-
-#: newToolbarCmd.tooltip
-msgid "Create a new Composer page"
-msgstr "Cruthaigh leathanach nua Cumadóra"
-
-#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
-#. # msgHdrViewOverlay.js
-#: openToolbarCmd.label open.label openLabel
-msgid "Open"
-msgstr "Oscail"
-
-#: openToolbarCmd.tooltip
-msgid "Open a local file"
-msgstr "Oscail comhad logánta"
-
-#: saveToolbarCmd.tooltip
-msgid "Save file to a local location"
-msgstr "Sábháil comhad i suíomh logánta"
-
-#: publishToolbarCmd.tooltip
-msgid "Upload file to a remote location"
-msgstr "Uasluchtaigh comhad go suíomh cianda"
 
 #: cutToolbarCmd.tooltip cut.label cutButton.tooltip
 msgid "Cut"
@@ -1109,10 +1112,7 @@ msgstr "&Bain"
 msgid "Ta&ble of Contents…"
 msgstr "Clár Á&bhair…"
 
-#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
-#. LOCALIZATION NOTE attachments.accesskey This access key should correspond
-#. to the strings in attachmentCount in composeMsgs.properties
-#: editorCheck.accesskey copy.key attachments.accesskey
+#: editorCheck.accesskey copy.key
 msgid "c"
 msgstr "c"
 
@@ -1729,9 +1729,10 @@ msgstr "% den fhuinneog"
 msgid "% of table"
 msgstr "% den tábla"
 
-#: untitled
-msgid "untitled"
-msgstr "gan teideal"
+#. #LOCALIZATION NOTE (untitledTitle): %S is the window #.  No plural handling needed.
+#: untitledTitle
+msgid "untitled-%S"
+msgstr "ganteideal-%S"
 
 #: ShowToolbar
 msgid "Show Toolbar"
@@ -1943,8 +1944,7 @@ msgstr "Cmd+"
 msgid "Del"
 msgstr "Del"
 
-#: Delete deleteAddrBookCard.label deleteLabel hdrTrashButton1.label
-#: deleteButton.label
+#: Delete deleteLabel hdrTrashButton1.label deleteButton.label
 msgid "Delete"
 msgstr "Scrios"
 
@@ -5568,7 +5568,8 @@ msgstr "Léim go Greille"
 msgid "&enable Snap to Grid"
 msgstr "&cumasaigh \"Léim go Greille\""
 
-#: sizeEditField.label sizeEditField.accessKey
+#: sizeEditField.label sizeEditField.accessKey defaultSize.label
+#: defaultSize.accesskey
 msgid "&Size:"
 msgstr "&Méid:"
 
@@ -7568,6 +7569,19 @@ msgstr "&POP"
 msgid "&Leave messages on server"
 msgstr "&Fág teachtaireachtaí ar an bhfreastalaí"
 
+#: portNum.label portNum.accesskey SSLport.label SSLport.accesskey
+msgid "P&ort:"
+msgstr "P&ort:"
+
+#: defaultPortLabel.label serverPortDefault.label
+msgid "Default:"
+msgstr "Réamhshocrú:"
+
+#: defaultPortValue.label
+msgctxt "defaultPortValue.label"
+msgid ""
+msgstr ""
+
 # for when the user has an SMTP server pre-configured
 # LOCALIZATION NOTE (currentSmtpBefore.label) : Do not translate "SMTP" and "&quot;" in
 # this variable. Also, translate currentSmtpBefore.label and currentSmtpAfter.label as a single sentence,
@@ -8628,69 +8642,31 @@ msgstr "C&uardaigh:"
 msgid "Name or Email"
 msgstr "Ainm nó Seoladh Ríomhphoist"
 
-#. #-#-#-#-#  chromemessengerfolderProps.dtd.po (firefox)  #-#-#-#-#
-#. ***** BEGIN LICENSE BLOCK *****
-#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
-#. -
-#. - The contents of this file are subject to the Mozilla Public License Version
-#. - 1.1 (the "License"); you may not use this file except in compliance with
-#. - the License. You may obtain a copy of the License at
-#. - http://www.mozilla.org/MPL/
-#. -
-#. - Software distributed under the License is distributed on an "AS IS" basis,
-#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-#. - for the specific language governing rights and limitations under the
-#. - License.
-#. -
-#. - The Original Code is Mozilla Communicator.
-#. -
-#. - The Initial Developer of the Original Code is
-#. - Netscape Communications Corp.
-#. - Portions created by the Initial Developer are Copyright (C) 2000
-#. - the Initial Developer. All Rights Reserved.
-#. -
-#. - Contributor(s):
-#. -   David Bienvenu <bienvenu@netscape.com>
-#. -   Mohan Bhamidipati <mohanb@netscape.com>
-#. -   Lorenzo Colitti   <lorenzo@colitti.com>
-#. -   Stefan Borggraefe <Stefan.Borggraefe@gmx.de>
-#. -
-#. - Alternatively, the contents of this file may be used under the terms of
-#. - either of the GNU General Public License Version 2 or later (the "GPL"),
-#. - or the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-#. - in which case the provisions of the GPL or the LGPL are applicable instead
-#. - of those above. If you wish to allow use of your version of this file only
-#. - under the terms of either the GPL or the LGPL, and not to allow others to
-#. - use your version of this file under the terms of the MPL, indicate your
-#. - decision by deleting the provisions above and replace them with the notice
-#. - and other provisions required by the GPL or the LGPL. If you do not delete
-#. - the provisions above, a recipient may use your version of this file under
-#. - the terms of any one of the MPL, the GPL or the LGPL.
-#. -
-#. - ***** END LICENSE BLOCK *****
-#: addrBookCardProperties.label folderProps.windowtitle.label
-msgid "Properties"
-msgstr "Airíonna"
+#: addrBookCardProperties.label addrBookCardProperties.accesskey
+#: editButton2.label editButton2.accesskey propertiesButton.label
+#: propertiesButton.accesskey
+msgid "&Properties"
+msgstr "&Airíonna"
 
-#: addtoToFieldMenu.label
-msgid "Add to To field"
-msgstr "Cuir leis an réimse \"Chuig\""
+#: addtoToFieldMenu.label addtoToFieldMenu.accesskey
+msgid "&Add to To field"
+msgstr "&Cuir leis an réimse Chuig"
 
-#: addtoCcFieldMenu.label
-msgid "Add to Cc field"
-msgstr "Cuir leis an réimse \"Cc\""
+#: addtoCcFieldMenu.label addtoCcFieldMenu.accesskey
+msgid "Add to &Cc field"
+msgstr "Cuir &leis an réimse Cc"
 
-#: addtoBccFieldMenu.label
-msgid "Add to Bcc field"
-msgstr "Cuir leis an réimse \"Bcc\""
+#: addtoBccFieldMenu.label addtoBccFieldMenu.accesskey
+msgid "Add to &Bcc field"
+msgstr "Cuir leis an réimse &Bcc"
 
 #: toButton.label toButton.accesskey
 msgid "&Add to To:"
 msgstr "&Cuir le Chuig:"
 
 #: ccButton.label ccButton.accesskey
-msgid "A&dd to Cc:"
-msgstr "C&uir le Cc:"
+msgid "Add to &Cc:"
+msgstr "Cuir &le Cc:"
 
 #: bccButton.label bccButton.accesskey
 msgid "Add to &Bcc:"
@@ -9048,11 +9024,6 @@ msgstr "&Teagmháil Nua"
 msgid "New &List"
 msgstr "Lios&ta Nua"
 
-#: editButton2.label editButton2.accesskey propertiesButton.label
-#: propertiesButton.accesskey
-msgid "&Properties"
-msgstr "&Airíonna"
-
 #: newmsgButton.label newmsgButton.accesskey composeButton.label
 #: composeButton.accesskey
 msgid "&Write"
@@ -9234,8 +9205,6 @@ msgstr "Fuinneog"
 msgid "Minimize"
 msgstr "Íoslaghdaigh"
 
-#. #-#-#-#-#  chromemessengermessengercomposemessengercompose.dtd.po (firefox)  #-#-#-#-#
-#. Mac OS X Window Menu
 #: minimizeWindow.key certs.auto.accesskey
 msgid "m"
 msgstr "m"
@@ -11212,10 +11181,6 @@ msgstr "Ai&nm Úsáideora:"
 msgid "&Port:"
 msgstr "&Port:"
 
-#: serverPortDefault.label
-msgid "Default:"
-msgstr "Réamhshocrú:"
-
 #. translate below 2 line with grammer dependency
 #. For example, in Japanese cases:
 #. biffStart.label "every"
@@ -11618,15 +11583,9 @@ msgstr "Iompórtáil ríomhphost logánta ó Ríomhphost MacOS X"
 # LOCALIZATION NOTE : Do not translate the word "%S" below.
 # # @name COMM4XMAILIMPORT_MAILBOX_SUCCESS
 # # @loc None
-#. #-#-#-#-#  chromemessengerappleMailImportMsgs.properties.po (firefox)  #-#-#-#-#
 #. # Success Message
 #. # LOCALIZATION NOTE : Do not translate the word "%S" below.
 #. ## @name APPLEMAILIMPORT_MAILBOX_SUCCESS
-#. ## @loc None
-#. #-#-#-#-#  chromemessengercomm4xMailImportMsgs.properties.po (firefox)  #-#-#-#-#
-#. # Success Message
-#. # LOCALIZATION NOTE : Do not translate the word "%S" below.
-#. ## @name COMM4XMAILIMPORT_MAILBOX_SUCCESS
 #. ## @loc None
 #: 2002
 msgid "Local messages were successfully imported from %S"
@@ -11635,13 +11594,8 @@ msgstr "D'éirigh le hiompórtáil na dteachtaireachtaí logánta ó %S"
 # Error Message
 # # @name COMM4XMAILIMPORT_MAILBOX_BADPARAM
 # # @loc None
-#. #-#-#-#-#  chromemessengerappleMailImportMsgs.properties.po (firefox)  #-#-#-#-#
 #. # Error Message
 #. ## @name APPLEMAILIMPORT_MAILBOX_BADPARAM
-#. ## @loc None
-#. #-#-#-#-#  chromemessengercomm4xMailImportMsgs.properties.po (firefox)  #-#-#-#-#
-#. # Error Message
-#. ## @name COMM4XMAILIMPORT_MAILBOX_BADPARAM
 #. ## @loc None
 #: 2003
 msgid "An internal error occurred. Importing failed. Try importing again."
@@ -11717,54 +11671,6 @@ msgstr "accel"
 #: aboutMenuCmd.label aboutMenuCmd.accesskey
 msgid "&About &brandShortName;"
 msgstr "&Maidir le &brandShortName;"
-
-# #-#-#-#-#  tmp.XXXXqDdwwW.po (thunderbird)  #-#-#-#-#
-# LOCALIZATION NOTE : "Communicator 4.x" is the used for previous versions of Netscape Communicator
-# Please translate using the brandname in respective languages for Netscape Communicator 4 releases.
-# LOCALIZATION NOTE : Please do not translate "*.na2", this represents the extension of the address book
-# files from the Netscape Communicator 4 releases.
-# Comm4.xTo6.xImport user selection string
-# #-#-#-#-#  tmp.XXXXwYGJE8.po (thunderbird)  #-#-#-#-#
-# Short name of import module
-# LOCALIZATION NOTE : "Communicator 4.x" below is the used for previous versions of Netscape Communicator
-# Please translate using the brandname in respective languages for Netscape Communicator 4 releases.
-# # @name COMM4XMAILIMPORT_NAME
-# # @loc None
-#. # LOCALIZATION NOTE (comm4xImportName) : "Communicator 4.x" below is the used for previous versions of Netscape Communicator. Please translate using the brandname in respective languages for Netscape Communicator 4 releases.
-#: comm4xImportName
-msgid "Communicator 4.x"
-msgstr "Communicator 4.x"
-
-# Description of import module
-# LOCALIZATION NOTE : "Communicator 4.x" below is the used for previous versions of Netscape Communicator
-# Please translate using the brandname in respective languages for Netscape Communicator 4 releases.
-# # @name COMM4XMAILIMPORT_DESCRIPTION
-# # @loc None
-#. # Description of import module
-#. # LOCALIZATION NOTE : "Communicator 4.x" below is the used for previous versions of Netscape Communicator
-#. # Please translate using the brandname in respective languages for Netscape Communicator 4 releases.
-#. ## @name COMM4XMAILIMPORT_DESCRIPTION
-#. ## @loc None
-#: 2001
-msgid "Import Local Mail from Communicator 4.x."
-msgstr "Iompórtáil ríomhphost logánta ó Communicator 4.x."
-
-# Error message
-# LOCALIZATION NOTE : Do not translate the word "%S" below.
-# # @name COMM4XMAILIMPORT_MAILBOX_CONVERTERROR
-# # @loc None
-#. # Error message
-#. # LOCALIZATION NOTE : Do not translate the word "%S" below.
-#. ## @name COMM4XMAILIMPORT_MAILBOX_CONVERTERROR
-#. ## @loc None
-#: 2004
-msgid ""
-"An error occurred while importing messages from %S. Messages were not "
-"imported. Make more disk space available and try again."
-msgstr ""
-"Tharla earráid le linn teachtaireachtaí a iompórtáil ó %S. Níor iompórtáladh "
-"na teachtaireachtaí. Féach chuige go bhfuil níos mó spás diosca ar fáil agus "
-"bain triail eile as."
 
 #: window.title
 msgid "Customize Headers"
@@ -13010,7 +12916,11 @@ msgstr "Freagair le teimpléad"
 
 #: markMessageRead.label
 msgid "Mark As Read"
-msgstr "Marcáil mar léite"
+msgstr "Marcáil \"Léite\""
+
+#: markMessageUnread.label
+msgid "Mark As Unread"
+msgstr "Marcáil \"Neamhléite\""
 
 #: markMessageStarred.label
 msgid "Add Star"
@@ -13327,7 +13237,7 @@ msgstr "scriosta"
 
 #: filterAction4
 msgid "marked as read"
-msgstr "marcáilte mar léite"
+msgstr "marcáilte \"léite\""
 
 #: filterAction5
 msgid "thread killed"
@@ -13387,6 +13297,10 @@ msgstr "clibeáilte"
 msgid "ignored subthread"
 msgstr "foshnáithe ar a dtugtar neamhaird"
 
+#: filterAction19
+msgid "marked as unread"
+msgstr "marcáilte \"neamhléite\""
+
 # LOCALIZATION NOTE(filterAutoNameStr)
 # %1$S=Header or item to match, e.g. "From", "Tag", "Age in days", etc.
 # %2$S=Operator, e.g. "Contains", "is", "is greater than", etc.
@@ -13411,6 +13325,49 @@ msgstr "Gan Léamh"
 #: totalColumn.label
 msgid "Total"
 msgstr "Iomlán"
+
+#. ***** BEGIN LICENSE BLOCK *****
+#. - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#. -
+#. - The contents of this file are subject to the Mozilla Public License Version
+#. - 1.1 (the "License"); you may not use this file except in compliance with
+#. - the License. You may obtain a copy of the License at
+#. - http://www.mozilla.org/MPL/
+#. -
+#. - Software distributed under the License is distributed on an "AS IS" basis,
+#. - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+#. - for the specific language governing rights and limitations under the
+#. - License.
+#. -
+#. - The Original Code is Mozilla Communicator.
+#. -
+#. - The Initial Developer of the Original Code is
+#. - Netscape Communications Corp.
+#. - Portions created by the Initial Developer are Copyright (C) 2000
+#. - the Initial Developer. All Rights Reserved.
+#. -
+#. - Contributor(s):
+#. -   David Bienvenu <bienvenu@netscape.com>
+#. -   Mohan Bhamidipati <mohanb@netscape.com>
+#. -   Lorenzo Colitti   <lorenzo@colitti.com>
+#. -   Stefan Borggraefe <Stefan.Borggraefe@gmx.de>
+#. -
+#. - Alternatively, the contents of this file may be used under the terms of
+#. - either of the GNU General Public License Version 2 or later (the "GPL"),
+#. - or the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+#. - in which case the provisions of the GPL or the LGPL are applicable instead
+#. - of those above. If you wish to allow use of your version of this file only
+#. - under the terms of either the GPL or the LGPL, and not to allow others to
+#. - use your version of this file under the terms of the MPL, indicate your
+#. - decision by deleting the provisions above and replace them with the notice
+#. - and other provisions required by the GPL or the LGPL. If you do not delete
+#. - the provisions above, a recipient may use your version of this file under
+#. - the terms of any one of the MPL, the GPL or the LGPL.
+#. -
+#. - ***** END LICENSE BLOCK *****
+#: folderProps.windowtitle.label
+msgid "Properties"
+msgstr "Airíonna"
 
 #: generalInfo.label
 msgid "General Information"
@@ -15870,22 +15827,6 @@ msgstr "Ríomhphost Iompórtáilte"
 msgid "%S Import"
 msgstr "Iompórtáil %S"
 
-# LOCALIZATION NOTE : "Communicator 4.x" is the used for previous versions of Netscape Communicator
-# Please translate using the brandname in respective languages for Netscape Communicator 4 releases.
-# strings profile dialog that comes up when importing mail from 4.x
-#. # LOCALIZATION NOTE : "Communicator 4.x" is the used for previous versions of Netscape Communicator
-#. # Please translate using the brandname in respective languages for Netscape Communicator 4 releases.
-#. # strings profile dialog that comes up when importing mail from 4.x
-#: profileTitle
-msgid "Communicator 4.x profiles"
-msgstr "Próifílí Communicator 4.x"
-
-#: profileText
-msgid "Choose the profile that contains the Local Mail you want to import:"
-msgstr ""
-"Roghnaigh an phróifíl ina bhfuil an Ríomhphost Logánta a theastaíonn uait é a "
-"iompórtáil:"
-
 #: window.title
 msgid "About Junk Mail"
 msgstr "Maidir le Dramhphost"
@@ -17675,17 +17616,16 @@ msgstr "Athainmnigh Iatán"
 msgid "New attachment name:"
 msgstr "Ainm nua an iatáin:"
 
-# # Attachment Reminder
-# # LOCALIZATION NOTE (mail.compose.attachment_reminder_keywords): comma separated
-# #   words that that should trigger an attachment reminder.
 #. ## Attachment Reminder
 #. ## LOCALIZATION NOTE (mail.compose.attachment_reminder_keywords): comma separated
 #. ##   words that that should trigger an attachment reminder.
 #: mail.compose.attachment_reminder_keywords
-msgid ".doc,.pdf,attachment,attach,attached,attaching,enclosed,CV,cover letter"
+msgid ""
+".doc,.pdf,.xls,.ppt,.rtf,.pps,attachment,attach,attached,attaching,enclosed,"
+"CV,cover letter"
 msgstr ""
-".doc,.pdf,iatán,iatáin,t-iatán,hiatáin,m'iatán,d'iatán,ceangaltán,cheangaltán,"
-"gceangaltán,ceangaltáin,gceangaltáin,cheangaltáin,iamh,CV,ceangailte"
+".doc,.pdf,.xls,.ppt,.rtf,.pps,attachment,attach,attached,attaching,enclosed,"
+"CV,iatán,iatáin,hiatán,hiatáin,ceangaltán,ceangaltáin,gceangaltán,gceangaltáin,cheangaltán,cheangaltáin,iamh"
 
 #: addAttachmentButton
 msgid "Add Attachment…"
@@ -18022,13 +17962,20 @@ msgid "&Address Book"
 msgstr "Le&abhar Seoltaí"
 
 #: accountManagerCmd.label accountManagerCmd.accesskey
-msgid "A&ccount Settings…"
-msgstr "So&cruithe Cuntais…"
+msgid "Account &Settings…"
+msgstr "&Socruithe an Chuntais…"
 
 #: accountManagerCmdUnix.accesskey
 msgctxt "accountManagerCmdUnix.accesskey"
 msgid "S"
 msgstr "S"
+
+#. #-#-#-#-#  chromemessengermessengercomposemessengercompose.dtd.po (firefox)  #-#-#-#-#
+#. Mac OS X Window Menu
+#: minimizeWindow.key
+msgctxt "minimizeWindow.key"
+msgid "m"
+msgstr "m"
 
 #: quoteButton.label
 msgid "Quote"
@@ -18093,6 +18040,13 @@ msgstr "Ó:"
 #: subject.label subject.accesskey
 msgid "&Subject:"
 msgstr "Á&bhar:"
+
+#. LOCALIZATION NOTE attachments.accesskey This access key should correspond
+#. to the strings in attachmentCount in composeMsgs.properties
+#: attachments.accesskey
+msgctxt "attachments.accesskey"
+msgid "m"
+msgstr "m"
 
 #. Format Toolbar, imported from editorAppShell.xul
 #: SmileButton.tooltip
@@ -18265,10 +18219,6 @@ msgstr "Tá do theachtaireacht seolta."
 #: messageSaved
 msgid "Your message has been saved."
 msgstr "Tá do theachtaireacht sábháilte."
-
-#: messengerWindow.title
-msgid "Mail &amp; Newsgroups"
-msgstr "Ríomhphost &amp; Grúpaí Nuachta"
 
 #: titledefault.label
 msgid "&brandFullName;"
@@ -19105,7 +19055,7 @@ msgstr "&Léite"
 
 #: markAsUnreadCmd.label markAsUnreadCmd.accesskey
 msgid "As &Unread"
-msgstr "Mar &Neamhléite"
+msgstr "&Neamhléite"
 
 #: markThreadAsReadCmd.label markThreadAsReadCmd.accesskey
 msgid "&Thread As Read"
@@ -19251,10 +19201,6 @@ msgstr "Io&mpórtáil…"
 #: errorConsoleCmd.label errorConsoleCmd.accesskey
 msgid "&Error Console"
 msgstr "Consól &Earráide"
-
-#: accountManagerCmd.label accountManagerCmd.accesskey
-msgid "Account &Settings…"
-msgstr "&Socruithe an Chuntais…"
 
 # Mail Toolbar
 #. Mail Toolbar
@@ -19521,9 +19467,10 @@ msgctxt "folderContextSubscribe.label folderContextSubscribe.accesskey"
 msgid "Su&bscribe…"
 msgstr "&Liostáil…"
 
-#: folderContextSearchMessages.label folderContextSearchMessages.accesskey
-msgid "&Search…"
-msgstr "&Cuardach…"
+#: folderContextSearchForMessages.label
+#: folderContextSearchForMessages.accesskey
+msgid "&Search Messages…"
+msgstr "&Cuardaigh Teachtaireachtaí…"
 
 #: folderContextProperties.label folderContextProperties.accesskey
 msgid "&Properties…"
@@ -20030,11 +19977,6 @@ msgstr "&Oscail i mBrabhsálaí"
 #: openLinkInBrowser.label openLinkInBrowser.accesskey
 msgid "&Open Link In Browser"
 msgstr "&Oscail Nasc i mBrabhsálaí"
-
-#: minimizeWindow.key
-msgctxt "minimizeWindow.key"
-msgid "m"
-msgstr "m"
 
 #. Mac OS X Application Menu (Cocoa widgets)
 #: preferencesCmdMac.label
@@ -20630,20 +20572,6 @@ msgstr "Bosca Amach"
 msgctxt "junkFolderName"
 msgid "Junk"
 msgstr "Dramhphost"
-
-# Error message for special folder deletion on imap accounts
-# LOCALIZATION NOTES (specialFolderDeletionErr): Do not translate "IMAP" in the line below
-#. # Error message for special folder deletion on imap accounts
-#. # LOCALIZATION NOTE (specialFolderDeletionErr): Do not translate "IMAP" in the line below
-#: specialFolderDeletionErr
-msgid "Deletion of special folder %S is not allowed for IMAP accounts."
-msgstr ""
-"I gcás na gcuntas IMAP, níl sé ceadaithe an fillteán speisialta %S a "
-"scriosadh."
-
-#: specialFolderDeletionErrTitle
-msgid "Special Folder Deletion"
-msgstr "Scriosadh Fillteáin Speisialta"
 
 #. #Group by date thread pane titles
 #: today
@@ -21961,9 +21889,9 @@ msgstr ""
 msgid "&Don't import anything"
 msgstr "&Ná hiompórtáil rud ar bith"
 
-#: importFromSeamonkey2.label importFromSeamonkey2.accesskey
-msgid "Netscape 6, 7, Mozilla 1.x or &SeaMonkey"
-msgstr "Netscape 6, 7, Mozilla 1.x or &SeaMonkey"
+#: importFromSeamonkey3.label importFromSeamonkey3.accesskey
+msgid "&SeaMonkey 2 or later"
+msgstr "&SeaMonkey 2 nó níos déanaí"
 
 #: importFromOExpress.label importFromOExpress.accesskey
 msgid "O&utlook Express"
@@ -22008,29 +21936,6 @@ msgstr "Iompórtáil curtha i gcrích"
 #: done.label
 msgid "The following items were successfully imported:"
 msgstr "Iompórtáladh na rudaí seo go rathúil:"
-
-# trade name, do not translate
-#. # Browser Specific
-#: sourceNameSeamonkey
-msgid "Netscape 6/7/Mozilla"
-msgstr "Netscape 6/7/Mozilla"
-
-# #-#-#-#-#  tmp.XXXXID1WO9.po (thunderbird)  #-#-#-#-#
-#
-# The following are used by the outlook express import code to display status/error
-# and informational messages
-#
-# Short name of import module
-# # @name OEIMPORT_NAME
-# # @loc None
-# # LOCALIZATION NOTE (2000): DONT_TRANSLATE
-#: sourceNameOExpress
-msgid "Outlook Express"
-msgstr "Outlook Express"
-
-#: sourceNameOutlook
-msgid "Outlook"
-msgstr "Outlook"
 
 #. # Import Sources
 #: 1_seamonkey
@@ -23343,7 +23248,7 @@ msgstr ""
 "+Ceann amháin eile…;#1 cheann eile…;#1 cinn eile…;#1 gcinn eile…;#1 ceann "
 "eile…"
 
-#. # LOCALIZATION NOTE (price):
+#. # LOCALIZATION NOTE (sepAnd):
 #. #   \u0020 is a space, and should be included before and after.
 #: sepAnd
 msgid " and "
@@ -24419,10 +24324,6 @@ msgstr "SOC&KS v4"
 msgid "SOCKS &v5"
 msgstr "SOCKS &v5"
 
-#: SSLport.label SSLport.accesskey
-msgid "P&ort:"
-msgstr "P&ort:"
-
 #: SOCKSport.label SOCKSport.accesskey
 msgid "Por&t:"
 msgstr "Por&t:"
@@ -24511,11 +24412,6 @@ msgstr "Gnáth"
 msgid "Bold Italic"
 msgstr "Iodálach Trom"
 
-#: size.label size.accesskey
-msgctxt "size.label size.accesskey"
-msgid "&Size:"
-msgstr "&Méid:"
-
 #: regularSize.label
 msgctxt "regularSize.label"
 msgid "Regular"
@@ -24545,11 +24441,10 @@ msgstr "Dathanna"
 msgid "When displaying messages, use the following colors:"
 msgstr "Agus teachtaireachtaí á dtaispeáint, úsáid na dathanna seo:"
 
-# LOCALIZATION NOTE : (emoticonsAndStructs.label) 'Emoticons' are also known as 'Smileys', e.g. :-)
 #. LOCALIZATION NOTE : (emoticonsAndStructs.label) 'Emoticons' are also known as 'Smileys', e.g. :-)
 #: convertEmoticons.label convertEmoticons.accesskey
-msgid "&Display emoticons as graphics"
-msgstr "Taispeáin straoiseoga mar &ghrafaicí"
+msgid "Display &emoticons as graphics"
+msgstr "Taispeáin &straoiseoga mar ghraificí"
 
 # labels
 #. labels
@@ -24567,11 +24462,6 @@ msgstr "Clófhoirne"
 #: defaultFont.label defaultFont.accesskey
 msgid "&Default font:"
 msgstr "Cló réamh&shocraithe:"
-
-#: defaultSize.label defaultSize.accesskey
-msgctxt "defaultSize.label defaultSize.accesskey"
-msgid "&Size:"
-msgstr "&Méid:"
 
 #: fontOptions.label fontOptions.accesskey
 msgid "&Advanced…"
@@ -25555,10 +25445,6 @@ msgstr "Iontráil óstainm bailí, le do thoil."
 msgid "Failed to remove this account."
 msgstr "Theip ar bhaint an chuntais seo."
 
-#: failedDuplicateAccount
-msgid "Failed to duplicate this account."
-msgstr "Theip ar dhúbailt an chuntais seo."
-
 # LOCALIZATION NOTE: confirmRemoveAccount: %S is the account pretty name
 #. #LOCALIZATION NOTE: confirmRemoveAccount: %S is the account pretty name
 #: confirmRemoveAccount
@@ -25679,6 +25565,12 @@ msgstr "Roghnaigh comhad"
 #: forAccount
 msgid "For account \"%S\""
 msgstr "Do chuntas \"%S\""
+
+#. The label  for the button on the tab bar that toggles the visibility of
+#. the quick filter bar.
+#: quickFilterBar.qfbShowFilterBar.label
+msgid "Quick Filter"
+msgstr "Mearscagaire"
 
 #. The label to display for the "View... Toolbars..." menu item that controls
 #. whether the quick filter bar is visible.
