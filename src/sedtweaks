@@ -3,7 +3,7 @@ echo "Applying sed tweaks..."
 FULLPATH="${1}"   # passed on from mozdist
 
 sed -i '/^VK/s/\\\\u/\\u/' toolkit-ga-IE/chrome/global-platform/mac/platformKeys.properties
-sed -i '/^monthDate/s/.*/monthDate=#2 #1/' toolkit-ga-IE/chrome/mozapps/downloads/downloads.properties
+#sed -i '/^monthDate/s/.*/monthDate=#2 #1/' toolkit-ga-IE/chrome/mozapps/downloads/downloads.properties
 
 # comments in this file before this field.   need to increment now and again
 sed -i '/=Bing/d' browser-ga-IE/chrome/browser-region/region.properties
@@ -24,9 +24,6 @@ sed -i '/^notifyBarNotNowButtonText/s/=.*$/=Ná Meabhraigh anois/; /^notifyBarCh
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "50em">/' browser-ga-IE/chrome/browser/preferences/connection.dtd
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/preferences/fonts.dtd
 sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
-
-# weird bug - see email from Axel with subject "hard to find bug"
-sed -i '/securityOverride.warningText/s/">$//' browser-ga-IE/chrome/overrides/netError.dtd mail-ga-IE/chrome/overrides/netError.dtd mobile-ga-IE/chrome/overrides/netError.dtd
 
 # commandkey problems - don't want any translated - routine now is
 # to leave single letters untranslated in PO and then fix the accesskeys
@@ -108,7 +105,7 @@ sed -i 's/calendar.dayView.key "11"/calendar.dayView.key "1"/' calendar-ga-IE/ch
 sed -i 's/progress.level.100.accesskey "11"/progress.level.100.accesskey "1"/' calendar-ga-IE/chrome/calendar/calendar.dtd
 sed -i 's/^likelyTimezone.*/likelyTimezone=Europe\/Dublin/' calendar-ga-IE/chrome/calendar/calendar.properties
 sed -i 's/^last1=.*/last1=seo caite/; s/^last2=.*/last2=seo caite/' calendar-ga-IE/chrome/calendar/calendar.properties
-sed -i 's/event\.recurrence\.of\.label .*/event.recurrence.of.label "de">/' calendar-ga-IE/chrome/calendar/calendar-event-dialog.dtd
+sed -i 's/event\.recurrence\.of\.label .*/event.recurrence.of.label "de">/; s/event.freebusy.legend.free ".*/event.freebusy.legend.free "Saor">/' calendar-ga-IE/chrome/calendar/calendar-event-dialog.dtd
 sed -i '/^pluralForWeekdays=/s/.*/pluralForWeekdays=false/' calendar-ga-IE/chrome/calendar/calendar-event-dialog.properties
 sed -i '
 s/day.1.Ddd.accesskey "."/day.1.Ddd.accesskey "D"/
@@ -143,9 +140,9 @@ s/window.width "..em"/window.width "42em"/
 s/window.macWidth "..em"/window.macWidth "45em"/
 ' calendar-ga-IE/chrome/calendar/preferences/connection.dtd
 
-sed -i '
-s/inspectReturnNew.label "[^"]*"/inspectReturnNew.label "i bhfuinneog nua"/
-' extensions-ga-IE/inspector/resources/viewers/jsObject.dtd
+#sed -i '
+#s/inspectReturnNew.label "[^"]*"/inspectReturnNew.label "i bhfuinneog nua"/
+#' extensions-ga-IE/inspector/resources/viewers/jsObject.dtd
 
 sed -i 's/exceptionMgr.certstatus.accesskey "."/exceptionMgr.certstatus.accesskey "A"/' security-ga-IE/manager/chrome/pippki/certManager.dtd
 sed -i 's/loaddevice.modname.accesskey "."/loaddevice.modname.accesskey "A"/' security-ga-IE/manager/chrome/pippki/deviceManager.dtd
@@ -174,6 +171,6 @@ LC_ALL=C sed -i '
 /^zh *=/s/.*/zh = Sínis/
 ' toolkit-ga-IE/chrome/global/languageNames.properties
 
-sed -i '
-s/credit.translation ""/credit.translation "<h3>Aistritheoirí<\/h3><ul><li>Marion Gunn<\/li><li>Séamus Ó Ciardhuáin<\/li><li>Kevin Scannell<\/li><\/ul>"/
-' calendar-ga-IE/chrome/calendar/aboutDialog.dtd
+#sed -i '
+#s/credit.translation ""/credit.translation "<h3>Aistritheoirí<\/h3><ul><li>Marion Gunn<\/li><li>Séamus Ó Ciardhuáin<\/li><li>Kevin Scannell<\/li><\/ul>"/
+##' calendar-ga-IE/chrome/calendar/aboutDialog.dtd
