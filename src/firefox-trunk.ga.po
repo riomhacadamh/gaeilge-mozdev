@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-28 11:53-0500\n"
+"POT-Creation-Date: 2012-01-18 22:51-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -3316,8 +3316,7 @@ msgstr "Tá, ba mhaith liom cabhrú"
 msgid "Y"
 msgstr "Y"
 
-#: telemetryNoButtonLabel no pref_enable_plugins_no checkbox.no.label noButton
-#: noButtonLabel
+#: telemetryNoButtonLabel no checkbox.no.label noButton noButtonLabel
 msgid "No"
 msgstr "Níl"
 
@@ -5509,8 +5508,7 @@ msgstr "%S:"
 msgid "Not specified"
 msgstr "Gan sonrú"
 
-#: yes pref_enable_plugins_yes checkbox.yes.label yesButton
-#: browsewithcaret.checkButtonLabel
+#: yes checkbox.yes.label yesButton browsewithcaret.checkButtonLabel
 msgid "Yes"
 msgstr "Tá"
 
@@ -6273,8 +6271,8 @@ msgstr "Clibeanna Is Déanaí"
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromemozappsdownloadsdownloads.properties.po (firefox)  #-#-#-#-#
 #. # Desktop folder name for downloaded files
-#: OrganizerQueryDownloads downloads.label downloadsFolderName alertDownloads
-#: downloadsHeader.label downloads.title downloadsFolder
+#: OrganizerQueryDownloads downloads.label downloadsFolderName downloads
+#: alertDownloads downloadsHeader.label downloads.title downloadsFolder
 #: detail.numberOfDownloads.label
 msgid "Downloads"
 msgstr "Íosluchtú"
@@ -6300,7 +6298,7 @@ msgstr "Clib"
 #. # This is what we use to form the label (for screen readers)
 #. # for url bar autocomplete results of type "bookmark"
 #. # See createResultLabel() in urlbarBindings.xml
-#: bookmarkResultLabel bookmark_add
+#: bookmarkResultLabel bookmark
 msgid "Bookmark"
 msgstr "Leabharmharc"
 
@@ -7750,7 +7748,8 @@ msgctxt "locbar.history.label"
 msgid "History"
 msgstr "Stair"
 
-#: locbar.bookmarks.label collection.bookmarks.label bookmarksHeader.label
+#: locbar.bookmarks.label collection.bookmarks.label awesomebar_bookmarks_title
+#: bookmarksHeader.label
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
@@ -8942,7 +8941,7 @@ msgstr "Níorbh fhéidir an fhaisnéis chuóta a fháil."
 msgid "Retrieving…"
 msgstr "Á Fháil…"
 
-#: quota.remove.label bookmark_remove pw_remove_button
+#: quota.remove.label pw_remove_button
 msgid "Remove"
 msgstr "Bain"
 
@@ -11587,7 +11586,6 @@ msgstr "Cóipeáil Sonraí go dtí an Ghearrthaisce"
 msgid "Log install process"
 msgstr "Logáil an próiseas suiteála"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
 #. # your locale code, and link to your translated pages as soon as they're 
 #. # live.
@@ -15743,11 +15741,6 @@ msgstr "Níor aimsíodh aon fheidhmchláir Ghréasáin"
 msgid "Top Sites"
 msgstr "Suímh Is Fearr"
 
-#: awesomebar_bookmarks_title
-msgctxt "awesomebar_bookmarks_title"
-msgid "Bookmarks"
-msgstr "Leabharmharcanna"
-
 #: awesomebar_search_engine
 msgid "Search for \\&quot;&#037;s\\&quot;"
 msgstr "Cuardaigh ar \\&quot;&#037;s\\&quot;"
@@ -15814,25 +15807,6 @@ msgstr "Inis do shuímh gan a bheith do mo lorg"
 msgid "Send performance data"
 msgstr "Seol sonraí feidhmíochta"
 
-#: pref_homepage
-msgid "Home page"
-msgstr "Leathanach baile"
-
-#. #-#-#-#-#  profilebookmarks.inc.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (bookmarks_aboutHome):
-#. # link title for about:home
-#: pref_homepage_start bookmarks_aboutHome
-msgid "Firefox Start"
-msgstr "Tosach Firefox"
-
-#: pref_homepage_blank
-msgid "Blank page"
-msgstr "Leathanach bán"
-
-#: pref_homepage_current
-msgid "Current page"
-msgstr "An leathanach reatha"
-
 #: pref_remember_signons rememberPasswords.title
 msgid "Remember passwords"
 msgstr "Meabhraigh focail fhaire"
@@ -15861,13 +15835,21 @@ msgstr "Bánaigh sonraí príobháideacha"
 msgid "Browsing settings, including passwords and cookies, will be deleted"
 msgstr "Scriosfar socruithe brabhsála, focail fhaire agus fianáin san áireamh"
 
-#: pref_enable_plugins
-msgid "Enable plugins"
-msgstr "Cumasaigh forlíontáin"
+#: pref_plugins type.plugin.name
+msgid "Plugins"
+msgstr "Forlíontáin"
 
-#: pref_enable_plugins_tap_to_play
+#: pref_plugins_enabled crlAutoupdateEnabled aboutSupport.extensionEnabled
+msgid "Enabled"
+msgstr "Cumasaithe"
+
+#: pref_plugins_tap_to_play
 msgid "Tap to play"
 msgstr "Cnap le seinm"
+
+#: pref_plugins_disabled devinfo_stat_disabled
+msgid "Disabled"
+msgstr "Díchumasaithe"
 
 #: pref_font_size
 msgid "Font size"
@@ -16511,13 +16493,14 @@ msgstr "%S: %S"
 msgid "Incorrect password"
 msgstr "Focal faire mícheart"
 
-#: search.placeholder
-msgid "Search Preferences"
-msgstr "Sainroghanna Cuardaigh"
+# Not "Socruithe Cuardaigh"
+#: search.placeholder2
+msgid "Search Settings"
+msgstr "Cuardaigh na Socruithe"
 
-#: newpref.label
-msgid "Add a New Preference"
-msgstr "Cuir Sainrogha Nua Leis"
+#: newpref.label2
+msgid "Add a New Setting"
+msgstr "Cuir Socrú Nua Leis"
 
 #: addPref.selectType
 msgid "Select type:"
@@ -17119,6 +17102,12 @@ msgstr "Firefox: Cuir in oiriúint duit féin le breiseáin"
 #: bookmarks_support
 msgid "Firefox: Support"
 msgstr "Firefox: Tacaíocht"
+
+#. # LOCALIZATION NOTE (bookmarks_aboutHome):
+#. # link title for about:home
+#: bookmarks_aboutHome
+msgid "Firefox Start"
+msgstr "Tosach Firefox"
 
 #. LOCALIZATION NOTE:
 #. These strings are concatenated in order. Unneeded strings may be left blank.
@@ -17771,6 +17760,10 @@ msgstr "Fógraí Gréasáin"
 #: pageactions.openWebappsManage
 msgid "Manage Web Apps"
 msgstr "Bainistigh Feidhmchláir Ghréasáin"
+
+#: newpref.label
+msgid "Add a New Preference"
+msgstr "Cuir Sainrogha Nua Leis"
 
 #: addpref.value devmgr.details.title2 aboutSupport.modifiedPrefsValue
 #: valueColumn.label
@@ -22288,10 +22281,6 @@ msgstr "Leagan na gCrua-earraí"
 msgid "FW Version"
 msgstr "Leagan na nDochtearraí"
 
-#: devinfo_stat_disabled
-msgid "Disabled"
-msgstr "Díchumasaithe"
-
 #: devinfo_stat_notpresent
 msgid "Not Present"
 msgstr "Níl Ann"
@@ -22395,10 +22384,6 @@ msgstr "Níl URL an nuashonraithe sainmhínithe."
 #: resetPasswordConfirmationMessage
 msgid "Your password has been reset."
 msgstr "Bánaíodh d'fhocal faire."
-
-#: crlAutoupdateEnabled aboutSupport.extensionEnabled
-msgid "Enabled"
-msgstr "Cumasaithe"
 
 #: crlAutoupdateNotEnabled
 msgid "Not Enabled"
@@ -27544,27 +27529,27 @@ msgstr "Frámaí péinteáilte"
 
 #: error.aborted
 msgid "Video loading stopped."
-msgstr ""
+msgstr "Stopadh luchtú an fhíseáin."
 
 #: error.network
 msgid "Video playback aborted due to a network error."
-msgstr ""
+msgstr "Stopadh athsheinm an fhíseáin mar gheall ar earráid líonra."
 
 #: error.decode
 msgid "Video can't be played because the file is corrupt."
-msgstr ""
+msgstr "Ní féidir an físeán a sheinm toisc go bhfuil an comhad truaillithe."
 
 #: error.srcNotSupported
 msgid "Video format or MIME type is not supported."
-msgstr ""
+msgstr "Ní thacaítear leis an bhformáid fhíse nó leis an gcineál MIME."
 
 #: error.noSource2
 msgid "No video with supported format and MIME type found."
-msgstr ""
+msgstr "Níor aimsíodh aon fhíseán a dtacaítear lena fhormáid agus lena chineál MIME."
 
 #: error.generic
 msgid "Video playback aborted due to an unknown error."
-msgstr ""
+msgstr "Stopadh athsheinm an fhíseáin mar gheall ar earráid anaithnid."
 
 #. the #1 string is the current
 #. media position, and the #2 string is the total duration. For example, when at
@@ -29568,10 +29553,6 @@ msgstr ""
 #: type.theme.name
 msgid "Appearance"
 msgstr "Cuma"
-
-#: type.plugin.name
-msgid "Plugins"
-msgstr "Forlíontáin"
 
 #: type.dictionary.name
 msgid "Dictionaries"
