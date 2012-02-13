@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 22:51-0500\n"
+"POT-Creation-Date: 2012-01-30 07:38-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -50,7 +50,8 @@ msgstr "Roghnaigh an leathanach baile atá uait, le do thoil:"
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowserpreferencespreferences.dtd.po (firefox)  #-#-#-#-#
 #. This should match syncBrand.shortName.label in ../syncBrand.dtd
-#: syncBrandShortName paneSync.title syncBrand.shortName.label sync.title
+#: syncBrandShortName paneSync.title syncBrand.shortName.label pref_sync
+#: sync.title
 msgid "Sync"
 msgstr "Sync"
 
@@ -395,7 +396,7 @@ msgstr "Socraigh Sync"
 #. (aboutHome.syncPairDevice): This string should match the desktop
 #. equivalent, in particular concerning syncBrand.fullName.label.
 #: abouthome.pairDevice.label pairDevice.label pairDevice.title.label
-#: sync.pair.title aboutHome.syncPairDevice
+#: sync.title.pair.label sync.pair.title aboutHome.syncPairDevice
 msgid "Pair a Device"
 msgstr "Ceangail Gléas"
 
@@ -2103,6 +2104,9 @@ msgid "&Close"
 msgstr "&Dún"
 
 # ctrl+D is "Dún" under Main -> Comhad
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserdevtoolsstyleeditor.dtd.po (firefox)  #-#-#-#-#
+#. Accel + this key closes the window.
 #: closeCmd.key closeCmd.commandkey closeWindow.commandkey
 msgid "W"
 msgstr "W"
@@ -2196,11 +2200,15 @@ msgstr "&Cuir Foclóirí Leis…"
 msgid "Done"
 msgstr "Déanta"
 
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  androidbasesync_strings.dtd.po (firefox)  #-#-#-#-#
+#. Common text
 #: editBookmark.cancel.label addonDownloadCancelTooltip
-#: button.syncOptionsCancel.label CancelBtn addonAction.cancel cancel
-#: cancel.label sync.setup.cancel addonsSearchStart.button Cancel
-#: cancelButton.label button-cancel dialogCancel.label unknownCancel.label
-#: progress.cancel.tooltip cancelButton cancelButtonText
+#: button.syncOptionsCancel.label CancelBtn sync.button.cancel.label
+#: addonAction.cancel cancel cancel.label sync.setup.cancel
+#: addonsSearchStart.button Cancel cancelButton.label button-cancel
+#: dialogCancel.label unknownCancel.label progress.cancel.tooltip cancelButton
+#: cancelButtonText
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -2573,9 +2581,13 @@ msgstr "Níor lig %S don suíomh seo preabfhuinneog a oscailt."
 msgid "%S prevented this site from opening %S pop-up windows."
 msgstr "Níor lig %S don suíomh seo %S preabfhuinneog a oscailt."
 
-#: popupWarningButton prefWindow.titleWin aboutAddons.options
-#: addonAction.options addonOptions.label preferencesDefaultTitleWin.title
-#: optionsGroup.label cmd.showPreferencesWin.label
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  androidbasesync_strings.dtd.po (firefox)  #-#-#-#-#
+#. Firefox SyncAdapter Settings Screen
+#: popupWarningButton prefWindow.titleWin sync.settings.options.label
+#: aboutAddons.options addonAction.options addonOptions.label
+#: preferencesDefaultTitleWin.title optionsGroup.label
+#: cmd.showPreferencesWin.label
 msgid "Options"
 msgstr "Roghanna"
 
@@ -3891,34 +3903,6 @@ msgstr "&Iompórtáil…"
 msgid "Import and append an existing style sheet to the document"
 msgstr "Iompórtáil agus iarcheangail stílbhileog nua leis an gcáipéis"
 
-#: searchInput.tooltip
-msgid "Filter style sheets by name"
-msgstr "Scag stílbhileoga de réir ainm"
-
-#: searchInput.placeholder
-msgid "Find style sheet"
-msgstr "Aimsigh stílbhileog"
-
-#. LOCALIZATION NOTE  (searchNoResults): This is shown when searching a term
-#. that is not found in any stylesheet or stylesheet name.
-#: searchNoResults.label
-msgid "No matching style sheet has been found."
-msgstr "Níor aimsíodh stílbhileog chomhoiriúnach."
-
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  chromebrowserdevtoolsstyleeditor.dtd.po (firefox)  #-#-#-#-#
-#. LOCALIZATION NOTE  (searchClearButton): This button clears the search input
-#. box and is visible only when a search term has been typed.
-#. #-#-#-#-#  chromebrowserdevtoolswebconsole.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (btnClear):
-#. #
-#. # This is used as the text of the "Clear" button for the toolbar. It clears the
-#. # contents of the console.
-#: searchClearButton.label btnClear site_settings_clear clear.altText
-#: consoleClear.label clearPrivateData.button
-msgid "Clear"
-msgstr "Bánaigh"
-
 #: visibilityToggle.tooltip
 msgid "Toggle style sheet visibility"
 msgstr "Scoránaigh infheictheacht na stílbhileoige"
@@ -4157,13 +4141,15 @@ msgid ""
 "Could not initialize the WebGL context, your hardware or drivers may not "
 "support it."
 msgstr ""
+"Níorbh fhéidir an comhthéacs WebGL a thúsú. Seans nach dtacaítear do chrua-"
+"earraí nó do thiománaithe leis."
 
 #. # LOCALIZATION NOTE (linkProgram.error): This error happens when the WebGL
 #. # context can't link two compiled shader programs together. It is displayed in
 #. # the Error Console.
 #: linkProgram.error
 msgid "Could not initialize shader program: %S"
-msgstr ""
+msgstr "Níorbh fhéidir clár scáthaithe a thúsú: %S"
 
 #. # LOCALIZATION NOTE (compileShader.source.error): This error is caused when the
 #. # source (uri or path) of a shader is not the expected one. It is displayed in
@@ -4398,6 +4384,16 @@ msgstr "Consól Logánta"
 #: clearConsoleCmd.label
 msgid "Clear Console"
 msgstr "Bánaigh an Consól"
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (btnClear):
+#. #
+#. # This is used as the text of the "Clear" button for the toolbar. It clears the
+#. # contents of the console.
+#: btnClear site_settings_clear clear.altText consoleClear.label
+#: clearPrivateData.button
+msgid "Clear"
+msgstr "Bánaigh"
 
 #: stringFilter
 msgid "Filter"
@@ -5915,7 +5911,8 @@ msgstr "&Bog…"
 
 # #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 # for the Tag picker in search and mail views.
-#: col.tags.label OrganizerQueryTags TagsFolderTitle
+#: col.tags.label OrganizerQueryTags bookmarks.folder.tags.label
+#: TagsFolderTitle
 msgid "Tags"
 msgstr "Clibeanna"
 
@@ -7227,7 +7224,8 @@ msgid "&Allow pages to choose their own fonts, instead of my selections above"
 msgstr ""
 "T&abhair cead do leathanaigh a gclónna féin a roghnú, in áit mo roghanna thuas"
 
-#: languages.customize.Charset.grouplabel pageactions.charEncoding
+#: languages.customize.Charset.grouplabel char_encoding
+#: pageactions.charEncoding
 msgid "Character Encoding"
 msgstr "Ionchódú Carachtar"
 
@@ -8672,7 +8670,11 @@ msgstr "Deasc Firefox.bmp"
 msgid "Saving Picture…"
 msgstr "Pictiúr á Shábháil…"
 
-#: syncBrand.fullName.label sync.update.title
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  androidbasesync_strings.dtd.po (firefox)  #-#-#-#-#
+#. Don't localize these. They're here until they have
+#. a better place to live.
+#: syncBrand.fullName.label abouthome_sync_bold_name sync.update.title
 msgid "Firefox Sync"
 msgstr "Firefox Sync"
 
@@ -8941,7 +8943,7 @@ msgstr "Níorbh fhéidir an fhaisnéis chuóta a fháil."
 msgid "Retrieving…"
 msgstr "Á Fháil…"
 
-#: quota.remove.label pw_remove_button
+#: quota.remove.label contextmenu_remove_bookmark pw_remove_button
 msgid "Remove"
 msgstr "Bain"
 
@@ -9105,7 +9107,7 @@ msgstr ""
 msgid "&Save…"
 msgstr "&Sábháil…"
 
-#: addDevice.showMeHow.label
+#: addDevice.showMeHow.label sync.link.show.label
 msgid "Show me how."
 msgstr "Taispeáin dom."
 
@@ -9134,7 +9136,9 @@ msgstr ""
 msgid "Enter the code that the device provides:"
 msgstr "Cuir isteach an cód a thug an gléas duit:"
 
-#: addDevice.dialog.tryAgain.label
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. Pair Device
+#: addDevice.dialog.tryAgain.label sync.pair.tryagain.label
 msgid "Please try again."
 msgstr "Bain triail as arís."
 
@@ -9247,8 +9251,11 @@ msgid "Warning: The following devices will be overwritten with your local data:"
 msgstr ""
 "Rabhadh: Forscríobhfar na gléasanna seo a leanas leis na sonraí logánta:"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. New & Existing Account: Setup Complete
-#: setup.successPage.title
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. Setup Success
+#: setup.successPage.title sync.title.success.label
 msgid "Setup Complete"
 msgstr "Críochnaithe"
 
@@ -15815,9 +15822,17 @@ msgstr "Meabhraigh focail fhaire"
 msgid "Enable cookies"
 msgstr "Cumasaigh fianáin"
 
-#: pref_char_encoding showCharsetEncoding.title
-msgid "Show character encoding"
-msgstr "Taispeáin an t-ionchódú carachtar"
+#: pref_char_encoding
+msgid "Character encoding"
+msgstr "Ionchódú carachtar"
+
+#: pref_char_encoding_on
+msgid "Show menu"
+msgstr "Taispeáin an roghchlár"
+
+#: pref_char_encoding_off
+msgid "Don\\'t show menu"
+msgstr "Ná taispeáin an roghchlár"
 
 #: pref_clear_history
 msgid "Clear history"
@@ -15851,9 +15866,13 @@ msgstr "Cnap le seinm"
 msgid "Disabled"
 msgstr "Díchumasaithe"
 
-#: pref_font_size
-msgid "Font size"
-msgstr "Clómhéid"
+#: pref_text_size
+msgid "Text size"
+msgstr "Méid téacs"
+
+#: pref_font_size_tiny
+msgid "Tiny"
+msgstr "An-bheag"
 
 #: pref_font_size_small
 msgid "Small"
@@ -15887,14 +15906,6 @@ msgstr "Roinn"
 #: save_as_pdf
 msgid "Save as PDF"
 msgstr "Sábháil mar PDF"
-
-#: agent_request_desktop
-msgid "Request Desktop Site"
-msgstr ""
-
-#: agent_request_mobile
-msgid "Request Mobile Site"
-msgstr ""
 
 #: contextmenu_open_new_tab
 msgid "Open in New Tab"
@@ -15930,8 +15941,8 @@ msgstr "Cruthaigh Príomhfhocal Faire"
 msgid "Remove Master Password"
 msgstr "Bánaigh an Príomhfhocal Faire"
 
-#: masterpassword_password sync.password password pageactions.password
-#: treehead.password.label
+#: masterpassword_password sync.input.password.label sync.password password
+#: pageactions.password treehead.password.label
 msgid "Password"
 msgstr "Focal Faire"
 
@@ -15981,8 +15992,8 @@ msgstr "Dearbhaigh an focal faire"
 #. # WARNING!!! This file is obsoleted by the dialog.xml widget
 #. #
 #. OK Cancel Buttons
-#: button_ok ok.label crlAutoupdateOk OK okButton.label button-accept okButton
-#: Ok
+#: button_ok sync.button.ok.label ok.label crlAutoupdateOk OK okButton.label
+#: button-accept okButton Ok
 msgid "OK"
 msgstr "OK"
 
@@ -15990,6 +16001,218 @@ msgstr "OK"
 msgctxt "button_cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
+
+#: abouthome_addons_title aboutHome.recommendedAddons2
+msgid "Add-ons for your &brandShortName;"
+msgstr "Breiseáin le haghaidh &brandShortName;"
+
+#: abouthome_addons_browse
+msgid "Browse all &brandShortName; add-ons"
+msgstr "Brabhsáil gach breiseán &brandShortName;"
+
+#: abouthome_last_tabs_title aboutHome.recentTabs
+msgid "Your tabs from last time"
+msgstr "Do chuid cluaisíní ón uair roimhe seo"
+
+#: abouthome_last_tabs_open
+msgid "Open all tabs from last time"
+msgstr "Oscail gach cluaisín ón uair roimhe seo"
+
+#: abouthome_top_sites_title
+msgid "Top sites"
+msgstr "Barrshuímh"
+
+#: abouthome_top_sites_browse
+msgid "Browse all your top sites"
+msgstr "Brabhsáil na suímh is ansa leat"
+
+#: abouthome_no_top_sites
+msgid "You do no have any top sites yet. Tap the Title bar to start browsing."
+msgstr "Níl aon bharrshuímh agat. Cniog an Barra Teidil chun brabhsáil."
+
+#: abouthome_about_sync
+msgid ""
+"Set up Firefox Sync to access bookmarks, history and tabs from your other "
+"devices"
+msgstr ""
+"Socraigh Firefox Sync chun do stair, leabharmharcanna, agus cluaisíní a "
+"rochtain ar gach gléas atá agat"
+
+#. Main titles.
+#: sync.app.name.label
+msgctxt "sync.app.name.label"
+msgid "&syncBrand.fullName.label;"
+msgstr "&syncBrand.fullName.label;"
+
+#: sync.title.connect.label
+msgid "Connect to &syncBrand.shortName.label;"
+msgstr "Ceangail le &syncBrand.shortName.label;"
+
+#: sync.title.adddevice.label
+msgid "Add a &syncBrand.fullName.label; Account"
+msgstr "Cuir Cuntas &syncBrand.fullName.label; Leis"
+
+#. J-PAKE Key Screen
+#: sync.subtitle.connect.label
+msgid ""
+"To activate your new device, select “Set up &syncBrand.shortName.label;” on "
+"the device."
+msgstr ""
+"Chun do ghléas nua a ghníomhachtú, roghnaigh “Socraigh &syncBrand.shortName."
+"label;” ar an ngléas."
+
+#: sync.subtitle.header.label
+msgid "Enter this code on your computer"
+msgstr "Cuir an cód isteach ar do ríomhaire"
+
+#: sync.subtitle.connectlocation.label
+msgid ""
+"Select “&sync.title.pair.label;” in the &syncBrand.shortName.label; section "
+"of your desktop Firefox options."
+msgstr ""
+"Roghnaigh “&sync.title.pair.label;” sna roghanna &syncBrand.shortName.label; "
+"i bhFirefox ar do ríomhaire deisce."
+
+#: sync.subtitle.pair.label
+msgid "To activate, select “Pair a device” on your other device."
+msgstr "Chun gníomhachtú, roghnaigh “Ceangail gléas” ar do ghléas eile."
+
+#: sync.pin.default.label
+msgid "...\\n...\\n...\\n"
+msgstr "...\\n...\\n...\\n"
+
+#: sync.pin.oneline.label
+msgid "..."
+msgstr "..."
+
+#: sync.link.advancedsetup.label
+msgid "Advanced setup..."
+msgstr "Ardsocrú..."
+
+#: sync.link.nodevice.label
+msgid "I don\\'t have the device with me…"
+msgstr "Níl an gléas liom faoi láthair..."
+
+#. #-#-#-#-#  androidbasesync_strings.dtd.po (firefox)  #-#-#-#-#
+#. J-PAKE Waiting Screen
+#: sync.jpake.subtitle.waiting.label sync.setup.waiting2
+msgid "Waiting for other device…"
+msgstr "Ag fanacht leis an ngléas eile…"
+
+#. Account Login Screen
+#: sync.subtitle.account.label
+msgid "Enter your &syncBrand.fullName.label; account information"
+msgstr "Cuir faisnéis do chuntais &syncBrand.fullName.label; isteach"
+
+# Entities for Account name page
+#: sync.input.username.label sync.account
+msgid "Account Name"
+msgstr "Ainm an Chuntais"
+
+#: sync.input.key.label sync.recoveryKey
+msgid "Recovery Key"
+msgstr "Eochair Athshlánaithe"
+
+#: sync.checkbox.server.label sync.customServer
+msgid "Use custom server"
+msgstr "Úsáid freastalaí saincheaptha"
+
+#: sync.input.server.label sync.serverURL
+msgid "Server URL"
+msgstr "URL an fhreastalaí"
+
+#. Setup Fail
+#: sync.title.fail.label
+msgid "Cannot Set Up &syncBrand.shortName.label;"
+msgstr "Ní féidir &syncBrand.shortName.label; a shocrú"
+
+#: sync.subtitle.fail.label
+msgid ""
+"&syncBrand.fullName.label; could not connect to the server. Would you like to "
+"try again?"
+msgstr ""
+"Níorbh fhéidir le &syncBrand.fullName.label; ceangal leis an bhfreastalaí. An "
+"bhfuil fonn ort triail eile a bhaint as?"
+
+#: sync.button.tryagain.label sync.setup.tryagain
+msgid "Try again"
+msgstr "Bain triail eile as"
+
+#: sync.button.manual.label
+msgid "Manual Setup"
+msgstr "Socrú De Láimh"
+
+#: sync.subtitle.nointernet.label
+msgid "No internet connection available."
+msgstr "Níl ceangal leis an Idirlíon ar fáil."
+
+#: sync.subtitle.success.label
+msgid ""
+"Your data is now being downloaded in the background. You can go to Settings "
+"to manage your account."
+msgstr ""
+
+#: sync.settings.label edit.button
+msgid "Settings"
+msgstr "Socruithe"
+
+#: sync.subtitle.manage.label
+msgid ""
+"Your &syncBrand.fullName.label; account is already set up. Go to Settings to "
+"manage your account."
+msgstr ""
+"Tá cuntas &syncBrand.fullName.label; socraithe agat cheana. Féach ar "
+"'Socruithe' chun do chuntas a bhainistiú."
+
+#: sync.summary.pair.label
+msgid "Link another device to your &syncBrand.shortName.label; account"
+msgstr "Nasc gléas eile le do chuntas &syncBrand.shortName.label;"
+
+#: sync.button.connect.label
+msgid "Connect"
+msgstr "Nasc"
+
+#. Account strings
+#: sync.account.label.label
+msgctxt "sync.account.label.label"
+msgid "&syncBrand.fullName.label;"
+msgstr "&syncBrand.fullName.label;"
+
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. Bookmark folder strings
+#: bookmarks.folder.menu.label BookmarksMenuFolderTitle
+msgid "Bookmarks Menu"
+msgstr "Roghchlár na Leabharmharcanna"
+
+#: bookmarks.folder.places.label
+msgctxt "bookmarks.folder.places.label"
+msgid ""
+msgstr ""
+
+#: bookmarks.folder.toolbar.label BookmarksToolbarFolderTitle
+msgid "Bookmarks Toolbar"
+msgstr "Barra Leabharmharc"
+
+#: bookmarks.folder.unfiled.label UnsortedBookmarksFolderTitle
+msgid "Unsorted Bookmarks"
+msgstr "Leabharmharcanna Gan Sórtáil"
+
+#. #-#-#-#-#  androidchromebrowser.properties.po (firefox)  #-#-#-#-#
+#. # Bookmark List
+#. #-#-#-#-#  xulchromebrowser.properties.po (firefox)  #-#-#-#-#
+#. # Bookmark List
+#: bookmarks.folder.desktop.label bookmarkList.desktop
+msgid "Desktop Bookmarks"
+msgstr "Leabharmharcanna Deisce"
+
+#: bookmarks.folder.mobile.label mobile.label
+msgid "Mobile Bookmarks"
+msgstr "Leabharmharcanna Soghluaiste"
+
+#. Notification strings
+#: sync.notification.oneaccount.label
+msgid "Only one &syncBrand.fullName.label; account is supported."
+msgstr "Ní thacaítear ach aon chuntas &syncBrand.fullName.label; amháin."
 
 #: aboutAddons.title addons.windowTitle
 msgid "Add-ons Manager"
@@ -16348,11 +16571,6 @@ msgstr "Meabhraigh"
 msgid "Never"
 msgstr "Ná Meabhraigh Riamh"
 
-#. # Bookmark List
-#: bookmarkList.desktop
-msgid "Desktop Bookmarks"
-msgstr "Leabharmharcanna Deisce"
-
 #. # LOCALIZATION NOTE (tabs.closeWarning): Semi-colon list of plural forms.
 #. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
 #. # #1 number of tabs (must be greater than 1)
@@ -16422,8 +16640,8 @@ msgstr ""
 #. # LOCALIZATION NOTE (intl.charsetmenu.browser.static): Set to a series of comma separated
 #. # values for charsets that the user can select from in the Character Encoding menu.
 #: intl.charsetmenu.browser.static
-msgid "iso-8859-1,utf-8,x-gbk,big5,iso-2022-jp,shift_jis,euc-jp"
-msgstr "iso-8859-1,utf-8,x-gbk,big5,iso-2022-jp,shift_jis,euc-jp"
+msgid "iso-8859-1,utf-8,big5,iso-2022-jp,shift_jis,euc-jp"
+msgstr "iso-8859-1,utf-8,big5,iso-2022-jp,shift_jis,euc-jp"
 
 #. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  androidchromebrowser.properties.po (firefox)  #-#-#-#-#
@@ -16673,23 +16891,6 @@ msgstr "Nílim in aice le mo ríomhaire…"
 msgid "Enter your Sync account information"
 msgstr "Cuir faisnéis do chuntais Sync isteach"
 
-# Entities for Account name page
-#: sync.account
-msgid "Account Name"
-msgstr "Ainm an Chuntais"
-
-#: sync.recoveryKey
-msgid "Recovery Key"
-msgstr "Eochair Athshlánaithe"
-
-#: sync.customServer
-msgid "Use custom server"
-msgstr "Úsáid freastalaí saincheaptha"
-
-#: sync.serverURL
-msgid "Server URL"
-msgstr "URL an fhreastalaí"
-
 #: sync.setup.connect
 msgctxt "sync.setup.connect"
 msgid "Connect"
@@ -16698,10 +16899,6 @@ msgstr "Ceangail"
 #: sync.setup.tutorial
 msgid "Show me how"
 msgstr "Taispeáin dom é"
-
-#: sync.setup.waiting2
-msgid "Waiting for other device…"
-msgstr "Ag fanacht leis an ngléas eile…"
 
 #: sync.setup.waitingdownload
 msgid ""
@@ -16761,10 +16958,6 @@ msgid "%S could not connect to Sync. Would you like to try again?"
 msgstr ""
 "Níorbh fhéidir le %S ceangal le Sync.  An bhfuil fonn ort triail eile a "
 "bhaint as?"
-
-#: sync.setup.tryagain
-msgid "Try again"
-msgstr "Bain triail eile as"
 
 #: sync.setup.manual
 msgid "Manual setup"
@@ -17119,17 +17312,9 @@ msgstr "Maidir leis an gceadúnas"
 msgid "<span>&brandShortName; </span><span id='header-suffix'>Start</span>"
 msgstr "<span id='header-suffix'>Tosach </span><span>&brandShortName;</span>"
 
-#: aboutHome.recentTabs
-msgid "Your tabs from last time"
-msgstr "Do chuid cluaisíní ón uair roimhe seo"
-
 #: aboutHome.remoteTabs
 msgid "Tabs from your other computers"
 msgstr "Cluaisíní ó do ríomhairí eile"
-
-#: aboutHome.recommendedAddons2
-msgid "Add-ons for your &brandShortName;"
-msgstr "Breiseáin le haghaidh &brandShortName;"
 
 #: aboutHome.giveFeedback
 msgid "Give Feedback"
@@ -17761,6 +17946,12 @@ msgstr "Fógraí Gréasáin"
 msgid "Manage Web Apps"
 msgstr "Bainistigh Feidhmchláir Ghréasáin"
 
+#. # LOCALIZATION NOTE (intl.charsetmenu.browser.static): Set to a series of comma separated
+#. # values for charsets that the user can select from in the Character Encoding menu.
+#: intl.charsetmenu.browser.static
+msgid "iso-8859-1,utf-8,x-gbk,big5,iso-2022-jp,shift_jis,euc-jp"
+msgstr "iso-8859-1,utf-8,x-gbk,big5,iso-2022-jp,shift_jis,euc-jp"
+
 #: newpref.label
 msgid "Add a New Preference"
 msgstr "Cuir Sainrogha Nua Leis"
@@ -17813,6 +18004,10 @@ msgstr "Leathanach Bán"
 #: homepage.currentpage
 msgid "Use Current Page"
 msgstr "Úsáid an Leathanach Reatha"
+
+#: showCharsetEncoding.title
+msgid "Show character encoding"
+msgstr "Taispeáin an t-ionchódú carachtar"
 
 #: actionbar.default
 msgid "&brandShortName; Settings"
@@ -22687,10 +22882,6 @@ msgstr "Theip ar Nuashonrú go Leanúnach cheana: "
 msgid "Details of Last Update Failure: "
 msgstr "Sonraí faoin uair dheireanach ar theip ar Nuashonrú: "
 
-#: edit.button
-msgid "Settings"
-msgstr "Socruithe"
-
 #: error.login.reason.network
 msgid "Failed to connect to the server"
 msgstr "Theip ar cheangal leis an bhfreastalaí"
@@ -22763,10 +22954,6 @@ msgstr "Tá an focal faire róghearr"
 #: client.name2
 msgid "%1$S's %2$S on %3$S"
 msgstr "%2$S %1$S ar %3$S"
-
-#: mobile.label
-msgid "Mobile Bookmarks"
-msgstr "Leabharmharcanna Soghluaiste"
 
 #: remote.pending.label
 msgid "Remote tabs are being synced…"
@@ -27545,7 +27732,8 @@ msgstr "Ní thacaítear leis an bhformáid fhíse nó leis an gcineál MIME."
 
 #: error.noSource2
 msgid "No video with supported format and MIME type found."
-msgstr "Níor aimsíodh aon fhíseán a dtacaítear lena fhormáid agus lena chineál MIME."
+msgstr ""
+"Níor aimsíodh aon fhíseán a dtacaítear lena fhormáid agus lena chineál MIME."
 
 #: error.generic
 msgid "Video playback aborted due to an unknown error."
@@ -30268,10 +30456,10 @@ msgstr "Athluchtaigh an leathanach"
 msgid " to try again."
 msgstr " chun triail eile a bhaint as."
 
-#. LOCALIZATION NOTE: report.* strings should be as short as possible, ideally 2-3 words.
-#: report.checkbox
-msgid "…and send crash report"
-msgstr "…agus tuairisc a sheoladh"
+#. This and the other report.* strings should be as short as possible, ideally 2-3 words.
+#: report.please
+msgid "Send crash report"
+msgstr "Seol tuairisc ar thuairteáil"
 
 #: report.submitting
 msgid "Sending report…"
@@ -31450,18 +31638,6 @@ msgstr "An bhfuil fonn ort an focal faire sábháilte a athrú?"
 #: notifyBarUpdateButtonText
 msgid "Update Password"
 msgstr "Athraigh an Focal Faire"
-
-#: BookmarksMenuFolderTitle
-msgid "Bookmarks Menu"
-msgstr "Roghchlár na Leabharmharcanna"
-
-#: BookmarksToolbarFolderTitle
-msgid "Bookmarks Toolbar"
-msgstr "Barra Leabharmharc"
-
-#: UnsortedBookmarksFolderTitle
-msgid "Unsorted Bookmarks"
-msgstr "Leabharmharcanna Gan Sórtáil"
 
 #: finduri-AgeInDays-is
 msgid "%S days ago"
