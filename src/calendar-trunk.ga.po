@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 22:49-0500\n"
+"POT-Creation-Date: 2012-02-13 08:42-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -356,6 +356,10 @@ msgstr "Gach imeacht as seo amach"
 msgid "Currently Selected Day"
 msgstr "An lá atá roghnaithe anois"
 
+#: calender.events.filter.currentview.label
+msgid "Events in Current View"
+msgstr "Imeachtaí san Amharc Reatha"
+
 #: calendar.events.filter.next7Days.label
 msgid "Events in the Next 7 Days"
 msgstr "Imeachtaí faoi cheann 7 lá"
@@ -432,6 +436,7 @@ msgid "Close event search and event list"
 msgstr "Dún cuardach na n-imeachtaí agus liosta na n-imeachtaí"
 
 #: calendar.today.button.tooltip showToday.tooltip
+#: lightning.toolbar.gototoday.label
 msgid "Go to Today"
 msgstr "Taispeáin Inniu"
 
@@ -513,7 +518,7 @@ msgstr "Imeacht Nua"
 msgid "New Task"
 msgstr "Tasc Nua"
 
-#: calendar.print.button.label
+#: calendar.print.button.label lightning.toolbar.print.label
 msgid "Print"
 msgstr "Priontáil"
 
@@ -678,6 +683,18 @@ msgstr "Marcáil na tascanna roghnaithe mar chríochnaithe"
 msgid "Change the priority"
 msgstr "Athraigh an tosaíocht"
 
+#: calendar.task.text-filter.textbox.emptytext.base
+msgid "Filter tasks… #1"
+msgstr "Scag tascanna… #1"
+
+#: calendar.task.text-filter.textbox.emptytext.keylabel.nonmac
+msgid "&lt;Ctrl+Shift+K&gt;"
+msgstr "&lt;Ctrl+Shift+K&gt;"
+
+#: calendar.task.text-filter.textbox.emptytext.keylabel.mac
+msgid "&lt;&#x21E7;&#x2318;K&gt;"
+msgstr "&lt;&#x21E7;&#x2318;K&gt;"
+
 # Statusbar
 #. Statusbar
 #: statusText.label
@@ -764,6 +781,10 @@ msgstr "&Dul Chun Cinn"
 #: calendar.context.priority.label calendar.context.priority.accesskey
 msgid "P&riority"
 msgstr "&Tosaíocht"
+
+#: calendar.context.postpone.label calendar.context.postpone.accesskey
+msgid "Po&stpone Task"
+msgstr "Cuir Ta&sc Ar Athlá"
 
 # =percent sign
 #. =percent sign
@@ -862,6 +883,21 @@ msgstr "Ard"
 #: priority.level.high.accesskey
 msgid "H"
 msgstr "H"
+
+#: calendar.context.postpone.1hour.label
+#: calendar.context.postpone.1hour.accesskey
+msgid "1 &Hour"
+msgstr "&Uair amháin"
+
+#: calendar.context.postpone.1day.label
+#: calendar.context.postpone.1day.accesskey
+msgid "1 &Day"
+msgstr "&Lá amháin"
+
+#: calendar.context.postpone.1week.label
+#: calendar.context.postpone.1week.accesskey
+msgid "1 &Week"
+msgstr "&Seachtain amháin"
 
 #. Task View
 #. Note that the above *.context.* strings are currently used for the other
@@ -1436,7 +1472,7 @@ msgstr "X"
 #. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
 #. Lightning specific keybindings
 #: event.dialog.copy.key lightning.keys.event.showCalendar.key
-#: lightning.toolbar.calendar.accesskey calendar.copy.key
+#: calendar.copy.key
 msgid "C"
 msgstr "C"
 
@@ -1707,7 +1743,7 @@ msgid "Save and Close"
 msgstr "Sábháil agus Dún"
 
 #: event.toolbar.delete.label deleteItemLabel imipCancelInvitation.label
-#: sunbird.delete.button.label
+#: lightning.toolbar.delete.label sunbird.delete.button.label
 msgid "Delete"
 msgstr "Scrios"
 
@@ -2326,14 +2362,6 @@ msgstr " An sliotán roimhe seo"
 #: event.freebusy.zoom
 msgid "Zoom:"
 msgstr "Súmáil:"
-
-#: event.freebusy.plus
-msgid "Next hour"
-msgstr "An chéad uair eile"
-
-#: event.freebusy.minus
-msgid "Previous hour"
-msgstr "An uair roimhe seo"
 
 #: event.freebusy.legend.free
 msgid "Free"
@@ -3147,7 +3175,7 @@ msgstr ""
 msgid "Click here for details"
 msgstr "Cliceáil anseo i gcomhair mionsonraí"
 
-#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromelightninglightning-toolbar.dtd.po (firefox)  #-#-#-#-#
 #. Toolbar write button
 #: itemMenuLabelEvent lightning.toolbar.newevent.label
 msgid "Event"
@@ -5598,8 +5626,7 @@ msgstr "lá"
 msgid "M"
 msgstr "B"
 
-#: day.3.Ddd.accesskey lightning.toolbar.task.accesskey
-#: event.delete.tasks.accesskey
+#: day.3.Ddd.accesskey event.delete.tasks.accesskey
 msgid "T"
 msgstr "T"
 
@@ -8791,40 +8818,6 @@ msgstr "Tas&canna"
 msgid "Eve&nts and Tasks"
 msgstr "I&meachtaí agus Tascanna"
 
-#. Mode Toolbar
-#: lightning.toolbar.mail.label lightning.toolbar.mail.accesskey
-msgid "&Mail"
-msgstr "Río&mhphost"
-
-#: lightning.toolbar.calendar.tooltip
-msgid "Switch to the calendar tab"
-msgstr "Féach ar chluaisín an fhéilire"
-
-#: lightning.toolbar.task.label lightning.toolbar.task.accesskey
-msgid "&Tasks"
-msgstr "&Tascanna"
-
-#: lightning.toolbar.task.tooltip
-msgid "Switch to the tasks tab"
-msgstr "Féach ar chluaisín na dtascanna"
-
-#. Messenger Toolbar
-#: lightning.toolbar.day.label lightning.toolbar.day.accesskey
-msgid "&Day"
-msgstr "&Lá"
-
-#: lightning.toolbar.week.label lightning.toolbar.week.accesskey
-msgid "&Week"
-msgstr "&Seachtain"
-
-#: lightning.toolbar.multiweek.label lightning.toolbar.multiweek.accesskey
-msgid "M&ultiweek"
-msgstr "Amharc &Ilseachtaine"
-
-#: lightning.toolbar.month.label lightning.toolbar.month.accesskey
-msgid "&Month"
-msgstr "&Mí"
-
 # properties dialog, calendar creation wizard
 #. properties dialog, calendar creation wizard
 #: lightning.calendarproperties.showevents.inagenda.label
@@ -9003,9 +8996,25 @@ msgstr "Ghlac %1$S le do chuireadh imeachta."
 msgid "%1$S has declined your event invitation."
 msgstr "Dhiúltaigh %1$S le do chuireadh imeachta."
 
+#: itipReplySubjectAccept
+msgid "Event Invitation Reply (Accepted): %1$S"
+msgstr ""
+
+#: itipReplySubjectDecline
+msgid "Event Invitation Reply (Declined): %1$S"
+msgstr ""
+
+#: itipReplySubjectTentative
+msgid "Event Invitation Reply (Tentative): %1$S"
+msgstr ""
+
 #: itipRequestSubject
 msgid "Event Invitation: %1$S"
 msgstr "Cuireadh Imeachta: %1$S"
+
+#: itipRequestUpdatedSubject
+msgid "Updated Event Invitation: %1$S"
+msgstr ""
 
 #: itipRequestBody
 msgid "%1$S has invited you to %2$S"
@@ -9066,9 +9075,47 @@ msgstr "Barra Féilirí"
 msgid "Task Toolbar"
 msgstr "Barra Tascanna"
 
+#: lightning.toolbar.task.label lightning.toolbar.task.accesskey
+msgid "&Tasks"
+msgstr "&Tascanna"
+
 #: lightning.toolbar.sync.label
 msgid "Synchronize"
 msgstr "Sioncrónaigh"
+
+#: lightning.toolbar.edit.label sunbird.edit.button.label
+msgid "Edit"
+msgstr "Eagar"
+
+#. Mode Toolbar
+#: lightning.toolbar.mail.label lightning.toolbar.mail.accesskey
+msgid "&Mail"
+msgstr "Río&mhphost"
+
+#: lightning.toolbar.calendar.tooltip
+msgid "Switch to the calendar tab"
+msgstr "Féach ar chluaisín an fhéilire"
+
+#: lightning.toolbar.task.tooltip
+msgid "Switch to the tasks tab"
+msgstr "Féach ar chluaisín na dtascanna"
+
+#. Calendar and Task Mode Toolbar
+#: lightning.toolbar.day.label lightning.toolbar.day.accesskey
+msgid "&Day"
+msgstr "&Lá"
+
+#: lightning.toolbar.week.label lightning.toolbar.week.accesskey
+msgid "&Week"
+msgstr "&Seachtain"
+
+#: lightning.toolbar.multiweek.label lightning.toolbar.multiweek.accesskey
+msgid "M&ultiweek"
+msgstr "Amharc &Ilseachtaine"
+
+#: lightning.toolbar.month.label lightning.toolbar.month.accesskey
+msgid "&Month"
+msgstr "&Mí"
 
 #. -*- Mode: HTML; tab-width: 20; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 #. - ***** BEGIN LICENSE BLOCK *****
@@ -9552,10 +9599,6 @@ msgstr "Athluchtaigh"
 #: sunbird.unifinder.button.label
 msgid "Find Events"
 msgstr "Aimsigh Imeachtaí"
-
-#: sunbird.edit.button.label
-msgid "Edit"
-msgstr "Eagar"
 
 #: sunbird.flat.topbar.choosedate
 msgid "Go to Date"
