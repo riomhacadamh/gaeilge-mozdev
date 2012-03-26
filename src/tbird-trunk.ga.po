@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-06 08:46-0500\n"
+"POT-Creation-Date: 2012-03-25 16:57-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -875,13 +875,19 @@ msgstr "Cill i&na Dhiaidh"
 
 #. #-#-#-#-#  editor-ga-IE.po (firefox)  #-#-#-#-#
 #. Delete SubMenu
+#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromemessengerchat.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (buddy.deletePrompt.button):
+#. # the & symbol indicates the position of the character that should be
+#. # used as the accesskey for this button.
 #: tableDeleteMenu.label tableDeleteMenu.accesskey deleteCmd.label
 #: deleteCmd.accesskey deleteAddrBookCard.label deleteAddrBookCard.accesskey
 #: deleteDirectory.label deleteDirectory.accesskey identitiesListDelete.label
-#: identitiesListDelete.accesskey folderContextRemove.label
-#: folderContextRemove.accesskey removeKeywordButton.label
-#: removeKeywordButton.accesskey removeTagButton.label
-#: removeTagButton.accesskey deleteButton.label deleteButton.accesskey
+#: identitiesListDelete.accesskey buddy.deletePrompt.button
+#: folderContextRemove.label folderContextRemove.accesskey
+#: removeKeywordButton.label removeKeywordButton.accesskey
+#: removeTagButton.label removeTagButton.accesskey deleteButton.label
+#: deleteButton.accesskey
 msgid "&Delete"
 msgstr "&Scrios"
 
@@ -982,7 +988,7 @@ msgstr "Tábla"
 msgid "Insert new table or edit selected table's properties"
 msgstr "Ionsáigh tábla nua nó cuir airíonna an tábla roghnaithe in eagar"
 
-#: linkToolbarCmd.label Link link.label imageLinkTab.label
+#: linkToolbarCmd.label Link link.label imageLinkTab.label bigFileShare.label
 msgid "Link"
 msgstr "Nasc"
 
@@ -1097,7 +1103,8 @@ msgid "&Insert"
 msgstr "&Ionsáigh"
 
 #: updateTOC.label updateTOC.accesskey UpdatePhoto.label UpdatePhoto.accesskey
-#: editFolderButton.label editFolderButton.accesskey
+#: button.editFeed.label button.editFeed.accesskey editFolderButton.label
+#: editFolderButton.accesskey
 msgid "&Update"
 msgstr "N&uashonraigh"
 
@@ -1105,6 +1112,7 @@ msgstr "N&uashonraigh"
 #: removeImageMapButton.accessKey RemoveElement.label RemoveElement.accesskey
 #: removeButton.label removeButton.accesskey button.removeFeed.label
 #: button.removeFeed.accesskey remove.label remove.accesskey
+#: removeCloudFileAccount.label removeCloudFileAccount.accesskey
 msgid "&Remove"
 msgstr "&Bain"
 
@@ -1112,7 +1120,7 @@ msgstr "&Bain"
 msgid "Ta&ble of Contents…"
 msgstr "Clár Á&bhair…"
 
-#: editorCheck.accesskey
+#: editorCheck.accesskey cloudFileUploadingCancel.accesskey
 msgid "c"
 msgstr "c"
 
@@ -1733,6 +1741,10 @@ msgstr "% den tábla"
 #: untitledTitle
 msgid "untitled-%S"
 msgstr "ganteideal-%S"
+
+#: untitledDefaultFilename
+msgid "untitled"
+msgstr "gan teideal"
 
 #: ShowToolbar
 msgid "Show Toolbar"
@@ -3696,7 +3708,7 @@ msgstr "&Cineál an Réimse"
 msgid "Text"
 msgstr "Téacs"
 
-#: password.value password.placeholder
+#: password.value password.placeholder accountPasswordTitle.label
 msgid "Password"
 msgstr "Focal Faire"
 
@@ -4439,7 +4451,7 @@ msgstr "Suíomh:"
 msgid "Last Modified:"
 msgstr "Athraithe:"
 
-#: titleInput.label titleInput.accessKey
+#: titleInput.label titleInput.accessKey feedTitle.label feedTitle.accesskey
 msgid "&Title:"
 msgstr "&Teideal:"
 
@@ -4553,7 +4565,8 @@ msgstr "Focal &nua:"
 # "C" is Ionchódú Carachtar…
 #: AddButton.label AddButton.accessKey addDirectory.label
 #: addDirectory.accesskey addButton.label addButton.accesskey
-#: button.addFeed.label button.addFeed.accesskey addKeywordButton.label
+#: button.addFeed.label button.addFeed.accesskey addCloudFileAccount.label
+#: addCloudFileAccount.accesskey addKeywordButton.label
 #: addKeywordButton.accesskey addTagButton.label addTagButton.accesskey
 msgid "&Add"
 msgstr "Cuir &Leis"
@@ -4572,7 +4585,8 @@ msgid "R&emove"
 msgstr "B&ain"
 
 #: CloseButton.label CloseButton.accessKey closeButton.label
-#: closeButton.accessKey closeCmd.label closeCmd.accesskey button.close.label
+#: closeButton.accessKey closeCmd.label closeCmd.accesskey
+#: identitiesListClose.label identitiesListClose.accesskey button.close.label
 #: button.close.accesskey CloseBtn
 msgid "&Close"
 msgstr "&Dún"
@@ -4686,9 +4700,7 @@ msgstr "&Bain Suíomh"
 msgid "Publishing Sites"
 msgstr "Suíomhanna Foilsithe"
 
-#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
-#. Entities for Server page
-#: serverInfo.label serverTitle.label
+#: serverInfo.label
 msgid "Server Information"
 msgstr "Eolas faoin bhfreastalaí"
 
@@ -5812,9 +5824,8 @@ msgstr "&Nua"
 #. #-#-#-#-#  chromemessengermessengercomposemessengercompose.dtd.po (firefox)  #-#-#-#-#
 #. Edit Menu
 #: editMenu.label editMenu.accesskey editDirectory.label
-#: editDirectory.accesskey button.editFeed.label button.editFeed.accesskey
-#: editKeywordButton.label editKeywordButton.accesskey editTagButton.label
-#: editTagButton.accesskey
+#: editDirectory.accesskey editKeywordButton.label editKeywordButton.accesskey
+#: editTagButton.label editTagButton.accesskey
 msgid "&Edit"
 msgstr "&Eagar"
 
@@ -5851,12 +5862,13 @@ msgstr "&Cóipeáil"
 
 #: copyCmd.key Contact.accesskey cancelDownloadButton.accesskey
 #: digitalSign.certificate_clear.accesskey
+#: accountsManager.notification.button.accessKey goChatCmd.commandKey
 #: testpilot.notification.accessKey.cancel
 msgid "C"
 msgstr "C"
 
 # "R" under Main -> Eagar ("G" is Gearr)
-#: pasteCmd.label pasteCmd.accesskey pasteLinkCmd.label pasteLinkCmd.accesskey
+#: pasteCmd.label pasteCmd.accesskey
 msgid "&Paste"
 msgstr "Grea&maigh"
 
@@ -5869,9 +5881,9 @@ msgstr "Roghnaigh &Uile"
 #. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
 #. belongs to accountManagerCmd.label,
 #. which is placed under the Edit menu on Unix systems
-#: selectAllCmd.key addAttachmentButton.accessskey
-#: accountManagerCmdUnix.accesskey certs.ask.accesskey
-#: testpilot.notification.accessKey.allStudies
+#: selectAllCmd.key buddy.authRequest.allow.accesskey
+#: addAttachmentButton.accessskey accountManagerCmdUnix.accesskey
+#: certs.ask.accesskey testpilot.notification.accessKey.allStudies
 msgid "A"
 msgstr "W"
 
@@ -5987,7 +5999,12 @@ msgstr "Cearta an Úsáideora"
 
 #. #-#-#-#-#  chromemessengeraboutDialog.dtd.po (firefox)  #-#-#-#-#
 #. This is a link title that links to http://www.mozilla.com/legal/privacy/.
-#: bottomLinks.privacy privacyPolicy testpilot.welcomePage.privacyPolicy
+#. #-#-#-#-#  chromemessengercloudfilemanagement.dtd.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+#. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#: bottomLinks.privacy cloudfileMgmt.privacyPolicy privacyPolicy
+#: testpilot.welcomePage.privacyPolicy
 msgid "Privacy Policy"
 msgstr "Polasaí Príobháideachta"
 
@@ -6509,7 +6526,11 @@ msgstr "Isteach:"
 msgid "Outgoing:"
 msgstr "Amach:"
 
-#: username.label
+#. #-#-#-#-#  chromemessengercloudfileYouSendItsettings.dtd.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+#. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#: username.label account.name youSendItSettings.username accountUsername
 msgid "Username:"
 msgstr "Ainm úsáideora:"
 
@@ -7101,6 +7122,10 @@ msgstr "Gníomh&artha Cuntais"
 msgid "&Add Mail Account…"
 msgstr "Cuir Cunt&as Ríomhphoist Leis…"
 
+#: addIMAccountButton.label addIMAccountButton.accesskey
+msgid "Add &Chat Account…"
+msgstr "Cuir Cuntas &Comhrá Leis…"
+
 #: addOtherAccountButton.label addOtherAccountButton.accesskey
 msgid "Add &Other Account…"
 msgstr "Cuir Cuntas &Eile Leis…"
@@ -7209,48 +7234,14 @@ msgstr "&D'ainm:"
 msgid "&Email Address:"
 msgstr "S&eoladh Ríomhphoist:"
 
+#. Entities for Incoming Server page
+#: incomingTitle.label
+msgid "Incoming Server Information"
+msgstr "Maidir leis an bhFreastalaí Isteach"
+
 #: incomingServerTypeDesc.label
 msgid "Select the type of incoming server you are using."
 msgstr "Roghnaigh cineál do fhreastalaí isteach."
-
-#. Do not translate "&quot;pop.example.net&quot;" in below line
-#: incomingServerNameDesc.label
-msgid ""
-"Enter the name of your incoming server (for example, &quot;mail.example."
-"net&quot;)."
-msgstr ""
-"Iontráil ainm do fhreastalaí isteach (mar shampla, &quot;post.sampla."
-"net&quot;)."
-
-#: incomingServerLabel.label incomingServerLabel.accesskey
-msgid "Incoming &Server:"
-msgstr "Frea&stalaí Ríomhphoist Isteach:"
-
-#. Do not translate "NNTP" or the "&quot;" entities in below line
-#: newsServerNameDesc.label
-msgid ""
-"Enter the name of your news server (NNTP) (for example, &quot;news.example."
-"net&quot;)."
-msgstr ""
-"Iontráil ainm do fhreastalaí nuachta (NNTP) (mar shampla, &quot;nuacht.sampla."
-"net&quot;)."
-
-#. Do not translate "SMTP" and "&quot;smtp.example.net&quot;" in below line
-#: smtpServerDesc.label
-msgid ""
-"Enter the name of your outgoing server (SMTP) (for example, &quot;smtp."
-"example.net&quot;)."
-msgstr ""
-"Iontráil ainm do fhreastalaí amach (SMTP) (mar shampla, &quot;smtp.sampla."
-"net&quot;)."
-
-#: smtpServerLabel.label smtpServerLabel.accesskey
-msgid "&Outgoing Server:"
-msgstr "Freastalaí Rí&omhphoist Amach:"
-
-#: newsServerLabel.label newsServerLabel.accesskey
-msgid "Ne&wsgroup Server:"
-msgstr "Freastalaí &Nuachta:"
 
 #. Do not translate "IMAP" in below line
 #: imapType.label imapType.accesskey
@@ -7279,6 +7270,75 @@ msgctxt "defaultPortValue.label"
 msgid ""
 msgstr ""
 
+#. LOCALIZATION NOTE (incomingServerNameDesc.label) : Do not translate "&quot;pop.example.net&quot;" in below line
+#: incomingServer.description
+msgid ""
+"Enter the name of your incoming server (for example, &quot;mail.example."
+"net&quot;)."
+msgstr ""
+"Iontráil ainm do fhreastalaí isteach (mar shampla, &quot;post.sampla."
+"net&quot;)."
+
+#: incomingServer.label incomingServer.accesskey
+msgid "Incoming &Server:"
+msgstr "Frea&stalaí Ríomhphoist Isteach:"
+
+#. do not translate "&quot;jsmith&quot;" in below line
+#: incomingUsername.description
+msgid ""
+"Enter the incoming user name given to you by your email provider (for "
+"example, &quot;jsmith&quot;)."
+msgstr ""
+"Cuir isteach an t-ainm úsáideora isteach a thug do sholáthraí ríomhphoist "
+"duit (mar shampla, &quot;tadhgor&quot;)."
+
+#: incomingUsername.label incomingUsername.accesskey
+msgid "&User Name:"
+msgstr "&Ainm Úsáideora:"
+
+#. Do not translate "NNTP" or the "&quot;" entities in below line
+#: newsServerNameDesc.label
+msgid ""
+"Enter the name of your news server (NNTP) (for example, &quot;news.example."
+"net&quot;)."
+msgstr ""
+"Iontráil ainm do fhreastalaí nuachta (NNTP) (mar shampla, &quot;nuacht.sampla."
+"net&quot;)."
+
+#: newsServerLabel.label newsServerLabel.accesskey
+msgid "Newsgroup &Server:"
+msgstr "Frea&stalaí Nuachta:"
+
+#. Entities for Outgoing Server page
+#: outgoingTitle.label
+msgid "Outgoing Server Information"
+msgstr "Maidir leis an bhFreastalaí Amach"
+
+#. Do not translate "SMTP" and "&quot;smtp.example.net&quot;" in below line
+#: outgoingServer.description
+msgid ""
+"Enter the name of your outgoing server (SMTP) (for example, &quot;smtp."
+"example.net&quot;)."
+msgstr ""
+"Iontráil ainm do fhreastalaí amach (SMTP) (mar shampla, &quot;smtp.sampla."
+"net&quot;)."
+
+#: outgoingServer.label outgoingServer.accesskey
+msgid "Outgoing &Server:"
+msgstr "Frea&stalaí Amach:"
+
+#: outgoingUsername.description
+msgid ""
+"Enter the outgoing user name given to you by your email provider (this is "
+"typically the same as your incoming user name)."
+msgstr ""
+"Cuir isteach an t-ainm úsáideora amach a thug do sholáthraí ríomhphoist duit "
+"(is iondúil gurb ionann é seo agus d'ainm úsáideora isteach)."
+
+#: outgoingUsername.label outgoingUsername.accesskey
+msgid "Outgoing &User Name:"
+msgstr "&Ainm Úsáideora Amach:"
+
 #. This string will be appended after each of
 #. haveSmtp1.suffix3, haveSmtp2.suffix3, haveSmtp3.suffix3 .
 #: modifyOutgoing.suffix
@@ -7305,38 +7365,6 @@ msgstr "Bainfear úsáid as do fhreastalaí ríomhphoist amach (SMTP), &quot;"
 msgctxt "haveSmtp1.suffix3"
 msgid "&quot;, will be used."
 msgstr "&quot; a úsáidfear."
-
-# Entities for Login page
-#. Entities for Login page
-#: loginTitle.label
-msgid "User Names"
-msgstr "Ainmneacha Úsáideora"
-
-#: usernameDesc.label
-msgid "Enter the incoming user name given to you by your email provider "
-msgstr ""
-"Cuir isteach an t-ainm úsáideora isteach a thug do sholáthraí ríomhphoist duit"
-
-#. do not translate "&quot;jsmith&quot;" in below line
-#: usernameExample.label
-msgid "(for example, &quot;jsmith&quot;)."
-msgstr "(mar shampla, &quot;torodai&quot;)."
-
-#: usernameLabel.label usernameLabel.accesskey
-msgid "&Incoming User Name:"
-msgstr "Ainm Úsáideora &Isteach:"
-
-#: usernameSmtpDesc.label
-msgid ""
-"Enter the outgoing user name given to you by your email provider (this is "
-"typically the same as your incoming user name)."
-msgstr ""
-"Cuir isteach an t-ainm úsáideora amach a thug do sholáthraí ríomhphoist duit "
-"(is iondúil gurb ionann é seo agus d'ainm úsáideora isteach)."
-
-#: usernameSmtpLabel.label usernameSmtpLabel.accesskey
-msgid "&Outgoing User Name:"
-msgstr "Ainm Úsáide&ora Amach:"
 
 # LOCALIZATION NOTE (haveSmtp2.prefix and haveSmtp2.suffix) : Do not translate "SMTP" and "&quot;" in
 # these variables. Also, translate haveSmtp2.prefix and haveSmtp2.suffix as a single sentence, inserting
@@ -7462,7 +7490,7 @@ msgid "485"
 msgstr "485"
 
 #. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: window.height
+#: window.height accountWindow.width
 msgid "300"
 msgstr "300"
 
@@ -7835,6 +7863,71 @@ msgid "#1 second elapsed;#1 seconds elapsed"
 msgstr ""
 "#1 soicind imithe;#1 shoicind imithe;#1 shoicind imithe;#1 soicind imithe;#1 "
 "soicind imithe"
+
+#: addBuddyWindow.title
+msgid "Add contact"
+msgstr "Cuir teagmháil leis"
+
+#. #-#-#-#-#  chromemessengerchat.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (buddytooltip.username, buddytooltip.account):
+#. # This is for the tooltip that appears when hovering
+#. # a contact or a conversation in the left pane.
+#: name.label buddytooltip.username accountUsernameTitle.label
+msgid "Username"
+msgstr "Ainm an Úsáideora"
+
+#. #-#-#-#-#  chromemessengergloda.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (*.facetNameLabel): These are the labels used to label the facet
+#. #  displays in the global search facet display mechanism.  They should be
+#. #  compact descriptions of the facet type (e.g. "Folder", and don't need to
+#. #  refer to the objects being faceted (e.g. "Message" or "Mail").
+#. # LOCALIZATION NOTE (*.includeLabel): The label to use for the included group
+#. #  in the facet display. If not provided, we will fall back to
+#. #  "glodaFacetView.facets.included.fallbackLabel".
+#. # LOCALIZATION NOTE (*.excludeLabel): The label to use for the excluded group
+#. #  in the facet display. If not provided, we will fall back to
+#. #  "glodaFacetView.facets.excluded.fallbackLabel".
+#. # LOCALIZATION NOTE (*.remainderLabel): The label to use for the remaining items
+#. #  that are neither part of the included group or the excluded group in the
+#. #  facet display. If not provided, we will fall back to
+#. #  "glodaFacetView.facets.remainder.fallbackLabel".
+#. # LOCALIZATION NOTE (*.mustMatchLabel): The label to use for the popup menu
+#. #  to indicate that the results should be restricted to messages which match
+#. #  a particular value. If not provided, we will fall back to
+#. #  "glodaFacetView.facets.mustMatch.fallbackLabel".  #1, if present, is
+#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
+#. # LOCALIZATION NOTE (*.cantMatchLabel): The label to use for the popup menu
+#. #  to indicate that the results should be restricted to messages which match
+#. #  a particular value. If not provided, we will fall back to
+#. #  "glodaFacetView.facets.cantMatch.fallbackLabel".  #1, if present, is
+#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
+#. # LOCALIZATION NOTE (*.mayMatchLabel): The label to use for the popup menu
+#. #  to indicate that the results should no longer be restricted relative to
+#. #  this particular facet value. If not provided, we will fall back to
+#. #  "glodaFacetView.facets.mayMatch.fallbackLabel".  #1, if present, is
+#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
+#. # LOCALIZATION NOTE (*.mustMatchSomeLabel): The label to use for the popup menu
+#. #  to indicate that the results should be restricted to messages which have
+#. #  _some_ value (e.g. at least one tag is set). If not provided, we will fall
+#. #  back to "glodaFacetView.facets.mustMatchSome.fallbackLabel".  #1, if present,
+#. #  is replaced by the value of the facet (name, folder, mailing list, etc.)
+#. # LOCALIZATION NOTE (*.mustMatchNoneLabel): The label to use for the popup menu
+#. #  to indicate that the results should be restricted to messages which have _no_
+#. #  value (e.g. no tags are set). If not provided, we will fall back to
+#. #  "glodaFacetView.facets.mustMatchNoneLabel.fallbackLabel".  #1, if present, is
+#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
+#. # LOCALIZATION NOTE (*.mayMatchAnyLabel): The label to use for the popup menu
+#. #  to indicate that the results should not be restricted to messages which have
+#. #  any or no value (e.g. no requirements on any tags are set). If not provided,
+#. #  we will fall back to "glodaFacetView.facets.mayMatchAnyLabel.fallbackLabel".
+#. #  #1, if present, is replaced by the value of the facet (name, folder, mailing
+#. #  list, etc.)
+#. # LOCALIZATION NOTE (gloda.message.attr.account.*): Stores the account in which
+#. #  a message's folder is located.
+#: account.label buddytooltip.account gloda.message.attr.account.facetNameLabel
+#: accountColumn.label
+msgid "Account"
+msgstr "Cuntas"
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -8339,8 +8432,8 @@ msgid "Name or Email"
 msgstr "Ainm nó Seoladh Ríomhphoist"
 
 #: addrBookCardProperties.label addrBookCardProperties.accesskey
-#: editButton2.label editButton2.accesskey propertiesButton.label
-#: propertiesButton.accesskey
+#: editButton2.label editButton2.accesskey account.edit.label
+#: account.edit.accesskey propertiesButton.label propertiesButton.accesskey
 msgid "&Properties"
 msgstr "&Airíonna"
 
@@ -8618,7 +8711,7 @@ msgstr "&Malartaigh Ainm agus Sloinne"
 msgid "Propert&ies…"
 msgstr "A&iríonna…"
 
-#: propertiesCmd.key sizeMono.accesskey
+#: propertiesCmd.key bigFileAttach.accesskey sizeMono.accesskey
 msgid "i"
 msgstr "i"
 
@@ -9116,7 +9209,7 @@ msgstr "Leasainm"
 #. # Description: Address book field name
 #. ## @name IMPORT_FIELD_DESC
 #. ## @loc None
-#: propertyDisplayName 2102 DisplayName
+#: propertyDisplayName displayNameEmptyText 2102 DisplayName
 msgid "Display Name"
 msgstr "Ainm Taispeána"
 
@@ -9220,6 +9313,9 @@ msgstr "%1$S, %2$S"
 #. #-#-#-#-#  chromemessengeraddressbookaddressBook.properties.po (firefox)  #-#-#-#-#
 #. ## LOCALIZATION NOTE (cityOrStateAndZip): 
 #. ## %1$S is city or state, %2$S is zip
+#. #-#-#-#-#  chromemessengerchat.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (dateTime):
+#. # %1$S is the date, %2$S is the date.
 #. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 #. # Format definition tag menu texts.
 #. # This is necessary in order to get the accesskeys to be the on the first
@@ -9234,7 +9330,7 @@ msgstr "%1$S, %2$S"
 #. # LOCALIZATION NOTE (typeDescriptionWithDetails):
 #. # %1$S = type description (for example "Portable Document Format")
 #. # %2$S = details (see below, for example "(application/pdf: .pdf, .pdfx)")
-#: cityOrStateAndZip mailnews.tags.format typeDescriptionWithDetails
+#: cityOrStateAndZip dateTime mailnews.tags.format typeDescriptionWithDetails
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -9847,11 +9943,11 @@ msgstr "Ú&sáid nasc daingean (SSL)"
 msgid "B&ind DN: "
 msgstr "DN ceanga&il: "
 
-#: General.tab itemGeneral.label paneGeneral.title
+#: General.tab account.general itemGeneral.label paneGeneral.title
 msgid "General"
 msgstr "Ginearálta"
 
-#: Offline.tab offlineInfo.caption
+#: Offline.tab status.offline imStatus.offline offlineInfo.caption
 msgid "Offline"
 msgstr "As Líne"
 
@@ -10102,7 +10198,8 @@ msgstr "Iontráil eolaire á macasamhlú: %S"
 msgid "Download Now"
 msgstr "Íosluchtaigh Anois"
 
-#: downloadButton.accesskey testpilot.notification.accessKey.alwaysSubmit
+#: downloadButton.accesskey buddy.authRequest.deny.accesskey
+#: testpilot.notification.accessKey.alwaysSubmit
 msgid "D"
 msgstr "D"
 
@@ -10426,6 +10523,39 @@ msgstr "Socruithe Aitheantais"
 #: identityListDesc.label
 msgid "Configure the settings for this identity:"
 msgstr "Cumraigh na socruithe don aitheantas seo:"
+
+#: accountWindow.title
+msgid "Account properties"
+msgstr "Airíonna an chuntais"
+
+#: account.advanced accountAdvancedTitle.label
+msgid "Advanced Options"
+msgstr "Ardroghanna"
+
+#: account.password accountPasswordField.label
+msgid "Password:"
+msgstr "Focal Faire:"
+
+#: account.alias accountAliasField.label
+msgid "Alias:"
+msgstr "Ailias:"
+
+#: account.newMailNotification accountAdvanced.newMailNotification.label
+msgid "Notify on new Mail"
+msgstr "Abair liom faoi theachtaireachtaí nua"
+
+#: account.autojoin
+msgid "Auto-Joined Channels:"
+msgstr ""
+
+#: account.proxySettings.caption
+msgid "Proxy Settings:"
+msgstr "Socruithe an tSeachfhreastalaí:"
+
+#: account.proxySettings.change.label account.proxySettings.change.accessKey
+#: accountProxySettings.change.label accountProxySettings.change.accessKey
+msgid "&Change…"
+msgstr "&Athraigh…"
 
 #: junkSettings.label prefPanel-junk
 msgid "Junk Settings"
@@ -11377,6 +11507,332 @@ msgstr "accel"
 #: aboutMenuCmd.label aboutMenuCmd.accesskey
 msgid "&About &brandShortName;"
 msgstr "&Maidir le &brandShortName;"
+
+#: onlineContactsHeader.label
+msgid "Online Contacts"
+msgstr "Teagmhálacha ar líne"
+
+#: offlineContactsHeader.label
+msgid "Offline Contacts"
+msgstr "Teagmhálacha as líne"
+
+#: conversationsHeader.label
+msgid "Conversations"
+msgstr "Comhráite"
+
+#: searchResultConversation.label
+msgid "Search result"
+msgstr "Toradh cuardaigh"
+
+#: chat.noConv.title
+msgid "Conversations will be displayed here."
+msgstr "Taispeánfar comhráite anseo."
+
+#: chat.noConv.description
+msgid "Use the contact list in the left panel to start a conversation."
+msgstr "Úsáid an liosta sa phainéal ar chlé chun comhrá a thosú."
+
+#: chat.noPreviousConv.description
+msgid ""
+"&brandShortName; currently doesn't have any previous conversations stored for "
+"this contact."
+msgstr ""
+
+#: chat.noAccount.title
+msgid "You haven't set up a chat account yet."
+msgstr "Níl cuntas comhrá socraithe agat fós."
+
+#: chat.noAccount.description
+msgid ""
+"Let &brandShortName; guide you through the process of setting up your chat "
+"account."
+msgstr ""
+
+#: chat.accountWizard.button
+msgid "Get started"
+msgstr "Tús maith"
+
+#: chat.noConnectedAccount.title
+msgid "Your chat accounts are not connected."
+msgstr "Níl do chuntais chomhrá ceangailte."
+
+#: chat.noConnectedAccount.description
+msgid "You can connect them from the 'Chat status' dialog:"
+msgstr "Is féidir iad a cheangal sa dialóg 'Stádas comhrá':"
+
+#: chat.showAccountManager.button
+msgid "Show chat status"
+msgstr "Taispeáin stádas comhrá"
+
+#: chat.participants
+msgid "Participants:"
+msgstr "Rannpháirtithe:"
+
+#: chat.previousConversations
+msgid "Previous Conversations:"
+msgstr "Comhráite Roimhe Seo:"
+
+#: chat.ongoingConversation
+msgid "Ongoing conversation"
+msgstr "Comhrá ar siúl"
+
+#: openConversationCmd.label openConversationCmd.accesskey
+msgid "Start a &Conversation"
+msgstr "Tosaigh &Comhrá"
+
+#: closeConversationCmd.label closeConversationCmd.accesskey
+msgid "&Close Conversation"
+msgstr "&Dún Comhrá"
+
+#: aliasCmd.label aliasCmd.accesskey folderContextRename.label
+#: folderContextRename.accesskey accept.label accept.accesskey
+msgid "&Rename"
+msgstr "&Athainmnigh"
+
+#: deleteCmd.label deleteCmd.accesskey
+msgid "Remo&ve Contact"
+msgstr "&Bain Teagmháil"
+
+#: openConversationButton.tooltip
+msgid "Start a conversation"
+msgstr "Tosaigh comhrá"
+
+#: closeConversationButton.tooltip
+msgid "Close conversation"
+msgstr "Dún comhrá"
+
+#: addBuddyButton.label
+msgid "Add Contact"
+msgstr "Cuir Teagmháil Leis"
+
+#: joinChatButton.label
+msgid "Join Chat"
+msgstr "Téigh isteach i gComhrá"
+
+#: chatAccountsButton.label
+msgid "Show Accounts"
+msgstr "Taispeáin Cuntais"
+
+#. This is the base of the empty text for the chat search box.  We replace
+#. #1 with the contents of the appropriate search.keyLabel.* value for the
+#. platform (defined in messenger/messenger.dtd).
+#. The goal is to convey to the user that typing in the box will allow them
+#. to search for conversations and that there is a hotkey they can press
+#. to get to the box faster.  If the global indexer is disabled, the search
+#. box will be collapsed and the user will never see this message.
+#: searchAllChatMessages.label.base
+msgid "Search all conversations… #1"
+msgstr "Cuardaigh gach uile chomhrá… #1"
+
+#: status.available imStatus.available
+msgid "Available"
+msgstr "Ar fáil"
+
+#: status.unavailable imStatus.unavailable
+msgid "Unavailable"
+msgstr "Níl ar fáil"
+
+#: openLinkCmd.label openLinkCmd.accesskey
+msgid "&Open Link…"
+msgstr "&Oscail Nasc…"
+
+#: chatTabTitle chatButton.label paneChat.title
+msgid "Chat"
+msgstr "Comhrá"
+
+#: goBackToCurrentConversation.button
+msgid "Back to current conversation"
+msgstr "Fill ar an gcomhrá reatha"
+
+#. # LOCALIZATION NOTE (startAConversationWith.button):
+#. #  %S is replaced with the display name of a contact.
+#: startAConversationWith.button
+msgid "Start a conversation with %S"
+msgstr "Tosaigh comhrá le %S"
+
+#. # LOCALIZATION NOTE (defaultGroup):
+#. #  this is used in the addBuddies dialog if the list of existing groups is empty
+#: defaultGroup
+msgid "Contacts"
+msgstr "Teagmhálacha"
+
+#. # LOCALIZATION NOTE (buddy.authRequest.label):
+#. # This string appears in a notification bar at the
+#. # top of the Contacts window when someone added the user to his/her
+#. # contact list, to request the permission from the user to share
+#. # status information with this potential new contact.
+#. # %S is replaced with the user name of the potential new contact.
+#: buddy.authRequest.label
+msgid "%S wants to chat with you"
+msgstr "Ba mhaith le %S comhrá a dhéanamh leat"
+
+#: buddy.authRequest.allow.label can
+msgid "Allow"
+msgstr "Ceadaigh"
+
+#: buddy.authRequest.deny.label
+msgid "Deny"
+msgstr "Diúltaigh"
+
+#. # LOCALIZATION NOTE (buddy.deletePrompt.title):
+#. # %S here will be replaced by the alias (or username) of a buddy about
+#. # to be removed from the buddy list.
+#: buddy.deletePrompt.title
+msgid "Delete %S?"
+msgstr "Scrios %S?"
+
+#. # LOCALIZATION NOTE (buddy.deletePrompt.message):
+#. # %1$S will be replaced by the name of a buddy (either the alias
+#. # followed by the username between parenthesis if an alias is set, or
+#. # only the username otherwise).
+#. # %2$S will be the name of the protocol on which this buddy is removed
+#. # (for example: AIM, MSN, Google Talk).
+#. #
+#. # Please find a wording that will keep the username as close as
+#. # possible to the beginning of the string, because this is the
+#. # important information that an user should see when looking quickly
+#. # at this prompt.
+#: buddy.deletePrompt.message
+msgid ""
+"%1$S will be permanently removed from your %2$S buddy list if you continue."
+msgstr ""
+"Bainfear %1$S ó do liosta cairde in %2$S go deo má leanann tú ar aghaidh"
+
+#. # LOCALIZATION NOTE (buddy.deletePrompt.displayName):
+#. # This is used to format the display name inserted in buddy.deletePrompt.message
+#. # %1$S is the alias, %2$S is the username.
+#: buddy.deletePrompt.displayName
+msgid "%1$S (%2$S)"
+msgstr "%1$S (%2$S)"
+
+#: userIconFilePickerTitle
+msgid "Select the new icon…"
+msgstr "Roghnaigh an deilbhín nua…"
+
+#. # LOCALIZATION NOTE (chat.isTyping, chat.hasStoppedTyping):
+#. # The contact display name is displayed with a big font on a first
+#. # line and these two strings are displayed on a second line with a
+#. # smaller font. Please try to find a wording that make this look
+#. # almost like a sentence.
+#: chat.isTyping
+msgid "is typing…"
+msgstr "ag clóscríobh…"
+
+#: chat.hasStoppedTyping
+msgid "has stopped typing."
+msgstr ""
+
+#. # LOCALIZATION NOTE (chat.contactIsTyping, chat.contactHasStoppedTyping):
+#. #  These strings are displayed in a tooltip when hovering the status type icon.
+#. #  %S is replaced with the display name of the contact.
+#: chat.contactIsTyping
+msgid "%S is typing."
+msgstr "Tá %S ag clóscríobh."
+
+#: chat.contactHasStoppedTyping
+msgid "%S has stopped typing."
+msgstr "Stop %S clóscríobh."
+
+#: noTopic
+msgid "No topic message for this room."
+msgstr ""
+
+#. # LOCALIZATION NOTE (unknownCommand):
+#. # This is shown when an unknown command (/foo) is attempted. %S is the command.
+#: unknownCommand
+msgid "%S is not a supported command. Type /help to see the list of commands."
+msgstr ""
+"Ní thacaítear leis an ordú %S. Clóscríobh /help chun na horduithe a fheiceáil."
+
+#. # LOCALIZATION NOTE (today, yesterday):
+#. # These 3 strings are used to display when previous conversations happened.
+#. # In 'today' and 'yesterday', %S is replaced with the time.
+#: today
+msgid "Today %S"
+msgstr "Inniu ag %S"
+
+#: yesterday
+msgid "Yesterday %S"
+msgstr "Inné ag %S"
+
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+#. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#: addAccountDialog.title
+msgid "Set up Filelink"
+msgstr "Socraigh Filelink"
+
+#: addAccountDialog.menuTitle
+msgid "Select an online storage service"
+msgstr "Roghnaigh seirbhís stórála ar líne"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: addAccountDialog.style
+msgid "width: 40em; min-height: 20em;"
+msgstr "width: 40em; min-height: 20em;"
+
+#: addAccountDialog.accountName.label
+msgid "Account Name:"
+msgstr "Ainm an Chuntais:"
+
+#: addAccountDialog.noAccountText
+msgid ""
+"We're sorry, but the current version of &brandShortName; only allows one "
+"account from each online storage service."
+msgstr ""
+
+#: addAccountDialog.createAccountText
+msgid ""
+"This feature allows you to send large attachments using one of several online "
+"storage services. You can either connect to an existing account, or sign up "
+"for a new account."
+msgstr ""
+
+#: addAccountDialog.authorizing
+msgid "Checking authorization..."
+msgstr "Údarú á dhearbhú..."
+
+#: addAccountDialog.error
+msgid "An error occurred while setting up the account!"
+msgstr "Tharla earráid agus an cuntas á shocrú!"
+
+#: addAccountDialog.acceptButton.label
+msgid "Set up Account"
+msgstr "Socraigh Cuntas"
+
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+#. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#: dropboxMgmt.viewSettings
+msgid "View my account settings on dropbox.com"
+msgstr "Féach ar shocruithe mo chuntais ar dropbox.com"
+
+#: cloudfileMgmt.termsOfService tos
+msgid "Terms of Service"
+msgstr "Téarmaí Seirbhíse"
+
+#: cloudfileMgmt.usedSpace
+msgid "Used Space:"
+msgstr "Spás Úsáidte:"
+
+#: cloudfileMgmt.unusedSpace
+msgid "Unused Space:"
+msgstr "Spás Saor:"
+
+#: cloudfileMgmt.upgradeOffer
+msgid "Get more space"
+msgstr "Faigh tuilleadh spáis"
+
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+#. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#: youSendItMgmt.viewSettings
+msgid "View my account settings on yousendit.com"
+msgstr "Féach ar shocruithe mo chuntais ar yousendit.com"
+
+#: youSendItSettings.needAnAccount
+msgid "Need an account?"
+msgstr "An bhfuil cuntas uait?"
 
 #: window.title
 msgid "Customize Headers"
@@ -12427,11 +12883,11 @@ msgstr "Riachtanach:"
 msgid "You're running low on space!"
 msgstr "Tá an diosca ag éirí lán!"
 
-#: featureConfigurator.previousButton previousButton.label
+#: featureConfigurator.previousButton
 msgid "Previous"
 msgstr "Siar"
 
-#: featureConfigurator.nextButton nextButton.label
+#: featureConfigurator.nextButton
 msgid "Next"
 msgstr "Ar Aghaidh"
 
@@ -12712,7 +13168,7 @@ msgstr "&Rith Anois"
 msgid "Run sele&cted filter(s) on:"
 msgstr "Rith s&cagairí roghnaithe ar:"
 
-#: choosethis.label filemessageschoosethis.label choosethisfolder.label
+#: choosethis.label filemessageschoosethis.label
 msgid "choose this folder"
 msgstr "roghnaigh an fillteán seo"
 
@@ -13232,20 +13688,21 @@ msgctxt "glodaComplete.messagesMentioningMany.label"
 msgid "Messages mentioning: #1"
 msgstr "Teachtaireachtaí a luann: #1"
 
-#. # LOCALIZATION NOTE (glodaComplete.webSearch.label): The label used in the
+#. # LOCALIZATION NOTE (glodaComplete.webSearch1.label): The label used in the
 #. #  autocomplete widget to refer to a search on the web for a short string
-#. #  containing at most 15 characters. #1 is the string to search for.
-#: glodaComplete.webSearch.label
-msgid "Search the web for: #1"
-msgstr "Cuardaigh an Gréasán: #1"
+#. #  containing at most 15 characters. #1 is the search provider to use. #2 is
+#. #  the string to search for, truncated to 15 characters.
+#: glodaComplete.webSearch1.label
+msgid "Search #1 for: #2"
+msgstr ""
 
-#. # LOCALIZATION NOTE (glodaComplete.webSearch.label.truncated): The label used in
+#. # LOCALIZATION NOTE (glodaComplete.webSearch1.label.truncated): The label used in
 #. #  the autocomplete widget to refer to a search on the web for a short string
-#. #  containing more than 15 characters. #1 is the string to search for, truncated
-#. #  to 15 characters.
-#: glodaComplete.webSearch.label.truncated
-msgid "Search the web for: #1…"
-msgstr "Cuardaigh an Gréasán: #1…"
+#. #  containing more than 15 characters. #1 is the search provider to use. #2 is
+#. #  the string to search for, truncated to 15 characters.
+#: glodaComplete.webSearch1.label.truncated
+msgid "Search #1 for: #2…"
+msgstr ""
 
 #. #-#-#-#-#  chromemessengerglodaFacetView.dtd.po (firefox)  #-#-#-#-#
 #. Label at the top of the
@@ -13610,58 +14067,6 @@ msgstr ""
 ", agus duine amháin eile;, agus beirt eile;, agus #1 fhaighteoir eile;, agus "
 "#1 bhfaighteoir eile;, agus #1 faighteoir eile"
 
-#. #-#-#-#-#  chromemessengergloda.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (*.facetNameLabel): These are the labels used to label the facet
-#. #  displays in the global search facet display mechanism.  They should be
-#. #  compact descriptions of the facet type (e.g. "Folder", and don't need to
-#. #  refer to the objects being faceted (e.g. "Message" or "Mail").
-#. # LOCALIZATION NOTE (*.includeLabel): The label to use for the included group
-#. #  in the facet display. If not provided, we will fall back to
-#. #  "glodaFacetView.facets.included.fallbackLabel".
-#. # LOCALIZATION NOTE (*.excludeLabel): The label to use for the excluded group
-#. #  in the facet display. If not provided, we will fall back to
-#. #  "glodaFacetView.facets.excluded.fallbackLabel".
-#. # LOCALIZATION NOTE (*.remainderLabel): The label to use for the remaining items
-#. #  that are neither part of the included group or the excluded group in the
-#. #  facet display. If not provided, we will fall back to
-#. #  "glodaFacetView.facets.remainder.fallbackLabel".
-#. # LOCALIZATION NOTE (*.mustMatchLabel): The label to use for the popup menu
-#. #  to indicate that the results should be restricted to messages which match
-#. #  a particular value. If not provided, we will fall back to
-#. #  "glodaFacetView.facets.mustMatch.fallbackLabel".  #1, if present, is
-#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
-#. # LOCALIZATION NOTE (*.cantMatchLabel): The label to use for the popup menu
-#. #  to indicate that the results should be restricted to messages which match
-#. #  a particular value. If not provided, we will fall back to
-#. #  "glodaFacetView.facets.cantMatch.fallbackLabel".  #1, if present, is
-#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
-#. # LOCALIZATION NOTE (*.mayMatchLabel): The label to use for the popup menu
-#. #  to indicate that the results should no longer be restricted relative to
-#. #  this particular facet value. If not provided, we will fall back to
-#. #  "glodaFacetView.facets.mayMatch.fallbackLabel".  #1, if present, is
-#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
-#. # LOCALIZATION NOTE (*.mustMatchSomeLabel): The label to use for the popup menu
-#. #  to indicate that the results should be restricted to messages which have
-#. #  _some_ value (e.g. at least one tag is set). If not provided, we will fall
-#. #  back to "glodaFacetView.facets.mustMatchSome.fallbackLabel".  #1, if present,
-#. #  is replaced by the value of the facet (name, folder, mailing list, etc.)
-#. # LOCALIZATION NOTE (*.mustMatchNoneLabel): The label to use for the popup menu
-#. #  to indicate that the results should be restricted to messages which have _no_
-#. #  value (e.g. no tags are set). If not provided, we will fall back to
-#. #  "glodaFacetView.facets.mustMatchNoneLabel.fallbackLabel".  #1, if present, is
-#. #  replaced by the value of the facet (name, folder, mailing list, etc.)
-#. # LOCALIZATION NOTE (*.mayMatchAnyLabel): The label to use for the popup menu
-#. #  to indicate that the results should not be restricted to messages which have
-#. #  any or no value (e.g. no requirements on any tags are set). If not provided,
-#. #  we will fall back to "glodaFacetView.facets.mayMatchAnyLabel.fallbackLabel".
-#. #  #1, if present, is replaced by the value of the facet (name, folder, mailing
-#. #  list, etc.)
-#. # LOCALIZATION NOTE (gloda.message.attr.account.*): Stores the account in which
-#. #  a message's folder is located.
-#: gloda.message.attr.account.facetNameLabel accountColumn.label
-msgid "Account"
-msgstr "Cuntas"
-
 #: gloda.message.attr.account.mustMatchLabel
 msgctxt "gloda.message.attr.account.mustMatchLabel"
 msgid "must be in #1"
@@ -13875,6 +14280,288 @@ msgstr "Meáin (Fuaim, Físeán)"
 #: gloda.mimetype.category.pdf.label
 msgid "PDF Files"
 msgstr "Comhaid PDF"
+
+#: accountsWindow.title
+msgid "Instant messaging status"
+msgstr "Stádas teachtaireachtaí meandaracha"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: accountsWindow.style
+msgid "width: 28em; height: 19em;"
+msgstr "width: 28em; height: 19em;"
+
+#: accountManager.newAccount.label accountManager.newAccount.accesskey
+msgid "&New Account"
+msgstr "Cuntas &Nua"
+
+#: accountManager.close.label accountManager.close.accesskey
+msgid "C&lose"
+msgstr "Dú&n"
+
+#. #-#-#-#-#  chromemessengerimAccounts.dtd.po (firefox)  #-#-#-#-#
+#. This should match account.commandkey in instantbird.dtd
+#: accountManager.close.commandkey lwthemeInstallRequest.allowButton.accesskey
+msgid "a"
+msgstr "a"
+
+#. This title must be short, displayed with a big font size
+#: accountManager.noAccount.title
+msgid "No account configured yet"
+msgstr "Níl aon chuntas cumraithe fós"
+
+#: accountManager.noAccount.description
+msgid ""
+"Click on the &accountManager.newAccount.label; button to let &brandShortName; "
+"guide you through the process of configuring one."
+msgstr ""
+
+#: account.autoSignOn.label account.autoSignOn.accesskey
+msgid "&Sign-on at startup"
+msgstr "&Logáil isteach ag am tosaithe"
+
+#: account.connect.label account.connect.accesskey
+msgid "C&onnect"
+msgstr "C&eangail"
+
+#: account.disconnect.label account.disconnect.accesskey
+msgid "D&isconnect"
+msgstr "Díc&heangail"
+
+#: account.moveup.label
+msgid "Move up"
+msgstr "Bog suas"
+
+#: account.movedown.label
+msgid "Move down"
+msgstr "Bog síos"
+
+#: account.cancelReconnection.label account.cancelReconnection.accesskey
+msgid "C&ancel reconnection"
+msgstr "Ce&alaigh an t-athcheangal"
+
+#: account.connecting
+msgid "Connecting…"
+msgstr "Ag ceangal…"
+
+#: account.disconnecting
+msgid "Disconnecting…"
+msgstr "Á Dhícheangal…"
+
+#: account.disconnected
+msgid "Not Connected"
+msgstr "Gan Ceangal"
+
+#. # LOCALIZATION NOTE (protoOptions):
+#. # %S is replaced by the name of a protocol
+#: protoOptions
+msgid "%S Options"
+msgstr "Roghanna %S"
+
+#. # LOCALIZATION NOTE (accountColon):
+#. # This string is used to append a colon after the label of each
+#. # option. It's localizable so that the typography can be adapted.
+#: accountColon
+msgid "%S:"
+msgstr "%S:"
+
+#. # LOCALIZATION NOTE (accountUsernameInfo):
+#. # %S is replaced by the name of a protocol
+#: accountUsernameInfo
+msgid "Please enter the username for your %S account."
+msgstr "Tabhair uait ainm úsáideora do chuntais %S."
+
+#. # LOCALIZATION NOTE (accountUsernameInfoWithDescription):
+#. # %1$S is a hint for the expected format of the username
+#. # %2$S is the name of a protocol
+#: accountUsernameInfoWithDescription
+msgid "Please enter the username (%1$S) for your %2$S account."
+msgstr "Tabhair uait ainm úsáideora (%1$S) do chuntais %2$S."
+
+#. # LOCALIZATION NOTE (account.connection.error):
+#. # %S is the error message.
+#: account.connection.error
+msgid "Error: %S"
+msgstr "Earráid: %S"
+
+#. # LOCALIZATION NOTE (account.connection.errorUnknownPrpl)
+#. # %S is the id (not very user friendly; hence the quotes) of the missing plugin.
+#: account.connection.errorUnknownPrpl
+msgid "No '%S' protocol plugin."
+msgstr ""
+
+#: account.connection.errorEnteringPasswordRequired
+msgid "Entering a password is required to connect this account."
+msgstr ""
+"Caithfidh tú focal faire a chur isteach chun ceangal leis an gcuntas seo."
+
+#: account.connection.errorCrashedAccount
+msgid "A crash occurred while connecting this account."
+msgstr "Tharla tuairt agus an cuntas seo á cheangal."
+
+#. # LOCALIZATION NOTE (account.connection.progress):
+#. # %S is a message indicating progress of the connection process
+#: account.connection.progress
+msgid "Connecting: %S…"
+msgstr "Á Cheangal: %S…"
+
+#: account.connectedForSeconds
+msgid "Connected for a few seconds."
+msgstr "Ceangailte ar feadh cúpla soicind."
+
+#. # LOCALIZATION NOTE (account.connectedFor{Double,Single},
+#. #                    account.reconnectIn{Double,Single}):
+#. # Each pair of %S is a number followed by a unit. The units are
+#. # already localized in a downloads.properties file of the toolkit.
+#: account.connectedForDouble
+msgid "Connected for %1$S %2$S and %3$S %4$S."
+msgstr "Ceangailte ar feadh %1$S %2$S agus %3$S %4$S."
+
+#: account.connectedForSingle
+msgid "Connected for about %1$S %2$S."
+msgstr "Ceangailte ar feadh %1$S %2$S."
+
+#: account.reconnectInDouble
+msgid "Reconnection in %1$S %2$S and %3$S %4$S."
+msgstr "Athcheanglófar i gceann %1$S %2$S agus %3$S %4$S."
+
+#: account.reconnectInSingle
+msgid "Reconnection in %1$S %2$S."
+msgstr "Athcheanglófar i gceann %1$S %2$S."
+
+#: requestAuthorizeTitle
+msgid "Authorization request"
+msgstr "Iarratas ar údarú"
+
+#. #-#-#-#-#  chromemessengerimAccounts.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (requestAuthorizeAllow, requestAuthorizeDeny):
+#. # the & symbol indicates the position of the character that should be
+#. # used as the accesskey for this button.
+#: requestAuthorizeAllow allow.label allow.accesskey
+msgid "&Allow"
+msgstr "&Ceadaigh"
+
+#: requestAuthorizeDeny
+msgid "&Deny"
+msgstr "&Diúltaigh"
+
+#. # LOCALIZATION NOTE (requestAuthorizeText):
+#. # %S is a contact username.
+#: requestAuthorizeText
+msgid ""
+"%S added you to his/her buddy list, do you want to allow him/her to see you?"
+msgstr ""
+"Chuir %S lena liosta cairde thú; an bhfuil fonn ort cead a thabhairt dó/di "
+"tusa a fheiceáil ar líne?"
+
+#: accountsManager.notification.button.label
+msgid "Connect Now"
+msgstr "Ceangail Anois"
+
+#: accountsManager.notification.userDisabled.label
+msgid "You have disabled automatic connections."
+msgstr "Dhíchumasaigh tú ceangal uathoibríoch."
+
+#: accountsManager.notification.safeMode.label
+msgid ""
+"Automatic Connection Settings have been ignored because the application is "
+"currently running in Safe-Mode."
+msgstr ""
+
+#: accountsManager.notification.startOffline.label
+msgid ""
+"Automatic Connection Settings have been ignored because the application was "
+"started in Offline Mode."
+msgstr ""
+
+#: accountsManager.notification.crash.label
+msgid ""
+"The last run exited unexpectedly while connecting. Automatic Connections have "
+"been disabled to give you an opportunity to Edit your Settings."
+msgstr ""
+
+#. # LOCALIZATION NOTE (accountsManager.notification.singleCrash.label): Semi-colon list of plural forms.
+#. #  See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. #  #1 is the number of accounts that are suspected to have caused a crash.
+#: accountsManager.notification.singleCrash.label
+msgid ""
+"A previous run exited unexpectedly while connecting a new or edited account. "
+"It has not been connected so that you can Edit its Settings.;A previous run "
+"exited unexpectedly while connecting #1 new or edited accounts. They have not "
+"been connected so that you can Edit their Settings."
+msgstr ""
+
+#: accountsManager.notification.other.label
+msgid "Automatic connection has been disabled."
+msgstr "Díchumasaíodh ceangal uathoibríoch."
+
+#: windowTitle.label
+msgid "Chat Account Wizard"
+msgstr "Treoraí Cuntais Chomhrá"
+
+#: accountProtocolTitle.label
+msgid "Chat network"
+msgstr "Líonra comhrá"
+
+#: accountProtocolInfo.label
+msgid "Please choose the network of your chat account."
+msgstr "Roghnaigh líonra do chuntais chomhrá."
+
+#: accountProtocolField.label
+msgid "Network:"
+msgstr "Líonra:"
+
+#: accountProtocolGetMore.label
+msgid "Get more…"
+msgstr "Tuilleadh…"
+
+#: accountUsernameDuplicate.label
+msgid "This account is already configured!"
+msgstr "Tá an cuntas seo cumraithe cheana!"
+
+#: accountPasswordInfo.label
+msgid "Please enter your password in the box below."
+msgstr "Cuir d'fhocal faire sa mbosca thíos."
+
+#: accountPasswordManager.label
+msgid ""
+"The password entered here will be stored in the Password Manager. Leave this "
+"box empty if you want to be prompted for your password each time this account "
+"is connected."
+msgstr ""
+
+#: accountAdvancedInfo.label
+msgid "Feel free to skip this step if you want to."
+msgstr ""
+
+#: accountAliasGroupbox.caption
+msgid "Local Alias"
+msgstr "Ailias Logánta"
+
+#: accountAliasInfo.label
+msgid ""
+"This will only be displayed in your conversations when you talk, remote "
+"contacts won't see it."
+msgstr ""
+
+#: accountProxySettings.caption
+msgid "Proxy Settings"
+msgstr "Socruithe an tSeachfhreastalaí"
+
+#: accountSummaryTitle.label SUMMARY_PAGE_TITLE
+msgid "Summary"
+msgstr "Achoimre"
+
+#: accountSummaryInfo.label
+msgid ""
+"A summary of the information you entered is displayed below. Please check it "
+"before the account is created."
+msgstr ""
+"Seo é achoimre ar an bhfaisnéis a chuir tú isteach. Dearbhaigh é sula "
+"gcruthóidh tú an cuntas."
+
+#: accountSummary.connectNow.label
+msgid "Connect this account now."
+msgstr "Ceangail an cuntas seo anois."
 
 #
 # The following are used by the imap code to display progress/status/error messages
@@ -14946,7 +15633,7 @@ msgstr "Ar Aghaidh &gt;"
 msgid "Finish"
 msgstr "Críochnaigh"
 
-#: cancel.label WizardContinue CancelBtn
+#: cancel.label cloudFileUploadingCancel.label WizardContinue CancelBtn
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -15532,6 +16219,22 @@ msgstr "Ríomhphost Iompórtáilte"
 #: ImportModuleFolderName
 msgid "%S Import"
 msgstr "Iompórtáil %S"
+
+#: joinChatWindow.title
+msgid "Join chat"
+msgstr "Téigh isteach sa chomhrá"
+
+#: name.label
+msgid "Room"
+msgstr "Seomra"
+
+#: optional.label
+msgid "(optional)"
+msgstr "(roghnach)"
+
+#: autojoin.label autojoin.accesskey
+msgid "&Auto-join this Chat Room"
+msgstr "Téigh iste&ach sa seomra seo go huathoibríoch"
 
 #: window.title
 msgid "About Junk Mail"
@@ -17130,6 +17833,12 @@ msgstr ""
 msgid "Attach File(s)"
 msgstr "Cuir comha(i)d faoi iamh"
 
+#. # LOCALIZATION NOTE (chooseFileToAttachViaCloud): %1$S is the cloud
+#. # provider to save the file to.
+#: chooseFileToAttachViaCloud
+msgid "Attach File(s) via %1$S"
+msgstr "Ceangail Comha(i)d trí %1$S"
+
 # #
 #. ##
 #: windowTitlePrefix
@@ -17372,6 +18081,69 @@ msgstr "Rinne mé dearmad!"
 msgid "No, Send Now"
 msgstr "Ní dhearna, Seol Anois"
 
+#. # LOCALIZATION NOTE (bigFileDescription): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/Localization_and_Plurals
+#. # #1 number of big attached files
+#: bigFileDescription
+msgid ""
+"This is a large file. It might be better to use Filelink instead.;These are "
+"large files. It might be better to use Filelink instead."
+msgstr ""
+"Is comhad mór é seo. Ba chóir duit Filelink a úsáid.;Is comhaid mhóra iad "
+"seo. Ba chóir duit Filelink a úsáid.;Is comhaid mhóra iad seo. Ba chóir duit "
+"Filelink a úsáid.;Is comhaid mhóra iad seo. Ba chóir duit Filelink a úsáid.;"
+"Is comhaid mhóra iad seo. Ba chóir duit Filelink a úsáid."
+
+# Ctrl+i is highlights URL for opening
+#: bigFileShare.accesskey
+msgid "l"
+msgstr "l"
+
+#: bigFileAttach.label
+msgid "Ignore"
+msgstr "Ná Bac Leis"
+
+#: bigFileChooseAccount.title
+msgid "Choose Account"
+msgstr "Roghnaigh Cuntas"
+
+#: bigFileChooseAccount.text
+msgid "Choose a cloud account to upload the attachment to"
+msgstr ""
+
+#: bigFileHideNotification.title
+msgid "Don't Upload My Files"
+msgstr "Ná hUasluchtaigh Mo Chuid Comhad"
+
+#: bigFileHideNotification.text
+msgid "You won't be notified if you attach more big files to this message."
+msgstr ""
+
+#: bigFileHideNotification.check
+msgid "Never notify me of this again."
+msgstr "Ná habair liom faoi seo arís."
+
+#. # LOCALIZATION NOTE(cloudFileUploadingTooltip): Do not translate the string
+#. # %S. %S is the display name for the cloud account the attachment is being
+#. # uploaded to.
+#: cloudFileUploadingTooltip
+msgid "Uploading to %S…"
+msgstr "Á uasluchtú go %S…"
+
+#. # LOCALIZATION NOTE(cloudFileUploadedTooltip): Do not translate the string
+#. # %S. %S is the display name for the cloud account the attachment was uploaded
+#. # to.
+#: cloudFileUploadedTooltip
+msgid "Uploaded to %S"
+msgstr "Uasluchtaithe go %S"
+
+#: cloudFileUploadingNotification
+msgid ""
+"Your file is being linked. It will appear in the body of the message when "
+"it's done.;Your files are being linked. They will appear in the body of the "
+"message when they're done."
+msgstr ""
+
 # # LOCALIZATION NOTE(smtpEnterPasswordPromptWithUsername): Do not translate the
 # # words %1$S and %2$S. Place the word %1$S where the host name should appear,
 # # and %2$S where the user name should appear.
@@ -17399,6 +18171,102 @@ msgstr "Bain Iatán;Bain Iatáin;Bain Iatáin;Bain Iatáin;Bain Iatáin"
 msgid "There was an error saving the message to %S. Retry?"
 msgstr "Tharla earráid agus an teachtaireacht á sábháil go %S. Atriail?"
 
+#: errorCloudFileAuth.title
+msgid "Authentication Error"
+msgstr "Earráid Fhíordheimhnithe"
+
+#. ## LOCALIZATION NOTE(errorCloudFileAuth.message):
+#. ## %1$S is the name of the online storage service that authentication failed against.
+#: errorCloudFileAuth.message
+msgid "Unable to authenticate to %1$S."
+msgstr ""
+
+#: errorCloudFileUpload.title
+msgid "Upload Error"
+msgstr "Earráid le linn uasluchtaithe"
+
+#. ## LOCALIZATION NOTE(errorCloudFileUpload.message):
+#. ## %1$S is the name of the online storage service that uploading failed against.
+#. ## %2$S is the name of the file that failed to upload.
+#: errorCloudFileUpload.message
+msgid "Unable to upload %2$S to %1$S."
+msgstr "Ní féidir %2$S a uasluchtú go %1$S."
+
+#: errorCloudFileQuota.title
+msgid "Quota Error"
+msgstr "Earráid Chuóta"
+
+#. ## LOCALIZATION NOTE(errorCloudFileQuota.message):
+#. ## %1$S is the name of the online storage service being uploaded to.
+#. ## %2$S is the name of the file that could not be uploaded due to exceeding the storage limit.
+#: errorCloudFileQuota.message
+msgid "Uploading %2$S to %1$S would exceed your space quota."
+msgstr ""
+
+#: errorCloudFileLimit.title
+msgid "File Size Error"
+msgstr ""
+
+#. ## LOCALIZATION NOTE(errorCloudFileLimit.message):
+#. ## %1$S is the name of the online storage service being uploaded to.
+#. ## %2$S is the name of the file that could not be uploaded due to size restrictions.
+#: errorCloudFileLimit.message
+msgid "%2$S exceeds the maximum size for %1$S."
+msgstr ""
+
+#: errorCloudFileOther.title
+msgid "Unknown Error"
+msgstr "Earráid Anaithnid"
+
+#. ## LOCALIZATION NOTE(errorCloudFileOther.message):
+#. ## %1$S is the name of the online storage service that cannot be communicated with.
+#: errorCloudFileOther.message
+msgid "An unknown error occurred when communicating with %1$S."
+msgstr "Tharla earráid anaithnid le linn cumarsáide le %1$S."
+
+#: errorCloudFileDeletion.title
+msgid "Deletion Error"
+msgstr "Earráid: Scriosadh"
+
+#. ## LOCALIZATION NOTE(errorCloudFileDeletion.message):
+#. ## %1$S is the name of the online storage service that the file is to be deleted from.
+#. ## %2$S is the name of the file that failed to be deleted.
+#: errorCloudFileDeletion.message
+msgid "There was a problem deleting %2$S from %1$S."
+msgstr "Tharla earráid agus %2$S á scriosadh ó %1$S."
+
+#: errorCloudFileUpgrade.label
+msgid "Upgrade"
+msgstr "Uasghrádú"
+
+#. ## LOCALIZATION NOTE(cloudAttachmentCountHeader): A line of text describing how
+#. ## many uploaded files have been appended to this message.  Emphasis should be
+#. ## on sharing as opposed to attaching. This item is used as a header to a list,
+#. ## hence the colon.  This header is only displayed in HTML emails.
+#. ## Using PluralForm (so don't replace the #1).
+#: cloudAttachmentCountHeader
+msgid "I've linked #1 file to this email:;I've linked #1 files to this email:"
+msgstr ""
+"Cheangail mé #1 chomhad leis an teachtaireacht seo:;Cheangail mé #1 chomhad "
+"leis an teachtaireacht seo:;Cheangail mé #1 chomhad leis an teachtaireacht "
+"seo:;Cheangail mé #1 gcomhad leis an teachtaireacht seo:;Cheangail mé #1 "
+"comhad leis an teachtaireacht seo:"
+
+#. ## LOCALIZATION NOTE(cloudAttachmentListFooter): %1$S is a link, whose text
+#. ## contents are the brandFullName of this application.
+#: cloudAttachmentListFooter
+msgid "%1$S makes it easy to share large files over email."
+msgstr ""
+
+#. ## LOCALIZATION NOTE(cloudAttachmentListItem): A line of text describing a cloud
+#. ## attachment, to be inserted into the message body. Do not translate the words
+#. ## %1$S, %2$S, %3$S, or %4$S. %1$S is the attachment name, %2$S is its size,
+#. ## %3$S is the name of the cloud storage service, and %4$S is the link to the
+#. ## attachment.
+#: cloudAttachmentListItem
+msgid "* %1$S (%2$S) hosted on %3$S: %4$S"
+msgstr "* %1$S (%2$S) óstáilte ag %3$S: %4$S"
+
 #: attachImageSource.label attachImageSource.accesskey
 msgid "Attach thi&s image to the message"
 msgstr "Ceangail a&n íomhá seo leis an teachtaireacht"
@@ -17425,6 +18293,10 @@ msgstr "&Comha(i)d…"
 msgctxt "attachFileCmd.key"
 msgid "A"
 msgstr "A"
+
+#: attachCloudCmd.label attachCloudCmd.accesskey
+msgid "F&ilelink"
+msgstr "F&ilelink"
 
 #: attachPageCmd.label attachPageCmd.accesskey
 msgid "&Web Page…"
@@ -17884,6 +18756,22 @@ msgstr "Roghnaigh &Uile"
 msgid "Attach &File(s)…"
 msgstr "Cuir comha(i)d &faoi iamh…"
 
+#: attachCloud.label attachCloud.accesskey
+msgid "F&ilelink…"
+msgstr "F&ilelink…"
+
+#: convertCloud.label convertCloud.accesskey
+msgid "&Convert to…"
+msgstr "&Tiontaigh go…"
+
+#: cancelUpload.label cancelUpload.accesskey
+msgid "Ca&ncel Upload"
+msgstr "C&ealaigh an tUasluchtú"
+
+#: convertRegularAttachment.label convertRegularAttachment.accesskey
+msgid "Regular &Attachment"
+msgstr "Gnáth&iatán"
+
 #: attachPage.label attachPage.accesskey
 msgid "Attach &Web Page…"
 msgstr "Ceangail Leathanach &Gréasáin…"
@@ -17975,6 +18863,10 @@ msgstr "Fai&gh cuntas nua ríomhphoist…"
 #: newExistingEmailAccountCmd.label newExistingEmailAccountCmd.accesskey
 msgid "&Existing Mail Account…"
 msgstr "Cunt&as ríomhphoist atá ann…"
+
+#: newIMAccountCmd.label newIMAccountCmd.accesskey
+msgid "&Chat Account…"
+msgstr "&Cuntas Comhrá…"
 
 #: openMessageFileCmd.label openMessageFileCmd.accesskey
 msgid "&Open Saved Message…"
@@ -18102,8 +18994,8 @@ msgid "Un&delete Selected Messages"
 msgstr "&Díscrios Teachtaireachtaí Roghnaithe"
 
 #: unsubscribeNewsgroupCmd.label unsubscribeNewsgroupCmd.accesskey
-msgid "U&nsubscribe"
-msgstr "Dí&liostáil"
+msgid "Unsu&bscribe"
+msgstr "Dílio&stáil"
 
 #: selectMenu.label selectMenu.accesskey
 msgid "&Select"
@@ -18530,6 +19422,10 @@ msgstr "&Ar Aghaidh"
 msgid "&Back"
 msgstr "&Siar"
 
+#: goChatCmd.label goChatCmd.accesskey
+msgid "&Chat"
+msgstr "&Comhrá"
+
 #: prevStarredMsgCmd.label prevStarredMsgCmd.accesskey
 msgctxt "prevStarredMsgCmd.label prevStarredMsgCmd.accesskey"
 msgid "&Starred Message"
@@ -18874,6 +19770,14 @@ msgstr "&Breiseáin"
 msgid "Acti&vity Manager"
 msgstr "Bainisteoir Gnío&mhaíochta"
 
+#: imAccountsStatus.label imAccountsStatus.accesskey
+msgid "&Chat status"
+msgstr "&Stádas comhrá"
+
+#: imStatus.showAccounts
+msgid "Show Accounts…"
+msgstr "Taispeáin Cuntais…"
+
 #: savedFiles.label savedFiles.accesskey
 msgid "Saved Fi&les"
 msgstr "Comhaid Shábhái&lte"
@@ -18941,6 +19845,34 @@ msgstr "Seol Ar Aghaidh"
 #: archiveButton.label hdrArchiveButton1.label
 msgid "Archive"
 msgstr "Cuir sa Chartlann"
+
+#: nextButton.label
+msgctxt "nextButton.label"
+msgid "Next"
+msgstr "Ar Aghaidh"
+
+#: nextButtonToolbarItem.label
+msgid "Next Unread"
+msgstr "An Chéad Teachtaireacht Eile Gan Léamh"
+
+#: nextMsgButton.label
+msgctxt "nextMsgButton.label"
+msgid "Next"
+msgstr "Ar Aghaidh"
+
+#: previousButton.label
+msgctxt "previousButton.label"
+msgid "Previous"
+msgstr "Siar"
+
+#: previousButtonToolbarItem.label
+msgid "Previous Unread"
+msgstr "An teachtaireacht gan léamh roimhe seo"
+
+#: previousMsgButton.label
+msgctxt "previousMsgButton.label"
+msgid "Previous"
+msgstr "Siar"
 
 # Toolbar
 #: backButton1.label
@@ -19056,9 +19988,17 @@ msgstr "Cuir na teachtaireachtaí roghnaithe sa chartlann"
 msgid "Move to the next unread message"
 msgstr "Téigh go dtí an chéad teachtaireacht eile gan léamh"
 
+#: nextMsgButton.tooltip
+msgid "Move to the next message"
+msgstr "Téigh go dtí an chéad teachtaireacht eile"
+
 #: previousButton.tooltip
 msgid "Move to the previous unread message"
 msgstr "Téigh go dtí an teachtaireacht gan léamh roimhe seo"
+
+#: previousMsgButton.tooltip
+msgid "Move to the previous message"
+msgstr "Téigh go dtí an teachtaireacht roimhe seo"
 
 #: goForwardButton.tooltip
 msgid "Go forward one message"
@@ -19100,6 +20040,10 @@ msgstr "Marcáil na teachtaireachtaí roghnaithe mar phost ceart"
 msgid "Go to the address book"
 msgstr "Téigh go dtí an leabhar seoltaí"
 
+#: chatButton.tooltip
+msgid "Show the Chat tab"
+msgstr "Taispeáin an cluaisín Comhrá"
+
 #: tagButton.tooltip
 msgid "Tag messages"
 msgstr "Clibeáil Teachtaireachtaí"
@@ -19133,11 +20077,6 @@ msgstr "Oscail i g&Cluaisín Nua"
 #: folderContextNew.label folderContextNew.accesskey
 msgid "&New Subfolder…"
 msgstr "Fo-Fhillteán &Nua…"
-
-#: folderContextRename.label folderContextRename.accesskey accept.label
-#: accept.accesskey
-msgid "&Rename"
-msgstr "&Athainmnigh"
 
 #: folderContextCompact.label folderContextCompact.accesskey
 msgid "&Compact"
@@ -19573,13 +20512,13 @@ msgid "k"
 msgstr "k"
 
 #. This is the base of the empty text for the global search box.  We replace
-#. #1 with the contents of the appropriate
-#. searchAllMessages.keyLabel2.* value for the platform.
+#. #1 with the contents of the appropriate search.keyLabel.* value for the
+#. platform.
 #. The goal is to convey to the user that typing in the box will allow them
 #. to search for messages globally and that there is a hotkey they can press
 #. to get to the box faster.  If the global indexer is disabled, the search
 #. box will be collapsed and the user will never see this message.
-#: searchAllMessages.label.base
+#: search.label.base
 msgid "Search… #1"
 msgstr "Cuardaigh… #1"
 
@@ -19588,11 +20527,10 @@ msgstr "Cuardaigh… #1"
 # windows and linux (which use the control key).  We use the key defined in
 # the quickSearchCmd.key entity defined above, the letter should match it.
 #
-#. LOCALIZATION NOTE (searchAllMessages.keyLabel.nonmac):
 #. The description of the key-binding to get into the global search box on
 #. windows and linux (which use the control key).  We use the key defined in
 #. the quickSearchCmd.key entity defined above, the letter should match it.
-#: searchAllMessages.keyLabel2.nonmac
+#: search.keyLabel.nonmac
 msgid "&lt;Ctrl+K&gt;"
 msgstr "&lt;Ctrl+K&gt;"
 
@@ -19601,11 +20539,10 @@ msgstr "&lt;Ctrl+K&gt;"
 # systems.  We use the key defined in the quickSearchCmd.key entity defined
 # above, the letter should match it.
 #
-#. LOCALIZATION NOTE (searchAllMessages.keyLabel.mac):
 #. The description of the key-binding to get into the global search box on mac
 #. systems.  We use the key defined in the quickSearchCmd.key entity defined
 #. above, the letter should match it.
-#: searchAllMessages.keyLabel2.mac
+#: search.keyLabel.mac
 msgid "&lt;&#x2318;K&gt;"
 msgstr "&lt;&#x2318;K&gt;"
 
@@ -21394,10 +22331,6 @@ msgctxt "lwthemeInstallRequest.allowButton"
 msgid "Allow"
 msgstr "Ceadaigh"
 
-#: lwthemeInstallRequest.allowButton.accesskey
-msgid "a"
-msgstr "a"
-
 #: lwthemePostInstallNotification.message
 msgid "A new theme has been installed."
 msgstr "Suiteáladh téama nua."
@@ -21983,58 +22916,6 @@ msgstr "<B>Eolas Faoin Cháipéis:</B>"
 msgid "Attachment"
 msgstr "Iatán"
 
-# Partial Message Format 1
-# # @name MIME_MSG_PARTIAL_FMT_1
-# # @loc
-# LOCALIZATION NOTE (1037): In the following line, translate only the word, "Truncated!".
-#. # Partial Message Format 1
-#. ## @name MIME_MSG_PARTIAL_FMT_1
-#. ## @loc
-#. # LOCALIZATION NOTE (1037): In the following line, translate only the word, "Truncated!".
-#: 1037
-msgid ""
-"<P><CENTER><TABLE BORDER CELLSPACING=5 CELLPADDING=10 WIDTH=\"80%%\"><TR><TD "
-"ALIGN=CENTER><FONT SIZE=\"+1\"><B>Truncated!</B></FONT><HR>"
-msgstr ""
-"<P><CENTER><TABLE BORDER CELLSPACING=5 CELLPADDING=10 WIDTH=\"80%%\"><TR><TD "
-"ALIGN=CENTER><FONT SIZE=\"+1\"><B>Teasctha!</B></FONT><HR>"
-
-# Partial Message Format 2
-# # @name MIME_MSG_PARTIAL_FMT_2
-# # @loc
-# LOCALIZATION NOTE (1038): Translate the following two lines as a single sentence. In the middle of the two sections
-# there will be a URL. You may translate the text in any order you wish, but the html tags must stay in the same locations.
-# In particular, the "<B>" tag must begin the first section, which must end with the "<A HREF=" tag. Do not translate the html tag,"<P>"
-#. # Partial Message Format 2
-#. ## @name MIME_MSG_PARTIAL_FMT_2
-#. ## @loc
-#. # LOCALIZATION NOTE (1038): Translate the following two lines as a single sentence. In the middle of the two sections
-#. # there will be a URL. You may translate the text in any order you wish, but the html tags must stay in the same locations.
-#. # In particular, the "<B>" tag must begin the first section, which must end with the "<A HREF=" tag. Do not translate the html tag,"<P>"
-#: 1038
-msgid ""
-"<B>This message exceeded the Maximum Message Size set in Account Settings, so "
-"we have only downloaded the first few lines from the mail server.<P>Click <A "
-"HREF=\""
-msgstr ""
-"<B>Tá an teachtaireacht seo níos mó ná an t-uasmhéid teachtaireachta sna "
-"Socruithe Cuntais agus dá bhrí sin níl ach an chéad chúpla líne íosluchtaithe "
-"ón bhfreastalaí ríomhphoist.<P>Cliceáil<A HREF=\""
-
-#. # Partial Message Format 3
-#. ## @name MIME_MSG_PARTIAL_FMT_3
-#. ## @loc
-#. # LOCALIZATION NOTE (1039): This section must begin with the ">" sign and end with the tags,"</B></TD></TR></TABLE></CENTER>"
-#. # Do not translate "</A>" tag.
-#: 1039
-msgctxt "1039"
-msgid ""
-"\">here</A> to download the rest of the message.</B></TD></TR></TABLE></"
-"CENTER>"
-msgstr ""
-"\">anseo</A> chun an chuid eile den teachtaireacht a íosluchtú.</B></TD></"
-"TR></TABLE></CENTER>"
-
 # default attachment name
 # # @name MIME_MSG_DEFAULT_ATTACHMENT_NAME
 # # @loc
@@ -22049,55 +22930,44 @@ msgstr ""
 msgid "Part %s"
 msgstr "Páirt %s"
 
-# Partial Message Format2 1
-# # @name MIME_MSG_PARTIAL_FMT2_1
-# # @loc
-# LOCALIZATION NOTE (1037): In the following line, translate only the words, "Not Downloaded".
-#. # Partial Message Format2 1
-#. ## @name MIME_MSG_PARTIAL_FMT2_1
+#. # Partial Message Truncated
+#. ## @name MIME_MSG_PARTIAL_TRUNCATED
 #. ## @loc
-#. # LOCALIZATION NOTE (1042): In the following line, translate only the words, "Not Downloaded".
-#: 1042
-msgid ""
-"<P><CENTER><TABLE BORDER CELLSPACING=5 CELLPADDING=10 WIDTH=\"80%%\"><TR><TD "
-"ALIGN=CENTER><FONT SIZE=\"+1\"><B>Not Downloaded</B></FONT><HR>"
-msgstr ""
-"<P><CENTER><TABLE BORDER CELLSPACING=5 CELLPADDING=10 WIDTH=\"80%%\"><TR><TD "
-"ALIGN=CENTER><FONT SIZE=\"+1\"><B>Gan Íosluchtú</B></FONT><HR>"
+#: MIME_MSG_PARTIAL_TRUNCATED
+msgid "Truncated!"
+msgstr "Teasctha!"
 
-# Partial Message Format2 2
-# # @name MIME_MSG_PARTIAL_FMT2_2
-# # @loc
-# LOCALIZATION NOTE (1038): Translate the following two lines as a single sentence. In the middle of the two sections
-# there will be a URL. You may translate the text in any order you wish, but the html tags must stay in the same locations.
-# In particular, the "<B>" tag must begin the first section, which must end with the "<A HREF=" tag. Do not translate the html tag,"<P>"
-#. # Partial Message Format2 2
-#. ## @name MIME_MSG_PARTIAL_FMT2_2
+#. # Partial Message Truncated Explanation
+#. ## @name MIME_MSG_PARTIAL_TRUNCATED_EXPLANATION
 #. ## @loc
-#. # LOCALIZATION NOTE (1043): Translate the following two lines as a single sentence. In the middle of the two sections
-#. # there will be a URL. You may translate the text in any order you wish, but the html tags must stay in the same locations.
-#. # In particular, the "<B>" tag must begin the first section, which must end with the "<A HREF=" tag. Do not translate the html tag,"<P>"
-#: 1043
+#: MIME_MSG_PARTIAL_TRUNCATED_EXPLANATION
 msgid ""
-"<B>Only the headers for this message were downloaded from the mail server."
-"<P>Click <A HREF=\""
+"This message exceeded the Maximum Message Size set in Account Settings, so we "
+"have only downloaded the first few lines from the mail server."
 msgstr ""
-"<B>Níor íosluchtaíodh ach ceanntásca na teachtaireachta seo ón bhfreastalaí "
-"ríomhphoist.<P>Cliceáil <A HREF=\""
 
-#. # Partial Message Format2 3
-#. ## @name MIME_MSG_PARTIAL_FMT2_3
+#. # Partial Message Not Downloaded
+#. ## @name MIME_MSG_PARTIAL_NOT_DOWNLOADED
 #. ## @loc
-#. # LOCALIZATION NOTE (1044): This section must begin with the ">" sign and end with the tags,"</B></TD></TR></TABLE></CENTER>"
-#. # Do not translate "</A>" tag.
-#: 1044
-msgctxt "1044"
-msgid ""
-"\">here</A> to download the rest of the message.</B></TD></TR></TABLE></"
-"CENTER>"
+#: MIME_MSG_PARTIAL_NOT_DOWNLOADED
+msgid "Not Downloaded"
+msgstr "Gan íosluchtú"
+
+#. # Partial Message Not Downloaded Explanation
+#. ## @name MIME_MSG_PARTIAL_NOT_DOWNLOADED_EXPLANATION
+#. ## @loc
+#: MIME_MSG_PARTIAL_NOT_DOWNLOADED_EXPLANATION
+msgid "Only the headers for this message were downloaded from the mail server."
 msgstr ""
-"\">anseo</A> chun an chuid eile den teachtaireacht a íosluchtú.</B></TD></"
-"TR></TABLE></CENTER>"
+"Níor íosluchtaíodh ach ceanntásca na teachtaireachta seo ón bhfreastalaí "
+"ríomhphoist."
+
+#. # MIME_MSG_PARTIAL_CLICK_FOR_REST
+#. ## @name MIME_MSG_PARTIAL_CLICK_FOR_REST
+#. ## @loc
+#: MIME_MSG_PARTIAL_CLICK_FOR_REST
+msgid "Download the rest of the message."
+msgstr "Íosluchtaigh an chuid eile."
 
 #: readMsgsLink.label
 msgid "Read messages"
@@ -22803,7 +23673,7 @@ msgstr "C&ruthaigh Fillteán"
 msgid "Welcome to &brandShortName;"
 msgstr "Fáilte go &brandShortName;"
 
-#: header.label
+#: header2.label
 msgid "Would you like a new email address?"
 msgstr "An bhfuil fonn ort seoladh nua ríomhphoist a fháil?"
 
@@ -22986,10 +23856,6 @@ msgstr ""
 "\">Polasaí Príobháideachta</a>) agus chuig sholáthraithe ríomhphoist tríú "
 "páirtí <span class=\"placeholder\"></span> chun seoltaí ríomhphoist a aimsiú."
 
-#: tos
-msgid "Terms of Service"
-msgstr "Téarmaí Seirbhíse"
-
 #. # LOCALIZATION NOTE (searchDesc):
 #. #   %S will be the selected search engine.
 #: searchDesc
@@ -23033,30 +23899,6 @@ msgctxt "feeds.wizardLongName"
 msgid "Blogs &amp; News Feeds"
 msgstr "Blaganna agus Fothaí Nuachta"
 
-# # Strings used in the Account Manager
-#. ## Strings used in the Account Manager
-#: prefPanel-newsblog
-msgid "Feed Settings"
-msgstr "Socruithe Fotha"
-
-# Feed Properties Dialog
-#. Feed Properties Dialog
-#: window.title
-msgid "Feed Properties"
-msgstr "Airíonna na bhFothaí"
-
-#: feedFolder.label feedFolder.accesskey
-msgid "&Store Articles in: "
-msgstr "&Stóráil Ailt i: "
-
-#: feedLocation.label feedLocation.accesskey
-msgid "&Feed URL: "
-msgstr "URL an &Fhotha: "
-
-#: quickMode.label quickMode.accesskey
-msgid "S&how the article summary instead of loading the web page"
-msgstr "Taispeáin ac&hoimre an ailt in áit an leathanach Gréasáin a íosluchtú"
-
 # Subscription Dialog
 #. Subscription Dialog
 #: feedSubscriptions.label
@@ -23071,9 +23913,25 @@ msgstr ""
 "Nóta: ní chuirfidh baint nó athrú fillteáin fhotha isteach ar altanna atá "
 "íosluchtaithe cheana féin."
 
-#: feedTitle.label
-msgid "Title:"
-msgstr "Teideal:"
+#: feedLocation.label feedLocation.accesskey
+msgid "Feed &URL:"
+msgstr "&URL an fhotha:"
+
+#: feedLocation.placeholder
+msgid "Enter a valid feed url to Add"
+msgstr ""
+
+#: feedFolder.label feedFolder.accesskey
+msgid "&Store Articles in:"
+msgstr "&Sábháil Ailt i:"
+
+#: quickMode.label quickMode.accesskey
+msgid "S&how the article summary instead of loading the web page"
+msgstr "Taispeáin ac&hoimre an ailt in áit an leathanach Gréasáin a íosluchtú"
+
+#: validateText.label
+msgid "Check validation and retrieve a valid url."
+msgstr ""
 
 #: button.importOPML.label button.importOPML.accesskey
 msgid "&Import"
@@ -23097,10 +23955,6 @@ msgstr ""
 msgid "Subscribing to a Feed…"
 msgstr "Ag liostáil le Fotha…"
 
-#: subscribe-noFeedIsSelected
-msgid "<no feed selected>"
-msgstr "<níl aon fhotha roghnaithe>"
-
 #: subscribe-feedAlreadySubscribed
 msgid "You already have a subscription for this feed."
 msgstr "Tá síntiús agat cheana don fhotha seo."
@@ -23108,6 +23962,30 @@ msgstr "Tá síntiús agat cheana don fhotha seo."
 #: subscribe-errorOpeningFile
 msgid "Could not open the file."
 msgstr "Níorbh fhéidir an comhad a oscailt."
+
+#: subscribe-feedAdded
+msgid "Feed added."
+msgstr "Cuireadh fotha leis."
+
+#: subscribe-feedUpdated
+msgid "Feed updated."
+msgstr "Nuashonraíodh an fotha."
+
+#: subscribe-feedMoved
+msgid "Feed subscription moved."
+msgstr ""
+
+#: subscribe-feedRemoved
+msgid "Feed unsubscribed."
+msgstr "Díliostáladh ón bhfotha."
+
+#: subscribe-feedNotValid
+msgid "The Feed URL is not a valid feed."
+msgstr "Níl fotha bailí ag an URL seo."
+
+#: subscribe-networkError
+msgid "The Feed URL could not be found. Please check the name and try again."
+msgstr ""
 
 #: subscribe-OPMLImportTitle
 msgid "Select OPML file to import"
@@ -23134,21 +24012,36 @@ msgstr "My%SFeeds.opml"
 msgid "The file %S does not seem to be a valid OPML file."
 msgstr "Ní comhad bailí OPML é %S."
 
-#. ## LOCALIZATION NOTE(subscribe-OPMLImportNewFeeds): %S is the count of new imported entries.
-#: subscribe-OPMLImportNewFeeds
-msgid "Imported %S new feeds."
-msgstr "Iompórtáladh %S fotha nua."
-
-#. ## LOCALIZATION NOTE(subscribe-OPMLImportTotalFeeds):
-#. ## - The first %S is the the count of new imported entries,
-#. ## - The second %S is total number of elements found in the file
-#: subscribe-OPMLImportTotalFeeds
-msgid ""
-"Imported %S new feeds to which you aren't already subscribed (out of %S total "
-"entries found)."
+#. ## LOCALIZATION NOTE(subscribe-OPMLImportFeedCount): Semi-colon list of plural forms.
+#. ## See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. ## #1 is the count of new imported entries.
+#: subscribe-OPMLImportFeedCount
+msgid "Imported #1 new feed.;Imported #1 new feeds."
 msgstr ""
-"Iompórtáladh %S fotha nua nach bhfuil cead agat liostáil leo (as %S fotha "
-"iomlán)."
+"Iompórtáladh #1 fhotha nua.;Iompórtáladh #1 fhotha nua.;Iompórtáladh #1 "
+"fhotha nua.;Iompórtáladh #1 bhfotha nua.;Iompórtáladh #1 fotha nua."
+
+#. ## LOCALIZATION NOTE(subscribe-OPMLImportUniqueFeeds): Semi-colon list of plural forms.
+#. ## #1 is the count of new imported entries
+#: subscribe-OPMLImportUniqueFeeds
+msgid ""
+"Imported #1 new feed to which you aren't already subscribed;Imported #1 new "
+"feeds to which you aren't already subscribed"
+msgstr ""
+
+#. ## LOCALIZATION NOTE(subscribe-OPMLImportFoundFeeds):
+#. ## #1 is total number of elements found in the file
+#: subscribe-OPMLImportFoundFeeds
+msgid "(out of #1 entry found);(out of #1 total entries found)"
+msgstr ""
+
+#. ## LOCALIZATION NOTE(subscribe-OPMLImportStatus):
+#. ## This is the concatenation of the two strings defined above to compose 1 sentence.
+#. ## %1$S = subscribe-OPMLImportUniqueFeeds
+#. ## %2$S = subscribe-OPMLImportFoundFeeds
+#: subscribe-OPMLImportStatus
+msgid "%1$S %2$S."
+msgstr "%1$S %2$S."
 
 #: subscribe-OPMLExportOPMLFilesFilterText
 msgid "OPML Files"
@@ -23182,18 +24075,10 @@ msgstr "Altanna fotha á n-íosluchtú (%S as %S)…"
 msgid "There are no new articles for this feed."
 msgstr "Níl aon alt nua ón bhfotha seo."
 
-#: newsblog-networkErrorTitle
-msgid "Network Error"
-msgstr "Earráid Líonra"
-
 #. ## LOCALIZATION NOTE(newsblog-networkError): %S is the feed URL
 #: newsblog-networkError
 msgid "%S could not be found. Please check the name and try again."
 msgstr "%S gan aimsiú. Deimhnigh an t-ainm agus bain triail eile as."
-
-#: newsblog-feedNotValidTitle
-msgid "Invalid Feed"
-msgstr "Fotha Neamhbhailí"
 
 # # LOCALIZATION NOTE(newsblog-feedNotValid): %S is the feed URL
 #. ## LOCALIZATION NOTE(newsblog-feedNotValid): %S is the feed URL
@@ -23328,27 +24213,20 @@ msgstr "An bhfuil tú cinnte gur mian leat an teachtaireacht seo a chealú?"
 msgid "Message cancelled."
 msgstr "Cealaíodh an teachtaireacht."
 
-#: enterUsername
-msgid "Please enter a username for news server access:"
-msgstr "Iontráil ainm úsáideora le haghaidh rochtain an fhreastalaí nuachta:"
-
-#: enterUsernameTitle
-msgid "News Server Username Required"
-msgstr "Ainm Úsáideora de dhíth don Fhreastalaí Nuachta"
-
-#: saveUsername
-msgid "Use Password Manager to remember this value."
+#: enterUserPassTitle
+msgid "News Server Username and Password Required"
 msgstr ""
-"Bí i dtuilleamaí Bhainisteoir na bhFocal Faire leis an luach seo a choinneáil "
-"i gcuimhne."
 
-#: enterPassword
-msgid "Please enter a password for news server access:"
-msgstr "Iontráil focal faire le haghaidh rochtain an fhreastalaí nuachta:"
+#. # LOCALIZATION NOTE (enterUserPassServer): %S is the server being accessed
+#: enterUserPassServer
+msgid "Please enter a username and password for %S:"
+msgstr ""
 
-#: enterPasswordTitle
-msgid "News Server Password Required"
-msgstr "Focal Faire an fhreastalaí nuachta de dhíth"
+#. # LOCALIZATION NOTE (enterUserPassGroup): %1$S is a specific newsgroup to set
+#. # the password for; %2$S is the server from which the newsgroup is accessed
+#: enterUserPassGroup
+msgid "Please enter a username and password for %1$S on %2$S:"
+msgstr ""
 
 # LOCALIZATION NOTE (newNewsgroupHeaders): %1$S is the number of the current
 # header being downloaded, %2$S is the number of headers to be downloaded, and
@@ -23799,7 +24677,7 @@ msgstr "&As Líne…"
 msgid "Comp&act folders when it will save over"
 msgstr "Dlúth&aigh fillteáin má sábhálfar níos mó ná"
 
-#: mb.label
+#: mb.label enableCloudFileAccountOffer.mb
 msgid "MB"
 msgstr "MB"
 
@@ -23898,6 +24776,42 @@ msgstr "&Sábháil comhaid i"
 msgid "&Always ask me where to save files"
 msgstr "Fi&afraigh díom cá sábhálfar an comhad i gcónaí"
 
+#: attachments.incoming.label
+msgid "Incoming"
+msgstr "Isteach"
+
+#: attachments.outgoing.label
+msgid "Outgoing"
+msgstr "Amach"
+
+#: addCloudFileAccount.description
+msgid "Add a new Filelink storage service"
+msgstr "Cuir seirbhís stórála Filelink leis"
+
+#: authRequired.description
+msgid ""
+"Your authorization is required in order to see the settings for this storage "
+"service."
+msgstr ""
+
+#: authRequired.button.label authRequired.button.accesskey
+msgid "A&uthorize"
+msgstr "Ú&daraigh"
+
+#: enableCloudFileAccountOffer.label
+msgid "Offer to share for files larger than"
+msgstr ""
+
+# LOCALIZATION NOTE: confirmRemoveAccount: %S is the account pretty name
+#. #-#-#-#-#  chromemessengerpreferencesapplications.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (dialog_removeAccount):
+#. # %S will be replaced with the user-defined name of a storage account.
+#. #-#-#-#-#  chromemessengerprefs.properties.po (firefox)  #-#-#-#-#
+#. #LOCALIZATION NOTE: confirmRemoveAccount: %S is the account pretty name
+#: dialog_removeAccount confirmRemoveAccount
+msgid "Are you sure you want to remove the account \"%S\"?"
+msgstr "An bhfuil tú cinnte go dteastaíonn uait an cuntas \"%S\" a bhaint?"
+
 #: attachmentReminderDialog.title
 msgid "Attachment Reminder Keywords"
 msgstr "Lorgfhocail Mheabhrúcháin Iatáin"
@@ -23910,6 +24824,40 @@ msgstr ""
 "Tabhairfaidh &brandShortName; rabhadh duit maidir le hiatáin atá ar iarraidh "
 "má tá tú ar tí teachtaireacht a sheoladh ina bhfuil ceann de na lorgfhocail "
 "seo."
+
+#: startupAction.label startupAction.accesskey
+msgid "When &brandShortName; &starts:"
+msgstr "Agus &brandShortName; á tho&sú:"
+
+#: startupOffline.label
+msgid "Keep my Chat Accounts offline"
+msgstr ""
+
+#: startupConnectAuto.label
+msgid "Connect my chat accounts automatically"
+msgstr "Ceangail mo chuntais chomhrá go huathoibríoch"
+
+#. LOCALIZATION NOTE: reportIdleAfter.label is displayed first, then
+#. there's a field where the user can enter a number, and itemTime is
+#. displayed at the end of the line. The translations of the
+#. reportIdleAfter.label and idleTime parts don't have to mean the exact
+#. same thing as in English; please try instead to translate the whole
+#. sentence.
+#: reportIdleAfter.label reportIdleAfter.accesskey
+msgid "Let my contacts know that &I am Idle after"
+msgstr "&Abair le mo chairde go bhfuilim díomhaoin tar éis"
+
+#: idleTime
+msgid "minutes of inactivity"
+msgstr "nóiméad gan gníomh"
+
+#: andSetStatusToAway.label andSetStatusToAway.accesskey
+msgid "and set my status to &Away with this status message:"
+msgstr ""
+
+#: sendTyping.label sendTyping.accesskey
+msgid "Send &typing notifications in conversations"
+msgstr "Abair le &daoine nuair a bhím ag clóscríobh"
 
 #: forwardMsg.label forwardMsg.accesskey
 msgid "&Forward messages:"
@@ -24610,10 +25558,6 @@ msgstr "&Coisc"
 msgid "Allow for &Session"
 msgstr "Ceadaigh don &Seisiún"
 
-#: allow.label allow.accesskey
-msgid "&Allow"
-msgstr "&Ceadaigh"
-
 #: prefWindow.titleWin
 msgid "Options"
 msgstr "Roghanna"
@@ -24837,10 +25781,6 @@ msgstr "Gach cineál ceangail"
 #: AtEndOfSession
 msgid "at end of session"
 msgstr "ag deireadh seisiúin"
-
-#: can
-msgid "Allow"
-msgstr "Ceadaigh"
 
 #: canSession
 msgid "Allow for Session"
@@ -25174,19 +26114,13 @@ msgid "Exit"
 msgstr "Scoir"
 
 #. # when the wizard already has a domain (Should we say something different?)
-#: enterValidHostname
-msgid "Please enter a valid hostname."
-msgstr "Iontráil óstainm bailí, le do thoil."
+#: enterValidServerName
+msgid "Please enter a valid server name."
+msgstr ""
 
 #: failedRemoveAccount
 msgid "Failed to remove this account."
 msgstr "Theip ar bhaint an chuntais seo."
-
-# LOCALIZATION NOTE: confirmRemoveAccount: %S is the account pretty name
-#. #LOCALIZATION NOTE: confirmRemoveAccount: %S is the account pretty name
-#: confirmRemoveAccount
-msgid "Are you sure you want to remove the account \"%S\"?"
-msgstr "An bhfuil tú cinnte go dteastaíonn uait an cuntas \"%S\" a bhaint?"
 
 #: confirmRemoveAccountTitle
 msgid "Remove Account"
@@ -28237,10 +29171,6 @@ msgstr "Socrú Aicearraí"
 #: SHORTCUTS_PAGE_SUBTITLE
 msgid "Create Program Icons"
 msgstr "Cruthaigh Deilbhíní"
-
-#: SUMMARY_PAGE_TITLE
-msgid "Summary"
-msgstr "Achoimre"
 
 #: SUMMARY_PAGE_SUBTITLE
 msgid "Ready to start installing $BrandShortName"
