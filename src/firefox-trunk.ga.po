@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-25 16:58-0500\n"
+"POT-Creation-Date: 2012-03-26 15:01-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1175,7 +1175,7 @@ msgstr "Priontáil an leathanach seo"
 msgid "Back/Forward"
 msgstr "Siar/Ar Aghaidh"
 
-#: locationItem.title col.url.label bookmark_edit_location
+#: locationItem.title col.url.label tooltip.location bookmark_edit_location
 #: pageactions.geolocation
 msgid "Location"
 msgstr "Suíomh"
@@ -4000,11 +4000,12 @@ msgstr "Roghnaigh %S…"
 msgid "Add"
 msgstr "Cuir Leis"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (fieldArrayDel): When a command has a parameter that can
 #. # be repeated a number of times (e.g. like the 'cat a.txt b.txt' command) the
 #. # user interface presents buttons to add and remove arguments. This string is
 #. # used to remove arguments.
-#: fieldArrayDel
+#: fieldArrayDel action.delete
 msgid "Delete"
 msgstr "Scrios"
 
@@ -4134,7 +4135,8 @@ msgstr "Achoimre"
 #. # LOCALIZATION NOTE (helpManDescription): A heading shown in a help page for a
 #. # command in the console. This heading precedes the top level description.
 #: helpManDescription col.description.label
-#: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE description_label devinfo_desc
+#: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE tooltip.description
+#: description_label devinfo_desc
 msgid "Description"
 msgstr "Cur Síos"
 
@@ -5373,12 +5375,17 @@ msgstr "min-width: 39em;"
 msgid "You have the following search engines installed:"
 msgstr "Tá na hinnill chuardaigh seo a leanas suiteáilte:"
 
+#. #-#-#-#-#  chat-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (tooltip.*):
+#. #    These are the descriptions given in a tooltip with information received
+#. #    from a whois response.
+#. #    The human readable ("realname") description of the user.
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromemozappsextensionsextensions.dtd.po (firefox)  #-#-#-#-#
 #. list sorting
 #: columnLabel.name generalMetaName col.name.label clearTimeDuration.nameColumn
-#: bookmark_edit_name addpref.name DirColName validation.crlname.label
-#: name.label sort.name.label select.name
+#: tooltip.realname bookmark_edit_name addpref.name DirColName
+#: validation.crlname.label name.label sort.name.label select.name
 msgid "Name"
 msgstr "Ainm"
 
@@ -5918,11 +5925,11 @@ msgstr "Bain an suíomh seo"
 
 #: newtab.show
 msgid "Show the new tab page"
-msgstr ""
+msgstr "Taispeáin an leathanach cluaisín nua"
 
 #: newtab.hide
 msgid "Hide the new tab page"
-msgstr ""
+msgstr "Folaigh an leathanach cluaisín nua"
 
 #. extracted from content/openLocation.xul
 #: enter.label
@@ -5930,8 +5937,8 @@ msgid ""
 "Enter the web location (URL), or specify the local file you would like to "
 "open:"
 msgstr ""
-"Iontráil suíomh (URL) an leathanaigh Gréasáin, nó teideal an chomhaid logánta "
-"is mian leat a oscailt:"
+"Cuir isteach suíomh (URL) an leathanaigh Gréasáin, nó teideal an chomhaid "
+"logánta is mian leat a oscailt:"
 
 #: chooseFile.label
 msgid "Choose File…"
@@ -6254,7 +6261,10 @@ msgstr "Eolas slándála maidir leis an leathanach seo"
 msgid "View Certificate"
 msgstr "Taispeáin an Teastas"
 
-#: securityView.unknown unknown CertUnknown addon.unknownDate
+#. #-#-#-#-#  chat-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (unknownStatusType):
+#. # the status of a buddy is unknown when it's in the list of a disconnected account
+#: securityView.unknown unknown unknownStatusType CertUnknown addon.unknownDate
 msgid "Unknown"
 msgstr "Anaithnid"
 
@@ -6325,6 +6335,9 @@ msgstr "%S:"
 msgid "Not specified"
 msgstr "Gan sonrú"
 
+#. #-#-#-#-#  chat-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (yes, no):
+#. #  These are used to turn true/false values into a yes/no response.
 #: yes checkbox.yes.label yesButton browsewithcaret.checkButtonLabel
 msgid "Yes"
 msgstr "Tá"
@@ -8170,7 +8183,8 @@ msgstr "&Bainistigh Breiseáin…"
 msgid "Exceptions"
 msgstr "Eisceachtaí"
 
-#: treehead.status.label devmgr.status.label devinfo_status lockColumn.label
+#: treehead.status.label tooltip.statusNoResource devmgr.status.label
+#: devinfo_status lockColumn.label
 msgid "Status"
 msgstr "Stádas"
 
@@ -8316,7 +8330,7 @@ msgstr "Eisceachtaí - Íomhánna"
 
 #: invalidURI
 msgid "Please enter a valid hostname"
-msgstr "Iontráil óstainm bailí, le do thoil"
+msgstr "Cuir óstainm bailí isteach, le do thoil"
 
 #: invalidURITitle
 msgid "Invalid Hostname Entered"
@@ -9609,7 +9623,7 @@ msgstr "Diúltaigh an freastalaí d'fhocal faire, nuashonraigh é anois."
 
 #: new.password.label
 msgid "Enter your new password"
-msgstr "Iontráil focal faire nua"
+msgstr "Cuir d'fhocal faire nua isteach"
 
 #: new.password.confirm
 msgid "Confirm your new password"
@@ -9849,7 +9863,12 @@ msgstr "Tá mé ag baint úsáide as &syncBrand.shortName.label; ar ríomhaire e
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. New Account AND Existing Account
-#: server.label VerifySSLServer_p
+#. #-#-#-#-#  chat-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  irc.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (options.*):
+#. #   These are the protocol specific options shown in the account manager and
+#. #   account wizard windows.
+#: server.label options.server options.connectServer VerifySSLServer_p
 msgid "Server"
 msgstr "Freastalaí"
 
@@ -12515,6 +12534,958 @@ msgid ""
 "date is very important for your online security, and Mozilla strongly "
 "recommends that you keep this service enabled."
 msgstr ""
+
+#. # LOCALIZATION NOTE (passwordPromptTitle, passwordPromptText):
+#. # %S is replaced with the name of the account
+#: passwordPromptTitle
+msgid "Password for %S"
+msgstr "Focal faire i gcomhair %S"
+
+#: passwordPromptText
+msgid "Please enter your password for %S in order to connect it."
+msgstr "Cuir d'fhocal faire i gcomhair %S isteach chun ceangal leis."
+
+#: passwordPromptSaveCheckbox rememberPassword
+msgid "Use Password Manager to remember this password."
+msgstr ""
+"Bí i dtuilleamaí Bhainisteoir na bhFocal Faire leis an bhfocal faire seo a "
+"choinneáil i gcuimhne."
+
+#. # LOCALIZATION NOTE (commands):
+#. #  %S is a comma separated list of command names.
+#: commands
+msgid ""
+"Commands: %S.\n"
+"Use /help &lt;command&gt; for more information."
+msgstr ""
+"Orduithe: %S.\n"
+"Úsáid /help &lt;ordú&gt; chun tuilleadh eolais a fháil."
+
+#. # LOCALIZATION NOTE (noCommand, noHelp):
+#. #  %S is the command name the user typed.
+#: noCommand
+msgid "No '%S' command."
+msgstr "Níl aon ordú '%S' ann."
+
+#: noHelp
+msgid "No help message for the '%S' command, sorry!"
+msgstr "Níl cabhair ar fáil le haghadh '%S'"
+
+#: sayHelpString
+msgid "say &lt;message&gt;: send a message without processing commands."
+msgstr ""
+"say &lt;teachtaireacht&gt;: seol teachtaireacht gan orduithe a phróiseáil."
+
+#: rawHelpString
+msgid "raw &lt;message&gt;: send a message without escaping HTML entities."
+msgstr "raw &lt;teachtaireacht&gt;: seol teachtaireacht gan aonáin HTML a éalú."
+
+#: helpHelpString
+msgid ""
+"help &lt;name&gt;: show the help message for the &lt;name&gt; command, or the "
+"list of possible commands when used without parameter."
+msgstr ""
+
+#. # LOCALIZATION NOTE (statusCommand):
+#. #  %1$S is replaced with a status command name
+#. #   (one of "back", "away", "busy", "dnd", or "offline").
+#. #  %2$S is replaced with the localized version of that status type
+#. #   (one of the 5 strings below).
+#: statusCommand
+msgid ""
+"%1$S &lt;status message&gt;: set the status to %2$S with an optional status "
+"message."
+msgstr ""
+"%1$S &lt;stádas&gt;: socraigh %2$S mar stádas, le teachtaireacht roghnach."
+
+#: back
+msgid "available"
+msgstr "ar fáil"
+
+#: away
+msgid "away"
+msgstr "amuigh"
+
+#: busy
+msgctxt "busy"
+msgid "unavailable"
+msgstr "gnóthach"
+
+#: dnd
+msgctxt "dnd"
+msgid "unavailable"
+msgstr "gafa"
+
+#: offline
+msgid "offline"
+msgstr "as líne"
+
+#. # LOCALIZATION NOTE (targetChanged):
+#. #  %1$S is the new conversation title (display name of the new target),
+#. #  %2$S is the protocol name used for the new target.
+#: targetChanged
+msgid "The conversation will continue with %1$S, using %2$S."
+msgstr "Leanfaidh an comhrá le %1$S, trí %2$S."
+
+#. # LOCALIZATION NOTE (statusChanged):
+#. #  %1$S is the display name of the contact.
+#. #  %2$S is the new status type (a value from status.properties).
+#: statusChanged
+msgid "%1$S is now %2$S."
+msgstr "Tá %1$S %2$S anois."
+
+#. # LOCALIZATION NOTE (statusChangedWithStatusText):
+#. #  %1$S is the display name of the contact.
+#. #  %2$S is the new status type (a value from status.properties).
+#. #  %3$S is the status text (eg. "I'm currently away from the computer").
+#: statusChangedWithStatusText
+msgid "%1$S is now %2$S: %3$S."
+msgstr "Tá %1$S %2$S anois: %3$S."
+
+#. # LOCALIZATION NOTE (statusChangedFromUnknown[WithStatusText]):
+#. #  special case of the previous 2 strings for when the status was
+#. #  previously unknown. These 2 strings should not mislead the user
+#. #  into thinking the person's status has just changed.
+#: statusChangedFromUnknown
+msgid "%1$S is %2$S."
+msgstr "Tá %1$S %2$S."
+
+#: statusChangedFromUnknownWithStatusText
+msgid "%1$S is %2$S: %3$S."
+msgstr "Tá %1$S %2$S: %3$S."
+
+#. # LOCALIZATION NOTE (statusUnknown):
+#. #  %S is the display name of the contact.
+#: statusUnknown
+msgid "Your account is disconnected (the status of %S is no longer known)."
+msgstr "Tá do chuntas dícheangailte (ní eol stádas %S a thuilleadh)."
+
+#: accountDisconnected
+msgid "Your account is disconnected."
+msgstr "Tá do chuntas dícheangailte."
+
+#. # LOCALIZATION NOTE (autoReply):
+#. #  %S is replaced by the text of a message that was sent as an automatic reply.
+#: autoReply
+msgid "Auto-reply - %S"
+msgstr "Freagra uathoibríoch  - %S"
+
+#. # LOCALIZATION NOTE (messenger.conversations.selections.ellipsis):
+#. #  ellipsis is used when copying a part of a message to show that the message was cut
+#: messenger.conversations.selections.ellipsis
+msgid "[…]"
+msgstr "[…]"
+
+#. # LOCALIZATION NOTE (messenger.conversations.selections.{system,content,action}MessagesTemplate):
+#. #  These 3 templates are used to format selected messages before copying them.
+#. #  Do not translate the texts between % characters, but feel free to adjust
+#. #  whitespace and separators to make them fit your locale.
+#: messenger.conversations.selections.systemMessagesTemplate
+msgid "%time% - %message%"
+msgstr "%time% - %message%"
+
+#: messenger.conversations.selections.contentMessagesTemplate
+msgid "%time% - %sender%: %message%"
+msgstr "%time% - %sender%: %message%"
+
+#: messenger.conversations.selections.actionMessagesTemplate
+msgid "%time% * %sender% %message%"
+msgstr "%time% * %sender% %message%"
+
+#: connection.error.useUsernameNotEmailAddress
+msgid "Please use your Facebook username, not an email address"
+msgstr "Úsáid d'ainm úsáideora Facebook in ionad seoladh ríomhphoist"
+
+#. # LOCALIZATION NOTE (connection.error.*):
+#. #   These will show in the account manager if the account is
+#. #   disconnected because of an error.
+#: connection.error.lost
+msgid "Lost connection with server"
+msgstr "Cailleadh an ceangal leis an bhfreastalaí"
+
+#: connection.error.timeOut check_error-2152398862
+msgid "Connection timed out"
+msgstr "Ceangal imithe thar am"
+
+#: connection.error.certError
+msgid "Certification error when connecting to server"
+msgstr "Earráid deimhniúcháin agus ceangal leis an bhfreastalaí á bhunú"
+
+#. # LOCALIZATION NOTE (joinChat.*):
+#. #   These show up on the join chat menu. An underscore is for the access key.
+#: joinChat.channel
+msgid "_Channel"
+msgstr "_Cainéal"
+
+#: joinChat.password chatRoomField.password
+msgid "_Password"
+msgstr "_Focal Faire"
+
+#: options.port options.connectPort
+msgid "Port"
+msgstr "Port"
+
+#: options.ssl
+msgid "Use SSL"
+msgstr "Úsáid SSL"
+
+#: options.encoding
+msgid "Character Set"
+msgstr "Tacar Carachtar"
+
+#: options.quitMessage
+msgid "Quit message"
+msgstr "Teachtaireacht dúnta"
+
+#: options.partMessage
+msgid "Part message"
+msgstr "Teachtaireacht fágtha"
+
+#: options.showServerTab
+msgid "Show messages from the server"
+msgstr "Taispeáin teachtaireachtaí ón bhfreastalaí"
+
+#. # LOCALIZATION NOTE (ctcp.ping): Semi-colon list of plural forms.
+#. #  See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. #   %1$S is the nickname of the user who was pinged.
+#. #   #2 is the delay (in seconds).
+#: ctcp.ping
+msgid "Ping reply from %1$S in #2 second.;Ping reply from %1$S in #2 seconds."
+msgstr ""
+"Fuarthas freagra ar phingiú ó %1$S tar éis #2 soicind.;Fuarthas freagra ar "
+"phingiú ó %1$S tar éis #2 shoicind.;Fuarthas freagra ar phingiú ó %1$S tar "
+"éis #2 shoicind.;Fuarthas freagra ar phingiú ó %1$S tar éis #2 soicind.;"
+"Fuarthas freagra ar phingiú ó %1$S tar éis #2 soicind."
+
+#. # LOCALIZATION NOTE (ctcp.version):
+#. #   %1$S is the nickname of the user whose version was requested.
+#. #   %2$S is the version response from the client.
+#: ctcp.version
+msgid "%1$S is using \"%2$S\""
+msgstr "Tá %1$S ag úsáid \"%2$S\""
+
+#. # LOCALIZATION NOTE (ctcp.time):
+#. #   %1$S is the nickname of the user whose time was requested.
+#. #   %2$S is the time response.
+#: ctcp.time
+msgid "The time for %1$S is %2$S."
+msgstr "Is é %2$S an t-am le haghaidh %1$S."
+
+#. # LOCALZIATION NOTE (command.*):
+#. #   These are the help messages for each command, the %S is the command name
+#. #   Each command first gives the parameter it accepts and then a description of
+#. #   the command.
+#: command.action
+msgid "%S &lt;action to perform&gt;: Perform an action."
+msgstr "%S &lt;gníomh&gt;: Déan gníomh."
+
+#: command.ctcp
+msgid "%S &lt;nick&gt; &lt;msg&gt;: Sends a CTCP message to the nick."
+msgstr ""
+"%S &lt;leasainm&gt; &lt;tcht&gt;: Seol teachtaireacht CTCP chuig an leasainm."
+
+#: command.chanserv
+msgid "%S &lt;command&gt;: Send a command to ChanServ."
+msgstr "%S &lt;ordú&gt;: Seol ordú chuig CharServ."
+
+#: command.deop
+msgid ""
+"%S &lt;nick1&gt;[,&lt;nick2&gt;]*: Remove channel operator status from "
+"someone. You must be a channel operator to do this."
+msgstr ""
+
+#: command.devoice
+msgid ""
+"%S &lt;nick1&gt;[,&lt;nick2&gt;]*: Remove channel voice status from someone, "
+"preventing them from speaking if the channel is moderated (+m). You must be a "
+"channel operator to do this."
+msgstr ""
+
+#: command.invite
+msgid ""
+"%S &lt;nick&gt; [&lt;room&gt;]: Invite someone to join you in the specified "
+"channel, or the current channel."
+msgstr ""
+
+#: command.join
+msgid ""
+"%S &lt;room1&gt;[,&lt;room2&gt;]* [&lt;key1&gt;[,&lt;key2&gt;]*]: Enter one "
+"or more channels, optionally providing a channel key for each if needed."
+msgstr ""
+
+#: command.kick
+msgid ""
+"%S &lt;nick&gt; [&lt;message&gt;]: Remove someone from a channel. You must be "
+"a channel operator to do this."
+msgstr ""
+
+#: command.list
+msgid ""
+"%S: Display a list of chat rooms on the network. Warning, some servers may "
+"disconnect you upon doing this."
+msgstr ""
+
+#: command.memoserv
+msgid "%S &lt;command&gt;: Send a command to MemoServ."
+msgstr "%S &lt;ordú&gt;: Seol ordú chuig MemoServ."
+
+#: command.mode
+msgid ""
+"%S (&lt;nick&gt;|&lt;channel&gt;) (+|-)&lt;new mode&gt;: Set or unset a "
+"channel or user mode."
+msgstr ""
+
+#: command.msg
+msgid ""
+"%S &lt;nick&gt; &lt;message&gt;: Send a private message to a user (as opposed "
+"to a channel)."
+msgstr ""
+
+#: command.nick
+msgid "%S &lt;new nickname&gt;: Change your nickname."
+msgstr "%S &lt;leasainm nua&gt;: Athraigh do leasainm."
+
+#: command.nickserv
+msgid "%S &lt;command&gt;: Send a command to NickServ."
+msgstr "%S &lt;ordú&gt;: Seol ordú chuig NickServ."
+
+#: command.notice
+msgid "%S &lt;target&gt; &lt;message&gt;: Send a notice to a user or channel."
+msgstr ""
+"%S &lt;sprioc&gt; &lt;teachtaireacht&gt;: Seol fógra chuig úsáideoir nó chuig "
+"chainéal."
+
+#: command.op
+msgid ""
+"%S &lt;nick1&gt;[,&lt;nick2&gt;]*: Grant channel operator status to someone. "
+"You must be a channel operator to do this."
+msgstr ""
+
+#: command.operserv
+msgid "%S &lt;command&gt;: Send a command to OperServ."
+msgstr "%S &lt;ordú&gt;: Seol ordú chuig OperServ."
+
+#: command.part
+msgid "%S [message]: Leave the current channel with an optional message."
+msgstr "%S [teachtaireacht]: Fág an cainéal reatha le teachtaireacht roghnach."
+
+#: command.ping
+msgid ""
+"%S [&lt;nick&gt;]: Asks how much lag a user (or the server if no user "
+"specified) has."
+msgstr ""
+
+#: command.quit
+msgid ""
+"%S &lt;message&gt;: Disconnect from the server, with an optional message."
+msgstr ""
+"%S &lt;teachtaireacht&gt;: Dícheangail ón bhfreastalaí, le teachtaireacht "
+"roghnach."
+
+#: command.quote
+msgid "%S &lt;command&gt;: Send a raw command to the server."
+msgstr "%S &lt;ordú&gt;: Seol amhordú chuig an bhfreastalaí."
+
+#: command.time
+msgid "%S: Displays the current local time at the IRC server."
+msgstr "%S: Taispeáin an t-am áitiúil ag an bhfreastalaí IRC."
+
+#: command.topic
+msgid "%S [&lt;new topic&gt;]: View or change the channel topic."
+msgstr "%S [&lt;ábhar nua&gt;]: Féach ar, nó athraigh ábhar an chainéil."
+
+#: command.umode
+msgid "%S (+|-)&lt;new mode&gt;: Set or unset a user mode."
+msgstr "%S (+|-)&lt;mód nua&gt;: Socraigh nó díshocraigh mód úsáideora."
+
+#: command.version
+msgid "%S &lt;nick&gt;: Request the version of a user's client."
+msgstr "%S &lt;leasainm&gt;: Faigh leagan de chliant an úsáideora."
+
+#: command.voice
+msgid ""
+"%S &lt;nick1&gt;[,&lt;nick2&gt;]*: Grant channel voice status to someone. You "
+"must be a channel operator to do this."
+msgstr ""
+
+#: command.wallops
+msgid ""
+"%S &lt;message&gt;: If you don't know what this is, you probably can't use it "
+"(sends a command to all connected with the +w flag and all operators on the "
+"server."
+msgstr ""
+
+#: command.whowas
+msgid "%S &lt;nick&gt;: Get information on a user that has logged off."
+msgstr ""
+"%S &lt;leasainm&gt;: Faigh faisnéis maidir le húsáideoir atá logáilte amach."
+
+#. # LOCALIZATION NOTE (message.*):
+#. #    These are shown as system messages in the conversation.
+#. #    %1$S is the nick and %2$S is the nick and host of the user who joined.
+#: message.join
+msgid "%1$S [%2$S] entered the room."
+msgstr "Tháinig %1$S [%2$S] isteach sa seomra."
+
+#. #    %1$S is the nick of who kicked you.
+#. #    %2$S is message.kicked.reason, if a kick message was given.
+#: message.kicked.you
+msgid "You have been kicked by %1$S%2$S."
+msgstr "Bhí tú ciceáilte amach ag %1$S%2$S."
+
+#. #    %1$S is the nick that is kicked, %2$S the nick of the person who kicked
+#. #    %1$S. %3$S is message.kicked.reason, if a kick message was given.
+#: message.kicked
+msgid "%1$S has been kicked by %2$S%3$S."
+msgstr "Bhí %1$S ciceáilte amach ag %2$S%3$S."
+
+#. #    %S is the kick message
+#: message.kicked.reason
+msgctxt "message.kicked.reason"
+msgid ": %S"
+msgstr ": %S"
+
+#. #    %1$S is the nickname of the user whose mode was changed, %2$S is the new
+#. #    mode and %3$S is who set the mode.
+#: message.mode
+msgid "mode (%1$S %2$S) by %3$S."
+msgstr "mód (%1$S %2$S) ag %3$S."
+
+#. #    %1$S is the old nick and %2$S is the new nick.
+#: message.nick
+msgid "%1$S is now known as %2$S."
+msgstr "Tugtar %2$S ar %1$S anois."
+
+#. #    %S is your new nick.
+#: message.nick.you
+msgid "You are now known as %S."
+msgstr "Tugtar %S ort anois."
+
+#. #    The paramter is the message.parted.reason, if a part message is given.
+#: message.parted.you
+msgid "You have left the room (Part%1$S)."
+msgstr "D'fhág tú an seomra (Part%1$S)."
+
+#. #    %1$S is the user's nick, %2$S is message.parted.reason, if a part message is given.
+#: message.parted
+msgid "%1$S has left the room (Part%2$S)."
+msgstr "D'fhág %1$S an seomra (Part%2$S)."
+
+#. #    %S is the part message supplied by the user.
+#: message.parted.reason
+msgctxt "message.parted.reason"
+msgid ": %S"
+msgstr ": %S"
+
+#. #    %1$S is the user's nick, %2$S is message.quit2 if a quit message is given.
+#: message.quit
+msgid "%1$S has left the room (Quit%2$S)."
+msgstr "D'fhág %1$S an seomra (Quit%2$S)."
+
+#. #    The paramter is the quit message given by the user.
+#: message.quit2
+msgctxt "message.quit2"
+msgid ": %S"
+msgstr ": %S"
+
+#. #    %1$S is the user who changed the topic, %2$S is the new topic.
+#: message.topicChanged
+msgid "%1$S has changed the topic to: %2$S."
+msgstr "D'athraigh %1$S an t-ábhar: %2$S."
+
+#. #    %1$S is the user who cleared the topic.
+#: message.topicCleared
+msgid "%1$S has cleared the topic."
+msgstr "Ghlan %1$S an t-ábhar."
+
+#. #    %1$S is the conversation name, %2$S is the topic.
+#: message.topic
+msgid "The topic for %1$S is: %2$S."
+msgstr ""
+
+#. #    %S is the conversation name.
+#: message.topicRemoved
+msgid "The topic for %S was removed."
+msgstr ""
+
+#. #    %1$S is the nickname of the invited user, %2$S is the conversation name
+#. #    they were invited to.
+#: message.invited
+msgid "%1$S was successfully invited to %2$S."
+msgstr ""
+
+#. #    %S is the nickname of the user who was summoned.
+#: message.summoned
+msgid "%S was summoned."
+msgstr ""
+
+#. # LOCALIZATION NOTE (error.*):
+#. #    These are shown as error messages in the conversation.
+#. #    %S is the channel name.
+#: error.noChannel
+msgid "There is no channel: %S."
+msgstr "Níl aon chainéal ann: %S."
+
+#: error.tooManyChannels
+msgid "Cannot join %S; you've joined too many channels."
+msgstr "Ní féidir dul isteach i %S; tá tú ar an iomarca cainéal cheana."
+
+#. #    %1$S is your new nick, %2$S is the kill message from the server.
+#: error.nickCollision
+msgid "Nick already in use, changing nick to %1$S [%2$S]."
+msgstr ""
+
+#: error.banned
+msgid "You are banned from this server."
+msgstr "Tá cosc ort ar an bhfreastalaí seo."
+
+#: error.bannedSoon
+msgid "You will soon be banned from this server."
+msgstr "Beidh cosc ort ar an bhfreastalaí seo go luath."
+
+#: error.mode.wrongUser
+msgid "You cannot change modes for other users."
+msgstr "Ní féidir leat mód a athrú le haghaidh úsáideoirí eile."
+
+#. #    The username and hostname that the user connects from (usually based on the
+#. #    reverse DNS of the user's IP, but often mangled by the server to
+#. #    protect users).
+#: tooltip.connectedFrom
+msgid "Connected from"
+msgstr "Ceangailte ó"
+
+#. #-#-#-#-#  irc.properties.po (firefox)  #-#-#-#-#
+#. # The away message of the user
+#: tooltip.away awayStatusType
+msgid "Away"
+msgstr "Amuigh"
+
+#: tooltip.ircOp
+msgid "IRC Operator"
+msgstr "Oibreoir IRC"
+
+#: tooltip.channels
+msgid "Currently on"
+msgstr "Ar líne faoi láthair"
+
+#: tooltip.server identity.connectedTo2
+msgid "Connected to"
+msgstr "Ceangailte le"
+
+#. #    %1$S is the server name, %2$S is the server location.
+#: tooltip.serverValue
+msgid "%1$S (%2$S)"
+msgstr "%1$S (%2$S)"
+
+#: tooltip.idleTime
+msgid "Idle for"
+msgstr "Díomhaoin ar feadh"
+
+#. # LOCALIZATION NOTE (gtalk.usernameHint):
+#. #  This is displayed inside the accountUsernameInfoWithDescription
+#. #  string defined in imAccounts.properties when the user is
+#. #  configuring an IRC account.
+#: usernameHint
+msgid "and server"
+msgstr "agus freastalaí"
+
+#: availableStatusType
+msgid "Available"
+msgstr "Ar fáil"
+
+#: unavailableStatusType
+msgid "Unavailable"
+msgstr "Níl ar fáil"
+
+#: offlineStatusType
+msgid "Offline"
+msgstr "As Líne"
+
+#: invisibleStatusType
+msgid "Invisible"
+msgstr "Dofheicthe"
+
+#: idleStatusType
+msgid "Idle"
+msgstr "Díomhaoin"
+
+# LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
+# your locale code, and link to your translated pages as soon as they're
+# live.
+# LOCALIZATION NOTE: Some of these URLs are currently 404s, but should be coming
+# online shortly.
+# LOCALIZATION NOTE (bookmarks_title):
+# title for the folder that will contains the default bookmarks
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
+#. # your locale code, and link to your translated pages as soon as they're 
+#. # live.
+#. # LOCALIZATION NOTE: Some of these URLs are currently 404s, but should be coming
+#. # online shortly.
+#. # LOCALIZATION NOTE (bookmarks_title):
+#. # title for the folder that will contains the default bookmarks
+#: mobileStatusType bookmarks_title
+msgid "Mobile"
+msgstr "Fón Póca"
+
+#. # LOCALIZATION NOTE (messenger.status.defaultIdleAwayMessage):
+#. #  This will be the away message put automatically when the user is idle.
+#: messenger.status.defaultIdleAwayMessage
+msgid "I am currently away from the computer."
+msgstr "Níl mé os comhair an ríomhaire faoi láthair."
+
+#. # LOCALIZATION NOTE (error.*):
+#. #   These are errors that will be shown to the user in conversation.
+#: error.tooLong
+msgid "Status is over 140 characters."
+msgstr "Tá an stádas níos faide ná 140 carachtar."
+
+#. # LOCALIZATION NOTE (error.general, error.retweet, error.delete):
+#. #   %1$S will be either the error string returned by the twitter server,
+#. #   in English, inside parenthesis, or the empty string if we have no specific
+#. #   message for the error.
+#. #   %2$S is the message that caused the error.
+#: error.general
+msgid "An error %1$S occurred while sending: %2$S"
+msgstr "Tharla earráid %1$S agus an teachtaireacht á seoladh: %2$S"
+
+#: error.retweet
+msgid "An error %1$S occurred while retweeting: %2$S"
+msgstr ""
+
+#: error.delete
+msgid "An error %1$S occurred while deleting: %2$S"
+msgstr "Tharla earráid %1$S le linn scriosadh: %2$S"
+
+#. # LOCALIZATION NOTE (timeline):
+#. #   This is the title of the conversation tab, %S will be replaced by
+#. #   @<username>.
+#: timeline
+msgid "%S timeline"
+msgstr "Amlíne %S"
+
+#. # LOCALIZATION NOTE (action.*):
+#. #  This will be an action in the context menu of displayed tweets.
+#: action.copyLink
+msgid "Copy Link to Tweet"
+msgstr "Cóipeáil Nasc le Tuít"
+
+#: action.retweet
+msgid "Retweet"
+msgstr "Atuíteáil"
+
+#: action.reply
+msgid "Reply"
+msgstr "Freagair"
+
+#. # LOCALIZATION NOTE (action.follow, action.stopFollowing):
+#. #  %S will be replaced by the screen name of a twitter user.
+#: action.follow
+msgid "Follow %S"
+msgstr "Lean %S"
+
+#: action.stopFollowing
+msgid "Stop following %S"
+msgstr "Ná lean %S a thuilleadh"
+
+#. # LOCALIZATION NOTE (event.follow, event.unfollow, event.followed):
+#. #  This will be displayed in system messages inside the timeline conversation.
+#. #  %S will be replaced by the screen name of a twitter user.
+#: event.follow
+msgid "You are now following %S."
+msgstr "Tá tú ag leanúint %S anois."
+
+#: event.unfollow
+msgid "You are no longer following %S."
+msgstr "Níl tú ag leanúint %S a thuilleadh."
+
+#: event.followed
+msgid "%S is now following you."
+msgstr "Tá %S do do leanúint anois."
+
+#. # LOCALIZATION NOTE (event.deleted):
+#. #  %S will be replaced by the text of the deleted tweet.
+#: event.deleted
+msgid "You have deleted this tweet: \"%S\"."
+msgstr "Scrios tú an tuít seo: \"%S\"."
+
+#. # LOCALIZATION NOTE (replyingToStatusText):
+#. #  This will be visible in the status bar of the conversation window
+#. #  while the user is typing a reply to a tweet.
+#. #  %S will be replaced by the text of the tweet the user is replying to.
+#: replyingToStatusText
+msgid "Replying to: %S"
+msgstr "Freagra ar: %S"
+
+#. # LOCALIZATION NOTE (connection.*):
+#. #   These will be displayed in the account manager in order to show the progress
+#. #   of the connection.
+#. #   (These will be displayed in account.connection.progress from
+#. #    accounts.properties, which adds … at the end, so do not include
+#. #    periods at the end of these messages.)
+#: connection.initAuth
+msgid "Initiating authentication process"
+msgstr "Próiseas fíordheimhnithe á thosú"
+
+#: connection.requestAuth
+msgid "Waiting for your authorization"
+msgstr "Ag fanacht le húdarú uait"
+
+#: connection.requestAccess
+msgid "Finalizing authentication"
+msgstr "Fíordheimhniú á chur i gcrích"
+
+#: connection.requestTimelines
+msgid "Requesting user timelines"
+msgstr ""
+
+#. # LOCALIZATION NOTE (connection.error.*):
+#. #   These will show in the account manager if an error occurs during the
+#. #   connection attempt.
+#: connection.error.userMismatch
+msgid "Username mismatch."
+msgstr "Ainmneacha mí-oiriúnaithe."
+
+#: connection.error.failedToken
+msgid "Failed to get request token."
+msgstr ""
+
+#: connection.error.authCancelled
+msgid "You cancelled the authorization process."
+msgstr "Chealaigh tú an próiseas údaraithe."
+
+#: connection.error.authFailed
+msgid "Failed to get authorization."
+msgstr "Theip ar údarú."
+
+#: connection.error.noNetwork
+msgid "There is no network connection available."
+msgstr "Níl ceangal leis an líonra ar fáil."
+
+#. # LOCALIZATION NOTE (authPrompt):
+#. #   This is the prompt in the browser window that pops up to authorize us
+#. #   to use a Twitter account. It is shown in the title bar of the authorization
+#. #   window.
+#: authPrompt
+msgid "Give permission to use your Twitter account"
+msgstr "Tabhair cead dúinn do chuntas Twitter a úsáid"
+
+#. # LOCALIZATION NOTE (options.*):
+#. #   These are the protocol specific options shown in the account manager and
+#. #   account wizard windows.
+#: options.track
+msgid "Tracked keywords"
+msgstr ""
+
+#. # LOCALIZATION NOTE (tooltip.*):
+#. #   These are the Twitter information that will appear in the tooltip
+#. #   for each participant on the home timeline.
+#. # LOCALIZATION NOTE (tooltip.created_at): the date the user joined.
+#: tooltip.created_at
+msgid "User Since"
+msgstr "Úsáideoir ó"
+
+#: tooltip.lang language.title
+msgid "Language"
+msgstr "Teanga"
+
+#: tooltip.time_zone
+msgid "Timezone"
+msgstr "Crios Ama"
+
+#: tooltip.url
+msgid "Homepage"
+msgstr "Leathanach Baile"
+
+#. # LOCALIZATION NOTE (tooltip.protected):
+#. #  whether the user's tweets are publicly visible.
+#: tooltip.protected
+msgid "Protects Tweets"
+msgstr "Tuíteanna Faoi Rún"
+
+#. # LOCALIZATION NOTE (tooltip.following):
+#. #  whether you are subscribed to the user's tweets.
+#: tooltip.following
+msgid "Currently Following"
+msgstr ""
+
+#. # LOCALIZATION NOTE (tooltip.*_count):
+#. #  Please see the right side of the official Twitter website UI.
+#: tooltip.friends_count
+msgid "Following"
+msgstr ""
+
+#: tooltip.statuses_count
+msgid "Tweets"
+msgstr "Tuíteanna"
+
+#: tooltip.followers_count
+msgid "Followers"
+msgstr ""
+
+#: tooltip.listed_count
+msgid "Listed"
+msgstr "Liostaithe"
+
+#. # LOCALIZATION NOTE (connection.*)
+#. #   These will be displayed in the account manager in order to show the progress
+#. #   of the connection.
+#. #   (These will be displayed in account.connection.progress from
+#. #    accounts.properties, which adds … at the end, so do not include
+#. #    periods at the end of these messages.)
+#: connection.initializingStream
+msgid "Initializing stream"
+msgstr "Sruth á thúsú"
+
+#: connection.initializingEncryption
+msgid "Initializing encryption"
+msgstr "Criptiú á thúsú"
+
+#: connection.authenticating
+msgid "Authenticating"
+msgstr "Á Fhíordheimhniú"
+
+#: connection.gettingResource
+msgid "Getting resource"
+msgstr "Acmhainn á fáil"
+
+#: connection.downloadingRoster
+msgid "Downloading contact list"
+msgstr "Liosta teagmhálacha á íosluchtú"
+
+#. # LOCALIZATION NOTE (connection.error.*)
+#. #   These will show in the account manager if an error occurs during the
+#. #   connection attempt.
+#: connection.error.failedToCreateASocket
+msgid "Failed to create a socket (Are you offline?)"
+msgstr "Níorbh fhéidir soicéad a chruthú (An bhfuil tú as líne?)"
+
+#: connection.error.serverClosedConnection
+msgid "The server closed the connection"
+msgstr "Dhún an freastalaí an ceangal"
+
+#: connection.error.resetByPeer
+msgid "Connection reset by peer"
+msgstr "D'athshocraigh an comhghleacaí an ceangal"
+
+#: connection.error.timedOut
+msgid "The connection timed out"
+msgstr "Ceangal imithe thar am"
+
+#: connection.error.receivedUnexpectedData
+msgid "Received unexpected data"
+msgstr "Fuarthas sonraí gan choinne"
+
+#: connection.error.incorrectResponse
+msgid "Received an incorrect response"
+msgstr "Fuarthas freagra mícheart"
+
+#: connection.error.startTLSRequired
+msgid "The server requires encryption but you disabled it"
+msgstr ""
+
+#: connection.error.startTLSNotSupported
+msgid "The server doesn't support encryption but your configuration requires it"
+msgstr ""
+
+#: connection.error.failedToStartTLS
+msgid "Failed to start encryption"
+msgstr ""
+
+#: connection.error.noAuthMec
+msgid "No authentication mechanism offered by the server"
+msgstr ""
+
+#: connection.error.noCompatibleAuthMec
+msgid ""
+"None of the authentication mechanisms offered by the server are supported"
+msgstr ""
+
+#: connection.error.notSendingPasswordInClear
+msgid ""
+"The server only supports authentication by sending the password in cleartext"
+msgstr ""
+
+#: connection.error.authenticationFailure
+msgid "Authentication failure"
+msgstr "Theip ar fhíordheimhniú"
+
+#: connection.error.notAuthorized
+msgid "Not authorized (Did you enter the wrong password?)"
+msgstr "Gan údarú (Ar chuir tú an focal faire mícheart isteach?)"
+
+#: connection.error.failedToGetAResource
+msgid "Failed to get a resource"
+msgstr "Theip ar acmhainn a fháil"
+
+#. # LOCALIZATION NOTE (tooltip.*):
+#. #   These are the titles of lines of information that will appear in
+#. #   the tooltip showing details about a contact or conversation.
+#. # LOCALIZATION NOTE (tooltip.status):
+#. #   %S will be replaced by the XMPP resource identifier
+#: tooltip.status
+msgid "Status (%S)"
+msgstr "Stádas (%S)"
+
+#: tooltip.subscription
+msgid "Subscription"
+msgstr "Síntiús"
+
+#. # LOCALIZATION NOTE (chatRoomField.*):
+#. #   These are the name of fields displayed in the 'Join Chat' dialog
+#. #   for XMPP accounts.
+#. #   The _ character won't be displayed; it indicates the next
+#. #   character of the string should be used as the access key for this
+#. #   field.
+#: chatRoomField.room
+msgid "_Room"
+msgstr "_Seomra"
+
+#: chatRoomField.server
+msgid "_Server"
+msgstr "Frea_stalaí"
+
+#: chatRoomField.nick
+msgid "_Nick"
+msgstr "_Leasainm"
+
+#. # LOCALIZATION NOTE
+#. #  Buddies that aren't in any group on the server will appear in this group.
+#. #  Try to use the same translation as for defaultGroup in instantbird.properties
+#: defaultGroup
+msgid "Contacts"
+msgstr "Teagmhálacha"
+
+#. # LOCALIZATION NOTE (options.*):
+#. #   These are the protocol specific options shown in the account manager and
+#. #   account wizard windows.
+#: options.resource
+msgid "Resource"
+msgstr "Acmhainn"
+
+#: options.connectionSecurity
+msgid "Connection security"
+msgstr "Slándáil an cheangail"
+
+#: options.connectionSecurity.requireEncryption
+msgid "Require encryption"
+msgstr ""
+
+#: options.connectionSecurity.opportunisticTLS
+msgid "Use encryption if available"
+msgstr "Úsáid criptiú más féidir"
+
+#: options.connectionSecurity.allowUnencryptedAuth
+msgid "Allow sending the password unencrypted"
+msgstr ""
+
+#. # LOCALIZATION NOTE (gtalk.usernameHint):
+#. #  This is displayed inside the accountUsernameInfoWithDescription
+#. #  string defined in imAccounts.properties when the user is
+#. #  configuring a Google Talk account.
+#: gtalk.usernameHint
+msgid "email address"
+msgstr "seoladh ríomhphoist"
 
 #: jump
 msgid "Jump"
@@ -18058,12 +19029,6 @@ msgstr ""
 "Bí i dtuilleamaí Bhainisteoir na bhFocal Faire leis an luach seo a choinneáil "
 "i gcuimhne."
 
-#: rememberPassword
-msgid "Use Password Manager to remember this password."
-msgstr ""
-"Bí i dtuilleamaí Bhainisteoir na bhFocal Faire leis an bhfocal faire seo a "
-"choinneáil i gcuimhne."
-
 #. # 1st string is product name, 2nd is the username for the login, 3rd is the
 #. #   login's hostname. Note that long usernames may be truncated.
 #: saveLoginText
@@ -18200,24 +19165,6 @@ msgstr "Meaitseálann na focail fhaire seo a leanas do chuardach:"
 #: username treehead.username.label
 msgid "Username"
 msgstr "Ainm an Úsáideora"
-
-# LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
-# your locale code, and link to your translated pages as soon as they're
-# live.
-# LOCALIZATION NOTE: Some of these URLs are currently 404s, but should be coming
-# online shortly.
-# LOCALIZATION NOTE (bookmarks_title):
-# title for the folder that will contains the default bookmarks
-#. # LOCALIZATION NOTE: The 'en-US' strings in the URLs will be replaced with
-#. # your locale code, and link to your translated pages as soon as they're 
-#. # live.
-#. # LOCALIZATION NOTE: Some of these URLs are currently 404s, but should be coming
-#. # online shortly.
-#. # LOCALIZATION NOTE (bookmarks_title):
-#. # title for the folder that will contains the default bookmarks
-#: bookmarks_title
-msgid "Mobile"
-msgstr "Fón Póca"
 
 #. # LOCALIZATION NOTE (bookmarks_aboutBrowser):
 #. # link title for about:fennec
@@ -18465,10 +19412,6 @@ msgstr "Eagar"
 msgctxt "bookmarkShortcut.label"
 msgid "Add to Home Screen"
 msgstr "Cuir leis an Scáileán Baile"
-
-#: identity.connectedTo2
-msgid "Connected to"
-msgstr "Ceangailte le"
 
 #. Localization note (identity.runBy2)
 #. The layout of the identity dialog prevents combining this into a single string with
@@ -18904,10 +19847,6 @@ msgstr "Cumasaigh JavaScript"
 #: allowCookies.title
 msgid "Allow cookies"
 msgstr "Ceadaigh fianáin"
-
-#: language.title
-msgid "Language"
-msgstr "Teanga"
 
 #: language.auto
 msgid "Auto-detect"
@@ -20506,7 +21445,7 @@ msgstr "Fíordheimhnithe ag %S"
 
 #: CertPassPrompt
 msgid "Please enter the master password for the %S."
-msgstr "Iontráil príomhfhocal faire i gcomhair %S, le do thoil."
+msgstr "Cuir príomhfhocal faire i gcomhair %S isteach, le do thoil."
 
 # the following strings have special requirements:
 # they must fit in a 32 or 64 byte buffer after being translated
@@ -22861,7 +23800,8 @@ msgstr "Dialóg Iontrála Focal Faire"
 msgid ""
 "Please enter the password that was used to encrypt this certificate backup."
 msgstr ""
-"Iontráil an focal faire a úsáideadh chun an cúltaca teastais seo a chriptiú."
+"Cuir isteach an focal faire a úsáideadh chun an cúltaca teastais seo a "
+"chriptiú."
 
 #: chooseToken.title
 msgid "Choose Token Dialog"
@@ -32484,10 +33424,6 @@ msgstr "Teipthe (ní fios cén fáth)"
 #: check_error-2152398861
 msgid "Connection refused"
 msgstr "Ceangal diúltaithe"
-
-#: check_error-2152398862
-msgid "Connection timed out"
-msgstr "Ceangal imithe thar am"
 
 #. # NS_ERROR_OFFLINE
 #: check_error-2152398864
