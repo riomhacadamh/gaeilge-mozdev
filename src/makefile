@@ -10,7 +10,7 @@
 #  these vars are needed both for the install AND for the translation
 #  process (including build of obair.po during newrelease)
 VERSION=trunk
-CVSDIREC=moz-2.0
+CVSDIREC=moz-aurora
 ##################################
 HGFULLPATH=${HOME}/seal/$(CVSDIREC)/ga-IE
 GDFULLPATH=${HOME}/seal/$(CVSDIREC)/gd-GB
