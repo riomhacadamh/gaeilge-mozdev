@@ -19,7 +19,6 @@ rm -fR "${IRISHJAR}"
 mkdir "${IRISHJAR}"
 #PYTHONPATH="/home/kps/seal/installed-local/translate-toolkit-0.9" po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
 po2moz -i "${IRISHJAR}po" -o "${IRISHJAR}" -t "${1}"
-bash sedtweaks "${2}"
 if echo "${1}" | egrep '^browser' > /dev/null
 then
 	cat aistr.txt | sed 's/.*/<em:contributor>&<\/em:contributor> /' | tr -d "\n" | sed 's/^/#define MOZ_LANGPACK_CONTRIBUTORS /' > aistr.8.txt
@@ -51,6 +50,7 @@ then
 #	cp tbird-start.html ${IRISHJAR}/chrome/messenger/start.html
 	cp tbird-defines.inc ${IRISHJAR}/defines.inc
 	cp -f tb-installer-ga.inc ${IRISHJAR}/installer/installer.inc
+	cat eile/searchplugins/list.txt | egrep -v '(answer|creative)' > ${IRISHJAR}/searchplugins/list.txt
 fi
 if echo "${1}" | egrep '^calendar' > /dev/null
 then
@@ -63,6 +63,10 @@ then
 fi
 # eile-* dirs contain CVS metadata, wipe those out
 find ${IRISHJAR} -name 'CVS' | xargs rm -fR
+find ${IRISHJAR} -name '*.dtd' | xargs sed -i 's/^<!ENTITY  *\([^ ]*\)  *"/<!ENTITY \1 "/'
+find ${IRISHJAR} -name '*.dtd' | xargs sed -i "s/^<!ENTITY  *\([^ ]*\)  *'/<!ENTITY \1 '/"
+find ${IRISHJAR} -name '*.dtd' | xargs sed -i 's/ *> *$/>/'
+bash sedtweaks "${2}"
 #rm -f "${IRISHJAR}.jar"
 #jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
 mv -f "${IRISHJAR}" "${PACK}"
