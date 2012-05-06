@@ -1,0 +1,69 @@
+#!/bin/bash
+#  ASCII ONLY
+PONAME='trunk'
+SRCDIR='moz-aurora'
+
+# commit any outstanding changes to PO file
+cvs commit -m "outstanding changes before sync" firefox-${PONAME}.ga.po tbird-${PONAME}.ga.po calendar-${PONAME}.ga.po
+
+cd ${HOME}/seal/$SRCDIR/ga-IE
+hg up
+hg pull -u
+
+cd ${HOME}/seal/$SRCDIR/mozilla-central
+hg pull
+hg update -c
+
+cd ${HOME}/seal/$SRCDIR/comm-central
+hg pull
+hg update -c
+
+cd ${HOME}/gaeilge/gnu/mozilla/gaeilge/src
+cat ${PONAME}.txt | sed 's/$/-en-US/' | xargs rm -Rf
+cat ${PONAME}.txt | sed 's/$/-en-US/' | xargs mkdir
+mkdir -p other-licenses-en-US/branding
+exit 0
+
+
+cd ~/seal/$SRCDIR/mozilla-central
+cp -Rf browser/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/browser-en-US
+cp -Rf dom/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/dom-en-US
+cp -Rf netwerk/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/netwerk-en-US
+cp -Rf other-licenses/branding/firefox/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/firefox
+cp -Rf security/manager/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/security-en-US/manager
+cp -Rf services/sync/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/services-en-US/sync
+cp -Rf toolkit/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/toolkit-en-US
+cp -Rf embedding/android/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/embedding-en-US/android
+
+cd ~/seal/$SRCDIR/mobile-browser
+cp -Rf locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/mobile-en-US
+
+cd ~/seal/$SRCDIR/comm-central
+cp -Rf calendar/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/calendar-en-US
+cp -Rf editor/ui/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/editor-en-US/ui
+cp -Rf mail/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/mail-en-US
+cp -Rf other-licenses/branding/thunderbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/thunderbird
+cp -Rf other-licenses/branding/sunbird/locales/en-US ~/gaeilge/gnu/mozilla/gaeilge/src/other-licenses-en-US/branding/sunbird
+
+cd ~/gaeilge/gnu/mozilla/gaeilge/src
+
+# HACKS until these files are cleaned up in CVS or translate toolkit works
+sed -i '/^<!-- commenting/d; /<!ENTITY messagesHeader.label/d' mail-en-US/chrome/messenger/subscribe.dtd
+sed -i 's/credit.translation "/&<h3>Translators<\/h3><ul><li>Name Here<\/li><\/ul>/' mail-en-US/chrome/messenger/credits.dtd
+# next two lines reinserted into ga-IE dtd after translation
+sed -i '1,2d' browser-en-US/chrome/overrides/netError.dtd
+sed -i '1,3d' browser-en-US/chrome/browser/aboutCertError.dtd
+sed -i '1,3d' mobile-en-US/chrome/aboutCertError.dtd
+
+# set up variables in makefile; need "VERSION" correct
+# before translation starts since moznua needs it
+sed -i "/^VERSION/s/.*/VERSION=$PONAME/" makefile
+sed -i "/^CVSDIREC/s/.*/CVSDIREC=$SRCDIR/" makefile
+
+make obair.po
+
+cpo -q *${PONAME}.ga.po
+cpo -q cal_obair.po obair.po tb_obair.po
+
+echo "Finish translating the obair files, copy to -trunk.ga.po files"
+echo "Then do a 'make' to build Irish dtd/properties and copy to hg"
