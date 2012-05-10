@@ -24,6 +24,7 @@ sed -i '/^notifyBarNotNowButtonText/s/=.*$/=Ná Meabhraigh anois/; /^notifyBarCh
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "50em">/' browser-ga-IE/chrome/browser/preferences/connection.dtd
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/preferences/fonts.dtd
 sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
+sed -i '/^telemetryYesButtonAccessKey/s/.*/telemetryYesButtonAccessKey = T/' mail-ga-IE/chrome/messenger/telemetry.properties browser-ga-IE/chrome/browser/browser.properties
 
 # commandkey problems - don't want any translated - routine now is
 # to leave single letters untranslated in PO and then fix the accesskeys

@@ -62,7 +62,7 @@ then
 	sed -i '1s/.*/<!ENTITY % brandDTD\n    SYSTEM "chrome:\/\/branding\/locale\/brand.dtd">\n  %brandDTD;\n\n&/' ${IRISHJAR}/chrome/aboutCertError.dtd
 fi
 # eile-* dirs contain CVS metadata, wipe those out
-find ${IRISHJAR} -name 'CVS' | xargs rm -fR
+#find ${IRISHJAR} -name 'CVS' | xargs rm -fR
 find ${IRISHJAR} -name '*.dtd' | xargs sed -i 's/^<!ENTITY  *\([^ ]*\)  *"/<!ENTITY \1 "/'
 find ${IRISHJAR} -name '*.dtd' | xargs sed -i "s/^<!ENTITY  *\([^ ]*\)  *'/<!ENTITY \1 '/"
 find ${IRISHJAR} -name '*.dtd' | xargs sed -i 's/ *> *$/>/'
