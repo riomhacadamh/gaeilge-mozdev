@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-06 21:51-0500\n"
+"POT-Creation-Date: 2012-06-19 20:58-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -3293,8 +3293,7 @@ msgstr "An bhfuil fonn ort an láthair ina bhfuil tú a nochtadh do %S?"
 
 #: geolocation.shareWithFile
 msgid "Would you like to share your location with the file %S?"
-msgstr ""
-"An bhfuil fonn ort an láthair ina bhfuil tú a nochtadh do chomhad %S?"
+msgstr "An bhfuil fonn ort an láthair ina bhfuil tú a nochtadh do chomhad %S?"
 
 #. # LOCALIZATION NOTE (geolocation.learnMore): Use the unicode ellipsis char, \u2026,
 #. # or use "..." if \u2026 doesn't suit traditions in your locale.
@@ -3393,13 +3392,18 @@ msgid "Search %S"
 msgstr "Cuardaigh %S"
 
 #. # TabView
-#: tabView2.title
+#. # LOCALIZATION NOTE (tabview.title): %S is the application name.
+#: tabview.title
 msgid "%S - Group Your Tabs"
 msgstr "%S - Grúpáil Do Chluaisíní"
 
-#: tabview2.moveToUnnamedGroup.label
-msgid "%S and %S more"
-msgstr "%S agus %S ceann eile"
+#. # LOCALIZATION NOTE (tabview.moveToUnnamedGroup.label): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. # #1 is the page title of the first tab in the unnamed group, 
+#. # #2 is the number of remaining tabs.
+#: tabview.moveToUnnamedGroup.label
+msgid "#1 and 1 more;#1 and #2 more"
+msgstr "#1 agus ceann amháin eile;#1 agus #2 cheann eile;#1 agus #2 cinn eile;#1 agus #2 gcinn eile;#1 agus #2 ceann eile"
 
 #: extensions.{972ce4c6-7e08-4474-a285-3208198ce6fd}.name
 #: detail.updateDefault.label
@@ -14975,7 +14979,7 @@ msgstr "foirm"
 
 #: comboboxlist
 msgid "combo box list"
-msgstr ""
+msgstr "liosta i mbosca teaglama"
 
 #: comboboxoption
 msgid "combo box option"
@@ -15070,7 +15074,7 @@ msgstr "dúnta"
 
 #: switchAction
 msgid "switched"
-msgstr ""
+msgstr "athraithe"
 
 #: clickAction
 msgid "clicked"
@@ -15092,7 +15096,7 @@ msgstr "curtha i bhfeidhm"
 
 #: cycleAction
 msgid "cycled"
-msgstr ""
+msgstr "timthriallta"
 
 #. # Tab states
 #: tabLoading
@@ -15109,7 +15113,7 @@ msgstr "cluaisín nua"
 
 #: tabLoadStopped
 msgid "loading stopped"
-msgstr ""
+msgstr "luchtú stoptha"
 
 #: tabReload
 msgid "reloading"
@@ -16165,28 +16169,38 @@ msgstr ""
 msgid ""
 "Request for full-screen was denied because this domain has been blocked from "
 "full-screen by user."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc gur chuir an t-úsáideoir cosc ar an bhfearann seo."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc gur chuir an t-úsáideoir cosc ar "
+"an bhfearann seo."
 
 #: FullScreenDeniedDisabled
 msgid ""
 "Request for full-screen was denied because full-screen API is disabled by "
 "user preference."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc gur dhíchumasaigh an t-úsáideoir an API lánscáileáin."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc gur dhíchumasaigh an t-úsáideoir "
+"an API lánscáileáin."
 
 #: FullScreenDeniedFocusedPlugin
 msgid "Request for full-screen was denied because a windowed plugin is focused."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc go bhfuil forlíontán i bhfuinneog i bhfócas."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc go bhfuil forlíontán i bhfuinneog "
+"i bhfócas."
 
 #: FullScreenDeniedHidden
 msgid ""
 "Request for full-screen was denied because the document is no longer visible."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil an cháipéis infheicthe a thuilleadh."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil an cháipéis "
+"infheicthe a thuilleadh."
 
 #: FullScreenDeniedIframeDisallowed
 msgid ""
 "Request for full-screen was denied because at least one of the document's "
 "containing iframes does not have a \"mozallowfullscreen\" attribute."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil aitreabúid \"mozallowfullscreen\" ag ceann de na iframe-anna ina bhfuil an cháipéis."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil aitreabúid "
+"\"mozallowfullscreen\" ag ceann de na iframe-anna ina bhfuil an cháipéis."
 
 #: FullScreenDeniedNotInputDriven
 msgid ""
@@ -16198,44 +16212,58 @@ msgstr ""
 msgid ""
 "Request for full-screen was denied because requesting element is no longer in "
 "its document."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil an eilimint a rinne an iarraidh ina cáipéis a thuilleadh."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil an eilimint a rinne "
+"an iarraidh ina cáipéis a thuilleadh."
 
 #: FullScreenDeniedMovedDocument
 msgid ""
 "Request for full-screen was denied because requesting element has moved "
 "document."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc go bhfuil an eilimint a rinne an iarraidh i gcáipéis nua anois."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc go bhfuil an eilimint a rinne an "
+"iarraidh i gcáipéis nua anois."
 
 #: FullScreenDeniedLostWindow
 msgid "Request for full-screen was denied because we no longer have a window."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil fuinneog againn a thuilleadh."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil fuinneog againn a "
+"thuilleadh."
 
 #: FullScreenDeniedSubDocFullScreen
 msgid ""
 "Request for full-screen was denied because a subdocument of the document "
 "requesting full-screen is already full-screen."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc go bhfuil focháipéis den cháipéis a rinne an iarraidh á taispeáint sa lánscáileán cheana."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc go bhfuil focháipéis den cháipéis "
+"a rinne an iarraidh á taispeáint sa lánscáileán cheana."
 
 #: FullScreenDeniedNotDescendant
 msgid ""
 "Request for full-screen was denied because requesting element is not a "
 "descendant of the current full-screen element."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc nach de shliocht na heiliminte sa lánscáileán í an eilimint a rinne an iarraidh."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc nach de shliocht na heiliminte sa "
+"lánscáileán í an eilimint a rinne an iarraidh."
 
 #: FullScreenDeniedNotFocusedTab
 msgid ""
 "Request for full-screen was denied because requesting element is not in the "
 "currently focused tab."
-msgstr "Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil an eilimint a rinne an iarraidh sa chluaisín atá i bhfócas faoi láthair."
+msgstr ""
+"Diúltaíodh an iarraidh ar lánscáileán toisc nach bhfuil an eilimint a rinne "
+"an iarraidh sa chluaisín atá i bhfócas faoi láthair."
 
 #: RemovedFullScreenElement
 msgid ""
 "Exited full-screen because full-screen element was removed from document."
-msgstr "Scortha ón mód lánscáileán mar gur baineadh eilimint lánscáileáin ón gcáipéis."
+msgstr ""
+"Scortha ón mód lánscáileán mar gur baineadh eilimint lánscáileáin ón gcáipéis."
 
 #: FocusedWindowedPluginWhileFullScreen
 msgid "Exited full-screen because windowed plugin was focused."
-msgstr "Scortha ón mód lánscáileán toisc go raibh forlíontán i bhfuinneog i bhfócas."
+msgstr ""
+"Scortha ón mód lánscáileán toisc go raibh forlíontán i bhfuinneog i bhfócas."
 
 #: HTMLMultipartXHRWarning
 msgid "HTML parsing in XMLHttpRequest is not supported for multipart responses."
