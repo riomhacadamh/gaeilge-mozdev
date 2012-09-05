@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: firefox\n"
+"Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-02 20:51-0500\n"
+"POT-Creation-Date: 2012-09-05 07:55-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -263,7 +263,7 @@ msgstr "Greamaigh mar &Athfhriotal"
 #. #-#-#-#-#  uichromecomposereditor.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE This character must be in the above string and not confict with other accesskeys in Format menu
 #: pasteAsQuotationCmd.key ObjectPropertiesAccessKey Photo.accesskey
-#: location1.accesskey
+#: reorderTopButton.accessKey location1.accesskey
 msgid "o"
 msgstr "o"
 
@@ -439,7 +439,7 @@ msgstr "&Stíl Téacs"
 msgid "&Bold"
 msgstr "&Trom"
 
-#: styleBoldCmd.key addressBookCmd.key Byte
+#: styleBoldCmd.key reorderBottomButton.accessKey addressBookCmd.key Byte
 msgid "B"
 msgstr "B"
 
@@ -1773,6 +1773,7 @@ msgid "Del"
 msgstr "Del"
 
 #: Delete deleteLabel hdrTrashButton1.label deleteButton.label
+#: identity-delete-confirm-button
 msgid "Delete"
 msgstr "Scrios"
 
@@ -4883,6 +4884,10 @@ msgctxt "update.downloading.end"
 msgid ""
 msgstr ""
 
+#: update.applying
+msgid "Applying update…"
+msgstr "Nuashonrú á chur i bhfeidhm…"
+
 #. LOCALIZATION NOTE (channel.description.start,channel.description.end): channel.description.start and
 #. channel.description.end create one sentence, with the current channel label inserted in between.
 #. example: You are currently on the _Stable_ update channel.
@@ -6434,21 +6439,15 @@ msgid "#1 #2"
 msgstr "#1 #2"
 
 # LOCALIZATION NOTE sendprogress.dtd Main UI for Send Message Progress Dialog
-#. #-#-#-#-#  chromemessengeractivity.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (sendingMessages): this is used as a title for grouping processes in the activity manager when sending email.
-#. #-#-#-#-#  chromemessengermessengercomposesendProgress.dtd.po (firefox)  #-#-#-#-#
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#. LOCALIZATION NOTE sendprogress.dtd Main UI for Send Message Progress Dialog
-#: sendingMessages sendWindow.title
+#: sendingMessages
 msgid "Sending Messages"
 msgstr "Teachtaireachtaí á Seoladh"
 
 # # Strings used by prompt when Quitting while in progress
 #. #-#-#-#-#  chromemessengermessengercomposecomposeMsgs.properties.po (firefox)  #-#-#-#-#
 #. ## Strings used by prompt when Quitting while in progress
-#: sendingMessage quitComposeWindowTitle
+#: sendingMessage quitComposeWindowTitle titleSendMsg
 msgid "Sending Message"
 msgstr "Teachtaireacht á Seoladh"
 
@@ -6831,7 +6830,7 @@ msgstr "Teagmháil"
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
 #. Folder Pane
-#: Name.box nameColumn.label folderColumn.label
+#: Name.box nameColumn.label folderColumn.label clearTimeDuration.nameColumn
 msgid "Name"
 msgstr "Ainm"
 
@@ -7510,13 +7509,18 @@ msgstr "&Uirlisí"
 
 #: messengerCmd.label messengerCmd.accesskey
 msgid "&Mail &amp; Newsgroups"
-msgstr "Río&mhphost &amp; Grúpaí Nuachta"
+msgstr "Río&mhphost agus Grúpaí Nuachta"
 
 # see http://developer.mozilla.org/en/docs/Localization_and_Plurals
 # don't change if you don't know what you're doing!
-#: messengerCmd.commandkey tagCmd1.key
+#. #-#-#-#-#  chromemessengerFilterEditor.dtd.po (firefox)  #-#-#-#-#
+#. LOCALIZATION NOTE
+#. The values below are used to control the widths of the filter action widgets.
+#. Change the values only when the localized strings in the popup menus
+#. are truncated in the widgets.
+#: messengerCmd.commandkey filterActionTypeFlexValue tagCmd1.key
 msgid "1"
-msgstr "11"
+msgstr "1"
 
 #: searchAddressesCmd.label searchAddressesCmd.accesskey
 msgid "&Search Addresses…"
@@ -8897,7 +8901,7 @@ msgstr "Cealaigh an tÍosluchtú"
 #. extracted from am-addressing.xul
 #: addressing.label addressingTab.label
 msgid "Composition &amp; Addressing"
-msgstr "Cumadóireacht &amp; Seoladh"
+msgstr "Cumadóireacht agus Seoladh"
 
 #: addressingGroupTitle.label itemAutoComplete.label
 msgid "Addressing"
@@ -9098,7 +9102,7 @@ msgstr "Bosca Isteach"
 #. extracted from am-copies.xul
 #: copyAndFolderTitle.label copiesFoldersTab.label
 msgid "Copies &amp; Folders"
-msgstr "Cóipeanna &amp; Fillteáin"
+msgstr "Cóipeanna agus Fillteáin"
 
 #: sendingPrefix.label
 msgid "When sending messages, automatically: "
@@ -9416,6 +9420,10 @@ msgstr "Admhálacha Léite"
 msgid "&Use my global return receipt preferences for this account"
 msgstr ""
 "Úsáid mo shainroghanna &uilíocha maidir le hadmhálacha léite don chuntas seo"
+
+#: globalReceipts.label globalReceipts.accesskey
+msgid "&Global Preferences…"
+msgstr "Sainroghanna &Comhchoiteanna…"
 
 #: useCustomPrefs.label useCustomPrefs.accesskey
 msgid "&Customize return receipts for this account"
@@ -10548,9 +10556,10 @@ msgstr "Tuilleadh eolais…"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#. Note to localizers, Box is a brand from box.com
 #: auth.title
 msgid "Box Authentication"
-msgstr ""
+msgstr "Fíordheimhniú Box"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -10562,6 +10571,7 @@ msgstr "Féach ar shocruithe mo chuntais ar box.com"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#. Note to localizers, Box is a brand from box.com
 #: boxSettings.needAnAccount
 msgid "Get a Box account…"
 msgstr "Faigh cuntas Box…"
@@ -10614,15 +10624,15 @@ msgstr "OK"
 
 #: fileExceeds2GB.description
 msgid "Sending files over 2GB is not supported."
-msgstr ""
+msgstr "Ní féidir comhad atá níos mó ná 2GB a sheoladh."
 
 #: fileExceedsLimit.thatsBigFile
 msgid "Sending files larger than 50 MB"
-msgstr ""
+msgstr "Ní féidir comhaid atá níos mó ná 50MB a sheoladh"
 
 #: fileExceedsLimit.thatsBigFile2
 msgid "is a premium feature."
-msgstr ""
+msgstr "gan íoc as ardchuntas."
 
 #: fileExceedsLimit.accept fileExceedsQuota.accept errorCloudFileUpgrade.label
 msgid "Upgrade"
@@ -10635,40 +10645,40 @@ msgstr "Cealaigh"
 
 #: fileExceedsLimit.proIncludes
 msgid "Upgrade now to send this file plus:"
-msgstr ""
+msgstr "Uasghrádaigh anois chun an comhad seo a sheoladh, agus:"
 
 #: fileExceedsLimit.pros1
 msgid "Send files and folders up to 2GB"
-msgstr ""
+msgstr "Seol comhaid agus fillteáin suas le 2GB"
 
 #: fileExceedsLimit.pros2
 msgid "Store unlimited files online"
-msgstr ""
+msgstr "Sábháil comhaid ar líne gan teorainn"
 
 #: fileExceedsLimit.pros3
 msgid "Access and share files from anywhere"
-msgstr ""
+msgstr "Tar ar agus roinn comhaid ó aon áit"
 
 #: fileExceedsQuota.storageLimitReached
 msgid "Storage limit reached"
-msgstr ""
+msgstr "Shroich tú do theorainn stórála"
 
 #: fileExceedsQuota.description
 msgid "You have reached your account storage limit of 2GB."
-msgstr ""
+msgstr "Shroich tú teorainn stórála do chuntais (2GB)."
 
 #: fileExceedsQuota.description1
 msgid "Your current storage usage is #XXX GB."
-msgstr ""
+msgstr "Tá tú ag úsáid #XXX GB."
 
 #: fileExceedsQuota.description2
 msgid "Upgrade today to Pro Plus account and get more storage."
-msgstr ""
+msgstr "Uasghrádaigh inniu agus faigh tuilleadh spáis le cuntas Pro Plus."
 
 #: fileExceedsQuota.description3
 msgid ""
 "You can also choose to delete files in your account to create more space."
-msgstr ""
+msgstr "Nó is féidir comhaid a scriosadh chun fairsinge a dhéanamh."
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -11642,6 +11652,10 @@ msgstr "Cuir gníomh nua leis"
 msgid "Remove this action"
 msgstr "Bain an gníomh seo"
 
+#: filterActionTargetFlexValue tagCmd4.key
+msgid "4"
+msgstr "4"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11665,9 +11679,25 @@ msgstr "&Nua…"
 msgid "Dele&te"
 msgstr "Scri&os"
 
+#: reorderTopButton
+msgid "Move to Top"
+msgstr "Go dtí an barr"
+
+#: reorderTopButton.toolTip
+msgid "Rearrange filter so it executes before all others"
+msgstr "Cuir an scagaire seo i bhfeidhm roimh na cinn eile"
+
+#: reorderBottomButton
+msgid "Move to Bottom"
+msgstr "Go dtí an bun"
+
+#: reorderBottomButton.toolTip
+msgid "Rearrange filter so it executes after all others"
+msgstr "Cuir an scagaire seo i bhfeidhm tar éis na cinn eile"
+
 #: filterHeader.label
 msgid "Enabled filters are run automatically in the order shown below."
-msgstr "Ritear scagairí cumasaithe san ord thíos go huathoibríoch ."
+msgstr "Cuirtear scagairí cumasaithe i bhfeidhm san ord thíos go huathoibríoch."
 
 #: filtersForPrefix.label filtersForPrefix.accesskey
 msgid "&Filters for:"
@@ -11734,6 +11764,10 @@ msgstr "roghnaigh an freastalaí nuachta seo"
 #: helpButton.label helpButton.accesskey
 msgid "&Help"
 msgstr "Cab&hair"
+
+#: searchBox.emptyText
+msgid "Search filters by name…"
+msgstr "Aimsigh scagaire de réir a ainm…"
 
 #: mustSelectFolder
 msgid "You must select a target folder."
@@ -11866,6 +11900,17 @@ msgid ""
 msgstr ""
 "Ní féidir an scagaire seo a shábháil toisc go bhfuil roinnt de na téarmaí "
 "cuardaigh neamhbhailí sa chomhthéacs reatha."
+
+#: filterCountVisibleOfTotal
+msgid "%1$S of %2$S"
+msgstr "%1$S as %2$S"
+
+#. ## LOCALIZATION NOTE(filterCountItems): Semi-colon list of plural forms.
+#. ## See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#. ## #1 is the count of items in the list.# filterCountItems is a pluralForm - see
+#: filterCountItems
+msgid "#1 item; #1 items"
+msgstr "#1 mhír;#1 mhír;#1 mhír;#1 mír;#1 mír"
 
 # for junk mail logging / mail filter logging
 # LOCALIZATION NOTE(junkLogDetectStr)
@@ -12141,6 +12186,26 @@ msgstr "Úsáid:"
 #: folderQuotaStatus.label status.label
 msgid "Status:"
 msgstr "Stádas:"
+
+#: numberOfMessages.label
+msgid "Number of messages:"
+msgstr "Líon na dteachtaireachtaí:"
+
+#. LOCALIZATION NOTE: When the number of messages can't be determined, this string is displayed as the number
+#: numberUnknown.label
+msgctxt "numberUnknown.label"
+msgid "unknown"
+msgstr "anaithnid"
+
+#: sizeOnDisk.label
+msgid "Size on disk:"
+msgstr "Méid ar an diosca:"
+
+#. LOCALIZATION NOTE: When the size can't be determined, this string is displayed as the size
+#: sizeUnknown.label
+msgctxt "sizeUnknown.label"
+msgid "unknown"
+msgstr "anaithnid"
 
 # LOCALIZATION NOTE (glodaComplete.messagesTagged.label): The label used
 # in the autocomplete widget to refer to a query for all messages tagged
@@ -16725,7 +16790,7 @@ msgstr "Dá n-uasluchtófá %2$S go %1$S, rachfá thar do chuóta spáis."
 
 #: errorCloudFileNameLimit.title
 msgid "File Name Error"
-msgstr ""
+msgstr "Earráid in Ainm an Chomhaid"
 
 #. ## LOCALIZATION NOTE(errorCloudFileNameLimit.message):
 #. ## %1$S is the name of the online storage service being uploaded to.
@@ -17331,17 +17396,33 @@ msgctxt "addressesSidebarTitle.label"
 msgid "Contacts"
 msgstr "Teagmhálacha"
 
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#. LOCALIZATION NOTE sendprogress.dtd Main UI for Send Message Progress Dialog
+#: sendDialog.title
+msgid "Processing Message"
+msgstr "Teachtaireacht á Próiseáil"
+
 #: progress.label
 msgid "Progress:"
 msgstr "Dul chun cinn:"
 
-#: titlePrefixSave
-msgid "Saving Messages -"
-msgstr "Teachtaireachtaí á Sábháil -"
+#. # LOCALIZATION NOTE (titleSendMsgSubject):
+#. # %S will be replaced by the message subject.
+#: titleSendMsgSubject
+msgid "Sending Message - %S"
+msgstr "Teachtaireacht á Seoladh - %S"
 
-#: titlePrefixSend
-msgid "Sending Messages -"
-msgstr "Teachtaireachtaí á Seoladh -"
+#. # LOCALIZATION NOTE (titleSaveMsgSubject):
+#. # %S will be replaced by the message subject.
+#: titleSaveMsgSubject
+msgid "Saving Message - %S"
+msgstr "Teachtaireacht á Sábháil - %S"
+
+#: titleSaveMsg
+msgid "Saving Message"
+msgstr "Teachtaireacht á Sábháil"
 
 # for quota in main window (commandglue.js)
 #. #-#-#-#-#  chromemessengermessengercomposesendProgress.properties.po (firefox)  #-#-#-#-#
@@ -18168,17 +18249,13 @@ msgstr "0"
 # profile database.  Note that "new" is defined as "has a different URL"; this
 # means that it's not possible to update the name of existing handler, so
 # don't make any spelling errors here.
-#: tagCmd2.key searchTermListButtonsFlexValue
+#: tagCmd2.key
 msgid "2"
 msgstr "2"
 
-#: tagCmd3.key
+#: tagCmd3.key searchTermListValueFlexValue
 msgid "3"
 msgstr "3"
-
-#: tagCmd4.key
-msgid "4"
-msgstr "4"
 
 #: tagCmd5.key
 msgid "5"
@@ -18307,7 +18384,7 @@ msgstr ""
 
 #: messengerCmd.label messengerCmd.accesskey
 msgid "Mail &amp; &Newsgroups"
-msgstr "Ríomhphost &amp; Grúpaí &Nuachta"
+msgstr "Ríomhphost agus Grúpaí &Nuachta"
 
 #: addressBookCmd.label addressBookCmd.accesskey
 msgid "Address &Book"
@@ -18378,6 +18455,10 @@ msgstr "Consól &Earráide"
 msgctxt "errorConsoleCmd.commandkey"
 msgid "j"
 msgstr "j"
+
+#: clearRecentHistory.label clearRecentHistory.accesskey
+msgid "Clear Recent &History…"
+msgstr "Glan an &Stair Is Déanaí…"
 
 # Mail Toolbar
 #. Mail Toolbar
@@ -18502,6 +18583,10 @@ msgstr "Clib"
 msgid "Compact"
 msgstr "Dlúthaigh"
 
+#: appmenuButton.label
+msgid "AppMenu"
+msgstr "Feidhmchláir"
+
 # Mail Toolbar Tooltips
 #. Mail Toolbar Tooltips
 #: advancedButton.tooltip
@@ -18612,6 +18697,31 @@ msgstr "Clibeáil Teachtaireachtaí"
 msgid "Remove deleted messages from selected folder"
 msgstr "Bain teachtaireachtaí scriosta den fhillteán roghnaithe"
 
+#: appmenuButton.tooltip
+msgid "Displays the Application Menu"
+msgstr "Taispeáin an Roghchlár Feidhmchlár"
+
+#. AppMenu Popup
+#: appmenuNewMsgCmd.label
+msgid "New Message"
+msgstr "Teachtaireacht Nua"
+
+#: appmenuNewContactCmd.label
+msgid "Address Book Contact…"
+msgstr "Teagmháil sa Leabhar Seoltaí…"
+
+#: appmenuEditMenu.label
+msgid "Edit"
+msgstr "Eagar"
+
+#: appmenuQFBMenu.label
+msgid "Quick Filter Bar"
+msgstr ""
+
+#: appmenuToolbarLayout.label
+msgid "Toolbar Layout…"
+msgstr "Leagan Amach an Bharra Uirlisí…"
+
 # Tags Menu Popup
 #. Tags Menu Popup
 #: addNewTag.label addNewTag.accesskey
@@ -18620,7 +18730,7 @@ msgstr "&Clib Nua…"
 
 #: manageTags.label manageTags.accesskey
 msgid "&Manage Tags…"
-msgstr ""
+msgstr "&Bainistigh Clibeanna…"
 
 #: folderSizeColumn.label
 msgctxt "folderSizeColumn.label"
@@ -19792,8 +19902,9 @@ msgctxt "junkFolderName"
 msgid "Junk"
 msgstr "Dramhphost"
 
+#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 #. #Group by date thread pane titles
-#: today
+#: today clearTimeDuration.today
 msgid "Today"
 msgstr "Inniu"
 
@@ -20987,6 +21098,15 @@ msgctxt "update.restart.updateButton.accesskey"
 msgid "R"
 msgstr "A"
 
+#: update.restart.restartButton.label
+msgid "Update & Restart"
+msgstr "Nuashonraigh agus Atosaigh"
+
+#: update.restart.restartButton.accesskey
+msgctxt "update.restart.restartButton.accesskey"
+msgid "R"
+msgstr "A"
+
 #: update.openUpdateUI.upgradeButton.label
 msgid "Upgrade Now…"
 msgstr "Uasghrádaigh Anois…"
@@ -21097,6 +21217,41 @@ msgstr "Atosaigh sa mhód 32-giotán"
 msgctxt "carbonFailurePluginsMessage.restartButton.accesskey"
 msgid "R"
 msgstr "A"
+
+# LOCALIZATION NOTE (sanitizeDialog2.everything.title): When "Time range to
+# clear" is set to "Everything", the Clear Recent History dialog's title is
+# changed to this.  See UI mockup and comment 11 at bug 480169 -->
+#. # Sanitize
+#. # LOCALIZATION NOTE (sanitizeDialog2.everything.title): When "Time range to
+#. # clear" is set to "Everything", the Clear Recent History dialog's title is
+#. # changed to this.  See UI mockup and comment 11 at bug 480169 -->
+#: sanitizeDialog2.everything.title
+msgid "Clear All History"
+msgstr "Glan an Stair Go Léir"
+
+#: sanitizeButtonOK
+msgid "Clear Now"
+msgstr "Glan Anois"
+
+# LOCALIZATION NOTE (sanitizeEverythingNoVisitsWarning): Used in same context
+# as sanitizeEverythingWarning except this is shown instead when there are no
+# visits in the user's history.
+#. # LOCALIZATION NOTE (sanitizeEverythingWarning2): Warning that appears when
+#. # "Time range to clear" is set to "Everything" in Clear Recent History dialog,
+#. # provided that the user has not modified the default set of history items to clear.
+#: sanitizeEverythingWarning2
+msgid "All history will be cleared."
+msgstr "Glanfar an stair go léir."
+
+# LOCALIZATION NOTE (sanitizeSelectedWarning): Warning that appears when
+# "Time range to clear" is set to "Everything" in Clear Recent History dialog,
+# provided that the user has modified the default set of history items to clear.
+#. # LOCALIZATION NOTE (sanitizeSelectedWarning): Warning that appears when
+#. # "Time range to clear" is set to "Everything" in Clear Recent History dialog,
+#. # provided that the user has modified the default set of history items to clear.
+#: sanitizeSelectedWarning
+msgid "All selected items will be cleared."
+msgstr "Glanfar gach mír roghnaithe."
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -21771,6 +21926,11 @@ msgstr "&Sábháil mar…"
 #: viewSourceMenuItem1.label viewSourceMenuItem1.accesskey
 msgid "&View Source"
 msgstr "&Amharc ar Fhoinse"
+
+#. Attachment bar context menu items
+#: startExpandedCmd.label startExpandedCmd.accesskey
+msgid "Initially &Show Attachment Pane"
+msgstr "&Taispeáin an pána iatáin i dtosach báire"
 
 #: detachAttachmentCmd.label detachAttachmentCmd.accesskey
 msgid "&Detach…"
@@ -22967,12 +23127,12 @@ msgstr "Fiafraigh díom i gcónaí agus mé ag dul ar líne"
 
 #: sendMessagesNow
 msgid "Send Now"
-msgstr ""
+msgstr "Seol Anois"
 
 #. # GetMessages While Offline Prompt
 #: getMessagesOfflineWindowTitle1
 msgid "Get Messages"
-msgstr ""
+msgstr "Faigh Teachtaireachtaí"
 
 #: getMessagesOfflineLabel1
 msgid "You are currently offline. Do you want to go online to get new messages?"
@@ -23076,15 +23236,15 @@ msgstr "Leabhair sheoltaí Outlook"
 msgid ""
 "This is an encrypted OpenPGP message.<br>In order to decrypt this mail, you "
 "need to install an <a href=\"%S\">OpenPGP add-on</a>."
-msgstr ""
+msgstr "Bhí an teachtaireacht seo criptithe le OpenPGP.<br>Chun an teachtaireacht seo a dhíchriptiú, caithfidh tú <a href=\"%S\">breiseán OpenPGP</a> a shuiteáil."
 
 #: itemDisplay.label
 msgid "Reading &amp; Display"
-msgstr "Léamh &amp; Taispeáint"
+msgstr "Léamh agus Taispeáint"
 
 #: itemNetworking.label
 msgid "Network &amp; Disk Space"
-msgstr "Líonra &amp; Spás Diosca"
+msgstr "Líonra agus Spás Diosca"
 
 #. General Settings
 #: submitTelemetry.label submitTelemetry.accesskey
@@ -23102,11 +23262,11 @@ msgstr "Cumasaigh Cuardach Cuimsith&each agus an tInneacsóir"
 
 #: scrolling.label
 msgid "Scrolling"
-msgstr ""
+msgstr "Scrollú"
 
 #: useAutoScroll.label useAutoScroll.accesskey
 msgid "&Use autoscrolling"
-msgstr ""
+msgstr "Ú&sáid uathscrollú"
 
 #: useSmoothScrolling.label useSmoothScrolling.accesskey
 msgid "Use s&mooth scrolling"
@@ -23267,11 +23427,11 @@ msgstr "&As Líne…"
 
 #: offlineCompactFolders.label offlineCompactFolders.accesskey
 msgid "Comp&act all folders when it will save over"
-msgstr ""
+msgstr "Dlúth&aigh fillteáin dá sábhálfadh sé níos mó ná"
 
 #: offlineCompactFoldersMB.label
 msgid "MB in total"
-msgstr ""
+msgstr "MB iomlán"
 
 #. LOCALIZATION NOTE:
 #. The entities useCacheBefore.label and useCacheAfter.label appear on a single
@@ -23773,7 +23933,7 @@ msgstr "Cas&ta…"
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #: fontsAndEncodingsDialog.title
 msgid "Fonts &amp; Encodings"
-msgstr "Clófhoirne &amp; Ionchóduithe"
+msgstr "Clófhoirne agus Ionchóduithe"
 
 #. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
 #: window.width
@@ -23864,7 +24024,7 @@ msgstr "Turcach"
 
 #: font.langGroup.unicode1
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #: font.langGroup.user-def
 msgid "User Defined"
@@ -24050,23 +24210,6 @@ msgstr "F&uaim airdill an chórais"
 #: customsound.label customsound.accesskey
 msgid "&Use the following sound file"
 msgstr "Úsáid an comhad f&uaime seo"
-
-#: addonsMgr.label
-msgid "Add-ons"
-msgstr "Breiseáin"
-
-#: manageAddonsDescWin.label
-msgid "Change options for your add-ons"
-msgstr "Athraigh roghanna le haghaidh do bhreiseán"
-
-#: manageAddonsDescUnix2.label
-msgid "Change preferences for your add-ons"
-msgstr "Athraigh sainroghanna le haghaidh do bhreiseán"
-
-# don't use "B" - Leathanach &Baile
-#: manageAddons.label manageAddons.accesskey
-msgid "&Manage Add-ons…"
-msgstr "Bainis&tigh Breiseáin…"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -24877,6 +25020,20 @@ msgstr "Ní mór duit seoladh bailí ríomhphoist a shonrú don aitheantas seo."
 msgid "Error Creating Identity"
 msgstr "Earráid agus aitheantas á chruthú"
 
+#. ## LOCALIZATION NOTE (identity-delete-confirm): %S is the identity name
+#. # and should be put on a new line. The new line is produced with the "\n" string.
+#: identity-delete-confirm
+msgid ""
+"Are you sure you want to delete the identity\n"
+"%S?"
+msgstr "An bhfuil tú cinnte gur mhaith leat an t-aitheantas seo a scriosadh?\n"
+"%S"
+
+#. ## LOCALIZATION NOTE (identity-delete-confirm-title): %S is the account name
+#: identity-delete-confirm-title
+msgid "Deleting identity for %S"
+msgstr "Aitheantas le haghaidh %S á scriosadh"
+
 #: choosefile
 msgid "Choose a file"
 msgstr "Roghnaigh comhad"
@@ -25186,6 +25343,118 @@ msgstr "&Cuir na hAthruithe i bhFeidhm agus Atosaigh"
 msgid "&Continue in Safe Mode"
 msgstr "&Lean Ar Aghaidh sa Mhód Sábháilteachta"
 
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: sanitizePrefs2.title
+msgid "Settings for Clearing History"
+msgstr "Socruithe maidir le glanadh na staire"
+
+#: sanitizeDialog2.title
+msgid "Clear Recent History"
+msgstr "Glan an Stair Is Déanaí"
+
+#: sanitizeItems.label
+msgid "Clear the following items now:"
+msgstr "Bánaigh na míreanna seo a leanas anois:"
+
+#: clearDataSettings2.label
+msgid "When I quit &brandShortName;, it should automatically clear all:"
+msgstr "Agus mé ag scoir de &brandShortName;, glan iad seo go huathoibríoch:"
+
+# XXX rearrange entities to match physical layout when l10n isn't an issue
+# LOCALIZATION NOTE (clearTimeDuration.*): "Time range to clear" dropdown.
+# See UI mockup at bug 480169
+#. XXX rearrange entities to match physical layout when l10n isn't an issue
+#. LOCALIZATION NOTE (clearTimeDuration.*): "Time range to clear" dropdown.
+#. See UI mockup at bug 480169
+#: clearTimeDuration.label clearTimeDuration.accesskey
+msgid "&Time range to clear: "
+msgstr "Raon ama le glanadh: "
+
+#: clearTimeDuration.lastHour
+msgid "Last Hour"
+msgstr "An Uair Is Déanaí"
+
+#: clearTimeDuration.last2Hours
+msgid "Last Two Hours"
+msgstr "An Dá Uair Is Déanaí"
+
+#: clearTimeDuration.last4Hours
+msgid "Last Four Hours"
+msgstr "Na Ceithre hUaire Is Déanaí"
+
+# LOCALIZATION NOTE (glodaSearchFacet.*) labels specify search constraints.
+# "everything" searches over subject, involves, body, and attachments.
+# "subject" searches only messages subjects.
+# "involves" searches only message to/from/cc/bcc.
+# "to" searches only message to/cc.
+# "from" searches only message using "from" (the message author).
+# "body" searches only message bodies, which does not include message
+# attachment names or the content of the attachments.  Message body
+# basically means a message part with a content-type of text/*.
+#
+#: clearTimeDuration.everything
+msgid "Everything"
+msgstr "Gach Uile Rud"
+
+#. Localization note (clearTimeDuration.suffix) - trailing entity for languages
+#. that require it.
+#: clearTimeDuration.suffix
+msgctxt "clearTimeDuration.suffix"
+msgid ""
+msgstr ""
+
+#: clearTimeDuration.dateColumn
+msgid "Visit Date"
+msgstr "Dáta Cuairte"
+
+# LOCALIZATION NOTE (detailsProgressiveDisclosure.*): Labels and accesskeys
+# of the "Details" progressive disclosure button.  See UI mockup at bug
+# 480169
+#. LOCALIZATION NOTE (detailsProgressiveDisclosure.*): Labels and accesskeys
+#. of the "Details" progressive disclosure button.  See UI mockup at bug
+#. 480169
+#: detailsProgressiveDisclosure.label detailsProgressiveDisclosure.accesskey
+msgid "D&etails"
+msgstr "&Mionsonraí"
+
+#: historySection.label
+msgid "History"
+msgstr "Stair"
+
+#: dataSection.label
+msgid "Data"
+msgstr "Sonraí"
+
+#. LOCALIZATION NOTE (item*): itemHistoryAndDownloads.* and
+#. itemBrowsingHistory.* will never be used at the same time, so they can
+#. have the same accesskey.
+#: itemCookies.label itemCookies.accesskey
+msgid "&Cookies"
+msgstr "&Fianáin"
+
+#: itemCache.label itemCache.accesskey
+msgid "C&ache"
+msgstr "T&aisce"
+
+#. Second warning paragraph
+#. that appears when "Time range to clear" is set to "Everything".  See UI
+#. mockup at bug 480169
+#: sanitizeEverythingUndoWarning
+msgid "This action cannot be undone."
+msgstr "Ní féidir an gníomh seo a chur ar ceal."
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: dialog.width
+msgid "28em"
+msgstr "31em"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: column.width
+msgid "14em"
+msgstr "16em"
+
 #: AgeInDays
 msgid "Age In Days"
 msgstr "Laethanta d'aois"
@@ -25461,18 +25730,13 @@ msgstr "&Meaitseáil gach teachtaireacht"
 #. are truncated in the widgets.
 #: searchTermListAttributesFlexValue
 msgctxt "searchTermListAttributesFlexValue"
-msgid "5"
-msgstr "5"
+msgid "1"
+msgstr "1"
 
 #: searchTermListOperatorsFlexValue
 msgctxt "searchTermListOperatorsFlexValue"
-msgid "5"
-msgstr "5"
-
-#: searchTermListValueFlexValue
-msgctxt "searchTermListValueFlexValue"
-msgid "5"
-msgstr "5"
+msgid "1"
+msgstr "1"
 
 # These strings are loaded and represented by the XUL dialog.
 #. # These strings are loaded and represented by the XUL dialog.

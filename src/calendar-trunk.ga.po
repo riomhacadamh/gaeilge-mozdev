@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-02 20:50-0500\n"
+"POT-Creation-Date: 2012-09-05 07:55-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -232,6 +232,8 @@ msgstr "Tá tú liostáilte leis an bhféilire ag an suíomh seo cheana."
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. General
+#. #-#-#-#-#  chromelightninglightning-toolbar.dtd.po (firefox)  #-#-#-#-#
+#. Mode Toolbar
 #: calendar.calendar.label calendar.calendar.accesskey
 #: lightning.toolbar.calendar.label lightning.toolbar.calendar.accesskey
 msgid "&Calendar"
@@ -1105,9 +1107,9 @@ msgstr "Inléite Amháin"
 msgid "Show Reminders"
 msgstr "Taispeáin Meabhrúcháin"
 
-#: calendarproperties.cache2.label
-msgid "Cache"
-msgstr "Taisce"
+#: calendarproperties.cache3.label
+msgid "Offline Support"
+msgstr "Tacaíocht As Líne"
 
 #: calendarproperties.enabled.label
 msgid "Switch this calendar on"
@@ -1272,6 +1274,26 @@ msgstr "Cathaoirleach"
 msgid "Unknown Attendee (%1$S)"
 msgstr "Rannpháirtí Anaithnid (%1$S)"
 
+#: event.attendee.usertype.individual
+msgid "Individual"
+msgstr "Duine Aonair"
+
+#: event.attendee.usertype.group
+msgid "Group"
+msgstr "Grúpa"
+
+#: event.attendee.usertype.resource
+msgid "Resource"
+msgstr "Acmhainn"
+
+#: event.attendee.usertype.room
+msgid "Room"
+msgstr "Seomra"
+
+#: event.attendee.usertype.unknown
+msgid "Unknown Type (%1$S)"
+msgstr "Cineál Anaithnid (%1$S)"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -1384,7 +1406,7 @@ msgstr "X"
 #. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
 #. Lightning specific keybindings
 #: event.dialog.copy.key lightning.keys.event.showCalendar.key
-#: calendar.copy.key
+#: lightning.toolbar.calendar.name.accesskey calendar.copy.key
 msgid "C"
 msgstr "C"
 
@@ -1544,13 +1566,6 @@ msgstr "Taispeáin Nasc &Gaolta"
 msgid "&Options"
 msgstr "R&oghanna"
 
-#: event.menu.options.attachments.label
-#: event.menu.options.attachments.accesskey
-msgctxt ""
-"event.menu.options.attachments.label event.menu.options.attachments.accesskey"
-msgid "Attach &Webpage…"
-msgstr "Ceangail &Leathanach Gréasáin…"
-
 #: event.menu.options.attendees.label event.menu.options.attendees.accesskey
 msgctxt ""
 "event.menu.options.attendees.label event.menu.options.attendees.accesskey"
@@ -1672,10 +1687,6 @@ msgstr "Seiceáil Litrithe"
 msgid "Privacy"
 msgstr "Príobháideachas"
 
-#: event.toolbar.attachments.label
-msgid "Attach"
-msgstr "Ceangail"
-
 #. Main page
 #: event.title.textbox.label event.title.textbox.accesskey
 msgid "T&itle:"
@@ -1748,10 +1759,6 @@ msgstr "&Cur Síos:"
 msgid "Attac&hments:"
 msgstr "&Iatáin:"
 
-#. LOCALIZATION NOTE - These 4 strings are not in production yet,
-#. but I want to land Filelink support for Lightning soon. The attach
-#. button will become a dropdown button that allows to attach links
-#. as usual, but also files via the Filelink providers.
 #: event.attachments.menubutton.label event.attachments.menubutton.accesskey
 msgid "&Attach"
 msgstr "&Ceangail"
@@ -1774,9 +1781,6 @@ msgstr "B&ain Uile"
 
 #: event.attachments.popup.attachPage.label
 #: event.attachments.popup.attachPage.accesskey
-msgctxt ""
-"event.attachments.popup.attachPage.label event.attachments.popup.attachPage."
-"accesskey"
 msgid "Attach &Webpage…"
 msgstr "Ceangail &Leathanach Gréasáin…"
 
@@ -3028,11 +3032,18 @@ msgstr ""
 "le héifeacht ó %2$S."
 
 #. # LOCALIZATION NOTE (ruleTooComplex):
-#. # This string is shown in the reminder details area if our code can't handle the
+#. # This string is shown in the repeat details area if our code can't handle the
 #. # complexity of the recurrence rule yet.
 #: ruleTooComplex
 msgid "Click here for details"
 msgstr "Cliceáil anseo i gcomhair mionsonraí"
+
+#. # LOCALIZATION NOTE (ruleTooComplexSummary):
+#. # This string is shown in the event summary dialog if our code can't handle the
+#. # complexity of the recurrence rule yet.
+#: ruleTooComplexSummary
+msgid "Repeat details unknown"
+msgstr "Ní féidir na mionsonraí athdéanta a chur i bhfeidhm"
 
 #. #-#-#-#-#  chromelightninglightning-toolbar.dtd.po (firefox)  #-#-#-#-#
 #. Toolbar write button
@@ -3076,7 +3087,7 @@ msgstr "Sprioc:"
 #. # Attach File Dialog
 #: attachViaFilelink
 msgid "File using %1$S"
-msgstr ""
+msgstr "Comhad le %1$S"
 
 # Attach File Dialog
 #: selectAFile
@@ -5297,7 +5308,8 @@ msgstr "lá"
 msgid "M"
 msgstr "B"
 
-#: day.3.Ddd.accesskey event.delete.tasks.accesskey
+#: day.3.Ddd.accesskey lightning.toolbar.task.name.accesskey
+#: event.delete.tasks.accesskey
 msgid "T"
 msgstr "T"
 
@@ -8333,6 +8345,16 @@ msgstr "Imeacht Cealaithe: %1$S"
 msgid "%1$S has canceled this event: « %2$S »"
 msgstr "Tá an t-imeacht seo cealaithe ag %1$S: \"%2$S\""
 
+#: confirmProcessInvitation
+msgid ""
+"You have recently deleted this item, are you sure you want to process this "
+"invitation?"
+msgstr "Scrios tú an mhír seo le déanaí. An bhfuil tú cinnte gur mhaith leat an cuireadh seo a phróiseáil?"
+
+#: confirmProcessInvitationTitle
+msgid "Process Invitation?"
+msgstr "An bhfuil fonn ort an cuireadh a phróiseáil?"
+
 #: invitationsLink.label
 msgid "Invitations: %1$S"
 msgstr "Cuirí: %1$S"
@@ -8348,10 +8370,6 @@ msgstr "Barra Féilirí"
 msgid "Task Toolbar"
 msgstr "Barra Tascanna"
 
-#: lightning.toolbar.task.label lightning.toolbar.task.accesskey
-msgid "&Tasks"
-msgstr "&Tascanna"
-
 #: lightning.toolbar.sync.label
 msgid "Synchronize"
 msgstr "Sioncrónaigh"
@@ -8360,14 +8378,13 @@ msgstr "Sioncrónaigh"
 msgid "Edit"
 msgstr "Eagar"
 
-#. Mode Toolbar
-#: lightning.toolbar.mail.label lightning.toolbar.mail.accesskey
-msgid "&Mail"
-msgstr "Río&mhphost"
-
 #: lightning.toolbar.calendar.tooltip
 msgid "Switch to the calendar tab"
 msgstr "Féach ar chluaisín an fhéilire"
+
+#: lightning.toolbar.task.label lightning.toolbar.task.accesskey
+msgid "&Tasks"
+msgstr "&Tascanna"
 
 #: lightning.toolbar.task.tooltip
 msgid "Switch to the tasks tab"
