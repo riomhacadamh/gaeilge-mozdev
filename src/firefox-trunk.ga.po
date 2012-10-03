@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-05 07:57-0500\n"
+"POT-Creation-Date: 2012-10-03 14:32-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -2390,30 +2390,17 @@ msgstr "Cnaipe Barra Shóisialta"
 msgid "Not logged in"
 msgstr "Níl tú logáilte isteach"
 
-#. LOCALIZATION NOTE (social.ok.label, social.ok.accesskey): this string is
-#. used for the "OK" button for two different social panels. One appears when
-#. the feature is activated (social.activated.* below), and the other when
-#. the user clicks the "Share" button a second time (social.sharePopup.*
-#. below).
 #: social.ok.label social.ok.accesskey
 msgid "&OK"
 msgstr "&OK"
 
-#: social.sharePopup.undo.label social.sharePopup.undo.accesskey
-msgid "&Unshare"
-msgstr "&Díroinn"
-
-#: social.sharePopup.shared.label
-msgid "You shared this page."
-msgstr "Chomhroinn tú an leathanach seo."
-
-#: social.sharePopup.portrait.arialabel
-msgid "User profile picture"
-msgstr "Grianghraf úsáideora"
-
 #: social.toggleSidebar.label social.toggleSidebar.accesskey
 msgid "&Show sidebar"
 msgstr "&Taispeáin an barra taoibh"
+
+#: social.toggleNotifications.label social.toggleNotifications.accesskey
+msgid "Show desktop &notifications"
+msgstr "Taispeái&n fógraí deisce"
 
 #: social.activated.undobutton.label social.activated.undobutton.accesskey
 msgctxt ""
@@ -2893,8 +2880,8 @@ msgstr ""
 "An bhfuil fonn ort na forlíontáin ar an leathanach seo a chur i ngníomh?"
 
 #: activatePluginsMessage.label
-msgid "Activate plugins"
-msgstr "Cuir forlíontáin i ngníomh"
+msgid "Activate All Plugins"
+msgstr "Gníomhachtaigh Gach Forlíontán"
 
 #: activatePluginsMessage.accesskey
 msgctxt "activatePluginsMessage.accesskey"
@@ -2917,6 +2904,44 @@ msgstr "Ná cuir forlíontáin i ngníomh ar an suíomh seo riamh"
 msgctxt "activatePluginsMessage.never.accesskey"
 msgid "N"
 msgstr "N"
+
+#: activateSinglePlugin activate
+msgid "Activate"
+msgstr "Gníomhachtaigh"
+
+#: PluginClickToPlay
+msgid "Click here to activate the %S plugin."
+msgstr "Cliceáil anseo chun forlíontán %S a ghníomhachtú."
+
+#. # LOCALIZATION NOTE - "vulnerable" indicates there is a security bug in the
+#. # plugin that is being exploited by attackers.
+#: PluginVulnerableUpdatable
+msgid "This plugin is vulnerable and should be updated."
+msgstr "Tá an forlíontán seo contúirteach agus ba chóir duit é a nuashonrú."
+
+#: PluginVulnerableNoUpdate
+msgid "This plugin has security vulnerabilities."
+msgstr "Tá fabhtanna slándála san fhorlíontán seo."
+
+#: vulnerableUpdatablePluginWarning
+msgid "Outdated Version!"
+msgstr "Leagan As Dáta!"
+
+#: vulnerableNoUpdatePluginWarning
+msgid "Vulnerable Plugin!"
+msgstr "Forlíontán Contúirteach!"
+
+#: vulnerablePluginsMessage
+msgid "Some plugins have been deactivated for your safety."
+msgstr "Díghníomhachtaíodh forlíontáin chun do shlándáil a chosaint."
+
+#. #-#-#-#-#  chat-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (unknownStatusType):
+#. # the status of a buddy is unknown when it's in the list of a disconnected account
+#: pluginInfo.unknownPlugin securityView.unknown unknown unknownStatusType
+#: CertUnknown addon.unknownDate
+msgid "Unknown"
+msgstr "Anaithnid"
 
 # LOCALIZATION NOTE (sanitizeDialog2.everything.title): When "Time range to
 # clear" is set to "Everything", the Clear Recent History dialog's title is
@@ -3996,6 +4021,9 @@ msgid ""
 "An incoming request to permit remote debugging connection was detected. A "
 "remote client can take complete control over your browser! Allow connection?"
 msgstr ""
+"Tháinig iarratas ceangailte isteach ó ríomhaire i gcéin chun dífhabhtú. "
+"Bheadh an ríomhaire seo in ann dul i gceannas go hiomlán ar do bhrabhsálaí. "
+"An bhfuil tú cinnte gur mhaith leat é seo a cheadú?"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (remoteIncomingPromptDisable): The label displayed on the
@@ -8382,13 +8410,6 @@ msgstr "Eolas slándála maidir leis an leathanach seo"
 #: securityView.certView
 msgid "View Certificate"
 msgstr "Taispeáin an Teastas"
-
-#. #-#-#-#-#  chat-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (unknownStatusType):
-#. # the status of a buddy is unknown when it's in the list of a disconnected account
-#: securityView.unknown unknown unknownStatusType CertUnknown addon.unknownDate
-msgid "Unknown"
-msgstr "Anaithnid"
 
 #: securityView.identity.header
 msgid "Website Identity"
@@ -16448,10 +16469,6 @@ msgstr "Laghdaigh"
 msgid "Expand"
 msgstr "Leathnaigh"
 
-#: activate
-msgid "Activate"
-msgstr "Gníomhachtaigh"
-
 #: cycle
 msgid "Cycle"
 msgstr "Ciogal"
@@ -18215,7 +18232,8 @@ msgstr "Ní rabhthas ag súil le bosca gan ainm."
 
 #: PEBadDirValue
 msgid "Expected 'ltr' or 'rtl' in direction selector but found '%1$S'."
-msgstr "Bhíothas ag súil le 'ltr' nó 'rtl' sa roghnóir treo, ach fuarthas '%1$S'."
+msgstr ""
+"Bhíothas ag súil le 'ltr' nó 'rtl' sa roghnóir treo, ach fuarthas '%1$S'."
 
 #: PESupportsConditionStartEOF
 msgid "'not' or '('"
@@ -18231,19 +18249,27 @@ msgstr "'not'"
 
 #: PESupportsConditionExpectedOpenParen
 msgid "Expected '(' while parsing supports condition but found '%1$S'."
-msgstr "Bhíothas ag súil le '(' agus coinníoll @supports á pharsáil, ach fuarthas '%1$S'."
+msgstr ""
+"Bhíothas ag súil le '(' agus coinníoll @supports á pharsáil, ach fuarthas "
+"'%1$S'."
 
 #: PESupportsConditionExpectedCloseParen
 msgid "Expected ')' while parsing supports condition but found '%1$S'."
-msgstr "Bhíothas ag súil le ')' agus coinníoll @supports á pharsáil, ach fuarthas '%1$S'."
+msgstr ""
+"Bhíothas ag súil le ')' agus coinníoll @supports á pharsáil, ach fuarthas "
+"'%1$S'."
 
 #: PESupportsConditionExpectedStart
 msgid "Expected 'not' or '(' while parsing supports condition but found '%1$S'."
-msgstr "Bhíothas ag súil le 'not' nó '(' agus coinníoll @supports á pharsáil, ach fuarthas '%1$S'."
+msgstr ""
+"Bhíothas ag súil le 'not' nó '(' agus coinníoll @supports á pharsáil, ach "
+"fuarthas '%1$S'."
 
 #: PESupportsConditionExpectedNot
 msgid "Expected 'not' while parsing supports condition but found '%1$S'."
-msgstr "Bhíothas ag súil le 'not' agus coinníoll @supports á pharsáil, ach fuarthas '%1$S'."
+msgstr ""
+"Bhíothas ag súil le 'not' agus coinníoll @supports á pharsáil, ach fuarthas "
+"'%1$S'."
 
 #: PESupportsGroupRuleStart
 msgid "Expected '{' to begin @supports rule but found '%1$S'."
@@ -18830,7 +18856,9 @@ msgstr "Chonacthas “isindex”."
 #: errFooSeenWhenFooOpen
 msgid ""
 "An “%1$S” start tag seen but an element of the same type was already open."
-msgstr "Chonacthas clib thosaigh “%1$S” ach bhí eilimint den chineál seo oscailte cheana."
+msgstr ""
+"Chonacthas clib thosaigh “%1$S” ach bhí eilimint den chineál seo oscailte "
+"cheana."
 
 #: errHeadingWhenHeadingOpen
 msgid "Heading cannot be a child of another heading."
@@ -21499,6 +21527,59 @@ msgstr "Fan le do thoil..."
 msgid "App"
 msgstr "Feidhmchlár"
 
+#. Updater notifications
+#: updater_start_title
+msgctxt "updater_start_title"
+msgid "&brandShortName;"
+msgstr ""
+
+#: updater_start_ticker
+msgctxt "updater_start_ticker"
+msgid "&brandShortName; update available&#8230;"
+msgstr ""
+
+#: updater_start_select
+msgid "Select to download update."
+msgstr ""
+
+#: updater_downloading_title downloadPage.title
+msgid "Downloading &brandShortName;"
+msgstr "&brandShortName; á íosluchtú"
+
+#: updater_downloading_ticker
+msgid "Downloading &brandShortName; update&#8230;"
+msgstr ""
+
+#: updater_downloading_ticker_failed
+msgid "Failed to download &brandShortName; update&#8230;"
+msgstr ""
+
+#: updater_downloading_select
+msgid "Select to apply update when complete."
+msgstr ""
+
+#: updater_downloading_retry
+msgid "Select to retry update download."
+msgstr ""
+
+#: updater_downloading_willapply
+msgid "Waiting for download to complete."
+msgstr ""
+
+#: updater_apply_title
+msgctxt "updater_apply_title"
+msgid "&brandShortName;"
+msgstr ""
+
+#: updater_apply_ticker
+msgctxt "updater_apply_ticker"
+msgid "&brandShortName; update available&#8230;"
+msgstr ""
+
+#: updater_apply_select
+msgid "Select to apply downloaded update."
+msgstr ""
+
 #. Main titles.
 #: sync.app.name.label
 msgctxt "sync.app.name.label"
@@ -21905,7 +21986,9 @@ msgstr "Cuireann sé sin gliondar ar ár gcroí!"
 #. but essentially it means that we want you to let others know how much you love Firefox.
 #: happy.message
 msgid "Want to share the love by giving us a 5 star rating on Google Play?"
-msgstr "An bhfuil fonn ort cabhrú linn agus 5 réiltín a thabhairt dúinn ar Google Play?"
+msgstr ""
+"An bhfuil fonn ort cabhrú linn agus 5 réiltín a thabhairt dúinn ar Google "
+"Play?"
 
 #. "feels great" — Another exaggeration where we're trying to
 #. get people to rate us by playfully telling them there's a benefit in it for them as well.
@@ -21927,7 +22010,7 @@ msgstr "Níl"
 
 #: sad.message
 msgid ""
-"We’re sorry that you had some problems with &brandShortName;. Please tell us "
+"We're sorry that you had some problems with &brandShortName;. Please tell us "
 "what happened so that we can fix it."
 msgstr ""
 
@@ -21952,7 +22035,7 @@ msgstr "Go raibh maith agat as seo."
 #. and that it doesn't just go to some automated system that looks for keywords, or something like that.
 #: sad.thanksMessageTop
 msgid ""
-"We’re always working to make &brandShortName; better. Rest assured that real "
+"We're always working to make &brandShortName; better. Rest assured that real "
 "people will look at your feedback and do their very best to resolve your "
 "issue."
 msgstr ""
@@ -21979,7 +22062,7 @@ msgstr "Cuir do smaoineamh anseo"
 
 #: idea.thanksMessageTop
 msgid ""
-"We appreciate you taking the time to share your thoughts. We’re always "
+"We appreciate you taking the time to share your thoughts. We're always "
 "working to make &brandShortName; better and contributions like yours can lead "
 "to great things."
 msgstr ""
@@ -21993,7 +22076,7 @@ msgstr ""
 
 #: feedback.privacy
 msgid ""
-"For your privacy, please don't include any personally indentifiable "
+"For your privacy, please don't include any personally identifiable "
 "information in your feedback."
 msgstr ""
 
@@ -31750,6 +31833,10 @@ msgstr ""
 msgid "Close this message"
 msgstr "Dún an teachtaireacht seo"
 
+#: checkForUpdates
+msgid "Check for updates…"
+msgstr "Lorg nuashonruithe…"
+
 #: SortMenuItems
 msgid "Sorted by %COLNAME%"
 msgstr "Sórtáilte de réir %COLNAME%"
@@ -36166,20 +36253,6 @@ msgstr "Cnag anseo chun an forlíontán a chur i ngníomh."
 msgid "Click here to activate plugin."
 msgstr "Cliceáil anseo chun an forlíontán a chur i ngníomh."
 
-#: clickToPlayPluginVulnerableUpdateAvailable
-msgid "Click here to activate vulnerable plugin."
-msgstr "Cliceáil anseo chun an forlíontán neamhshlán a chur i ngníomh."
-
-#: clickToPlayPluginVulnerableNoUpdate
-msgid "Click here to activate vulnerable plugin (no update available)."
-msgstr ""
-"Cliceáil anseo chun an forlíontán neamhshlán a chur i ngníomh (níl aon "
-"nuashonrú ar fáil)."
-
-#: checkForUpdates
-msgid "Check for updates…"
-msgstr "Lorg nuashonruithe…"
-
 #: disabledPlugin
 msgid "This plugin is disabled."
 msgstr "Tá an forlíontán seo díchumasaithe."
@@ -36845,10 +36918,6 @@ msgstr "Nílim toilteanach glacadh le coinníollacha an Chomhaontú um Cheadúna
 #: incompatibleList.title
 msgid "Incompatible Add-ons Found"
 msgstr "Aimsíodh Breiseáin Neamh-Chomhoiriúnacha"
-
-#: downloadPage.title
-msgid "Downloading &brandShortName;"
-msgstr "&brandShortName; á íosluchtú"
 
 #: downloading.intro
 msgid "Downloading the update…"
