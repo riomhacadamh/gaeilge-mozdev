@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: thunderbird\n"
+"Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-03 14:31-0500\n"
+"POT-Creation-Date: 2012-10-08 20:38-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -210,6 +210,9 @@ msgstr "Taispeáin deilbhín do gach clib HTML"
 #. or use latin "rtl" if you want this image to the right of text. You do
 #. not need to include HTML in the label 'HTMLSourceModeTab.label'
 #. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. rights.locale-direction instead of the usual local.dir entity, so RTL can skip translating page.
 #: HTMLSourceModeTab.dir rights.locale-direction
 msgid "ltr"
@@ -374,27 +377,29 @@ msgstr "Roghnaigh clómhéid"
 msgid "Smalle&r"
 msgstr "Nío&s Lú"
 
-#: decreaseFontSize.key fullZoomReduceCmd.commandkey
-msgid "-"
-msgstr "-"
+#: decreaseFontSize.key
+msgid "&lt;"
+msgstr "&lt;"
+
+#. #-#-#-#-#  editor-ga-IE.po (firefox)  #-#-#-#-#
+#. < is above this key on many keyboards
+#: decreaseFontSize.key2 preferencesCmdMac.commandkey
+msgid ","
+msgstr ","
 
 #: increaseFontSize.label increaseFontSize.accesskey
 msgid "Lar&ger"
 msgstr "Níos &Mó"
 
-# #-#-#-#-#  ga-win.po (firefox 0.8)  #-#-#-#-#
-# the separator character used between modifiers
-# #-#-#-#-#  ga-unix.po (firefox 0.8)  #-#-#-#-#
-# the separator character used between modifiers
-#: increaseFontSize.key fullZoomEnlargeCmd.commandkey
-msgid "+"
-msgstr "+"
+#: increaseFontSize.key
+msgid "&gt;"
+msgstr "&gt;"
 
-# + is above this key on many keyboards
-#. + is above this key on many keyboards
-#: increaseFontSize.key2 fullZoomEnlargeCmd.commandkey2
-msgid "="
-msgstr "="
+#. #-#-#-#-#  editor-ga-IE.po (firefox)  #-#-#-#-#
+#. > is above this key on many keyboards
+#: increaseFontSize.key2 info1b.label error.suggest.after
+msgid "."
+msgstr "."
 
 #: fontSizeMenu.label fontSizeMenu.accesskey sortBySizeCmd.label
 #: sortBySizeCmd.accesskey
@@ -4805,7 +4810,7 @@ msgid "End-User Rights"
 msgstr "Cearta an Úsáideora"
 
 #. #-#-#-#-#  chromemessengeraboutDialog.dtd.po (firefox)  #-#-#-#-#
-#. This is a link title that links to http://www.mozilla.com/legal/privacy/.
+#. This is a link title that links to https://www.mozilla.org/legal/privacy/.
 #. #-#-#-#-#  chromemessengercloudfilemanagement.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -7346,7 +7351,11 @@ msgstr "&Teagmháil Leabhair Seoltaí…"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: newContact.key newMessageCmd2.key telemetryNoButtonAccessKey
+#. #-#-#-#-#  chromemessengermessengercomposecomposeMsgs.properties.po (firefox)  #-#-#-#-#
+#. ## LOCALIZATION NOTE(stopShowingUploadingNotification): This string is used in the Filelink
+#. ## upload notification bar to allow the user to dismiss the notification permanently.
+#: newContact.key newMessageCmd2.key stopShowingUploadingNotification.accesskey
+#: telemetryNoButtonAccessKey
 msgid "N"
 msgstr "N"
 
@@ -8982,6 +8991,14 @@ msgstr "Cu&ir an síniú i bhfreagraí"
 msgid "Include signature for for&wards"
 msgstr "Cuir síniú san áireamh i d&teachtaireachtaí curtha ar aghaidh"
 
+#: globalComposingPrefs.label globalComposingPrefs.accesskey
+msgid "&Global Composing Preferences…"
+msgstr ""
+
+#: globalAddressingPrefs.label globalAddressingPrefs.accesskey
+msgid "Global Addressing &Preferences…"
+msgstr ""
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -9204,13 +9221,18 @@ msgstr "&Eile:"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: identitiesListDesc.label
-msgid "Multiple Identities Support"
-msgstr "Tacaíocht Ilaitheantas "
+#: identitiesListManageDesc.label
+msgid ""
+"Manage the identities for this account. The first identity is used by default."
+msgstr ""
 
 #: identitiesListAdd.label identitiesListAdd.accesskey
 msgid "&Add…"
 msgstr "&Cuir Leis…"
+
+#: identitiesListDefault.label identitiesListDefault.accesskey
+msgid "&Set Default"
+msgstr ""
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -9324,6 +9346,10 @@ msgstr "Cuir muinín i gceann&tásca dramhphoist a shocraigh:"
 #: junkActions.label
 msgid "Destination and Retention"
 msgstr "Ceann Scríbe agus Coinneáil"
+
+#: globalJunkPrefs.label globalJunkPrefs.accesskey
+msgid "&Global Junk Preferences…"
+msgstr ""
 
 #. #-#-#-#-#  chromemessengeram-serverwithnoidentities.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
@@ -11893,13 +11919,14 @@ msgstr "Ná fiafraigh díom arís"
 msgid "Search Terms Invalid"
 msgstr "Téarmaí cuardaigh neamhbhailí"
 
-#: searchTermsInvalidMessage
+#. # LOCALIZATION NOTE(searchTermsInvalidRule)
+#. # %1$S=search attribute name from the invalid rule
+#. # %2$S=search operator from the bad rule
+#: searchTermsInvalidRule
 msgid ""
-"This filter cannot be saved because some search terms are invalid in the "
-"current context."
+"This filter cannot be saved because the search term \"%1$S %2$S\" is invalid "
+"in the current context."
 msgstr ""
-"Ní féidir an scagaire seo a shábháil toisc go bhfuil roinnt de na téarmaí "
-"cuardaigh neamhbhailí sa chomhthéacs reatha."
 
 #: filterCountVisibleOfTotal
 msgid "%1$S of %2$S"
@@ -14833,10 +14860,6 @@ msgstr ""
 "dramhphoist orthu. Cuirtear deilbhín dramhphoist le teachtaireachtaí a "
 "cheapann &brandShortName; gur dramhphost iad."
 
-#: info1b.label error.suggest.after
-msgid "."
-msgstr "."
-
 #: info2.label
 msgid ""
 "At first, you must train &brandShortName; to identify junk mail by using the "
@@ -16727,7 +16750,9 @@ msgstr ""
 msgid ""
 "Linking is complete. Please note that linked attachments may be accessible to "
 "people who can see or guess the links."
-msgstr "Tá an nascadh críochnaithe. Tabhair faoi deara go mbeadh daoine eile in ann iatán nasctha a fheiceáil dá mbeadh an nasc acu."
+msgstr ""
+"Tá an nascadh críochnaithe. Tabhair faoi deara go mbeadh daoine eile in ann "
+"iatán nasctha a fheiceáil dá mbeadh an nasc acu."
 
 # # LOCALIZATION NOTE(smtpEnterPasswordPromptWithUsername): Do not translate the
 # # words %1$S and %2$S. Place the word %1$S where the host name should appear,
@@ -16800,8 +16825,10 @@ msgid ""
 "Uploading %2$S to %1$S contains has more than 120 characters in its name. "
 "Please rename the file to have 120 characters or less in its name and upload "
 "again."
-msgstr "%2$S á uasluchtú go %1$S, ach tá níos mó ná 120 carachtar ina ainm. "
-"Cuir ainm nua ar an gcomhad a bhfuil níos lú ná 120 carachtar ann, agus uasluchtaigh arís é."
+msgstr ""
+"%2$S á uasluchtú go %1$S, ach tá níos mó ná 120 carachtar ina ainm. Cuir ainm "
+"nua ar an gcomhad a bhfuil níos lú ná 120 carachtar ann, agus uasluchtaigh "
+"arís é."
 
 #: errorCloudFileLimit.title
 msgid "File Size Error"
@@ -16862,6 +16889,10 @@ msgstr "Tá sé éasca comhaid mhóra a roinnt trí ríomhphost le %1$S."
 #: cloudAttachmentListItem
 msgid "* %1$S (%2$S) hosted on %3$S: %4$S"
 msgstr "* %1$S (%2$S) óstáilte ag %3$S: %4$S"
+
+#: stopShowingUploadingNotification.label
+msgid "Never show this again"
+msgstr ""
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -17913,51 +17944,6 @@ msgstr "Formái&d Réamhshocraithe"
 msgid "Display &Attachments Inline"
 msgstr "Taispeáint &Inlíne na nIatán"
 
-#. LOCALIZATION NOTE :
-#. fullZoomEnlargeCmd.commandkey3, fullZoomReduceCmd.commandkey2 and
-#. fullZoomResetCmd.commandkey2 are alternative acceleration keys for zoom.
-#. If shift key is needed with your locale popular keyboard for them,
-#. you can use these alternative items. Otherwise, their values should be empty.
-#: fullZoomEnlargeCmd.label fullZoomEnlargeCmd.accesskey
-msgid "Zoom &In"
-msgstr "Súmáil &Isteach"
-
-#: fullZoomEnlargeCmd.commandkey3
-msgctxt "fullZoomEnlargeCmd.commandkey3fullZoomEnlargeCmd.commandkey3"
-msgid ""
-msgstr ""
-
-#: fullZoomReduceCmd.label fullZoomReduceCmd.accesskey
-msgid "Zoom &Out"
-msgstr "Súmáil &Amach"
-
-#: fullZoomReduceCmd.commandkey2
-msgctxt "fullZoomReduceCmd.commandkey2"
-msgid ""
-msgstr ""
-
-#: fullZoomResetCmd.label fullZoomResetCmd.accesskey
-msgid "&Reset"
-msgstr "Athshoc&raigh"
-
-#: fullZoomResetCmd.commandkey
-msgctxt "fullZoomResetCmd.commandkey"
-msgid "0"
-msgstr "0"
-
-#: fullZoomResetCmd.commandkey2
-msgctxt "fullZoomResetCmd.commandkey2"
-msgid ""
-msgstr ""
-
-#: fullZoomToggleCmd.label fullZoomToggleCmd.accesskey
-msgid "Zoom &Text Only"
-msgstr "Súmáil &Téacs Amháin"
-
-#: fullZoom.label fullZoom.accesskey
-msgid "&Zoom"
-msgstr "&Súmáil"
-
 #: pageSourceCmd.label pageSourceCmd.accesskey
 msgid "Message S&ource"
 msgstr "F&oinse Teachtaireachtaí"
@@ -18240,8 +18226,20 @@ msgstr "&Cóipeáil Anseo"
 msgid "Ta&g"
 msgstr "Cli&b"
 
-#: tagCmd0.key
-msgctxt "tagCmd0.key"
+#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+#. # valid format options are:
+#. # 1: yyyy/mm/dd
+#. # 2: yyyy/dd/mm
+#. # 3: mm/dd/yyyy
+#. # 4: mm/yyyy/dd
+#. # 5: dd/mm/yyyy
+#. # 6: dd/yyyy/mm
+#. #
+#. # 0: auto-detect the current locale format
+#. #    a separator has to be either '/', '-', '.' and the year in Chistian year
+#. #    otherwise mm/dd/yyyy (option 3) is used
+#. #
+#: tagCmd0.key mailnews.search_date_format fullZoomResetCmd.commandkey
 msgid "0"
 msgstr "0"
 
@@ -19308,10 +19306,6 @@ msgstr "&Oscail Nasc i mBrabhsálaí"
 msgid "Preferences…"
 msgstr "Sainroghanna…"
 
-#: preferencesCmdMac.commandkey
-msgid ","
-msgstr ","
-
 #: preferencesCmdMac.modifiers
 msgctxt "preferencesCmdMac.modifiers"
 msgid "accel"
@@ -20064,22 +20058,6 @@ msgctxt "mail.addr_book.show_phonetic_fields"
 msgid "false"
 msgstr "false"
 
-#. # valid format options are:
-#. # 1: yyyy/mm/dd
-#. # 2: yyyy/dd/mm
-#. # 3: mm/dd/yyyy
-#. # 4: mm/yyyy/dd
-#. # 5: dd/mm/yyyy
-#. # 6: dd/yyyy/mm
-#. #
-#. # 0: auto-detect the current locale format
-#. #    a separator has to be either '/', '-', '.' and the year in Chistian year
-#. #    otherwise mm/dd/yyyy (option 3) is used
-#. #
-#: mailnews.search_date_format
-msgid "0"
-msgstr "0"
-
 #. # separator for search date (e.g. "/", "-"), or empty when search_date_format is zero
 #: mailnews.search_date_separator
 msgctxt "mailnews.search_date_separator"
@@ -20588,11 +20566,6 @@ msgid "%1$S has asked to be notified (on %2$S) when you read this message."
 msgstr ""
 "D'iarr %1$S go seolfaí fógra chuige/chuici (ar %2$S) nuair a léifidh tú an "
 "teachtaireacht seo."
-
-#. # Strings for growl notifications on Mac OS X
-#: growlNotification
-msgid "New Mail"
-msgstr "Ríomhphost Nua"
 
 #. # mailCommands.js
 #: emptyJunkTitle
@@ -24483,14 +24456,9 @@ msgstr "(%1$S: %2$S)"
 msgid "Choose Sound"
 msgstr "Roghnaigh Fuaim"
 
-#. #### Shell Service
-#: alreadyDefaultClientTitle
-msgid "Default Client"
-msgstr "Cliant Réamhshocraithe"
-
-#: alreadyDefault
-msgid "%S is already set as your default mail client."
-msgstr "Is é %S an cliant ríomhphoist réamhshocraithe cheana."
+#: soundFilesDescription
+msgid "Sound Files"
+msgstr "Comhaid Fhuaime"
 
 # ### Attachment Reminder
 #. #### Attachment Reminder
@@ -24889,6 +24857,12 @@ msgstr ""
 msgid "Neither the server name nor the user name can be empty."
 msgstr "Ní cheadaítear ainm freastalaí nó ainm úsáideora folamh."
 
+#: localDirectoryInvalid
+msgid ""
+"The directory specified in the Local Directory setting is invalid. Please "
+"pick a different directory."
+msgstr ""
+
 # if the user chooses to cancel the wizard when no accounts are there throw a message
 # LOCALIZATION NOTE (cancelWizard)
 # do not localize "\n\n"
@@ -24954,13 +24928,23 @@ msgstr ""
 msgid "Defer Account?"
 msgstr "An bhfuil an cuntas le cur ar athlá?"
 
-#: directoryUsedByOtherAccount
+#: directoryAlreadyUsedByOtherAccount
 msgid ""
-"This directory is already used by the %S account. Please pick a different "
-"directory."
+"The directory specified in the Local Directory setting is already used by the "
+"\"%S\" account. Please pick a different directory."
 msgstr ""
-"Tá an chomhadlann seo á húsáid ag cuntas %S cheana. Roghnaigh comhadlann eile "
-"le do thoil."
+
+#: directoryParentUsedByOtherAccount
+msgid ""
+"A parent directory of the directory specified in the Local Directory setting "
+"is already used by the \"%S\" account. Please pick a different directory."
+msgstr ""
+
+#: directoryChildUsedByOtherAccount
+msgid ""
+"A subdirectory of the directory specified in the Local Directory setting is "
+"already used by the \"%S\" account. Please pick a different directory."
+msgstr ""
 
 # Provide default example values for sample email address
 #. #Provide default example values for sample email address
@@ -26408,6 +26392,67 @@ msgstr ""
 #: enableLog.label enableLog.accesskey
 msgid "&Enable the Filter Log"
 msgstr "&Cumasaigh Loga na Scagairí"
+
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#. LOCALIZATION NOTE :
+#. fullZoomEnlargeCmd.commandkey3, fullZoomReduceCmd.commandkey2 and
+#. fullZoomResetCmd.commandkey2 are alternative acceleration keys for zoom.
+#. If shift key is needed with your locale popular keyboard for them,
+#. you can use these alternative items. Otherwise, their values should be empty.
+#: fullZoomEnlargeCmd.label fullZoomEnlargeCmd.accesskey
+msgid "Zoom &In"
+msgstr "Súmáil &Isteach"
+
+# #-#-#-#-#  ga-win.po (firefox 0.8)  #-#-#-#-#
+# the separator character used between modifiers
+# #-#-#-#-#  ga-unix.po (firefox 0.8)  #-#-#-#-#
+# the separator character used between modifiers
+#: fullZoomEnlargeCmd.commandkey
+msgid "+"
+msgstr "+"
+
+# + is above this key on many keyboards
+#. + is above this key on many keyboards
+#: fullZoomEnlargeCmd.commandkey2
+msgid "="
+msgstr "="
+
+#: fullZoomEnlargeCmd.commandkey3
+msgctxt "fullZoomEnlargeCmd.commandkey3fullZoomEnlargeCmd.commandkey3"
+msgid ""
+msgstr ""
+
+#: fullZoomReduceCmd.label fullZoomReduceCmd.accesskey
+msgid "Zoom &Out"
+msgstr "Súmáil &Amach"
+
+#: fullZoomReduceCmd.commandkey
+msgid "-"
+msgstr "-"
+
+#: fullZoomReduceCmd.commandkey2
+msgctxt "fullZoomReduceCmd.commandkey2"
+msgid ""
+msgstr ""
+
+#: fullZoomResetCmd.label fullZoomResetCmd.accesskey
+msgid "&Reset"
+msgstr "Athshoc&raigh"
+
+#: fullZoomResetCmd.commandkey2
+msgctxt "fullZoomResetCmd.commandkey2"
+msgid ""
+msgstr ""
+
+#: fullZoomToggleCmd.label fullZoomToggleCmd.accesskey
+msgid "Zoom &Text Only"
+msgstr "Súmáil &Téacs Amháin"
+
+#: fullZoom.label fullZoom.accesskey
+msgid "&Zoom"
+msgstr "&Súmáil"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
