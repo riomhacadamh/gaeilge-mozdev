@@ -25,11 +25,19 @@ sed -i 's/\(ENTITY window\..*idth\).*/\1 "50em">/' browser-ga-IE/chrome/browser/
 sed -i 's/\(ENTITY window\..*idth\).*/\1 "48em">/' browser-ga-IE/chrome/browser/preferences/fonts.dtd
 sed -i '/prefWindow\.styleWin /s/height: ..em/height: 40em/' browser-ga-IE/chrome/browser/preferences/preferences.dtd
 sed -i '/^telemetryYesButtonAccessKey/s/.*/telemetryYesButtonAccessKey = T/' mail-ga-IE/chrome/messenger/telemetry.properties browser-ga-IE/chrome/browser/browser.properties
+sed -i '/^social.toggle.accesskey/s/.*/social.toggle.accesskey = a/' browser-ga-IE/chrome/browser/browser.properties
+sed -i '/^view.sortBy.date.accesskey/s/.*/view.sortBy.date.accesskey=r/' browser-ga-IE/chrome/browser/places/places.properties
+sed -i '/^view.sortBy.keyword.accesskey/s/.*/view.sortBy.keyword.accesskey=g/' browser-ga-IE/chrome/browser/places/places.properties
+sed -i '/^view.sortBy.lastModified.accesskey/s/.*/view.sortBy.lastModified.accesskey=A/' browser-ga-IE/chrome/browser/places/places.properties
 
 # commandkey problems - don't want any translated - routine now is
 # to leave single letters untranslated in PO and then fix the accesskeys
 # that need fixing
 sed -i 's/^hideButton.accesskey.*/hideButton.accesskey=F/' toolkit-ga-IE/chrome/mozapps/update/updates.properties
+sed -i '/^pluginInstallation.close.accesskey/s/.*/pluginInstallation.close.accesskey=D/' toolkit-ga-IE/chrome/mozapps/plugins/plugins.properties
+sed -i '/^pluginInstallation.restart.accesskey/s/.*/pluginInstallation.restart.accesskey=A/' toolkit-ga-IE/chrome/mozapps/plugins/plugins.properties
+sed -i '/^cmd.purchaseAddon.accesskey/s/.*/cmd.purchaseAddon.accesskey=C/' toolkit-ga-IE/chrome/mozapps/extensions/extensions.properties
+
 sed -i 's/certs.ask.accesskey "."/certs.ask.accesskey "d"/; s/certs.auto.accesskey "."/certs.auto.accesskey "u"/' browser-ga-IE/chrome/browser/preferences/advanced.dtd
 sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/' browser-ga-IE/chrome/browser/browser.dtd
 sed -i 's/mediaSaveAs.accesskey "."/mediaSaveAs.accesskey "S"/' browser-ga-IE/chrome/browser/pageInfo.dtd
