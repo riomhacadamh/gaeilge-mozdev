@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-24 17:07-0500\n"
+"POT-Creation-Date: 2012-12-31 08:28-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -452,7 +452,7 @@ msgstr "B"
 msgid "&Italic"
 msgstr "&Iodálach"
 
-#: styleItalicCmd.key missingpluginsMessage.button.accesskey
+#: styleItalicCmd.key goChatCmd.key missingpluginsMessage.button.accesskey
 msgid "I"
 msgstr "I"
 
@@ -4670,7 +4670,7 @@ msgstr "&Cóipeáil"
 
 #: copyCmd.key Contact.accesskey cancelDownloadButton.accesskey
 #: digitalSign.certificate_clear.accesskey
-#: accountsManager.notification.button.accessKey goChatCmd.commandKey
+#: accountsManager.notification.button.accessKey
 #: testpilot.notification.accessKey.cancel
 msgid "C"
 msgstr "C"
@@ -10165,10 +10165,6 @@ msgstr ""
 "dteachtaireachtaí?"
 
 #. ## Strings used by nsMsgComposeSecure
-#: mime_multipartSignedBlurb
-msgid "This is a cryptographically signed message in MIME format."
-msgstr "Is teachtaireacht i bhformáid MIME atá sínithe go cripteagrafach í seo."
-
 #: mime_smimeEncryptedContentDesc
 msgid "S/MIME Encrypted Message"
 msgstr "Teachtaireacht Chriptithe S/MIME"
@@ -11574,29 +11570,25 @@ msgstr "Ard"
 msgid "Highest"
 msgstr "Is Airde"
 
-#: contextDesc.label contextDesc.accesskey
-msgid "Apply filter &when:"
-msgstr "Cuir an scagaire seo i bh&feidhm agus:"
+#: contextDesc.label
+msgid "Apply filter when:"
+msgstr ""
 
-#: contextIncoming.label
-msgid "Checking Mail"
-msgstr "ríomhphost á sheiceáil"
+#: contextIncomingMail.label contextIncomingMail.accesskey
+msgid "&Getting New Mail:"
+msgstr ""
 
-#: contextManual.label
-msgid "Manually Run"
-msgstr "scagaire á rith de láimh"
+#: contextManual.label contextManual.accesskey
+msgid "Manually &Run"
+msgstr ""
 
-#: contextBoth.label
-msgid "Checking Mail or Manually Run"
-msgstr "ríomhphost á sheiceáil nó an scagaire á rith de láimh"
+#: contextBeforeCls.label
+msgid "Filter before Junk Classification"
+msgstr ""
 
-#: contextPostPlugin.label
-msgid "Checking Mail (after classification)"
-msgstr "ríomhphost á sheiceáil (tar éis rangaithe)"
-
-#: contextPostPluginBoth.label
-msgid "Checking Mail (after classification) or Manually Run"
-msgstr "ríomhphost á sheiceáil (tar éis rangaithe) nó rite le láimh"
+#: contextAfterCls.label
+msgid "Filter after Junk Classification"
+msgstr ""
 
 #: filterActionDesc.label filterActionDesc.accesskey
 msgid "&Perform these actions:"
@@ -11824,6 +11816,17 @@ msgid ""
 msgstr ""
 "Tá an t-ainm scagaire a d'iontráil tú ann cheana. Iontráil ainm eile le do "
 "thoil."
+
+#: mustHaveFilterTypeTitle
+msgid "No filter event selected"
+msgstr ""
+
+#: mustHaveFilterTypeMessage
+msgid ""
+"You must select at least one event when this filter is applied. If you "
+"temporarily do not wish the filter to run at any event, uncheck its enabled "
+"state from the Message Filters dialog."
+msgstr ""
 
 #: deleteFilterConfirmation
 msgid "Are you sure you want to delete the selected filter(s)?"
@@ -16132,8 +16135,7 @@ msgid "Error reading file."
 msgstr "Earráid agus an comhad á léamh."
 
 # # @name NS_FOLLOWUPTO_SENDER
-#. ## @name NS_FOLLOWUPTO_SENDER
-#: 12564
+#: followupToSenderMessage
 msgid ""
 "The author of this message has requested that responses be sent only to the "
 "author. If you also want to reply to the newsgroup, add a new row to the "
@@ -17119,9 +17121,9 @@ msgstr "Admháil Léi&te"
 msgid "Delivery Status &Notification"
 msgstr "&Fógairt Stádais Sheachadta"
 
-#: outputFormatMenu.label outputFormatMenu.accesskey
-msgid "&Format"
-msgstr "&Formáid"
+#: deliveryFormatMenu.label deliveryFormatMenu.accesskey
+msgid "Delivery &Format"
+msgstr ""
 
 #: autoFormatCmd.label autoFormatCmd.accesskey
 msgid "&Auto-Detect"
@@ -18410,8 +18412,8 @@ msgid "Show Accounts…"
 msgstr "Taispeáin Cuntais…"
 
 #: joinChatCmd.label joinChatCmd.accesskey
-msgid "J&oin Chat…"
-msgstr "Glac Páirt i gC&omhrá…"
+msgid "Join Cha&t…"
+msgstr ""
 
 #: savedFiles.label savedFiles.accesskey
 msgid "Saved Fi&les"
@@ -19279,8 +19281,8 @@ msgid "Sa&ve Image As…"
 msgstr "Sábháil an Íomhá &Mar…"
 
 #: copyLinkCmd.label copyLinkCmd.accesskey
-msgid "&Copy Link Location"
-msgstr "&Cóipeáil Suíomh an Naisc"
+msgid "Copy &Link Location"
+msgstr "Cóipeáil &Suíomh an Naisc"
 
 #: copyImageAllCmd.label copyImageAllCmd.accesskey
 msgid "Copy &Image"
@@ -21745,6 +21747,10 @@ msgstr "Socruithe as líne"
 msgid "choose this for the parent"
 msgstr "roghnaigh é seo don mháthair"
 
+#: recentfolders.label
+msgid "Recent"
+msgstr "Le Déanaí"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -21949,6 +21955,10 @@ msgstr "Sábháil Uile"
 #: saveAllAttachmentsButton1.tooltip
 msgid "Save all the attached files"
 msgstr "Sábháil na comhaid cheangailte go léir"
+
+#: copyLinkCmd.label copyLinkCmd.accesskey
+msgid "&Copy Link Location"
+msgstr "&Cóipeáil Suíomh an Naisc"
 
 #: CopyMessageId.label CopyMessageId.accesskey
 msgid "&Copy Message-ID"
@@ -23272,9 +23282,9 @@ msgid "Allow &searchIntegration.engineName; to &search messages"
 msgstr ""
 "&Ceadaigh do &searchIntegration.engineName; teachtaireachtaí a chuardach"
 
-#: checkNow.label checkNow.accesskey
-msgid "Check &Now"
-msgstr "Seiceáil A&nois"
+#: checkDefaultsNow.label checkDefaultsNow.accesskey
+msgid "Check &Now…"
+msgstr ""
 
 #: configEditDesc.label
 msgid "Advanced Configuration"
@@ -26261,6 +26271,14 @@ msgstr "L"
 msgid "Please wait…"
 msgstr "Fan go fóill, le do thoil…"
 
+#: acceptIntegration.label
+msgid "Set as Default"
+msgstr ""
+
+#: cancelIntegration.label
+msgid "Skip Integration"
+msgstr ""
+
 #: defaultClient.intro
 msgid "Use &brandShortName; as the default client for:"
 msgstr "Úsáid &brandShortName; mar chliant réamhshocraithe le haghaidh:"
@@ -26268,6 +26286,13 @@ msgstr "Úsáid &brandShortName; mar chliant réamhshocraithe le haghaidh:"
 #: email.label
 msgid "E-Mail"
 msgstr "R-Phost"
+
+#: unsetDefault.tooltip
+msgid ""
+"It is not possible to unset &brandShortName; as the default client within "
+"&brandShortName;. To make another application the default you must use its "
+"'Set as default' dialog."
+msgstr ""
 
 #: checkOnStartup.label checkOnStartup.accesskey
 msgid "&Always perform this check when starting &brandShortName;"
