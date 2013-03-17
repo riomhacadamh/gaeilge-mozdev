@@ -126,7 +126,7 @@ obair.po : FORCE
 	sed -i '1s/.*/msgid ""\nmsgstr ""\n"Project-Id-Version: thunderbird\\n"\n&/' tb_obair.po
 #	sed -i '3,/updaterupdater.ini.po.*\\n"$$/d' tb_obair.po
 	msgcat calendar-ga-IE.po > cal_obair.po
-	sed -i 's/msgstr "End"/msgstr "Críoch"/; s/msgstr "Chuig"/msgstr "Go"/; s/msgstr "lá anuas"/msgstr "lá"/; s/msgstr "seachtain anuas"/msgstr "seachtain"/; s/msgstr "mí anuas"/msgstr "mí"/' cal_obair.po
+	sed -i 's/msgstr "Tosaigh"/msgstr "Tús"/; s/msgstr "End"/msgstr "Críoch"/; s/msgstr "Chuig"/msgstr "Go"/; s/msgstr "lá anuas"/msgstr "lá"/; s/msgstr "seachtain anuas"/msgstr "seachtain"/; s/msgstr "mí anuas"/msgstr "mí"/' cal_obair.po
 	sed -i '1,/^"Project-Id-Version: /d' cal_obair.po
 	sed -i '1s/.*/msgid ""\nmsgstr ""\n"Project-Id-Version: sunbird\\n"\n&/' cal_obair.po
 #	cat trunk.txt | while read x; do rm -f $$x-ga-IE.po; done

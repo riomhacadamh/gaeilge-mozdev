@@ -17,6 +17,9 @@ then
 	sed -i '1s/.*/# LOCALIZATION NOTE: REVIEW_REQUIRED\n# Please do not commit any changes to this file without a review from\n# the l10n-drivers team (this includes en-US). In order to get one,\n# please file a bug, add the "productization" keyword and CC l10n@mozilla.com.\n\n&/' browser-ga-IE/chrome/browser-region/region.properties
 fi
 
+# see bug 833344 (really should upgrade translate toolkit)
+sed -i 's/\(.\)#/\1\n#/g' browser-ga-IE/profile/bookmarks.inc mobile-ga-IE/profile/bookmarks.inc mobile-ga-IE/xul/defines.inc mobile-ga-IE/android/defines.inc
+
 
 sed -i '/^notifyBarNotNowButtonText/s/=.*$/=Ná Meabhraigh anois/; /^notifyBarChangeButtonAccessKey/s/=.$/=A/; /^notifyBarDontChangeButtonAccessKey/s/=.$/=N/' toolkit-ga-IE/chrome/passwordmgr/passwordmgr.properties
 
