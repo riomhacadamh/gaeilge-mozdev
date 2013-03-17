@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-11 08:42-0500\n"
+"POT-Creation-Date: 2013-03-13 09:48-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1098,6 +1098,14 @@ msgid "Fewer Properties"
 msgstr "Níos Lú Airíonna"
 
 # G&reamaigh, P&riontáil
+#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromemessengermsgPrintEngine.dtd.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#. LOCALIZATION NOTE (printCmd.key, closeCmd.key):
+#. As defined in msgPrintEngine.xul, Ctrl plus the command keys defined here
+#. will be the keyboard shortcuts effective in print preview, e.g. Ctrl+P
 #: PropertiesAccessKey Home.accesskey printContactCmd.key printCmd.key
 msgid "P"
 msgstr "R"
@@ -6425,7 +6433,7 @@ msgstr "Cealaithe"
 
 #. #-#-#-#-#  chromemessengeractivity.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (yesterday): Displayed time for files finished yesterday
-#: yesterday
+#: yesterday log.yesterday
 msgid "Yesterday"
 msgstr "Inné"
 
@@ -7137,6 +7145,10 @@ msgstr "&ICQ:"
 #: XMPP.label XMPP.accesskey
 msgid "&Jabber ID:"
 msgstr "Aitheantas &Jabber:"
+
+#: IRC.label IRC.accesskey
+msgid "I&RC Nick:"
+msgstr "Leasainm I&RC:"
 
 #: Photo.tab
 msgid "Photo"
@@ -8046,6 +8058,10 @@ msgstr "ICQ"
 #: propertyXMPP
 msgid "Jabber ID"
 msgstr "Aitheantas Jabber"
+
+#: propertyIRC
+msgid "IRC Nick"
+msgstr "Leasainm IRC"
 
 # # LOCALIZATION NOTE (dateformat)
 # # Only used if the year isn't present and should be in the format used by Date.toLocaleFormat
@@ -10523,6 +10539,20 @@ msgstr "Inniu ag %S"
 msgid "Yesterday %S"
 msgstr "Inné ag %S"
 
+#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+#. #Group by date thread pane titles
+#: log.today today clearTimeDuration.today
+msgid "Today"
+msgstr "Inniu"
+
+#: log.lastWeek lastWeek
+msgid "Last Week"
+msgstr "An tseachtain seo caite"
+
+#: log.twoWeeksAgo twoWeeksAgo
+msgid "Two Weeks Ago"
+msgstr "Coicís ó shin"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11572,27 +11602,35 @@ msgstr "Is Airde"
 
 #: contextDesc.label
 msgid "Apply filter when:"
-msgstr ""
+msgstr "Cuir an scagaire seo i bhfeidhm agus:"
 
 #: contextIncomingMail.label contextIncomingMail.accesskey
 msgid "&Getting New Mail:"
-msgstr ""
+msgstr "Ríomhphost Nua á &Fháil:"
 
 #: contextManual.label contextManual.accesskey
 msgid "Manually &Run"
-msgstr ""
+msgstr "&Rith de láimh"
 
 #: contextBeforeCls.label
 msgid "Filter before Junk Classification"
-msgstr ""
+msgstr "Scagadh roimh Aicmiú Dramhphoist"
 
 #: contextAfterCls.label
 msgid "Filter after Junk Classification"
-msgstr ""
+msgstr "Scagadh tar éis Aicmiú Dramhphoist"
 
 #: filterActionDesc.label filterActionDesc.accesskey
 msgid "&Perform these actions:"
 msgstr "Déan na &gníomhartha seo:"
+
+#: filterActionOrderWarning.label
+msgid "Note: Filter actions will be run in a different order."
+msgstr "Nóta: Cuirfear na scagairí i bhfeidhm in ord difriúil."
+
+#: filterActionOrder.label
+msgid "See execution order"
+msgstr "Féach ar ord curtha i bhfeidhm"
 
 # New Style Filter Rule Actions
 #. New Style Filter Rule Actions
@@ -11819,7 +11857,7 @@ msgstr ""
 
 #: mustHaveFilterTypeTitle
 msgid "No filter event selected"
-msgstr ""
+msgstr "Níl aon teagmhas scagtha roghnaithe"
 
 #: mustHaveFilterTypeMessage
 msgid ""
@@ -11827,6 +11865,9 @@ msgid ""
 "temporarily do not wish the filter to run at any event, uncheck its enabled "
 "state from the Message Filters dialog."
 msgstr ""
+"Caithfidh tú teagmhas a roghnú chun an scagaire seo a chur i bhfeidhm. Mura "
+"mian leat an scagaire a chur i bhfeidhm riamh, bain an tic ó Cumasaithe sa "
+"dialóg Scagairí Teachtaireachta."
 
 #: deleteFilterConfirmation
 msgid "Are you sure you want to delete the selected filter(s)?"
@@ -11935,6 +11976,29 @@ msgstr ""
 "Ní féidir an scagaire seo a shábháil toisc go bhfuil an téarma cuardaigh "
 "\"%1$S %2$S\" neamhbhailí sa chomhthéacs reatha."
 
+#. # LOCALIZATION NOTE(filterActionOrderExplanation)
+#. # Keep the \n\n that mean 2 linebreaks.
+#: filterActionOrderExplanation
+msgid ""
+"When a message matches this filter the actions will be run in this order:\n"
+"\n"
+msgstr ""
+"Nuair atá teachtaireacht comhoiriúnach leis an scagaire seo, cuirfear na "
+"gníomhaíochtaí i bhfeidhm san ord seo:\n"
+"\n"
+
+#: filterActionOrderTitle
+msgid "Real action order"
+msgstr "Fíor-ord gníomhaíochta"
+
+#. ## LOCALIZATION NOTE(filterActionItem):
+#. # %1$S=sequence number of the action, %2$S=action text, %3$S=action argument
+#: filterActionItem
+msgid "%1$S. %2$S %3$S\n"
+msgstr "%1$S. %2$S %3$S\n"
+
+#. ## LOCALIZATION NOTE(filterCountVisibleOfTotal):
+#. # %1$S=number of matching filters, %2$S=total number of filters
 #: filterCountVisibleOfTotal
 msgid "%1$S of %2$S"
 msgstr "%1$S as %2$S"
@@ -16414,6 +16478,8 @@ msgid ""
 "There are non-ASCII characters in the local part of the recipient address %s. "
 "This is not yet supported. Please change this address and try again."
 msgstr ""
+"Tá carachtair neamh-ASCII sa chuid áitiúil de sheoladh an fhaighteora %s. Ní "
+"thacaítear leis seo fós. Athraigh an seoladh agus déan iarracht eile."
 
 #. ## Strings use for the save message dialog shown when the user close a message compose window
 #: saveDlogTitle
@@ -17131,7 +17197,7 @@ msgstr "&Fógairt Stádais Sheachadta"
 
 #: deliveryFormatMenu.label deliveryFormatMenu.accesskey
 msgid "Delivery &Format"
-msgstr ""
+msgstr "&Formáid Seachadta"
 
 #: autoFormatCmd.label autoFormatCmd.accesskey
 msgid "&Auto-Detect"
@@ -18421,7 +18487,7 @@ msgstr "Taispeáin Cuntais…"
 
 #: joinChatCmd.label joinChatCmd.accesskey
 msgid "Join Cha&t…"
-msgstr ""
+msgstr "Glac Páir&t sa Chomhrá…"
 
 #: savedFiles.label savedFiles.accesskey
 msgid "Saved Fi&les"
@@ -18734,6 +18800,14 @@ msgstr "Barra Mearscagairí"
 #: appmenuToolbarLayout.label
 msgid "Toolbar Layout…"
 msgstr "Leagan Amach an Bharra Uirlisí…"
+
+#: appmenuSelectThread.label
+msgid "Select Thread"
+msgstr "Roghnaigh Snáithe"
+
+#: appmenuSelectFlagged.label
+msgid "Select Starred Messages"
+msgstr "Roghnaigh Teachtaireachtaí Marcáilte"
 
 # Tags Menu Popup
 #. Tags Menu Popup
@@ -19910,20 +19984,6 @@ msgstr "Bosca Amach"
 msgctxt "junkFolderName"
 msgid "Junk"
 msgstr "Dramhphost"
-
-#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
-#. #Group by date thread pane titles
-#: today clearTimeDuration.today
-msgid "Today"
-msgstr "Inniu"
-
-#: lastWeek
-msgid "Last Week"
-msgstr "An tseachtain seo caite"
-
-#: twoWeeksAgo
-msgid "Two Weeks Ago"
-msgstr "Coicís ó shin"
 
 #: older
 msgid "Old Mail"
@@ -23297,7 +23357,7 @@ msgstr ""
 
 #: checkDefaultsNow.label checkDefaultsNow.accesskey
 msgid "Check &Now…"
-msgstr ""
+msgstr "Seiceáil A&nois…"
 
 #: configEditDesc.label
 msgid "Advanced Configuration"
@@ -24882,13 +24942,24 @@ msgstr ""
 
 #: userNameEmpty
 msgid "The user name can not be empty."
-msgstr ""
+msgstr "Ní cheadaítear ainm folamh."
 
+#. # LOCALIZATION NOTE (localDirectoryInvalid): %1$S is path to folder
 #: localDirectoryInvalid
 msgid ""
-"The directory specified in the Local Directory setting is invalid. Please "
-"pick a different directory."
+"The Local Directory path \"%1$S\" is invalid. Please pick a different "
+"directory."
 msgstr ""
+"Tá Comhadlann Logánta \"%1$S\" neamhbhailí. Roghnaigh ceann eile, le do thoil."
+
+#. # LOCALIZATION NOTE (localDirectoryNotAllowed): %1$S is path to folder
+#: localDirectoryNotAllowed
+msgid ""
+"The Local Directory path \"%1$S\" is not suitable for message storage. Please "
+"choose another directory."
+msgstr ""
+"Ní féidir teachtaireachtaí a shábháil i gcomhadlann logánta \"%1$S\". "
+"Roghnaigh comhadlann eile, le do thoil."
 
 # if the user chooses to cancel the wizard when no accounts are there throw a message
 # LOCALIZATION NOTE (cancelWizard)
@@ -24966,6 +25037,8 @@ msgid ""
 "The directory specified in the Local Directory setting is already used by the "
 "\"%S\" account. Please pick a different directory."
 msgstr ""
+"Tá an chomhadlann atá socraithe mar Comhadlann Logánta in úsáid cheana, ag an "
+"gcuntas \"%S\". Roghnaigh comhadlann eile, le do thoil."
 
 #: directoryParentUsedByOtherAccount
 msgid ""
@@ -26292,11 +26365,11 @@ msgstr "Fan go fóill, le do thoil…"
 
 #: acceptIntegration.label
 msgid "Set as Default"
-msgstr ""
+msgstr "Socraigh mar réamhshocrú"
 
 #: cancelIntegration.label
 msgid "Skip Integration"
-msgstr ""
+msgstr "Ná Bac le Comhtháthú"
 
 #: defaultClient.intro
 msgid "Use &brandShortName; as the default client for:"
@@ -26312,6 +26385,9 @@ msgid ""
 "&brandShortName;. To make another application the default you must use its "
 "'Set as default' dialog."
 msgstr ""
+"Ní féidir &brandShortName; a dhíshocrú mar chliant réamhshocraithe taobh "
+"istigh de &brandShortName;. Chun feidhmchlár eile a roghnú, caithfidh tú an "
+"dialóg 'Socraigh mar réamhshocrú' san fheidhmchlár sin a úsáid."
 
 #: checkOnStartup.label checkOnStartup.accesskey
 msgid "&Always perform this check when starting &brandShortName;"
