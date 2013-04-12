@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-13 09:48-0500\n"
+"POT-Creation-Date: 2013-04-11 17:43-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -2162,6 +2162,7 @@ msgid "&Visited link text"
 msgstr "Téacs naisc &feicthe"
 
 #: background.label background.accesskey background.accessKey
+#: backgroundColor.label backgroundColor.accesskey
 msgid "&Background:"
 msgstr "&Cúlra:"
 
@@ -4129,7 +4130,7 @@ msgstr "&Díchumasaithe"
 msgid "Option"
 msgstr "Rogha"
 
-#: OptionText.label OptionText.accesskey
+#: OptionText.label OptionText.accesskey textColor.label textColor.accesskey
 msgid "&Text:"
 msgstr "&Téacs:"
 
@@ -4429,7 +4430,7 @@ msgstr ""
 "cill roghnaithe"
 
 #: backgroundColor.label backgroundColor.accessKey bgColor.label
-#: bgColor.accesskey backgroundColor.accesskey
+#: bgColor.accesskey
 msgid "&Background Color:"
 msgstr "Dath an Chú&lra:"
 
@@ -10082,26 +10083,27 @@ msgstr ""
 "Shonraigh tú gur cheart an teachtaireacht seo a chriptiú, ach níor aimsigh an "
 "feidhmchlár teastas criptiúcháin le haghaidh %S."
 
-#: ErrorCanNotEncrypt
+#: ErrorEncryptMail
 msgid ""
 "Unable to encrypt message. Please check that you have a valid email "
 "certificate for each recipient. Please check that the certificates specified "
 "in Mail & Newsgroups Account Settings for this mail account are valid and "
-"trusted."
+"trusted for mail."
 msgstr ""
 "Ní féidir an teachtaireacht a chriptiú. Cinntigh go bhfuil teastas bailí "
 "ríomhphoist agat do gach aon fhaighteoir. Cinntigh go bhfuil na teastais atá "
 "sonraithe sna Socruithe Cuntais don chuntas seo bailí agus go bhfuil muinín "
-"agat astu."
+"agat astu le haghaidh ríomhphoist."
 
-#: ErrorCanNotSign
+#: ErrorCanNotSignMail
 msgid ""
 "Unable to sign message. Please check that the certificates specified in Mail "
-"& Newsgroups Account Settings for this mail account are valid and trusted"
+"& Newsgroups Account Settings for this mail account are valid and trusted for "
+"mail."
 msgstr ""
-"Ní féidir an teachtaireacht a chriptiú. Cinntigh go bhfuil na teastais atá "
+"Ní féidir an teachtaireacht a shíniú. Cinntigh go bhfuil na teastais atá "
 "sonraithe sna Socruithe Cuntais don chuntas seo bailí agus go bhfuil muinín "
-"agat astu."
+"agat astu le haghaidh ríomhphoist."
 
 #. #-#-#-#-#  chromemessengeram-smime.properties.po (firefox)  #-#-#-#-#
 #. ## Strings used for in the prefs.
@@ -10693,7 +10695,8 @@ msgid "Upgrade"
 msgstr "Uasghrádú"
 
 #: fileExceedsLimit.cancel fileExceedsQuota.cancel cancel.label
-#: cloudFileUploadingCancel.label WizardContinue CancelBtn
+#: cloudFileUploadingCancel.label WizardContinue cancelIntegration2.label
+#: CancelBtn
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -13687,18 +13690,6 @@ msgstr "Níl aon teachtaireacht nua ar an bhfreastalaí."
 #: 5057
 msgid "Mail for %S"
 msgstr "Ríomhphost do %S"
-
-# # @name IMAP_EMPTY_TRASH_CONFIRM
-# # @loc None
-#. ## @name IMAP_EMPTY_TRASH_CONFIRM
-#. ## @loc None
-#: 5061
-msgid ""
-"Emptying trash will delete %S and all of the messages it contains. Do you "
-"want to delete this folder?"
-msgstr ""
-"Scriosfaidh folmhú an Bhosca Bruscair %S agus gach teachtaireacht atá ann. An "
-"bhfuil fonn ort an fillteán seo a scriosadh?"
 
 #. ## @name IMAP_SPECIAL_CHAR
 #. ## @loc None
@@ -18444,17 +18435,17 @@ msgctxt "openConversationCmd.key"
 msgid "o"
 msgstr "o"
 
-#: openFeedMessage.label openFeedMessage.accesskey
-msgid "&Open Feed Message"
-msgstr "&Oscail an Teachtaireacht Fhotha"
+#: openFeedMessage1.label openFeedMessage1.accesskey
+msgid "When &Opening Feed Messages"
+msgstr "Agus Teachtaireachtaí Fotha á n&Oscailt"
 
-#: openFeedWebPageInWindow.label openFeedWebPageInWindow.accesskey
-msgid "&Web Page in New Window"
-msgstr "Leathanach &Gréasáin i bhFuinneog Nua"
+#: openFeedWebPage.label openFeedWebPage.accesskey
+msgid "Open as &Web Page"
+msgstr "Oscail mar &Leathanach Gréasáin"
 
-#: openFeedSummaryInWindow.label openFeedSummaryInWindow.accesskey
-msgid "&Summary in New Window"
-msgstr "&Achoimre i bhFuinneog Nua"
+#: openFeedSummary.label openFeedSummary.accesskey
+msgid "Open as &Summary"
+msgstr "Oscail mar &Achoimre"
 
 #: openFeedWebPageInMP.label openFeedWebPageInMP.accesskey
 msgid "&Toggle Web Page and Summary in Message Pane"
@@ -19986,8 +19977,8 @@ msgid "Junk"
 msgstr "Dramhphost"
 
 #: older
-msgid "Old Mail"
-msgstr "Seanphost"
+msgid "Older"
+msgstr "Níos Sine"
 
 # Grouped By Tags
 #. #Grouped By Tags
@@ -20640,11 +20631,6 @@ msgid "%1$S has asked to be notified (on %2$S) when you read this message."
 msgstr ""
 "D'iarr %1$S go seolfaí fógra chuige/chuici (ar %2$S) nuair a léifidh tú an "
 "teachtaireacht seo."
-
-#. # Strings for growl notifications on Mac OS X
-#: growlNotification
-msgid "New Mail"
-msgstr "Ríomhphost Nua"
 
 #. # mailCommands.js
 #: emptyJunkTitle
@@ -23692,6 +23678,53 @@ msgstr "agus socraigh go bhfuilim &Amuigh, leis an teachtaireacht stádais seo:"
 msgid "Send &typing notifications in conversations"
 msgstr "Abair le &daoine nuair a bhím ag clóscríobh"
 
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: colorsDialog.title
+msgid "Colors"
+msgstr "Dathanna"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: window.width
+msgid "38em"
+msgstr "46em"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: window.macWidth window.unixWidth
+msgid "41em"
+msgstr "49em"
+
+#: allowPagesToUse.label allowPagesToUse.accesskey
+msgid "&Allow content to choose its own colors, instead of my selections above"
+msgstr ""
+"T&abhair cead don ábhar a dhathanna féin a roghnú, in áit mo roghanna thuas"
+
+#: color
+msgid "Text and Background"
+msgstr "Téacs agus Cúlra"
+
+#: useSystemColors.label useSystemColors.accesskey
+msgid "U&se system colors"
+msgstr "Ú&sáid dathanna an chórais"
+
+#: underlineLinks.label underlineLinks.accesskey
+msgid "&Underline links"
+msgstr "Cuir líne &faoi naisc"
+
+#: links
+msgid "Link Colors"
+msgstr "Dathanna Nasc"
+
+#: linkColor.label linkColor.accesskey
+msgid "Unvisited &Links:"
+msgstr "Naisc &gan Chuairt:"
+
+# "f" conflicts, "c" conflicts with Cúlra
+#: visitedLinkColor.label visitedLinkColor.accesskey
+msgid "&Visited Links:"
+msgstr "Naisc Fh&eicthe:"
+
 #: forwardMsg.label forwardMsg.accesskey
 msgid "&Forward messages:"
 msgstr "Cuir teachtaireachtaí ar a&ghaidh:"
@@ -23716,7 +23749,7 @@ msgstr "C&ló:"
 msgid "Si&ze:"
 msgstr "&Méid:"
 
-#: fontColor.label fontColor.accesskey textColor.label textColor.accesskey
+#: fontColor.label fontColor.accesskey
 msgid "&Text Color:"
 msgstr "Dath an &Téacs:"
 
@@ -23943,9 +23976,9 @@ msgstr "Gnáth"
 msgid "Bigger"
 msgstr "Níos Mó"
 
-#: color.label color.accesskey
-msgid "&Color:"
-msgstr "&Dath:"
+#: quotedTextColor.label quotedTextColor.accesskey
+msgid "C&olor:"
+msgstr "Da&th:"
 
 #: displayWidth.label
 msgid "Plain Text Messages"
@@ -23954,14 +23987,6 @@ msgstr "Teachtaireachtaí Gnáth-théacs"
 #: displayText.label
 msgid "When displaying quoted plain text messages:"
 msgstr "Agus teachtaireachtaí gnáth-théacs á dtaispeáint mar athfhriotal:"
-
-#: colors.label
-msgid "Colors"
-msgstr "Dathanna"
-
-#: overrideColors.label
-msgid "When displaying messages, use the following colors:"
-msgstr "Agus teachtaireachtaí á dtaispeáint, úsáid na dathanna seo:"
 
 #. LOCALIZATION NOTE : (emoticonsAndStructs.label) 'Emoticons' are also known as 'Smileys', e.g. :-)
 #: convertEmoticons.label convertEmoticons.accesskey
@@ -23976,10 +24001,10 @@ msgstr ""
 "Is féidir clibeanna a úsáid le catagóirí agus tosaíochtaí a chur le do chuid "
 "teachtaireachtaí."
 
-#. Fonts
-#: fontsAndColors.label
-msgid "Fonts"
-msgstr "Clófhoirne"
+#. Fonts and Colors
+#: fontsAndColors1.label
+msgid "Fonts &amp; Colors"
+msgstr "Clófhoirne agus Dathanna"
 
 # Was "s" but that conflicts with Eisceachtaí...
 #: defaultFont.label defaultFont.accesskey
@@ -23990,6 +24015,10 @@ msgstr "Cló &réamhshocraithe:"
 #: fontOptions.label fontOptions.accesskey
 msgid "&Advanced…"
 msgstr "Cas&ta…"
+
+#: colorButton.label colorButton.accesskey
+msgid "&Colors…"
+msgstr "&Dathanna…"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -24007,11 +24036,6 @@ msgstr "47em"
 #: window.macWidth
 msgid "43em"
 msgstr "51em"
-
-#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: window.unixWidth
-msgid "41em"
-msgstr "49em"
 
 #: language.label language.accesskey
 msgid "Fon&ts for:"
@@ -24261,6 +24285,10 @@ msgstr "d"
 #: showAnimatedAlert.label showAnimatedAlert.accesskey
 msgid "&Show an alert"
 msgstr "Tai&speáin airdeall"
+
+#: showTrayIcon.label showTrayIcon.accesskey
+msgid "Show a &tray icon"
+msgstr "Taispeáin deilbhín sa &tráidire"
 
 #: systemsound.label systemsound.accesskey
 msgid "Default s&ystem sound for new mail"
@@ -25634,9 +25662,13 @@ msgstr "Cuardaigh Teachtaireachtaí"
 msgid "Results"
 msgstr "Torthaí"
 
-#: fileButton.label fileButton.accesskey
-msgid "F&ile"
-msgstr "C&omhad"
+#: moveHereMenu.label moveHereMenu.accesskey
+msgid "Move &Here"
+msgstr "Bog &Anseo"
+
+#: moveButton.label moveButton.accesskey
+msgid "Move &To"
+msgstr "Bog &Go"
 
 #: openInFolder.label openInFolder.accesskey
 msgid "Open in Folde&r"
