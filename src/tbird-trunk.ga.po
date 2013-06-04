@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-20 14:47-0500\n"
+"POT-Creation-Date: 2013-06-04 08:26-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1785,7 +1785,7 @@ msgstr "Cmd+"
 msgid "Del"
 msgstr "Del"
 
-#: Delete deleteLabel hdrTrashButton1.label deleteButton.label
+#: Delete hdrTrashButton1.label deleteButton.label
 #: identity-delete-confirm-button
 msgid "Delete"
 msgstr "Scrios"
@@ -6844,7 +6844,7 @@ msgstr "Teagmháil"
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
 #. Folder Pane
-#: Name.box nameColumn.label folderColumn.label clearTimeDuration.nameColumn
+#: Name.box nameColumn.label folderColumn.label
 msgid "Name"
 msgstr "Ainm"
 
@@ -17607,11 +17607,6 @@ msgstr "Teagmháil C&homhrá…"
 msgid "&Open Saved Message…"
 msgstr "&Oscail Teachtaireacht Shábháilte…"
 
-#: openAttachmentCmd.label openAttachmentCmd.accesskey
-msgctxt "openAttachmentCmd.label openAttachmentCmd.accesskey"
-msgid "&Attachments"
-msgstr "&Iatáin"
-
 #: saveAsMenu.label saveAsMenu.accesskey
 msgid "&Save As"
 msgstr "Sábháil M&ar"
@@ -17868,7 +17863,6 @@ msgid "&Star"
 msgstr "&Réiltín"
 
 #: sortByAttachmentsCmd.label sortByAttachmentsCmd.accesskey
-msgctxt "sortByAttachmentsCmd.label sortByAttachmentsCmd.accesskey"
 msgid "&Attachments"
 msgstr "&Iatáin"
 
@@ -18434,6 +18428,10 @@ msgstr "O&scail i gComhrá"
 msgctxt "openConversationCmd.key"
 msgid "o"
 msgstr "o"
+
+#: openAttachmentListCmd.label openAttachmentListCmd.accesskey
+msgid "Attac&hments"
+msgstr "Ia&táin"
 
 #: openFeedMessage1.label openFeedMessage1.accesskey
 msgid "When &Opening Feed Messages"
@@ -19465,9 +19463,14 @@ msgstr "Airíonna Fillteáin"
 msgid "New Tag…"
 msgstr "Clib Nua…"
 
-#: getNextNMessages
-msgid "Get Next %S News Messages"
-msgstr "Faigh an chéad %S teachtaireachtaí nuachta eile"
+#. # LOCALIZATION NOTE (getNextNewsMessages): Semi-colon list of plural forms.
+#. # #1 is the number of news messages to get.
+#: getNextNewsMessages
+msgid "Get Next #1 News Message;Get Next #1 News Messages"
+msgstr ""
+"Faigh an chéad mhír nuachta eile;Faigh an chéad #1 mhír nuachta eile;Faigh an "
+"chéad #1 mhír nuachta eile;Faigh an chéad #1 mír nuachta eile;Faigh an chéad "
+"#1 mír nuachta eile"
 
 #: advanceNextPrompt
 msgid "Advance to next unread message in %S?"
@@ -20228,6 +20231,11 @@ msgctxt "detachLabelAccesskey"
 msgid "D"
 msgstr "D"
 
+#: deleteLabel
+msgctxt "deleteLabel"
+msgid "Delete"
+msgstr "Scrios"
+
 #: deleteLabelAccesskey spellCheckInline1.accesskey
 msgid "E"
 msgstr "E"
@@ -20405,16 +20413,25 @@ msgid "Are you sure you want to delete this saved search?"
 msgstr ""
 "An bhfuil tú cinnte gur mian leat an cuardach sábháilte seo a scriosadh?"
 
-#. # for checking if the user really wants to open lots of messages
+#. # for checking if the user really wants to open lots of messages in separate windows.
 #: openWindowWarningTitle
 msgctxt "openWindowWarningTitle"
 msgid "Confirm"
 msgstr "Dearbhaigh"
 
-#: openWindowWarningText
-msgid "Opening %S messages may be slow.  Continue?"
+#. # LOCALIZATION NOTE (openWindowWarningConfirmation): Semi-colon list of plural forms.
+#. # #1 is the number of messages the user is attempting to open.
+#: openWindowWarningConfirmation
+msgid ""
+"Opening #1 message may be slow.  Continue?;Opening #1 messages may be slow.  "
+"Continue?"
 msgstr ""
-"D'fhéadfadh oscailt %S teachtaireacht a bheith mall. An bhfuil fonn ort "
+"D'fhéadfadh oscailt #1 teachtaireacht a bheith mall. An bhfuil fonn ort "
+"leanúint ar aghaidh?;D'fhéadfadh oscailt #1 theachtaireacht a bheith mall. An "
+"bhfuil fonn ort leanúint ar aghaidh?;D'fhéadfadh oscailt #1 theachtaireacht a "
+"bheith mall. An bhfuil fonn ort leanúint ar aghaidh?;D'fhéadfadh oscailt #1 "
+"dteachtaireacht a bheith mall. An bhfuil fonn ort leanúint ar aghaidh?;"
+"D'fhéadfadh oscailt #1 teachtaireacht a bheith mall. An bhfuil fonn ort "
 "leanúint ar aghaidh?"
 
 # for warning the user that a tag they're trying to create already exists
@@ -20946,23 +20963,35 @@ msgstr ""
 "Tá baol mór ann go mbeidh an breiseán #1 ina údár le fadhbanna slándála agus "
 "cobhsaíochta, agus ní féidir é a shuiteáil."
 
-#: applyToCollapsedMsgsTitle
-msgid "Confirm Delete of Messages in Collapsed Thread(s)"
-msgstr "Dearbhaigh Scriosadh Teachtaireachtaí i Snáitheanna Leacaithe"
+#: confirmMsgDelete.title
+msgid "Confirm Deletion"
+msgstr "Dearbhaigh Scriosadh"
 
-#: applyToCollapsedMsgs
-msgid "Warning - this will delete messages in collapsed thread(s)"
-msgstr "Rabhadh - scriosfaidh sé seo teachtaireachtaí i snáitheanna leacaithe"
-
-#: applyToCollapsedAlwaysAskCheckbox
-msgid "Always ask me before deleting messages in collapsed threads"
+#: confirmMsgDelete.collapsed.desc
+msgid ""
+"This will delete messages in collapsed threads. Are you sure you want to "
+"continue?"
 msgstr ""
-"Fiafraigh díom i gcónaí roimh scriosadh teachtaireachtaí i snáitheanna "
-"leacaithe"
+"Scriosfaidh sé seo teachtaireachtaí i snáitheanna leacaithe. An bhfuil tú "
+"cinnte?"
 
-#: applyNowButton
-msgid "Apply"
-msgstr "Cuir i bhFeidhm"
+#: confirmMsgDelete.shiftDel.desc
+msgid ""
+"This will delete messages immediately, without saving a copy to Trash. Are "
+"you sure you want to continue?"
+msgstr ""
+"Scriosfaidh sé seo na teachtaireachtaí láithreach bonn, gan cóip a shábháil "
+"sa mBruscar. An bhfuil tú cinnte?"
+
+#: confirmMsgDelete.dontAsk.label
+msgctxt "confirmMsgDelete.dontAsk.label"
+msgid "Don't ask me again."
+msgstr "Ná fiafraigh díom arís."
+
+#: confirmMsgDelete.delete.label
+msgctxt "confirmMsgDelete.delete.label"
+msgid "Delete"
+msgstr "Scrios"
 
 #: mailServerLoginFailedTitle
 msgid "Login Failed"
@@ -22417,7 +22446,7 @@ msgstr ""
 msgid ""
 "In partnership with several providers, &brandShortName; can offer you a new "
 "email account. Just fill in your first and last name, or any other words "
-"you’d like, in the fields above to get started."
+"you'd like, in the fields above to get started."
 msgstr ""
 "I gcomhar le soláthraithe áirithe, is féidir leat cuntas nua ríomhphoist a "
 "chruthú trí &brandShortName;. Tabhair d'ainm agus sloinne, nó aon téarmaí "
@@ -22436,8 +22465,8 @@ msgid "Skip this and use my existing email"
 msgstr "Ná bac leis seo; úsáid an seoladh s'agam"
 
 #: content.close
-msgid "I think I’ll configure my account later."
-msgstr "Ba mhaith liom mo chuntas a chumrú ar ball."
+msgid "I think I'll configure my account later."
+msgstr "Socróidh mé cuntas ar ball."
 
 #: successful.successMessage
 msgid "You have successfully set up your account."
@@ -22449,8 +22478,8 @@ msgstr "Scríobh ríomhphost"
 
 #: successful.write.desc
 msgid ""
-"Let your friends and family know about your new address.<br/> That’s why you "
-"got this new account, isn’t it?"
+"Let your friends and family know about your new address.<br/> That's why you "
+"got this new account, isn't it?"
 msgstr ""
 "Inis do chairde agus do chlann faoi do sheoladh nua.<br/> Nach é sin an fáth "
 "a bhfuair tú an cuntas seo?"
@@ -23392,7 +23421,7 @@ msgstr "Ch&omh luath agus a thaispeántar iad"
 msgid "After &displaying for"
 msgstr "Tar éis iad a &thaispeáint ar feadh"
 
-#: secondsLabel.label
+#: secondsLabel.label totalOpenTimeEnd.label
 msgid "seconds"
 msgstr "soicind"
 
@@ -24330,6 +24359,16 @@ msgstr "Á&bhar"
 msgid "S&ender"
 msgstr "S&eoltóir"
 
+#. LOCALIZATION NOTE: totalOpenTimeBefore.label is displayed first, then
+#. there's a field where the user can enter a number, and totalOpenTimeEnd.label
+#. is displayed at the end of the line. The translations of the
+#. totalOpenTimeBefore.label and totalOpenTimeEnd.label parts don't have to mean
+#. the exact same thing as in English; please try instead to translate the whole
+#. sentence.
+#: totalOpenTimeBefore.label totalOpenTimeBefore.accesskey
+msgid "Show &New Mail Alert for"
+msgstr "Taispeáin Airdeall Ríomhphoist &Nua le haghaidh"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -25079,6 +25118,9 @@ msgid ""
 "A subdirectory of the directory specified in the Local Directory setting is "
 "already used by the \"%S\" account. Please pick a different directory."
 msgstr ""
+"Tá fochomhadlann de chuid na comhadlainne atá socraithe mar Comhadlann "
+"Logánta in úsáid cheana, ag an gcuntas \"%S\". Roghnaigh comhadlann eile, le "
+"do thoil."
 
 # Provide default example values for sample email address
 #. #Provide default example values for sample email address
@@ -25468,21 +25510,9 @@ msgstr "&Lean Ar Aghaidh sa Mhód Sábháilteachta"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: sanitizePrefs2.title
-msgid "Settings for Clearing History"
-msgstr "Socruithe maidir le glanadh na staire"
-
 #: sanitizeDialog2.title
 msgid "Clear Recent History"
 msgstr "Glan an Stair Is Déanaí"
-
-#: sanitizeItems.label
-msgid "Clear the following items now:"
-msgstr "Bánaigh na míreanna seo a leanas anois:"
-
-#: clearDataSettings2.label
-msgid "When I quit &brandShortName;, it should automatically clear all:"
-msgstr "Agus mé ag scoir de &brandShortName;, glan iad seo go huathoibríoch:"
 
 # XXX rearrange entities to match physical layout when l10n isn't an issue
 # LOCALIZATION NOTE (clearTimeDuration.*): "Time range to clear" dropdown.
@@ -25527,10 +25557,6 @@ msgctxt "clearTimeDuration.suffix"
 msgid ""
 msgstr ""
 
-#: clearTimeDuration.dateColumn
-msgid "Visit Date"
-msgstr "Dáta Cuairte"
-
 # LOCALIZATION NOTE (detailsProgressiveDisclosure.*): Labels and accesskeys
 # of the "Details" progressive disclosure button.  See UI mockup at bug
 # 480169
@@ -25541,17 +25567,6 @@ msgstr "Dáta Cuairte"
 msgid "D&etails"
 msgstr "&Mionsonraí"
 
-#: historySection.label
-msgid "History"
-msgstr "Stair"
-
-#: dataSection.label
-msgid "Data"
-msgstr "Sonraí"
-
-#. LOCALIZATION NOTE (item*): itemHistoryAndDownloads.* and
-#. itemBrowsingHistory.* will never be used at the same time, so they can
-#. have the same accesskey.
 #: itemCookies.label itemCookies.accesskey
 msgid "&Cookies"
 msgstr "&Fianáin"
@@ -25571,11 +25586,6 @@ msgstr "Ní féidir an gníomh seo a chur ar ceal."
 #: dialog.width
 msgid "28em"
 msgstr "31em"
-
-#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: column.width
-msgid "14em"
-msgstr "16em"
 
 #: AgeInDays
 msgid "Age In Days"
