@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-04 08:26-0500\n"
+"POT-Creation-Date: 2013-07-09 20:23-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -28,7 +28,7 @@ msgstr "O"
 msgid "Open Web &Location…"
 msgstr "Oscail &Suíomh Gréasáin…"
 
-#: openRemoteCmd.key insertLinkCmd.key
+#: openRemoteCmd.key insertLinkCmd.key learnMoreAboutIgnoreThreadAccessKey
 msgid "L"
 msgstr "L"
 
@@ -59,12 +59,8 @@ msgstr "Foil&sigh"
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. Attn: Localization - some of the menus in this dialog directly affect mail also.
 #. File menu items
-#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  feedbackmain.properties.po (firefox)  #-#-#-#-#
-#. # modules/notifications.js - doorhanger notification button shortcut keys
 #: publishCmd.key saveCmd.key digitalSign.certificate.accesskey
 #: markStarredCmd.key crashedpluginsMessage.submitButton.accesskey
-#: testpilot.notification.accessKey.submit
 msgid "S"
 msgstr "S"
 
@@ -2638,7 +2634,7 @@ msgstr "Socruithe"
 msgid "&Type"
 msgstr "&Cineál"
 
-#: submit.value testpilot.submit
+#: submit.value
 msgid "Submit"
 msgstr "Seol"
 
@@ -3241,9 +3237,7 @@ msgstr "Siombailí Coitianta"
 msgid "Insert"
 msgstr "Ionsáigh"
 
-#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
-#. notification
-#: closeButton.label testpilot.notification.close.tooltip
+#: closeButton.label
 msgid "Close"
 msgstr "Dún"
 
@@ -4680,7 +4674,6 @@ msgstr "&Cóipeáil"
 #: copyCmd.key Contact.accesskey cancelDownloadButton.accesskey
 #: digitalSign.certificate_clear.accesskey
 #: accountsManager.notification.button.accessKey
-#: testpilot.notification.accessKey.cancel
 msgid "C"
 msgstr "C"
 
@@ -4700,7 +4693,7 @@ msgstr "Roghnaigh &Uile"
 #. which is placed under the Edit menu on Unix systems
 #: selectAllCmd.key buddy.authRequest.allow.accesskey
 #: addAttachmentButton.accessskey accountManagerCmdUnix.accesskey
-#: certs.ask.accesskey testpilot.notification.accessKey.allStudies
+#: certs.ask.accesskey
 msgid "A"
 msgstr "W"
 
@@ -4825,7 +4818,6 @@ msgstr "Cearta an Úsáideora"
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
 #: bottomLinks.privacy cloudfileMgmt.privacyPolicy privacyPolicy
-#: testpilot.welcomePage.privacyPolicy
 msgid "Privacy Policy"
 msgstr "Polasaí Príobháideachta"
 
@@ -4881,6 +4873,25 @@ msgstr "leagan is déanaí"
 
 #: update.manual.end
 msgctxt "update.manual.end"
+msgid ""
+msgstr ""
+
+#. LOCALIZATION NOTE (update.unsupported.start,update.unsupported.linkText,update.unsupported.end):
+#. update.unsupported.start, update.unsupported.linkText, and
+#. update.unsupported.end all go into one line with linkText being wrapped in
+#. an anchor that links to a site to provide additional information regarding
+#. why the system is no longer supported. As this is all in one line, try to
+#. make the localized text short (see bug 843497 for screenshots).
+#: update.unsupported.start
+msgid "You can not perform further updates on this system. "
+msgstr "Ní féidir leat tuilleadh nuashonruithe a chur i bhfeidhm ar an gcóras. "
+
+#: update.unsupported.linkText
+msgid "Learn more"
+msgstr "Tuilleadh eolais"
+
+#: update.unsupported.end
+msgctxt "update.unsupported.end"
 msgid ""
 msgstr ""
 
@@ -5968,6 +5979,10 @@ msgstr "Cuir Cunt&as Ríomhphoist Leis…"
 #: addIMAccountButton.label addIMAccountButton.accesskey
 msgid "Add &Chat Account…"
 msgstr "Cuir Cuntas &Comhrá Leis…"
+
+#: addFeedAccountButton.label addFeedAccountButton.accesskey
+msgid "Add &Feed Account…"
+msgstr "Cuir Cuntas &Fotha Leis…"
 
 #: addOtherAccountButton.label addOtherAccountButton.accesskey
 msgid "Add &Other Account…"
@@ -7099,7 +7114,7 @@ msgstr "Saincheaptha &4:"
 msgid "&Notes:"
 msgstr "&Nótaí:"
 
-#: Chat.tab chat.heading headingChat chatTabTitle chatButton.label
+#: Chat.tab chat.heading headingChat chatTabTitle chatButton.label chat.label
 #: paneChat.title
 msgid "Chat"
 msgstr "Comhrá"
@@ -7390,8 +7405,7 @@ msgid "&Message"
 msgstr "&Teachtaireacht"
 
 #: newMessageCmd.key newMessage.key
-#: lwthemePostInstallNotification.manageButton.accesskey
-#: testpilot.notification.accessKey.moreInfo Mega
+#: lwthemePostInstallNotification.manageButton.accesskey Mega
 msgid "M"
 msgstr "B"
 
@@ -8133,15 +8147,19 @@ msgstr ""
 #. # To
 #. ## @name MIME_MHTML_TO
 #. ## @loc
-#: prefixTo TO 1012 To
+#. #-#-#-#-#  chromemessengermsgHdrViewOverlay.dtd.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: prefixTo TO 1012 toField4.label To
 msgid "To"
 msgstr "Chuig"
 
-#: prefixCc Cc
+#: prefixCc ccField4.label Cc
 msgid "Cc"
 msgstr "Cc"
 
-#: prefixBcc
+#: prefixBcc bccField4.label
 msgid "Bcc"
 msgstr "Bcc"
 
@@ -8910,7 +8928,6 @@ msgid "Download Now"
 msgstr "Íosluchtaigh Anois"
 
 #: downloadButton.accesskey buddy.authRequest.deny.accesskey
-#: testpilot.notification.accessKey.alwaysSubmit
 msgid "D"
 msgstr "D"
 
@@ -9758,10 +9775,6 @@ msgid ""
 msgstr ""
 "Agus ríomhphost POP á íosluchtú ón bhfreastalaí seo, úsáid an fillteán seo a "
 "leanas le haghaidh teachtaireachtaí nua:"
-
-#: globalInbox.label globalInbox.accesskey
-msgid "&Global Inbox (Local Folders Account)"
-msgstr "&Bosca Isteach Uilíoch (Cuntas na bhFillteán Logánta)"
 
 #: accountDirectory.label accountDirectory.accesskey
 msgid "Inbox for thi&s server's account"
@@ -11693,11 +11706,11 @@ msgstr "Faigh ón bhfreastalaí POP"
 msgid "Ignore Thread"
 msgstr "Tabhair Neamhaird ar an Snáithe"
 
-#: ignoreSubthread.label
+#: ignoreSubthread.label contextKillSubthreadMenu.label
 msgid "Ignore Subthread"
 msgstr "Tabhair Neamhaird ar an bhFoshnáithe"
 
-#: watchThread.label
+#: watchThread.label contextWatchThreadMenu.label
 msgid "Watch Thread"
 msgstr "Bí ag Faire ar an Snáithe"
 
@@ -12308,6 +12321,12 @@ msgctxt "sizeUnknown.label"
 msgid "unknown"
 msgstr "anaithnid"
 
+#. # LOCALIZATION NOTE(globalInbox)
+#. # %S=name of the Local folders account
+#: globalInbox
+msgid "Global Inbox (%S)"
+msgstr "Bosca Isteach Uilíoch (%S)"
+
 # LOCALIZATION NOTE (glodaComplete.messagesTagged.label): The label used
 # in the autocomplete widget to refer to a query for all messages tagged
 # by a particular tag (replacing #1).
@@ -12788,7 +12807,8 @@ msgstr "ní féidir #1 a bheith páirteach"
 #. # Date
 #. ## @name MIME_MHTML_DATE
 #. ## @loc
-#: gloda.message.attr.date.facetNameLabel dateColumn.label DATE 1007 Date
+#: gloda.message.attr.date.facetNameLabel dateColumn.label DATE 1007
+#: dateField4.label Date
 msgid "Date"
 msgstr "Dáta"
 
@@ -12835,7 +12855,7 @@ msgstr "ní féidir bheith i liosta ríomhphoist"
 #. #-#-#-#-#  chromemessengerquickFilterBar.dtd.po (firefox)  #-#-#-#-#
 #. The label for the filter button that causes us to filter results to only
 #. include messages with at least one tag on them.
-#: gloda.message.attr.tag.facetNameLabel tag itemTags.label
+#: gloda.message.attr.tag.facetNameLabel tag tagsHdr4.label itemTags.label
 #: quickFilterBar.tags.label Tags tagsColumn.label
 msgid "Tags"
 msgstr "Clibeanna"
@@ -13963,11 +13983,9 @@ msgstr "Teachtaireacht %1$S as %2$S á cóipeáil go %3$S"
 #. # LOCALIZATION NOTE (5105): Do not translate the word %S below.
 #. # "%S" is the the name of the folder.
 #. #-#-#-#-#  chromemessengerlocalMsgs.properties.po (firefox)  #-#-#-#-#
-#. ## @name POP3_MOVE_FOLDER_TO_TRASH
-#. ## @loc None
-#. # LOCALIZATION NOTE (4044): Do not translate the word %S below.
+#. # LOCALIZATION NOTE (pop3MoveFolderToTrash): Do not translate the word %S below.
 #. # "%S" is the the name of the folder.
-#: 5105 4044
+#: 5105 pop3MoveFolderToTrash
 msgid "Are you sure you want to delete the folder '%S'?"
 msgstr "An bhfuil tú cinnte gur mian leat fillteán '%S' a scriosadh?"
 
@@ -13998,20 +14016,15 @@ msgstr ""
 #. #-#-#-#-#  chromemessengerimapMsgs.properties.po (firefox)  #-#-#-#-#
 #. ## @name IMAP_DELETE_FOLDER_DIALOG_TITLE
 #. ## @loc None
-#. #-#-#-#-#  chromemessengerlocalMsgs.properties.po (firefox)  #-#-#-#-#
-#. ## @name POP3_DELETE_FOLDER_DIALOG_TITLE
-#. ## @loc None
-#: 5107 4045
+#: 5107 pop3DeleteFolderDialogTitle
 msgid "Delete Folder"
 msgstr "Scrios an Fillteán"
 
 #. #-#-#-#-#  chromemessengerimapMsgs.properties.po (firefox)  #-#-#-#-#
 #. ## @name IMAP_DELETE_FOLDER_BUTTON_LABEL
 #. ## @loc None
-#. #-#-#-#-#  chromemessengerlocalMsgs.properties.po (firefox)  #-#-#-#-#
-#. ## @name POP3_DELETE_FOLDER_BUTTON_LABEL
-#. ## @loc None
-#: 5108 4046 deleteFolderCmd.label deleteFolderCmd.accesskey
+#: 5108 pop3DeleteFolderButtonLabel deleteFolderCmd.label
+#: deleteFolderCmd.accesskey
 msgid "&Delete Folder"
 msgstr "&Scrios Fillteán"
 
@@ -14629,7 +14642,7 @@ msgstr "Roinn"
 #. # Organization
 #. ## @name MIME_MHTML_ORGANIZATION
 #. ## @loc
-#: 2125 ORGANIZATION 1011 Organization
+#: 2125 ORGANIZATION 1011 organizationField4.label Organization
 msgid "Organization"
 msgstr "Eagras"
 
@@ -14985,8 +14998,6 @@ msgid "Please enter a new password for user %1$S on %2$S:"
 msgstr "Iontráil focal faire nua d'úsáideoir %1$S ar %2$S:"
 
 #. # Status - Downloading message n of m to account
-#. ## @name receivingMsgs
-#. ## @loc None
 #. #LOCALIZATION NOTE (receivingMsgs): Do not translate %1$S, %2$S, or %3$S in the following lines.
 #. # Place the word %1$S where the number of messages downloaded so far should appear.
 #. # Place the word %2$S where the total number of messages to receive should appear;
@@ -14996,8 +15007,6 @@ msgid "Downloading message %1$S of %2$S to %3$S"
 msgstr "Teachtaireacht %1$S as %2$S go %3$S á híosluchtú"
 
 #. # Status - connecting to host
-#. ## @name hostContacted
-#. ## @loc None
 #. #LOCALIZATION NOTE : Do not translate %1$S in the following line.
 #. # Place %1$S where the account name should appear
 #: hostContacted
@@ -15007,8 +15016,6 @@ msgstr ""
 "isteach á seoladh…"
 
 #. # Status - no messages to download 
-#. ## @name noMessages
-#. ## @loc None
 #. #LOCALIZATION NOTE : Do not translate %1$S in the following line.
 #. # Place %1$S where the account name should appear
 #: noMessages
@@ -15016,8 +15023,6 @@ msgid "There are no new messages for %1$S."
 msgstr "Níl aon teachtaireachtaí nua ann le haghaidh %1$S."
 
 #. # Status - messages received after the download
-#. ## @name receivedMessages
-#. ## @loc None
 #. #LOCALIZATION NOTE : Do not translate %1$S, %2$S or %3$S in the following line.
 #. # %1$S will receive the number of messages received
 #. # %2$S will receive the total number of messages
@@ -15030,9 +15035,7 @@ msgstr "%3$S Fuarthas %1$S as %2$S teachtaireacht"
 #
 # # @name MK_POP3_OUT_OF_DISK_SPACE
 # # @loc None
-#. ## @name MK_POP3_OUT_OF_DISK_SPACE
-#. ## @loc None
-#: -321
+#: pop3OutOfDiskSpace
 msgid ""
 "There is not enough disk space to download new messages. Try deleting old "
 "mail, emptying the Trash folder, and compacting your mail folders, and then "
@@ -15048,21 +15051,17 @@ msgstr ""
 # LOCALIZATION NOTE (4000): Do not translate %s in the following line.
 # Place the word %s where the name of the mailbox should appear
 #. # Status - parsing folder
-#. ## @name LOCAL_STATUS_SELECTING_MAILBOX
-#. ## @loc None
-#. #LOCALIZATION NOTE (4000): Do not translate %s in the following line.
-#. # Place the word %s where the name of the mailbox should appear
-#: 4000
+#. #LOCALIZATION NOTE (buildingSummary): Do not translate %S in the following line.
+#. # Place the word %S where the name of the mailbox should appear
+#: buildingSummary
 msgid "Building summary file for %S…"
 msgstr "Ag tógáil comhaid achoimre le haghaidh %S…"
 
 #. #-#-#-#-#  chromemessengerlocalMsgs.properties.po (firefox)  #-#-#-#-#
 #. # Status - parsing folder
-#. ## @name LOCAL_STATUS_DOCUMENT_DONE
-#. ## @loc None
 #. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
 #. Statusbar
-#: 4001 statusText.label
+#: localStatusDocumentDone statusText.label
 msgid "Done"
 msgstr "Déanta"
 
@@ -15071,10 +15070,8 @@ msgstr "Déanta"
 # # @loc None
 # LOCALIZATION NOTE (4003): Do not translate POP3 in the following line.
 #. # Status - pop3 server error
-#. ## @name POP3_SERVER_ERROR
-#. ## @loc None
-#. #LOCALIZATION NOTE (4003): Do not translate POP3 in the following line.
-#: 4003
+#. #LOCALIZATION NOTE (pop3ServerError): Do not translate POP3 in the following line.
+#: pop3ServerError
 msgid "An error occurred with the POP3 mail server."
 msgstr "Tharla earráid leis an bhfreastalaí POP3."
 
@@ -15082,9 +15079,7 @@ msgstr "Tharla earráid leis an bhfreastalaí POP3."
 # # @name POP3_USERNAME_FAILURE
 # # @loc None
 #. # Status - pop3 user name failed
-#. ## @name POP3_USERNAME_FAILURE
-#. ## @loc None
-#: 4004
+#: pop3UsernameFailure
 msgid "Sending of username did not succeed."
 msgstr "Níor éirigh le seoladh an ainm úsáideora."
 
@@ -15092,9 +15087,7 @@ msgstr "Níor éirigh le seoladh an ainm úsáideora."
 # # @name POP3_PASSWORD_FAILURE
 # # @loc None
 #. # Status - password failed
-#. ## @name POP3_PASSWORD_FAILURE
-#. ## @loc None
-#: 4005
+#: pop3PasswordFailure
 msgid "Sending of password did not succeed."
 msgstr "Níor éirigh le seoladh an fhocail fhaire."
 
@@ -15102,9 +15095,7 @@ msgstr "Níor éirigh le seoladh an fhocail fhaire."
 # # @name POP3_MESSAGE_WRITE_ERROR
 # # @loc None
 #. # Status - write error occurred
-#. ## @name POP3_MESSAGE_WRITE_ERROR
-#. ## @loc None
-#: 4006
+#: pop3MessageWriteError
 msgid ""
 "Unable to write the email to the mailbox. Make sure the file system allows "
 "you write privileges, and you have enough disk space to copy the mailbox."
@@ -15118,10 +15109,7 @@ msgstr ""
 # # @loc None
 # LOCALIZATION NOTE(4012): Do not translate the word "POP3" below.
 #. # Status - retr failure from the server
-#. ## @name POP3_RETR_FAILURE
-#. ## @loc None
-#. # LOCALIZATION NOTE(4012): Do not translate the word "POP3" below.
-#: 4012
+#: pop3RetrFailure
 msgid "The RETR command did not succeed. Error retrieving a message."
 msgstr "Níor éirigh leis an ordú RETR. Earráid agus teachtaireacht á fáil."
 
@@ -15131,20 +15119,16 @@ msgstr "Níor éirigh leis an ordú RETR. Earráid agus teachtaireacht á fáil.
 # Status - password undefined
 # # @name POP3_PASSWORD_UNDEFINED
 # # @loc None
-#. # Status - password undefined 
-#. ## @name POP3_PASSWORD_UNDEFINED
-#. ## @loc None
-#: 4013
+#. # Status - password undefined
+#: pop3PasswordUndefined
 msgid "Error getting mail password."
 msgstr "Earráid agus focal faire ríomhphoist á fháil."
 
 # Status - username undefined
 # # @name POP3_USERNAME_UNDEFINED
 # # @loc None
-#. # Status - username undefined 
-#. ## @name POP3_USERNAME_UNDEFINED
-#. ## @loc None
-#: 4014
+#. # Status - username undefined
+#: pop3UsernameUndefined
 msgid ""
 "You have not supplied a username for this server.  Please provide one in the "
 "account setup menu and try again."
@@ -15157,10 +15141,7 @@ msgstr ""
 # # @loc None
 # LOCALIZATION NOTE(4015): Do not translate the word "POP3" below.
 #. # Status - list failure
-#. ## @name POP3_LIST_FAILURE
-#. ## @loc None
-#. # LOCALIZATION NOTE(4015): Do not translate the word "POP3" below.
-#: 4015
+#: pop3ListFailure
 msgid ""
 "The LIST command did not succeed. Error getting the ID and size of a message."
 msgstr ""
@@ -15171,11 +15152,8 @@ msgstr ""
 # # @name POP3_DELE_FAILURE
 # # @loc None
 # LOCALIZATION NOTE(4016): Do not translate the word "POP3" below.
-#. # Status - delete error 
-#. ## @name POP3_DELE_FAILURE
-#. ## @loc None
-#. # LOCALIZATION NOTE(4016): Do not translate the word "POP3" below.
-#: 4016
+#. # Status - delete error
+#: pop3DeleFailure
 msgid "The DELE command did not succeed. Error marking a message as deleted."
 msgstr ""
 "Níor éirigh leis an ordú DELE. Earráid agus teachtaireacht á marcáil scriosta."
@@ -15184,34 +15162,27 @@ msgstr ""
 # # @name POP3_STAT
 # # @loc None
 #. # Status - stat failed
-#. ## @name POP3_STAT
-#. ## @loc None
-#: 4024
+#: pop3StatFail
 msgid ""
 "The STAT command did not succeed. Error getting message number and sizes."
 msgstr ""
 "Níor éirigh leis an ordú STAT. Earráid agus uimhir agus méid teachtaireachta "
 "á fáil."
 
-#. ## @name POP3_SERVER_SAID
-#. ## @loc None
-#: 4025
+#. #LOCALIZATION NOTE (pop3ServerSaid): Do not remove the leading space during translation.
+#: pop3ServerSaid
 msgid "Mail server %S responded: "
 msgstr "D'fhreagair an freastalaí ríomhphoist %S: "
 
 # # @name COPYING_MSGS_STATUS
 # # @loc None
-#. ## @name COPYING_MSGS_STATUS
-#. ## @loc None
-#: 4027
+#: copyingMessagesStatus
 msgid "Copying %S of %S messages to %S"
 msgstr "%S as %S teachtaireacht á gcóipeáil go %S"
 
 # # @name MOVING_MSGS_STATUS
 # # @loc None
-#. ## @name MOVING_MSGS_STATUS
-#. ## @loc None
-#: 4028
+#: movingMessagesStatus
 msgid "Moving %S of %S messages to %S"
 msgstr "%S as %S teachtaireacht á bogadh go %S"
 
@@ -15219,9 +15190,7 @@ msgstr "%S as %S teachtaireacht á bogadh go %S"
 # # @name POP3_MESSAGE_FOLDER_BUSY
 # # @loc None
 #. # Status - write error occurred
-#. ## @name POP3_MESSAGE_FOLDER_BUSY
-#. ## @loc None
-#: 4029
+#: pop3MessageFolderBusy
 msgid ""
 "This folder is being processed. Please wait until processing is complete to "
 "get messages."
@@ -15231,17 +15200,13 @@ msgstr ""
 
 # # @name MOVEMAIL_CANT_OPEN_SPOOL_FILE
 # # @loc None
-#. ## @name MOVEMAIL_CANT_OPEN_SPOOL_FILE
-#. ## @loc None
-#: 4033
+#: movemailCantOpenSpoolFile
 msgid "Unable to open mail spool file %S."
 msgstr "Ní féidir an comhad spólála %S a oscailt."
 
 # # @name MOVEMAIL_CANT_CREATE_LOCK
 # # @loc None
-#. ## @name MOVEMAIL_CANT_CREATE_LOCK
-#. ## @loc None
-#: 4034
+#: movemailCantCreateLock
 msgid ""
 "Unable to create lock file %S. For movemail to work, it is necessary to "
 "create lock files in the mail spool directory. On many systems, this is best "
@@ -15254,33 +15219,32 @@ msgstr ""
 
 # # @name MOVEMAIL_CANT_DELETE_LOCK
 # # @loc None
-#. ## @name MOVEMAIL_CANT_DELETE_LOCK
-#. ## @loc None
-#: 4035
+#: movemailCantDeleteLock
 msgid "Unable to delete lock file %S."
 msgstr "Ní féidir an comhad glais %S a scriosadh."
 
 # # @name MOVEMAIL_CANT_TRUNCATE_SPOOL_FILE
 # # @loc None
-#. ## @name MOVEMAIL_CANT_TRUNCATE_SPOOL_FILE
-#. ## @loc None
-#: 4036
+#: movemailCantTruncateSpoolFile
 msgid "Unable to truncate spool file %S."
 msgstr "Ní féidir an comhad spólála %S a theascadh."
 
 # # @name MOVEMAIL_SPOOL_FILE_NOT_FOUND
 # # @loc None
-#. ## @name MOVEMAIL_SPOOL_FILE_NOT_FOUND
-#. ## @loc None
-#: 4037
+#: movemailSpoolFileNotFound
 msgid "Unable to locate mail spool file."
 msgstr "Ní féidir an comhad spólála a aimsiú."
 
+#. #LOCALIZATION NOTE (movemailCantParseSpool): %S is file name
+#: movemailCantParseSpool
+msgid "Unable to parse spool file %S. The file may be corrupt or not valid."
+msgstr ""
+"Ní féidir an comhad spólála %S a pharsáil. Seans go bhfuil an comhad "
+"truaillithe nó neamhbhailí."
+
 # # @name POP3_TMP_DOWNLOAD_FAILED
 # # @loc None
-#. ## @name POP3_TMP_DOWNLOAD_FAILED
-#. ## @loc None
-#: 4038
+#: pop3TmpDownloadError
 msgid ""
 "There was an error downloading the following message:   \n"
 "From: %S\n"
@@ -15302,13 +15266,11 @@ msgstr ""
 # Do not translate "%S". Place %S in your translation where the name of the server should appear.
 # Do not translate "UIDL"
 #. # Status - the server doesn't support UIDL…
-#. ## @name POP3_SERVER_DOES_NOT_SUPPORT_UIDL_ETC
-#. ## @loc None
-#. # LOCALIZATION NOTE(4010): The following sentence should be translated in this way:
+#. # LOCALIZATION NOTE(pop3ServerDoesNotSupportUidlEtc): The following sentence should be translated in this way:
 #. # Do not translate "POP3"
 #. # Do not translate "%S". Place %S in your translation where the name of the server should appear.
 #. # Do not translate "UIDL"
-#: 4040
+#: pop3ServerDoesNotSupportUidlEtc
 msgid ""
 "The POP3 mail server (%S) does not support UIDL or XTND XLST, which are "
 "required to implement the ``Leave on Server'', ``Maximum Message Size'' or "
@@ -15330,13 +15292,11 @@ msgstr ""
 # Do not translate "%S". Place %S in your translation where the name of the server should appear.
 # Do not translate "TOP"
 #. # Status - the server doesn't support the top command
-#. ## @name POP3_SERVER_DOES_NOT_SUPPORT_THE_TOP_COMMAND
-#. ## @loc None
-#. # LOCALIZATION NOTE(4011): The following sentence should be translated in this way:
+#. # LOCALIZATION NOTE(pop3ServerDoesNotSupportTopCommand): The following sentence should be translated in this way:
 #. # Do not translate "POP3"
 #. # Do not translate "%S". Place %S in your translation where the name of the server should appear.
 #. # Do not translate "TOP"
-#: 4041
+#: pop3ServerDoesNotSupportTopCommand
 msgid ""
 "The POP3 mail server (%S) does not support the TOP command. Without server "
 "support for this, we cannot implement the ``Maximum Message Size'' or ``Fetch "
@@ -15351,9 +15311,7 @@ msgstr ""
 
 # # @name NS_ERROR_COULD_NOT_CONNECT_VIA_TLS
 # # @loc None
-#. ## @name NS_ERROR_COULD_NOT_CONNECT_VIA_TLS
-#. ## @loc None
-#: 4043
+#: nsErrorCouldNotConnectViaTls
 msgid ""
 "Unable to establish TLS connection to POP3 server. The server may be down or "
 "may be incorrectly configured. Please verify the correct configuration in the "
@@ -15368,9 +15326,7 @@ msgstr ""
 
 # # @name POP3_AUTH_INTERNAL_ERROR
 # # @loc None
-#. ## @name POP3_AUTH_INTERNAL_ERROR
-#. ## @loc None
-#: 4047
+#: pop3AuthInternalError
 msgid ""
 "Internal state error during POP3 server authentication. This is an internal, "
 "unexpected error in the application, please report it as bug."
@@ -15380,9 +15336,7 @@ msgstr ""
 
 # # @name POP3_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
 # # @loc None
-#. ## @name POP3_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
-#. ## @loc None
-#: 4048
+#: pop3AuthChangeEncryptToPlainNoSSL
 msgid ""
 "This POP3 server does not seem to support encrypted passwords. If you just "
 "set up the account, please try changing to 'Password, transmitted insecurely' "
@@ -15399,9 +15353,7 @@ msgstr ""
 
 # # @name POP3_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
 # # @loc None
-#. ## @name POP3_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
-#. ## @loc None
-#: 4049
+#: pop3AuthChangeEncryptToPlainSSL
 msgid ""
 "This POP3 server does not seem to support encrypted passwords. If you just "
 "set up this account, please try changing to 'Normal password' as the "
@@ -15417,9 +15369,7 @@ msgstr ""
 
 # # @name POP3_AUTH_CHANGE_PLAIN_TO_ENCRYPT
 # # @loc None
-#. ## @name POP3_AUTH_CHANGE_PLAIN_TO_ENCRYPT
-#. ## @loc None
-#: 4050
+#: pop3AuthChangePlainToEncrypt
 msgid ""
 "This POP3 server does not allow plaintext passwords. Please try changing to "
 "'Encrypted password' as the 'Authentication method' in the 'Account Settings "
@@ -15433,9 +15383,7 @@ msgstr ""
 # # @name POP3_AUTH_MECH_NOT_SUPPORTED
 # # @loc None
 #. # Authentication server caps and pref don't match
-#. ## @name POP3_AUTH_MECH_NOT_SUPPORTED
-#. ## @loc None
-#: 4051
+#: pop3AuthMechNotSupported
 msgid ""
 "The server does not support the selected authentication method. Please change "
 "the 'Authentication method' in the 'Account Settings | Server settings'."
@@ -15448,9 +15396,7 @@ msgstr ""
 # # @name POP3_GSSAPI_FAILURE
 # # @loc None
 #. # Status - Could not log in to GSSAPI, and it was the only method
-#. ## @name POP3_GSSAPI_FAILURE
-#. ## @loc None
-#: 4052
+#: pop3GssapiFailure
 msgid ""
 "The Kerberos/GSSAPI ticket was not accepted by the POP server. Please check "
 "that you are logged in to the Kerberos/GSSAPI realm."
@@ -16738,9 +16684,8 @@ msgstr "Rinne mé dearmad!"
 msgid "No, Send Now"
 msgstr "Ní dhearna, Seol Anois"
 
-#. #-#-#-#-#  chromemessengermessengercomposecomposeMsgs.properties.po (firefox)  #-#-#-#-#
 #. # Strings used by the Filelink offer notification bar.
-#: learnMore.label crashedpluginsMessage.learnMore
+#: learnMore.label
 msgid "Learn More…"
 msgstr "Tuilleadh Eolais…"
 
@@ -17113,6 +17058,10 @@ msgstr "&Aimsigh agus Ionadaigh…"
 msgid "F"
 msgstr "F"
 
+#: findReplaceCmd.key
+msgid "H"
+msgstr "H"
+
 # "M" under Main -> Eagar
 #: findAgainCmd.label findAgainCmd.accesskey
 msgid "Find A&gain"
@@ -17440,9 +17389,8 @@ msgstr "Grea&maigh"
 
 #. #-#-#-#-#  chromemessengermsgHdrViewOverlay.dtd.po (firefox)  #-#-#-#-#
 #. Attachment context menu items
-#: openAttachment.label openAttachment.accesskey
-#: folderContextOpenNewWindow.label folderContextOpenNewWindow.accesskey
-#: openAttachmentCmd.label openAttachmentCmd.accesskey
+#: openAttachment.label openAttachment.accesskey openAttachmentCmd.label
+#: openAttachmentCmd.accesskey
 msgid "&Open"
 msgstr "&Oscail"
 
@@ -17598,6 +17546,10 @@ msgstr "Cunt&as ríomhphoist atá ann…"
 #: newIMAccountCmd.label newIMAccountCmd.accesskey
 msgid "&Chat Account…"
 msgstr "&Cuntas Comhrá…"
+
+#: newFeedAccountCmd.label newFeedAccountCmd.accesskey
+msgid "Fee&d Account…"
+msgstr "Cun&tas Fotha…"
 
 #: newIMContactCmd.label newIMContactCmd.accesskey
 msgid "C&hat Contact…"
@@ -18214,10 +18166,12 @@ msgid "For&ward As"
 msgstr "Seol ar A&ghaidh Mar"
 
 #: forwardAsInline.label forwardAsInline.accesskey
+msgctxt "forwardAsInline.label forwardAsInline.accesskey"
 msgid "&Inline"
 msgstr "&Inlíne"
 
 #: forwardAsAttachmentCmd.label forwardAsAttachmentCmd.accesskey
+msgctxt "forwardAsAttachmentCmd.label forwardAsAttachmentCmd.accesskey"
 msgid "&Attachment"
 msgstr "I&atán"
 
@@ -18258,8 +18212,9 @@ msgid "m"
 msgstr "a"
 
 #: killThreadMenu.label killThreadMenu.accesskey
+msgctxt "killThreadMenu.label killThreadMenu.accesskey"
 msgid "&Ignore Thread"
-msgstr "Tabhair Neamha&ird ar an Snáithe"
+msgstr "&Tabhair Neamhaird ar an Snáithe"
 
 #: killThreadMenu.key
 msgctxt "killThreadMenu.key"
@@ -18528,6 +18483,10 @@ msgstr "j"
 msgid "Clear Recent &History…"
 msgstr "Glan an &Stair Is Déanaí…"
 
+#: allowRemoteDebugging.label allowRemoteDebugging.accesskey
+msgid "Allow Remote Debu&gging"
+msgstr "Ceadaigh Cian-Dí&fhabhtú"
+
 # Mail Toolbar
 #. Mail Toolbar
 #: getMsgButton.label
@@ -18689,6 +18648,14 @@ msgstr "Seol freagra chuig liosta ríomhphoist"
 msgid "Forward selected message"
 msgstr "Cuir an teachtaireacht roghnaithe ar aghaidh"
 
+#: forwardAsInline.tooltip
+msgid "Forward selected message as inline text"
+msgstr "Cuir an teachtaireacht roghnaithe ar aghaidh mar théacs inlíne"
+
+#: forwardAsAttachment.tooltip
+msgid "Forward selected message as an attachment"
+msgstr "Cuir an teachtaireacht roghnaithe ar aghaidh mar iatán"
+
 #: fileButton.tooltip
 msgid "File selected message"
 msgstr "Bog an teachtaireacht roghnaithe go fillteán"
@@ -18769,6 +18736,15 @@ msgstr "Bain teachtaireachtaí scriosta den fhillteán roghnaithe"
 msgid "Display the &brandShortName; Menu"
 msgstr "Taispeáin an Roghchlár &brandShortName;"
 
+#. Toolbar Button Popup
+#: buttonMenuForwardAsInline.label
+msgid "Forward Inline"
+msgstr "Cuir Ar Aghaidh Inlíne"
+
+#: buttonMenuForwardAsAttachment.label
+msgid "Forward As Attachment"
+msgstr "Cuir Ar Aghaidh Mar Iatán"
+
 #. AppMenu Popup
 #: appmenuNewMsgCmd.label
 msgid "New Message"
@@ -18818,6 +18794,10 @@ msgstr "Méid"
 #: folderContextGetMessages.label folderContextGetMessages.accesskey
 msgid "&Get Messages"
 msgstr "Fai&gh Teachtaireachtaí"
+
+#: folderContextOpenInNewWindow.label folderContextOpenInNewWindow.accesskey
+msgid "&Open in New Window"
+msgstr "&Oscail i bhFuinneog Nua"
 
 #: folderContextOpenNewTab.label folderContextOpenNewTab.accesskey
 #: otherActionsOpenInNewTab1.label otherActionsOpenInNewTab1.accesskey
@@ -19107,7 +19087,24 @@ msgctxt "contextForward.label contextForward.accesskey"
 msgid "&Forward"
 msgstr "&Seol Ar Aghaidh"
 
-#: contextForwardAsAttachment.label contextForwardAsAttachment.accesskey
+#: contextForwardAsMenu.label contextForwardAsMenu.accesskey
+msgid "F&orward As"
+msgstr "C&uir Ar Aghaidh Mar"
+
+#: contextForwardAsInline.label contextForwardAsInline.accesskey
+msgctxt "contextForwardAsInline.label contextForwardAsInline.accesskey"
+msgid "&Inline"
+msgstr "&Inlíne"
+
+#: contextForwardAsAttachmentItem.label
+#: contextForwardAsAttachmentItem.accesskey
+msgctxt ""
+"contextForwardAsAttachmentItem.label contextForwardAsAttachmentItem.accesskey"
+msgid "&Attachment"
+msgstr "I&atán"
+
+#: contextMultiForwardAsAttachment.label
+#: contextMultiForwardAsAttachment.accesskey
 msgid "F&orward as Attachments"
 msgstr "Se&ol ar Aghaidh mar Iatáin"
 
@@ -19126,6 +19123,11 @@ msgstr "&Le Déanaí"
 msgctxt "contextCopyMsgMenu.label contextCopyMsgMenu.accesskey"
 msgid "&Copy To"
 msgstr "&Cóipeáil Go"
+
+#: contextKillThreadMenu.label contextKillThreadMenu.accesskey
+msgctxt "contextKillThreadMenu.label contextKillThreadMenu.accesskey"
+msgid "&Ignore Thread"
+msgstr "&Tabhair Neamhaird ar an Snáithe"
 
 #: contextSaveAs.label contextSaveAs.accesskey saveAsAttachmentCmd.label
 #: saveAsAttachmentCmd.accesskey
@@ -20975,7 +20977,7 @@ msgstr ""
 "Scriosfaidh sé seo teachtaireachtaí i snáitheanna leacaithe. An bhfuil tú "
 "cinnte?"
 
-#: confirmMsgDelete.shiftDel.desc
+#: confirmMsgDelete.deleteNoTrash.desc
 msgid ""
 "This will delete messages immediately, without saving a copy to Trash. Are "
 "you sure you want to continue?"
@@ -21271,6 +21273,11 @@ msgstr "A"
 msgid "Submit a crash report"
 msgstr "Seol tuairisc ar thuairteáil"
 
+#: crashedpluginsMessage.learnMore
+msgctxt "crashedpluginsMessage.learnMore"
+msgid "Learn More…"
+msgstr "Tuilleadh Eolais…"
+
 #: carbonFailurePluginsMessage.message
 msgid "This page asks to use a plugin that can only run in 32-bit mode"
 msgstr ""
@@ -21320,6 +21327,59 @@ msgstr "Glanfar an stair go léir."
 #: sanitizeSelectedWarning
 msgid "All selected items will be cleared."
 msgstr "Glanfar gach mír roghnaithe."
+
+#: learnMoreAboutIgnoreThread
+msgctxt "learnMoreAboutIgnoreThread"
+msgid "Learn More…"
+msgstr "Tuilleadh Eolais…"
+
+#: undoIgnoreThread
+msgid "Undo Ignore Thread"
+msgstr "Ná Tabhair Neamhaird a Thuilleadh"
+
+#: undoIgnoreThreadAccessKey
+msgctxt "undoIgnoreThreadAccessKey"
+msgid "U"
+msgstr ""
+
+#: undoIgnoreSubthread
+msgid "Undo Ignore Subthread"
+msgstr ""
+
+#: undoIgnoreSubthreadAccessKey
+msgctxt "undoIgnoreSubthreadAccessKey"
+msgid "U"
+msgstr ""
+
+#. # LOCALIZATION NOTE (ignoredThreadFeedback): #1 is the message thread title
+#: ignoredThreadFeedback
+msgid "Replies to the thread \"#1\" will not be shown."
+msgstr "Ní thaispeánfar freagraí ar shnáithe \"#1\"."
+
+#. # LOCALIZATION NOTE (ignoredSubthreadFeedback): #1 is the message subthread title
+#: ignoredSubthreadFeedback
+msgid "Replies to the subthread \"#1\" will not be shown."
+msgstr "Ní thaispeánfar freagraí ar fho-shnáithe \"#1\"."
+
+#. # LOCALIZATION NOTE (ignoredThreadsFeedback): Semi-colon list of plural forms.
+#. # #1 is the number of threads
+#: ignoredThreadsFeedback
+msgid ""
+"Replies to the thread that was selected will not be shown.;Replies to the #1 "
+"threads that were selected will not be shown."
+msgstr ""
+"Ní thaispeánfar freagraí ar an snáithe roghnaithe.;Ní thaispeánfar freagraí "
+"ar an #1 shnáithe roghnaithe.;Ní thaispeánfar freagraí ar na #1 shnáithe "
+"roghnaithe.;Ní thaispeánfar freagraí ar na #1 snáithe roghnaithe.;Ní "
+"thaispeánfar freagraí ar na #1 snáithe roghnaithe."
+
+#. # LOCALIZATION NOTE (ignoredSubthreadsFeedback): Semi-colon list of plural forms.
+#. # #1 is number of subthreads
+#: ignoredSubthreadsFeedback
+msgid ""
+"Replies to the subthread that was selected will not be shown.;Replies to the "
+"#1 subthreads that were selected will not be shown."
+msgstr ""
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -21516,7 +21576,7 @@ msgstr "Leanúint-Chuig"
 #. # From
 #. ## @name MIME_MHTML_FROM
 #. ## @loc
-#: FROM 1009 From fromColumn.label
+#: FROM 1009 fromField4.label From fromColumn.label
 msgid "From"
 msgstr "Ó"
 
@@ -21540,7 +21600,7 @@ msgstr "Leagan-MIME"
 #. # Newsgroups
 #. ## @name MIME_MHTML_NEWSGROUPS
 #. ## @loc
-#: NEWSGROUPS 1014 newsSectionHdr.label newsgroups.label
+#: NEWSGROUPS 1014 newsSectionHdr.label newsgroupsField4.label newsgroups.label
 msgid "Newsgroups"
 msgstr "Grúpaí-Nuachta"
 
@@ -21548,7 +21608,7 @@ msgstr "Grúpaí-Nuachta"
 #. # References
 #. ## @name MIME_MHTML_REFERENCES
 #. ## @loc
-#: REFERENCES 1016
+#: REFERENCES 1016 referencesField4.label
 msgid "References"
 msgstr "Tagairtí"
 
@@ -21654,7 +21714,7 @@ msgstr "Athsheolta-Cc"
 #. #-#-#-#-#  chromemessengerquickFilterBar.dtd.po (firefox)  #-#-#-#-#
 #. The button label that toggles whether the text filter searches the message
 #. sender for the string.
-#: SENDER 1008 quickFilterBar.textFilter.sender.label
+#: SENDER 1008 senderField4.label quickFilterBar.textFilter.sender.label
 msgid "Sender"
 msgstr "Seoltóir"
 
@@ -21671,8 +21731,8 @@ msgstr "Seoltóir"
 #. #-#-#-#-#  chromemessengersearch-attributes.properties.po (firefox)  #-#-#-#-#
 #. #these need to match nsMsgSearchAttrib interface in nsMsgSearchCore.idl
 #. #and nsMsgSearchAttribMap in nsMsgSearchAdapter.cpp
-#: SUBJECT 1000 quickFilterBar.textFilter.subject.label Subject
-#: subjectColumn.label
+#: SUBJECT 1000 subjectField4.label quickFilterBar.textFilter.subject.label
+#: Subject subjectColumn.label
 msgid "Subject"
 msgstr "Ábhar"
 
@@ -21791,6 +21851,10 @@ msgstr "Bainistiú Shíntiúis na nGrúpaí Nuachta"
 msgid "Manage subscriptions"
 msgstr "Bainistigh síntiúis"
 
+#: movemail.label
+msgid "Movemail"
+msgstr ""
+
 #: accountsSectionHdr.label
 msgid "Accounts"
 msgstr "Cuntais"
@@ -21806,6 +21870,10 @@ msgstr "Taispeáin socruithe an chuntais seo"
 #: newAcctLink.label
 msgid "Create a new account"
 msgstr "Cruthaigh cuntas nua"
+
+#: newAcct.label
+msgid "Create a new account:"
+msgstr "Cruthaigh cuntas nua:"
 
 #: advFeaturesSectionHdr.label
 msgid "Advanced Features"
@@ -21839,76 +21907,29 @@ msgstr "roghnaigh é seo don mháthair"
 msgid "Recent"
 msgstr "Le Déanaí"
 
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: toField3.label
-msgid "To "
-msgstr "Chuig "
+#: replyToField4.label
+msgid "Reply to"
+msgstr "Tabhair freagra ar"
 
-#: fromField3.label
-msgid "From "
-msgstr "Ó "
+#: followupToField4.label
+msgid "Followup to"
+msgstr "Leanúint chuig"
 
-#: senderField3.label
-msgid "Sender "
-msgstr "Seoltóir "
+#: userAgentField4.label
+msgid "User agent"
+msgstr "Gníomhaire úsáideora"
 
-#: organizationField3.label
-msgid "Organization "
-msgstr "Eagras "
+#: messageIdField4.label
+msgid "Message ID"
+msgstr "Aitheantas na Teachtaireachta"
 
-#: replyToField3.label
-msgid "Reply to "
-msgstr "Freagra chuig "
+#: inReplyToField4.label
+msgid "In reply to"
+msgstr "I bhfreagra ar:"
 
-#: subjectField3.label
-msgid "Subject "
-msgstr "Ábhar "
-
-#: ccField3.label
-msgid "Cc "
-msgstr "Cc "
-
-#: bccField3.label
-msgid "Bcc "
-msgstr "Bcc "
-
-#: newsgroupsField3.label
-msgid "Newsgroups "
-msgstr "Grúpaí nuachta "
-
-#: followupToField3.label
-msgid "Followup to "
-msgstr "Leanúint chuig "
-
-#: tagsHdr3.label
-msgid "Tags "
-msgstr "Clibeanna "
-
-#: dateField3.label
-msgid "Date "
-msgstr "Dáta "
-
-#: userAgentField3.label
-msgid "User agent "
-msgstr "Clár ríomhphoist "
-
-#: referencesField3.label
-msgid "References "
-msgstr "Tagairtí "
-
-#: messageIdField3.label
-msgid "Message ID "
-msgstr "Aitheantas na Teachtaireachta "
-
-#: inReplyToField3.label
-msgid "In reply to "
-msgstr "I bhfreagra ar "
-
-#: originalWebsite3.label
-msgid "Website "
-msgstr "Suíomh Gréasáin "
+#: originalWebsite4.label
+msgid "Website"
+msgstr "Suíomh Gréasáin"
 
 #: editMessageDescription.label
 msgid "This is a draft message"
@@ -21937,6 +21958,10 @@ msgstr "Leanúint"
 #: hdrFollowupButton1.tooltip
 msgid "Post a followup to this newsgroup"
 msgstr "Seol leanúint chuig an ngrúpa nuachta seo"
+
+#: hdrMenuForwardButton.label
+msgid "Forward As"
+msgstr "Cuir Ar Aghaidh Mar"
 
 #: hdrForwardButton1.label
 msgid "Forward"
@@ -22334,11 +22359,9 @@ msgid ", #1 unread;, #1 unread"
 msgstr ""
 ", #1 gan léamh;, #1 gan léamh;, #1 gan léamh;, #1 gan léamh;, #1 gan léamh"
 
-#: Nmessages
-msgid "(#1 message);(#1 messages)"
+#: ignoredCount
+msgid "#1 ignored;#1 ignored"
 msgstr ""
-"(#1 teachtaireacht);(#1 theachtaireacht);(#1 theachtaireacht);(#1 "
-"dteachtaireacht);(#1 teachtaireacht)"
 
 # thread and multiple message selection summaries
 #. # thread and multiple message selection summaries
@@ -22607,6 +22630,10 @@ msgstr ""
 msgid "&Manage Subscriptions…"
 msgstr "Bainistiú na &Síntiús…"
 
+#: feedWindowTitle.label
+msgid "Feed Account Wizard"
+msgstr "Treoraí na gCuntas Fotha"
+
 #. entities from rss.rdf
 #: feeds.accountName
 msgctxt "feeds.accountName"
@@ -22727,7 +22754,7 @@ msgstr ""
 "Níorbh fhéidir URL an fhotha a aimsiú. Dearbhaigh an t-ainm agus bain triail "
 "eile as."
 
-#: subscribe-loading testpilot.studiesWindow.stillLoadingMessage
+#: subscribe-loading
 msgid "Loading, please wait…"
 msgstr "Á luchtú, fan go fóill…"
 
@@ -25319,6 +25346,31 @@ msgstr "&lt;Ctrl+Shift+K&gt;"
 msgid "&lt;&#x21E7;&#x2318;K&gt;"
 msgstr "&lt;&#x21E7;&#x2318;K&gt;"
 
+#. Tooltip of the Any of / All of tagging mode selector.
+#: quickFilterBar.booleanMode.tooltip
+msgid "Tag filtering mode"
+msgstr ""
+
+#. Tooltip of the Any of / All of tagging mode selector.
+#: quickFilterBar.booleanModeAny.label
+msgid "Any of"
+msgstr ""
+
+#. Tooltip of the Any of / All of tagging mode selector.
+#: quickFilterBar.booleanModeAny.tooltip
+msgid "At least one of the selected tag criteria should match"
+msgstr ""
+
+#. Tooltip of the Any of / All of tagging mode selector.
+#: quickFilterBar.booleanModeAll.label
+msgid "All of"
+msgstr ""
+
+#. Tooltip of the Any of / All of tagging mode selector.
+#: quickFilterBar.booleanModeAll.tooltip
+msgid "All of the selected tag criteria must match"
+msgstr ""
+
 #. The number of pixels for the ideal width of the quick filter box textbox.
 #. Choose this value so that the emptyText fits nicely with a little bit of
 #. extra whitespace.
@@ -27684,521 +27736,6 @@ msgid ""
 msgstr ""
 "<em:contributor>Séamus Ó Ciardhuáin</em:contributor> <em:contributor>Kevin "
 "Scannell</em:contributor> <em:contributor>Brian King</em:contributor>"
-
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: testpilot.brand.label
-msgid "Test Pilot"
-msgstr "Test Pilot"
-
-#. browser window: menu and status bar
-#: testpilot.settings.label
-msgctxt "testpilot.settings.label"
-msgid "Settings"
-msgstr "Socruithe"
-
-#: testpilot.settings.dataSubmission.label
-msgid "Data Submission"
-msgstr "Seoladh Sonraí"
-
-#: testpilot.settings.notifications.label
-msgid "Notifications"
-msgstr "Fógraí"
-
-#: testpilot.settings.notifyWhen.label
-msgid "Notify me when…"
-msgstr "Cuir in iúl dom…"
-
-#: testpilot.settings.readyToSubmit.label
-msgid "A study is ready to submit"
-msgstr "Nuair a bheidh staidéar réidh le seoladh"
-
-#: testpilot.settings.newStudy.label
-msgid "There's a new study"
-msgstr "Nuair a bheidh staidéar nua ann"
-
-#: testpilot.settings.hasNewResults.label
-msgid "A study has new results"
-msgstr "Nuair a bheidh torthaí nua ag staidéar"
-
-#: testpilot.settings.alwaysSubmitData.shortLabel
-msgid "Always submit my data (don't ask me)"
-msgstr "Seol mo chuid sonraí i gcónaí (ná fiafraigh díom)"
-
-#: testpilot.allYourStudies.label
-msgid "All Your User Studies…"
-msgstr "Do Chuid Staidéar Go Léir…"
-
-#: testpilot.about.label
-msgid "About Test Pilot"
-msgstr "Maidir le Test Pilot"
-
-# all studies window
-#. all studies window
-#: testpilot.studiesWindow.title
-msgid "Your Test Pilot Studies"
-msgstr "Do Chuid Staidéar Test Pilot"
-
-#: testpilot.studiesWindow.currentStudies.label
-msgid "Current Studies"
-msgstr "Staidéir Reatha"
-
-#: testpilot.studiesWindow.finishedStudies.label
-msgid "Finished Studies"
-msgstr "Staidéir Chríochnaithe"
-
-#: testpilot.studiesWindow.studyFindings.label
-msgid "Study Findings"
-msgstr "Torthaí an Staidéir"
-
-#: testpilot.studiesWindow.settings.label
-msgctxt "testpilot.studiesWindow.settings.label"
-msgid "Settings"
-msgstr "Socruithe"
-
-# raw data dialog
-#. raw data dialog
-#: testpilot.rawDataWindow.title
-msgid "Test Pilot: Raw Data"
-msgstr "Test Pilot: Amhshonraí"
-
-# #-#-#-#-#  feedbackmain.dtd.po (firefox)  #-#-#-#-#
-# Firefox 4 beta version UI
-# #-#-#-#-#  feedbackmain.properties.po (firefox)  #-#-#-#-#
-# Feedback button menu
-#. #-#-#-#-#  feedbackmain.dtd.po (firefox)  #-#-#-#-#
-#. Firefox 4 beta version UI
-#. #-#-#-#-#  feedbackmain.properties.po (firefox)  #-#-#-#-#
-#. # Feedback button menu
-#: testpilot.enable.label testpilot.turnOn
-msgid "Turn On User Studies"
-msgstr "Cuir Staidéir Úsáideora Ar Siúl"
-
-#: testpilot.feedbackbutton.label
-msgid "Feedback"
-msgstr "Aiseolas"
-
-#: testpilot.happy.label
-msgid "Firefox Made Me Happy Because…"
-msgstr "Chuir Firefox aoibhneas orm de bharr…"
-
-#: testpilot.sad.label
-msgid "Firefox Made Me Sad Because…"
-msgstr "Chuir Firefox brón orm de bharr…"
-
-#: testpilot.happy.thunderbirdLabel
-msgid "Thunderbird Made Me Happy Because…"
-msgstr "Chuir Thunderbird aoibhneas orm de bharr…"
-
-#: testpilot.sad.thunderbirdLabel
-msgid "Thunderbird Made Me Sad Because…"
-msgstr "Chuir Thunderbird brón orm de bharr…"
-
-#: testpilot.broken.label
-msgid "Report this website as broken…"
-msgstr "Seol tuairisc go bhfuil an suíomh seo briste…"
-
-#: testpilot.idea.label
-msgid "Give us a suggestion…"
-msgstr "Seol moladh chugainn…"
-
-#. # description for add-on manager
-#: extensions.tbtestpilot@labs.mozilla.com.description
-msgid "Help make Thunderbird better by running user studies."
-msgstr ""
-"Cabhraigh linn Thunderbird a fheabhsú trí pháirt a ghlacadh i staidéar "
-"úsáideora."
-
-# common
-#. # common
-#: testpilot.fullBrandName
-msgid "Mozilla Labs Test Pilot"
-msgstr "Saotharlann Mozilla - Test Pilot"
-
-#: testpilot.moreInfo
-msgid "More Info"
-msgstr "Eolas Breise"
-
-#: testpilot.takeSurvey
-msgid "Take the Survey"
-msgstr "Glac páirt sa suirbhé"
-
-#: testpilot.turnOff
-msgid "Turn Off User Studies"
-msgstr "Stop Staidéir Úsáideora"
-
-# studies window
-#. # studies window
-#: testpilot.studiesWindow.noStudies
-msgid ""
-"We are working on a new study now; it will knock on your door soon! Stay "
-"Tuned!"
-msgstr "Tá staidéar nua idir lámha againn faoi láthair; beidh sé leat go luath!"
-
-#: testpilot.studiesWindow.uploading
-msgid "Uploading…"
-msgstr "Á Uasluchtú…"
-
-#: testpilot.studiesWindow.unableToReachServer
-msgid "Unable to reach Mozilla; please try again later."
-msgstr "Ní féidir ceangal a bhunú le Mozilla; bain triail eile as amach anseo."
-
-#: testpilot.studiesWindow.thanksForContributing
-msgid "Thanks for contributing!"
-msgstr "Go raibh maith agat as páirt a ghlacadh!"
-
-#: testpilot.studiesWindow.finishedOn
-msgid "Finished on %S"
-msgstr "Críochnaithe ar %S"
-
-#: testpilot.studiesWindow.canceledStudy
-msgid "(You canceled this study)"
-msgstr "(Chealaigh tú an staidéar seo)"
-
-#: testpilot.studiesWindow.missedStudy
-msgid "(You missed this study)"
-msgstr "(Lig tú an staidéar seo thart)"
-
-#: testpilot.studiesWindow.willStart
-msgid "Will start on %S"
-msgstr "Tosóidh sé ar %S"
-
-#: testpilot.studiesWindow.gatheringData
-msgid "Currently gathering data."
-msgstr "Sonraí á mbailiú faoi láthair."
-
-#: testpilot.studiesWindow.willFinish
-msgid "Will finish on %S"
-msgstr "Críochnóidh sé ar %S"
-
-#: testpilot.studiesWindow.proposeStudy
-msgid "Propose your own study"
-msgstr "Mol do staidéar féin"
-
-# for pages
-#. # for pages
-#: testpilot.page.commentsAndDiscussions
-msgid "Comments & Discussions »"
-msgstr "Trácht agus Plé »"
-
-#: testpilot.page.proposeATest
-msgid "Propose a Test »"
-msgstr "Mol Tástáil »"
-
-#: testpilot.page.testpilotOnTwitter
-msgid "@MozTestPilot on Twitter »"
-msgstr "@MozTestPilot ar Twitter »"
-
-# status page
-#. # status page
-#: testpilot.statusPage.uploadingData
-msgid "Now uploading data…"
-msgstr "Sonraí á n-uasluchtú anois…"
-
-#: testpilot.statusPage.uploadErrorMsg
-msgid ""
-"Oops! There was an error connecting to the Mozilla servers.  Maybe your "
-"network connection is down?"
-msgstr ""
-"Tharla earráid agus ceangal á bhunú leis na freastalaithe Mozilla.  B'fhéidir "
-"go bhfuil fadhb ann le do cheangal líonra?"
-
-#: testpilot.statusPage.willRetry
-msgid "Test Pilot will retry automatically, so it's OK to close this page now."
-msgstr ""
-"Déanfaidh Test Pilot iarracht eile go huathoibríoch, mar sin is féidir leat "
-"an leathanach seo a dhúnadh anois."
-
-#: testpilot.statusPage.endedAlready
-msgid "(It has already ended and you should not be seeing this page)"
-msgstr ""
-"(Tá sé críochnaithe cheana agus ní cóir go bhfuil tú ag féachaint ar an "
-"leathanach seo)"
-
-#: testpilot.statusPage.todayAt
-msgid "today, at %S"
-msgstr "inniu, ag %S"
-
-#: testpilot.statusPage.endOn
-msgid "on %S"
-msgstr "ar %S"
-
-# LOCALIZATION NOTE (numExtensions): Semi-colon list of plural forms.
-# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
-# #1 = number of extensions
-# example: "2 extensions"
-#. # LOCALIZATION NOTE (numExtensions): Semi-colon list of plural forms.
-#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
-#. # #1 = number of extensions
-#. # example: "2 extensions"
-#: testpilot.statusPage.numExtensions
-msgid "#1 extension;#1 extensions"
-msgstr ""
-"#1 eisínteacht;#1 eisínteacht;#1 eisínteacht;#1 n-eisínteacht;#1 eisínteacht"
-
-#: testpilot.statusPage.recursEveryNumberOfDays
-msgid "This test recurs every %S days. Each time it completes:"
-msgstr "Atarlaíonn an triail seo gach %S lá. Gach uair a chríochnaíonn sé:"
-
-#: testpilot.statusPage.askMeBeforeSubmitData
-msgid "Ask me whether I want to submit my data."
-msgstr "Fiafraigh díom ar mhaith liom mo chuid sonraí a sheoladh."
-
-#: testpilot.statusPage.alwaysSubmitData
-msgid "Always submit my data, and don't ask me about it."
-msgstr "Seol mo chuid sonraí i gcónaí agus ná fiafraigh díom faoi."
-
-#: testpilot.statusPage.neverSubmitData
-msgid "Never submit my data, and don't ask me about it."
-msgstr "Ná seol mo chuid sonraí riamh, agus ná fiafraigh díom faoi."
-
-#: testpilot.statusPage.loading
-msgctxt "testpilot.statusPage.loading"
-msgid "Loading, please wait a moment…"
-msgstr "Á luchtú, fan go fóill…"
-
-# quit page
-#. # quit page
-#: testpilot.quitPage.aboutToQuit
-msgid "You are about to quit the \"%S\" study."
-msgstr "Tá tú ar tí éirí as an staidéar \"%S\"."
-
-#: testpilot.quitPage.optionalMessage
-msgid ""
-"(Optional) If you have a minute, please let us know why you have chosen to "
-"quit the study."
-msgstr ""
-"(Roghnach) Má tá am saor agat, cuir in iúl dúinn cén fáth ar éirigh tú as an "
-"staidéar."
-
-#: testpilot.quitPage.reason
-msgid "Reason:"
-msgstr "Fáth:"
-
-#: testpilot.quitPage.recurringStudy
-msgid ""
-"This is a recurring study. Normally we will let you know the next time we run "
-"the study.  If you never want to hear about this study again, check the box "
-"below:"
-msgstr ""
-"Is staidéar atarlaithe é seo.  De ghnáth, cuirfimid in iúl duit an chéad uair "
-"eile a dhéanfaimid an staidéar.  Mura mian leat cloisteáil uainn faoin "
-"staidéar seo, cuir tic sa bhosca thíos:"
-
-#: testpilot.quitPage.quitForever
-msgid "Quit this recurring study."
-msgstr "Éirigh as an staidéar atarlaithe seo."
-
-#: testpilot.quitPage.quitStudy
-msgid "Quit the Study »"
-msgstr "Éirigh as an Staidéar »"
-
-# welcome page
-#. # welcome page
-#: testpilot.welcomePage.thankYou
-msgid "Thank You for Joining the Test Pilot Team!"
-msgstr "Go raibh maith agat as bheith linn ar Fhoireann Test Pilot!"
-
-# LOCALIZATION NOTE (getting_started):
-# link title for http://en-US.www.mozilla.com/en-US/firefox/central/
-#: testpilot.welcomePage.gettingStarted
-msgid "Getting Started"
-msgstr "Tús Maith"
-
-#: testpilot.welcomePage.pleaseTake
-msgid "Please take the"
-msgstr "Glac páirt sa"
-
-#: testpilot.welcomePage.backgroundSurvey
-msgid "Pilot Background Survey"
-msgstr "Suirbhé Cúlra Test Pilot"
-
-#: testpilot.welcomePage.clickToOpenStudiesWindow
-msgid "Click here to see the studies that are currently running."
-msgstr "Cliceáil anseo chun na staidéir atá ar siúl faoi láthair a fheiceáil."
-
-#: testpilot.welcomePage.testpilotAddon
-msgid "Test Pilot Add-on"
-msgstr "Breiseán Test Pilot"
-
-#: testpilot.welcomePage.iconExplanation
-msgid "« look for this icon in the bottom right of the mail window."
-msgstr ""
-"« lorg an deilbhín seo ag bun na fuinneoige ríomhphoist ar thaobh na láimhe "
-"deise."
-
-#: testpilot.welcomePage.iconExplanation2
-msgid "« look for this icon in the Tools menu."
-msgstr "« lorg an deilbhín seo sa roghchlár Uirlisí."
-
-#: testpilot.welcomePage.moreIconExplanation
-msgid "You can click on it to get the main Test Pilot menu."
-msgstr "Is féidir é a chliceáil chun príomhroghchlár Test Pilot a oscailt."
-
-#: testpilot.welcomePage.moreIconExplanation2
-msgid ""
-"Use the sub-menu to see what Test Pilot studies are running on your computer "
-"and to set your preferences."
-msgstr ""
-"Gheobhaidh tú liosta de na staidéir Test Pilot atá ar siúl ar do ríomhaire "
-"san fho-roghchlár."
-
-#: testpilot.welcomePage.notificationInfo
-msgid "The icon will pop up a notification when a study needs your attention."
-msgstr ""
-"Taispeánfaidh an deilbhín fógra nuair a chaithfidh tú aire a thabhairt do "
-"staidéar."
-
-#: testpilot.welcomePage.notificationInfo2
-msgid ""
-"The icon will appear and pop up a notification when a study needs your "
-"attention."
-msgstr ""
-"Feicfidh tú an deilbhín seo agus fógra nuair a chaithfidh tú aire a thabhairt "
-"do staidéar."
-
-#: testpilot.welcomePage.legalNotices
-msgid "Legal Notices"
-msgstr "Fógraí Dlí"
-
-# survey page
-#. # survey page
-#: testpilot.surveyPage.saveAnswers
-msgid "Save Answers"
-msgstr "Sábháil Freagraí"
-
-#: testpilot.surveyPage.submitAnswers
-msgid "Submit Answers"
-msgstr "Seol Freagraí"
-
-#: testpilot.surveyPage.changeAnswers
-msgid "Change Answers"
-msgstr "Athraigh Freagraí"
-
-#: testpilot.surveyPage.loading
-msgctxt "testpilot.surveyPage.loading"
-msgid "Loading, please wait a moment…"
-msgstr "Á luchtú, fan go fóill…"
-
-#: testpilot.surveyPage.thankYouForFinishingSurvey
-msgid ""
-"Thank you for finishing this survey. Your answers will be uploaded along with "
-"the next set of experimental data."
-msgstr ""
-"Go raibh maith agat as an tsuirbhé seo a chríochnú. Uasluchtófar do chuid "
-"freagraí maraon leis an chéad tacar eile de shonraí turgnamhacha."
-
-#: testpilot.surveyPage.reviewOrChangeYourAnswers
-msgid ""
-"If you would like to review or change your answers, you can do so at any time "
-"using the button below."
-msgstr ""
-"Más mian leat do chuid freagraí a athbhreithniú nó a athrú, is féidir é seo a "
-"dhéanamh am ar bith leis an gcnaipe thíos."
-
-# modules/task.js
-#. # modules/task.js
-#: testpilot.finishedTask.finishedStudy
-msgid "Excellent! You finished the \"%S\" Study!"
-msgstr "Go hiontach!  Chríochnaigh tú an staidéar \"%S\"!"
-
-#: testpilot.finishedTask.allRelatedDataDeleted
-msgid "All data related to this study has been removed from your computer."
-msgstr ""
-"Scriosadh na sonraí go léir a bhain leis an staidéar seo ó do ríomhaire."
-
-# modules/setup.js
-#. # modules/setup.js
-#: testpilot.notification.update
-msgid "Update…"
-msgstr "Nuashonraigh…"
-
-#: testpilot.notification.thankYouForUploadingData
-msgid "Thanks!"
-msgstr "GRMA!"
-
-#: testpilot.notification.thankYouForUploadingData.message
-msgid "Thank you for uploading your data."
-msgstr "Go raibh maith agat as do chuid sonraí a uasluchtú."
-
-#: testpilot.notification.readyToSubmit
-msgid "Ready to Submit"
-msgstr "Réidh le Seoladh"
-
-#: testpilot.notification.readyToSubmit.message
-msgid ""
-"The Test Pilot \"%S\" study is finished gathering data and is ready to submit."
-msgstr ""
-"Tá an staidéar Test Pilot \"%S\" críochnaithe agus tá sé réidh do chuid "
-"sonraí a sheoladh."
-
-#: testpilot.notification.newTestPilotStudy
-msgid "New Test Pilot Study"
-msgstr "Staidéar Nua Test Pilot"
-
-#: testpilot.notification.newTestPilotStudy.pre.message
-msgid "The Test Pilot \"%S\" study is about to begin."
-msgstr "Tá an staidéar Test Pilot \"%S\" ar tí tosú."
-
-#: testpilot.notification.newTestPilotSurvey
-msgid "New Test Pilot Survey"
-msgstr "Suirbhé Nua Test Pilot"
-
-#: testpilot.notification.newTestPilotSurvey.message
-msgid "The Test Pilot \"%S\" survey is available."
-msgstr "Tá an suirbhé Test Pilot \"%S\" ar fáil."
-
-#: testpilot.notification.newTestPilotResults
-msgid "New Test Pilot Results"
-msgstr "Torthaí Nua Test Pilot"
-
-#: testpilot.notification.newTestPilotResults.message
-msgid "New results are now available for the Test Pilot \"%S\" study."
-msgstr "Tá torthaí nua don staidéar Test Pilot \"%S\" ar fáil anois."
-
-#: testpilot.notification.autoUploadedData
-msgid "Thank you!"
-msgstr "Go raibh maith agat!"
-
-#: testpilot.notification.autoUploadedData.message
-msgid ""
-"The Test Pilot \"%S\" study is completed and your data has been submitted!"
-msgstr ""
-"Tá an staidéar Test Pilot \"%S\" críochnaithe agus seoladh do chuid sonraí!"
-
-#: testpilot.notification.extensionUpdate
-msgid "Extension Update"
-msgstr "Nuashonrú Eisínteachta"
-
-#: testpilot.notification.extensionUpdate.message
-msgid ""
-"One of your studies requires a newer version of Test Pilot. You can get the "
-"latest version using the Add-ons window."
-msgstr ""
-"Tá leagan níos nuaí de Test Pilot de dhíth le haghaidh ceann de do chuid "
-"staidéar. Is féidir an leagan is nuaí a fháil trí fhuinneog na mbreiseán."
-
-#. # modules/setup.js - doorhanger notification buttons
-#: testpilot.notification.cancelLabel
-msgid "Cancel Study"
-msgstr "Cealaigh Staidéar"
-
-#: testpilot.notification.alwaysSubmitLabel
-msgid "Don't Ask, Always Submit"
-msgstr "Ná Fiafraigh, Seol i gCónaí"
-
-#: testpilot.notification.dontShowNewLabel
-msgid "Don't Notify Me of New Studies"
-msgstr "Ná cuir in iúl dom nuair a bheidh staidéar nua ann"
-
-#: testpilot.notification.seeAllStudiesLabel
-msgid "See All User Studies"
-msgstr "Na Staidéir Úsáideora Go Léir"
-
-#: testpilot.notification.seeYourData
-msgid "See Your Data"
-msgstr "Do Chuid Sonraí"
 
 # LOCALIZATION NOTE:
 # This file must be saved as UTF8

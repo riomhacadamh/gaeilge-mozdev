@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-20 14:47-0500\n"
+"POT-Creation-Date: 2013-07-09 20:22-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1216,11 +1216,7 @@ msgstr "Chuig:"
 msgid "Print Settings"
 msgstr "Socruithe Priontála"
 
-#. #-#-#-#-#  chromecalendarpreferencespreferences.dtd.po (firefox)  #-#-#-#-#
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: calendar.print.optionsGroup.label prefWindow.titleWin
+#: calendar.print.optionsGroup.label
 msgid "Options"
 msgstr "Roghanna"
 
@@ -1253,6 +1249,27 @@ msgstr "Cur Síos:"
 #: calendar.error.title genericErrorTitle
 msgid "An error has occurred"
 msgstr "Tharla earráid"
+
+#. Extract buttons in message header
+#: calendar.extract.event.button
+msgid "Add as event"
+msgstr "Cuir leis mar imeacht"
+
+#: calendar.extract.task.button
+msgid "Add as task"
+msgstr "Cuir leis mar thasc"
+
+#: calendar.extract.event.button.tooltip
+msgid ""
+"Extract calendaring information from the message and add it to your calendar "
+"as an event"
+msgstr "Bain faisnéis faoi imeacht as an teachtaireacht agus cuir le d'fhéilire í"
+
+#: calendar.extract.task.button.tooltip
+msgid ""
+"Extract calendaring information from the message and add it to your calendar "
+"as a task"
+msgstr "Bain faisnéis faoi thasc as an teachtaireacht agus cuir le d'fhéilire é"
 
 #: event.attendee.role.required
 msgid "Required Attendee"
@@ -1385,7 +1402,7 @@ msgid "S"
 msgstr "S"
 
 # G&reamaigh, P&riontáil
-#: event.dialog.print.key calendar.print.key HTTPport.accesskey
+#: event.dialog.print.key calendar.print.key
 msgid "P"
 msgstr "R"
 
@@ -1699,6 +1716,10 @@ msgstr "&Suíomh:"
 #: event.categories.label event.categories.accesskey
 msgid "Categor&y:"
 msgstr "Catagói&r:"
+
+#: event.categories.textbox.label event.categories.textbox.accesskey
+msgid "&Add a new category"
+msgstr "&Cuir catagóir nua leis"
 
 #: event.calendar.label event.calendar.accesskey
 msgid "&Calendar:"
@@ -2334,13 +2355,10 @@ msgstr "Tuilleadh Criosanna Ama…"
 
 #. #-#-#-#-#  chromecalendarcalendar-event-dialog.dtd.po (firefox)  #-#-#-#-#
 #. Read-Only dialog
-#. #-#-#-#-#  chromecalendarpreferencesadvanced.dtd.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromecalendarpreferencespreferences.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#. WARNING! This file contains UTF-8 encoded characters!
-#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
-#. - your editor isn't using UTF-8 encoding and may munge up the document!
 #. #-#-#-#-#  chromecalendarpreferencesviews.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -2348,8 +2366,7 @@ msgstr "Tuilleadh Criosanna Ama…"
 #. WARNING! This file contains UTF-8 encoded characters!
 #. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
 #. - your editor isn't using UTF-8 encoding and may munge up the document!
-#: read.only.general.label pref.calendar.advanced.generalTab.label
-#: paneGeneral.title pref.calendar.view.allview.caption
+#: read.only.general.label paneGeneral.title pref.calendar.view.allview.caption
 msgid "General"
 msgstr "Ginearálta"
 
@@ -3194,6 +3211,580 @@ msgstr "Go Brách"
 msgid "Last day"
 msgstr "An lá deiridh"
 
+#. # LOCALIZATION NOTE:
+#. # Strings here are used to create events and tasks with start and end times
+#. # based on email content.
+#. # None of the strings are displayed in the user interface.
+#. #
+#. # You don't have to fill all from.*, until.*, *.prefix and *.suffix patterns.
+#. # It's ok to leave some empty.
+#. # Please consider declensions and gender if your language has them.
+#. # Don't just translate directly. The number of variants doesn't have to be
+#. # the same as in en-US. All of 0, 1, 2, etc is allowed in patterns except alphabet.
+#. # patterns. You can and should add language specific variants.
+#. #
+#. # There are two different ways to find a start time text in email:
+#. # 1) it matches a from.* pattern and does not have end.prefix or end.suffix next to it
+#. # 2) it matches until.* pattern and has start.prefix or start.suffix next to it
+#. # Similar inverse logic applies to end times.
+#. # These rules enable using prefix and suffix values with only start.* or only until.*
+#. # patterns localized for some languages and thus not having to repeat the same
+#. # values in both.
+#. #
+#. # Patterns are partially space-insensitive.
+#. # "deadline is" pattern will find both "deadlineis" and "deadline  is"
+#. # but "deadlineis" won't find "deadline is" or "deadline  is".
+#. # Therefore you should include all spaces that are valid within a pattern.
+#. # LOCALIZATION NOTE (start.prefix):
+#. # datetimes with these in front are extracted as start times
+#. # can be a list of values, separate variants by |
+#: start.prefix
+msgctxt "start.prefixstart.prefix"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (start.suffix):
+#. # datetimes followed by these are extracted as start times
+#: start.suffix
+msgid "by | until | to | - | till | til | and"
+msgstr "go dtí | go | - | agus"
+
+#. # LOCALIZATION NOTE (end.prefix):
+#. # datetimes followed by these are extracted as end times
+#: end.prefix
+msgid ""
+"by | until | to | - | till | til | and | due: | due | ends | deadline is | "
+"deadline:"
+msgstr "go dtí | go | - | agus | sprioc: | sprioc | sprioc-am | spriocdháta | spriocdháta: | dlite | dlite:"
+
+#. # LOCALIZATION NOTE (end.suffix):
+#. # datetimes followed by these are extracted as end times
+#. # can be a list of values, separate variants by |
+#: end.suffix
+msgctxt "end.suffix"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (no.datetime.prefix):
+#. # datetimes with these in front won't be used
+#. # specify full words here
+#: no.datetime.prefix
+msgid ""
+"last week | sent | email | e-mail | instead of | > | unfortunately | in | not"
+msgstr "ríomhphost | r-phost"
+
+#. # LOCALIZATION NOTE (no.datetime.suffix):
+#. # datetimes follwed by these won't be used
+#: no.datetime.suffix
+msgid "floor | flr | : | email | e-mail | > | % | usd | dollars"
+msgstr ": | ríomhphost | r-phost"
+
+#. # LOCALIZATION NOTE (from.*):
+#. # can be a list of values, separate variants by |
+#. # LOCALIZATION NOTE (from.today):
+#. # must not be empty!
+#: from.today
+msgid "today"
+msgstr "inniu"
+
+#: from.tomorrow
+msgid "tomorrow"
+msgstr "amárach"
+
+#. # LOCALIZATION NOTE (until.*):
+#. # can be a list of values, separate variants by |
+#: until.tomorrow
+msgctxt "until.tomorrow"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (ordinal.date):
+#. # %1$S = matches numbers 1-31 and number.x
+#. # should not have "%1$S" as this would match any single number in email to a time
+#: from.ordinal.date
+msgid "%1$Sst | %1$Snd | %1$Srd | %1$Sth"
+msgstr "%1$Sú"
+
+#. # LOCALIZATION NOTE (until.ordinal.date):
+#. # %1$S = matches numbers 1-31 and number.x
+#: until.ordinal.date
+msgctxt "until.ordinal.date"
+msgid ""
+msgstr ""
+
+#: from.noon
+msgid "noon"
+msgstr "meán lae"
+
+#: until.noon
+msgctxt "until.noon"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (hour.only):
+#. # %1$S = matches numbers 0-23 and number.0-number.23
+#. # should not have "%1$S" as this would match any single number in email to a time
+#: from.hour
+msgid "at %1$S | around %1$S | %1$S - | %1$S to"
+msgstr "timpeall %1$S | %1$S - | %1$S go"
+
+#. # LOCALIZATION NOTE (until.hour):
+#. # %1$S = matches numbers 0-23 and number.0-number.23
+#. # should also list how to find end of a timeframe
+#: until.hour
+msgid "- %1$S | to %1$S | until %1$S | by %1$S"
+msgstr "- %1$S | go %1$S | go dtí %1$S"
+
+#. # LOCALIZATION NOTE (hour.only.am):
+#. # %1$S = matches numbers 0-23 and number.0-number.23
+#: from.hour.am
+msgid "%1$S am | %1$S a.m"
+msgstr "%1$S am | %1$S a.m | %1$S rn | %1$S r.n"
+
+#. # LOCALIZATION NOTE (until.hour.am):
+#. # %1$S = matches numbers 0-23 and number.0-number.23
+#. # should also list how to find end of a timeframe
+#: until.hour.am
+msgctxt "until.hour.am"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (hour.only.pm):
+#. # %1$S = matches numbers 0-23 and number.0-number.23
+#: from.hour.pm
+msgid "%1$S pm | %1$S p.m | %1$S p"
+msgstr "%1$S pm | %1$S p.m | %1$S i.n"
+
+#. # LOCALIZATION NOTE (until.hour.pm):
+#. # %1$S = matches numbers 0-23 and number.0-number.23
+#. # should also list how to find end of a timeframe
+#: until.hour.pm
+msgctxt "until.hour.pm"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (from.half.hour.before):
+#. # denotes times 30 minutes before next full hour
+#: from.half.hour.before
+msgid "half an hour before %1$S"
+msgstr "leathuair roimh %1$S"
+
+#. # LOCALIZATION NOTE (until.half.hour.before):
+#. # denotes times 30 minutes before next full hour
+#: until.half.hour.before
+msgctxt "until.half.hour.before"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (from.half.hour.after):
+#. # denotes times 30 minutes after last full hour
+#: from.half.hour.after
+msgid "half past %1$S"
+msgstr "leathuair tar éis %1$S"
+
+#. # LOCALIZATION NOTE (until.half.hour.after):
+#. # denotes times 30 minutes after last full hour
+#: until.half.hour.after
+msgctxt "until.half.hour.after"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (hour.minutes):
+#. # %1$S = matches numbers 0-23
+#. # %2$S = matches numbers 0-59
+#: from.hour.minutes
+msgid "%1$S:%2$S | at %1$S%2$S"
+msgstr "%1$S:%2$S | ag %1$S%2$S"
+
+#. # LOCALIZATION NOTE (until.hour.minutes):
+#. # %1$S = matches numbers 0-23
+#. # %2$S = matches numbers 0-59
+#: until.hour.minutes
+msgctxt "until.hour.minutes"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (hour.minutes.am):
+#. # %1$S = matches numbers 0-23
+#. # %2$S = matches numbers 0-59
+#: from.hour.minutes.am
+msgid "%1$S:%2$S am | %1$S:%2$S a.m"
+msgstr "%1$S:%2$S am | %1$S:%2$S a.m | %1$S:%2$S rn | %1$S:%2$S r.n"
+
+#. # LOCALIZATION NOTE (until.hour.minutes.am):
+#. # %1$S = matches numbers 0-23
+#. # %2$S = matches numbers 0-59
+#: until.hour.minutes.am
+msgctxt "until.hour.minutes.am"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (hour.minutes.pm):
+#. # %1$S = matches numbers 0-23
+#. # %2$S = matches numbers 0-59
+#: from.hour.minutes.pm
+msgid "%1$S:%2$S pm | %1$S:%2$S p.m | %1$S:%2$S p"
+msgstr "%1$S:%2$S pm | %1$S:%2$S p.m | %1$S:%2$S i.n"
+
+#. # LOCALIZATION NOTE (until.hour.minutes.pm):
+#. # %1$S = matches numbers 0-23
+#. # %2$S = matches numbers 0-59
+#: until.hour.minutes.pm
+msgctxt "until.hour.minutes.pm"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (monthname.day):
+#. # %1$S = matches numbers 1-31 and number.x
+#. # %2$S = matches monthname
+#: from.monthname.day
+msgid ""
+"%1$S %2$S | %2$S %1$S | %2$S %1$Sst | %2$S %1$Snd | %2$S %1$Srd | %2$S %1$Sth "
+"| %1$Sst of %2$S | %1$Snd of %2$S | %1$Srd of %2$S | %1$Sth of %2$S"
+msgstr ""
+"%1$S %2$S | %2$S %1$S | %1$Sú %2$S | %1$Sú lá de %2$S | %1$Sú lá de mhí %2$S"
+
+#. # LOCALIZATION NOTE (until.monthname.day):
+#. # %1$S = matches numbers 1-31
+#. # %2$S = matches monthname
+#: until.monthname.day
+msgctxt "until.monthname.day"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (month.day):
+#. # %1$S = matches numbers 1-31
+#. # %2$S = matches numbers 1-12
+#: from.month.day
+msgid "%2$S/%1$S"
+msgstr "%1$S/%2$S"
+
+#. # LOCALIZATION NOTE (until.month.day):
+#. # %1$S = matches numbers 1-31 and number.x
+#. # %2$S = matches numbers 1-12
+#: until.month.day
+msgctxt "until.month.day"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (year.month.day):
+#. # %1$S = matches numbers 1-31
+#. # %2$S = matches numbers 1-12
+#. # %3$S = matches 2/4 numbers
+#: from.year.month.day
+msgid "%2$S/%1$S/%3$S | %3$S/%2$S/%1$S | %3$S-%2$S-%1$S"
+msgstr "%1$S/%2$S/%3$S | %3$S/%2$S/%1$S | %3$S-%2$S-%1$S"
+
+#. # LOCALIZATION NOTE (until.year.month.day):
+#. # %1$S = matches numbers 1-31
+#. # %2$S = matches numbers 1-12
+#. # %3$S = matches 2/4 numbers
+#: until.year.month.day
+msgctxt "until.year.month.day"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (year.monthname.day):
+#. # %1$S = matches numbers 1-31
+#. # %2$S = matches monthname
+#. # %3$S = matches 2/4 numbers
+#: from.year.monthname.day
+msgid ""
+"%1$S %2$S %3$S | %1$Sst %2$S %3$S | %1$Snd %2$S %3$S | %1$Srd %2$S %3$S | "
+"%1$Sth %2$S %3$S | %2$S %1$S, %3$S | %3$S-%2$S-%1$S"
+msgstr ""
+"%1$S %2$S %3$S | %1$Sú %2$S %3$S | %1$S %2$S, %3$S | %3$S-%2$S-%1$S"
+
+#. # LOCALIZATION NOTE (until.year.monthname.day):
+#. # %1$S = matches numbers 1-31
+#. # %2$S = matches monthname
+#. # %3$S = matches 2/4 numbers
+#: until.year.monthname.day
+msgctxt "until.year.monthname.day"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (duration.*):
+#. # can be a list of values, separate variants by |
+#. # LOCALIZATION NOTE (duration.minutes):
+#. # %1$S = matches 1/2 numbers and number.0 - and number.31
+#: duration.minutes
+msgid "%1$S minutes | %1$S min | %1$S mins"
+msgstr "%1$S nóiméad | %1$S nóim | %1$S nóiméid"
+
+#. # LOCALIZATION NOTE (duration.hours):
+#. # %1$S = matches 1/2 numbers and number.0 - and number.31
+#: duration.hours
+msgid "%1$S hour | %1$S hours"
+msgstr "%1$S uair | %1$S huaire | %1$S n-uaire"
+
+#. # LOCALIZATION NOTE (duration.days):
+#. # %1$S = matches 1/2 numbers and number.0 - and number.31
+#: duration.days
+msgid "%1$S days"
+msgstr "%1$S lá"
+
+#. # LOCALIZATION NOTE (month.*):
+#. # can be a list of values, separate variants by |
+#: month.1
+msgid "january | jan | jan."
+msgstr "eanáir | ean | ean."
+
+#: month.2
+msgid "february | feb | feb."
+msgstr "feabhra | fea | fea. | feabh | feabh."
+
+#: month.3
+msgid "march | mar | mar."
+msgstr "márta | már | már."
+
+#: month.4
+msgid "april | apr | apr."
+msgstr "aibreán | aib | aib."
+
+#: month.5
+msgid "may"
+msgstr "bealtaine | bea | bea. | beal | beal."
+
+#: month.6
+msgid "june | jun | jun."
+msgstr "meitheamh | mei | mei. | meith | meith."
+
+#: month.7
+msgid "july | jul | jul."
+msgstr "iúil | iúl"
+
+#: month.8
+msgid "august | aug | aug."
+msgstr "lúnasa | lughnasa | lún | lún."
+
+#: month.9
+msgid "september | sep | sep. | sept."
+msgstr "meán fómhair | m.f. | m.fómh"
+
+#: month.10
+msgid "october | oct | oct."
+msgstr "deireadh fómhair | d.f. | d.fómh"
+
+#: month.11
+msgid "november | nov | nov."
+msgstr "samhain | mí na samhna | samh | samh."
+
+#: month.12
+msgid "december | dec | dec."
+msgstr "nollaig | mí na nollag | noll | noll."
+
+#. # LOCALIZATION NOTE (weekday.*):
+#. # used to derive start date based on weekdays mentioned
+#. # can be a list of values, separate variants by |
+#. # LOCALIZATION NOTE (weekday.0):
+#. # Regardless of what the first day of the week is in your country, 0 is Sunday here.
+#: from.weekday.0
+msgid "sunday | sundays"
+msgstr "domhnach | dé domhnaigh"
+
+#: from.weekday.1
+msgid "monday | mondays"
+msgstr "luan | dé luain"
+
+#: from.weekday.2
+msgid "tuesday | tuesdays"
+msgstr "máirt | dé máirt"
+
+#: from.weekday.3
+msgid "wednesday | wednesdays"
+msgstr "céadaoin | dé céadaoin"
+
+#: from.weekday.4
+msgid "thursday | thursdays"
+msgstr "déardaoin"
+
+#: from.weekday.5
+msgid "friday | fridays"
+msgstr "aoine | dé haoine"
+
+#: from.weekday.6
+msgid "saturday | saturdays"
+msgstr "satharn | dé sathairn"
+
+#. # LOCALIZATION NOTE (until.weekday.*):
+#. # used to derive end date based on weekdays mentioned
+#. # can be a list of values, separate variants by |
+#. # LOCALIZATION NOTE (until.weekday.0):
+#. # Regardless of what the first day of the week is in your country, 0 is Sunday here.
+#: until.weekday.0
+msgctxt "until.weekday.0"
+msgid ""
+msgstr ""
+
+#: until.weekday.1
+msgctxt "until.weekday.1"
+msgid ""
+msgstr ""
+
+#: until.weekday.2
+msgctxt "until.weekday.2"
+msgid ""
+msgstr ""
+
+#: until.weekday.3
+msgctxt "until.weekday.3"
+msgid ""
+msgstr ""
+
+#: until.weekday.4
+msgctxt "until.weekday.4"
+msgid ""
+msgstr ""
+
+#: until.weekday.5
+msgctxt "until.weekday.5"
+msgid ""
+msgstr ""
+
+#: until.weekday.6
+msgctxt "until.weekday.6"
+msgid ""
+msgstr ""
+
+#. # LOCALIZATION NOTE (number.*):
+#. # used within other patterns to understand dates where day of month isn't written with digits
+#. # can be a list of values, separate variants by |
+#: number.0
+msgid "zero"
+msgstr ""
+
+#: number.1
+msgid "one | first"
+msgstr ""
+
+#: number.2
+msgid "two | second"
+msgstr ""
+
+#: number.3
+msgid "three | third"
+msgstr ""
+
+#: number.4
+msgid "four | fourth"
+msgstr ""
+
+#: number.5
+msgid "five | fifth"
+msgstr ""
+
+#: number.6
+msgid "six | sixth"
+msgstr ""
+
+#: number.7
+msgid "seven | seventh"
+msgstr ""
+
+#: number.8
+msgid "eight | eighth"
+msgstr ""
+
+#: number.9
+msgid "nine | ninth"
+msgstr ""
+
+#: number.10
+msgid "ten | tenth"
+msgstr ""
+
+#: number.11
+msgid "eleven | eleventh"
+msgstr ""
+
+#: number.12
+msgid "twelve | twelfth"
+msgstr ""
+
+#: number.13
+msgid "thirteen | thirteenth"
+msgstr ""
+
+#: number.14
+msgid "fourteen | fourteenth"
+msgstr ""
+
+#: number.15
+msgid "fifteen | fifteenth"
+msgstr ""
+
+#: number.16
+msgid "sixteen | sixteenth"
+msgstr ""
+
+#: number.17
+msgid "seventeen | seventeenth"
+msgstr ""
+
+#: number.18
+msgid "eighteen | eighteenth"
+msgstr ""
+
+#: number.19
+msgid "nineteen | nineteenth"
+msgstr ""
+
+#: number.20
+msgid "twenty | twentieth"
+msgstr ""
+
+#: number.21
+msgid "twenty one | twenty first"
+msgstr ""
+
+#: number.22
+msgid "twenty two | twenty second"
+msgstr ""
+
+#: number.23
+msgid "twenty three | twenty third"
+msgstr ""
+
+#: number.24
+msgid "twenty four | twenty fourth"
+msgstr ""
+
+#: number.25
+msgid "twenty five | twenty fifth"
+msgstr ""
+
+#: number.26
+msgid "twenty six | twenty sixth"
+msgstr ""
+
+#: number.27
+msgid "twenty seven | twenty seventh"
+msgstr ""
+
+#: number.28
+msgid "twenty eight | twenty eighth"
+msgstr ""
+
+#: number.29
+msgid "twenty nine | twenty ninth"
+msgstr ""
+
+#: number.30
+msgid "thirty | thirtieth"
+msgstr ""
+
+#: number.31
+msgid "thirty one | thirty first"
+msgstr ""
+
+#. # LOCALIZATION NOTE (alphabet):
+#. # list all lower and uppercase letters if your language has an alphabet
+#. # otherwise leave it empty
+#: alphabet
+msgid "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "abcdefghijklmnopqrstuvwxyzáéíóúABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚ"
+
 # #-#-#-#-#  chromeprototypescalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -3320,11 +3911,10 @@ msgstr "Gan sonrú"
 
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
 # cmd_cut_accesskey is sedtweaked
-#. #-#-#-#-#  chromecalendarcalendar-occurrence-prompt.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: buttons.occurrence.accesskey SOCKSport.accesskey
+#: buttons.occurrence.accesskey
 msgid "t"
 msgstr "t"
 
@@ -4185,6 +4775,10 @@ msgstr "%1$S (críochnaithe)"
 msgid "Add Category"
 msgstr "Cuir Catagóir Leis"
 
+#: multipleCategories
+msgid "Multiple Categories"
+msgstr "Catagóirí Éagsúla"
+
 #: yesterday
 msgid "Yesterday"
 msgstr "Inné"
@@ -4733,6 +5327,13 @@ msgstr "s"
 msgid "Every minute;Every #1 minutes"
 msgstr ""
 "Gach nóiméad;Gach #1 nóiméad;Gach #1 nóiméad;Gach #1 nóiméad;Gach #1 nóiméad"
+
+#. # LOCALIZATION NOTE (extractUsing)
+#. # Used in message header
+#. #    %1$S will be replaced with language name from languageNames.properties
+#: extractUsing
+msgid "Using %1$S"
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -5587,216 +6188,6 @@ msgstr ""
 "Tá an sean-eisínteacht Mozilla Calendar suiteáilte agat, ach níl sé "
 "comhoiriúnach le Lightning. Déanfar é a dhíchumasú agus atosóidh %1$S."
 
-#: pref.calendar.advanced.passwordsTab.label
-msgid "Passwords"
-msgstr "Focail Fhaire"
-
-#: pref.calendar.advanced.updateTab.label imipUpdate.label
-msgid "Update"
-msgstr "Nuashonrú"
-
-#: pref.calendar.advanced.encryptionTab.label
-msgid "Encryption"
-msgstr "Criptiúchán"
-
-# ***** BEGIN LICENSE BLOCK *****
-# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
-# -
-# - The contents of this file are subject to the Mozilla Public License Version
-# - 1.1 (the "License"); you may not use this file except in compliance with
-# - the License. You may obtain a copy of the License at
-# - http://www.mozilla.org/MPL/
-# -
-# - Software distributed under the License is distributed on an "AS IS" basis,
-# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# - for the specific language governing rights and limitations under the
-# - License.
-# -
-# - The Original Code is the Firefox Preferences System.
-# -
-# - The Initial Developer of the Original Code is
-# - Ben Goodger.
-# - Portions created by the Initial Developer are Copyright (C) 2005
-# - the Initial Developer. All Rights Reserved.
-# -
-# - Contributor(s):
-# -
-# - Alternatively, the contents of this file may be used under the terms of
-# - either the GNU General Public License Version 2 or later (the "GPL"), or
-# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# - in which case the provisions of the GPL or the LGPL are applicable instead
-# - of those above. If you wish to allow use of your version of this file only
-# - under the terms of either the GPL or the LGPL, and not to allow others to
-# - use your version of this file under the terms of the MPL, indicate your
-# - decision by deleting the provisions above and replace them with the notice
-# - and other provisions required by the LGPL or the GPL. If you do not delete
-# - the provisions above, a recipient may use your version of this file under
-# - the terms of any one of the MPL, the GPL or the LGPL.
-# -
-# - ***** END LICENSE BLOCK *****
-# WARNING! This file contains UTF-8 encoded characters!
-# - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
-# - your editor isn't using UTF-8 encoding and may munge up the document!
-#
-#. General
-#: pref.calendar.advanced.showConnections.label
-#: pref.calendar.advanced.showConnections.accesskey
-msgid "C&onnection Settings…"
-msgstr "S&ocruithe an Naisc…"
-
-#: pref.calendar.advanced.proxiesInfo.label
-msgid "Determine how &brandShortName; connects to the Internet"
-msgstr "Socraigh conas a nascfar &brandShortName; leis an Idirlíon"
-
-#: pref.calendar.advanced.configEdit.caption
-msgid "Advanced Configuration"
-msgstr "Cumraíocht Chasta"
-
-#: pref.calendar.advanced.configEdit.button
-msgid "Config Editor…"
-msgstr "Eagarthóir Cumraíochta…"
-
-#: pref.calendar.advanced.configEdit.accesskey
-msgid "g"
-msgstr "C"
-
-# Passwords
-#. Passwords
-#: pref.calendar.advanced.savedPasswords.intro
-msgid ""
-"&brandShortName; can remember password information for all of your calendars "
-"so you don't need to re-enter your login details."
-msgstr ""
-"Is féidir le &brandShortName; faisnéis maidir le focail fhaire do chuid "
-"féilirí go léir a mheabhrú ionas nach mbeidh ort do shonraí a athiontráil."
-
-#: pref.calendar.advanced.useMasterPassword.label
-#: pref.calendar.advanced.useMasterPassword.accesskey
-msgid "Use a Master &Password to encrypt stored passwords"
-msgstr "Úsáid &Príomhfhocal Faire chun focail fhaire shábháilte a chriptiú"
-
-#: pref.calendar.advanced.masterPassword.intro
-msgid ""
-"When set, the Master Password protects all your passwords, but you must enter "
-"it once per session."
-msgstr ""
-"Agus é socruithe, cosnaíonn an Príomhfhocal Faire d'fhocail fhaire go léir, "
-"ach ní mór duit é a iontráil uair amháin sa seisiún."
-
-#: pref.calendar.advanced.changeMasterPassword.label
-#: pref.calendar.advanced.changeMasterPassword.accesskey
-msgid "Change &Master Password…"
-msgstr "Athraigh an &Príomhfhocal Faire…"
-
-#: pref.calendar.advanced.viewPasswords.label
-#: pref.calendar.advanced.viewPasswords.accesskey
-msgid "&View Saved Passwords…"
-msgstr "&Taispeáin Focail Fhaire a Sábháladh…"
-
-#. Update
-#: pref.calendar.advanced.update.autoCheck.label
-msgid "Automatically check for updates to:"
-msgstr "Déan nuashonruithe a lorg go huathoibríoch i gcomhair:"
-
-#: pref.calendar.advanced.update.enableAppUpdate.label
-msgid "&brandShortName;"
-msgstr "&brandShortName;"
-
-#: pref.calendar.advanced.update.enableAppUpdate.accesskey FTPport.accesskey
-msgid "r"
-msgstr "r"
-
-#: pref.calendar.advanced.update.enableAddonsUpdate.label
-#: pref.calendar.advanced.update.enableAddonsUpdate.accesskey
-msgid "I&nstalled Add-ons"
-msgstr "Breiseái&n Shuiteáilte"
-
-#: pref.calendar.advanced.update.whenUpdatesFound.label
-msgid "When updates to &brandShortName; are found:"
-msgstr "Agus nuashonruithe do &brandShortName; aimsithe:"
-
-#: pref.calendar.advanced.update.modeAskMe.label
-#: pref.calendar.advanced.update.modeAskMe.accesskey
-msgid "As&k me what I want to do"
-msgstr "Fiafraigh díom &cad atá le déanamh"
-
-#: pref.calendar.advanced.update.modeAuto.label
-#: pref.calendar.advanced.update.modeAuto.accesskey
-msgid "Automatically &download and install the update"
-msgstr "Íos&luchtaigh agus suiteáil an nuashonrú go huathoibríoch"
-
-#: pref.calendar.advanced.update.modeAutoWarn.label
-#: pref.calendar.advanced.update.modeAutoWarn.accesskey
-msgid "&Warn me if this will disable any of my add-ons"
-msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
-
-#: pref.calendar.advanced.update.showHistory.label
-#: pref.calendar.advanced.update.showHistory.accesskey
-msgid "Show &Update History…"
-msgstr "Taispeáin Stair na N&uashonruithe…"
-
-#. Encryption
-#: pref.calendar.advanced.encryption.protocols.label
-msgid "Protocols"
-msgstr "Prótacail"
-
-#: pref.calendar.advanced.encryption.useSSL3.label
-#: pref.calendar.advanced.encryption.useSSL3.accesskey
-msgid "Use SSL &3.0"
-msgstr "Úsáid SSL &3.0"
-
-#: pref.calendar.advanced.encryption.useTLS1.label
-#: pref.calendar.advanced.encryption.useTLS1.accesskey
-msgid "Use TLS &1.0"
-msgstr "Úsáid TLS &1.0"
-
-# #-#-#-#-#  tmp.XXXXj5AXGE.po (firefox 0.8)  #-#-#-#-#
-# Certs
-#: pref.calendar.advanced.encryption.certificates.label
-msgid "Certificates"
-msgstr "Teastais"
-
-#: pref.calendar.advanced.encryption.certSelection.description
-msgid "When a server requests my personal certificate:"
-msgstr "Nuair atá freastalaí ag iarraidh mo theastas pearsanta:"
-
-#: pref.calendar.advanced.encryption.certs.auto
-msgid "Select one automatically"
-msgstr "Roghnaigh go huathoibríoch"
-
-# Ctrl+i is highlights URL for opening
-#: pref.calendar.advanced.encryption.certs.auto.accesskey
-msgid "l"
-msgstr "l"
-
-#: pref.calendar.advanced.encryption.certs.ask
-msgid "Ask me every time"
-msgstr "Fiafraigh díom i gcónaí"
-
-#: pref.calendar.advanced.encryption.certs.ask.accesskey
-msgid "i"
-msgstr "i"
-
-#: pref.calendar.advanced.encryption.viewCerts.label
-#: pref.calendar.advanced.encryption.viewCerts.accesskey
-msgid "View Certificate&s"
-msgstr "Tai&speáin Teastais"
-
-#: pref.calendar.advanced.encryption.viewCRLs.label
-#: pref.calendar.advanced.encryption.viewCRLs.accesskey
-msgid "&Revocation Lists"
-msgstr "&Liostaí Cúlghairme"
-
-#: pref.calendar.advanced.encryption.verify2.label
-#: pref.calendar.advanced.encryption.verify2.accesskey
-msgid "&Validation"
-msgstr "&Bailíochtú"
-
-#: pref.calendar.advanced.encryption.viewSecurityDevices.label
-#: pref.calendar.advanced.encryption.viewSecurityDevices.accesskey
-msgid "Securit&y Devices"
-msgstr "&Gléasanna Slándála"
-
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -5927,97 +6318,6 @@ msgstr "Caithfidh tú ainm a chur ar an chatagóir."
 #. WARNING! This file contains UTF-8 encoded characters!
 #. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
 #. - your editor isn't using UTF-8 encoding and may munge up the document!
-#: connectionsDialog.title
-msgid "Connection Settings"
-msgstr "Socruithe Ceangail"
-
-#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: window.width
-msgid "37em"
-msgstr "37em"
-
-#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: window.macWidth
-msgid "39em"
-msgstr "39em"
-
-#: proxyTitle.label
-msgid "Configure Proxies to Access the Internet"
-msgstr "Cumraigh Seachfhreastalaí Rochtana Idirlín"
-
-#: directTypeRadio.label directTypeRadio.accesskey
-msgid "&Direct connection to the Internet"
-msgstr "Ceangal &díreach leis an Idirlíon"
-
-#: WPADTypeRadio.label WPADTypeRadio.accesskey
-msgid "Auto-detect proxy settings for this net&work"
-msgstr "&Aimsigh socruithe seachfhreastalaí an líonra seo go huathoibríoch"
-
-#: manualTypeRadio.label manualTypeRadio.accesskey
-msgid "&Manual proxy configuration:"
-msgstr "Lá&mhchumraíocht seachfhreastalaí:"
-
-# not "a" since used in "Aimsigh" above
-#: autoTypeRadio.label autoTypeRadio.accesskey
-msgid "&Automatic proxy configuration URL:"
-msgstr "URL &Uathchumraíocht Seachfhreastalaí:"
-
-#: reload.label reload.accesskey
-msgid "R&eload"
-msgstr "&Athluchtaigh"
-
-#: ftp.label ftp.accesskey
-msgid "&FTP Proxy:"
-msgstr "Seachfhreastalaí &FTP:"
-
-#: http.label http.accesskey
-msgid "HTTP Prox&y:"
-msgstr "&Seachfhreastalaí HTTP:"
-
-#: ssl.label ssl.accesskey
-msgid "&SSL Proxy:"
-msgstr "Seachfhreastalaí &SSL:"
-
-#: socks.label socks.accesskey
-msgid "SO&CKS Host:"
-msgstr "Ósta SO&CKS:"
-
-#: socks4.label socks4.accesskey
-msgid "SOC&KS v4"
-msgstr "SOC&KS v4"
-
-#: socks5.label socks5.accesskey
-msgid "SOCKS &v5"
-msgstr "SOCKS &v5"
-
-# OK as is
-#: port.label
-msgid "Port:"
-msgstr "Port:"
-
-# Ctrl+O for "Oscail" in Main -> Comhad
-#: SSLport.accesskey
-msgid "o"
-msgstr "o"
-
-#: noproxy.label noproxy.accesskey
-msgid "&No Proxy for:"
-msgstr "Ga&n Seachfhreastalaí do:"
-
-#: noproxyExplain.label
-msgid "Example: .mozilla.org, .net.nz, 192.168.1.0/24"
-msgstr "Sampla: .mozilla.org, .net.nz, 192.168.1.0/24"
-
-#: shareproxy.label shareproxy.accesskey
-msgid "Use this pro&xy server for all protocols"
-msgstr "Úsái&d an seachfhreastalaí seo do gach prótacal"
-
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#. WARNING! This file contains UTF-8 encoded characters!
-#. - If this ==> … <== doesn't look like an ellipsis (three dots in a row),
-#. - your editor isn't using UTF-8 encoding and may munge up the document!
 #: pref.mainbox.label
 msgid "General Settings"
 msgstr "Socruithe Ghinearálta"
@@ -6050,25 +6350,6 @@ msgstr "Inrochtaineacht"
 msgid "Optimize &colors for accessibility"
 msgstr "Roghnaigh na &dathanna is fearr ó thaobh inrochtaineachta"
 
-#: prefWindow.titleGNOME
-msgid "&brandShortName; Preferences"
-msgstr "Sainroghanna &brandShortName;"
-
-#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: prefWindow.styleWin
-msgid "width: 47em; height: 37em;"
-msgstr "width: 52em; height: 41em;"
-
-#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: prefWindow.styleMac
-msgid "width: 47em;"
-msgstr "width: 58em;"
-
-#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
-#: prefWindow.styleGNOME
-msgid "width: 47em; height: 34.5em;"
-msgstr "width: 52em; height: 37.5em;"
-
 #: paneAlarms.title
 msgid "Reminders"
 msgstr "Meabhrúcháin"
@@ -6084,10 +6365,6 @@ msgstr "Amhairc"
 #: paneTimezones.title
 msgid "Timezone"
 msgstr "Crios Ama"
-
-#: paneAdvanced.title
-msgid "Advanced"
-msgstr "Ardroghanna"
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -8362,6 +8639,10 @@ msgid ""
 msgstr ""
 "Níl aon fhéilirí inscríofa ar fáil chun cuirí a láimhseáil, féach ar airíonna "
 "an fhéilire."
+
+#: imipUpdate.label
+msgid "Update"
+msgstr "Nuashonrú"
 
 # Error reporting
 #: imipDetails.label
