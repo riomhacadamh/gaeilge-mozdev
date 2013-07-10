@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-04 08:27-0500\n"
+"POT-Creation-Date: 2013-06-04 13:46-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1453,6 +1453,15 @@ msgid "Get &More Tools"
 msgstr "Faigh &Tuilleadh Uirlisí"
 
 # "C" in main browser window
+#. #-#-#-#-#  webapprt-ga-IE.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+#. - You can obtain one at http://mozilla.org/MPL/2.0/.
+#. LOCALIZATION NOTE: These are localized strings for the webapp runtime,
+#. - which loads a webapp in a separate process from Firefox.  Webapps loaded
+#. - in this way have very little application chrome, but the runtime does
+#. - provide them with some default functionality, like the standard OS
+#. - menus/menuitems.
 #: fileMenu.label fileMenu.accesskey
 msgid "&File"
 msgstr "&Comhad"
@@ -2850,7 +2859,10 @@ msgstr ""
 "An bhfuil fonn ort forlíontán a shuiteáil chun na meáin ar an leathanach seo "
 "a thaispeáint?"
 
-#: installPlugin.button.label
+#. #-#-#-#-#  webapprt-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (webapps.install.title): %S will be replaced with the name
+#. # of the webapp being installed.
+#: installPlugin.button.label webapps.install.title
 msgid "Install %S"
 msgstr "Suiteáil %S"
 
@@ -3359,7 +3371,7 @@ msgstr "Cliceáil anseo i gcomhair mionsonraí"
 #. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (geolocation.shareLocation): Label that will be used in
 #. # site settings dialog.
-#: geolocation.shareLocation permGeo geo.label
+#: geolocation.shareLocation permGeo geo.label geolocation.sharelocation
 msgid "Share Location"
 msgstr "Ceadaigh"
 
@@ -3860,7 +3872,7 @@ msgctxt "getUserMedia.shareSelectedDevices.accesskey"
 msgid "S"
 msgstr "S"
 
-#: getUserMedia.denyRequest.label
+#: getUserMedia.denyRequest.label geolocation.dontshare
 msgid "Don't Share"
 msgstr "Ná Nocht"
 
@@ -4562,7 +4574,7 @@ msgstr "VK_F8"
 #. # debugger.
 #: debuggerMenu.accesskey generalSecurityDetails.accesskey
 #: view.sortBy.description.accesskey mismatchDontCheckAccesskey
-#: notifyBarDontChangeButtonAccessKey
+#: notifyBarDontChangeButtonAccessKey deleteCmd.key
 msgid "D"
 msgstr "D"
 
@@ -6747,11 +6759,11 @@ msgstr "Aitheantas an Ghléis:"
 #: appCacheListExpirationTime
 msgctxt "appCacheListExpirationTime"
 msgid "Expires:"
-msgstr ""
+msgstr "As Feidhm:"
 
 #: appCacheListFetchCount
 msgid "Fetch count:"
-msgstr ""
+msgstr "Uaireanta faighte:"
 
 #: appCacheListLastFetched
 msgid "Last fetched:"
@@ -8039,9 +8051,14 @@ msgstr "Fáil:"
 msgid "Network"
 msgstr "Líonra"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (netmonitor.commandkey, netmonitor.accesskey)
 #. # Used for the menuitem in the tool menu
-#: netmonitor.commandkey
+#. #-#-#-#-#  webapprt-ga-IE.po (firefox)  #-#-#-#-#
+#. On Mac, we create the Quit and Hide command labels dynamically,
+#. - using properties in window.properties, in order to include the name
+#. - of the webapp in the labels without creating a DTD file for it.
+#: netmonitor.commandkey quitApplicationCmdMac.key
 msgid "Q"
 msgstr "Q"
 
@@ -13284,7 +13301,15 @@ msgstr "Tar éi&s dom nasc a oscailt i gcluaisín nua, athraigh chuige láithrea
 msgid "Show tab previews in the Windows tas&kbar"
 msgstr "Taispeáin réamhamharc ar chluaisíní sa tas&cbharra Windows"
 
-#: quitDialogTitle
+#. #-#-#-#-#  webapprt-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE: These are localized strings for the webapp runtime,
+#. # which loads a webapp in a separate process from Firefox.  Webapps loaded
+#. # in this way have very little application chrome, but the runtime does
+#. # provide them with some default functionality, like the standard OS
+#. # menus/menuitems.
+#. # LOCALIZATION NOTE (quitApplicationCmdMac.label): %S will be replaced with
+#. # the name of the webapp.
+#: quitDialogTitle quitApplicationCmdMac.label
 msgid "Quit %S"
 msgstr "Scoir %S"
 
@@ -23026,15 +23051,15 @@ msgstr "Díchumasaithe"
 
 #: pref_donottrack_disallow_tracking
 msgid "Tell sites that I do not want to be tracked"
-msgstr ""
+msgstr "Cuir in iúl do shuímh Ghréasáin gan mé a rianú"
 
 #: pref_donottrack_allow_tracking
 msgid "Tell sites that I want to be tracked"
-msgstr ""
+msgstr "Cuir in iúl do shuímh Ghréasáin gur mhaith liom a bheith rianaithe"
 
 #: pref_donottrack_no_pref
 msgid "Do not tell sites anything about my tracking preferences"
-msgstr ""
+msgstr "Ná hinis faic do shuímh maidir le rianú"
 
 #: pref_char_encoding
 msgid "Character encoding"
@@ -23072,7 +23097,7 @@ msgstr "Méid téacs"
 
 #: pref_reflow_on_zoom2
 msgid "Pinch to reflow text"
-msgstr ""
+msgstr "Fáisc chun téacs a athshreabhadh"
 
 #: pref_font_size_tiny
 msgid "Tiny"
@@ -23167,7 +23192,7 @@ msgstr "Staitisticí agus sonraí ó &brandShortName;"
 
 #: datareporting_notification_action
 msgid "Choose what to share"
-msgstr ""
+msgstr "Roghnaigh cad a roinnfidh mé"
 
 #: datareporting_notification_summary
 msgid ""
@@ -23785,7 +23810,7 @@ msgstr "Nasc gléas eile le do chuntas &syncBrand.shortName.label;"
 #. Configure Engines
 #: sync.configure.engines.title.label
 msgid "What to sync"
-msgstr ""
+msgstr "Rudaí le sioncrónú"
 
 #: sync.configure.engines.sync.my.title.label
 msgid "Sync your…"
@@ -24366,7 +24391,7 @@ msgstr "Ná Nocht"
 
 #: geolocation.ask
 msgid "Share your location with %S?"
-msgstr ""
+msgstr "An bhfuil fonn ort an láthair ina bhfuil tú a nochtadh do %S?"
 
 #. # LOCALIZATION NOTE (geolocation.dontAskAgain): This label appears next to a
 #. # checkbox to indicate whether or not the user wants to make a permanent decision.
@@ -30456,6 +30481,8 @@ msgstr "here"
 msgid ""
 ". Other features and Services can be disabled in the application preferences."
 msgstr ""
+". Is féidir gnéithe agus Seirbhísí eile a dhíchumasú i sainroghanna an "
+"fheidhmchláir."
 
 #. safe browsing points for branded builds
 #: rights.safebrowsing-a
@@ -39309,3 +39336,58 @@ msgstr ""
 #: MOZ_LANG_TITLE
 msgid "English (US)"
 msgstr "Béarla (SAM)"
+
+#: hideThisAppCmdMac.key
+msgctxt "hideThisAppCmdMac.key"
+msgid "H"
+msgstr "H"
+
+#: hideOtherAppsCmdMac.key
+msgctxt "hideOtherAppsCmdMac.key"
+msgid "H"
+msgstr "H"
+
+#. # LOCALIZATION NOTE (hideApplicationCmdMac.label): %S will be replaced with
+#. # the name of the webapp.
+#: hideApplicationCmdMac.label
+msgid "Hide %S"
+msgstr "Folaigh %S"
+
+#. # LOCALIZATION NOTE (geolocation.title): %S will be replaced with the name of
+#. # the webapp.
+#: geolocation.title
+msgid "%S - Share Location"
+msgstr "%S - Nocht mo Láthair"
+
+#: geolocation.description
+msgid "Do you want to share your location?"
+msgstr "An bhfuil fonn ort an láthair ina bhfuil tú a nochtadh?"
+
+#: geolocation.remember
+msgid "Remember my choice"
+msgstr "Meabhraigh mo rogha"
+
+#. # LOCALIZATION NOTE (webapps.install.description): %S will be replaced with the
+#. # name of the webapp being installed.
+#: webapps.install.description
+msgid "Do you want to install %S?"
+msgstr "An bhfuil fonn ort %S a shuiteáil?"
+
+#: webapps.install.install
+msgid "Install App"
+msgstr "Suiteáil an Feidhmchlár"
+
+#: webapps.install.dontinstall
+msgid "Don't Install"
+msgstr "Ná Suiteáil"
+
+#. # LOCALIZATION NOTE: This file must be saved as UTF8
+#. # LOCALIZATION NOTE: $AppName will be replaced with the (already localized)
+#. #                    name of the webapp being uninstalled.
+#: ^UninstallCaption
+msgid "$AppName Uninstall"
+msgstr "Díshuiteáil $AppName"
+
+#: UN_CONFIRM_UNINSTALL
+msgid "$AppName will be uninstalled from your computer."
+msgstr "Díshuiteálfar $AppName ó do ríomhaire."
