@@ -78,7 +78,7 @@ messages.po-update : FORCE
 # weird structure with "codes" in msgid and English in msgstrs
 amo.pot : messages.po
 	cat messages.po | sed '/^#~/,$$d' > mstripped.po
-	po2pot mstripped.po > $@
+	makepot mstripped.po > $@
 	rm -f mstripped.po
 
 amo-obair.po : amo.pot
