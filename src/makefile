@@ -60,46 +60,6 @@ distclean :
 #   rest relates to maintenance/updates                                   #
 ###########################################################################
 
-# To update AMO site;
-# make messages.po-update
-# make amo-obair.po
-# translate anything missing
-# make amodiff
-# If diff looks OK, 
-# make amo-commit
-# Then commit to local repo: cvs commit amo-obair.po, with comment giving
-# untranslated count, etc.
-
-messages.po-update : FORCE
-	rm -f messages.po
-	wget http://svn.mozilla.org/addons/trunk/site/app/locale/en_US/LC_MESSAGES/messages.po
-
-# used to do "perl AMOfake mstripped.po" when messages.po had
-# weird structure with "codes" in msgid and English in msgstrs
-amo.pot : messages.po
-	cat messages.po | sed '/^#~/,$$d' > mstripped.po
-	makepot mstripped.po > $@
-	rm -f mstripped.po
-
-amo-obair.po : amo.pot
-	cpo -q amo-obair.po
-	msgmerge -N -q --backup=off -U $@ amo.pot > /dev/null 2>&1
-	cpo -q amo-obair.po
-	touch $@
-
-SVNDIR=/home/kps/seal/amo/ga_IE/LC_MESSAGES
-# used to do "perl AMOback mstripped.po" when messages.po had
-# weird structure with "codes" in msgid and English in msgstrs
-# amo-final.po : amo-obair.po
-#	cat amo-obair.po | sed '/^#~/,$$d' > mstripped.po
-#	perl AMOback mstripped.po | sed '/^msgctxt/d' > $@
-#	rm -f mstripped.po
-#	-diff -u $(SVNDIR)/messages.po $@
-#	chmod 644 $@
-
-amodiff : FORCE
-	-diff -u $(SVNDIR)/messages.po amo-obair.po
-
 amo-obair.mo : amo-obair.po
 	msgfmt -o $@ amo-obair.po
 
