@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-02 19:29-0500\n"
+"POT-Creation-Date: 2013-08-06 14:33-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -294,6 +294,7 @@ msgstr ""
 "Ní féidir leat tuilleadh nuashonruithe a chur i bhfeidhm ar an gcóras seo. "
 
 #: update.unsupported.linkText mixedContentBlocked.helplink
+#: pref_developer_remotedebugging_docs
 msgid "Learn more"
 msgstr "Tuilleadh eolais"
 
@@ -638,9 +639,14 @@ msgctxt "restorepage.tryagainButton"
 msgid "Restore"
 msgstr "Athchóirigh"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserdevtoolsnetmonitor.dtd.po (firefox)  #-#-#-#-#
+#. LOCALIZATION NOTE (debuggerUI.summary.resend.accesskey): This is the access key
+#. -  for the Resend menu item displayed in the context menu for a request
 #: restorepage.restore.access editBookmark.removeBookmark.accessKey
-#: protocol.checkbox.accesskey pluginInstallation.restart.accesskey
-#: restartNowButton.accesskey notifyBarRememberPasswordButtonAccessKey
+#: netmonitorUI.summary.resend.accesskey protocol.checkbox.accesskey
+#: pluginInstallation.restart.accesskey restartNowButton.accesskey
+#: notifyBarRememberPasswordButtonAccessKey
 msgid "R"
 msgstr "R"
 
@@ -666,10 +672,15 @@ msgstr "R"
 msgid "Close"
 msgstr "Dún"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserdevtoolsnetmonitor.dtd.po (firefox)  #-#-#-#-#
+#. This is the access key
+#. -  for the Copy URL menu item displayed in the context menu for a request
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromeglobalconfig.dtd.po (firefox)  #-#-#-#-#
 #. Context Menu
-#: restorepage.close.access copyCmd.key close.accesskey
+#: restorepage.close.access copyCmd.key inspector.commandkey
+#: netmonitorUI.context.copyUrl.accesskey close.accesskey
 #: view.sortBy.visitCount.accesskey CertDumpAVACountry copyPref.key
 #: copyCmd.commandkey pluginInstallation.close.accesskey
 msgid "C"
@@ -680,7 +691,7 @@ msgctxt "restorepage.restoreHeader"
 msgid "Restore"
 msgstr "Athchóirigh"
 
-#: restorepage.listHeader
+#: restorepage.listHeader 128_firefox
 msgid "Windows and Tabs"
 msgstr "Fuinneoga agus Cluaisíní"
 
@@ -689,6 +700,27 @@ msgstr "Fuinneoga agus Cluaisíní"
 #: restorepage.windowLabel
 msgid "Window &#37;S"
 msgstr "Fuinneog &#37;S"
+
+#. LOCALIZATION NOTE: The following 'welcomeback' strings are for about:welcomeback,
+#. not for about:sessionstore
+#: welcomeback.tabtitle
+msgctxt "welcomeback.tabtitle"
+msgid "Welcome Back!"
+msgstr "Fáilte ar ais!"
+
+#. LOCALIZATION NOTE: The title is intended to be welcoming and congratulatory,
+#. expressing joy that the user has successfully migrated their stuff and hope
+#. that now they have a better experience.
+#: welcomeback.pageTitle
+msgctxt "welcomeback.pageTitle"
+msgid "Welcome Back!"
+msgstr "Fáilte ar ais!"
+
+#: welcomeback.pageInfo
+msgid ""
+"&brandShortName; successfully reset your profile. Below is a list of windows "
+"and tabs you had open; you can restore them or start with a clean slate."
+msgstr "D'athshocraigh &brandShortName; do phróifíl. Seo é liosta de na fuinneoga agus na cluaisín a bhí oscailte agat; is féidir leat iad a athoscailt nó tosú as an nua."
 
 #. #-#-#-#-#  chromebrowseraboutSyncTabs.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
@@ -819,6 +851,10 @@ msgstr "Cab&hair &brandShortName;"
 msgid "?"
 msgstr "?"
 
+#: helpKeyboardShortcuts.label helpKeyboardShortcuts.accesskey
+msgid "&Keyboard Shortcuts"
+msgstr "&Aicearraí Méarchláir"
+
 #: helpSafeMode.label helpSafeMode.accesskey appMenuSafeMode.label
 #: appMenuSafeMode.accesskey
 msgid "&Restart with Add-ons Disabled…"
@@ -929,6 +965,14 @@ msgstr "Leabharmharcáil Gach &Cluaisín…"
 msgid "&Undo Close Tab"
 msgstr "&Cealaigh Dúnadh an Chluaisín"
 
+#. This label is used
+#. when the previous tab-closing operation closed more than one tab. It
+#. replaces the undoCloseTab.label and will use the same accesskey as the
+#. undoCloseTab.label so users will not need to learn new keyboard controls.
+#: undoCloseTabs.label
+msgid "Undo Close Tabs"
+msgstr "&Cealaigh Dúnadh na gCluaisíní"
+
 #: closeTab.label closeTab.accesskey
 msgid "&Close Tab"
 msgstr "&Dún Cluaisín"
@@ -1005,6 +1049,10 @@ msgstr "Oi&brigh As Líne"
 msgid "&Menu Bar"
 msgstr "&Barra Roghchláir"
 
+#. LOCALIZATION NOTE: the following strings are unused in Australis, they're
+#. kept here to avoid warnings from l10n tools like compare-locales on
+#. l10n-central. They will be definitely removed when Australis is ready
+#. for mozilla-aurora.
 #: navbarCmd.label navbarCmd.accesskey
 msgid "&Navigation Toolbar"
 msgstr "Barra &Nascleanúna"
@@ -1016,10 +1064,6 @@ msgstr "&Barra Leabharmharc"
 #: bookmarksToolbarItem.label
 msgid "Bookmarks Toolbar Items"
 msgstr "Rudaí ar an Bharra Leabharmharc"
-
-#: addonBarCmd.label addonBarCmd.accesskey
-msgid "&Add-on Bar"
-msgstr "&Barra na mBreiseán"
 
 # "F" under Main -> Amharc
 #: pageSourceCmd.label pageSourceCmd.accesskey
@@ -1077,7 +1121,7 @@ msgstr "Folaig&h Barraí Uirlisí"
 msgid "Exit &Full Screen Mode"
 msgstr "Fág Mód &Lánscáileáin"
 
-#: fullscreenAllowButton.label permAllow permission.allow can
+#: fullscreenAllowButton.label permAllow permission.allow can allow
 msgid "Allow"
 msgstr "Ceadaigh"
 
@@ -1085,13 +1129,9 @@ msgstr "Ceadaigh"
 msgid "Deny"
 msgstr "Diúltaigh"
 
-#: fullscreenApproval.value
-msgid "Allow fullscreen?"
-msgstr "Ceadaigh lánscáileán?"
-
-#: fullscreenExitHint.value
-msgid "Press ESC at any time to exit fullscreen."
-msgstr "Brúigh ESC ag am ar bith chun scor ón lánscáileán."
+#: fullscreenExitHint2.value
+msgid "Press ESC at any time to exit."
+msgstr "Brúigh ESC am ar bith chun scor."
 
 #: leaveDOMFullScreen.label leaveDOMFullScreen.accesskey
 msgid "Exit F&ull Screen"
@@ -1220,7 +1260,7 @@ msgstr "Athluchtaigh an leathanach reatha"
 msgid "&Stop"
 msgstr "&Stad"
 
-#: stopCmd.macCommandKey aboutApps.noApps.post support.post
+#: stopCmd.macCommandKey aboutApps.noApps.post
 msgid "."
 msgstr "."
 
@@ -1252,27 +1292,19 @@ msgstr "Siar/Ar Aghaidh"
 msgid "Location"
 msgstr "Suíomh"
 
-#: throbberItem.title
-msgid "Activity Indicator"
-msgstr "Táscaire Gníomhaíochta"
-
 #: bookmarksItem.title
 msgctxt "bookmarksItem.title"
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
+# Toolbar items
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. Toolbar items
-#: appMenuButton.label menu
-msgid "Menu"
-msgstr "Roghchlár"
-
-#: appMenuButton.tooltip
-msgid "Open &brandShortName; menu"
-msgstr "Oscail roghchlár &brandShortName;"
-
-#: homeButton.label
-msgctxt "homeButton.label"
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromeglobalkeys.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE : BLOCK end maybe GLYPHS
+#. # LOCALIZATION NOTE : BLOCK typing state keys
+#: homeButton.label VK_HOME
 msgid "Home"
 msgstr "Baile"
 
@@ -1284,23 +1316,10 @@ msgstr "Grúpaí Cluaisíní"
 msgid "Group your tabs"
 msgstr "Grúpáil do chuid cluaisíní"
 
-#: feedButton.label feedSubscribe dialogAcceptLabelAddLivemark
-msgid "Subscribe"
-msgstr "Liostáil"
-
-#: feedButton.tooltip
-msgid "Subscribe to this page…"
-msgstr "Liostáil leis an leathanach seo…"
-
 #: bookmarksButton.label
 msgctxt "bookmarksButton.label"
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
-
-#: bookmarksButton.tooltip
-msgctxt "bookmarksButton.tooltip"
-msgid "Display your bookmarks"
-msgstr "Taispeáin do leabharmharcanna"
 
 # Ctrl+B shows bookmarks in the sidebar
 #: bookmarksCmd.commandkey
@@ -1343,10 +1362,6 @@ msgctxt "bookmarksWinCmd.commandkey"
 msgid "i"
 msgstr "i"
 
-#: historyButton.tooltip
-msgid "Display pages you've viewed recently"
-msgstr "Taispeáin leathanaigh ar thug tú cuairt orthu le déanaí"
-
 # Ctrl+h = Stair (for now, most other good ones are taken)
 #: historySidebarCmd.commandKey
 msgid "h"
@@ -1360,10 +1375,6 @@ msgstr "&Uirlisí"
 #: keywordfield.label keywordfield.accesskey
 msgid "Add a &Keyword for this Search…"
 msgstr "Cuir &lorgfhocal leis an gcuardach seo…"
-
-#: search.label search.accesskey
-msgid "Web &Search"
-msgstr "&Cuardach Idirlín"
 
 # "L" under Main -> Uirlisí
 #: downloads.label downloads.accesskey
@@ -1399,6 +1410,14 @@ msgstr "A"
 #: webDeveloperMenu.label webDeveloperMenu.accesskey
 msgid "&Web Developer"
 msgstr "&Forbróir Gréasáin"
+
+#: devToolsCmd.keycode
+msgid "VK_F12"
+msgstr "VK_F12"
+
+#: devToolsCmd.keytext VK_F12
+msgid "F12"
+msgstr "F12"
 
 #: devtoolsConnect.label devtoolsConnect.accesskey
 msgid "Conn&ect…"
@@ -1486,6 +1505,16 @@ msgstr "F2"
 #: devToolboxMenuItem.label devToolboxMenuItem.accesskey
 msgid "&Toggle Tools"
 msgstr "S&coránaigh Uirlisí"
+
+#: devToolboxMenuItem.keycode
+msgctxt "devToolboxMenuItem.keycode"
+msgid "I"
+msgstr "I"
+
+#: devToolboxMenuItem.keytext
+msgctxt "devToolboxMenuItem.keytext"
+msgid "I"
+msgstr "I"
 
 #: devToolbarToolsButton.tooltip
 msgid "Toggle developer tools"
@@ -1653,10 +1682,6 @@ msgstr "Barra &Taoibh"
 msgid "&Customize…"
 msgstr "Sain&cheap…"
 
-#: viewTabsOnTop.label viewTabsOnTop.accesskey
-msgid "&Tabs on Top"
-msgstr "&Cluaisíní ar Barr"
-
 # XXX historyMenu entities are used with or without places (bug 336058)
 #: historyMenu.label historyMenu.accesskey
 msgid "Hi&story"
@@ -1676,11 +1701,6 @@ msgstr "Fuinneoga a Dúnadh Le Déanaí"
 msgid "Restore Previous Session"
 msgstr "Athchóirigh an Seisiún Roimhe Seo"
 
-#: historyHomeCmd.label
-msgctxt "historyHomeCmd.label"
-msgid "Home"
-msgstr "Baile"
-
 #: showAllHistoryCmd2.label
 msgid "Show All History"
 msgstr "Taispeáin an Stair Iomlán"
@@ -1690,59 +1710,9 @@ msgstr "Taispeáin an Stair Iomlán"
 msgid "H"
 msgstr "H"
 
-#. #-#-#-#-#  chromebrowserdevtoolsgclicommands.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (cookieListOutEdit) A title used in the output from the
-#. # 'cookie list' command on a button which can be used to edit cookie values
-#: appMenuEdit.label cookieListOutEdit
-msgid "Edit"
-msgstr "Eagar"
-
 #: appMenuCustomize.label
 msgid "Customize"
 msgstr "Saincheap"
-
-#: appMenuToolbarLayout.label
-msgid "Toolbar Layout…"
-msgstr "Leagan Amach an Bharra Uirlisí…"
-
-#: appMenuSidebars.label
-msgid "Sidebars"
-msgstr "Barraí Taoibh"
-
-#. #-#-#-#-#  chromebrowserdevtoolssourceeditor.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE These strings are used inside the Source Editor component.
-#. # This component is used whenever source code is displayed for the purpose of
-#. # being edited, inside the Firefox developer tools - current examples are the
-#. # Scratchpad and the Style Editor tools.
-#. # LOCALIZATION NOTE The correct localization of this file might be to keep it
-#. # in English, or another language commonly spoken among web developers.
-#. # You want to make that choice consistent across the developer tools.
-#. # A good criteria is the language in which you'd find the best documentation
-#. # on web development on the web.
-#. # LOCALIZATION NOTE  (findCmd.promptTitle): This is the dialog title used
-#. # when the user wants to search for a string in the code. You can
-#. # access this feature by pressing Ctrl-F on Windows/Linux or Cmd-F on Mac.
-#: appMenuFind.label findCmd.promptTitle
-msgid "Find…"
-msgstr "Aimsigh…"
-
-#: appMenuUnsorted.label
-msgctxt "appMenuUnsorted.label"
-msgid "Unsorted Bookmarks"
-msgstr "Leabharmharcanna Gan Sórtáil"
-
-#: appMenuWebDeveloper.label
-msgid "Web Developer"
-msgstr "Forbróir Gréasáin"
-
-# LOCALIZATION NOTE (getting_started):
-# link title for http://en-US.www.mozilla.com/en-US/firefox/central/
-#. #-#-#-#-#  profilebookmarks.inc.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (getting_started):
-#. # link title for https://www.mozilla.org/en-US/firefox/central/
-#: appMenuGettingStarted.label getting_started
-msgid "Getting Started"
-msgstr "Tús Maith"
 
 #: openCmd.commandkey
 msgctxt "openCmd.commandkey"
@@ -1880,6 +1850,10 @@ msgstr "&Taispeáin an Íomhá Amháin"
 #: viewImageInfoCmd.label viewImageInfoCmd.accesskey
 msgid "View Image In&fo"
 msgstr "Taispeáin Eolas &Faoin Íomhá"
+
+#: viewImageDescCmd.label viewImageDescCmd.accesskey
+msgid "View &Description"
+msgstr "Taispeáin &Cur Síos"
 
 #: viewVideoCmd.label viewVideoCmd.accesskey
 msgid "V&iew Video"
@@ -2184,43 +2158,19 @@ msgstr "Oscail fuinneog nua"
 msgid "Close sidebar"
 msgstr "Dún an barra taoibh"
 
-#: cutButton.tooltip
-msgid "Cut"
-msgstr "Gearr"
-
-#: copyButton.tooltip contextmenu.copy
-msgid "Copy"
-msgstr "Cóipeáil"
-
-#: pasteButton.tooltip contextmenu_paste contextmenu.paste
-msgid "Paste"
-msgstr "Greamaigh"
-
 #: fullScreenButton.tooltip
 msgid "Display the window in full screen"
 msgstr "Taispeáin an fhuinneog sa scáileán iomlán"
-
-#: zoomOutButton.tooltip
-msgid "Zoom out"
-msgstr "Súmáil amach"
-
-#: zoomInButton.tooltip
-msgid "Zoom in"
-msgstr "Súmáil isteach"
-
-#: zoomControls.label
-msgid "Zoom Controls"
-msgstr "Rialtáin Súmála"
 
 #: quitApplicationCmdWin.label quitApplicationCmdWin.accesskey
 msgid "E&xit"
 msgstr "&Scoir"
 
-#: goBackCmd.commandKey goBackCmd.commandkey
+#: goBackCmd.commandKey toolboxPreviousTool.key goBackCmd.commandkey
 msgid "["
 msgstr "["
 
-#: goForwardCmd.commandKey goForwardCmd.commandkey
+#: goForwardCmd.commandKey toolboxNextTool.key goForwardCmd.commandkey
 msgid "]"
 msgstr "]"
 
@@ -2347,13 +2297,17 @@ msgstr "&Cuir Foclóirí Leis…"
 msgid "Done"
 msgstr "Déanta"
 
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserdevtoolsnetmonitor.dtd.po (firefox)  #-#-#-#-#
+#. LOCALIZATION NOTE (debuggerUI.custom.cancel): This is the label displayed
+#. -  on the button which cancels and closes the custom request form
 #. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  androidbasesync_strings.dtd.po (firefox)  #-#-#-#-#
 #. Common text
 #: editBookmark.cancel.label addonDownloadCancelTooltip
-#: button.syncOptionsCancel.label CANCEL_BUTTON CancelBtn
-#: sync.button.cancel.label aboutDownloads.cancel inputWidgetHelper.cancel
-#: cancel nssdialogs.cancel.label cancel.label sync.setup.cancel Cancel
+#: netmonitorUI.custom.cancel button.syncOptionsCancel.label CANCEL_BUTTON
+#: CancelBtn sync.button.cancel.label aboutDownloads.cancel cancel
+#: nssdialogs.cancel.label cancel.label sync.setup.cancel Cancel
 #: cancelButton.label button-cancel dialogCancel.label unknownCancel.label
 #: progress.cancel.tooltip cancelButton cancelButtonText
 msgid "Cancel"
@@ -2397,6 +2351,10 @@ msgstr "atá á reáchtáil ag"
 msgid "More Information…"
 msgstr "Tuilleadh Eolais…"
 
+#: identity.permissions permTab
+msgid "Permissions"
+msgstr "Ceadanna"
+
 # Name for the tabs toolbar as spoken by screen readers.
 # The word "toolbar" is appended automatically and should not be contained below!
 #. Name for the tabs toolbar as spoken by screen readers.
@@ -2427,14 +2385,6 @@ msgstr "&Sioncrónaigh Anois"
 msgctxt "syncToolbarButton.label"
 msgid "Sync"
 msgstr "Sync"
-
-#: addonBarCloseButton.tooltip
-msgid "Close Add-on Bar"
-msgstr "Dún Barra na mBreiseán"
-
-#: toggleAddonBarCmd.key
-msgid "/"
-msgstr "/"
 
 #: socialToolbar.title
 msgid "Social Toolbar Button"
@@ -2549,7 +2499,126 @@ msgstr "Ceadaigh agus Meabhraigh"
 
 #: pluginBlockNow.label
 msgid "Block Plugin"
-msgstr "Cuir Cosc ar an mBreiseán"
+msgstr "Cuir Cosc ar an bhForlíontán"
+
+#: addonBarCmd.label addonBarCmd.accesskey
+msgid "&Add-on Bar"
+msgstr "&Barra na mBreiseán"
+
+#: throbberItem.title
+msgid "Activity Indicator"
+msgstr "Táscaire Gníomhaíochta"
+
+#: appMenuButton.label menu
+msgid "Menu"
+msgstr "Roghchlár"
+
+#: appMenuButton.tooltip
+msgid "Open &brandShortName; menu"
+msgstr "Oscail roghchlár &brandShortName;"
+
+#: feedButton.label feedSubscribe dialogAcceptLabelAddLivemark
+msgid "Subscribe"
+msgstr "Liostáil"
+
+#: feedButton.tooltip
+msgid "Subscribe to this page…"
+msgstr "Liostáil leis an leathanach seo…"
+
+#: bookmarksButton.tooltip
+msgctxt "bookmarksButton.tooltip"
+msgid "Display your bookmarks"
+msgstr "Taispeáin do leabharmharcanna"
+
+#: historyButton.tooltip
+msgid "Display pages you've viewed recently"
+msgstr "Taispeáin leathanaigh ar thug tú cuairt orthu le déanaí"
+
+#: viewTabsOnTop.label viewTabsOnTop.accesskey
+msgid "&Tabs on Top"
+msgstr "&Cluaisíní ar Barr"
+
+#. #-#-#-#-#  chromebrowserdevtoolsgclicommands.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (cookieListOutEdit) A title used in the output from the
+#. # 'cookie list' command on a button which can be used to edit cookie values
+#: appMenuEdit.label cookieListOutEdit
+msgid "Edit"
+msgstr "Eagar"
+
+#: appMenuToolbarLayout.label
+msgid "Toolbar Layout…"
+msgstr "Leagan Amach an Bharra Uirlisí…"
+
+#: appMenuSidebars.label
+msgid "Sidebars"
+msgstr "Barraí Taoibh"
+
+#. #-#-#-#-#  chromebrowserdevtoolssourceeditor.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE These strings are used inside the Source Editor component.
+#. # This component is used whenever source code is displayed for the purpose of
+#. # being edited, inside the Firefox developer tools - current examples are the
+#. # Scratchpad and the Style Editor tools.
+#. # LOCALIZATION NOTE The correct localization of this file might be to keep it
+#. # in English, or another language commonly spoken among web developers.
+#. # You want to make that choice consistent across the developer tools.
+#. # A good criteria is the language in which you'd find the best documentation
+#. # on web development on the web.
+#. # LOCALIZATION NOTE  (findCmd.promptTitle): This is the dialog title used
+#. # when the user wants to search for a string in the code. You can
+#. # access this feature by pressing Ctrl-F on Windows/Linux or Cmd-F on Mac.
+#: appMenuFind.label findCmd.promptTitle
+msgid "Find…"
+msgstr "Aimsigh…"
+
+#: appMenuUnsorted.label
+msgctxt "appMenuUnsorted.label"
+msgid "Unsorted Bookmarks"
+msgstr "Leabharmharcanna Gan Sórtáil"
+
+#: appMenuWebDeveloper.label
+msgid "Web Developer"
+msgstr "Forbróir Gréasáin"
+
+# LOCALIZATION NOTE (getting_started):
+# link title for http://en-US.www.mozilla.com/en-US/firefox/central/
+#. #-#-#-#-#  profilebookmarks.inc.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (getting_started):
+#. # link title for https://www.mozilla.org/en-US/firefox/central/
+#: appMenuGettingStarted.label getting_started
+msgid "Getting Started"
+msgstr "Tús Maith"
+
+#: cutButton.tooltip
+msgid "Cut"
+msgstr "Gearr"
+
+#: copyButton.tooltip contextmenu.copy
+msgid "Copy"
+msgstr "Cóipeáil"
+
+#: pasteButton.tooltip contextmenu_paste contextmenu.paste
+msgid "Paste"
+msgstr "Greamaigh"
+
+#: zoomOutButton.tooltip
+msgid "Zoom out"
+msgstr "Súmáil amach"
+
+#: zoomInButton.tooltip
+msgid "Zoom in"
+msgstr "Súmáil isteach"
+
+#: zoomControls.label
+msgid "Zoom Controls"
+msgstr "Rialtáin Súmála"
+
+#: addonBarCloseButton.tooltip
+msgid "Close Add-on Bar"
+msgstr "Dún Barra na mBreiseán"
+
+#: toggleAddonBarCmd.key
+msgid "/"
+msgstr "/"
 
 #: nv_timeout
 msgid "Timed Out"
@@ -2866,8 +2935,7 @@ msgstr ""
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowserdevtoolsgcli.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (canonDefaultGroupName): The default name for a group of
-#. # parameters.
+#. # LOCALIZATION NOTE: The default name for a group of parameters.
 #. #-#-#-#-#  chromebrowserpreferencespreferences.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -3365,27 +3433,41 @@ msgstr "Chuir tú eisceacht slándála leis an suíomh seo."
 msgid "%S, %S"
 msgstr "%S, %S"
 
-#: identity.encrypted
-msgid "Your connection to this website is encrypted to prevent eavesdropping."
+#: identity.encrypted2
+msgid "The connection to this website is secure."
+msgstr "Tá an ceangal leis an suíomh Gréasáin slán."
+
+#: identity.mixed_display_loaded
+msgid ""
+"The connection to this website is not fully secure because it contains "
+"unencrypted elements (such as images)."
 msgstr ""
-"Tá do cheangal leis an suíomh Gréasáin seo criptithe le bac a chur ar "
-"chúléisteacht."
+
+#: identity.mixed_display_loaded_active_blocked
+msgid ""
+"Interactive content (such as script) that isn't encrypted has been blocked "
+"for your protection."
+msgstr ""
+
+#: identity.mixed_active_loaded2
+msgid ""
+"This website contains interactive content that isn't encrypted (such as "
+"scripts). Other people can view your information or modify the website's "
+"behavior."
+msgstr ""
 
 #: identity.unencrypted
 msgid "Your connection to this website is not encrypted."
 msgstr "Níl do cheangal leis an suíomh Gréasáin seo criptithe."
 
-#: identity.mixed_content
-msgid ""
-"Your connection to this site is only partially encrypted, and does not "
-"prevent eavesdropping."
-msgstr ""
-"Níl do cheangal leis an suíomh seo criptithe go hiomlan agus níl bac ar "
-"chúléisteacht."
-
 #: identity.ownerUnknown2
 msgid "(unknown)"
 msgstr "(anaithnid)"
+
+#. # LOCALIZATION NOTE (identity.chrome): %S is replaced with the brandShortName.
+#: identity.chrome
+msgid "This is a secure %S page."
+msgstr "Is leathanach slán %S é seo."
 
 # Edit Bookmark UI
 #. # Edit Bookmark UI
@@ -3459,9 +3541,9 @@ msgstr "Cliceáil anseo i gcomhair mionsonraí"
 #. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (geolocation.shareLocation): Label that will be used in
 #. # site settings dialog.
-#: geolocation.shareLocation permGeo geo.label geolocation.sharelocation
+#: geolocation.shareLocation geo.label geolocation.sharelocation
 msgid "Share Location"
-msgstr "Ceadaigh"
+msgstr "Do Láthair a Fheiceáil"
 
 #: geolocation.shareLocation.accesskey
 msgctxt "geolocation.shareLocation.accesskey"
@@ -4016,8 +4098,9 @@ msgstr "Dealraíonn sé… go bhfuil… moill ar %S… ag tosú."
 msgid "Learn How to Speed It Up"
 msgstr "Foghlaim conas is féidir é a luathú"
 
-#: slowStartup.helpButton.accesskey confirmNavigationAway.buttonLeaveAccesskey
-#: CertDumpAVALocality restartLaterButton.accesskey
+#: slowStartup.helpButton.accesskey debuggerUI.searchGoToLine.key
+#: confirmNavigationAway.buttonLeaveAccesskey CertDumpAVALocality
+#: restartLaterButton.accesskey
 msgid "L"
 msgstr "L"
 
@@ -4363,6 +4446,22 @@ msgstr "Príomhphróiseas"
 msgid "Toggle panes"
 msgstr "Scoránaigh pánaí"
 
+#. This is the message
+#. - displayed to users when they select a black boxed source from the sources
+#. - list in the debugger.
+#: debuggerUI.blackBoxMessage.label
+msgid ""
+"This source is black boxed: its breakpoints are disabled, and stepping skips "
+"through it."
+msgstr ""
+
+#. This is
+#. - the text displayed in the button to stop black boxing the currently selected
+#. - source.
+#: debuggerUI.blackBoxMessage.unBlackBoxButton
+msgid "Stop black boxing this source"
+msgstr ""
+
 #. This is the tooltip for
 #. -  the button that opens up an options context menu for the debugger UI.
 #: debuggerUI.optsButton.tooltip
@@ -4423,10 +4522,10 @@ msgid "O"
 msgstr "B"
 
 #. This is the text that
-#. -  appears in the filter panel popup as a description.
-#: debuggerUI.searchPanelTitle
-msgid "Operators"
-msgstr "Oibreoirí"
+#. -  appears in the filter panel popup as a header for the operators part.
+#: debuggerUI.searchPanelOperators
+msgid "Operators:"
+msgstr "Oibreoirí:"
 
 #. This is the text that appears
 #. -  in the source editor's context menu for the scripts search operation.
@@ -4480,15 +4579,16 @@ msgctxt "debuggerUI.searchToken.key"
 msgid "F"
 msgstr "A"
 
-#. This is the text that appears
+#. #-#-#-#-#  chromebrowserdevtoolsdebugger.dtd.po (firefox)  #-#-#-#-#
+#. LOCALIZATION NOTE (debuggerUI.searchLine): This is the text that appears
 #. -  in the source editor's context menu for the line search operation.
-#: debuggerUI.searchLine
-msgid "Jump to line…"
-msgstr "Téigh go líne…"
-
-#: debuggerUI.searchLine.key gotoLineCmd.key
-msgid "J"
-msgstr "J"
+#. #-#-#-#-#  chromebrowserdevtoolssourceeditor.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE  (gotoLineCmd.promptTitle): This is the dialog title used
+#. # when the user wants to jump to a specific line number in the code. You can
+#. # access this feature by pressing Ctrl-J on Windows/Linux or Cmd-J on Mac.
+#: debuggerUI.searchGoToLine gotoLineCmd.promptTitle
+msgid "Go to line…"
+msgstr "Léim go líne…"
 
 #. #-#-#-#-#  chromebrowserdevtoolsdebugger.dtd.po (firefox)  #-#-#-#-#
 #. This is the text that appears
@@ -4586,26 +4686,41 @@ msgstr "S"
 #. LOCALIZATION NOTE (debuggerUI.stepping): These are the keycodes that
 #. -  control the stepping commands in the debugger (continue, step over,
 #. -  step in and step out).
-#: debuggerUI.stepping.resume
-msgid "VK_F6"
-msgstr "VK_F6"
-
-#. #-#-#-#-#  chromebrowserdevtoolsstyleeditor.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE  (open.commandkey): This the key to use in
-#. # conjunction with shift to open the style editor
-#: debuggerUI.stepping.stepOver open.commandkey
-msgid "VK_F7"
-msgstr "VK_F7"
-
-#: debuggerUI.stepping.stepIn
-msgctxt "debuggerUI.stepping.stepIn"
+#: debuggerUI.stepping.resume1
 msgid "VK_F8"
 msgstr "VK_F8"
 
-#: debuggerUI.stepping.stepOut
-msgctxt "debuggerUI.stepping.stepOut"
-msgid "VK_F8"
-msgstr "VK_F8"
+#: debuggerUI.stepping.resume2
+msgid "VK_SLASH"
+msgstr "VK_SLASH"
+
+#: debuggerUI.stepping.stepOver1
+msgid "VK_F10"
+msgstr "VK_F10"
+
+#: debuggerUI.stepping.stepOver2
+msgid "VK_QUOTE"
+msgstr "VK_QUOTE"
+
+#: debuggerUI.stepping.stepIn1
+msgctxt "debuggerUI.stepping.stepIn1"
+msgid "VK_F11"
+msgstr "VK_F11"
+
+#: debuggerUI.stepping.stepIn2
+msgctxt "debuggerUI.stepping.stepIn2"
+msgid "VK_SEMICOLON"
+msgstr "VK_SEMICOLON"
+
+#: debuggerUI.stepping.stepOut1
+msgctxt "debuggerUI.stepping.stepOut1"
+msgid "VK_F11"
+msgstr "VK_F11"
+
+#: debuggerUI.stepping.stepOut2
+msgctxt "debuggerUI.stepping.stepOut2"
+msgid "VK_SEMICOLON"
+msgstr "VK_SEMICOLON"
 
 #. # LOCALIZATION NOTE These strings are used inside the Debugger
 #. # which is available from the Web Developer sub-menu -> 'Debugger'.
@@ -4688,6 +4803,13 @@ msgstr "Níl aon athróga comhoiriúnacha ann"
 msgid "This page has no sources."
 msgstr "Níl aon fhoinsí ag an leathanach seo."
 
+#. # LOCALIZATION NOTE (blackBoxCheckboxTooltip) = The tooltip text to display when
+#. # the user hovers over the checkbox used to toggle black boxing its associated
+#. # source.
+#: blackBoxCheckboxTooltip
+msgid "Toggle black boxing"
+msgstr ""
+
 #. # LOCALIZATION NOTE (noMatchingSourcesText): The text to display in the
 #. # sources menu when there are no matching scripts after filtering.
 #: noMatchingSourcesText
@@ -4700,11 +4822,11 @@ msgstr "Níl aon fhoinsí comhoiriúnacha ann."
 msgid "No matches found"
 msgstr "Níor aimsíodh aon rud"
 
-#. # LOCALIZATION NOTE (emptyFilterText): This is the text that appears in the
+#. # LOCALIZATION NOTE (emptySearchText): This is the text that appears in the
 #. # filter text box when it is empty and the scripts container is selected.
-#: emptyFilterText
-msgid "Filter scripts (%S)"
-msgstr "Scag scripteanna (%S)"
+#: emptySearchText
+msgid "Search scripts (%S)"
+msgstr "Cuardaigh scripteanna (%S)"
 
 #. # LOCALIZATION NOTE (emptyChromeGlobalsFilterText): This is the text that
 #. # appears in the filter text box when it is empty and the chrome globals
@@ -4712,6 +4834,12 @@ msgstr "Scag scripteanna (%S)"
 #: emptyChromeGlobalsFilterText
 msgid "Filter chrome globals (%S)"
 msgstr "Scag athróga comhchoiteanna (%S)"
+
+#. # LOCALIZATION NOTE (searchPanelFilter): This is the text that appears in the
+#. # filter panel popup for the filter scripts operation.
+#: searchPanelFilter
+msgid "Filter scripts (%S)"
+msgstr "Scag scripteanna (%S)"
 
 #. # LOCALIZATION NOTE (searchPanelGlobal): This is the text that appears in the
 #. # filter panel popup for the global search operation.
@@ -4731,11 +4859,11 @@ msgstr "Aimsigh sainmhíniú ar fheidhm (%S)"
 msgid "Find in this file (%S)"
 msgstr "Aimsigh sa chomhad seo (%S)"
 
-#. # LOCALIZATION NOTE (searchPanelLine): This is the text that appears in the
+#. # LOCALIZATION NOTE (searchPanelGoToLine): This is the text that appears in the
 #. # filter panel popup for the line search operation.
-#: searchPanelLine
-msgid "Jump to line (%S)"
-msgstr "Léim go líne (%S)"
+#: searchPanelGoToLine
+msgid "Go to line (%S)"
+msgstr "Téigh go dtí líne (%S)"
 
 #. # LOCALIZATION NOTE (searchPanelVariable): This is the text that appears in the
 #. # filter panel popup for the variables search operation.
@@ -4923,10 +5051,9 @@ msgstr "i gcéin"
 #. # LOCALIZATION NOTE (helpDesc) A very short string used to describe the
 #. # function of the help command.
 #. #-#-#-#-#  chromebrowserdevtoolsgcli.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (helpDesc): A very short description of the 'help'
-#. # command. This string is designed to be shown in a menu alongside the command
-#. # name, which is why it should be as short as possible. See helpManual for a
-#. # fuller description of what it does.
+#. # LOCALIZATION NOTE (helpDesc, helpManual, helpSearchDesc, helpSearchManual3):
+#. # These strings describe the "help" command, used to display a description of
+#. # a command (e.g. "help pref"), and its parameter 'search'.
 #: helpDesc
 msgid "Get help on the available commands"
 msgstr "Cabhair leis na horduithe atá ar fáil"
@@ -5575,6 +5702,81 @@ msgstr ""
 msgid "List the source URLs loaded in the debugger"
 msgstr "Taispeáin na foinsí atá luchtaithe sa dífhabhtóir"
 
+#. # LOCALIZATION NOTE (dbgBlackBoxDesc) A very short string used to describe the
+#. # function of the 'dbg blackbox' command.
+#: dbgBlackBoxDesc
+msgid "Black box sources in the debugger"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgBlackBoxSourceDesc) A very short string used to describe the
+#. # 'source' parameter to the 'dbg blackbox' command.
+#: dbgBlackBoxSourceDesc
+msgid "A specific source to black box"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgBlackBoxGlobDesc) A very short string used to describe the
+#. # 'glob' parameter to the 'dbg blackbox' command.
+#: dbgBlackBoxGlobDesc
+msgid "Black box all sources that match this glob (for example: \"*.min.js\")"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgBlackBoxEmptyDesc) A very short string used to let the
+#. # user know that no sources were black boxed.
+#: dbgBlackBoxEmptyDesc
+msgid "(No sources black boxed)"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgBlackBoxNonEmptyDesc) A very short string used to let the
+#. # user know which sources were black boxed.
+#: dbgBlackBoxNonEmptyDesc
+msgid "The following sources were black boxed:"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgBlackBoxErrorDesc) A very short string used to let the
+#. # user know there was an error black boxing a source (whose url follows this
+#. # text).
+#: dbgBlackBoxErrorDesc
+msgid "Error black boxing:"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgUnBlackBoxDesc) A very short string used to describe the
+#. # function of the 'dbg unblackbox' command.
+#: dbgUnBlackBoxDesc
+msgid "Stop black boxing sources in the debugger"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgUnBlackBoxSourceDesc) A very short string used to describe the
+#. # 'source' parameter to the 'dbg unblackbox' command.
+#: dbgUnBlackBoxSourceDesc
+msgid "A specific source to stop black boxing"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgUnBlackBoxGlobDesc) A very short string used to describe the
+#. # 'glob' parameter to the 'dbg blackbox' command.
+#: dbgUnBlackBoxGlobDesc
+msgid ""
+"Stop black boxing all sources that match this glob (for example: \"*.min.js\")"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgUnBlackBoxEmptyDesc) A very short string used to let the
+#. # user know that we did not stop black boxing any sources.
+#: dbgUnBlackBoxEmptyDesc
+msgid "(Did not stop black boxing any sources)"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgUnBlackBoxNonEmptyDesc) A very short string used to let the
+#. # user know which sources we stopped black boxing.
+#: dbgUnBlackBoxNonEmptyDesc
+msgid "Stopped black boxing the following sources:"
+msgstr ""
+
+#. # LOCALIZATION NOTE (dbgUnBlackBoxErrorDesc) A very short string used to let the
+#. # user know there was an error black boxing a source (whose url follows this
+#. # text).
+#: dbgUnBlackBoxErrorDesc
+msgid "Error stopping black boxing:"
+msgstr ""
+
 #. # LOCALIZATION NOTE (consolecloseDesc) A very short description of the
 #. # 'console close' command. This string is designed to be shown in a menu
 #. # alongside the command name, which is why it should be as short as possible.
@@ -5707,6 +5909,33 @@ msgstr "Láimhseáil na horduithe"
 #: cmdRefreshDesc
 msgid "Re-read mozcmd directory"
 msgstr "Athléigh comhadlann mozcmd"
+
+#. # LOCALIZATION NOTE (cmdStatus) When the we load new commands from mozcmd
+#. # directory, we report on how many we loaded. %1$S is a count of the number
+#. # of loaded commands, and %2$S is the directory we loaded from.
+#: cmdStatus
+msgid "Read %1$S commands from '%2$S'"
+msgstr "%1$S ordú léite ó '%2$S'"
+
+#. # LOCALIZATION NOTE (cmdSetdirDesc)
+#: cmdSetdirDesc
+msgid "Setup a mozcmd directory"
+msgstr "Comhadlann mozcmd socraithe"
+
+#. # LOCALIZATION NOTE (cmdSetdirManual)
+#: cmdSetdirManual
+msgid ""
+"A 'mozcmd' directory is an easy way to create new custom commands for the "
+"Firefox command line. For more information see the <a href=\"https://"
+"developer.mozilla.org/en-US/docs/Tools/GCLI/Customization\">MDN "
+"documentation</a>."
+msgstr ""
+
+#. # LOCALIZATION NOTE (cmdSetdirDirectoryDesc) The description of the directory
+#. # parameter to the 'cmd setdir' command.
+#: cmdSetdirDirectoryDesc
+msgid "Directory containing .mozcmd files"
+msgstr "Comhadlann ina bhfuil comhaid .mozcmd"
 
 #. # LOCALIZATION NOTE (addonDesc) A very short description of the 'addon'
 #. # command. This string is designed to be shown in a menu alongside the command
@@ -6677,7 +6906,7 @@ msgstr "Scoránaigh aibhsiú péinteála"
 #. # function of the "appcache" command
 #: appCacheDesc
 msgid "Application cache utilities"
-msgstr ""
+msgstr "Uirlisí don taisce feidhmchláir"
 
 #. # LOCALIZATION NOTE (appCacheValidateDesc) A very short string used to describe
 #. # the function of the "appcache validate" command.
@@ -6691,7 +6920,7 @@ msgstr "Bailíochtaigh an lastliosta taisce"
 #: appCacheValidateManual
 msgid ""
 "Find issues relating to a cache manifest and the files that it references"
-msgstr ""
+msgstr "Aimsigh fadhbanna a bhaineann leis an lastliosta agus na comhaid a ndéanann sé tagairt dóibh"
 
 #. # LOCALIZATION NOTE (appCacheValidateUriDesc) A very short string used to describe
 #. # the function of the "uri" parameter of the appcache validate" command.
@@ -6875,21 +7104,9 @@ msgstr "Ainm próifíle."
 #. # LOCALIZATION NOTE (profilerAlreadyStarted) A message that is displayed whenever
 #. # an operation cannot be completed because the profile in question has already
 #. # been started.
-#: profilerAlreadyStarted
-msgid "This profile has already been started"
-msgstr "Bhí an phróifíl seo tosaithe cheana"
-
-#. # LOCALIZATION NOTE (profilerAlreadyFinished) A message that is displayed whenever
-#. # an operation cannot be completed because the profile in question has already
-#. # been finished. It also contains a hint to use the 'profile show' command to see
-#. # the profiling results.
-#: profilerAlreadyFinished
-msgid ""
-"This profile has already been completed. Use 'profile show' command to see "
-"its results"
-msgstr ""
-"Bhí an phróifíl seo críochnaithe cheana.  Úsáid an t-ordú 'profile show' chun "
-"na torthaí a fheiceáil"
+#: profilerAlreadyStarted2
+msgid "Profile has already been started"
+msgstr "Tosaíodh an phróifíl cheana"
 
 #. # LOCALIZATION NOTE (profilerNotFound) A message that is displayed whenever
 #. # an operation cannot be completed because the profile in question could not be
@@ -6902,27 +7119,16 @@ msgstr "Próifíl gan aimsiú"
 #. # an operation cannot be completed because the profile in question has not been
 #. # started yet. It also contains a hint to use the 'profile start' command to
 #. # start the profiler.
-#: profilerNotStarted2
+#: profilerNotStarted3
 msgid ""
-"This profile has not been started yet. Use 'profile start' to start profiling"
-msgstr ""
+"Profiler has not been started yet. Use 'profile start' to start profiling"
+msgstr "Níor tosaíodh an próifíleoir go dtí seo. Úsáid 'profile start' chun é a thosú"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  chromebrowserdevtoolsgclicommands.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (profilerStarting) A very short string that indicates that
-#. # we're starting the profiler.
-#. #-#-#-#-#  chromebrowserdownloadsdownloads.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (stateStarting):
-#. # Indicates that the download is starting.
-#: profilerStarting2 stateStarting downloadState.starting starting.label
-msgid "Starting…"
-msgstr "Á Tosú…"
-
-#. # LOCALIZATION NOTE (profilerStopping) A very short string that indicates that
-#. # we're stopping the profiler.
-#: profilerStopping2
-msgid "Stopping…"
-msgstr "Á Stopadh…"
+#. # LOCALIZATION NOTE (profilerStarted2) A very short string that indicates that
+#. # we have started recording.
+#: profilerStarted2
+msgid "Recording…"
+msgstr "Ag taifeadadh…"
 
 #. # LOCALIZATION NOTE (profilerNotReady) A message that is displayed whenever
 #. # an operation cannot be completed because the profiler has not been opened yet.
@@ -6947,20 +7153,15 @@ msgstr ""
 #. #-#-#-#-#  chromebrowserdevtoolsgclicommands.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (listenPortDesc) A very short string used to describe the
 #. # function of 'port' parameter to the 'listen' command.
-#. #-#-#-#-#  chromebrowserdevtoolsgcli.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (connectPortDesc): A short description of the 'port'
-#. # parameter to the 'connect' command. This string is designed to be shown in a
-#. # dialog with restricted space, which is why it should be as short as
-#. # possible.
 #: listenPortDesc connectPortDesc
 msgid "The TCP port to listen on"
-msgstr ""
+msgstr "An port TCP le héisteacht leis"
 
 #. # LOCALIZATION NOTE (listenDisabledOutput) Text of a message output during the
 #. # execution of the 'listen' command.
 #: listenDisabledOutput
 msgid "Listen is disabled by the devtools.debugger.remote-enabled preference"
-msgstr ""
+msgstr "Ní féidir éisteacht mar gheall ar an sainrogha devtools.debugger.remote-enabled"
 
 #. # LOCALIZATION NOTE (listenInitOutput) Text of a message output during the
 #. # execution of the 'listen' command. %1$S is a port number
@@ -6974,6 +7175,37 @@ msgstr "Ag éisteacht le port %1$S"
 msgid "DebuggerServer not initialized"
 msgstr "Freastalaí dífhabhtaithe gan túsú"
 
+#. # LOCALIZATION NOTE (mediaDesc, mediaEmulateDesc, mediaEmulateManual,
+#. # mediaEmulateType, mediaResetDesc, mediaResetManual) These strings describe
+#. # the 'media' commands and all available parameters.
+#: mediaDesc
+msgid "CSS media type emulation"
+msgstr "Aithris ar chineál meáin CSS"
+
+#: mediaEmulateDesc
+msgid "Emulate a specified CSS media type"
+msgstr "Déan aithris ar mheán CSS áirithe"
+
+#: mediaEmulateManual
+msgid ""
+"View the document as if rendered on a device supporting the given media type, "
+"with the relevant CSS rules applied."
+msgstr ""
+
+#: mediaEmulateType
+msgid "The media type to emulate"
+msgstr "An cineál meáin le haithris a dhéanamh air"
+
+#: mediaResetDesc
+msgctxt "mediaResetDesc"
+msgid "Stop emulating a CSS media type"
+msgstr "Stad aithris ar mheán CSS a thuilleadh"
+
+#: mediaResetManual
+msgctxt "mediaResetManual"
+msgid "Stop emulating a CSS media type"
+msgstr "Stad aithris ar mheán CSS a thuilleadh"
+
 #. # LOCALIZATION NOTE These strings are used inside the Web Console
 #. # command line which is available from the Web Developer sub-menu
 #. # -> 'Web Console'.
@@ -6982,121 +7214,146 @@ msgstr "Freastalaí dífhabhtaithe gan túsú"
 #. # You want to make that choice consistent across the developer tools.
 #. # A good criteria is the language in which you'd find the best
 #. # documentation on web development on the web.
-#. # LOCALIZATION NOTE (canonDescNone): Short string used to describe any command
-#. # or command parameter when no description has been provided.
+#. # For each command there are in general two strings. As an example consider
+#. # the 'pref' command.
+#. # commandDesc (e.g. prefDesc for the command 'pref'): this string contains a
+#. # very short description of the command. It's designed to be shown in a menu
+#. # alongside the command name, which is why it should be as short as possible.
+#. # commandManual (e.g. prefManual for the command 'pref'): this string will
+#. # contain a fuller description of the command. It's diplayed when the user
+#. # asks for help about a specific command (e.g. 'help pref').
+#. # LOCALIZATION NOTE: This message is used to describe any command or command
+#. # parameter when no description has been provided.
 #: canonDescNone
 msgid "(No description)"
 msgstr "(Gan cur síos)"
 
-#. # LOCALIZATION NOTE (canonProxyDesc): A very short description of a set of
-#. # remote commands. This string is designed to be shown in a menu alongside the
-#. # command name, which is why it should be as short as possible. See
-#. # canonProxyManual for a fuller description of what it does.
+#. # LOCALIZATION NOTE (canonProxyDesc, canonProxyManual): These commands are
+#. # used to execute commands on a remote system (using a proxy). Parameters: %S
+#. # is the name of the remote system.
 #: canonProxyDesc
 msgid "Execute a command on %S"
 msgstr "Rith ordú ar %S"
 
-#. # LOCALIZATION NOTE (canonProxyManual): A fuller description of a set of
-#. # remote commands. Displayed when the user asks for help on what it does.
 #: canonProxyManual
 msgid ""
 "A set of commands that are executed on a remote system. The remote system is "
 "reached via %S"
 msgstr ""
 
-#. # LOCALIZATION NOTE (canonProxyExists): An error message displayed when we try
-#. # to add new command (via a proxy) where one already exists in that name.
+#. # LOCALIZATION NOTE: This error message is displayed when we try to add a new
+#. # command (using a proxy) where one already exists with the same name.
 #: canonProxyExists
 msgid "There is already a command called '%S'"
 msgstr "Tá ordú darb ainm '%S' ann cheana"
 
-#. # LOCALIZATION NOTE (cliEvalJavascript): The special '{' command allows entry
-#. # of JavaScript like traditional developer tool command lines. This describes
-#. # the '{' command.
+#. # LOCALIZATION NOTE: This message describes the '{' command, which allows
+#. # entry of JavaScript like traditional developer tool command lines.
 #: cliEvalJavascript
 msgid "Enter JavaScript directly"
 msgstr "Cuir JavaScript isteach go díreach"
 
-#. # LOCALIZATION NOTE (cliUnusedArg): When the command line has more arguments
-#. # than the current command can understand this is the error message shown to
-#. # the user.
+#. # LOCALIZATION NOTE: This message is displayed when the command line has more
+#. # arguments than the current command can understand.
 #: cliUnusedArg
 msgid "Too many arguments"
 msgstr "An iomarca argóintí"
 
-#. # LOCALIZATION NOTE (cliOptions): The title of the dialog which displays the
-#. # options that are available to the current command.
+#. # LOCALIZATION NOTE: The title of the dialog which displays the options that
+#. # are available to the current command.
 #: cliOptions
 msgid "Available Options"
 msgstr "Roghanna"
 
-#. # LOCALIZATION NOTE (fieldSelectionSelect): When a command has a parameter
-#. # that has a number of pre-defined options the user interface presents these
-#. # in a drop-down menu, where the first 'option' is an indicator that a
-#. # selection should be made. This string describes that first option.
+#. # LOCALIZATION NOTE: Error message given when a file argument points to a file
+#. # that does not exist, but should (e.g. for use with File->Open) %1$S is a
+#. # filename
+#: fileErrNotExists
+msgid "'%1$S' doesn't exist"
+msgstr "Níl '%1$S' ann"
+
+#. # LOCALIZATION NOTE: Error message given when a file argument points to a file
+#. # that exists, but should not (e.g. for use with File->Save As) %1$S is a
+#. # filename
+#: fileErrExists
+msgid "'%1$S' already exists"
+msgstr "Tá '%1$S' ann cheana"
+
+#. # LOCALIZATION NOTE: Error message given when a file argument points to a
+#. # non-file, when a file is needed. %1$S is a filename
+#: fileErrIsNotFile
+msgid "'%1$S' is not a file"
+msgstr "Ní comhad é '%1$S'"
+
+#. # LOCALIZATION NOTE: Error message given when a file argument points to a
+#. # non-directory, when a directory is needed (e.g. for use with 'cd') %1$S is a
+#. # filename
+#: fileErrIsNotDirectory
+msgid "'%1$S' is not a directory"
+msgstr "Ní comhadlann é '%1$S'"
+
+#. # LOCALIZATION NOTE: Error message given when a file argument does not match
+#. # the specified regular expression %1$S is a filename %2$S is a regular
+#. # expression
+#: fileErrDoesntMatch
+msgid "'%1$S' does not match '%2$S'"
+msgstr "Níl '%1$S' comhoiriúnach le '%2$S'"
+
+#. # LOCALIZATION NOTE: When a command has a parameter that has a number of
+#. # pre-defined options the user interface presents these in a drop-down menu,
+#. # where the first 'option' is an indicator that a selection should be made.
+#. # This string describes that first option.
 #: fieldSelectionSelect
 msgid "Select a %S…"
 msgstr "Roghnaigh %S…"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowserdevtoolsgcli.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (fieldArrayAdd): When a command has a parameter that can
-#. # be repeated a number of times (e.g. like the 'cat a.txt b.txt' command) the
-#. # user interface presents buttons to add and remove arguments. This string is
-#. # used to add arguments.
+#. # LOCALIZATION NOTE (fieldArrayAdd, fieldArrayDel): When a command has a
+#. # parameter that can be repeated multiple times (e.g. like the 'cat a.txt
+#. # b.txt' command) the user interface presents buttons to add and remove
+#. # arguments. This string is used to add arguments.
 #: fieldArrayAdd dialogAcceptLabelAddItem addPref.title addEngineAddButtonLabel
 msgid "Add"
 msgstr "Cuir Leis"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (fieldArrayDel): When a command has a parameter that can
-#. # be repeated a number of times (e.g. like the 'cat a.txt b.txt' command) the
-#. # user interface presents buttons to add and remove arguments. This string is
-#. # used to remove arguments.
 #: fieldArrayDel action.delete aboutDownloads.remove
 msgid "Delete"
 msgstr "Scrios"
 
-#. # LOCALIZATION NOTE (fieldMenuMore): When the menu has displayed all the
-#. # matches that it should (i.e. about 10 items) then we display this to alert
-#. # the user that more matches are available.
+#. # LOCALIZATION NOTE: When the menu has displayed all the matches that it
+#. # should (i.e. about 10 items) then we display this to alert the user that
+#. # more matches are available.
 #: fieldMenuMore
 msgid "More matches, keep typing"
 msgstr ""
 
-#. # LOCALIZATION NOTE (jstypeParseScope): The command line provides completion
-#. # for JavaScript commands, however there are times when the scope of what
-#. # we're completing against can't be used. This error message is displayed when
-#. # this happens.
+#. # LOCALIZATION NOTE: The command line provides completion for JavaScript
+#. # commands, however there are times when the scope of what we're completing
+#. # against can't be used. This error message is displayed when this happens.
 #: jstypeParseScope
 msgid "Scope lost"
 msgstr "Scóip caillte"
 
-#. # LOCALIZATION NOTE (jstypeParseMissing): When the command line is doing
-#. # JavaScript completion, sometimes the property to be completed does not
-#. # exist. This error message is displayed when this happens.
+#. # LOCALIZATION NOTE (jstypeParseMissing, jstypeBeginSyntax,
+#. # jstypeBeginUnterm): These error messages are displayed when the command line
+#. # is doing JavaScript completion and encounters errors.
 #: jstypeParseMissing
 msgid "Can't find property '%S'"
 msgstr "Airí '%S' gan aimsiú"
 
-#. # LOCALIZATION NOTE (jstypeBeginSyntax): When the command line is doing
-#. # JavaScript completion using invalid JavaScript, this error message is
-#. # displayed.
 #: jstypeBeginSyntax
 msgid "Syntax error"
 msgstr "Earráid chomhréire"
 
-#. # LOCALIZATION NOTE (jstypeBeginUnterm): When the command line is doing
-#. # JavaScript completion using a string that is not properly terminated, this
-#. # error message is displayed.
 #: jstypeBeginUnterm
 msgid "Unterminated string literal"
 msgstr "Tairiseach teaghráin gan chríochnú"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowserdevtoolsgcli.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (jstypeParseError): If the system for providing JavaScript
-#. # completions encounters and error it displays this.
+#. # LOCALIZATION NOTE: This message is displayed if the system for providing
+#. # JavaScript completions encounters and error it displays this.
 #. #-#-#-#-#  pdfviewerviewer.properties.po (firefox)  #-#-#-#-#
 #. # Loading indicator messages
 #. #-#-#-#-#  security-ga-IE.po (firefox)  #-#-#-#-#
@@ -7105,84 +7362,66 @@ msgstr "Tairiseach teaghráin gan chríochnú"
 msgid "Error"
 msgstr "Earráid"
 
-#. # LOCALIZATION NOTE (typesNumberNan): When the command line is passed a
-#. # number, however the input string is not a valid number, this error message
-#. # is displayed.
+#. # LOCALIZATION NOTE (typesNumberNan, typesNumberNotInt2, typesDateNan): These
+#. # error messages are displayed when the command line is passed a variable
+#. # which has the wrong format and can't be converted. Parameters: %S is the
+#. # passed variable.
 #: typesNumberNan
 msgid "Can't convert \"%S\" to a number."
 msgstr "Ní féidir \"%S\" a thiontú go huimhir."
 
-#. # LOCALIZATION NOTE (typesNumberMax): When the command line is passed a
-#. # number, but the number is bigger than the largest allowed number, this error
-#. # message is displayed.
-#: typesNumberMax
-msgid "%1$S is greater than maximum allowed: %2$S."
-msgstr "Tá %1$S níos mó ná an luach is mó a nglactar leis: %2$S."
-
-#. # LOCALIZATION NOTE (typesNumberMin): When the command line is passed a
-#. # number, but the number is lower than the smallest allowed number, this error
-#. # message is displayed.
-#: typesNumberMin
-msgid "%1$S is smaller than minimum allowed: %2$S."
-msgstr "Tá %1$S níos lú ná an luach is lú a nglactar leis: %2$S."
-
-#. # LOCALIZATION NOTE (typesNumberNotInt2): When the command line is passed a
-#. # number, but the number has a decimal part and floats are not allowed.
 #: typesNumberNotInt2
 msgid "Can't convert \"%S\" to an integer."
 msgstr "Ní féidir slánuimhir a dhéanamh as \"%S\"."
 
-#. # LOCALIZATION NOTE (typesDateNan): When the command line is passed a date,
-#. # however the input string is not a valid date, this error message is
-#. # displayed.
 #: typesDateNan
 msgid "Can't convert \"%S\" to a date."
 msgstr "Ní féidir dáta a dhéanamh as \"%S\"."
 
-#. # LOCALIZATION NOTE (typesDateMax): When the command line is passed a date,
-#. # but the number is later than the latest allowed date, this error message is
-#. # displayed.
+#. # LOCALIZATION NOTE (typesNumberMax, typesNumberMin, typesDateMax,
+#. # typesDateMin): These error messages are displayed when the command line is
+#. # passed a variable which has a value out of range (number or date).
+#. # Parameters: %1$S is the passed variable, %2$S is the limit value.
+#: typesNumberMax
+msgid "%1$S is greater than maximum allowed: %2$S."
+msgstr "Tá %1$S níos mó ná an luach is mó a nglactar leis: %2$S."
+
+#: typesNumberMin
+msgid "%1$S is smaller than minimum allowed: %2$S."
+msgstr "Tá %1$S níos lú ná an luach is lú a nglactar leis: %2$S."
+
 #: typesDateMax
 msgid "%1$S is later than maximum allowed: %2$S."
 msgstr "Tá %1$S níos déanaí ná an luach is déanaí a nglactar leis: %2$S."
 
-#. # LOCALIZATION NOTE (typesDateMin): When the command line is passed a date,
-#. # but the date is earlier than the earliest allowed number, this error message
-#. # is displayed.
 #: typesDateMin
 msgid "%1$S is earlier than minimum allowed: %2$S."
 msgstr "Tá %1$S níos luaithe ná an luach is luaithe a nglactar leis: %2$S."
 
-#. # LOCALIZATION NOTE (typesSelectionNomatch): When the command line is passed
-#. # an option with a limited number of correct values, but the passed value is
-#. # not one of them, this error message is displayed.
+#. # LOCALIZATION NOTE: This error message is displayed when the command line is
+#. # passed an option with a limited number of correct values, but the passed
+#. # value is not one of them.
 #: typesSelectionNomatch
 msgid "Can't use '%S'."
 msgstr "Ní féidir '%S' a úsáid."
 
-#. # LOCALIZATION NOTE (nodeParseSyntax): When the command line is expecting a
-#. # CSS query string, however the passed string is not valid, this error message
-#. # is displayed.
+#. # LOCALIZATION NOTE: This error message is displayed when the command line is
+#. # expecting a CSS query string, however the passed string is not valid.
 #: nodeParseSyntax
 msgid "Syntax error in CSS query"
 msgstr "Earráid chomhréire in iarratas CSS"
 
-#. # LOCALIZATION NOTE (nodeParseMultiple): When the command line is expecting a
-#. # CSS string that matches a single node, but more than one node matches, this
-#. # error message is displayed.
+#. # LOCALIZATION NOTE (nodeParseMultiple, nodeParseNone): These error messages
+#. # are displayed when the command line is expecting a CSS string that matches a
+#. # single node, but more nodes (or none) match.
 #: nodeParseMultiple
 msgid "Too many matches (%S)"
 msgstr "An iomarca rudaí aimsithe (%S)"
 
-#. # LOCALIZATION NOTE (nodeParseNone): When the command line is expecting a CSS
-#. # string that matches a single node, but no nodes match, this error message is
-#. # displayed.
 #: nodeParseNone
 msgid "No matches"
 msgstr "Níor aimsíodh aon rud"
 
-#. # LOCALIZATION NOTE (helpManual): A fuller description of the 'help' command.
-#. # Displayed when the user asks for help on what it does.
 #: helpManual
 msgid ""
 "Provide help either on a specific command (if a search string is provided and "
@@ -7193,17 +7432,10 @@ msgstr ""
 "éigin aimsithe) nó leis na horduithe ar fáil (mura raibh téarma cuardaigh "
 "ann, nó mura raibh aon rud aimsithe)."
 
-#. # LOCALIZATION NOTE (helpSearchDesc): A very short description of the 'search'
-#. # parameter to the 'help' command. See helpSearchManual3 for a fuller
-#. # description of what it does. This string is designed to be shown in a dialog
-#. # with restricted space, which is why it should be as short as possible.
 #: helpSearchDesc
 msgid "Search string"
 msgstr "Teaghrán cuardaigh"
 
-#. # LOCALIZATION NOTE (helpSearchManual3): A fuller description of the 'search'
-#. # parameter to the 'help' command. Displayed when the user asks for help on
-#. # what it does.
 #: helpSearchManual3
 msgid ""
 "search string to use in narrowing down the displayed commands. Regular "
@@ -7212,242 +7444,194 @@ msgstr ""
 "teaghrán cuardaigh a úsáidtear chun na torthaí a chúngú. Ní thacaítear le "
 "sloinn ionadaíochta."
 
-#. # LOCALIZATION NOTE (helpManSynopsis): A heading shown at the top of a help
-#. # page for a command in the console It labels a summary of the parameters to
-#. # the command
+#. # LOCALIZATION NOTE (helpManSynopsis, helpManDescription, helpManParameters):
+#. # These strings are displayed in the help page for a command in the console.
 #: helpManSynopsis
 msgid "Synopsis"
 msgstr "Achoimre"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  chromebrowserdevtoolsgcli.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (helpManDescription): A heading shown in a help page for a
-#. # command in the console. This heading precedes the top level description.
 #: helpManDescription col.description.label
 #: MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE tooltip.description
 #: description_label devinfo_desc
 msgid "Description"
 msgstr "Cur Síos"
 
-#. # LOCALIZATION NOTE (helpManParameters): A heading shown above the parameters
-#. # in a help page for a command in the console.
 #: helpManParameters
 msgid "Parameters"
 msgstr "Paraiméadair"
 
-#. # LOCALIZATION NOTE (helpManNone): Some text shown under the parameters
-#. # heading in a help page for a command which has no parameters.
+#. # LOCALIZATION NOTE: This message is displayed in the help page if the command
+#. # has no parameters.
 #: helpManNone
 msgctxt "helpManNone"
 msgid "None"
 msgstr "Dada"
 
-#. # LOCALIZATION NOTE (helpListAll): The heading shown in response to the 'help'
+#. # LOCALIZATION NOTE: This message is displayed in response to the 'help'
 #. # command when used without a filter, just above the list of known commands.
 #: helpListAll
 msgid "Available Commands:"
 msgstr "Orduithe Le Fáil:"
 
-#. # LOCALIZATION NOTE (helpListPrefix): The heading shown in response to the
-#. # 'help <search>' command (i.e. with a search string), just above the list of
-#. # matching commands.
+#. # LOCALIZATION NOTE (helpListPrefix, helpListNone): These messages are
+#. # displayed in response to the 'help <search>' command (i.e. with a search
+#. # string), just above the list of matching commands. Parameters: %S is the
+#. # search string.
 #: helpListPrefix
-msgid "Commands starting with '%1$S':"
-msgstr "Orduithe a thosaíonn le '%1$S':"
+msgid "Commands starting with '%S':"
+msgstr "Orduithe a thosaíonn le '%S':"
 
-#. # LOCALIZATION NOTE (helpListNone): The heading shown in response to the 'help
-#. # <search>' command (i.e. with a search string), when there are no matching
-#. # commands.
 #: helpListNone
-msgid "No commands starting with '%1$S'"
-msgstr "Níl aon orduithe a thosaíonn le '%1$S'"
+msgid "No commands starting with '%S'"
+msgstr "Níl aon orduithe a thosaíonn le '%S'"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (helpManRequired): When the 'help x' command wants to show
-#. # the manual for the 'x' command it needs to be able to describe the
-#. # parameters as either required or optional, or if they have a default value.
-#. # See also 'helpManOptional' and 'helpManDefault'.
+#. # LOCALIZATION NOTE (helpManRequired, helpManOptional, helpManDefault): When
+#. # the 'help x' command wants to show the manual for the 'x' command, it needs
+#. # to be able to describe the parameters as either required or optional, or if
+#. # they have a default value.
 #: helpManRequired stateRequired
 msgid "required"
 msgstr "riachtanach"
 
-#. # LOCALIZATION NOTE (helpManOptional): See description of 'helpManRequired'
 #: helpManOptional
 msgid "optional"
 msgstr "roghnach"
 
-#. # LOCALIZATION NOTE (helpManDefault): See description of 'helpManRequired'. %1$
-#. # S is the default value
 #: helpManDefault
-msgid "optional, default=%1$S"
-msgstr "roghnach, réamhshocrú=%1$S"
+msgid "optional, default=%S"
+msgstr "roghnach, réamhshocrú=%S"
 
-#. # LOCALIZATION NOTE (subCommands): Text shown as part of the output of the
-#. # 'help' command when the command in question has sub-commands, before a list
-#. # of the matching sub-commands
+#. # LOCALIZATION NOTE: Text shown as part of the output of the 'help' command
+#. # when the command in question has sub-commands, before a list of the matching
+#. # sub-commands.
 #: subCommands
 msgid "Sub-Commands"
 msgstr "Fo-orduithe"
 
-#. # LOCALIZATION NOTE (subCommandsNone): Text shown as part of the output of the
-#. # 'help' command when the command in question should have sub-commands but in
-#. # fact has none
+#. # LOCALIZATION NOTE: Text shown as part of the output of the 'help' command
+#. # when the command in question should have sub-commands but in fact has none.
 #: subCommandsNone
 msgctxt "subCommandsNone"
 msgid "None"
 msgstr "Dada"
 
-#. # LOCALIZATION NOTE (contextDesc): A very short description of the 'context'
-#. # command. This string is designed to be shown in a menu alongside the command
-#. # name, which is why it should be as short as possible. See contextManual for
-#. # a fuller description of what it does.
+#. # LOCALIZATION NOTE (contextDesc, contextManual, contextPrefixDesc): These
+#. # strings are used to describe the 'context' command and its 'prefix'
+#. # parameter. See localization comment for 'connect' for an explanation about
+#. # 'prefix'.
 #: contextDesc
 msgid "Concentrate on a group of commands"
 msgstr "Dírigh ar ghrúpa orduithe"
 
-#. # LOCALIZATION NOTE (contextManual): A fuller description of the 'context'
-#. # command. Displayed when the user asks for help on what it does.
 #: contextManual
 msgid ""
 "Setup a default prefix to future commands. For example 'context git' would "
 "allow you to type 'commit' rather than 'git commit'."
 msgstr ""
 
-#. # LOCALIZATION NOTE (contextPrefixDesc): A short description of the 'prefix'
-#. # parameter to the 'context' command. This string is designed to be shown in a
-#. # dialog with restricted space, which is why it should be as short as
-#. # possible.
 #: contextPrefixDesc
 msgid "The command prefix"
 msgstr "Réimír an ordaithe"
 
-#. # LOCALIZATION NOTE (contextNotParentError): An error message displayed during
-#. # the processing of the 'context' command, when the found command is not a
-#. # parent command.
+#. # LOCALIZATION NOTE: This message message displayed during the processing of
+#. # the 'context' command, when the found command is not a parent command.
 #: contextNotParentError
-msgid "Can't use '%1$S' as a prefix because it is not a parent command."
-msgstr "Ní féidir '%1$S' a úsáid mar réimír toisc nach máthairordú é."
+msgid "Can't use '%S' as a prefix because it is not a parent command."
+msgstr ""
 
-#. # LOCALIZATION NOTE (contextReply): A message displayed during the processing
-#. # of the 'context' command, to indicate success.
+#. # LOCALIZATION NOTE (contextReply, contextEmptyReply): These messages are
+#. # displayed during the processing of the 'context' command, to indicate
+#. # success or that there is no command prefix.
 #: contextReply
-msgid "Using %1$S as a command prefix"
-msgstr "Ag úsáid %1$S mar réimír ordaithe"
+msgid "Using %S as a command prefix"
+msgstr "Ag úsáid %S mar réimír ar ordú"
 
-#. # LOCALIZATION NOTE (contextEmptyReply): A message displayed during the
-#. # processing of the 'context' command, to indicate that there is no command
-#. # prefix
 #: contextEmptyReply
 msgid "Command prefix is unset"
 msgstr "Réimír ordaithe gan socrú"
 
-#. # LOCALIZATION NOTE (connectDesc): A very short description of the 'connect'
-#. # command. This string is designed to be shown in a menu alongside the command
-#. # name, which is why it should be as short as possible. See connectManual for
-#. # a fuller description of what it does.
+#. # LOCALIZATION NOTE (connectDesc, connectManual, connectPrefixDesc,
+#. # connectPortDesc, connectHostDesc, connectDupReply): These strings describe
+#. # the 'connect' command and all its available parameters. A 'prefix' is an 
+#. # alias for the remote server (think of it as a "connection name"), and it
+#. # allows to identify a specific server when connected to multiple remote
+#. # servers.
 #: connectDesc
-msgctxt "connectDesc"
 msgid "Proxy commands to server"
-msgstr "Orduithe seachfhreastalaí don fhreastalaí"
+msgstr ""
 
-#. # LOCALIZATION NOTE (connectManual): A fuller description of the 'connect'
-#. # command. Displayed when the user asks for help on what it does.
 #: connectManual
-msgctxt "connectManual"
 msgid ""
 "Connect to the server, creating local versions of the commands on the server. "
 "Remote commands initially have a prefix to distinguish them from local "
 "commands (but see the context command to get past this)"
 msgstr ""
 
-#. # LOCALIZATION NOTE (connectPrefixDesc): A short description of the 'prefix'
-#. # parameter to the 'connect' command. This string is designed to be shown in a
-#. # dialog with restricted space, which is why it should be as short as
-#. # possible.
 #: connectPrefixDesc
 msgctxt "connectPrefixDesc"
 msgid "Parent prefix for imported commands"
 msgstr "Réimír le cur roimh orduithe iompórtáilte"
 
-#. # LOCALIZATION NOTE (connectHostDesc): A short description of the 'host'
-#. # parameter to the 'connect' command. This string is designed to be shown in a
-#. # dialog with restricted space, which is why it should be as short as
-#. # possible.
 #: connectHostDesc
 msgid "The hostname to bind to"
 msgstr "Óstainm le ceangal leis"
 
-#. # LOCALIZATION NOTE (connectDupReply): An error condition from executing the
-#. # 'connect' command
 #: connectDupReply
 msgid "Connection called %S already exists."
 msgstr "Tá ceangal darb ainm %S ann cheana."
 
-#. # LOCALIZATION NOTE (connectReply): The output of the 'connect' command,
-#. # telling the user what it has done.
+#. # LOCALIZATION NOTE: The output of the 'connect' command, telling the user
+#. # what it has done. Parameters: %S is the prefix command. See localization
+#. # comment for 'connect' for an explanation about 'prefix'.
 #: connectReply
 msgid "Added %S commands."
 msgstr "Cuireadh orduithe %S leis."
 
-#. # LOCALIZATION NOTE (disconnectDesc): A very short description of the
-#. # 'disconnect' command. This string is designed to be shown in a menu
-#. # alongside the command name, which is why it should be as short as possible.
-#. # See connectManual for a fuller description of what it does.
-#: disconnectDesc
-msgctxt "disconnectDesc"
-msgid "Proxy commands to server"
-msgstr "Orduithe seachfhreastalaí don fhreastalaí"
+#. # LOCALIZATION NOTE (disconnectDesc2, disconnectManual2, disconnectPrefixDesc,
+#. # disconnectForceDesc): These strings describe the 'disconnect' command and
+#. # all its available parameters. See localization comment for 'connect' for an
+#. # explanation about 'prefix'.
+#: disconnectDesc2
+msgid "Disconnect from server"
+msgstr "Dícheangail ón fhreastalaí"
 
-#. # LOCALIZATION NOTE (disconnectManual): A fuller description of the
-#. # 'disconnect' command. Displayed when the user asks for help on what it does.
-#: disconnectManual
-msgctxt "disconnectManual"
+#: disconnectManual2
 msgid ""
-"Connect to the server, creating local versions of the commands on the server. "
-"Remote commands initially have a prefix to distinguish them from local "
-"commands (but see the context command to get past this)"
+"Disconnect from a server currently connected for remote commands execution"
 msgstr ""
 
-#. # LOCALIZATION NOTE (disconnectPrefixDesc): A short description of the
-#. # 'prefix' parameter to the 'disconnect' command. This string is designed to
-#. # be shown in a dialog with restricted space, which is why it should be as
-#. # short as possible.
 #: disconnectPrefixDesc
 msgctxt "disconnectPrefixDesc"
 msgid "Parent prefix for imported commands"
 msgstr "Réimír le cur roimh orduithe iompórtáilte"
 
-#. # LOCALIZATION NOTE (disconnectForceDesc): A short description of the 'force'
-#. # parameter to the 'disconnect' command. This string is designed to be shown
-#. # in a dialog with restricted space, which is why it should be as short as
-#. # possible.
 #: disconnectForceDesc
 msgid "Ignore outstanding requests"
 msgstr "Déan neamhaird d'iarratais gan réiteach"
 
-#. # LOCALIZATION NOTE (disconnectReply): The output of the 'disconnect' command,
-#. # telling the user what it's done.
+#. # LOCALIZATION NOTE: This is the output of the 'disconnect' command,
+#. # explaining the user what has been done. Parameters: %S is the number of
+#. # commands removed.
 #: disconnectReply
 msgid "Removed %S commands."
 msgstr "Baineadh orduithe %S."
 
-#. # LOCALIZATION NOTE (disconnectOutstanding): An error message displayed when
-#. # the user attempts to disconnect before all requests have completed. %1$S is
-#. # a list of commands which are incomplete
+#. # LOCALIZATION NOTE: This error message is displayed when the user attempts to
+#. # disconnect before all requests have completed. Parameters: %S is a list of
+#. # incomplete requests.
 #: disconnectOutstanding
-msgid "Outstanding requests (%1$S)"
-msgstr "Iarratais gan réiteach (%1$S)"
+msgid "Outstanding requests (%S)"
+msgstr "Iarratais gan réiteach (%S)"
 
-#. # LOCALIZATION NOTE (prefDesc): A very short description of the 'pref'
-#. # command. This string is designed to be shown in a menu alongside the command
-#. # name, which is why it should be as short as possible. See prefManual for a
-#. # fuller description of what it does.
+#. # LOCALIZATION NOTE (prefDesc, prefManual, prefListDesc, prefListManual,
+#. # prefListSearchDesc, prefListSearchManual, prefShowDesc, prefShowManual,
+#. # prefShowSettingDesc, prefShowSettingManual): These strings describe the
+#. # 'pref' command and all its available sub-commands and parameters.
 #: prefDesc
 msgid "Commands to control settings"
 msgstr "Orduithe a rialaíonn socruithe"
 
-#. # LOCALIZATION NOTE (prefManual): A fuller description of the 'pref' command.
-#. # Displayed when the user asks for help on what it does.
 #: prefManual
 msgid ""
 "Commands to display and alter preferences both for GCLI and the surrounding "
@@ -7456,16 +7640,10 @@ msgstr ""
 "Orduithe a thaispeánann nó a athraíonn sainroghanna le haghaidh GCLI agus an "
 "timpeallacht máguaird"
 
-#. # LOCALIZATION NOTE (prefListDesc): A very short description of the 'pref
-#. # list' command. This string is designed to be shown in a menu alongside the
-#. # command name, which is why it should be as short as possible. See
-#. # prefListManual for a fuller description of what it does.
 #: prefListDesc
 msgid "Display available settings"
 msgstr "Taispeáin na socruithe atá ar fáil"
 
-#. # LOCALIZATION NOTE (prefListManual): A fuller description of the 'pref list'
-#. # command. Displayed when the user asks for help on what it does.
 #: prefListManual
 msgid ""
 "Display a list of preferences, optionally filtered when using the 'search' "
@@ -7474,98 +7652,60 @@ msgstr ""
 "Taispeáin liosta sainroghanna, scagtha leis an bparaiméadar 'cuardach' má "
 "mian leat"
 
-#. # LOCALIZATION NOTE (prefListSearchDesc): A short description of the 'search'
-#. # parameter to the 'pref list' command. See prefListSearchManual for a fuller
-#. # description of what it does. This string is designed to be shown in a dialog
-#. # with restricted space, which is why it should be as short as possible.
 #: prefListSearchDesc
 msgid "Filter the list of settings displayed"
 msgstr "Scag an liosta socruithe ar taispeáint"
 
-#. # LOCALIZATION NOTE (prefListSearchManual): A fuller description of the
-#. # 'search' parameter to the 'pref list' command. Displayed when the user asks
-#. # for help on what it does.
 #: prefListSearchManual
 msgid "Search for the given string in the list of available preferences"
 msgstr "Déan cuardach ar an teaghrán sa liosta sainroghanna"
 
-#. # LOCALIZATION NOTE (prefShowDesc): A very short description of the 'pref
-#. # show' command. This string is designed to be shown in a menu alongside the
-#. # command name, which is why it should be as short as possible. See
-#. # prefShowManual for a fuller description of what it does.
 #: prefShowDesc
 msgid "Display setting value"
 msgstr "Taispeáin luach an tsocraithe"
 
-#. # LOCALIZATION NOTE (prefShowManual): A fuller description of the 'pref show'
-#. # command. Displayed when the user asks for help on what it does.
 #: prefShowManual
 msgid "Display the value of a given preference"
 msgstr "Taispeáin luach an tsocraithe roghnaithe"
 
-#. # LOCALIZATION NOTE (prefShowSettingDesc): A short description of the
-#. # 'setting' parameter to the 'pref show' command. See prefShowSettingManual
-#. # for a fuller description of what it does. This string is designed to be
-#. # shown in a dialog with restricted space, which is why it should be as short
-#. # as possible.
 #: prefShowSettingDesc
 msgid "Setting to display"
 msgstr "An socrú le taispeáint"
 
-#. # LOCALIZATION NOTE (prefShowSettingManual): A fuller description of the
-#. # 'setting' parameter to the 'pref show' command. Displayed when the user asks
-#. # for help on what it does.
 #: prefShowSettingManual
 msgid "The name of the setting to display"
 msgstr "Ainm an tsocraithe le taispeáint"
 
-#. # LOCALIZATION NOTE (prefShowSettingValue): This is used to show the
-#. # preference name and the associated preference value. %1$S is replaced with
-#. # the preference name and %2$S is replaced with the preference value.
+#. # LOCALIZATION NOTE: This message is used to show the preference name and the
+#. # associated preference value. Parameters: %1$S is the preference name, %2$S
+#. # is the preference value.
 #: prefShowSettingValue
 msgid "%1$S: %2$S"
 msgstr "%1$S: %2$S"
 
-#. # LOCALIZATION NOTE (prefSetDesc): A very short description of the 'pref set'
-#. # command. This string is designed to be shown in a menu alongside the command
-#. # name, which is why it should be as short as possible. See prefSetManual for
-#. # a fuller description of what it does.
+#. # LOCALIZATION NOTE (prefSetDesc, prefSetManual, prefSetSettingDesc,
+#. # prefSetSettingManual, prefSetValueDesc, prefSetValueManual): These strings
+#. # describe the 'pref set' command and all its parameters.
 #: prefSetDesc
 msgid "Alter a setting"
 msgstr "Athraigh socrú"
 
-#. # LOCALIZATION NOTE (prefSetManual): A fuller description of the 'pref set'
-#. # command. Displayed when the user asks for help on what it does.
 #: prefSetManual
 msgid "Alter preferences defined by the environment"
 msgstr "Athraigh sainroghanna sainithe ag an timpeallacht"
 
-#. # LOCALIZATION NOTE (prefSetSettingDesc): A short description of the 'setting'
-#. # parameter to the 'pref set' command. See prefSetSettingManual for a fuller
-#. # description of what it does. This string is designed to be shown in a dialog
-#. # with restricted space, which is why it should be as short as possible.
 #: prefSetSettingDesc
 msgid "Setting to alter"
 msgstr "An socrú le hathrú"
 
-#. # LOCALIZATION NOTE (prefSetSettingManual): A fuller description of the
-#. # 'setting' parameter to the 'pref set' command. Displayed when the user asks
-#. # for help on what it does.
 #: prefSetSettingManual
 msgid "The name of the setting to alter."
 msgstr "Ainm an tsocraithe le hathrú."
 
-#. # LOCALIZATION NOTE (prefSetValueDesc): A short description of the 'value'
-#. # parameter to the 'pref set' command. See prefSetValueManual for a fuller
-#. # description of what it does. This string is designed to be shown in a dialog
-#. # with restricted space, which is why it should be as short as possible.
 #: prefSetValueDesc
 msgid "New value for setting"
 msgstr "An luach nua don socrú"
 
-#. # LOCALIZATION NOTE (prefSetValueManual): A fuller description of the 'value'
-#. # parameter to the 'pref set' command. Displayed when the user asks for help
-#. # on what it does.
 #: prefSetValueManual
 msgid "The new value for the specified setting"
 msgstr "An luach nua don socrú roghnaithe"
@@ -7573,9 +7713,9 @@ msgstr "An luach nua don socrú roghnaithe"
 # about:config warning page
 # LOCALIZATION NOTE: aboutWarningTitle.label should be attention grabbing and playful
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (prefSetCheckHeading): Title displayed to the user the
-#. # first time they try to alter a setting This is displayed directly above
-#. # prefSetCheckBody and prefSetCheckGo.
+#. # LOCALIZATION NOTE (prefSetCheckHeading, prefSetCheckBody, prefSetCheckGo):
+#. # These strings are displayed to the user the first time they try to alter a
+#. # setting.
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. about:config warning page
 #. LOCALIZATION NOTE: aboutWarningTitle.label should be attention grabbing and playful
@@ -7583,10 +7723,6 @@ msgstr "An luach nua don socrú roghnaithe"
 msgid "This might void your warranty!"
 msgstr "Fainic!  Seans go gcuirfidh tú do bharánta ar neamhní!"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (prefSetCheckBody): The main text of the warning displayed
-#. # to the user the first time they try to alter a setting. See also
-#. # prefSetCheckHeading and prefSetCheckGo.
 #: prefSetCheckBody aboutWarningText.label
 msgid ""
 "Changing these advanced settings can be harmful to the stability, security, "
@@ -7597,56 +7733,40 @@ msgstr ""
 "shlándáil agus fheidhmíocht an fheidhmchláir seo. Ná lean ar aghaidh muna "
 "bhfuil tú lánchinnte faoi cad tá á dhéanamh agat."
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (prefSetCheckGo): The text to enable preference editing.
-#. # Displayed in a button directly under prefSetCheckHeading and
-#. # prefSetCheckBody
 #: prefSetCheckGo aboutWarningButton.label
 msgid "I'll be careful, I promise!"
 msgstr "Geallaim go mbeidh mé cúramach!"
 
-#. # LOCALIZATION NOTE (prefResetDesc): A very short description of the 'pref
-#. # reset' command. This string is designed to be shown in a menu alongside the
-#. # command name, which is why it should be as short as possible. See
-#. # prefResetManual for a fuller description of what it does.
+#. # LOCALIZATION NOTE (prefResetDesc, prefResetManual, prefResetSettingDesc,
+#. # prefResetSettingManual): These strings describe the 'pref reset' command and
+#. # all its parameters.
 #: prefResetDesc
 msgid "Reset a setting"
 msgstr "Athshocraigh socrú"
 
-#. # LOCALIZATION NOTE (prefResetManual): A fuller description of the 'pref
-#. # reset' command. Displayed when the user asks for help on what it does.
 #: prefResetManual
 msgid "Reset the value of a setting to the system defaults"
 msgstr "Fill an luach ar réamhshocrú an chórais"
 
-#. # LOCALIZATION NOTE (prefResetSettingDesc): A short description of the
-#. # 'setting' parameter to the 'pref reset' command. See prefResetSettingManual
-#. # for a fuller description of what it does. This string is designed to be
-#. # shown in a dialog with restricted space, which is why it should be as short
-#. # as possible.
 #: prefResetSettingDesc
 msgid "Setting to reset"
 msgstr "An socrú le hathshocrú"
 
-#. # LOCALIZATION NOTE (prefResetSettingManual): A fuller description of the
-#. # 'setting' parameter to the 'pref reset' command. Displayed when the user
-#. # asks for help on what it does.
 #: prefResetSettingManual
 msgid "The name of the setting to reset to the system default value"
 msgstr ""
 
-#. # LOCALIZATION NOTE (prefOutputFilter): Displayed in the output from the 'pref
+#. # LOCALIZATION NOTE: This string is displayed in the output from the 'pref
 #. # list' command as a label to an input element that allows the user to filter
-#. # the results
+#. # the results.
 #: prefOutputFilter
 msgid "Filter"
 msgstr "Scag"
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  chromebrowserdevtoolsgcli.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (prefOutputName): Displayed in the output from the 'pref
-#. # list' command as a heading to a table. The column contains the names of the
-#. # available preferences
+#. # LOCALIZATION NOTE (prefOutputName, prefOutputValue): These strings are
+#. # displayed in the output from the 'pref list' command as table headings.
 #. #-#-#-#-#  chat-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  irc.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (tooltip.*):
@@ -7662,25 +7782,18 @@ msgstr "Scag"
 msgid "Name"
 msgstr "Ainm"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (prefOutputValue): Displayed in the output from the 'pref
-#. # list' command as a heading to a table. The column contains the values of the
-#. # available preferences
 #: prefOutputValue devmgr.details.title2 aboutSupport.modifiedPrefsValue
 #: valuesHeader valueColumn.label
 msgid "Value"
 msgstr "Luach"
 
-#. # LOCALIZATION NOTE (introDesc): A very short description of the 'intro'
-#. # command. This string is designed to be shown in a menu alongside the command
-#. # name, which is why it should be as short as possible. See introManual for a
-#. # fuller description of what it does.
+#. # LOCALIZATION NOTE (introDesc, introManual): These strings describe the
+#. # 'intro' command. The localization of 'Got it!' should be the same used in
+#. # introTextGo.
 #: introDesc
 msgid "Show the opening message"
 msgstr "Taispeáin an teachtaireacht fáilte"
 
-#. # LOCALIZATION NOTE (introManual): A fuller description of the 'intro'
-#. # command. Displayed when the user asks for help on what it does.
 #: introManual
 msgid ""
 "Redisplay the message that is shown to new users until they click the 'Got "
@@ -7689,10 +7802,10 @@ msgstr ""
 "Ataispeáin an teachtaireacht a thaispeántar d'úsáideoirí nua sula gcliceálann "
 "siad an cnaipe 'Tuigim!'"
 
-#. # LOCALIZATION NOTE (introTextOpening2): The 'intro text' opens when the user
+#. # LOCALIZATION NOTE (introTextOpening2, introTextCommands, introTextKeys2,
+#. # introTextF1Escape, introTextGo): These strings are displayed when the user
 #. # first opens the developer toolbar to explain the command line, and is shown
-#. # each time it is opened until the user clicks the 'Got it!' button. This
-#. # string is the opening paragraph of the intro text.
+#. # each time it is opened until the user clicks the 'Got it!' button.
 #: introTextOpening2
 msgid ""
 "This command line is designed for developers. It focuses on speed of input "
@@ -7702,56 +7815,44 @@ msgstr ""
 "tábhachtaí ná comhréir JavaScript, agus taispeáint shaibhir níos "
 "tábhachtaí ná aschur aonleithid."
 
-#. # LOCALIZATION NOTE (introTextCommands): For information about the 'intro
-#. # text' see introTextOpening2. The second paragraph is in 2 sections, the
-#. # first section points the user to the 'help' command.
 #: introTextCommands
 msgid "For a list of commands type"
 msgstr "Chun liosta na n-orduithe a fheiceáil, clóscríobh"
 
-#. # LOCALIZATION NOTE (introTextKeys2): For information about the 'intro text'
-#. # see introTextOpening2. The second section in the second paragraph points the
-#. # user to the F1/Escape keys which show and hide hints.
 #: introTextKeys2
 msgid ", or to show/hide command hints press"
 msgstr ", nó, chun leideanna a chur ar taispeáint/i bhfolach, brúigh"
 
-#. # LOCALIZATION NOTE (introTextF1Escape): For information about the 'intro
-#. # text' see introTextOpening2. This string is used with introTextKeys2, and
-#. # contains the keys that are pressed to open and close hints.
 #: introTextF1Escape
 msgid "F1/Escape"
 msgstr "F1/Esc"
 
-#. # LOCALIZATION NOTE (introTextGo): For information about the 'intro text' see
-#. # introTextOpening2. The text on the button that dismisses the intro text.
 #: introTextGo
 msgid "Got it!"
 msgstr "Tuigim!"
 
-#. # LOCALIZATION NOTE (hideIntroDesc): Short description of the 'hideIntro'
-#. # setting. Displayed when the user asks for help on the settings.
+#. # LOCALIZATION NOTE: This is a short description of the 'hideIntro' setting.
 #: hideIntroDesc
 msgid "Show the initial welcome message"
 msgstr "Taispeáin an teachtaireacht fáilte"
 
-#. # LOCALIZATION NOTE (eagerHelperDesc): Short description of the 'eagerHelper'
-#. # setting. Displayed when the user asks for help on the settings. eagerHelper
-#. # allows users to select between showing no tooltips, permanent tooltips, and
-#. # only important tooltips
+#. # LOCALIZATION NOTE: This is a description of the 'eagerHelper' setting. It's
+#. # displayed when the user asks for help on the settings. eagerHelper allows
+#. # users to select between showing no tooltips, permanent tooltips, and only
+#. # important tooltips.
 #: eagerHelperDesc
 msgid "How eager are the tooltips"
 msgstr "Cé chomh dúthrachtach is atá na leideanna"
 
-#. # LOCALIZATION NOTE (allowSetDesc): Short description of the 'allowSetDesc'
-#. # setting. Displayed when the user asks for help on the settings.
+#. # LOCALIZATION NOTE: This is a short description of the 'allowSetDesc'
+#. # setting.
 #: allowSetDesc
 msgid "Has the user enabled the 'pref set' command?"
 msgstr "An bhfuil an t-ordú 'pref set' cumasaithe ag an úsáideoir?"
 
-#. # LOCALIZATION NOTE (introBody): The text displayed at the top of the output
-#. # for the help command, just before the list of commands. This text is wrapped
-#. # inside a link to a localized MDN article
+#. # LOCALIZATION NOTE: This text is displayed at the top of the output for the
+#. # help command, just before the list of commands. This text is wrapped inside
+#. # a link to a localized MDN article.
 #: introBody
 msgid "For more information see MDN."
 msgstr "Tá tuilleadh eolais ar fáil ó MDN."
@@ -7828,13 +7929,7 @@ msgstr "Oibríochtaí nóid"
 msgid "Inspector"
 msgstr "Scrúdaitheoir"
 
-#: inspector.commandkey
-msgctxt "inspector.commandkey"
-msgid "I"
-msgstr "I"
-
-#: inspector.accesskey
-msgctxt "inspector.accesskey"
+#: inspector.accesskey accesskey-disclosure installButtonTextAccesskey
 msgid "I"
 msgstr "I"
 
@@ -8158,6 +8253,52 @@ msgstr "Feitheamh:"
 msgid "Receiving:"
 msgstr "Fáil:"
 
+#. This is the label displayed
+#. -  on the context menu that copies the selected request's url
+#: netmonitorUI.context.copyUrl
+msgid "Copy URL"
+msgstr "Cóipeáil an URL"
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserdevtoolsnetmonitor.dtd.po (firefox)  #-#-#-#-#
+#. LOCALIZATION NOTE (debuggerUI.summary.resend): This is the label displayed
+#. -  on the button in the headers tab that opens a form to resend the currently
+#. displayed request
+#: netmonitorUI.summary.resend resendButton.label
+msgid "Resend"
+msgstr "Athsheol"
+
+#. LOCALIZATION NOTE (debuggerUI.custom.newRequest): This is the label displayed
+#. -  as the title of the new custom request form
+#: netmonitorUI.custom.newRequest
+msgid "New Request"
+msgstr "Iarratas Nua"
+
+#. LOCALIZATION NOTE (debuggerUI.custom.query): This is the label displayed
+#. -  above the query string entry in the custom request form
+#: netmonitorUI.custom.query
+msgid "Query String:"
+msgstr "Teaghrán Cuardaigh:"
+
+#. LOCALIZATION NOTE (debuggerUI.custom.headers): This is the label displayed
+#. -  above the request headers entry in the custom request form
+#: netmonitorUI.custom.headers
+msgid "Request Headers:"
+msgstr "Ceanntásca an Iarratais:"
+
+#. LOCALIZATION NOTE (debuggerUI.custom.postData): This is the label displayed
+#. -  above the request body entry in the custom request form
+#: netmonitorUI.custom.postData
+msgid "Request Body:"
+msgstr "Corp an Iarratais:"
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. LOCALIZATION NOTE (debuggerUI.custom.send): This is the label displayed
+#. -  on the button which sends the custom request
+#: netmonitorUI.custom.send sync.button.send.label
+msgid "Send"
+msgstr "Seol"
+
 #. #-#-#-#-#  chromebrowserdevtoolsnetmonitor.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE These strings are used inside the Network Monitor
 #. # which is available from the Web Developer sub-menu -> 'Network Monitor'.
@@ -8370,6 +8511,33 @@ msgstr "%S ms"
 msgid "New"
 msgstr "Nua"
 
+#. #-#-#-#-#  chromebrowserdevtoolsprofiler.dtd.po (firefox)  #-#-#-#-#
+#. This is the label for the
+#. -  button that starts the profiler.
+#. #-#-#-#-#  chromebrowserdevtoolsprofiler.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (profiler.start)
+#. # This string is displayed on the button that starts the profiler.
+#: profilerStart.label profiler.start
+msgid "Start"
+msgstr "Tosaigh"
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromebrowserdevtoolsprofiler.dtd.po (firefox)  #-#-#-#-#
+#. This is the label for the
+#. -  button that stops the profiler.
+#. #-#-#-#-#  chromebrowserdevtoolsprofiler.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (profiler.stop)
+#. # This string is displayed on the button that stops the profiler.
+#: profilerStop.label profiler.stop stop
+msgid "Stop"
+msgstr "Stad"
+
+#. LOCALIZATION NOTE (profiler.importProfile): This string is displayed
+#. -  on a button that opens a dialog to import a saved profile data file.
+#: importProfile.label
+msgid "Import…"
+msgstr "Iompórtáil…"
+
 #. # LOCALIZATION NOTE These strings are used inside the Debugger
 #. # which is available from the Web Developer sub-menu -> 'Debugger'.
 #. # The correct localization of this file might be to keep it in
@@ -8390,10 +8558,15 @@ msgstr "Próifíleoir"
 msgid "VK_F5"
 msgstr "VK_F5"
 
+#. #-#-#-#-#  chromebrowserdevtoolsprofiler.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (profiler.tooltip2):
 #. # This string is displayed in the tooltip of the tab when the profiler is
 #. # displayed inside the developer tools window.
-#: profiler.tooltip2
+#. #-#-#-#-#  chromebrowserdevtoolstoolbox.dtd.po (firefox)  #-#-#-#-#
+#. This is the label for the
+#. -  heading of the group of JavaScript Profiler preferences in the options
+#. -  panel.
+#: profiler.tooltip2 options.profiler.label
 msgid "JavaScript Profiler"
 msgstr "Próifíleoir JavaScript"
 
@@ -8453,19 +8626,6 @@ msgstr "Cliceáil anseo %S chun próifíliú a thosú"
 msgid "Click here %S to stop profiling"
 msgstr "Cliceáil anseo %S chun próifíliú a stopadh"
 
-#. # LOCALIZATION NOTE (profiler.start)
-#. # This string is displayed on the button that starts the profiler.
-#: profiler.start
-msgid "Start"
-msgstr "Tosaigh"
-
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (profiler.stop)
-#. # This string is displayed on the button that stops the profiler.
-#: profiler.stop stop
-msgid "Stop"
-msgstr "Stad"
-
 #. # LOCALIZATION NOTE (profiler.loading)
 #. # This string is displayed above the progress bar when the profiler
 #. # is busy loading and parsing the report.
@@ -8506,6 +8666,38 @@ msgstr "Ag Rith"
 #: profiler.stateCompleted Completed
 msgid "Completed"
 msgstr "Críochnaithe"
+
+#. # LOCALIZATION NOTE (profiler.sidebarNotice)
+#. # This string is displayed in the profiler sidebar when there are no
+#. # existing profiles to show (usually happens when the user opens the
+#. # profiler for the first time).
+#: profiler.sidebarNotice
+msgid "There are no profiles yet."
+msgstr "Níl aon phróifílí ann fós."
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (profiler.save)
+#. # This string is displayed as a label for a button that opens a Save File
+#. # dialog where user can save generated profiler to a file.
+#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  androidchromebrowser.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (password.save): This should match
+#. # saveButton in passwordmgr.properties
+#: profiler.save password.save saveButton saveButtonLabel
+msgid "Save"
+msgstr "Sábháil"
+
+#. # LOCALIZATION NOTE (profiler.saveFileAs)
+#. # This string as a title for a Save File dialog.
+#: profiler.saveFileAs
+msgid "Save Profile As"
+msgstr "Sábháil an Phróifíl Mar"
+
+#. # LOCALIZATION NOTE (profiler.openFile)
+#. # This string as a title for a Open File dialog.
+#: profiler.openFile
+msgid "Import Profile"
+msgstr "Iompórtáil Próifíl"
 
 #. # LOCALIZATION NOTE These strings are used inside the Responsive Mode
 #. # which is available from the Web Developer sub-menu -> 'Responsive Mode'.
@@ -8813,6 +9005,20 @@ msgstr "https://developer.mozilla.org/en/Tools/Scratchpad"
 msgid "This file no longer exists."
 msgstr "Níl an comhad seo ann a thuilleadh."
 
+#. # LOCALIZATION NOTE (stringConversionFailed): Happens when a value cannot be
+#. # converted to a string for inspection.
+#: stringConversionFailed
+msgid "Cannot convert value to string."
+msgstr "Ní féidir teaghrán a dhéanamh as an luach."
+
+#. # LOCALIZATION NOTE (connectionTimeout): message displayed when the Remote Scratchpad
+#. # fails to connect to the server due to a timeout.
+#: connectionTimeout
+msgid ""
+"Connection timeout. Check the Error Console on both ends for potential error "
+"messages. Reopen the Scratchpad to try again."
+msgstr ""
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -8829,19 +9035,16 @@ msgstr "Níl an comhad seo ann a thuilleadh."
 msgid "&Jump to line…"
 msgstr "&Léim go líne…"
 
+#: gotoLineCmd.key
+msgid "J"
+msgstr "J"
+
 #. # LOCALIZATION NOTE  (gotoLineCmd.promptMessage): This is the message shown when
 #. # the user wants to search for a string in the code. You can
 #. # access this feature by pressing Ctrl-F on Windows/Linux or Cmd-F on Mac.
 #: findCmd.promptMessage
 msgid "Search for:"
 msgstr "Cuardaigh:"
-
-#. # LOCALIZATION NOTE  (gotoLineCmd.promptTitle): This is the dialog title used
-#. # when the user wants to jump to a specific line number in the code. You can
-#. # access this feature by pressing Ctrl-J on Windows/Linux or Cmd-J on Mac.
-#: gotoLineCmd.promptTitle
-msgid "Go to line…"
-msgstr "Léim go líne…"
 
 #. # LOCALIZATION NOTE  (gotoLineCmd.promptMessage): This is the message shown when
 #. # the user wants to jump to a specific line number in the code. You can
@@ -8999,6 +9202,12 @@ msgstr "Sábháil stílbhileog"
 msgctxt "saveStyleSheet.filter"
 msgid "CSS files"
 msgstr "Comhaid CSS"
+
+#. # LOCALIZATION NOTE  (open.commandkey): This the key to use in
+#. # conjunction with shift to open the style editor
+#: open.commandkey
+msgid "VK_F7"
+msgstr "VK_F7"
 
 #. # LOCALIZATION NOTE  (saveStyleSheet.commandkey): This the key to use in
 #. # conjunction with accel (Command on Mac or Ctrl on other platforms) to Save
@@ -9356,6 +9565,20 @@ msgid ""
 "you navigate to a new page"
 msgstr ""
 
+#. This is the
+#. -  label for the checkbox that toggles the display of the platform data in the,
+#. -  Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference
+#. -  in about:config, in the options panel.
+#: options.showPlatformData.label
+msgid "Show Gecko platform data"
+msgstr ""
+
+#: options.showPlatformData.tooltip
+msgid ""
+"If you enable this option the JavaScript Profiler reports will include \n"
+"Gecko platform symbols"
+msgstr ""
+
 #: toolboxDockButtons.bottom.tooltip
 msgid "Dock to bottom of browser window"
 msgstr "Cuir i nduga ag bun na fuinneoige"
@@ -9662,7 +9885,7 @@ msgstr "Bánaigh an Consól"
 
 #: clearConsoleCmd.accesskey mediaSaveAs2.accesskey
 #: view.sortBy.dateAdded.accesskey sizeMonospace.accesskey
-#: notifyBarNeverRememberButtonAccessKey
+#: resetProfile.resetButton.accesskey notifyBarNeverRememberButtonAccessKey
 msgid "e"
 msgstr "l"
 
@@ -10016,6 +10239,13 @@ msgid "Could not find any matching downloads."
 msgstr "Níor aimsíodh aon íosluchtuithe comhoiriúnacha."
 
 #. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (stateStarting):
+#. # Indicates that the download is starting.
+#: stateStarting downloadState.starting starting.label
+msgid "Starting…"
+msgstr "Á Tosú…"
+
+#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (stateScanning):
 #. # Indicates that an external program is scanning the download for viruses.
 #: stateScanning scanning.label
@@ -10107,11 +10337,8 @@ msgstr "Cosctha: d'fhéadfadh víreas nó bogearra spiaireachta a bheith ann"
 #. # Example: My Addon
 #. # %2$S is the add-on version.
 #. # Example: 2.1.5
-#. #-#-#-#-#  chromeplacesplaces.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (finduri-MonthYear):
-#. # %1$S is the month name, %2$S is the year (4 digits format).
 #: sizeWithUnits enclosureSizeText offlineAppUsage quota.sizeValueUnit.label
-#: name addonLabel finduri-MonthYear
+#: name addonLabel
 msgid "%1$S %2$S"
 msgstr "%1$S %2$S"
 
@@ -10903,11 +11130,7 @@ msgstr "Réamhamharc na Meán:"
 msgid "Feeds"
 msgstr "Fothaí"
 
-#: permTab
-msgid "Permissions"
-msgstr "Ceadanna"
-
-#: permUseDefault
+#: permUseDefault permissions.useDefault
 msgid "Use Default"
 msgstr "Úsáid Réamhshocrú"
 
@@ -10915,11 +11138,11 @@ msgstr "Úsáid Réamhshocrú"
 msgid "Always ask"
 msgstr "Fiafraigh díom i gcónaí"
 
-#: permAllowSession permission.allowForSession canSession
+#: permAllowSession permission.allowForSession canSession allowForSession
 msgid "Allow for Session"
 msgstr "Ceadaigh don Seisiún"
 
-#: permBlock permission.block cannot
+#: permBlock permission.block cannot block
 msgid "Block"
 msgstr "Coisc"
 
@@ -10927,47 +11150,12 @@ msgstr "Coisc"
 msgid "Permissions for:"
 msgstr "Ceadanna le haghaidh:"
 
-#: permImage
-msgid "Load Images"
-msgstr "Luchtaigh Íomhánna"
-
-#: permPopup popup.label
-msgid "Open Pop-up Windows"
-msgstr "Oscail Preabfhuinneoga"
-
-#: permCookie cookie.label
-msgid "Set Cookies"
-msgstr "Socraigh Fianáin"
-
-#: permNotifications
-msgid "Show Notifications"
-msgstr "Taispeáin Fógraí"
-
-#: permInstall
-msgid "Install Extensions or Themes"
-msgstr "Suiteáil Eisínteachtaí nó Téamaí"
-
 #. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (clickToPlayPlugins.playPlugins): Label that
 #. # will be used in site settings dialog.
 #: permPlugins clickToPlayPlugins.activatePlugins
 msgid "Activate Plugins"
 msgstr "Cuir Forlíontáin i nGníomh"
-
-#: permFullscreen
-msgid "Enter Fullscreen"
-msgstr "Lánscáileán"
-
-#: permPointerLock2
-msgid "Hide the Mouse Pointer"
-msgstr "Folaigh an Pointeoir Luiche"
-
-#. #-#-#-#-#  chromebrowserpreferencesaboutPermissions.dtd.po (firefox)  #-#-#-#-#
-#. This is describing indexedDB storage
-#. using the same language used for the permIndexedDB string in browser/pageInfo.dtd
-#: permIndexedDB indexedDB.label
-msgid "Maintain Offline Storage"
-msgstr "Coinnigh Stóras As Líne"
 
 #: permClearStorage
 msgid "Clear Storage"
@@ -11849,7 +12037,7 @@ msgstr "Ceadanna Réamhshocraithe ar Gach Suíomh"
 msgid "Forget About This Site"
 msgstr "Déan Dearmad ar an Suíomh Seo"
 
-#: permission.alwaysAsk
+#: permission.alwaysAsk alwaysAsk
 msgid "Always Ask"
 msgstr "Fiafraigh Díom i gCónaí"
 
@@ -11859,11 +12047,15 @@ msgstr "Glac le fianáin ón suíomh amháin"
 
 #: password.label
 msgid "Store Passwords"
-msgstr "Sábháil Focail Fhaire"
+msgstr "Focail Fhaire a Shábháil"
 
 #: password.manage
 msgid "Manage Passwords…"
 msgstr "Bainistigh Focail Fhaire…"
+
+#: cookie.label permission.cookie.label
+msgid "Set Cookies"
+msgstr "Fianáin a Shocrú"
 
 #: cookie.remove button.removecookies.label
 msgid "Remove Cookies"
@@ -11881,9 +12073,20 @@ msgstr "Bain Gach Fianán"
 msgid "Plugins"
 msgstr "Forlíontáin"
 
+#. #-#-#-#-#  chromebrowserpreferencesaboutPermissions.dtd.po (firefox)  #-#-#-#-#
+#. This is describing indexedDB storage
+#. using the same language used for the permIndexedDB string in browser/pageInfo.dtd
+#: indexedDB.label permission.indexedDB.label
+msgid "Maintain Offline Storage"
+msgstr "Sonraí a Stóráil As Líne"
+
+#: popup.label permission.popup.label
+msgid "Open Pop-up Windows"
+msgstr "Preabfhuinneoga a Oscailt"
+
 #: fullscreen.label
 msgid "Fullscreen"
-msgstr "Lánscáileán"
+msgstr "Mód Lánscáileáin a Thosú"
 
 #. # LOCALIZATION NOTE (visitCount): Semicolon-separated list of plural forms.
 #. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
@@ -12870,8 +13073,7 @@ msgid "width: 45.5em; min-height: 40.5em;"
 msgstr "width: 52em; min-height: 45em;"
 
 # OK as is --kps
-#: paneTabs.title collection.tabs.label tabs_normal
-#: sync.configure.engines.title.tabs
+#: paneTabs.title collection.tabs.label sync.configure.engines.title.tabs
 msgid "Tabs"
 msgstr "Cluaisíní"
 
@@ -12883,7 +13085,7 @@ msgstr "Feidhmchláir"
 msgid "Privacy"
 msgstr "Príobháideachas"
 
-#: paneAdvanced.title
+#: paneAdvanced.title pref_category_advanced
 msgid "Advanced"
 msgstr "Ardroghanna"
 
@@ -13623,8 +13825,8 @@ msgstr "http://add.my.yahoo.com/rss?url=%s"
 #. # means that it's not possible to update the name of existing handler, so 
 #. # don't make any spelling errors here.
 #: gecko.handlerService.defaultHandlersVersion
-msgid "3"
-msgstr "3"
+msgid "4"
+msgstr "4"
 
 # The default set of protocol handlers for webcal
 #. # The default set of protocol handlers for webcal:
@@ -13633,7 +13835,7 @@ msgid "30 Boxes"
 msgstr "30 Boxes"
 
 #: gecko.handlerService.schemes.webcal.0.uriTemplate
-msgid "http://30boxes.com/external/widget?refer=ff&url=%s"
+msgid "https://30boxes.com/external/widget?refer=ff&url=%s"
 msgstr "http://30boxes.com/external/widget?refer=ff&url=%s"
 
 # The default set of protocol handlers for mailto:
@@ -14077,6 +14279,30 @@ msgstr "Deasc Firefox.bmp"
 #: DesktopBackgroundDownloading
 msgid "Saving Picture…"
 msgstr "Pictiúr á Shábháil…"
+
+#: permission.desktop-notification.label
+msgid "Show Notifications"
+msgstr "Taispeáin Fógraí"
+
+#: permission.image.label
+msgid "Load Images"
+msgstr "Íomhánna a Luchtú"
+
+#: permission.install.label
+msgid "Install Add-ons"
+msgstr "Breiseáin a Shuiteáil"
+
+#: permission.geo.label
+msgid "Access Your Location"
+msgstr "Do Láthair a Fheiceáil"
+
+#: permission.fullscreen.label
+msgid "Enter Fullscreen"
+msgstr "Mód Lánscáileáin a Thosú"
+
+#: permission.pointerLock.label
+msgid "Hide the Mouse Pointer"
+msgstr "Folaigh an Pointeoir Luiche"
 
 #. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
 #. #-#-#-#-#  androidbaseandroid_strings.dtd.po (firefox)  #-#-#-#-#
@@ -14961,10 +15187,6 @@ msgstr ""
 "Leis an leathanach seo a thaispeáint, caithfidh %S faisnéis a sheoladh a "
 "athdhéanfaidh gníomh ar bith (cosúil le cuardach nó dearbhú ordaithe) a "
 "deineadh níos luaithe."
-
-#: resendButton.label
-msgid "Resend"
-msgstr "Athsheol"
 
 #: unknownSocketType
 msgid "Firefox doesn't know how to communicate with the server."
@@ -16781,9 +17003,8 @@ msgstr "Rothlaigh ar deiseal"
 msgid "Rotate Counterclockwise"
 msgstr "Rothlaigh ar tuathal"
 
-#. #-#-#-#-#  browser-ga-IE.po (firefox)  #-#-#-#-#
 #. # Find panel button title and messages
-#: find_label NormalFindLabel
+#: find_label
 msgid "Find:"
 msgstr "Aimsigh:"
 
@@ -16796,6 +17017,12 @@ msgctxt "find_previous_label"
 msgid "Previous"
 msgstr "Roimhe seo"
 
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#. LOCALIZATION NOTE : FILE This file contains the entities needed to
+#. LOCALIZATION NOTE : FILE use the Find Bar.
 #: find_next.title next.tooltip
 msgid "Find the next occurrence of the phrase"
 msgstr "Aimsigh an chéad sampla eile den nath sin"
@@ -18448,9 +18675,76 @@ msgstr "An chéad mhír"
 msgid "Last item"
 msgstr "An mhír dheiridh"
 
-#: listItemCount
-msgid "%S items"
-msgstr "%S mír"
+#. # LOCALIZATION NOTE (listItemsCount): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: listItemsCount
+msgid "1 item;#1 items"
+msgstr ""
+
+#. #-#-#-#-#  chromeaccessibilityAccessFu.properties.po (firefox)  #-#-#-#-#
+#. # Landmark announcements
+#: banner
+msgid "banner"
+msgstr "meirge"
+
+#: complementary
+msgid "complementary"
+msgstr "comhlántach"
+
+#: contentinfo
+msgid "content info"
+msgstr ""
+
+#: main
+msgid "main"
+msgstr "príomh"
+
+#: navigation
+msgid "navigation"
+msgstr "nascleanúint"
+
+#. #-#-#-#-#  chromeaccessibilitymacaccessible.properties.po (firefox)  #-#-#-#-#
+#. # The Role Description for WAI-ARIA Landmarks
+#: search
+msgid "search"
+msgstr "cuardach"
+
+#. # Description of a table or grid:
+#. # 1 is a dynamically retrieved localized role of either 'table' or 'grid'.
+#. # 2 is the number of columns within the table.
+#. # 3 is the number of rows within the table or grid.
+#: tableInfo
+msgid "%S with %S and %S"
+msgstr ""
+
+#. # LOCALIZATION NOTE (tableColumnInfo): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: tableColumnInfo
+msgid "1 column;#1 columns"
+msgstr ""
+
+#. # LOCALIZATION NOTE (tableRowInfo): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: tableRowInfo
+msgid "1 row;#1 rows"
+msgstr ""
+
+#. # table or grid cell information
+#: columnInfo
+msgid "Column %S"
+msgstr ""
+
+#: rowInfo
+msgid "Row %S"
+msgstr ""
+
+#: spansColumns
+msgid "spans %S columns"
+msgstr ""
+
+#: spansRows
+msgid "spans %S rows"
+msgstr ""
 
 #. # Invoked actions
 #: jumpAction
@@ -18582,6 +18876,10 @@ msgstr "Cnaipí"
 msgid "Combo boxes"
 msgstr "Boscaí teaglama"
 
+#: quicknav_Landmark
+msgid "Landmarks"
+msgstr ""
+
 #: quicknav_Entry
 msgid "Entries"
 msgstr "Iontrálacha"
@@ -18651,6 +18949,30 @@ msgstr "pic"
 msgid "txtarea"
 msgstr "lmstrtcs"
 
+#: tableAbbr
+msgid "tbl"
+msgstr ""
+
+#: tableInfoAbbr
+msgid "%S %S %S"
+msgstr ""
+
+#. # LOCALIZATION NOTE (tableColumnInfoAbbr): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: tableColumnInfoAbbr
+msgid "#1c;#1c"
+msgstr ""
+
+#. # LOCALIZATION NOTE (tableRowInfoAbbr): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+#: tableRowInfoAbbr
+msgid "#1r;#1r"
+msgstr ""
+
+#: cellInfoAbbr
+msgid "c%Sr%S"
+msgstr ""
+
 #: jump
 msgid "Jump"
 msgstr "Léim"
@@ -18706,27 +19028,6 @@ msgstr "Ábhar HTML"
 #: tab
 msgid "tab"
 msgstr "táb"
-
-#. # The Role Description for WAI-ARIA Landmarks
-#: search
-msgid "search"
-msgstr "cuardach"
-
-#: banner
-msgid "banner"
-msgstr "meirge"
-
-#: navigation
-msgid "navigation"
-msgstr "nascleanúint"
-
-#: complementary
-msgid "complementary"
-msgstr "comhlántach"
-
-#: main
-msgid "main"
-msgstr "príomh"
 
 #: fileNotFound
 msgid "The file %S cannot be found. Please check the location and try again."
@@ -19279,6 +19580,20 @@ msgid ""
 msgstr ""
 "Tá an leathanach seo ag fiafraí díot an bhfuil tú cinnte gur mian leat fágáil "
 "- d'fhéadfaí nár sábháladh na sonraí a chuir tú isteach."
+
+#: UseOfCaptureEventsWarning
+msgid ""
+"Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 "
+"addEventListener() method. For more help http://developer.mozilla.org/en/docs/"
+"DOM:element.addEventListener"
+msgstr ""
+
+#: UseOfReleaseEventsWarning
+msgid ""
+"Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 "
+"removeEventListener() method. For more help http://developer.mozilla.org/en/"
+"docs/DOM:element.removeEventListener"
+msgstr ""
 
 #: UseOfDOM3LoadMethodWarning
 msgid ""
@@ -20461,6 +20776,26 @@ msgstr ""
 msgid "Expected '{' to begin @supports rule but found '%1$S'."
 msgstr "Bhíothas ag súil le '{' ag tús rialach @supports, ach fuarthas '%1$S'."
 
+#: PEFilterEOF
+msgid "filter"
+msgstr ""
+
+#: PEExpectedNoneOrURL
+msgid "Expected 'none' or URL but found '%1$S'."
+msgstr ""
+
+#: PEExpectedNoneOrURLOrFilterFunction
+msgid "Expected 'none', URL, or filter function but found '%1$S'."
+msgstr ""
+
+#: PEExpectedNonnegativeNP
+msgid "Expected non-negative number or percentage."
+msgstr ""
+
+#: PEFilterFunctionArgumentsParsingError
+msgid "Error in parsing arguments for filter function."
+msgstr ""
+
 #: Submit
 msgid "Submit Query"
 msgstr "Seol Fiosrú"
@@ -20534,6 +20869,10 @@ msgstr "Níl aon chomhad roghnaithe."
 #: XFilesSelected
 msgid "%S files selected."
 msgstr "%S comhad roghnaithe."
+
+#: ColorPicker
+msgid "Choose a color"
+msgstr ""
 
 #. # Encoding warnings and errors
 #: EncNoDeclarationFrame
@@ -22869,6 +23208,11 @@ msgid ""
 "Report-Only header(s) will be ignored."
 msgstr ""
 
+#. # LOCALIZATION NOTE: Do not translate "Strict-Transport-Security" or "HSTS"
+#: InvalidSTSHeaders
+msgid "The site specified an invalid Strict-Transport-Security header."
+msgstr ""
+
 #: AttributeParseWarning
 msgid "Unexpected value %2$S parsing %1$S attribute."
 msgstr "Luach %2$S gan súil leis agus aitreabúid %1$S á parsáil."
@@ -23090,19 +23434,10 @@ msgstr "Bhí earráid ann agus stílbhileog á luchtú: %S"
 msgid "Error during XSLT transformation: %S"
 msgstr "Earráid i rith trasfhoirmithe XSLT: %S"
 
+# Android string - need to backslash escape any apostrophes in msgstr
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: splash_settingup
-msgid "Setting up your &brandShortName;"
-msgstr "&brandShortName; á shocrú"
-
-#: splash_bookmarks_history
-msgid ""
-"We are updating your bookmarks and history, which may take a minute or so."
-msgstr "Fan nóiméad - leabharmharcanna agus stair á nuashonrú."
-
-# Android string - need to backslash escape any apostrophes in msgstr
 #: no_space_to_start_error
 msgid "There is not enough space available for &brandShortName; to start."
 msgstr "Ní féidir le &brandShortName; tosú mar nach bhfuil go leor spáis ann."
@@ -23287,55 +23622,80 @@ msgctxt "settings_title"
 msgid "Settings"
 msgstr "Socruithe"
 
-#: pref_category_general
-msgctxt "pref_category_general"
-msgid "General"
-msgstr "Ginearálta"
+#: pref_category_customize
+msgctxt "pref_category_customize"
+msgid "Customize"
+msgstr ""
 
-#: pref_category_privacy
-msgctxt "pref_category_privacy"
-msgid "Privacy &amp; Security"
-msgstr "Príobháideacht agus Slándáil"
+#: pref_category_search2
+msgid "Search settings"
+msgstr ""
 
-#: pref_category_content
-msgctxt "pref_category_content"
-msgid "Content"
-msgstr "Ábhar"
+#: pref_category_display
+msgctxt "pref_category_display"
+msgid "Display"
+msgstr ""
 
-#. Localization note (datareporting_title) : This string matches
-#. (dataChoicesTab.label) in chrome/browser/preferences/advanced.dtd except in
-#. capitalization.
+#: pref_category_privacy_short
+msgctxt "pref_category_privacy_short"
+msgid "Privacy"
+msgstr ""
+
+#: pref_category_vendor
+msgctxt "pref_category_vendor"
+msgid "&vendorShortName;"
+msgstr ""
+
 #: pref_category_datareporting
 msgid "Data choices"
 msgstr "Roghanna sonraí"
 
-#. #-#-#-#-#  androidchromeabout.dtd.po (firefox)  #-#-#-#-#
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: pref_about_firefox aboutPage.title
-msgid "About &brandShortName;"
-msgstr "Maidir le &brandShortName;"
+#: pref_category_installed_search_engines
+msgid "Installed search engines"
+msgstr ""
+
+#: pref_category_devtools
+msgctxt "pref_category_devtools"
+msgid "Developer tools"
+msgstr ""
+
+#: pref_developer_remotedebugging
+msgid "Remote debugging"
+msgstr ""
 
 #: pref_remember_signons
 msgid "Remember passwords"
 msgstr "Meabhraigh focail fhaire"
 
 #. Localization note: These are shown in the left sidebar on tablets
-#: pref_header_general
-msgctxt "pref_header_general"
-msgid "General"
-msgstr "Ginearálta"
+#: pref_header_customize
+msgctxt "pref_header_customize"
+msgid "Customize"
+msgstr ""
 
-#: pref_header_privacy
-msgctxt "pref_header_privacy"
-msgid "Privacy &amp; Security"
-msgstr "Príobháideacht agus Slándáil"
+#: pref_header_display
+msgctxt "pref_header_display"
+msgid "Display"
+msgstr ""
 
-#: pref_header_content
-msgctxt "pref_header_content"
-msgid "Content"
-msgstr "Ábhar"
+#: pref_header_privacy_short
+msgctxt "pref_header_privacy_short"
+msgid "Privacy"
+msgstr ""
+
+#: pref_header_help helpButton.label button-help
+msgid "Help"
+msgstr "Cabhair"
+
+#: pref_header_vendor
+msgctxt "pref_header_vendor"
+msgid "&vendorShortName;"
+msgstr ""
+
+#: pref_header_devtools
+msgctxt "pref_header_devtools"
+msgid "Developer tools"
+msgstr ""
 
 #: pref_cookies_accept_all
 msgctxt "pref_cookies_accept_all"
@@ -23385,9 +23745,26 @@ msgstr "Díchumasaithe"
 msgid "Text size"
 msgstr "Méid téacs"
 
-#: pref_reflow_on_zoom3
-msgid "Double tap to reflow text"
-msgstr "Tapáil faoi dhó chun téacs a ataispeáint"
+#: pref_reflow_on_zoom4
+msgid "Text reflow"
+msgstr ""
+
+#: pref_restore
+msgctxt "pref_restore"
+msgid "Tabs"
+msgstr ""
+
+#: pref_restore_always
+msgid "Always restore"
+msgstr ""
+
+#: pref_restore_crash
+msgid "Restore after a crash"
+msgstr ""
+
+#: pref_restore_never
+msgid "Never restore"
+msgstr ""
 
 #: pref_font_size_tiny
 msgid "Tiny"
@@ -23475,6 +23852,22 @@ msgstr "Socruithe an tsuímh"
 #: pref_private_data_downloadFiles
 msgid "Downloaded files"
 msgstr "Comhaid íosluchtaithe"
+
+#. #-#-#-#-#  androidchromeabout.dtd.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: pref_about_firefox aboutPage.title
+msgid "About &brandShortName;"
+msgstr "Maidir le &brandShortName;"
+
+#: pref_vendor_faqs
+msgid "FAQs"
+msgstr ""
+
+#: pref_vendor_feedback feedback.feedback.title
+msgid "Give feedback"
+msgstr "Seol aiseolas"
 
 #: datareporting_notification_title
 msgid "&brandShortName; stats &amp; data"
@@ -23602,6 +23995,11 @@ msgstr "Cluaisín Nua Príobháideach"
 msgid "Close All Tabs"
 msgstr "Dún Gach Cluaisín"
 
+#: tabs_normal
+msgctxt "tabs_normal"
+msgid "Tabs"
+msgstr ""
+
 #: tabs_private
 msgid "Private"
 msgstr "Príobháideach"
@@ -23610,17 +24008,13 @@ msgstr "Príobháideach"
 msgid "Synced"
 msgstr "Sioncrónaithe"
 
-#: wallpaper_success
-msgid "Wallpaper updated"
-msgstr "Cúlbhrat nuashonraithe"
+#: set_image_fail
+msgid "Unable to set image"
+msgstr ""
 
-#: wallpaper_progress
-msgid "Setting wallpaper"
-msgstr "Cúlbhrat á shocrú"
-
-#: wallpaper_fail
-msgid "Unable to set wallpaper"
-msgstr "Ní féidir cúlbhrat a shocrú"
+#: set_image_chooser_title contextmenu.setImageAs
+msgid "Set Image As"
+msgstr ""
 
 #. Localization note (find_text, find_prev, find_next, find_close) : These strings are used
 #. as alternate text for accessibility. They are not visible in the UI.
@@ -23750,9 +24144,11 @@ msgstr "Níor cuireadh an leathanach le do liosta léitheoireachta"
 msgid "Page already in your Reading List"
 msgstr "Tá an leathanach seo i do liosta léitheoireachta cheana"
 
-#: reader
-msgid "Reader"
-msgstr "Léitheoir"
+#. Localization note : These strings are used as alternate text for accessibility.
+#. They are not visible in the UI.
+#: page_action_dropmarker_description
+msgid "Additional Actions"
+msgstr ""
 
 #: masterpassword_create_title
 msgid "Create Master Password"
@@ -23787,8 +24183,8 @@ msgstr "Dearbhaigh an focal faire"
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. WARNING!!! This file is obsoleted by the dialog.xml widget
 #. OK Cancel Buttons
-#: button_ok sync.button.ok.label nssdialogs.ok.label ok.label OK
-#: okButton.label button-accept okButton Ok
+#: button_ok sync.button.ok.label remoteIncomingPromptAccept
+#: nssdialogs.ok.label ok.label OK okButton.label button-accept okButton Ok
 msgid "OK"
 msgstr "OK"
 
@@ -23961,6 +24357,10 @@ msgstr "Feidhmchlár"
 msgid "Bookmarks and history"
 msgstr "Leabharmharcanna agus stair"
 
+#: devtools_remote_debugging_forward
+msgid "Don\\'t forget to set up port forwarding!"
+msgstr ""
+
 #. Updater notifications
 #: updater_start_title2
 msgctxt "updater_start_title2"
@@ -23995,6 +24395,45 @@ msgstr "Nuashonrú ar fáil: &brandShortName;"
 #: updater_apply_select2
 msgid "Touch to update"
 msgstr "Tapáil chun nuashonrú"
+
+#. Guest mode
+#: new_guest_session
+msgid "New Guest Session"
+msgstr ""
+
+#: exit_guest_session
+msgid "Exit Guest Session"
+msgstr ""
+
+#: guest_session_dialog_continue continue Continue
+msgid "Continue"
+msgstr "Ar Aghaidh"
+
+#: guest_session_dialog_cancel
+msgctxt "guest_session_dialog_cancel"
+msgid "Cancel"
+msgstr ""
+
+#: new_guest_session_title
+msgctxt "new_guest_session_title"
+msgid "&brandShortName; will now restart"
+msgstr ""
+
+#: new_guest_session_text
+msgid ""
+"The person using it will not be able to see any of your personal browsing "
+"data (like saved passwords, history or bookmarks).\\n\\nWhen your guest is "
+"done, their browsing data will be deleted and your session will be restored."
+msgstr ""
+
+#: exit_guest_session_title
+msgctxt "exit_guest_session_title"
+msgid "&brandShortName; will now restart"
+msgstr ""
+
+#: exit_guest_session_text
+msgid "The browsing data from this session will be deleted."
+msgstr ""
 
 #. Main titles.
 #: sync.app.name.label
@@ -24220,10 +24659,6 @@ msgstr "Eochair Athshlánaithe mhícheart. Triail arís é, le do thoil."
 msgid "Send Tab To Devices"
 msgstr "Seol an Cluaisín Chuig Ghléasanna"
 
-#: sync.button.send.label
-msgid "Send"
-msgstr "Seol"
-
 #: sync.button.set.up.sync.label
 msgid "Set up &syncBrand.shortName.label;"
 msgstr "Socraigh &syncBrand.shortName.label;"
@@ -24279,6 +24714,10 @@ msgstr "Logchaighdeán"
 #: addonStatus.uninstalled
 msgid "%S will be uninstalled after restart."
 msgstr "Beidh %S díshuiteáilte tar éis duit atosú."
+
+#: addons.browseAll
+msgid "Browse all Firefox Add-ons"
+msgstr ""
 
 #: aboutApps.header
 msgid "Your Apps"
@@ -24418,17 +24857,25 @@ msgstr "Taitníonn sé liom"
 msgid "I ran into some problems"
 msgstr "Bhí fadhbanna agam"
 
-#. Include a trailing space as needed.
+#: intro.maybeLater
+msgctxt "intro.maybeLater"
+msgid "Maybe later"
+msgstr ""
+
+#. LOCALIZATION NOTE (support.pre): Include a trailing space as needed.
 #. LOCALIZATION NOTE (support.link): Avoid leading/trailing spaces, this text is a link.
 #. LOCALIZATION NOTE (support.post): Include a starting space as needed.
-#: support.pre
-msgid "If you need help or have a problem with &brandShortName;, please visit "
+#: support.pre2
+msgid "You can also visit "
 msgstr ""
-"Má tá cabhair uait, nó má tá fadhb agat le &brandShortName;, déan cuairt ar "
 
 #: support.link
 msgid "&brandShortName; Support"
 msgstr "Tacaíocht &brandShortName;"
+
+#: support.post2
+msgid " for more information."
+msgstr ""
 
 #: happy.header
 msgid "That's great to hear!"
@@ -24454,9 +24901,10 @@ msgstr ""
 msgid "Yes, go to Google Play"
 msgstr "Tá, déan cuairt ar Google Play"
 
-#: happy.maybeLater
-msgid "Maybe Later"
-msgstr "B'fhéidir ar ball"
+#: happy.maybeLater2
+msgctxt "happy.maybeLater2"
+msgid "Maybe later"
+msgstr ""
 
 #: happy.noThanks
 msgid "No thanks"
@@ -24778,6 +25226,28 @@ msgctxt "desktopNotification.dontAskAgain"
 msgid "Don't ask again for this site"
 msgstr "Ná fiafraigh díom arís le haghaidh an tsuímh seo"
 
+#. # Contacts API
+#: contacts.allow
+msgctxt "contacts.allow"
+msgid "Allow"
+msgstr ""
+
+#: contacts.dontAllow
+msgctxt "contacts.dontAllow"
+msgid "Don't allow"
+msgstr ""
+
+#: contacts.ask
+msgid "Allow %S to access your contacts?"
+msgstr ""
+
+#. # LOCALIZATION NOTE (contacts.dontAskAgain): This label appears next to a
+#. # checkbox to indicate whether or not the user wants to make a permanent decision.
+#: contacts.dontAskAgain
+msgctxt "contacts.dontAskAgain"
+msgid "Don't ask again for this site"
+msgstr ""
+
 #. # New Tab Popup
 #. # LOCALIZATION NOTE (newtabpopup, newprivatetabpopup): Semicolon-separated list of plural forms.
 #. # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
@@ -24830,14 +25300,6 @@ msgstr ""
 #: password.savePassword
 msgid "Save Password"
 msgstr "Sábháil an Focal Faire"
-
-#. #-#-#-#-#  mobile-ga-IE.po (firefox)  #-#-#-#-#
-#. #-#-#-#-#  androidchromebrowser.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (password.save): This should match
-#. # saveButton in passwordmgr.properties
-#: password.save saveButton saveButtonLabel
-msgid "Save"
-msgstr "Sábháil"
 
 #. #-#-#-#-#  androidchromebrowser.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (password.dontSave): This should match
@@ -24923,15 +25385,18 @@ msgstr "Cóipeáil Suíomh na hÍomhá"
 msgid "Share Image"
 msgstr "Comhroinn an Íomhá"
 
+#. # LOCALIZATION NOTE (contextmenu.search):
+#. # The label of the contextmenu item which allows you to search with your default search engine for
+#. # the text you have selected. %S is the name of the search engine. For example, "Google".
+#: contextmenu.search
+msgid "%S Search"
+msgstr ""
+
 #. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
 #. # context menu strings
 #: contextmenu.saveImage SaveImageTitle
 msgid "Save Image"
 msgstr "Sábháil an Íomhá"
-
-#: contextmenu.setWallpaper
-msgid "Set as Wallpaper"
-msgstr "Socraigh mar Chúlbhrat"
 
 #: contextmenu.addSearchEngine addEngineConfirmTitle
 msgid "Add Search Engine"
@@ -24952,6 +25417,14 @@ msgstr "Comhroinn an Físeán"
 #: contextmenu.showControls2
 msgid "Show Controls"
 msgstr "Taispeáin Rialtáin"
+
+#: contextmenu.mute muteButton.muteLabel
+msgid "Mute"
+msgstr "Gan fuaim"
+
+#: contextmenu.unmute muteButton.unmuteLabel
+msgid "Unmute"
+msgstr "Le fuaim"
 
 #: contextmenu.saveVideo SaveVideoTitle
 msgid "Save Video"
@@ -25003,6 +25476,11 @@ msgstr "Roghnaigh seachtain"
 #: inputWidgetHelper.month
 msgid "Pick a month"
 msgstr "Roghnaigh mí"
+
+#: inputWidgetHelper.cancel
+msgctxt "inputWidgetHelper.cancel"
+msgid "Cancel"
+msgstr ""
 
 #: inputWidgetHelper.set
 msgid "Set"
@@ -25102,6 +25580,11 @@ msgstr ""
 "Bheadh an ríomhaire seo in ann dul i gceannas go hiomlán ar do bhrabhsálaí. "
 "An bhfuil tú cinnte gur mhaith leat é seo a cheadú?"
 
+#: remoteIncomingPromptCancel
+msgctxt "remoteIncomingPromptCancel"
+msgid "Cancel"
+msgstr ""
+
 #: helperapps.ignore
 msgid "Ignore"
 msgstr "Ná Bac Leis"
@@ -25159,6 +25642,15 @@ msgstr "Tá an micreafón ar siúl"
 #: getUserMedia.sharingCameraAndMicrophone.message2
 msgid "Camera and microphone are on"
 msgstr "Tá an ceamara agus an micreafón ar siúl"
+
+#. #Reader mode
+#: readerMode.enter
+msgid "Enter Reader Mode"
+msgstr ""
+
+#: readerMode.exit
+msgid "Exit Reader Mode"
+msgstr ""
 
 # Not "Socruithe Cuardaigh"
 #. This Source Code Form is subject to the terms of the Mozilla Public
@@ -25227,10 +25719,6 @@ msgstr "Uirlisí Aiseolais"
 msgid "Communicate to Us!"
 msgstr "Déan Teagmháil Linn!"
 
-#: feedback.feedback.title
-msgid "Give feedback"
-msgstr "Seol aiseolas"
-
 #: feedback.feedback.good
 msgid "Good"
 msgstr "Go Maith"
@@ -25277,10 +25765,6 @@ msgstr "Roghnaigh teanga eile"
 #: chooseLanguage
 msgid "Choose a Language"
 msgstr "Roghnaigh Teanga"
-
-#: continue Continue
-msgid "Continue"
-msgstr "Ar Aghaidh"
 
 #: installing
 msgid "Installing %S"
@@ -25585,19 +26069,14 @@ msgstr "Socrú de láimh"
 msgid "No tabs from your other computers."
 msgstr "Níl aon chluaisíní ar ríomhairí eile."
 
-# increment this number when anything gets changed in the list below.  This will
-# cause Firefox to re-read these prefs and inject any new handlers into the
-# profile database.  Note that "new" is defined as "has a different URL"; this
-# means that it's not possible to update the name of existing handler, so
-# don't make any spelling errors here.
 #. # increment this number when anything gets changed in the list below.  This will
 #. # cause Firefox to re-read these prefs and inject any new handlers into the
 #. # profile database.  Note that "new" is defined as "has a different URL"; this
 #. # means that it's not possible to update the name of existing handler, so
 #. # don't make any spelling errors here.
 #: gecko.handlerService.defaultHandlersVersion
-msgid "2"
-msgstr "2"
+msgid "3"
+msgstr "3"
 
 #: browser.contentHandlers.types.1.title
 msgctxt "browser.contentHandlers.types.1.title"
@@ -32057,10 +32536,6 @@ msgstr "Meán Oíche"
 msgid "All Day"
 msgstr "I Rith an Lae"
 
-#: helpButton.label button-help
-msgid "Help"
-msgstr "Cabhair"
-
 #: button-disclosure
 msgid "More Info"
 msgstr "Eolas Breise"
@@ -32074,10 +32549,6 @@ msgstr ""
 msgctxt "accesskey-cancel"
 msgid ""
 msgstr ""
-
-#: accesskey-disclosure installButtonTextAccesskey
-msgid "I"
-msgstr "I"
 
 # Ctrl+Y = Athfheidhmigh, transcending language
 #: redoCmd.key
@@ -32267,36 +32738,25 @@ msgstr "Earráid Anaithnid"
 msgid "An unknown error occured (path %S)"
 msgstr "Tharla earráid anaithnid (conair %S)"
 
-#. #-#-#-#-#  chromeglobalfindbar.dtd.po (firefox)  #-#-#-#-#
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#. LOCALIZATION NOTE : FILE This file contains the entities needed to
-#. LOCALIZATION NOTE : FILE use the Find Bar.
-#. entities split out from browser.dtd
-#: next.label next.accesskey button-next-unix.label button-next-unix.accesskey
-msgid "&Next"
-msgstr "&Ar Aghaidh"
-
-#: previous.label previous.accesskey
-msgid "&Previous"
-msgstr "&Siar"
-
 #: findCloseButton.tooltip
-msgid "Close Find bar"
-msgstr "Dún an barra Aimsithe"
+msgid "Close find bar"
+msgstr ""
 
-#: highlight.label highlight.accesskey
-msgid "Highlight &all"
-msgstr "&Aibhsigh gach ceann"
+#: highlightAll.label highlightAll.accesskey
+msgid "Highlight &All"
+msgstr ""
 
-#: highlight.tooltiptext
+#: highlightAll.tooltiptext
 msgid "Highlight all occurrences of the phrase"
 msgstr "Aibhsigh gach sampla den nath"
 
-#: caseSensitiveCheckbox.label caseSensitiveCheckbox.accesskey
-msgid "Mat&ch case"
-msgstr "Meaitseáil an &cás"
+#: caseSensitive.label caseSensitive.accesskey
+msgid "Match &Case"
+msgstr ""
+
+#: caseSensitive.tooltiptext
+msgid "Search with case sensitivity"
+msgstr ""
 
 #: WrappedToTop
 msgid "Reached end of page, continued from top"
@@ -32306,13 +32766,17 @@ msgstr "Ag bun an leathanaigh, ag leanúint ón mbarr"
 msgid "Reached top of page, continued from bottom"
 msgstr "Ag barr an leathanaigh, ag leanúint ón mbun"
 
-#: FastFindLabel
-msgid "Quick Find:"
-msgstr "Aimsiú Tapa:"
+#: NormalFind
+msgid "Find in page"
+msgstr ""
 
-#: FastFindLinksLabel
-msgid "Quick Find (links only):"
-msgstr "Mearchuardach (nascanna amháin):"
+#: FastFind
+msgid "Quick find"
+msgstr ""
+
+#: FastFindLinks
+msgid "Quick find (links only)"
+msgstr ""
 
 #: CaseSensitive
 msgid "(Case sensitive)"
@@ -32342,6 +32806,10 @@ msgstr "Aimsigh sa Leathanach Seo"
 #: findField.label findField.accesskey
 msgid "Fi&nd what:"
 msgstr "Aimsigh an rud &seo:"
+
+#: caseSensitiveCheckbox.label caseSensitiveCheckbox.accesskey
+msgid "Mat&ch case"
+msgstr "Meaitseáil an &cás"
 
 #: wrapCheckbox.label wrapCheckbox.accesskey
 msgid "&Wrap"
@@ -32565,10 +33033,6 @@ msgstr "F10"
 msgid "F11"
 msgstr "F11"
 
-#: VK_F12
-msgid "F12"
-msgstr "F12"
-
 #: VK_F13
 msgid "F13"
 msgstr "F13"
@@ -32661,14 +33125,6 @@ msgstr "Backspace"
 #: VK_DELETE
 msgid "Del"
 msgstr "Del"
-
-# Toolbar items
-#. #-#-#-#-#  chromeglobalkeys.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE : BLOCK end maybe GLYPHS
-#. # LOCALIZATION NOTE : BLOCK typing state keys
-#: VK_HOME homeButton.label
-msgid "Home"
-msgstr "Baile"
 
 # OK as is --kps
 #: VK_END
@@ -35140,6 +35596,19 @@ msgstr "Athshocraigh &brandShortName;…"
 msgid "Please wait while &brandShortName; cleans up your old data…"
 msgstr "Fan nóiméad agus do chuid seansonraí á nglanadh ag &brandShortName;…"
 
+#. # LOCALIZATION NOTE: These strings are used for profile reset.
+#. # LOCALIZATION NOTE (resetUnusedProfile.message): %S is brandShortName.
+#: resetUnusedProfile.message
+msgid ""
+"It looks like you haven't started %S in a while. Do you want to clean it up "
+"for a fresh, like-new experience? And by the way, welcome back!"
+msgstr ""
+
+#. # LOCALIZATION NOTE (resetProfile.resetButton.label): %S is brandShortName.
+#: resetProfile.resetButton.label
+msgid "Reset %S…"
+msgstr ""
+
 #: spellAddToDictionary.label spellAddToDictionary.accesskey
 msgid "Add t&o Dictionary"
 msgstr "Cuir &leis an bhFoclóir é"
@@ -35166,14 +35635,6 @@ msgstr "&Teangacha"
 #: restoreColumnOrder.label
 msgid "Restore Column Order"
 msgstr "Athchóirigh Ord na gColún"
-
-#: muteButton.muteLabel
-msgid "Mute"
-msgstr "Gan fuaim"
-
-#: muteButton.unmuteLabel
-msgid "Unmute"
-msgstr "Le fuaim"
 
 #: fullscreenButton.exitfullscreenlabel
 msgid "Exit Full Screen"
@@ -35369,6 +35830,10 @@ msgstr "&Ar Aghaidh"
 msgctxt "button-cancel-mac.label"
 msgid "Cancel"
 msgstr "Cealaigh"
+
+#: button-next-unix.label button-next-unix.accesskey
+msgid "&Next"
+msgstr "&Ar Aghaidh"
 
 #: button-finish-unix.label
 msgctxt "button-finish-unix.label"
@@ -37969,7 +38434,7 @@ msgstr ""
 
 #: missingPlugin
 msgid "A plugin is needed to display this content."
-msgstr "Teastaíonn breiseán uait chun an t-ábhar seo a chur ar taispeáint."
+msgstr "Teastaíonn forlíontán uait chun an t-ábhar seo a chur ar taispeáint."
 
 #. Mobile (used for touch interfaces) only has one type of plugin possible.
 #: tapToPlayPlugin
@@ -37987,6 +38452,10 @@ msgstr "Tá an forlíontán seo díchumasaithe."
 #: blockedPlugin.label
 msgid "This plugin has been blocked for your protection."
 msgstr "Tá cosc curtha ar an bhforlíontán seo le tú a chosaint."
+
+#: hidePluginBtn.label
+msgid "Hide plugin"
+msgstr ""
 
 #: installPlugin
 msgid "Install plugin…"
@@ -39236,6 +39705,13 @@ msgstr "An mhí seo"
 msgid "Older than %S months"
 msgstr "Níos sine ná %S mí"
 
+#. # LOCALIZATION NOTE (finduri-MonthYear):
+#. # %1$S is the month name, %2$S is the year (4 digits format).
+#: finduri-MonthYear
+msgctxt "finduri-MonthYear"
+msgid "%1$S %2$S"
+msgstr ""
+
 #. # LOCALIZATION NOTE (localFiles):
 #. # This is used to generate local files container when history is grouped by site
 #: localhost
@@ -39251,6 +39727,15 @@ msgstr "(comhaid logánta)"
 #: bookmarksArchiveFilename
 msgid "bookmarks-%S.json"
 msgstr "bookmarks-%S.json"
+
+#. # LOCALIZATION NOTE
+#. # The string is used for showing file size of each backup in the "fileRestorePopup" popup
+#. # %1$S is the file size
+#. # %2$S is the file size unit
+#: backupFileSizeText
+msgctxt "backupFileSizeText"
+msgid "%1$S %2$S"
+msgstr ""
 
 #: addEngineConfirmation
 msgid ""
