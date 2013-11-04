@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-15 10:15-0500\n"
+"POT-Creation-Date: 2013-11-04 15:38-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -10821,6 +10821,66 @@ msgstr ""
 "carachtar dophriontáilte, carachtar nach ASCII é, nó carachtar ASCII ocht "
 "ngiotán. Bain an carachtar neamhbhailí, le do thoil, agus déan iarracht eile."
 
+#: options.title
+msgid "Developer Tools Options"
+msgstr "Uirlisí Forbartha: Roghanna"
+
+#: options.status.label folderQuotaStatus.label status.label
+msgid "Status:"
+msgstr "Stádas:"
+
+# OK as is
+#: options.port.label
+msgid "Port:"
+msgstr "Port:"
+
+#: options.forcelocal.label
+msgid "Allow connections from other computers"
+msgstr "Ceadaigh ceangail ó ríomhairí eile"
+
+#: options.stop.label
+msgid "Stop Developer Tools Server"
+msgstr "Stop Freastalaí na nUirlisí Forbartha"
+
+#: options.start.label
+msgid "Start Developer Tools Server"
+msgstr "Tosaigh Freastalaí na nUirlisí Forbartha"
+
+#: options.connected.label
+msgid "#1 Client Connected;#1 Clients Connected"
+msgstr "#1 Chliant Ceangailte;#1 Chliant Ceangailte;#1 Chliant Ceangailte;#1 gCliant Ceangailte;#1 Cliant Ceangailte"
+
+#: options.connected.tooltip
+msgid "The developer tools server is running and there are clients connected."
+msgstr ""
+
+#: options.listening.label
+msgid "Listening"
+msgstr "Éisteacht"
+
+#: options.listening.tooltip
+msgid "The developer tools server is running and waiting for connections."
+msgstr ""
+
+#: options.idle.label
+msgid "Not Running"
+msgstr ""
+
+#: options.idle.tooltip
+msgid ""
+"The developer tools server is not running. You can start it from this dialog."
+msgstr ""
+
+#: options.unsupported.label
+msgid "Unsupported"
+msgstr "Gan tacaíocht"
+
+#: options.unsupported.tooltip
+msgid ""
+"There was an error loading the built-in developer tools server. Make sure it "
+"is packaged and check your error console for messages."
+msgstr ""
+
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
 #
@@ -12175,18 +12235,16 @@ msgstr "Airíonna"
 msgid "General Information"
 msgstr "Eolas Ginearálta"
 
-#: folderCharsetTab.label folderCharsetTab.accesskey
-msgid "Default Character &Encoding:"
-msgstr "Ionchódú réamhshocraithe na g&carachtar:"
+#: folderCharsetFallback.label folderCharsetFallback.accesskey
+msgid "Fallback Character &Encoding:"
+msgstr "Ion&chódú Réamhshocraithe:"
 
-#: folderCharsetOverride.label folderCharsetOverride.accesskey
+#: folderCharsetEnforce.label folderCharsetEnforce.accesskey
 msgid ""
-"&Apply default to all messages in the folder (individual message character "
+"&Apply encoding to all messages in the folder (individual message character "
 "encoding settings and auto-detection will be ignored)"
 msgstr ""
-"Cuir an ré&amhshocrú i bhfeidhm ar gach teachtaireacht san fhillteán "
-"(tabharfar neamhaird ar shocruithe ionchódú na gcarachtar sna "
-"teachtaireachtaí féin agus ar bhrath uathoibríoch)"
+"Cuir &an t-ionchódú réamhshocraithe i bhfeidhm ar gach teachtaireacht san fhillteán (tabharfar neamhaird ar shocruithe ionchódaithe sna teachtaireachtaí féin agus ar bhrath uathoibríoch)"
 
 #: folderRebuildSummaryFileTip2.label
 msgid "Rebuild Summary File Index"
@@ -12296,10 +12354,6 @@ msgstr "Fréamh an Chuóta:"
 #: folderQuotaUsage.label
 msgid "Usage:"
 msgstr "Úsáid:"
-
-#: folderQuotaStatus.label status.label
-msgid "Status:"
-msgstr "Stádas:"
 
 #: numberOfMessages.label
 msgid "Number of messages:"
@@ -13210,8 +13264,8 @@ msgid ""
 "is connected."
 msgstr ""
 "Sábhálfar an focal faire i mBainisteoir na bhFocal Faire. Fág an bosca seo "
-"folamh más mian leat d'fhocal faire a chur isteach gach uair a úsáidfidh "
-"tú an cuntas seo amach anseo."
+"folamh más mian leat d'fhocal faire a chur isteach gach uair a úsáidfidh tú "
+"an cuntas seo amach anseo."
 
 #: accountAdvancedInfo.label
 msgid "Feel free to skip this step if you want to."
@@ -13249,6 +13303,15 @@ msgstr ""
 msgid "Connect this account now."
 msgstr "Ceangail an cuntas seo anois."
 
+#. #
+#. # The following are used by the imap code to display progress/status/error messages
+#. #
+#. #LOCALIZATION NOTE(imapAlertDialogTile): Do not translate the word "%S"
+#. # below. Place the word %S where the account name should appear.
+#: imapAlertDialogTitle
+msgid "Alert for account %S"
+msgstr ""
+
 #
 # The following are used by the imap code to display progress/status/error messages
 #
@@ -13258,9 +13321,6 @@ msgstr "Ceangail an cuntas seo anois."
 # # @name IMAP_SELECTING_MAILBOX
 # LOCALIZATION NOTE (Error 5044): Do not translate the word "%S" below.
 # Place the word %S in your translation where the name of the folder should appear.
-#. #
-#. # The following are used by the imap code to display progress/status/error messages
-#. #
 #. # Status - opening folder
 #: imapStatusSelectingMailbox
 msgid "Opening folder %S…"
@@ -16793,6 +16853,11 @@ msgctxt "sendLaterCmd.keycode"
 msgid "VK_RETURN"
 msgstr "VK_RETURN"
 
+# "R" under Main -> Comhad
+#: printPreviewCmd.label printPreviewCmd.accesskey
+msgid "Print Pre&view"
+msgstr "&Réamhamharc Priontála"
+
 # "P" under Main -> Comhad
 #: printCmd.label printCmd.accesskey otherActionsPrint1.label
 #: otherActionsPrint1.accesskey
@@ -17612,8 +17677,8 @@ msgid "&Star"
 msgstr "&Réiltín"
 
 #: sortByAttachmentsCmd.label sortByAttachmentsCmd.accesskey
-msgid "&Attachments"
-msgstr "&Iatáin"
+msgid "Attach&ments"
+msgstr "Iatái&n"
 
 #: sortByStatusCmd.label sortByStatusCmd.accesskey
 msgid "Stat&us"
@@ -18557,10 +18622,6 @@ msgstr "Teagmháil sa Leabhar Seoltaí…"
 msgid "Edit"
 msgstr "Eagar"
 
-#: appmenuQFBMenu.label
-msgid "Quick Filter Bar"
-msgstr "Barra Mearscagairí"
-
 #: appmenuToolbarLayout.label
 msgid "Toolbar Layout…"
 msgstr "Leagan Amach an Bharra Uirlisí…"
@@ -19226,6 +19287,13 @@ msgstr "Taispeáin Gach"
 
 #. # The following are used by the messenger application
 #. #
+#. #LOCALIZATION NOTE(statusMessage): Do not translate the words
+#. # $1S and $2S below. Place the word $1S where account name should appear and $2S
+#. # where the status message should appear.
+#: statusMessage
+msgid "%1$S: %2$S"
+msgstr "%1$S: %2$S"
+
 #: removeAccount
 msgid "Delete Account…"
 msgstr "Scrios Cuntas…"
@@ -25070,6 +25138,12 @@ msgstr "Mearscagaire"
 #: quickFilterBar.toggleBarVisibility.menu.accesskey
 msgid "&Quick Filter Bar"
 msgstr "&Barra Mearscagairí"
+
+#. The label to display for the "App Menu... Preferences..." menu item that
+#. controls whether the quick filter bar is visible.
+#: quickFilterBar.toggleBarVisibility.appmenu.label
+msgid "Quick Filter Bar"
+msgstr "Barra Mearscagairí"
 
 #. The tooltip to display when hovering over the button on the tab bar that
 #. toggles the visibility of the quick filter bar.
