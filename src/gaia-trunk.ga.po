@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 12:32-0500\n"
+"POT-Creation-Date: 2013-11-19 18:21-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -108,7 +108,8 @@ msgstr "Ní féidir na gléasanna a phéireáil"
 
 #: error-pair-pincode
 msgid "Unable to pair with the device. Check that the PIN is correct."
-msgstr "Ní féidir péireáil leis an ngléas. Bí cinnte go bhfuil an UAP ceart agat."
+msgstr ""
+"Ní féidir péireáil leis an ngléas. Bí cinnte go bhfuil an UAP ceart agat."
 
 #: error-pair-toofast
 msgid "Unable to pair with the device. Too many requests."
@@ -1804,7 +1805,9 @@ msgstr "Bain ó na ceanáin é"
 msgid "Mobile"
 msgstr "Soghluaiste"
 
-#: home operator-roamingPreference-home
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. #software buttons
+#: home operator-roamingPreference-home softwareHomeButton.ariaLabel
 msgid "Home"
 msgstr "Baile"
 
@@ -2838,6 +2841,10 @@ msgstr "Croch"
 #: pickup-a11y-button.aria-label
 msgid "Pick up"
 msgstr "Freagair"
+
+#: unlock-a11y-button.aria-label
+msgid "Slider"
+msgstr "Sleamhnán"
 
 #. #Call log
 #: delete-n-log?
@@ -4645,7 +4652,7 @@ msgstr ""
 #. # permissions
 #. # LOCALIZATION NOTE: this is displayed in a permission request dialog box,
 #. # see shared/permissions/permissions.properties for more context.
-#: yes
+#: yes stop_download_right_button
 msgid "Yes"
 msgstr "Tá"
 
@@ -7392,7 +7399,7 @@ msgstr "Díchumasaithe"
 msgid "Error"
 msgstr "Earráid"
 
-#: no
+#: no stop_download_left_button
 msgid "No"
 msgstr "Níl"
 
@@ -8644,10 +8651,6 @@ msgstr ""
 msgid "Keyboards"
 msgstr "Méarchláir"
 
-#: keyboardLayouts
-msgid "Keyboard layouts"
-msgstr "Leaganacha amach méarchláir"
-
 #: numberKeyboardLayouts
 msgid "Number layouts"
 msgstr ""
@@ -9890,9 +9893,9 @@ msgstr "Faigh Stádas an Chainéil"
 msgid "Gaia Messages"
 msgstr "Teachtaireachtaí Gaia"
 
-#: editMode
-msgid "Edit messages"
-msgstr "Cuir teachtaireachtaí in eagar"
+#: deleteMessages-title
+msgid "Delete messages"
+msgstr "Scrios teachtaireachtaí"
 
 #. # Contact title
 #: thread-header-text
@@ -9968,6 +9971,11 @@ msgstr "{{n}} gcinn roghnaithe"
 msgctxt "selected[other]"
 msgid "{{n}} selected"
 msgstr "{{n}} ceann roghnaithe"
+
+#. # Options menu
+#: deleteMessages-label
+msgid "Delete Messages"
+msgstr "Scrios Teachtaireachtaí"
 
 #. # New Message
 #: to
@@ -12213,6 +12221,80 @@ msgstr "%x %I:%M %p"
 msgid "0"
 msgstr "0"
 
+#: stopped_download_title
+msgid "Download stopped"
+msgstr "Stopadh an t-íosluchtú"
+
+#: stopped_download_message
+msgid "Download was stopped. Try downloading again?"
+msgstr "Stopadh an t-íosluchtú. Iarracht eile?"
+
+#: stopped_download_left_button
+msgctxt "stopped_download_left_button"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: stopped_download_right_button
+msgctxt "stopped_download_right_button"
+msgid "Try again"
+msgstr "Déan iarracht eile"
+
+#: failed_download_title
+msgid "Download failed"
+msgstr "Theip ar íosluchtú"
+
+#: failed_download_message
+msgid "{{name}} failed to download. Try downloading again?"
+msgstr ""
+
+#: failed_download_left_button
+msgctxt "failed_download_left_button"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: failed_download_right_button
+msgctxt "failed_download_right_button"
+msgid "Try again"
+msgstr "Déan iarracht eile"
+
+#: stop_download_title
+msgid "Stop download"
+msgstr "Stop an t-íosluchtú"
+
+#: stop_download_message
+msgid "Are you sure you want to stop the download?"
+msgstr "An bhfuil tú cinnte gur mhaith leat an t-íosluchtú a stopadh?"
+
+#: delete_download_title
+msgctxt "delete_download_title"
+msgid "Delete"
+msgstr "Scrios"
+
+#: delete_download_message
+msgid "Delete {{name}}?"
+msgstr "Scrios {{name}}?"
+
+#: delete_download_left_button
+msgctxt "delete_download_left_button"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: delete_download_right_button
+msgctxt "delete_download_right_button"
+msgid "Delete"
+msgstr "Scrios"
+
+#. /*
+#: %2A+File+sizes
+msgctxt "* File sizes* File sizes"
+msgid ""
+msgstr ""
+
+#: */
+msgctxt "*/"
+msgid ""
+msgstr ""
+
 #: perm-contacts-appRequest
 msgid "{{app}} would like to access your contact list."
 msgstr ""
@@ -12231,7 +12313,7 @@ msgstr ""
 
 #: perm-device-storage-music
 msgid "Music Storage"
-msgstr ""
+msgstr "Stóras Ceoil"
 
 #: perm-device-storage-music-appRequest
 msgid "{{app}} would like to access your music."
@@ -12312,7 +12394,7 @@ msgstr ""
 
 #: perm-audio-capture
 msgid "Microphone"
-msgstr ""
+msgstr "Micreafón"
 
 #: perm-audio-capture-appRequest
 msgid "Would you like to share your microphone with {{app}}?"
@@ -12324,7 +12406,7 @@ msgstr ""
 
 #: perm-media-capture
 msgid "Camera and Microphone"
-msgstr ""
+msgstr "Ceamara agus Micreafón"
 
 #: perm-media-capture-appRequest
 msgid "Would you like to share your camera and microphone with {{app}}?"
