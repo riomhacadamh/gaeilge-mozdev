@@ -27,6 +27,10 @@ rm -Rf "${IRISHPREF}po"
 mkdir "${IRISHPREF}po"
 #PYTHONPATH="/home/kps/seal/installed-local/translate-toolkit-0.9" moz2po -P --progress=verbose -i "${1}" -o "${IRISHPREF}po"
 moz2po -P --progress=verbose -i "${1}" -o "${IRISHPREF}po"
+if [ $1 = "gaia-en-US" ]
+then
+	UTFCOMP="gaia-trunk.ga.po"
+fi
 if [ $1 = "dom-en-US" ]
 then
         sed -i 's/image.*cannot/image \\"%S\\" cannot/' "${IRISHPREF}po/chrome/layout/MediaDocument.properties.pot"
@@ -44,14 +48,15 @@ find "${IRISHPREF}po" -name '*.pot' |
 while read pofile
 do
 	FILENAMEBASE=`echo "${pofile}" | sed 's/\(.*\)\.pot$/\1/'`
-	echo "Translating ${FILENAMEBASE}.po..."
+	echo "Translating ${FILENAMEBASE}.po using compendium ${UTFCOMP}..."
 	TEMPPOT=`mktemp`
 	msguniq "${pofile}" > ${TEMPPOT}
 	if $MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > /dev/null 2>&1
 	then
-		echo "merged fine." > /dev/null
+		echo "merged fine."
 		pocat "${FILENAMEBASE}.po" > ${TEMPPOT}  # these lines clean it up - only important, as far as I know, for mail-en-US/chrome/messenger/featureConfigurator.dtd
 		mv ${TEMPPOT} "${FILENAMEBASE}.po"
+		echo "moved to ${FILENAMEBASE}.po"
 	else
 		echo "PROBLEM TRANSLATING ${pofile}!!!" >> aistriuchan.log
 		$MSGMERGE -C "${UTFCOMP}" -o "${FILENAMEBASE}.po" /dev/null "${TEMPPOT}" > aistriuchan.log 2>&1

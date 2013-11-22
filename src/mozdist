@@ -69,6 +69,11 @@ find ${IRISHJAR} -name '*.dtd' | xargs sed -i 's/ *> *$/>/'
 bash sedtweaks "${2}"
 #rm -f "${IRISHJAR}.jar"
 #jar cvf "${IRISHJAR}.jar" "${IRISHJAR}"
-mv -f "${IRISHJAR}" "${PACK}"
-cp -Rf ${PACK} "${CVSFULLPATH}"
-mv -f "${PACK}" "${IRISHJAR}"
+if echo "${1}" | egrep '^gaia' > /dev/null
+then
+	cp -Rf ${IRISHJAR}/* ${HOME}/seal/gaia/ga-IE
+else
+	mv -f "${IRISHJAR}" "${PACK}"
+	cp -Rf ${PACK} "${CVSFULLPATH}"
+	mv -f "${PACK}" "${IRISHJAR}"
+fi

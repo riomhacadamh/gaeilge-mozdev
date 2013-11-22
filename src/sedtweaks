@@ -42,7 +42,7 @@ sed -i '/^pluginInstallation.restart.accesskey/s/.*/pluginInstallation.restart.a
 sed -i '/^cmd.purchaseAddon.accesskey/s/.*/cmd.purchaseAddon.accesskey=C/' toolkit-ga-IE/chrome/mozapps/extensions/extensions.properties
 
 sed -i 's/certs.ask.accesskey "."/certs.ask.accesskey "d"/; s/certs.auto.accesskey "."/certs.auto.accesskey "u"/' browser-ga-IE/chrome/browser/preferences/advanced.dtd
-sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/' browser-ga-IE/chrome/browser/browser.dtd
+sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/; s/responsiveDesignTool.commandkey "."/responsiveDesignTool.commandkey "E"/' browser-ga-IE/chrome/browser/browser.dtd
 sed -i 's/mediaSaveAs.accesskey "."/mediaSaveAs.accesskey "S"/' browser-ga-IE/chrome/browser/pageInfo.dtd
 sed -i 's/mediaTab.accesskey "."/mediaTab.accesskey "M"/' browser-ga-IE/chrome/browser/pageInfo.dtd
 sed -i 's/generalSecurityDetails.accesskey "."/generalSecurityDetails.accesskey "M"/' browser-ga-IE/chrome/browser/pageInfo.dtd
@@ -138,15 +138,6 @@ s/newevent.before.label "[^"]*"/newevent.before.label "roimhe"/
 s/newevent.after.label "[^"]*"/newevent.after.label "ina dhiaidh"/
 ' calendar-ga-IE/chrome/calendar/calendar.dtd
 
-sed -i '
-s/window.width "..em"/window.width "42em"/
-s/window.macWidth "..em"/window.macWidth "45em"/
-' calendar-ga-IE/chrome/calendar/preferences/connection.dtd
-
-#sed -i '
-#s/inspectReturnNew.label "[^"]*"/inspectReturnNew.label "i bhfuinneog nua"/
-#' extensions-ga-IE/inspector/resources/viewers/jsObject.dtd
-
 sed -i 's/exceptionMgr.certstatus.accesskey "."/exceptionMgr.certstatus.accesskey "A"/' security-ga-IE/manager/chrome/pippki/certManager.dtd
 sed -i 's/loaddevice.modname.accesskey "."/loaddevice.modname.accesskey "A"/' security-ga-IE/manager/chrome/pippki/deviceManager.dtd
 sed -i 's/loaddevice.filename.accesskey "."/loaddevice.filename.accesskey "c"/' security-ga-IE/manager/chrome/pippki/deviceManager.dtd
@@ -173,6 +164,8 @@ LC_ALL=C sed -i '
 /^uk *=/s/.*/uk = Úcráinis/
 /^zh *=/s/.*/zh = Sínis/
 ' toolkit-ga-IE/chrome/global/languageNames.properties
+
+sed -i 's/^dontallow=/deny=/' gaia-ga-IE/apps/system/system.properties
 
 #sed -i '
 #s/credit.translation ""/credit.translation "<h3>Aistritheoirí<\/h3><ul><li>Marion Gunn<\/li><li>Séamus Ó Ciardhuáin<\/li><li>Kevin Scannell<\/li><\/ul>"/

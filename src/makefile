@@ -75,11 +75,13 @@ amo-commit : amo-obair.mo amo-javascript.mo
 	svn commit -m "Updated Irish translation" $(SVNDIR)/messages.po $(SVNDIR)/messages.mo $(SVNDIR)/javascript.po $(SVNDIR)/javascript.mo
 
 # only made from inside the "newrelease" scripts, so ok to FORCE
+# really makes all three: obair.po, tb_obair.po, cal_obair.po
 obair.po : FORCE
 	$(MAKE) $(UTFCOMP)
 	cat $(VERSION).txt | while read x; do bash moznua $$x-en-US $(VERSION); bash mozcat $$x-en-US; done
-	cat $(VERSION).txt | egrep -v '^(calendar|editor|mail)$$' | sed 's/$$/-ga-IE.po/' | xargs msgcat | sed '1,/^#, fuzzy/d; /browser-ga-IE.po.*\\n"$$/,/toolkit-ga-IE.po.*\\n"$$/d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
+	cat $(VERSION).txt | egrep -v '^(calendar|editor|gaia|mail)$$' | sed 's/$$/-ga-IE.po/' | xargs msgcat | sed '1,/^#, fuzzy/d; /browser-ga-IE.po.*\\n"$$/,/toolkit-ga-IE.po.*\\n"$$/d; /^.Project-Id/s/thunderbird/firefox/' > obair.po
 	sed -i '/Download & Install Now/{N; s/msgstr ""/msgstr "Íosluchtaigh agus Suiteáil Anois >>"/}; /Get the new version /{N; s/msgstr ""/msgstr "Faigh an leagan nua >>"/}' obair.po
+	msgcat gaia-ga-IE.po | sed '/trunk.ga.po/d' > gaia_obair.po
 	msgcat editor-ga-IE.po mail-ga-IE.po | sed '/trunk.ga.po/d' > tb_obair.po
 	sed -i 's/msgstr "11"/msgstr "1"/; s/msgstr "39em"/msgstr "47em"/; s/msgstr "43em"/msgstr "51em"/; s/msgstr "Firefox Soghluaiste"/msgstr "Fón Póca"/; s/msgstr "Staid"/msgstr "Stát"/; s/msgstr "is"/msgstr "atá"/; s/msgstr "go"/msgstr "chuig"/; s/msgstr "G&reamaigh"/msgstr "Grea\&maigh"/; s/msgstr "&Scoir"/msgstr "S\&coir"/; s/msgstr "Ionchódú &Carachtar"/msgstr "Ionchódú Ca\&rachtar"/; s/msgstr "Socrú &Leathanaigh..."/msgstr "Socrú L\&eathanaigh..."/' tb_obair.po
 	sed -i '1,/^"Project-Id-Version: /d' tb_obair.po
