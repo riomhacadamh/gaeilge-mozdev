@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 12:38-0500\n"
+"POT-Creation-Date: 2013-11-26 10:18-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: confirmation confirm-dialog-title
+#: confirmation confirm-dialog-title device-option-unpair-confirmation
 msgid "Confirmation"
 msgstr "Deimhniú"
 
@@ -52,9 +52,17 @@ msgstr ""
 
 #. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # modal-dialog buttons
-#: ok OK dialog-button-ok file_not_found_download_right_button
+#: ok OK dialog-button-ok
 msgid "OK"
 msgstr "OK"
+
+#: transfer-has-started-title
+msgid "The transfer has started"
+msgstr "Tosaíodh an t-aistriú"
+
+#: transfer-has-started-description
+msgid "Check the progress in Notification center"
+msgstr "Féach ar an dul chun cinn i Lárionad na bhFógraí"
 
 #. #-#-#-#-#  appsbluetoothbluetooth.properties.po (firefox)  #-#-#-#-#
 #. # Bluetooth :: Devices Panel
@@ -1709,7 +1717,7 @@ msgstr "Sloinne"
 #. # Security :: Phone Lock
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
 #. # sleep menu
-#: tel.placeholder dialer.name phone evme-collection-title-suffix deviceMenu
+#: tel.placeholder dialer.name phone deviceMenu
 msgid "Phone"
 msgstr "Guthán"
 
@@ -1805,9 +1813,7 @@ msgstr "Bain ó na ceanáin é"
 msgid "Mobile"
 msgstr "Soghluaiste"
 
-#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
-#. #software buttons
-#: home operator-roamingPreference-home softwareHomeButton.ariaLabel
+#: home operator-roamingPreference-home
 msgid "Home"
 msgstr "Baile"
 
@@ -1950,39 +1956,6 @@ msgstr ""
 #: exportErrorTitle
 msgid "Export error"
 msgstr "Earráid easpórtála"
-
-#: contactsExported2
-msgid "{[ plural(exported) ]}"
-msgstr "{[ plural(exported) ]}"
-
-#: contactsExported2[zero]
-msgid "No contacts exported"
-msgstr "Níor easpórtáladh aon teagmhálacha"
-
-#: contactsExported2[one]
-msgctxt "contactsExported2[one]"
-msgid "{{exported}}/{{total}} contacts exported"
-msgstr ""
-
-#: contactsExported2[two]
-msgctxt "contactsExported2[two]"
-msgid "{{exported}}/{{total}} contacts exported"
-msgstr ""
-
-#: contactsExported2[few]
-msgctxt "contactsExported2[few]"
-msgid "{{exported}}/{{total}} contacts exported"
-msgstr ""
-
-#: contactsExported2[many]
-msgctxt "contactsExported2[many]"
-msgid "{{exported}}/{{total}} contacts exported"
-msgstr ""
-
-#: contactsExported2[other]
-msgctxt "contactsExported2[other]"
-msgid "{{exported}}/{{total}} contacts exported"
-msgstr ""
 
 #: exportError-general
 msgid "Some error happened while exporting"
@@ -2358,6 +2331,10 @@ msgctxt "facebook-serviceName"
 msgid "Facebook Friends"
 msgstr "Cairde Facebook"
 
+#: selectAll
+msgid "Select All"
+msgstr "Roghnaigh Uile"
+
 #: viewAll
 msgid "View All Facebook Friends"
 msgstr "Gach Cara Facebook"
@@ -2643,6 +2620,10 @@ msgstr "Aimsíodh teagmhálacha dúbailte"
 msgid "{{name}} duplicates information in the following contacts"
 msgstr ""
 
+#: addNewNumber
+msgid "Add new number"
+msgstr ""
+
 #: addToExistingContact message-contact-menu-add-existing
 msgid "Add to existing contact"
 msgstr "Cuir le teagmháil atá ann é"
@@ -2712,6 +2693,10 @@ msgstr "Glan na glaonna roghnaithe?"
 #: createNewContact
 msgid "Create new contact"
 msgstr "Cruthaigh teagmháil nua"
+
+#: deselectAll
+msgid "Deselect All"
+msgstr "Díroghnaigh Uile"
 
 #: edit-selected
 msgctxt "edit-selected"
@@ -2834,10 +2819,6 @@ msgstr "Ar feitheamh"
 #: sendSms
 msgid "Send Message"
 msgstr "Seol Teachtaireacht"
-
-#: callEnded
-msgid "Call Ended"
-msgstr "Glao Críochnaithe"
 
 #. ## LOCALIZATION NOTE: these labels aren't displayed but they're used for acessibility
 #: hangup-a11y-button.aria-label
@@ -4446,7 +4427,7 @@ msgstr ""
 "láimh."
 
 #: airplane-mode-error-message2
-msgid "Turn off airplane mode to update your balance or top up."
+msgid "Turn off airplane mode to update your balance or top up. "
 msgstr ""
 
 #: disable-airplane-mode
@@ -4519,7 +4500,8 @@ msgstr "Breisiú á phróiseáil."
 
 #: top-up-timed-out2
 msgid ""
-"Update your balance to confirm. If balance is unchanged, try topping up again."
+"Update your balance to confirm. If balance is unchanged, try topping up "
+"again. "
 msgstr ""
 
 #: on-topup-not-confirmed-title
@@ -4683,7 +4665,7 @@ msgstr ""
 #. # permissions
 #. # LOCALIZATION NOTE: this is displayed in a permission request dialog box,
 #. # see shared/permissions/permissions.properties for more context.
-#: yes stop_download_right_button
+#: yes
 msgid "Yes"
 msgstr "Tá"
 
@@ -4864,10 +4846,6 @@ msgstr "Úsáid"
 msgid "Internet"
 msgstr "Idirlíon"
 
-#: loading-interface-data
-msgid "Loading interface data. Please retry in a while."
-msgstr ""
-
 #. # Abbreviate date format for the consumption graph in strftime format
 #. # http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
 #: chart-date-format
@@ -4937,8 +4915,6 @@ msgstr "{{day}}, {{time}}"
 
 #. #-#-#-#-#  appscostcontrolcostcontrol.properties.po (firefox)  #-#-#-#-#
 #. # Localized units
-#. #-#-#-#-#  shareddownloaddownload.properties.po (firefox)  #-#-#-#-#
-#. # File sizes
 #: B byteUnit-B
 msgid "B"
 msgstr "B"
@@ -5061,13 +5037,6 @@ msgstr ""
 msgid "The server said you're not authorized to create an account"
 msgstr ""
 
-#. # The error for when the server is not good enough to be supported
-#. # because it is missing the required features.
-#: setup-error-pop-server-not-great
-msgid ""
-"Server unsupported. The POP3 server does not implement required features."
-msgstr ""
-
 #. # The fallback error; if we don't have a better error, we report this.
 #: setup-error-unknown2
 msgid ""
@@ -5090,14 +5059,6 @@ msgstr ""
 #. # to support IMAP.
 #: setup-error-imap-disabled
 msgid "You must enable IMAP for your Gmail account"
-msgstr ""
-
-#. # The error for Gmail accounts where POP3 is not enabled.  This can occur
-#. # for individual users where they have disabled POP3 from the settings UI.
-#. # This can also occur for apps-for-domains where the domain is not configured
-#. # to support POP3.
-#: setup-error-pop3-disabled
-msgid "You must enable POP3 for your Gmail account"
 msgstr ""
 
 #. # The error for when we are able to contact a server that should be the mail
@@ -5251,19 +5212,6 @@ msgstr "Caithfidh tú IMAP a chumasú i do chuntas Gmail"
 msgctxt "setup-gmail-imap-retry"
 msgid "Retry"
 msgstr "Atriail"
-
-#: setup-gmail-pop3-header
-msgid "POP3 Disabled"
-msgstr ""
-
-#: setup-gmail-pop3-message
-msgid "You must enable POP3 on your Gmail account"
-msgstr ""
-
-#: setup-gmail-pop3-retry
-msgctxt "setup-gmail-pop3-retry"
-msgid "Retry"
-msgstr ""
 
 #: settings-main-header
 msgid "Mail Settings"
@@ -5451,10 +5399,6 @@ msgstr "Socruithe ActiveSync"
 msgctxt "settings-imap-label"
 msgid "IMAP settings"
 msgstr "Socruithe IMAP"
-
-#: settings-pop3-label
-msgid "POP3 settings"
-msgstr ""
 
 #: settings-smtp-label
 msgctxt "settings-smtp-label"
@@ -5800,19 +5744,6 @@ msgctxt "message-multiedit-delete-confirm[other]"
 msgid "Delete {{ n }} email messages?"
 msgstr "Scrios {{ n }} teachtaireacht?"
 
-#: message-large-message-cancel
-msgctxt "message-large-message-cancel"
-msgid "Cancel"
-msgstr ""
-
-#: message-large-message-ok continue
-msgid "Continue"
-msgstr "Ar Aghaidh"
-
-#: message-large-message-confirm
-msgid "This message is large and may take some time to download."
-msgstr ""
-
 #: message-search-from
 msgctxt "message-search-from"
 msgid "From"
@@ -5864,7 +5795,7 @@ msgstr "Roghnaigh fillteán"
 msgid "Save new contact"
 msgstr "Sábháil teagmháil nua"
 
-#: message-contact-menu-view viewContact
+#: message-contact-menu-view
 msgid "View contact"
 msgstr "Amharc ar an teagmháil"
 
@@ -5886,7 +5817,7 @@ msgstr "Freagair"
 msgid "Reply All"
 msgstr "Freagair Cách"
 
-#: message-reply-menu-forward callForwardingForward forward
+#: message-reply-menu-forward callForwardingForward
 msgid "Forward"
 msgstr "Ar Aghaidh"
 
@@ -6298,6 +6229,8 @@ msgstr "R-Phost"
 msgid "Gaia E-Mail"
 msgstr "R-Phost Gaia"
 
+#. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
+#. # App reinstall
 #: download-button download
 msgid "Download"
 msgstr "Íosluchtaigh"
@@ -6620,14 +6553,6 @@ msgstr "Maisíochtaí"
 msgid "Borders"
 msgstr "Imlínte"
 
-#: enhance-on
-msgid "Auto-enhance on"
-msgstr "Uathfheabhsú: ann"
-
-#: enhance-off
-msgid "Auto-enhance off"
-msgstr "Uathfheabhsú: as"
-
 #: original
 msgid "Original"
 msgstr "Bunleagan"
@@ -6730,22 +6655,6 @@ msgstr "Gailearaí"
 msgid "Gaia Gallery"
 msgstr "Gailearaí Gaia"
 
-#: Entertainment evme-shortcut-id-entertainment
-msgid "Entertainment"
-msgstr "Siamsaíocht"
-
-#: Social evme-shortcut-id-social
-msgid "Social"
-msgstr "Sóisialta"
-
-#: Games evme-shortcut-id-games
-msgid "Games"
-msgstr "Cluichí"
-
-#: Music evme-shortcut-id-music name music music-space
-msgid "Music"
-msgstr "Ceol"
-
 #. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
 #. # Add bookmark to homescreen
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
@@ -6766,15 +6675,6 @@ msgstr "Curtha leis an Scáileán Baile"
 #: wrapper-search-name
 msgid "{{topic}} on {{name}}"
 msgstr "{{topic}} ar {{name}}"
-
-#. # Dialog that appears when a user long taps on the homescreen
-#: contextmenu-add-wallpaper
-msgid "Change Wallpaper"
-msgstr "Athraigh an Cúlbhrat"
-
-#: contextmenu-add-collections
-msgid "Add Collection"
-msgstr "Cuir Bailiúchán Leis"
 
 #. # Prompt that appears when a user tries to delete an app.
 #: delete-title
@@ -6798,12 +6698,6 @@ msgstr "Scrios {{name}}"
 #: remove-body
 msgid "Remove {{name}} from the homescreen?"
 msgstr "Bain {{name}} ón scáileán baile?"
-
-#. # App reinstall
-#: download
-msgctxt "download"
-msgid "Download"
-msgstr "Íosluchtaigh"
 
 #: restart-download-title
 msgid "Restart Download"
@@ -6829,14 +6723,9 @@ msgctxt "evme-searchbar-default2"
 msgid "I'm thinking of…"
 msgstr "Táim ag smaoineamh ar…"
 
-#: evme-searchbar-default2.placeholder
-msgctxt "evme-searchbar-default2.placeholder"
-msgid "I'm thinking of…"
-msgstr "Táim ag smaoineamh ar…"
-
-#: evme-collections
-msgid "Collections"
-msgstr "Bailiúcháin"
+#: evme-smart-folders
+msgid "Smart Collections"
+msgstr ""
 
 #: evme-searchbar-default.placeholder
 msgctxt "evme-searchbar-default.placeholder"
@@ -6894,15 +6783,6 @@ msgctxt "evme-helper-title-empty"
 msgid "Everything"
 msgstr "Gach Rud"
 
-#: evme-apps-market-download
-msgctxt "evme-apps-market-download"
-msgid "Download"
-msgstr "Íosluchtaigh"
-
-#: evme-apps-market-more-apps
-msgid "More Apps"
-msgstr "Tuilleadh Aipeanna"
-
 #: evme-apps-loading-app
 msgctxt "evme-apps-loading-app"
 msgid "Loading…"
@@ -6921,20 +6801,24 @@ msgstr "Cuir {{name}} leis an Scáileán Baile?"
 msgid "{{name}} was already added to Home Screen"
 msgstr "Bhí {{name}} curtha leis an Scáileán Baile cheana"
 
-#: evme-alert-offline-collections-more
-msgid "Connect to the internet to add more collections"
-msgstr "Ceangail leis an Idirlíon chun tuilleadh bailiúchán a chur leis"
+#: evme-alert-offline-shortcuts-more
+msgid "Connect to the internet to add more shortcuts"
+msgstr ""
 
-#: evme-alert-save-collection
-msgid "Add as Collection?"
+#: evme-alert-save-smartfolder
+msgid "Add as Smart Collection?"
 msgstr ""
 
 #: evme-alert-save-wallpaper
 msgid "Set as wallpaper?"
 msgstr "Socraigh mar chúlbhrat?"
 
-#: evme-alert-no-more-collections
-msgid "No Collections to add"
+#: evme-alert-shortcuts-suggest-empty
+msgid "No Smart Collections to add"
+msgstr ""
+
+#: evme-alert-no-more-shortcuts
+msgid "No Shortcuts to add"
 msgstr ""
 
 #: evme-banner-app-install-success
@@ -6951,37 +6835,29 @@ msgstr ""
 msgid "More"
 msgstr "Tuilleadh"
 
-#: evme-collectionssuggest-loading
-msgctxt "evme-collectionssuggest-loading"
+#: evme-shortcutscustomize-loading
+msgctxt "evme-shortcutscustomize-loading"
 msgid "Loading…"
-msgstr "Á Luchtú…"
+msgstr ""
 
-#: evme-collectionssuggest-loading-cancel
-msgctxt "evme-collectionssuggest-loading-cancel"
+#: evme-shortcutscustomize-loading-cancel
+msgctxt "evme-shortcutscustomize-loading-cancel"
 msgid "Cancel"
-msgstr "Cealaigh"
-
-#: evme-collectionssuggest-prompt-create
-msgid "Create your own collection"
-msgstr "Cruthaigh do bhailiúchán féin"
+msgstr ""
 
 #: evme-backgroundimage-source-label
 msgid "Source:"
 msgstr "Foinse:"
 
-#: evme-collection-title-prefix
-msgctxt "evme-collection-title-prefix"
+#: evme-smartfolder-title-prefix
+msgctxt "evme-smartfolder-title-prefix"
 msgid "Everything"
-msgstr "Gach rud"
+msgstr ""
 
-#: evme-collection-loading-more
-msgctxt "evme-collection-loading-more"
+#: evme-smartfolder-loading-more
+msgctxt "evme-smartfolder-loading-more"
 msgid "Loading…"
-msgstr "Á Luchtú…"
-
-#: evme-collection-prompt-rename
-msgid "Rename Collection"
-msgstr "Tabhair ainm nua ar an mbailiúchán"
+msgstr ""
 
 #. # {{query}} will always be the user's current query from the searchbox
 #: evme-connectionmessage-apps
@@ -7006,11 +6882,7 @@ msgid ""
 "These are the apps for <b>{{query}}</b>,<br /><br /> tap any icon to open it."
 msgstr ""
 
-#. # collection translations
-#: evme-shortcut-custom
-msgid "Custom..."
-msgstr "Saincheap..."
-
+#. # smart folder translations
 #: evme-shortcut-id-astrology
 msgid "Astrology"
 msgstr "Astralaíocht"
@@ -7059,6 +6931,10 @@ msgstr "Faisean"
 msgid "Funny"
 msgstr "Greannmhar"
 
+#: evme-shortcut-id-games
+msgid "Games"
+msgstr "Cluichí"
+
 #: evme-shortcut-id-government
 msgid "Government"
 msgstr "Rialtas"
@@ -7083,6 +6959,10 @@ msgstr "Léarscáileanna"
 msgid "Movies"
 msgstr "Scannáin"
 
+#: evme-shortcut-id-music name music music-space
+msgid "Music"
+msgstr "Ceol"
+
 #: evme-shortcut-id-new-apps
 msgid "New Apps"
 msgstr "Aipeanna Nua"
@@ -7106,6 +6986,10 @@ msgstr "Bialanna"
 #: evme-shortcut-id-shopping
 msgid "Shopping"
 msgstr "Siopadóireacht"
+
+#: evme-shortcut-id-social
+msgid "Social"
+msgstr "Sóisialta"
 
 #: evme-shortcut-id-sports
 msgid "Sports"
@@ -7178,6 +7062,14 @@ msgstr "Méarchlár ionsuite"
 msgctxt "description"
 msgid "Built-in Keyboard"
 msgstr "Méarchlár ionsuite"
+
+#: number.name
+msgid "Number"
+msgstr ""
+
+#: number.description
+msgid "Numeric layout"
+msgstr ""
 
 #: description
 msgid "Gaia Music"
@@ -7311,8 +7203,8 @@ msgid "PDF Viewer"
 msgstr "Amharcán PDF"
 
 #: description
-msgid "Portable Document Format (PDF) Viewer"
-msgstr "Amharcán PDF (Formáid Doiciméad Iniompartha)"
+msgid "Portable Document Format(PDF) Viewer"
+msgstr ""
 
 #: name
 msgid "System Ringtones"
@@ -7438,28 +7330,6 @@ msgstr ""
 msgid "Ring"
 msgstr "Cling"
 
-#: name
-msgid "Set Ringtone"
-msgstr ""
-
-#: description
-msgid "Gaia Ringtone Setter"
-msgstr ""
-
-#: setringtone
-msgid "Set as ringtone"
-msgstr ""
-
-#: settingringtone
-msgid "Setting ringtone…"
-msgstr "Clingthon á shocrú…"
-
-#: cantplay
-msgid ""
-"The audio file cannot be played on this phone and can not be used as a "
-"ringtone."
-msgstr ""
-
 #: description
 msgid "Gaia Settings"
 msgstr "Socruithe Gaia"
@@ -7481,9 +7351,13 @@ msgstr "Díchumasaithe"
 msgid "Error"
 msgstr "Earráid"
 
-#: no stop_download_left_button
+#: no
 msgid "No"
 msgstr "Níl"
+
+#: continue
+msgid "Continue"
+msgstr "Ar Aghaidh"
 
 #: pair
 msgid "Pair"
@@ -7650,14 +7524,9 @@ msgstr "An-mhaith"
 msgid "Forget"
 msgstr "Déan dearmad"
 
-#: forgetNetwork-dialog
-msgid "Forget network?"
-msgstr "Déan dearmad den líonra?"
-
-#: forgetNetwork-confirmation
-msgctxt "forgetNetwork-confirmation"
-msgid "Confirmation"
-msgstr "Deimhniú"
+#: forgetNetwork
+msgid "Forget network"
+msgstr ""
 
 #: authentication
 msgctxt "authentication"
@@ -8145,10 +8014,6 @@ msgctxt "operator-networkSelect-auto"
 msgid "Automatic"
 msgstr "Uathoibríoch"
 
-#: operator-networkSelect-manual
-msgid "Manual"
-msgstr "De Láimh"
-
 #: operator-turnAutoSelectOff
 msgid "Turn automatic selection off to view available network operators."
 msgstr ""
@@ -8374,11 +8239,6 @@ msgstr ""
 msgid "Unpair"
 msgstr "Díphéireáil"
 
-#: device-option-unpair-confirmation
-msgctxt "device-option-unpair-confirmation"
-msgid "Confirmation"
-msgstr "Deimhniú"
-
 #: device-option-unpair-device
 msgid "Unpair Device?"
 msgstr "Díphéireáil an Gléas?"
@@ -8398,10 +8258,6 @@ msgstr "Tabhair ainm nua do mo ghléas"
 #: change-phone-name
 msgid "Change phone name"
 msgstr "Athraigh ainm an ghutháin"
-
-#: change-phone-name-desc
-msgid "Change the name of your device as it appears in your computer"
-msgstr "Athraigh ainm do ghléis a thaispeánfar ar do ríomhaire"
 
 #: bluetooth-new-name
 msgid "New name"
@@ -8470,11 +8326,6 @@ msgstr ""
 #: pair-view-title
 msgid "Bluetooth Request From"
 msgstr "Iarratas Bluetooth Ó"
-
-#. # Connectivity :: NFC
-#: nfc
-msgid "NFC"
-msgstr "NFC"
 
 #. # Connectivity :: Internet Sharing
 #: SSIDCannotBeEmpty
@@ -8644,7 +8495,7 @@ msgid "Adjust automatically"
 msgstr "Coigeartaigh go huathoibríoch"
 
 #: lockScreen
-msgid "Lock screen"
+msgid "Lock Screen"
 msgstr ""
 
 #: wallpaper name
@@ -8746,6 +8597,10 @@ msgstr "Modhanna ionchurtha suiteáilte"
 #: keyboards
 msgid "Keyboards"
 msgstr "Méarchláir"
+
+#: keyboardLayouts
+msgid "Keyboard layouts"
+msgstr ""
 
 #: numberKeyboardLayouts
 msgid "Number layouts"
@@ -8879,13 +8734,9 @@ msgstr "Athraigh"
 msgid "Create"
 msgstr "Cruthaigh"
 
-#: create-a-passcode
+#: create-passcode
 msgid "Create a Passcode"
 msgstr "Cruthaigh Cód Faire"
-
-#: passcode-heading
-msgid "Passcode"
-msgstr "Cód faire"
 
 #: enter-passcode
 msgid "Enter passcode"
@@ -8907,9 +8758,13 @@ msgstr "Cód faire mícheart"
 msgid "Passcode doesn’t match. Try again."
 msgstr "Cód faire mícheart. Déan iarracht eile."
 
+#: passcode
+msgid "Passcode"
+msgstr "Cód faire"
+
 #: confirm-passcode
-msgid "Confirm passcode"
-msgstr "Deimhnigh an cód faire"
+msgid "Confirm Passcode"
+msgstr ""
 
 #: immediately
 msgid "Immediately"
@@ -8960,12 +8815,12 @@ msgid "After 4 hours"
 msgstr "Tar éis 4 huaire an chloig"
 
 #: require-passcode
-msgid "Require passcode"
+msgid "Require Passcode"
 msgstr ""
 
 #: change-passcode
-msgid "Change passcode"
-msgstr "Athraigh an cód faire"
+msgid "Change Passcode"
+msgstr ""
 
 #. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Security :: SIM PIN Lock
@@ -9146,10 +9001,6 @@ msgstr ""
 msgid "SIM card not ready"
 msgstr "Níl an cárta SIM réidh"
 
-#: simCardIllegal
-msgid "Unauthorized SIM card"
-msgstr "Cárta SIM neamhúdaraithe"
-
 #. # Security :: Do Not Track
 #: doNotTrack
 msgid "Do Not Track"
@@ -9194,9 +9045,9 @@ msgstr ""
 msgid "Storage"
 msgstr "Stóras"
 
-#: enableUSBStorage1
-msgid "USB storage"
-msgstr "Stóras USB"
+#: enableUSBStorage
+msgid "Enable USB storage"
+msgstr ""
 
 #. # Storage :: Application storage
 #: deviceStorage
@@ -9355,7 +9206,7 @@ msgstr ""
 
 #: change-default-location-confirm
 msgid ""
-"Changing the default media storage volume will affect where photos, videos, "
+"Changing the default media storage volume will effect where photos, videos, "
 "downloads and other media will be saved to by default. Existing data will "
 "remain in its current location."
 msgstr ""
@@ -9418,10 +9269,6 @@ msgstr "Dífhabhtaigh"
 msgid "Grid"
 msgstr "Greille"
 
-#: developer-menu
-msgid "Developer Menu"
-msgstr "Roghchlár Forbróra"
-
 #: fps-monitor
 msgid "Show frames per second"
 msgstr "Taispeáin frámaí sa tsoicind"
@@ -9432,10 +9279,6 @@ msgstr ""
 
 #: paint-flashing
 msgid "Flash repainted area"
-msgstr ""
-
-#: apz-force-enable
-msgid "Enable APZ for all content processes"
 msgstr ""
 
 #: log-animations
@@ -9635,10 +9478,6 @@ msgstr ""
 
 #: homegesture-enabled
 msgid "Home gesture enabled"
-msgstr ""
-
-#: edgesgesture-enabled
-msgid "Edges gesture enabled"
 msgstr ""
 
 #: debug-gaia-enabled
@@ -9998,9 +9837,9 @@ msgstr "Faigh Stádas an Chainéil"
 msgid "Gaia Messages"
 msgstr "Teachtaireachtaí Gaia"
 
-#: deleteMessages-title
-msgid "Delete messages"
-msgstr "Scrios teachtaireachtaí"
+#: editMode
+msgid "Edit messages"
+msgstr ""
 
 #. # Contact title
 #: thread-header-text
@@ -10076,11 +9915,6 @@ msgstr "{{n}} gcinn roghnaithe"
 msgctxt "selected[other]"
 msgid "{{n}} selected"
 msgstr "{{n}} ceann roghnaithe"
-
-#. # Options menu
-#: deleteMessages-label
-msgid "Delete Messages"
-msgstr "Scrios Teachtaireachtaí"
 
 #. # New Message
 #: to
@@ -10207,10 +10041,6 @@ msgstr "Iompróir anaithnid"
 msgid "Are you sure you want to discard this message?"
 msgstr "An bhfuil tú cinnte gur mhaith leat an teachtaireacht seo a scriosadh?"
 
-#: discard-new-message
-msgid "Discard the message you're composing and open the new message?"
-msgstr ""
-
 #: resend-confirmation
 msgid "The message could not be sent. Try again?"
 msgstr "Níorbh fhéidir an teachtaireacht a sheoladh. Déan iarracht eile?"
@@ -10222,14 +10052,6 @@ msgstr "Scrios na teachtaireachtaí roghnaithe?"
 #: deleteThreads-confirmation2
 msgid "Delete selected message threads?"
 msgstr "Scrios na snáitheanna roghnaithe?"
-
-#: new-message-notice-text
-msgid "New message from"
-msgstr "Teachtaireacht nua ó"
-
-#: new-message-notice-a-text
-msgid "Read it"
-msgstr "Léigh é"
 
 #: noMessages-title
 msgid "No messages"
@@ -10383,10 +10205,6 @@ msgstr ""
 msgctxt "unsent-message-option-edit"
 msgid "Edit"
 msgstr "Eagar"
-
-#: message-options
-msgid "Message options"
-msgstr ""
 
 #. # Date and time
 #: today
@@ -10593,19 +10411,6 @@ msgstr "Atosaigh"
 #: power
 msgid "Power off"
 msgstr "Múch"
-
-#: asyncpanzoom
-msgid "Disable APZ for Apps"
-msgstr ""
-
-#: asyncpanzoomOff
-msgid "Enable APZ for Apps"
-msgstr ""
-
-#. # cards view
-#: no-recent-apps
-msgid "No recent apps"
-msgstr ""
 
 #: dontallow
 msgid "Don't allow"
@@ -11094,11 +10899,11 @@ msgstr ""
 msgid "{{deviceName}} would like to transfer {{fileName}} ({{fileSize}})."
 msgstr ""
 
-#: transfer-confirmation-title
+#: notification-fileTransfer-title
 msgid "{{deviceName}}"
 msgstr "{{deviceName}}"
 
-#: transfer-confirmation-description
+#: notification-fileTransfer-description
 msgid "Review transfer request."
 msgstr ""
 
@@ -11151,14 +10956,6 @@ msgstr "Aistriú"
 msgid "Cancel Bluetooth file transfer?"
 msgstr ""
 
-#: transfer-has-started-title
-msgid "The transfer has started"
-msgstr ""
-
-#: transfer-has-started-description
-msgid "Check the progress in Notification center"
-msgstr ""
-
 #: transferFinished-sentSuccessful-title
 msgid "File sent"
 msgstr "Comhad seolta"
@@ -11174,15 +10971,6 @@ msgstr "Níorbh fhéidir an comhad a sheoladh"
 #: transferFinished-receivedFailed-title
 msgid "File could not be received"
 msgstr "Níorbh fhéidir an comhad a fháil"
-
-#: transferReport-title
-msgid "Transfer report:"
-msgstr "Tuairisc ar aistriú:"
-
-#: transferReport-description
-msgid ""
-"{{numSuccessful}} files successful, {{numUnsuccessful}} files unsuccessful"
-msgstr ""
 
 #: unknown-file
 msgid "Unknown file"
@@ -11201,12 +10989,12 @@ msgid "Can not receive file"
 msgstr "Ní féidir an comhad a fháil"
 
 #: cannotGetStorageState
-msgid "Can not get device storage state."
+msgid "Can not get device storage state"
 msgstr ""
 
-#: sdcard-not-exist2
-msgid "No memory card found. Please insert a memory card."
-msgstr "Níor aimsíodh cárta cuimhne. Cuir cárta cuimhne isteach."
+#: sdcard-not-exist
+msgid "No memory card found (Please insert a memory card)"
+msgstr ""
 
 #: sdcard-in-use
 msgid ""
@@ -11553,87 +11341,13 @@ msgstr "Bainisteoir brúfhógraí WAP"
 msgid "Receives, filters and displays WAP Push messages"
 msgstr ""
 
-#: title
-msgid "WAP Push message"
-msgstr "Brúfhógra WAP"
-
-#: accept
-msgid "Accept"
-msgstr "Glac leis"
-
-#: quit
-msgid "Quit"
-msgstr "Scoir"
-
-#: store
-msgid "Store"
-msgstr ""
-
-#: finish
-msgid "Finish"
-msgstr "Críochnaigh"
-
 #: this-message-has-expired
 msgid "This message has expired"
 msgstr ""
 
-#: cp-pin.placeholder
-msgid "PIN"
-msgstr "UAP"
-
-#: cp-message-received
-msgid "Configuration message received"
-msgstr ""
-
-#: cp-container-title
-msgid "OTA Access Point Configuration"
-msgstr ""
-
-#: cp-accept-help
-msgid "Configuration message received, click on 'Accept' to continue."
-msgstr ""
-
-#: cp-accept-help-pin
-msgid ""
-"The PIN code should have been provided to you by whomever sent you the "
-"configuration message."
-msgstr ""
-
-#: cp-quit-app-confirm-dialog-message
-msgid "The message has not been processed yet, do you really want to quit?"
-msgstr ""
-
-#: cp-auth-failure-confirm-dialog-message
-msgid ""
-"The PIN you have entered is incorrect. The PIN code should have been provided "
-"to you by whomever sent you the configuration message."
-msgstr ""
-
-#: cp-store-confirm-dialog-message
-msgid "You are about to store the following APN(s) on your phone:"
-msgstr ""
-
-#: cp-finish-confirm-dialog-message
-msgid "We are done, the APN(s) are now stored."
-msgstr ""
-
-#: cp-finish-confirm-dialog-message-invalid-doc
-msgid ""
-"The configuration message you received could not be authenticated against "
-"your SIM card, so cannot be used to configure your device."
-msgstr ""
-
-#: cp-finish-confirm-dialog-message-auth-error
-msgid "There was a error while authenticating the sender of the message."
-msgstr ""
-
-#: cp-finish-confirm-dialog-message-auth-unsupported-mechanism
-msgid "The authentication mechanism is not supported yet."
-msgstr ""
-
-#: cp-finish-confirm-dialog-message-no-apns
-msgid "The configuration message you received does not have valid APNs."
-msgstr ""
+#: wap-push-message
+msgid "WAP Push message"
+msgstr "Brúfhógra WAP"
 
 #: brandShortName
 msgid "B2G OS"
@@ -12338,119 +12052,6 @@ msgstr "%x %I:%M %p"
 #: weekStartsOnMonday
 msgid "0"
 msgstr "0"
-
-#: stopped_download_title
-msgid "Download stopped"
-msgstr "Stopadh an t-íosluchtú"
-
-#: stopped_download_message
-msgid "Download was stopped. Try downloading again?"
-msgstr "Stopadh an t-íosluchtú. Iarracht eile?"
-
-#: stopped_download_left_button
-msgctxt "stopped_download_left_button"
-msgid "Cancel"
-msgstr "Cealaigh"
-
-#: stopped_download_right_button
-msgctxt "stopped_download_right_button"
-msgid "Try again"
-msgstr "Déan iarracht eile"
-
-#: failed_download_title
-msgid "Download failed"
-msgstr "Theip ar íosluchtú"
-
-#: failed_download_message
-msgid "{{name}} failed to download. Try downloading again?"
-msgstr "Níorbh fhéidir {{name}} a íosluchtú. Déan iarracht eile?"
-
-#: failed_download_left_button
-msgctxt "failed_download_left_button"
-msgid "Cancel"
-msgstr "Cealaigh"
-
-#: failed_download_right_button
-msgctxt "failed_download_right_button"
-msgid "Try again"
-msgstr "Déan iarracht eile"
-
-#: stop_download_title
-msgid "Stop download"
-msgstr "Stop an t-íosluchtú"
-
-#: stop_download_message
-msgid "Are you sure you want to stop the download?"
-msgstr "An bhfuil tú cinnte gur mhaith leat an t-íosluchtú a stopadh?"
-
-#: delete_download_title
-msgctxt "delete_download_title"
-msgid "Delete"
-msgstr "Scrios"
-
-#: delete_download_message
-msgid "Delete {{name}}?"
-msgstr "Scrios {{name}}?"
-
-#: delete_download_left_button
-msgctxt "delete_download_left_button"
-msgid "Cancel"
-msgstr "Cealaigh"
-
-#: delete_download_right_button
-msgctxt "delete_download_right_button"
-msgid "Delete"
-msgstr "Scrios"
-
-#: unsupported_file_type_download_title
-msgctxt "unsupported_file_type_download_title"
-msgid "Unable to open"
-msgstr "Ní féidir é a oscailt"
-
-#: unsupported_file_type_download_message
-msgid ""
-"There isn’t an app that can open {{name}}. Would you like to save the file or "
-"delete it?"
-msgstr ""
-
-#: unsupported_file_type_download_left_button
-msgctxt "unsupported_file_type_download_left_button"
-msgid "Keep File"
-msgstr "Coinnigh an Comhad"
-
-#: unsupported_file_type_download_right_button
-msgctxt "unsupported_file_type_download_right_button"
-msgid "Delete"
-msgstr "Scrios"
-
-#: file_not_found_download_title
-msgid "File not found"
-msgstr "Comhad gan aimsiú"
-
-#: file_not_found_download_message
-msgid "The file wasn’t found on the device"
-msgstr "Níor aimsíodh an comhad ar an ngléas"
-
-#: file_open_error_download_title
-msgctxt "file_open_error_download_title"
-msgid "Unable to open"
-msgstr "Ní féidir é a oscailt"
-
-#: file_open_error_download_message
-msgid ""
-"There is a problem opening {{name}}. Would you like to save the file or "
-"delete it?"
-msgstr ""
-
-#: file_open_error_download_left_button
-msgctxt "file_open_error_download_left_button"
-msgid "Keep File"
-msgstr "Coinnigh an Comhad"
-
-#: file_open_error_download_right_button
-msgctxt "file_open_error_download_right_button"
-msgid "Delete"
-msgstr "Scrios"
 
 #: perm-contacts-appRequest
 msgid "{{app}} would like to access your contact list."
