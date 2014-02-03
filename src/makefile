@@ -47,7 +47,7 @@ eilecheck : FORCE
 
 
 clean :
-	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-?.?.po *ga-IE.po amo-javascript.mo mozilla-stable.po
+	rm -f *ga-*.jar IE.jar langpack-ga-IE.xpi $(UTFCOMP) obair.po tb_obair.po cal_obair.po mozilla-trunk.po mozilla-?.?.po *ga-IE.po amo-javascript.mo mozilla-stable.po gaia_obair.po
 	rm -fR langpack-build-dir
 	rm -f messages.po amo.pot amo-final.po amo-final.mo amo-obair.mo
 	rm -Rf gatemp
