@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-09 15:51-0500\n"
+"POT-Creation-Date: 2014-02-17 10:53-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -4669,7 +4669,7 @@ msgstr "&Cóipeáil"
 
 #: copyCmd.key Contact.accesskey cancelDownloadButton.accesskey
 #: digitalSign.certificate_clear.accesskey
-#: accountsManager.notification.button.accessKey
+#: accountsManager.notification.button.accessKey updatesItem_default.accesskey
 msgid "C"
 msgstr "C"
 
@@ -4756,6 +4756,22 @@ msgstr "&Scoir &brandShortName;"
 msgid "About &brandFullName;"
 msgstr "Maidir le &brandFullName;"
 
+#. LOCALIZATION NOTE (update.checkForUpdatesButton.*, update.updateButton.*, update.applyButtonBillboard.*):
+#. # Only one button is present at a time.
+#. # The button when displayed is located directly under the Thunderbird version in
+#. # the about dialog.
+#: update.checkForUpdatesButton.label update.checkForUpdatesButton.accesskey
+msgid "&Check for Updates"
+msgstr "&Lorg Nuashonruithe"
+
+#: update.updateButton.label update.updateButton.accesskey
+msgid "&Restart to Update"
+msgstr ""
+
+#: update.applyButtonBillboard.label update.applyButtonBillboard.accesskey
+msgid "&Apply Update…"
+msgstr ""
+
 #: community.start2
 msgid "&brandShortName; is designed by "
 msgstr "Bhí &brandShortName; cruthaithe ag "
@@ -4821,11 +4837,6 @@ msgstr "Polasaí Príobháideachta"
 #: update.checkingForUpdates
 msgid "Checking for updates…"
 msgstr "Nuashonruithe á lorg…"
-
-#. try to make the localized text short (see bug 596813 for screenshots).
-#: update.checkingAddonCompat
-msgid "Checking Add-on compatibility…"
-msgstr "Comhoiriúnacht na mBreiseán á Seiceáil…"
 
 #. try to make the localized text short (see bug 596813 for screenshots).
 #: update.noUpdatesFound
@@ -7087,7 +7098,7 @@ msgid "Other"
 msgstr "Eile"
 
 # Ctrl+h = Stair (for now, most other good ones are taken)
-#: Other.accesskey enableAppUpdate.accesskey
+#: Other.accesskey
 msgid "h"
 msgstr "h"
 
@@ -8075,19 +8086,15 @@ msgstr "Aitheantas Jabber"
 msgid "IRC Nick"
 msgstr "Leasainm IRC"
 
-# # LOCALIZATION NOTE (dateformat)
-# # Only used if the year isn't present and should be in the format used by Date.toLocaleFormat
-# # see http://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Date/toLocaleFormat
-# # %B is the month's localized name and %e is the day of the month [1-31]
-# # Separators (a space, dash, etc.) can be used
-#. ## LOCALIZATION NOTE (dateformat)
-#. ## Only used if the year isn't present and should be in the format used by Date.toLocaleFormat
-#. ## see http://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Date/toLocaleFormat
-#. ## %B is the month's localized name and %e is the day of the month [1-31]
+#. ## LOCALIZATION NOTE (dateFormatMonthDay)
+#. ## Only used if the year isn't present and should be in the format used by
+#. ## Date.toLocaleFormat see http://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Date/toLocaleFormat
+#. ## %B is the month's localized name and %d is the day of the month [01-31].
+#. ## Don't go using %e here, since it breaks things on Windows!
 #. ## Separators (a space, dash, etc.) can be used
-#: dateformat
-msgid "%B %e"
-msgstr "%B %e"
+#: dateFormatMonthDay
+msgid "%B %d"
+msgstr ""
 
 # # LOCALIZATION NOTE (cityAndStateAndZip):
 # # %1$S is city, %2$S is state, %3$S is zip
@@ -10029,7 +10036,7 @@ msgctxt "encryption.certificate_clear.button"
 msgid "Clear"
 msgstr "Glan"
 
-#: encryption.certificate_clear.accesskey editMsgAsNewCmd.key
+#: encryption.certificate_clear.accesskey editAsNewMsgCmd.key
 #: proportionalSize.accesskey
 msgid "e"
 msgstr "l"
@@ -11848,52 +11855,6 @@ msgstr "&Rith Anois"
 msgid "Run sele&cted filter(s) on:"
 msgstr "Rith s&cagairí roghnaithe ar:"
 
-#: choosethis.label filemessageschoosethis.label
-msgid "choose this folder"
-msgstr "roghnaigh an fillteán seo"
-
-# #-#-#-#-#  tmp.XXXXs6n9B1.po (thunderbird)  #-#-#-#-#
-# ***** BEGIN LICENSE BLOCK *****
-# Version: MPL 1.1/GPL 2.0/LGPL 2.1
-#
-# The contents of this file are subject to the Mozilla Public License Version
-# 1.1 (the "License"); you may not use this file except in compliance with
-# the License. You may obtain a copy of the License at
-# http://www.mozilla.org/MPL/
-#
-# Software distributed under the License is distributed on an "AS IS" basis,
-# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# for the specific language governing rights and limitations under the
-# License.
-#
-# The Original Code is Mozilla Communicator client code, released
-# March 31, 1998.
-#
-# The Initial Developer of the Original Code is
-# Netscape Communications Corporation.
-# Portions created by the Initial Developer are Copyright (C) 1998-1999
-# the Initial Developer. All Rights Reserved.
-#
-# Contributor(s):
-#
-# Alternatively, the contents of this file may be used under the terms of
-# either the GNU General Public License Version 2 or later (the "GPL"), or
-# the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# in which case the provisions of the GPL or the LGPL are applicable instead
-# of those above. If you wish to allow use of your version of this file only
-# under the terms of either the GPL or the LGPL, and not to allow others to
-# use your version of this file under the terms of the MPL, indicate your
-# decision by deleting the provisions above and replace them with the notice
-# and other provisions required by the GPL or the LGPL. If you do not delete
-# the provisions above, a recipient may use your version of this file under
-# the terms of any one of the MPL, the GPL or the LGPL.
-#
-# ***** END LICENSE BLOCK *****
-# Labels
-#: choosethisnewsserver.label
-msgid "choose this news server"
-msgstr "roghnaigh an freastalaí nuachta seo"
-
 #: helpButton.label helpButton.accesskey
 msgid "&Help"
 msgstr "Cab&hair"
@@ -12382,6 +12343,20 @@ msgstr "anaithnid"
 msgid "Global Inbox (%S)"
 msgstr "Bosca Isteach Uilíoch (%S)"
 
+# LOCALIZATION NOTES(verboseFolderFormat): %1$S is folder name, %2$S is server name
+#. # LOCALIZATION NOTE(verboseFolderFormat): %1$S is folder name, %2$S is server name
+#: verboseFolderFormat
+msgid "%1$S on %2$S"
+msgstr "%1$S ar %2$S"
+
+#: chooseFolder
+msgid "Choose Folder…"
+msgstr ""
+
+#: noFolders
+msgid "No available folders"
+msgstr ""
+
 # LOCALIZATION NOTE (glodaComplete.messagesTagged.label): The label used
 # in the autocomplete widget to refer to a query for all messages tagged
 # by a particular tag (replacing #1).
@@ -12750,13 +12725,10 @@ msgstr "dáta"
 #. # glodaFacetView.results.message.andOthers for more information).  The \u0020
 #. # character is a Unicode space character, which is needed as otherwise the
 #. # trailing whitespace is trimmed before it gets to the code.
-#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
-#. # Used to separate names/email addresses in a list.  Note the trailing space ', '
 #. #-#-#-#-#  chromemessengernewmailaccountaccountProvisioner.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (sepComma):
 #. #   \u0020 is a space, and should be included after.
-#: glodaFacetView.results.message.recipientSeparator
-#: macBiffNotification_separator sepComma
+#: glodaFacetView.results.message.recipientSeparator sepComma
 msgid ", "
 msgstr ", "
 
@@ -13051,6 +13023,10 @@ msgstr "Bog síos"
 #: account.cancelReconnection.label account.cancelReconnection.accesskey
 msgid "C&ancel reconnection"
 msgstr "Ce&alaigh an t-athcheangal"
+
+#: account.copyDebugLog.label account.copyDebugLog.accesskey
+msgid "&Copy Debug Log"
+msgstr ""
 
 #: account.connecting
 msgid "Connecting…"
@@ -16494,6 +16470,12 @@ msgstr "Ar %s"
 msgid "-------- Original Message --------"
 msgstr "-------- Teachtaireacht Bhunaidh --------"
 
+#. ## forwarded header in composeMsg
+#. ## user specified
+#: mailnews.forward_header_originalmessage
+msgid "-------- Forwarded Message --------"
+msgstr ""
+
 # # Strings used by the rename attachment dialog
 #. ## Strings used by the rename attachment dialog
 #: renameAttachmentTitle
@@ -16801,8 +16783,8 @@ msgid "Write: (no subject)"
 msgstr "Scríobh: (gan ábhar)"
 
 #: attachMenu.label attachMenu.accesskey
-msgid "A&ttach"
-msgstr "&Ceangail"
+msgid "Attac&h"
+msgstr ""
 
 #: attachFileCmd.label attachFileCmd.accesskey
 msgid "&File(s)…"
@@ -17138,6 +17120,10 @@ msgstr "Seiceáil litriú an roghnaithe nó na teachtaireachta iomláine"
 #: saveButton.tooltip
 msgid "Save this message"
 msgstr "Sábháil an teachtaireacht seo"
+
+#: printButton.tooltip
+msgid "Print this message"
+msgstr "Priontáil an teachtaireacht seo"
 
 #. Headers
 #. LOCALIZATION NOTE headersSpace.style is for aligning  the From:, To: and
@@ -17946,10 +17932,6 @@ msgstr "Teachtaireacht &Mharcáilte"
 msgid "F&older"
 msgstr "&Fillteán"
 
-#: thisFolder.label thisFolder.accesskey
-msgid "This &Folder"
-msgstr "An Fillteán &Seo"
-
 #: goRecentlyClosedTabs.label goRecentlyClosedTabs.accesskey
 msgctxt "goRecentlyClosedTabs.label goRecentlyClosedTabs.accesskey"
 msgid "&Recently Closed Tabs"
@@ -18050,9 +18032,10 @@ msgctxt "forwardAsAttachmentCmd.label forwardAsAttachmentCmd.accesskey"
 msgid "&Attachment"
 msgstr "I&atán"
 
-#: editMsgAsNewCmd.label editMsgAsNewCmd.accesskey
-msgid "&Edit Message As New"
-msgstr "Cuir in &Eagar Mar Theachtaireacht Nua"
+#: editAsNewMsgCmd.label editAsNewMsgCmd.accesskey
+msgctxt "editAsNewMsgCmd.label editAsNewMsgCmd.accesskey"
+msgid "&Edit As New Message"
+msgstr ""
 
 #: createFilter.label createFilter.accesskey
 msgid "Cre&ate Filter From Message…"
@@ -18108,14 +18091,6 @@ msgstr "k"
 #: watchThreadMenu.label watchThreadMenu.accesskey
 msgid "&Watch Thread"
 msgstr "Bí ag &Faire ar an Snáithe"
-
-#: fileHereMenu.label fileHereMenu.accesskey
-msgid "&File Here"
-msgstr "&Comhdaigh Anseo"
-
-#: copyHereMenu.label copyHereMenu.accesskey
-msgid "&Copy Here"
-msgstr "&Cóipeáil Anseo"
 
 #: tagMenu.label tagMenu.accesskey
 msgid "Ta&g"
@@ -18572,10 +18547,6 @@ msgstr "Díscrios an teachtaireacht roghnaithe"
 msgid "Mark messages"
 msgstr "Marcáil teachtaireachtaí"
 
-#: printButton.tooltip
-msgid "Print this message"
-msgstr "Priontáil an teachtaireacht seo"
-
 #: stopButton.tooltip
 msgid "Stop the current transfer"
 msgstr "Stop an traschur reatha"
@@ -18633,9 +18604,12 @@ msgstr ""
 msgid "Ig&nore warning for this message"
 msgstr ""
 
-#: phishingOptionDisableDetection.label
-#: phishingOptionDisableDetection.accesskey
-msgid "&Disable scam detection for all messages"
+#: phishingOptionSettings.label phishingOptionSettings.accesskey
+msgid "E&dit scam detection options…"
+msgstr ""
+
+#: phishingOptionSettingsUnix.label phishingOptionSettingsUnix.accesskey
+msgid "E&dit scam detection preferences…"
 msgstr ""
 
 #. AppMenu Popup
@@ -18847,85 +18821,85 @@ msgid "Order Received"
 msgstr "Ord Fála"
 
 #. Thread Pane Tooltips
-#: columnChooser.tooltip
-msgid "Click to select columns to display"
-msgstr "Cliceáil chun colúin a roghnú le cur ar taispeáint"
+#: columnChooser2.tooltip
+msgid "Select columns to display"
+msgstr ""
 
-#: threadColumn.tooltip
-msgid "Click to display message threads"
-msgstr "Cliceáil chun snáitheanna na dteachtaireachtaí a thaispeáint"
+#: threadColumn2.tooltip
+msgid "Display message threads"
+msgstr ""
 
-#: fromColumn.tooltip
-msgid "Click to sort by from"
-msgstr "Cliceáil chun sórtáil de réir Ó"
+#: fromColumn2.tooltip
+msgid "Sort by from"
+msgstr ""
 
-#: recipientColumn.tooltip
-msgid "Click to sort by recipient"
-msgstr "Cliceáil chun sórtáil de réir faighteora"
+#: recipientColumn2.tooltip
+msgid "Sort by recipient"
+msgstr ""
 
-#: subjectColumn.tooltip
-msgid "Click to sort by subject"
-msgstr "Cliceáil chun sórtáil de réir ábhair"
+#: subjectColumn2.tooltip
+msgid "Sort by subject"
+msgstr ""
 
-#: dateColumn.tooltip
-msgid "Click to sort by date"
-msgstr "Cliceáil chun sórtáil de réir dáta"
+#: dateColumn2.tooltip
+msgid "Sort by date"
+msgstr ""
 
-#: priorityColumn.tooltip
-msgid "Click to sort by priority"
-msgstr "Cliceáil chun sórtáil de réir tosaíochta"
+#: priorityColumn2.tooltip
+msgid "Sort by priority"
+msgstr ""
 
-#: tagsColumn.tooltip
-msgid "Click to sort by tags"
-msgstr "Cliceáil chun sórtáil de réir clibe"
+#: tagsColumn2.tooltip
+msgid "Sort by tags"
+msgstr ""
 
-#: accountColumn.tooltip
-msgid "Click to sort by account"
-msgstr "Cliceáil chun sórtáil de réir cuntais"
+#: accountColumn2.tooltip
+msgid "Sort by account"
+msgstr ""
 
-#: statusColumn.tooltip
-msgid "Click to sort by status"
-msgstr "Cliceáil chun sórtáil de réir stádais"
+#: statusColumn2.tooltip
+msgid "Sort by status"
+msgstr ""
 
-#: sizeColumn.tooltip sizeColumnTooltip
-msgid "Click to sort by size"
-msgstr "Cliceáil chun sórtáil de réir méide"
+#: sizeColumn2.tooltip
+msgid "Sort by size"
+msgstr ""
 
-#: junkStatusColumn.tooltip
-msgid "Click to sort by junk status"
-msgstr "Cliceáil chun sórtáil de réir stádais dramhphoist"
+#: junkStatusColumn2.tooltip
+msgid "Sort by junk status"
+msgstr ""
 
-#: unreadColumn.tooltip
+#: unreadColumn2.tooltip
 msgid "Number of unread messages in thread"
 msgstr "Teachtaireachtaí gan léamh sa snáithe"
 
-#: totalColumn.tooltip
+#: totalColumn2.tooltip
 msgid "Total number of messages in thread"
 msgstr "Iomlán na dTeachtaireachtaí sa snáithe"
 
-#: readColumn.tooltip
-msgid "Click to sort by read"
-msgstr "Cliceáil chun sórtáil de réir stádais léite"
+#: readColumn2.tooltip
+msgid "Sort by read"
+msgstr ""
 
-#: receivedColumn.tooltip
-msgid "Click to sort by date received"
-msgstr "Cliceáil chun sórtáil de réir dáta fála"
+#: receivedColumn2.tooltip
+msgid "Sort by date received"
+msgstr ""
 
-#: starredColumn.tooltip
-msgid "Click to sort by star"
-msgstr "Cliceáil chun sórtáil de réir réiltín"
+#: starredColumn2.tooltip
+msgid "Sort by star"
+msgstr ""
 
-#: locationColumn.tooltip
-msgid "Click to sort by location"
-msgstr "Cliceáil chun sórtáil de réir suímh"
+#: locationColumn2.tooltip
+msgid "Sort by location"
+msgstr ""
 
-#: idColumn.tooltip
-msgid "Click to sort by order received"
-msgstr "Cliceáil chun sórtáil de réir ord fála"
+#: idColumn2.tooltip
+msgid "Sort by order received"
+msgstr ""
 
-#: attachmentColumn.tooltip
-msgid "Click to sort by attachments"
-msgstr "Cliceáil chun sórtáil de réir iatán"
+#: attachmentColumn2.tooltip
+msgid "Sort by attachments"
+msgstr ""
 
 #. Thread Pane Context Menu
 #: contextOpenNewWindow.label contextOpenNewWindow.accesskey
@@ -18944,9 +18918,10 @@ msgstr "Oscail Teachtaireacht i g&Cluaisín Nua"
 msgid "Ope&n Message in Conversation"
 msgstr "Oscail Teachtaireacht i gComh&rá"
 
-#: contextEditAsNew.label contextEditAsNew.accesskey
-msgid "&Edit As New…"
-msgstr "Cuir in &Eagar mar Nua…"
+#: contextEditMsgAsNew.label contextEditMsgAsNew.accesskey
+msgctxt "contextEditMsgAsNew.label contextEditMsgAsNew.accesskey"
+msgid "&Edit As New Message"
+msgstr ""
 
 #: contextArchive.label contextArchive.accesskey
 msgid "Arc&hive"
@@ -19151,9 +19126,9 @@ msgstr "Cuir sa Lea&bhar Seoltaí…"
 msgid "Add to Address &Book"
 msgstr "Cuir sa Lea&bhar Seoltaí"
 
-#: EditContact.label EditContact.accesskey
-msgid "&Edit Contact…"
-msgstr "Cuir Teagmháil in &Eagar…"
+#: EditContact1.label EditContact1.accesskey
+msgid "&Edit Contact"
+msgstr ""
 
 #: ViewContact.label ViewContact.accesskey
 msgid "&View Contact"
@@ -19615,12 +19590,6 @@ msgstr ""
 "Níorbh fhéidir an fillteán a athainmniú. B'fhéidir go bhfuil an fillteán á "
 "athpharsáil nó nach ainm fillteáin bailí atá san ainm nua."
 
-# LOCALIZATION NOTES(verboseFolderFormat): %1$S is folder name, %2$S is server name
-#. # LOCALIZATION NOTE(verboseFolderFormat): %1$S is folder name, %2$S is server name
-#: verboseFolderFormat
-msgid "%1$S on %2$S"
-msgstr "%1$S ar %2$S"
-
 # LOCALIZATION NOTES(filterFolderTruncateFailed): %1$S is replaced by the folder name, %2$S is replaced by the brandShortName
 #. # LOCALIZATION NOTE(filterFolderTruncateFailed): %1$S is replaced by the folder name, %2$S is replaced by the brandShortName
 #: filterFolderTruncateFailed
@@ -19761,6 +19730,10 @@ msgstr "Freastalaí Ríomhphoist IMAP"
 msgid "Local Mail Store"
 msgstr "Stóras Logánta Ríomhphoist"
 
+#: sizeColumnTooltip
+msgid "Click to sort by size"
+msgstr "Cliceáil chun sórtáil de réir méide"
+
 #: linesColumnTooltip
 msgid "Click to sort by lines"
 msgstr "Cliceáil chun sórtáil de réir línte"
@@ -19768,6 +19741,18 @@ msgstr "Cliceáil chun sórtáil de réir línte"
 #: linesColumnHeader LINES
 msgid "Lines"
 msgstr "Línte"
+
+#. # LOCALIZATION NOTE (getMsgButtonTooltip): Do not translate the word "%S" below.
+#. # Place the word "%S" in your translation where the name of the comma seperated accounts should appear.
+#: getMsgButtonTooltip
+msgid "Get new messages for %S"
+msgstr ""
+
+#. # Used to separate email addresses in a list.  Note the trailing space ', '
+#: getMsgButtonTooltip.listSeparator
+msgctxt "getMsgButtonTooltip.listSeparator"
+msgid ", "
+msgstr ""
 
 #. # status feedback stuff
 #: documentDone
@@ -19932,14 +19917,12 @@ msgstr "Bratach IMAP"
 
 #. # mailnews.js
 #: mailnews.send_default_charset
-msgctxt "mailnews.send_default_charset"
-msgid "ISO-8859-1"
-msgstr "ISO-8859-1"
+msgid "UTF-8"
+msgstr ""
 
 #: mailnews.view_default_charset
-msgctxt "mailnews.view_default_charset"
 msgid "ISO-8859-1"
-msgstr "ISO-8859-1"
+msgstr ""
 
 #. # generate display names in last first order
 #. # valid mail.addr_book.displayName.lastnamefirst are: true or false
@@ -20321,6 +20304,12 @@ msgstr "%1$S teachtaireacht nua ó %2$S."
 msgid "%1$S new messages from %2$S and %3$S more."
 msgstr "%1$S teachtaireacht nua ó %2$S agus %3$S eile."
 
+#. # Used to separate names/email addresses in a list.  Note the trailing space ', '
+#: macBiffNotification_separator
+msgctxt "macBiffNotification_separator"
+msgid ", "
+msgstr ""
+
 # For the Quota tab in the mail folder properties dialog
 #. # For the Quota tab in the mail folder properties dialog
 #: quotaUsedFree
@@ -20488,11 +20477,6 @@ msgctxt "updatesItem_defaultFallback"
 msgid "Check for Updates…"
 msgstr "Lorg Nuashonruithe…"
 
-#: updatesItem_default.accesskey
-msgctxt "updatesItem_default.accesskey"
-msgid "C"
-msgstr "C"
-
 #: updatesItem_downloading
 msgid "Downloading %S…"
 msgstr "%S á íosluchtú…"
@@ -20507,9 +20491,8 @@ msgid "D"
 msgstr "D"
 
 #: updatesItem_resume
-msgctxt "updatesItem_resume"
 msgid "Resume Downloading %S…"
-msgstr "Lean le híosluchtú %S…"
+msgstr "Lean le hÍosluchtú %S…"
 
 #: updatesItem_resumeFallback
 msgid "Resume Downloading Update…"
@@ -21095,75 +21078,16 @@ msgstr ""
 msgid "Restart"
 msgstr "Atosaigh"
 
-#. # Check for Updates in the About Dialog - button labels and accesskeys
-#. # LOCALIZATION NOTE - all of the following update buttons labels will only be
-#. # displayed one at a time. So, if a button is displayed nothing else will
-#. # be displayed alongside of the button. The button when displayed is located
-#. # directly under the Thunderbird version in the about dialog (see bug 596813 for
-#. # screenshots).
-#: update.checkInsideButton.label
-msgid "Check for Updates"
-msgstr "Lorg Nuashonruithe"
+#. # LOCALIZATION NOTE (downloadAndInstallButton.label): %S is replaced by the
+#. # version of the update: "Update to 28.0".
+#: update.downloadAndInstallButton.label
+msgid "Update to %S"
+msgstr ""
 
-#: update.checkInsideButton.accesskey
-msgctxt "update.checkInsideButton.accesskey"
-msgid "C"
-msgstr "L"
-
-#: update.resumeButton.label
-msgctxt "update.resumeButton.label"
-msgid "Resume Downloading %S…"
-msgstr "Lean le híosluchtú %S…"
-
-#: update.resumeButton.accesskey
-msgctxt "update.resumeButton.accesskey"
-msgid "D"
-msgstr "L"
-
-#: update.openUpdateUI.applyButton.label
-msgid "Apply Update…"
-msgstr "Cuir Nuashonrú i bhFeidhm…"
-
-#: update.openUpdateUI.applyButton.accesskey
-msgctxt "update.openUpdateUI.applyButton.accesskey"
-msgid "A"
-msgstr "F"
-
-#: update.restart.updateButton.label
-msgid "Restart to Update"
-msgstr "Atosaigh chun an nuashonrú a chur i bhfeidhm"
-
-#: update.restart.updateButton.accesskey
-msgctxt "update.restart.updateButton.accesskey"
-msgid "R"
-msgstr "A"
-
-#: update.restart.restartButton.label
-msgid "Update & Restart"
-msgstr "Nuashonraigh agus Atosaigh"
-
-#: update.restart.restartButton.accesskey
-msgctxt "update.restart.restartButton.accesskey"
-msgid "R"
-msgstr "A"
-
-#: update.openUpdateUI.upgradeButton.label
-msgid "Upgrade Now…"
-msgstr "Uasghrádaigh Anois…"
-
-#: update.openUpdateUI.upgradeButton.accesskey
-msgctxt "update.openUpdateUI.upgradeButton.accesskey"
+#: update.downloadAndInstallButton.accesskey
+msgctxt "update.downloadAndInstallButton.accesskey"
 msgid "U"
-msgstr "U"
-
-#: update.restart.upgradeButton.label
-msgid "Upgrade Now"
-msgstr "Uasghrádaigh Anois"
-
-#: update.restart.upgradeButton.accesskey
-msgctxt "update.restart.upgradeButton.accesskey"
-msgid "U"
-msgstr "U"
+msgstr ""
 
 #: websearch.setDefault
 msgid "Set this search engine as the default"
@@ -21883,9 +21807,9 @@ msgstr "Socruithe as líne"
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. Labels
-#: newfolderchoosethis.label
-msgid "choose this for the parent"
-msgstr "roghnaigh é seo don mháthair"
+#: filemessageschoosethis.label
+msgid "choose this folder"
+msgstr "roghnaigh an fillteán seo"
 
 #: recentfolders.label
 msgid "Recent"
@@ -23456,37 +23380,37 @@ msgid "&Close message window/tab on move or delete"
 msgstr "Dún fuinneog/&cluaisín na teachtaireachta tar éis a bhogtha nó scriosta"
 
 #. Update
-#: autoCheck.label
-msgid "Automatically check for updates to:"
-msgstr "Déan nuashonruithe a lorg go huathoibríoch i gcomhair:"
+#: updateApp.label
+msgid "&brandShortName; updates:"
+msgstr "Nuashonruithe &brandShortName;:"
 
-#: enableAppUpdate.label
-msgid "&brandShortName;"
-msgstr "&brandShortName;"
+#: updateAuto.label updateAuto.accesskey
+msgid "&Automatically install updates (recommended: improved security)"
+msgstr "Suiteáil nu&ashonruithe go huathoibríoch (molta: slándáil níos fearr)"
 
-#: enableAddonsUpdate.label enableAddonsUpdate.accesskey
-msgid "Installed &Add-ons"
-msgstr "B&reiseáin shuiteáilte"
+#: updateCheck.label updateCheck.accesskey
+msgid "&Check for updates, but let me choose whether to install them"
+msgstr "&Lorg nuashonruithe, ach lig dom iad a shuiteáil nuair is mian liom"
 
-#: whenUpdatesFound.label
-msgid "When updates to &brandShortName; are found,"
-msgstr "Agus nuashonruithe do &brandShortName; aimsithe,"
+#: updateManual.label updateManual.accesskey
+msgid "&Never check for updates (not recommended: security risk)"
+msgstr "&Ná lorg nuashonruithe riamh (rabhadh: contúirt slándála)"
 
-#: modeAskMe.label modeAskMe.accesskey
-msgid "Ask &me what I want to do"
-msgstr "fiafraigh díom cad atá l&e déanamh"
-
-#: modeAutomatic.label modeAutomatic.accesskey
-msgid "Automatically &download and install the update"
-msgstr "Íos&luchtaigh agus suiteáil an nuashonrú go huathoibríoch"
-
-#: modeAutoAddonWarn.label modeAutoAddonWarn.accesskey
+#: updateAutoAddonWarn.label updateAutoAddonWarn.accesskey
 msgid "&Warn me if this will disable any of my add-ons"
 msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 
-#: showUpdates.label showUpdates.accesskey
-msgid "&Show Update History"
-msgstr "Tai&speáin Stair na Nuashonruithe"
+#: updateHistory.label updateHistory.accesskey
+msgid "Show U&pdate History"
+msgstr "Tais&peáin Stair na Nuashonruithe"
+
+#: updateOthers.label
+msgid "Automatically update:"
+msgstr "Nuashonraigh go huathoibríoch:"
+
+#: enableAddonsUpdate3.label enableAddonsUpdate3.accesskey
+msgid "Add-&ons"
+msgstr ""
 
 #: useService.label useService.accesskey
 msgid "Use a &background service to install updates"
@@ -25723,10 +25647,6 @@ msgstr "Cuardaigh Teachtaireachtaí"
 #: results.label
 msgid "Results"
 msgstr "Torthaí"
-
-#: moveHereMenu.label moveHereMenu.accesskey
-msgid "Move &Here"
-msgstr "Bog &Anseo"
 
 #: moveButton.label moveButton.accesskey
 msgid "Move &To"
