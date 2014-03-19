@@ -10,6 +10,7 @@ sed -i '/=Bing/d' browser-ga-IE/chrome/browser-region/region.properties
 sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=2/' browser-ga-IE/chrome/browser-region/region.properties mobile-ga-IE/chrome/region.properties
 # http://hg.mozilla.org/releases/l10n/mozilla-aurora/ga-IE/rev/0cdb79b8517e
 sed -i '/^browser.search.order.[23]=/d' mobile-ga-IE/chrome/region.properties
+sed -i '/^promoBanner.message.text=/s/  *$/\\u0020/' mobile-ga-IE/android/chrome/sync.properties
 sed -i 's/name=Mibbit/name = Mibbit/' browser-ga-IE/chrome/browser-region/region.properties
 sed -i '/mibbit\.com/s/late=https/late = https/' browser-ga-IE/chrome/browser-region/region.properties
 sed -i '/The default set of protocol handlers for irc:/s/.*/\n&/' browser-ga-IE/chrome/browser-region/region.properties
@@ -44,7 +45,7 @@ sed -i '/^pluginInstallation.restart.accesskey/s/.*/pluginInstallation.restart.a
 sed -i '/^cmd.purchaseAddon.accesskey/s/.*/cmd.purchaseAddon.accesskey=C/' toolkit-ga-IE/chrome/mozapps/extensions/extensions.properties
 
 sed -i 's/certs.ask.accesskey "."/certs.ask.accesskey "d"/; s/certs.auto.accesskey "."/certs.auto.accesskey "u"/' browser-ga-IE/chrome/browser/preferences/advanced.dtd
-sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/; s/responsiveDesignTool.commandkey "."/responsiveDesignTool.commandkey "E"/' browser-ga-IE/chrome/browser/browser.dtd
+sed -i 's/urlbar.accesskey "."/urlbar.accesskey "m"/; s/selectAllCmd.key "."/selectAllCmd.key "A"/; s/searchFocus.commandkey2 "."/searchFocus.commandkey2 "e"/; s/findAgainCmd.commandkey "."/findAgainCmd.commandkey "g"/; s/responsiveDesignTool.commandkey "."/responsiveDesignTool.commandkey "M"/' browser-ga-IE/chrome/browser/browser.dtd
 sed -i 's/mediaSaveAs.accesskey "."/mediaSaveAs.accesskey "S"/' browser-ga-IE/chrome/browser/pageInfo.dtd
 sed -i 's/mediaTab.accesskey "."/mediaTab.accesskey "M"/' browser-ga-IE/chrome/browser/pageInfo.dtd
 sed -i 's/generalSecurityDetails.accesskey "."/generalSecurityDetails.accesskey "M"/' browser-ga-IE/chrome/browser/pageInfo.dtd
