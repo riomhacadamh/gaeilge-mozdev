@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-17 10:53-0500\n"
+"POT-Creation-Date: 2014-04-14 09:26-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -3236,7 +3236,7 @@ msgstr "Siombailí Coitianta"
 msgid "Insert"
 msgstr "Ionsáigh"
 
-#: closeButton.label
+#: closeButton.label button.close.label
 msgid "Close"
 msgstr "Dún"
 
@@ -4766,11 +4766,11 @@ msgstr "&Lorg Nuashonruithe"
 
 #: update.updateButton.label update.updateButton.accesskey
 msgid "&Restart to Update"
-msgstr ""
+msgstr "&Atosaigh chun Nuashonrú"
 
 #: update.applyButtonBillboard.label update.applyButtonBillboard.accesskey
 msgid "&Apply Update…"
-msgstr ""
+msgstr "&Cuir nuashonrú i bhfeidhm…"
 
 #: community.start2
 msgid "&brandShortName; is designed by "
@@ -7718,7 +7718,10 @@ msgid "Ph&onetic Name"
 msgstr "Ainm F&oghrach"
 
 # Toolbar items
-#: home.heading
+#. #-#-#-#-#  chromemessengertabmail.dtd.po (firefox)  #-#-#-#-#
+#. This is the default tab
+#. title to show when the tab has no title.
+#: home.heading defaultTabTitle.label
 msgid "Home"
 msgstr "Baile"
 
@@ -8094,7 +8097,7 @@ msgstr "Leasainm IRC"
 #. ## Separators (a space, dash, etc.) can be used
 #: dateFormatMonthDay
 msgid "%B %d"
-msgstr ""
+msgstr "%d %B"
 
 # # LOCALIZATION NOTE (cityAndStateAndZip):
 # # %1$S is city, %2$S is state, %3$S is zip
@@ -10558,19 +10561,25 @@ msgstr "Inniu ag %S"
 msgid "Yesterday %S"
 msgstr "Inné ag %S"
 
+#. #-#-#-#-#  chromemessengerchat.properties.po (firefox)  #-#-#-#-#
+#. #LOCALIZATION NOTE
+#. # These are special entries in the log tree for the corresponding days.
 #. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
 #. #Group by date thread pane titles
 #: log.today today clearTimeDuration.today
 msgid "Today"
 msgstr "Inniu"
 
-#: log.lastWeek lastWeek
+#. #LOCALIZATION NOTE
+#. # These are special groups in the log tree for the last 3-7 days and
+#. # the last 8-14 days.
+#: log.currentWeek
+msgid "This Week"
+msgstr "An tSeachtain Seo"
+
+#: log.previousWeek lastWeek
 msgid "Last Week"
 msgstr "An tseachtain seo caite"
-
-#: log.twoWeeksAgo twoWeeksAgo
-msgid "Two Weeks Ago"
-msgstr "Coicís ó shin"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -10858,7 +10867,7 @@ msgstr ""
 
 #: options.connected.tooltip
 msgid "The developer tools server is running and there are clients connected."
-msgstr ""
+msgstr "Tá freastalaí na n-uirlisí forbartha ar siúl agus tá cliaint ceangailte leis."
 
 #: options.listening.label
 msgid "Listening"
@@ -10866,16 +10875,16 @@ msgstr "Éisteacht"
 
 #: options.listening.tooltip
 msgid "The developer tools server is running and waiting for connections."
-msgstr ""
+msgstr "Tá freastalaí na n-uirlisí forbartha ar siúl agus tá sé ag feitheamh le cliaint."
 
 #: options.idle.label
 msgid "Not Running"
-msgstr ""
+msgstr "Níl sé ar siúl"
 
 #: options.idle.tooltip
 msgid ""
 "The developer tools server is not running. You can start it from this dialog."
-msgstr ""
+msgstr "Níl freastalaí na n-uirlisí forbartha ar siúl. Is féidir leat é a chur ar siúl ón dialóg seo."
 
 #: options.unsupported.label
 msgid "Unsupported"
@@ -12351,11 +12360,11 @@ msgstr "%1$S ar %2$S"
 
 #: chooseFolder
 msgid "Choose Folder…"
-msgstr ""
+msgstr "Roghnaigh Fillteán…"
 
 #: noFolders
 msgid "No available folders"
-msgstr ""
+msgstr "Níl aon fhillteán ar fáil"
 
 # LOCALIZATION NOTE (glodaComplete.messagesTagged.label): The label used
 # in the autocomplete widget to refer to a query for all messages tagged
@@ -16258,13 +16267,12 @@ msgctxt "saveDlogTitle"
 msgid "Save Message"
 msgstr "Sábháil an Teachtaireacht"
 
-#: saveDlogMessage
+#. ## LOCALIZATION NOTE (SaveDlogMessages): %1$S is folder name
+#: saveDlogMessages
 msgid ""
-"Message has not been sent. Do you want to save the message in the Drafts "
-"folder?"
-msgstr ""
-"Níor seoladh an teachtaireacht. An bhfuil fonn ort í a shábháil i bhfillteán "
-"na nDréachtaí?"
+"Message has not been sent. Do you want to save the message in your drafts "
+"folder (%1$S)?"
+msgstr "Níor seoladh an teachtaireacht. An bhfuil fonn ort an teachtaireacht a shábháil i bhfillteán na ndréachtaí (%1$S)?"
 
 #: chooseFileToAttach
 msgid "Attach File(s)"
@@ -16474,7 +16482,7 @@ msgstr "-------- Teachtaireacht Bhunaidh --------"
 #. ## user specified
 #: mailnews.forward_header_originalmessage
 msgid "-------- Forwarded Message --------"
-msgstr ""
+msgstr "-------- Teachtaireacht Ar Aghaidh --------"
 
 # # Strings used by the rename attachment dialog
 #. ## Strings used by the rename attachment dialog
@@ -16784,7 +16792,7 @@ msgstr "Scríobh: (gan ábhar)"
 
 #: attachMenu.label attachMenu.accesskey
 msgid "Attac&h"
-msgstr ""
+msgstr "Iatá&n"
 
 #: attachFileCmd.label attachFileCmd.accesskey
 msgid "&File(s)…"
@@ -18035,7 +18043,7 @@ msgstr "I&atán"
 #: editAsNewMsgCmd.label editAsNewMsgCmd.accesskey
 msgctxt "editAsNewMsgCmd.label editAsNewMsgCmd.accesskey"
 msgid "&Edit As New Message"
-msgstr ""
+msgstr "&Cuir in eagar mar theachtaireacht nua"
 
 #: createFilter.label createFilter.accesskey
 msgid "Cre&ate Filter From Message…"
@@ -18592,17 +18600,17 @@ msgstr "Cuir Ar Aghaidh Mar Iatán"
 #: remoteContentOptionsAllowForMsg.label
 #: remoteContentOptionsAllowForMsg.accesskey
 msgid "&Show remote content in this message"
-msgstr ""
+msgstr "&Taispeáin ábhar i gcéin sa teachtaireacht seo"
 
 #: remoteContentOptionAllowForAddress.label
 #: remoteContentOptionAllowForAddress.accesskey
 msgid "Show remote content &from this sender"
-msgstr ""
+msgstr "Taispeáin ábhar i gcéin ón &seoltóir seo"
 
 #. Phishing Button Popup
 #: phishingOptionIgnore.label phishingOptionIgnore.accesskey
 msgid "Ig&nore warning for this message"
-msgstr ""
+msgstr "Déa&n neamhaird de rabhadh a bhaineann leis an teachtaireacht seo"
 
 #: phishingOptionSettings.label phishingOptionSettings.accesskey
 msgid "E&dit scam detection options…"
@@ -18823,51 +18831,51 @@ msgstr "Ord Fála"
 #. Thread Pane Tooltips
 #: columnChooser2.tooltip
 msgid "Select columns to display"
-msgstr ""
+msgstr "Roghnaigh colúin le taispeáint"
 
 #: threadColumn2.tooltip
 msgid "Display message threads"
-msgstr ""
+msgstr "Taispeáin snáithe"
 
 #: fromColumn2.tooltip
 msgid "Sort by from"
-msgstr ""
+msgstr "Sórtáil de réir seoltóra"
 
 #: recipientColumn2.tooltip
 msgid "Sort by recipient"
-msgstr ""
+msgstr "Sórtáil de réir faighteora"
 
 #: subjectColumn2.tooltip
 msgid "Sort by subject"
-msgstr ""
+msgstr "Sórtáil de réir ábhair"
 
 #: dateColumn2.tooltip
 msgid "Sort by date"
-msgstr ""
+msgstr "Sórtáil de réir dáta"
 
 #: priorityColumn2.tooltip
 msgid "Sort by priority"
-msgstr ""
+msgstr "Sórtáil de réir tosaíochta"
 
 #: tagsColumn2.tooltip
 msgid "Sort by tags"
-msgstr ""
+msgstr "Sórtáil de réir clibeanna"
 
 #: accountColumn2.tooltip
 msgid "Sort by account"
-msgstr ""
+msgstr "Sórtáil de réir cuntais"
 
 #: statusColumn2.tooltip
 msgid "Sort by status"
-msgstr ""
+msgstr "Sórtáil de réir stádais"
 
 #: sizeColumn2.tooltip
 msgid "Sort by size"
-msgstr ""
+msgstr "Sórtáil de réir méide"
 
 #: junkStatusColumn2.tooltip
 msgid "Sort by junk status"
-msgstr ""
+msgstr "Sórtáil de réir stádais dramhphoist"
 
 #: unreadColumn2.tooltip
 msgid "Number of unread messages in thread"
@@ -18879,27 +18887,27 @@ msgstr "Iomlán na dTeachtaireachtaí sa snáithe"
 
 #: readColumn2.tooltip
 msgid "Sort by read"
-msgstr ""
+msgstr "Sórtáil de réir stádais léite"
 
 #: receivedColumn2.tooltip
 msgid "Sort by date received"
-msgstr ""
+msgstr "Sórtáil de réir dáta faighte"
 
 #: starredColumn2.tooltip
 msgid "Sort by star"
-msgstr ""
+msgstr "Sórtáil de réir réiltín"
 
 #: locationColumn2.tooltip
 msgid "Sort by location"
-msgstr ""
+msgstr "Sórtáil de réir suímh"
 
 #: idColumn2.tooltip
 msgid "Sort by order received"
-msgstr ""
+msgstr "Sórtáil de réir oird fhaighte"
 
 #: attachmentColumn2.tooltip
 msgid "Sort by attachments"
-msgstr ""
+msgstr "Sórtáil de réir iatán"
 
 #. Thread Pane Context Menu
 #: contextOpenNewWindow.label contextOpenNewWindow.accesskey
@@ -18921,7 +18929,7 @@ msgstr "Oscail Teachtaireacht i gComh&rá"
 #: contextEditMsgAsNew.label contextEditMsgAsNew.accesskey
 msgctxt "contextEditMsgAsNew.label contextEditMsgAsNew.accesskey"
 msgid "&Edit As New Message"
-msgstr ""
+msgstr "Cuir in &Eagar Mar Theachtaireacht Nua"
 
 #: contextArchive.label contextArchive.accesskey
 msgid "Arc&hive"
@@ -19128,7 +19136,7 @@ msgstr "Cuir sa Lea&bhar Seoltaí"
 
 #: EditContact1.label EditContact1.accesskey
 msgid "&Edit Contact"
-msgstr ""
+msgstr "Cuir Teagmháil in &Eagar"
 
 #: ViewContact.label ViewContact.accesskey
 msgid "&View Contact"
@@ -19242,6 +19250,11 @@ msgstr "accel,alt"
 #: showAllAppsCmdMac.label
 msgid "Show All"
 msgstr "Taispeáin Gach"
+
+#. Mac OS X Dock Icon pop-up menu
+#: dockOptions.label
+msgid "App Icon Options…"
+msgstr "Roghanna an Deilbhín…"
 
 #. # The following are used by the messenger application
 #. #
@@ -19746,13 +19759,13 @@ msgstr "Línte"
 #. # Place the word "%S" in your translation where the name of the comma seperated accounts should appear.
 #: getMsgButtonTooltip
 msgid "Get new messages for %S"
-msgstr ""
+msgstr "Faigh teachtaireachtaí nua do %S"
 
 #. # Used to separate email addresses in a list.  Note the trailing space ', '
 #: getMsgButtonTooltip.listSeparator
 msgctxt "getMsgButtonTooltip.listSeparator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #. # status feedback stuff
 #: documentDone
@@ -19815,6 +19828,10 @@ msgstr "Bosca Amach"
 msgctxt "junkFolderName"
 msgid "Junk"
 msgstr "Dramhphost"
+
+#: twoWeeksAgo
+msgid "Two Weeks Ago"
+msgstr "Coicís ó shin"
 
 #: older
 msgid "Older"
@@ -19918,11 +19935,11 @@ msgstr "Bratach IMAP"
 #. # mailnews.js
 #: mailnews.send_default_charset
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: mailnews.view_default_charset
 msgid "ISO-8859-1"
-msgstr ""
+msgstr "ISO-8859-1"
 
 #. # generate display names in last first order
 #. # valid mail.addr_book.displayName.lastnamefirst are: true or false
@@ -20055,7 +20072,7 @@ msgstr "Tuilleadh Eolais"
 #: junkBarInfoButtonKey
 msgctxt "junkBarInfoButtonKey"
 msgid "L"
-msgstr ""
+msgstr "T"
 
 #. # LOCALIZATION NOTE(remoteContentBarMessage): %S is brand
 #: remoteContentBarMessage
@@ -20065,22 +20082,22 @@ msgstr ""
 #: remoteContentPrefLabel
 msgctxt "remoteContentPrefLabel"
 msgid "Options"
-msgstr ""
+msgstr "Roghanna"
 
 #: remoteContentPrefAccesskey
 msgctxt "remoteContentPrefAccesskey"
 msgid "O"
-msgstr ""
+msgstr "O"
 
 #: remoteContentPrefLabelUnix
 msgctxt "remoteContentPrefLabelUnix"
 msgid "Preferences"
-msgstr ""
+msgstr "Sainroghanna"
 
 #: remoteContentPrefAccesskeyUnix
 msgctxt "remoteContentPrefAccesskeyUnix"
 msgid "P"
-msgstr ""
+msgstr "S"
 
 # Phishing Bar
 #: phishingBarMessage
@@ -20090,49 +20107,49 @@ msgstr "Meastar gur camscéim í an teachtaireacht seo."
 #: phishingBarPrefLabel
 msgctxt "phishingBarPrefLabel"
 msgid "Options"
-msgstr ""
+msgstr "Roghanna"
 
 #: phishingBarPrefAccesskey
 msgctxt "phishingBarPrefAccesskey"
 msgid "O"
-msgstr ""
+msgstr "O"
 
 #: phishingBarPrefLabelUnix
 msgctxt "phishingBarPrefLabelUnix"
 msgid "Preferences"
-msgstr ""
+msgstr "Sainroghanna"
 
 #: phishingBarPrefAccesskeyUnix
 msgctxt "phishingBarPrefAccesskeyUnix"
 msgid "P"
-msgstr ""
+msgstr "S"
 
 #: mdnBarIgnoreButton
 msgid "Ignore Request"
-msgstr ""
+msgstr "Déan neamhaird den iarratas"
 
 #: mdnBarIgnoreButtonKey
 msgctxt "mdnBarIgnoreButtonKey"
 msgid "n"
-msgstr ""
+msgstr "n"
 
 #: mdnBarSendReqButton
 msgid "Send Receipt"
-msgstr ""
+msgstr "Seol Admháil"
 
 #: mdnBarSendReqButtonKey
 msgctxt "mdnBarSendReqButtonKey"
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: draftMessageMsg
 msgid "This is a draft message."
-msgstr ""
+msgstr "Is dréacht é seo."
 
 #: draftMessageButtonKey
 msgctxt "draftMessageButtonKey"
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: openLabelAccesskey
 msgctxt "openLabelAccesskey"
@@ -20165,7 +20182,7 @@ msgstr "Scrios"
 #: deleteLabelAccesskey
 msgctxt "deleteLabelAccesskey"
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: deleteAttachments
 msgid ""
@@ -20308,7 +20325,7 @@ msgstr "%1$S teachtaireacht nua ó %2$S agus %3$S eile."
 #: macBiffNotification_separator
 msgctxt "macBiffNotification_separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 # For the Quota tab in the mail folder properties dialog
 #. # For the Quota tab in the mail folder properties dialog
@@ -21082,12 +21099,12 @@ msgstr "Atosaigh"
 #. # version of the update: "Update to 28.0".
 #: update.downloadAndInstallButton.label
 msgid "Update to %S"
-msgstr ""
+msgstr "Nuashonrú: leagan %S"
 
 #: update.downloadAndInstallButton.accesskey
 msgctxt "update.downloadAndInstallButton.accesskey"
 msgid "U"
-msgstr ""
+msgstr "U"
 
 #: websearch.setDefault
 msgid "Set this search engine as the default"
@@ -21235,7 +21252,7 @@ msgstr "Tuilleadh Eolais…"
 #: learnMoreAboutIgnoreThreadAccessKey
 msgctxt "learnMoreAboutIgnoreThreadAccessKey"
 msgid "L"
-msgstr ""
+msgstr "T"
 
 #: undoIgnoreThread
 msgid "Undo Ignore Thread"
@@ -21802,18 +21819,6 @@ msgstr "Socruithe dramhphoist"
 #: offlineLink.label
 msgid "Offline settings"
 msgstr "Socruithe as líne"
-
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#. Labels
-#: filemessageschoosethis.label
-msgid "choose this folder"
-msgstr "roghnaigh an fillteán seo"
-
-#: recentfolders.label
-msgid "Recent"
-msgstr "Le Déanaí"
 
 #: replyToField4.label
 msgid "Reply to"
@@ -23119,7 +23124,7 @@ msgstr "Fiafraigh díom i gcónaí agus mé ag dul as líne"
 
 #: downloadMessagesNow2
 msgid "&Download Now"
-msgstr ""
+msgstr "Ío&sluchtaigh Anois"
 
 #. # Send Messages Prompt
 #: sendMessagesWindowTitle1
@@ -23138,11 +23143,11 @@ msgstr "Fiafraigh díom i gcónaí agus mé ag dul ar líne"
 
 #: sendMessagesNow2
 msgid "&Send Now"
-msgstr ""
+msgstr "&Seol Anois"
 
 #: processMessagesLater2
 msgid "&Later"
-msgstr ""
+msgstr "&Ar Ball"
 
 #: getMessagesOfflineLabel1
 msgid "You are currently offline. Do you want to go online to get new messages?"
@@ -23403,14 +23408,6 @@ msgstr "&Tabhair rabhadh dom má tá breiseán díchumasaithe dá mbarr"
 #: updateHistory.label updateHistory.accesskey
 msgid "Show U&pdate History"
 msgstr "Tais&peáin Stair na Nuashonruithe"
-
-#: updateOthers.label
-msgid "Automatically update:"
-msgstr "Nuashonraigh go huathoibríoch:"
-
-#: enableAddonsUpdate3.label enableAddonsUpdate3.accesskey
-msgid "Add-&ons"
-msgstr ""
 
 #: useService.label useService.accesskey
 msgid "Use a &background service to install updates"
@@ -23986,6 +23983,38 @@ msgstr "&Dathanna…"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: dockOptionsDialog.title
+msgid "App icon options"
+msgstr "Roghanna an deilbhín"
+
+#. Do not translate this.  Only change the numeric values if you need this dialogue box to appear bigger
+#: window.macWidth
+msgid "35em"
+msgstr "40em"
+
+#: bounceSystemDockIcon.label bounceSystemDockIcon.accesskey
+msgid "An&imate the app icon when a new message arrives"
+msgstr ""
+
+#: newMessagesCountDock.label newMessagesCountDock.accesskey
+msgid "Cou&nt of new messages"
+msgstr ""
+
+#: showAllUnreadMessagesCount.label showAllUnreadMessagesCount.accesskey
+msgid "Co&unt of unread messages"
+msgstr ""
+
+#: dockIconBadge.label
+msgid "App icon badge"
+msgstr ""
+
+#: dockIconShow.label
+msgid "Badge app icon with:"
+msgstr ""
+
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #: fontsAndEncodingsDialog.title
 msgid "Fonts &amp; Encodings"
 msgstr "Clófhoirne agus Ionchóduithe"
@@ -24229,9 +24258,13 @@ msgstr ""
 msgid "&Restore Default"
 msgstr "Athchóirigh na &Réamhshocruithe"
 
-#: bounceSystemDockIcon.label bounceSystemDockIcon.accesskey
-msgid "An&imate the dock icon"
-msgstr "Beo&igh deilbhín an duga"
+#: changeDockIconOptions.label
+msgid "Change preferences for the app icon"
+msgstr ""
+
+#: dockOptions.label dockOptions.accesskey
+msgid "App Ico&n Options…"
+msgstr "Rogha&nna an Deilbhín…"
 
 #: newMessagesArrive.label
 msgid "When new messages arrive:"
@@ -24899,7 +24932,7 @@ msgstr ""
 
 #: accountNameEmpty
 msgid "The account name can not be empty."
-msgstr ""
+msgstr "Ní cheadaítear ainm folamh."
 
 #: modifiedAccountExists
 msgid ""
@@ -25182,12 +25215,6 @@ msgstr "Scoránaigh an barra mearscagairí"
 #: quickFilterBar.sticky.tooltip
 msgid "Keep filters applied when switching folders"
 msgstr "Fág scagairí i bhfeidhm agus an fillteán á athrú"
-
-#. The text to display on the quick filter bar, labeling it.  This should
-#. ideally be as short as possible.
-#: quickFilterBar.barLabel.label
-msgid "Quick Filter:"
-msgstr "Mearscagaire:"
 
 #. The tooltip for the filter button that causes us to filter results to only
 #. include unread messages.
@@ -27372,11 +27399,11 @@ msgctxt "netTimeout.longDesc"
 msgid "&sharedLongDesc;"
 msgstr "&sharedLongDesc;"
 
-#: protocolNotFound.title
+#: unknownProtocolFound.title
 msgid "The address wasn't understood"
 msgstr "Níor tuigeadh an seoladh"
 
-#: protocolNotFound.longDesc
+#: unknownProtocolFound.longDesc
 msgid ""
 "<ul> \n"
 "<li>You might need to install other software to open this address.</li> \n"
