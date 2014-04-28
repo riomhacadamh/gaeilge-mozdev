@@ -53,7 +53,7 @@ cp -Rf other-licenses/branding/thunderbird/locales/en-US ${ANSEO}/other-licenses
 
 cd ${HOME}/seal/gaia
 cp -Rf en-US/* ${ANSEO}/gaia-en-US
-sed -i "s/^deny=Don't allow/dontallow=Don't allow/" ${ANSEO}/gaia-en-US/apps/system/system.properties
+sed -i "s/^deny=\(Don.*\)$/dontallow=\1/" ${ANSEO}/gaia-en-US/apps/system/system.properties
 cd ${ANSEO}
 
 # HACKS until these files are cleaned up in CVS or translate toolkit works
