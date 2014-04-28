@@ -168,7 +168,11 @@ LC_ALL=C sed -i '
 /^zh *=/s/.*/zh = Sínis/
 ' toolkit-ga-IE/chrome/global/languageNames.properties
 
+# English is "Movies" which is Scannáin elsewhere
+sed -i 's/^none=.*/none=Gan meabhrúchán/' gaia-ga-IE/apps/calendar/calendar.properties
+sed -i 's/^videos-space=.*/videos-space=Físeáin/' gaia-ga-IE/apps/settings/settings.properties
 sed -i 's/^dontallow=/deny=/' gaia-ga-IE/apps/system/system.properties
+sed -i 's/^securityNone.*$/securityNone = Gan Slándáil/' gaia-ga-IE/apps/communications/ftu/ftu.properties
 
 #sed -i '
 #s/credit.translation ""/credit.translation "<h3>Aistritheoirí<\/h3><ul><li>Marion Gunn<\/li><li>Séamus Ó Ciardhuáin<\/li><li>Kevin Scannell<\/li><\/ul>"/
