@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-14 15:28-0500\n"
+"POT-Creation-Date: 2014-05-01 08:25-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -14,7 +14,7 @@ msgstr ""
 # # LOCALIZATION NOTE (cityOrStateAndZip):
 # # %1$S is city or state, %2$S is zip
 #. # LOCALIZATION NOTE (reminderCustomTitle):
-#. # %1$S = reminderCustomUnit, %2$S = reminderCustomOrigin
+#. # %1$S = unit, %2$S = reminderCustomOrigin
 #. # Example: "3 minutes" "before the task starts"
 #: reminderCustomTitle
 msgid "%1$S %2$S"
@@ -36,26 +36,10 @@ msgstr "Chomh luath is a chríochnaíonn an t-imeacht"
 msgid "The moment the task ends"
 msgstr "Chomh luath is a chríochnaíonn an tasc"
 
-#: reminderCustomUnitMinutes
-msgid "#1 minute;#1 minutes"
-msgstr "#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad"
-
-#: reminderCustomUnitHours
-msgid "#1 hour;#1 hours "
-msgstr "#1 uair;#1 uair;#1 uaire;#1 n-uaire;#1 uair"
-
-#. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
-#. # Task tree, "Due In" column.
-#. # LOCALIZATION NOTE (dueInDays, dueInHours): Semi-colon list of plural
-#. # forms. See: http://developer.mozilla.org/en/Localization_and_Plurals
-#: reminderCustomUnitDays dueInDays
-msgid "#1 day;#1 days"
-msgstr "#1 lá;#1 lá;#1 lá;#1 lá;#1 lá"
-
 #. # LOCALIZATION NOTE (reminderSnoozeOkA11y)
 #. # This string is not seen in the UI, it is read by screen readers when the user
 #. # focuses the "OK" button in the "Snooze for..." popup of the alarm dialog.
-#. # %1$S = any of reminderCustomUnit*
+#. # %1$S = any of unit*
 #: reminderSnoozeOkA11y
 msgid "Snooze reminder for %1$S"
 msgstr "Meabhrúchán néil chodlata le haghaidh %1$S"
@@ -260,7 +244,7 @@ msgstr "Taispeáin tascanna críochnaithe"
 msgid "Today"
 msgstr "Inniu"
 
-#: calendar.tomorrow.button.label tomorrow
+#: calendar.tomorrow.button.label tomorrow pref.default_task_tomorrow.label
 msgid "Tomorrow"
 msgstr "Amárach"
 
@@ -881,8 +865,8 @@ msgstr "&Cóipeáil Suíomh an Naisc"
 #. Task View
 #. Note that the above *.context.* strings are currently used for the other
 #. task action buttons
-#: calendar.taskview.delete.label deleteItemLabel imipCancelInvitation.label
-#: lightning.toolbar.delete.label
+#: calendar.taskview.delete.label deleteItemLabel
+#: lightning.imipbar.btnDelete.label lightning.toolbar.delete.label
 msgid "Delete"
 msgstr "Scrios"
 
@@ -1177,7 +1161,7 @@ msgstr "Tascanna"
 
 #. #-#-#-#-#  chromecalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. #Today pane
-#: calendar.print.events.label eventsonly
+#: calendar.print.events.label eventsonly pref.events.label
 msgid "Events"
 msgstr "Imeachtaí"
 
@@ -1316,20 +1300,6 @@ msgstr "Ó"
 msgid "To"
 msgstr "Go"
 
-#: newevent.attendees.notify.label
-msgid "Notify attendees"
-msgstr "Cuir in iúl don lucht freastail"
-
-#: newevent.attendees.notifyundisclosed.label
-msgid "Keep attendee undisclosed in invitations"
-msgstr ""
-
-#: newevent.attendees.notifyundisclosed.tooltip
-msgid ""
-"If enabled, attendees will not see each other in invitations. Applied only on "
-"e-mail invitations."
-msgstr ""
-
 #: newevent.status.label newevent.status.accesskey
 msgid "&Status"
 msgstr "&Stádas"
@@ -1372,6 +1342,24 @@ msgstr "Críochnaithe ar"
 #: newtodo.percentcomplete.label
 msgid "&#37; complete"
 msgstr "&#37; críochnaithe"
+
+#. LOCALIZATON NOTE(event.attendees.notify.label,event.attendees.notifyundisclosed.label)
+#. - These two labels are displayed side by side in the event dialog, make sure
+#. - they still fit in.
+#: event.attendees.notify.label
+msgid "Notify attendees"
+msgstr "Cuir in iúl don lucht freastail"
+
+#: event.attendees.notifyundisclosed.label
+msgid "Separate invitation per attendee"
+msgstr ""
+
+#: event.attendees.notifyundisclosed.tooltip
+msgid ""
+"This option sends one invitation email per attendee. Each invitation only "
+"contains the recipient attendee so that other attendee identities are not "
+"disclosed."
+msgstr ""
 
 #. Keyboard Shortcuts
 #: event.dialog.new.event.key2
@@ -2335,7 +2323,7 @@ msgstr "Gnóthach"
 #. # Event status: Tentative, Confirmed, Cancelled
 #. # ToDo task status: NeedsAction, InProcess, Completed, Cancelled
 #: event.freebusy.legend.busy_tentative statusTentative
-#: imipAcceptTentativeInvitation.label
+#: lightning.imipbar.btnTentative.label
 msgid "Tentative"
 msgstr "Sealadach"
 
@@ -3908,11 +3896,15 @@ msgstr "Níor aimsíodh aon chuireadh neamhdhaingnithe."
 
 #. #-#-#-#-#  chromecalendarcalendar-invitations-dialog.dtd.po (firefox)  #-#-#-#-#
 #. Calendar Invitations List
-#: calendar.invitations.list.accept.button.label imipAcceptInvitation.label
+#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
+#. iMIP Bar (meeting support)
+#: calendar.invitations.list.accept.button.label
+#: lightning.imipbar.btnAccept.label
 msgid "Accept"
 msgstr "Glac Leis"
 
-#: calendar.invitations.list.decline.button.label imipDeclineInvitation.label
+#: calendar.invitations.list.decline.button.label
+#: lightning.imipbar.btnDecline.label
 msgid "Decline"
 msgstr "Diúltaigh"
 
@@ -3936,7 +3928,8 @@ msgstr "Eagraí: "
 msgid "Attendee: "
 msgstr "Rannpháirtí: "
 
-#: calendar.invitations.list.none.text None imipNoIdentity
+#: calendar.invitations.list.none.text None pref.default_task_none.label
+#: imipNoIdentity
 msgid "None"
 msgstr "Gan sonrú"
 
@@ -4264,19 +4257,6 @@ msgstr ""
 "Tá na sonraí féilire i do phróifíl nuashonraithe ag leagan níos nuaí de %1$S, "
 "agus is é is dóichí go gcaillfear nó go dtruaillfear na sonraí má leantar ar "
 "aghaidh. Déanfar %1$S a dhíchumasú anois agus %2$S a atosú."
-
-#. # LOCALIZATION NOTE (tooNewSchemaErrorBoxTextSunbird):
-#. #    %1$S will be replaced with the name of the calendar application e.g. 'Sunbird'
-#. #    %2$S will be replaced with the name of the host application 'calendar'
-#: tooNewSchemaErrorBoxTextSunbird
-msgid ""
-"The calendar data in your profile was updated by a newer version of %1$S, and "
-"continuing will probably cause the information to be lost or corrupted. %1$S "
-"will now quit."
-msgstr ""
-"Tá na sonraí féilire i do phróifíl nuashonraithe ag leagan níos nuaí de %1$S, "
-"agus is é is dóichí go gcaillfear nó go dtruaillfear na sonraí má leantar ar "
-"aghaidh. Stopfaidh %1$S anois."
 
 #. # LOCALIZATION NOTE (tooNewSchemaButtonRestart):
 #. #    %1$S will be replaced with the name of the host application 'Calendar'
@@ -4818,7 +4798,7 @@ msgstr "Inné"
 msgid "Events and Tasks"
 msgstr "Imeachtaí agus Tascanna"
 
-#: tasksonly
+#: tasksonly pref.tasks.label
 msgid "Tasks"
 msgstr "Tascanna"
 
@@ -4852,59 +4832,6 @@ msgstr "caite"
 msgctxt "last2"
 msgid "last"
 msgstr "roimhe"
-
-#. # Master Password
-#: changeMasterPassword
-msgid "Change Master Password…"
-msgstr "Athraigh Príomhfhocal Faire…"
-
-#: pw_change2empty_in_fips_mode
-msgid ""
-"You are currently in FIPS mode. FIPS requires a non-empty Master Password."
-msgstr ""
-"Tá tú i mód FIPS faoi láthair. Tá Príomhfhocal Faire neamhfholamh ag teastáil "
-"ó FIPS."
-
-#: pw_change_failed_title
-msgid "Password Change Failed"
-msgstr "Theip ar athrú an fhocail faire."
-
-#. # Check for Updates     (SUNBIRD_ONLY)
-#: updatesItem_default
-msgctxt "updatesItem_default"
-msgid "Check for Updates…"
-msgstr "Lorg Nuashonruithe…"
-
-#: updatesItem_defaultFallback
-msgctxt "updatesItem_defaultFallback"
-msgid "Check for Updates…"
-msgstr "Lorg Nuashonruithe…"
-
-#: updatesItem_downloading
-msgid "Downloading %S…"
-msgstr "%S á íosluchtú…"
-
-#: updatesItem_downloadingFallback
-msgid "Downloading Update…"
-msgstr "Nuashonrú á Íosluchtú…"
-
-#: updatesItem_resume
-msgid "Resume Downloading %S…"
-msgstr "Lean le hÍosluchtú %S…"
-
-#: updatesItem_resumeFallback
-msgid "Resume Downloading Update…"
-msgstr "Lean le híosluchtú an nuashonraithe…"
-
-#: updatesItem_pending
-msgctxt "updatesItem_pending"
-msgid "Apply Downloaded Update Now…"
-msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois…"
-
-#: updatesItem_pendingFallback
-msgctxt "updatesItem_pendingFallback"
-msgid "Apply Downloaded Update Now…"
-msgstr "Cuir an nuashonrú íosluchtaithe i bhfeidhm anois…"
 
 # Alarm Dialog
 # LOCALIZATION NOTE (alarmWindowTitle.label): Semi-colon list of plural
@@ -4960,15 +4887,6 @@ msgstr "Cur Síos Réamhshocraithe Mozilla"
 #: alarmDefaultSummary
 msgid "Default Mozilla Summary"
 msgstr "Achoimre Réamhshocraithe Mozilla"
-
-#. # offline support strings (SUNBIRD ONLY)
-#: offlineTooltip
-msgid "You are currently offline."
-msgstr "Tá tú as líne faoi láthair."
-
-#: onlineTooltip
-msgid "You are currently online."
-msgstr "Tá tú ar líne faoi láthair."
 
 #: taskDetailsStatusNeedsAction
 msgctxt "taskDetailsStatusNeedsAction"
@@ -5112,9 +5030,18 @@ msgstr "SF: %1$S"
 msgid "CWs: %1$S-%2$S"
 msgstr "SF: %1$S-%2$S"
 
+#. # Task tree, "Due In" column.
+#. # LOCALIZATION NOTE (dueInDays, dueInHours): Semi-colon list of plural
+#. # forms. See: http://developer.mozilla.org/en/Localization_and_Plurals
+#: dueInDays
+msgctxt "dueInDays"
+msgid "#1 day;#1 days"
+msgstr ""
+
 #: dueInHours
+msgctxt "dueInHours"
 msgid "#1 hour;#1 hours"
-msgstr "#1 uair;#1 uair;#1 uaire;#1 n-uaire;#1 uair"
+msgstr ""
 
 #: dueInLessThanOneHour
 msgid "< 1 hour"
@@ -5373,6 +5300,22 @@ msgstr "As %1$S"
 #: extractUsingRegion
 msgid "Using %1$S (%2$S)"
 msgstr "As %1$S (%2$S)"
+
+#. # LOCALIZATION NOTE (unit)
+#. # Used to determine the correct plural form of a unit
+#: unitMinutes
+msgid "#1 minute;#1 minutes"
+msgstr "#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad;#1 nóiméad"
+
+#: unitHours
+msgctxt "unitHours"
+msgid "#1 hour;#1 hours"
+msgstr ""
+
+#: unitDays
+msgctxt "unitDays"
+msgid "#1 day;#1 days"
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -5964,15 +5907,15 @@ msgstr "Taispeáin airdeall"
 msgid "Send an E-mail"
 msgstr "Seol ríomhphost"
 
-#: alarm.units.minutes calendar.global.units.minutes
+#: alarm.units.minutes
 msgid "minutes"
 msgstr "nóiméad"
 
-#: alarm.units.hours calendar.global.units.hours
+#: alarm.units.hours
 msgid "hours"
 msgstr "uaire"
 
-#: alarm.units.days calendar.global.units.days
+#: alarm.units.days
 msgid "days"
 msgstr "lá"
 
@@ -5992,19 +5935,6 @@ msgstr "h"
 #: day.6.Ddd.accesskey
 msgid "F"
 msgstr "F"
-
-#. Units
-#: calendar.global.units.minute
-msgid "minute"
-msgstr "nóiméad"
-
-#: calendar.global.units.hour
-msgid "hour"
-msgstr "uair"
-
-#: calendar.global.units.day
-msgid "day"
-msgstr "lá"
 
 #: onedaybackward.tooltip
 msgid "One Day Backward"
@@ -6248,6 +6178,10 @@ msgstr "Seoladh réamhshocraithe a seolfar meabhrúcháin chuige:"
 msgid "Default text for reminders :"
 msgstr "Téacs réamhshocraithe i meabhrúchán:"
 
+#: pref.defaultsnoozelength.label pref.defaultsnoozelength.accesskey
+msgid "Default &Snooze Length:"
+msgstr "Achar codlata réamh&shocraithe:"
+
 #: pref.categories.addButton.label pref.categories.addButton.accesskey
 msgid "&Add…"
 msgstr "&Cuir Leis…"
@@ -6312,13 +6246,37 @@ msgstr "Fada"
 msgid "Short"
 msgstr "Gearr"
 
-#: pref.defaultlength.label pref.defaultlength.accesskey
-msgid "Default &Event Length:"
-msgstr "Achar réamhshocraithe na n-im&eachtaí:"
+#: pref.defaults.label
+msgid "Default Values for New Items"
+msgstr ""
 
-#: pref.defaultsnoozelength.label pref.defaultsnoozelength.accesskey
-msgid "Default &Snooze Length:"
-msgstr "Achar codlata réamh&shocraithe:"
+#: pref.default_event_length.label pref.default_event_length.accesskey
+msgid "D&efault Length:"
+msgstr ""
+
+#: pref.default_task_start_of_day.label
+msgid "Start of Day"
+msgstr ""
+
+#: pref.default_task_end_of_day.label
+msgid "End of Day"
+msgstr ""
+
+#: pref.default_task_next_week.label
+msgid "Next Week"
+msgstr ""
+
+#: pref.default_task_offset_current.label
+msgid "Relative to Current Time"
+msgstr ""
+
+#: pref.default_task_offset_start.label
+msgid "Relative to Start"
+msgstr ""
+
+#: pref.default_task_offset_next_hour.label
+msgid "Relative to Next Hour"
+msgstr ""
 
 #: pref.accessibility.label
 msgid "Accessibility"
@@ -8426,6 +8384,11 @@ msgstr "An Áise/Ust-Nera"
 msgid "Europe/Busingen"
 msgstr "An Eoraip/Busingen"
 
+#. #added with 0.1.2014b
+#: pref.timezone.Antarctica.Troll
+msgid "Antarctica/Troll"
+msgstr ""
+
 #: lightning.menupopup.new.calendar.label
 #: lightning.menupopup.new.calendar.accesskey
 msgid "Cale&ndar…"
@@ -8462,10 +8425,89 @@ msgstr "I&meachtaí agus Tascanna"
 msgid "E-Mail:"
 msgstr "Ríomhphost:"
 
+#: lightning.imipbar.btnAccept2.tooltiptext
+msgid "Accept event invitation"
+msgstr ""
+
+#: lightning.imipbar.btnAcceptRecurrences.label
+msgid "Accept all"
+msgstr ""
+
+#: lightning.imipbar.btnAcceptRecurrences2.tooltiptext
+msgid "Accept event invitation for all occurrences of the event"
+msgstr ""
+
+#: lightning.imipbar.btnAdd.label
+msgid "Add"
+msgstr "Cuir Leis"
+
+#: lightning.imipbar.btnAdd.tooltiptext
+msgid "Add the event to the calendar"
+msgstr ""
+
+#: lightning.imipbar.btnDecline2.tooltiptext
+msgid "Decline event invitation"
+msgstr ""
+
+#: lightning.imipbar.btnDeclineRecurrences.label
+msgid "Decline all"
+msgstr ""
+
+#: lightning.imipbar.btnDeclineRecurrences2.tooltiptext
+msgid "Decline event invitation for all occurrences of the event"
+msgstr ""
+
+#: lightning.imipbar.btnDelete.tooltiptext
+msgid "Delete from calendar"
+msgstr ""
+
+# Error reporting
+#: lightning.imipbar.btnDetails.label
+msgid "Details…"
+msgstr "Mionsonraí…"
+
+#: lightning.imipbar.btnDetails.tooltiptext
+msgid "Show event details"
+msgstr ""
+
+#: lightning.imipbar.btnMore.label
+msgid "More"
+msgstr "Tuilleadh"
+
+#: lightning.imipbar.btnMore.tooltiptext
+msgid "Click to show more options"
+msgstr ""
+
+#: lightning.imipbar.btnReconfirm2.label
+msgid "Reconfirm"
+msgstr ""
+
+#: lightning.imipbar.btnReconfirm.tooltiptext
+msgid "Sends a reconfirmation to the organizer"
+msgstr ""
+
+#: lightning.imipbar.btnTentative2.tooltiptext
+msgid "Accept event invitation tentatively"
+msgstr ""
+
+#: lightning.imipbar.btnTentativeRecurrences.label
+msgid "Tentative all"
+msgstr ""
+
+#: lightning.imipbar.btnTentativeRecurrences2.tooltiptext
+msgid "Accept event invitation tentatively for all occurrences of the event"
+msgstr ""
+
+#: lightning.imipbar.btnUpdate.label
+msgid "Update"
+msgstr "Nuashonrú"
+
+#: lightning.imipbar.btnUpdate.tooltiptext
+msgid "Update event in calendar"
+msgstr ""
+
 # #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
 # iMIP Bar (meeting support)
-#. #-#-#-#-#  chromelightninglightning.dtd.po (firefox)  #-#-#-#-#
-#. iMIP Bar (meeting support)
 #: lightning.imipbar.description imipBarRequestText
 msgid "This message contains an invitation to an event."
 msgstr "Tá cuireadh d'imeacht sa teachtaireacht seo."
@@ -8621,19 +8663,6 @@ msgid ""
 msgstr ""
 "Níl aon fhéilirí inscríofa ar fáil chun cuirí a láimhseáil, féach ar airíonna "
 "an fhéilire."
-
-#: imipUpdate.label
-msgid "Update"
-msgstr "Nuashonrú"
-
-# Error reporting
-#: imipDetails.label
-msgid "Details…"
-msgstr "Mionsonraí…"
-
-#: imipSend.label
-msgid "Send"
-msgstr "Seol"
 
 #: imipSendMail.title
 msgid "E-Mail Notification"

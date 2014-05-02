@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-14 15:29-0500\n"
+"POT-Creation-Date: 2014-05-01 08:26-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -262,11 +262,15 @@ msgstr "Greamaigh mar &Athfhriotal"
 #. #-#-#-#-#  uichromecomposereditor.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE This character must be in the above string and not confict with other accesskeys in Format menu
 #: pasteAsQuotationCmd.key ObjectPropertiesAccessKey Photo.accesskey
-#: reorderTopButton.accessKey location1.accesskey
+#: reorderTopButton.accessKey location1.accesskey dntTrackingNopref.accesskey
 msgid "o"
 msgstr "o"
 
-#: findCmd.label
+#: findBarCmd.label
+msgid "Find…"
+msgstr "Aimsigh…"
+
+#: findReplaceCmd.label
 msgid "Find and Replace…"
 msgstr "Aimsigh agus Ionadaigh…"
 
@@ -311,6 +315,10 @@ msgstr "&Tábla…"
 #: insertHTMLCmd.label insertHTMLCmd.accesskey
 msgid "&HTML…"
 msgstr "&HTML…"
+
+#: insertMathCmd.label insertMathCmd.accesskey
+msgid "&Math…"
+msgstr ""
 
 #: insertCharsCmd.label insertCharsCmd.accesskey
 msgid "&Characters and Symbols…"
@@ -1844,7 +1852,7 @@ msgstr "Stop Stíleanna Téacs"
 #. #
 #. # LOCALIZATION NOTE "RemoveLinksAccesskey" is used for both
 #. #  menu items: "RemoveLinks" and "StopLinks"
-#: RemoveLinksAccesskey nextUnreadMsgCmd.key
+#: RemoveLinksAccesskey nextUnreadMsgCmd.key dntTrackingNotOkay.accesskey
 msgid "n"
 msgstr "n"
 
@@ -3240,6 +3248,50 @@ msgstr "Ionsáigh"
 msgid "Close"
 msgstr "Dún"
 
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#. Window title
+#: windowTitle.label
+msgid "Insert Math"
+msgstr ""
+
+#: sourceEditField.label
+msgid "Enter LaTeX source code:"
+msgstr ""
+
+#. #-#-#-#-#  mail-ga-IE.po (firefox)  #-#-#-#-#
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: options.label prefWindow.titleWin
+msgid "Options"
+msgstr "Roghanna"
+
+#: optionInline.label optionInline.accesskey
+msgid "I&nline mode"
+msgstr ""
+
+#: optionDisplay.label optionDisplay.accesskey
+msgid "&Display mode"
+msgstr ""
+
+#: optionLTR.label optionLTR.accesskey
+msgid "&Left-to-right direction"
+msgstr ""
+
+#: optionRTL.label optionRTL.accesskey
+msgid "&Right-to-left direction"
+msgstr ""
+
+#: example.label
+msgid "Example: "
+msgstr "Sampla: "
+
+#: insertButton.label insertButton.accesskey
+msgid "&Insert"
+msgstr "&Ionsáigh"
+
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
 # -
@@ -3289,17 +3341,9 @@ msgstr "Ionsáigh HTML"
 msgid "Enter HTML tags and text:"
 msgstr "Iontráil clibeanna agus téacs HTML:"
 
-#: example.label
-msgid "Example: "
-msgstr "Sampla: "
-
 #: exampleText.label
 msgid "Hello World!"
 msgstr "Dia duit, a dhomhain!"
-
-#: insertButton.label insertButton.accesskey
-msgid "&Insert"
-msgstr "&Ionsáigh"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -4610,7 +4654,6 @@ msgstr "http://www.seamonkey-project.org/"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#. these things need to move into utilityOverlay.xul
 #. LOCALIZATION NOTE : FILE This file contains the global menu items
 #. #-#-#-#-#  chromemessengeraddressbookabMainWindow.dtd.po (firefox)  #-#-#-#-#
 #. File Menu
@@ -4685,19 +4728,17 @@ msgstr "Roghnaigh &Uile"
 
 # Alt+W is Roghnaigh Uile  ?? (not working, tried V,7,lots of others)
 #. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
-#. belongs to accountManagerCmd.label,
+#. belongs to accountManagerCmd2.label,
 #. which is placed under the Edit menu on Unix systems
 #: selectAllCmd.key buddy.authRequest.allow.accesskey
-#: addAttachmentButton.accesskey accountManagerCmdUnix.accesskey
+#: addAttachmentButton.accesskey accountManagerCmdUnix2.accesskey
 #: certs.ask.accesskey
 msgid "A"
 msgstr "W"
 
-# also without dots
-# _this_ is the "R" under Main -> Uirlisí
-#: preferencesCmd.label preferencesCmd.accesskey
-msgid "&Options…"
-msgstr "&Roghanna…"
+#: preferencesCmd2.label preferencesCmd2.accesskey
+msgid "&Options"
+msgstr "R&oghanna"
 
 #: preferencesCmdUnix.label preferencesCmdUnix.accesskey
 msgid "Prefere&nces"
@@ -4721,10 +4762,6 @@ msgstr "Barraí &Uirlisí"
 #: showTaskbarCmd.label showTaskbarCmd.accesskey
 msgid "Stat&us Bar"
 msgstr "Barra &Stádais"
-
-#: proxy.label proxy.accesskey
-msgid "Proxy &Configuration…"
-msgstr "&Cumraíocht an tSeachfhreastalaí…"
 
 # ctrl+D is "Dún" under Main -> Comhad
 #. #-#-#-#-#  chromemessengerconfigEditorOverlay.dtd.po (firefox)  #-#-#-#-#
@@ -5376,11 +5413,11 @@ msgstr "Isteach:"
 msgid "Outgoing:"
 msgstr "Amach:"
 
-#. #-#-#-#-#  chromemessengercloudfileYouSendItsettings.dtd.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  chromemessengercloudfileHightailsettings.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
-#: username.label account.name youSendItSettings.username accountUsername
+#: username.label account.name hightailSettings.username accountUsername
 msgid "Username:"
 msgstr "Ainm úsáideora:"
 
@@ -6926,24 +6963,6 @@ msgstr "HTML"
 msgid "Chat Name:"
 msgstr "Ainm an Chomhrá:"
 
-#: allowRemoteContent1.label allowRemoteContent1.accesskey
-msgid "Allow &remote content."
-msgstr "Ceadaigh ábha&r cianda."
-
-#: allowRemoteContent1.tooltip
-msgid ""
-"In HTML messages it is possible to \n"
-"embed content from remote sources. Opening such a message will open a \n"
-"connection to this external source. This may allow tracking of the \n"
-"message being read. Checking this box will allow such external embedded \n"
-"content in HTML messages from this contact."
-msgstr ""
-"Is féidir ábhar ó chianfhoinsí a leabú i dteachtaireachtaí HTML. Osclófar "
-"nasc chuig an foinse eachtrach seo nuair a osclófar a leithéid de "
-"theachtaireacht. Leis sin, d'fhéadfadh lorg na teachtaireachta atá á léamh a "
-"bheith inleanta. Ceadófar ábhar seachtrach leabaithe den chineál sin i "
-"dteachtaireachtaí HTML ón duine seo sin má chuirtear tic sa bhosca seo."
-
 #: WorkPhone.label WorkPhone.accesskey
 msgid "Wor&k:"
 msgstr "&Obair:"
@@ -7219,7 +7238,9 @@ msgstr "Ainm nó Seoladh Ríomhphoist"
 
 #: addrBookCardProperties.label addrBookCardProperties.accesskey
 #: editButton2.label editButton2.accesskey account.edit.label
-#: account.edit.accesskey propertiesButton.label propertiesButton.accesskey
+#: account.edit.accesskey folderContextProperties2.label
+#: folderContextProperties2.accesskey propertiesButton.label
+#: propertiesButton.accesskey
 msgid "&Properties"
 msgstr "&Airíonna"
 
@@ -7477,9 +7498,9 @@ msgstr "Scrios Míreanna"
 msgid "S&wap First/Last Name"
 msgstr "&Malartaigh Ainm agus Sloinne"
 
-#: propertiesCmd.label propertiesCmd.accesskey
-msgid "Propert&ies…"
-msgstr "A&iríonna…"
+#: propertiesCmd2.label propertiesCmd2.accesskey
+msgid "Propert&ies"
+msgstr "A&iríonna"
 
 #: propertiesCmd.key bigFileAttach.accesskey sizeMono.accesskey
 msgid "i"
@@ -10031,6 +10052,7 @@ msgstr "Roghnaigh…"
 # ctrl+t for "cluaisín" in Main -> Comhad (C=copy,N=new window,etc. all taken)
 # cmd_cut_accesskey is sedtweaked
 #: encryption.certificate.accesskey nextUnreadThread.key
+#: dntTrackingOkay.accesskey
 msgid "t"
 msgstr "t"
 
@@ -10630,8 +10652,7 @@ msgstr "Tharla earráid agus an cuntas á shocrú!"
 msgid "Set up Account"
 msgstr "Socraigh Cuntas"
 
-#: addAccountDialog.learnMore UbuntuOneSettings.learnMore
-#: youSendItSettings.learnMore
+#: addAccountDialog.learnMore hightailSettings.learnMore
 msgid "Learn more…"
 msgstr "Tuilleadh eolais…"
 
@@ -10658,47 +10679,12 @@ msgstr "Féach ar shocruithe mo chuntais ar box.com"
 msgid "Get a Box account…"
 msgstr "Faigh cuntas Box…"
 
-#: cloudfileMgmt.termsOfService tos
-msgid "Terms of Service"
-msgstr "Téarmaí Seirbhíse"
-
-#: cloudfileMgmt.usedSpace
-msgid "Used Space:"
-msgstr "Spás Úsáidte:"
-
-#: cloudfileMgmt.unusedSpace
-msgid "Unused Space:"
-msgstr "Spás Saor:"
-
-#: cloudfileMgmt.upgradeOffer
-msgid "Get more space"
-msgstr "Faigh tuilleadh spáis"
-
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
-#. - You can obtain one at http://mozilla.org/MPL/2.0/.
-#: ubuntuOneMgmt.viewSettings
-msgid "View my account settings on one.ubuntu.com"
-msgstr "Féach ar shocruithe mo chuntais ar one.ubuntu.com"
-
-#. #-#-#-#-#  chromemessengercloudfileUbuntuOnesettings.dtd.po (firefox)  #-#-#-#-#
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
-#. - You can obtain one at http://mozilla.org/MPL/2.0/.
-#: UbuntuOneSettings.emailAddress emailFieldText
-msgid "Email Address:"
-msgstr "Seoladh Ríomhphoist:"
-
-#: UbuntuOneSettings.needAnAccount youSendItSettings.needAnAccount
-msgid "Need an account?"
-msgstr "An bhfuil cuntas uait?"
-
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
 #: fileExceeds2GB.title fileExceedsLimit.title fileExceedsQuota.title
-msgid "YouSendIt"
-msgstr "YouSendIt"
+msgid "Hightail"
+msgstr ""
 
 #: fileExceeds2GB.cancel
 msgid "OK"
@@ -10766,9 +10752,29 @@ msgstr "Nó is féidir comhaid a scriosadh chun fairsinge a dhéanamh."
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
-#: youSendItMgmt.viewSettings
-msgid "View my account settings on yousendit.com"
-msgstr "Féach ar shocruithe mo chuntais ar yousendit.com"
+#: hightailMgmt.viewSettings
+msgid "View my account settings on hightail.com"
+msgstr ""
+
+#: hightailSettings.needAnAccount
+msgid "Need an account?"
+msgstr "An bhfuil cuntas uait?"
+
+#: cloudfileMgmt.termsOfService tos
+msgid "Terms of Service"
+msgstr "Téarmaí Seirbhíse"
+
+#: cloudfileMgmt.usedSpace
+msgid "Used Space:"
+msgstr "Spás Úsáidte:"
+
+#: cloudfileMgmt.unusedSpace
+msgid "Unused Space:"
+msgstr "Spás Saor:"
+
+#: cloudfileMgmt.upgradeOffer
+msgid "Get more space"
+msgstr "Faigh tuilleadh spáis"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -12198,10 +12204,11 @@ msgstr "Gan Léamh"
 msgid "Total"
 msgstr "Iomlán"
 
+#. #-#-#-#-#  chromemessengerfolderProps.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: folderProps.windowtitle.label
+#: folderProps.windowtitle.label folderPropsCmd2.label
 msgid "Properties"
 msgstr "Airíonna"
 
@@ -14847,39 +14854,31 @@ msgstr "Iontráil d'fhocal faire le haghaidh %1$S ar %2$S:"
 msgid "Please enter a new password for user %1$S on %2$S:"
 msgstr "Iontráil focal faire nua d'úsáideoir %1$S ar %2$S:"
 
-#. # Status - Downloading message n of m to account
-#. #LOCALIZATION NOTE (receivingMsgs): Do not translate %1$S, %2$S, or %3$S in the following lines.
+#. # Status - Downloading message n of m
+#. # LOCALIZATION NOTE (receivingMessages): Do not translate %1$S or %2$S in the following lines.
 #. # Place the word %1$S where the number of messages downloaded so far should appear.
 #. # Place the word %2$S where the total number of messages to receive should appear;
-#. # Place %3$S where the account name should appear.
-#: receivingMsgs
-msgid "Downloading message %1$S of %2$S to %3$S"
-msgstr "Teachtaireacht %1$S as %2$S go %3$S á híosluchtú"
+#: receivingMessages
+msgid "Downloading message %1$S of %2$S…"
+msgstr ""
 
 #. # Status - connecting to host
-#. #LOCALIZATION NOTE : Do not translate %1$S in the following line.
-#. # Place %1$S where the account name should appear
-#: hostContacted
-msgid "Connect: Host for %1$S contacted, sending login information…"
+#: hostContact
+msgid "Host contacted, sending login information…"
 msgstr ""
-"Ceangal: Teagmháil déanta leis an óstríomhaire do %1$S, faisnéis logála "
-"isteach á seoladh…"
 
-#. # Status - no messages to download 
-#. #LOCALIZATION NOTE : Do not translate %1$S in the following line.
-#. # Place %1$S where the account name should appear
-#: noMessages
-msgid "There are no new messages for %1$S."
-msgstr "Níl aon teachtaireachtaí nua ann le haghaidh %1$S."
+#. # Status - no messages to download
+#: noNewMessages
+msgid "There are no new messages."
+msgstr ""
 
 #. # Status - messages received after the download
-#. #LOCALIZATION NOTE : Do not translate %1$S, %2$S or %3$S in the following line.
+#. #LOCALIZATION NOTE : Do not translate %1$S or %2$S in the following line.
 #. # %1$S will receive the number of messages received
 #. # %2$S will receive the total number of messages
-#. # Place %3$S where the account name should appear
-#: receivedMessages
-msgid "%3$S Received %1$S of %2$S messages"
-msgstr "%3$S Fuarthas %1$S as %2$S teachtaireacht"
+#: receivedMsgs
+msgid "Received %1$S of %2$S messages"
+msgstr ""
 
 # The following are used by the local mail code to display progress/status/error messages
 #
@@ -15619,18 +15618,6 @@ msgstr "Ní féidir do theachtaireacht a shábháil mar theimpléad."
 msgid "Unable to save your message as draft."
 msgstr "Ní féidir do theachtaireacht a shábháil mar dhréacht."
 
-# # @name NS_MSG_LOAD_ATTACHMNTS
-#. ## @name NS_MSG_LOAD_ATTACHMNTS
-#: 12504
-msgid "Loading attachments…"
-msgstr "Iatáin á luchtú…"
-
-# # @name NS_MSG_LOAD_ATTACHMNT
-#. ## @name NS_MSG_LOAD_ATTACHMNT
-#: 12505
-msgid "Loading attachment…"
-msgstr "Iatán á luchtú…"
-
 # # @name NS_MSG_COULDNT_OPEN_FCC_FOLDER
 #. ## @name NS_MSG_COULDNT_OPEN_FCC_FOLDER
 #: 12506
@@ -15640,26 +15627,6 @@ msgid ""
 msgstr ""
 "Níorbh fhéidir an fillteán \"Seolta\" a oscailt. Cinntigh go bhfuil do "
 "shainroghanna ríomhphoist i gceart."
-
-# # @name NS_MSG_CANT_POST_TO_MULTIPLE_NEWS_HOSTS
-#. ## @name NS_MSG_CANT_POST_TO_MULTIPLE_NEWS_HOSTS
-#: 12507
-msgid "Can't post to multiple news hosts. Try again."
-msgstr ""
-"Ní féidir seoladh go dtí níos mó ná óstríomhaire nuachta amháin. Déan "
-"iarracht eile."
-
-# # @name NS_MSG_ASSEMB_DONE_MSG
-#. ## @name NS_MSG_ASSEMB_DONE_MSG
-#: 12508
-msgid "Assembling message…Done"
-msgstr "Teachtaireacht á cóimeáil…Críochnaithe"
-
-# # @name NS_MSG_ASSEMBLING_MSG
-#. ## @name NS_MSG_ASSEMBLING_MSG
-#: 12509
-msgid "Assembling message…"
-msgstr "Teachtaireacht á cóimeáil…"
 
 # # @name NS_MSG_NO_SENDER
 #. ## @name NS_MSG_NO_SENDER
@@ -15749,24 +15716,6 @@ msgstr "Tharla earráid i rith sheoladh na dteachtaireachtaí gan seoladh."
 msgid "Sending of message failed."
 msgstr "Theip ar sheoladh an ríomhphoist."
 
-# # @name SMTP_DELIV_MAIL
-#. ## @name SMTP_DELIV_MAIL
-#: 12521
-msgid "Delivering mail…"
-msgstr "Ríomhphost á sheachadadh…"
-
-# # @name SMTP_MESSAGE_SENT_WAITING_MAIL_REPLY
-#. ## @name SMTP_MESSAGE_SENT_WAITING_MAIL_REPLY
-#: 12522
-msgid "Mail: Message sent; waiting for reply…"
-msgstr "Ríomhphost: Teachtaireacht seolta, ag feitheamh le freagra…"
-
-# # @name SMTP_PROGRESS_MAILSENT
-#. ## @name SMTP_PROGRESS_MAILSENT
-#: 12523
-msgid "Mail sent successfully"
-msgstr "D'éirigh le seoladh an ríomhphoist."
-
 # # @name NS_ERROR_SMTP_SERVER_ERROR
 #. ## @name NS_ERROR_SMTP_SERVER_ERROR
 #: 12524
@@ -15836,84 +15785,6 @@ msgstr ""
 "D'éirigh le seoladh na teachtaireachta, ach níorbh fhéidir í a chóipeáil go "
 "dtí d'fhillteán \"Seolta\"."
 
-# # @name NS_MSG_FAILURE_ON_OBJ_EMBED_WHILE_SAVING
-#. ## @name NS_MSG_FAILURE_ON_OBJ_EMBED_WHILE_SAVING
-#: 12533
-msgid ""
-"There was a problem including the file %.200s in the message. Would you like "
-"to continue saving the message without this file?"
-msgstr ""
-"Bhí fadhb ann agus an comhad %.200s á chur sa teachtaireacht. An bhfuil tú "
-"sásta an teachtaireacht a shábháil gan an comhad sin?"
-
-# # @name NS_MSG_ASSEMBLING_MESSAGE
-#. ## @name NS_MSG_ASSEMBLING_MESSAGE
-#: 12534
-msgid "Assembling mail information…"
-msgstr "Faisnéis ríomhphoist á cur le chéile…"
-
-# # @name NS_MSG_GATHERING_ATTACHMENT
-#. ## @name NS_MSG_GATHERING_ATTACHMENT
-#: 12535
-msgid "Attaching %s…"
-msgstr "%s á chur faoi iamh…"
-
-# # @name NS_MSG_CREATING_MESSAGE
-#. ## @name NS_MSG_CREATING_MESSAGE
-#: 12536
-msgid "Creating mail message…"
-msgstr "Teachtaireacht ríomhphoist á cruthú…"
-
-# # @name NS_MSG_FAILURE_ON_OBJ_EMBED_WHILE_SENDING
-#. ## @name NS_MSG_FAILURE_ON_OBJ_EMBED_WHILE_SENDING
-#: 12537
-msgid ""
-"There was a problem including the file %.200s in the message. Would you like "
-"to continue sending the message without this file?"
-msgstr ""
-"Bhí fadhb ann agus an comhad %.200s á chur sa teachtaireacht. An bhfuil tú "
-"sásta an teachtaireacht a sheoladh gan an comhad sin?"
-
-# # @name NS_MSG_START_COPY_MESSAGE
-#. ## @name NS_MSG_START_COPY_MESSAGE
-#: 12538
-msgid "Copying message to %S folder…"
-msgstr "Teachtaireacht á cóipeáil go fillteán %S…"
-
-# # @name NS_MSG_START_COPY_MESSAGE_COMPLETE
-#. ## @name NS_MSG_START_COPY_MESSAGE_COMPLETE
-#: 12539
-msgid "Copy complete."
-msgstr "Cóipeáil críochnaithe."
-
-# # @name NS_MSG_START_COPY_MESSAGE_FAILED
-#. ## @name NS_MSG_START_COPY_MESSAGE_FAILED
-#: 12540
-msgid "Copy failed."
-msgstr "Theip ar an gcóipeáil."
-
-# # @name NS_MSG_LARGE_MESSAGE_WARNING
-#. ## @name NS_MSG_LARGE_MESSAGE_WARNING
-#: 12541
-msgid ""
-"Warning! You are about to send a %d byte message. Are you sure that you want "
-"to do this?"
-msgstr ""
-"Rabhadh! Tá tú ar tí teachtaireacht %d beart a sheoladh. An bhfuil tú cinnte "
-"gur mian leat é sin a dhéanamh?"
-
-# # @name NS_MSG_SENDING_MESSAGE
-#. ## @name NS_MSG_SENDING_MESSAGE
-#: 12550
-msgid "Sending message…"
-msgstr "Teachtaireacht á seoladh…"
-
-# # @name NS_MSG_POSTING_MESSAGE
-#. ## @name NS_MSG_POSTING_MESSAGE
-#: 12551
-msgid "Posting message…"
-msgstr "Teachtaireacht á postáil…"
-
 # # @name NS_ERROR_NNTP_NO_CROSS_POSTING
 #. ## @name NS_ERROR_NNTP_NO_CROSS_POSTING
 #: 12554
@@ -15928,30 +15799,6 @@ msgstr ""
 msgid "Cancelling…"
 msgstr "Á Chealú…"
 
-# # @name NS_MSG_SEND_ERROR_TITLE
-#. ## @name NS_MSG_SEND_ERROR_TITLE
-#: 12556
-msgid "Send Message Error"
-msgstr "Earráid Seolta Teachtaireachta"
-
-# # @name NS_MSG_SENDLATER_ERROR_TITLE
-#. ## @name NS_MSG_SENDLATER_ERROR_TITLE
-#: 12557
-msgid "Send Later Error"
-msgstr "Earráid i Seoladh Níos Déanaí"
-
-# # @name NS_MSG_SAVE_DRAFT_TITLE
-#. ## @name NS_MSG_SAVE_DRAFT_TITLE
-#: 12558
-msgid "Save Draft Error"
-msgstr "Earráid Sábhála Dréachta"
-
-# # @name NS_MSG_SAVE_TEMPLATE_TITLE
-#. ## @name NS_MSG_SAVE_TEMPLATE_TITLE
-#: 12559
-msgid "Save Template Error"
-msgstr "Earráid Sábhála Teimpléid"
-
 # # @name NS_ERROR_SEND_FAILED_BUT_NNTP_OK
 #. ## @name NS_ERROR_SEND_FAILED_BUT_NNTP_OK
 #: 12560
@@ -15961,21 +15808,6 @@ msgid ""
 msgstr ""
 "Tá do theachtaireacht seolta chuig an ngrúpa nuachta, ach níor seoladh í "
 "chuig an bhfaighteoir eile."
-
-# # @name NS_MSG_ASK_TO_COMEBACK_TO_COMPOSE
-#. ## @name NS_MSG_ASK_TO_COMEBACK_TO_COMPOSE
-#: 12561
-msgid "Would you like to return to the compose window?"
-msgstr "An bhfuil tú ag iarraidh filleadh ar an fhuinneog scríofa?"
-
-# # @name NS_MSG_GENERIC_FAILURE_EXPLANATION
-#. ## @name NS_MSG_GENERIC_FAILURE_EXPLANATION
-#: 12562
-msgid ""
-"Please verify that your Mail & Newsgroups account settings are correct and "
-"try again."
-msgstr ""
-"Cinntigh go bhfuil do shocruithe cuntais i gceart agus déan iarracht eile."
 
 # # @name NS_MSG_ERROR_READING_FILE
 #. ## @name NS_MSG_ERROR_READING_FILE
@@ -15995,14 +15827,6 @@ msgstr ""
 "mian leat freagra a chur chuig an ngrúpa nuachta freisin, cuir ró nua leis an "
 "réimse seoltaí, roghnaigh \"Grúpa Nuachta\" ó liosta na bhfaighteoirí, agus "
 "cuir isteach ainm an ghrúpa nuachta."
-
-# # @name NS_MSG_UNDISCLOSED_RECIPIENTS
-# # LOCALIZATION NOTE: this string must be using only US_ASCII characters
-#. ## @name NS_MSG_UNDISCLOSED_RECIPIENTS
-#. ## LOCALIZATION NOTE: this string must be using only US_ASCII characters
-#: 12566
-msgid "undisclosed-recipients"
-msgstr "faighteoiri-neamhnochtaithe"
 
 # # @name NS_MSG_ERROR_ATTACHING_FILE
 #. ## @name NS_MSG_ERROR_ATTACHING_FILE
@@ -16285,6 +16109,21 @@ msgstr ""
 msgid "Attach File(s)"
 msgstr "Cuir comha(i)d faoi iamh"
 
+# # @name NS_MSG_GENERIC_FAILURE_EXPLANATION
+#: genericFailureExplanation
+msgid ""
+"Please verify that your Mail & Newsgroups account settings are correct and "
+"try again."
+msgstr ""
+"Cinntigh go bhfuil do shocruithe cuntais i gceart agus déan iarracht eile."
+
+# # @name NS_MSG_UNDISCLOSED_RECIPIENTS
+# # LOCALIZATION NOTE: this string must be using only US_ASCII characters
+#. ## LOCALIZATION NOTE (undisclosedRecipients): this string must use only US_ASCII characters
+#: undisclosedRecipients
+msgid "undisclosed-recipients"
+msgstr "faighteoiri-neamhnochtaithe"
+
 #. # LOCALIZATION NOTE (chooseFileToAttachViaCloud): %1$S is the cloud
 #. # provider to save the file to.
 #: chooseFileToAttachViaCloud
@@ -16455,17 +16294,130 @@ msgid "Are you sure you are ready to send this message?"
 msgstr ""
 "An bhfuil tú cinnte go bhfuil tú réidh chun an teachtaireacht seo a sheoladh?"
 
-# # reply header in composeMsg
-# # <author> wrote:
-#. ## reply header in composeMsg
-#. ## <author> wrote:
-#: mailnews.reply_header_authorwrote
-msgid "%s wrote"
-msgstr "scríobh %s"
+# # @name NS_MSG_ASSEMB_DONE_MSG
+#: assemblingMessageDone
+msgid "Assembling message…Done"
+msgstr "Teachtaireacht á cóimeáil…Críochnaithe"
 
-#: mailnews.reply_header_ondate
-msgid "On %s"
-msgstr "Ar %s"
+# # @name NS_MSG_ASSEMBLING_MSG
+#: assemblingMessage
+msgid "Assembling message…"
+msgstr "Teachtaireacht á cóimeáil…"
+
+# # @name SMTP_DELIV_MAIL
+#: smtpDeliveringMail
+msgid "Delivering mail…"
+msgstr "Ríomhphost á sheachadadh…"
+
+# # @name SMTP_PROGRESS_MAILSENT
+#: smtpMailSent
+msgid "Mail sent successfully"
+msgstr "D'éirigh le seoladh an ríomhphoist."
+
+# # @name NS_MSG_ASSEMBLING_MESSAGE
+#: assemblingMailInformation
+msgid "Assembling mail information…"
+msgstr "Faisnéis ríomhphoist á cur le chéile…"
+
+#. ## LOCALIZATION NOTE (gatheringAttachment): argument %S is file name/URI of attachment
+#: gatheringAttachment
+msgid "Attaching %S…"
+msgstr ""
+
+# # @name NS_MSG_CREATING_MESSAGE
+#: creatingMailMessage
+msgid "Creating mail message…"
+msgstr "Teachtaireacht ríomhphoist á cruthú…"
+
+# # @name NS_MSG_START_COPY_MESSAGE
+#. ## LOCALIZATION NOTE (copyMessageStart): argument %S is folder name
+#: copyMessageStart
+msgid "Copying message to %S folder…"
+msgstr "Teachtaireacht á cóipeáil go fillteán %S…"
+
+# # @name NS_MSG_START_COPY_MESSAGE_COMPLETE
+#: copyMessageComplete
+msgid "Copy complete."
+msgstr "Cóipeáil críochnaithe."
+
+# # @name NS_MSG_START_COPY_MESSAGE_FAILED
+#: copyMessageFailed
+msgid "Copy failed."
+msgstr "Theip ar an gcóipeáil."
+
+# # @name NS_MSG_LARGE_MESSAGE_WARNING
+#: sendLargeMessageWarning
+msgid ""
+"Warning! You are about to send a %d byte message. Are you sure that you want "
+"to do this?"
+msgstr ""
+"Rabhadh! Tá tú ar tí teachtaireacht %d beart a sheoladh. An bhfuil tú cinnte "
+"gur mian leat é sin a dhéanamh?"
+
+# # @name NS_MSG_SENDING_MESSAGE
+#: sendingMessage
+msgid "Sending message…"
+msgstr "Teachtaireacht á seoladh…"
+
+# # @name NS_MSG_SEND_ERROR_TITLE
+#: sendMessageErrorTitle
+msgid "Send Message Error"
+msgstr "Earráid Seolta Teachtaireachta"
+
+# # @name NS_MSG_POSTING_MESSAGE
+#: postingMessage
+msgid "Posting message…"
+msgstr "Teachtaireacht á postáil…"
+
+# # @name NS_MSG_SENDLATER_ERROR_TITLE
+#: sendLaterErrorTitle
+msgid "Send Later Error"
+msgstr "Earráid i Seoladh Níos Déanaí"
+
+# # @name NS_MSG_SAVE_DRAFT_TITLE
+#: saveDraftErrorTitle
+msgid "Save Draft Error"
+msgstr "Earráid Sábhála Dréachta"
+
+# # @name NS_MSG_SAVE_TEMPLATE_TITLE
+#: saveTemplateErrorTitle
+msgid "Save Template Error"
+msgstr "Earráid Sábhála Teimpléid"
+
+#. ## LOCALIZATION NOTE (failureOnObjectEmbeddingWhileSaving): argument %.200S is file name/URI of object to be embedded
+#: failureOnObjectEmbeddingWhileSaving
+msgid ""
+"There was a problem including the file %.200S in the message. Would you like "
+"to continue saving the message without this file?"
+msgstr ""
+
+#. ## LOCALIZATION NOTE (failureOnObjectEmbeddingWhileSending): argument %.200S is file name/URI of object to be embedded
+#: failureOnObjectEmbeddingWhileSending
+msgid ""
+"There was a problem including the file %.200S in the message. Would you like "
+"to continue sending the message without this file?"
+msgstr ""
+
+# # @name NS_MSG_ASK_TO_COMEBACK_TO_COMPOSE
+#: returnToComposeWindowQuestion
+msgid "Would you like to return to the compose window?"
+msgstr "An bhfuil tú ag iarraidh filleadh ar an fhuinneog scríofa?"
+
+#. ## reply header in composeMsg
+#. ## LOCALIZATION NOTE (mailnews.reply_header_authorwrotesingle): #1 is author (name of person replying to)
+#: mailnews.reply_header_authorwrotesingle
+msgid "#1 wrote:"
+msgstr ""
+
+#. ## LOCALIZATION NOTE (mailnews.reply_header_ondateauthorwrote): #1 is author, #2 is date, #3 is time
+#: mailnews.reply_header_ondateauthorwrote
+msgid "On #2 #3, #1 wrote:"
+msgstr ""
+
+#. ## LOCALIZATION NOTE (mailnews.reply_header_authorwroteondate): #1 is author, #2 is date, #3 is time
+#: mailnews.reply_header_authorwroteondate
+msgid "#1 wrote on #2 #3:"
+msgstr ""
 
 # #-#-#-#-#  tmp.XXXX8uqs6Q.po (thunderbird)  #-#-#-#-#
 # default forwarded message prefix
@@ -16569,10 +16521,10 @@ msgstr ""
 "Filelink a úsáid.;Is comhaid mhóra iad seo. Ba chóir duit Filelink a úsáid.;"
 "Is comhaid mhóra iad seo. Ba chóir duit Filelink a úsáid."
 
-# Ctrl+i is highlights URL for opening
 #: bigFileShare.accesskey
+msgctxt "bigFileShare.accesskey"
 msgid "l"
-msgstr "l"
+msgstr ""
 
 #: bigFileAttach.label
 msgid "Ignore"
@@ -16724,7 +16676,9 @@ msgstr "Comhad Rómhór"
 msgid "%2$S exceeds the maximum size for %1$S."
 msgstr "Tá %2$S níos mó ná an t-uasmhéid le haghaidh %1$S."
 
-#: errorCloudFileOther.title
+#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+#. # Connection Error Messages
+#: errorCloudFileOther.title 101
 msgid "Unknown Error"
 msgstr "Earráid Anaithnid"
 
@@ -16776,6 +16730,19 @@ msgstr "* %1$S (%2$S) óstáilte ag %3$S: %4$S"
 #: stopShowingUploadingNotification.label
 msgid "Never show this again"
 msgstr "Ná taispeáin é seo arís"
+
+#: replaceButton.label
+msgid "Replace…"
+msgstr ""
+
+#: replaceButton.accesskey
+msgctxt "replaceButton.accesskey"
+msgid "l"
+msgstr ""
+
+#: replaceButton.tooltip
+msgid "Show the Find and Replace dialog"
+msgstr ""
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -16926,13 +16893,17 @@ msgctxt "selectAllCmd.key"
 msgid "A"
 msgstr "A"
 
-#: findCmd.label findCmd.accesskey
-msgid "&Find and Replace…"
-msgstr "&Aimsigh agus Ionadaigh…"
+#: findBarCmd.label findBarCmd.accesskey
+msgid "&Find…"
+msgstr ""
 
-#: findCmd.key feeds.wizardLongName.accesskey
+#: findBarCmd.key feeds.wizardLongName.accesskey
 msgid "F"
 msgstr "F"
+
+#: findReplaceCmd.label findReplaceCmd.accesskey
+msgid "Find and Rep&lace…"
+msgstr ""
 
 #: findReplaceCmd.key
 msgid "H"
@@ -17073,14 +17044,14 @@ msgstr "Comhdaigh Anseo"
 msgid "&Address Book"
 msgstr "Le&abhar Seoltaí"
 
-#: accountManagerCmd.label accountManagerCmd.accesskey
-msgid "Account &Settings…"
-msgstr "&Socruithe an Chuntais…"
+#: accountManagerCmd2.label accountManagerCmd2.accesskey
+msgid "Account &Settings"
+msgstr ""
 
-#: accountManagerCmdUnix.accesskey
-msgctxt "accountManagerCmdUnix.accesskey"
+#: accountManagerCmdUnix2.accesskey
+msgctxt "accountManagerCmdUnix2.accesskey"
 msgid "S"
-msgstr "S"
+msgstr ""
 
 #. #-#-#-#-#  chromemessengermessengercomposemessengercompose.dtd.po (firefox)  #-#-#-#-#
 #. Mac OS X Window Menu
@@ -17506,9 +17477,9 @@ msgstr "Oi&brigh As Líne"
 msgid "Download/&Sync Now…"
 msgstr "Íosluchtaigh/&Sioncronaigh Anois…"
 
-#: settingsOfflineCmd.label settingsOfflineCmd.accesskey
-msgid "Offlin&e Settings…"
-msgstr "Socruith&e As Líne…"
+#: settingsOfflineCmd2.label settingsOfflineCmd2.accesskey
+msgid "Offlin&e Settings"
+msgstr ""
 
 #: downloadSelectedCmd.label downloadSelectedCmd.accesskey
 msgid "Get Se&lected Messages"
@@ -17581,17 +17552,18 @@ msgstr "Teachtaireachtaí &Marcáilte"
 msgid "Fa&vorite Folder"
 msgstr "Mo &Rogha Fillteán"
 
-#: folderPropsCmd.label folderPropsCmd.accesskey
-msgid "Pr&operties…"
-msgstr "Airí&onna…"
+#: folderPropsFolderCmd2.label folderProperties
+msgid "Folder Properties"
+msgstr "Airíonna Fillteáin"
 
-#: folderPropsFolderCmd.label
-msgid "Folder Properties…"
-msgstr "Airíonna an Fhillteáin…"
+#: folderPropsNewsgroupCmd2.label
+msgid "Newsgroup Properties"
+msgstr ""
 
-#: folderPropsNewsgroupCmd.label
-msgid "Newsgroup Properties…"
-msgstr "Airíonna an Ghrúpa Nuachta…"
+#: folderPropsCmd.accesskey
+msgctxt "folderPropsCmd.accesskey"
+msgid "o"
+msgstr ""
 
 #: undoDeleteMsgCmd.label
 msgid "Undo Delete Message"
@@ -17677,6 +17649,10 @@ msgstr "Mo Rogha &Fillteán"
 msgctxt "recentFolders.label recentFolders.accesskey"
 msgid "&Recent"
 msgstr "&Le Déanaí"
+
+#: compactVersion.label compactVersion.accesskey
+msgid "&Compact View"
+msgstr ""
 
 #: sortByDateCmd.label sortByDateCmd.accesskey
 msgid "Dat&e"
@@ -18307,9 +18283,9 @@ msgctxt "savedFiles.key"
 msgid "j"
 msgstr "j"
 
-#: filtersCmd.label filtersCmd.accesskey
-msgid "Message &Filters…"
-msgstr "&Scagairí Teachtaireachta…"
+#: filtersCmd2.label filtersCmd2.accesskey
+msgid "Message &Filters"
+msgstr ""
 
 #: filtersApply.label filtersApply.accesskey
 msgid "&Run Filters on Folder"
@@ -18609,10 +18585,13 @@ msgstr "Cuir Ar Aghaidh Mar Iatán"
 msgid "&Show remote content in this message"
 msgstr "&Taispeáin ábhar i gcéin sa teachtaireacht seo"
 
-#: remoteContentOptionAllowForAddress.label
-#: remoteContentOptionAllowForAddress.accesskey
-msgid "Show remote content &from this sender"
-msgstr "Taispeáin ábhar i gcéin ón &seoltóir seo"
+#: editRemoteContentSettings.label editRemoteContentSettings.accesskey
+msgid "&Edit remote content options…"
+msgstr ""
+
+#: editRemoteContentSettingsUnix.label editRemoteContentSettingsUnix.accesskey
+msgid "&Edit remote content preferences…"
+msgstr ""
 
 #. Phishing Button Popup
 #: phishingOptionIgnore.label phishingOptionIgnore.accesskey
@@ -18732,17 +18711,13 @@ msgstr "&Liostáil…"
 msgid "&Search Messages…"
 msgstr "&Cuardaigh Teachtaireachtaí…"
 
-#: folderContextProperties.label folderContextProperties.accesskey
-msgid "&Properties…"
-msgstr "&Airíonna…"
-
 #: folderContextFavoriteFolder.label folderContextFavoriteFolder.accesskey
 msgid "F&avorite Folder"
 msgstr "Mo Rogh&a Fillteán"
 
-#: folderContextSettings.label folderContextSettings.accesskey
-msgid "S&ettings…"
-msgstr "Socruith&e…"
+#: folderContextSettings2.label folderContextSettings2.accesskey
+msgid "S&ettings"
+msgstr ""
 
 #. Search Bar
 #: SearchNameOrEmail.label SearchNameOrEmail.accesskey
@@ -18932,6 +18907,10 @@ msgstr "Oscail Teachtaireacht i g&Cluaisín Nua"
 #: contextOpenConversation.label contextOpenConversation.accesskey
 msgid "Ope&n Message in Conversation"
 msgstr "Oscail Teachtaireacht i gComh&rá"
+
+#: contextOpenContainingFolder.label contextOpenContainingFolder.accesskey
+msgid "Ope&n Message in Containing Folder"
+msgstr ""
 
 #: contextEditMsgAsNew.label contextEditMsgAsNew.accesskey
 msgctxt "contextEditMsgAsNew.label contextEditMsgAsNew.accesskey"
@@ -19213,10 +19192,13 @@ msgstr "&Oscail i mBrabhsálaí"
 msgid "&Open Link In Browser"
 msgstr "&Oscail Nasc i mBrabhsálaí"
 
+#. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
 #. Mac OS X Application Menu (Cocoa widgets)
-#: preferencesCmdMac.label
-msgid "Preferences…"
-msgstr "Sainroghanna…"
+#. #-#-#-#-#  chromemessengermigrationmigration.properties.po (firefox)  #-#-#-#-#
+#. # Import Sources
+#: preferencesCmdMac2.label 1_seamonkey
+msgid "Preferences"
+msgstr "Sainroghanna"
 
 #: preferencesCmdMac.modifiers
 msgctxt "preferencesCmdMac.modifiers"
@@ -19302,10 +19284,6 @@ msgstr ""
 "Marcáil na Grúpaí Nuachta mar Léite;Marcáil na Grúpaí Nuachta mar Léite;"
 "Marcáil na Grúpaí Nuachta mar Léite"
 
-#: folderProperties
-msgid "Folder Properties"
-msgstr "Airíonna Fillteáin"
-
 #: newTag
 msgid "New Tag…"
 msgstr "Clib Nua…"
@@ -19348,6 +19326,12 @@ msgstr "Oscail Teachtaireacht"
 #: defaultSaveMessageAsFileName
 msgid "message.eml"
 msgstr "tcht.eml"
+
+#. # LOCALIZATION NOTE(longMsgSubjectTruncator): A suffix string appended to the filename
+#. # (created from message subject) if it needed to be truncated due to length.
+#: longMsgSubjectTruncator
+msgid "..."
+msgstr "..."
 
 #: SaveMailAs
 msgid "Save Message As"
@@ -19454,6 +19438,13 @@ msgid "A folder with that name already exists. Please enter a different name."
 msgstr ""
 "Tá an t-ainm sin ar fhillteán atá ann cheana. Iontráil ainm eile, le do thoil."
 
+#. # LOCALIZATION NOTE(confirmDuplicateFolderRename): %1$S is name of folder being moved, %2$S is parent folder name, %3$S is proposed new folder name
+#: confirmDuplicateFolderRename
+msgid ""
+"A subfolder with the name '%1$S' already exists in the folder '%2$S'. Would "
+"you like to move this folder using the new name '%3$S'?"
+msgstr ""
+
 #: folderCreationFailed
 msgid ""
 "The folder could not be created because the folder name you specified "
@@ -19524,11 +19515,8 @@ msgstr ""
 #: parsingFolderFailed
 msgid ""
 "Unable to open the folder %S because it is in use by some other operation. "
-"Please wait for that operation to finish and then select the folder again. "
+"Please wait for that operation to finish and then select the folder again."
 msgstr ""
-"Ní féidir an fillteán %S a oscailt toisc go bhfuil sé in úsáid ag oibríocht "
-"eile. Fan go gcríochnóidh an oibríocht sin agus ansin roghnaigh an fillteán "
-"arís. "
 
 #: deletingMsgsFailed
 msgid ""
@@ -20106,6 +20094,11 @@ msgctxt "remoteContentPrefAccesskeyUnix"
 msgid "P"
 msgstr "S"
 
+#. # LOCALIZATION NOTE(remoteAllow): %S is host name
+#: remoteAllow
+msgid "Allow remote content for %S"
+msgstr ""
+
 # Phishing Bar
 #: phishingBarMessage
 msgid "This message may be a scam."
@@ -20264,11 +20257,6 @@ msgstr "%S %S"
 #: attachmentsPrintHeader
 msgid "Attachments:"
 msgstr "Iatáin:"
-
-#. # Connection Error Messages
-#: 101
-msgid "Unknown Error "
-msgstr "Earráid Anaithnid "
 
 #: 103
 msgid "Could not connect to server %S; the connection was refused."
@@ -20552,13 +20540,25 @@ msgstr "Gach Fillteán"
 msgid "Unread Folders"
 msgstr "Fillteáin Gan Léamh"
 
+#: folderPaneModeHeader_unread_compact
+msgid "Unread Folders - Compact View"
+msgstr ""
+
 #: folderPaneModeHeader_favorite
 msgid "Favorite Folders"
 msgstr "Mo Rogha Fillteán"
 
+#: folderPaneModeHeader_favorite_compact
+msgid "Favorite Folders - Compact View"
+msgstr ""
+
 #: folderPaneModeHeader_recent
 msgid "Recent Folders"
 msgstr "Fillteáin Dheireanacha"
+
+#: folderPaneModeHeader_recent_compact
+msgid "Recent Folders - Compact View"
+msgstr ""
 
 #: folderPaneModeHeader_smart
 msgctxt "folderPaneModeHeader_smart"
@@ -21313,6 +21313,14 @@ msgstr ""
 "fhoshnáithe roghnaithe.;Ní thaispeánfar freagraí ar na #1 bhfoshnáithe "
 "roghnaithe.;Ní thaispeánfar freagraí ar na #1 foshnáithe roghnaithe."
 
+#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (saveAsType): replace %S with the extension of the file to be saved.
+#. #-#-#-#-#  chromemessengerpreferencespreferences.properties.po (firefox)  #-#-#-#-#
+#. #### Applications
+#: saveAsType fileEnding
+msgid "%S file"
+msgstr "Comhad %S"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -21386,11 +21394,6 @@ msgstr "Iompórtáil curtha i gcrích"
 #: done.label
 msgid "The following items were successfully imported:"
 msgstr "Iompórtáladh na rudaí seo go rathúil:"
-
-#. # Import Sources
-#: 1_seamonkey
-msgid "Preferences"
-msgstr "Sainroghanna"
 
 #: 2_seamonkey
 msgctxt "2_seamonkey"
@@ -22594,6 +22597,18 @@ msgstr "&Sábháil Ailt i:"
 msgid "S&how the article summary instead of loading the web page"
 msgstr "Taispeáin ac&hoimre an ailt in áit an leathanach Gréasáin a íosluchtú"
 
+#: autotagEnable.label autotagEnable.accesskey
+msgid "Automati&cally create tags from feed &lt;category&gt; names"
+msgstr ""
+
+#: autotagUsePrefix.label autotagUsePrefix.accesskey
+msgid "&Prefix tags with:"
+msgstr ""
+
+#: autoTagPrefix.placeholder
+msgid "Enter a tag prefix"
+msgstr ""
+
 #: locationValidate.label
 msgid "Validate"
 msgstr "Bailíochtaigh"
@@ -23641,6 +23656,26 @@ msgstr "agus socraigh go bhfuilim &Amuigh, leis an teachtaireacht stádais seo:"
 msgid "Send &typing notifications in conversations"
 msgstr "Abair le &daoine nuair a bhím ag clóscríobh"
 
+#: chatNotifications.label
+msgid "When messages directed at you arrive:"
+msgstr ""
+
+#: desktopChatNotifications.label desktopChatNotifications.accesskey
+msgid "Show a notifi&cation"
+msgstr ""
+
+#: chatSound.label chatSound.accesskey
+msgid "Play a soun&d"
+msgstr ""
+
+#: systemSound.label systemSound.accesskey
+msgid "&Default system sound for new mail"
+msgstr ""
+
+#: customsound.label customsound.accesskey
+msgid "&Use the following sound file"
+msgstr "Úsáid an comhad f&uaime seo"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -24301,10 +24336,6 @@ msgstr "F&uaim réamhshocraithe chórais le haghaidh ríomhphost nua"
 msgid "S&ystem Alert Sound"
 msgstr "F&uaim airdill an chórais"
 
-#: customsound.label customsound.accesskey
-msgid "&Use the following sound file"
-msgstr "Úsáid an comhad f&uaime seo"
-
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -24413,9 +24444,10 @@ msgstr "Eisceachtaí"
 msgid "R&emove All Sites"
 msgstr "Scrios na Suímh Uil&e"
 
+# "d" conflicts with "Dún"!
 #: address.label address.accesskey
-msgid "A&ddress of web site:"
-msgstr "Seola&dh an tsuímh Ghréasáin:"
+msgid "A&ddress of website:"
+msgstr "Seoladh an tsuímh &Ghréasáin:"
 
 #: block.label block.accesskey
 msgid "&Block"
@@ -24424,13 +24456,6 @@ msgstr "&Coisc"
 #: session.label session.accesskey
 msgid "Allow for &Session"
 msgstr "Ceadaigh don &Seisiún"
-
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: prefWindow.titleWin
-msgid "Options"
-msgstr "Roghanna"
 
 #: prefWindow.titleGNOME
 msgid "&brandShortName; Preferences"
@@ -24450,6 +24475,10 @@ msgstr "width: 58em;"
 #: prefWindow.styleGNOME
 msgid "width: 47em; min-height: 38em;"
 msgstr "width: 52em; min-height: 42em;"
+
+#: panePrivacy.title
+msgid "Privacy"
+msgstr "Príobháideachas"
 
 #. #-#-#-#-#  chromemessengerpreferencespreferences.properties.po (firefox)  #-#-#-#-#
 #. #### Add HTML and Plain Text Domain Names for sendOption
@@ -24500,11 +24529,6 @@ msgstr "Deasc"
 #: myDownloadsFolderName
 msgid "My Downloads"
 msgstr "Mo Chuid Íosluchtaithe"
-
-#. #### Applications
-#: fileEnding
-msgid "%S file"
-msgstr "Comhad %S"
 
 #: saveFile
 msgid "Save File"
@@ -24608,6 +24632,19 @@ msgctxt "attachmentReminderEditText"
 msgid "Keyword:"
 msgstr "Lorgfhocal:"
 
+#. #### Remote content
+#: imagepermissionstext
+msgid ""
+"You can specify from which web sites images and other remote content are "
+"allowed to load. You can also allow all remote content based on sender e-mail "
+"address. Type the address of the site or e-mail you want to manage and then "
+"click Block or Allow."
+msgstr ""
+
+#: imagepermissionstitle
+msgid "Exceptions - Remote Content"
+msgstr ""
+
 #. #### Cookies
 #: cookiepermissionstitle
 msgid "Exceptions - Cookies"
@@ -24671,6 +24708,92 @@ msgstr "Bain Fianáin"
 msgid "Remove Cookie"
 msgstr "Bain Fianán"
 
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#. Mail Content
+#: captionMailContent.label
+msgid "Mail Content"
+msgstr ""
+
+#: acceptRemoteContent.label acceptRemoteContent.accesskey
+msgid "&Allow remote content in messages"
+msgstr ""
+
+#: remoteContentExceptions.label remoteContentExceptions.accesskey
+msgid "E&xceptions…"
+msgstr "Ei&sceachtaí…"
+
+#: acceptRemoteContentInfo.label
+msgid "Learn more about the privacy issues of remote content"
+msgstr ""
+
+#. Web Content
+#: captionWebContent.label
+msgid "Web Content"
+msgstr "Inneachar Gréasáin"
+
+#: acceptCookies.label acceptCookies.accesskey
+msgid "&Accept cookies from sites"
+msgstr "Gl&ac le fianáin ó shuímh"
+
+#: acceptThirdParty.pre.label acceptThirdParty.pre.accesskey
+msgid "A&ccept third-party cookies:"
+msgstr "Gla&c le fianáin tríú páirtí:"
+
+#: acceptThirdParty.always.label
+msgid "Always"
+msgstr "I gCónaí"
+
+#: acceptThirdParty.never.label
+msgid "Never"
+msgstr "Riamh"
+
+#: acceptThirdParty.visited.label
+msgid "From visited"
+msgstr "Ó shuímh fheicthe"
+
+# "c" and "g" conflict
+#: keepUntil.label keepUntil.accesskey
+msgid "&Keep until:"
+msgstr "C&oinnigh:"
+
+#: expire.label
+msgid "they expire"
+msgstr "go dtí go mbeidh siad caite"
+
+#: close.label
+msgid "I close &brandShortName;"
+msgstr "go dtí go ndúnaim &brandShortName;"
+
+#: askEachTime.label
+msgid "ask me every time"
+msgstr "fiafraigh díom i gcónaí"
+
+#: cookieExceptions.label cookieExceptions.accesskey
+msgid "&Exceptions…"
+msgstr "&Eisceachtaí…"
+
+#: showCookies.label showCookies.accesskey
+msgid "&Show Cookies…"
+msgstr "Tai&speáin Fianáin…"
+
+#: dntTrackingNopref.label2
+msgid "Do not tell sites anything about my tracking preferences"
+msgstr "Ná hinis faic do shuímh maidir le rianú"
+
+#: dntTrackingNotOkay.label2
+msgid "Tell sites that I do not want to be tracked"
+msgstr "Cuir in iúl do shuímh Ghréasáin gan mé a rianú"
+
+#: dntTrackingOkay.label2
+msgid "Tell sites that I want to be tracked"
+msgstr "Cuir in iúl do shuímh Ghréasáin gur mhaith liom a bheith rianaithe"
+
+#: doNotTrackInfo.label
+msgid "Learn more about Do Not Track"
+msgstr ""
+
 #: returnSome.label returnSome.accesskey
 msgid "Allow &return receipts for some messages"
 msgstr "Ceadaigh admhálacha léite le haghaidh teachtaireachtaí ái&rithe"
@@ -24698,10 +24821,6 @@ msgstr "Focail Fhaire"
 #: itemAntiVirus.label
 msgid "Anti-Virus"
 msgstr "Frith-Víreas"
-
-#: itemCookies.label
-msgid "Web Content"
-msgstr "Inneachar Gréasáin"
 
 # Junk Mail Controls
 #. Junk Mail Controls
@@ -24803,50 +24922,6 @@ msgstr ""
 msgid "&Allow anti-virus clients to quarantine individual incoming messages"
 msgstr ""
 "Ce&adaigh do chliaint fhrithvíris teachtaireachtaí isteach a chur ar coraintín"
-
-# Cookies
-#. Cookies
-#: cookies.intro
-msgid ""
-"&brandShortName; lets you specify which blogs, news feeds, and other web "
-"sites are allowed to set cookies."
-msgstr ""
-"Is féidir leat na blaganna, fothaí nuachta agus suímh ghréasáin eile a bhfuil "
-"cead acu fianáin a fhágáil a shonrú le &brandShortName;."
-
-#: acceptCookies.label acceptCookies.accesskey
-msgid "A&ccept cookies from sites"
-msgstr "Gla&c le fianáin ó shuímh"
-
-# "c" and "g" conflict
-#: keepUntil.label keepUntil.accesskey
-msgid "&Keep until:"
-msgstr "C&oinnigh:"
-
-#: expire.label
-msgid "they expire"
-msgstr "go dtí go mbeidh siad caite"
-
-#: close.label
-msgid "I close &brandShortName;"
-msgstr "go dtí go ndúnaim &brandShortName;"
-
-#: askEachTime.label
-msgid "ask me every time"
-msgstr "fiafraigh díom i gcónaí"
-
-#: cookieExceptions.label cookieExceptions.accesskey
-msgid "&Exceptions…"
-msgstr "&Eisceachtaí…"
-
-#: showCookies.label showCookies.accesskey
-msgid "&Show Cookies…"
-msgstr "Tai&speáin Fianáin…"
-
-#. Do Not Track
-#: doNotTrack.label doNotTrack.accesskey
-msgid "Tell web sites I &do not want to be tracked"
-msgstr "Cuir in iúl &do shuímh Ghréasáin gan mé a rianú"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -25109,6 +25184,10 @@ msgstr "úsáideoir"
 #: exampleEmailDomain
 msgid "example.net"
 msgstr "sampla.net"
+
+#: emailFieldText
+msgid "Email Address:"
+msgstr "Seoladh Ríomhphoist:"
 
 #. #LOCALIZATION NOTE: defaultEmailText: %1$S is user name, %2$S is domain
 #: defaultEmailText
