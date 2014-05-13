@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-19 18:17-0500\n"
+"POT-Creation-Date: 2014-05-08 07:42-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -32,6 +32,7 @@ msgid "Do you want to turn Bluetooth on?"
 msgstr "An bhfuil fonn ort Bluetooth a thosú?"
 
 #: cancel curtainCancel cancel-button overlay-cancel-button
+#: voicemailNoNumberCancel
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -123,9 +124,71 @@ msgstr "Aistriú Bluetooth"
 msgid "Gaia Bluetooth Transfer"
 msgstr "Aistriú Bluetooth Gaia"
 
-#: done done-search settings-done edit-dialog-done
+#. # Add and update bookmark UIs
+#: add-bookmark-header
+msgid "Add link"
+msgstr "Cuir nasc leis"
+
+#: edit-bookmark-header
+msgid "Edit link"
+msgstr "Cuir nasc in eagar"
+
+#: added-to-home-screen
+msgid "Added to Home Screen"
+msgstr "Curtha leis an Scáileán Baile"
+
+#: updated-bookmark
+msgid "Updated bookmark"
+msgstr "Leabharmharc nuashonraithe"
+
+#: website-name edit-dialog-name
+msgid "Website name"
+msgstr "Ainm an tsuímh"
+
+#: address legendAddress edit-dialog-url
+msgid "Address"
+msgstr "Seoladh"
+
+#: cancel-action
+msgctxt "cancel-action"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. # wrapper
+#: add-action add-to-home-screen
+msgid "Add to Home Screen"
+msgstr "Cuir leis an Scáileán Baile"
+
+#: done-action done settings-done edit-dialog-done done-search
 msgid "Done"
 msgstr "Déanta"
+
+#. #-#-#-#-#  appsbookmarkbookmark.properties.po (firefox)  #-#-#-#-#
+#. # Remove bookmark UI
+#. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
+#. # Prompt that appears when a user tries to remove a site saved to the homescreen.
+#: remove-title remove-title-2
+msgid "Remove {{name}}"
+msgstr "Scrios {{name}}"
+
+#: remove-message
+msgid "Remove {{name}} from system?"
+msgstr "Scrios {{name}} ón chóras?"
+
+#. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
+#. # Dialog to disambiguate in a new message
+#: remove-action remove
+msgid "Remove"
+msgstr "Bain"
+
+#: name bookmark
+msgid "Bookmark"
+msgstr "Leabharmharc"
+
+#: description
+msgid "Bookmark Manager"
+msgstr "Bainisteoir na Leabharmharcanna"
 
 #: enter-search-or-address.placeholder
 msgid "Search or enter address"
@@ -248,7 +311,7 @@ msgstr "Barrshuímh"
 #. # Settings
 #. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # settings
-#: browser-settings settings-show settings name
+#: browser-settings settings-show settings name voicemailNoNumberSettings
 msgid "Settings"
 msgstr "Socruithe"
 
@@ -290,10 +353,6 @@ msgstr "Inneall réamhshocraithe"
 msgid "Bookmarks"
 msgstr "Leabharmharcanna"
 
-#: bookmark
-msgid "Bookmark"
-msgstr "Leabharmharc"
-
 #: unbookmark
 msgid "Unbookmark"
 msgstr "Bain leabharmharc"
@@ -311,10 +370,6 @@ msgstr "Cuir leabharmharc in eagar"
 #: page-title
 msgid "Page title"
 msgstr "Teideal an leathanaigh"
-
-#: address legendAddress
-msgid "Address"
-msgstr "Seoladh"
 
 #: add-to-home-screen
 msgid "Add to home screen"
@@ -505,11 +560,7 @@ msgstr "Imeacht"
 msgid "Account"
 msgstr "Cuntas"
 
-#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Accounts (N/A)
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: account-list-header accounts
+#: account-list-header settings-account-section
 msgid "Accounts"
 msgstr "Cuntais"
 
@@ -1126,10 +1177,6 @@ msgstr "Bí cinnte go dtarlaíonn an dáta deiridh tar éis an dáta tosaigh"
 msgid "Wrong login and/or password"
 msgstr "Ainm úsáideora agus/nó focal faire mícheart"
 
-#: error-no-url
-msgid "No connection. Check your Wi-Fi and try again."
-msgstr "Gan ceangal. Dearbhaigh do cheangal Wi-Fi agus déan iarracht eile."
-
 #: error-internal-server-error
 msgid "Server error. Check your login and try again."
 msgstr ""
@@ -1378,7 +1425,7 @@ msgstr "Uath"
 msgid "(Flash deactivated)"
 msgstr "(Splanc díchumasaithe)"
 
-#: options
+#: options fxa-options
 msgid "Options"
 msgstr "Roghanna"
 
@@ -1485,6 +1532,7 @@ msgid "Alarm name"
 msgstr "Ainm an aláraim"
 
 #: newAlarm
+msgctxt "newAlarm"
 msgid "New alarm"
 msgstr "Aláram nua"
 
@@ -1529,6 +1577,27 @@ msgstr "Athdhéanamh"
 #: vibrate
 msgid "Vibrate"
 msgstr "Crith"
+
+#: close
+msgctxt "close"
+msgid "Close"
+msgstr "Dún"
+
+#: closeButton.ariaLabel
+msgctxt "closeButton.ariaLabel"
+msgid "Close"
+msgstr "Dún"
+
+#: newAlarmButton.ariaLabel
+msgctxt "newAlarmButton.ariaLabel"
+msgid "New alarm"
+msgstr "Aláram nua"
+
+#. # The label for a slider that allows the user to change
+#. # the System Alarm Volume for all clock alarms.
+#: alarm-volume-label
+msgid "System Alarm Volume"
+msgstr "Airde Aláram an Chórais"
 
 #: default
 msgid "Default"
@@ -1614,6 +1683,7 @@ msgid "less than a minute"
 msgstr "níos lú ná nóiméad"
 
 #: nMinutes[one]
+msgctxt "nMinutes[one]"
 msgid "one minute"
 msgstr "nóiméad amháin"
 
@@ -1773,6 +1843,106 @@ msgctxt "nRemainMinutes[other]"
 msgid "and <strong>{{n}} minutes</strong>"
 msgstr "agus <strong>{{n}} nóiméad</strong>"
 
+#: nSpinnerSeconds
+msgctxt "nSpinnerSeconds"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: nSpinnerSeconds[zero]
+msgid "zero seconds"
+msgstr "0 soicind"
+
+#: nSpinnerSeconds[one]
+msgid "one second"
+msgstr "soicind amháin"
+
+#: nSpinnerSeconds[two]
+msgctxt "nSpinnerSeconds[two]"
+msgid "{{n}} seconds"
+msgstr "{{n}} shoicind"
+
+#: nSpinnerSeconds[few]
+msgctxt "nSpinnerSeconds[few]"
+msgid "{{n}} seconds"
+msgstr "{{n}} shoicind"
+
+#: nSpinnerSeconds[many]
+msgctxt "nSpinnerSeconds[many]"
+msgid "{{n}} seconds"
+msgstr "{{n}} soicind"
+
+#: nSpinnerSeconds[other]
+msgctxt "nSpinnerSeconds[other]"
+msgid "{{n}} seconds"
+msgstr "{{n}} soicind"
+
+#: nSpinnerMinutes
+msgctxt "nSpinnerMinutes"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: nSpinnerMinutes[zero]
+msgid "zero minutes"
+msgstr "0 nóiméad"
+
+#: nSpinnerMinutes[one]
+msgctxt "nSpinnerMinutes[one]"
+msgid "one minute"
+msgstr "nóiméad amháin"
+
+#: nSpinnerMinutes[two]
+msgctxt "nSpinnerMinutes[two]"
+msgid "{{n}} minutes"
+msgstr "{{n}} nóiméad"
+
+#: nSpinnerMinutes[few]
+msgctxt "nSpinnerMinutes[few]"
+msgid "{{n}} minutes"
+msgstr "{{n}} nóiméad"
+
+#: nSpinnerMinutes[many]
+msgctxt "nSpinnerMinutes[many]"
+msgid "{{n}} minutes"
+msgstr "{{n}} nóiméad"
+
+#: nSpinnerMinutes[other]
+msgctxt "nSpinnerMinutes[other]"
+msgid "{{n}} minutes"
+msgstr "{{n}} nóiméad"
+
+#: nSpinnerHours
+msgctxt "nSpinnerHours"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: nSpinnerHours[zero]
+msgid "zero hours"
+msgstr "0 uair"
+
+#: nSpinnerHours[one]
+msgid "{{n}} hour"
+msgstr "{{n}} uair"
+
+#: nSpinnerHours[two]
+msgctxt "nSpinnerHours[two]"
+msgid "{{n}} hours"
+msgstr "{{n}} uair"
+
+#: nSpinnerHours[few]
+msgctxt "nSpinnerHours[few]"
+msgid "{{n}} hours"
+msgstr "{{n}} huaire"
+
+#: nSpinnerHours[many]
+msgctxt "nSpinnerHours[many]"
+msgid "{{n}} hours"
+msgstr "{{n}} n-uaire"
+
+#: nSpinnerHours[other]
+msgctxt "nSpinnerHours[other]"
+msgid "{{n}} hours"
+msgstr "{{n}} uair"
+
 #: name
 msgid "Clock"
 msgstr "Clog"
@@ -1799,13 +1969,13 @@ msgstr "Nuashonraigh"
 msgid "Retry"
 msgstr "Atriail"
 
-#. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
 #. # Menus and dialog strings
-#: contacts contacts.name perm-contacts
+#: contacts
+msgctxt "contacts"
 msgid "Contacts"
 msgstr "Teagmhálacha"
 
-#: addContact fdnAction-add
+#: addContact dialerAddContact.ariaLabel fdnAction-add
 msgid "Add contact"
 msgstr "Cuir teagmháil leis"
 
@@ -1833,11 +2003,10 @@ msgstr "Cuir teagmháil in eagar"
 msgid "Delete contact?"
 msgstr "Scrios an teagmháil?"
 
-#. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
-#. # Dialog to disambiguate in a new message
-#: remove
-msgid "Remove"
-msgstr "Bain"
+#: delete
+msgctxt "delete"
+msgid "Delete"
+msgstr "Scrios"
 
 #: comments
 msgid "Comments"
@@ -1940,6 +2109,11 @@ msgstr "Saincheaptha"
 
 #: date
 msgctxt "date"
+msgid "Date"
+msgstr "Dáta"
+
+#: date-span-placeholder
+msgctxt "date-span-placeholder"
 msgid "Date"
 msgstr "Dáta"
 
@@ -2118,12 +2292,10 @@ msgstr "Seoladh ríomhphoist"
 
 #. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
 #. # search related
-#. #-#-#-#-#  appscommunicationscontactsfbfacebook.properties.po (firefox)  #-#-#-#-#
-#. # search related
 #. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
 #. # Search functionality
-#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
-#. # Rocketbar
+#. #-#-#-#-#  sharedfacebookfacebook.properties.po (firefox)  #-#-#-#-#
+#. # search related
 #: search-contact.placeholder search
 msgid "Search"
 msgstr "Cuardaigh"
@@ -2305,10 +2477,6 @@ msgctxt "simContacts-imported3[other]"
 msgid "Imported {{n}} contacts"
 msgstr "Iompórtáladh {{n}} teagmháil"
 
-#: noSimMsg
-msgid "To import contacts insert or unlock your SIM card"
-msgstr "Ionsáigh nó díghlasáil do chárta SIM chun teagmhálacha a iompórtáil"
-
 #: noSimMsgExport
 msgid "To export contacts insert or unlock your SIM card"
 msgstr "Chun teagmhálacha a easpórtáil, cuir cárta SIM isteach, nó díghlasáil é"
@@ -2367,10 +2535,6 @@ msgstr "Iompórtáladh {{n}} dteagmháil"
 msgctxt "memoryCardContacts-imported3[other]"
 msgid "Imported {{n}} contacts"
 msgstr "Iompórtáladh {{n}} teagmháil"
-
-#: noMemoryCardMsg
-msgid "To import contacts insert a memory card"
-msgstr "Chun teagmhálacha a iompórtáil, cuir cárta cuimhne isteach"
 
 #: noMemoryCardMsgExport
 msgid "To export contacts insert a memory card"
@@ -2480,11 +2644,6 @@ msgctxt "importSim2"
 msgid "SIM card"
 msgstr "Cárta SIM"
 
-#: importMemoryCard
-msgctxt "importMemoryCard"
-msgid "Memory card"
-msgstr "Cárta cuimhne"
-
 #: importGmail gmail-serviceName
 msgid "Gmail"
 msgstr "Gmail"
@@ -2514,10 +2673,6 @@ msgid "Your password in Facebook has changed. Please, update it."
 msgstr ""
 "D'athraigh d'fhocal faire Facebook. Caithfidh tú é a athrú anseo freisin."
 
-#: noConnection11
-msgid "To import Facebook friends or contacts connect to Wi-Fi or data network"
-msgstr "Ceangail le Wi-Fi nó líonra eile chun cairde ó Facebook a iompórtáil"
-
 #: notEnabledYet
 msgid "Not enabled yet"
 msgstr "Níl sé cumasaithe fós"
@@ -2532,8 +2687,7 @@ msgctxt "simCard"
 msgid "SIM card"
 msgstr "Cárta SIM"
 
-#: memoryCard
-msgctxt "memoryCard"
+#: memoryCard importMemoryCard
 msgid "Memory card"
 msgstr "Cárta cuimhne"
 
@@ -2583,7 +2737,7 @@ msgid "SIM Card is full"
 msgstr "Tá an cárta SIM lán"
 
 #: exportError-SIM-CannotAccessPhoneBook
-msgid "Cannot access SIM card's phone book"
+msgid "Cannot access SIM card’s phone book"
 msgstr "Níl aon fháil ar an eolaire ar an gcárta SIM"
 
 #: exportError-SIM-Unavailable
@@ -2594,250 +2748,129 @@ msgstr "Níl aon chárta SIM ann"
 msgid "An error occurred while exporting a contact"
 msgstr "Tharla earráid agus teagmháil á heaspórtáil"
 
-#: import
-msgid "Import"
-msgstr "Iompórtáil"
+#: ContactManagementTitle
+msgid "Contacts Management"
+msgstr "Bainisteoir Teagmhálacha"
 
-#: fbFriends
-msgctxt "fbFriends"
-msgid "Facebook Friends"
-msgstr "Cairde Facebook"
+#: DeleteTitle
+msgctxt "DeleteTitle"
+msgid "Delete"
+msgstr "Scrios"
 
-#: facebook-serviceName
-msgctxt "facebook-serviceName"
-msgid "Facebook Friends"
-msgstr "Cairde Facebook"
+#: bulkDeleteButton
+msgid "Delete Contacts"
+msgstr "Scrios Teagmhálacha"
 
-#: viewAll
-msgid "View All Facebook Friends"
-msgstr "Gach Cara Facebook"
+#: BulkDelCancel
+msgid "Contacts delete cancelled"
+msgstr "Cealaíodh scriosadh na dteagmhálacha"
 
-#: viewRecommend
-msgid "View Only Recommended"
-msgstr "Cairde Molta Amháin"
+#: DeletedTxt
+msgctxt "DeletedTxt"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
 
-#: linkProposal
-msgctxt "linkProposal"
-msgid "{[ plural(numFriends) ]}"
-msgstr "{[ plural(numFriends) ]}"
+#: DeletedTxt[zero]
+msgctxt "DeletedTxt[zero]"
+msgid "No Contact to Delete"
+msgstr "Níl aon teagmháil le scriosadh ann"
 
-#: linkProposal[zero]
-msgid "No matching friends. Showing all"
-msgstr "Níor aimsíodh aon chairde. Chuile dhuine á dtaispeáint"
+#: DeletedTxt[one]
+msgid "1 Contact removed"
+msgstr "Scriosadh teagmháil amháin"
 
-#: linkProposal[one]
-msgid "Select the recommended one"
-msgstr "Roghnaigh an cara molta"
+#: DeletedTxt[two]
+msgctxt "DeletedTxt[two]"
+msgid "{{n}} Contacts removed"
+msgstr "Scriosadh {{n}} theagmháil"
 
-#: linkProposal[two]
-msgctxt "linkProposal[two]"
-msgid "Select a recommended one"
-msgstr "Roghnaigh cara molta"
+#: DeletedTxt[few]
+msgctxt "DeletedTxt[few]"
+msgid "{{n}} Contacts removed"
+msgstr "Scriosadh {{n}} theagmháil"
 
-#: linkProposal[few]
-msgctxt "linkProposal[few]"
-msgid "Select a recommended one"
-msgstr "Roghnaigh cara molta"
+#: DeletedTxt[many]
+msgctxt "DeletedTxt[many]"
+msgid "{{n}} Contacts removed"
+msgstr "Scriosadh {{n}} dteagmháil"
 
-#: linkProposal[many]
-msgctxt "linkProposal[many]"
-msgid "Select a recommended one"
-msgstr "Roghnaigh cara molta"
+#: DeletedTxt[other]
+msgctxt "DeletedTxt[other]"
+msgid "{{n}} Contacts removed"
+msgstr "Scriosadh {{n}} teagmháil"
 
-#: linkProposal[other]
-msgctxt "linkProposal[other]"
-msgid "Select a recommended one"
-msgstr "Roghnaigh cara molta"
+#: DeletingContacts
+msgid "Deleting contacts"
+msgstr "Teagmhálacha á scriosadh"
 
-#: fbFriendsFound
-msgctxt "fbFriendsFound"
-msgid "{[ plural(numFriends) ]}"
-msgstr "{[ plural(numFriends) ]}"
+#: ContactConfirmDel
+msgctxt "ContactConfirmDel"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
 
-#: fbFriendsFound[zero]
-msgid "All your friends are imported"
-msgstr "Iompórtáladh do chairde go léir"
+#: ContactConfirmDel[zero]
+msgctxt "ContactConfirmDel[zero]"
+msgid "No Contact to Delete"
+msgstr "Níl aon teagmháil le scriosadh ann"
 
-#: fbFriendsFound[one]
-msgid "Found one friend to import"
-msgstr "Aimsíodh cara amháin le hiompórtáil"
+#: ContactConfirmDel[one]
+msgid "Delete 1 Contact? This cannot be undone."
+msgstr "Scrios teagmháil amháin? Fainic! Beidh sé scriosta go brách."
 
-#: fbFriendsFound[two]
-msgctxt "fbFriendsFound[two]"
-msgid "Found {{numFriends}} friends to import"
-msgstr "Aimsíodh {{numFriends}} chara le hiompórtáil"
+#: ContactConfirmDel[two]
+msgctxt "ContactConfirmDel[two]"
+msgid "Delete {{n}} Contacts? This cannot be undone."
+msgstr "Scrios {{n}} theagmháil? Fainic! Beidh siad scriosta go brách."
 
-#: fbFriendsFound[few]
-msgctxt "fbFriendsFound[few]"
-msgid "Found {{numFriends}} friends to import"
-msgstr "Aimsíodh {{numFriends}} chara le hiompórtáil"
+#: ContactConfirmDel[few]
+msgctxt "ContactConfirmDel[few]"
+msgid "Delete {{n}} Contacts? This cannot be undone."
+msgstr "Scrios {{n}} theagmháil? Fainic! Beidh siad scriosta go brách."
 
-#: fbFriendsFound[many]
-msgctxt "fbFriendsFound[many]"
-msgid "Found {{numFriends}} friends to import"
-msgstr "Aimsíodh {{numFriends}} gcara le hiompórtáil"
+#: ContactConfirmDel[many]
+msgctxt "ContactConfirmDel[many]"
+msgid "Delete {{n}} Contacts? This cannot be undone."
+msgstr "Scrios {{n}} dteagmháil? Fainic! Beidh siad scriosta go brách."
 
-#: fbFriendsFound[other]
-msgctxt "fbFriendsFound[other]"
-msgid "Found {{numFriends}} friends to import"
-msgstr "Aimsíodh {{numFriends}} cara le hiompórtáil"
+#: ContactConfirmDel[other]
+msgctxt "ContactConfirmDel[other]"
+msgid "Delete {{n}} Contacts? This cannot be undone."
+msgstr "Scrios {{n}} teagmháil? Fainic! Beidh siad scriosta go brách."
 
-#. # Progress
-#: progressFB3ImportTitle
-msgid "Importing friends to Contacts"
-msgstr "Cairde á n-iompórtáil"
+#: SelectedTxt
+msgctxt "SelectedTxt"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
 
-#: progressFB3UpdateTitle
-msgid "Updating friends in Contacts"
-msgstr "Cairde á nuashonrú i dTeagmhálacha"
+#: SelectedTxt[zero]
+msgctxt "SelectedTxt[zero]"
+msgid "Contacts"
+msgstr "Teagmhálacha"
 
-#. # Message
-#: message2
-msgctxt "message2"
-msgid "This may take a couple of minutes"
-msgstr "Seans go dtógfaidh sé seo cúpla nóiméad"
+#: SelectedTxt[one]
+msgctxt "SelectedTxt[one]"
+msgid "{{n}} selected"
+msgstr "Ceann amháin roghnaithe"
 
-#: messageLinking
-msgid "Please hold on. We are linking your friend and your contact."
-msgstr "Fan nóiméad... an cara á nascadh le do theagmháil."
+#: SelectedTxt[two]
+msgctxt "SelectedTxt[two]"
+msgid "{{n}} selected"
+msgstr "{{n}} cheann roghnaithe"
 
-#. # Errors
-#: error1
-msgid "Error {{from}}"
-msgstr "Earráid {{from}}"
+#: SelectedTxt[few]
+msgctxt "SelectedTxt[few]"
+msgid "{{n}} selected"
+msgstr "{{n}} cinn roghnaithe"
 
-#: error2
-msgctxt "error2"
-msgid "Do you want to retry?"
-msgstr "An bhfuil fonn ort iarracht eile a dhéanamh?"
+#: SelectedTxt[many]
+msgctxt "SelectedTxt[many]"
+msgid "{{n}} selected"
+msgstr "{{n}} gcinn roghnaithe"
 
-#: errorProposal
-msgctxt "errorProposal"
-msgid "calculating proposals"
-msgstr "moltaí á n-áireamh"
-
-#: errorFriends
-msgctxt "errorFriends"
-msgid "retrieving friends"
-msgstr "cairde á bhfáil"
-
-#: errorLinking
-msgid "linking contact"
-msgstr "teagmháil á nascadh"
-
-#. # Timeouts
-#: timeout1
-msgid "Exceeded timeout {{from}}"
-msgstr "{{from}} thar am"
-
-#: timeout2
-msgctxt "timeout2"
-msgid "Do you want to retry?"
-msgstr "An bhfuil fonn ort iarracht eile a dhéanamh?"
-
-#: timeoutProposal
-msgctxt "timeoutProposal"
-msgid "calculating proposals"
-msgstr "moltaí á n-áireamh"
-
-#: timeoutFriends
-msgctxt "timeoutFriends"
-msgid "retrieving friends"
-msgstr "cairde á bhfáil"
-
-#: timeoutLinking
-msgid "linking contacts"
-msgstr "teagmháil á nascadh"
-
-#. # Wait
-#: wait1
-msgid "Please hold on"
-msgstr "Fan nóiméad"
-
-#: wait2
-msgctxt "wait2"
-msgid "This may take a couple of minutes"
-msgstr "Seans go dtógfaidh sé seo cúpla nóiméad"
-
-#: waitProposal
-msgid "Please hold on. We are calculating a proposal."
-msgstr "Fan nóiméad - moladh á áireamh."
-
-#: waitFriends
-msgid "Please hold on. We are connecting to obtain your friend list."
-msgstr "Fan nóiméad - táimid ag iarraidh do liosta cairde a íosluchtú."
-
-#: curtainCancel
-msgctxt "curtainCancel"
-msgid "Cancel"
-msgstr "Cealaigh"
-
-#: curtainOK
-msgctxt "curtainOK"
-msgid "OK"
-msgstr "OK"
-
-#: connectionLost
-msgid "No Internet connection"
-msgstr "Gan ceangal Idirlín"
-
-#: connectionLostMsg
-msgid "Friends’ photos will not be added to your contacts. Continue anyway?"
-msgstr "Ní chuirfear grianghraif de do chairde le do theagmhálacha. Lean ar aghaidh mar sin féin?"
-
-#: yesOption
-msgctxt "yesOption"
-msgid "OK"
-msgstr "OK"
-
-#: noOption
-msgctxt "noOption"
-msgid "Cancel"
-msgstr "Cealaigh"
-
-#. # Status
-#: friendsUpdated
-msgctxt "friendsUpdated"
-msgid "{[ plural(numFriends) ]}"
-msgstr "{[ plural(numFriends) ]}"
-
-#: friendsUpdated[zero]
-msgid "No friends updated"
-msgstr "Níor nuashonraíodh aon chairde"
-
-#: friendsUpdated[one]
-msgid "Updated one friend"
-msgstr "Nuashonraíodh cara amháin"
-
-#: friendsUpdated[two]
-msgctxt "friendsUpdated[two]"
-msgid "Updated {{numFriends}} friends"
-msgstr "Nuashonraíodh {{numFriends}} chara"
-
-#: friendsUpdated[few]
-msgctxt "friendsUpdated[few]"
-msgid "Updated {{numFriends}} friends"
-msgstr "Nuashonraíodh {{numFriends}} chara"
-
-#: friendsUpdated[many]
-msgctxt "friendsUpdated[many]"
-msgid "Updated {{numFriends}} friends"
-msgstr "Nuashonraíodh {{numFriends}} gcara"
-
-#: friendsUpdated[other]
-msgctxt "friendsUpdated[other]"
-msgid "Updated {{numFriends}} friends"
-msgstr "Nuashonraíodh {{numFriends}} cara"
-
-#. # Notification relogging is needed
-#: notificationLogin
-msgid "Your Facebook session is invalid. Please sign in."
-msgstr "Seisiún neamhbhailí Facebook. Logáil isteach, le do thoil."
-
-#. # Error sync
-#: syncError
-msgid "There was an error synchronizing your friend’s data"
-msgstr "Tharla earráid agus sonraí do chairde á sioncrónú"
+#: SelectedTxt[other]
+msgctxt "SelectedTxt[other]"
+msgid "{{n}} selected"
+msgstr "{{n}} ceann roghnaithe"
 
 #. # Wait
 #: waitDuplicateContacts
@@ -2893,17 +2926,39 @@ msgstr "Aimsíodh teagmhálacha dúbailte"
 msgid "{{name}} duplicates information in the following contacts"
 msgstr ""
 
+#: addNewNumber
+msgid "Add new number"
+msgstr "Cuir uimhir nua leis"
+
 #: addToExistingContact message-contact-menu-add-existing
 msgid "Add to existing contact"
 msgstr "Cuir le teagmháil atá ann é"
 
-#: all message-search-all
+#: all
+msgctxt "all"
 msgid "All"
 msgstr "Uile"
+
+#: all.ariaLabel
+msgctxt "all.ariaLabel"
+msgid "All"
+msgstr "Uile"
+
+#: asterisk.ariaLabel
+msgid "Asterisk"
+msgstr "Réiltín"
 
 #: callLog
 msgid "Call log"
 msgstr "Logchomhad glaonna"
+
+#: callLogEdit.title
+msgid "Edit call log"
+msgstr "Cuir an logchomhad glaonna in eagar"
+
+#: callLogEditDialog.ariaLabel
+msgid "Edit call log dialog"
+msgstr "Logchomhad glaonna á chur in eagar"
 
 #: connecting
 msgid "Connecting"
@@ -2959,9 +3014,17 @@ msgstr "Guth: {{ voice }}\n"
 msgid "Clear selected calls?"
 msgstr "Glan na glaonna roghnaithe?"
 
+#: contacts.ariaLabel contacts.name perm-contacts
+msgid "Contacts"
+msgstr "Teagmhálacha"
+
 #: createNewContact
 msgid "Create new contact"
 msgstr "Cruthaigh teagmháil nua"
+
+#: dialerAddContactDialog.ariaLabel
+msgid "Add Contact Dialog"
+msgstr "Dialóg: Cuir Teagmháil Leis"
 
 #: edit-selected
 msgctxt "edit-selected"
@@ -2993,6 +3056,14 @@ msgctxt "edit-selected[other]"
 msgid "{{ n }} selected"
 msgstr "{{ n }} ceann roghnaithe"
 
+#: hashSign.ariaLabel
+msgid "Hash sign"
+msgstr "Comhartha hais"
+
+#: hideKeypad.ariaLabel
+msgid "Hide keypad"
+msgstr "Cuir an t-eochaircheap i bhfolach"
+
 #: ignore
 msgid "Ignore Call"
 msgstr "Ná Bac Leis an nGlao"
@@ -3001,7 +3072,26 @@ msgstr "Ná Bac Leis an nGlao"
 msgid "Incoming"
 msgstr "Isteach"
 
+#: keypad.ariaLabel keypad
+msgid "Keypad"
+msgstr "Eochaircheap"
+
+#: keypadDelete.ariaLabel
+msgctxt "keypadDelete.ariaLabel"
+msgid "Delete"
+msgstr "Scrios"
+
+#: makeCall.ariaLabel
+msgid "Make call"
+msgstr "Cuir glaoch"
+
 #: missed
+msgctxt "missed"
+msgid "Missed"
+msgstr "Caillte"
+
+#: missed.ariaLabel
+msgctxt "missed.ariaLabel"
 msgid "Missed"
 msgstr "Caillte"
 
@@ -3025,6 +3115,14 @@ msgstr "Seisiún thar am"
 msgid "Message successfully sent"
 msgstr "Seoladh an teachtaireacht"
 
+#: mute.ariaLabel
+msgid "Mute"
+msgstr "Balbhaigh"
+
+#: newCall.ariaLabel
+msgid "New call"
+msgstr "Glao nua"
+
 #: no-logs-msg-1
 msgid "No calls recorded"
 msgstr "Níl aon ghlaonna taifeadta"
@@ -3037,6 +3135,14 @@ msgstr "Abair leat!"
 msgid "No missed calls"
 msgstr "Gan glaonna caillte"
 
+#: phoneNumberInput.ariaLabel deviceInfo-MSISDN
+msgid "Phone number"
+msgstr "Uimhir ghutháin"
+
+#: recents.ariaLabel
+msgid "Recent calls"
+msgstr "Glaonna is déanaí"
+
 #: reply
 msgid "Reply"
 msgstr "Freagair"
@@ -3048,6 +3154,10 @@ msgstr "Seol"
 #: switch-calls
 msgid "Switch calls"
 msgstr "Athraigh glaonna"
+
+#: voiceMailKey.ariaLabel voiceMail
+msgid "Voicemail"
+msgstr "Glórphost"
 
 #: withheld-number
 msgid "Withheld number"
@@ -3069,9 +3179,18 @@ msgstr "Ó uimhir cheilte"
 msgid "Sending…"
 msgstr "Á Sheoladh…"
 
+#: speakerOption.ariaLabel
+msgctxt "speakerOption.ariaLabel"
+msgid "Speaker"
+msgstr "Callaire"
+
 #: ussd-services
 msgid "{{ operator }} services"
 msgstr "Seirbhísí {{ operator }}"
+
+#: toggleKeypad.ariaLabel
+msgid "Toggle keypad"
+msgstr "Scoránaigh an t-eochaircheap"
 
 #: type-your-response.placeholder
 msgid "Type your response…"
@@ -3081,9 +3200,19 @@ msgstr "Clóscríobh do fhreagra…"
 msgid "Clear all text"
 msgstr "Glan an téacs"
 
-#: hold
+#: hold.ariaLabel
 msgid "Hold"
 msgstr "Ar feitheamh"
+
+#: resume
+msgctxt "resume"
+msgid "Resume"
+msgstr "Lean"
+
+#: resume.ariaLabel
+msgctxt "resume.ariaLabel"
+msgid "Resume"
+msgstr "Lean"
 
 #: sendSms
 msgid "Send Message"
@@ -3102,15 +3231,15 @@ msgid "SIM{{ n }}"
 msgstr "SIM{{ n }}"
 
 #. ## LOCALIZATION NOTE: these labels aren't displayed but they're used for acessibility
-#: hangup-a11y-button.aria-label
+#: hangup-a11y-button.ariaLabel
 msgid "Hang Up"
 msgstr "Croch"
 
-#: pickup-a11y-button.aria-label
+#: pickup-a11y-button.ariaLabel
 msgid "Pick up"
 msgstr "Freagair"
 
-#: unlock-a11y-button.aria-label
+#: unlock-a11y-button.ariaLabel
 msgid "Slider"
 msgstr "Sleamhnán"
 
@@ -3615,6 +3744,7 @@ msgid "Receiver"
 msgstr "Glacadóir"
 
 #: speaker
+msgctxt "speaker"
 msgid "Speaker"
 msgstr "Callaire"
 
@@ -3639,18 +3769,17 @@ msgstr "Tá an uimhir gnóthach"
 msgid "The number is currently busy. Please try again later."
 msgstr "Tá an uimhir gnóthach faoi láthair. Déan iarracht eile ar ball."
 
-#: fdnIsEnabledTitle fdnBlockedTitle
+#: fdnIsActiveTitle fdnBlocked2Title
 msgid "FDN active"
 msgstr "Tá FDN gníomhach"
 
-#: fdnIsEnabledMessage
-msgid "This number is blocked as it is not in your list of authorized numbers."
+#: fdnIsActiveMessage
+msgid ""
+"FDN (Fixed Dialing Numbers) is activated and the following number is not in "
+"your FDN list: {{ number }}"
 msgstr ""
-"Tá bac ar an uimhir seo toisc nach bhfuil sí i do liosta uimhreacha údaraithe."
-
-#: voiceMail
-msgid "Voicemail"
-msgstr "Glórphost"
+"Tá FDN (Fixed Dialing Numbers) ar siúl ach níl an uimhir seo i do liosta FDN: "
+"{{ number }}"
 
 #: emergencyNumber
 msgid "Emergency number"
@@ -3873,6 +4002,26 @@ msgstr "Cuir cód CCK isteach"
 msgid "Enter SPCK code"
 msgstr "Cuir cód SPCK isteach"
 
+#: nck1code nck1Title
+msgid "Enter NCK1 code"
+msgstr "Cuir cód NCK1 isteach"
+
+#: nck2code nck2Title
+msgid "Enter NCK2 code"
+msgstr "Cuir cód NCK2 isteach"
+
+#: hnckcode hnckTitle
+msgid "Enter HNCK code"
+msgstr "Cuir cód HNCK isteach"
+
+#: rcckcode rcckTitle
+msgid "Enter RCCK code"
+msgstr "Cuir cód RCCK isteach"
+
+#: rspckcode rspckTitle
+msgid "Enter RSPCK code"
+msgstr "Cuir cód RSPCK isteach"
+
 #: nckcodeTitle
 msgid "Enter SIM {{n}} NCK"
 msgstr "Cuir NCK SIM {{n}} isteach"
@@ -3884,6 +4033,26 @@ msgstr "Cuir CCK SIM {{n}} isteach"
 #: spckcodeTitle
 msgid "Enter SIM {{n}} SPCK"
 msgstr "Cuir SPCK SIM {{n}} isteach"
+
+#: nck1codeTitle
+msgid "Enter SIM {{n}} NCK1"
+msgstr "Cuir NCK1 SIM {{n}} isteach"
+
+#: nck2codeTitle
+msgid "Enter SIM {{n}} NCK2"
+msgstr "Cuir NCK2 SIM {{n}} isteach"
+
+#: hnckcodeTitle
+msgid "Enter SIM {{n}} HNCK"
+msgstr "Cuir HNCK SIM {{n}} isteach"
+
+#: rcckcodeTitle
+msgid "Enter SIM {{n}} RCCK"
+msgstr "Cuir RCCK SIM {{n}} isteach"
+
+#: rspckcodeTitle
+msgid "Enter SIM {{n}} RSPCK"
+msgstr "Cuir RSPCK SIM {{n}} isteach"
 
 #: nckcodeLabel
 msgid "SIM {{n}} NCK"
@@ -3897,6 +4066,26 @@ msgstr "CCK SIM {{n}}"
 msgid "SIM {{n}} SPCK"
 msgstr "SPCK SIM {{n}}"
 
+#: nck1codeLabel
+msgid "SIM {{n}} NCK1"
+msgstr "NCK1 SIM {{n}}"
+
+#: nck2codeLabel
+msgid "SIM {{n}} NCK2"
+msgstr "NCK2 SIM {{n}}"
+
+#: hnckcodeLabel
+msgid "SIM {{n}} HNCK"
+msgstr "HNCK SIM {{n}}"
+
+#: rcckcodeLabel
+msgid "SIM {{n}} RCCK"
+msgstr "RCCK SIM {{n}}"
+
+#: rspckcodeLabel
+msgid "SIM {{n}} RSPCK"
+msgstr "RSPCK SIM {{n}}"
+
 #: type_nck
 msgid "Type your NCK code"
 msgstr "Cuir do chód NCK isteach"
@@ -3909,6 +4098,26 @@ msgstr "Cuir do chód CCK isteach"
 msgid "Type your SPCK code"
 msgstr "Cuir do chód SPCK isteach"
 
+#: type_nck1
+msgid "Type your NCK1 code"
+msgstr "Cuir do chód NCK1 isteach"
+
+#: type_nck2
+msgid "Type your NCK2 code"
+msgstr "Cuir do chód NCK2 isteach"
+
+#: type_hnck
+msgid "Type your HNCK code"
+msgstr "Cuir do chód HNCK isteach"
+
+#: type_rcck
+msgid "Type your RCCK code"
+msgstr "Cuir do chód RCCK isteach"
+
+#: type_rspck
+msgid "Type your RSPCK code"
+msgstr "Cuir do chód RSPCK isteach"
+
 #: nckValidation
 msgid "NCK must have between 8 and 16 characters."
 msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK."
@@ -3920,6 +4129,26 @@ msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód CCK."
 #: spckValidation
 msgid "SPCK must have between 8 and 16 characters."
 msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód SPCK."
+
+#: nck1Validation
+msgid "NCK1 must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK1."
+
+#: nck2Validation
+msgid "NCK2 must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK2."
+
+#: hnckValidation
+msgid "HNCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód HNCK."
+
+#: rcckValidation
+msgid "RCCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód RCCK."
+
+#: rspckValidation
+msgid "RSPCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód RSPCK."
 
 #: nckErrorMsg
 msgid "The NCK code is incorrect."
@@ -4138,7 +4367,7 @@ msgid ""
 "you have a data plan with your carrier to avoid potentially hefty charges."
 msgstr ""
 
-#: caution
+#: caution phishing-blocked
 msgid "Warning"
 msgstr "Rabhadh"
 
@@ -4167,7 +4396,11 @@ msgid ""
 "Data is sent to Mozilla and other service providers and will be used in the "
 "aggregate to improve those location databases.  Data may be stored on your "
 "device and data collection may occur even when no apps are running."
-msgstr "Seoltar sonraí chuig Mhozilla agus chuig sholáthraithe seirbhíse eile. Úsáidtear na sonraí seo i bhfoirm chomhiomlán chun na seirbhísí geoshuite a fheabhsú. Seans go stórálfar sonraí ar do ghléas agus go mbaileofar na sonraí fiú nuair nach bhfuil aon aipeanna ar siúl."
+msgstr ""
+"Seoltar sonraí chuig Mhozilla agus chuig sholáthraithe seirbhíse eile. "
+"Úsáidtear na sonraí seo i bhfoirm chomhiomlán chun na seirbhísí geoshuite a "
+"fheabhsú. Seans go stórálfar sonraí ar do ghléas agus go mbaileofar na sonraí "
+"fiú nuair nach bhfuil aon aipeanna ar siúl."
 
 #: notice
 msgid "Notice"
@@ -4337,6 +4570,27 @@ msgstr ""
 "Is féidir cairde ó Facebook a iompórtáil nó a chur in eagar sna socruithe "
 "Teagmhálacha"
 
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Fxa Intro
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: firefox-accounts
+msgid "Firefox Accounts"
+msgstr "Cuntais Firefox"
+
+#: fxa-overview.innerHTML
+msgid ""
+"A Firefox Account lets you use features like Find My Device and apps like the "
+"Firefox Marketplace."
+msgstr ""
+
+#: fxa-create-account-or-sign-in
+msgid "Create Account or Sign In"
+msgstr "Cruthaigh Cuntas nó Logáil Isteach"
+
+#: fxa-email-sent
+msgid "A verification link has been sent to {{email}}"
+msgstr "Seoladh nasc deimhnithe chuig {{email}}"
+
 #. #-#-#-#-#  appscommunicationsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # About your rights
@@ -4397,21 +4651,18 @@ msgid ""
 "products better, faster and more responsive."
 msgstr ""
 
-#: learn-more-at
-msgid "Learn more at"
-msgstr "Tuilleadh eolais ó"
+#. # LOCALIZATION NOTE(learn-more-telemetry.innerHTML, learn-more-information.innerHTML:
+#. # {{link}} will be replaced at run-time by an active link, the URL will be
+#. # used as text for the link.
+#: learn-more-telemetry.innerHTML
+msgid "Learn more at {{link}}"
+msgstr "Tuilleadh eolais ó {{link}}"
 
-#: external-telemetry.title
-msgid "Telemetry"
-msgstr "Teiliméadracht"
-
-#: learn-about-information
-msgid "Learn how Mozilla handles your information at"
-msgstr "Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta ag"
-
-#: external-privacy.title
-msgid "Privacy"
-msgstr "Príobháideachas"
+#: learn-more-information.innerHTML
+msgid "Learn how Mozilla handles your information at {{link}}"
+msgstr ""
+"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo: "
+"{{link}}"
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # OS privacy
@@ -4423,17 +4674,18 @@ msgid ""
 "keeping the power of the Web in your hands."
 msgstr ""
 
-#: learnHow
-msgid "Learn how Mozilla handles your information in our"
-msgstr "Déileálann Mozilla le do chuid faisnéis phearsanta de réir ár"
+#. # LOCALIZATION NOTE(learn-more-privacy.innerHTML): {{link}} will be replaced at
+#. # run-time by an active link, string "learn-more-privacy-link" will be
+#. # used as text for the link.
+#: learn-more-privacy.innerHTML
+msgid "Learn how Mozilla handles your information in our {{link}}."
+msgstr ""
+"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo inár "
+"{{link}}."
 
-#: privacyPolicy crash-reports-description-3-privacy
+#: learn-more-privacy-link crash-reports-description-3-privacy
 msgid "privacy policy"
 msgstr "bpolasaí príobháideachta"
-
-#: privacyPolicy.title
-msgid "Privacy policy"
-msgstr "Polasaí príobháideachta"
 
 #: aboutBrowser aboutBrowserOS
 msgid "About {{brandShortName}}"
@@ -4484,7 +4736,7 @@ msgctxt "privacy-b2g.title"
 msgid "{{brandShortName}}"
 msgstr "{{brandShortName}}"
 
-#: privacy-marketplace
+#: privacy-marketplace fxa-marketplace-app
 msgid "Marketplace"
 msgstr "Áit Mhargaidh"
 
@@ -4552,7 +4804,7 @@ msgstr ""
 "Is féidir i gcónaí svaidhpeáil aníos chun filleadh ar an scáileán baile."
 
 #: thatsIt2Tablet-2
-msgid "Let's do it !"
+msgid "Let’s do it!"
 msgstr "Ceart go leor!"
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -4592,11 +4844,11 @@ msgstr "Svaidhpeáil anoir is aniar chun na haipeanna is déanaí a bhrabhsáil.
 
 #: tutorial-step1-large-2
 msgid ""
-"Swipe down from top to access recent notiﬁcations, credit information and "
+"Swipe down from top to access recent notifications, credit information and "
 "settings."
 msgstr ""
-"Svaidhpeáil anuas chun fógraí, eolas faoi chreidmheas, agus socruithe a "
-"fheiceáil."
+"Svaidhpeáil anuas ón bharr chun fógraí, eolas faoi chreidmheas, agus "
+"socruithe a fheiceáil."
 
 #: tutorial-step2-large-2
 msgid "Swipe left or right to discover new apps on home screen."
@@ -4660,6 +4912,16 @@ msgstr "Téigh ar ais agus ceartaigh an iontráil."
 msgid "Gaia Phone"
 msgstr "Guthán Gaia"
 
+#: ftu.name
+msgctxt "ftu.name"
+msgid "FTU"
+msgstr "FTU"
+
+#: ftu.description
+msgctxt "ftu.description"
+msgid "FTU"
+msgstr "FTU"
+
 #: contacts.description
 msgid "Gaia Contacts"
 msgstr "Teagmhálacha Gaia"
@@ -4721,6 +4983,14 @@ msgstr "Cuireadh SIM nua isteach"
 msgid "Tap to track your internet usage."
 msgstr "Tapáil chun tuairisc a choinneáil ar úsáid Idirlín."
 
+#: widget-airplane-mode-heading
+msgid "Airplane Mode"
+msgstr "Mód Eitleáin"
+
+#: widget-airplane-mode-meta
+msgid "Please, turn off airplane mode to enable Usage."
+msgstr "Scoir ón mód eitleáin chun Úsáid a chumasú."
+
 #: widget-no-sim2-heading
 msgid "No SIM inserted"
 msgstr "Níl aon SIM isteach ann"
@@ -4740,7 +5010,7 @@ msgstr "Díghlasáil an cárta SIM chun Úsáid a rianú."
 #. # FTE Welcome
 #: fte
 msgid "Usage First Time Experience"
-msgstr ""
+msgstr "Do Chéad Chuairt ar Úsáid"
 
 #: fte-authed-sim
 msgid "Save money by keeping track of your phone and internet usage."
@@ -4780,7 +5050,7 @@ msgstr ""
 
 #: fte-prepaid3-title
 msgid "Data Report and Alert"
-msgstr ""
+msgstr "Sonraí: Tuairisc agus Foláireamh"
 
 #: fte-prepaid3-hint
 msgid ""
@@ -4790,7 +5060,7 @@ msgstr ""
 
 #: fte-postpaid2-title
 msgid "Phone and Data Report"
-msgstr ""
+msgstr "Tuairisc Úsáide Gutháin agus Sonraí"
 
 #: fte-postpaid2-hint
 msgid "Receive reports about your phone and Internet usage."
@@ -5158,7 +5428,7 @@ msgstr "Táim iaríoctha"
 
 #: reset-data-usage
 msgid "Reset data usage"
-msgstr ""
+msgstr "Athshocraigh úsáid sonraí"
 
 #: reset-report
 msgid "Reset report"
@@ -5263,7 +5533,7 @@ msgstr "Úsáid"
 msgid "Usage application to see credit and data usage statistics"
 msgstr ""
 
-#: setup-app-name-header mail
+#: setup-app-name-header
 msgid "Mail"
 msgstr "Post"
 
@@ -5271,10 +5541,12 @@ msgstr "Post"
 msgid ""
 "You are not set up to send or receive email. Would you like to do that now?"
 msgstr ""
+"Níl cuntas ríomhphoist socraithe agat. An bhfuil fonn ort é sin a dhéanamh "
+"anois?"
 
 #: setup-pick-service
 msgid "To send and receive email, you will need to set up an account."
-msgstr ""
+msgstr "Chun ríomhphost a sheoladh nó a fháil, caithfidh tú cuntas a shocrú."
 
 #. # Title of the account setup card where the user enters their display name,
 #. # e-mail address, and password.
@@ -5348,13 +5620,13 @@ msgstr ""
 #. # it in either place.
 #: setup-error-bad-user-or-pass2
 msgid "Invalid username or password. Check for typos."
-msgstr ""
+msgstr "Ainm úsáideora nó focal faire mícheart. Botún cló?"
 
 #. # The error for a bad e-mail address. We tried to send email but
 #. # couldn't because the server said it was a bad address.
 #: setup-error-bad-address
 msgid "Invalid e-mail address. Check for typos."
-msgstr ""
+msgstr "Seoladh ríomhphoist neamhbhailí. Botún cló?"
 
 #. # The error for a user having the correct username and password, but the mail
 #. # server explicitly indicates they don't have permission to talk to the mail
@@ -5363,7 +5635,7 @@ msgstr ""
 #. # domain have their own error code: setup-error-imap-disabled.
 #: setup-error-not-authorized
 msgid "The server said you’re not authorized to create an account"
-msgstr ""
+msgstr "Dúirt an freastalaí nach bhfuil cead agat cuntas a chruthú"
 
 #. # The error for when the server is not good enough to be supported
 #. # because it is missing the required features.
@@ -5411,6 +5683,8 @@ msgid ""
 "Unable to establish a secure connection with \"{{server}}\". There may be a "
 "problem with your network or the server."
 msgstr ""
+"Níorbh fhéidir ceangal slán a bhunú le \"{{server}}\". Seans go bhfuil fadhb "
+"le do líonra nó leis an bhfreastalaí."
 
 #. # The error for when we try to contact a server but see no indication of a
 #. # response before we give up because of a timeout.
@@ -5419,6 +5693,8 @@ msgid ""
 "Unable to establish a connection with \"{{server}}\". There may be a problem "
 "with the network."
 msgstr ""
+"Níorbh fhéidir ceangal a bhunú le \"{{server}}\". Seans go bhfuil fadhb leis "
+"an líonra."
 
 #. # The error for when we able to establish a (secure) connection with the server,
 #. # but there is some type of failure talking to the server that isn't covered by
@@ -5517,6 +5793,10 @@ msgstr "Uimhir Phoirt"
 msgctxt "setup-manual-username.placeholder"
 msgid "Username"
 msgstr "Ainm úsáideora"
+
+#: setup-manual-activesync-username.placeholder
+msgid "Domain\\u0000ame"
+msgstr ""
 
 #: setup-bad-password-header
 msgid "Bad password!"
@@ -5621,11 +5901,6 @@ msgctxt "fld-account-picker-last-sync"
 msgid "Last sync:"
 msgstr "Sioncrónú is déanaí:"
 
-#: settings-account-section
-msgctxt "settings-account-section"
-msgid "Accounts"
-msgstr "Cuntais"
-
 #: settings-account-add
 msgid "Add Account"
 msgstr "Cuir Cuntas Leis"
@@ -5639,6 +5914,9 @@ msgid ""
 "Are you sure you want to delete your {{account}} mail account? You will have "
 "to re-download your mail if you re-create the account."
 msgstr ""
+"An bhfuil tú cinnte gur mhaith leat do chuntas {{account}} a scriosadh? Beidh "
+"sé ort do chuid ríomhphoist a íosluchtú arís má chruthaíonn tú an cuntas arís "
+"amach anseo."
 
 #: settings-account-delete-cancel
 msgctxt "settings-account-delete-cancel"
@@ -5650,17 +5928,37 @@ msgctxt "settings-account-delete-confirm"
 msgid "Delete"
 msgstr "Scrios"
 
-#: settings-about-section
-msgid "About"
-msgstr "Maidir Leis"
+#. # When dealing with an account that involves multiple types of
+#. # connections, such as IMAP and POP3 which both use SMTP for sending,
+#. # we augment the account name in the string with a label to help
+#. # clarify to the user which account type they are dealing with. For
+#. # most users, the same password will be used for the IMAP server and
+#. # the SMTP server, and they will only ever see the IMAP or POP3 label.
+#. # But some users with unusual server configurations will also see the
+#. # SMTP variant. These unusual users will probably have received
+#. # specific instructions from their ISP that involve use of the
+#. # protocol names. In general we expect that localizers will want to
+#. # leave the protocol names as-is since they are technical protocol
+#. # names, but it may make sense to place the name of the protocol
+#. # before the account type for certain languages.
+#. # Note that the account name is displayed as a string that is
+#. # displayed in its entirety, so you don't need to worry about clipping
+#. # or ellipses.
+#: settings-account-clarify-imap
+msgid "{{account-name}} (IMAP)"
+msgstr "{{account-name}} (IMAP)"
+
+#: settings-account-clarify-pop3
+msgid "{{account-name}} (POP3)"
+msgstr "{{account-name}} (POP3)"
+
+#: settings-account-clarify-smtp
+msgid "{{account-name}} (SMTP)"
+msgstr "{{account-name}} (SMTP)"
 
 #: settings-general-section
 msgid "General settings"
 msgstr "Socruithe Ginearálta"
-
-#: settings-check-mail
-msgid "Check mail"
-msgstr "Faigh ríomhphost nua"
 
 #: settings-show-images
 msgid "Always show images"
@@ -5670,17 +5968,9 @@ msgstr "Taispeáin íomhánna i gcónaí"
 msgid "Download attachments"
 msgstr "Íosluchtaigh iatáin"
 
-#: settings-notify-mail
-msgid "Notify of new mail"
-msgstr "Abair liom faoi ríomhphost nua"
-
 #. # How often to check the mail server for new mail messages for the inbox.
 #. # "Manually" means, do not automatically connect on a periodic sync interval.
 #. # User will manually click the refresh button to check for new messages.
-#: settings-check-every-3min
-msgid "Every 3 minutes"
-msgstr "Gach 3 nóiméad"
-
 #: settings-check-every-5min
 msgid "Every 5 minutes"
 msgstr "Gach 5 nóiméad"
@@ -5829,16 +6119,6 @@ msgstr "1 mhí"
 msgid "All messages"
 msgstr "Gach teachtaireacht"
 
-#: accounts-header
-msgctxt "accounts-header"
-msgid "Accounts"
-msgstr "Cuntais"
-
-#: accounts-button
-msgctxt "accounts-button"
-msgid "Accounts"
-msgstr "Cuntais"
-
 #: envelope-from
 msgctxt "envelope-from"
 msgid "From"
@@ -5979,29 +6259,13 @@ msgstr "{{kilobytes}}K"
 msgid "View"
 msgstr "Amharc"
 
+#: message-attachment-too-large
+msgid "This file is too large to download."
+msgstr "Ní féidir an comhad seo a íosluchtú: tá sé rómhór."
+
 #: message-no-subject
 msgid "(no subject)"
 msgstr "(gan ábhar)"
-
-#: message-edit-menu-star
-msgid "Star"
-msgstr "Réiltín"
-
-#: message-edit-menu-unstar
-msgid "Unstar"
-msgstr "Bain Réiltín"
-
-#: message-edit-menu-mark-read
-msgid "Mark as read"
-msgstr "Marcáil \"léite\""
-
-#: message-edit-menu-mark-unread
-msgid "Mark as unread"
-msgstr "Marcáil \"neamhléite\""
-
-#: message-edit-menu-move
-msgid "Move"
-msgstr "Bog"
 
 #: message-edit-menu-delete
 msgctxt "message-edit-menu-delete"
@@ -6149,6 +6413,10 @@ msgstr "Ábhar"
 #: message-search-body
 msgid "Body"
 msgstr "Corp"
+
+#: message-search-all
+msgid "All"
+msgstr "Uile"
 
 #: message-search-input.placeholder
 msgid "Search Mail"
@@ -6325,22 +6593,22 @@ msgstr ""
 
 #: toaster-message-star[two]
 msgctxt "toaster-message-star[two]"
-msgid "{{ n }} messages flag set"
+msgid "{{ n }} message flags set"
 msgstr ""
 
 #: toaster-message-star[few]
 msgctxt "toaster-message-star[few]"
-msgid "{{ n }} messages flag set"
+msgid "{{ n }} message flags set"
 msgstr ""
 
 #: toaster-message-star[many]
 msgctxt "toaster-message-star[many]"
-msgid "{{ n }} messages flag set"
+msgid "{{ n }} message flags set"
 msgstr ""
 
 #: toaster-message-star[other]
 msgctxt "toaster-message-star[other]"
-msgid "{{ n }} messages flag set"
+msgid "{{ n }} message flags set"
 msgstr ""
 
 #: toaster-message-unstar
@@ -6354,22 +6622,22 @@ msgstr ""
 
 #: toaster-message-unstar[two]
 msgctxt "toaster-message-unstar[two]"
-msgid "{{ n }} messages flag removed"
+msgid "{{ n }} message flags removed"
 msgstr ""
 
 #: toaster-message-unstar[few]
 msgctxt "toaster-message-unstar[few]"
-msgid "{{ n }} messages flag removed"
+msgid "{{ n }} message flags removed"
 msgstr ""
 
 #: toaster-message-unstar[many]
 msgctxt "toaster-message-unstar[many]"
-msgid "{{ n }} messages flag removed"
+msgid "{{ n }} message flags removed"
 msgstr ""
 
 #: toaster-message-unstar[other]
 msgctxt "toaster-message-unstar[other]"
-msgid "{{ n }} messages flag removed"
+msgid "{{ n }} message flags removed"
 msgstr ""
 
 #: toaster-message-read
@@ -6616,6 +6884,24 @@ msgstr "R-Phost"
 msgid "Gaia E-Mail"
 msgstr "R-Phost Gaia"
 
+#: name
+msgid "EmergencyCall"
+msgstr "Glao Éigeandála"
+
+#: description
+msgid "Web app template"
+msgstr ""
+
+#: name
+msgid "Find My Device"
+msgstr "Aimsigh Mo Ghléas"
+
+#: description
+msgid "Find My Device helps find, lock and erase a lost phone"
+msgstr ""
+"Le 'Aimsigh Mo Ghléas', is féidir guthán caillte a aimsiú, a chur faoi ghlas, "
+"nó a bhánú"
+
 #: download-button download
 msgid "Download"
 msgstr "Íosluchtaigh"
@@ -6713,7 +6999,8 @@ msgstr ""
 msgid ""
 "Do you want to download and install this audio file as a song or as a "
 "ringtone?"
-msgstr "Ar mhaith leat an comhad fuaime seo a íosluchtú mar amhrán nó mar chlingthon?"
+msgstr ""
+"Ar mhaith leat an comhad fuaime seo a íosluchtú mar amhrán nó mar chlingthon?"
 
 #: ringtone-response
 msgid "Ringtone"
@@ -6751,7 +7038,9 @@ msgstr "Cúlbhrat á íosluchtú…"
 msgid ""
 "{{vendor}} has locked this media file so that it cannot be shared with others "
 "or transferred to a new device."
-msgstr "Chuir {{vendor}} an comhad seo faoi ghlas sa chaoi nárbh fhéidir é a chomhroinnt le daoine eile nó a aistriú chuig ghléas nua."
+msgstr ""
+"Chuir {{vendor}} an comhad seo faoi ghlas sa chaoi nárbh fhéidir é a "
+"chomhroinnt le daoine eile nó a aistriú chuig ghléas nua."
 
 #. # This version is like the above, but used when we don't know the name of
 #. # the vendor.
@@ -6759,7 +7048,9 @@ msgstr "Chuir {{vendor}} an comhad seo faoi ghlas sa chaoi nárbh fhéidir é a 
 msgid ""
 "The seller has locked this media file so that it cannot be shared with others "
 "or transferred to a new device."
-msgstr "Chuir an díoltóir an comhad seo faoi ghlas sa chaoi nárbh fhéidir é a chomhroinnt le daoine eile nó a aistriú chuig ghléas nua."
+msgstr ""
+"Chuir an díoltóir an comhad seo faoi ghlas sa chaoi nárbh fhéidir é a "
+"chomhroinnt le daoine eile nó a aistriú chuig ghléas nua."
 
 #: download-confirmation-type
 msgid "Type"
@@ -6831,7 +7122,7 @@ msgstr "Mód eitleáin ann"
 
 #: airplaneModeMsg
 msgid "Turn off Airplane mode to use FM Radio."
-msgstr "Múch an mód eitleáin chun Raidió FM a úsáid."
+msgstr "Scoir ón mód eitleáin chun Raidió FM a úsáid."
 
 #: name perm-fmradio
 msgid "FM Radio"
@@ -7082,32 +7373,6 @@ msgstr "Cluichí"
 msgid "Music"
 msgstr "Ceol"
 
-#. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
-#. # Add bookmark to homescreen
-#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
-#. # wrapper
-#: add-to-home-screen
-msgid "Add to Home Screen"
-msgstr "Cuir leis an Scáileán Baile"
-
-#: add-to-home-screen-header
-msgid "Add link"
-msgstr "Cuir nasc leis"
-
-#: website-name
-msgctxt "website-name"
-msgid "Website name"
-msgstr "Ainm an tsuímh"
-
-#: address
-msgctxt "address"
-msgid "Address"
-msgstr "Seoladh"
-
-#: added-to-home-screen
-msgid "Added to Home Screen"
-msgstr "Curtha leis an Scáileán Baile"
-
 #. # Wrapper
 #: wrapper-search-name
 msgid "{{topic}} on {{name}}"
@@ -7135,11 +7400,6 @@ msgstr "Scriosfar {{name}} agus na sonraí a bhaineann leis."
 msgctxt "cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
-
-#. # Prompt that appears when a user tries to remove a site saved to the homescreen.
-#: remove-title-2
-msgid "Remove {{name}}"
-msgstr "Scrios {{name}}"
 
 #: remove-body
 msgid "Remove {{name}} from the homescreen?"
@@ -7265,7 +7525,7 @@ msgstr "Bhí {{name}} curtha leis an Scáileán Baile cheana"
 
 #: evme-alert-offline-smart-collections-more
 msgid "Connect to the internet to add more Smart Collections"
-msgstr ""
+msgstr "Ceangail leis an Idirlíon chun tuilleadh Bailiúchán Cliste a fháil"
 
 #: evme-alert-save-wallpaper
 msgid "Set as wallpaper?"
@@ -7321,10 +7581,14 @@ msgstr "Á Luchtú…"
 #: evme-connectionmessage-apps
 msgid "Connect to the internet to get apps for {{query}}"
 msgstr ""
+"Ceangail leis an Idirlíon chun tuilleadh aipeanna a bhaineann le {{query}} a "
+"fháil"
 
 #: evme-connectionmessage-apps-has-installed
 msgid "Connect to the internet to get even more apps for {{query}}"
 msgstr ""
+"Ceangail leis an Idirlíon chun tuilleadh aipeanna fós a bhaineann le "
+"{{query}} a fháil"
 
 #. # tips are shown throughout the app on certain actions
 #: evme-tips-app-explain.innerHTML
@@ -7339,6 +7603,8 @@ msgstr "Mar shampla, aimsigh an t-amhránaí nó an banna ceoil is ansa leat…"
 msgid ""
 "These are the apps for <b>{{query}}</b>,<br /><br /> tap any icon to open it."
 msgstr ""
+"Seo iad na haipeanna a bhaineann le <b>{{query}}</b>,<br /><br /> tapáil "
+"deilbhín chun an aip sin a oscailt."
 
 #. # collection translations
 #: evme-shortcut-custom
@@ -7480,21 +7746,11 @@ msgstr "Aimsir"
 #. #search contextmenu
 #: evme-add-to-top-of-collection
 msgid "Add to top of collection"
-msgstr ""
+msgstr "Cuir le barr an bhailiúcháin é"
 
 #: evme-save-to-homescreen
 msgid "Save to Homescreen"
 msgstr "Sábháil ar an Scáileán Baile"
-
-#: edit-dialog-name
-msgctxt "edit-dialog-name"
-msgid "Website name"
-msgstr "Ainm an tsuímh"
-
-#: edit-dialog-url
-msgctxt "edit-dialog-url"
-msgid "Address"
-msgstr "Seoladh"
 
 #: edit-dialog-cancel
 msgctxt "edit-dialog-cancel"
@@ -7510,6 +7766,10 @@ msgstr "Baile"
 #: description
 msgid "Gaia Homescreen"
 msgstr "Baile Gaia"
+
+#: title
+msgid "Keyboard"
+msgstr "Méarchlár"
 
 #: keyboardSettings
 msgid "Keyboard settings"
@@ -7547,7 +7807,7 @@ msgstr "Uimhir"
 
 #: number.description
 msgid "Numeric layout"
-msgstr ""
+msgstr "Leagan amach uimhriúil"
 
 #: description
 msgid "Gaia Music"
@@ -7686,7 +7946,7 @@ msgstr "Cealaigh"
 
 #: music-paused-notification
 msgid "Music paused during the call"
-msgstr ""
+msgstr "Ceol curtha ar sos le linn glao teileafóin"
 
 #: name
 msgid "PDF Viewer"
@@ -7835,6 +8095,26 @@ msgstr "Torthaí an Chuardaigh"
 msgid "Install {{ title }}"
 msgstr "Suiteáil {{ title }}"
 
+#: history
+msgid "HISTORY"
+msgstr "STAIR"
+
+#: top-sites
+msgid "TOP SITES"
+msgstr "BARRSHUÍMH"
+
+#: suggestions.ariaLabel
+msgid "Suggestions"
+msgstr "Moltaí"
+
+#: places.ariaLabel
+msgid "Places"
+msgstr "Áiteanna"
+
+#: apps.ariaLabel
+msgid "Apps"
+msgstr "Aipeanna"
+
 #: name
 msgid "Set Ringtone"
 msgstr "Roghnaigh Clingthon"
@@ -7872,11 +8152,6 @@ msgstr "Socruithe Gaia"
 #: advancedSettings
 msgid "Advanced settings"
 msgstr "Ardsocruithe"
-
-#: default
-msgctxt "default"
-msgid "Default"
-msgstr "Réamhshocrú"
 
 #: enabled
 msgid "Enabled"
@@ -8047,7 +8322,7 @@ msgstr "Bainistigh teastais"
 
 #: manageCert
 msgid "Manage Cert."
-msgstr ""
+msgstr "Bainistigh Teastais"
 
 #: securedBy
 msgid "Secured by {{capabilities}}"
@@ -8143,6 +8418,7 @@ msgid ""
 "Notice: If you need to import new certificates, please go to \"Manage "
 "certificates\"."
 msgstr ""
+"Aire: Más gá teastais nua a iompórtáil, féach ar \"Bainistigh teastais\"."
 
 #: identity
 msgid "Identifier"
@@ -8175,7 +8451,7 @@ msgstr "Níor aimsíodh aon líonraí"
 
 #: noKnownNetworks
 msgid "No known networks"
-msgstr ""
+msgstr "Gan líonraí aitheanta"
 
 #: certificateList
 msgid "Certificate list"
@@ -8207,7 +8483,8 @@ msgstr "Leasainm"
 
 #: enter-certificate-name-msg
 msgid "You can change the nick name or keep the default name."
-msgstr "Is féidir leat an leasainm a athrú, nó an t-ainm réamhshocraithe a úsáid."
+msgstr ""
+"Is féidir leat an leasainm a athrú, nó an t-ainm réamhshocraithe a úsáid."
 
 #: certificate-deletion-failed
 msgid "Certificate deletion failed"
@@ -8426,7 +8703,7 @@ msgstr ""
 
 #: callForwardingInvalidNumberError
 msgid "This phone number is invalid."
-msgstr ""
+msgstr "Níl an uimhir theileafóin seo bailí."
 
 #: callForwardingSetSuccess
 msgid "Operation successfully set."
@@ -8446,7 +8723,7 @@ msgstr "Aitheantas Glaoiteora"
 
 #: callerId-default
 msgid "Network default"
-msgstr ""
+msgstr "Réamhshocrú an líonra"
 
 #: callerId-hide
 msgid "Hide number"
@@ -9134,8 +9411,8 @@ msgid "Confirmation"
 msgstr "Deimhniú"
 
 #: device-option-unpair-device
-msgid "Unpair Device?"
-msgstr "Díphéireáil an Gléas?"
+msgid "Unpair device?"
+msgstr "Díphéireáil an gléas?"
 
 #: device-option-connect
 msgid "Connect"
@@ -9265,7 +9542,9 @@ msgstr "Wi-Fi"
 msgid ""
 "Allow other devices to share my phone’s Internet connection by connecting via "
 "Wi-Fi."
-msgstr "Tabhair cead do ghléasanna eile ceangal Idirlín mo ghutháin a úsáid trí cheangal Wi-Fi."
+msgstr ""
+"Tabhair cead do ghléasanna eile ceangal Idirlín mo ghutháin a úsáid trí "
+"cheangal Wi-Fi."
 
 #: hotspot
 msgid "Hotspot"
@@ -9424,6 +9703,10 @@ msgstr "Teachtaireacht á Seoladh"
 msgid "Ringer & Notifications"
 msgstr "Clingire agus Fógraí"
 
+#: media-sound
+msgid "Media"
+msgstr "Meáin"
+
 #: savingringtone
 msgid "Saving ringtone…"
 msgstr "Clingthon á shábháil…"
@@ -9581,13 +9864,17 @@ msgstr "Bainisteoir SIM"
 msgid "{{simManager}}"
 msgstr "{{simManager}}"
 
+#: simSettings
+msgid "SIM settings"
+msgstr "Socruithe SIM"
+
 #: sim-manager-outgoing-calls
 msgid "Outgoing calls"
 msgstr "Glaonna amach"
 
 #: sim-manager-outgoing-call-desc
 msgid "Calls will be sent from"
-msgstr ""
+msgstr "Seolfar glaonna ó"
 
 #: sim-manager-outgoing-messages
 msgid "Outgoing messages"
@@ -9602,9 +9889,8 @@ msgctxt "sim-manager-outgoing-data"
 msgid "Data"
 msgstr "Sonraí"
 
-#: sim-manager-outgoing-data-desc-new
-msgid ""
-"Internet connection, MMS, A-GPS and Marketplace payments will be sent from"
+#: sim-manager-outgoing-data-description
+msgid "Data service network and Marketplace payments"
 msgstr ""
 
 #: sim-manager-always-ask
@@ -9624,7 +9910,7 @@ msgstr ""
 
 #: change-outgoing-data-confirm
 msgid "The current data transfer will be suspended. Continue anyway?"
-msgstr ""
+msgstr "Cuirfear an t-aistriú sonraí ar fionraí. Lean ar aghaidh mar sin féin?"
 
 #. # LOCALIZATION NOTE (homescreen-header): if you leave the original
 #. # en-US value "{{homescreen}}" in the following string, the localization
@@ -9674,10 +9960,6 @@ msgstr ""
 msgid "Option layouts"
 msgstr ""
 
-#: keypad
-msgid "Keypad"
-msgstr "Eochaircheap"
-
 #: selectedKeyboards
 msgid "Selected keyboards"
 msgstr "Méarchláir roghnaithe"
@@ -9723,11 +10005,120 @@ msgstr "uimhir"
 
 #: defaultKeyboardEnabled
 msgid "{{appName}} {{layoutName}} is set as default input method"
-msgstr "Úsáidfear {{appName}} {{layoutName}} mar mhodh réamhshocraithe ionchurtha"
+msgstr ""
+"Úsáidfear {{appName}} {{layoutName}} mar mhodh réamhshocraithe ionchurtha"
 
-#: persona
-msgid "Persona"
-msgstr "Persona"
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Accounts
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: fxa
+msgctxt "fxa"
+msgid "Firefox Accounts"
+msgstr "Cuntais Firefox"
+
+#: accounts
+msgid "Account Management"
+msgstr "Bainisteoir Cuntas"
+
+#: fxa-accounts
+msgctxt "fxa-accounts"
+msgid "Firefox Accounts"
+msgstr "Cuntais Firefox"
+
+#. # LOCALIZATION NOTE (fxa-accounts-header): if you leave the original
+#. # en-US value "{{fxa-accounts}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID "fxa-accounts".
+#. # If you need to adapt your localization to the reduced space available
+#. # in headers, you can use a shorter string here.
+#: fxa-accounts-header
+msgid "{{fxa-accounts}}"
+msgstr "{{fxa-accounts}}"
+
+#. # Panel: logged out
+#: fxa-overview
+msgid ""
+"Your Firefox Account lets you use features like Find My Device and apps like "
+"the Firefox Marketplace."
+msgstr ""
+
+#: fxa-invitation
+msgid "Create account or sign in"
+msgstr "Cruthaigh cuntas nó logáil isteach"
+
+#. # Panel: logged in, unverified
+#: fxa-confirm-account
+msgid "Confirm Your Account"
+msgstr "Deimhnigh Do Chuntas"
+
+#: fxa-verification-email-sent-msg
+msgid "We will send an email to: {{email}}"
+msgstr "Seolfaimid teachtaireacht ríomhphoist chuig: {{email}}"
+
+#: fxa-please-verify
+msgid "Click the verification link in your email to confirm your account."
+msgstr ""
+"Cliceáil an nasc deimhnithe sa teachtaireacht chun do chuntas a dheimhniú."
+
+#: fxa-cancel-confirmation
+msgid "Cancel Account Confirmation"
+msgstr "Cealaigh Deimhniú an Chuntais"
+
+#. # Panel: logged in, verified
+#: fxa-about
+msgid "About"
+msgstr "Maidir Leis"
+
+#: fxa-logged-in-text
+msgid "Signed in as {{email}}"
+msgstr "Logáilte isteach mar {{email}}"
+
+#: fxa-signed-in-header
+msgid "Signed In"
+msgstr "Logáilte Isteach"
+
+#: fxa-find-my-device-app
+msgctxt "fxa-find-my-device-app"
+msgid "Find My Device"
+msgstr "Aimsigh Mo Ghléas"
+
+#: fxa-sign-out
+msgid "Sign Out"
+msgstr "Logáil Amach"
+
+#. # Additional menu states
+#: fxa-confirm-email
+msgid "Please confirm {{email}}"
+msgstr "Deimhnigh {{email}} le do thoil"
+
+#: findmydevice
+msgctxt "findmydevice"
+msgid "Find My Device"
+msgstr "Aimsigh Mo Ghléas"
+
+#: findmydevice-signup-description
+msgid "Find My Device allows you to locate, lock or erase your phone"
+msgstr ""
+"Le 'Aimsigh Mo Ghléas', is féidir do ghuthán a aimsiú, a chur faoi ghlas, nó "
+"a bhánú"
+
+#: findmydevice-login
+msgid "Sign In or Create an Account"
+msgstr "Logáil Isteach nó Cruthaigh Cuntas"
+
+#: findmydevice-enable
+msgid "Enable Find My Device"
+msgstr "Cumasaigh 'Aimsigh Mo Ghléas'"
+
+#: findmydevice-about
+msgid "About Find My Device"
+msgstr "Maidir le 'Aimsigh Mo Ghléas'"
+
+#: findmydevice-settings-description
+msgid ""
+"Find My Device allows you to locate, lock or erase your phone from a web site:"
+msgstr ""
+"Le 'Aimsigh Mo Ghléas', is féidir leat do ghuthán a aimsiú, a chur faoi "
+"ghlas, nó a bhánú ó shuíomh Gréasáin:"
 
 #: passcode-lock
 msgid "Passcode lock"
@@ -9737,18 +10128,18 @@ msgstr "Úsáid cód faire"
 msgid "Passcode: {{code}}"
 msgstr "Cód faire: {{code}}"
 
-#: phoneLock
+#: screenLock
 msgid "Screen lock"
 msgstr "Cur faoi ghlas"
 
-#. # LOCALIZATION NOTE (phoneLock-header): if you leave the original
-#. # en-US value "{{phoneLock}}" in the following string, the localization
-#. # will be automatically picked from the existing string with ID "phoneLock".
+#. # LOCALIZATION NOTE (screenLock-header): if you leave the original
+#. # en-US value "{{screenLock}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID "screenLock".
 #. # If you need to adapt your localization to the reduced space available
 #. # in headers, you can use a shorter string here.
-#: phoneLock-header
-msgid "{{phoneLock}}"
-msgstr "{{phoneLock}}"
+#: screenLock-header
+msgid "{{screenLock}}"
+msgstr "{{screenLock}}"
 
 #: simSecurity
 msgid "SIM security"
@@ -9822,7 +10213,9 @@ msgstr "Glan sonraí príobháideacha ó leabharmharcanna?"
 msgid ""
 "This clears private data from bookmarks that have been added to the home "
 "screen. This cannot be undone."
-msgstr "Glanann an rogha seo sonraí príobháideacha ó leabharmharcanna a chuir tú leis an scáileán baile. Ní bheidh tú in ann na sonraí a fháil ar ais."
+msgstr ""
+"Glanann an rogha seo sonraí príobháideacha ó leabharmharcanna a chuir tú leis "
+"an scáileán baile. Ní bheidh tú in ann na sonraí a fháil ar ais."
 
 #: clear
 msgid "Clear"
@@ -9979,11 +10372,11 @@ msgstr "Athraigh UAP"
 
 #: simPinChangedSuccessfully
 msgid "SIM PIN changed successfully"
-msgstr ""
+msgstr "Athraíodh an UAP SIM"
 
 #: simPinChangedSuccessfullyWithIndex
 msgid "SIM {{index}} PIN changed successfully"
-msgstr ""
+msgstr "Athraíodh an UAP SIM {{index}}"
 
 #: pinTitle
 msgid "Enter SIM PIN"
@@ -10277,7 +10670,9 @@ msgstr "Saor"
 msgid ""
 "Photos, videos and music are stored separately from apps. See media storage "
 "for details."
-msgstr "Ní úsáidtear stóras aipeanna le haghaidh grianghraf, físeán, ná ceoil. Féach 'Stóras meán'."
+msgstr ""
+"Ní úsáidtear stóras aipeanna le haghaidh grianghraf, físeán, ná ceoil. Féach "
+"'Stóras meán'."
 
 #: ums-shared-volumes
 msgid "{{list}} shared"
@@ -10380,7 +10775,9 @@ msgstr "Stóras réamhshocraithe meán"
 
 #: default-media-location-msg
 msgid "Choose where photos, videos, music and downloads are stored by default."
-msgstr "Roghnaigh an áit a stórálfar grianghraif, ceol, agus íosluchtuithe de réir réamhshocraithe."
+msgstr ""
+"Roghnaigh an áit a stórálfar grianghraif, ceol, agus íosluchtuithe de réir "
+"réamhshocraithe."
 
 #: change-default-location-confirm
 msgid ""
@@ -10442,10 +10839,6 @@ msgstr "{{deviceInfo}}"
 #: deviceInfo-ICCID
 msgid "ICCID"
 msgstr "ICCID"
-
-#: deviceInfo-MSISDN
-msgid "Phone number"
-msgstr "Uimhir ghutháin"
 
 #: deviceInfo-ICCID-unavailable-sim
 msgid "SIM {{index}}: Not available"
@@ -10511,7 +10904,7 @@ msgid "{{hud}}"
 msgstr "{{hud}}"
 
 #: hud-logging
-msgid "Log changes in adb"
+msgid "Log changes in ADB"
 msgstr ""
 
 #: hud-problems
@@ -10528,7 +10921,7 @@ msgstr "Earráidí"
 
 #: hud-security
 msgid "Security issues"
-msgstr ""
+msgstr "Fadhbanna slándála"
 
 #: hud-performance
 msgid "Performance"
@@ -10556,7 +10949,7 @@ msgstr "Cuimhne"
 
 #: hud-appmemory
 msgid "App memory"
-msgstr ""
+msgstr "Cuimhne aipeanna"
 
 #: hud-jsobjects
 msgid "JS objects"
@@ -10599,12 +10992,16 @@ msgstr "Dífhabhtaigh"
 msgid "Developer Menu"
 msgstr "Roghchlár Forbróirí"
 
-#: layers-draw-borders
-msgid "Draw layers borders"
-msgstr ""
+#: developer-tools
+msgid "Developer Tools"
+msgstr "Uirlisí Forbartha"
 
-#: layers-composer2d-enabled
-msgid "Enable hardware composer"
+#: graphics
+msgid "Graphics"
+msgstr "Grafaicí"
+
+#: hardware-composer
+msgid "Hardware composer"
 msgstr ""
 
 #: paint-flashing
@@ -10615,62 +11012,37 @@ msgstr ""
 msgid "Dump layers tree"
 msgstr ""
 
-#: apz-force-enable
-msgid "Enable APZ for all content processes"
+#: apz
+msgid "Async Pan/Zoom"
 msgstr ""
 
-#: layers-enable-tiles
-msgid "Layers: Enable Tiles"
+#: tiling
+msgid "Tiling"
+msgstr "Tíliú"
+
+#: simple-tiling
+msgid "Simple tiling"
+msgstr "Tíliú simplí"
+
+#: draw-tile-borders
+msgid "Draw tile borders"
 msgstr ""
 
-#: layers-simple-tiles
-msgid "Layers: Simple Tiles"
-msgstr ""
-
-#: layers-progressive-paint
-msgid "Layers: Progressive Paint"
-msgstr ""
-
-#: layers-draw-tile-borders
-msgid "Layers: Draw Tile Borders"
-msgstr ""
-
-#: apz-displayport-heuristics
-msgid "Displayport Heuristics"
-msgstr ""
-
-#: apz-heuristic-default
-msgctxt "apz-heuristic-default"
-msgid "Default"
-msgstr "Réamhshocrú"
-
-#: apz-heuristic-center
-msgid "Center displayport"
-msgstr ""
-
-#: apz-heuristic-perfect
-msgid "Assume perfect paints"
-msgstr ""
-
-#: apz-heuristic-taller
-msgid "Taller displayport"
-msgstr ""
-
-#: apz-heuristic-faster
-msgid "Faster paints"
-msgstr ""
-
-#: apz-heuristic-nocheck
-msgid "No checkerboarding"
+#: draw-layer-borders
+msgid "Draw layer borders"
 msgstr ""
 
 #: log-animations
 msgid "Log slow animations"
 msgstr ""
 
-#: remote-debugging
-msgid "Remote debugging"
-msgstr "Cian-dífhabhtú"
+#: remote-debugging-usb
+msgid "Debugging via USB"
+msgstr ""
+
+#: dev-tools-wifi
+msgid "DevTools via Wi-Fi"
+msgstr ""
 
 #: debugger-disabled
 msgctxt "debugger-disabled"
@@ -10682,28 +11054,32 @@ msgid "ADB only"
 msgstr "ADB amháin"
 
 #: debugger-adb-and-devtools
-msgid "ADB and Devtools"
-msgstr "ADB agus uirlisí forbartha"
+msgid "ADB and DevTools"
+msgstr "ADB agus DevTools"
 
 #: devtools-overlay
 msgid "Show devtools overlay"
-msgstr ""
+msgstr "Taispeáin forleagan devtools"
 
 #: jank-threshold
 msgid "Jank Threshold"
 msgstr ""
 
 #: wifi-debugging
-msgid "Wi-Fi output in adb"
-msgstr "Aschur Wi-Fi in adb"
+msgid "Wi-Fi output in ADB"
+msgstr "Aschur Wi-Fi in ADB"
 
 #: bluetooth-debugging
-msgid "Bluetooth output in adb"
+msgid "Bluetooth output in ADB"
 msgstr "Aschur Bluetooth in ADB"
 
 #: console-enabled
 msgid "Console enabled"
 msgstr "Consól cumasaithe"
+
+#: cards-view-screenshots
+msgid "Cards View: Screenshots"
+msgstr ""
 
 #: model-name
 msgid "Model"
@@ -10732,6 +11108,10 @@ msgstr "Aitheantóir an leagain"
 #: update-channel
 msgid "Update channel"
 msgstr "Cainéal nuashonraithe"
+
+#: update-url
+msgid "Update URL"
+msgstr "URL nuashonraithe"
 
 #: last-updated
 msgid "Last Updated"
@@ -10780,7 +11160,7 @@ msgstr "Níor aimsíodh aon nuashonruithe"
 
 #: retry-when-online
 msgid "Network is offline. Will check again when the network is online."
-msgstr ""
+msgstr "Tá an líonra as líne. Seiceálfar arís nuair a bheidh sé ar líne."
 
 #: already-latest-version
 msgid "This is already the latest version of {{brandShortName}}"
@@ -10919,43 +11299,43 @@ msgid "Apache License 2.0"
 msgstr "Ceadúnas Apache 2.0"
 
 #: launch-ftu
-msgid "Launch first time use"
-msgstr ""
+msgid "Launch First Time Use"
+msgstr "Tosaigh Úsáid Céaduaire"
 
 #: no-ftu
 msgid "No first time use app found"
-msgstr ""
+msgstr "Níor aimsíodh aip úsáide céaduaire"
 
 #: rocketbar-enabled
 msgid "Rocketbar enabled"
 msgstr ""
 
-#: software-button-enabled
-msgid "Enable software home button"
+#: software-home-button
+msgid "Software home button"
 msgstr ""
 
-#: homegesture-enabled
-msgid "Home gesture enabled"
+#: home-gesture
+msgid "Home gesture"
 msgstr ""
 
-#: edgesgesture-enabled
-msgid "Edges gesture enabled"
+#: edges-gesture
+msgid "Edges gesture"
 msgstr ""
 
-#: continuoustransition-enabled
-msgid "Continuous transition enabled"
+#: continuous-transition
+msgid "Continuous transition"
 msgstr ""
 
 #: debug-gaia-enabled
 msgid "Gaia debug traces"
 msgstr ""
 
-#: enable-app-transition
-msgid "App transition enabled"
+#: app-transition
+msgid "App transition"
 msgstr ""
 
-#: enable-app-suspending
-msgid "Keep killed app in task manager"
+#: app-suspending
+msgid "App suspending"
 msgstr ""
 
 #: window-management
@@ -11048,9 +11428,17 @@ msgid ""
 "to assist blind and low-vision users."
 msgstr ""
 
+#: screen-reader-speech-volume
+msgid "Speech Volume"
+msgstr "Airde Cainte"
+
+#: screen-reader-speech-rate
+msgid "Speech Rate"
+msgstr "Ráta Cainte"
+
 #: screenReader-confirm-title-start
 msgid "Start Screen Reader?"
-msgstr ""
+msgstr "Tosaigh an Léitheoir Scáileáin?"
 
 #: screenReader-confirm-description-start
 msgid ""
@@ -11060,7 +11448,7 @@ msgstr ""
 
 #: screenReader-confirm-title-stop
 msgid "Stop Screen Reader?"
-msgstr ""
+msgstr "Stop an Léitheoir Scáileáin?"
 
 #: screenReader-confirm-description-stop
 msgid "Stopping the screen reader will end all speech feedback."
@@ -11199,7 +11587,9 @@ msgstr "Tabhair cuntas mionchruinn dúinn."
 msgid ""
 "The content of your feedback will be public, so please be sure not include "
 "any personal information."
-msgstr "Beidh do chuid aiseolais ar fáil go poiblí. Ná cuir aon fhaisnéis phearsanta san áireamh!"
+msgstr ""
+"Beidh do chuid aiseolais ar fáil go poiblí. Ná cuir aon fhaisnéis phearsanta "
+"san áireamh!"
 
 #: feedback-contactyou
 msgid "Check here to let us contact you from your email."
@@ -11259,7 +11649,9 @@ msgstr ""
 msgid ""
 "Thanks for the feedback! We use it to help create better experiences in "
 "future releases of Firefox OS."
-msgstr "Go raibh maith agat as an aiseolas. Úsáidfimid é chun feabhas a chur ar leaganacha de Firefox OS amach anseo."
+msgstr ""
+"Go raibh maith agat as an aiseolas. Úsáidfimid é chun feabhas a chur ar "
+"leaganacha de Firefox OS amach anseo."
 
 #. # Device :: Help
 #: online-support
@@ -11377,6 +11769,14 @@ msgstr "Seol Sonraí"
 msgid "Get Channel Status"
 msgstr "Faigh Stádas an Chainéil"
 
+#: name
+msgid "Shared Tests"
+msgstr ""
+
+#: description
+msgid "Runs shared tests"
+msgstr ""
+
 #: description
 msgid "Gaia Messages"
 msgstr "Teachtaireachtaí Gaia"
@@ -11492,7 +11892,7 @@ msgctxt "composeMessage.dataset.placeholder"
 msgid "Message"
 msgstr "Teachtaireacht"
 
-#: composeSubject.placeholder
+#: composeSubject.dataset.placeholder
 msgid "Subject"
 msgstr "Ábhar"
 
@@ -11512,10 +11912,10 @@ msgstr ""
 msgid "Maximum length of subject reached."
 msgstr ""
 
-#: messages-exceeded-length-text
+#: message-exceeded-max-length
 msgid ""
-"You’ve exceeded the maximum length. Remove special characters or shorten the "
-"message to send it."
+"You’ve exceeded the maximum size. Remove attachments or shorten the message "
+"to send it."
 msgstr ""
 
 #: newMessage
@@ -11608,7 +12008,7 @@ msgstr ""
 
 #: message-type-sms
 msgid "Text Message (SMS)"
-msgstr ""
+msgstr "Teachtaireacht Téacs (SMS)"
 
 #: message-type-mms
 msgid "Multimedia Message (MMS)"
@@ -11622,10 +12022,11 @@ msgstr "Seoladh do Théacs (SMS) ar {{datetime}}"
 msgid ""
 "Your Multimedia Message (MMS), subject {{subject}}, was sent on {{datetime}}"
 msgstr ""
+"Seoladh do Theachtaireacht Il-Mheán (MMS), ábhar {{subject}}, ar {{datetime}}"
 
 #: mms-no-subject-report-description
 msgid "Your Multimedia Message (MMS), was sent on {{datetime}}"
-msgstr ""
+msgstr "Seoladh do Theachtaireacht Il-Mheán (MMS), ar {{datetime}}"
 
 #: message-status
 msgid "Status:"
@@ -11695,6 +12096,28 @@ msgstr "Trí:"
 msgid "Carrier unknown"
 msgstr "Iompróir anaithnid"
 
+#. # LOCALIZATION NOTE(thread-header): parameters in this string will be replaced
+#. # at runtime. {{numberType}} is the label associated to the number ('work',
+#. # 'home', etc.), {{numberDetail}} is either the phone number or the carrier's
+#. # name. Resulting example for en-US: "mobile | +123456789", "mobile | Verizon".
+#: thread-header
+msgid "{{numberType}} | {{numberDetail}}"
+msgstr "{{numberType}} | {{numberDetail}}"
+
+#. # LOCALIZATION NOTE(thread-separator): used to separate type/carrier from
+#. # the number itself. It should be consistent with the characters used in
+#. # "thread- header", \u20 is a blank space (\u20|\u20 is equivalent to " | ").
+#: thread-separator
+msgid "Ȁu20"
+msgstr ""
+
+#. # LOCALIZATION NOTE(carrier-separator): used to separate carrier's name from
+#. # the number itself. \u20 is a blank space. Resulting example for en-US:
+#. # "Verizon, +123456789".
+#: carrier-separator
+msgid ",Ȁ"
+msgstr ""
+
 #. # Modal Dialogs
 #: replace-draft
 msgid "Replace existing Draft"
@@ -11707,7 +12130,7 @@ msgstr "Sábháil mar Dhréacht"
 #: discard-message
 msgctxt "discard-message"
 msgid "Discard"
-msgstr ""
+msgstr "Ná Sábháil"
 
 #: discard-sms
 msgid "Are you sure you want to discard this message?"
@@ -11745,18 +12168,16 @@ msgstr "Léigh é"
 msgid "No messages"
 msgstr "Gan teachtaireachtaí"
 
-#: sendGeneralErrorTitle
-msgid "Service currently unavailable"
-msgstr "Níl an tseirbhís ar fáil faoi láthair"
+#: sendDefaultErrorTitle
+msgid "Message not sent"
+msgstr "Níor seoladh an teachtaireacht"
 
-#: sendGeneralErrorBody
-msgid "Message will automatically be sent once service is available."
+#: sendDefaultErrorBody
+msgid "There was a problem sending the message. Please try again."
 msgstr ""
-"Seolfar an teachtaireacht go huathoibríoch chomh luath agus a bheidh an "
-"tseirbhís ar fáil."
 
-#: sendGeneralErrorBtnOk
-msgctxt "sendGeneralErrorBtnOk"
+#: sendDefaultErrorBtnOk
+msgctxt "sendDefaultErrorBtnOk"
 msgid "OK"
 msgstr "OK"
 
@@ -11782,47 +12203,51 @@ msgctxt "sendFlightModeBtnOk"
 msgid "OK"
 msgstr "OK"
 
-#: fdnBlockedBody.innerHTML
-msgctxt "fdnBlockedBody.innerHTML"
+#. #LOCALIZATION NOTE (fdnBlocked2Body): the English translation does not need the
+#. # actual number of phone numbers. If your translation needs it, you can still add it
+#. # using the parameter {{ n }}. Also take into account that you could add HTML so be
+#. # careful with the content, it may affect to the whole app.
+#: fdnBlocked2Body.innerHTML
+msgctxt "fdnBlocked2Body.innerHTML"
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
 
-#: fdnBlockedBody.innerHTML[one]
+#: fdnBlocked2Body.innerHTML[one]
 msgid ""
-"FDN is enabled and the following recipient is not in your FDN list:<br />"
-"{{ numbers }}"
-msgstr "Tá FDN ar siúl ach níl an faighteoir seo a leanas i do liosta FDN:<br />{{ numbers }}"
+"FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
+"following recipient are in your FDN list:<br />{{ numbers }}"
+msgstr ""
 
-#: fdnBlockedBody.innerHTML[two]
-msgctxt "fdnBlockedBody.innerHTML[two]"
+#: fdnBlocked2Body.innerHTML[two]
+msgctxt "fdnBlocked2Body.innerHTML[two]"
 msgid ""
-"FDN is enabled and the following recipients are not in your FDN list:<br />"
-"{{ numbers }}"
-msgstr "Tá FDN ar siúl ach níl na faighteoirí seo a leanas i do liosta FDN:<br />{{ numbers }}"
+"FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
+"following recipients are in your FDN list:<br />{{ numbers }}"
+msgstr ""
 
-#: fdnBlockedBody.innerHTML[few]
-msgctxt "fdnBlockedBody.innerHTML[few]"
+#: fdnBlocked2Body.innerHTML[few]
+msgctxt "fdnBlocked2Body.innerHTML[few]"
 msgid ""
-"FDN is enabled and the following recipients are not in your FDN list:<br />"
-"{{ numbers }}"
-msgstr "Tá FDN ar siúl ach níl na faighteoirí seo a leanas i do liosta FDN:<br />{{ numbers }}"
+"FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
+"following recipients are in your FDN list:<br />{{ numbers }}"
+msgstr ""
 
-#: fdnBlockedBody.innerHTML[many]
-msgctxt "fdnBlockedBody.innerHTML[many]"
+#: fdnBlocked2Body.innerHTML[many]
+msgctxt "fdnBlocked2Body.innerHTML[many]"
 msgid ""
-"FDN is enabled and the following recipients are not in your FDN list:<br />"
-"{{ numbers }}"
-msgstr "Tá FDN ar siúl ach níl na faighteoirí seo a leanas i do liosta FDN:<br />{{ numbers }}"
+"FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
+"following recipients are in your FDN list:<br />{{ numbers }}"
+msgstr ""
 
-#: fdnBlockedBody.innerHTML[other]
-msgctxt "fdnBlockedBody.innerHTML[other]"
+#: fdnBlocked2Body.innerHTML[other]
+msgctxt "fdnBlocked2Body.innerHTML[other]"
 msgid ""
-"FDN is enabled and the following recipients are not in your FDN list:<br />"
-"{{ numbers }}"
-msgstr "Tá FDN ar siúl ach níl na faighteoirí seo a leanas i do liosta FDN:<br />{{ numbers }}"
+"FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
+"following recipients are in your FDN list:<br />{{ numbers }}"
+msgstr ""
 
-#: fdnBlockedBtnOk
-msgctxt "fdnBlockedBtnOk"
+#: fdnBlocked2BtnOk
+msgctxt "fdnBlocked2BtnOk"
 msgid "OK"
 msgstr "OK"
 
@@ -11834,7 +12259,9 @@ msgstr "Athraigh an ceangal sonraí"
 msgid ""
 "Switch the data connection to {{ nonactive }} to retrieve the MMS. The "
 "current data transfer on {{ active }} will be suspended. Continue anyway?"
-msgstr "Athraigh an ceangal sonraí go {{ nonactive }} chun an MMS a fháil. Cuirfear an t-aistriú sonraí ar {{ active }} ar fionraí. Lean ar aghaidh mar sin féin?"
+msgstr ""
+"Athraigh an ceangal sonraí go {{ nonactive }} chun an MMS a fháil. Cuirfear "
+"an t-aistriú sonraí ar {{ active }} ar fionraí. Lean ar aghaidh mar sin féin?"
 
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
 #. # update manager
@@ -11856,7 +12283,10 @@ msgstr "{{nonActiveSimTitle}}"
 msgid ""
 "Switch the data connection to {{ nonactive }} to send the MMS. The current "
 "data transfer on {{ active }} will be suspended. Continue anyway?"
-msgstr "Athraigh an ceangal sonraí go {{ nonactive }} chun an MMS a sheoladh. Cuirfear an t-aistriú sonraí ar {{ active }} ar fionraí. Lean ar aghaidh mar sin féin?"
+msgstr ""
+"Athraigh an ceangal sonraí go {{ nonactive }} chun an MMS a sheoladh. "
+"Cuirfear an t-aistriú sonraí ar {{ active }} ar fionraí. Lean ar aghaidh mar "
+"sin féin?"
 
 #: nonActiveSimToSendBtnOk
 msgid "{{nonActiveSimBtnOk}}"
@@ -11872,7 +12302,8 @@ msgstr "Gan seirbhís mhóibíleach"
 
 #: sendNoSignalErrorBody
 msgid "Make sure you have a mobile signal and try again."
-msgstr "Bí cinnte go bhfuil seirbhís mhóibíleach ar fáil agus bain triail eile as."
+msgstr ""
+"Bí cinnte go bhfuil seirbhís mhóibíleach ar fáil agus bain triail eile as."
 
 #: sendNoSignalErrorBtnOk
 msgctxt "sendNoSignalErrorBtnOk"
@@ -12042,9 +12473,43 @@ msgstr "íosluchtú"
 msgid "untitled"
 msgstr "gan teideal"
 
-#: file-too-large
-msgid "The file you have selected is too large"
-msgstr "Tá an comhad a roghnaigh tú rómhór"
+#. # LOCALIZATION NOTE (files-too-large): the English translation does not need the
+#. # actual number of files. If your translation needs it, you can still add it
+#. # using the parameter {{ n }}.
+#: files-too-large
+msgctxt "files-too-large"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: files-too-large[zero]
+msgctxt "files-too-large[zero]"
+msgid "The file you have selected is too large."
+msgstr "Tá an comhad a roghnaigh tú rómhór."
+
+#: files-too-large[one]
+msgctxt "files-too-large[one]"
+msgid "The file you have selected is too large."
+msgstr "Tá an comhad a roghnaigh tú rómhór."
+
+#: files-too-large[two]
+msgctxt "files-too-large[two]"
+msgid "The files you have selected are too large."
+msgstr "Tá na comhaid a roghnaigh tú rómhór."
+
+#: files-too-large[few]
+msgctxt "files-too-large[few]"
+msgid "The files you have selected are too large."
+msgstr "Tá na comhaid a roghnaigh tú rómhór."
+
+#: files-too-large[many]
+msgctxt "files-too-large[many]"
+msgid "The files you have selected are too large."
+msgstr "Tá na comhaid a roghnaigh tú rómhór."
+
+#: files-too-large[other]
+msgctxt "files-too-large[other]"
+msgid "The files you have selected are too large."
+msgstr "Tá na comhaid a roghnaigh tú rómhór."
 
 #: resize-image
 msgid "Resizing the attached image"
@@ -12120,6 +12585,26 @@ msgstr "(curtha faoi ghlas ag an soláthróir seirbhíse)"
 msgid "(corporate locked)"
 msgstr "(curtha faoi ghlas ag an gcorparáid)"
 
+#: emergencyCallsOnly-network1Locked
+msgid "(network1 locked)"
+msgstr ""
+
+#: emergencyCallsOnly-network2Locked
+msgid "(network2 locked)"
+msgstr ""
+
+#: emergencyCallsOnly-hrpdNetworkLocked
+msgid "(hrpd network locked)"
+msgstr ""
+
+#: emergencyCallsOnly-ruimCorporateLocked
+msgid "(ruim corporate locked)"
+msgstr ""
+
+#: emergencyCallsOnly-ruimServiceProviderLocked
+msgid "(ruim service provider locked)"
+msgstr ""
+
 #: enterPIN
 msgid "Enter PIN"
 msgstr "Cuir UAP isteach"
@@ -12175,6 +12660,27 @@ msgstr "Glórphost nua"
 msgid "Dial {{number}}"
 msgstr "Diailigh {{number}}"
 
+#: voicemailNotificationMultiSim
+msgid "(SIM {{n}}) {{title}}"
+msgstr "(SIM {{n}}) {{title}}"
+
+#. # NFC Bluetooth Connect
+#: confirmNFCConnectBTenabledNameUnknown
+msgid "Are you sure you want to connect to the device?"
+msgstr "An bhfuil tú cinnte gur mhaith leat ceangal leis an ngléas?"
+
+#: confirmNFCConnectBTdisabledNameUnknown
+msgid "Turn on Bluetooth and connect to the device?"
+msgstr "Tosaigh Bluetooth agus ceangail leis an ngléas?"
+
+#: confirmNFCConnectBTenabledNameKnown
+msgid "Are you sure you want to connect to {{deviceName}}?"
+msgstr "An bhfuil tú cinnte gur mhaith leat ceangal le {{deviceName}}?"
+
+#: confirmNFCConnectBTdisabledNameKnown
+msgid "Turn on Bluetooth and connect to {{deviceName}}?"
+msgstr "Tosaigh Bluetooth agus ceangail le {{deviceName}}?"
+
 #: airplane
 msgid "Turn on airplane mode"
 msgstr "Cuir an mód eitleáin ar siúl"
@@ -12198,14 +12704,6 @@ msgstr "Atosaigh"
 #: power
 msgid "Power off"
 msgstr "Múch"
-
-#: asyncpanzoom
-msgid "Disable APZ for Apps"
-msgstr "Díchumasaigh APZ le haghaidh Aipeanna"
-
-#: asyncpanzoomOff
-msgid "Enable APZ for Apps"
-msgstr "Cumasaigh APZ le haghaidh Aipeanna"
 
 #. # screen reader
 #: enableScreenReaderSteps
@@ -12289,6 +12787,10 @@ msgstr "Meabhraigh mo rogha"
 msgid "More info…"
 msgstr "Tuilleadh eolais…"
 
+#: hide-info
+msgid "Hide info"
+msgstr "Cuir eolas i bhfolach"
+
 #. # App install
 #: install-app
 msgid "Install {{name}}?"
@@ -12355,7 +12857,15 @@ msgstr "Is féidir aipeanna a shuiteáil ar ball ón mbunfhoinse."
 msgid "Are you sure you want to cancel this install?"
 msgstr "An bhfuil tú cinnte gur mhaith leat an tsuiteáil seo a chealú?"
 
+#. # LOCALIZATION NOTE (cancel-install*): cancel-install is the string used in
+#. # the title, cancel-install-button is used in the bottom-left button
 #: cancel-install
+msgctxt "cancel-install"
+msgid "Cancel Install"
+msgstr "Cealaigh an tSuiteáil"
+
+#: cancel-install-button
+msgctxt "cancel-install-button"
 msgid "Cancel Install"
 msgstr "Cealaigh an tSuiteáil"
 
@@ -12384,7 +12894,10 @@ msgstr "Níl a dhóthain spáis ann"
 msgid ""
 "There is not enough space to install this app. Free up space by deleting old "
 "apps or media, and try installing again from the original source."
-msgstr "Níl a dhóthain spáis agat chun an aip seo a shuiteáil. Oscail spás trí aipeanna nó comhaid mheán a scriosadh, agus déan iarracht eile an aip a shuiteáil ón mbunfhoinse."
+msgstr ""
+"Níl a dhóthain spáis agat chun an aip seo a shuiteáil. Oscail spás trí "
+"aipeanna nó comhaid mheán a scriosadh, agus déan iarracht eile an aip a "
+"shuiteáil ón mbunfhoinse."
 
 #: app-install-success
 msgid "{{ appName }} installed"
@@ -12528,17 +13041,23 @@ msgstr "Á Dhí-chomhbhrú… <span>Seans go dtógfaidh seo cúpla nóiméad.</s
 msgid ""
 "Wi-Fi unavailable. Updating over current connection may incur additional "
 "charges."
-msgstr "Níl Wi-Fi ar fáil. Seans go ngearrfar táille bhreise ort chun nuashonrú ar an gceangal gníomhach."
+msgstr ""
+"Níl Wi-Fi ar fáil. Seans go ngearrfar táille bhreise ort chun nuashonrú ar an "
+"gceangal gníomhach."
 
 #: downloadOfflineWarning
 msgid "Connection unavailable. Connect to a network to download updates."
-msgstr "Níl tú ceangailte leis an líonra. Ceangail anois chun nuashonruithe a íosluchtú."
+msgstr ""
+"Níl tú ceangailte leis an líonra. Ceangail anois chun nuashonruithe a "
+"íosluchtú."
 
 #: downloadDataConnectionWarning
 msgid ""
 "Updates are downloaded via data connection when Wi-Fi is not available. "
 "Additional data charges may apply."
-msgstr "Íosluchtaítear nuashonruithe trí cheangal sonraí nuair nach bhfuil Wi-Fi ar fáil. Seans go ngearrfar táille bhreise ort."
+msgstr ""
+"Íosluchtaítear nuashonruithe trí cheangal sonraí nuair nach bhfuil Wi-Fi ar "
+"fáil. Seans go ngearrfar táille bhreise ort."
 
 #: downloadUpdatesViaDataConnection
 msgid "Download updates via data connection?"
@@ -12549,7 +13068,10 @@ msgid ""
 "Updates are downloaded via data connection when Wi-Fi is not available. When "
 "using data connection, phone calls may be blocked and additional charges may "
 "also apply."
-msgstr "Íosluchtaítear nuashonruithe trí cheangal sonraí nuair nach bhfuil Wi-Fi ar fáil. Nuair a úsáideann tú ceangal sonraí, seans go gcuirfear bac ar ghlaonna agus beidh táille bhreise i gceist."
+msgstr ""
+"Íosluchtaítear nuashonruithe trí cheangal sonraí nuair nach bhfuil Wi-Fi ar "
+"fáil. Nuair a úsáideann tú ceangal sonraí, seans go gcuirfear bac ar ghlaonna "
+"agus beidh táille bhreise i gceist."
 
 #. # screenshots
 #: screenshotSaved
@@ -12583,7 +13105,8 @@ msgstr "Díghlasáil"
 msgid ""
 "A username and password are being requested by {{host}}. The site says: "
 "“{{realm}}”"
-msgstr "Tá {{host}} ag iarraidh ainm úsáideora agus focal faire. Deir an suíomh: "
+msgstr ""
+"Tá {{host}} ag iarraidh ainm úsáideora agus focal faire. Deir an suíomh: "
 "“{{realm}}”"
 
 #: error-message
@@ -12608,6 +13131,149 @@ msgstr "Freastalaí gan aimsiú"
 msgid "Can’t find the server at {{name}}."
 msgstr "Ní féidir an freastalaí ag {{name}} a aimsiú."
 
+#: file-not-found file_not_found_download_title
+msgid "File not found"
+msgstr "Comhad gan aimsiú"
+
+#: file-not-found-error
+msgid "The device can’t display this page because the file cannot be found."
+msgstr "Ní féidir an leathanach seo a thaispeáint; comhad gan aimsiú."
+
+#: connection-failed
+msgctxt "connection-failed"
+msgid "Unable to connect"
+msgstr "Ní féidir ceangal a bhunú"
+
+#: connection-failed-error
+msgctxt "connection-failed-error"
+msgid "A network error occurred while trying to reach the site."
+msgstr ""
+
+#: invalid-connection
+msgctxt "invalid-connection"
+msgid "Unable to connect"
+msgstr "Ní féidir ceangal a bhunú"
+
+#: invalid-connection-error
+msgctxt "invalid-connection-error"
+msgid "A network error occurred while trying to reach the site."
+msgstr ""
+
+#: malformed-uri
+msgid "URL not valid"
+msgstr "URL neamhbhailí"
+
+#: malformed-uri-error
+msgid "The URL entered is not valid and cannot be loaded."
+msgstr ""
+
+#: redirect-loop
+msgctxt "redirect-loop"
+msgid "Can’t display page"
+msgstr "Ní féidir an leathanach a thaispeáint"
+
+#: redirect-loop-error
+msgid ""
+"The device can’t display this page because the page is not redirecting "
+"properly. Try this page again at a later time."
+msgstr ""
+
+#: not-cached
+msgid "Page expired"
+msgstr ""
+
+#: not-cached-error
+msgid ""
+"As a security precaution, this page cannot be displayed by the device because "
+"it has expired."
+msgstr ""
+
+#: is-printing-error
+msgid "The document cannot change while Printing or in Print Preview."
+msgstr ""
+
+#: denied-port-access
+msgid "This address is restricted"
+msgstr ""
+
+#: denied-port-access-error
+msgid ""
+"This address uses a network port which is normally used for purposes other "
+"than Web browsing. The device has cancelled the request for your protection."
+msgstr ""
+
+#: proxy-resolve-failure
+msgctxt "proxy-resolve-failure"
+msgid "Proxy Server Error"
+msgstr ""
+
+#: proxy-resolve-failure-error
+msgid "The device is configured to use a proxy server that can’t be found."
+msgstr ""
+
+#: proxy-connect-failure
+msgctxt "proxy-connect-failure"
+msgid "Proxy Server Error"
+msgstr ""
+
+#: proxy-connect-failure-error
+msgid ""
+"The device is configured to use a proxy server that is refusing connections."
+msgstr ""
+
+#: content-encoding
+msgctxt "content-encoding"
+msgid "Can’t display page"
+msgstr "Ní féidir an leathanach a thaispeáint"
+
+#: content-encoding-error
+msgid ""
+"The device can’t display this page because a content encoding error occurred."
+msgstr ""
+
+#: remote-xul
+msgid "Page unsupported"
+msgstr "Leathanach gan tacaíocht"
+
+#: remote-xul-error
+msgid ""
+"This page can’t be displayed because it uses a technology that is not "
+"supported on the device."
+msgstr ""
+
+#: phishing-blocked-error
+msgid ""
+"The website has been reported as a web forgery designed to trick users into "
+"sharing personal or financial information."
+msgstr ""
+
+#: malware-blocked
+msgid "Malware attack blocked"
+msgstr ""
+
+#: malware-blocked-error
+msgid "The site at has been reported as an attack site and has been blocked."
+msgstr ""
+
+#: unsafe-content-type
+msgid "Unsafe content"
+msgstr "Ábhar neamhshlán"
+
+#: unsafe-content-type-error
+msgid "The page cannot be shown because it may not be safe to open."
+msgstr ""
+
+#: corrupted-content
+msgctxt "corrupted-content"
+msgid "Can’t display page"
+msgstr "Ní féidir an leathanach a thaispeáint"
+
+#: corrupted-content-error
+msgid ""
+"The page cannot be shown because an error in the data transmission was "
+"detected."
+msgstr ""
+
 #: network-connection-unavailable
 msgid "Network connection unavailable"
 msgstr "Ní féidir ceangal leis an líonra"
@@ -12616,19 +13282,34 @@ msgstr "Ní féidir ceangal leis an líonra"
 msgid ""
 "{{name}} requires a network connection. Try connecting to a Wi-Fi or mobile "
 "data network."
-msgstr "Teastaíonn ó {{name}} ceangal líonra. Ba chóir duit ceangal le Wi-Fi nó le líonra sonraí."
+msgstr ""
+"Teastaíonn ó {{name}} ceangal líonra. Ba chóir duit ceangal le Wi-Fi nó le "
+"líonra sonraí."
+
+#: network-error-launching
+msgid "{{name}} requires an Internet connection."
+msgstr ""
+
+#: network-error-in-app
+msgid "No access to the Internet right now."
+msgstr "Níl tú ceangailte leis an Idirlíon faoi láthair."
 
 #: unable-to-connect
+msgctxt "unable-to-connect"
 msgid "Unable to connect"
-msgstr "Ní féidir ceangal"
-
-#: tap-to-retry
-msgid "Tap to retry"
-msgstr "Tapáil chun triail eile a bhaint as"
+msgstr "Ní féidir ceangal a bhunú"
 
 #: try-again
 msgid "Try again"
 msgstr "Bain triail eile as"
+
+#: check-settings
+msgid "Check settings"
+msgstr "Seiceáil na socruithe"
+
+#: tap-to-check-settings
+msgid "Tap to check settings"
+msgstr "Tapáil chun na socruithe a sheiceáil"
 
 #. # value selector, time/date picker
 #: select-time
@@ -12671,7 +13352,7 @@ msgstr ""
 
 #: crash-info-link
 msgid "What’s in a crash report?"
-msgstr ""
+msgstr "Céard atá i dtuairisc ar thuairteáil?"
 
 #: crash-always-report
 msgid "Always send Mozilla a report when a crash occurs."
@@ -12704,25 +13385,13 @@ msgid "Report"
 msgstr "Tuairisc"
 
 #. # bluetooth transfer
-#: bluetooth-sendingTitle
-msgctxt "bluetooth-sendingTitle"
-msgid "Sending Bluetooth transfer.."
-msgstr "Comhad á sheoladh trí Blueooth..."
-
-#: bluetooth-receivingTitle
-msgctxt "bluetooth-receivingTitle"
-msgid "Receiving Bluetooth transfer.."
-msgstr "Comhad á fháil trí Bluetooth..."
-
 #: bluetooth-sending-progress
-msgctxt "bluetooth-sending-progress"
-msgid "Sending Bluetooth transfer.."
-msgstr "Comhad á sheoladh trí Blueooth..."
+msgid "Sending Bluetooth transfer…"
+msgstr "Comhad á sheoladh trí Bluetooth…"
 
 #: bluetooth-receiving-progress
-msgctxt "bluetooth-receiving-progress"
-msgid "Receiving Bluetooth transfer.."
-msgstr "Comhad á fháil trí Bluetooth..."
+msgid "Receiving Bluetooth transfer…"
+msgstr "Comhad á fháil trí Bluetooth…"
 
 #: acceptFileTransfer
 msgid "Accept Bluetooth file transfer?"
@@ -12785,6 +13454,11 @@ msgstr "Aistriú"
 msgid "Cancel Bluetooth file transfer?"
 msgstr "Cuir an t-aistriú Bluetooth ar ceal?"
 
+#: continueFileTransfer
+msgctxt "continueFileTransfer"
+msgid "Continue"
+msgstr "Lean ar aghaidh"
+
 #: transfer-has-started-title
 msgid "The transfer has started"
 msgstr "Tosaíodh an t-aistriú"
@@ -12841,7 +13515,7 @@ msgstr ""
 
 #: sdcard-not-exist2
 msgid "No memory card found. Please insert a memory card."
-msgstr ""
+msgstr "Níor aimsíodh cárta cuimhne. Cuir cárta cuimhne isteach anois."
 
 #: sdcard-in-use
 msgid ""
@@ -12881,6 +13555,26 @@ msgstr "Cód CCK"
 #: spckCode
 msgid "SPCK code"
 msgstr "Cód SPCK"
+
+#: nck1code
+msgid "NCK1 code"
+msgstr "Cód NCK1"
+
+#: nck2code
+msgid "NCK2 code"
+msgstr "Cód NCK2"
+
+#: hnckcode
+msgid "HNCK code"
+msgstr "Cód HNCK"
+
+#: rcckcode
+msgid "RCCK code"
+msgstr "Cód RCCK"
+
+#: rspckcode
+msgid "RSPCK code"
+msgstr "Cód RSPCK"
 
 #: multiSIMpinTitle
 msgid "Enter SIM {{n}} PIN"
@@ -12977,7 +13671,7 @@ msgstr ""
 #. #power saving mode
 #: notification-powersaving-mode-on-title
 msgid "Power Saving Mode"
-msgstr ""
+msgstr "Mód Spárála Cumhachta"
 
 #: notification-powersaving-mode-on-description
 msgid "Power saving mode is on."
@@ -12997,7 +13691,7 @@ msgstr "{[ plural(value) ]}"
 
 #: free-space[zero]
 msgid "No remaining free space."
-msgstr ""
+msgstr "Níl aon spás saor fágtha."
 
 #: free-space[one]
 msgctxt "free-space[one]"
@@ -13120,8 +13814,15 @@ msgstr "Íosluchtú teipthe"
 msgid "{{percentage}}% - {{name}}"
 msgstr "{{percentage}}% - {{name}}"
 
-#: search-or-type-address.placeholder
-msgid "Search or type address"
+#. # Rocketbar
+#: search-or-enter-address
+msgctxt "search-or-enter-address"
+msgid "Search or enter address"
+msgstr "Cuardaigh nó cuir seoladh isteach"
+
+#: search-or-enter-address.placeholder
+msgctxt "search-or-enter-address.placeholder"
+msgid "Search or enter address"
 msgstr "Cuardaigh nó cuir seoladh isteach"
 
 #. # Hotspot
@@ -13246,6 +13947,14 @@ msgstr "Sábháil"
 #: finish
 msgid "Finish"
 msgstr "Críochnaigh"
+
+#: sim
+msgid "SIM {{id}}"
+msgstr "SIM {{id}}"
+
+#: dsds-notification-title-with-sim
+msgid "({{sim}}) {{title}}"
+msgstr "({{sim}}) {{title}}"
 
 #: this-message-has-expired
 msgid "This message has expired"
@@ -14139,7 +14848,9 @@ msgstr "Ní féidir é a oscailt"
 msgid ""
 "There isn’t an app that can open {{name}}. Would you like to save the file or "
 "delete it?"
-msgstr "Níl aon aip agat chun {{name}} a oscailt. An bhfuil fonn ort é a choinneáil nó a scriosadh?"
+msgstr ""
+"Níl aon aip agat chun {{name}} a oscailt. An bhfuil fonn ort é a choinneáil "
+"nó a scriosadh?"
 
 #: unsupported_file_type_download_left_button
 msgctxt "unsupported_file_type_download_left_button"
@@ -14150,10 +14861,6 @@ msgstr "Coinnigh an Comhad"
 msgctxt "unsupported_file_type_download_right_button"
 msgid "Delete"
 msgstr "Scrios"
-
-#: file_not_found_download_title
-msgid "File not found"
-msgstr "Comhad gan aimsiú"
 
 #: file_not_found_download_message
 msgid "The file wasn’t found on the device"
@@ -14277,6 +14984,265 @@ msgctxt "cancel_downloaded_file"
 msgid "Cancel"
 msgstr "Cealaigh"
 
+#: import
+msgid "Import"
+msgstr "Iompórtáil"
+
+#: fbFriends
+msgctxt "fbFriends"
+msgid "Facebook Friends"
+msgstr "Cairde Facebook"
+
+#: facebook-serviceName
+msgctxt "facebook-serviceName"
+msgid "Facebook Friends"
+msgstr "Cairde Facebook"
+
+#: viewAll
+msgid "View All Facebook Friends"
+msgstr "Gach Cara Facebook"
+
+#: viewRecommend
+msgid "View Only Recommended"
+msgstr "Cairde Molta Amháin"
+
+#: linkProposal
+msgctxt "linkProposal"
+msgid "{[ plural(numFriends) ]}"
+msgstr "{[ plural(numFriends) ]}"
+
+#: linkProposal[zero]
+msgid "No matching friends. Showing all"
+msgstr "Níor aimsíodh aon chairde. Chuile dhuine á dtaispeáint"
+
+#: linkProposal[one]
+msgid "Select the recommended one"
+msgstr "Roghnaigh an cara molta"
+
+#: linkProposal[two]
+msgctxt "linkProposal[two]"
+msgid "Select a recommended one"
+msgstr "Roghnaigh cara molta"
+
+#: linkProposal[few]
+msgctxt "linkProposal[few]"
+msgid "Select a recommended one"
+msgstr "Roghnaigh cara molta"
+
+#: linkProposal[many]
+msgctxt "linkProposal[many]"
+msgid "Select a recommended one"
+msgstr "Roghnaigh cara molta"
+
+#: linkProposal[other]
+msgctxt "linkProposal[other]"
+msgid "Select a recommended one"
+msgstr "Roghnaigh cara molta"
+
+#: fbFriendsFound
+msgctxt "fbFriendsFound"
+msgid "{[ plural(numFriends) ]}"
+msgstr "{[ plural(numFriends) ]}"
+
+#: fbFriendsFound[zero]
+msgid "All your friends are imported"
+msgstr "Iompórtáladh do chairde go léir"
+
+#: fbFriendsFound[one]
+msgid "Found one friend to import"
+msgstr "Aimsíodh cara amháin le hiompórtáil"
+
+#: fbFriendsFound[two]
+msgctxt "fbFriendsFound[two]"
+msgid "Found {{numFriends}} friends to import"
+msgstr "Aimsíodh {{numFriends}} chara le hiompórtáil"
+
+#: fbFriendsFound[few]
+msgctxt "fbFriendsFound[few]"
+msgid "Found {{numFriends}} friends to import"
+msgstr "Aimsíodh {{numFriends}} chara le hiompórtáil"
+
+#: fbFriendsFound[many]
+msgctxt "fbFriendsFound[many]"
+msgid "Found {{numFriends}} friends to import"
+msgstr "Aimsíodh {{numFriends}} gcara le hiompórtáil"
+
+#: fbFriendsFound[other]
+msgctxt "fbFriendsFound[other]"
+msgid "Found {{numFriends}} friends to import"
+msgstr "Aimsíodh {{numFriends}} cara le hiompórtáil"
+
+#. # Progress
+#: progressFB3ImportTitle
+msgid "Importing friends to Contacts"
+msgstr "Cairde á n-iompórtáil"
+
+#: progressFB3UpdateTitle
+msgid "Updating friends in Contacts"
+msgstr "Cairde á nuashonrú i dTeagmhálacha"
+
+#. # Message
+#: message2
+msgctxt "message2"
+msgid "This may take a couple of minutes"
+msgstr "Seans go dtógfaidh sé seo cúpla nóiméad"
+
+#: messageLinking
+msgid "Please hold on. We are linking your friend and your contact."
+msgstr "Fan nóiméad... an cara á nascadh le do theagmháil."
+
+#. # Errors
+#: error1
+msgid "Error {{from}}"
+msgstr "Earráid {{from}}"
+
+#: error2
+msgctxt "error2"
+msgid "Do you want to retry?"
+msgstr "An bhfuil fonn ort iarracht eile a dhéanamh?"
+
+#: errorProposal
+msgctxt "errorProposal"
+msgid "calculating proposals"
+msgstr "moltaí á n-áireamh"
+
+#: errorFriends
+msgctxt "errorFriends"
+msgid "retrieving friends"
+msgstr "cairde á bhfáil"
+
+#: errorLinking
+msgid "linking contact"
+msgstr "teagmháil á nascadh"
+
+#. # Timeouts
+#: timeout1
+msgid "Exceeded timeout {{from}}"
+msgstr "{{from}} thar am"
+
+#: timeout2
+msgctxt "timeout2"
+msgid "Do you want to retry?"
+msgstr "An bhfuil fonn ort iarracht eile a dhéanamh?"
+
+#: timeoutProposal
+msgctxt "timeoutProposal"
+msgid "calculating proposals"
+msgstr "moltaí á n-áireamh"
+
+#: timeoutFriends
+msgctxt "timeoutFriends"
+msgid "retrieving friends"
+msgstr "cairde á bhfáil"
+
+#: timeoutLinking
+msgid "linking contacts"
+msgstr "teagmháil á nascadh"
+
+#. # Wait
+#: wait1
+msgid "Please hold on"
+msgstr "Fan nóiméad"
+
+#: wait2
+msgctxt "wait2"
+msgid "This may take a couple of minutes"
+msgstr "Seans go dtógfaidh sé seo cúpla nóiméad"
+
+#: waitProposal
+msgid "Please hold on. We are calculating a proposal."
+msgstr "Fan nóiméad - moladh á áireamh."
+
+#: waitFriends
+msgid "Please hold on. We are connecting to obtain your friend list."
+msgstr "Fan nóiméad - táimid ag iarraidh do liosta cairde a íosluchtú."
+
+#: curtainCancel
+msgctxt "curtainCancel"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: curtainOK
+msgctxt "curtainOK"
+msgid "OK"
+msgstr "OK"
+
+#: connectionLost
+msgid "No Internet connection"
+msgstr "Gan ceangal Idirlín"
+
+#: connectionLostMsg
+msgid "Friends’ photos will not be added to your contacts. Continue anyway?"
+msgstr ""
+"Ní chuirfear grianghraif de do chairde le do theagmhálacha. Lean ar aghaidh "
+"mar sin féin?"
+
+#: yesOption
+msgctxt "yesOption"
+msgid "OK"
+msgstr "OK"
+
+#: noOption
+msgctxt "noOption"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#. # Status
+#: friendsUpdated
+msgctxt "friendsUpdated"
+msgid "{[ plural(numFriends) ]}"
+msgstr "{[ plural(numFriends) ]}"
+
+#: friendsUpdated[zero]
+msgid "No friends updated"
+msgstr "Níor nuashonraíodh aon chairde"
+
+#: friendsUpdated[one]
+msgid "Updated one friend"
+msgstr "Nuashonraíodh cara amháin"
+
+#: friendsUpdated[two]
+msgctxt "friendsUpdated[two]"
+msgid "Updated {{numFriends}} friends"
+msgstr "Nuashonraíodh {{numFriends}} chara"
+
+#: friendsUpdated[few]
+msgctxt "friendsUpdated[few]"
+msgid "Updated {{numFriends}} friends"
+msgstr "Nuashonraíodh {{numFriends}} chara"
+
+#: friendsUpdated[many]
+msgctxt "friendsUpdated[many]"
+msgid "Updated {{numFriends}} friends"
+msgstr "Nuashonraíodh {{numFriends}} gcara"
+
+#: friendsUpdated[other]
+msgctxt "friendsUpdated[other]"
+msgid "Updated {{numFriends}} friends"
+msgstr "Nuashonraíodh {{numFriends}} cara"
+
+#. # Notification relogging is needed
+#: notificationLogin
+msgid "Your Facebook session is invalid. Please sign in."
+msgstr "Seisiún neamhbhailí Facebook. Logáil isteach, le do thoil."
+
+#. # Error sync
+#: syncError
+msgid "There was an error synchronizing your friend’s data"
+msgstr "Tharla earráid agus sonraí do chairde á sioncrónú"
+
+#: noSimMsg
+msgid "To import contacts insert or unlock your SIM card"
+msgstr "Ionsáigh nó díghlasáil do chárta SIM chun teagmhálacha a iompórtáil"
+
+#: noMemoryCardMsg
+msgid "To import contacts insert a memory card"
+msgstr "Chun teagmhálacha a iompórtáil, cuir cárta cuimhne isteach"
+
+#: noConnection11
+msgid "To import Facebook friends or contacts connect to Wi-Fi or data network"
+msgstr "Ceangail le Wi-Fi nó líonra eile chun cairde ó Facebook a iompórtáil"
+
 #: perm-contacts-appRequest
 msgid "{{app}} would like to access your contact list."
 msgstr "Tá {{app}} ag iarraidh do liosta teagmhálacha a rochtain."
@@ -14366,7 +15332,11 @@ msgid ""
 "may occur even when no apps are running."
 msgstr ""
 "Úsáideann {{brandShortName}} sonraí GPS, Wi-Fi, agus líonraí móibíleacha i "
-"ngar duit chun do shuíomh a dhéanamh amach. Seoltar sonraí chuig Mhozilla agus chuig sholáthraithe seirbhíse eile. Úsáidtear na sonraí seo i bhfoirm chomhiomlán chun na seirbhísí geoshuite a fheabhsú. Seans go stórálfar sonraí ar do ghléas agus go mbaileofar na sonraí fiú nuair nach bhfuil aon aipeanna ar siúl."
+"ngar duit chun do shuíomh a dhéanamh amach. Seoltar sonraí chuig Mhozilla "
+"agus chuig sholáthraithe seirbhíse eile. Úsáidtear na sonraí seo i bhfoirm "
+"chomhiomlán chun na seirbhísí geoshuite a fheabhsú. Seans go stórálfar sonraí "
+"ar do ghléas agus go mbaileofar na sonraí fiú nuair nach bhfuil aon aipeanna "
+"ar siúl."
 
 #: perm-video-capture-appRequest
 msgid "Would you like to share your camera with {{app}}?"
@@ -14386,7 +15356,7 @@ msgstr "An bhfuil tú sásta do mhicreafón a roinnt le {{app}}?"
 
 #: perm-audio-capture-webRequest
 msgid "Would you like to share your microphone with {{site}}?"
-msgstr "An bhfuil tú sásta do mhicreafón a roinnt le {{app}}?"
+msgstr "An bhfuil tú sásta do mhicreafón a roinnt le {{site}}?"
 
 #: perm-media-capture
 msgid "Camera and Microphone"
@@ -14444,3 +15414,13 @@ msgstr "An tAigéan Indiach"
 #: tzRegion-Pacific
 msgid "Pacific Ocean"
 msgstr "An tAigéan Ciúin"
+
+#. # Voicemail lacks of a number set
+#: voicemailNoNumberTitle
+msgid "Voicemail number is unavailable"
+msgstr ""
+
+#: voicemailNoNumberText
+msgid ""
+"Unable to call the voicemail. Set up the voicemail number to place the call."
+msgstr ""
