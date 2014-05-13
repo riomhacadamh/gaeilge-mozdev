@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-08 07:42-0500\n"
+"POT-Creation-Date: 2014-05-12 12:45-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -309,9 +309,12 @@ msgstr "Barrshuímh"
 
 #. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # Settings
-#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
-#. # settings
-#: browser-settings settings-show settings name voicemailNoNumberSettings
+#. #-#-#-#-#  appsemailemail.properties.po (firefox)  #-#-#-#-#
+#. # At the bottom of the folder picker drawer, there is an icon link that
+#. # goes to the account settings. This string is only used for accessibility
+#. # concerns, and is not visible visually.
+#: browser-settings settings drawer-settings-link name
+#: voicemailNoNumberSettings
 msgid "Settings"
 msgstr "Socruithe"
 
@@ -482,7 +485,11 @@ msgstr "Brabhsálaí Gaia"
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Navigation bar
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: back navbar-back evme-searchbar-clear
+#. #-#-#-#-#  appsemailemail.properties.po (firefox)  #-#-#-#-#
+#. # In the folder picker drawer, there is a transparent area for the header,
+#. # and a tap region to take the user back to the message list. So this text is
+#. # not visible by the user, but could be used for accessibility.
+#: back navbar-back drawer-back evme-searchbar-clear
 msgid "Back"
 msgstr "Siar"
 
@@ -533,6 +540,12 @@ msgstr "Seachtain"
 msgid "Day"
 msgstr "Lá"
 
+#. # settings
+#: settings-show
+msgctxt "settings-show"
+msgid "Settings"
+msgstr "Socruithe"
+
 #: settings-hide
 msgid "Hide settings"
 msgstr "Folaigh socruithe"
@@ -560,18 +573,15 @@ msgstr "Imeacht"
 msgid "Account"
 msgstr "Cuntas"
 
-#: account-list-header settings-account-section
+#: account-list-header
 msgid "Accounts"
 msgstr "Cuntais"
 
 #. # advanced settings
-#: settings-header
-msgid "Calendars"
-msgstr "Féilirí"
-
-#: advanced-settings
-msgid "Calendar settings"
-msgstr "Socruithe Féilire"
+#: advanced-settings-short
+msgctxt "advanced-settings-short"
+msgid "Settings"
+msgstr "Socruithe"
 
 #: advanced-settings-header
 msgid "Calendar Settings"
@@ -588,6 +598,10 @@ msgstr "Pearsanú"
 #: advanced-settings-reminders
 msgid "Reminders"
 msgstr "Meabhrúcháin"
+
+#: advanced-settings-add-account settings-account-add
+msgid "Add Account"
+msgstr "Cuir Cuntas Leis"
 
 #: field-full-url.placeholder
 msgid "URL"
@@ -683,6 +697,14 @@ msgid ""
 msgstr ""
 "Dá scriosfá an cuntas seo, scriosfaí cóipeanna logánta d'fhéilirí agus "
 "d'imeachtaí atá ceangailte leis."
+
+#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # sync button in settings drawer
+#. # This sync button uses an icon for display, so this text is only
+#. # for accessibility purposes, not visible to the eye.
+#: drawer-sync-button serviceClassDataSync
+msgid "Sync"
+msgstr "Sionc"
 
 #. # sync
 #: sync-frequency
@@ -1629,11 +1651,7 @@ msgstr "Laethanta oibre"
 msgid "Weekends"
 msgstr "Deirí seachtaine"
 
-#. #-#-#-#-#  appsemailemail.properties.po (firefox)  #-#-#-#-#
-#. # L10n note: This string is displayed to the right of account-last-synced-label
-#. # if no folder has ever been synchronized.  Otherwise the space occupied by this
-#. # string will be a (short) relative timestamp.
-#: never account-never-synced
+#: never
 msgid "Never"
 msgstr "Riamh"
 
@@ -2573,7 +2591,7 @@ msgstr "Iompórtáil cairde ó Fhacebook"
 msgid "View Facebook profile"
 msgstr "Féach ar phróifíl Facebook"
 
-#: msg-send message
+#: msg-send
 msgid "Message"
 msgstr "Teachtaireacht"
 
@@ -2914,7 +2932,23 @@ msgstr "Níl aon teagmhálacha roghnaithe"
 msgid "Merge with {{n}} contact"
 msgstr "Cumaisc le {{n}} teagmháil"
 
+#: mergeActionButtonLabel[two]
+msgctxt "mergeActionButtonLabel[two]"
+msgid "Merge with {{n}} contacts"
+msgstr "Cumaisc le {{n}} theagmháil"
+
+#: mergeActionButtonLabel[few]
+msgctxt "mergeActionButtonLabel[few]"
+msgid "Merge with {{n}} contacts"
+msgstr "Cumaisc le {{n}} theagmháil"
+
+#: mergeActionButtonLabel[many]
+msgctxt "mergeActionButtonLabel[many]"
+msgid "Merge with {{n}} contacts"
+msgstr "Cumaisc le {{n}} dteagmháil"
+
 #: mergeActionButtonLabel[other]
+msgctxt "mergeActionButtonLabel[other]"
 msgid "Merge with {{n}} contacts"
 msgstr "Cumaisc le {{n}} teagmháil"
 
@@ -3114,6 +3148,10 @@ msgstr "Seisiún thar am"
 #: mmi-successfully-sent
 msgid "Message successfully sent"
 msgstr "Seoladh an teachtaireacht"
+
+#: mmi-notification-title-with-sim dsds-notification-title-with-sim
+msgid "({{sim}}) {{title}}"
+msgstr "({{sim}}) {{title}}"
 
 #: mute.ariaLabel
 msgid "Mute"
@@ -3365,9 +3403,8 @@ msgstr "IMEI"
 msgid "USSD"
 msgstr "USSD"
 
-#. #-#-#-#-#  appscommunicationsdialerdialer.properties.po (firefox)  #-#-#-#-#
 #. # MMI Service class
-#: serviceClassVoice voice-sound
+#: serviceClassVoice
 msgid "Voice"
 msgstr "Guth"
 
@@ -3386,10 +3423,6 @@ msgstr "FACS"
 #: serviceClassSms
 msgid "SMS"
 msgstr "SMS"
-
-#: serviceClassDataSync
-msgid "Sync"
-msgstr "Sionc"
 
 #: serviceClassDataAsync
 msgid "Async"
@@ -3677,7 +3710,7 @@ msgstr "Athraíodh SS go SS"
 
 #: SubscriptionNotSupported
 msgid "Subscription not supported"
-msgstr ""
+msgstr "Ní cheadaítear liostáil"
 
 #: InvalidParameter
 msgid "Invalid parameter"
@@ -4289,66 +4322,6 @@ msgstr "Gan oibreoir"
 msgid "Language"
 msgstr "Teanga"
 
-#: english
-msgid "English"
-msgstr "Béarla"
-
-#: dvorak
-msgid "English (Dvorak)"
-msgstr "Béarla (Dvorak)"
-
-#: spanish
-msgid "Spanish"
-msgstr "Spáinnis"
-
-#: portuguese
-msgid "Portuguese Brazilian"
-msgstr "Portaingéilis na Brasaíle"
-
-#: french
-msgid "French"
-msgstr "Fraincis"
-
-#: italian
-msgid "Italian"
-msgstr "Iodáilis"
-
-#: arabic
-msgid "Arabic"
-msgstr "Araibis"
-
-#: greek
-msgid "Greek"
-msgstr "Gréigis"
-
-#: hebrew
-msgid "Hebrew"
-msgstr "Eabhrais"
-
-#: jp-kanji
-msgid "Japanese"
-msgstr "Seapáinis"
-
-#: jp-kanji-desc
-msgid "Kanji"
-msgstr "Ceansaí"
-
-#: traditionalChinese
-msgid "Traditional Chinese"
-msgstr "Sínis Thraidisiúnta"
-
-#: traditionalChinese-desc
-msgid "Zhuyin"
-msgstr "Zhuyin"
-
-#: simplifiedChinese
-msgid "Simplified Chinese"
-msgstr "Sínis Simplithe"
-
-#: simplifiedChinese-desc
-msgid "Pinyin"
-msgstr "Pinyin"
-
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # 3g
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -4413,10 +4386,6 @@ msgstr "Tuilleadh eolais faoi phríobháideacht"
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Wifi
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: wifi
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
 #: scanningNetworks
 msgid "Scanning for networks"
 msgstr "Ag lorg líonraí"
@@ -4515,15 +4484,6 @@ msgstr "Ainm SSID an líonra"
 msgid "Date & Time"
 msgstr "Dáta agus Am"
 
-#: setTimeAutomatically
-msgid "Set automatically"
-msgstr "Socraigh go huathoibríoch"
-
-#: timezoneMessage
-msgctxt "timezoneMessage"
-msgid "Time zone"
-msgstr "Crios ama"
-
 #. # LOCALIZATION NOTE(timezoneTitle): Parameters in this label will be replaced
 #. # at runtime, use this string to reorder elements, translate "UTC", or use
 #. # different separator characters.
@@ -4532,12 +4492,7 @@ msgstr "Crios ama"
 msgid "UTC{{utcOffset}} {{region}}/{{city}}"
 msgstr "UTC{{utcOffset}} {{region}}/{{city}}"
 
-#: dateMessage forward-header-date
-msgid "Date"
-msgstr "Dáta"
-
-#: timeZone
-msgctxt "timeZone"
+#: timeZone timezoneMessage
 msgid "Time zone"
 msgstr "Crios ama"
 
@@ -4640,10 +4595,6 @@ msgstr "Cuir cárta SIM isteach agus atosaigh an guthán."
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Sharing Performance Data
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: sharing-performance-data
-msgid "Sharing Performance Data"
-msgstr "Sonraí Feidhmíochta a Chomhroinnt"
-
 #: telemetry-sends
 msgid ""
 "Telemetry sends Mozilla data about performance, hardware, configurations and "
@@ -4722,10 +4673,6 @@ msgstr "Cuireadh seoladh ríomhphoist leis"
 msgid "Saving your email…"
 msgstr "Do ríomhphost á shábháil…"
 
-#: browserPrivacyChoices
-msgid "{{brandShortName}} Privacy Choices"
-msgstr "Roghanna Príobháideachta {{brandShortName}}"
-
 #: privacy-b2g
 msgctxt "privacy-b2g"
 msgid "{{brandShortName}}"
@@ -4775,7 +4722,7 @@ msgstr "Tabhair turas ar do ghuthán!"
 
 #: startYourTablet
 msgid "Start your tablet tour!"
-msgstr "Tabhair turas ar do thaibléad!"
+msgstr "Tabhair turas ar do tháibléad!"
 
 #: joinTutorial
 msgid "Join us for a quick tutorial about your new phone."
@@ -4989,7 +4936,7 @@ msgstr "Mód Eitleáin"
 
 #: widget-airplane-mode-meta
 msgid "Please, turn off airplane mode to enable Usage."
-msgstr "Scoir ón mód eitleáin chun Úsáid a chumasú."
+msgstr "Scoir den mhód eitleáin chun Úsáid a chumasú."
 
 #: widget-no-sim2-heading
 msgid "No SIM inserted"
@@ -5112,7 +5059,7 @@ msgstr ""
 #: balance-error-message2
 msgid "Balance didn’t update correctly. Try updating manually."
 msgstr ""
-"Níor nuashonraíodh an iarmhéid mar is ceart. Déan iarracht é a nuashonrú de "
+"Níor nuashonraíodh an t-iarmhéid mar is ceart. Déan iarracht é a nuashonrú de "
 "láimh."
 
 #: airplane-mode-error-message2
@@ -5242,23 +5189,11 @@ msgstr "Nuair a bhíonn an t-iarmhéid níos lú ná"
 
 #: phone-and-internet-data-report
 msgid "Phone and Internet data report"
-msgstr ""
+msgstr "Tuairisc: Guthán agus sonraí Idirlín"
 
 #: starting-on
 msgid "Starting on"
 msgstr "Ag tosú ar"
-
-#: set
-msgid "Set"
-msgstr "Socraigh"
-
-#: set-day
-msgid "Set day"
-msgstr "Socraigh an lá"
-
-#: set-date
-msgid "Set date"
-msgstr "Socraigh dáta"
 
 #: monthly check-update-monthly
 msgid "Monthly"
@@ -5296,41 +5231,13 @@ msgstr "Satharn"
 msgid "Sunday"
 msgstr "Domhnach"
 
-#: monday-abbr weekday-1-short
-msgid "Mon"
-msgstr "Luan"
-
-#: tuesday-abbr weekday-2-short
-msgid "Tue"
-msgstr "Máir"
-
-#: wednesday-abbr weekday-3-short
-msgid "Wed"
-msgstr "Céad"
-
-#: thursday-abbr weekday-4-short
-msgid "Thu"
-msgstr "Déar"
-
-#: friday-abbr weekday-5-short
-msgid "Fri"
-msgstr "Aoin"
-
-#: saturday-abbr weekday-6-short
-msgid "Sat"
-msgstr "Sath"
-
-#: sunday-abbr weekday-0-short
-msgid "Sun"
-msgstr "Domh"
-
 #: billing-cycle-ends
 msgid "Billing cycle ends"
 msgstr "Deireadh na tréimhse billeála"
 
 #: tracking-will-reset
 msgid "Tracking will reset on this date"
-msgstr ""
+msgstr "Athshocrófar staitisticí ar an dáta seo"
 
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
 #. # permissions
@@ -5485,16 +5392,7 @@ msgstr "Idirlíon"
 
 #: loading-interface-data
 msgid "Loading interface data. Please retry in a while."
-msgstr ""
-
-#. #-#-#-#-#  appscostcontrolcostcontrol.properties.po (firefox)  #-#-#-#-#
-#. # Abbreviate date format for the consumption graph in strftime format
-#. # http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
-#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
-#. # see http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
-#: chart-date-format statusbarDateFormat
-msgid "%b %e"
-msgstr "%e %b"
+msgstr "Sonraí á luchtú. Déan iarracht eile ar ball."
 
 #: verbose-chart-date-format
 msgid "{{em-month}} {{monthday-number}}"
@@ -5894,16 +5792,10 @@ msgstr "Socruithe freastalaí"
 msgid "Username and password"
 msgstr "Ainm úsáideora agus focal faire"
 
-#. # In the account picker card, where the user can select which account to view
-#. # in the app, it shows when each account was last synchronized.
-#: fld-account-picker-last-sync
-msgctxt "fld-account-picker-last-sync"
-msgid "Last sync:"
-msgstr "Sioncrónú is déanaí:"
-
-#: settings-account-add
-msgid "Add Account"
-msgstr "Cuir Cuntas Leis"
+#: settings-account-section
+msgctxt "settings-account-section"
+msgid "Accounts"
+msgstr "Cuntais"
 
 #: settings-account-delete
 msgid "Delete account"
@@ -6440,7 +6332,7 @@ msgstr "Níl aon ríomhphost san Fhillteán seo"
 
 #: messages-search-empty
 msgid "No matches in locally cached messages"
-msgstr ""
+msgstr "Níl aon teachtaireachtaí comhoiriúnacha sa taisce logánta"
 
 #: messages-folder-select
 msgid "Select folder"
@@ -6481,22 +6373,6 @@ msgctxt "message-reply-menu-cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: folder-list-header
-msgid "Folders"
-msgstr "Fillteáin"
-
-#. # L10n note: account-last-synced-label is found on the folder list card,
-#. # accessible from the message-list card by clicking the icon in the upper left
-#. # of the card.  The label is displayed at the bottom of the folder list and is
-#. # right aligned.  There is currently 1 button to the left of the label and soon
-#. # there will be two, so it is desirable to use as short a translation as
-#. # possible.  To the right of the label, a (short) relative timestamp is
-#. # displayed.
-#: account-last-synced-label
-msgctxt "account-last-synced-label"
-msgid "Last sync:"
-msgstr "Sionc is déanaí:"
-
 #. # LOCALIZATION NOTE: do not translate {name}
 #: reply-quoting-wrote
 msgid "{name} wrote"
@@ -6515,6 +6391,10 @@ msgstr "Bunteachtaireacht"
 msgctxt "forward-header-subject"
 msgid "Subject"
 msgstr "Ábhar"
+
+#: forward-header-date dateMessage
+msgid "Date"
+msgstr "Dáta"
 
 #: forward-header-from
 msgctxt "forward-header-from"
@@ -6573,6 +6453,22 @@ msgstr "Cartlanna"
 msgid "Local Drafts"
 msgstr "Dréachtaí Logánta"
 
+#. # In the folder picker drawer, the list of email accounts are shown. This is
+#. # the header for that section.
+#: drawer-accounts-header
+msgctxt "drawer-accounts-header"
+msgid "Accounts"
+msgstr "Cuntais"
+
+#. # folder-last-synced-label is shown in the message-list, in the
+#. # middle of its bottom toolbar, and shows the last sync time for the currently
+#. # displayed list of messages in the folder. Since space is tight in that area,
+#. # the app code detects if the string will be too long and it will shrink the
+#. # font size to fit longer text.
+#: folder-last-synced-label
+msgid "Last sync:"
+msgstr "Sioncrónú is déanaí:"
+
 #: toaster-undo undo
 msgid "Undo"
 msgstr "Cealaigh"
@@ -6589,27 +6485,27 @@ msgstr "{[ plural(n) ]}"
 
 #: toaster-message-star[one]
 msgid "1 message flag set"
-msgstr ""
+msgstr "Bratach amháin socraithe"
 
 #: toaster-message-star[two]
 msgctxt "toaster-message-star[two]"
 msgid "{{ n }} message flags set"
-msgstr ""
+msgstr "{{ n }} bhratach socraithe"
 
 #: toaster-message-star[few]
 msgctxt "toaster-message-star[few]"
 msgid "{{ n }} message flags set"
-msgstr ""
+msgstr "{{ n }} bhratach socraithe"
 
 #: toaster-message-star[many]
 msgctxt "toaster-message-star[many]"
 msgid "{{ n }} message flags set"
-msgstr ""
+msgstr "{{ n }} mbratach socraithe"
 
 #: toaster-message-star[other]
 msgctxt "toaster-message-star[other]"
 msgid "{{ n }} message flags set"
-msgstr ""
+msgstr "{{ n }} bratach socraithe"
 
 #: toaster-message-unstar
 msgctxt "toaster-message-unstar"
@@ -6618,27 +6514,27 @@ msgstr "{[ plural(n) ]}"
 
 #: toaster-message-unstar[one]
 msgid "1 message flag removed"
-msgstr ""
+msgstr "Bratach amháin bainte"
 
 #: toaster-message-unstar[two]
 msgctxt "toaster-message-unstar[two]"
 msgid "{{ n }} message flags removed"
-msgstr ""
+msgstr "{{ n }} bhratach bainte"
 
 #: toaster-message-unstar[few]
 msgctxt "toaster-message-unstar[few]"
 msgid "{{ n }} message flags removed"
-msgstr ""
+msgstr "{{ n }} bhratach bainte"
 
 #: toaster-message-unstar[many]
 msgctxt "toaster-message-unstar[many]"
 msgid "{{ n }} message flags removed"
-msgstr ""
+msgstr "{{ n }} mbratach bainte"
 
 #: toaster-message-unstar[other]
 msgctxt "toaster-message-unstar[other]"
 msgid "{{ n }} message flags removed"
-msgstr ""
+msgstr "{{ n }} bratach bainte"
 
 #: toaster-message-read
 msgctxt "toaster-message-read"
@@ -6647,27 +6543,27 @@ msgstr "{[ plural(n) ]}"
 
 #: toaster-message-read[one]
 msgid "1 message marked as read"
-msgstr ""
+msgstr "Marcáladh teachtaireacht amháin 'léite'"
 
 #: toaster-message-read[two]
 msgctxt "toaster-message-read[two]"
 msgid "{{ n }} messages marked as read"
-msgstr ""
+msgstr "Marcáladh {{ n }} theachtaireacht 'léite'"
 
 #: toaster-message-read[few]
 msgctxt "toaster-message-read[few]"
 msgid "{{ n }} messages marked as read"
-msgstr ""
+msgstr "Marcáladh {{ n }} theachtaireacht 'léite'"
 
 #: toaster-message-read[many]
 msgctxt "toaster-message-read[many]"
 msgid "{{ n }} messages marked as read"
-msgstr ""
+msgstr "Marcáladh {{ n }} dteachtaireacht 'léite'"
 
 #: toaster-message-read[other]
 msgctxt "toaster-message-read[other]"
 msgid "{{ n }} messages marked as read"
-msgstr ""
+msgstr "Marcáladh {{ n }} teachtaireacht 'léite'"
 
 #: toaster-message-unread
 msgctxt "toaster-message-unread"
@@ -6676,27 +6572,27 @@ msgstr "{[ plural(n) ]}"
 
 #: toaster-message-unread[one]
 msgid "1 message marked as unread"
-msgstr ""
+msgstr "Marcáladh teachtaireacht amháin 'gan léamh'"
 
 #: toaster-message-unread[two]
 msgctxt "toaster-message-unread[two]"
 msgid "{{ n }} messages marked as unread"
-msgstr ""
+msgstr "Marcáladh {{ n }} theachtaireacht 'gan léamh'"
 
 #: toaster-message-unread[few]
 msgctxt "toaster-message-unread[few]"
 msgid "{{ n }} messages marked as unread"
-msgstr ""
+msgstr "Marcáladh {{ n }} theachtaireacht 'gan léamh'"
 
 #: toaster-message-unread[many]
 msgctxt "toaster-message-unread[many]"
 msgid "{{ n }} messages marked as unread"
-msgstr ""
+msgstr "Marcáladh {{ n }} dteachtaireacht 'gan léamh'"
 
 #: toaster-message-unread[other]
 msgctxt "toaster-message-unread[other]"
 msgid "{{ n }} messages marked as unread"
-msgstr ""
+msgstr "Marcáladh {{ n }} teachtaireacht 'gan léamh'"
 
 #: toaster-message-move
 msgctxt "toaster-message-move"
@@ -6705,27 +6601,27 @@ msgstr "{[ plural(n) ]}"
 
 #: toaster-message-move[one]
 msgid "1 message moved"
-msgstr ""
+msgstr "Bogadh teachtaireacht amháin"
 
 #: toaster-message-move[two]
 msgctxt "toaster-message-move[two]"
 msgid "{{ n }} messages moved"
-msgstr ""
+msgstr "Bogadh {{ n }} theachtaireacht"
 
 #: toaster-message-move[few]
 msgctxt "toaster-message-move[few]"
 msgid "{{ n }} messages moved"
-msgstr ""
+msgstr "Bogadh {{ n }} theachtaireacht"
 
 #: toaster-message-move[many]
 msgctxt "toaster-message-move[many]"
 msgid "{{ n }} messages moved"
-msgstr ""
+msgstr "Bogadh {{ n }} dteachtaireacht"
 
 #: toaster-message-move[other]
 msgctxt "toaster-message-move[other]"
 msgid "{{ n }} messages moved"
-msgstr ""
+msgstr "Bogadh {{ n }} teachtaireacht"
 
 #: toaster-message-delete
 msgctxt "toaster-message-delete"
@@ -6890,7 +6786,7 @@ msgstr "Glao Éigeandála"
 
 #: description
 msgid "Web app template"
-msgstr ""
+msgstr "Teimpléad d'aip Ghréasáin"
 
 #: name
 msgid "Find My Device"
@@ -6971,7 +6867,7 @@ msgstr "Ní féidir an t-amhrán a shábháil. Níl aon chárta cuimhne ann."
 msgid ""
 "Cannot save song because the memory card is in use. Unplug your phone and try "
 "downloading again."
-msgstr ""
+msgstr "Ní féidir an t-amhrán a shábháil toisc go bhfuil an cárta cuimhne in úsáid. Díphlugáil do ghuthán agus déan iarracht eile é a íosluchtú."
 
 #: err_ds_save_failure
 msgctxt "err_ds_save_failure"
@@ -6985,15 +6881,15 @@ msgstr "Earráid agus comhad meáin á shábháil."
 
 #: success_song
 msgid "Song downloaded and installed. Use the Music app to play it."
-msgstr ""
+msgstr "Íosluchtaíodh agus suiteáladh an t-amhrán. Úsáid an aip 'Ceol' chun é a sheinm."
 
 #: success_ringtone
 msgid "Ringtone downloaded and installed."
-msgstr ""
+msgstr "Íosluchtaíodh agus suiteáladh an clingthon."
 
 #: success_wallpaper
 msgid "Wallpaper downloaded and installed."
-msgstr ""
+msgstr "Íosluchtaíodh agus suiteáladh an cúlbhrat."
 
 #: ringtone-or-song-query
 msgid ""
@@ -7122,7 +7018,7 @@ msgstr "Mód eitleáin ann"
 
 #: airplaneModeMsg
 msgid "Turn off Airplane mode to use FM Radio."
-msgstr "Scoir ón mód eitleáin chun Raidió FM a úsáid."
+msgstr "Scoir den mhód eitleáin chun Raidió FM a úsáid."
 
 #: name perm-fmradio
 msgid "FM Radio"
@@ -7460,7 +7356,7 @@ msgstr "Cuir topaic nó téarma cuardaigh isteach"
 msgid "Enter any topic or keyword"
 msgstr "Cuir topaic nó lorgfhocal isteach"
 
-#: evme-helper-dismiss
+#: evme-helper-dismiss dismiss
 msgid "Dismiss"
 msgstr "Díbir"
 
@@ -7541,7 +7437,7 @@ msgstr "Cuireadh {{name}} leis an Scáileán Baile"
 
 #: evme-banner-save-wallpaper
 msgid "Wallpaper set successfully"
-msgstr ""
+msgstr "Socraíodh an cúlbhrat nua"
 
 #. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
 #. # Shortcuts - AKA smart collections - evme homepage
@@ -7790,6 +7686,79 @@ msgstr "Uathcheartú"
 #: wordSuggestion
 msgid "Word suggestion"
 msgstr "Focal molta"
+
+#: wordSuggestions
+msgid "Word suggestions"
+msgstr "Focail mholta"
+
+#. # Key labels for accessibility.
+#: alternateLayoutKey
+msgid "more numbers and symbols"
+msgstr "tuilleadh uimhreacha agus siombailí"
+
+#: basicLayoutKey
+msgid "letters"
+msgstr "litreacha"
+
+#: upperCaseKey
+msgid "shift"
+msgstr "shift"
+
+#: backSpaceKey
+msgid "delete"
+msgstr "scrios"
+
+#: spaceKey
+msgid "space"
+msgstr "spás"
+
+#: returnKey
+msgid "return"
+msgstr "return"
+
+#: periodKey
+msgid "period"
+msgstr "stad"
+
+#: commaKey
+msgid "comma"
+msgstr "camóg"
+
+#: colonKey
+msgid "colon"
+msgstr "idirstad"
+
+#: semicolonKey
+msgid "semicolon"
+msgstr "leathstad"
+
+#: questionMarkKey
+msgid "question mark"
+msgstr "comhartha ceiste"
+
+#: exclamationPointKey
+msgid "exclamation point"
+msgstr "comhartha uaillbhreasa"
+
+#: leftBracketKey
+msgid "left bracket"
+msgstr "lúibín ar chlé"
+
+#: rightBracketKey
+msgid "right bracket"
+msgstr "lúibín ar dheis"
+
+#: doubleQuoteKey
+msgid "double quote"
+msgstr "carachtar dúbailte athfhriotail"
+
+#: leftDoubleAngleQuoteKey
+msgid "left double angle quote"
+msgstr "uillinn dhúbailte ar chlé"
+
+#: rightDoubleAngleQuoteKey
+msgid "right double angle quote"
+msgstr "uillinn dhúbailte ar dheis"
 
 #: name
 msgctxt "name"
@@ -8174,6 +8143,10 @@ msgstr "Níl"
 msgid "Pair"
 msgstr "Péireáil"
 
+#: set
+msgid "Set"
+msgstr "Socraigh"
+
 #: notNow
 msgid "Not now"
 msgstr "Níos Déanaí"
@@ -8407,7 +8380,7 @@ msgstr "Modh EAP"
 
 #: auth-phase2
 msgid "Phase 2 authentication"
-msgstr ""
+msgstr "Fíordheimhniú, céim a dó"
 
 #: server-certificate
 msgid "Server certificate"
@@ -8492,7 +8465,7 @@ msgstr "Níorbh fhéidir an teastas a scriosadh"
 
 #: certificate-deletion-failed-description
 msgid "This may be due to a storage issue, for example."
-msgstr ""
+msgstr "Seans gurb é an córas stórála is cúis leis seo, mar shampla."
 
 #: certificate-import-failed
 msgid "Certificate import failed"
@@ -8971,10 +8944,6 @@ msgstr "Ceangal sonraí"
 msgid "Data roaming"
 msgstr "Sonraí fánaíochta"
 
-#: dataRoaming-disabled
-msgid "When entering a roaming area, your data connection will be turned off."
-msgstr "Múchfar do cheangal sonraí nuair a bhíonn tú ar fánaíocht."
-
 #: networkOperator
 msgid "Network operator"
 msgstr "Oibreoir líonra"
@@ -9183,10 +9152,6 @@ msgstr "Socruithe IMS"
 #: imsSettings-header2
 msgid "{{imsSettings}}"
 msgstr "{{imsSettings}}"
-
-#: apnSettings
-msgid "APN settings"
-msgstr "Socruithe APN"
 
 #: mmsport
 msgid "MMS port"
@@ -9546,10 +9511,6 @@ msgstr ""
 "Tabhair cead do ghléasanna eile ceangal Idirlín mo ghutháin a úsáid trí "
 "cheangal Wi-Fi."
 
-#: hotspot
-msgid "Hotspot"
-msgstr "Ball Te"
-
 #: wifi-hotspot
 msgid "Wi-Fi hotspot"
 msgstr "Ball Te Wi-Fi"
@@ -9634,14 +9595,15 @@ msgstr "{{sound}}"
 msgid "Volume"
 msgstr "Airde"
 
-# "Toin" is unfortunate
+# "Toin" is unfortunate, but correct
+# These include ringtones *and* touchtones (tadhalltoin)
 #: tones
 msgid "Tones"
-msgstr "Clingthoin"
+msgstr "Toin"
 
 #: touch-tones
 msgid "Audible touch tones"
-msgstr ""
+msgstr "Tadhalltoin inchloiste"
 
 #: touch-tone-short
 msgid "Short"
@@ -9666,10 +9628,6 @@ msgstr "Clingthoin"
 #: alert-tones
 msgid "Alert tones"
 msgstr "Fuaimeanna foláirimh"
-
-#: volume-and-tones
-msgid "Volume & Tones"
-msgstr "Airde agus Clingthoin"
 
 #: other-sounds
 msgid "Other sounds"
@@ -9807,13 +9765,13 @@ msgstr "Taispeáin ar an scáileán glasáilte"
 msgid "{{dateAndTime}}"
 msgstr "{{dateAndTime}}"
 
+#: setTimeAutomatically
+msgid "Set automatically"
+msgstr "Socraigh go huathoibríoch"
+
 #: setTimeManually
 msgid "Set manually"
 msgstr "Socraigh de láimh"
-
-#: timezoneMessage
-msgid "Time zone"
-msgstr "Crios ama"
 
 #: selectTimezoneContinent
 msgid "Select continent"
@@ -10583,19 +10541,10 @@ msgid "Storage"
 msgstr "Stóras"
 
 #: enableUSBStorage1
-msgctxt "enableUSBStorage1"
 msgid "USB storage"
 msgstr "Stóras USB"
 
 #. # Storage :: Application storage
-#: deviceStorage
-msgid "Device storage"
-msgstr "Stóras gléis"
-
-#: usbMassStorage
-msgid "USB mass storage"
-msgstr "Ollstóras USB"
-
 #: umsUnplugToDisable
 msgid "Unplug USB cable to disable"
 msgstr "Díphlugáil an cábla USB chun é a dhíchumasú"
@@ -10692,18 +10641,7 @@ msgstr "Stóras meán"
 msgid "{{mediaStorage}}"
 msgstr "{{mediaStorage}}"
 
-#: enableUSBStorage2
-msgctxt "enableUSBStorage2"
-msgid "USB storage"
-msgstr "Stóras USB"
-
-#: internalStorage
-msgctxt "internalStorage"
-msgid "Internal Storage"
-msgstr "Stóras Inmheánach"
-
 #: storage-name-internal
-msgctxt "storage-name-internal"
 msgid "Internal Storage"
 msgstr "Stóras Inmheánach"
 
@@ -11771,11 +11709,11 @@ msgstr "Faigh Stádas an Chainéil"
 
 #: name
 msgid "Shared Tests"
-msgstr ""
+msgstr "Tástálacha Comhroinnte"
 
 #: description
 msgid "Runs shared tests"
-msgstr ""
+msgstr "Ritheann sé seo tástálacha comhroinnte"
 
 #: description
 msgid "Gaia Messages"
@@ -12174,7 +12112,7 @@ msgstr "Níor seoladh an teachtaireacht"
 
 #: sendDefaultErrorBody
 msgid "There was a problem sending the message. Please try again."
-msgstr ""
+msgstr "Tharla earráid agus an teachtaireacht á seoladh. Bain triail eile as."
 
 #: sendDefaultErrorBtnOk
 msgctxt "sendDefaultErrorBtnOk"
@@ -12196,7 +12134,7 @@ msgstr "OK"
 
 #: sendFlightModeBody
 msgid "Turn off airplane mode to send messages."
-msgstr "Scoir ón mód eitleáin chun teachtaireachtaí a sheoladh."
+msgstr "Scoir den mhód eitleáin chun teachtaireachtaí a sheoladh."
 
 #: sendFlightModeBtnOk
 msgctxt "sendFlightModeBtnOk"
@@ -12329,7 +12267,7 @@ msgstr "Uimhir neamhbhailí"
 
 #: sendInvalidAddressErrorBody
 msgid "Make sure the mobile number you’re sending to is valid."
-msgstr ""
+msgstr "Deimhnigh go bhfuil an uimhir bailí."
 
 #: sendInvalidAddressErrorBtnOk
 msgctxt "sendInvalidAddressErrorBtnOk"
@@ -12614,6 +12552,11 @@ msgstr "Cuir UAP isteach"
 msgid "{{date}}, {{operator}}"
 msgstr "{{date}}, {{operator}}"
 
+#. # see http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
+#: statusbarDateFormat
+msgid "%b %e"
+msgstr "%e %b"
+
 #: clear-all
 msgid "Clear all"
 msgstr "Glan uile"
@@ -12687,7 +12630,7 @@ msgstr "Cuir an mód eitleáin ar siúl"
 
 #: airplaneOff
 msgid "Turn off airplane mode"
-msgstr "Scoir ón mód eitleáin"
+msgstr "Scoir den mhód eitleáin"
 
 #: silent
 msgid "Silence incoming calls"
@@ -13165,7 +13108,7 @@ msgstr "URL neamhbhailí"
 
 #: malformed-uri-error
 msgid "The URL entered is not valid and cannot be loaded."
-msgstr ""
+msgstr "Tá an URL neamhbhailí agus ní féidir é a luchtú."
 
 #: redirect-loop
 msgctxt "redirect-loop"
@@ -13194,7 +13137,7 @@ msgstr ""
 
 #: denied-port-access
 msgid "This address is restricted"
-msgstr ""
+msgstr "Tá an seoladh seo teoranta"
 
 #: denied-port-access-error
 msgid ""
@@ -13249,7 +13192,7 @@ msgstr ""
 
 #: malware-blocked
 msgid "Malware attack blocked"
-msgstr ""
+msgstr "Cuireadh cosc ar bhogearraí mailíseacha"
 
 #: malware-blocked-error
 msgid "The site at has been reported as an attack site and has been blocked."
@@ -13611,7 +13554,7 @@ msgstr "Oscail le:"
 
 #: activity-save-bookmark
 msgid "Bookmark to:"
-msgstr ""
+msgstr "Sábháil leabharmharc i:"
 
 #: activity-record
 msgid "Record from:"
@@ -13856,7 +13799,7 @@ msgstr "Cuir cárta cuimhne isteach chun féachaint ar fhíseáin."
 
 #: pluggedin-title
 msgid "Video can not be watched while plugged in"
-msgstr ""
+msgstr "Ní féidir breathnú ar fhíseán nuair a bhíonn an guthán plugáilte isteach"
 
 #: pluggedin-text
 msgid "Unplug the phone to watch videos."
@@ -13864,7 +13807,7 @@ msgstr "Díphlugáil an guthán chun breathnú ar fhíseáin."
 
 #: upgrade-text
 msgid "Please wait while Video updates its database."
-msgstr ""
+msgstr "Fan nóiméad; bunachar sonraí na bhfíseán á nuashonrú."
 
 #: confirm-delete
 msgid "Are you sure you want to delete:"
@@ -13952,10 +13895,6 @@ msgstr "Críochnaigh"
 msgid "SIM {{id}}"
 msgstr "SIM {{id}}"
 
-#: dsds-notification-title-with-sim
-msgid "({{sim}}) {{title}}"
-msgstr "({{sim}}) {{title}}"
-
 #: this-message-has-expired
 msgid "This message has expired"
 msgstr "Chuaigh an teachtaireacht seo as feidhm"
@@ -14029,6 +13968,34 @@ msgstr "Brabhsálaí"
 #: browserBrandFullName
 msgid "Mozilla Web Browser"
 msgstr "Brabhsálaí Mozilla"
+
+#: weekday-0-short
+msgid "Sun"
+msgstr "Domh"
+
+#: weekday-1-short
+msgid "Mon"
+msgstr "Luan"
+
+#: weekday-2-short
+msgid "Tue"
+msgstr "Máir"
+
+#: weekday-3-short
+msgid "Wed"
+msgstr "Céad"
+
+#: weekday-4-short
+msgid "Thu"
+msgstr "Déar"
+
+#: weekday-5-short
+msgid "Fri"
+msgstr "Aoin"
+
+#: weekday-6-short
+msgid "Sat"
+msgstr "Sath"
 
 #. # Month names
 #: month-0-long
@@ -14927,12 +14894,12 @@ msgstr "Ní féidir é a oscailt"
 msgid ""
 "There is a problem opening {{name}}. Would you like to save the file or "
 "delete it?"
-msgstr ""
+msgstr "Tharla earráid agus {{name}} á oscailt. Ar mhaith leat an comhad a shábháil nó a scriosadh?"
 
 #: file_open_error_download_left_button
 msgctxt "file_open_error_download_left_button"
 msgid "Keep File"
-msgstr "Coinnigh an Comhad"
+msgstr "Sábháil an Comhad"
 
 #: file_open_error_download_right_button
 msgctxt "file_open_error_download_right_button"
