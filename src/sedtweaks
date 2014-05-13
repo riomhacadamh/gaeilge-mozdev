@@ -7,10 +7,11 @@ sed -i '/^VK/s/\\\\u/\\u/' toolkit-ga-IE/chrome/global-platform/mac/platformKeys
 
 # comments in this file before this field.   need to increment now and again
 sed -i '/=Bing/d' browser-ga-IE/chrome/browser-region/region.properties
-sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=2/' browser-ga-IE/chrome/browser-region/region.properties mobile-ga-IE/chrome/region.properties
+sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=3/' browser-ga-IE/chrome/browser-region/region.properties mobile-ga-IE/chrome/region.properties
 # http://hg.mozilla.org/releases/l10n/mozilla-aurora/ga-IE/rev/0cdb79b8517e
 sed -i '/^browser.search.order.[23]=/d' mobile-ga-IE/chrome/region.properties
-sed -i '/^promoBanner.message.text=/s/  *$/\\u0020/' mobile-ga-IE/android/chrome/sync.properties
+# now handled by spacefixer.sh
+#sed -i '/^promoBanner.message.text=/s/  *$/\\u0020/' mobile-ga-IE/android/chrome/sync.properties
 sed -i 's/name=Mibbit/name = Mibbit/' browser-ga-IE/chrome/browser-region/region.properties
 sed -i '/mibbit\.com/s/late=https/late = https/' browser-ga-IE/chrome/browser-region/region.properties
 sed -i '/The default set of protocol handlers for irc:/s/.*/\n&/' browser-ga-IE/chrome/browser-region/region.properties
@@ -23,6 +24,8 @@ fi
 # see bug 833344 (really should upgrade translate toolkit)
 #sed -i 's/\(.\)#/\1\n#/g' browser-ga-IE/profile/bookmarks.inc mobile-ga-IE/profile/bookmarks.inc mobile-ga-IE/xul/defines.inc mobile-ga-IE/android/defines.inc
 
+# toolkit bug?
+sed -i '/sync.subtitle.failmultiple.label/s/ syncBrand.fullName.label/ \&syncBrand.fullName.label/' mobile-ga-IE/android/base/sync_strings.dtd
 
 sed -i '/^notifyBarNotNowButtonText/s/=.*$/=Ná Meabhraigh anois/; /^notifyBarChangeButtonAccessKey/s/=.$/=A/; /^notifyBarDontChangeButtonAccessKey/s/=.$/=N/' toolkit-ga-IE/chrome/passwordmgr/passwordmgr.properties
 
@@ -171,8 +174,11 @@ LC_ALL=C sed -i '
 # English is "Movies" which is Scannáin elsewhere
 sed -i 's/^none=.*/none=Gan meabhrúchán/' gaia-ga-IE/apps/calendar/calendar.properties
 sed -i 's/^videos-space=.*/videos-space=Físeáin/' gaia-ga-IE/apps/settings/settings.properties
-sed -i 's/^dontallow=/deny=/' gaia-ga-IE/apps/system/system.properties
+# old bug
+#sed -i 's/^dontallow=/deny=/' gaia-ga-IE/apps/system/system.properties
 sed -i 's/^securityNone.*$/securityNone = Gan Slándáil/' gaia-ga-IE/apps/communications/ftu/ftu.properties
+
+bash spacefixer.sh
 
 #sed -i '
 #s/credit.translation ""/credit.translation "<h3>Aistritheoirí<\/h3><ul><li>Marion Gunn<\/li><li>Séamus Ó Ciardhuáin<\/li><li>Kevin Scannell<\/li><\/ul>"/

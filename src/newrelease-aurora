@@ -5,7 +5,7 @@ SRCDIR='moz-aurora'
 ANSEO=${HOME}/gaeilge/gnu/mozilla/gaeilge/src
 
 # commit any outstanding changes to PO file
-cvs commit -m "outstanding changes before sync" firefox-${PONAME}.ga.po tbird-${PONAME}.ga.po calendar-${PONAME}.ga.po
+cvs commit -m "outstanding changes before sync" firefox-${PONAME}.ga.po tbird-${PONAME}.ga.po calendar-${PONAME}.ga.po gaia-${PONAME}.ga.po
 
 cd ${HOME}/seal/$SRCDIR/ga-IE
 hg up
@@ -53,7 +53,8 @@ cp -Rf other-licenses/branding/thunderbird/locales/en-US ${ANSEO}/other-licenses
 
 cd ${HOME}/seal/gaia
 cp -Rf en-US/* ${ANSEO}/gaia-en-US
-sed -i "s/^deny=\(Don.*\)$/dontallow=\1/" ${ANSEO}/gaia-en-US/apps/system/system.properties
+# old bug, now fixed I think
+#sed -i "s/^deny=\(Don.*\)$/dontallow=\1/" ${ANSEO}/gaia-en-US/apps/system/system.properties
 cd ${ANSEO}
 
 # HACKS until these files are cleaned up in CVS or translate toolkit works
