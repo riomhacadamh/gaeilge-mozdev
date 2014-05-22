@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-15 09:18-0500\n"
+"POT-Creation-Date: 2014-05-21 21:45-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -31,8 +31,8 @@ msgstr "Tá Bluetooth díchumasaithe"
 msgid "Do you want to turn Bluetooth on?"
 msgstr "An bhfuil fonn ort Bluetooth a thosú?"
 
-#: cancel
-msgctxt "cancel"
+#: cancel curtainCancel cancel-button overlay-cancel-button
+#: voicemailNoNumberCancel
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -240,11 +240,6 @@ msgstr "Leabharmharc"
 msgid "Bookmark Manager"
 msgstr "Bainisteoir na Leabharmharcanna"
 
-#: cancel curtainCancel cancel-button overlay-cancel-button
-#: voicemailNoNumberCancel
-msgid "Cancel"
-msgstr "Cealaigh"
-
 #: enter-search-or-address.placeholder
 msgid "Search or enter address"
 msgstr "Cuardaigh nó cuir seoladh isteach"
@@ -257,6 +252,8 @@ msgstr "Stair"
 msgid "New tab"
 msgstr "Cluaisín nua"
 
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. # Browser Context Menu
 #: open-in-new-tab
 msgid "Open link in new tab"
 msgstr "Oscail an nasc i gcluaisín nua"
@@ -487,6 +484,7 @@ msgstr "Athluchtaigh"
 msgid "Search for"
 msgstr "Cuardaigh"
 
+#. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # Image saving context menu
 #: save-image
 msgid "Save Image"
@@ -500,6 +498,7 @@ msgstr "Sábháladh an íomhá sa Ghailearaí"
 msgid "Error saving image"
 msgstr "Earráid agus íomhá á sábháil"
 
+#. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # Video saving context menu
 #: save-video
 msgid "Save Video"
@@ -536,15 +535,15 @@ msgstr "Brabhsálaí Gaia"
 
 #. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # generic
-#. #-#-#-#-#  appscommunicationsftuftu.properties.po (firefox)  #-#-#-#-#
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Navigation bar
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. #-#-#-#-#  appsemailemail.properties.po (firefox)  #-#-#-#-#
 #. # In the folder picker drawer, there is a transparent area for the header,
 #. # and a tap region to take the user back to the message list. So this text is
 #. # not visible by the user, but could be used for accessibility.
-#: back navbar-back drawer-back evme-searchbar-clear
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Navigation bar
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: back drawer-back navbar-back evme-searchbar-clear
 msgid "Back"
 msgstr "Siar"
 
@@ -573,6 +572,10 @@ msgstr "Eagar"
 #: allday-events
 msgid "All-day Events"
 msgstr "Imeachtaí ar feadh an lae"
+
+#: no-events
+msgid "No Events"
+msgstr "Gan Imeachtaí"
 
 #. # first time use hints
 #: hint-swipe-action
@@ -1320,13 +1323,13 @@ msgstr "Níor aimsíodh cárta cuimhne"
 msgid "Insert a memory card to take pictures."
 msgstr "Cuir cárta cuimhne isteach chun grianghraif a ghlacadh."
 
-#: pluggedin-title
-msgid "Camera can not be used while plugged in"
-msgstr "Ní féidir an ceamara a úsáid má tá an guthán plugáilte isteach"
+#: pluggedin2-title
+msgid "Camera can not be used while phone is plugged in"
+msgstr "Ní féidir an ceamara a úsáid nuair atá an guthán plugáilte isteach"
 
-#: pluggedin-text
-msgid "Unplug the phone to view pictures."
-msgstr "Díphlugáil an guthán chun pictiúir a bhrabhsáil."
+#: pluggedin2-text
+msgid "Unplug the phone to capture photos and videos"
+msgstr "Díphlugáil an guthán chun grianghraif agus físeáin a ghabháil"
 
 #: storage-size-limit-reached
 msgid "You have run out of media storage space."
@@ -1582,16 +1585,6 @@ msgstr "Nóiméad"
 msgid "Minutes"
 msgstr "Nóiméid"
 
-#: enable
-msgid "Enable"
-msgstr "Cumasaigh"
-
-#. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
-#. # Field labels
-#: label
-msgid "Label"
-msgstr "Lipéad"
-
 #: alarm alarm-sound
 msgid "Alarm"
 msgstr "Aláram"
@@ -1675,14 +1668,6 @@ msgstr "Aláram nua"
 #: alarm-volume-label
 msgid "System Alarm Volume"
 msgstr "Airde Aláram an Chórais"
-
-#: default
-msgid "Default"
-msgstr "Réamhshocrú"
-
-#: color
-msgid "Color"
-msgstr "Dath"
 
 #. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Personalization :: Sound
@@ -2245,6 +2230,11 @@ msgstr "Cuir leis na ceanáin é"
 msgid "Remove as Favorite"
 msgstr "Bain ó na ceanáin é"
 
+#. # Field labels
+#: label
+msgid "Label"
+msgstr "Lipéad"
+
 #. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
 #. # Labels for contact fields
 #: mobile
@@ -2499,124 +2489,6 @@ msgid "There’s not enough space on the memory card to export the contacts"
 msgstr ""
 "Níl a dhóthain spáis ar an gcárta cuimhne chun na teagmhálacha a easpórtáil"
 
-#. # SIM import
-#: simContacts-import
-msgid "Import SIM contacts"
-msgstr "Iompórtáil teagmhálacha SIM"
-
-#: simContacts-importing
-msgid "Importing SIM contacts…"
-msgstr "Teagmhálacha SIM á nIompórtáil…"
-
-#: simContacts-reading
-msgid "Reading from SIM card…"
-msgstr "Cárta SIM á léamh…"
-
-#: simContacts-error
-msgid "Could not import contacts from SIM"
-msgstr "Níorbh fhéidir teagmhálacha a iompórtáil ón chárta SIM"
-
-#: simContacts-imported3
-msgctxt "simContacts-imported3"
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
-
-#: simContacts-imported3[zero]
-msgid "No contacts detected on SIM to import"
-msgstr "Níl aon teagmhálacha le hiompórtáil ar an SIM"
-
-#: simContacts-imported3[one]
-msgctxt "simContacts-imported3[one]"
-msgid "Imported one contact"
-msgstr "Iompórtáladh teagmháil amháin"
-
-#: simContacts-imported3[two]
-msgctxt "simContacts-imported3[two]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
-
-#: simContacts-imported3[few]
-msgctxt "simContacts-imported3[few]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
-
-#: simContacts-imported3[many]
-msgctxt "simContacts-imported3[many]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} dteagmháil"
-
-#: simContacts-imported3[other]
-msgctxt "simContacts-imported3[other]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} teagmháil"
-
-#: noSimMsgExport
-msgid "To export contacts insert or unlock your SIM card"
-msgstr "Chun teagmhálacha a easpórtáil, cuir cárta SIM isteach, nó díghlasáil é"
-
-#: simNumber
-msgid "SIM {{number}}"
-msgstr "SIM {{number}}"
-
-#. # SD Card import
-#: memoryCardContacts-import
-msgid "Import contacts from memory card"
-msgstr "Iompórtáil teagmhálacha ó chárta cuimhne"
-
-#: memoryCardContacts-importing
-msgid "Importing contacts from memory card…"
-msgstr "Teagmhálacha á n-iompórtáil ó chárta cuimhne…"
-
-#: memoryCardContacts-reading
-msgid "Reading from memory card…"
-msgstr "Cárta cuimhne á léamh…"
-
-#: memoryCardContacts-error
-msgid "Could not import contacts from memory card"
-msgstr "Níorbh fhéidir teagmhálacha a iompórtáil ón chárta cuimhne"
-
-#: memoryCardContacts-imported3
-msgctxt "memoryCardContacts-imported3"
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
-
-#: memoryCardContacts-imported3[zero]
-msgid "No contacts detected on memory card to import"
-msgstr "Níor aimsíodh aon teagmhálacha ar an gcárta cuimhne le hiompórtáil"
-
-#: memoryCardContacts-imported3[one]
-msgctxt "memoryCardContacts-imported3[one]"
-msgid "Imported one contact"
-msgstr "Iompórtáladh teagmháil amháin"
-
-#: memoryCardContacts-imported3[two]
-msgctxt "memoryCardContacts-imported3[two]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
-
-#: memoryCardContacts-imported3[few]
-msgctxt "memoryCardContacts-imported3[few]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
-
-#: memoryCardContacts-imported3[many]
-msgctxt "memoryCardContacts-imported3[many]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} dteagmháil"
-
-#: memoryCardContacts-imported3[other]
-msgctxt "memoryCardContacts-imported3[other]"
-msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} teagmháil"
-
-#: noMemoryCardMsgExport
-msgid "To export contacts insert a memory card"
-msgstr "Chun teagmhálacha a easpórtáil, cuir cárta cuimhne isteach"
-
-#: genericProgress progressFB
-msgid "{{current}}/{{total}}"
-msgstr "{{current}}/{{total}}"
-
 #. # Social networks
 #: social-network
 msgid "Social networks"
@@ -2653,42 +2525,6 @@ msgstr "Teachtaireacht"
 #: wall-post
 msgid "Wall post"
 msgstr "Postáil bhalla"
-
-#: facebook importFb2
-msgid "Facebook"
-msgstr "Facebook"
-
-#: facebook-import-msg
-msgid "{[ plural(imported) ]}"
-msgstr "{[ plural(imported) ]}"
-
-#: facebook-import-msg[zero]
-msgid "No friends imported (out of {{total}})"
-msgstr "Níor iompórtáladh aon chairde (as {{total}})"
-
-#: facebook-import-msg[one]
-msgid "One friend imported (out of {{total}})"
-msgstr "Iompórtáladh cara amháin (as {{total}})"
-
-#: facebook-import-msg[two]
-msgctxt "facebook-import-msg[two]"
-msgid "{{imported}}/{{total}} friends imported"
-msgstr "Iompórtáladh {{imported}} chara (as {{total}})"
-
-#: facebook-import-msg[few]
-msgctxt "facebook-import-msg[few]"
-msgid "{{imported}}/{{total}} friends imported"
-msgstr "Iompórtáladh {{imported}} chara (as {{total}})"
-
-#: facebook-import-msg[many]
-msgctxt "facebook-import-msg[many]"
-msgid "{{imported}}/{{total}} friends imported"
-msgstr "Iompórtáladh {{imported}} gcara (as {{total}})"
-
-#: facebook-import-msg[other]
-msgctxt "facebook-import-msg[other]"
-msgid "{{imported}}/{{total}} friends imported"
-msgstr "Iompórtáladh {{imported}} cara (as {{total}})"
 
 #: otherAccount
 msgid "Other accounts"
@@ -2764,6 +2600,10 @@ msgstr "Cárta SIM"
 msgid "Memory card"
 msgstr "Cárta cuimhne"
 
+#: simNumber
+msgid "SIM {{number}}"
+msgstr "SIM {{number}}"
+
 #. # No contacts
 #: create-new
 msgid "Create a new contact"
@@ -2820,6 +2660,14 @@ msgstr "Níl aon chárta SIM ann"
 #: exportError-SIM-GenericError
 msgid "An error occurred while exporting a contact"
 msgstr "Tharla earráid agus teagmháil á heaspórtáil"
+
+#: noSimMsgExport
+msgid "To export contacts insert or unlock your SIM card"
+msgstr "Chun teagmhálacha a easpórtáil, cuir cárta SIM isteach, nó díghlasáil é"
+
+#: noMemoryCardMsgExport
+msgid "To export contacts insert a memory card"
+msgstr "Chun teagmhálacha a easpórtáil, cuir cárta cuimhne isteach"
 
 #: ContactManagementTitle
 msgid "Contacts Management"
@@ -3919,1010 +3767,9 @@ msgstr ""
 "Tá glao ar siúl agat cheana ar cheangal eile. Ní féidir leat ach ceangal "
 "amháin a úsáid."
 
-#: pincode2
-msgid "Enter PIN code"
-msgstr "Cuir UAP isteach"
-
-#: type_pin
-msgid "Type your PIN code"
-msgstr "Cuir do UAP isteach"
-
-#: pincodeLabel
-msgid "SIM {{n}} PIN"
-msgstr "UAP SIM {{n}}"
-
-#: pinValidation
-msgid "PIN must have between 4 and 8 characters."
-msgstr "Ní mór idir 4 agus 8 gcarachtar a bheith san UAP."
-
-#: pinError pinErrorMsg
-msgid "The PIN was incorrect."
-msgstr "UAP mícheart"
-
-#: pinAttemptMsg2
-msgctxt "pinAttemptMsg2"
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
-
-#: pinAttemptMsg2[one]
-msgid ""
-"You have one try left to enter the correct code before locking the SIM card."
-msgstr ""
-"Níl ach iarracht amháin eile agat sula gcuirfear an cárta SIM faoi bhac."
-
-#: pinAttemptMsg2[two]
-msgctxt "pinAttemptMsg2[two]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before locking the SIM "
-"card."
-msgstr "Tá {{n}} iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
-
-#: pinAttemptMsg2[few]
-msgctxt "pinAttemptMsg2[few]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before locking the SIM "
-"card."
-msgstr "Tá {{n}} iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
-
-#: pinAttemptMsg2[many]
-msgctxt "pinAttemptMsg2[many]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before locking the SIM "
-"card."
-msgstr "Tá {{n}} n-iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
-
-#: pinAttemptMsg2[other]
-msgctxt "pinAttemptMsg2[other]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before locking the SIM "
-"card."
-msgstr "Tá {{n}} iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
-
-#: pinLastChanceMsg
-msgid ""
-"This is your last chance to enter the correct PIN. Otherwise, you must enter "
-"the PUK code to use this SIM card."
-msgstr ""
-"Seo é an iarracht deiridh atá agat chun an UAP a chur isteach. Is é sin, nó "
-"beidh sé ort cód PUK a chur isteach chun an cárta SIM seo."
-
-#: pukcode pukTitle
-msgid "Enter PUK code"
-msgstr "Cuir cód PUK isteach"
-
-#: pukcodeTitle
-msgid "Enter SIM {{n}} PUK"
-msgstr "Cuir PUK SIM {{n}} isteach"
-
-#: pukcodeLabel
-msgid "SIM {{n}} PUK"
-msgstr "PUK SIM {{n}}"
-
-#: type_puk pukCode
-msgid "PUK code"
-msgstr "Cód PUK"
-
-#: pukValidation
-msgid "PUK code must have exactly 8 characters."
-msgstr "Ní mór ocht gcarachtar cothrom a bheith i gcód PUK."
-
-#: pukInfo
-msgid ""
-"You must enter the Personal Unlocking Key (PUK) Code for the SIM card. Refer "
-"to your SIM card documentation or contact your carrier for more information."
-msgstr ""
-
-#: pukError
-msgid "The PUK was incorrect."
-msgstr "PUK mícheart"
-
-#: pukAttemptMsg2
-msgctxt "pukAttemptMsg2"
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
-
-#: pukAttemptMsg2[one] pukAttemptMsg3[one]
-msgid ""
-"You have one try left to enter the correct code before this SIM card will be "
-"permanently unusable. Refer to your SIM card documentation or contact your "
-"carrier for more information."
-msgstr ""
-
-#: pukAttemptMsg2[two]
-msgctxt "pukAttemptMsg2[two]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before this SIM card will "
-"be permanently unusable. Refer to your SIM card documentation or contact your "
-"carrier for more information."
-msgstr ""
-
-#: pukAttemptMsg2[few]
-msgctxt "pukAttemptMsg2[few]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before this SIM card will "
-"be permanently unusable. Refer to your SIM card documentation or contact your "
-"carrier for more information."
-msgstr ""
-
-#: pukAttemptMsg2[many]
-msgctxt "pukAttemptMsg2[many]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before this SIM card will "
-"be permanently unusable. Refer to your SIM card documentation or contact your "
-"carrier for more information."
-msgstr ""
-
-#: pukAttemptMsg2[other]
-msgctxt "pukAttemptMsg2[other]"
-msgid ""
-"You have {{n}} tries left to enter the correct code before this SIM card will "
-"be permanently unusable. Refer to your SIM card documentation or contact your "
-"carrier for more information."
-msgstr ""
-
-#: pukLastChanceMsg
-msgid ""
-"This is your last chance to enter the correct PUK code. Your SIM card will be "
-"permanently unusable if you enter in the wrong PUK code."
-msgstr ""
-
-#: create_newpin
-msgid "Create new PIN (4 to 8 digits)"
-msgstr "Cruthaigh UAP nua (idir 4 agus 8 ndigit)"
-
-#: confirm_newpin confirmNewSimPinMsg
-msgid "Confirm new PIN"
-msgstr "Deimhnigh an UAP nua"
-
-#: newpinConfirmation newPinErrorMsg
-msgid "PINs don’t match"
-msgstr "Ní ionann na UAPanna"
-
-#: nckcode nckTitle
-msgid "Enter NCK code"
-msgstr "Cuir cód NCK isteach"
-
-#: cckcode cckTitle
-msgid "Enter CCK code"
-msgstr "Cuir cód CCK isteach"
-
-#: spckcode spckTitle
-msgid "Enter SPCK code"
-msgstr "Cuir cód SPCK isteach"
-
-#: nck1code nck1Title
-msgid "Enter NCK1 code"
-msgstr "Cuir cód NCK1 isteach"
-
-#: nck2code nck2Title
-msgid "Enter NCK2 code"
-msgstr "Cuir cód NCK2 isteach"
-
-#: hnckcode hnckTitle
-msgid "Enter HNCK code"
-msgstr "Cuir cód HNCK isteach"
-
-#: rcckcode rcckTitle
-msgid "Enter RCCK code"
-msgstr "Cuir cód RCCK isteach"
-
-#: rspckcode rspckTitle
-msgid "Enter RSPCK code"
-msgstr "Cuir cód RSPCK isteach"
-
-#: nckcodeTitle
-msgid "Enter SIM {{n}} NCK"
-msgstr "Cuir NCK SIM {{n}} isteach"
-
-#: cckcodeTitle
-msgid "Enter SIM {{n}} CCK"
-msgstr "Cuir CCK SIM {{n}} isteach"
-
-#: spckcodeTitle
-msgid "Enter SIM {{n}} SPCK"
-msgstr "Cuir SPCK SIM {{n}} isteach"
-
-#: nck1codeTitle
-msgid "Enter SIM {{n}} NCK1"
-msgstr "Cuir NCK1 SIM {{n}} isteach"
-
-#: nck2codeTitle
-msgid "Enter SIM {{n}} NCK2"
-msgstr "Cuir NCK2 SIM {{n}} isteach"
-
-#: hnckcodeTitle
-msgid "Enter SIM {{n}} HNCK"
-msgstr "Cuir HNCK SIM {{n}} isteach"
-
-#: rcckcodeTitle
-msgid "Enter SIM {{n}} RCCK"
-msgstr "Cuir RCCK SIM {{n}} isteach"
-
-#: rspckcodeTitle
-msgid "Enter SIM {{n}} RSPCK"
-msgstr "Cuir RSPCK SIM {{n}} isteach"
-
-#: nckcodeLabel
-msgid "SIM {{n}} NCK"
-msgstr "NCK SIM {{n}}"
-
-#: cckcodeLabel
-msgid "SIM {{n}} CCK"
-msgstr "CCK SIM {{n}}"
-
-#: spckcodeLabel
-msgid "SIM {{n}} SPCK"
-msgstr "SPCK SIM {{n}}"
-
-#: nck1codeLabel
-msgid "SIM {{n}} NCK1"
-msgstr "NCK1 SIM {{n}}"
-
-#: nck2codeLabel
-msgid "SIM {{n}} NCK2"
-msgstr "NCK2 SIM {{n}}"
-
-#: hnckcodeLabel
-msgid "SIM {{n}} HNCK"
-msgstr "HNCK SIM {{n}}"
-
-#: rcckcodeLabel
-msgid "SIM {{n}} RCCK"
-msgstr "RCCK SIM {{n}}"
-
-#: rspckcodeLabel
-msgid "SIM {{n}} RSPCK"
-msgstr "RSPCK SIM {{n}}"
-
-#: type_nck
-msgid "Type your NCK code"
-msgstr "Cuir do chód NCK isteach"
-
-#: type_cck
-msgid "Type your CCK code"
-msgstr "Cuir do chód CCK isteach"
-
-#: type_spck
-msgid "Type your SPCK code"
-msgstr "Cuir do chód SPCK isteach"
-
-#: type_nck1
-msgid "Type your NCK1 code"
-msgstr "Cuir do chód NCK1 isteach"
-
-#: type_nck2
-msgid "Type your NCK2 code"
-msgstr "Cuir do chód NCK2 isteach"
-
-#: type_hnck
-msgid "Type your HNCK code"
-msgstr "Cuir do chód HNCK isteach"
-
-#: type_rcck
-msgid "Type your RCCK code"
-msgstr "Cuir do chód RCCK isteach"
-
-#: type_rspck
-msgid "Type your RSPCK code"
-msgstr "Cuir do chód RSPCK isteach"
-
-#: nckValidation
-msgid "NCK must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK."
-
-#: cckValidation
-msgid "CCK must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód CCK."
-
-#: spckValidation
-msgid "SPCK must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód SPCK."
-
-#: nck1Validation
-msgid "NCK1 must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK1."
-
-#: nck2Validation
-msgid "NCK2 must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK2."
-
-#: hnckValidation
-msgid "HNCK must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód HNCK."
-
-#: rcckValidation
-msgid "RCCK must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód RCCK."
-
-#: rspckValidation
-msgid "RSPCK must have between 8 and 16 characters."
-msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód RSPCK."
-
-#: nckErrorMsg
-msgid "The NCK code is incorrect."
-msgstr "Cód NCK mícheart."
-
-#: nckAttemptMsg2
-msgctxt "nckAttemptMsg2"
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
-
-#: nckAttemptMsg2[one]
-msgid ""
-"Network depersonalization request failure. You have one try left to enter the "
-"correct code. Refer to your device documentation or contact your carrier for "
-"more information."
-msgstr ""
-
-#: nckAttemptMsg2[two]
-msgctxt "nckAttemptMsg2[two]"
-msgid ""
-"Network depersonalization request failure. You have {{n}} tries left to enter "
-"the correct code. Refer to your device documentation or contact your carrier "
-"for more information."
-msgstr ""
-
-#: nckAttemptMsg2[few]
-msgctxt "nckAttemptMsg2[few]"
-msgid ""
-"Network depersonalization request failure. You have {{n}} tries left to enter "
-"the correct code. Refer to your device documentation or contact your carrier "
-"for more information."
-msgstr ""
-
-#: nckAttemptMsg2[many]
-msgctxt "nckAttemptMsg2[many]"
-msgid ""
-"Network depersonalization request failure. You have {{n}} tries left to enter "
-"the correct code. Refer to your device documentation or contact your carrier "
-"for more information."
-msgstr ""
-
-#: nckAttemptMsg2[other]
-msgctxt "nckAttemptMsg2[other]"
-msgid ""
-"Network depersonalization request failure. You have {{n}} tries left to enter "
-"the correct code. Refer to your device documentation or contact your carrier "
-"for more information."
-msgstr ""
-
-#: nckLastChanceMsg
-msgid ""
-"Network depersonalization request failure. Last chance to enter the correct "
-"NCK code. Refer to your device documentation or contact your carrier for more "
-"information."
-msgstr ""
-
-#: skip
-msgid "Skip"
-msgstr ""
-
-#: ok
-msgctxt "ok"
-msgid "OK"
-msgstr "OK"
-
-#: simLocked
-msgid "The SIM card is locked"
-msgstr "Tá an cárta SIM faoi ghlas"
-
-#: inputCodeRetriesLeft
-msgctxt "inputCodeRetriesLeft"
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
-
-#: inputCodeRetriesLeft[one]
-msgid "Last try."
-msgstr "Iarracht deiridh."
-
-#: inputCodeRetriesLeft[two]
-msgctxt "inputCodeRetriesLeft[two]"
-msgid "{{n}} tries left."
-msgstr "{{n}} iarracht fágtha."
-
-#: inputCodeRetriesLeft[few]
-msgctxt "inputCodeRetriesLeft[few]"
-msgid "{{n}} tries left."
-msgstr "{{n}} iarracht fágtha."
-
-#: inputCodeRetriesLeft[many]
-msgctxt "inputCodeRetriesLeft[many]"
-msgid "{{n}} tries left."
-msgstr "{{n}} n-iarracht fágtha."
-
-#: inputCodeRetriesLeft[other]
-msgctxt "inputCodeRetriesLeft[other]"
-msgid "{{n}} tries left."
-msgstr "{{n}} iarracht fágtha."
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # SIM Manager
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: simManager
-msgid "SIM Manager"
-msgstr "Bainisteoir SIM"
-
-#: simDetail
-msgid "SIM {{n}}"
-msgstr "SIM {{n}}"
-
-#: simDefault sim-picker-button-default
-msgid "(default)"
-msgstr "(réamhshocrú)"
-
-#: simDefaultMessage
-msgid ""
-"Outgoing calls, outgoing messages and data connection are set to SIM 1 as "
-"default"
-msgstr ""
-
-#: simSettingsMessage
-msgid "You can change default settings at Settings > SIM manager"
-msgstr ""
-"Is féidir leat na réamhshocruithe a athrú faoi Socruithe > Bainisteoir SIM"
-
-#: simPinLocked sim-pin-locked
-msgid "SIM PIN locked"
-msgstr "SIM faoi ghlas le UAP"
-
-#: noOperator no-operator
-msgid "No operator"
-msgstr "Gan oibreoir"
-
-#. #-#-#-#-#  appscommunicationsftuftu.properties.po (firefox)  #-#-#-#-#
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Language
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: language
-msgid "Language"
-msgstr "Teanga"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # 3g
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: 3g
-msgid "Cellular Data"
-msgstr "Sonraí Ceallacha"
-
-#: dataConnection
-msgid "Enable Data"
-msgstr "Cumasaigh Sonraí"
-
-#: dataConnectionInfo
-msgid ""
-"Enabling data connection now will allow you to set up your phone without a Wi-"
-"Fi connection. You may also enable it later on in Settings. Just make sure "
-"you have a data plan with your carrier to avoid potentially hefty charges."
-msgstr ""
-
-#: caution phishing-blocked
-msgid "Warning"
-msgstr "Rabhadh"
-
-#. #-#-#-#-#  appscommunicationsftuftu.properties.po (firefox)  #-#-#-#-#
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Geolocation
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: geolocation perm-geolocation
-msgid "Geolocation"
-msgstr "Geoshuíomh"
-
-#: geolocationCheckbox
-msgid "Enable Geolocation"
-msgstr "Cumasaigh Geoshuíomh"
-
-#: geolocationInfo2
-msgid ""
-"{{brandShortName}} uses data such as GPS, Wi-Fi, and mobile networks near you "
-"to help determine your approximate location."
-msgstr ""
-"Úsáideann {{brandShortName}} sonraí GPS, Wi-Fi, agus líonraí móibíleacha i "
-"ngar duit chun do shuíomh a dhéanamh amach."
-
-#: geolocationInfoMore
-msgid ""
-"Data is sent to Mozilla and other service providers and will be used in the "
-"aggregate to improve those location databases.  Data may be stored on your "
-"device and data collection may occur even when no apps are running."
-msgstr ""
-"Seoltar sonraí chuig Mhozilla agus chuig sholáthraithe seirbhíse eile. "
-"Úsáidtear na sonraí seo i bhfoirm chomhiomlán chun na seirbhísí geoshuite a "
-"fheabhsú. Seans go stórálfar sonraí ar do ghléas agus go mbaileofar na sonraí "
-"fiú nuair nach bhfuil aon aipeanna ar siúl."
-
-#: notice
-msgid "Notice"
-msgstr "Fógra"
-
-#: aboutYourPrivacy
-msgid "More about your privacy"
-msgstr "Tuilleadh eolais faoi phríobháideacht"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Wifi
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: scanningNetworks
-msgid "Scanning for networks"
-msgstr "Ag lorg líonraí"
-
-#: selectNetwork
-msgid "Select a network"
-msgstr "Roghnaigh líonra"
-
-#: shortStatus-associated
-msgid "Obtaining an IP address…"
-msgstr "Seoladh IP á fháil…"
-
-#: shortStatus-connectingfailed
-msgid "Connection failed"
-msgstr "Theip ar cheangal"
-
-#: shortStatus-disconnected
-msgid "Offline"
-msgstr "As Líne"
-
-#: securedBy
-msgid "secured by {{capabilities}}"
-msgstr "cosanta ag {{capabilities}}"
-
-#: security
-msgid "Security"
-msgstr "Slándáil"
-
-#: securityWEP
-msgid "WEP"
-msgstr "WEP"
-
-#: securityWPA-PSK
-msgid "WPA-PSK"
-msgstr "WPA-PSK"
-
-#: securityWPA-EAP
-msgid "WPA-EAP"
-msgstr "WPA-EAP"
-
-#: securityOpen open_downloaded_file
-msgid "Open"
-msgstr "Oscail"
-
-#: identity
-msgctxt "identity"
-msgid "User"
-msgstr "Úsáideoir"
-
-#: identityInput.placeholder
-msgctxt "identityInput.placeholder"
-msgid "User"
-msgstr "Úsáideoir"
-
-#: password
-msgctxt "password"
-msgid "Password"
-msgstr "Focal faire"
-
-#: passwordInput.placeholder
-msgctxt "passwordInput.placeholder"
-msgid "Password"
-msgstr "Focal faire"
-
-#: showPassword
-msgid "Show Password"
-msgstr "Taispeáin an Focal Faire"
-
-#: refresh
-msgid "Refresh"
-msgstr "Athnuaigh"
-
-#: noWifiFound3
-msgid "No wireless networks found"
-msgstr "Níor aimsíodh aon líonra gan sreang"
-
-#: join-hidden-button joinHiddenNetwork
-msgid "Join hidden network"
-msgstr "Ceangail le líonra i bhfolach"
-
-#: authentication
-msgid "Authentication"
-msgstr "Fíordheimhniú"
-
-#: ssid-name
-msgid "SSID Network Name"
-msgstr "Ainm SSID an líonra"
-
-#. #-#-#-#-#  appscommunicationsftuftu.properties.po (firefox)  #-#-#-#-#
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Date & Time
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
-#. # Personalization :: Date & Time
-#: dateAndTime
-msgid "Date & Time"
-msgstr "Dáta agus Am"
-
-#. # LOCALIZATION NOTE(timezoneTitle): Parameters in this label will be replaced
-#. # at runtime, use this string to reorder elements, translate "UTC", or use
-#. # different separator characters.
-#. # Example of a resulting string for English: "UTC+01:00 Europe/Paris"
-#: timezoneTitle
-msgid "UTC{{utcOffset}} {{region}}/{{city}}"
-msgstr "UTC{{utcOffset}} {{region}}/{{city}}"
-
-#: timeZone timezoneMessage
-msgid "Time zone"
-msgstr "Crios ama"
-
-#: change
-msgid "Change"
-msgstr "Athraigh"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Import contacts
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: importContacts3
-msgid "Import contacts"
-msgstr "Iompórtáil teagmhálacha"
-
-#: importSim2
-msgid "SIM card"
-msgstr "Cárta SIM"
-
-#: fb-checking
-msgid "… checking"
-msgstr "… á sheiceáil"
-
-#: notImportedYet
-msgid "Not imported yet"
-msgstr "Gan iompórtáil fós"
-
-#: afterFbImport
-msgid "You can import and edit Facebook friends anytime in Contacts settings"
-msgstr ""
-"Is féidir cairde ó Facebook a iompórtáil nó a chur in eagar sna socruithe "
-"Teagmhálacha"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Fxa Intro
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: firefox-accounts
-msgid "Firefox Accounts"
-msgstr "Cuntais Firefox"
-
-#: fxa-overview.innerHTML
-msgid ""
-"A Firefox Account lets you use features like Find My Device and apps like the "
-"Firefox Marketplace."
-msgstr ""
-
-#: fxa-create-account-or-sign-in
-msgid "Create Account or Sign In"
-msgstr "Cruthaigh Cuntas nó Logáil Isteach"
-
-#: fxa-email-sent
-msgid "A verification link has been sent to {{email}}"
-msgstr "Seoladh nasc deimhnithe chuig {{email}}"
-
-#. #-#-#-#-#  appscommunicationsftuftu.properties.po (firefox)  #-#-#-#-#
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # About your rights
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: about-your-rights-0
-msgid ""
-"{{brandShortName}} is built on free and open source software by a community "
-"of thousands from all over the world. There are a few things you should know:"
-msgstr ""
-
-#: about-your-rights-1
-msgid ""
-"{{brandShortName}} is made available to you under the terms of several open "
-"source licenses including the Mozilla Public License. A device running "
-"{{brandShortName}} may also contain proprietary software from third parties. "
-"Any code provided under open licenses give you the right to modify the source "
-"code and distribute your modified versions as long as you comply with their "
-"terms."
-msgstr ""
-
-#: about-your-rights-2
-msgid ""
-"You are not granted any trademark rights or licenses to the trademarks of the "
-"Mozilla Foundation or any party, including without limitation the "
-"{{brandShortName}} name or logo."
-msgstr ""
-
-#: about-your-rights-3
-msgid ""
-"Some features in {{brandShortName}}, such as the Crash Reporter, give you the "
-"option to provide feedback to Mozilla. By choosing to submit feedback, you "
-"give Mozilla permission to use the feedback to improve its products, to "
-"publish the feedback on its websites, and to distribute the feedback."
-msgstr ""
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # SIM mandatory
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: SIM_mandatory
-msgid "SIM Card Warning"
-msgstr "Rabhadh: Cárta SIM"
-
-#: SIM_mandatory_warm
-msgid "Please, insert a SIM card and reboot your phone."
-msgstr "Cuir cárta SIM isteach agus atosaigh an guthán."
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Sharing Performance Data
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: telemetry-sends
-msgid ""
-"Telemetry sends Mozilla data about performance, hardware, configurations and "
-"customizations in your {{brandShortName}} device. We use this to make our "
-"products better, faster and more responsive."
-msgstr ""
-
-#. # LOCALIZATION NOTE(learn-more-telemetry.innerHTML, learn-more-information.innerHTML:
-#. # {{link}} will be replaced at run-time by an active link, the URL will be
-#. # used as text for the link.
-#: learn-more-telemetry.innerHTML
-msgid "Learn more at {{link}}"
-msgstr "Tuilleadh eolais ó {{link}}"
-
-#: learn-more-information.innerHTML
-msgid "Learn how Mozilla handles your information at {{link}}"
-msgstr ""
-"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo: "
-"{{link}}"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # OS privacy
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: welcomeBrowser
-msgid ""
-"Welcome to {{brandShortName}}, the free and open source operating system from "
-"Mozilla. Our mission is to promote openness, innovation and opportunity by "
-"keeping the power of the Web in your hands."
-msgstr ""
-
-#. # LOCALIZATION NOTE(learn-more-privacy.innerHTML): {{link}} will be replaced at
-#. # run-time by an active link, string "learn-more-privacy-link" will be
-#. # used as text for the link.
-#: learn-more-privacy.innerHTML
-msgid "Learn how Mozilla handles your information in our {{link}}."
-msgstr ""
-"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo inár "
-"{{link}}."
-
-#: learn-more-privacy-link crash-reports-description-3-privacy
-msgid "privacy policy"
-msgstr "bpolasaí príobháideachta"
-
-#: aboutBrowser aboutBrowserOS
-msgid "About {{brandShortName}}"
-msgstr "Maidir le {{brandShortName}}"
-
-#: aboutYourPrivacy2 your-privacy
-msgid "Your Privacy"
-msgstr "Do Phríobháideacht"
-
-#: mozillaCommunity2
-msgid ""
-"When you use {{brandShortName}}, you become part of a global community "
-"helping to build a brighter future for the Web. If you’d like to know more "
-"about the Mozilla community, our other products and events near you, please "
-"enter your email address below."
-msgstr ""
-
-#: collaborate
-msgid ""
-"I want to help improve {{brandShortName}} by sharing data about my phone."
-msgstr ""
-"Ba mhaith liom {{brandShortName}} a fheabhsú trí shonraí ó mo ghuthán a "
-"roinnt."
-
-#: learnMore
-msgid "Learn more."
-msgstr "Tuilleadh eolais."
-
-#: email-successfully-added
-msgid "Email successfully added"
-msgstr "Cuireadh seoladh ríomhphoist leis"
-
-#: email-loading
-msgid "Saving your email…"
-msgstr "Do ríomhphost á shábháil…"
-
-#: privacy-b2g
-msgctxt "privacy-b2g"
-msgid "{{brandShortName}}"
-msgstr "{{brandShortName}}"
-
-#: privacy-b2g.title
-msgctxt "privacy-b2g.title"
-msgid "{{brandShortName}}"
-msgstr "{{brandShortName}}"
-
-#: privacy-marketplace fxa-marketplace-app
-msgid "Marketplace"
-msgstr "Áit Mhargaidh"
-
-#. # please don't translate the brand name
-#: privacy-marketplace.title
-msgid "{{privacy-marketplace}}"
-msgstr "{{privacy-marketplace}}"
-
-#: privacy-e-me
-msgid "everything.me"
-msgstr "everything.me"
-
-#. # please don't translate the brand name
-#: privacy-e-me.title
-msgid "{{privacy-e-me}}"
-msgstr "{{privacy-e-me}}"
-
-#: navbar-next next
-msgid "Next"
-msgstr "Ar Aghaidh"
-
-#: navbar-join
-msgid "Join"
-msgstr "Cláraigh"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Welcome OS
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: thatsIt
-msgid "That’s it!"
-msgstr "Sin é!"
-
-#: startYourPhone
-msgid "Start your phone tour!"
-msgstr "Tabhair turas ar do ghuthán!"
-
-#: startYourTablet
-msgid "Start your tablet tour!"
-msgstr "Tabhair turas ar do tháibléad!"
-
-#: joinTutorial
-msgid "Join us for a quick tutorial about your new phone."
-msgstr "Tugaimis turas tapa ar do ghuthán nua."
-
-#: enjoyYourPhone
-msgid "You’re ready to enjoy your new phone."
-msgstr "Tá tú réidh sult a bhaint as do ghuthán nua."
-
-#: optionsAvailable
-msgid "You can change the language, date/time and Wi-Fi connection in settings."
-msgstr ""
-"Is féidir leat teanga, dáta/am agus an ceangal Wi-Fi a athrú sna Socruithe."
-
-#: letsGo
-msgid "Let’s go"
-msgstr "Ar aghaidh linn"
-
-#: startTour
-msgid "Start tour"
-msgstr "Tosaigh an turas"
-
-#: thatsIt1Tablet-2
-msgid "You can always swipe from the bottom edge to enter home screen."
-msgstr ""
-"Is féidir i gcónaí svaidhpeáil aníos chun filleadh ar an scáileán baile."
-
-#: thatsIt2Tablet-2
-msgid "Let’s do it!"
-msgstr "Ceart go leor!"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Tutorial
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: tutorial-step1-tiny
-msgid "Swipe from right to left to browse your apps."
-msgstr "Svaidhpeáil anoir chun aipeanna a bhrabhsáil."
-
-#: tutorial-step2-tiny
-msgctxt "tutorial-step2-tiny"
-msgid "Tap and hold on an icon to delete or move it."
-msgstr "Tapáil deilbhín agus coinnigh síos é chun é a scriosadh nó a bhogadh."
-
-#: tutorial-step3-tiny
-msgid "Enter any keyword or topic and your phone will instantly adapt."
-msgstr ""
-"Cuir lorgfhocal nó topaic isteach agus cuirfidh an guthán é féin in oiriúint."
-
-#: tutorial-step4-tiny
-msgid ""
-"Swipe down to access recent notifications, credit information and settings."
-msgstr ""
-"Svaidhpeáil anuas chun fógraí, eolas faoi chreidmheas, agus socruithe a "
-"fheiceáil."
-
-#: tutorial-step5-tiny
-msgid "Tap and hold the home button to browse and close recent apps."
-msgstr ""
-"Tapáil an cnaipe baile agus coinnigh síos é chun na haipeanna is déanaí a "
-"bhrabhsáil."
-
-#: tutorial-step6-tiny
-msgid ""
-"Swipe from the side of the screen to move back and forth between recent apps."
-msgstr "Svaidhpeáil anoir is aniar chun na haipeanna is déanaí a bhrabhsáil."
-
-#: tutorial-step1-large-2
-msgid ""
-"Swipe down from top to access recent notifications, credit information and "
-"settings."
-msgstr ""
-"Svaidhpeáil anuas ón bharr chun fógraí, eolas faoi chreidmheas, agus "
-"socruithe a fheiceáil."
-
-#: tutorial-step2-large-2
-msgid "Swipe left or right to discover new apps on home screen."
-msgstr ""
-"Svaidhpeáil anoir is aniar chun aipeanna nua a aimsiú ar an scáileán baile."
-
-#: tutorial-step3-large-2
-msgctxt "tutorial-step3-large-2"
-msgid "Tap and hold on an icon to delete or move it."
-msgstr "Tapáil deilbhín agus coinnigh síos é chun é a scriosadh nó a bhogadh."
-
-#: tutorial-step4-large-2
-msgid "Two fingers swipe up from the bottom edge to trigger card view."
-msgstr "Svaidhpeáil aníos le dhá mhéar chun amharc cárta a oscailt."
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Offline Error Dialog
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: offline-dialog-title
-msgid "You must be connected to the Internet to view the page."
-msgstr ""
-"Caithfidh tú a bheith ceangailte leis an Idirlíon chun an leathanach a "
-"fheiceáil."
-
-#: offline-dialog-text
-msgid ""
-"Please go back and connect to the Internet. You can also view the page later "
-"from Settings or by entering {{url}} in any browser."
-msgstr ""
-"Ní mór duit dul ar ais agus ceangal leis an Idirlíon. Nó, is féidir féachaint "
-"ar an leathanach ar ball ó na Socruithe, nó trí {{url}} a chur isteach i "
-"mbrabhsálaí."
-
-#: OK
-msgctxt "OK"
-msgid "OK"
-msgstr "OK"
-
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#. # Newsletter Error Dialogs
-#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: offline-newsletter-dialog-title
-msgid "You must be connected to the Internet to subscribe to the newsletter."
-msgstr ""
-"Caithfidh tú a bheith ceangailte leis an Idirlíon chun liostáil leis an "
-"nuachtlitir."
-
-#: offline-newsletter-dialog-text
-msgid "Please go back and connect to the Internet."
-msgstr "Téigh ar ais agus ceangail leis an Idirlíon."
-
-#: invalid-email-dialog-title
-msgid "Your email is not valid"
-msgstr "Seoladh neamhbhailí"
-
-#: invalid-email-dialog-text
-msgid "Please go back and correct your entry."
-msgstr "Téigh ar ais agus ceartaigh an iontráil."
-
 #: dialer.description
 msgid "Gaia Phone"
 msgstr "Guthán Gaia"
-
-#: ftu.name
-msgctxt "ftu.name"
-msgid "FTU"
-msgstr "FTU"
-
-#: ftu.description
-msgctxt "ftu.description"
-msgid "FTU"
-msgstr "FTU"
 
 #: contacts.description
 msgid "Gaia Contacts"
@@ -5396,6 +4243,10 @@ msgstr "Athshocraigh úsáid sonraí"
 msgid "Reset report"
 msgstr "Athshocraigh an tuairisc"
 
+#: next navbar-next
+msgid "Next"
+msgstr "Ar Aghaidh"
+
 #: lets-go
 msgid "Let’s go!"
 msgstr "Ar aghaidh linn!"
@@ -5747,9 +4598,10 @@ msgctxt "setup-manual-username.placeholder"
 msgid "Username"
 msgstr "Ainm úsáideora"
 
-#: setup-manual-activesync-username.placeholder
-msgid "Domain\\u0000ame"
-msgstr ""
+#. # LOCALIZATION NOTE (setup-manual-activesync-username.placeholder):
+#. # the double \\ will be displayed as a single #: setup-manual-activesync-username.placeholder
+msgid "Domain\\Username"
+msgstr "Fearann\\Ainm Úsáideora"
 
 #: setup-bad-password-header
 msgid "Bad password!"
@@ -6369,9 +5221,10 @@ msgstr "Uile"
 msgid "Search Mail"
 msgstr "Cuardaigh Ríomhphost"
 
-#: message-search-cancel-accessible
-msgid "Cancel search"
-msgstr "Cealaigh an cuardach"
+#: message-search-cancel
+msgctxt "message-search-cancel"
+msgid "Cancel"
+msgstr "Cealaigh"
 
 #: messages-syncing
 msgid "Loading Messages"
@@ -7087,6 +5940,1007 @@ msgstr "Raidió FM"
 msgid "Gaia FM Radio"
 msgstr "Raidió FM Gaia"
 
+#: pincode2
+msgid "Enter PIN code"
+msgstr "Cuir UAP isteach"
+
+#: type_pin
+msgid "Type your PIN code"
+msgstr "Cuir do UAP isteach"
+
+#: pincodeLabel
+msgid "SIM {{n}} PIN"
+msgstr "UAP SIM {{n}}"
+
+#: pinValidation
+msgid "PIN must have between 4 and 8 characters."
+msgstr "Ní mór idir 4 agus 8 gcarachtar a bheith san UAP."
+
+#: pinError pinErrorMsg
+msgid "The PIN was incorrect."
+msgstr "UAP mícheart"
+
+#: pinAttemptMsg2
+msgctxt "pinAttemptMsg2"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: pinAttemptMsg2[one]
+msgid ""
+"You have one try left to enter the correct code before locking the SIM card."
+msgstr ""
+"Níl ach iarracht amháin eile agat sula gcuirfear an cárta SIM faoi bhac."
+
+#: pinAttemptMsg2[two]
+msgctxt "pinAttemptMsg2[two]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before locking the SIM "
+"card."
+msgstr "Tá {{n}} iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
+
+#: pinAttemptMsg2[few]
+msgctxt "pinAttemptMsg2[few]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before locking the SIM "
+"card."
+msgstr "Tá {{n}} iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
+
+#: pinAttemptMsg2[many]
+msgctxt "pinAttemptMsg2[many]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before locking the SIM "
+"card."
+msgstr "Tá {{n}} n-iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
+
+#: pinAttemptMsg2[other]
+msgctxt "pinAttemptMsg2[other]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before locking the SIM "
+"card."
+msgstr "Tá {{n}} iarracht eile agat sula gcuirfear an cárta SIM faoi bhac."
+
+#: pinLastChanceMsg
+msgid ""
+"This is your last chance to enter the correct PIN. Otherwise, you must enter "
+"the PUK code to use this SIM card."
+msgstr ""
+"Seo é an iarracht deiridh atá agat chun an UAP a chur isteach. Is é sin, nó "
+"beidh sé ort cód PUK a chur isteach chun an cárta SIM seo."
+
+#: pukcode pukTitle
+msgid "Enter PUK code"
+msgstr "Cuir cód PUK isteach"
+
+#: pukcodeTitle
+msgid "Enter SIM {{n}} PUK"
+msgstr "Cuir PUK SIM {{n}} isteach"
+
+#: pukcodeLabel
+msgid "SIM {{n}} PUK"
+msgstr "PUK SIM {{n}}"
+
+#: type_puk pukCode
+msgid "PUK code"
+msgstr "Cód PUK"
+
+#: pukValidation
+msgid "PUK code must have exactly 8 characters."
+msgstr "Ní mór ocht gcarachtar cothrom a bheith i gcód PUK."
+
+#: pukInfo
+msgid ""
+"You must enter the Personal Unlocking Key (PUK) Code for the SIM card. Refer "
+"to your SIM card documentation or contact your carrier for more information."
+msgstr ""
+
+#: pukError
+msgid "The PUK was incorrect."
+msgstr "PUK mícheart"
+
+#: pukAttemptMsg2
+msgctxt "pukAttemptMsg2"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: pukAttemptMsg2[one] pukAttemptMsg3[one]
+msgid ""
+"You have one try left to enter the correct code before this SIM card will be "
+"permanently unusable. Refer to your SIM card documentation or contact your "
+"carrier for more information."
+msgstr ""
+
+#: pukAttemptMsg2[two]
+msgctxt "pukAttemptMsg2[two]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before this SIM card will "
+"be permanently unusable. Refer to your SIM card documentation or contact your "
+"carrier for more information."
+msgstr ""
+
+#: pukAttemptMsg2[few]
+msgctxt "pukAttemptMsg2[few]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before this SIM card will "
+"be permanently unusable. Refer to your SIM card documentation or contact your "
+"carrier for more information."
+msgstr ""
+
+#: pukAttemptMsg2[many]
+msgctxt "pukAttemptMsg2[many]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before this SIM card will "
+"be permanently unusable. Refer to your SIM card documentation or contact your "
+"carrier for more information."
+msgstr ""
+
+#: pukAttemptMsg2[other]
+msgctxt "pukAttemptMsg2[other]"
+msgid ""
+"You have {{n}} tries left to enter the correct code before this SIM card will "
+"be permanently unusable. Refer to your SIM card documentation or contact your "
+"carrier for more information."
+msgstr ""
+
+#: pukLastChanceMsg
+msgid ""
+"This is your last chance to enter the correct PUK code. Your SIM card will be "
+"permanently unusable if you enter in the wrong PUK code."
+msgstr ""
+
+#: create_newpin
+msgid "Create new PIN (4 to 8 digits)"
+msgstr "Cruthaigh UAP nua (idir 4 agus 8 ndigit)"
+
+#: confirm_newpin confirmNewSimPinMsg
+msgid "Confirm new PIN"
+msgstr "Deimhnigh an UAP nua"
+
+#: newpinConfirmation newPinErrorMsg
+msgid "PINs don’t match"
+msgstr "Ní ionann na UAPanna"
+
+#: nckcode nckTitle
+msgid "Enter NCK code"
+msgstr "Cuir cód NCK isteach"
+
+#: cckcode cckTitle
+msgid "Enter CCK code"
+msgstr "Cuir cód CCK isteach"
+
+#: spckcode spckTitle
+msgid "Enter SPCK code"
+msgstr "Cuir cód SPCK isteach"
+
+#: nck1code nck1Title
+msgid "Enter NCK1 code"
+msgstr "Cuir cód NCK1 isteach"
+
+#: nck2code nck2Title
+msgid "Enter NCK2 code"
+msgstr "Cuir cód NCK2 isteach"
+
+#: hnckcode hnckTitle
+msgid "Enter HNCK code"
+msgstr "Cuir cód HNCK isteach"
+
+#: rcckcode rcckTitle
+msgid "Enter RCCK code"
+msgstr "Cuir cód RCCK isteach"
+
+#: rspckcode rspckTitle
+msgid "Enter RSPCK code"
+msgstr "Cuir cód RSPCK isteach"
+
+#: nckcodeTitle
+msgid "Enter SIM {{n}} NCK"
+msgstr "Cuir NCK SIM {{n}} isteach"
+
+#: cckcodeTitle
+msgid "Enter SIM {{n}} CCK"
+msgstr "Cuir CCK SIM {{n}} isteach"
+
+#: spckcodeTitle
+msgid "Enter SIM {{n}} SPCK"
+msgstr "Cuir SPCK SIM {{n}} isteach"
+
+#: nck1codeTitle
+msgid "Enter SIM {{n}} NCK1"
+msgstr "Cuir NCK1 SIM {{n}} isteach"
+
+#: nck2codeTitle
+msgid "Enter SIM {{n}} NCK2"
+msgstr "Cuir NCK2 SIM {{n}} isteach"
+
+#: hnckcodeTitle
+msgid "Enter SIM {{n}} HNCK"
+msgstr "Cuir HNCK SIM {{n}} isteach"
+
+#: rcckcodeTitle
+msgid "Enter SIM {{n}} RCCK"
+msgstr "Cuir RCCK SIM {{n}} isteach"
+
+#: rspckcodeTitle
+msgid "Enter SIM {{n}} RSPCK"
+msgstr "Cuir RSPCK SIM {{n}} isteach"
+
+#: nckcodeLabel
+msgid "SIM {{n}} NCK"
+msgstr "NCK SIM {{n}}"
+
+#: cckcodeLabel
+msgid "SIM {{n}} CCK"
+msgstr "CCK SIM {{n}}"
+
+#: spckcodeLabel
+msgid "SIM {{n}} SPCK"
+msgstr "SPCK SIM {{n}}"
+
+#: nck1codeLabel
+msgid "SIM {{n}} NCK1"
+msgstr "NCK1 SIM {{n}}"
+
+#: nck2codeLabel
+msgid "SIM {{n}} NCK2"
+msgstr "NCK2 SIM {{n}}"
+
+#: hnckcodeLabel
+msgid "SIM {{n}} HNCK"
+msgstr "HNCK SIM {{n}}"
+
+#: rcckcodeLabel
+msgid "SIM {{n}} RCCK"
+msgstr "RCCK SIM {{n}}"
+
+#: rspckcodeLabel
+msgid "SIM {{n}} RSPCK"
+msgstr "RSPCK SIM {{n}}"
+
+#: type_nck
+msgid "Type your NCK code"
+msgstr "Cuir do chód NCK isteach"
+
+#: type_cck
+msgid "Type your CCK code"
+msgstr "Cuir do chód CCK isteach"
+
+#: type_spck
+msgid "Type your SPCK code"
+msgstr "Cuir do chód SPCK isteach"
+
+#: type_nck1
+msgid "Type your NCK1 code"
+msgstr "Cuir do chód NCK1 isteach"
+
+#: type_nck2
+msgid "Type your NCK2 code"
+msgstr "Cuir do chód NCK2 isteach"
+
+#: type_hnck
+msgid "Type your HNCK code"
+msgstr "Cuir do chód HNCK isteach"
+
+#: type_rcck
+msgid "Type your RCCK code"
+msgstr "Cuir do chód RCCK isteach"
+
+#: type_rspck
+msgid "Type your RSPCK code"
+msgstr "Cuir do chód RSPCK isteach"
+
+#: nckValidation
+msgid "NCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK."
+
+#: cckValidation
+msgid "CCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód CCK."
+
+#: spckValidation
+msgid "SPCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód SPCK."
+
+#: nck1Validation
+msgid "NCK1 must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK1."
+
+#: nck2Validation
+msgid "NCK2 must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód NCK2."
+
+#: hnckValidation
+msgid "HNCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód HNCK."
+
+#: rcckValidation
+msgid "RCCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód RCCK."
+
+#: rspckValidation
+msgid "RSPCK must have between 8 and 16 characters."
+msgstr "Ní mór idir 8 agus 16 carachtar a bheith i gcód RSPCK."
+
+#: nckErrorMsg
+msgid "The NCK code is incorrect."
+msgstr "Cód NCK mícheart."
+
+#: nckAttemptMsg2
+msgctxt "nckAttemptMsg2"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: nckAttemptMsg2[one]
+msgid ""
+"Network depersonalization request failure. You have one try left to enter the "
+"correct code. Refer to your device documentation or contact your carrier for "
+"more information."
+msgstr ""
+
+#: nckAttemptMsg2[two]
+msgctxt "nckAttemptMsg2[two]"
+msgid ""
+"Network depersonalization request failure. You have {{n}} tries left to enter "
+"the correct code. Refer to your device documentation or contact your carrier "
+"for more information."
+msgstr ""
+
+#: nckAttemptMsg2[few]
+msgctxt "nckAttemptMsg2[few]"
+msgid ""
+"Network depersonalization request failure. You have {{n}} tries left to enter "
+"the correct code. Refer to your device documentation or contact your carrier "
+"for more information."
+msgstr ""
+
+#: nckAttemptMsg2[many]
+msgctxt "nckAttemptMsg2[many]"
+msgid ""
+"Network depersonalization request failure. You have {{n}} tries left to enter "
+"the correct code. Refer to your device documentation or contact your carrier "
+"for more information."
+msgstr ""
+
+#: nckAttemptMsg2[other]
+msgctxt "nckAttemptMsg2[other]"
+msgid ""
+"Network depersonalization request failure. You have {{n}} tries left to enter "
+"the correct code. Refer to your device documentation or contact your carrier "
+"for more information."
+msgstr ""
+
+#: nckLastChanceMsg
+msgid ""
+"Network depersonalization request failure. Last chance to enter the correct "
+"NCK code. Refer to your device documentation or contact your carrier for more "
+"information."
+msgstr ""
+
+#: skip
+msgid "Skip"
+msgstr ""
+
+#: ok
+msgctxt "ok"
+msgid "OK"
+msgstr "OK"
+
+#: simLocked
+msgid "The SIM card is locked"
+msgstr "Tá an cárta SIM faoi ghlas"
+
+#: inputCodeRetriesLeft
+msgctxt "inputCodeRetriesLeft"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: inputCodeRetriesLeft[one]
+msgid "Last try."
+msgstr "Iarracht deiridh."
+
+#: inputCodeRetriesLeft[two]
+msgctxt "inputCodeRetriesLeft[two]"
+msgid "{{n}} tries left."
+msgstr "{{n}} iarracht fágtha."
+
+#: inputCodeRetriesLeft[few]
+msgctxt "inputCodeRetriesLeft[few]"
+msgid "{{n}} tries left."
+msgstr "{{n}} iarracht fágtha."
+
+#: inputCodeRetriesLeft[many]
+msgctxt "inputCodeRetriesLeft[many]"
+msgid "{{n}} tries left."
+msgstr "{{n}} n-iarracht fágtha."
+
+#: inputCodeRetriesLeft[other]
+msgctxt "inputCodeRetriesLeft[other]"
+msgid "{{n}} tries left."
+msgstr "{{n}} iarracht fágtha."
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # SIM Manager
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: simManager
+msgid "SIM Manager"
+msgstr "Bainisteoir SIM"
+
+#: simDetail
+msgid "SIM {{n}}"
+msgstr "SIM {{n}}"
+
+#: simDefault sim-picker-button-default
+msgid "(default)"
+msgstr "(réamhshocrú)"
+
+#: simDefaultMessage
+msgid ""
+"Outgoing calls, outgoing messages and data connection are set to SIM 1 as "
+"default"
+msgstr ""
+
+#: simSettingsMessage
+msgid "You can change default settings at Settings > SIM manager"
+msgstr ""
+"Is féidir leat na réamhshocruithe a athrú faoi Socruithe > Bainisteoir SIM"
+
+#: simPinLocked sim-pin-locked
+msgid "SIM PIN locked"
+msgstr "SIM faoi ghlas le UAP"
+
+#: noOperator no-operator
+msgid "No operator"
+msgstr "Gan oibreoir"
+
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Language
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: language
+msgid "Language"
+msgstr "Teanga"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # 3g
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: 3g
+msgid "Cellular Data"
+msgstr "Sonraí Ceallacha"
+
+#: dataConnection
+msgid "Enable Data"
+msgstr "Cumasaigh Sonraí"
+
+#: dataConnectionInfo
+msgid ""
+"Enabling data connection now will allow you to set up your phone without a Wi-"
+"Fi connection. You may also enable it later on in Settings. Just make sure "
+"you have a data plan with your carrier to avoid potentially hefty charges."
+msgstr ""
+
+#: caution phishing-blocked
+msgid "Warning"
+msgstr "Rabhadh"
+
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Geolocation
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: geolocation perm-geolocation
+msgid "Geolocation"
+msgstr "Geoshuíomh"
+
+#: geolocationCheckbox
+msgid "Enable Geolocation"
+msgstr "Cumasaigh Geoshuíomh"
+
+#: geolocationInfo2
+msgid ""
+"{{brandShortName}} uses data such as GPS, Wi-Fi, and mobile networks near you "
+"to help determine your approximate location."
+msgstr ""
+"Úsáideann {{brandShortName}} sonraí GPS, Wi-Fi, agus líonraí móibíleacha i "
+"ngar duit chun do shuíomh a dhéanamh amach."
+
+#: geolocationInfoMore
+msgid ""
+"Data is sent to Mozilla and other service providers and will be used in the "
+"aggregate to improve those location databases.  Data may be stored on your "
+"device and data collection may occur even when no apps are running."
+msgstr ""
+"Seoltar sonraí chuig Mhozilla agus chuig sholáthraithe seirbhíse eile. "
+"Úsáidtear na sonraí seo i bhfoirm chomhiomlán chun na seirbhísí geoshuite a "
+"fheabhsú. Seans go stórálfar sonraí ar do ghléas agus go mbaileofar na sonraí "
+"fiú nuair nach bhfuil aon aipeanna ar siúl."
+
+#: notice
+msgid "Notice"
+msgstr "Fógra"
+
+#: aboutYourPrivacy
+msgid "More about your privacy"
+msgstr "Tuilleadh eolais faoi phríobháideacht"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Wifi
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: scanningNetworks
+msgid "Scanning for networks"
+msgstr "Ag lorg líonraí"
+
+#: selectNetwork
+msgid "Select a network"
+msgstr "Roghnaigh líonra"
+
+#: shortStatus-associated
+msgid "Obtaining an IP address…"
+msgstr "Seoladh IP á fháil…"
+
+#: shortStatus-connectingfailed
+msgid "Connection failed"
+msgstr "Theip ar cheangal"
+
+#: shortStatus-disconnected
+msgid "Offline"
+msgstr "As Líne"
+
+#: securedBy
+msgid "secured by {{capabilities}}"
+msgstr "cosanta ag {{capabilities}}"
+
+#: security
+msgid "Security"
+msgstr "Slándáil"
+
+#: securityWEP
+msgid "WEP"
+msgstr "WEP"
+
+#: securityWPA-PSK
+msgid "WPA-PSK"
+msgstr "WPA-PSK"
+
+#: securityWPA-EAP
+msgid "WPA-EAP"
+msgstr "WPA-EAP"
+
+#: securityOpen open_downloaded_file
+msgid "Open"
+msgstr "Oscail"
+
+#: identity
+msgctxt "identity"
+msgid "User"
+msgstr "Úsáideoir"
+
+#: identityInput.placeholder
+msgctxt "identityInput.placeholder"
+msgid "User"
+msgstr "Úsáideoir"
+
+#: password
+msgctxt "password"
+msgid "Password"
+msgstr "Focal faire"
+
+#: passwordInput.placeholder
+msgctxt "passwordInput.placeholder"
+msgid "Password"
+msgstr "Focal faire"
+
+#: showPassword
+msgid "Show Password"
+msgstr "Taispeáin an Focal Faire"
+
+#: refresh
+msgid "Refresh"
+msgstr "Athnuaigh"
+
+#: noWifiFound3
+msgid "No wireless networks found"
+msgstr "Níor aimsíodh aon líonra gan sreang"
+
+#: join-hidden-button joinHiddenNetwork
+msgid "Join hidden network"
+msgstr "Ceangail le líonra i bhfolach"
+
+#: authentication
+msgid "Authentication"
+msgstr "Fíordheimhniú"
+
+#: ssid-name
+msgid "SSID Network Name"
+msgstr "Ainm SSID an líonra"
+
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Date & Time
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
+#. # Personalization :: Date & Time
+#: dateAndTime
+msgid "Date & Time"
+msgstr "Dáta agus Am"
+
+#. # LOCALIZATION NOTE(timezoneTitle): Parameters in this label will be replaced
+#. # at runtime, use this string to reorder elements, translate "UTC", or use
+#. # different separator characters.
+#. # Example of a resulting string for English: "UTC+01:00 Europe/Paris"
+#: timezoneTitle
+msgid "UTC{{utcOffset}} {{region}}/{{city}}"
+msgstr "UTC{{utcOffset}} {{region}}/{{city}}"
+
+#: timeZone timezoneMessage
+msgid "Time zone"
+msgstr "Crios ama"
+
+#: change
+msgid "Change"
+msgstr "Athraigh"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Import contacts
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: importContacts3
+msgid "Import contacts"
+msgstr "Iompórtáil teagmhálacha"
+
+#: importSim2
+msgid "SIM card"
+msgstr "Cárta SIM"
+
+#. #-#-#-#-#  sharedimport_contactsimport_contacts.properties.po (firefox)  #-#-#-#-#
+#. # Facebook import
+#: importFb2 facebook
+msgid "Facebook"
+msgstr "Facebook"
+
+#: fb-checking
+msgid "… checking"
+msgstr "… á sheiceáil"
+
+#: notImportedYet
+msgid "Not imported yet"
+msgstr "Gan iompórtáil fós"
+
+#: afterFbImport
+msgid "You can import and edit Facebook friends anytime in Contacts settings"
+msgstr ""
+"Is féidir cairde ó Facebook a iompórtáil nó a chur in eagar sna socruithe "
+"Teagmhálacha"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Fxa Intro
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: firefox-accounts
+msgid "Firefox Accounts"
+msgstr "Cuntais Firefox"
+
+#: fxa-overview.innerHTML
+msgid ""
+"A Firefox Account lets you use features like Find My Device and apps like the "
+"Firefox Marketplace."
+msgstr ""
+
+#: fxa-create-account-or-sign-in
+msgid "Create Account or Sign In"
+msgstr "Cruthaigh Cuntas nó Logáil Isteach"
+
+#: fxa-email-sent
+msgid "A verification link has been sent to {{email}}"
+msgstr "Seoladh nasc deimhnithe chuig {{email}}"
+
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # About your rights
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: about-your-rights-0
+msgid ""
+"{{brandShortName}} is built on free and open source software by a community "
+"of thousands from all over the world. There are a few things you should know:"
+msgstr ""
+
+#: about-your-rights-1
+msgid ""
+"{{brandShortName}} is made available to you under the terms of several open "
+"source licenses including the Mozilla Public License. A device running "
+"{{brandShortName}} may also contain proprietary software from third parties. "
+"Any code provided under open licenses give you the right to modify the source "
+"code and distribute your modified versions as long as you comply with their "
+"terms."
+msgstr ""
+
+#: about-your-rights-2
+msgid ""
+"You are not granted any trademark rights or licenses to the trademarks of the "
+"Mozilla Foundation or any party, including without limitation the "
+"{{brandShortName}} name or logo."
+msgstr ""
+
+#: about-your-rights-3
+msgid ""
+"Some features in {{brandShortName}}, such as the Crash Reporter, give you the "
+"option to provide feedback to Mozilla. By choosing to submit feedback, you "
+"give Mozilla permission to use the feedback to improve its products, to "
+"publish the feedback on its websites, and to distribute the feedback."
+msgstr ""
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # SIM mandatory
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: SIM_mandatory
+msgid "SIM Card Warning"
+msgstr "Rabhadh: Cárta SIM"
+
+#: SIM_mandatory_warm
+msgid "Please, insert a SIM card and reboot your phone."
+msgstr "Cuir cárta SIM isteach agus atosaigh an guthán."
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Sharing Performance Data
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: telemetry-sends
+msgid ""
+"Telemetry sends Mozilla data about performance, hardware, configurations and "
+"customizations in your {{brandShortName}} device. We use this to make our "
+"products better, faster and more responsive."
+msgstr ""
+
+#. # LOCALIZATION NOTE(learn-more-telemetry.innerHTML, learn-more-information.innerHTML:
+#. # {{link}} will be replaced at run-time by an active link, the URL will be
+#. # used as text for the link.
+#: learn-more-telemetry.innerHTML
+msgid "Learn more at {{link}}"
+msgstr "Tuilleadh eolais ó {{link}}"
+
+#: learn-more-information.innerHTML
+msgid "Learn how Mozilla handles your information at {{link}}"
+msgstr ""
+"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo: "
+"{{link}}"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # OS privacy
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: welcomeBrowser
+msgid ""
+"Welcome to {{brandShortName}}, the free and open source operating system from "
+"Mozilla. Our mission is to promote openness, innovation and opportunity by "
+"keeping the power of the Web in your hands."
+msgstr ""
+
+#. # LOCALIZATION NOTE(learn-more-privacy.innerHTML): {{link}} will be replaced at
+#. # run-time by an active link, string "learn-more-privacy-link" will be
+#. # used as text for the link.
+#: learn-more-privacy.innerHTML
+msgid "Learn how Mozilla handles your information in our {{link}}."
+msgstr ""
+"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo inár "
+"{{link}}."
+
+#: learn-more-privacy-link crash-reports-description-3-privacy
+msgid "privacy policy"
+msgstr "bpolasaí príobháideachta"
+
+#: aboutBrowser aboutBrowserOS
+msgid "About {{brandShortName}}"
+msgstr "Maidir le {{brandShortName}}"
+
+#: aboutYourPrivacy2 your-privacy
+msgid "Your Privacy"
+msgstr "Do Phríobháideacht"
+
+#: mozillaCommunity2
+msgid ""
+"When you use {{brandShortName}}, you become part of a global community "
+"helping to build a brighter future for the Web. If you’d like to know more "
+"about the Mozilla community, our other products and events near you, please "
+"enter your email address below."
+msgstr ""
+
+#: collaborate
+msgid ""
+"I want to help improve {{brandShortName}} by sharing data about my phone."
+msgstr ""
+"Ba mhaith liom {{brandShortName}} a fheabhsú trí shonraí ó mo ghuthán a "
+"roinnt."
+
+#: learnMore
+msgid "Learn more."
+msgstr "Tuilleadh eolais."
+
+#: email-successfully-added
+msgid "Email successfully added"
+msgstr "Cuireadh seoladh ríomhphoist leis"
+
+#: email-loading
+msgid "Saving your email…"
+msgstr "Do ríomhphost á shábháil…"
+
+#: privacy-b2g
+msgctxt "privacy-b2g"
+msgid "{{brandShortName}}"
+msgstr "{{brandShortName}}"
+
+#: privacy-b2g.title
+msgctxt "privacy-b2g.title"
+msgid "{{brandShortName}}"
+msgstr "{{brandShortName}}"
+
+#: privacy-marketplace fxa-marketplace-app
+msgid "Marketplace"
+msgstr "Áit Mhargaidh"
+
+#. # please don't translate the brand name
+#: privacy-marketplace.title
+msgid "{{privacy-marketplace}}"
+msgstr "{{privacy-marketplace}}"
+
+#: privacy-e-me
+msgid "everything.me"
+msgstr "everything.me"
+
+#. # please don't translate the brand name
+#: privacy-e-me.title
+msgid "{{privacy-e-me}}"
+msgstr "{{privacy-e-me}}"
+
+#: navbar-join
+msgid "Join"
+msgstr "Cláraigh"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Welcome OS
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: thatsIt
+msgid "That’s it!"
+msgstr "Sin é!"
+
+#: startYourPhone
+msgid "Start your phone tour!"
+msgstr "Tabhair turas ar do ghuthán!"
+
+#: startYourTablet
+msgid "Start your tablet tour!"
+msgstr "Tabhair turas ar do tháibléad!"
+
+#: joinTutorial
+msgid "Join us for a quick tutorial about your new phone."
+msgstr "Tugaimis turas tapa ar do ghuthán nua."
+
+#: enjoyYourPhone
+msgid "You’re ready to enjoy your new phone."
+msgstr "Tá tú réidh sult a bhaint as do ghuthán nua."
+
+#: optionsAvailable
+msgid "You can change the language, date/time and Wi-Fi connection in settings."
+msgstr ""
+"Is féidir leat teanga, dáta/am agus an ceangal Wi-Fi a athrú sna Socruithe."
+
+#: letsGo
+msgid "Let’s go"
+msgstr "Ar aghaidh linn"
+
+#: startTour
+msgid "Start tour"
+msgstr "Tosaigh an turas"
+
+#: thatsIt1Tablet-2
+msgid "You can always swipe from the bottom edge to enter home screen."
+msgstr ""
+"Is féidir i gcónaí svaidhpeáil aníos chun filleadh ar an scáileán baile."
+
+#: thatsIt2Tablet-2
+msgid "Let’s do it!"
+msgstr "Ceart go leor!"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Tutorial
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: tutorial-step1-tiny
+msgid "Swipe from right to left to browse your apps."
+msgstr "Svaidhpeáil anoir chun aipeanna a bhrabhsáil."
+
+#: tutorial-step2-tiny
+msgctxt "tutorial-step2-tiny"
+msgid "Tap and hold on an icon to delete or move it."
+msgstr "Tapáil deilbhín agus coinnigh síos é chun é a scriosadh nó a bhogadh."
+
+#: tutorial-step3-tiny
+msgid "Enter any keyword or topic and your phone will instantly adapt."
+msgstr ""
+"Cuir lorgfhocal nó topaic isteach agus cuirfidh an guthán é féin in oiriúint."
+
+#: tutorial-step4-tiny
+msgid ""
+"Swipe down to access recent notifications, credit information and settings."
+msgstr ""
+"Svaidhpeáil anuas chun fógraí, eolas faoi chreidmheas, agus socruithe a "
+"fheiceáil."
+
+#: tutorial-step5-tiny
+msgid "Tap and hold the home button to browse and close recent apps."
+msgstr ""
+"Tapáil an cnaipe baile agus coinnigh síos é chun na haipeanna is déanaí a "
+"bhrabhsáil."
+
+#: tutorial-step6-tiny
+msgid ""
+"Swipe from the side of the screen to move back and forth between recent apps."
+msgstr "Svaidhpeáil anoir is aniar chun na haipeanna is déanaí a bhrabhsáil."
+
+#: tutorial-step1-large-2
+msgid ""
+"Swipe down from top to access recent notifications, credit information and "
+"settings."
+msgstr ""
+"Svaidhpeáil anuas ón bharr chun fógraí, eolas faoi chreidmheas, agus "
+"socruithe a fheiceáil."
+
+#: tutorial-step2-large-2
+msgid "Swipe left or right to discover new apps on home screen."
+msgstr ""
+"Svaidhpeáil anoir is aniar chun aipeanna nua a aimsiú ar an scáileán baile."
+
+#: tutorial-step3-large-2
+msgctxt "tutorial-step3-large-2"
+msgid "Tap and hold on an icon to delete or move it."
+msgstr "Tapáil deilbhín agus coinnigh síos é chun é a scriosadh nó a bhogadh."
+
+#: tutorial-step4-large-2
+msgid "Two fingers swipe up from the bottom edge to trigger card view."
+msgstr "Svaidhpeáil aníos le dhá mhéar chun amharc cárta a oscailt."
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Offline Error Dialog
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: offline-dialog-title
+msgid "You must be connected to the Internet to view the page."
+msgstr ""
+"Caithfidh tú a bheith ceangailte leis an Idirlíon chun an leathanach a "
+"fheiceáil."
+
+#: offline-dialog-text
+msgid ""
+"Please go back and connect to the Internet. You can also view the page later "
+"from Settings or by entering {{url}} in any browser."
+msgstr ""
+"Ní mór duit dul ar ais agus ceangal leis an Idirlíon. Nó, is féidir féachaint "
+"ar an leathanach ar ball ó na Socruithe, nó trí {{url}} a chur isteach i "
+"mbrabhsálaí."
+
+#: OK
+msgctxt "OK"
+msgid "OK"
+msgstr "OK"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Newsletter Error Dialogs
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: offline-newsletter-dialog-title
+msgid "You must be connected to the Internet to subscribe to the newsletter."
+msgstr ""
+"Caithfidh tú a bheith ceangailte leis an Idirlíon chun liostáil leis an "
+"nuachtlitir."
+
+#: offline-newsletter-dialog-text
+msgid "Please go back and connect to the Internet."
+msgstr "Téigh ar ais agus ceangail leis an Idirlíon."
+
+#: invalid-email-dialog-title
+msgid "Your email is not valid"
+msgstr "Seoladh neamhbhailí"
+
+#: invalid-email-dialog-text
+msgid "Please go back and correct your entry."
+msgstr "Téigh ar ais agus ceartaigh an iontráil."
+
+#: name
+msgid "FTU"
+msgstr ""
+
+#: description
+msgid "First Time Experience"
+msgstr ""
+
 #: number-selected2
 msgctxt "number-selected2"
 msgid "{[ plural(n) ]}"
@@ -7350,6 +7204,11 @@ msgstr "Scrios {{name}}"
 #: delete-body
 msgid "{{name}} and all of its data will be deleted."
 msgstr "Scriosfar {{name}} agus na sonraí a bhaineann leis."
+
+#: cancel
+msgctxt "cancel"
+msgid "Cancel"
+msgstr "Cealaigh"
 
 #: remove-body
 msgid "Remove {{name}} from the homescreen?"
@@ -8182,6 +8041,10 @@ msgstr "Socruithe Gaia"
 #: advancedSettings
 msgid "Advanced settings"
 msgstr "Ardsocruithe"
+
+#: default
+msgid "Default"
+msgstr "Réamhshocrú"
 
 #: enabled
 msgid "Enabled"
@@ -11036,6 +10899,10 @@ msgstr "Consól cumasaithe"
 msgid "Cards View: Screenshots"
 msgstr ""
 
+#: geolocation-debugging-enabled
+msgid "Geolocation output in ADB"
+msgstr ""
+
 #: model-name
 msgid "Model"
 msgstr "Déantús"
@@ -11842,12 +11709,12 @@ msgctxt "message"
 msgid "Message"
 msgstr "Teachtaireacht"
 
-#: composeMessage.dataset.placeholder
-msgctxt "composeMessage.dataset.placeholder"
+#: messagesInput_placeholder
+msgctxt "messagesInput_placeholder"
 msgid "Message"
-msgstr "Teachtaireacht"
+msgstr ""
 
-#: composeSubject.dataset.placeholder
+#: messagesSubjectInput_placeholder
 msgid "Subject"
 msgstr "Ábhar"
 
@@ -12407,6 +12274,9 @@ msgstr "Teachtaireacht MMS"
 msgid "Message is not downloaded yet."
 msgstr "Níl an teachtaireacht íosluchtaithe fós."
 
+#. # LOCALIZATION NOTE (not-downloaded-attachment, expired-attachment):
+#. # {{date}} is replaced at run-time with a date. The format used to display
+#. # this date is specified in the string with ID 'expiry-date-format'.
 #: not-downloaded-attachment
 msgid "Attachment can be downloaded until {{date}}."
 msgstr ""
@@ -12415,7 +12285,7 @@ msgstr ""
 msgid "Sorry, the message expired on {{date}} and cannot be downloaded."
 msgstr ""
 
-#: downloading-attachment download_downloading
+#: downloading-attachment
 msgid "Downloading…"
 msgstr "Á íosluchtú…"
 
@@ -12484,6 +12354,11 @@ msgid "({{sim}}) {{sender}}"
 msgstr "({{sim}}) {{sender}}"
 
 #. # Date formats specific for SMS app
+#. # LOCALIZATION NOTE (expiry-date-format): this is a date format.
+#. # See http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
+#. # %A is the full weekday name from shared/date/date.properties and it might
+#. # not be in the correct grammatical case. To work around this issue, you can
+#. # use a different format like "%m/%d/%Y".
 #: expiry-date-format
 msgid "%A, %b %e"
 msgstr "%A, %e %b"
@@ -12573,6 +12448,178 @@ msgstr "{{date}}, {{operator}}"
 #: statusbarDateFormat
 msgid "%b %e"
 msgstr "%e %b"
+
+#. # The following statusbar messages are for screen reader accessibility.
+#: statusbar.ariaLabel
+msgid "Status Bar"
+msgstr "Barra Stádais"
+
+#: statusbarBattery
+msgid "Battery {{level}} percent"
+msgstr "Cadhnra: {{level}}%"
+
+#: statusbarBatteryCharging
+msgid "Battery {{level}} percent, charging"
+msgstr "Cadhnra: {{level}}%, á luchtú"
+
+#: statusbarFlightMode.ariaLabel
+msgid "Airplane mode on"
+msgstr "Mód eitleáin: ann"
+
+#: statusbarWiFiConnecting
+msgid "Wi-Fi: connecting"
+msgstr "Wi-Fi: ag ceangal"
+
+#: statusbarWiFiConnected
+msgid "Wi-Fi: {{level}} of 4 bars"
+msgstr "Wi-Fi: {{level}} as 4 bharra"
+
+#: statusbarSignal
+msgid "{{operator}} network, {{level}} of 5 bars"
+msgstr "Líonra {{operator}}, {{level}} as 5 bharra"
+
+#: statusbarSignalRoaming
+msgid "{{operator}} network (roaming), {{level}} of 5 bars"
+msgstr "Líonra {{operator}} (fánaíocht), {{level}} as 5 bharra"
+
+#: statusbarSignalNoneSearching
+msgid "Searching… Emergency calls only"
+msgstr "Ag cuardach… Glaonna éigeandála amháin"
+
+#: statusbarHeadphones.ariaLabel
+msgid "Headphones on"
+msgstr "Cluasáin: ann"
+
+#: statusbarBluetoothHeadphones.ariaLabel
+msgid "Bluetooth headphones on"
+msgstr "Cluasáin Bluetooth: ann"
+
+#: statusbarBluetoothTransferring.ariaLabel
+msgid "Bluetooth transfer active"
+msgstr "Aistriú Bluetooth ar siúl"
+
+#: statusbarIconOn-tethering
+msgid "Tethering on"
+msgstr "Teaghránú: ann"
+
+#: statusbarIconOnActive-tethering
+msgid "Tethering on, active"
+msgstr "Teaghránú: ann, gníomhach"
+
+#: statusbarAlarm.ariaLabel
+msgid "Alarm on"
+msgstr "Aláram: ann"
+
+#: statusbarIconOn-bluetooth
+msgid "Bluetooth on"
+msgstr "Bluetooth: ann"
+
+#: statusbarIconOnActive-bluetooth
+msgid "Bluetooth on, active"
+msgstr "Bluetooth: ann, gníomhach"
+
+#: statusbarIconOn-mute
+msgid "Mute on"
+msgstr ""
+
+#: statusbarIconOn-vibration
+msgid "Vibration on"
+msgstr "Crith: ann"
+
+#: statusbarRecording.ariaLabel
+msgid "Recording on"
+msgstr "Taifeadadh: ann"
+
+#: statusbarGeolocation.ariaLabel
+msgid "Geolocation on"
+msgstr "Geoshuíomh: ann"
+
+#: statusbarUsb.ariaLabel
+msgid "USB on"
+msgstr "USB: ann"
+
+#: statusbarForwarding
+msgid "Call forwarding on"
+msgstr "Cur ar aghaidh: ann"
+
+#: statusbarPlaying.ariaLabel
+msgid "Media playing"
+msgstr ""
+
+#: statusbarNfc.ariaLabel
+msgid "NFC on"
+msgstr "NFC: ann"
+
+#: statusbarDownloads.ariaLabel
+msgctxt "statusbarDownloads.ariaLabel"
+msgid "Downloading…"
+msgstr "Á íosluchtú…"
+
+#: statusbarNetworkActivity.ariaLabel
+msgid "Networking on"
+msgstr "Líonrú: ann"
+
+#: statusbarEmergencyCBNotification.ariaLabel
+msgid "Emergency callback"
+msgstr "Aisghlaoch éigeandála"
+
+#: statusbarNotifications
+msgctxt "statusbarNotifications"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: statusbarNotifications[one]
+msgid "{{n}} notification"
+msgstr "{{n}} fhógra"
+
+#: statusbarNotifications[two]
+msgctxt "statusbarNotifications[two]"
+msgid "{{n}} notifications"
+msgstr "{{n}} fhógra"
+
+#: statusbarNotifications[few]
+msgctxt "statusbarNotifications[few]"
+msgid "{{n}} notifications"
+msgstr "{{n}} fhógra"
+
+#: statusbarNotifications[many]
+msgctxt "statusbarNotifications[many]"
+msgid "{{n}} notifications"
+msgstr "{{n}} bhfógra"
+
+#: statusbarNotifications[other]
+msgctxt "statusbarNotifications[other]"
+msgid "{{n}} notifications"
+msgstr "{{n}} fógra"
+
+#: statusbarNotifications-unread
+msgctxt "statusbarNotifications-unread"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: statusbarNotifications-unread[one]
+msgid "{{n}} unread notification"
+msgstr "{{n}} fhógra gan léamh"
+
+#: statusbarNotifications-unread[two]
+msgctxt "statusbarNotifications-unread[two]"
+msgid "{{n}} unread notifications"
+msgstr "{{n}} fhógra gan léamh"
+
+#: statusbarNotifications-unread[few]
+msgctxt "statusbarNotifications-unread[few]"
+msgid "{{n}} unread notifications"
+msgstr "{{n}} fhógra gan léamh"
+
+#: statusbarNotifications-unread[many]
+msgctxt "statusbarNotifications-unread[many]"
+msgid "{{n}} unread notifications"
+msgstr "{{n}} bhfógra gan léamh"
+
+#: statusbarNotifications-unread[other]
+msgctxt "statusbarNotifications-unread[other]"
+msgid "{{n}} unread notifications"
+msgstr "{{n}} fógra gan léamh"
 
 #: clear-all
 msgid "Clear all"
@@ -13749,10 +13796,6 @@ msgstr "{{appName}}: {{name}}"
 msgid "Tap to switch input method"
 msgstr "Tapáil chun an modh ionchurtha a athrú"
 
-#: layout-selection
-msgid "Layout selection"
-msgstr "Roghnú leagain amach"
-
 #. # Shrinking UI
 #: shrinking-tip
 msgid "Swipe to share"
@@ -13766,6 +13809,11 @@ msgstr "Íosluchtú tosaithe"
 #: download_stopped stopped_download_title
 msgid "Download stopped"
 msgstr "Íosluchtú stoptha"
+
+#: download_downloading
+msgctxt "download_downloading"
+msgid "Downloading…"
+msgstr "Á íosluchtú…"
 
 #: download_succeeded
 msgid "Download complete"
@@ -13794,6 +13842,14 @@ msgstr "Cuardaigh nó cuir seoladh isteach"
 #: noSIMCardInHotspot
 msgid "SIM card is absent or inserted incorrectly, so turn off hotspot"
 msgstr "Ní féidir ball te a shocrú toisc nach bhfuil aon chárta SIM ann."
+
+#: add-link-to-home-screen
+msgid "Add link to home screen"
+msgstr "Cuir nasc leis an scáileán baile"
+
+#: share-link
+msgid "Share link"
+msgstr "Roinn nasc"
 
 #: description
 msgid "Gaia Video"
@@ -15069,6 +15125,10 @@ msgstr "Aimsíodh {{numFriends}} cara le hiompórtáil"
 msgid "Importing friends to Contacts"
 msgstr "Cairde á n-iompórtáil"
 
+#: progressFB genericProgress
+msgid "{{current}}/{{total}}"
+msgstr "{{current}}/{{total}}"
+
 #: progressFB3UpdateTitle
 msgid "Updating friends in Contacts"
 msgstr "Cairde á nuashonrú i dTeagmhálacha"
@@ -15234,6 +15294,140 @@ msgstr "Chun teagmhálacha a iompórtáil, cuir cárta cuimhne isteach"
 #: noConnection11
 msgid "To import Facebook friends or contacts connect to Wi-Fi or data network"
 msgstr "Ceangail le Wi-Fi nó líonra eile chun cairde ó Facebook a iompórtáil"
+
+#. # SIM import
+#: simContacts-import
+msgid "Import SIM contacts"
+msgstr "Iompórtáil teagmhálacha SIM"
+
+#: simContacts-importing
+msgid "Importing SIM contacts…"
+msgstr "Teagmhálacha SIM á nIompórtáil…"
+
+#: simContacts-reading
+msgid "Reading from SIM card…"
+msgstr "Cárta SIM á léamh…"
+
+#: simContacts-error
+msgid "Could not import contacts from SIM"
+msgstr "Níorbh fhéidir teagmhálacha a iompórtáil ón chárta SIM"
+
+#: simContacts-imported3
+msgctxt "simContacts-imported3"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: simContacts-imported3[zero]
+msgid "No contacts detected on SIM to import"
+msgstr "Níl aon teagmhálacha le hiompórtáil ar an SIM"
+
+#: simContacts-imported3[one]
+msgctxt "simContacts-imported3[one]"
+msgid "Imported one contact"
+msgstr "Iompórtáladh teagmháil amháin"
+
+#: simContacts-imported3[two]
+msgctxt "simContacts-imported3[two]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} theagmháil"
+
+#: simContacts-imported3[few]
+msgctxt "simContacts-imported3[few]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} theagmháil"
+
+#: simContacts-imported3[many]
+msgctxt "simContacts-imported3[many]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} dteagmháil"
+
+#: simContacts-imported3[other]
+msgctxt "simContacts-imported3[other]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} teagmháil"
+
+#. # SD Card import
+#: memoryCardContacts-import
+msgid "Import contacts from memory card"
+msgstr "Iompórtáil teagmhálacha ó chárta cuimhne"
+
+#: memoryCardContacts-importing
+msgid "Importing contacts from memory card…"
+msgstr "Teagmhálacha á n-iompórtáil ó chárta cuimhne…"
+
+#: memoryCardContacts-reading
+msgid "Reading from memory card…"
+msgstr "Cárta cuimhne á léamh…"
+
+#: memoryCardContacts-error
+msgid "Could not import contacts from memory card"
+msgstr "Níorbh fhéidir teagmhálacha a iompórtáil ón chárta cuimhne"
+
+#: memoryCardContacts-imported3
+msgctxt "memoryCardContacts-imported3"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: memoryCardContacts-imported3[zero]
+msgid "No contacts detected on memory card to import"
+msgstr "Níor aimsíodh aon teagmhálacha ar an gcárta cuimhne le hiompórtáil"
+
+#: memoryCardContacts-imported3[one]
+msgctxt "memoryCardContacts-imported3[one]"
+msgid "Imported one contact"
+msgstr "Iompórtáladh teagmháil amháin"
+
+#: memoryCardContacts-imported3[two]
+msgctxt "memoryCardContacts-imported3[two]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} theagmháil"
+
+#: memoryCardContacts-imported3[few]
+msgctxt "memoryCardContacts-imported3[few]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} theagmháil"
+
+#: memoryCardContacts-imported3[many]
+msgctxt "memoryCardContacts-imported3[many]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} dteagmháil"
+
+#: memoryCardContacts-imported3[other]
+msgctxt "memoryCardContacts-imported3[other]"
+msgid "Imported {{n}} contacts"
+msgstr "Iompórtáladh {{n}} teagmháil"
+
+#: facebook-import-msg
+msgid "{[ plural(imported) ]}"
+msgstr "{[ plural(imported) ]}"
+
+#: facebook-import-msg[zero]
+msgid "No friends imported (out of {{total}})"
+msgstr "Níor iompórtáladh aon chairde (as {{total}})"
+
+#: facebook-import-msg[one]
+msgid "One friend imported (out of {{total}})"
+msgstr "Iompórtáladh cara amháin (as {{total}})"
+
+#: facebook-import-msg[two]
+msgctxt "facebook-import-msg[two]"
+msgid "{{imported}}/{{total}} friends imported"
+msgstr "Iompórtáladh {{imported}} chara (as {{total}})"
+
+#: facebook-import-msg[few]
+msgctxt "facebook-import-msg[few]"
+msgid "{{imported}}/{{total}} friends imported"
+msgstr "Iompórtáladh {{imported}} chara (as {{total}})"
+
+#: facebook-import-msg[many]
+msgctxt "facebook-import-msg[many]"
+msgid "{{imported}}/{{total}} friends imported"
+msgstr "Iompórtáladh {{imported}} gcara (as {{total}})"
+
+#: facebook-import-msg[other]
+msgctxt "facebook-import-msg[other]"
+msgid "{{imported}}/{{total}} friends imported"
+msgstr "Iompórtáladh {{imported}} cara (as {{total}})"
 
 #: perm-contacts-appRequest
 msgid "{{app}} would like to access your contact list."
