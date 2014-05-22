@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-12 17:39-0500\n"
+"POT-Creation-Date: 2014-05-15 09:18-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -31,8 +31,8 @@ msgstr "Tá Bluetooth díchumasaithe"
 msgid "Do you want to turn Bluetooth on?"
 msgstr "An bhfuil fonn ort Bluetooth a thosú?"
 
-#: cancel curtainCancel cancel-button overlay-cancel-button
-#: voicemailNoNumberCancel
+#: cancel
+msgctxt "cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -116,6 +116,56 @@ msgstr ""
 msgid "Unable to pair with the device. Too many requests."
 msgstr "Ní féidir péireáil leis an ngléas. An iomarca iarrachtaí."
 
+#. #-#-#-#-#  appsbluetoothbluetooth.properties.po (firefox)  #-#-#-#-#
+#. # Bluetooth :: Pair View
+#: pair
+msgid "Pair"
+msgstr "Péireáil"
+
+#: active-pair
+msgid "Confirm devices to pair"
+msgstr "Deimhnigh na gléasanna le péireáil"
+
+#: active-pair-confirmation
+msgid ""
+"To pair with {{device}}, make sure that both devices currently have the "
+"following PIN displayed:"
+msgstr ""
+
+#: active-pair-pincode
+msgid "To pair with {{device}}, enter the PIN on the device."
+msgstr "Chun péireáil le {{device}}, cuir UAP isteach ar an ngléas."
+
+#: active-pair-passkey
+msgid "To pair with {{device}}, enter the passkey on the device."
+msgstr "Chun péireáil le {{device}}, cuir an eochair isteach ar an ngléas."
+
+#: passive-pair
+msgid "Bluetooth pairing request"
+msgstr "Iarratas péireála Bluetooth"
+
+#: passive-pair-confirmation
+msgid ""
+"{{device}} would like to pair with this phone. To accept, make sure that both "
+"devices currently have the following PIN displayed:"
+msgstr ""
+
+#: passive-pair-pincode
+msgid ""
+"{{device}} would like to pair with this phone. To accept, enter the PIN on "
+"the device."
+msgstr ""
+
+#: passive-pair-passkey
+msgid ""
+"{{device}} would like to pair with this phone. To accept, enter the passkey "
+"on the device."
+msgstr ""
+
+#: pair-view-title
+msgid "Bluetooth Request From"
+msgstr "Iarratas Bluetooth Ó"
+
 #: name
 msgid "Bluetooth Transfer"
 msgstr "Aistriú Bluetooth"
@@ -189,6 +239,11 @@ msgstr "Leabharmharc"
 #: description
 msgid "Bookmark Manager"
 msgstr "Bainisteoir na Leabharmharcanna"
+
+#: cancel curtainCancel cancel-button overlay-cancel-button
+#: voicemailNoNumberCancel
+msgid "Cancel"
+msgstr "Cealaigh"
 
 #: enter-search-or-address.placeholder
 msgid "Search or enter address"
@@ -6798,7 +6853,7 @@ msgstr ""
 "Le 'Aimsigh Mo Ghléas', is féidir guthán caillte a aimsiú, a chur faoi ghlas, "
 "nó a bhánú"
 
-#: download-button download
+#: download-button download-attachment download
 msgid "Download"
 msgstr "Íosluchtaigh"
 
@@ -7296,11 +7351,6 @@ msgstr "Scrios {{name}}"
 msgid "{{name}} and all of its data will be deleted."
 msgstr "Scriosfar {{name}} agus na sonraí a bhaineann leis."
 
-#: cancel
-msgctxt "cancel"
-msgid "Cancel"
-msgstr "Cealaigh"
-
 #: remove-body
 msgid "Remove {{name}} from the homescreen?"
 msgstr "Bain {{name}} ón scáileán baile?"
@@ -7360,6 +7410,8 @@ msgstr "Cuir topaic nó téarma cuardaigh isteach"
 msgid "Enter any topic or keyword"
 msgstr "Cuir topaic nó lorgfhocal isteach"
 
+#. #-#-#-#-#  appskeyboardkeyboard.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (dismiss): The "x" button that closes the word suggestions.
 #: evme-helper-dismiss dismiss
 msgid "Dismiss"
 msgstr "Díbir"
@@ -7691,11 +7743,16 @@ msgstr "Uathcheartú"
 msgid "Word suggestion"
 msgstr "Focal molta"
 
+#. # Accessibility strings
+#. # LOCALIZATION NOTE (wordSuggestions): The name of the section above the
+#. # keyboard where the word suggestions appear. This is read out to screen reader
+#. # users when they put a finger in that area.
 #: wordSuggestions
 msgid "Word suggestions"
 msgstr "Focail mholta"
 
-#. # Key labels for accessibility.
+#. # Key labels, used by the screen reader to correctly pronounce special and
+#. # punctuation keys.
 #: alternateLayoutKey
 msgid "more numbers and symbols"
 msgstr "tuilleadh uimhreacha agus siombailí"
@@ -8142,10 +8199,6 @@ msgstr "Earráid"
 #: no stop_download_left_button
 msgid "No"
 msgstr "Níl"
-
-#: pair
-msgid "Pair"
-msgstr "Péireáil"
 
 #: set
 msgid "Set"
@@ -9407,46 +9460,6 @@ msgstr "Roghnaigh ainm a fheicfear ar ríomhairí péireáilte"
 msgid "New name"
 msgstr "Ainm nua"
 
-#: active-pair
-msgid "Confirm devices to pair"
-msgstr "Deimhnigh na gléasanna le péireáil"
-
-#: active-pair-confirmation
-msgid ""
-"To pair with {{device}}, make sure that both devices currently have the "
-"following PIN displayed:"
-msgstr ""
-
-#: active-pair-pincode
-msgid "To pair with {{device}}, enter the PIN on the device."
-msgstr "Chun péireáil le {{device}}, cuir UAP isteach ar an ngléas."
-
-#: active-pair-passkey
-msgid "To pair with {{device}}, enter the passkey on the device."
-msgstr "Chun péireáil le {{device}}, cuir an eochair isteach ar an ngléas."
-
-#: passive-pair
-msgid "Bluetooth pairing request"
-msgstr "Iarratas péireála Bluetooth"
-
-#: passive-pair-confirmation
-msgid ""
-"{{device}} would like to pair with this phone. To accept, make sure that both "
-"devices currently have the following PIN displayed:"
-msgstr ""
-
-#: passive-pair-pincode
-msgid ""
-"{{device}} would like to pair with this phone. To accept, enter the PIN on "
-"the device."
-msgstr ""
-
-#: passive-pair-passkey
-msgid ""
-"{{device}} would like to pair with this phone. To accept, enter the passkey "
-"on the device."
-msgstr ""
-
 #: error-connect-title
 msgid "Unable to connect devices"
 msgstr "Ní féidir gléasanna a cheangal"
@@ -9466,10 +9479,6 @@ msgid ""
 "You are currently connected to this device. Unpairing will also disconnect "
 "from it."
 msgstr ""
-
-#: pair-view-title
-msgid "Bluetooth Request From"
-msgstr "Iarratas Bluetooth Ó"
 
 #. # Connectivity :: NFC
 #: nfc
@@ -9759,6 +9768,10 @@ msgstr "{{notifications}}"
 #: lockscreen-notifications
 msgid "Show on lock screen"
 msgstr "Taispeáin ar an scáileán glasáilte"
+
+#: notifications-resend
+msgid "Show after reboot"
+msgstr "Taispeáin tar éis atosaithe"
 
 #. # LOCALIZATION NOTE (dateAndTime-header): if you leave the original
 #. # en-US value "{{dateAndTime}}" in the following string, the localization
@@ -12394,22 +12407,17 @@ msgstr "Teachtaireacht MMS"
 msgid "Message is not downloaded yet."
 msgstr "Níl an teachtaireacht íosluchtaithe fós."
 
-#: not-downloaded-mms
-msgid "I have sent you a file. It will be available until {{date}}"
-msgstr "Sheol mé comhad chugat. Beidh sé ar fáil go dtí {{date}}"
-
-#: expired-mms
-msgid "Sorry, message cannot be downloaded as it expired on {{date}}"
+#: not-downloaded-attachment
+msgid "Attachment can be downloaded until {{date}}."
 msgstr ""
-"Ní féidir an teachtaireacht a íosluchtú. Chuaigh sé as feidhm ar {{date}}"
 
-#: download
-msgid "download"
-msgstr "íosluchtaigh"
+#: expired-attachment
+msgid "Sorry, the message expired on {{date}} and cannot be downloaded."
+msgstr ""
 
-#: downloading
-msgid "downloading"
-msgstr "íosluchtú"
+#: downloading-attachment download_downloading
+msgid "Downloading…"
+msgstr "Á íosluchtú…"
 
 #: unnamed-attachment
 msgid "untitled"
@@ -12474,6 +12482,11 @@ msgstr "SIM{{id}}"
 #: dsds-notification-title-with-sim
 msgid "({{sim}}) {{sender}}"
 msgstr "({{sim}}) {{sender}}"
+
+#. # Date formats specific for SMS app
+#: expiry-date-format
+msgid "%A, %b %e"
+msgstr "%A, %e %b"
 
 #: name
 msgid "System"
@@ -12627,6 +12640,15 @@ msgstr "An bhfuil tú cinnte gur mhaith leat ceangal le {{deviceName}}?"
 #: confirmNFCConnectBTdisabledNameKnown
 msgid "Turn on Bluetooth and connect to {{deviceName}}?"
 msgstr "Tosaigh Bluetooth agus ceangail le {{deviceName}}?"
+
+#: confirmNFCConnectBTdisabled
+msgid "Turn on"
+msgstr "Tosaigh"
+
+#: dismissNFCConnectBTdisabled
+msgctxt "dismissNFCConnectBTdisabled"
+msgid "Cancel"
+msgstr "Cealaigh"
 
 #: airplane
 msgid "Turn on airplane mode"
@@ -13744,10 +13766,6 @@ msgstr "Íosluchtú tosaithe"
 #: download_stopped stopped_download_title
 msgid "Download stopped"
 msgstr "Íosluchtú stoptha"
-
-#: download_downloading
-msgid "Downloading…"
-msgstr "Á íosluchtú…"
 
 #: download_succeeded
 msgid "Download complete"
