@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-22 10:20-0500\n"
+"POT-Creation-Date: 2014-06-08 07:54-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -31,7 +31,7 @@ msgstr "Tá Bluetooth díchumasaithe"
 msgid "Do you want to turn Bluetooth on?"
 msgstr "An bhfuil fonn ort Bluetooth a thosú?"
 
-#: cancel curtainCancel cancel-button overlay-cancel-button
+#: cancel cancel-action curtainCancel cancel-button overlay-cancel-button
 #: voicemailNoNumberCancel
 msgid "Cancel"
 msgstr "Cealaigh"
@@ -53,7 +53,7 @@ msgstr ""
 
 #. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # modal-dialog buttons
-#: ok dialog-button-ok
+#: ok dialog-button-ok fxa-ok
 msgid "OK"
 msgstr "OK"
 
@@ -141,8 +141,9 @@ msgid "To pair with {{device}}, enter the passkey on the device."
 msgstr "Chun péireáil le {{device}}, cuir an eochair isteach ar an ngléas."
 
 #: passive-pair
+msgctxt "passive-pair"
 msgid "Bluetooth pairing request"
-msgstr "Iarratas péireála Bluetooth"
+msgstr "Iarratas Bluetooth"
 
 #: passive-pair-confirmation
 msgid ""
@@ -165,6 +166,20 @@ msgstr ""
 #: pair-view-title
 msgid "Bluetooth Request From"
 msgstr "Iarratas Bluetooth Ó"
+
+#. # Bluetooth :: Pair Manager
+#: bluetooth-pairing-request-now-title
+msgctxt "bluetooth-pairing-request-now-title"
+msgid "Bluetooth pairing request"
+msgstr "Iarratas Bluetooth"
+
+#: pairing-request-timeout-title
+msgid "Bluetooth Pairing Request"
+msgstr "Iarratas Bluetooth"
+
+#: pairing-request-timeout-description
+msgid "Bluetooth pairing request expired. Try to pair again."
+msgstr ""
 
 #: name
 msgid "Bluetooth Transfer"
@@ -199,18 +214,14 @@ msgstr "Ainm an tsuímh"
 msgid "Address"
 msgstr "Seoladh"
 
-#: cancel-action
-msgctxt "cancel-action"
-msgid "Cancel"
-msgstr "Cealaigh"
-
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
 #. # wrapper
 #: add-action add-to-home-screen
 msgid "Add to Home Screen"
 msgstr "Cuir leis an Scáileán Baile"
 
-#: done-action done settings-done edit-dialog-done done-search
+#: done-action done settings-done edit-dialog-done pick-done fxa-done
+#: done-search
 msgid "Done"
 msgstr "Déanta"
 
@@ -240,7 +251,9 @@ msgstr "Leabharmharc"
 msgid "Bookmark Manager"
 msgstr "Bainisteoir na Leabharmharcanna"
 
-#: enter-search-or-address.placeholder
+#. #-#-#-#-#  appsverticalhomehomescreen.properties.po (firefox)  #-#-#-#-#
+#. # Search
+#: enter-search-or-address.placeholder search-or-enter-address.placeholder
 msgid "Search or enter address"
 msgstr "Cuardaigh nó cuir seoladh isteach"
 
@@ -365,7 +378,7 @@ msgstr "Barrshuímh"
 #. # At the bottom of the folder picker drawer, there is an icon link that
 #. # goes to the account settings. This string is only used for accessibility
 #. # concerns, and is not visible visually.
-#: browser-settings settings drawer-settings-link name
+#: browser-settings settings drawer-settings-link name settingsButton.ariaLabel
 #: voicemailNoNumberSettings
 msgid "Settings"
 msgstr "Socruithe"
@@ -438,7 +451,7 @@ msgstr "Cuir leis an scáileán baile"
 msgid "Username"
 msgstr "Ainm an Úsáideora"
 
-#: password field-password.placeholder
+#: password field-password.placeholder fxa-password.placeholder
 msgid "Password"
 msgstr "Focal Faire"
 
@@ -543,11 +556,11 @@ msgstr "Brabhsálaí Gaia"
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Navigation bar
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: back drawer-back navbar-back evme-searchbar-clear
+#: back drawer-back navbar-back evme-searchbar-clear fxa-back
 msgid "Back"
 msgstr "Siar"
 
-#: save settings-save
+#: save settings-save create-save
 msgid "Save"
 msgstr "Sábháil"
 
@@ -608,7 +621,7 @@ msgstr "Socruithe"
 msgid "Hide settings"
 msgstr "Folaigh socruithe"
 
-#. # add records
+#. # view/add/edit records
 #: add-account
 msgid "Add an account"
 msgstr "Cuir cuntas leis"
@@ -617,9 +630,17 @@ msgstr "Cuir cuntas leis"
 msgid "Add event"
 msgstr "Cuir imeacht leis"
 
-#: add-event-header
+#: view-event-header
 msgid "Event"
 msgstr "Imeacht"
+
+#: new-event-header
+msgid "Add Event"
+msgstr "Cuir Imeacht Leis"
+
+#: edit-event-header
+msgid "Edit Event"
+msgstr "Cuir Imeacht in Eagar"
 
 #. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # account
@@ -702,8 +723,9 @@ msgctxt "calendar-local"
 msgid "Offline calendar"
 msgstr "Féilire as líne"
 
+#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # create event
-#: event-title.placeholder
+#: event-title.placeholder mediaPlaybackTitle.ariaLabel
 msgid "Title"
 msgstr "Teideal"
 
@@ -785,23 +807,39 @@ msgstr "30 nóim"
 msgid "Each hour"
 msgstr "Gach uair an chloig"
 
+#. # duration time of events
+#. # startDate and endDate use the `longDateFormat` format.
+#. # startTime and endTime use the `shortTimeFormat` format.
+#. # `<br>` (line break) used for presentation.
+#: one-day-duration
+msgid "{{startDate}}<br>from {{startTime}} to {{endTime}}"
+msgstr "{{startDate}}<br>ó {{startTime}} go {{endTime}}"
+
+#: multiple-day-duration
+msgid "From {{startTime}} {{startDate}}<br>to {{endTime}} {{endDate}}"
+msgstr "Ó {{startTime}} {{startDate}}<br>go {{endTime}} {{endDate}}"
+
+#: one-all-day-duration
+msgid "All day<br>{{startDate}}"
+msgstr "I rith an lae<br>{{startDate}}"
+
+#: multiple-all-day-duration
+msgid "All day from {{startDate}}<br>to {{endDate}}"
+msgstr "I rith an lae {{startDate}}<br>go {{endDate}}"
+
 #. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # alarms for event view/edit
-#: none securityNone
+#: none securityNone ringtone-none
 msgid "None"
 msgstr "Gan fuaim"
+
+#: reminder
+msgid "Reminder:"
+msgstr "Meabhrúchán:"
 
 #: remind-me
 msgid "Remind me"
 msgstr "Meabhraigh dom"
-
-#: from-time
-msgid "From: "
-msgstr "Ó: "
-
-#: to-time
-msgid "To: "
-msgstr "Go: "
 
 #: alarm-at-event-standard
 msgid "At time of event"
@@ -1226,19 +1264,11 @@ msgstr "%I %p"
 msgid "All Day"
 msgstr "I Rith an Lae"
 
-#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
-#. # Default header used in month view / week view
-#. #-#-#-#-#  appsgallerygallery.properties.po (firefox)  #-#-#-#-#
-#. # Header format used in thumbnail view
-#. # see http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
-#. #-#-#-#-#  appsvideovideo.properties.po (firefox)  #-#-#-#-#
-#. # Header format used in thumbnail view
-#. # see http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
-#: month-view-header-format date-group-header
-msgid "%B %Y"
-msgstr "%B %Y"
+#: current-time
+msgid "%I:%M"
+msgstr "%I:%M"
 
-#. # In week view when displaying multiple months (weeks that span months).
+#. # Default header used in month view / week view
 #: multi-month-view-header-format
 msgid "%b %Y"
 msgstr "%b %Y"
@@ -1247,6 +1277,27 @@ msgstr "%b %Y"
 #: day-view-header-format
 msgid "%b %e, %A"
 msgstr "%e %b, %A"
+
+#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Header used on month view before the event list (selected day date)
+#. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
+#. # Date formats specific for SMS app
+#. # LOCALIZATION NOTE (expiry-date-format): this is a date format.
+#. # See http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
+#. # %A is the full weekday name from shared/date/date.properties and it might
+#. # not be in the correct grammatical case. To work around this issue, you can
+#. # use a different format like "%m/%d/%Y".
+#: months-day-view-header-format expiry-date-format
+msgid "%A, %b %e"
+msgstr "%A, %e %b"
+
+#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # Date format in the event detail view.
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
+#. # see http://www.cplusplus.com/reference/clibrary/ctime/strftime/
+#: longDateFormat
+msgid "%A, %B %d, %Y"
+msgstr "%A, %d %B %Y"
 
 #. #errors
 #: error-start-after-end
@@ -1359,7 +1410,7 @@ msgstr "Scrios an grianghraf?"
 msgid "Delete video?"
 msgstr "Scrios an físeán?"
 
-#: delete downloads-delete
+#: delete delete-confirm downloads-delete
 msgid "Delete"
 msgstr "Scrios"
 
@@ -1517,7 +1568,7 @@ msgstr "Oscail an Gailearaí"
 msgid "Preview"
 msgstr "Réamhamharc"
 
-#: name camera-a11y-button.ariaLabel perm-video-capture
+#: name camera camera-a11y-button.ariaLabel perm-video-capture
 msgid "Camera"
 msgstr "Ceamara"
 
@@ -1610,7 +1661,7 @@ msgstr "Aláram nua"
 msgid "Edit alarm"
 msgstr "Cuir aláram in eagar"
 
-#: pause
+#: pause mediaPlaybackPause
 msgid "Pause"
 msgstr "Sos"
 
@@ -1626,7 +1677,7 @@ msgstr "Cuaird"
 msgid "Lap {{n}}"
 msgstr "Cuaird {{n}}"
 
-#: time timeMessage
+#: time time.ariaLabel timeMessage
 msgid "Time"
 msgstr "Am"
 
@@ -2009,6 +2060,57 @@ msgstr "Clog"
 msgid "Gaia Clock"
 msgstr "Clog Gaia"
 
+#. # create-collection
+#: loading
+msgid "Loading"
+msgstr "Á Luchtú"
+
+#: custom custom.placeholder
+msgid "Custom"
+msgstr "Saincheaptha"
+
+#: prompt-create-custom evme-collectionssuggest-prompt-create-custom
+msgid "Create your own Smart Collection"
+msgstr "Cruthaigh Bailiúchán Cliste de do chuid féin"
+
+#: network-error-message evme-alert-offline-smart-collections-more
+msgid "Connect to the internet to add more Smart Collections"
+msgstr "Ceangail leis an Idirlíon chun tuilleadh Bailiúchán Cliste a fháil"
+
+#. #-#-#-#-#  appscollectioncollection.properties.po (firefox)  #-#-#-#-#
+#. # view-collection
+#. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
+#. #search contextmenu
+#: add-to-top-of-collection evme-add-to-top-of-collection
+msgid "Add to top of collection"
+msgstr "Cuir le barr an bhailiúcháin é"
+
+#: save-to-homescreen evme-save-to-homescreen
+msgid "Save to Homescreen"
+msgstr "Sábháil ar an Scáileán Baile"
+
+#. #-#-#-#-#  appscollectioncollection.properties.po (firefox)  #-#-#-#-#
+#. # delete-collection
+#. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
+#. # Prompt that appears when a user tries to delete an app.
+#. #-#-#-#-#  appsverticalhomehomescreen.properties.po (firefox)  #-#-#-#-#
+#. # Prompt that appears when a user tries to delete an app.
+#: delete-title
+msgid "Delete {{name}}"
+msgstr "Scrios {{name}}"
+
+#: delete-body
+msgid "{{name}} and all of its data will be deleted."
+msgstr "Scriosfar {{name}} agus na sonraí a bhaineann leis."
+
+#: name
+msgid "Smart Collections"
+msgstr "Bailiúcháin Chliste"
+
+#: description
+msgid "Smart Collections Manager"
+msgstr "Bainisteoir na mBailiúchán Cliste"
+
 #: add
 msgid "Add"
 msgstr "Cuir Leis"
@@ -2023,6 +2125,10 @@ msgstr "Glaoigh"
 msgid "Update"
 msgstr "Nuashonraigh"
 
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Memory Card Contacts Import Error Dialog
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #: retry curtainRetry
 msgid "Retry"
 msgstr "Atriail"
@@ -2145,7 +2251,7 @@ msgstr "Sráid"
 msgid "Zip code"
 msgstr "Cód poist"
 
-#: locality.placeholder tz-city
+#: locality.placeholder city.ariaLabel tz-city
 msgid "City"
 msgstr "Cathair"
 
@@ -2160,10 +2266,6 @@ msgstr "Nóta"
 #: org.placeholder
 msgid "Company"
 msgstr "Comhlacht"
-
-#: custom.placeholder
-msgid "Custom"
-msgstr "Saincheaptha"
 
 #: date
 msgctxt "date"
@@ -2793,6 +2895,16 @@ msgctxt "SelectedTxt[other]"
 msgid "{{n}} selected"
 msgstr "{{n}} ceann roghnaithe"
 
+#. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
+#. # WebRTC App
+#: video evme-shortcut-id-video name
+msgid "Video"
+msgstr "Fís"
+
+#: audio
+msgid "Audio"
+msgstr "Fuaim"
+
 #. # Wait
 #: waitDuplicateContacts
 msgid "Looking for duplicate contacts"
@@ -2897,7 +3009,11 @@ msgstr "Cuir an logchomhad glaonna in eagar"
 msgid "Edit call log dialog"
 msgstr "Logchomhad glaonna á chur in eagar"
 
-#: connecting
+#. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Interstitial screen
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: connecting fxa-connecting
 msgid "Connecting"
 msgstr "Ag Ceangal"
 
@@ -4243,7 +4359,7 @@ msgstr "Athshocraigh úsáid sonraí"
 msgid "Reset report"
 msgstr "Athshocraigh an tuairisc"
 
-#: next navbar-next
+#: next navbar-next fxa-next mediaPlaybackNext.ariaLabel
 msgid "Next"
 msgstr "Ar Aghaidh"
 
@@ -4663,18 +4779,25 @@ msgstr "Atriail"
 msgid "Mail Settings"
 msgstr "Socruithe Ríomhphoist"
 
-#. # Label in the "Account" sub-section of acccount settings that shows the
+#. # Label in the "Account" sub-section of account settings that shows the
 #. # human name, not the email address, for the account.
 #: settings-account-name
 msgctxt "settings-account-name"
 msgid "Your name"
 msgstr "D'ainm"
 
-#. # Label in the "Account" sub-section of acccount settings for the checkbox
+#. # Label in the "Account" sub-section of account settings for the checkbox
 #. # that enables getting phone notifications when new inbox email is found
 #. # via periodic sync with the mail server.
 #: settings-account-display-notifications
 msgid "Display notifications for new messages"
+msgstr ""
+
+#. # LOCALIZATION NOTE(settings-account-play-sound-onsend): Label in the "Account"
+#. # sub-section of account settings for the checkbox that enables playing a sound
+#. # after a message is sent.
+#: settings-account-play-sound-onsend
+msgid "Play sound after message is sent"
 msgstr ""
 
 #. # Label in the "Data" sub-section of acccount settings for the select box
@@ -4995,6 +5118,12 @@ msgctxt "compose-attachments[other]"
 msgid "{{ n }} attachments"
 msgstr "{{ n }} iatán"
 
+#. # Shown when user taps on attachment icon in compose, but the app still
+#. # needs a bit more time to finishing the add of the previous attachment.
+#: compose-attachment-still-working
+msgid "One moment, still working on the previous attachment..."
+msgstr ""
+
 #: compose-subject
 msgctxt "compose-subject"
 msgid "Subject"
@@ -5300,7 +5429,7 @@ msgctxt "forward-header-subject"
 msgid "Subject"
 msgstr "Ábhar"
 
-#: forward-header-date dateMessage
+#: forward-header-date date.ariaLabel dateMessage
 msgid "Date"
 msgstr "Dáta"
 
@@ -5377,7 +5506,10 @@ msgstr "Cuntais"
 msgid "Last sync:"
 msgstr "Sioncrónú is déanaí:"
 
-#: toaster-undo undo
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE(undo.ariaLabel): The following string is spoken by screen
+#. # readers and not shown on the screen.
+#: toaster-undo undo undo.ariaLabel
 msgid "Undo"
 msgstr "Cealaigh"
 
@@ -6550,6 +6682,18 @@ msgstr "Fíordheimhniú"
 msgid "SSID Network Name"
 msgstr "Ainm SSID an líonra"
 
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#. # LOCALIZATION NOTE(wifiLevel): {{level}} will be replaced at run-time by a
+#. # number ranging from 1 to 4.
+#: wifiLevel
+msgid "{{level}} of 4 bars"
+msgstr "{{level}} as 4 bharra"
+
+#: networksList
+msgid "Networks found"
+msgstr "Líonraí aimsithe"
+
 #. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Date & Time
@@ -6575,6 +6719,10 @@ msgstr "Crios ama"
 #: change
 msgid "Change"
 msgstr "Athraigh"
+
+#: region.ariaLabel region tz-region
+msgid "Region"
+msgstr "Réigiún"
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Import contacts
@@ -6607,10 +6755,11 @@ msgstr ""
 "Is féidir cairde ó Facebook a iompórtáil nó a chur in eagar sna socruithe "
 "Teagmhálacha"
 
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Fxa Intro
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: firefox-accounts
+#: firefox-accounts firefox-accounts-title
 msgid "Firefox Accounts"
 msgstr "Cuntais Firefox"
 
@@ -6835,6 +6984,12 @@ msgstr "Ceart go leor!"
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Tutorial
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # LOCALIZATION NOTE(tutorial): The following string is spoken by screen readers
+#. # and not shown on the screen.
+#: tutorial
+msgid "Tutorial"
+msgstr "Cúrsa Teagaisc"
+
 #: tutorial-step1-tiny
 msgid "Swipe from right to left to browse your apps."
 msgstr "Svaidhpeáil anoir chun aipeanna a bhrabhsáil."
@@ -6850,11 +7005,10 @@ msgstr ""
 "Cuir lorgfhocal nó topaic isteach agus cuirfidh an guthán é féin in oiriúint."
 
 #: tutorial-step4-tiny
+msgctxt "tutorial-step4-tiny"
 msgid ""
 "Swipe down to access recent notifications, credit information and settings."
 msgstr ""
-"Svaidhpeáil anuas chun fógraí, eolas faoi chreidmheas, agus socruithe a "
-"fheiceáil."
 
 #: tutorial-step5-tiny
 msgid "Tap and hold the home button to browse and close recent apps."
@@ -6888,6 +7042,22 @@ msgstr "Tapáil deilbhín agus coinnigh síos é chun é a scriosadh nó a bhoga
 #: tutorial-step4-large-2
 msgid "Two fingers swipe up from the bottom edge to trigger card view."
 msgstr "Svaidhpeáil aníos le dhá mhéar chun amharc cárta a oscailt."
+
+#: tutorial-vertical-scroll-tiny
+msgid ""
+"Swipe up and down to browse your apps. Tap and hold an icon to move or delete "
+"it."
+msgstr ""
+
+#: tutorial-notifications-tiny
+msgctxt "tutorial-notifications-tiny"
+msgid ""
+"Swipe down to access recent notifications, credit information and settings."
+msgstr ""
+
+#: tutorial-sheets-tiny
+msgid "Drag from the left edge of your screen to return to recently used apps."
+msgstr ""
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Offline Error Dialog
@@ -6933,12 +7103,18 @@ msgstr "Seoladh neamhbhailí"
 msgid "Please go back and correct your entry."
 msgstr "Téigh ar ais agus ceartaigh an iontráil."
 
-#: name
-msgid "FTU"
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#: progressbar
+msgid "Step {{step}} of {{total}}"
+msgstr "Céim {{step}} as {{total}}"
+
+#: progressbar.ariaLabel description
+msgid "First Time Experience"
 msgstr ""
 
-#: description
-msgid "First Time Experience"
+#: name
+msgid "FTU"
 msgstr ""
 
 #: number-selected2
@@ -7162,6 +7338,12 @@ msgstr "Beart"
 msgid "Gallery"
 msgstr "Gailearaí"
 
+#. # Header format used in thumbnail view
+#. # see http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
+#: date-group-header
+msgid "%B %Y"
+msgstr "%B %Y"
+
 #: description
 msgid "Gaia Gallery"
 msgstr "Gailearaí Gaia"
@@ -7187,23 +7369,15 @@ msgstr "Ceol"
 msgid "{{topic}} on {{name}}"
 msgstr "{{topic}} ar {{name}}"
 
+#. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
 #. # Dialog that appears when a user long taps on the homescreen
-#: contextmenu-add-wallpaper
+#: contextmenu-add-wallpaper change-wallpaper
 msgid "Change Wallpaper"
 msgstr "Athraigh an Cúlbhrat"
 
-#: contextmenu-add-smart-collections
+#: contextmenu-add-smart-collections add-smart-collections
 msgid "Add Smart Collections"
 msgstr "Cuir Bailiúcháin Chliste Leis"
-
-#. # Prompt that appears when a user tries to delete an app.
-#: delete-title
-msgid "Delete {{name}}"
-msgstr "Scrios {{name}}"
-
-#: delete-body
-msgid "{{name}} and all of its data will be deleted."
-msgstr "Scriosfar {{name}} agus na sonraí a bhaineann leis."
 
 #: cancel
 msgctxt "cancel"
@@ -7334,17 +7508,13 @@ msgstr "Cuir {{name}} leis an Scáileán Baile?"
 msgid "{{name}} was already added to Home Screen"
 msgstr "Bhí {{name}} curtha leis an Scáileán Baile cheana"
 
-#: evme-alert-offline-smart-collections-more
-msgid "Connect to the internet to add more Smart Collections"
-msgstr "Ceangail leis an Idirlíon chun tuilleadh Bailiúchán Cliste a fháil"
-
 #: evme-alert-save-wallpaper
 msgid "Set as wallpaper?"
 msgstr "Socraigh mar chúlbhrat?"
 
 #: evme-alert-no-more-smart-collections
 msgid "No Smart Collections to add"
-msgstr ""
+msgstr "Níl aon Bhailiúcháin Chliste ann"
 
 #: evme-banner-app-install-success
 msgid "{{name}} added to Home Screen"
@@ -7369,10 +7539,6 @@ msgstr "Á Luchtú…"
 msgctxt "evme-collectionssuggest-loading-cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
-
-#: evme-collectionssuggest-prompt-create-custom
-msgid "Create your own Smart Collection"
-msgstr "Cruthaigh Bailiúchán Cliste de do chuid féin"
 
 #: evme-backgroundimage-source-label
 msgid "Source:"
@@ -7542,10 +7708,6 @@ msgstr "Taisteal"
 msgid "TV"
 msgstr "Teilifís"
 
-#: evme-shortcut-id-video name
-msgid "Video"
-msgstr "Fís"
-
 #: evme-shortcut-id-utilities
 msgid "Utilities"
 msgstr "Uirlisí"
@@ -7554,23 +7716,12 @@ msgstr "Uirlisí"
 msgid "Weather"
 msgstr "Aimsir"
 
-#. #search contextmenu
-#: evme-add-to-top-of-collection
-msgid "Add to top of collection"
-msgstr "Cuir le barr an bhailiúcháin é"
-
-#: evme-save-to-homescreen
-msgid "Save to Homescreen"
-msgstr "Sábháil ar an Scáileán Baile"
-
 #: edit-dialog-cancel
 msgctxt "edit-dialog-cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
-#. # Personalization :: Homescreen
-#: name homescreen
+#: name
 msgid "Homescreen"
 msgstr "Baile"
 
@@ -7845,129 +7996,125 @@ msgstr "Amharcán PDF"
 msgid "Portable Document Format (PDF) Viewer"
 msgstr "Amharcán PDF (Formáid Doiciméad Iniompartha)"
 
-#: name
-msgid "System Ringtones"
-msgstr "Clingthoin an Chórais"
+#: name ring-tones
+msgid "Ringtones"
+msgstr "Clingthoin"
 
 #: description
 msgid "Gaia Ringtone Picker"
 msgstr "Roghnóir Clingthon Gaia"
 
-#: ringtone-title
-msgid "Select ringtone"
-msgstr "Roghnaigh clingthon"
+#: manage-title manage-ringtones
+msgid "Manage Ringtones"
+msgstr "Bainistigh Clingthoin"
 
-#: alerttone-title
-msgid "Select alert tone"
-msgstr "Roghnaigh ton foláirimh"
+#: actions-share
+msgid "Share ringtone"
+msgstr "Comhroinn clingthon"
 
-#: ringer_classic_prism_ogg
-msgid "Classic Prism"
-msgstr "Priosma Clasaiceach"
+#: actions-delete
+msgid "Delete ringtone"
+msgstr "Scrios clingthon"
 
-#: ringer_classic_courier_opus
-msgid "Classic Courier"
-msgstr "Courier Clasaiceach"
+#: actions-cancel
+msgctxt "actions-cancel"
+msgid "Cancel"
+msgstr "Cealaigh"
 
-#: ringer_classic_touchmatic_opus
-msgid "Classic Touchmatic"
-msgstr "Touchmatic Clasaiceach"
+#: delete-title
+msgid "Delete Ringtone"
+msgstr "Scrios Clingthon"
 
-#: ringer_classic_electric_ogg
-msgid "Classic Electric"
-msgstr "Leictreach Clasaiceach"
+#: delete-desc
+msgid "Are you sure you want to delete \"{{tone}}\"?"
+msgstr "An bhfuil tú cinnte gur mhaith leat \"{{tone}}\" a scriosadh?"
 
-#: ringer_classic_wallphone_ogg
-msgid "Classic Wallphone"
-msgstr "Guthán Balla Clasaiceach"
-
-#: ringer_disco_drive_opus
-msgid "Disco Drive"
+#: delete-desc-default-ringtone
+msgid ""
+"\"{{tone}}\" is the current default ringtone.\n"
+"\n"
+"Are you sure you want to delete it?"
 msgstr ""
 
-#: ringer_vamos_la_elektro_opus
-msgid "Vamos Là Elektro"
-msgstr "Vamos Là Elektro"
-
-#: ringer_digitalascent_opus
-msgid "Analog Ascent"
-msgstr "Éirí Analógach"
-
-#: ringer_low_bit_swing_opus
-msgid "Low Bit Swing"
+#: delete-desc-default-alerttone
+msgid ""
+"\"{{tone}}\" is the current default alert.\n"
+"\n"
+"Are you sure you want to delete it?"
 msgstr ""
 
-#: ringer_ringing_gems_opus
-msgid "Ringing Gems"
-msgstr "Geamanna Clingeacha"
+#: delete-cancel
+msgctxt "delete-cancel"
+msgid "Cancel"
+msgstr "Cealaigh"
 
-#: ringer_rain_echoes_opus
-msgid "Rain Echoes"
-msgstr "Macallaí Baistí"
+#: deleted-tone
+msgid "Ringtone deleted."
+msgstr "Scriosadh an clingthon."
 
-#: ringer_progressive_dapple_opus
-msgid "Progressive Dapple"
-msgstr "Breacadh Forásach"
+#: created-tone
+msgid "New ringtone created."
+msgstr "Cruthaíodh clingthon nua."
 
-#: ringer_digital_dapple_opus
-msgid "Analog Dapple"
-msgstr "Breacadh Analógach"
-
-#: ringer_loud_windchimes_opus
-msgid "Wind Chimes"
-msgstr "Clogra Gaoithe"
-
-#: ringer_bitbounce_opus
-msgid "Bit Bounce"
+#: set-default-tone
+msgid "Ringtone set as default."
 msgstr ""
 
-#: notifier_minimal_bands_ogg
-msgid "Minimal Bands"
+#. ##### Ringtone Picking #####
+#: pick-title
+msgid "Select Sound"
+msgstr "Roghnaigh Fuaim"
+
+#. ##### List Section Headers #####
+#: list-title-ringtone
+msgid "Firefox Ringtones"
+msgstr "Clingthoin Firefox"
+
+#: list-title-alerttone alerts
+msgid "Alerts"
+msgstr "Foláirimh"
+
+#: list-title-custom
+msgid "Custom Ringtones"
+msgstr "Clingthoin Shaincheaptha"
+
+#. #### Ringtone Sharing (creation) #####
+#: create-title
+msgid "Create Ringtone"
+msgstr "Cruthaigh Clingthon"
+
+#: create-cancel
+msgctxt "create-cancel"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: saving-ringtone savingringtone
+msgid "Saving ringtone…"
+msgstr "Clingthon á shábháil…"
+
+#: play-error-title
+msgid "Corrupted File"
+msgstr "Comhad Truaillithe"
+
+#: play-error-desc
+msgid "The file is corrupted. It cannot be used to create a ringtone."
+msgstr "Tá an comhad truaillithe. Ní féidir clingthon a dhéanamh as."
+
+#: save-error-title
+msgid "Ringtone Not Created"
+msgstr "Níor Cruthaíodh an Clingthon"
+
+#: save-error-desc
+msgid "There was an issue creating the ringtone. Please try again."
 msgstr ""
 
-#: notifier_exclamation_ogg
-msgid "Exclamation"
-msgstr ""
+#: default-label
+msgid "Use as default ringtone"
+msgstr "Úsáid mar an clingthon réamhshocraithe"
 
-#: notifier_boomer_opus
-msgid "Boomer"
-msgstr ""
-
-#: notifier_rewind_ogg
-msgid "Rewind"
-msgstr ""
-
-#: notifier_bop_opus
-msgid "Bop"
-msgstr ""
-
-#: notifier_ting_opus
-msgid "Ting"
-msgstr ""
-
-#: notifier_bap_opus
-msgid "Bap"
-msgstr ""
-
-#: notifier_dididi_opus
-msgid "Dididi"
-msgstr ""
-
-#: notifier_spring_ogg
-msgid "Spring"
-msgstr ""
-
-#: notifier_bell_opus
-msgid "Bell"
-msgstr ""
-
-#: notifier_bell_extd_opus
-msgid "Bell Extended"
-msgstr ""
-
-#: notifier_ring_ogg ring
-msgid "Ring"
-msgstr "Cling"
+#: ringtone-untitled
+msgid "Untitled"
+msgstr "Gan teideal"
 
 #: name
 msgctxt "name"
@@ -8004,36 +8151,6 @@ msgstr "Áiteanna"
 msgid "Apps"
 msgstr "Aipeanna"
 
-#: name
-msgid "Set Ringtone"
-msgstr "Roghnaigh Clingthon"
-
-#: description
-msgid "Gaia Ringtone Setter"
-msgstr "Roghnóir Clingthoin Gaia"
-
-#: setringtone-header
-msgctxt "setringtone-header"
-msgid "Set as ringtone"
-msgstr "Socraigh mar chlingthon"
-
-#: setringtone-button
-msgctxt "setringtone-button"
-msgid "Set as ringtone"
-msgstr "Socraigh mar chlingthon"
-
-#: settingringtone
-msgid "Setting ringtone…"
-msgstr "Clingthon á shocrú…"
-
-#: cantplay
-msgid ""
-"The audio file cannot be played on this phone and can not be used as a "
-"ringtone."
-msgstr ""
-"Ní féidir an comhad fuaime a sheinm ar an nguthán seo agus dá bharr sin ní "
-"féidir é a úsáid mar chlingthon."
-
 #: description
 msgid "Gaia Settings"
 msgstr "Socruithe Gaia"
@@ -8050,12 +8167,18 @@ msgstr "Réamhshocrú"
 msgid "Enabled"
 msgstr "Cumasaithe"
 
+#: enable
+msgid "Enable"
+msgstr "Cumasaigh"
+
 #: disabled
 msgctxt "disabled"
 msgid "Disabled"
 msgstr "Díchumasaithe"
 
-#: error
+#. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
+#. # this is a real error screen (3.2 in spec)
+#: error fxa-invalid-email-title
 msgid "Error"
 msgstr "Earráid"
 
@@ -8317,7 +8440,7 @@ msgstr ""
 msgid "Identifier"
 msgstr "Aitheantóir"
 
-#: showPassword
+#: showPassword fxa-show-password
 msgid "Show password"
 msgstr "Taispeáin an focal faire"
 
@@ -9497,37 +9620,21 @@ msgstr "Roghnaigh ton"
 msgid "Ringer"
 msgstr "Clingire"
 
-#: ring-tones
-msgid "Ringtones"
-msgstr "Clingthoin"
-
 #: alert-tones
 msgid "Alert tones"
 msgstr "Fuaimeanna foláirimh"
+
+#: manage-sounds
+msgid "Manage Sounds"
+msgstr "Bainistigh Fuaimeanna"
 
 #: other-sounds
 msgid "Other sounds"
 msgstr "Fuaimeanna eile"
 
-#: alerts
-msgid "Alerts"
-msgstr "Foláirimh"
-
 #: unlock-screen
 msgid "Unlock screen"
 msgstr "Scáileán á dhíghlasáil"
-
-#: camera-shutter
-msgid "Camera shutter"
-msgstr "Comhla ceamara"
-
-#: camera-recordingsound
-msgid "Video recording"
-msgstr "Físeán á thaifeadadh"
-
-#: sent-mail
-msgid "Sent Mail"
-msgstr "Ríomhphost á Sheoladh"
 
 #: sent-message
 msgid "Sent Message"
@@ -9541,10 +9648,6 @@ msgstr "Clingire agus Fógraí"
 msgid "Media"
 msgstr "Meáin"
 
-#: savingringtone
-msgid "Saving ringtone…"
-msgstr "Clingthon á shábháil…"
-
 #: unplayable-ringtone
 msgid ""
 "The ringtone was not changed because the selected file can not be played on "
@@ -9552,6 +9655,10 @@ msgid ""
 msgstr ""
 "Níor athraíodh an clingthon toisc nach féidir an comhad roghnaithe a sheinm "
 "ar an nguthán seo."
+
+#: no-ringtone-app
+msgid "We were unable to find a ringtone app to manage ringtones!"
+msgstr "Níor aimsíodh aip chun clingthoin a bhainistiú!"
 
 #. # Personalization :: Display
 #: display
@@ -9675,18 +9782,9 @@ msgstr "Teanga agus Réigiún"
 msgid "{{language}}"
 msgstr "{{language}}"
 
-#: region tz-region
-msgid "Region"
-msgstr "Réigiún"
-
 #: sample-format
 msgid "Sample Format"
 msgstr "Formáid Shamplach"
-
-#. # see http://www.cplusplus.com/reference/clibrary/ctime/strftime/
-#: longDateFormat
-msgid "%A, %B %d, %Y"
-msgstr "%A, %d %B %Y"
 
 #. # Personalization :: Sim cards manager
 #: simManager
@@ -9750,14 +9848,42 @@ msgstr ""
 msgid "The current data transfer will be suspended. Continue anyway?"
 msgstr "Cuirfear an t-aistriú sonraí ar fionraí. Lean ar aghaidh mar sin féin?"
 
-#. # LOCALIZATION NOTE (homescreen-header): if you leave the original
-#. # en-US value "{{homescreen}}" in the following string, the localization
-#. # will be automatically picked from the existing string with ID "homescreen".
+#. # Personalization :: Homescreen
+#: homescreen
+msgctxt "homescreen"
+msgid "Homescreen"
+msgstr "Scáileán Baile"
+
+#: vertical-homescreen-header
+msgctxt "vertical-homescreen-header"
+msgid "Homescreen"
+msgstr "Scáileán Baile"
+
+#: vertical-homescreen-icon-layout
+msgid "Icon Layout"
+msgstr "Leagan Amach na nDeilbhíní"
+
+#: vertical-homescreen-three-columns
+msgid "Three Columns"
+msgstr "Trí Cholún"
+
+#: vertical-homescreen-four-columns
+msgid "Four Columns"
+msgstr "Ceithre Cholún"
+
+#. # Personalization :: Homescreens
+#: homescreens
+msgid "Homescreens"
+msgstr "Scáileáin Bhaile"
+
+#. # LOCALIZATION NOTE (homescreens-header): if you leave the original
+#. # en-US value "{{homescreens}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID "homescreens".
 #. # If you need to adapt your localization to the reduced space available
 #. # in headers, you can use a shorter string here.
-#: homescreen-header
-msgid "{{homescreen}}"
-msgstr "{{homescreen}}"
+#: homescreens-header
+msgid "{{homescreens}}"
+msgstr "{{homescreens}}"
 
 #: changeHomescreen
 msgid "Change homescreen"
@@ -9883,12 +10009,17 @@ msgstr ""
 msgid "Create account or sign in"
 msgstr "Cruthaigh cuntas nó logáil isteach"
 
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Panel: logged in, unverified
+#. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Signup success
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #: fxa-confirm-account
 msgid "Confirm Your Account"
 msgstr "Deimhnigh Do Chuntas"
 
-#: fxa-verification-email-sent-msg
+#: fxa-verification-email-sent-msg fxa-will-send-email
 msgid "We will send an email to: {{email}}"
 msgstr "Seolfaimid teachtaireacht ríomhphoist chuig: {{email}}"
 
@@ -9957,6 +10088,18 @@ msgid ""
 msgstr ""
 "Le 'Aimsigh Mo Ghléas', is féidir leat do ghuthán a aimsiú, a chur faoi "
 "ghlas, nó a bhánú ó shuíomh Gréasáin:"
+
+#: findmydevice-enable-geolocation-prompt
+msgid "Enable Geolocation?"
+msgstr "Cumasaigh Geoshuíomh?"
+
+#: findmydevice-enable-geolocation-description
+msgid "To view your device's location, you must enable geolocation tracking."
+msgstr ""
+
+#: findmydevice-geolocation-enabled
+msgid "Geolocation Enabled"
+msgstr "Geoshuíomh Cumasaithe"
 
 #: passcode-lock
 msgid "Passcode lock"
@@ -10064,6 +10207,10 @@ msgstr "Glan"
 #: messages name
 msgid "Messages"
 msgstr "Teachtaireachtaí"
+
+#: ring notifier_ring
+msgid "Ring"
+msgstr "Cling"
 
 #: change
 msgctxt "change"
@@ -10832,6 +10979,10 @@ msgstr ""
 
 #: apz
 msgid "Async Pan/Zoom"
+msgstr ""
+
+#: apz-overscroll
+msgid "Overscrolling"
 msgstr ""
 
 #: tiling
@@ -11712,7 +11863,7 @@ msgstr "Teachtaireacht"
 #: messagesInput_placeholder
 msgctxt "messagesInput_placeholder"
 msgid "Message"
-msgstr ""
+msgstr "Teachtaireacht"
 
 #: messagesSubjectInput_placeholder
 msgid "Subject"
@@ -11913,18 +12064,6 @@ msgstr "Faighte:"
 #: message-via
 msgid "Via:"
 msgstr "Trí:"
-
-#: carrier-unknown
-msgid "Carrier unknown"
-msgstr "Iompróir anaithnid"
-
-#. # LOCALIZATION NOTE(thread-header): parameters in this string will be replaced
-#. # at runtime. {{numberType}} is the label associated to the number ('work',
-#. # 'home', etc.), {{numberDetail}} is either the phone number or the carrier's
-#. # name. Resulting example for en-US: "mobile | +123456789", "mobile | Verizon".
-#: thread-header
-msgid "{{numberType}} | {{numberDetail}}"
-msgstr "{{numberType}} | {{numberDetail}}"
 
 #. # LOCALIZATION NOTE(thread-separator): used to separate type/carrier from
 #. # the number itself. It should be consistent with the characters used in
@@ -12353,15 +12492,175 @@ msgstr "SIM{{id}}"
 msgid "({{sim}}) {{sender}}"
 msgstr "({{sim}}) {{sender}}"
 
-#. # Date formats specific for SMS app
-#. # LOCALIZATION NOTE (expiry-date-format): this is a date format.
-#. # See http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html
-#. # %A is the full weekday name from shared/date/date.properties and it might
-#. # not be in the correct grammatical case. To work around this issue, you can
-#. # use a different format like "%m/%d/%Y".
-#: expiry-date-format
-msgid "%A, %b %e"
-msgstr "%A, %e %b"
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Errors
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # 'spec' references below refer to the spec attached to bug 960130
+#. # this is a real error screen (7.2 in spec)
+#: fxa-connection-error-title
+msgctxt "fxa-connection-error-title"
+msgid "Unable to Connect"
+msgstr "Ní féidir ceangal a bhunú"
+
+#: fxa-connection-error-message
+msgid "You can create an account or sign in from Settings."
+msgstr ""
+
+#. # this is a real error screen (5.4 in spec)
+#: fxa-reset-password-error-title
+msgid "Reset Password"
+msgstr "Athshocraigh an Focal Faire"
+
+#: fxa-reset-password-error-message
+msgid "You can reset your password from Settings."
+msgstr ""
+
+#. # this is a real error screen (19.4 in spec)
+#: fxa-coppa-failure-error-title
+msgid "Cannot Create Account"
+msgstr "Ní féidir cuntas a chruthú"
+
+#: fxa-coppa-failure-error-message
+msgid ""
+"You must meet certain age requirements to create a Firefox Account. "
+"{{learnmore}}"
+msgstr ""
+
+#. # LOCALIZATION NOTE(fxa-learn-more): This string corresponds to the {{learnmore}}
+#. # placeholder in fxa-coppa-failure-error-message.
+#: fxa-learn-more
+msgid "Learn more"
+msgstr "Tuilleadh eolais"
+
+#. # this is a real error screen (13.2 and 17.2 in spec)
+#: fxa-offline-error-title
+msgctxt "fxa-offline-error-title"
+msgid "Unable to Connect"
+msgstr "Ní féidir ceangal a bhunú"
+
+#: fxa-offline-error-message
+msgid "Please connect to a network from Settings."
+msgstr ""
+
+#: fxa-invalid-email-message
+msgid "Please enter a valid email."
+msgstr ""
+
+#. # this is a real error screen (5.2 / 11.1 in spec)
+#: fxa-invalid-password-title
+msgid "Invalid Password"
+msgstr "Focal Faire Neamhbhailí"
+
+#: fxa-invalid-password-message
+msgid "Please check your password and try again."
+msgstr ""
+
+#. # this is the fallback error
+#: fxa-unknown-error-title
+msgctxt "fxa-unknown-error-title"
+msgid "Unable to Connect"
+msgstr "Ní féidir ceangal a bhunú"
+
+#: fxa-unknown-error-message
+msgid "System unavailable, try again soon."
+msgstr ""
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Enter Email
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: fxa-enter-email-input.placeholder
+msgid "Enter your email"
+msgstr "Cuir do sheoladh ríomhphoist isteach"
+
+#: fxa-use-email-to-sign-in
+msgid "Use your email address to create an account or sign in."
+msgstr ""
+
+#: fxa-notice
+msgid ""
+"By proceeding, I agree to the {{tos}} and {{pn}} of Firefox cloud services."
+msgstr ""
+
+#. # LOCALIZATION NOTE(fxa-tos): This string corresponds to the {{tos}} placeholder
+#. # in fxa-notice.
+#: fxa-tos
+msgid "Terms of Service"
+msgstr "Téarmaí Seirbhíse"
+
+#. # LOCALIZATION NOTE(fxa-pn): This string corresponds to the {{pn}} placeholder
+#. # in fxa-notice.
+#: fxa-pn
+msgid "Privacy Notice"
+msgstr "Fógra Príobháideachta"
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Set & Enter Password
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: fxa-create-password-title
+msgid "Create a Password"
+msgstr "Cruthaigh Focal Faire"
+
+#: fxa-enter-password-title
+msgid "Enter Your Password"
+msgstr "Cuir d'Fhocal Faire Isteach"
+
+#: fxa-hello-user
+msgid "Hello, {{email}}"
+msgstr "Dia dhuit a {{email}}"
+
+#: fxa-password-refresh
+msgid "Please enter your Firefox Account password to continue."
+msgstr ""
+
+#: fxa-forgot-your-password
+msgid "Forgot your password?"
+msgstr ""
+
+#: fxa-password-length-requirement
+msgid "Your password must be at least 8 characters long."
+msgstr ""
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # Signin success
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: fxa-success
+msgid "Success!"
+msgstr ""
+
+#: fxa-ready-to-go
+msgid "Your Firefox Account is ready to go! "
+msgstr "Tá do chuntas Firefox réidh! "
+
+#: fxa-use-features
+msgid ""
+"Now you can use features like Find My Device and apps like the Firefox "
+"Marketplace."
+msgstr ""
+
+#: fxa-access-manage-account-settings
+msgid "In the future, you can access and manage your account from Settings."
+msgstr ""
+
+#: fxa-signup-click-verification-link-in-email
+msgid ""
+"Next time you check your email, click the verification link to confirm your "
+"Firefox Account."
+msgstr ""
+
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. # COPPA
+#. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#: fxa-age-verification
+msgid "Age Verification"
+msgstr ""
+
+#: fxa-age-1990-earlier
+msgid "1990 or earlier"
+msgstr "1990 nó níos luaithe"
+
+#: fxa-year-of-birth
+msgid "Year of Birth"
+msgstr "Bliain Bhreithe"
 
 #: name
 msgid "System"
@@ -12370,6 +12669,72 @@ msgstr "Córas"
 #: description
 msgid "Main System"
 msgstr "Príomhchóras"
+
+#. #-#-#-#-#  appssystemmobile_idmobile_id.properties.po (firefox)  #-#-#-#-#
+#. # Button status
+#: share share_downloaded_file
+msgid "Share"
+msgstr "Comhroinn"
+
+#: resend
+msgid "Resend"
+msgstr "Seol Arís"
+
+#: verify
+msgid "Verify"
+msgstr "Deimhnigh"
+
+#: verifying
+msgid "Verifying"
+msgstr "Á Dheimhniú"
+
+#: verified
+msgid "Verified"
+msgstr "Deimhnithe"
+
+#. # Explanation of every step
+#: mobileIDExplanation
+msgid ""
+"{{app_name}} would like to know and verify your phone number. Please choose "
+"which one you want to share or enter a new one."
+msgstr ""
+
+#: verificationCodeExplanation
+msgid ""
+"We’ve sent a code to {{phone_number}}. We’ll try to pick it up automatically, "
+"but you’ll have to enter it manually if it’s not in use in this device."
+msgstr ""
+
+#: successMessage
+msgid ""
+"Awesome! Your number {{phone_number}} is now verified and available to "
+"{{app_name}}."
+msgstr ""
+
+#. # Errors
+#: serverErrorMessage
+msgid ""
+"The verification server is unavailable at this time. Please check your "
+"Internet connection, try again or wait a few minutes."
+msgstr ""
+
+#: timeoutErrorMessage
+msgid ""
+"There seems to be a problem with your verification code. Let's try once again!"
+msgstr ""
+
+#: errorTitle
+msgid "Mobile identity"
+msgstr "Aitheantas soghluaiste"
+
+#. # Options when typing a phone number
+#: addPhoneNumber
+msgid "Or add your phone number"
+msgstr "Nó cuir d'uimhir theileafóin leis"
+
+#: selectPhoneNumber
+msgid "Or select a phone number from the list"
+msgstr "Nó roghnaigh uimhir theileafóin ón liosta"
 
 #: help
 msgid "Help"
@@ -12382,6 +12747,10 @@ msgstr "Gan líonra"
 #: roaming
 msgid "{{operator}} (Roaming)"
 msgstr "{{operator}} (Fánaíocht)"
+
+#: operator-info
+msgid "{{carrier}} {{region}}"
+msgstr "{{carrier}} {{region}}"
 
 #: emergencyCallsOnly
 msgid "Emergency calls only"
@@ -12439,6 +12808,68 @@ msgstr ""
 msgid "Enter PIN"
 msgstr "Cuir UAP isteach"
 
+#: mediaPlaybackArtist.ariaLabel
+msgid "Artist"
+msgstr "Ealaíontóir"
+
+#: mediaPlaybackControls.ariaLabel
+msgid "Playback controls"
+msgstr "Rialtáin athsheinnte"
+
+#: mediaPlaybackPrevious.ariaLabel
+msgid "Previous"
+msgstr ""
+
+#: mediaPlaybackPlay
+msgid "Play"
+msgstr "Seinn"
+
+#: wifiButton-on
+msgid "Wi-Fi on"
+msgstr "Wi-Fi: ann"
+
+#: wifiButton-on-initializing
+msgid "Wi-Fi on, initializing"
+msgstr "Wi-Fi: ann, á thúsú"
+
+#: wifiButton-off
+msgid "Wi-Fi off"
+msgstr "Wi-Fi: as"
+
+#: dataButton-on
+msgid "Data {{type}} on"
+msgstr ""
+
+#: dataButton-off
+msgid "Data {{type}} off"
+msgstr ""
+
+#: bluetoothButton-on
+msgctxt "bluetoothButton-on"
+msgid "Bluetooth on"
+msgstr "Bluetooth: ann"
+
+#: bluetoothButton-on-initializing
+msgid "Bluetooth on, initializing"
+msgstr "Bluetooth: ann, á thúsú"
+
+#: bluetoothButton-off
+msgid "Bluetooth off"
+msgstr "Bluetooth: as"
+
+#: airplaneMode-on
+msgctxt "airplaneMode-on"
+msgid "Airplane mode on"
+msgstr "Mód eitleáin: ann"
+
+#: airplaneMode-off
+msgid "Airplane mode off"
+msgstr "Mód eitleáin: as"
+
+#: utilityTrayGrippy.ariaLabel
+msgid "Close utility tray"
+msgstr ""
+
 #. # status bar text label
 #: statusbarLabel
 msgid "{{date}}, {{operator}}"
@@ -12463,6 +12894,7 @@ msgid "Battery {{level}} percent, charging"
 msgstr "Cadhnra: {{level}}%, á luchtú"
 
 #: statusbarFlightMode.ariaLabel
+msgctxt "statusbarFlightMode.ariaLabel"
 msgid "Airplane mode on"
 msgstr "Mód eitleáin: ann"
 
@@ -12511,6 +12943,7 @@ msgid "Alarm on"
 msgstr "Aláram: ann"
 
 #: statusbarIconOn-bluetooth
+msgctxt "statusbarIconOn-bluetooth"
 msgid "Bluetooth on"
 msgstr "Bluetooth: ann"
 
@@ -12624,6 +13057,11 @@ msgstr "{{n}} fógra gan léamh"
 #: clear-all
 msgid "Clear all"
 msgstr "Glan uile"
+
+#. # Attention Screen
+#: attentionScreen-tapToShow
+msgid "Tap to show"
+msgstr "Tapáil chun taispeáint"
 
 #. # voice mails
 #: newVoicemails
@@ -13045,6 +13483,10 @@ msgstr "Nuashonrú an chórais"
 msgid "System Update Ready"
 msgstr "Tá Nuashonrú Réidh"
 
+#: systemUpdateLowBattery
+msgid "You need at least 50% battery level to install the update."
+msgstr ""
+
 #: required
 msgid "Required"
 msgstr "Riachtanach"
@@ -13116,6 +13558,12 @@ msgstr "Glao Éigeandála"
 #: unlock-a11y-button.ariaLabel
 msgid "Unlock"
 msgstr "Díghlasáil"
+
+#. # LOCALIZATION NOTE(panel-passcode.ariaLabel): The following string is spoken by
+#. # screen readers and not shown on the screen.
+#: panel-passcode.ariaLabel
+msgid "Passcode panel"
+msgstr ""
 
 #: http-authentication-message
 msgid ""
@@ -15024,10 +15472,6 @@ msgctxt "download-failed"
 msgid "Download failed"
 msgstr "Theip ar an íosluchtú"
 
-#: share_downloaded_file
-msgid "Share"
-msgstr "Comhroinn"
-
 #: ringtone_downloaded_file
 msgid "Set as ringtone"
 msgstr "Socraigh mar chlingthon"
@@ -15434,6 +15878,18 @@ msgctxt "facebook-import-msg[other]"
 msgid "{{imported}}/{{total}} friends imported"
 msgstr "Iompórtáladh {{imported}} cara (as {{total}})"
 
+#: title-app
+msgid "App Permission"
+msgstr ""
+
+#: title-web
+msgid "Website Permission"
+msgstr ""
+
+#: title-cam
+msgid "Select Camera"
+msgstr "Roghnaigh Ceamara"
+
 #: perm-contacts-appRequest
 msgid "{{app}} would like to access your contact list."
 msgstr "Tá {{app}} ag iarraidh do liosta teagmhálacha a rochtain."
@@ -15561,6 +16017,14 @@ msgstr "An bhfuil tú sásta do cheamara agus do mhicreafón a roinnt le {{app}}
 msgid "Would you like to share your camera and microphone with {{site}}?"
 msgstr "An bhfuil tú sásta do cheamara agus do mhicreafón a roinnt le {{site}}?"
 
+#: perm-camera-selector-appRequest
+msgid "Select a camera for {{app}}."
+msgstr "Roghnaigh ceamara le haghaidh {{app}}."
+
+#: perm-camera-selector-webRequest
+msgid "Select a camera for {{site}}."
+msgstr "Roghnaigh ceamara le haghaidh {{site}}."
+
 #. # SIM list
 #: sim-picker-dial-via-with-number
 msgid "Dial {{ phoneNumber }} via"
@@ -15569,6 +16033,110 @@ msgstr "Diailigh {{ phoneNumber }} trí"
 #: sim-picker-select-sim
 msgid "Select SIM"
 msgstr "Roghnaigh SIM"
+
+#: ringer_classic_prism
+msgid "Classic Prism"
+msgstr "Priosma Clasaiceach"
+
+#: ringer_classic_courier
+msgid "Classic Courier"
+msgstr "Courier Clasaiceach"
+
+#: ringer_classic_touchmatic
+msgid "Classic Touchmatic"
+msgstr "Touchmatic Clasaiceach"
+
+#: ringer_classic_electric
+msgid "Classic Electric"
+msgstr "Leictreach Clasaiceach"
+
+#: ringer_classic_wallphone
+msgid "Classic Wallphone"
+msgstr "Guthán Balla Clasaiceach"
+
+#: ringer_disco_drive
+msgid "Disco Drive"
+msgstr ""
+
+#: ringer_vamos_la_elektro
+msgid "Vamos Là Elektro"
+msgstr "Vamos Là Elektro"
+
+#: ringer_digitalascent
+msgid "Analog Ascent"
+msgstr "Éirí Analógach"
+
+#: ringer_low_bit_swing
+msgid "Low Bit Swing"
+msgstr ""
+
+#: ringer_ringing_gems
+msgid "Ringing Gems"
+msgstr "Geamanna Clingeacha"
+
+#: ringer_rain_echoes
+msgid "Rain Echoes"
+msgstr "Macallaí Baistí"
+
+#: ringer_progressive_dapple
+msgid "Progressive Dapple"
+msgstr "Breacadh Forásach"
+
+#: ringer_digital_dapple
+msgid "Analog Dapple"
+msgstr "Breacadh Analógach"
+
+#: ringer_loud_windchimes
+msgid "Wind Chimes"
+msgstr "Clogra Gaoithe"
+
+#: ringer_bitbounce
+msgid "Bit Bounce"
+msgstr ""
+
+#: notifier_minimal_bands
+msgid "Minimal Bands"
+msgstr ""
+
+#: notifier_exclamation
+msgid "Exclamation"
+msgstr ""
+
+#: notifier_boomer
+msgid "Boomer"
+msgstr ""
+
+#: notifier_rewind
+msgid "Rewind"
+msgstr ""
+
+#: notifier_bop
+msgid "Bop"
+msgstr ""
+
+#: notifier_ting
+msgid "Ting"
+msgstr ""
+
+#: notifier_bap
+msgid "Bap"
+msgstr ""
+
+#: notifier_dididi
+msgid "Dididi"
+msgstr ""
+
+#: notifier_spring
+msgid "Spring"
+msgstr ""
+
+#: notifier_bell
+msgid "Bell"
+msgstr ""
+
+#: notifier_bell_extd
+msgid "Bell Extended"
+msgstr ""
 
 #: tzRegion-Africa
 msgid "Africa"
