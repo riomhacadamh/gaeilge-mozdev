@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-08 07:54-0500\n"
+"POT-Creation-Date: 2014-06-20 13:34-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -578,7 +578,7 @@ msgstr "Imeachtaí"
 
 #. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
 #. # edit dialog
-#: edit message-multiedit-header[zero] edit-dialog-header
+#: edit message-multiedit-header[zero] edit-dialog-header edit-mode
 msgid "Edit"
 msgstr "Eagar"
 
@@ -670,7 +670,7 @@ msgstr "Socruithe Féilire"
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Personalization
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: advanced-settings-personalization personalization
+#: advanced-settings-personalization personalization collection-categoryId-368
 msgid "Personalization"
 msgstr "Pearsanú"
 
@@ -1616,7 +1616,7 @@ msgstr "Athshocraigh"
 msgid "Start"
 msgstr "Tosaigh"
 
-#: stop screenReader-confirm-button-stop
+#: stop screenReader-confirm-button-stop stop-download-action
 msgid "Stop"
 msgstr "Stad"
 
@@ -2088,6 +2088,10 @@ msgstr "Cuir le barr an bhailiúcháin é"
 #: save-to-homescreen evme-save-to-homescreen
 msgid "Save to Homescreen"
 msgstr "Sábháil ar an Scáileán Baile"
+
+#: offline-webresults
+msgid "Connect to the internet to get apps for {{collectionName}}"
+msgstr ""
 
 #. #-#-#-#-#  appscollectioncollection.properties.po (firefox)  #-#-#-#-#
 #. # delete-collection
@@ -2628,6 +2632,10 @@ msgstr "Teachtaireacht"
 msgid "Wall post"
 msgstr "Postáil bhalla"
 
+#: facebook-export-forbidden
+msgid "The contact cannot be shared due to Facebook constraint."
+msgstr ""
+
 #: otherAccount
 msgid "Other accounts"
 msgstr "Cuntais eile"
@@ -2897,7 +2905,7 @@ msgstr "{{n}} ceann roghnaithe"
 
 #. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
 #. # WebRTC App
-#: video evme-shortcut-id-video name
+#: video evme-shortcut-id-video name collection-categoryId-211
 msgid "Video"
 msgstr "Fís"
 
@@ -3740,34 +3748,34 @@ msgid "Rejected by remote"
 msgstr "Diúltaithe ar an taobh eile"
 
 #. # Conference call
-#: group-call
-msgctxt "group-call"
+#: conference
+msgctxt "conference"
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
 
-#: group-call[one]
-msgctxt "group-call[one]"
-msgid "Group call ({{ n }})"
+#: conference[one]
+msgctxt "conference[one]"
+msgid "Conference ({{ n }})"
 msgstr "Glao comhdhála ({{ n }})"
 
-#: group-call[two]
-msgctxt "group-call[two]"
-msgid "Group call ({{ n }})"
+#: conference[two]
+msgctxt "conference[two]"
+msgid "Conference ({{ n }})"
 msgstr "Glao comhdhála ({{ n }})"
 
-#: group-call[few]
-msgctxt "group-call[few]"
-msgid "Group call ({{ n }})"
+#: conference[few]
+msgctxt "conference[few]"
+msgid "Conference ({{ n }})"
 msgstr "Glao comhdhála ({{ n }})"
 
-#: group-call[many]
-msgctxt "group-call[many]"
-msgid "Group call ({{ n }})"
+#: conference[many]
+msgctxt "conference[many]"
+msgid "Conference ({{ n }})"
 msgstr "Glao comhdhála ({{ n }})"
 
-#: group-call[other]
-msgctxt "group-call[other]"
-msgid "Group call ({{ n }})"
+#: conference[other]
+msgctxt "conference[other]"
+msgid "Conference ({{ n }})"
 msgstr "Glao comhdhála ({{ n }})"
 
 #: caller-left-call
@@ -3809,7 +3817,7 @@ msgctxt "callAirplaneModeBtnOk"
 msgid "OK"
 msgstr "OK"
 
-#: callAirplaneModeTitle sendFlightModeTitle
+#: callAirplaneModeTitle sendFlightModeTitle apmActivated
 msgid "Airplane mode activated"
 msgstr "Mód eitleáin cumasaithe"
 
@@ -4408,7 +4416,7 @@ msgctxt "usage"
 msgid "Usage"
 msgstr "Úsáid"
 
-#: internet
+#: internet collection-categoryId-194
 msgid "Internet"
 msgstr "Idirlíon"
 
@@ -4526,9 +4534,12 @@ msgstr "Cuir cuntas eile leis"
 msgid "Continue to Mail"
 msgstr "Taispeáin Ríomhphost"
 
+#. #-#-#-#-#  appsemailemail.properties.po (firefox)  #-#-#-#-#
 #. # The error for when the user tries to create an account without a network
 #. # connection active.
-#: setup-error-offline
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
+#. # Reusing the setup-error-offline message from the email app
+#: setup-error-offline findmydevice-enable-network
 msgid "This device is currently offline. Connect to a network and try again."
 msgstr ""
 "Tá an gléas seo as líne faoi láthair. Ceangail le líonra agus déan iarracht "
@@ -5122,7 +5133,7 @@ msgstr "{{ n }} iatán"
 #. # needs a bit more time to finishing the add of the previous attachment.
 #: compose-attachment-still-working
 msgid "One moment, still working on the previous attachment..."
-msgstr ""
+msgstr "Fán nóiméad, ag obair ar an iatán roimhe seo fós..."
 
 #: compose-subject
 msgctxt "compose-subject"
@@ -5838,7 +5849,7 @@ msgstr ""
 "Le 'Aimsigh Mo Ghléas', is féidir guthán caillte a aimsiú, a chur faoi ghlas, "
 "nó a bhánú"
 
-#: download-button download-attachment download
+#: download-button download-attachment download resume-download-action
 msgid "Download"
 msgstr "Íosluchtaigh"
 
@@ -6778,6 +6789,12 @@ msgid "A verification link has been sent to {{email}}"
 msgstr "Seoladh nasc deimhnithe chuig {{email}}"
 
 #. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
+#. # Copy borrowed fxa-logged-in-text string in settings app
+#: fxa-signed-in fxa-logged-in-text
+msgid "Signed in as {{email}}"
+msgstr "Logáilte isteach mar {{email}}"
+
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # About your rights
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -7352,15 +7369,16 @@ msgstr "Gailearaí Gaia"
 msgid "Showbiz"
 msgstr "Siamsaíocht"
 
-#: Social evme-shortcut-id-social
+#: Social evme-shortcut-id-social collection-categoryId-289
 msgid "Social"
 msgstr "Sóisialta"
 
-#: Games evme-shortcut-id-games
+#: Games evme-shortcut-id-games collection-categoryId-207
 msgid "Games"
 msgstr "Cluichí"
 
 #: Music evme-shortcut-id-music name music music-space
+#: collection-categoryId-142
 msgid "Music"
 msgstr "Ceol"
 
@@ -7371,6 +7389,8 @@ msgstr "{{topic}} ar {{name}}"
 
 #. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
 #. # Dialog that appears when a user long taps on the homescreen
+#. #-#-#-#-#  appsverticalhomehomescreen.properties.po (firefox)  #-#-#-#-#
+#. # Context menu options
 #: contextmenu-add-wallpaper change-wallpaper
 msgid "Change Wallpaper"
 msgstr "Athraigh an Cúlbhrat"
@@ -7394,11 +7414,13 @@ msgctxt "download"
 msgid "Download"
 msgstr "Íosluchtaigh"
 
-#: restart-download-title
+#. #-#-#-#-#  appsverticalhomehomescreen.properties.po (firefox)  #-#-#-#-#
+#. # Prompt that appears when a user tries to resume a download.
+#: restart-download-title resume-download-title
 msgid "Restart Download"
 msgstr "Atosaigh an tÍosluchtú"
 
-#: restart-download-body
+#: restart-download-body resume-download-body
 msgid "Do you want to download {{name}}?"
 msgstr "An bhfuil fonn ort {{name}} a íosluchtú?"
 
@@ -7588,43 +7610,43 @@ msgstr ""
 msgid "Custom…"
 msgstr "Saincheap…"
 
-#: evme-shortcut-id-astrology
+#: evme-shortcut-id-astrology collection-categoryId-297
 msgid "Astrology"
 msgstr "Astralaíocht"
 
-#: evme-shortcut-id-autos
+#: evme-shortcut-id-autos collection-categoryId-288
 msgid "Autos"
 msgstr "Carranna"
 
-#: evme-shortcut-id-beauty
+#: evme-shortcut-id-beauty collection-categoryId-356
 msgid "Beauty"
 msgstr "Scéimh"
 
-#: evme-shortcut-id-books
+#: evme-shortcut-id-books collection-categoryId-22
 msgid "Books"
 msgstr "Leabhair"
 
-#: evme-shortcut-id-celebs
+#: evme-shortcut-id-celebs collection-categoryId-225
 msgid "Celebs"
 msgstr "Daoine Cáiliúla"
 
-#: evme-shortcut-id-daily-deals
+#: evme-shortcut-id-daily-deals collection-categoryId-292
 msgid "Daily Deals"
 msgstr "Sladmhargaí Laethúla"
 
-#: evme-shortcut-id-dating
+#: evme-shortcut-id-dating collection-categoryId-320
 msgid "Dating"
 msgstr "Suirí"
 
-#: evme-shortcut-id-electronics
+#: evme-shortcut-id-electronics collection-categoryId-286
 msgid "Electronics"
 msgstr "Leictreonaic"
 
-#: evme-shortcut-id-email
+#: evme-shortcut-id-email collection-categoryId-248
 msgid "Email"
 msgstr "Ríomhphost"
 
-#: evme-shortcut-id-entertainment
+#: evme-shortcut-id-entertainment collection-categoryId-376
 msgid "Entertainment"
 msgstr "Siamsaíocht"
 
@@ -7632,11 +7654,11 @@ msgstr "Siamsaíocht"
 msgid "Environment"
 msgstr "Comhshaol"
 
-#: evme-shortcut-id-fashion
+#: evme-shortcut-id-fashion collection-categoryId-282
 msgid "Fashion"
 msgstr "Faisean"
 
-#: evme-shortcut-id-funny
+#: evme-shortcut-id-funny collection-categoryId-277
 msgid "Funny"
 msgstr "Greannmhar"
 
@@ -7648,7 +7670,7 @@ msgstr "Rialtas"
 msgid "Health"
 msgstr "Sláinte"
 
-#: evme-shortcut-id-jobs
+#: evme-shortcut-id-jobs collection-categoryId-274
 msgid "Jobs"
 msgstr "Jabanna"
 
@@ -7660,7 +7682,7 @@ msgstr "Áitiúil"
 msgid "Maps"
 msgstr "Léarscáileanna"
 
-#: evme-shortcut-id-movies videos-space
+#: evme-shortcut-id-movies videos-space collection-categoryId-181
 msgid "Movies"
 msgstr "Scannáin"
 
@@ -7668,27 +7690,27 @@ msgstr "Scannáin"
 msgid "New Apps"
 msgstr "Aipeanna Nua"
 
-#: evme-shortcut-id-news
+#: evme-shortcut-id-news collection-categoryId-245
 msgid "News"
 msgstr "Nuacht"
 
-#: evme-shortcut-id-photography
+#: evme-shortcut-id-photography collection-categoryId-349
 msgid "Photography"
 msgstr "Grianghrafadóireacht"
 
-#: evme-shortcut-id-recipes
+#: evme-shortcut-id-recipes collection-categoryId-270
 msgid "Recipes"
 msgstr "Cócaireacht"
 
-#: evme-shortcut-id-restaurants
+#: evme-shortcut-id-restaurants collection-categoryId-220
 msgid "Restaurants"
 msgstr "Bialanna"
 
-#: evme-shortcut-id-shopping
+#: evme-shortcut-id-shopping collection-categoryId-238
 msgid "Shopping"
 msgstr "Siopadóireacht"
 
-#: evme-shortcut-id-sports
+#: evme-shortcut-id-sports collection-categoryId-260
 msgid "Sports"
 msgstr "Spórt"
 
@@ -7700,19 +7722,19 @@ msgstr "Nuacht Teic"
 msgid "Top Apps"
 msgstr "Barr-Aipeanna"
 
-#: evme-shortcut-id-travel
+#: evme-shortcut-id-travel collection-categoryId-306
 msgid "Travel"
 msgstr "Taisteal"
 
-#: evme-shortcut-id-tv
+#: evme-shortcut-id-tv collection-categoryId-213
 msgid "TV"
 msgstr "Teilifís"
 
-#: evme-shortcut-id-utilities
+#: evme-shortcut-id-utilities collection-categoryId-357
 msgid "Utilities"
 msgstr "Uirlisí"
 
-#: evme-shortcut-id-weather
+#: evme-shortcut-id-weather collection-categoryId-249
 msgid "Weather"
 msgstr "Aimsir"
 
@@ -8035,6 +8057,9 @@ msgid ""
 "\n"
 "Are you sure you want to delete it?"
 msgstr ""
+"Is é \"{{tone}}\" an clingthon réamhshocraithe faoi láthair.\n"
+"\n"
+"An bhfuil tú cinnte gur mhaith leat é a scriosadh?"
 
 #: delete-desc-default-alerttone
 msgid ""
@@ -8042,6 +8067,9 @@ msgid ""
 "\n"
 "Are you sure you want to delete it?"
 msgstr ""
+"Is é \"{{tone}}\" an rabhadh réamhshocraithe faoi láthair.\n"
+"\n"
+"An bhfuil tú cinnte gur mhaith leat é a scriosadh?"
 
 #: delete-cancel
 msgctxt "delete-cancel"
@@ -8106,7 +8134,7 @@ msgstr "Níor Cruthaíodh an Clingthon"
 
 #: save-error-desc
 msgid "There was an issue creating the ringtone. Please try again."
-msgstr ""
+msgstr "Tharla earráid agus an clingthon á chruthú. Déan iarracht eile."
 
 #: default-label
 msgid "Use as default ringtone"
@@ -8150,6 +8178,12 @@ msgstr "Áiteanna"
 #: apps.ariaLabel
 msgid "Apps"
 msgstr "Aipeanna"
+
+#: suggestions-notice
+msgid ""
+"Search suggestions are shown as you type. Go to the Homescreen section of "
+"Settings to change your search preferences."
+msgstr ""
 
 #: description
 msgid "Gaia Settings"
@@ -9718,6 +9752,28 @@ msgstr "Ná déan riamh"
 msgid "Lock orientation"
 msgstr "Ná rothlaigh"
 
+#. # Personalization :: Navigation
+#: navigation
+msgid "Navigation"
+msgstr "Nascleanúint"
+
+#. # LOCALIZATION NOTE (navigation-header): if you leave the original
+#. # en-US value "{{navigation}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID "navigation".
+#. # If you need to adapt your localization to the reduced space available
+#. # in headers, you can use a shorter string here.
+#: navigation-header
+msgid "{{navigation}}"
+msgstr "{{navigation}}"
+
+#: edge-swipe-navigation
+msgid "Edge swipe navigation"
+msgstr ""
+
+#: edge-swipe-navigation-enable-msg
+msgid "Drag from the left or right edge of the screen to jump between apps."
+msgstr ""
+
 #. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Personalization :: Notifications
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
@@ -9871,6 +9927,36 @@ msgstr "Trí Cholún"
 msgid "Four Columns"
 msgstr "Ceithre Cholún"
 
+#: search-engine
+msgid "Search Engine"
+msgstr "Inneall Cuardaigh"
+
+#: search-suggestions
+msgid "Search Suggestions"
+msgstr "Moltaí Cuardaigh"
+
+#. # LOCALIZATION NOTE (search-suggestions-button, search-suggestions-header):
+#. # If you leave the original en-US value "{{search-suggestions}}" in the following
+#. # strings, the localization will be automatically picked from the existing
+#. # string with ID "search-suggestions". If you need to adapt your localization to
+#. # the reduced space available in header or button, you can use shorter strings here.
+#: search-suggestions-button
+msgctxt "search-suggestions-button"
+msgid "{{search-suggestions}}"
+msgstr "{{search-suggestions}}"
+
+#: search-suggestions-header
+msgctxt "search-suggestions-header"
+msgid "{{search-suggestions}}"
+msgstr "{{search-suggestions}}"
+
+#: search-suggestions-description
+msgid ""
+"The characters you type when entering a search are sent to multiple search "
+"providers and will be used to send you search suggestions. Additional data "
+"charges may apply when using this feature."
+msgstr ""
+
 #. # Personalization :: Homescreens
 #: homescreens
 msgid "Homescreens"
@@ -9918,11 +10004,15 @@ msgstr "{{keyboards}}"
 
 #: numberKeyboardLayouts
 msgid "Number layouts"
-msgstr ""
+msgstr "Leaganacha amach: Uimhreacha"
 
 #: optionKeyboardLayouts
 msgid "Option layouts"
-msgstr ""
+msgstr "Leaganacha amach: Roghanna"
+
+#: dialpad
+msgid "Dial Pad"
+msgstr "Eochaircheap"
 
 #: selectedKeyboards
 msgid "Selected keyboards"
@@ -10032,14 +10122,25 @@ msgstr ""
 msgid "Cancel Account Confirmation"
 msgstr "Cealaigh Deimhniú an Chuntais"
 
+#: fxa-resend-alert
+msgid "A verification link has been sent to {{email}}."
+msgstr "Seoladh teachtaireacht deimhnithe chuig {{email}}."
+
+#. # LOCALIZATION NOTE (fxa-dont-see-email): the "{{resend}}" placeholder
+#. # will be replaced with a link containing the string with ID "fxa-resend":
+#. # "Don't see an email? <a>Resend</a>."
+#: fxa-dont-see-email
+msgid "Don’t see an email? {{resend}}."
+msgstr "Nár bhfuair tú an ríomhphost? {{resend}}."
+
+#: fxa-resend resend
+msgid "Resend"
+msgstr "Seol Arís"
+
 #. # Panel: logged in, verified
 #: fxa-about
 msgid "About"
 msgstr "Maidir Leis"
-
-#: fxa-logged-in-text
-msgid "Signed in as {{email}}"
-msgstr "Logáilte isteach mar {{email}}"
 
 #: fxa-signed-in-header
 msgid "Signed In"
@@ -11291,10 +11392,6 @@ msgstr ""
 msgid "Home gesture"
 msgstr ""
 
-#: edges-gesture
-msgid "Edges gesture"
-msgstr ""
-
 #: continuous-transition
 msgid "Continuous transition"
 msgstr ""
@@ -12544,7 +12641,7 @@ msgstr ""
 
 #: fxa-invalid-email-message
 msgid "Please enter a valid email."
-msgstr ""
+msgstr "Cuir seoladh bailí ríomhphoist isteach."
 
 #. # this is a real error screen (5.2 / 11.1 in spec)
 #: fxa-invalid-password-title
@@ -12563,7 +12660,7 @@ msgstr "Ní féidir ceangal a bhunú"
 
 #: fxa-unknown-error-message
 msgid "System unavailable, try again soon."
-msgstr ""
+msgstr "Níl an córas ar fáil. Déan iarracht eile ar ball."
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Enter Email
@@ -12575,6 +12672,7 @@ msgstr "Cuir do sheoladh ríomhphoist isteach"
 #: fxa-use-email-to-sign-in
 msgid "Use your email address to create an account or sign in."
 msgstr ""
+"Úsáid do sheoladh ríomhphoist chun cuntas a chruthú nó chun logáil isteach."
 
 #: fxa-notice
 msgid ""
@@ -12610,11 +12708,11 @@ msgstr "Dia dhuit a {{email}}"
 
 #: fxa-password-refresh
 msgid "Please enter your Firefox Account password to continue."
-msgstr ""
+msgstr "Cuir focal faire do do Chuntas Firefox chun dul ar aghaidh."
 
 #: fxa-forgot-your-password
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Focal faire dearmadta?"
 
 #: fxa-password-length-requirement
 msgid "Your password must be at least 8 characters long."
@@ -12625,7 +12723,7 @@ msgstr ""
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #: fxa-success
 msgid "Success!"
-msgstr ""
+msgstr "Réidh!"
 
 #: fxa-ready-to-go
 msgid "Your Firefox Account is ready to go! "
@@ -12675,10 +12773,6 @@ msgstr "Príomhchóras"
 #: share share_downloaded_file
 msgid "Share"
 msgstr "Comhroinn"
-
-#: resend
-msgid "Resend"
-msgstr "Seol Arís"
 
 #: verify
 msgid "Verify"
@@ -12953,7 +13047,7 @@ msgstr "Bluetooth: ann, gníomhach"
 
 #: statusbarIconOn-mute
 msgid "Mute on"
-msgstr ""
+msgstr "Balbh: ann"
 
 #: statusbarIconOn-vibration
 msgid "Vibration on"
@@ -12977,7 +13071,7 @@ msgstr "Cur ar aghaidh: ann"
 
 #: statusbarPlaying.ariaLabel
 msgid "Media playing"
-msgstr ""
+msgstr "Meáin: ag seinm"
 
 #: statusbarNfc.ariaLabel
 msgid "NFC on"
@@ -13563,7 +13657,7 @@ msgstr "Díghlasáil"
 #. # screen readers and not shown on the screen.
 #: panel-passcode.ariaLabel
 msgid "Passcode panel"
-msgstr ""
+msgstr "Painéal an chóid fhaire"
 
 #: http-authentication-message
 msgid ""
@@ -14200,6 +14294,26 @@ msgstr "Foláireamh ón Chóras"
 msgid "Channel {{channel}}"
 msgstr "Cainéal {{channel}}"
 
+#: cb-etws-warningType-earthquake
+msgid "Earthquake warning!"
+msgstr "Rabhadh creatha talún!"
+
+#: cb-etws-warningType-tsunami
+msgid "Tsunami warning!"
+msgstr "Rabhadh súnámaí!"
+
+#: cb-etws-warningType-earthquake-tsunami
+msgid "Earthquake-tsunami warning!"
+msgstr "Rabhadh creatha talún-súnámaí!"
+
+#: cb-etws-warningType-test
+msgid "Alert system is being tested."
+msgstr ""
+
+#: cb-etws-warningType-other
+msgid "Emergency warning!"
+msgstr "Rabhadh éigeandála!"
+
 #. # ICC / STK (= SIM Toolkit)
 #: icc-message-title
 msgid "Operator message from SIM {{id}}"
@@ -14296,6 +14410,10 @@ msgstr "Cuardaigh nó cuir seoladh isteach"
 msgid "SIM card is absent or inserted incorrectly, so turn off hotspot"
 msgstr "Ní féidir ball te a shocrú toisc nach bhfuil aon chárta SIM ann."
 
+#: noHopspotWhenAPMisOn
+msgid "Turn off airplane mode to use Wi-Fi hotspot"
+msgstr ""
+
 #: add-link-to-home-screen
 msgid "Add link to home screen"
 msgstr "Cuir nasc leis an scáileán baile"
@@ -14303,6 +14421,15 @@ msgstr "Cuir nasc leis an scáileán baile"
 #: share-link
 msgid "Share link"
 msgstr "Comhroinn nasc"
+
+#. # Prompt that appears when a user tries to stop a download.
+#: stop-download-title
+msgid "Stop {{name}}"
+msgstr "Stop {{name}}"
+
+#: stop-download-body
+msgid "Do you want to stop the download in progress?"
+msgstr "An bhfuil fonn ort an t-íosluchtú reatha a stopadh?"
 
 #: description
 msgid "Gaia Video"
@@ -14383,6 +14510,10 @@ msgstr "Cineál an Fhíseáin"
 msgid "PB"
 msgstr "PB"
 
+#: more-info
+msgid "More info"
+msgstr "Tuilleadh eolais"
+
 #: description
 msgid "Gaia Wallpaper Picker"
 msgstr "Roghnóir Cúlbhrat Gaia"
@@ -14403,7 +14534,7 @@ msgstr "Bainisteoir brúfhógraí WAP"
 msgid "Receives, filters and displays WAP Push messages"
 msgstr ""
 
-#: title
+#: wap-push-message
 msgid "WAP Push message"
 msgstr "Brúfhógra WAP"
 
@@ -14500,6 +14631,174 @@ msgstr "Brabhsálaí"
 #: browserBrandFullName
 msgid "Mozilla Web Browser"
 msgstr "Brabhsálaí Mozilla"
+
+#: collection-categoryId-242
+msgid "Images"
+msgstr "Íomhánna"
+
+#: collection-categoryId-244
+msgid "Tech"
+msgstr "Teic"
+
+#: collection-categoryId-256
+msgid "Culture"
+msgstr "Cultúr"
+
+#: collection-categoryId-271
+msgid "Reference"
+msgstr "Tagairt"
+
+#: collection-categoryId-272
+msgid "Travel Guides"
+msgstr "Treoirleabhair Thaistil"
+
+#: collection-categoryId-275
+msgid "Medical"
+msgstr "Leigheas"
+
+#: collection-categoryId-279
+msgid "Learning & Education"
+msgstr "Foghlaim agus Oideachas"
+
+#: collection-categoryId-291
+msgid "Video Games"
+msgstr "Físchluichí"
+
+#: collection-categoryId-294
+msgid "Personal Communication"
+msgstr "Cumarsáid Phearsanta"
+
+#: collection-categoryId-296
+msgid "Around Me"
+msgstr "I nGar Dom"
+
+#: collection-categoryId-302
+msgid "Kids"
+msgstr "Páistí"
+
+#: collection-categoryId-303
+msgid "Financial Services"
+msgstr "Seirbhísí Airgeadais"
+
+#: collection-categoryId-316
+msgid "Hotels"
+msgstr "Óstáin"
+
+#: collection-categoryId-321
+msgid "Financial News"
+msgstr "Nuacht Airgeadais"
+
+#: collection-categoryId-325
+msgid "Baseball"
+msgstr "Daorchluiche"
+
+#: collection-categoryId-338
+msgid "Classifieds"
+msgstr "Fógraí Saineagraithe"
+
+#: collection-categoryId-347
+msgid "Baby"
+msgstr "Leanbh"
+
+#: collection-categoryId-360
+msgid "Productivity"
+msgstr "Táirgiúlacht"
+
+#: collection-categoryId-365
+msgid "Comics"
+msgstr "Greannáin"
+
+#: collection-categoryId-366
+msgid "Lifestyle"
+msgstr "Stíl Mhaireachtála"
+
+#: collection-categoryId-372
+msgid "Transportation"
+msgstr "Iompar"
+
+#: collection-categoryId-373
+msgid "Telecommunication"
+msgstr "Teileachumarsáid"
+
+#: collection-categoryId-377
+msgid "Soccer"
+msgstr "Sacar"
+
+#: collection-categoryId-381
+msgid "Religion"
+msgstr "Creideamh"
+
+#: collection-categoryId-382
+msgid "Fitness"
+msgstr "Corpacmhainn"
+
+#: collection-categoryId-387
+msgid "Outdoor Activities"
+msgstr "Gníomhaíochtaí Lasmuigh"
+
+#: collection-categoryId-399
+msgid "DIY"
+msgstr "DFÉ"
+
+#: collection-categoryId-449
+msgid "I'm So Bored"
+msgstr ""
+
+#: collection-categoryId-462
+msgid "Telenovelas"
+msgstr ""
+
+#: collection-categoryId-463
+msgid "Politics"
+msgstr "Polaitíocht"
+
+#: collection-categoryId-473
+msgid "Cricket"
+msgstr "Cruicéad"
+
+#: collection-categoryId-491
+msgid "World Cup"
+msgstr "Corn an Domhain"
+
+#: collection-categoryId-501
+msgid "Brazilian Apps"
+msgstr "Aipeanna Brasaíleacha"
+
+#: collection-categoryId-504
+msgid "Bollywood"
+msgstr "Bollywood"
+
+#: collection-categoryId-505
+msgid "Food & Drinks"
+msgstr "Bia agus Deoch"
+
+#: collection-categoryId-507
+msgid "Travel & Local"
+msgstr "Taisteal agus Áitiúil"
+
+#: collection-categoryId-510
+msgid "Tech & Science"
+msgstr "Teic agus Eolaíocht"
+
+#: collection-categoryId-511
+msgid "Media & Video"
+msgstr "Meáin agus Físeáin"
+
+#: collection-categoryId-512
+msgid "Health & Fitness"
+msgstr "Sláinte agus Folláine"
+
+#: collection-categoryId-513
+msgid "Business"
+msgstr "Gnó"
+
+#: collection-categoryId-520
+msgid "Cycling"
+msgstr "Rothaíocht"
+
+#: collection-categoryId-521
+msgid "Surf"
+msgstr "Surfáil"
 
 #: weekday-0-short
 msgid "Sun"
@@ -15722,6 +16021,38 @@ msgctxt "friendsUpdated[other]"
 msgid "Updated {{numFriends}} friends"
 msgstr "Nuashonraíodh {{numFriends}} cara"
 
+#: friendsMerged contactsMerged
+msgid "{[ plural(numDups) ]}"
+msgstr "{[ plural(numDups) ]}"
+
+#: friendsMerged[zero]
+msgid "No duplicated friends merged"
+msgstr ""
+
+#: friendsMerged[one]
+msgid "One duplicated friend merged"
+msgstr "Cumascadh cara dubáilte amháin"
+
+#: friendsMerged[two]
+msgctxt "friendsMerged[two]"
+msgid "{{numDups}} friends merged"
+msgstr "Cumascadh {{numDups}} chara"
+
+#: friendsMerged[few]
+msgctxt "friendsMerged[few]"
+msgid "{{numDups}} friends merged"
+msgstr "Cumascadh {{numDups}} chara"
+
+#: friendsMerged[many]
+msgctxt "friendsMerged[many]"
+msgid "{{numDups}} friends merged"
+msgstr "Cumascadh {{numDups}} gcara"
+
+#: friendsMerged[other]
+msgctxt "friendsMerged[other]"
+msgid "{{numDups}} friends merged"
+msgstr "Cumascadh {{numDups}} cara"
+
 #. # Notification relogging is needed
 #: notificationLogin
 msgid "Your Facebook session is invalid. Please sign in."
@@ -15877,6 +16208,34 @@ msgstr "Iompórtáladh {{imported}} gcara (as {{total}})"
 msgctxt "facebook-import-msg[other]"
 msgid "{{imported}}/{{total}} friends imported"
 msgstr "Iompórtáladh {{imported}} cara (as {{total}})"
+
+#: contactsMerged[zero]
+msgid "No duplicated contacts merged"
+msgstr ""
+
+#: contactsMerged[one]
+msgid "One duplicated contact merged"
+msgstr "Cumascadh teagmháil amháin"
+
+#: contactsMerged[two]
+msgctxt "contactsMerged[two]"
+msgid "{{numDups}} contacts merged"
+msgstr "Cumascadh {{numDups}} theagmháil"
+
+#: contactsMerged[few]
+msgctxt "contactsMerged[few]"
+msgid "{{numDups}} contacts merged"
+msgstr "Cumascadh {{numDups}} theagmháil"
+
+#: contactsMerged[many]
+msgctxt "contactsMerged[many]"
+msgid "{{numDups}} contacts merged"
+msgstr "Cumascadh {{numDups}} dteagmháil"
+
+#: contactsMerged[other]
+msgctxt "contactsMerged[other]"
+msgid "{{numDups}} contacts merged"
+msgstr "Cumascadh {{numDups}} teagmháil"
 
 #: title-app
 msgid "App Permission"

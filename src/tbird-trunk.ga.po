@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-12 12:45-0500\n"
+"POT-Creation-Date: 2014-06-20 13:34-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -1072,8 +1072,7 @@ msgstr "Foilsiú"
 #. # Don't translate strings like this: %variable% 
 #. #  as they will be replaced using JavaScript
 #. #
-#: No smtpServer-SecureAuthentication-Type-false StatusNo
-#: telemetryNoButtonLabel
+#: No StatusNo telemetryNoButtonLabel
 msgid "No"
 msgstr "Níl"
 
@@ -6777,11 +6776,7 @@ msgstr ""
 msgid "Add contact"
 msgstr "Cuir teagmháil leis"
 
-#. #-#-#-#-#  chromemessengerchat.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE (buddytooltip.username, buddytooltip.account):
-#. # This is for the tooltip that appears when hovering
-#. # a contact or a conversation in the left pane.
-#: name.label buddytooltip.username accountUsernameTitle.label
+#: name.label accountUsernameTitle.label
 msgid "Username"
 msgstr "Ainm an Úsáideora"
 
@@ -6833,8 +6828,7 @@ msgstr "Ainm an Úsáideora"
 #. #  list, etc.)
 #. # LOCALIZATION NOTE (gloda.message.attr.account.*): Stores the account in which
 #. #  a message's folder is located.
-#: account.label buddytooltip.account gloda.message.attr.account.facetNameLabel
-#: accountColumn.label
+#: account.label gloda.message.attr.account.facetNameLabel accountColumn.label
 msgid "Account"
 msgstr "Cuntas"
 
@@ -10237,9 +10231,7 @@ msgstr "Síniú Cripteagrafach S/MIME"
 # # @name APPLEMAILIMPORT_NAME
 # # @loc None
 #. # Short name of import module
-#. ## @name APPLEMAILIMPORT_NAME
-#. ## @loc None
-#: 2000
+#: ApplemailImportName
 msgid "Apple Mail"
 msgstr "Ríomhphost Apple"
 
@@ -10247,9 +10239,7 @@ msgstr "Ríomhphost Apple"
 # # @name APPLEMAILIMPORT_DESCRIPTION
 # # @loc None
 #. # Description of import module
-#. ## @name APPLEMAILIMPORT_DESCRIPTION
-#. ## @loc None
-#: 2001
+#: ApplemailImportDescription
 msgid "Import Local Mail from Mac OS X Mail"
 msgstr "Iompórtáil ríomhphost logánta ó Ríomhphost MacOS X"
 
@@ -10258,10 +10248,8 @@ msgstr "Iompórtáil ríomhphost logánta ó Ríomhphost MacOS X"
 # # @name COMM4XMAILIMPORT_MAILBOX_SUCCESS
 # # @loc None
 #. # Success Message
-#. # LOCALIZATION NOTE : Do not translate the word "%S" below.
-#. ## @name APPLEMAILIMPORT_MAILBOX_SUCCESS
-#. ## @loc None
-#: 2002
+#. # LOCALIZATION NOTE(ApplemailImportMailboxSuccess): Do not translate the word "%S" below.
+#: ApplemailImportMailboxSuccess
 msgid "Local messages were successfully imported from %S"
 msgstr "D'éirigh le hiompórtáil na dteachtaireachtaí logánta ó %S"
 
@@ -10269,25 +10257,19 @@ msgstr "D'éirigh le hiompórtáil na dteachtaireachtaí logánta ó %S"
 # # @name COMM4XMAILIMPORT_MAILBOX_BADPARAM
 # # @loc None
 #. # Error Message
-#. ## @name APPLEMAILIMPORT_MAILBOX_BADPARAM
-#. ## @loc None
-#: 2003
+#: ApplemailImportMailboxBadparam
 msgid "An internal error occurred. Importing failed. Try importing again."
 msgstr ""
 "Tharla earráid inmheánach. Theip ar an iompórtáil. Bain triail eile as an "
 "iompórtáil."
 
 #. # Error message
-#. # LOCALIZATION NOTE : Do not translate the word "%S" below.
-#. ## @name APPLEMAILIMPORT_MAILBOX_CONVERTERROR
-#. ## @loc None
-#: 2004
+#. # LOCALIZATION NOTE(ApplemailImportMailboxConverterror): Do not translate the word "%S" below.
+#: ApplemailImportMailboxConverterror
 msgid ""
 "An error occurred while importing messages from %S. Messages were not "
-"imported. "
-msgstr ""
-"Tharla earráid agus teachtaireachtaí á n-iompórtáil ó %S. Níor iompórtáladh "
-"na teachtaireachtaí. "
+"imported."
+msgstr "Tharla earráid agus teachtaireachtaí á n-iompórtáil ó %S. Níor iompórtáladh aon teachtaireachtaí."
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -10344,6 +10326,399 @@ msgstr "accel"
 #: aboutMenuCmd.label aboutMenuCmd.accesskey
 msgid "&About &brandShortName;"
 msgstr "&Maidir le &brandShortName;"
+
+# #
+# # The contents of this file are subject to the Netscape Public
+# # License Version 1.1 (the "License"); you may not use this file
+# # except in compliance with the License. You may obtain a copy of
+# # the License at http://www.mozilla.org/NPL/
+# #
+# # Software distributed under the License is distributed on an "AS
+# # IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+# # implied. See the License for the specific language governing
+# # rights and limitations under the License.
+# #
+# # The Original Code is mozilla.org code.
+# #
+# # The Initial Developer of the Original Code is Netscape
+# # Communications Corporation.  Portions created by Netscape are
+# # Copyright (C) 1999 Netscape Communications Corporation. All
+# # Rights Reserved.
+# #
+# # Contributor(s):
+# # Rule of this file:
+# # 1. key should always be in lower case ascii so we can do case insensitive
+# #    comparison in the code faster.
+# # Format of this file:
+# # charset_name.title = a_title  -  specifies the human readable title for
+# # this charset
+#. ## Rule of this file:
+#. ## 1. key should always be in lower case ascii so we can do case insensitive
+#. ##    comparison in the code faster.
+#. ## Format of this file:
+#. ## charset_name.title = a_title  -  specifies the human readable title for 
+#. ## this charset
+#: us-ascii.title
+msgid "English (US-ASCII)"
+msgstr "Béarla (US-ASCII)"
+
+#: iso-8859-1.title
+msgid "Western (ISO-8859-1)"
+msgstr "Iartharach (ISO-8859-1)"
+
+#: iso-8859-2.title
+msgid "Central European (ISO-8859-2)"
+msgstr "Lár-Eorpach (ISO-8859-2)"
+
+#: iso-8859-3.title
+msgid "South European (ISO-8859-3)"
+msgstr "Deisceart na hEorpa (ISO-8859-3)"
+
+#: iso-8859-4.title
+msgid "Baltic (ISO-8859-4)"
+msgstr "Baltach (ISO-8859-4)"
+
+#: iso-8859-9.title
+msgid "Turkish (ISO-8859-9)"
+msgstr "Turcach (ISO-8859-9)"
+
+#: iso-8859-10.title
+msgid "Nordic (ISO-8859-10)"
+msgstr "Nordach (ISO-8859-10)"
+
+#: iso-8859-13.title
+msgid "Baltic (ISO-8859-13)"
+msgstr "Baltach (ISO-8859-13)"
+
+#: iso-8859-14.title
+msgid "Celtic (ISO-8859-14)"
+msgstr "Ceilteach (ISO-8859-14)"
+
+#: iso-8859-15.title
+msgid "Western (ISO-8859-15)"
+msgstr "Iartharach (ISO-8859-15)"
+
+#: iso-8859-16.title
+msgid "Romanian (ISO-8859-16)"
+msgstr "Rómánach (ISO-8859-16)"
+
+#: windows-1250.title
+msgid "Central European (Windows-1250)"
+msgstr "Lár-Eorpach (Windows-1250)"
+
+#: windows-1252.title
+msgid "Western (Windows-1252)"
+msgstr "Iartharach (Windows-1252)"
+
+#: windows-1254.title
+msgid "Turkish (Windows-1254)"
+msgstr "Turcach (Windows-1254)"
+
+#: windows-1257.title
+msgid "Baltic (Windows-1257)"
+msgstr "Baltach (Windows-1257)"
+
+#: macintosh.title
+msgid "Western (MacRoman)"
+msgstr "Iartharach (MacRoman)"
+
+#: x-mac-ce.title
+msgid "Central European (MacCE)"
+msgstr "Lár-Eorpach (MacCE)"
+
+#: x-mac-turkish.title
+msgid "Turkish (MacTurkish)"
+msgstr "Turcach (MacTurkish)"
+
+#: x-mac-croatian.title
+msgid "Croatian (MacCroatian)"
+msgstr "Crótach (MacCroatian)"
+
+#: x-mac-romanian.title
+msgid "Romanian (MacRomanian)"
+msgstr "Rómánach (MacRomanian)"
+
+#: x-mac-icelandic.title
+msgid "Icelandic (MacIcelandic)"
+msgstr "Íoslannach (MacIcelandic)"
+
+#: iso-2022-jp.title
+msgid "Japanese (ISO-2022-JP)"
+msgstr "Seapánach (ISO-2022-JP)"
+
+#: shift_jis.title
+msgid "Japanese (Shift_JIS)"
+msgstr "Seapánach (Shift_JIS)"
+
+#: euc-jp.title
+msgid "Japanese (EUC-JP)"
+msgstr "Seapánach (EUC-JP)"
+
+#: big5.title
+msgid "Chinese Traditional (Big5)"
+msgstr "Síneach Traidisiúnta (Big5)"
+
+#: big5-hkscs.title
+msgid "Chinese Traditional (Big5-HKSCS)"
+msgstr "Síneach Traidisiúnta (Big5-HKSCS)"
+
+#: x-euc-tw.title
+msgid "Chinese Traditional (EUC-TW)"
+msgstr "Síneach Traidisiúnta (EUC-TW)"
+
+#: gb2312.title
+msgid "Chinese Simplified (GB2312)"
+msgstr "Síneach Simplithe (GB2312)"
+
+#: hz-gb-2312.title
+msgid "Chinese Simplified (HZ)"
+msgstr "Síneach Simplithe (HZ)"
+
+#: gbk.title
+msgid "Chinese Simplified (GBK)"
+msgstr "Síneach Simplithe (GBK)"
+
+#: iso-2022-cn.title
+msgid "Chinese Simplified (ISO-2022-CN)"
+msgstr "Síneach Simplithe (ISO-2022-CN)"
+
+#: euc-kr.title
+msgid "Korean (EUC-KR)"
+msgstr "Cóiréach (EUC-KR)"
+
+#: x-johab.title
+msgid "Korean (JOHAB)"
+msgstr "Cóiréach (JOHAB)"
+
+#: iso-2022-kr.title
+msgid "Korean (ISO-2022-KR)"
+msgstr "Cóiréach (ISO-2022-KR)"
+
+#: utf-7.title
+msgid "Unicode (UTF-7)"
+msgstr "Unicode (UTF-7)"
+
+#: utf-8.title
+msgid "Unicode (UTF-8)"
+msgstr "Unicode (UTF-8)"
+
+#: utf-16.title
+msgid "Unicode (UTF-16)"
+msgstr "Unicode (UTF-16)"
+
+#: utf-16le.title
+msgid "Unicode (UTF-16LE)"
+msgstr "Unicode (UTF-16LE)"
+
+#: utf-16be.title
+msgid "Unicode (UTF-16BE)"
+msgstr "Unicode (UTF-16BE)"
+
+#: iso-8859-5.title
+msgid "Cyrillic (ISO-8859-5)"
+msgstr "Coireallach (ISO-8859-5)"
+
+#: iso-ir-111.title
+msgid "Cyrillic (ISO-IR-111)"
+msgstr "Coireallach (ISO-IR-111)"
+
+#: windows-1251.title
+msgid "Cyrillic (Windows-1251)"
+msgstr "Coireallach (Windows-1251)"
+
+#: x-mac-cyrillic.title
+msgid "Cyrillic (MacCyrillic)"
+msgstr "Coireallach (MacCyrillic)"
+
+#: x-mac-ukrainian.title
+msgid "Cyrillic/Ukrainian (MacUkrainian)"
+msgstr "Coireallach/Úcránach (MacUkrainian)"
+
+#: koi8-r.title
+msgid "Cyrillic (KOI8-R)"
+msgstr "Coireallach (KOI8-R)"
+
+#: koi8-u.title
+msgid "Cyrillic/Ukrainian (KOI8-U)"
+msgstr "Coireallach/Úcránach (KOI8-U)"
+
+#: iso-8859-7.title
+msgid "Greek (ISO-8859-7)"
+msgstr "Gréagach (ISO-8859-7)"
+
+#: windows-1253.title
+msgid "Greek (Windows-1253)"
+msgstr "Gréagach (Windows-1253)"
+
+#: x-mac-greek.title
+msgid "Greek (MacGreek)"
+msgstr "Gréagach (MacGreek)"
+
+#: windows-1258.title
+msgid "Vietnamese (Windows-1258)"
+msgstr "Vítneamach (Windows-1258)"
+
+#: x-viet-tcvn5712.title
+msgid "Vietnamese (TCVN)"
+msgstr "Vítneamach (TCVN)"
+
+#: viscii.title
+msgid "Vietnamese (VISCII)"
+msgstr "Vítneamach (VISCII)"
+
+#: x-viet-vps.title
+msgid "Vietnamese (VPS)"
+msgstr "Vítneamach (VPS)"
+
+#: tis-620.title
+msgid "Thai (TIS-620)"
+msgstr "Téalannach (TIS-620)"
+
+#: iso-8859-11.title
+msgid "Thai (ISO-8859-11)"
+msgstr "Téalannach (ISO-8859-11)"
+
+#: windows-874.title
+msgid "Thai (Windows-874)"
+msgstr "Téalannach (Windows-874)"
+
+#: ibm874.title
+msgid "Thai (IBM-874)"
+msgstr "Téalannach (IBM-874)"
+
+#: armscii-8.title
+msgid "Armenian (ARMSCII-8)"
+msgstr "Airméanach (ARMSCII-8)"
+
+#: iso-8859-6.title
+msgid "Arabic (ISO-8859-6)"
+msgstr "Arabach (ISO-8859-6)"
+
+#: iso-8859-6-i.title
+msgid "Arabic (ISO-8859-6-I)"
+msgstr "Arabach (ISO-8859-6-I)"
+
+#: iso-8859-6-e.title
+msgid "Arabic (ISO-8859-6-E)"
+msgstr "Arabach (ISO-8859-6-E)"
+
+#: iso-8859-8.title
+msgid "Hebrew Visual (ISO-8859-8)"
+msgstr "Eabhrach Infheicthe (ISO-8859-8)"
+
+#: iso-8859-8-i.title
+msgid "Hebrew (ISO-8859-8-I)"
+msgstr "Eabhrach (ISO-8859-8-I)"
+
+#: iso-8859-8-e.title
+msgid "Hebrew (ISO-8859-8-E)"
+msgstr "Eabhrach (ISO-8859-8-E)"
+
+#: windows-1255.title
+msgid "Hebrew (Windows-1255)"
+msgstr "Eabhrach (Windows-1255)"
+
+#: windows-1256.title
+msgid "Arabic (Windows-1256)"
+msgstr "Arabach (Windows-1256)"
+
+#: x-user-defined.title font.langGroup.user-def
+msgid "User Defined"
+msgstr "Sainmhínithe ag an Úsáideoir"
+
+#: ibm866.title
+msgid "Cyrillic/Russian (CP-866)"
+msgstr "Coireallach/Rúiseach (CP-866)"
+
+#: ibm850.title
+msgid "Western (IBM-850)"
+msgstr "Iartharach (IBM-850)"
+
+#: ibm852.title
+msgid "Central European (IBM-852)"
+msgstr "Lár-Eorpach (IBM-852)"
+
+#: ibm855.title
+msgid "Cyrillic (IBM-855)"
+msgstr "Coireallach (IBM-855)"
+
+#: ibm857.title
+msgid "Turkish (IBM-857)"
+msgstr "Turcach (IBM-857)"
+
+#: ibm862.title
+msgid "Hebrew (IBM-862)"
+msgstr "Eabhrach (IBM-862)"
+
+#: gb18030.title
+msgid "Chinese Simplified (GB18030)"
+msgstr "Síneach Simplithe (GB18030)"
+
+#: x-mac-arabic.title
+msgid "Arabic (MacArabic)"
+msgstr "Arabach (MacArabic)"
+
+#: x-mac-farsi.title
+msgid "Farsi (MacFarsi)"
+msgstr "Peirseach (MacFarsi)"
+
+#: x-mac-hebrew.title
+msgid "Hebrew (MacHebrew)"
+msgstr "Eabhrach (MacHebrew)"
+
+#: x-mac-devanagari.title
+msgid "Hindi (MacDevanagari)"
+msgstr "Hiondúch (MacDevanagari)"
+
+#: x-mac-gujarati.title
+msgid "Gujarati (MacGujarati)"
+msgstr "Gúisearátach (MacGujarati)"
+
+#: x-mac-gurmukhi.title
+msgid "Gurmukhi (MacGurmukhi)"
+msgstr "Gurmúcaíoch (MacGurmukhi)"
+
+#: chardet.off.title
+msgid "(Off)"
+msgstr "(Múchta)"
+
+#: chardet.universal_charset_detector.title
+msgid "Universal"
+msgstr "Uilechoiteann"
+
+# lang sedtweak
+#: chardet.ja_parallel_state_machine.title font.langGroup.japanese
+msgid "Japanese"
+msgstr "Seapánach"
+
+# lang sedtweak
+#: chardet.ko_parallel_state_machine.title font.langGroup.korean
+msgid "Korean"
+msgstr "Cóiréach"
+
+#: chardet.zhtw_parallel_state_machine.title
+msgid "Traditional Chinese"
+msgstr "Síneach Traidisiúnta"
+
+#: chardet.zhcn_parallel_state_machine.title font.langGroup.simpl-chinese
+msgid "Simplified Chinese"
+msgstr "Síneach Simplithe"
+
+#: chardet.zh_parallel_state_machine.title
+msgid "Chinese"
+msgstr "Síneach"
+
+#: chardet.cjk_parallel_state_machine.title
+msgid "East Asian"
+msgstr "Oirthear na hÁise"
+
+#: chardet.ruprob.title
+msgid "Russian"
+msgstr "Rúiseach"
+
+#: chardet.ukprob.title
+msgid "Ukrainian"
+msgstr "Úcránach"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -10560,10 +10935,6 @@ msgstr "Tá %S ag clóscríobh."
 #: chat.contactHasStoppedTyping
 msgid "%S has stopped typing."
 msgstr "Stop %S clóscríobh."
-
-#: noTopic
-msgid "No topic message for this room."
-msgstr "Níl aon topaic socraithe don seomra seo."
 
 #. # LOCALIZATION NOTE (unknownCommand):
 #. # This is shown when an unknown command (/foo) is attempted. %S is the command.
@@ -12652,6 +13023,9 @@ msgstr "chuig:"
 #. #  no subject.
 #. #-#-#-#-#  chromemessengermessengercomposecomposeMsgs.properties.po (firefox)  #-#-#-#-#
 #. ## generics string
+#. #-#-#-#-#  chromemessengermultimessageview.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (noSubject): What to display for a message if it has no
+#. # subject.
 #: glodaFacetView.result.message.noSubject defaultSubject noSubject
 msgid "(no subject)"
 msgstr "(gan ábhar)"
@@ -16282,7 +16656,7 @@ msgid ""
 "%1$S is currently in the process of saving a message.\n"
 "Would you like to wait until the message has been saved before quitting or "
 "quit now?"
-msgstr ""
+msgstr "Tá %1$S ag iarraidh teachtaireacht a shábháil faoi láthair.\nAr mhaith leat fanacht go mbeidh an teachtaireacht sábháilte, nó scoir anois láithreach?"
 
 # # String used by the dialog that ask the user to enter a subject
 #. ## Strings used by prompt for Ctrl-Enter check before sending message
@@ -19459,19 +19833,21 @@ msgstr ""
 msgid "Compacting folder %S…"
 msgstr "Fillteán %S á dhlúthú…"
 
-#: doneCompacting
-msgid "Done compacting"
-msgstr "Dlúthú Críochnaithe"
+#. # LOCALIZATION NOTE(compactingDone): %1$S is the compaction gain.
+#: compactingDone
+msgid "Done compacting (approx. %1$S saved)."
+msgstr ""
 
 #: autoCompactAllFoldersTitle
 msgid "Compact Folders"
 msgstr "Dlúthaigh Fillteáin"
 
-#: autoCompactAllFolders
-msgid "Do you wish to compact all local and offline folders to save disk space?"
+#. # LOCALIZATION NOTE(autoCompactAllFoldersText): %1$S is the compaction gain.
+#: autoCompactAllFoldersText
+msgid ""
+"Do you wish to compact all local and offline folders to save disk space? This "
+"will save about %1$S."
 msgstr ""
-"An bhfuil fonn ort gach fillteán logánta agus as líne a dhlúthú chun spás "
-"diosca a spáráil?"
 
 #: autoCompactAlwaysAskCheckbox
 msgid "Always ask me before compacting folders automatically"
@@ -19549,6 +19925,13 @@ msgstr ""
 "Níorbh fhéidir an fillteán \"%S\" a dhlúthú de bhrí gur theip ar an scríobh "
 "san fhillteán. Cinntigh go bhfuil go leor spáis diosca agat agus go bhfuil "
 "cead scríofa agat sa chomhadchóras. Ansin déan iarracht eile."
+
+#: filterFolderHdrAddFailed
+msgid ""
+"The messages could not be filtered to folder '%S' because adding a message to "
+"it failed. Verify that the folder is displaying properly or try to repair it "
+"from the folder properties."
+msgstr ""
 
 #: filterFolderWriteFailed
 msgid ""
@@ -19661,10 +20044,6 @@ msgstr "Leacaithe"
 #: smtpServerList-NotSpecified
 msgid "<not specified>"
 msgstr "<gan sonrú>"
-
-#: smtpServer-SecureAuthentication-Type-true StatusYes telemetryYesButtonLabel
-msgid "Yes"
-msgstr "Tá"
 
 #: smtpServers-confirmServerDeletionTitle
 msgid "Delete Server"
@@ -20073,7 +20452,7 @@ msgstr "T"
 #. # LOCALIZATION NOTE(remoteContentBarMessage): %S is brand
 #: remoteContentBarMessage
 msgid "To protect your privacy, %S has blocked remote content in this message."
-msgstr ""
+msgstr "Le do phríobháideachas a chosaint, chuir %S cosc ar ábhar cianda sa teachtaireacht seo. "
 
 #: remoteContentPrefLabel
 msgctxt "remoteContentPrefLabel"
@@ -22252,14 +22631,18 @@ msgstr "Teachtaireachtaí Roghnaithe"
 # See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
 # #1 number of threads or solitary messages selected
 # example: 4 conversations
-#. # LOCALIZATION NOTE (selectedNMessages, acrossNThreads): Semi-colon list of plural forms.
+#. # LOCALIZATION NOTE (numConversations): Semi-colon list of plural forms.
 #. # See: http://developer.mozilla.org/en/Localization_and_Plurals
-#. # #1 number of threads or solitary messages selected
-#. # example: 4 conversations
-#: NConversations
+#. # The number of conversations (threads or solitary messages) selected. #1 is the
+#. # number of conversations.
+#: numConversations
 msgid "#1 conversation; #1 conversations"
 msgstr "#1 chomhrá; #1 chomhrá; #1 chomhrá; #1 gcomhrá; #1 comhrá"
 
+#. #-#-#-#-#  chromemessengermultimessageview.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE (numMessages): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/Localization_and_Plurals
+#. # The number of messages in a thread. #1 is the number of messages.
 #. #-#-#-#-#  chromemessengerquickFilterBar.dtd.po (firefox)  #-#-#-#-#
 #. This is used to populate the results box; it either displays the
 #. number of messages found using this string, that there are no messages
@@ -22268,28 +22651,39 @@ msgstr "#1 chomhrá; #1 chomhrá; #1 chomhrá; #1 gcomhrá; #1 comhrá"
 #. the results.  We replace the '#1' with the number of messages, otherwise
 #. see the following URL For more information:
 #. https://developer.mozilla.org/En/Localization_and_Plurals
-#: numMsgs quickFilterBar.resultsLabel.some.formatString
+#: numMessages quickFilterBar.resultsLabel.some.formatString
 msgid "#1 message;#1 messages"
 msgstr ""
 "#1 teachtaireacht;#1 theachtaireacht;#1 theachtaireacht;#1 dteachtaireacht;#1 "
 "teachtaireacht"
 
-#: countUnread
+#. # LOCALIZATION NOTE (numUnread): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/Localization_and_Plurals
+#. # The number of unread messages in a thread; meant to be appended to
+#. # "numMessages". #1 is the number of unread messages.
+#: numUnread
 msgid ", #1 unread;, #1 unread"
 msgstr ""
 ", #1 gan léamh;, #1 gan léamh;, #1 gan léamh;, #1 gan léamh;, #1 gan léamh"
 
-#: ignoredCount
-msgid "#1 ignored;#1 ignored"
-msgstr "#1 i bhfolach;#1 i bhfolach;#1 i bhfolach;#1 i bhfolach;#1 i bhfolach"
+#. # LOCALIZATION NOTE (numIgnored): Semi-colon list of plural forms.
+#. # See: http://developer.mozilla.org/en/Localization_and_Plurals
+#. # The number of ignored messages in a thread; meant to be appended to
+#. # "numMessages". #1 is the number of ignored messages.
+#: numIgnored
+msgid ", #1 ignored;, #1 ignored"
+msgstr ""
 
-# thread and multiple message selection summaries
-#. # thread and multiple message selection summaries
-#: messagesSize
-msgid "These messages take up: #1 #2."
-msgstr "Úsáideann na teachtaireachtaí seo: #1 #2."
+#. # LOCALIZATION NOTE (messagesTotalSize): A message indicating the total size on
+#. # disk of the selected messages. #1 is the size, e.g. "123 KB".
+#: messagesTotalSize
+msgid "These messages take up #1."
+msgstr "Úsáideann na teachtaireachtaí seo #1."
 
-#: noticeText
+#. # LOCALIZATION NOTE (maxCountExceeded): A message to let the user know that not
+#. # all of the selected messages were summarized. #1 is the total number of
+#. # messages selected and #2 is the number of messages actually shown.
+#: maxCountExceeded
 msgid "(Note: #1 messages are selected, the first #2 are shown)"
 msgstr "(Nóta: tá #1 teachtaireacht roghnaithe; taispeántar an chéad #2)"
 
@@ -24104,27 +24498,13 @@ msgstr "Iartharach"
 msgid "Central European"
 msgstr "Lár-Eorpach"
 
-# lang sedtweak
-#: font.langGroup.japanese
-msgid "Japanese"
-msgstr "Seapánach"
-
 #: font.langGroup.trad-chinese
 msgid "Traditional Chinese (Taiwan)"
 msgstr "Síneach Traidisiúnta (An Téaváin)"
 
-#: font.langGroup.simpl-chinese
-msgid "Simplified Chinese"
-msgstr "Síneach Simplithe"
-
 #: font.langGroup.trad-chinese-hk
 msgid "Traditional Chinese (Hong Kong)"
 msgstr "Síneach Traidisiúnta (Hong Cong)"
-
-# lang sedtweak
-#: font.langGroup.korean
-msgid "Korean"
-msgstr "Cóiréach"
 
 #: font.langGroup.cyrillic
 msgid "Cyrillic"
@@ -24147,10 +24527,6 @@ msgstr "Turcach"
 #: font.langGroup.unicode1
 msgid "Unicode"
 msgstr "Unicode"
-
-#: font.langGroup.user-def
-msgid "User Defined"
-msgstr "Sainmhínithe ag an Úsáideoir"
 
 # lang sedtweak
 #: font.langGroup.thai
@@ -25011,7 +25387,7 @@ msgstr "Iontráil seoladh bailí ríomhphoist, le do thoil."
 msgid ""
 "An account with this name already exists. Please enter a different account "
 "name."
-msgstr ""
+msgstr "Tá cuntas leis an ainm seo ann cheana. Roghnaigh ainm eile le do thoil."
 
 #: accountNameEmpty
 msgid "The account name can not be empty."
@@ -26067,6 +26443,10 @@ msgstr "Cúlghairthe"
 #: StatusInvalid
 msgid "Invalid"
 msgstr "Neamhbhailí"
+
+#: StatusYes telemetryYesButtonLabel
+msgid "Yes"
+msgstr "Tá"
 
 #: StatusNotPossible
 msgid "Not possible"
@@ -27569,7 +27949,7 @@ msgctxt "nssFailure2.title"
 msgid "Secure connection failed"
 msgstr "Níorbh fhéidir ceangal slán a bhunú"
 
-#: nssFailure2.longDesc
+#: nssFailure2.longDesc2
 msgid ""
 "<ul> \n"
 "<li>The page you are trying to view can not be shown because the authenticity "
