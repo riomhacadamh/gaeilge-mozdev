@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: firefox\n"
+"Project-Id-Version: thunderbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-07 23:16-0500\n"
+"POT-Creation-Date: 2014-07-23 07:02-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -10976,6 +10976,10 @@ msgstr "An tSeachtain Seo"
 msgid "Last Week"
 msgstr "An tseachtain seo caite"
 
+#: messagePreview
+msgid "New Chat Message"
+msgstr ""
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
 #. - You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11278,7 +11282,9 @@ msgstr "Gan tacaíocht"
 msgid ""
 "There was an error loading the built-in developer tools server. Make sure it "
 "is packaged and check your error console for messages."
-msgstr "Tharla earráid agus freastalaí na n-uirlisí forbartha á luchtú. Bí cinnte go bhfuil sé pacáistithe agus féach ar an gconsól earráide."
+msgstr ""
+"Tharla earráid agus freastalaí na n-uirlisí forbartha á luchtú. Bí cinnte go "
+"bhfuil sé pacáistithe agus féach ar an gconsól earráide."
 
 # ***** BEGIN LICENSE BLOCK *****
 # Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -16725,14 +16731,13 @@ msgstr "Cóipeáil críochnaithe."
 msgid "Copy failed."
 msgstr "Theip ar an gcóipeáil."
 
-# # @name NS_MSG_LARGE_MESSAGE_WARNING
-#: sendLargeMessageWarning
+#. ## LOCALIZATION NOTE (largeMessageSendWarning):
+#. ## Do not translate %S. It is the size of the message in user-friendly notation.
+#: largeMessageSendWarning
 msgid ""
-"Warning! You are about to send a %d byte message. Are you sure that you want "
-"to do this?"
+"Warning! You are about to send a message of size %S which may exceed the "
+"allowed limit on the mail server. Are you sure that you want to do this?"
 msgstr ""
-"Rabhadh! Tá tú ar tí teachtaireacht %d beart a sheoladh. An bhfuil tú cinnte "
-"gur mian leat é sin a dhéanamh?"
 
 # # @name NS_MSG_SENDING_MESSAGE
 #: sendingMessage
@@ -16769,14 +16774,18 @@ msgstr "Earráid Sábhála Teimpléid"
 msgid ""
 "There was a problem including the file %.200S in the message. Would you like "
 "to continue saving the message without this file?"
-msgstr "Níorbh fhéidir an comhad %.200S a chur isteach sa teachtaireacht. An bhfuil fonn ort an teachtaireacht a shábháil gan an comhad seo?"
+msgstr ""
+"Níorbh fhéidir an comhad %.200S a chur isteach sa teachtaireacht. An bhfuil "
+"fonn ort an teachtaireacht a shábháil gan an comhad seo?"
 
 #. ## LOCALIZATION NOTE (failureOnObjectEmbeddingWhileSending): argument %.200S is file name/URI of object to be embedded
 #: failureOnObjectEmbeddingWhileSending
 msgid ""
 "There was a problem including the file %.200S in the message. Would you like "
 "to continue sending the message without this file?"
-msgstr "Níorbh fhéidir an comhad %.200S a chur isteach sa teachtaireacht. An bhfuil fonn ort an teachtaireacht a sheoladh gan an comhad seo?"
+msgstr ""
+"Níorbh fhéidir an comhad %.200S a chur isteach sa teachtaireacht. An bhfuil "
+"fonn ort an teachtaireacht a sheoladh gan an comhad seo?"
 
 # # @name NS_MSG_ASK_TO_COMEBACK_TO_COMPOSE
 #: returnToComposeWindowQuestion
@@ -19852,7 +19861,9 @@ msgstr "Dlúthaigh Fillteáin"
 msgid ""
 "Do you wish to compact all local and offline folders to save disk space? This "
 "will save about %1$S."
-msgstr "An bhfuil fonn ort gach fillteán áitiúil agus as líne a dhlúthú chun spás a spáráil? Saorfaidh tú timpeall %1$S."
+msgstr ""
+"An bhfuil fonn ort gach fillteán áitiúil agus as líne a dhlúthú chun spás a "
+"spáráil? Saorfaidh tú timpeall %1$S."
 
 #: autoCompactAlwaysAskCheckbox
 msgid "Always ask me before compacting folders automatically"
@@ -19898,7 +19909,9 @@ msgstr ""
 msgid ""
 "Unable to open the folder %S because it is in use by some other operation. "
 "Please wait for that operation to finish and then select the folder again."
-msgstr "Ní féidir fillteán %S a oscailt toisc go bhfuil sé in úsáid faoi láthair. Roghnaigh arís é nuair nach mbeidh sé in úsáid a thuilleadh."
+msgstr ""
+"Ní féidir fillteán %S a oscailt toisc go bhfuil sé in úsáid faoi láthair. "
+"Roghnaigh arís é nuair nach mbeidh sé in úsáid a thuilleadh."
 
 #: deletingMsgsFailed
 msgid ""
@@ -21011,36 +21024,28 @@ msgstr ""
 "teachtaireacht seo."
 
 #. # mailCommands.js
-#: emptyJunkTitle
-msgctxt "emptyJunkTitle"
-msgid "Confirm"
-msgstr "Dearbhaigh"
+#: emptyJunkFolderTitle
+msgctxt "emptyJunkFolderTitle"
+msgid "Empty \"%S\""
+msgstr "Bánaigh \"%S\""
 
-#: emptyJunkMessage
-msgid ""
-"Are you sure you want to permanently delete all messages and subfolders in "
-"the Junk folder?"
-msgstr ""
-"An bhfuil tú cinnte gur mian leat gach teachtaireacht agus fofhillteán san "
-"fhillteán Dramhphoist a scriosadh go buan?"
+#: emptyJunkFolderMessage
+msgid "Delete all messages and subfolders in the Junk folder?"
+msgstr "An bhfuil fonn ort gach teachtaireacht agus fofhillteán i nDramhphost a scriosadh?"
 
 #: emptyJunkDontAsk
 msgctxt "emptyJunkDontAsk"
 msgid "Don't ask me again."
 msgstr "Ná fiafraigh díom arís."
 
-#: emptyTrashTitle
-msgctxt "emptyTrashTitle"
-msgid "Confirm"
-msgstr "Dearbhaigh"
+#: emptyTrashFolderTitle
+msgctxt "emptyTrashFolderTitle"
+msgid "Empty \"%S\""
+msgstr "Bánaigh \"%S\""
 
-#: emptyTrashMessage
-msgid ""
-"Are you sure you want to permanently delete all messages and subfolders in "
-"the Trash folder?"
-msgstr ""
-"An bhfuil tú cinnte gur mian leat gach teachtaireacht agus fofhillteán san "
-"fhillteán Bruscar a scriosadh go buan?"
+#: emptyTrashFolderMessage
+msgid "Delete all messages and subfolders in the Trash folder?"
+msgstr "An bhfuil fonn ort gach teachtaireacht agus fofhillteán sa Bhruscar a scriosadh?"
 
 #: emptyTrashDontAsk
 msgctxt "emptyTrashDontAsk"
@@ -22679,7 +22684,10 @@ msgstr ""
 #. # "numMessages". #1 is the number of ignored messages.
 #: numIgnored
 msgid ", #1 ignored;, #1 ignored"
-msgstr ", neamhshuim déanta ar #1 teachtaireacht;, neamhshuim déanta ar #1 theachtaireacht;, neamhshuim déanta ar #1 theachtaireacht;, neamhshuim déanta ar #1 dteachtaireacht;, neamhshuim déanta ar #1 teachtaireacht"
+msgstr ""
+", neamhshuim déanta ar #1 teachtaireacht;, neamhshuim déanta ar #1 "
+"theachtaireacht;, neamhshuim déanta ar #1 theachtaireacht;, neamhshuim déanta "
+"ar #1 dteachtaireacht;, neamhshuim déanta ar #1 teachtaireacht"
 
 #. # LOCALIZATION NOTE (messagesTotalSize): A message indicating the total size on
 #. # disk of the selected messages. #1 is the size, e.g. "123 KB".
@@ -24063,8 +24071,20 @@ msgid "When messages directed at you arrive:"
 msgstr ""
 
 #: desktopChatNotifications.label desktopChatNotifications.accesskey
-msgid "Show a notifi&cation"
-msgstr "Taispeáin fó&gra"
+msgid "Show a notifi&cation:"
+msgstr "Taispeáin fóg&ra:"
+
+#: completeNotification.label
+msgid "with sender's name and message preview"
+msgstr "le hainm an tseoltóra agus réamhamharc"
+
+#: buddyInfoOnly.label
+msgid "with sender's name only"
+msgstr "le hainm an tseoltóra amháin"
+
+#: dummyNotification.label
+msgid "without any info"
+msgstr "gan aon fhaisnéis"
 
 #: chatSound.label chatSound.accesskey
 msgid "Play a soun&d"
@@ -25101,8 +25121,8 @@ msgid "Mail Content"
 msgstr "Ábhar Ríomhphoist"
 
 #: acceptRemoteContent.label acceptRemoteContent.accesskey
-msgid "&Allow remote content in messages"
-msgstr "&Ceadaigh ábhar i gcéin i dteachtaireachtaí"
+msgid "Allow re&mote content in messages"
+msgstr ""
 
 #: remoteContentExceptions.label remoteContentExceptions.accesskey
 msgid "E&xceptions…"
@@ -25116,6 +25136,10 @@ msgstr "Tuilleadh eolais faoin phríobháideacht agus ábhar i gcéin"
 #: captionWebContent.label
 msgid "Web Content"
 msgstr "Inneachar Gréasáin"
+
+#: keepHistory.label keepHistory.accesskey
+msgid "&Remember websites and links I've visited"
+msgstr ""
 
 #: acceptCookies.label acceptCookies.accesskey
 msgid "&Accept cookies from sites"
@@ -26034,6 +26058,10 @@ msgstr ""
 #: detailsProgressiveDisclosure.label detailsProgressiveDisclosure.accesskey
 msgid "D&etails"
 msgstr "&Mionsonraí"
+
+#: itemHistory.label itemHistory.accesskey
+msgid "&Browsing History"
+msgstr "Stair &Bhrabhsála"
 
 #: itemCookies.label itemCookies.accesskey
 msgid "&Cookies"
