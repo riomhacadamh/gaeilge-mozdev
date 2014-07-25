@@ -5,21 +5,21 @@ FULLPATH="${1}"   # passed on from mozdist
 sed -i '/^VK/s/\\\\u/\\u/' toolkit-ga-IE/chrome/global-platform/mac/platformKeys.properties
 #sed -i '/^monthDate/s/.*/monthDate=#2 #1/' toolkit-ga-IE/chrome/mozapps/downloads/downloads.properties
 
+#  as of July 2014... kill region.properties from process entirely
 # comments in this file before this field.   need to increment now and again
-sed -i '/=Bing/d' browser-ga-IE/chrome/browser-region/region.properties
-sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=3/' browser-ga-IE/chrome/browser-region/region.properties mobile-ga-IE/chrome/region.properties
-# http://hg.mozilla.org/releases/l10n/mozilla-aurora/ga-IE/rev/0cdb79b8517e
-sed -i '/^browser.search.order.[23]=/d' mobile-ga-IE/chrome/region.properties
-# now handled by spacefixer.sh
-#sed -i '/^promoBanner.message.text=/s/  *$/\\u0020/' mobile-ga-IE/android/chrome/sync.properties
-sed -i 's/name=Mibbit/name = Mibbit/' browser-ga-IE/chrome/browser-region/region.properties
-sed -i '/mibbit\.com/s/late=https/late = https/' browser-ga-IE/chrome/browser-region/region.properties
-sed -i '/The default set of protocol handlers for irc:/s/.*/\n&/' browser-ga-IE/chrome/browser-region/region.properties
-sed -i '/^gecko.handlerService.schemes.mailto.0.uriTemplate/s/ *$//' browser-ga-IE/chrome/browser-region/region.properties
-if [ ! "${FULLPATH}" = "${HOME}/seal/moz-1.9.2/ga-IE" -a ! "${FULLPATH}" = "${HOME}/seal/moz-2.0/ga-IE" ]
-then
-	sed -i '1s/.*/# LOCALIZATION NOTE: REVIEW_REQUIRED\n# Please do not commit any changes to this file without a review from\n# the l10n-drivers team (this includes en-US). In order to get one,\n# please file a bug, add the "productization" keyword and CC l10n@mozilla.com.\n\n&/' browser-ga-IE/chrome/browser-region/region.properties
-fi
+#sed -i '/=Bing/d' browser-ga-IE/chrome/browser-region/region.properties
+#sed -i '/^gecko.handlerService.defaultHandlersVersion/s/.*/gecko.handlerService.defaultHandlersVersion=3/' browser-ga-IE/chrome/browser-region/region.properties mobile-ga-IE/chrome/region.properties
+## http://hg.mozilla.org/releases/l10n/mozilla-aurora/ga-IE/rev/0cdb79b8517e
+#sed -i '/^browser.search.order.[23]=/d' mobile-ga-IE/chrome/region.properties
+## now handled by spacefixer.sh
+#sed -i 's/name=Mibbit/name = Mibbit/' browser-ga-IE/chrome/browser-region/region.properties
+#sed -i '/mibbit\.com/s/late=https/late = https/' browser-ga-IE/chrome/browser-region/region.properties
+#sed -i '/The default set of protocol handlers for irc:/s/.*/\n&/' browser-ga-IE/chrome/browser-region/region.properties
+#sed -i '/^gecko.handlerService.schemes.mailto.0.uriTemplate/s/ *$//' browser-ga-IE/chrome/browser-region/region.properties
+#if [ ! "${FULLPATH}" = "${HOME}/seal/moz-1.9.2/ga-IE" -a ! "${FULLPATH}" = "${HOME}/seal/moz-2.0/ga-IE" ]
+#then
+#	sed -i '1s/.*/# LOCALIZATION NOTE: REVIEW_REQUIRED\n# Please do not commit any changes to this file without a review from\n# the l10n-drivers team (this includes en-US). In order to get one,\n# please file a bug, add the "productization" keyword and CC l10n@mozilla.com.\n\n&/' browser-ga-IE/chrome/browser-region/region.properties
+#fi
 
 # see bug 833344 (really should upgrade translate toolkit)
 #sed -i 's/\(.\)#/\1\n#/g' browser-ga-IE/profile/bookmarks.inc mobile-ga-IE/profile/bookmarks.inc mobile-ga-IE/xul/defines.inc mobile-ga-IE/android/defines.inc
@@ -176,7 +176,7 @@ sed -i 's/^none=.*/none=Gan meabhrúchán/' gaia-ga-IE/apps/calendar/calendar.pr
 sed -i 's/^videos-space=.*/videos-space=Físeáin/' gaia-ga-IE/apps/settings/settings.properties
 # old bug
 #sed -i 's/^dontallow=/deny=/' gaia-ga-IE/apps/system/system.properties
-sed -i 's/^securityNone.*$/securityNone = Gan Slándáil/' gaia-ga-IE/apps/communications/ftu/ftu.properties
+sed -i 's/^securityNone.*$/securityNone = Gan Slándáil/' gaia-ga-IE/apps/ftu/ftu.properties
 
 bash spacefixer.sh
 

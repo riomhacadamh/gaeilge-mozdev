@@ -44,6 +44,7 @@ then
 #       sed -i '/^#: VK_SHIFT/{N; s/msgid .*/msgid "\\\\u0005"/}; /^#: VK_META/{N; s/msgid .*/msgid "\\\\u0011"/}; /^#: VK_ALT/{N; s/msgid .*/msgid "\\\\u0007"/}; /^#: VK_CONTROL/{N; s/msgid .*/msgid "\\\\u0006"/}' ${IRISHPREF}po/chrome/global-platform/mac/platformKeys.properties.pot
         rm -f ${IRISHPREF}po/chrome/mozapps/help/*.xhtml.pot
 fi
+find "${IRISHPREF}po" -name 'region.properties.pot' | xargs rm -f
 find "${IRISHPREF}po" -name '*.pot' |
 while read pofile
 do
