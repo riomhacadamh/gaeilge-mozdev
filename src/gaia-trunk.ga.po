@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-23 07:02-0500\n"
+"POT-Creation-Date: 2014-08-15 15:25-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -11,54 +11,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. #-#-#-#-#  appsbluetoothbluetooth.properties.po (firefox)  #-#-#-#-#
-#. # Bluetooth :: Confirmation Dialog
-#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
-#. # Connectivity :: Bluetooth
-#: bluetooth
-msgid "Bluetooth"
-msgstr "Bluetooth"
+#. # Bluetooth :: Settings
+#. # Bluetooth :: Devices Panel (reuse the string is partially)
+#. # LOCALIZATION NOTE (bluetooth-header): if you leave the original
+#. # en-US value "{{bluetooth}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID "bluetooth".
+#. # If you need to adapt your localization to the reduced space available
+#. # in headers, you can use a shorter string here.
+#: bluetooth-header
+msgid "{{bluetooth}}"
+msgstr "{{bluetooth}}"
 
-#: confirmation confirm-dialog-title
-msgid "Confirmation"
-msgstr "Deimhniú"
+#: bluetooth-enable-msg
+msgid "Turn Bluetooth on to view devices in the area."
+msgstr "Cumasaigh Bluetooth chun gléasanna sa cheantar a fheiceáil."
 
-#: bluetooth-status-description
-msgid "Bluetooth is disabled"
-msgstr "Tá Bluetooth díchumasaithe"
-
-#: turn-bluetooth-on
-msgid "Do you want to turn Bluetooth on?"
-msgstr "An bhfuil fonn ort Bluetooth a thosú?"
-
-#: cancel cancel-action curtainCancel cancel-button overlay-cancel-button
-#: gaia-grid-cancel voicemailNoNumberCancel
-msgid "Cancel"
-msgstr "Cealaigh"
-
-#: turn-on
-msgid "Turn On"
-msgstr "Tosaigh"
-
-#: error-transfer-title
-msgid "Bluetooth file transfer failed"
-msgstr "Theip ar aistriú Bluetooth"
-
-#: error-transfer-settings
-msgid ""
-"Bluetooth file transfer failed. Check that the Bluetooth settings are correct."
-msgstr ""
-"Theip ar aistriú Bluetooth. Deimhnigh go bhfuil Bluetooth socraithe mar is "
-"ceart."
-
-#. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
-#. # modal-dialog buttons
-#: ok dialog-button-ok fxa-ok gaia-grid-unrecoverable-error-action
-msgid "OK"
-msgstr "OK"
-
-#. #-#-#-#-#  appsbluetoothbluetooth.properties.po (firefox)  #-#-#-#-#
-#. # Bluetooth :: Devices Panel
 #: bluetooth-paired-devices
 msgid "Paired devices"
 msgstr "Gléasanna péireáilte"
@@ -66,6 +33,64 @@ msgstr "Gléasanna péireáilte"
 #: bluetooth-devices-in-area
 msgid "Devices in the area"
 msgstr "Gléasanna sa cheantar"
+
+#: bluetooth-visible-to-all
+msgid "Visible to all"
+msgstr "Infheicthe do chách"
+
+#: bluetooth-name-maxlength-alert
+msgid "Your device name exceeds {{length}} characters. Please retry again."
+msgstr ""
+"Tá ainm an ghléis níos faide ná {{length}} carachtar. Déan iarracht eile."
+
+#: bluetooth-address
+msgid "Bluetooth Address"
+msgstr "Seoladh Bluetooth"
+
+#: bluetooth-address-unavailable not-available
+msgid "Not available"
+msgstr "Níl ar fáil"
+
+#: bt-status-nopaired
+msgid "No devices paired"
+msgstr "Níl aon ghléasanna péireáilte ann"
+
+#: bt-status-turnoff
+msgid "Turned off"
+msgstr "Múchta"
+
+#: bt-status-paired mergeActionButtonLabel
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: bt-status-paired[zero] thread-header-text[zero] download_text_by_default
+msgid "{{name}}"
+msgstr "{{name}}"
+
+#: bt-status-paired[one]
+msgctxt "bt-status-paired[one]"
+msgid "{{name}}, +{{n}} more"
+msgstr "{{name}}, +{{n}} ghléas eile"
+
+#: bt-status-paired[two]
+msgctxt "bt-status-paired[two]"
+msgid "{{name}}, +{{n}} more"
+msgstr "{{name}}, +{{n}} ghléas eile"
+
+#: bt-status-paired[few]
+msgctxt "bt-status-paired[few]"
+msgid "{{name}}, +{{n}} more"
+msgstr "{{name}}, +{{n}} ghléas eile"
+
+#: bt-status-paired[many]
+msgctxt "bt-status-paired[many]"
+msgid "{{name}}, +{{n}} more"
+msgstr "{{name}}, +{{n}} ngléas eile"
+
+#: bt-status-paired[other]
+msgctxt "bt-status-paired[other]"
+msgid "{{name}}, +{{n}} more"
+msgstr "{{name}}, +{{n}} gléas eile"
 
 #: device-status-tap-connect
 msgid "Tap to connect"
@@ -91,6 +116,35 @@ msgstr "Ag ceangal…"
 msgid "Connected"
 msgstr "Ceangailte"
 
+#: device-status-connected-media
+msgid "Connected to media audio"
+msgstr ""
+
+#: device-option-unpair
+msgid "Unpair"
+msgstr "Díphéireáil"
+
+#: device-option-confirm confirm
+msgid "Confirm"
+msgstr "Deimhnigh"
+
+#: device-option-unpair-confirmation
+msgctxt "device-option-unpair-confirmation"
+msgid "Confirmation"
+msgstr "Deimhniú"
+
+#: device-option-unpair-device
+msgid "Unpair device?"
+msgstr "Díphéireáil an gléas?"
+
+#: device-option-connect
+msgid "Connect"
+msgstr "Ceangail"
+
+#: device-option-disconnect
+msgid "Disconnect"
+msgstr "Dícheangail"
+
 #: search-for-device
 msgid "Searching for devices…"
 msgstr "Gléasanna á lorg…"
@@ -99,9 +153,21 @@ msgstr "Gléasanna á lorg…"
 msgid "Search for devices"
 msgstr "Lorg gléasanna"
 
+#: rename-device
+msgid "Rename my device"
+msgstr "Tabhair ainm nua do mo ghléas"
+
 #: unnamed-device unknown-device
 msgid "Unknown device"
 msgstr "Gléas anaithnid"
+
+#: change-phone-name-desc
+msgid "Change the name of your device as it appears in your computer"
+msgstr "Roghnaigh ainm a fheicfear ar ríomhairí péireáilte"
+
+#: bluetooth-new-name
+msgid "New name"
+msgstr "Ainm nua"
 
 #: error-pair-title
 msgid "Unable to pair devices"
@@ -115,6 +181,75 @@ msgstr ""
 #: error-pair-toofast
 msgid "Unable to pair with the device. Too many requests."
 msgstr "Ní féidir péireáil leis an ngléas. An iomarca iarrachtaí."
+
+#: error-connect-title
+msgid "Unable to connect devices"
+msgstr "Ní féidir gléasanna a cheangal"
+
+#: error-connect-msg
+msgid ""
+"Check that the device you’re trying to connect with is still in range and has "
+"Bluetooth turned on."
+msgstr ""
+
+#: unpair-title
+msgid "Unpair a connected device?"
+msgstr "Díphéireáil gléas ceangailte?"
+
+#: unpair-msg
+msgid ""
+"You are currently connected to this device. Unpairing will also disconnect "
+"from it."
+msgstr ""
+
+#. #-#-#-#-#  appsbluetoothbluetooth.properties.po (firefox)  #-#-#-#-#
+#. # Bluetooth :: Confirmation Dialog
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
+#. # Connectivity :: Bluetooth
+#: bluetooth name
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: confirmation
+msgctxt "confirmation"
+msgid "Confirmation"
+msgstr "Deimhniú"
+
+#: bluetooth-status-description
+msgid "Bluetooth is disabled"
+msgstr "Tá Bluetooth díchumasaithe"
+
+#: turn-bluetooth-on
+msgid "Do you want to turn Bluetooth on?"
+msgstr "An bhfuil fonn ort Bluetooth a thosú?"
+
+#: cancel cancel-action curtainCancel cancel-button gaia-grid-cancel
+#: gaia-menu-cancel voicemailNoNumberCancel
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: turn-on
+msgid "Turn On"
+msgstr "Tosaigh"
+
+#: error-transfer-title
+msgid "Bluetooth file transfer failed"
+msgstr "Theip ar aistriú Bluetooth"
+
+#: error-transfer-settings
+msgid ""
+"Bluetooth file transfer failed. Check that the Bluetooth settings are correct."
+msgstr ""
+"Theip ar aistriú Bluetooth. Deimhnigh go bhfuil Bluetooth socraithe mar is "
+"ceart."
+
+#. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
+#. # modal-dialog buttons
+#. #-#-#-#-#  appsemergency-callemergency-call.properties.po (firefox)  #-#-#-#-#
+#. # emergency call on lockscreen
+#: ok dialog-button-ok fxa-ok gaia-grid-unrecoverable-error-action
+msgid "OK"
+msgstr "OK"
 
 #. #-#-#-#-#  appsbluetoothbluetooth.properties.po (firefox)  #-#-#-#-#
 #. # Bluetooth :: Pair View
@@ -181,13 +316,57 @@ msgstr "Iarratas Bluetooth"
 msgid "Bluetooth pairing request expired. Try to pair again."
 msgstr ""
 
-#: name
-msgid "Bluetooth Transfer"
-msgstr "Aistriú Bluetooth"
+#. # Localization note: strings in this file refer to a specific type of device
+#. # (phone, tablet, etc.). Try to be consistent across files for each type of
+#. # device, but don't use a simple copy and paste: string ID is the same, but
+#. # the device type is different in each file.
+#: change-device-name
+msgid "Change phone name"
+msgstr "Athraigh ainm an ghutháin"
+
+#: device-status-connected-device
+msgid "Connected to phone audio"
+msgstr "Ceangailte le fuaim tríd an ghuthán"
+
+#: device-status-connected-device-media
+msgid "Connected to phone/media audio"
+msgstr ""
+
+#. # Localization note: strings in this file refer to a specific type of device
+#. # (phone, tablet, etc.). Try to be consistent across files for each type of
+#. # device, but don't use a simple copy and paste: string ID is the same, but
+#. # the device type is different in each file.
+#: change-device-name
+msgid "Change tablet name"
+msgstr "Athraigh ainm an taibléid"
+
+#: device-status-connected-device
+msgid "Connected to tablet audio"
+msgstr ""
+
+#: device-status-connected-device-media
+msgid "Connected to tablet/media audio"
+msgstr ""
+
+#. # Localization note: strings in this file refer to a specific type of device
+#. # (phone, tablet, etc.). Try to be consistent across files for each type of
+#. # device, but don't use a simple copy and paste: string ID is the same, but
+#. # the device type is different in each file.
+#: change-device-name
+msgid "Change TV name"
+msgstr "Athraigh ainm an teilifíseáin"
+
+#: device-status-connected-device
+msgid "Connected to TV audio"
+msgstr ""
+
+#: device-status-connected-device-media
+msgid "Connected to TV/media audio"
+msgstr ""
 
 #: description
-msgid "Gaia Bluetooth Transfer"
-msgstr "Aistriú Bluetooth Gaia"
+msgid "Gaia Bluetooth"
+msgstr "Bluetooth Gaia"
 
 #. # Add and update bookmark UIs
 #: add-bookmark-header
@@ -216,7 +395,7 @@ msgstr "Seoladh"
 
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
 #. # wrapper
-#: add-action add-to-home-screen
+#: add-action add-to-home-screen add-to-home-screen.label
 msgid "Add to Home Screen"
 msgstr "Cuir leis an Scáileán Baile"
 
@@ -255,7 +434,7 @@ msgstr "Bainisteoir na Leabharmharcanna"
 #. # Search
 #: enter-search-or-address.placeholder search-or-enter-address.placeholder
 msgid "Search or enter address"
-msgstr "Cuardaigh nó cuir seoladh isteach"
+msgstr "Cuardach nó seoladh Gréasáin"
 
 #: history evme-helper-history-link
 msgid "History"
@@ -498,18 +677,16 @@ msgid "Search for"
 msgstr "Cuardaigh"
 
 #. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
+#. # Generic save link context menu
+#: save-link
+msgid "Save linked file"
+msgstr "Sábháil an comhad nasctha"
+
+#. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # Image saving context menu
 #: save-image
 msgid "Save Image"
 msgstr "Sábháil an Íomhá"
-
-#: image-saved
-msgid "Image saved to Gallery"
-msgstr "Sábháladh an íomhá sa Ghailearaí"
-
-#: error-saving-image
-msgid "Error saving image"
-msgstr "Earráid agus íomhá á sábháil"
 
 #. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # Video saving context menu
@@ -517,27 +694,11 @@ msgstr "Earráid agus íomhá á sábháil"
 msgid "Save Video"
 msgstr "Sábháil an Físeán"
 
-#: video-saved
-msgid "Video saved to Video"
-msgstr "Sábháladh an físeán sna Físeáin"
-
-#: error-saving-video
-msgid "Error saving video"
-msgstr "Earráid agus an físeán á shábháil"
-
 #. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # Audio saving context menu
 #: save-audio
 msgid "Save Audio"
 msgstr "Sábháil an Fhuaim"
-
-#: audio-saved
-msgid "Audio saved to Music"
-msgstr "Sábháladh an comhad fuaime i gCeol"
-
-#: error-saving-audio
-msgid "Error saving audio"
-msgstr "Earráid agus an comhad fuaime á shábháil"
 
 #: name
 msgid "Browser"
@@ -561,7 +722,7 @@ msgstr "Brabhsálaí Gaia"
 msgid "Back"
 msgstr "Siar"
 
-#: save settings-save create-save
+#: save settings-save evme-done.ariaLabel create-save
 msgid "Save"
 msgstr "Sábháil"
 
@@ -569,17 +730,13 @@ msgstr "Sábháil"
 msgid "Hide"
 msgstr "Folaigh"
 
-#: confirm device-option-confirm
-msgid "Confirm"
-msgstr "Deimhnigh"
-
 #: events
 msgid "Events"
 msgstr "Imeachtaí"
 
 #. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
 #. # edit dialog
-#: edit edit-mode message-multiedit-header[zero] edit-dialog-header
+#: edit edit-mode edit-dialog-header
 msgid "Edit"
 msgstr "Eagar"
 
@@ -683,7 +840,7 @@ msgstr "Meabhrúcháin"
 msgid "Add Account"
 msgstr "Cuir Cuntas Leis"
 
-#: field-full-url.placeholder
+#: field-full-url.placeholder accessibility-textInputType_url
 msgid "URL"
 msgstr "URL"
 
@@ -792,21 +949,17 @@ msgstr "Sionc"
 msgid "Sync Calendar"
 msgstr "Sioncrónaigh an Féilire"
 
-#: sync-frequency-manual.textContent settings-check-every-manual
-msgid "Manually"
-msgstr "De Láimh"
-
-#: sync-frequency-15min.textContent
+#: sync-frequency-15min
 msgid "15 min"
 msgstr "15 nóim"
 
-#: sync-frequency-30min.textContent
+#: sync-frequency-30min
 msgid "30 min"
 msgstr "30 nóim"
 
-#: sync-frequency-hourly.textContent
-msgid "Each hour"
-msgstr "Gach uair an chloig"
+#: sync-frequency-manual settings-check-every-manual
+msgid "Manually"
+msgstr "De Láimh"
 
 #. # duration time of events
 #. # startDate and endDate use the `longDateFormat` format.
@@ -1335,6 +1488,40 @@ msgstr "Earráid: sioncrónú féilire"
 msgid "Tap for more info"
 msgstr "Tapáil chun tuilleadh eolais a fháil"
 
+#. # Used in month view as column header, each single char represents a week day
+#. # (from 0-Sunday to 6-Saturday)
+#: weekday-0-single-char
+msgctxt "weekday-0-single-char"
+msgid "S"
+msgstr "D"
+
+#: weekday-1-single-char
+msgid "M"
+msgstr "L"
+
+#: weekday-2-single-char
+msgctxt "weekday-2-single-char"
+msgid "T"
+msgstr "M"
+
+#: weekday-3-single-char
+msgid "W"
+msgstr "C"
+
+#: weekday-4-single-char
+msgctxt "weekday-4-single-char"
+msgid "T"
+msgstr "D"
+
+#: weekday-5-single-char
+msgid "F"
+msgstr "A"
+
+#: weekday-6-single-char
+msgctxt "weekday-6-single-char"
+msgid "S"
+msgstr "S"
+
 #: name
 msgid "Calendar"
 msgstr "Féilire"
@@ -1360,12 +1547,22 @@ msgid "An error prevented Camera from saving the picture."
 msgstr "Tharla earráid agus ní raibh Ceamara in ann an pictiúr a shábháil."
 
 #: error-recording-title
+msgctxt "error-recording-title"
 msgid "Video not recorded"
 msgstr "Níor taifeadadh an físeán"
 
 #: error-recording-text
 msgid "An error prevented Camera from recording the video."
 msgstr "Tharla earráid agus ní raibh Ceamara in ann an físeán a thaifeadadh."
+
+#: error-video-file-path-title
+msgctxt "error-video-file-path-title"
+msgid "Video not recorded"
+msgstr "Níor taifeadadh an físeán"
+
+#: error-video-file-path-text
+msgid "Error creating video file path."
+msgstr ""
 
 #: nocard2-title screenshotNoSDCard no_sdcard_found_2_download_title
 msgid "No memory card found"
@@ -1399,7 +1596,10 @@ msgstr "Atóg"
 msgid "Select"
 msgstr "Roghnaigh"
 
-#: close-button close
+#. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#: close-button close evme-close.ariaLabel
 msgid "Close"
 msgstr "Dún"
 
@@ -1411,7 +1611,7 @@ msgstr "Scrios an grianghraf?"
 msgid "Delete video?"
 msgstr "Scrios an físeán?"
 
-#: delete delete-confirm downloads-delete
+#: delete delete-confirm downloads-delete keypadDelete.ariaLabel
 msgid "Delete"
 msgstr "Scrios"
 
@@ -2067,7 +2267,7 @@ msgstr "Clog Gaia"
 msgid "Loading"
 msgstr "Á Luchtú"
 
-#: custom custom.placeholder
+#: custom
 msgid "Custom"
 msgstr "Saincheaptha"
 
@@ -2087,13 +2287,9 @@ msgstr "Ceangail leis an Idirlíon chun tuilleadh Bailiúchán Cliste a fháil"
 msgid "Add to top of collection"
 msgstr "Cuir le barr an bhailiúcháin é"
 
-#: save-to-homescreen evme-save-to-homescreen
-msgid "Save to Homescreen"
-msgstr "Sábháil ar an Scáileán Baile"
-
 #: offline-webresults
 msgid "Connect to the internet to get apps for {{collectionName}}"
-msgstr ""
+msgstr "Ceangail leis an Idirlíon chun aipeanna do {{collectionName}} a fháil"
 
 #. #-#-#-#-#  appscollectioncollection.properties.po (firefox)  #-#-#-#-#
 #. # delete-collection
@@ -2143,19 +2339,19 @@ msgstr "Atriail"
 #: contacts
 msgctxt "contacts"
 msgid "Contacts"
-msgstr "Teagmhálacha"
+msgstr "Teagmhálaithe"
 
 #: addContact dialerAddContact.ariaLabel fdnAction-add
 msgid "Add contact"
-msgstr "Cuir teagmháil leis"
+msgstr "Cuir teagmhálaí leis"
 
 #: deleteContact fdnAction-delete
 msgid "Delete contact"
-msgstr "Scrios teagmháil"
+msgstr "Scrios teagmhálaí"
 
 #: selectContact
 msgid "Select contact"
-msgstr "Roghnaigh teagmháil"
+msgstr "Roghnaigh teagmhálaí"
 
 #: selectAll downloads-select-all select-all
 msgid "Select all"
@@ -2167,11 +2363,16 @@ msgstr "Díroghnaigh uile"
 
 #: editContact
 msgid "Edit contact"
-msgstr "Cuir teagmháil in eagar"
+msgstr "Cuir teagmhálaí in eagar"
 
 #: deleteConfirmMsg
 msgid "Delete contact?"
-msgstr "Scrios an teagmháil?"
+msgstr "Scrios an teagmhálaí?"
+
+#: remove
+msgctxt "remove"
+msgid "Remove"
+msgstr "Bain"
 
 #: delete
 msgctxt "delete"
@@ -2184,11 +2385,15 @@ msgstr "Nótaí"
 
 #: no_contact_phones
 msgid "This contact does not have a phone number"
-msgstr "Níl uimhir theileafóin ag an duine seo"
+msgstr "Níl uimhir ghutháin ag an duine seo"
 
 #: no_contact_email
 msgid "This contact does not have an email address"
 msgstr "Níl seoladh ríomhphoist ag an duine seo"
+
+#: no_contact_data
+msgid "This contact does not have a phone number and email address"
+msgstr "Níl uimhir ghutháin ná seoladh ríomhphoist ag an duine seo"
 
 #: removePhotoConfirm
 msgid "Remove contact picture?"
@@ -2196,13 +2401,13 @@ msgstr "Bain an pictiúr?"
 
 #: loadingContacts
 msgid "Loading contacts…"
-msgstr "Teagmhálacha á luchtú…"
+msgstr "Teagmhálaithe á luchtú…"
 
 #. # LOCALIZATION NOTE(noContactsActivity): Shown when using the context menu to add
 #. # a number from your call list to a contact, and your contacts list is empty.
 #: noContactsActivity
 msgid "Cannot add to contact as your contact list is empty"
-msgstr "Ní féidir an teagmháil a chur le liosta folamh teagmhálacha"
+msgstr "Ní féidir an teagmhálaí a chur le liosta folamh teagmhálaithe"
 
 #. # Contact fields
 #: noName
@@ -2338,68 +2543,6 @@ msgstr "Cuir leis na ceanáin é"
 msgid "Remove as Favorite"
 msgstr "Bain ó na ceanáin é"
 
-#. # Field labels
-#: label
-msgid "Label"
-msgstr "Lipéad"
-
-#. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
-#. # Labels for contact fields
-#: mobile
-msgid "Mobile"
-msgstr "Fón Póca"
-
-#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
-#. #software buttons
-#: home operator-roamingPreference-home softwareHomeButton.ariaLabel
-msgid "Home"
-msgstr "Baile"
-
-#: work
-msgid "Work"
-msgstr "Obair"
-
-#: personal
-msgid "Personal"
-msgstr "Pearsanta"
-
-#: faxHome
-msgid "Fax home"
-msgstr "Facs: baile"
-
-#: faxOffice
-msgid "Fax office"
-msgstr "Facs: oifig"
-
-#: faxOther
-msgid "Fax other"
-msgstr "Facs: eile"
-
-#: another
-msgid "Another"
-msgstr "Eile"
-
-#: other about-other
-msgid "Other"
-msgstr "Eile"
-
-#: customTag.placeholder
-msgid "Custom tag"
-msgstr "Clib shaincheaptha"
-
-#. # Note: For localizers. This tag indicates the current address
-#: current
-msgid "Current"
-msgstr "Reatha"
-
-#. # LOCALIZATION NOTE(itemWithLabel): Parameters in this string will be replaced
-#. # at run-time: {{label}} is the label associated to phone number or email,
-#. # item is the number/email itself. Examples for English: "Home, +123456789" or
-#. # "Work, foo@example.com".
-#: itemWithLabel
-msgid "{{label}}, {{item}}"
-msgstr "{{label}}, {{item}}"
-
 #. # Hidden information, for screen readers
 #: exit
 msgid "Exit"
@@ -2461,43 +2604,47 @@ msgstr "Uimhreacha gutháin"
 msgid "Email address"
 msgstr "Seoladh ríomhphoist"
 
+#: legendPhoto.ariaLabel
+msgid "Photo"
+msgstr ""
+
 #. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
 #. # search related
 #. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
 #. # Search functionality
 #. #-#-#-#-#  sharedfacebookfacebook.properties.po (firefox)  #-#-#-#-#
 #. # search related
-#: search-contact.placeholder search
+#: search-contact.placeholder search-header search
 msgid "Search"
 msgstr "Cuardaigh"
 
 #: noResults
 msgid "No contacts found"
-msgstr "Níor aimsíodh aon teagmhálacha"
+msgstr "Níor aimsíodh aon teagmhálaithe"
 
 #: transferContactsTitle
 msgid "Transfer Contacts"
-msgstr "Aistrigh Teagmhálacha"
+msgstr "Aistrigh Teagmhálaithe"
 
 #: importContactsTitle
 msgctxt "importContactsTitle"
 msgid "Import Contacts"
-msgstr "Iompórtáil Teagmhálacha"
+msgstr "Iompórtáil Teagmhálaithe"
 
 #: importContactsButton
 msgctxt "importContactsButton"
 msgid "Import Contacts"
-msgstr "Iompórtáil Teagmhálacha"
+msgstr "Iompórtáil Teagmhálaithe"
 
 #: exportContactsTitle
 msgctxt "exportContactsTitle"
 msgid "Export Contacts"
-msgstr "Easpórtáil Teagmhálacha"
+msgstr "Easpórtáil Teagmhálaithe"
 
 #: exportContactsButton
 msgctxt "exportContactsButton"
 msgid "Export Contacts"
-msgstr "Easpórtáil Teagmhálacha"
+msgstr "Easpórtáil Teagmhálaithe"
 
 #: exportContactsAction
 msgid "Export"
@@ -2530,32 +2677,32 @@ msgstr "{[ plural(exported) ]}"
 
 #: contactsExported2[zero]
 msgid "No contacts exported"
-msgstr "Níor easpórtáladh aon teagmhálacha"
+msgstr "Níor easpórtáladh aon teagmhálaithe"
 
 #: contactsExported2[one]
 msgctxt "contactsExported2[one]"
 msgid "{{exported}}/{{total}} contacts exported"
-msgstr "Easpórtáladh {{exported}} teagmháil (as {{total}}"
+msgstr "Easpórtáladh {{exported}} teagmhálaí (as {{total}}"
 
 #: contactsExported2[two]
 msgctxt "contactsExported2[two]"
 msgid "{{exported}}/{{total}} contacts exported"
-msgstr "Easpórtáladh {{exported}} theagmháil (as {{total}}"
+msgstr "Easpórtáladh {{exported}} theagmhálaí (as {{total}}"
 
 #: contactsExported2[few]
 msgctxt "contactsExported2[few]"
 msgid "{{exported}}/{{total}} contacts exported"
-msgstr "Easpórtáladh {{exported}} theagmháil (as {{total}}"
+msgstr "Easpórtáladh {{exported}} theagmhálaí (as {{total}}"
 
 #: contactsExported2[many]
 msgctxt "contactsExported2[many]"
 msgid "{{exported}}/{{total}} contacts exported"
-msgstr "Easpórtáladh {{exported}} dteagmháil (as {{total}}"
+msgstr "Easpórtáladh {{exported}} dteagmhálaí (as {{total}}"
 
 #: contactsExported2[other]
 msgctxt "contactsExported2[other]"
 msgid "{{exported}}/{{total}} contacts exported"
-msgstr "Easpórtáladh {{exported}} teagmháil (as {{total}}"
+msgstr "Easpórtáladh {{exported}} teagmhálaí (as {{total}}"
 
 #: exportError-general
 msgid "Some error happened while exporting"
@@ -2575,7 +2722,7 @@ msgstr "Níl cárta cuimhne ar fáil"
 msgctxt "exportError-SD-noSpace"
 msgid "There’s not enough space on the memory card to export the contacts"
 msgstr ""
-"Níl a dhóthain spáis ar an gcárta cuimhne chun na teagmhálacha a easpórtáil"
+"Níl a dhóthain spáis ar an gcárta cuimhne chun na teagmhálaithe a easpórtáil"
 
 #: exportError-SIM-unavailable
 msgid "SIM card is not available"
@@ -2595,7 +2742,7 @@ msgstr "Níl cárta cuimhne ar fáil"
 msgctxt "exportError-BT-noSpace"
 msgid "There’s not enough space on the memory card to export the contacts"
 msgstr ""
-"Níl a dhóthain spáis ar an gcárta cuimhne chun na teagmhálacha a easpórtáil"
+"Níl a dhóthain spáis ar an gcárta cuimhne chun na teagmhálaithe a easpórtáil"
 
 #. # Social networks
 #: social-network
@@ -2604,11 +2751,11 @@ msgstr "Líonraí sóisialta"
 
 #: social-link
 msgid "Link contact"
-msgstr "Nasc leis an teagmháil"
+msgstr "Nasc leis an teagmhálaí"
 
 #: social-unlink
 msgid "Unlink contact"
-msgstr "Bris nasc leis an teagmháil"
+msgstr "Bris nasc leis an teagmhálaí"
 
 #: social-unlink-confirm-title
 msgid "Do you want to unlink your friend?"
@@ -2655,6 +2802,10 @@ msgstr "Roghnaigh soghluaiste"
 msgid "Select email"
 msgstr "Roghnaigh seoladh ríomhphoist"
 
+#: select_recipient
+msgid "Select recipient"
+msgstr ""
+
 #. # Settings related
 #: contactsOrderBy
 msgid "Order by last name"
@@ -2700,7 +2851,7 @@ msgstr "Níl sé cumasaithe fós"
 
 #: genericNoConnection
 msgid "To import contacts connect to Wi-Fi or data network"
-msgstr "Chun teagmhálacha a iompórtáil, ceangail le Wi-Fi nó le líonra eile"
+msgstr "Chun teagmhálaithe a iompórtáil, ceangail le Wi-Fi nó le líonra eile"
 
 #. # Used for export, just in case the strings will diverge on time
 #: simCard
@@ -2716,22 +2867,47 @@ msgstr "Cárta cuimhne"
 msgid "SIM {{number}}"
 msgstr "SIM {{number}}"
 
+#. # ICE Contacts
+#: setICEButton
+msgid "Set ICE Contacts"
+msgstr ""
+
+#: ICESettingTitle
+msgid "ICE Contacts"
+msgstr ""
+
+#: ICEDescription
+msgid "Add two contacts for making “In Case of Emergency” calls."
+msgstr ""
+
+#: ICEContact1
+msgid "ICE Contact 1"
+msgstr ""
+
+#: ICESelectContact
+msgid "Select a contact"
+msgstr ""
+
+#: ICEContact2
+msgid "ICE Contact 2"
+msgstr ""
+
 #. # No contacts
 #: create-new
 msgid "Create a new contact"
-msgstr "Cruthaigh teagmháil nua"
+msgstr "Cruthaigh teagmhálaí nua"
 
 #: import-now
 msgid "Import your contacts from SIM card or Facebook"
-msgstr "Iompórtáil teagmhálacha ó chárta SIM nó ó Fhacebook"
+msgstr "Iompórtáil teagmhálaithe ó chárta SIM nó ó Fhacebook"
 
 #: no-contacts
 msgid "No contacts"
-msgstr "Gan teagmhálacha"
+msgstr "Gan teagmhálaithe"
 
 #: start-adding
 msgid "Start adding them now"
-msgstr "Cuir teagmhálacha leis anois"
+msgstr "Cuir teagmhálaithe leis anois"
 
 #: notImported
 msgid "Not imported"
@@ -2747,15 +2923,15 @@ msgstr "Fan nóiméad... oibríocht á cealú."
 
 #: organise-contacts
 msgid "Organize Contacts"
-msgstr "Cuir Teagmhálacha in Eagar"
+msgstr "Cuir Teagmhálaithe in Eagar"
 
 #: find-merge-contacts
 msgid "Find duplicate contacts"
-msgstr "Aimsigh teagmhálacha dúbailte"
+msgstr "Aimsigh teagmhálaithe dúbailte"
 
 #: preparing-contacts
 msgid "Preparing contacts"
-msgstr "Teagmhálacha á n-ullmhú"
+msgstr "Teagmhálaithe á n-ullmhú"
 
 #: exportError-SIM-NoFreeRecordFound
 msgid "SIM Card is full"
@@ -2771,19 +2947,19 @@ msgstr "Níl aon chárta SIM ann"
 
 #: exportError-SIM-GenericError
 msgid "An error occurred while exporting a contact"
-msgstr "Tharla earráid agus teagmháil á heaspórtáil"
+msgstr "Tharla earráid agus teagmhálaí á easpórtáil"
 
 #: noSimMsgExport
 msgid "To export contacts insert or unlock your SIM card"
-msgstr "Chun teagmhálacha a easpórtáil, cuir cárta SIM isteach, nó díghlasáil é"
+msgstr "Chun teagmhálaithe a easpórtáil, cuir cárta SIM isteach, nó díghlasáil é"
 
 #: noMemoryCardMsgExport
 msgid "To export contacts insert a memory card"
-msgstr "Chun teagmhálacha a easpórtáil, cuir cárta cuimhne isteach"
+msgstr "Chun teagmhálaithe a easpórtáil, cuir cárta cuimhne isteach"
 
 #: ContactManagementTitle
 msgid "Contacts Management"
-msgstr "Bainisteoir Teagmhálacha"
+msgstr "Bainisteoir Teagmhálaithe"
 
 #: DeleteTitle
 msgctxt "DeleteTitle"
@@ -2792,11 +2968,11 @@ msgstr "Scrios"
 
 #: bulkDeleteButton
 msgid "Delete Contacts"
-msgstr "Scrios Teagmhálacha"
+msgstr "Scrios Teagmhálaithe"
 
 #: BulkDelCancel
 msgid "Contacts delete cancelled"
-msgstr "Cealaíodh scriosadh na dteagmhálacha"
+msgstr "Cealaíodh scriosadh na dteagmhálaithe"
 
 #: DeletedTxt
 msgctxt "DeletedTxt"
@@ -2806,35 +2982,35 @@ msgstr "{[ plural(n) ]}"
 #: DeletedTxt[zero]
 msgctxt "DeletedTxt[zero]"
 msgid "No Contact to Delete"
-msgstr "Níl aon teagmháil le scriosadh ann"
+msgstr "Níl aon teagmhálaí le scriosadh ann"
 
 #: DeletedTxt[one]
 msgid "1 Contact removed"
-msgstr "Scriosadh teagmháil amháin"
+msgstr "Scriosadh teagmhálaí amháin"
 
 #: DeletedTxt[two]
 msgctxt "DeletedTxt[two]"
 msgid "{{n}} Contacts removed"
-msgstr "Scriosadh {{n}} theagmháil"
+msgstr "Scriosadh {{n}} theagmhálaí"
 
 #: DeletedTxt[few]
 msgctxt "DeletedTxt[few]"
 msgid "{{n}} Contacts removed"
-msgstr "Scriosadh {{n}} theagmháil"
+msgstr "Scriosadh {{n}} theagmhálaí"
 
 #: DeletedTxt[many]
 msgctxt "DeletedTxt[many]"
 msgid "{{n}} Contacts removed"
-msgstr "Scriosadh {{n}} dteagmháil"
+msgstr "Scriosadh {{n}} dteagmhálaí"
 
 #: DeletedTxt[other]
 msgctxt "DeletedTxt[other]"
 msgid "{{n}} Contacts removed"
-msgstr "Scriosadh {{n}} teagmháil"
+msgstr "Scriosadh {{n}} teagmhálaí"
 
 #: DeletingContacts
 msgid "Deleting contacts"
-msgstr "Teagmhálacha á scriosadh"
+msgstr "Teagmhálaithe á scriosadh"
 
 #: ContactConfirmDel
 msgctxt "ContactConfirmDel"
@@ -2844,31 +3020,31 @@ msgstr "{[ plural(n) ]}"
 #: ContactConfirmDel[zero]
 msgctxt "ContactConfirmDel[zero]"
 msgid "No Contact to Delete"
-msgstr "Níl aon teagmháil le scriosadh ann"
+msgstr "Níl aon teagmhálaí le scriosadh ann"
 
 #: ContactConfirmDel[one]
 msgid "Delete 1 Contact? This cannot be undone."
-msgstr "Scrios teagmháil amháin? Fainic! Beidh sé scriosta go brách."
+msgstr "Scrios teagmhálaí amháin? Fainic! Beidh sé scriosta go brách."
 
 #: ContactConfirmDel[two]
 msgctxt "ContactConfirmDel[two]"
 msgid "Delete {{n}} Contacts? This cannot be undone."
-msgstr "Scrios {{n}} theagmháil? Fainic! Beidh siad scriosta go brách."
+msgstr "Scrios {{n}} theagmhálaí? Fainic! Beidh siad scriosta go brách."
 
 #: ContactConfirmDel[few]
 msgctxt "ContactConfirmDel[few]"
 msgid "Delete {{n}} Contacts? This cannot be undone."
-msgstr "Scrios {{n}} theagmháil? Fainic! Beidh siad scriosta go brách."
+msgstr "Scrios {{n}} theagmhálaí? Fainic! Beidh siad scriosta go brách."
 
 #: ContactConfirmDel[many]
 msgctxt "ContactConfirmDel[many]"
 msgid "Delete {{n}} Contacts? This cannot be undone."
-msgstr "Scrios {{n}} dteagmháil? Fainic! Beidh siad scriosta go brách."
+msgstr "Scrios {{n}} dteagmhálaí? Fainic! Beidh siad scriosta go brách."
 
 #: ContactConfirmDel[other]
 msgctxt "ContactConfirmDel[other]"
 msgid "Delete {{n}} Contacts? This cannot be undone."
-msgstr "Scrios {{n}} teagmháil? Fainic! Beidh siad scriosta go brách."
+msgstr "Scrios {{n}} teagmhálaí? Fainic! Beidh siad scriosta go brách."
 
 #: SelectedTxt
 msgctxt "SelectedTxt"
@@ -2878,7 +3054,7 @@ msgstr "{[ plural(n) ]}"
 #: SelectedTxt[zero]
 msgctxt "SelectedTxt[zero]"
 msgid "Contacts"
-msgstr "Teagmhálacha"
+msgstr "Teagmhálaithe"
 
 #: SelectedTxt[one]
 msgctxt "SelectedTxt[one]"
@@ -2915,19 +3091,38 @@ msgstr "Fís"
 msgid "Audio"
 msgstr "Fuaim"
 
+#. # Pick Destination
+#: pick_destination
+msgid "{{ destination }} {{ carrier }}"
+msgstr ""
+
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#: removeField.ariaLabel
+msgctxt "removeField.ariaLabel"
+msgid "Remove"
+msgstr ""
+
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE(undo.ariaLabel): The following string is spoken by screen
+#. # readers and not shown on the screen.
+#: undo.ariaLabel toaster-undo undo
+msgid "Undo"
+msgstr "Cealaigh"
+
 #. # Wait
 #: waitDuplicateContacts
 msgid "Looking for duplicate contacts"
-msgstr "Teagmhálacha dúbailte á n-aimsiú"
+msgstr "Teagmhálaithe dúbailte á n-aimsiú"
 
 #: waitMergingDuplicateContacts
 msgid "Merging duplicate contacts"
-msgstr "Teagmhálacha dúbailte á gcumasc"
+msgstr "Teagmhálaithe dúbailte á gcumasc"
 
 #. # Alert
 #: alertNoDuplicateContacts
 msgid "No duplicate contacts found"
-msgstr "Níor aimsíodh aon teagmhálacha dúbailte"
+msgstr "Níor aimsíodh aon teagmhálaithe dúbailte"
 
 #: merge
 msgid "Merge"
@@ -2943,43 +3138,39 @@ msgstr "Cumaisc taifid dhúbailte"
 
 #: suggestedDuplicateContacts
 msgid "Suggested duplicate contacts for {{name}}"
-msgstr "Teagmhálacha dúbailte: {{name}}"
-
-#: mergeActionButtonLabel
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
+msgstr "Teagmhálaithe dúbailte: {{name}}"
 
 #: mergeActionButtonLabel[zero]
 msgid "No contacts selected"
-msgstr "Níl aon teagmhálacha roghnaithe"
+msgstr "Níl aon teagmhálaithe roghnaithe"
 
 #: mergeActionButtonLabel[one]
 msgid "Merge with {{n}} contact"
-msgstr "Cumaisc le {{n}} teagmháil"
+msgstr "Cumaisc le {{n}} teagmhálaí"
 
 #: mergeActionButtonLabel[two]
 msgctxt "mergeActionButtonLabel[two]"
 msgid "Merge with {{n}} contacts"
-msgstr "Cumaisc le {{n}} theagmháil"
+msgstr "Cumaisc le {{n}} theagmhálaí"
 
 #: mergeActionButtonLabel[few]
 msgctxt "mergeActionButtonLabel[few]"
 msgid "Merge with {{n}} contacts"
-msgstr "Cumaisc le {{n}} theagmháil"
+msgstr "Cumaisc le {{n}} theagmhálaí"
 
 #: mergeActionButtonLabel[many]
 msgctxt "mergeActionButtonLabel[many]"
 msgid "Merge with {{n}} contacts"
-msgstr "Cumaisc le {{n}} dteagmháil"
+msgstr "Cumaisc le {{n}} dteagmhálaí"
 
 #: mergeActionButtonLabel[other]
 msgctxt "mergeActionButtonLabel[other]"
 msgid "Merge with {{n}} contacts"
-msgstr "Cumaisc le {{n}} teagmháil"
+msgstr "Cumaisc le {{n}} teagmhálaí"
 
 #: duplicatesFoundTitle
 msgid "Duplicates found"
-msgstr "Aimsíodh teagmhálacha dúbailte"
+msgstr "Aimsíodh teagmhálaithe dúbailte"
 
 #: duplicatesFoundMessage
 msgid "{{name}} duplicates information in the following contacts"
@@ -2991,7 +3182,7 @@ msgstr "Cuir uimhir nua leis"
 
 #: addToExistingContact message-contact-menu-add-existing
 msgid "Add to existing contact"
-msgstr "Cuir le teagmháil atá ann é"
+msgstr "Cuir le teagmhálaí atá ann é"
 
 #: all
 msgctxt "all"
@@ -3002,10 +3193,6 @@ msgstr "Uile"
 msgctxt "all.ariaLabel"
 msgid "All"
 msgstr "Uile"
-
-#: asterisk.ariaLabel
-msgid "Asterisk"
-msgstr "Réiltín"
 
 #: callLog
 msgid "Call log"
@@ -3079,15 +3266,15 @@ msgstr "Glan na glaonna roghnaithe?"
 
 #: contacts.ariaLabel contacts.name perm-contacts
 msgid "Contacts"
-msgstr "Teagmhálacha"
+msgstr "Teagmhálaithe"
 
 #: createNewContact
 msgid "Create new contact"
-msgstr "Cruthaigh teagmháil nua"
+msgstr "Cruthaigh teagmhálaí nua"
 
 #: dialerAddContactDialog.ariaLabel
 msgid "Add Contact Dialog"
-msgstr "Dialóg: Cuir Teagmháil Leis"
+msgstr "Dialóg: Cuir Teagmhálaí Leis"
 
 #: edit-selected
 msgctxt "edit-selected"
@@ -3119,10 +3306,6 @@ msgctxt "edit-selected[other]"
 msgid "{{ n }} selected"
 msgstr "{{ n }} ceann roghnaithe"
 
-#: hashSign.ariaLabel
-msgid "Hash sign"
-msgstr "Comhartha hais"
-
 #: hideKeypad.ariaLabel
 msgid "Hide keypad"
 msgstr "Cuir an t-eochaircheap i bhfolach"
@@ -3138,11 +3321,6 @@ msgstr "Isteach"
 #: keypad.ariaLabel keypad
 msgid "Keypad"
 msgstr "Eochaircheap"
-
-#: keypadDelete.ariaLabel
-msgctxt "keypadDelete.ariaLabel"
-msgid "Delete"
-msgstr "Scrios"
 
 #: makeCall.ariaLabel
 msgid "Make call"
@@ -3202,9 +3380,9 @@ msgstr "Abair leat!"
 msgid "No missed calls"
 msgstr "Gan glaonna caillte"
 
-#: phoneNumberInput.ariaLabel deviceInfo-MSISDN
-msgid "Phone number"
-msgstr "Uimhir ghutháin"
+#: outgoing
+msgid "Outgoing"
+msgstr ""
 
 #: recents.ariaLabel
 msgid "Recent calls"
@@ -3221,10 +3399,6 @@ msgstr "Seol"
 #: switch-calls
 msgid "Switch calls"
 msgstr "Athraigh glaonna"
-
-#: voiceMailKey.ariaLabel voiceMail
-msgid "Voicemail"
-msgstr "Glórphost"
 
 #: withheld-number
 msgid "Withheld number"
@@ -3309,6 +3483,10 @@ msgstr "Freagair"
 #: unlock-a11y-button.ariaLabel
 msgid "Slider"
 msgstr "Sleamhnán"
+
+#: roaming
+msgid "{{operator}} (Roaming)"
+msgstr "{{operator}} (Fánaíocht)"
 
 #. #Call log
 #: delete-n-log?
@@ -3538,6 +3716,18 @@ msgstr "Athraíodh an UAP2"
 msgid "PIN2 successfully unblocked"
 msgstr "Baineadh bac den UAP2"
 
+#: ServiceIsEnabled
+msgid "Service is enabled"
+msgstr ""
+
+#: ServiceIsDisabled
+msgid "Service is disabled"
+msgstr ""
+
+#: ServiceIsEnabledFor
+msgid "Service is enabled for:"
+msgstr ""
+
 #. # MMI Error message
 #: emMmiError
 msgid "Connection problem or invalid MMI code"
@@ -3750,35 +3940,11 @@ msgid "Rejected by remote"
 msgstr "Diúltaithe ar an taobh eile"
 
 #. # Conference call
-#: conference
-msgctxt "conference"
-msgid "{[ plural(n) ]}"
-msgstr "{[ plural(n) ]}"
-
-#: conference[one]
-msgctxt "conference[one]"
-msgid "Conference ({{ n }})"
-msgstr "Glao comhdhála ({{ n }})"
-
-#: conference[two]
-msgctxt "conference[two]"
-msgid "Conference ({{ n }})"
-msgstr "Glao comhdhála ({{ n }})"
-
-#: conference[few]
-msgctxt "conference[few]"
-msgid "Conference ({{ n }})"
-msgstr "Glao comhdhála ({{ n }})"
-
-#: conference[many]
-msgctxt "conference[many]"
-msgid "Conference ({{ n }})"
-msgstr "Glao comhdhála ({{ n }})"
-
-#: conference[other]
-msgctxt "conference[other]"
-msgid "Conference ({{ n }})"
-msgstr "Glao comhdhála ({{ n }})"
+#. # LOCALIZATION NOTE(conferenceCall): {{n}} represents the number of
+#. # participants in the group call.
+#: conferenceCall
+msgid "Conference ({{n}})"
+msgstr ""
 
 #: caller-left-call
 msgid "{{ caller }} has left the call."
@@ -3843,6 +4009,10 @@ msgstr ""
 "Tá FDN (Fixed Dialing Numbers) ar siúl ach níl an uimhir seo i do liosta FDN: "
 "{{ number }}"
 
+#: voiceMail voiceMailKey.ariaLabel
+msgid "Voicemail"
+msgstr "Glórphost"
+
 #: emergencyNumber
 msgid "Emergency number"
 msgstr "Uimhir éigeandála"
@@ -3899,7 +4069,7 @@ msgstr "Guthán Gaia"
 
 #: contacts.description
 msgid "Gaia Contacts"
-msgstr "Teagmhálacha Gaia"
+msgstr "Teagmhálaithe Gaia"
 
 #. # Usage
 #. # Note: "Usage" is the application name
@@ -4219,6 +4389,10 @@ msgstr "Nuair a bhíonn an t-iarmhéid níos lú ná"
 msgid "Phone and Internet data report"
 msgstr "Tuairisc: Guthán agus sonraí Idirlín"
 
+#: internet-data-report
+msgid "Internet data report"
+msgstr ""
+
 #: starting-on
 msgid "Starting on"
 msgstr "Ag tosú ar"
@@ -4274,6 +4448,10 @@ msgstr "Athshocrófar staitisticí ar an dáta seo"
 #: yes stop_download_right_button
 msgid "Yes"
 msgstr "Tá"
+
+#: confirmation confirm-dialog-title forgetNetwork-confirmation
+msgid "Confirmation"
+msgstr "Deimhniú"
 
 #: reset-confirmation-warning
 msgid "All current data will be deleted. Are you sure you want to reset?"
@@ -4408,10 +4586,6 @@ msgstr ""
 #: zero-balance-message
 msgid "Balance has reached zero, no phone credit remaining."
 msgstr ""
-
-#: not-available
-msgid "Not available"
-msgstr "Níl ar fáil"
 
 #: usage
 msgctxt "usage"
@@ -4804,7 +4978,7 @@ msgstr "D'ainm"
 #. # via periodic sync with the mail server.
 #: settings-account-display-notifications
 msgid "Display notifications for new messages"
-msgstr ""
+msgstr "Taispeáin fógra nuair a thagann teachtaireacht nua isteach"
 
 #. # LOCALIZATION NOTE(settings-account-play-sound-onsend): Label in the "Account"
 #. # sub-section of account settings for the checkbox that enables playing a sound
@@ -4812,6 +4986,28 @@ msgstr ""
 #: settings-account-play-sound-onsend
 msgid "Play sound after message is sent"
 msgstr ""
+
+#. # LOCALIZATION NOTE (settings-account-signature-label): The label for the
+#. # signature field in the account settings card.
+#: settings-account-signature-label
+msgid "Signature"
+msgstr "Síniú"
+
+#. # LOCALIZATION NOTE (signature-save): This is the text for an option
+#. # in a dialog box that pops up when the user hits back with the
+#. # signature changed. The option keeps the saves the current signature in
+#. # the editor
+#: signature-save
+msgid "Save Signature"
+msgstr "Sábháil an Síniú"
+
+#. # LOCALIZATION NOTE (signature-discard-confirm): This is the text of the
+#. # button which discards changes when a user hits back in the signature
+#. # entry page.
+#: signature-discard-confirm
+msgctxt "signature-discard-confirm"
+msgid "Discard"
+msgstr "Ná Sábháil"
 
 #. # Label in the "Data" sub-section of acccount settings for the select box
 #. # that allows choosing how often to check the server for new messages in
@@ -4834,6 +5030,12 @@ msgstr "Socruithe freastalaí"
 #: settings-account-userpass
 msgid "Username and password"
 msgstr "Ainm úsáideora agus focal faire"
+
+#. # LOCALIZATION NOTE (settings-default-signature-2): The default signature
+#. # that the frontend adds in for new accounts
+#: settings-default-signature-2
+msgid "Sent Using Firefox OS"
+msgstr ""
 
 #: settings-account-section
 msgctxt "settings-account-section"
@@ -5073,10 +5275,6 @@ msgstr "Cc"
 msgid "Bcc"
 msgstr "Bcc"
 
-#: reader-header
-msgid "Read"
-msgstr "Léite"
-
 #: compose-header
 msgid "Compose message"
 msgstr "Scríobh teachtaireacht"
@@ -5151,12 +5349,9 @@ msgid "Discard email?"
 msgstr "Scrios an ríomhphost?"
 
 #: compose-discard-confirm
+msgctxt "compose-discard-confirm"
 msgid "Discard"
-msgstr "Scrios"
-
-#: compose-sending-message
-msgid "Sending email"
-msgstr "Ríomhphost á sheoladh"
+msgstr ""
 
 #: compose-send-message-failed
 msgid "Sending email failed"
@@ -5196,7 +5391,7 @@ msgstr "iatán{{ n }}"
 msgid "{{kilobytes}}K"
 msgstr "{{kilobytes}}K"
 
-#: message-attachment-view.textContent
+#: message-attachment-view
 msgid "View"
 msgstr "Amharc"
 
@@ -5207,6 +5402,13 @@ msgstr "Ní féidir an comhad seo a íosluchtú: tá sé rómhór."
 #: message-no-subject
 msgid "(no subject)"
 msgstr "(gan ábhar)"
+
+#. # LOCALIZATION NOTE(message-edit-menu-edit):
+#. # Displayed in a menu; tapping this item will cause the user to edit the given item.
+#: message-edit-menu-edit
+msgctxt "message-edit-menu-edit"
+msgid "Edit"
+msgstr ""
 
 #: message-edit-menu-delete
 msgctxt "message-edit-menu-delete"
@@ -5225,6 +5427,11 @@ msgstr "Ní féidir iatáin a chur ar aghaidh."
 msgctxt "message-multiedit-header"
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
+
+#: message-multiedit-header[zero]
+msgctxt "message-multiedit-header[zero]"
+msgid "Edit"
+msgstr ""
 
 #: message-multiedit-header[one]
 msgctxt "message-multiedit-header[one]"
@@ -5390,11 +5597,11 @@ msgstr "Roghnaigh fillteán"
 
 #: message-contact-menu-create
 msgid "Save new contact"
-msgstr "Sábháil teagmháil nua"
+msgstr "Sábháil teagmhálaí nua"
 
 #: message-contact-menu-view viewContact
 msgid "View contact"
-msgstr "Amharc ar an teagmháil"
+msgstr "Amharc ar an teagmhálaí"
 
 #: message-contact-menu-reply
 msgctxt "message-contact-menu-reply"
@@ -5503,6 +5710,10 @@ msgstr "Cartlanna"
 msgid "Local Drafts"
 msgstr "Dréachtaí Logánta"
 
+#: folder-outbox
+msgid "Outbox"
+msgstr ""
+
 #. # In the folder picker drawer, the list of email accounts are shown. This is
 #. # the header for that section.
 #: drawer-accounts-header
@@ -5519,12 +5730,14 @@ msgstr "Cuntais"
 msgid "Last sync:"
 msgstr "Sioncrónú is déanaí:"
 
-#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
-#. # LOCALIZATION NOTE(undo.ariaLabel): The following string is spoken by screen
-#. # readers and not shown on the screen.
-#: toaster-undo undo undo.ariaLabel
-msgid "Undo"
-msgstr "Cealaigh"
+#. # LOCALIZATION NOTE(message-list-top-action):
+#. # In the message-list, as the user scrolls down, an action bar will scroll into
+#. # view that if tapped will take the user to the top of the screen. That bar
+#. # will use an icon to display its meaning, this is text that will not be visible
+#. # to the user, it is provided for accessibility.
+#: message-list-top-action
+msgid "Top"
+msgstr ""
 
 #: toaster-retry
 msgctxt "toaster-retry"
@@ -5709,6 +5922,84 @@ msgstr "Scriosadh {{ n }} teachtaireacht"
 msgid "Unable to connect to server"
 msgstr "Níorbh fhéidir ceangal leis an bhfreastalaí"
 
+#. # LOCALIZATION NOTE(compose-invalid-addresses-title):
+#. # A title to be displayed on a warning screen, warning users that
+#. # some of the email addresses they typed were incorrect.
+#: compose-invalid-addresses-title
+msgid "Invalid Addresses"
+msgstr "Seoltaí Neamhbhailí"
+
+#. # LOCALIZATION NOTE(compose-invalid-addresses-description):
+#. # A description to be displayed on a warning screen, warning users that
+#. # some of the email addresses they typed were incorrect, and that they
+#. # must correct the email addresses before sending.
+#: compose-invalid-addresses-description
+msgid ""
+"Your message contains one or more invalid email addresses. Please correct "
+"them before sending."
+msgstr ""
+
+#. # LOCALIZATION NOTE(background-send-pending):
+#. # Brief message to be displayed in a popup, saying that the phone has
+#. # no network connection, and that the email has been saved to the outbox.
+#: background-send-pending
+msgid "Network unavailable. Email saved to outbox."
+msgstr ""
+
+#. # LOCALIZATION NOTE(background-send-sending):
+#. # Displayed in a toaster popup message, saying that the email
+#. # is currently being sent.
+#: background-send-sending
+msgid "Sending mail…"
+msgstr ""
+
+#. # LOCALIZATION NOTE(background-send-success):
+#. # Displayed in a toaster popup message, saying that the email
+#. # sent successfully.
+#: background-send-success
+msgid "Email sent."
+msgstr ""
+
+#. # LOCALIZATION NOTE(background-send-error):
+#. # Description to be displayed in a notification, saying that an error
+#. # occured while attempting to send an email, and that the email has
+#. # been saved to the outbox.
+#: background-send-error
+msgid "Error occurred. Email saved to outbox."
+msgstr ""
+
+#. # LOCALIZATION NOTE(background-send-error-recipients):
+#. # Description to be displayed in a notification, saying that the email
+#. # could not be sent because the server rejected one or more of the
+#. # email recipients, and that the email has been saved to the outbox.
+#: background-send-error-recipients
+msgid "Recipient error. Email saved to outbox."
+msgstr ""
+
+#. # LOCALIZATION NOTE(background-send-error-title):
+#. # Title to be displayed in a notification, indicating that the
+#. # email failed to send for some reason.
+#: background-send-error-title
+msgid "Mail failed to send"
+msgstr ""
+
+#. # LOCALIZATION NOTE(send-failure-recipients):
+#. # Message to be displayed when editing a message that failed to send due
+#. # to invalid recipients. It should instruct the user to check the addresses
+#. # above for spelling.
+#: send-failure-recipients
+msgid ""
+"Check the spelling of the addresses above. Your mail server indicated one or "
+"more of the addresses above are incorrect."
+msgstr ""
+
+#. # LOCALIZATION NOTE(send-failure-unknown):
+#. # Message to be displayed when editing a message that failed to send for an
+#. # unknown reason.
+#: send-failure-unknown
+msgid "The message could not be sent."
+msgstr "Níorbh fhéidir an teachtaireacht a sheoladh."
+
 #: form-clear-input
 msgid "Remove text"
 msgstr "Glan an téacs"
@@ -5833,6 +6124,14 @@ msgstr "R-Phost"
 msgid "Gaia E-Mail"
 msgstr "R-Phost Gaia"
 
+#: emergency-call-only
+msgid "Emergency Call Only"
+msgstr ""
+
+#: emergency-call-error
+msgid "{{ number }} is not an emergency number."
+msgstr ""
+
 #: name
 msgid "EmergencyCall"
 msgstr "Glao Éigeandála"
@@ -5949,12 +6248,9 @@ msgstr "Íosluchtaíodh agus suiteáladh an clingthon."
 msgid "Wallpaper downloaded and installed."
 msgstr "Íosluchtaíodh agus suiteáladh an cúlbhrat."
 
-#: ringtone-or-song-query
-msgid ""
-"Do you want to download and install this audio file as a song or as a "
-"ringtone?"
+#: ringtone-or-song-question
+msgid "Do you want to install this audio file as a song or as a ringtone?"
 msgstr ""
-"Ar mhaith leat an comhad fuaime seo a íosluchtú mar amhrán nó mar chlingthon?"
 
 #: ringtone-response
 msgid "Ringtone"
@@ -6743,7 +7039,7 @@ msgstr "Réigiún"
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #: importContacts3
 msgid "Import contacts"
-msgstr "Iompórtáil teagmhálacha"
+msgstr "Iompórtáil teagmhálaithe"
 
 #: importSim2
 msgid "SIM card"
@@ -6767,7 +7063,7 @@ msgstr "Gan iompórtáil fós"
 msgid "You can import and edit Facebook friends anytime in Contacts settings"
 msgstr ""
 "Is féidir cairde ó Facebook a iompórtáil nó a chur in eagar sna socruithe "
-"Teagmhálacha"
+"Teagmhálaithe"
 
 #. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -6832,6 +7128,10 @@ msgid ""
 "publish the feedback on its websites, and to distribute the feedback."
 msgstr ""
 
+#: about-other other
+msgid "Other"
+msgstr "Eile"
+
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # SIM mandatory
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -6846,11 +7146,11 @@ msgstr "Cuir cárta SIM isteach agus atosaigh an guthán."
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Sharing Performance Data
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: telemetry-sends
+#: telemetry-sends2
 msgid ""
-"Telemetry sends Mozilla data about performance, hardware, configurations and "
-"customizations in your {{brandShortName}} device. We use this to make our "
-"products better, faster and more responsive."
+"Telemetry sends Mozilla data about performance, hardware, configurations, "
+"customizations and app usage in your {{brandShortName}} device. We use this "
+"to make our products better, faster and more responsive."
 msgstr ""
 
 #. # LOCALIZATION NOTE(learn-more-telemetry.innerHTML, learn-more-information.innerHTML:
@@ -6905,12 +7205,11 @@ msgid ""
 "enter your email address below."
 msgstr ""
 
-#: collaborate
+#: sharePerformanceAndUsageData
 msgid ""
-"I want to help improve {{brandShortName}} by sharing data about my phone."
+"I want to help improve {{brandShortName}} by sharing data about my phone and "
+"the way I use it."
 msgstr ""
-"Ba mhaith liom {{brandShortName}} a fheabhsú trí shonraí ó mo ghuthán a "
-"roinnt."
 
 #: learnMore
 msgid "Learn more."
@@ -6943,9 +7242,9 @@ msgstr "Áit Mhargaidh"
 msgid "{{privacy-marketplace}}"
 msgstr "{{privacy-marketplace}}"
 
-#: privacy-e-me
-msgid "everything.me"
-msgstr "everything.me"
+#: privacy-eme
+msgid "EverythingMe"
+msgstr ""
 
 #. # please don't translate the brand name
 #: privacy-e-me.title
@@ -6991,6 +7290,16 @@ msgstr "Ar aghaidh linn"
 #: startTour
 msgid "Start tour"
 msgstr "Tosaigh an turas"
+
+#: whatsNew
+msgid "What’s new"
+msgstr ""
+
+#: updatedSuccessfully
+msgid ""
+"Your phone has updated successfully! Start the tour to find out more about "
+"the new features."
+msgstr ""
 
 #: thatsIt1Tablet-2
 msgid "You can always swipe from the bottom edge to enter home screen."
@@ -7392,8 +7701,6 @@ msgstr "{{topic}} ar {{name}}"
 
 #. #-#-#-#-#  appshomescreenhomescreen.properties.po (firefox)  #-#-#-#-#
 #. # Dialog that appears when a user long taps on the homescreen
-#. #-#-#-#-#  appsverticalhomehomescreen.properties.po (firefox)  #-#-#-#-#
-#. # Context menu options
 #: contextmenu-add-wallpaper change-wallpaper
 msgid "Change Wallpaper"
 msgstr "Athraigh an Cúlbhrat"
@@ -7419,7 +7726,7 @@ msgstr "Íosluchtaigh"
 
 #. #-#-#-#-#  appsverticalhomehomescreen.properties.po (firefox)  #-#-#-#-#
 #. # Prompt that appears when a user tries to resume a download.
-#. #-#-#-#-#  sharedgaia_gridgaia_grid.properties.po (firefox)  #-#-#-#-#
+#. #-#-#-#-#  sharedelementsgaia_gridgaia_grid.properties.po (firefox)  #-#-#-#-#
 #. # Prompt that appears when a user tries to resume a download.
 #: restart-download-title resume-download-title gaia-grid-resume-download-title
 msgid "Restart Download"
@@ -7428,6 +7735,16 @@ msgstr "Atosaigh an tÍosluchtú"
 #: restart-download-body resume-download-body gaia-grid-resume-download-body
 msgid "Do you want to download {{name}}?"
 msgstr "An bhfuil fonn ort {{name}} a íosluchtú?"
+
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#: paginationBarText
+msgid "Page {{current}} of {{total}}"
+msgstr ""
+
+#: paginationScroller.ariaLabel name
+msgid "Homescreen"
+msgstr "Baile"
 
 #. # Evme
 #: loadingEvme2
@@ -7472,7 +7789,7 @@ msgstr "Cuir topaic nó lorgfhocal isteach"
 
 #. #-#-#-#-#  appskeyboardkeyboard.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (dismiss): The "x" button that closes the word suggestions.
-#: evme-helper-dismiss dismiss
+#: evme-helper-dismiss dismiss2.ariaLabel
 msgid "Dismiss"
 msgstr "Díbir"
 
@@ -7507,6 +7824,16 @@ msgstr "Gach Rud"
 msgctxt "evme-helper-title-empty"
 msgid "Everything"
 msgstr "Gach Rud"
+
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#: evme-helper-save-search
+msgid "Add to homescreen"
+msgstr ""
+
+#: evme-helper-unsave-search
+msgid "Remove from homescreen"
+msgstr ""
 
 #: evme-apps-market-download
 msgctxt "evme-apps-market-download"
@@ -7743,14 +8070,14 @@ msgstr "Uirlisí"
 msgid "Weather"
 msgstr "Aimsir"
 
+#: evme-save-to-homescreen
+msgid "Save to Homescreen"
+msgstr "Sábháil ar an Scáileán Baile"
+
 #: edit-dialog-cancel
 msgctxt "edit-dialog-cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
-
-#: name
-msgid "Homescreen"
-msgstr "Baile"
 
 #: description
 msgid "Gaia Homescreen"
@@ -7784,77 +8111,77 @@ msgstr "Focal molta"
 #. # LOCALIZATION NOTE (wordSuggestions): The name of the section above the
 #. # keyboard where the word suggestions appear. This is read out to screen reader
 #. # users when they put a finger in that area.
-#: wordSuggestions
+#: wordSuggestions2.ariaLabel
 msgid "Word suggestions"
 msgstr "Focail mholta"
 
 #. # Key labels, used by the screen reader to correctly pronounce special and
 #. # punctuation keys.
-#: alternateLayoutKey
+#: alternateLayoutKey2.ariaLabel
 msgid "more numbers and symbols"
 msgstr "tuilleadh uimhreacha agus siombailí"
 
-#: basicLayoutKey
+#: basicLayoutKey2.ariaLabel
 msgid "letters"
 msgstr "litreacha"
 
-#: upperCaseKey
+#: upperCaseKey2.ariaLabel
 msgid "shift"
 msgstr "shift"
 
-#: backSpaceKey
+#: backSpaceKey2.ariaLabel
 msgid "delete"
 msgstr "scrios"
 
-#: spaceKey
+#: spaceKey2.ariaLabel
 msgid "space"
 msgstr "spás"
 
-#: returnKey
+#: returnKey2.ariaLabel
 msgid "return"
 msgstr "return"
 
-#: periodKey
+#: periodKey2.ariaLabel
 msgid "period"
 msgstr "stad"
 
-#: commaKey
+#: commaKey2.ariaLabel
 msgid "comma"
 msgstr "camóg"
 
-#: colonKey
+#: colonKey2.ariaLabel
 msgid "colon"
 msgstr "idirstad"
 
-#: semicolonKey
+#: semicolonKey2.ariaLabel
 msgid "semicolon"
 msgstr "leathstad"
 
-#: questionMarkKey
+#: questionMarkKey2.ariaLabel
 msgid "question mark"
 msgstr "comhartha ceiste"
 
-#: exclamationPointKey
+#: exclamationPointKey2.ariaLabel
 msgid "exclamation point"
 msgstr "comhartha uaillbhreasa"
 
-#: leftBracketKey
+#: leftBracketKey2.ariaLabel
 msgid "left bracket"
 msgstr "lúibín ar chlé"
 
-#: rightBracketKey
+#: rightBracketKey2.ariaLabel
 msgid "right bracket"
 msgstr "lúibín ar dheis"
 
-#: doubleQuoteKey
+#: doubleQuoteKey2.ariaLabel
 msgid "double quote"
 msgstr "carachtar dúbailte athfhriotail"
 
-#: leftDoubleAngleQuoteKey
+#: leftDoubleAngleQuoteKey2.ariaLabel
 msgid "left double angle quote"
 msgstr "uillinn dhúbailte ar chlé"
 
-#: rightDoubleAngleQuoteKey
+#: rightDoubleAngleQuoteKey2.ariaLabel
 msgid "right double angle quote"
 msgstr "uillinn dhúbailte ar dheis"
 
@@ -7867,14 +8194,6 @@ msgstr "Méarchlár ionsuite"
 msgctxt "description"
 msgid "Built-in Keyboard"
 msgstr "Méarchlár ionsuite"
-
-#: number.name
-msgid "Number"
-msgstr "Uimhir"
-
-#: number.description
-msgid "Numeric layout"
-msgstr "Leagan amach uimhriúil"
 
 #: description
 msgid "Gaia Music"
@@ -8013,7 +8332,7 @@ msgstr "Cealaigh"
 
 #: music-paused-notification
 msgid "Music paused during the call"
-msgstr "Ceol curtha ar sos le linn glao teileafóin"
+msgstr "Ceol curtha ar sos le linn glao gutháin"
 
 #: name
 msgid "PDF Viewer"
@@ -8147,13 +8466,13 @@ msgstr "Gan teideal"
 
 #: name
 msgctxt "name"
-msgid "Search Results"
-msgstr "Torthaí an Chuardaigh"
+msgid "Search"
+msgstr ""
 
 #: description
 msgctxt "description"
-msgid "Search Results"
-msgstr "Torthaí an Chuardaigh"
+msgid "Search"
+msgstr ""
 
 #. # LOCALIZATION NOTE {{title}} is name of a Marketplace Application to be installed
 #: install-marketplace-title
@@ -8186,12 +8505,218 @@ msgid ""
 "Settings to change your search preferences."
 msgstr ""
 
-#: add-to-homescreen
-msgid "Add to homescreen"
-msgstr ""
-
 #: offline-webresults
 msgid "Connect to the internet to get apps for {{ searchQuery }}"
+msgstr ""
+
+#. # Localization note: strings in this file refer to a specific type of device
+#. # (phone, tablet, etc.). Try to be consistent across files for each type of
+#. # device, but don't use a simple copy and paste: string ID is the same, but
+#. # the device type is different in each file.
+#: internetSharing-usb-desc
+msgid "Share my phone’s Internet connection with a USB-connected device."
+msgstr "Comhroinn ceangal Idirlín mo ghutháin le gléas atá ceangailte trí USB."
+
+#: internetSharing-wifi-desc
+msgid ""
+"Allow other devices to share my phone’s Internet connection by connecting via "
+"Wi-Fi."
+msgstr ""
+"Tabhair cead do ghléasanna eile ceangal Idirlín mo ghutháin a úsáid trí "
+"cheangal Wi-Fi."
+
+#: unplayable-ringtone
+msgid ""
+"The ringtone was not changed because the selected file can not be played on "
+"this phone."
+msgstr ""
+"Níor athraíodh an clingthon toisc nach féidir an comhad roghnaithe a sheinm "
+"ar an nguthán seo."
+
+#: findmydevice-signup-description
+msgid "Find My Device allows you to locate, lock or erase your phone"
+msgstr ""
+"Le 'Aimsigh Mo Ghléas', is féidir do ghuthán a aimsiú, a chur faoi ghlas, nó "
+"a bhánú"
+
+#: findmydevice-settings-description
+msgid ""
+"Find My Device allows you to locate, lock or erase your phone from a web site:"
+msgstr ""
+"Le 'Aimsigh Mo Ghléas', is féidir leat do ghuthán a aimsiú, a chur faoi "
+"ghlas, nó a bhánú ó shuíomh Gréasáin:"
+
+#: findmydevice-active-tracking
+msgid "Your phone is being tracked by another device through the website."
+msgstr ""
+
+#: findmydevice-not-tracking
+msgid "No devices are actively tracking your phone through the website."
+msgstr ""
+
+#: turn-on-ums-confirm
+msgid ""
+"Turning on Enable USB storage allows another computer or device connected "
+"using USB to access files on this phone."
+msgstr ""
+
+#: reset-device
+msgid "Reset Phone"
+msgstr "Athshocraigh an Guthán"
+
+#: reset-warning-body
+msgid ""
+"Resetting will erase all your data, including any apps you’ve purchased. The "
+"phone will be restored to its factory condition. None of your settings or "
+"data will be saved."
+msgstr ""
+
+#: powerSave-explanation
+msgid ""
+"Turning on power save mode turns off the phone’s data, Bluetooth and "
+"Geolocation connections to extend battery life. You can still turn these "
+"services back on manually."
+msgstr ""
+
+#: performanceAndUsageDataInfo
+msgid ""
+"Help us improve {{brandShortName}} by sharing data about your phone and the "
+"way you use it."
+msgstr ""
+
+#. # Localization note: strings in this file refer to a specific type of device
+#. # (phone, tablet, etc.). Try to be consistent across files for each type of
+#. # device, but don't use a simple copy and paste: string ID is the same, but
+#. # the device type is different in each file.
+#: internetSharing-usb-desc
+msgid "Share my tablet’s Internet connection with a USB-connected device."
+msgstr ""
+
+#: internetSharing-wifi-desc
+msgid ""
+"Allow other devices to share my tablet’s Internet connection by connecting "
+"via Wi-Fi."
+msgstr ""
+
+#: unplayable-ringtone
+msgid ""
+"The ringtone was not changed because the selected file can not be played on "
+"this tablet."
+msgstr ""
+
+#: findmydevice-signup-description
+msgid "Find My Device allows you to locate, lock or erase your tablet"
+msgstr ""
+
+#: findmydevice-settings-description
+msgid ""
+"Find My Device allows you to locate, lock or erase your tablet from a web "
+"site:"
+msgstr ""
+
+#: findmydevice-active-tracking
+msgid "Your tablet is being tracked by another device through the website."
+msgstr ""
+
+#: findmydevice-not-tracking
+msgid "No devices are actively tracking your tablet through the website."
+msgstr ""
+
+#: turn-on-ums-confirm
+msgid ""
+"Turning on Enable USB storage allows another computer or device connected "
+"using USB to access files on this tablet."
+msgstr ""
+
+#: reset-device
+msgid "Reset Tablet"
+msgstr ""
+
+#: reset-warning-body
+msgid ""
+"Resetting will erase all your data, including any apps you’ve purchased. The "
+"tablet will be restored to its factory condition. None of your settings or "
+"data will be saved."
+msgstr ""
+
+#: powerSave-explanation
+msgid ""
+"Turning on power save mode turns off the tablet's data, Bluetooth and "
+"Geolocation connections to extend battery life. You can still turn these "
+"services back on manually."
+msgstr ""
+
+#: performanceAndUsageDataInfo
+msgid ""
+"Help us improve {{brandShortName}} by sharing data about your tablet and the "
+"way you use it."
+msgstr ""
+
+#. # Localization note: strings in this file refer to a specific type of device
+#. # (phone, tablet, etc.). Try to be consistent across files for each type of
+#. # device, but don't use a simple copy and paste: string ID is the same, but
+#. # the device type is different in each file.
+#: internetSharing-usb-desc
+msgid "Share my TV’s Internet connection with a USB-connected device."
+msgstr ""
+
+#: internetSharing-wifi-desc
+msgid ""
+"Allow other devices to share my TV’s Internet connection by connecting via Wi-"
+"Fi."
+msgstr ""
+
+#: unplayable-ringtone
+msgid ""
+"The ringtone was not changed because the selected file can not be played on "
+"this TV."
+msgstr ""
+
+#: findmydevice-signup-description
+msgid "Find My Device allows you to locate, lock or erase your TV"
+msgstr ""
+
+#: findmydevice-settings-description
+msgid ""
+"Find My Device allows you to locate, lock or erase your TV from a web site:"
+msgstr ""
+
+#: findmydevice-active-tracking
+msgid "Your TV is being tracked by another device through the website."
+msgstr ""
+
+#: findmydevice-not-tracking
+msgid "No devices are actively tracking your TV through the website."
+msgstr ""
+
+#: turn-on-ums-confirm
+msgid ""
+"Turning on Enable USB storage allows another computer or device connected "
+"using USB to access files on this TV."
+msgstr ""
+
+#: reset-device
+msgid "Reset TV"
+msgstr ""
+
+#: reset-warning-body
+msgid ""
+"Resetting will erase all your data, including any apps you’ve purchased. The "
+"TV will be restored to its factory condition. None of your settings or data "
+"will be saved."
+msgstr ""
+
+#: powerSave-explanation
+msgid ""
+"Turning on power save mode turns off the TV’s data, Bluetooth and Geolocation "
+"connections to extend battery life. You can still turn these services back on "
+"manually."
+msgstr ""
+
+#: performanceAndUsageDataInfo
+msgid ""
+"Help us improve {{brandShortName}} by sharing data about your TV and the way "
+"you use it."
 msgstr ""
 
 #: description
@@ -8202,7 +8727,9 @@ msgstr "Socruithe Gaia"
 msgid "Advanced settings"
 msgstr "Ardsocruithe"
 
-#: default
+#. #-#-#-#-#  appssystemaccessibility.properties.po (firefox)  #-#-#-#-#
+#. # Quick navigation modes
+#: default accessibility-quicknav_Simple
 msgid "Default"
 msgstr "Réamhshocrú"
 
@@ -8228,6 +8755,11 @@ msgstr "Earráid"
 #: no stop_download_left_button
 msgid "No"
 msgstr "Níl"
+
+#: reset
+msgctxt "reset"
+msgid "Reset"
+msgstr ""
 
 #: set
 msgid "Set"
@@ -8441,11 +8973,6 @@ msgstr "Déan dearmad"
 msgid "Forget network?"
 msgstr "Déan dearmad ar líonra?"
 
-#: forgetNetwork-confirmation
-msgctxt "forgetNetwork-confirmation"
-msgid "Confirmation"
-msgstr "Deimhniú"
-
 #: authentication
 msgctxt "authentication"
 msgid "Authentication"
@@ -8498,6 +9025,12 @@ msgstr "Cuir in iúl dom nuair atá líonra oscailte ar fáil"
 #: macAddress
 msgid "MAC address"
 msgstr "Seoladh MAC"
+
+#. # os = OS version. For example: 2.0.
+#. # The whole string may look like this: "Firefox OS 2.0"
+#: deviceInfo_software
+msgid "{{ brandShortName }} {{ os }}"
+msgstr ""
 
 #: macUnavailable
 msgctxt "macUnavailable"
@@ -8587,9 +9120,9 @@ msgstr "Cealaíodh WPS"
 msgid "WPS timed out"
 msgstr "WPS thar am"
 
-#: fullStatus-wps-failed
-msgid "WPS failed"
-msgstr "Theip ar WPS"
+#: fullStatus-wps-failed-error
+msgid "WPS failed [{{error}}]"
+msgstr ""
 
 #: fullStatus-wps-overlapped
 msgid "Another WPS PBC AP was found"
@@ -8636,9 +9169,9 @@ msgstr "Ar Bith"
 msgid "Cancel WPS"
 msgstr "Cealaigh WPS"
 
-#: wpsCancelFailedMessage
-msgid "Failed to cancel WPS"
-msgstr "Níorbh fhéidir WPS a chealú"
+#: wpsCancelFailedMessageError
+msgid "Failed to cancel WPS [{{error}}]"
+msgstr ""
 
 # General - not a particular call so "Socruithe an Ghlao" is wrong
 #. # Connectivity :: Call
@@ -8731,8 +9264,8 @@ msgstr ""
 msgid "When unreachable"
 msgstr ""
 
-#: callForwardingForwardingVoiceTo
-msgid "Voice calls to"
+#: callForwardingForwardingVoiceToNumber
+msgid "Voice calls to {{number}}"
 msgstr ""
 
 #: callForwardingNotForwarding
@@ -8762,7 +9295,7 @@ msgstr ""
 
 #: callForwardingInvalidNumberError
 msgid "This phone number is invalid."
-msgstr "Níl an uimhir theileafóin seo bailí."
+msgstr "Níl an uimhir ghutháin seo bailí."
 
 #: callForwardingSetSuccess
 msgid "Operation successfully set."
@@ -8918,12 +9451,12 @@ msgstr "seol"
 #: fdnAction-edit
 msgctxt "fdnAction-edit"
 msgid "Edit contact"
-msgstr "Cuir teagmháil in eagar"
+msgstr "Cuir teagmhálaí in eagar"
 
 #: fdnAction-edit-header
 msgctxt "fdnAction-edit-header"
 msgid "Edit contact"
-msgstr "Cuir teagmháil in eagar"
+msgstr "Cuir teagmhálaí in eagar"
 
 #. # Connectivity :: Messaging
 #: messagingSettings
@@ -8940,32 +9473,32 @@ msgid "{{messagingSettings}}"
 msgstr "{{messagingSettings}}"
 
 #: message-confirmation
-msgid "Message confirmation"
-msgstr ""
+msgid "Message Confirmation"
+msgstr "Deimhniú na Teachtaireachta"
 
 #: message-delivery-reports
-msgid "Delivery reports"
-msgstr "Tuairiscí seachadta"
+msgid "Delivery Reports"
+msgstr "Fograí Seachadta"
 
 #: message-delivery-reports-details
 msgid "Request notification of delivery for each message sent"
 msgstr ""
 
 #: message-read-reports
-msgid "Read reports"
-msgstr "Tuairiscí léite"
+msgid "Read Reports"
+msgstr "Fógraí Léite"
 
 #: message-read-reports-details
 msgid "Request read report for each message sent"
 msgstr ""
 
 #: mmsTitle
-msgid "Multimedia messaging (MMS)"
-msgstr "Teachtaireachtaí ilmheáin (MMS)"
+msgid "Multimedia Messaging (MMS)"
+msgstr "Teachtaireachtaí Ilmheán (MMS)"
 
 #: auto-retrieve
-msgid "Auto retrieve"
-msgstr "Fáil uathoibríoch"
+msgid "Auto Retrieve"
+msgstr ""
 
 #: auto-retrieve-details
 msgid "Automatically retrieve messages"
@@ -8984,19 +9517,36 @@ msgid "Auto-configure"
 msgstr "Cumraigh go huathoibríoch"
 
 #: wapPushMessages
-msgid "WAP Push messages"
-msgstr "Brúfhógraí WAP"
+msgid "WAP Push Messages"
+msgstr ""
 
 #: wapPush
 msgid "WAP Push"
 msgstr "Brúfhógra WAP"
 
 #: cellBroadcastMessages
-msgid "Cell broadcast messages"
+msgid "Cell Broadcast Messages"
 msgstr ""
 
 #: cellBroadcast
-msgid "Cell broadcast"
+msgid "Cell Broadcast"
+msgstr ""
+
+#: emergencyAlert
+msgid "Emergency Alert"
+msgstr ""
+
+#: messagingInformation
+msgid "Information"
+msgstr ""
+
+#. # LOCALIZATION NOTE (messagingSMSC): SMSC stands for Short Message Service Center
+#: messaging-SMSC
+msgid "Service Center"
+msgstr ""
+
+#: unknown-SMSC
+msgid "Info not available"
 msgstr ""
 
 #. # Connectivity :: Cellular & Data
@@ -9160,6 +9710,12 @@ msgstr "Ceangailte"
 #: operator-roamingPreference
 msgid "Roaming preference"
 msgstr "Roghanna fánaíochta"
+
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. #software buttons
+#: operator-roamingPreference-home home softwareHomeButton.ariaLabel
+msgid "Home"
+msgstr "Baile"
 
 #: operator-roamingPreference-any
 msgctxt "operator-roamingPreference-any"
@@ -9357,157 +9913,15 @@ msgstr "Ceangailte"
 msgid "Forbidden"
 msgstr "Neamhcheadaithe"
 
-#. # LOCALIZATION NOTE (bluetooth-header): if you leave the original
-#. # en-US value "{{bluetooth}}" in the following string, the localization
-#. # will be automatically picked from the existing string with ID "bluetooth".
-#. # If you need to adapt your localization to the reduced space available
-#. # in headers, you can use a shorter string here.
-#: bluetooth-header
-msgid "{{bluetooth}}"
-msgstr "{{bluetooth}}"
-
-#: bluetooth-enable-msg
-msgid "Turn Bluetooth on to view devices in the area."
-msgstr "Cumasaigh Bluetooth chun gléasanna sa cheantar a fheiceáil."
-
-#: bluetooth-visible-to-all
-msgid "Visible to all"
-msgstr "Infheicthe do chách"
-
-#: bluetooth-name-maxlength-alert
-msgid "Your device name exceeds {{length}} characters. Please retry again."
-msgstr ""
-"Tá ainm an ghléis níos faide ná {{length}} carachtar. Déan iarracht eile."
-
-#: bluetooth-address
-msgid "Bluetooth Address"
-msgstr "Seoladh Bluetooth"
-
 #: bluetooth-address-unavailable
 msgctxt "bluetooth-address-unavailable"
 msgid "Not available"
 msgstr "Níl ar fáil"
 
-#: bt-status-nopaired
-msgid "No devices paired"
-msgstr "Níl aon ghléasanna péireáilte ann"
-
-#: bt-status-turnoff
-msgid "Turned off"
-msgstr "Múchta"
-
 #: bt-status-paired
 msgctxt "bt-status-paired"
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
-
-#: bt-status-paired[zero] thread-header-text[zero] download_text_by_default
-msgid "{{name}}"
-msgstr "{{name}}"
-
-#: bt-status-paired[one]
-msgctxt "bt-status-paired[one]"
-msgid "{{name}}, +{{n}} more"
-msgstr "{{name}}, +{{n}} ghléas eile"
-
-#: bt-status-paired[two]
-msgctxt "bt-status-paired[two]"
-msgid "{{name}}, +{{n}} more"
-msgstr "{{name}}, +{{n}} ghléas eile"
-
-#: bt-status-paired[few]
-msgctxt "bt-status-paired[few]"
-msgid "{{name}}, +{{n}} more"
-msgstr "{{name}}, +{{n}} ghléas eile"
-
-#: bt-status-paired[many]
-msgctxt "bt-status-paired[many]"
-msgid "{{name}}, +{{n}} more"
-msgstr "{{name}}, +{{n}} ngléas eile"
-
-#: bt-status-paired[other]
-msgctxt "bt-status-paired[other]"
-msgid "{{name}}, +{{n}} more"
-msgstr "{{name}}, +{{n}} gléas eile"
-
-#: device-status-connecting
-msgctxt "device-status-connecting"
-msgid "Connecting…"
-msgstr "Ag ceangal…"
-
-#: device-status-connected
-msgctxt "device-status-connected"
-msgid "Connected"
-msgstr "Ceangailte"
-
-#: device-status-connected-phone
-msgid "Connected to phone audio"
-msgstr "Ceangailte le fuaim tríd an ghuthán"
-
-#: device-status-connected-media
-msgid "Connected to media audio"
-msgstr ""
-
-#: device-status-connected-phone-media
-msgid "Connected to phone/media audio"
-msgstr ""
-
-#: device-option-unpair
-msgid "Unpair"
-msgstr "Díphéireáil"
-
-#: device-option-unpair-confirmation
-msgctxt "device-option-unpair-confirmation"
-msgid "Confirmation"
-msgstr "Deimhniú"
-
-#: device-option-unpair-device
-msgid "Unpair device?"
-msgstr "Díphéireáil an gléas?"
-
-#: device-option-connect
-msgid "Connect"
-msgstr "Ceangail"
-
-#: device-option-disconnect
-msgid "Disconnect"
-msgstr "Dícheangail"
-
-#: rename-device
-msgid "Rename my device"
-msgstr "Tabhair ainm nua do mo ghléas"
-
-#: change-phone-name
-msgid "Change phone name"
-msgstr "Athraigh ainm an ghutháin"
-
-#: change-phone-name-desc
-msgid "Change the name of your device as it appears in your computer"
-msgstr "Roghnaigh ainm a fheicfear ar ríomhairí péireáilte"
-
-#: bluetooth-new-name
-msgid "New name"
-msgstr "Ainm nua"
-
-#: error-connect-title
-msgid "Unable to connect devices"
-msgstr "Ní féidir gléasanna a cheangal"
-
-#: error-connect-msg
-msgid ""
-"Check that the device you’re trying to connect with is still in range and has "
-"Bluetooth turned on."
-msgstr ""
-
-#: unpair-title
-msgid "Unpair a connected device?"
-msgstr "Díphéireáil gléas ceangailte?"
-
-#: unpair-msg
-msgid ""
-"You are currently connected to this device. Unpairing will also disconnect "
-"from it."
-msgstr ""
 
 #. # Connectivity :: NFC
 #: nfc
@@ -9536,22 +9950,10 @@ msgstr "{{internetSharing}}"
 msgid "USB"
 msgstr "USB"
 
-#: internetSharing-usb-desc
-msgid "Share my phone’s Internet connection with a USB-connected device."
-msgstr "Comhroinn ceangal Idirlín mo ghutháin le gléas atá ceangailte trí USB."
-
 #: internetSharing-wifi
 msgctxt "internetSharing-wifi"
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
-
-#: internetSharing-wifi-desc
-msgid ""
-"Allow other devices to share my phone’s Internet connection by connecting via "
-"Wi-Fi."
-msgstr ""
-"Tabhair cead do ghléasanna eile ceangal Idirlín mo ghutháin a úsáid trí "
-"cheangal Wi-Fi."
 
 #: wifi-hotspot
 msgid "Wi-Fi hotspot"
@@ -9695,14 +10097,6 @@ msgstr "Meáin"
 msgid "Saving ringtone…"
 msgstr "Clingthon á shábháil…"
 
-#: unplayable-ringtone
-msgid ""
-"The ringtone was not changed because the selected file can not be played on "
-"this phone."
-msgstr ""
-"Níor athraíodh an clingthon toisc nach féidir an comhad roghnaithe a sheinm "
-"ar an nguthán seo."
-
 #: no-ringtone-app
 msgid "We were unable to find a ringtone app to manage ringtones!"
 msgstr "Níor aimsíodh aip chun clingthoin a bhainistiú!"
@@ -9837,6 +10231,23 @@ msgstr "Roghnaigh an mhór-roinn"
 msgid "Select time zone"
 msgstr "Roghnaigh crios ama"
 
+#: time-format
+msgctxt "time-format"
+msgid "Format"
+msgstr ""
+
+#: time-format-time
+msgid "Time Format"
+msgstr ""
+
+#: hour-12
+msgid "12-hour"
+msgstr ""
+
+#: hour-24
+msgid "24-hour"
+msgstr ""
+
 #. # Personalization :: Language & Region
 #: languageAndRegion
 msgid "Language & Region"
@@ -9870,20 +10281,20 @@ msgid "{{simManager}}"
 msgstr "{{simManager}}"
 
 #: simSettings
-msgid "SIM settings"
+msgid "SIM Settings"
 msgstr "Socruithe SIM"
 
 #: sim-manager-outgoing-calls
-msgid "Outgoing calls"
-msgstr "Glaonna amach"
+msgid "Outgoing Calls"
+msgstr "Glaonna Amach"
 
 #: sim-manager-outgoing-call-desc
 msgid "Calls will be sent from"
 msgstr "Seolfar glaonna ó"
 
 #: sim-manager-outgoing-messages
-msgid "Outgoing messages"
-msgstr "Teachtaireachtaí amach"
+msgid "Outgoing Messages"
+msgstr "Teachtaireachtaí Amach"
 
 #: sim-manager-outgoing-messages-desc
 msgid "SMS will be sent from"
@@ -9928,6 +10339,10 @@ msgctxt "vertical-homescreen-header"
 msgid "Homescreen"
 msgstr "Scáileán Baile"
 
+#: vertical-homescreen-layout
+msgid "Layout"
+msgstr ""
+
 #: vertical-homescreen-icon-layout
 msgid "Icon Layout"
 msgstr "Leagan Amach na nDeilbhíní"
@@ -9947,21 +10362,6 @@ msgstr "Inneall Cuardaigh"
 #: search-suggestions
 msgid "Search Suggestions"
 msgstr "Moltaí Cuardaigh"
-
-#. # LOCALIZATION NOTE (search-suggestions-button, search-suggestions-header):
-#. # If you leave the original en-US value "{{search-suggestions}}" in the following
-#. # strings, the localization will be automatically picked from the existing
-#. # string with ID "search-suggestions". If you need to adapt your localization to
-#. # the reduced space available in header or button, you can use shorter strings here.
-#: search-suggestions-button
-msgctxt "search-suggestions-button"
-msgid "{{search-suggestions}}"
-msgstr "{{search-suggestions}}"
-
-#: search-suggestions-header
-msgctxt "search-suggestions-header"
-msgid "{{search-suggestions}}"
-msgstr "{{search-suggestions}}"
 
 #: search-suggestions-description
 msgid ""
@@ -9998,9 +10398,13 @@ msgid "Description"
 msgstr "Cur Síos"
 
 #. # Personalization :: Keyboard
-#: installedInputMethods
-msgid "Installed input methods"
-msgstr "Modhanna ionchurtha suiteáilte"
+#: keyboardSettings
+msgid "Keyboard Settings"
+msgstr ""
+
+#: selectedKeyboards
+msgid "Selected Keyboards"
+msgstr ""
 
 #: keyboards
 msgid "Keyboards"
@@ -10027,31 +10431,18 @@ msgstr "Leaganacha amach: Roghanna"
 msgid "Dial Pad"
 msgstr "Eochaircheap"
 
-#: selectedKeyboards
-msgid "Selected keyboards"
-msgstr "Méarchláir roghnaithe"
+#: selectKeyboards
+msgid "Select Keyboards"
+msgstr ""
 
-#. # LOCALIZATION NOTE (selectedKeyboards-header): if you leave the original
-#. # en-US value "{{selectedKeyboards}}" in the following string, the localization
-#. # will be automatically picked from the existing string with ID "selectedKeyboards".
+#. # LOCALIZATION NOTE (selectKeyboards-header): if you leave the original
+#. # en-US value "{{selectKeyboards}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID "selectKeyboards".
 #. # If you need to adapt your localization to the reduced space available
 #. # in headers, you can use a shorter string here.
-#: selectedKeyboards-header
-msgid "{{selectedKeyboards}}"
-msgstr "{{selectedKeyboards}}"
-
-#: addMoreKeyboards
-msgid "Add more keyboards"
-msgstr "Faigh tuilleadh méarchlár"
-
-#. # LOCALIZATION NOTE (addMoreKeyboards-header): if you leave the original
-#. # en-US value "{{addMoreKeyboards}}" in the following string, the localization
-#. # will be automatically picked from the existing string with ID "addMoreKeyboards".
-#. # If you need to adapt your localization to the reduced space available
-#. # in headers, you can use a shorter string here.
-#: addMoreKeyboards-header
-msgid "{{addMoreKeyboards}}"
-msgstr "{{addMoreKeyboards}}"
+#: selectKeyboards-header
+msgid "{{selectKeyboards}}"
+msgstr ""
 
 #: mustHaveOneKeyboard
 msgid "At least one {{type}} keyboard should be selected"
@@ -10109,8 +10500,9 @@ msgid ""
 msgstr ""
 
 #: fxa-invitation
+msgctxt "fxa-invitation"
 msgid "Create account or sign in"
-msgstr "Cruthaigh cuntas nó logáil isteach"
+msgstr ""
 
 #. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Panel: logged in, unverified
@@ -10178,15 +10570,10 @@ msgctxt "findmydevice"
 msgid "Find My Device"
 msgstr "Aimsigh Mo Ghléas"
 
-#: findmydevice-signup-description
-msgid "Find My Device allows you to locate, lock or erase your phone"
+#: findmydevice-create-account
+msgctxt "findmydevice-create-account"
+msgid "Create account or sign in"
 msgstr ""
-"Le 'Aimsigh Mo Ghléas', is féidir do ghuthán a aimsiú, a chur faoi ghlas, nó "
-"a bhánú"
-
-#: findmydevice-login
-msgid "Sign In or Create an Account"
-msgstr "Logáil Isteach nó Cruthaigh Cuntas"
 
 #: findmydevice-enable
 msgid "Enable Find My Device"
@@ -10195,13 +10582,6 @@ msgstr "Cumasaigh 'Aimsigh Mo Ghléas'"
 #: findmydevice-about
 msgid "About Find My Device"
 msgstr "Maidir le 'Aimsigh Mo Ghléas'"
-
-#: findmydevice-settings-description
-msgid ""
-"Find My Device allows you to locate, lock or erase your phone from a web site:"
-msgstr ""
-"Le 'Aimsigh Mo Ghléas', is féidir leat do ghuthán a aimsiú, a chur faoi "
-"ghlas, nó a bhánú ó shuíomh Gréasáin:"
 
 #: findmydevice-enable-geolocation-prompt
 msgid "Enable Geolocation?"
@@ -10214,14 +10594,6 @@ msgstr ""
 #: findmydevice-geolocation-enabled
 msgid "Geolocation Enabled"
 msgstr "Geoshuíomh Cumasaithe"
-
-#: findmydevice-active-tracking
-msgid "Your phone is being tracked by another device through the website."
-msgstr ""
-
-#: findmydevice-not-tracking
-msgid "No devices are actively tracking your phone through the website."
-msgstr ""
 
 #: passcode-lock
 msgid "Passcode lock"
@@ -10245,8 +10617,8 @@ msgid "{{screenLock}}"
 msgstr "{{screenLock}}"
 
 #: simSecurity
-msgid "SIM security"
-msgstr "Slándáil SIM"
+msgid "SIM Security"
+msgstr ""
 
 #. # LOCALIZATION NOTE (simSecurity-header): if you leave the original
 #. # en-US value "{{simSecurity}}" in the following string, the localization
@@ -10320,7 +10692,7 @@ msgstr ""
 "Glanann an rogha seo sonraí príobháideacha ó leabharmharcanna a chuir tú leis "
 "an scáileán baile. Ní bheidh tú in ann na sonraí a fháil ar ais."
 
-#: clear
+#: clear clear.ariaLabel
 msgid "Clear"
 msgstr "Glan"
 
@@ -10328,7 +10700,7 @@ msgstr "Glan"
 #. # Headers
 #: messages name
 msgid "Messages"
-msgstr "Teachtaireachtaí"
+msgstr "Téacsáil"
 
 #: ring notifier_ring
 msgid "Ring"
@@ -10385,33 +10757,13 @@ msgstr "Deimhnigh an cód faire"
 msgid "Immediately"
 msgstr "Láithreach"
 
-#: after-five-seconds
-msgid "After 5 seconds"
-msgstr "Tar éis 5 shoicind"
-
-#: after-fifteen-seconds
-msgid "After 15 seconds"
-msgstr "Tar éis 15 soicind"
-
-#: after-thirty-seconds
-msgid "After 30 seconds"
-msgstr "Tar éis 30 soicind"
-
 #: after-one-minute
 msgid "After 1 minute"
 msgstr "Tar éis 1 nóiméad"
 
-#: after-two-minutes
-msgid "After 2 minutes"
-msgstr "Tar éis 2 nóiméad"
-
 #: after-five-minutes
 msgid "After 5 minutes"
 msgstr "Tar éis 5 nóiméad"
-
-#: after-ten-minutes
-msgid "After 10 minutes"
-msgstr "Tar éis 10 nóiméad"
 
 #: after-fifteen-minutes
 msgid "After 15 minutes"
@@ -10424,10 +10776,6 @@ msgstr "Tar éis 30 nóiméad"
 #: after-one-hour
 msgid "After 1 hour"
 msgstr "Tar éis uair an chloig"
-
-#: after-four-hours
-msgid "After 4 hours"
-msgstr "Tar éis 4 huaire an chloig"
 
 #: require-passcode
 msgid "Require passcode"
@@ -10671,15 +11019,15 @@ msgstr ""
 #: doNotTrack-dd1
 msgid ""
 "When you turn on Do Not Track, your device tells every website and app (as "
-"well as advertisers and other content providers) that you don’t want your "
+"well as advertisers and other content providers) that you do not want your "
 "behavior tracked."
 msgstr ""
 
 #: doNotTrack-dd2
 msgid ""
-"Turning on Do Not Track won’t affect your ability to sign in to websites nor "
-"cause your device to forget your private information, such as the contents of "
-"shopping carts, location information or sign-in information."
+"Turning on Do Not Track will not affect your ability to sign in to websites "
+"nor cause your device to forget your private information, such as the "
+"contents of shopping carts, location information or sign-in information."
 msgstr ""
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -10850,12 +11198,6 @@ msgstr "Ardroghanna"
 msgid "Enable USB storage?"
 msgstr "Cumasaigh stóras USB?"
 
-#: turn-on-ums-confirm
-msgid ""
-"Turning on Enable USB storage allows another computer or device connected "
-"using USB to access files on this phone."
-msgstr ""
-
 #: default-media-location
 msgid "Default media location"
 msgstr "Stóras réamhshocraithe meán"
@@ -10894,8 +11236,9 @@ msgstr ""
 "Scriosfar na sonraí go léir ó do chárta SD, mar shampla ceol agus grianghraif."
 
 #: format-sdcard-btnformat
+msgctxt "format-sdcard-btnformat"
 msgid "Format"
-msgstr "Formáidigh"
+msgstr ""
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Device
@@ -10926,6 +11269,10 @@ msgstr "{{deviceInfo}}"
 #: deviceInfo-ICCID
 msgid "ICCID"
 msgstr "ICCID"
+
+#: deviceInfo-MSISDN phoneNumberInput.ariaLabel
+msgid "Phone number"
+msgstr "Uimhir ghutháin"
 
 #: deviceInfo-ICCID-unavailable-sim
 msgid "SIM {{index}}: Not available"
@@ -10971,27 +11318,38 @@ msgid "{{developer}}"
 msgstr "{{developer}}"
 
 # Heads-Up Display
-#: hud
+#: hud-settings-button
 msgid "Developer HUD"
 msgstr ""
 
-#. # LOCALIZATION NOTE (hud-header, hud-button): if you leave the original
-#. # en-US value "{{hud}}" in the following string, the localization
-#. # will be automatically picked from the existing string with ID "hud".
-#. # If you need to adapt your localizations to the available space in
-#. # headers or buttons, you can use different strings here.
-#: hud-header
-msgctxt "hud-header"
-msgid "{{hud}}"
-msgstr "{{hud}}"
+#. # LOCALIZATION NOTE (hud-settings-header): if you leave the original en-US value
+#. # "{{hud-settings-button}}" in the following string, the localization will be
+#. # automatically picked from the existing string with ID "hud-settings-button". If you
+#. # need to adapt your localizations to the available space in headers or
+#. # buttons, you can use different strings here.
+#: hud-settings-header
+msgid "{{hud-settings-button}}"
+msgstr ""
 
-#: hud-button
-msgctxt "hud-button"
-msgid "{{hud}}"
-msgstr "{{hud}}"
+#: hud-devtools
+msgid "Developer tools"
+msgstr ""
+
+#. # LOCALIZATION NOTE (hud-devtools-header): if you leave the original en-US
+#. # value "{{hud-devtools}}" in the following string, the localization will be
+#. # automatically picked from the existing string with ID "hud-devtools". If you
+#. # need to adapt your localizations to the available space in headers or
+#. # buttons, you can use different strings here.
+#: hud-devtools-header
+msgid "{{hud-devtools}}"
+msgstr ""
 
 #: hud-logging
 msgid "Log changes in ADB"
+msgstr ""
+
+#: hud-system
+msgid "Show system HUD"
 msgstr ""
 
 #: hud-problems
@@ -11022,6 +11380,10 @@ msgstr ""
 msgid "Jank"
 msgstr ""
 
+#: jank-threshold
+msgid "Jank Threshold"
+msgstr ""
+
 #: hud-fps
 msgid "Frames per second"
 msgstr "Frámaí sa tsoicind"
@@ -11033,6 +11395,10 @@ msgstr "Am luchtaithe"
 #: hud-memory
 msgid "Memory"
 msgstr "Cuimhne"
+
+#: hud-uss
+msgid "Unique Set Size"
+msgstr ""
 
 #: hud-appmemory
 msgid "App memory"
@@ -11115,6 +11481,14 @@ msgstr "Tíliú"
 msgid "Simple tiling"
 msgstr "Tíliú simplí"
 
+#: low-precision
+msgid "Low-precision painting"
+msgstr ""
+
+#: low-opacity
+msgid "Low-precision transparency"
+msgstr ""
+
 #: draw-tile-borders
 msgid "Draw tile borders"
 msgstr ""
@@ -11135,6 +11509,10 @@ msgstr ""
 msgid "DevTools via Wi-Fi"
 msgstr ""
 
+#: dev-tools-qps
+msgid "Pseudo-localization"
+msgstr ""
+
 #: debugger-disabled
 msgctxt "debugger-disabled"
 msgid "Disabled"
@@ -11147,14 +11525,6 @@ msgstr "ADB amháin"
 #: debugger-adb-and-devtools
 msgid "ADB and DevTools"
 msgstr "ADB agus DevTools"
-
-#: devtools-overlay
-msgid "Show devtools overlay"
-msgstr "Taispeáin forleagan devtools"
-
-#: jank-threshold
-msgid "Jank Threshold"
-msgstr ""
 
 #: wifi-debugging
 msgid "Wi-Fi output in ADB"
@@ -11174,6 +11544,14 @@ msgstr ""
 
 #: geolocation-debugging-enabled
 msgid "Geolocation output in ADB"
+msgstr ""
+
+#: use-reviewer-certs
+msgid "Use Marketplace reviewer certs"
+msgstr ""
+
+#: shake-to-log
+msgid "Shake to save system log"
 msgstr ""
 
 #: model-name
@@ -11276,20 +11654,14 @@ msgstr ""
 msgid "Learn More"
 msgstr "Tuilleadh Eolais"
 
-#: reset-phone
-msgid "Reset Phone"
-msgstr "Athshocraigh an Guthán"
+#: reset-head
+msgctxt "reset-head"
+msgid "Reset"
+msgstr ""
 
 #: reset-warning-title
 msgid "CAUTION"
 msgstr "FAINIC"
-
-#: reset-warning-body
-msgid ""
-"Resetting will erase all your data, including any apps you’ve purchased. The "
-"phone will be restored to its factory condition. None of your settings or "
-"data will be saved."
-msgstr ""
 
 #. # LOCALIZATION NOTE: the licensing* strings below aren’t ready for translation yet.
 #: your-rights
@@ -11401,10 +11773,6 @@ msgstr "Tosaigh Úsáid Céaduaire"
 msgid "No first time use app found"
 msgstr "Níor aimsíodh aip úsáide céaduaire"
 
-#: rocketbar-enabled
-msgid "Rocketbar enabled"
-msgstr ""
-
 #: software-home-button
 msgid "Software home button"
 msgstr ""
@@ -11475,13 +11843,6 @@ msgstr "Mód spárála cumhachta"
 #: powerSave-threshold
 msgid "{{level}}% battery left"
 msgstr "{{level}}% cadhnra fágtha"
-
-#: powerSave-explanation
-msgid ""
-"Turning on power save mode turns off the phone’s data, Bluetooth and "
-"Geolocation connections to extend battery life. You can still turn these "
-"services back on manually."
-msgstr ""
 
 #: turnOnAuto
 msgid "Turn on automatically"
@@ -11560,19 +11921,13 @@ msgstr "Feabhsaigh {{brandShortName}}"
 msgid "Send Mozilla Feedback"
 msgstr "Seol Aiseolas chuig Mhozilla"
 
-#: performanceData
-msgid "Performance data"
-msgstr "Sonraí feidhmíochta"
-
-#: performanceDataInfo
-msgid "Help us improve {{brandShortName}} by sharing data about your phone."
+#: performanceAndUsageData
+msgid "Performance and usage data"
 msgstr ""
-"Cabhraigh linn feabhas a chur ar {{brandShortName}} trí sonraí ó do ghuthán a "
-"chomhroinnt linn."
 
-#: sharePerformanceData
-msgid "Submit performance data"
-msgstr "Seol sonraí feidhmíochta"
+#: sharePerformanceAndUsageData
+msgid "Submit data"
+msgstr ""
 
 #: crashReports
 msgid "Crash reports"
@@ -11860,6 +12215,17 @@ msgstr "Seol Sonraí"
 msgid "Get Channel Status"
 msgstr "Faigh Stádas an Chainéil"
 
+#. # Incompatible Settings :: USB Storage - USB Tethering - WiFi Tethering
+#: is-warning-head
+msgid "{{newSetting}}"
+msgstr ""
+
+#: is-warning-message
+msgid ""
+"Enabling {{newSetting}} will disable {{oldSetting}}. Do you want to enable "
+"{{newSetting}}?"
+msgstr ""
+
 #: name
 msgid "Shared Tests"
 msgstr "Tástálacha Comhroinnte"
@@ -12095,7 +12461,7 @@ msgstr "{{n}} rannpháirtí"
 #. # Message report
 #: message-report
 msgid "Message report"
-msgstr ""
+msgstr "Tuairisc teachtaireachta"
 
 #: message-type-sms
 msgid "Text Message (SMS)"
@@ -12183,24 +12549,27 @@ msgstr "Faighte:"
 msgid "Via:"
 msgstr "Trí:"
 
-#. # LOCALIZATION NOTE(thread-separator): used to separate type/carrier from
+#. # LOCALIZATION NOTE(phone-type-separator): used to separate phone type from
 #. # the number itself. It should be consistent with the characters used in
-#. # "thread- header", \u20 is a blank space (\u20|\u20 is equivalent to " | ").
-#: thread-separator
-msgid "Ȁu20"
+#. # "thread- header", \u20 is a blank space (,\u20 is equivalent to ", "). It can
+#. # be used together with "phone-carrier-separator" if carrier is available.
+#. # Resulting example for en-US: "Mobile, +123456789" or if carrier is available
+#. # "Mobile, +123456789 Carrier".
+#: phone-type-separator
+msgid ",Ȁ"
 msgstr ""
 
-#. # LOCALIZATION NOTE(carrier-separator): used to separate carrier's name from
-#. # the number itself. \u20 is a blank space. Resulting example for en-US:
-#. # "Verizon, +123456789".
-#: carrier-separator
-msgid ",Ȁ"
+#. # LOCALIZATION NOTE(phone-carrier-separator): used to separate carrier's name
+#. # from the number itself. \u20 is a blank space.  Resulting example for en-US:
+#. # "+123456789 Verizon".
+#: phone-carrier-separator
+msgid "Ȁ"
 msgstr ""
 
 #. # Modal Dialogs
 #: replace-draft
 msgid "Replace existing Draft"
-msgstr ""
+msgstr "Forscríobh an Dréacht atá ann"
 
 #: save-as-draft
 msgid "Save as Draft"
@@ -12282,6 +12651,18 @@ msgctxt "sendFlightModeBtnOk"
 msgid "OK"
 msgstr "OK"
 
+#: radioDisabledToDownloadTitle
+msgid "{{sendFlightModeTitle}}"
+msgstr "{{sendFlightModeTitle}}"
+
+#: radioDisabledToDownloadBody
+msgid "Turn off airplane mode to download attachments."
+msgstr ""
+
+#: radioDisabledToDownloadBtnOk
+msgid "{{sendFlightModeBtnOk}}"
+msgstr "{{sendFlightModeBtnOk}}"
+
 #. #LOCALIZATION NOTE (fdnBlocked2Body): the English translation does not need the
 #. # actual number of phone numbers. If your translation needs it, you can still add it
 #. # using the parameter {{ n }}. Also take into account that you could add HTML so be
@@ -12330,50 +12711,47 @@ msgctxt "fdnBlocked2BtnOk"
 msgid "OK"
 msgstr "OK"
 
-#: nonActiveSimTitle
+#: switchSimToRetrieveTitle
 msgid "Switch data connection"
 msgstr "Athraigh an ceangal sonraí"
 
-#: nonActiveSimBody
+#: switchSimToRetrieveBody
 msgid ""
-"Switch the data connection to {{ nonactive }} to retrieve the MMS. The "
-"current data transfer on {{ active }} will be suspended. Continue anyway?"
+"Switch the data connection to SIM {{ nonActiveSimId }} to retrieve the MMS. "
+"The current data transfer on SIM {{ activeSimId }} will be suspended. "
+"Continue anyway?"
 msgstr ""
-"Athraigh an ceangal sonraí go {{ nonactive }} chun an MMS a fháil. Cuirfear "
-"an t-aistriú sonraí ar {{ active }} ar fionraí. Lean ar aghaidh mar sin féin?"
 
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
 #. # update manager
-#: nonActiveSimBtnOk later
+#: switchSimToRetrieveBtnOk later
 msgid "Later"
 msgstr "Níos Déanaí"
 
-#: nonActiveSimConfirm
-msgctxt "nonActiveSimConfirm"
+#: switchSimToRetrieveConfirm
+msgctxt "switchSimToRetrieveConfirm"
 msgid "OK"
 msgstr "OK"
 
 #. # no need to retranslate title and buttons if not necessary
-#: nonActiveSimToSendTitle
-msgid "{{nonActiveSimTitle}}"
-msgstr "{{nonActiveSimTitle}}"
+#: switchSimToSendTitle
+msgid "{{switchSimToRetrieveTitle}}"
+msgstr "{{switchSimToRetrieveTitle}}"
 
-#: nonActiveSimToSendBody
+#: switchSimToSendBody
 msgid ""
-"Switch the data connection to {{ nonactive }} to send the MMS. The current "
-"data transfer on {{ active }} will be suspended. Continue anyway?"
+"Switch the data connection to SIM {{ nonActiveSimId }} to send the MMS. The "
+"current data transfer on SIM {{ activeSimId }} will be suspended. Continue "
+"anyway?"
 msgstr ""
-"Athraigh an ceangal sonraí go {{ nonactive }} chun an MMS a sheoladh. "
-"Cuirfear an t-aistriú sonraí ar {{ active }} ar fionraí. Lean ar aghaidh mar "
-"sin féin?"
 
-#: nonActiveSimToSendBtnOk
-msgid "{{nonActiveSimBtnOk}}"
-msgstr "{{nonActiveSimBtnOk}}"
+#: switchSimToSendBtnOk
+msgid "{{switchSimToRetrieveBtnOk}}"
+msgstr "{{switchSimToRetrieveBtnOk}}"
 
-#: nonActiveSimToSendConfirm
-msgid "{{nonActiveSimConfirm}}"
-msgstr "{{nonActiveSimConfirm}}"
+#: switchSimToSendConfirm
+msgid "{{switchSimToRetrieveConfirm}}"
+msgstr "{{switchSimToRetrieveConfirm}}"
 
 #: sendNoSignalErrorTitle
 msgid "No network coverage"
@@ -12412,6 +12790,21 @@ msgstr "Deimhnigh go bhfuil an uimhir bailí."
 
 #: sendInvalidAddressErrorBtnOk
 msgctxt "sendInvalidAddressErrorBtnOk"
+msgid "OK"
+msgstr "OK"
+
+#: simNotMatchedErrorTitle
+msgid "Unable to download"
+msgstr ""
+
+#: simNotMatchedErrorBody
+msgid ""
+"Please make sure the SIM card inserted is the one used to receive this "
+"message."
+msgstr ""
+
+#: simNotMatchedErrorBtnOk
+msgctxt "simNotMatchedErrorBtnOk"
 msgid "OK"
 msgstr "OK"
 
@@ -12498,6 +12891,36 @@ msgstr "Roghanna teachtaireachtaí"
 msgid "View message report"
 msgstr ""
 
+#. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
+#. # Labels for contact fields
+#: mobile
+msgid "Mobile"
+msgstr "Fón Póca"
+
+#: work
+msgid "Work"
+msgstr "Obair"
+
+#: personal
+msgid "Personal"
+msgstr "Pearsanta"
+
+#: faxHome
+msgid "Fax home"
+msgstr "Facs: baile"
+
+#: faxOffice
+msgid "Fax office"
+msgstr "Facs: oifig"
+
+#: faxOther
+msgid "Fax other"
+msgstr "Facs: eile"
+
+#: another
+msgid "Another"
+msgstr "Eile"
+
 #. # Date and time
 #: today
 msgid "today"
@@ -12516,7 +12939,7 @@ msgstr "(dáta mícheart)"
 #. #Phone Context Menu
 #: addToExistingContact
 msgid "Add to an existing contact"
-msgstr "Cuir le teagmháil atá ann é"
+msgstr "Cuir le teagmhálaí atá ann é"
 
 #: sendEmail
 msgid "Send email"
@@ -12549,6 +12972,13 @@ msgstr "Á íosluchtú…"
 #: unnamed-attachment
 msgid "untitled"
 msgstr "gan teideal"
+
+#. # LOCALIZATION NOTE (mms-label): This label is used to identify MMS in message
+#. # composer (above the send button) and in the thread list for the thread with
+#. # MMS as the last message.
+#: mms-label
+msgid "MMS"
+msgstr ""
 
 #. # LOCALIZATION NOTE (files-too-large): the English translation does not need the
 #. # actual number of files. If your translation needs it, you can still add it
@@ -12601,14 +13031,1289 @@ msgstr "Bhí fadhb leis an gcomhad ceangailte agus ní féidir é a íosluchtú.
 msgid "Message saved as draft"
 msgstr "Sábháladh an teachtaireacht mar dhréacht"
 
+#. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
 #. # some DSDS related localizations
-#: sim-name
-msgid "SIM{{id}}"
-msgstr "SIM{{id}}"
+#: sim-id-label sim
+msgid "SIM {{id}}"
+msgstr "SIM {{id}}"
 
 #: dsds-notification-title-with-sim
 msgid "({{sim}}) {{sender}}"
 msgstr "({{sim}}) {{sender}}"
+
+#. # LOCALIZATION NOTE (send-button-sim-indication): don't localize the
+#. # sim-indication itself as we use it to show the SIM number only. Yet obviously,
+#. # the "ariaLabel" needs to be localized.
+#: send-button-sim-indication
+msgid "{{n}}"
+msgstr "{{n}}"
+
+#: send-button-sim-indication.ariaLabel
+msgid "using SIM {{n}}"
+msgstr ""
+
+#: attach-button.ariaLabel
+msgid "Add attachment"
+msgstr ""
+
+#. # Instructions to enable or disable the screen reader
+#. # The sequence to enable or disable is volume up + volume down, repeat the
+#. # sequence 3 times
+#: accessibility-enableScreenReaderSteps
+msgid ""
+"To enable screen reader, press volume up then volume down buttons three more "
+"times"
+msgstr ""
+
+#: accessibility-disableScreenReaderSteps
+msgid ""
+"To disable screen reader, press volume up then volume down buttons three more "
+"times"
+msgstr ""
+
+#. # Screen reader started/stopped
+#: accessibility-screenReaderStarted
+msgid "Screen reader started"
+msgstr ""
+
+#: accessibility-screenReaderStopped
+msgid "Screen reader stopped"
+msgstr ""
+
+#. # Roles
+#: accessibility-menubar
+msgctxt "accessibility-menubar"
+msgid "menu bar"
+msgstr ""
+
+#: accessibility-scrollbar
+msgctxt "accessibility-scrollbar"
+msgid "scroll bar"
+msgstr ""
+
+#: accessibility-grip
+msgctxt "accessibility-grip"
+msgid "grip"
+msgstr ""
+
+#: accessibility-alert
+msgctxt "accessibility-alert"
+msgid "alert"
+msgstr ""
+
+#: accessibility-menupopup
+msgctxt "accessibility-menupopup"
+msgid "menu popup"
+msgstr ""
+
+#: accessibility-document
+msgctxt "accessibility-document"
+msgid "document"
+msgstr ""
+
+#: accessibility-pane
+msgctxt "accessibility-pane"
+msgid "pane"
+msgstr ""
+
+#: accessibility-dialog
+msgctxt "accessibility-dialog"
+msgid "dialog"
+msgstr ""
+
+#: accessibility-separator
+msgctxt "accessibility-separator"
+msgid "separator"
+msgstr ""
+
+#: accessibility-toolbar
+msgctxt "accessibility-toolbar"
+msgid "toolbar"
+msgstr ""
+
+#: accessibility-statusbar
+msgctxt "accessibility-statusbar"
+msgid "status bar"
+msgstr ""
+
+#: accessibility-table
+msgid "table"
+msgstr ""
+
+#: accessibility-columnheader
+msgctxt "accessibility-columnheader"
+msgid "column header"
+msgstr ""
+
+#: accessibility-rowheader
+msgctxt "accessibility-rowheader"
+msgid "row header"
+msgstr ""
+
+#: accessibility-column
+msgctxt "accessibility-column"
+msgid "column"
+msgstr ""
+
+#: accessibility-row
+msgctxt "accessibility-row"
+msgid "row"
+msgstr ""
+
+#: accessibility-cell
+msgctxt "accessibility-cell"
+msgid "cell"
+msgstr ""
+
+#: accessibility-link
+msgid "link"
+msgstr ""
+
+#: accessibility-list
+msgctxt "accessibility-list"
+msgid "list"
+msgstr ""
+
+#: accessibility-listitem
+msgctxt "accessibility-listitem"
+msgid "list item"
+msgstr ""
+
+#: accessibility-outline
+msgctxt "accessibility-outline"
+msgid "outline"
+msgstr ""
+
+#: accessibility-outlineitem
+msgctxt "accessibility-outlineitem"
+msgid "outline item"
+msgstr ""
+
+#: accessibility-pagetab
+msgctxt "accessibility-pagetab"
+msgid "tab"
+msgstr ""
+
+#: accessibility-propertypage
+msgctxt "accessibility-propertypage"
+msgid "property page"
+msgstr ""
+
+#: accessibility-graphic
+msgctxt "accessibility-graphic"
+msgid "graphic"
+msgstr ""
+
+#: accessibility-pushbutton
+msgid "button"
+msgstr ""
+
+#: accessibility-checkbutton
+msgctxt "accessibility-checkbutton"
+msgid "check button"
+msgstr ""
+
+#: accessibility-radiobutton
+msgctxt "accessibility-radiobutton"
+msgid "radio button"
+msgstr ""
+
+#: accessibility-combobox
+msgctxt "accessibility-combobox"
+msgid "combo box"
+msgstr ""
+
+#: accessibility-progressbar
+msgctxt "accessibility-progressbar"
+msgid "progress bar"
+msgstr ""
+
+#: accessibility-slider
+msgctxt "accessibility-slider"
+msgid "slider"
+msgstr ""
+
+#: accessibility-spinbutton
+msgctxt "accessibility-spinbutton"
+msgid "spin button"
+msgstr ""
+
+#: accessibility-diagram
+msgctxt "accessibility-diagram"
+msgid "diagram"
+msgstr ""
+
+#: accessibility-animation
+msgctxt "accessibility-animation"
+msgid "animation"
+msgstr ""
+
+#: accessibility-equation
+msgctxt "accessibility-equation"
+msgid "equation"
+msgstr ""
+
+#: accessibility-buttonmenu
+msgctxt "accessibility-buttonmenu"
+msgid "button menu"
+msgstr ""
+
+#: accessibility-whitespace
+msgctxt "accessibility-whitespace"
+msgid "white space"
+msgstr ""
+
+#: accessibility-pagetablist
+msgctxt "accessibility-pagetablist"
+msgid "tab list"
+msgstr ""
+
+#: accessibility-canvas
+msgctxt "accessibility-canvas"
+msgid "canvas"
+msgstr ""
+
+#: accessibility-checkmenuitem
+msgctxt "accessibility-checkmenuitem"
+msgid "check menu item"
+msgstr ""
+
+#: accessibility-label
+msgctxt "accessibility-label"
+msgid "label"
+msgstr ""
+
+#: accessibility-passwordtext
+msgid "password text"
+msgstr ""
+
+#: accessibility-radiomenuitem
+msgctxt "accessibility-radiomenuitem"
+msgid "radio menu item"
+msgstr ""
+
+#: accessibility-textcontainer
+msgctxt "accessibility-textcontainer"
+msgid "text container"
+msgstr ""
+
+#: accessibility-togglebutton
+msgctxt "accessibility-togglebutton"
+msgid "toggle button"
+msgstr ""
+
+#: accessibility-treetable
+msgctxt "accessibility-treetable"
+msgid "tree table"
+msgstr ""
+
+#: accessibility-header
+msgctxt "accessibility-header"
+msgid "header"
+msgstr ""
+
+#: accessibility-footer
+msgctxt "accessibility-footer"
+msgid "footer"
+msgstr ""
+
+#: accessibility-paragraph
+msgctxt "accessibility-paragraph"
+msgid "paragraph"
+msgstr ""
+
+#: accessibility-entry
+msgctxt "accessibility-entry"
+msgid "entry"
+msgstr ""
+
+#: accessibility-caption
+msgctxt "accessibility-caption"
+msgid "caption"
+msgstr ""
+
+#: accessibility-heading
+msgctxt "accessibility-heading"
+msgid "heading"
+msgstr ""
+
+#: accessibility-section
+msgctxt "accessibility-section"
+msgid "section"
+msgstr ""
+
+#: accessibility-form
+msgctxt "accessibility-form"
+msgid "form"
+msgstr ""
+
+#: accessibility-comboboxlist
+msgctxt "accessibility-comboboxlist"
+msgid "combo box list"
+msgstr ""
+
+#: accessibility-comboboxoption
+msgctxt "accessibility-comboboxoption"
+msgid "combo box option"
+msgstr ""
+
+#: accessibility-imagemap
+msgid "image map"
+msgstr ""
+
+#: accessibility-listboxoption
+msgctxt "accessibility-listboxoption"
+msgid "option"
+msgstr ""
+
+#: accessibility-listbox
+msgctxt "accessibility-listbox"
+msgid "list box"
+msgstr ""
+
+#: accessibility-flatequation
+msgctxt "accessibility-flatequation"
+msgid "flat equation"
+msgstr ""
+
+#: accessibility-gridcell
+msgctxt "accessibility-gridcell"
+msgid "gridcell"
+msgstr ""
+
+#: accessibility-note
+msgctxt "accessibility-note"
+msgid "note"
+msgstr ""
+
+#: accessibility-figure
+msgid "figure"
+msgstr ""
+
+#: accessibility-definitionlist
+msgctxt "accessibility-definitionlist"
+msgid "definition list"
+msgstr ""
+
+#: accessibility-term
+msgctxt "accessibility-term"
+msgid "term"
+msgstr ""
+
+#: accessibility-definition
+msgctxt "accessibility-definition"
+msgid "definition"
+msgstr ""
+
+#. # More sophisticated roles which are not actual numeric roles
+#: accessibility-textarea
+msgid "text area"
+msgstr ""
+
+#. # Text input types
+#: accessibility-textInputType_date
+msgid "date"
+msgstr ""
+
+#: accessibility-textInputType_email
+msgid "e-mail"
+msgstr ""
+
+#: accessibility-textInputType_search
+msgctxt "accessibility-textInputType_search"
+msgid "search"
+msgstr ""
+
+#: accessibility-textInputType_tel
+msgid "telephone"
+msgstr ""
+
+#. # More sophisticated object descriptions
+#. # LOCALIZATION NOTE: (0) is the numeric level value. An expanded example would
+#. # read "heading level 2"
+#: accessibility-headingLevel
+msgid "heading level {{0}}"
+msgstr ""
+
+#. # more sophisticated list announcement
+#: accessibility-listStart
+msgid "First item"
+msgstr ""
+
+#: accessibility-listEnd
+msgid "Last item"
+msgstr ""
+
+#. # LOCALIZATION NOTE: (count) is the number of list items in the list. Expanded
+#. # examples would read "3 items", "1 item"
+#: accessibility-listItemsCount
+msgctxt "accessibility-listItemsCount"
+msgid "{[ plural(count) ]}"
+msgstr "{[ plural(count) ]}"
+
+#: accessibility-listItemsCount[zero]
+msgctxt "accessibility-listItemsCount[zero]"
+msgid "{{count}} items"
+msgstr "{{count}} rud"
+
+#: accessibility-listItemsCount[one]
+msgid "{{count}} item"
+msgstr "{{count}} rud"
+
+#: accessibility-listItemsCount[two]
+msgctxt "accessibility-listItemsCount[two]"
+msgid "{{count}} items"
+msgstr "{{count}} rud"
+
+#: accessibility-listItemsCount[few]
+msgctxt "accessibility-listItemsCount[few]"
+msgid "{{count}} items"
+msgstr "{{count}} rud"
+
+#: accessibility-listItemsCount[many]
+msgctxt "accessibility-listItemsCount[many]"
+msgid "{{count}} items"
+msgstr "{{count}} rud"
+
+#: accessibility-listItemsCount[other]
+msgctxt "accessibility-listItemsCount[other]"
+msgid "{{count}} items"
+msgstr "{{count}} rud"
+
+#. # LOCALIZATION NOTE: (0): is the position of the item in the set. (1) is the
+#. # total number of such items in the set.
+#. # An expanded example would read "2 of 5".
+#: accessibility-objItemOfN
+msgid "{{0}} of {{1}}"
+msgstr "{{0}} as {{1}}"
+
+#. # Landmark announcements
+#: accessibility-banner
+msgid "banner"
+msgstr ""
+
+#: accessibility-complementary
+msgid "complementary"
+msgstr ""
+
+#: accessibility-contentinfo
+msgid "content info"
+msgstr ""
+
+#: accessibility-main
+msgid "main"
+msgstr ""
+
+#: accessibility-navigation
+msgid "navigation"
+msgstr ""
+
+#: accessibility-search
+msgctxt "accessibility-search"
+msgid "search"
+msgstr ""
+
+#. # Number of columns within the table.
+#. # LOCALIZATION NOTE: (count) is the number of columns in the table. Expanded
+#. # examples would read "with 1 column", "with 3 columns"
+#: accessibility-tblColumnInfo
+msgctxt "accessibility-tblColumnInfo"
+msgid "{[ plural(count) ]}"
+msgstr "{[ plural(count) ]}"
+
+#: accessibility-tblColumnInfo[zero]
+msgctxt "accessibility-tblColumnInfo[zero]"
+msgid "with {{count}} columns"
+msgstr "le {{count}} colún"
+
+#: accessibility-tblColumnInfo[one]
+msgid "with {{count}} column"
+msgstr "le {{count}} cholún"
+
+#: accessibility-tblColumnInfo[two]
+msgctxt "accessibility-tblColumnInfo[two]"
+msgid "with {{count}} columns"
+msgstr "le {{count}} cholún"
+
+#: accessibility-tblColumnInfo[few]
+msgctxt "accessibility-tblColumnInfo[few]"
+msgid "with {{count}} columns"
+msgstr "le {{count}} cholún"
+
+#: accessibility-tblColumnInfo[many]
+msgctxt "accessibility-tblColumnInfo[many]"
+msgid "with {{count}} columns"
+msgstr "le {{count}} gcolún"
+
+#: accessibility-tblColumnInfo[other]
+msgctxt "accessibility-tblColumnInfo[other]"
+msgid "with {{count}} columns"
+msgstr "le {{count}} colún"
+
+#. # Number of rows within the table or grid.
+#. # LOCALIZATION NOTE: (count) is the number of rows in the table. Expanded
+#. # examples would read "and 1 row", "and 3 rows"
+#: accessibility-tblRowInfo
+msgctxt "accessibility-tblRowInfo"
+msgid "{[ plural(count) ]}"
+msgstr "{[ plural(count) ]}"
+
+#: accessibility-tblRowInfo[zero]
+msgctxt "accessibility-tblRowInfo[zero]"
+msgid "and {{count}} rows"
+msgstr "agus {{count}} ró"
+
+#: accessibility-tblRowInfo[one]
+msgid "and {{count}} row"
+msgstr "agus {{count}} ró"
+
+#: accessibility-tblRowInfo[two]
+msgctxt "accessibility-tblRowInfo[two]"
+msgid "and {{count}} rows"
+msgstr "agus {{count}} ró"
+
+#: accessibility-tblRowInfo[few]
+msgctxt "accessibility-tblRowInfo[few]"
+msgid "and {{count}} rows"
+msgstr "agus {{count}} ró"
+
+#: accessibility-tblRowInfo[many]
+msgctxt "accessibility-tblRowInfo[many]"
+msgid "and {{count}} rows"
+msgstr "agus {{count}} ró"
+
+#: accessibility-tblRowInfo[other]
+msgctxt "accessibility-tblRowInfo[other]"
+msgid "and {{count}} rows"
+msgstr "agus {{count}} ró"
+
+#. # table or grid cell information
+#. # LOCALIZATION NOTE: (0): is the column index. An expanded example would read
+#. # "Column 3".
+#: accessibility-columnInfo
+msgid "Column {{0}}"
+msgstr "Colún {{0}}"
+
+#. # LOCALIZATION NOTE: (0): is the row index. An expanded example would read
+#. # "Row 3".
+#: accessibility-rowInfo
+msgid "Row {{0}}"
+msgstr "Ró {{0}}"
+
+#. # Number of columns occupied by a cell.
+#. # LOCALIZATION NOTE: (0) is the number of columns that the cell occupies.
+#. # Expanded examples would read "spans 1 column", "spans 10 columns"
+#: accessibility-spansColumns
+msgctxt "accessibility-spansColumns"
+msgid "{[ plural(0) ]}"
+msgstr "{[ plural(0) ]}"
+
+#: accessibility-spansColumns[zero]
+msgctxt "accessibility-spansColumns[zero]"
+msgid "spans {{0}} columns"
+msgstr ""
+
+#: accessibility-spansColumns[one]
+msgid "spans {{0}} column"
+msgstr ""
+
+#: accessibility-spansColumns[two]
+msgctxt "accessibility-spansColumns[two]"
+msgid "spans {{0}} columns"
+msgstr ""
+
+#: accessibility-spansColumns[few]
+msgctxt "accessibility-spansColumns[few]"
+msgid "spans {{0}} columns"
+msgstr ""
+
+#: accessibility-spansColumns[many]
+msgctxt "accessibility-spansColumns[many]"
+msgid "spans {{0}} columns"
+msgstr ""
+
+#: accessibility-spansColumns[other]
+msgctxt "accessibility-spansColumns[other]"
+msgid "spans {{0}} columns"
+msgstr ""
+
+#. # Number of rows occupied by a cell.
+#. # LOCALIZATION NOTE: (0) is the number of rows that the cell occupies. Expanded
+#. # examples would read "spans 1 row", "spans 10 rows"
+#: accessibility-spansRows
+msgctxt "accessibility-spansRows"
+msgid "{[ plural(0) ]}"
+msgstr "{[ plural(0) ]}"
+
+#: accessibility-spansRows[zero]
+msgctxt "accessibility-spansRows[zero]"
+msgid "spans {{0}} rows"
+msgstr ""
+
+#: accessibility-spansRows[one]
+msgid "spans {{0}} row"
+msgstr ""
+
+#: accessibility-spansRows[two]
+msgctxt "accessibility-spansRows[two]"
+msgid "spans {{0}} rows"
+msgstr ""
+
+#: accessibility-spansRows[few]
+msgctxt "accessibility-spansRows[few]"
+msgid "spans {{0}} rows"
+msgstr ""
+
+#: accessibility-spansRows[many]
+msgctxt "accessibility-spansRows[many]"
+msgid "spans {{0}} rows"
+msgstr ""
+
+#: accessibility-spansRows[other]
+msgctxt "accessibility-spansRows[other]"
+msgid "spans {{0}} rows"
+msgstr ""
+
+#. # Invoked actions
+#: accessibility-jumpAction
+msgid "jumped"
+msgstr ""
+
+#: accessibility-pressAction
+msgctxt "accessibility-pressAction"
+msgid "pressed"
+msgstr ""
+
+#: accessibility-checkAction
+msgctxt "accessibility-checkAction"
+msgid "checked"
+msgstr ""
+
+#: accessibility-uncheckAction
+msgid "unchecked"
+msgstr ""
+
+#: accessibility-selectAction
+msgctxt "accessibility-selectAction"
+msgid "selected"
+msgstr ""
+
+#: accessibility-unselectAction
+msgid "unselected"
+msgstr ""
+
+#: accessibility-openAction
+msgid "opened"
+msgstr ""
+
+#: accessibility-closeAction
+msgid "closed"
+msgstr ""
+
+#: accessibility-switchAction
+msgid "switched"
+msgstr ""
+
+#: accessibility-clickAction
+msgid "clicked"
+msgstr ""
+
+#: accessibility-collapseAction
+msgctxt "accessibility-collapseAction"
+msgid "collapsed"
+msgstr ""
+
+#: accessibility-expandAction
+msgctxt "accessibility-expandAction"
+msgid "expanded"
+msgstr ""
+
+#: accessibility-activateAction
+msgid "activated"
+msgstr ""
+
+#: accessibility-cycleAction
+msgid "cycled"
+msgstr ""
+
+#. # Live regions
+#. # (accessibility-hidden) will be spoken when something disappears in a live
+#. # region.
+#: accessibility-hidden
+msgid "hidden"
+msgstr ""
+
+#. # Tab states
+#: accessibility-tabLoading
+msgid "loading"
+msgstr ""
+
+#: accessibility-tabLoaded
+msgid "loaded"
+msgstr ""
+
+#: accessibility-tabNew
+msgid "new tab"
+msgstr ""
+
+#: accessibility-tabLoadStopped
+msgid "loading stopped"
+msgstr ""
+
+#: accessibility-tabReload
+msgid "reloading"
+msgstr ""
+
+#. # Object states
+#: accessibility-stateChecked
+msgctxt "accessibility-stateChecked"
+msgid "checked"
+msgstr ""
+
+#: accessibility-stateNotChecked
+msgid "not checked"
+msgstr ""
+
+#: accessibility-statePressed
+msgctxt "accessibility-statePressed"
+msgid "pressed"
+msgstr ""
+
+#. # No string for a not pressed toggle button
+#: accessibility-stateExpanded
+msgctxt "accessibility-stateExpanded"
+msgid "expanded"
+msgstr ""
+
+#: accessibility-stateCollapsed
+msgctxt "accessibility-stateCollapsed"
+msgid "collapsed"
+msgstr ""
+
+#: accessibility-stateUnavailable
+msgid "unavailable"
+msgstr ""
+
+#: accessibility-stateRequired
+msgid "required"
+msgstr ""
+
+#: accessibility-stateTraversed
+msgid "visited"
+msgstr ""
+
+#: accessibility-stateHasPopup
+msgid "has pop up"
+msgstr ""
+
+#: accessibility-stateSelected
+msgctxt "accessibility-stateSelected"
+msgid "selected"
+msgstr ""
+
+#. # App modes
+#: accessibility-editingMode
+msgid "editing"
+msgstr ""
+
+#: accessibility-navigationMode
+msgid "navigating"
+msgstr ""
+
+#: accessibility-quicknav_Anchor
+msgid "Anchors"
+msgstr ""
+
+#: accessibility-quicknav_Button
+msgid "Buttons"
+msgstr ""
+
+#: accessibility-quicknav_Combobox
+msgid "Combo boxes"
+msgstr ""
+
+#: accessibility-quicknav_Landmark
+msgid "Landmarks"
+msgstr ""
+
+#: accessibility-quicknav_Entry
+msgid "Entries"
+msgstr ""
+
+#: accessibility-quicknav_FormElement
+msgid "Form elements"
+msgstr ""
+
+#: accessibility-quicknav_Graphic collection-categoryId-242
+msgid "Images"
+msgstr "Íomhánna"
+
+#: accessibility-quicknav_Heading
+msgid "Headings"
+msgstr ""
+
+#: accessibility-quicknav_ListItem
+msgid "List items"
+msgstr ""
+
+#: accessibility-quicknav_Link
+msgid "Links"
+msgstr ""
+
+#: accessibility-quicknav_List
+msgid "Lists"
+msgstr ""
+
+#: accessibility-quicknav_PageTab
+msgid "Page tabs"
+msgstr ""
+
+#: accessibility-quicknav_RadioButton
+msgid "Radio buttons"
+msgstr ""
+
+#: accessibility-quicknav_Separator
+msgid "Separators"
+msgstr ""
+
+#: accessibility-quicknav_Table
+msgid "Tables"
+msgstr ""
+
+#: accessibility-quicknav_Checkbox
+msgid "Check boxes"
+msgstr ""
+
+#. # Shortened role names for braille.
+#. # LOCALIZATION NOTE: Braille displays have a very limited space for how many
+#. # characters can be visible at once. Thus, some of the roles are shortened to
+#. # save space ("table" -> "tbl", "link" -> "lnk", "button" -> "btn",
+#. # "image map" -> "imgmap"). Only shorten already shortened roles.
+#: accessibility-menubarAbbr
+msgctxt "accessibility-menubarAbbr"
+msgid "menu bar"
+msgstr ""
+
+#: accessibility-scrollbarAbbr
+msgctxt "accessibility-scrollbarAbbr"
+msgid "scroll bar"
+msgstr ""
+
+#: accessibility-gripAbbr
+msgctxt "accessibility-gripAbbr"
+msgid "grip"
+msgstr ""
+
+#: accessibility-alertAbbr
+msgctxt "accessibility-alertAbbr"
+msgid "alert"
+msgstr ""
+
+#: accessibility-menupopupAbbr
+msgctxt "accessibility-menupopupAbbr"
+msgid "menu popup"
+msgstr ""
+
+#: accessibility-documentAbbr
+msgctxt "accessibility-documentAbbr"
+msgid "document"
+msgstr ""
+
+#: accessibility-paneAbbr
+msgctxt "accessibility-paneAbbr"
+msgid "pane"
+msgstr ""
+
+#: accessibility-dialogAbbr
+msgctxt "accessibility-dialogAbbr"
+msgid "dialog"
+msgstr ""
+
+#: accessibility-separatorAbbr
+msgctxt "accessibility-separatorAbbr"
+msgid "separator"
+msgstr ""
+
+#: accessibility-toolbarAbbr
+msgctxt "accessibility-toolbarAbbr"
+msgid "toolbar"
+msgstr ""
+
+#: accessibility-statusbarAbbr
+msgctxt "accessibility-statusbarAbbr"
+msgid "status bar"
+msgstr ""
+
+#: accessibility-tableAbbr
+msgid "tbl"
+msgstr ""
+
+#: accessibility-columnheaderAbbr
+msgctxt "accessibility-columnheaderAbbr"
+msgid "column header"
+msgstr ""
+
+#: accessibility-rowheaderAbbr
+msgctxt "accessibility-rowheaderAbbr"
+msgid "row header"
+msgstr ""
+
+#: accessibility-columnAbbr
+msgctxt "accessibility-columnAbbr"
+msgid "column"
+msgstr ""
+
+#: accessibility-rowAbbr
+msgctxt "accessibility-rowAbbr"
+msgid "row"
+msgstr ""
+
+#: accessibility-cellAbbr
+msgctxt "accessibility-cellAbbr"
+msgid "cell"
+msgstr ""
+
+#: accessibility-linkAbbr
+msgid "lnk"
+msgstr ""
+
+#: accessibility-listAbbr
+msgctxt "accessibility-listAbbr"
+msgid "list"
+msgstr ""
+
+#: accessibility-listitemAbbr
+msgctxt "accessibility-listitemAbbr"
+msgid "list item"
+msgstr ""
+
+#: accessibility-outlineAbbr
+msgctxt "accessibility-outlineAbbr"
+msgid "outline"
+msgstr ""
+
+#: accessibility-outlineitemAbbr
+msgctxt "accessibility-outlineitemAbbr"
+msgid "outline item"
+msgstr ""
+
+#: accessibility-pagetabAbbr
+msgctxt "accessibility-pagetabAbbr"
+msgid "tab"
+msgstr ""
+
+#: accessibility-propertypageAbbr
+msgctxt "accessibility-propertypageAbbr"
+msgid "property page"
+msgstr ""
+
+#: accessibility-graphicAbbr
+msgctxt "accessibility-graphicAbbr"
+msgid "graphic"
+msgstr ""
+
+#: accessibility-pushbuttonAbbr
+msgid "btn"
+msgstr ""
+
+#: accessibility-checkbuttonAbbr
+msgctxt "accessibility-checkbuttonAbbr"
+msgid "check button"
+msgstr ""
+
+#: accessibility-radiobuttonAbbr
+msgctxt "accessibility-radiobuttonAbbr"
+msgid "radio button"
+msgstr ""
+
+#: accessibility-comboboxAbbr
+msgctxt "accessibility-comboboxAbbr"
+msgid "combo box"
+msgstr ""
+
+#: accessibility-progressbarAbbr
+msgctxt "accessibility-progressbarAbbr"
+msgid "progress bar"
+msgstr ""
+
+#: accessibility-sliderAbbr
+msgctxt "accessibility-sliderAbbr"
+msgid "slider"
+msgstr ""
+
+#: accessibility-spinbuttonAbbr
+msgctxt "accessibility-spinbuttonAbbr"
+msgid "spin button"
+msgstr ""
+
+#: accessibility-diagramAbbr
+msgctxt "accessibility-diagramAbbr"
+msgid "diagram"
+msgstr ""
+
+#: accessibility-animationAbbr
+msgctxt "accessibility-animationAbbr"
+msgid "animation"
+msgstr ""
+
+#: accessibility-equationAbbr
+msgctxt "accessibility-equationAbbr"
+msgid "equation"
+msgstr ""
+
+#: accessibility-buttonmenuAbbr
+msgctxt "accessibility-buttonmenuAbbr"
+msgid "button menu"
+msgstr ""
+
+#: accessibility-whitespaceAbbr
+msgctxt "accessibility-whitespaceAbbr"
+msgid "white space"
+msgstr ""
+
+#: accessibility-pagetablistAbbr
+msgctxt "accessibility-pagetablistAbbr"
+msgid "tab list"
+msgstr ""
+
+#: accessibility-canvasAbbr
+msgctxt "accessibility-canvasAbbr"
+msgid "canvas"
+msgstr ""
+
+#: accessibility-checkmenuitemAbbr
+msgctxt "accessibility-checkmenuitemAbbr"
+msgid "check menu item"
+msgstr ""
+
+#: accessibility-labelAbbr
+msgctxt "accessibility-labelAbbr"
+msgid "label"
+msgstr ""
+
+#: accessibility-passwordtextAbbr
+msgid "passwdtxt"
+msgstr ""
+
+#: accessibility-radiomenuitemAbbr
+msgctxt "accessibility-radiomenuitemAbbr"
+msgid "radio menu item"
+msgstr ""
+
+#: accessibility-textcontainerAbbr
+msgctxt "accessibility-textcontainerAbbr"
+msgid "text container"
+msgstr ""
+
+#: accessibility-togglebuttonAbbr
+msgctxt "accessibility-togglebuttonAbbr"
+msgid "toggle button"
+msgstr ""
+
+#: accessibility-treetableAbbr
+msgctxt "accessibility-treetableAbbr"
+msgid "tree table"
+msgstr ""
+
+#: accessibility-headerAbbr
+msgctxt "accessibility-headerAbbr"
+msgid "header"
+msgstr ""
+
+#: accessibility-footerAbbr
+msgctxt "accessibility-footerAbbr"
+msgid "footer"
+msgstr ""
+
+#: accessibility-paragraphAbbr
+msgctxt "accessibility-paragraphAbbr"
+msgid "paragraph"
+msgstr ""
+
+#: accessibility-entryAbbr
+msgctxt "accessibility-entryAbbr"
+msgid "entry"
+msgstr ""
+
+#: accessibility-captionAbbr
+msgctxt "accessibility-captionAbbr"
+msgid "caption"
+msgstr ""
+
+#: accessibility-headingAbbr
+msgctxt "accessibility-headingAbbr"
+msgid "heading"
+msgstr ""
+
+#: accessibility-sectionAbbr
+msgctxt "accessibility-sectionAbbr"
+msgid "section"
+msgstr ""
+
+#: accessibility-formAbbr
+msgctxt "accessibility-formAbbr"
+msgid "form"
+msgstr ""
+
+#: accessibility-comboboxlistAbbr
+msgctxt "accessibility-comboboxlistAbbr"
+msgid "combo box list"
+msgstr ""
+
+#: accessibility-comboboxoptionAbbr
+msgctxt "accessibility-comboboxoptionAbbr"
+msgid "combo box option"
+msgstr ""
+
+#: accessibility-imagemapAbbr
+msgid "imgmap"
+msgstr ""
+
+#: accessibility-listboxoptionAbbr
+msgctxt "accessibility-listboxoptionAbbr"
+msgid "option"
+msgstr ""
+
+#: accessibility-listboxAbbr
+msgctxt "accessibility-listboxAbbr"
+msgid "list box"
+msgstr ""
+
+#: accessibility-flatequationAbbr
+msgctxt "accessibility-flatequationAbbr"
+msgid "flat equation"
+msgstr ""
+
+#: accessibility-gridcellAbbr
+msgctxt "accessibility-gridcellAbbr"
+msgid "gridcell"
+msgstr ""
+
+#: accessibility-noteAbbr
+msgctxt "accessibility-noteAbbr"
+msgid "note"
+msgstr ""
+
+#: accessibility-figureAbbr
+msgid "fig"
+msgstr ""
+
+#: accessibility-definitionlistAbbr
+msgctxt "accessibility-definitionlistAbbr"
+msgid "definition list"
+msgstr ""
+
+#: accessibility-termAbbr
+msgctxt "accessibility-termAbbr"
+msgid "term"
+msgstr ""
+
+#: accessibility-definitionAbbr
+msgctxt "accessibility-definitionAbbr"
+msgid "definition"
+msgstr ""
+
+#: accessibility-textareaAbbr
+msgid "txtarea"
+msgstr ""
+
+#. # Number of columns within the table.
+#. # LOCALIZATION NOTE: "c" is the braille abbreviation for "Column". (count) is
+#. # the number of columns in the table. Expanded examples would read "1c", "4c"
+#: accessibility-tblColumnInfoAbbr
+msgctxt "accessibility-tblColumnInfoAbbr"
+msgid "{[ plural(count) ]}"
+msgstr "{[ plural(count) ]}"
+
+#: accessibility-tblColumnInfoAbbr[one]
+msgctxt "accessibility-tblColumnInfoAbbr[one]"
+msgid "{{count}}c"
+msgstr "{{count}}c"
+
+#: accessibility-tblColumnInfoAbbr[two]
+msgctxt "accessibility-tblColumnInfoAbbr[two]"
+msgid "{{count}}c"
+msgstr "{{count}}c"
+
+#: accessibility-tblColumnInfoAbbr[few]
+msgctxt "accessibility-tblColumnInfoAbbr[few]"
+msgid "{{count}}c"
+msgstr "{{count}}c"
+
+#: accessibility-tblColumnInfoAbbr[many]
+msgctxt "accessibility-tblColumnInfoAbbr[many]"
+msgid "{{count}}c"
+msgstr "{{count}}c"
+
+#: accessibility-tblColumnInfoAbbr[other]
+msgctxt "accessibility-tblColumnInfoAbbr[other]"
+msgid "{{count}}c"
+msgstr "{{count}}c"
+
+#. # Number of rows within the table or grid.
+#. # LOCALIZATION NOTE: "r" is the braille abbreviation for "Row". (count) is the
+#. # number of rows in the table. Expanded examples would read "1r", "4r"
+#: accessibility-tblRowInfoAbbr
+msgctxt "accessibility-tblRowInfoAbbr"
+msgid "{[ plural(count) ]}"
+msgstr "{[ plural(count) ]}"
+
+#: accessibility-tblRowInfoAbbr[one]
+msgctxt "accessibility-tblRowInfoAbbr[one]"
+msgid "{{count}}r"
+msgstr "{{count}}r"
+
+#: accessibility-tblRowInfoAbbr[two]
+msgctxt "accessibility-tblRowInfoAbbr[two]"
+msgid "{{count}}r"
+msgstr "{{count}}r"
+
+#: accessibility-tblRowInfoAbbr[few]
+msgctxt "accessibility-tblRowInfoAbbr[few]"
+msgid "{{count}}r"
+msgstr "{{count}}r"
+
+#: accessibility-tblRowInfoAbbr[many]
+msgctxt "accessibility-tblRowInfoAbbr[many]"
+msgid "{{count}}r"
+msgstr "{{count}}r"
+
+#: accessibility-tblRowInfoAbbr[other]
+msgctxt "accessibility-tblRowInfoAbbr[other]"
+msgid "{{count}}r"
+msgstr "{{count}}r"
+
+#. # Table cell column and row information.
+#. # LOCALIZATION NOTE: "c" and "r" are the braille abbreviations for "Column" and
+#. # "Row". (0) is the cell column index. (1) is the cell row index. An expanded
+#. # example would read "c2r4"
+#: accessibility-cellInfoAbbr
+msgid "c{{0}}r{{1}}"
+msgstr "c{{0}}r{{1}}"
+
+#. # LOCALIZATION NOTE: "(x)" is a braille abbreviation for checked
+#: accessibility-stateCheckedAbbr
+msgctxt "accessibility-stateCheckedAbbr"
+msgid "(x)"
+msgstr "(x)"
+
+#. # LOCALIZATION NOTE: "( )" is a braille abbreviation for unchecked
+#: accessibility-stateUncheckedAbbr
+msgctxt "accessibility-stateUncheckedAbbr"
+msgid "( )"
+msgstr "( )"
+
+#. # LOCALIZATION NOTE: "(x)" is a braille abbreviation for pressed
+#: accessibility-statePressedAbbr
+msgctxt "accessibility-statePressedAbbr"
+msgid "(x)"
+msgstr "(x)"
+
+#. # LOCALIZATION NOTE: "( )" is a braille abbreviation for unpressed
+#: accessibility-stateUnpressedAbbr
+msgctxt "accessibility-stateUnpressedAbbr"
+msgid "( )"
+msgstr "( )"
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Errors
@@ -12845,11 +14550,11 @@ msgstr "Aitheantas soghluaiste"
 #. # Options when typing a phone number
 #: addPhoneNumber
 msgid "Or add your phone number"
-msgstr "Nó cuir d'uimhir theileafóin leis"
+msgstr "Nó cuir d'uimhir ghutháin leis"
 
 #: selectPhoneNumber
 msgid "Or select a phone number from the list"
-msgstr "Nó roghnaigh uimhir theileafóin ón liosta"
+msgstr "Nó roghnaigh uimhir ghutháin ón liosta"
 
 #: help
 msgid "Help"
@@ -12858,10 +14563,6 @@ msgstr "Cabhair"
 #: noNetwork
 msgid "No network"
 msgstr "Gan líonra"
-
-#: roaming
-msgid "{{operator}} (Roaming)"
-msgstr "{{operator}} (Fánaíocht)"
 
 #: operator-info
 msgid "{{carrier}} {{region}}"
@@ -13274,19 +14975,6 @@ msgstr "Atosaigh"
 msgid "Power off"
 msgstr "Múch"
 
-#. # screen reader
-#: enableScreenReaderSteps
-msgid ""
-"To enable screen reader, press volume up then volume down buttons three more "
-"times"
-msgstr ""
-
-#: disableScreenReaderSteps
-msgid ""
-"To disable screen reader, press volume up then volume down buttons three more "
-"times"
-msgstr ""
-
 #. # cards view
 #: no-recent-apps
 msgid "No recent apps"
@@ -13598,8 +15286,12 @@ msgstr "Nuashonrú an chórais"
 msgid "System Update Ready"
 msgstr "Tá Nuashonrú Réidh"
 
-#: systemUpdateLowBattery
-msgid "You need at least 50% battery level to install the update."
+#. # LOCALIZATION NOTE (systemUpdateLowBatteryThreshold): {{ threshold }} will be
+#. # replaced at runtime by the minimum level of the battery needed to update,
+#. # resulting for example in "You need at least 40% battery level to install the
+#. # update."
+#: systemUpdateLowBatteryThreshold
+msgid "You need at least {{ threshold }}% battery level to install the update."
 msgstr ""
 
 #: required
@@ -13646,6 +15338,12 @@ msgstr ""
 "fáil. Nuair a úsáideann tú ceangal sonraí, seans go gcuirfear bac ar ghlaonna "
 "agus beidh táille bhreise i gceist."
 
+#: downloadUpdatesVia2GForbidden2
+msgid ""
+"Downloading updates is not possible on slow connections (2G). Please connect "
+"via Wi-Fi or 3G (if available) and try again."
+msgstr ""
+
 #. # screenshots
 #: screenshotSaved
 msgid "Screenshot saved to Gallery"
@@ -13658,6 +15356,15 @@ msgstr "Níorbh fhéidir an ghabháil scáileáin a shábháil"
 #: screenshotSDCardInUse
 msgid "Memory card is in use"
 msgstr "Tá an cárta cuimhne in úsáid"
+
+#. # logshake
+#: logsSaved
+msgid "Logs saved to storage"
+msgstr ""
+
+#: logsFailed
+msgid "The logs could not be saved"
+msgstr ""
 
 #. # lock screen
 #: emergency-call-button
@@ -13679,6 +15386,10 @@ msgstr "Díghlasáil"
 #: panel-passcode.ariaLabel
 msgid "Passcode panel"
 msgstr "Painéal an chóid fhaire"
+
+#: lockscreen-sim-id
+msgid "SIM {{ n }}"
+msgstr ""
 
 #: http-authentication-message
 msgid ""
@@ -14336,8 +16047,13 @@ msgid "Emergency warning!"
 msgstr "Rabhadh éigeandála!"
 
 #. # ICC / STK (= SIM Toolkit)
-#: icc-message-title
-msgid "Operator message from SIM {{id}}"
+#: icc-message-maintitle
+msgid "Operator message"
+msgstr ""
+
+#: icc-message-subtitle
+msgctxt "icc-message-subtitle"
+msgid "SIM {{id}}"
 msgstr ""
 
 #: icc-confirmCall-defaultmessage
@@ -14352,10 +16068,15 @@ msgstr "Teachtaireacht á seoladh"
 msgid "Send message?"
 msgstr "Seol an teachtaireacht?"
 
-#. # LOCALIZATION NOTE: (icc-inputbox-title) = title of SIM Toolkit input dialog panels
-#: icc-inputbox-title
-msgid "STK Query from SIM {{id}}"
-msgstr "Iarratas STK ó SIM {{id}}"
+#. # LOCALIZATION NOTE: (icc-inputbox-[main|sub]title) = title of SIM Toolkit input dialog panels
+#: icc-inputbox-maintitle
+msgid "STK Query"
+msgstr ""
+
+#: icc-inputbox-subtitle
+msgctxt "icc-inputbox-subtitle"
+msgid "SIM {{id}}"
+msgstr ""
 
 #. # CDMA emergency callback mode
 #: emergency-callback-mode
@@ -14419,12 +16140,12 @@ msgstr "{{percentage}}% - {{name}}"
 #: search-or-enter-address
 msgctxt "search-or-enter-address"
 msgid "Search or enter address"
-msgstr "Cuardaigh nó cuir seoladh isteach"
+msgstr "Cuardach nó seoladh Gréasáin"
 
 #: search-or-enter-address.placeholder
 msgctxt "search-or-enter-address.placeholder"
 msgid "Search or enter address"
-msgstr "Cuardaigh nó cuir seoladh isteach"
+msgstr "Cuardach nó seoladh Gréasáin"
 
 #. # Hotspot
 #: noSIMCardInHotspot
@@ -14442,6 +16163,23 @@ msgstr "Cuir nasc leis an scáileán baile"
 #: share-link
 msgid "Share link"
 msgstr "Comhroinn nasc"
+
+#: share-image
+msgid "Share Image"
+msgstr ""
+
+#: share-video
+msgid "Share Video"
+msgstr ""
+
+#: share-audio
+msgid "Share Audio"
+msgstr ""
+
+#. # Context menu options
+#: homescreen-settings
+msgid "Homescreen Settings"
+msgstr ""
 
 #. # Prompt that appears when a user tries to stop a download.
 #: stop-download-title gaia-grid-stop-download-title
@@ -14492,10 +16230,6 @@ msgstr "Fan nóiméad; bunachar sonraí na bhfíseán á nuashonrú."
 #: confirm-delete
 msgid "Are you sure you want to delete:"
 msgstr "An bhfuil tú cinnte gur mhaith leat é seo a scriosadh:"
-
-#: delete-video.label
-msgid "Delete Video?"
-msgstr "Scrios an Físeán?"
 
 #: pick-title
 msgid "Select a video"
@@ -14575,10 +16309,6 @@ msgstr "Sábháil"
 msgid "Finish"
 msgstr "Críochnaigh"
 
-#: sim
-msgid "SIM {{id}}"
-msgstr "SIM {{id}}"
-
 #: this-message-has-expired
 msgid "This message has expired"
 msgstr "Chuaigh an teachtaireacht seo as feidhm"
@@ -14652,10 +16382,6 @@ msgstr "Brabhsálaí"
 #: browserBrandFullName
 msgid "Mozilla Web Browser"
 msgstr "Brabhsálaí Mozilla"
-
-#: collection-categoryId-242
-msgid "Images"
-msgstr "Íomhánna"
 
 #: collection-categoryId-244
 msgid "Tech"
@@ -15529,8 +17255,18 @@ msgid "%I:%M:%S %p"
 msgstr "%I:%M:%S %p"
 
 #: shortTimeFormat
+msgctxt "shortTimeFormat"
 msgid "%I:%M %p"
-msgstr "%I:%M %p"
+msgstr ""
+
+#: shortTimeFormat12
+msgctxt "shortTimeFormat12"
+msgid "%I:%M %p"
+msgstr ""
+
+#: shortTimeFormat24
+msgid "%H:%M"
+msgstr ""
 
 #: shortDateTimeFormat
 msgid "%x %I:%M %p"
@@ -15801,6 +17537,17 @@ msgctxt "cancel_downloaded_file"
 msgid "Cancel"
 msgstr "Cealaigh"
 
+#. # Prompt that appears when removing an app
+#: gaia-grid-unrecoverable-error-title
+msgid "Remove Application"
+msgstr ""
+
+#: gaia-grid-unrecoverable-error-body
+msgid ""
+"Cannot install application due to an unrecoverable error. Please try "
+"downloading again. The application will be removed."
+msgstr ""
+
 #: import
 msgid "Import"
 msgstr "Iompórtáil"
@@ -15808,12 +17555,12 @@ msgstr "Iompórtáil"
 #: fbFriends
 msgctxt "fbFriends"
 msgid "Facebook Friends"
-msgstr "Cairde Facebook"
+msgstr "Cairde FB"
 
 #: facebook-serviceName
 msgctxt "facebook-serviceName"
 msgid "Facebook Friends"
-msgstr "Cairde Facebook"
+msgstr "Cairde FB"
 
 #: viewAll
 msgid "View All Facebook Friends"
@@ -15861,6 +17608,10 @@ msgctxt "fbFriendsFound"
 msgid "{[ plural(numFriends) ]}"
 msgstr "{[ plural(numFriends) ]}"
 
+#: fbNoFriends
+msgid "No contacts available to import"
+msgstr ""
+
 #: fbFriendsFound[zero]
 msgid "All your friends are imported"
 msgstr "Iompórtáladh do chairde go léir"
@@ -15900,7 +17651,7 @@ msgstr "{{current}}/{{total}}"
 
 #: progressFB3UpdateTitle
 msgid "Updating friends in Contacts"
-msgstr "Cairde á nuashonrú i dTeagmhálacha"
+msgstr "Cairde á nuashonrú i dTeagmhálaithe"
 
 #. # Message
 #: message2
@@ -15910,7 +17661,7 @@ msgstr "Seans go dtógfaidh sé seo cúpla nóiméad"
 
 #: messageLinking
 msgid "Please hold on. We are linking your friend and your contact."
-msgstr "Fan nóiméad... an cara á nascadh le do theagmháil."
+msgstr "Fan nóiméad... an cara á nascadh le do theagmhálaí."
 
 #. # Errors
 #: error1
@@ -15934,7 +17685,7 @@ msgstr "cairde á bhfáil"
 
 #: errorLinking
 msgid "linking contact"
-msgstr "teagmháil á nascadh"
+msgstr "teagmhálaí á nascadh"
 
 #. # Timeouts
 #: timeout1
@@ -15958,7 +17709,7 @@ msgstr "cairde á bhfáil"
 
 #: timeoutLinking
 msgid "linking contacts"
-msgstr "teagmháil á nascadh"
+msgstr "teagmhálaithe á nascadh"
 
 #. # Wait
 #: wait1
@@ -15995,7 +17746,7 @@ msgstr "Gan ceangal Idirlín"
 #: connectionLostMsg
 msgid "Friends’ photos will not be added to your contacts. Continue anyway?"
 msgstr ""
-"Ní chuirfear grianghraif de do chairde le do theagmhálacha. Lean ar aghaidh "
+"Ní chuirfear grianghraif de do chairde le do theagmhálaithe. Lean ar aghaidh "
 "mar sin féin?"
 
 #: yesOption
@@ -16084,24 +17835,13 @@ msgstr "Seisiún neamhbhailí Facebook. Logáil isteach, le do thoil."
 msgid "There was an error synchronizing your friend’s data"
 msgstr "Tharla earráid agus sonraí do chairde á sioncrónú"
 
-#. # Prompt that appears when removing an app
-#: gaia-grid-unrecoverable-error-title
-msgid "Remove Application"
-msgstr ""
-
-#: gaia-grid-unrecoverable-error-body
-msgid ""
-"Cannot install application due to an unrecoverable error. Please try "
-"downloading again. The application will be removed."
-msgstr ""
-
 #: noSimMsg
 msgid "To import contacts insert or unlock your SIM card"
-msgstr "Ionsáigh nó díghlasáil do chárta SIM chun teagmhálacha a iompórtáil"
+msgstr "Ionsáigh nó díghlasáil do chárta SIM chun teagmhálaithe a iompórtáil"
 
 #: noMemoryCardMsg
 msgid "To import contacts insert a memory card"
-msgstr "Chun teagmhálacha a iompórtáil, cuir cárta cuimhne isteach"
+msgstr "Chun teagmhálaithe a iompórtáil, cuir cárta cuimhne isteach"
 
 #: noConnection11
 msgid "To import Facebook friends or contacts connect to Wi-Fi or data network"
@@ -16110,11 +17850,11 @@ msgstr "Ceangail le Wi-Fi nó líonra eile chun cairde ó Facebook a iompórtái
 #. # SIM import
 #: simContacts-import
 msgid "Import SIM contacts"
-msgstr "Iompórtáil teagmhálacha SIM"
+msgstr "Iompórtáil teagmhálaithe SIM"
 
 #: simContacts-importing
 msgid "Importing SIM contacts…"
-msgstr "Teagmhálacha SIM á nIompórtáil…"
+msgstr "Teagmhálaithe SIM á nIompórtáil…"
 
 #: simContacts-reading
 msgid "Reading from SIM card…"
@@ -16122,7 +17862,7 @@ msgstr "Cárta SIM á léamh…"
 
 #: simContacts-error
 msgid "Could not import contacts from SIM"
-msgstr "Níorbh fhéidir teagmhálacha a iompórtáil ón chárta SIM"
+msgstr "Níorbh fhéidir teagmhálaithe a iompórtáil ón chárta SIM"
 
 #: simContacts-imported3
 msgctxt "simContacts-imported3"
@@ -16131,41 +17871,41 @@ msgstr "{[ plural(n) ]}"
 
 #: simContacts-imported3[zero]
 msgid "No contacts detected on SIM to import"
-msgstr "Níl aon teagmhálacha le hiompórtáil ar an SIM"
+msgstr "Níl aon teagmhálaithe le hiompórtáil ar an SIM"
 
 #: simContacts-imported3[one]
 msgctxt "simContacts-imported3[one]"
 msgid "Imported one contact"
-msgstr "Iompórtáladh teagmháil amháin"
+msgstr "Iompórtáladh teagmhálaí amháin"
 
 #: simContacts-imported3[two]
 msgctxt "simContacts-imported3[two]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
+msgstr "Iompórtáladh {{n}} theagmhálaí"
 
 #: simContacts-imported3[few]
 msgctxt "simContacts-imported3[few]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
+msgstr "Iompórtáladh {{n}} theagmhálaí"
 
 #: simContacts-imported3[many]
 msgctxt "simContacts-imported3[many]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} dteagmháil"
+msgstr "Iompórtáladh {{n}} dteagmhálaí"
 
 #: simContacts-imported3[other]
 msgctxt "simContacts-imported3[other]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} teagmháil"
+msgstr "Iompórtáladh {{n}} teagmhálaí"
 
 #. # SD Card import
 #: memoryCardContacts-import
 msgid "Import contacts from memory card"
-msgstr "Iompórtáil teagmhálacha ó chárta cuimhne"
+msgstr "Iompórtáil teagmhálaithe ó chárta cuimhne"
 
 #: memoryCardContacts-importing
 msgid "Importing contacts from memory card…"
-msgstr "Teagmhálacha á n-iompórtáil ó chárta cuimhne…"
+msgstr "Teagmhálaithe á n-iompórtáil ó chárta cuimhne…"
 
 #: memoryCardContacts-reading
 msgid "Reading from memory card…"
@@ -16173,7 +17913,7 @@ msgstr "Cárta cuimhne á léamh…"
 
 #: memoryCardContacts-error
 msgid "Could not import contacts from memory card"
-msgstr "Níorbh fhéidir teagmhálacha a iompórtáil ón chárta cuimhne"
+msgstr "Níorbh fhéidir teagmhálaithe a iompórtáil ón chárta cuimhne"
 
 #: memoryCardContacts-imported3
 msgctxt "memoryCardContacts-imported3"
@@ -16182,32 +17922,32 @@ msgstr "{[ plural(n) ]}"
 
 #: memoryCardContacts-imported3[zero]
 msgid "No contacts detected on memory card to import"
-msgstr "Níor aimsíodh aon teagmhálacha ar an gcárta cuimhne le hiompórtáil"
+msgstr "Níor aimsíodh aon teagmhálaithe ar an gcárta cuimhne le hiompórtáil"
 
 #: memoryCardContacts-imported3[one]
 msgctxt "memoryCardContacts-imported3[one]"
 msgid "Imported one contact"
-msgstr "Iompórtáladh teagmháil amháin"
+msgstr "Iompórtáladh teagmhálaí amháin"
 
 #: memoryCardContacts-imported3[two]
 msgctxt "memoryCardContacts-imported3[two]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
+msgstr "Iompórtáladh {{n}} theagmhálaí"
 
 #: memoryCardContacts-imported3[few]
 msgctxt "memoryCardContacts-imported3[few]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} theagmháil"
+msgstr "Iompórtáladh {{n}} theagmhálaí"
 
 #: memoryCardContacts-imported3[many]
 msgctxt "memoryCardContacts-imported3[many]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} dteagmháil"
+msgstr "Iompórtáladh {{n}} dteagmhálaí"
 
 #: memoryCardContacts-imported3[other]
 msgctxt "memoryCardContacts-imported3[other]"
 msgid "Imported {{n}} contacts"
-msgstr "Iompórtáladh {{n}} teagmháil"
+msgstr "Iompórtáladh {{n}} teagmhálaí"
 
 #: facebook-import-msg
 msgid "{[ plural(imported) ]}"
@@ -16247,27 +17987,35 @@ msgstr ""
 
 #: contactsMerged[one]
 msgid "One duplicated contact merged"
-msgstr "Cumascadh teagmháil amháin"
+msgstr "Cumascadh teagmhálaí amháin"
 
 #: contactsMerged[two]
 msgctxt "contactsMerged[two]"
 msgid "{{numDups}} contacts merged"
-msgstr "Cumascadh {{numDups}} theagmháil"
+msgstr "Cumascadh {{numDups}} theagmhálaí"
 
 #: contactsMerged[few]
 msgctxt "contactsMerged[few]"
 msgid "{{numDups}} contacts merged"
-msgstr "Cumascadh {{numDups}} theagmháil"
+msgstr "Cumascadh {{numDups}} theagmhálaí"
 
 #: contactsMerged[many]
 msgctxt "contactsMerged[many]"
 msgid "{{numDups}} contacts merged"
-msgstr "Cumascadh {{numDups}} dteagmháil"
+msgstr "Cumascadh {{numDups}} dteagmhálaí"
 
 #: contactsMerged[other]
 msgctxt "contactsMerged[other]"
 msgid "{{numDups}} contacts merged"
-msgstr "Cumascadh {{numDups}} teagmháil"
+msgstr "Cumascadh {{numDups}} teagmhálaí"
+
+#: asterisk.ariaLabel
+msgid "Asterisk"
+msgstr "Réiltín"
+
+#: hashSign.ariaLabel
+msgid "Hash sign"
+msgstr "Comhartha hais"
 
 #: title-app
 msgid "App Permission"
@@ -16283,11 +18031,11 @@ msgstr "Roghnaigh Ceamara"
 
 #: perm-contacts-appRequest
 msgid "{{app}} would like to access your contact list."
-msgstr "Tá {{app}} ag iarraidh do liosta teagmhálacha a rochtain."
+msgstr "Tá {{app}} ag iarraidh do liosta teagmhálaithe a rochtain."
 
 #: perm-contacts-webRequest
 msgid "{{site}} would like to access your contact list."
-msgstr "Tá {{site}} ag iarraidh do liosta teagmhálacha a rochtain."
+msgstr "Tá {{site}} ag iarraidh do liosta teagmhálaithe a rochtain."
 
 #: perm-desktop-notification-appRequest
 msgid "{{app}} would like to display notifications."
@@ -16420,6 +18168,28 @@ msgstr "Roghnaigh ceamara le haghaidh {{site}}."
 msgid "Mobile Identity"
 msgstr ""
 
+#. # Field labels
+#: label
+msgid "Label"
+msgstr "Lipéad"
+
+#: customTag.placeholder
+msgid "Custom tag"
+msgstr "Clib shaincheaptha"
+
+#. # Note: For localizers. This tag indicates the current address
+#: current
+msgid "Current"
+msgstr "Reatha"
+
+#. # LOCALIZATION NOTE(itemWithLabel): Parameters in this string will be replaced
+#. # at run-time: {{label}} is the label associated to phone number or email,
+#. # item is the number/email itself. Examples for English: "Home, +123456789" or
+#. # "Work, foo@example.com".
+#: itemWithLabel
+msgid "{{label}}, {{item}}"
+msgstr "{{label}}, {{item}}"
+
 #. # SIM list
 #: sim-picker-dial-via-with-number
 msgid "Dial {{ phoneNumber }} via"
@@ -16489,6 +18259,11 @@ msgstr "Clogra Gaoithe"
 msgid "Bit Bounce"
 msgstr ""
 
+#: ringer_firefox
+msgctxt "ringer_firefox"
+msgid "{{brandShortName}}"
+msgstr ""
+
 #: notifier_minimal_bands
 msgid "Minimal Bands"
 msgstr ""
@@ -16531,6 +18306,11 @@ msgstr ""
 
 #: notifier_bell_extd
 msgid "Bell Extended"
+msgstr ""
+
+#: notifier_firefox
+msgctxt "notifier_firefox"
+msgid "{{brandShortName}}"
 msgstr ""
 
 #: tzRegion-Africa
