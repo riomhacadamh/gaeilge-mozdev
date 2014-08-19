@@ -72,6 +72,8 @@ bash sedtweaks "${2}"
 if echo "${1}" | egrep '^gaia' > /dev/null
 then
 	cp -Rf ${IRISHJAR}/* ${HOME}/seal/gaia/ga-IE
+	# this is because of a stupid bug in po2moz... see newrelease-aurora
+	find ${HOME}/seal/gaia/ga-IE -name '*ddevice.properties' | while read x; do NEWNAME=`echo $x | sed 's/ddevice/.device/'`; mv $x $NEWNAME; done
 else
 	mv -f "${IRISHJAR}" "${PACK}"
 	cp -Rf ${PACK} "${CVSFULLPATH}"

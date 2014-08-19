@@ -53,6 +53,13 @@ cp -Rf other-licenses/branding/thunderbird/locales/en-US ${ANSEO}/other-licenses
 
 cd ${HOME}/seal/gaia
 cp -Rf en-US/* ${ANSEO}/gaia-en-US
+# Bug in po2moz because of full stops in file name?
+find ${ANSEO}/gaia-en-US -name '*.properties' | egrep '[.][^/]*[.][^/]*$' |
+while read x
+do
+	NEWNAME=`echo $x | sed 's/.device.properties$/ddevice.properties/'`
+	mv $x $NEWNAME
+done
 # old bug, now fixed I think
 #sed -i "s/^deny=\(Don.*\)$/dontallow=\1/" ${ANSEO}/gaia-en-US/apps/system/system.properties
 cd ${ANSEO}
