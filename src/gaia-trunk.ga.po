@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-02 08:46-0500\n"
+"POT-Creation-Date: 2014-09-12 16:46-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -11,8 +11,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. #-#-#-#-#  appsbluetoothbluetooth.properties.po (firefox)  #-#-#-#-#
 #. # Bluetooth :: Settings
 #. # Bluetooth :: Devices Panel (reuse the string is partially)
+#. # LOCALIZATION NOTE (bluetooth-header): if you leave the original
+#. # en-US value "{{bluetooth}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID "bluetooth".
+#. # If you need to adapt your localization to the reduced space available
+#. # in headers, you can use a shorter string here.
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (bluetooth-header): if you leave the original
 #. # en-US value "{{bluetooth}}" in the following string, the localization
 #. # will be automatically picked from the existing string with ID "bluetooth".
@@ -116,9 +123,17 @@ msgstr "Ag ceangal…"
 msgid "Connected"
 msgstr "Ceangailte"
 
+#: device-status-connected-phone device-status-connected-device
+msgid "Connected to phone audio"
+msgstr "Ceangailte le fuaim an ghutháin"
+
 #: device-status-connected-media
 msgid "Connected to media audio"
 msgstr "Ceangailte le fuaim na meán"
+
+#: device-status-connected-phone-media device-status-connected-device-media
+msgid "Connected to phone/media audio"
+msgstr "Ceangailte le fuaim ghutháin/meán"
 
 #: device-option-unpair
 msgid "Unpair"
@@ -160,6 +175,15 @@ msgstr "Tabhair ainm nua do mo ghléas"
 #: unnamed-device unknown-device
 msgid "Unknown device"
 msgstr "Gléas anaithnid"
+
+#. #-#-#-#-#  appssettingsdevice_typephonesettingsddevice.properties.po (firefox)  #-#-#-#-#
+#. # Localization note: strings in this file refer to a specific type of device
+#. # (phone, tablet, etc.). Try to be consistent across files for each type of
+#. # device, but don't use a simple copy and paste: string ID is the same, but
+#. # the device type is different in each file.
+#: change-phone-name change-device-name
+msgid "Change phone name"
+msgstr "Athraigh ainm an ghutháin"
 
 #: change-phone-name-desc
 msgid "Change the name of your device as it appears in your computer"
@@ -227,8 +251,8 @@ msgstr "Tá Bluetooth díchumasaithe"
 msgid "Do you want to turn Bluetooth on?"
 msgstr "An bhfuil fonn ort Bluetooth a thosú?"
 
-#: cancel cancel-action curtainCancel cancel-button gaia-grid-cancel
-#: gaia-menu-cancel voicemailNoNumberCancel
+#: cancel curtainCancel cancel-button gaia-grid-cancel gaia-menu-cancel
+#: voicemailNoNumberCancel
 msgid "Cancel"
 msgstr "Cealaigh"
 
@@ -328,88 +352,29 @@ msgstr "Iarratas Bluetooth"
 msgid "Bluetooth pairing request expired. Try to pair again."
 msgstr "Chuaigh an t-iarratas péireála Bluetooth in éag. Déan iarracht eile."
 
-#. # Localization note: strings in this file refer to a specific type of device
-#. # (phone, tablet, etc.). Try to be consistent across files for each type of
-#. # device, but don't use a simple copy and paste: string ID is the same, but
-#. # the device type is different in each file.
-#: change-device-name
-msgid "Change phone name"
-msgstr "Athraigh ainm an ghutháin"
-
-#: device-status-connected-device
-msgid "Connected to phone audio"
-msgstr "Ceangailte le fuaim an ghutháin"
-
-#: device-status-connected-device-media
-msgid "Connected to phone/media audio"
-msgstr "Ceangailte le fuaim ghutháin/meán"
-
-#. # Localization note: strings in this file refer to a specific type of device
-#. # (phone, tablet, etc.). Try to be consistent across files for each type of
-#. # device, but don't use a simple copy and paste: string ID is the same, but
-#. # the device type is different in each file.
-#: change-device-name
-msgid "Change tablet name"
-msgstr "Athraigh ainm an taibléid"
-
-#: device-status-connected-device
-msgid "Connected to tablet audio"
-msgstr "Ceangailte le fuaim an táibléid"
-
-#: device-status-connected-device-media
-msgid "Connected to tablet/media audio"
-msgstr "Ceangailte le fuaim tháibléid/meán"
-
-#. # Localization note: strings in this file refer to a specific type of device
-#. # (phone, tablet, etc.). Try to be consistent across files for each type of
-#. # device, but don't use a simple copy and paste: string ID is the same, but
-#. # the device type is different in each file.
-#: change-device-name
-msgid "Change TV name"
-msgstr "Athraigh ainm an teilifíseáin"
-
-#: device-status-connected-device
-msgid "Connected to TV audio"
-msgstr "Ceangailte le fuaim an teilifíseáin"
-
-#: device-status-connected-device-media
-msgid "Connected to TV/media audio"
-msgstr "Ceangailte le fuaim teilifíseáin/meán"
-
 #: description
 msgid "Gaia Bluetooth"
 msgstr "Bluetooth Gaia"
 
+#. #-#-#-#-#  appsbookmarkbookmark.properties.po (firefox)  #-#-#-#-#
 #. # Add and update bookmark UIs
-#: add-bookmark-header
-msgid "Add link"
-msgstr "Cuir nasc leis"
+#: add-to-home-screen-title add-to-home-screen
+msgid "Add to home screen"
+msgstr "Cuir leis an scáileán baile"
 
-#: edit-bookmark-header
-msgid "Edit link"
-msgstr "Cuir nasc in eagar"
+#: edit-bookmark-title
+msgid "Edit bookmark"
+msgstr "Cuir an leabharmharc in eagar"
 
-#: added-to-home-screen
-msgid "Added to Home Screen"
-msgstr "Curtha leis an Scáileán Baile"
+#: added-to-home-screen-message
+msgid "Added to home screen"
+msgstr "Curtha leis an scáileán baile"
 
 #: updated-bookmark
 msgid "Updated bookmark"
 msgstr "Leabharmharc nuashonraithe"
 
-#: website-name edit-dialog-name
-msgid "Website name"
-msgstr "Ainm an tsuímh"
-
-#: address legendAddress edit-dialog-url
-msgid "Address"
-msgstr "Seoladh"
-
-#: add-action add-to-home-screen add-to-home-screen.label
-msgid "Add to Home Screen"
-msgstr "Cuir leis an Scáileán Baile"
-
-#: done-action done edit-done settings-done edit-dialog-done fxa-done
+#: done-action done settings-done edit-dialog-done fxa-done edit-done
 #: done-search
 msgid "Done"
 msgstr "Déanta"
@@ -628,9 +593,9 @@ msgstr "Cuir leabharmharc in eagar"
 msgid "Page title"
 msgstr "Teideal an leathanaigh"
 
-#: add-to-home-screen
-msgid "Add to home screen"
-msgstr "Cuir leis an scáileán baile"
+#: address legendAddress edit-dialog-url
+msgid "Address"
+msgstr "Seoladh"
 
 #. #-#-#-#-#  appsbrowserbrowser.properties.po (firefox)  #-#-#-#-#
 #. # HTTP Authentication dialog
@@ -2345,11 +2310,20 @@ msgstr "Ceangail leis an Idirlíon chun tuilleadh Bailiúchán Cliste a fháil"
 msgid "Add to top of collection"
 msgstr "Cuir le barr an bhailiúcháin é"
 
+#: add-to-home-screen add-to-home-screen.label
+msgid "Add to Home Screen"
+msgstr "Cuir leis an Scáileán Baile"
+
 #: offline-webresults
 msgid "Connect to the internet to get apps for {{collectionName}}"
 msgstr ""
 "Ceangail leis an Idirlíon chun aipeanna sa bhailiúchán {{collectionName}} a "
 "fháil"
+
+#: edit-done
+msgctxt "edit-done"
+msgid "Done"
+msgstr "Déanta"
 
 #. #-#-#-#-#  appscollectioncollection.properties.po (firefox)  #-#-#-#-#
 #. # delete-collection
@@ -2366,6 +2340,16 @@ msgstr "Scrios {{name}}"
 #: delete-body
 msgid "{{name}} and all of its data will be deleted."
 msgstr "Scriosfar {{name}} agus na sonraí a bhaineann leis."
+
+#. # update-collection
+#: edit-collection-header
+msgid "Edit collection"
+msgstr "Cuir an bailiúchán in eagar"
+
+#: done
+msgctxt "done"
+msgid "Done"
+msgstr "Déanta"
 
 #: name
 msgid "Smart Collections"
@@ -3423,6 +3407,11 @@ msgstr "Eochaircheap"
 msgid "Make call"
 msgstr "Cuir glaoch"
 
+#: info-missed
+msgctxt "info-missed"
+msgid "Missed"
+msgstr "Caillte"
+
 #: missed
 msgctxt "missed"
 msgid "Missed"
@@ -4106,8 +4095,8 @@ msgid ""
 "FDN (Fixed Dialing Numbers) is activated and the following number is not in "
 "your FDN list: {{ number }}"
 msgstr ""
-"Tá FDN (Uimhreacha Socraithe Dialaithe) ar siúl ach níl an uimhir seo i do liosta FDN: "
-"{{ number }}"
+"Tá FDN (Uimhreacha Socraithe Dialaithe) ar siúl ach níl an uimhir seo i do "
+"liosta FDN: {{ number }}"
 
 #: voiceMail voiceMailKey.ariaLabel
 msgid "Voicemail"
@@ -4259,7 +4248,8 @@ msgstr "Do Chéad Chuairt ar Úsáid"
 
 #: fte-authed-sim
 msgid "Save money by keeping track of your phone and internet usage."
-msgstr "Sábháil airgead trí thaifead a choinneáil ar d'úsáid gutháin agus Idirlín."
+msgstr ""
+"Sábháil airgead trí thaifead a choinneáil ar d'úsáid gutháin agus Idirlín."
 
 #: fte-nonauthed-sim
 msgid "Save money by keeping track of your internet usage."
@@ -4274,7 +4264,10 @@ msgstr "Eolas soiléir faoin mhéid sonraí atá tú ag úsáid."
 msgid ""
 "Information shown on Usage comes directly from this device. Check with your "
 "mobile service provider for detailed account information."
-msgstr "Is go díreach ón ghléas seo an t-eolas a thaispeánann an aip Úsáid. Téigh i dteagmháil le do sholáthraí seirbhíse soghluaiste le mionsonraí do chuntas a fháil."
+msgstr ""
+"Is go díreach ón ghléas seo an t-eolas a thaispeánann an aip Úsáid. Téigh i "
+"dteagmháil le do sholáthraí seirbhíse soghluaiste le mionsonraí do chuntas a "
+"fháil."
 
 #. # FTE steps
 #: fte-plantype-title
@@ -4370,7 +4363,9 @@ msgstr ""
 
 #: no-coverage-error-message2
 msgid "You need phone coverage to update your balance or top up."
-msgstr "Ní mór seirbhís a bheith agat chun d'iarmhéid a nuashonrú nó do chuntas a bhreisiú."
+msgstr ""
+"Ní mór seirbhís a bheith agat chun d'iarmhéid a nuashonrú nó do chuntas a "
+"bhreisiú."
 
 #: top-up
 msgid "Top Up"
@@ -4700,6 +4695,76 @@ msgstr "Idirlíon"
 msgid "Loading interface data. Please retry in a while."
 msgstr "Sonraí á luchtú. Déan iarracht eile ar ball."
 
+#. # value in the following strings is an amount of data (100 MB, 2 GB...)
+#: data-limit
+msgid "Data Limit ({{value}})"
+msgstr "Teorainn Sonraí ({{value}})"
+
+#: data-available2
+msgctxt "data-available2"
+msgid "{[ plural(value) ]}"
+msgstr "{[ plural(value) ]}"
+
+#: data-available2[zero]
+msgctxt "data-available2[zero]"
+msgid "{{value}} {{unit}} available"
+msgstr "{{value}} {{unit}} ar fáil"
+
+#: data-available2[one]
+msgctxt "data-available2[one]"
+msgid "{{value}} {{unit}} available"
+msgstr "{{value}} {{unit}} ar fáil"
+
+#: data-available2[two]
+msgctxt "data-available2[two]"
+msgid "{{value}} {{unit}} available"
+msgstr "{{value}} {{unit}} ar fáil"
+
+#: data-available2[few]
+msgctxt "data-available2[few]"
+msgid "{{value}} {{unit}} available"
+msgstr "{{value}} {{unit}} ar fáil"
+
+#: data-available2[many]
+msgctxt "data-available2[many]"
+msgid "{{value}} {{unit}} available"
+msgstr "{{value}} {{unit}} ar fáil"
+
+#: data-available2[other]
+msgctxt "data-available2[other]"
+msgid "{{value}} {{unit}} available"
+msgstr "{{value}} {{unit}} ar fáil"
+
+#: over-limit
+msgctxt "over-limit"
+msgid "{[ plural(value) ]}"
+msgstr "{[ plural(value) ]}"
+
+#: over-limit[one]
+msgctxt "over-limit[one]"
+msgid "{{value}} {{unit}} over limit"
+msgstr "{{value}} {{unit}} thar an teorainn"
+
+#: over-limit[two]
+msgctxt "over-limit[two]"
+msgid "{{value}} {{unit}} over limit"
+msgstr "{{value}} {{unit}} thar an teorainn"
+
+#: over-limit[few]
+msgctxt "over-limit[few]"
+msgid "{{value}} {{unit}} over limit"
+msgstr "{{value}} {{unit}} thar an teorainn"
+
+#: over-limit[many]
+msgctxt "over-limit[many]"
+msgid "{{value}} {{unit}} over limit"
+msgstr "{{value}} {{unit}} thar an teorainn"
+
+#: over-limit[other]
+msgctxt "over-limit[other]"
+msgid "{{value}} {{unit}} over limit"
+msgstr "{{value}} {{unit}} thar an teorainn"
+
 #: verbose-chart-date-format
 msgid "{{em-month}} {{monthday-number}}"
 msgstr "{{monthday-number}} {{em-month}}"
@@ -4768,6 +4833,12 @@ msgstr "Chun ríomhphost a sheoladh nó a fháil, caithfidh tú cuntas a shocrú
 #: setup-account-header3
 msgid "New Account"
 msgstr "Cuntas Nua"
+
+#. # LOCALIZATION NOTE (setup-account-enter-password): Shown during account setup
+#. # if the autoconfig process determines a password is needed to complete setup.
+#: setup-account-enter-password
+msgid "Enter Password For:"
+msgstr "Focal faire le haghaidh:"
 
 #. # The placeholder for the display name of the user that will be displayed in the
 #. # account setup screen input box for the display name until they enter any text
@@ -5078,6 +5149,31 @@ msgctxt "setup-gmail-pop3-retry"
 msgid "Retry"
 msgstr "Atriail"
 
+#. # LOCALIZATION NOTE (setup-fix-oauth2-header): The card header for the card that
+#. # asks the user to reauthorize the email account to use an OAuth2 token. This
+#. # may show up from time to time with a GMail account for example, but there are
+#. # other account types besides GMail that could be OAuth2 authorized.
+#: setup-fix-oauth2-header
+msgid "Reauthorize Email"
+msgstr "Athúdaraigh Ríomhphost"
+
+#. # LOCALIZATION NOTE (setup-fix-oauth2-description): Describes that the account
+#. # needs to be reauthorized via OAuth2. The account is shown below this
+#. # description.
+#: setup-fix-oauth2-description
+msgid "Email needs to be reauthorized to access the following account:"
+msgstr ""
+
+#. # LOCALIZATION NOTE (setup-fix-oauth2-reauthorize): The button triggering the
+#. # reauthorization flow for OAuth2-protected account types. This will result in
+#. # a dialog-type browser window opening up and going to the account provider,
+#. # for instance GMail, so that the user can authorize the Email app to continue
+#. # to access the account.
+#: setup-fix-oauth2-reauthorize
+msgctxt "setup-fix-oauth2-reauthorize"
+msgid "Reauthorize"
+msgstr "Athúdaraigh"
+
 #: settings-main-header
 msgid "Mail Settings"
 msgstr "Socruithe Ríomhphoist"
@@ -5154,6 +5250,15 @@ msgstr "Socruithe freastalaí"
 #: settings-account-userpass
 msgid "Username and password"
 msgstr "Ainm úsáideora agus focal faire"
+
+#. # LOCALIZATION NOTE (ssettings-account-useroauth2): Label in the
+#. # "Server settings" sub-section of acccount settings for going to a settings
+#. # card that shows user name and a reauthorize option for an account that was
+#. # configured to use oauth2.
+#: settings-account-useroauth2
+msgctxt "settings-account-useroauth2"
+msgid "Username"
+msgstr "Ainm úsáideora"
 
 #. # LOCALIZATION NOTE (settings-default-signature-2): The default signature
 #. # that the frontend adds in for new accounts
@@ -5344,6 +5449,14 @@ msgstr "Focal faire"
 #: settings-password-empty
 msgid "Password field should not be empty"
 msgstr "Ní cheadaítear focal faire folamh"
+
+#. # LOCALIZATION NOTE (settings-reauth): On the account credentials settings card,
+#. # if the account is an oauth2 account, this is the button label that allows the
+#. # user to reauthorize the email app to access their account via oauth2.
+#: settings-reauth
+msgctxt "settings-reauth"
+msgid "Reauthorize"
+msgstr "Athúdaraigh"
 
 #. # How much email to sync, in smallest unit of days, from the server. Only
 #. # valid for ActiveSync mail servers, not shown for other mail server types
@@ -7131,7 +7244,7 @@ msgstr "WPA-PSK"
 msgid "WPA-EAP"
 msgstr "WPA-EAP"
 
-#: securityOpen open_downloaded_file
+#: securityOpen openCard.ariaLabel open_downloaded_file
 msgid "Open"
 msgstr "Oscail"
 
@@ -7257,7 +7370,7 @@ msgstr ""
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Fxa Intro
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: firefox-accounts firefox-accounts-title
+#: firefox-accounts firefox-accounts-title perm-firefox-accounts
 msgid "Firefox Accounts"
 msgstr "Cuntais Firefox"
 
@@ -7475,9 +7588,17 @@ msgstr "Tabhair turas ar do tháibléad!"
 msgid "Join us for a quick tutorial about your new phone."
 msgstr "Tugaimis turas tapa ar do ghuthán nua."
 
+#: joinTutorialUpdated
+msgid "Join us for a quick tutorial about the updates to your phone!"
+msgstr "Tugaimis turas tapa ar na gnéithe nua ar do ghuthán!"
+
 #: enjoyYourPhone
 msgid "You’re ready to enjoy your new phone."
 msgstr "Tá tú réidh sult a bhaint as do ghuthán nua."
+
+#: enjoyYourPhoneUpdated
+msgid "You’re ready to enjoy your updated phone."
+msgstr "Tá tú réidh sult a bhaint as do ghuthán nuashonraithe."
 
 #: optionsAvailable
 msgid "You can change the language, date/time and Wi-Fi connection in settings."
@@ -7491,16 +7612,6 @@ msgstr "Ar aghaidh linn"
 #: startTour
 msgid "Start tour"
 msgstr "Tosaigh an turas"
-
-#: whatsNew
-msgid "What’s new"
-msgstr "Gach rud nua"
-
-#: updatedSuccessfully
-msgid ""
-"Your phone has updated successfully! Start the tour to find out more about "
-"the new features."
-msgstr "D'éirigh leis an nuashonrú! Tabhair turas ar na gnéithe is déanaí."
 
 #: thatsIt1Tablet-2
 msgid "You can always swipe from the bottom edge to enter home screen."
@@ -7575,13 +7686,11 @@ msgstr "Tapáil deilbhín agus coinnigh síos é chun é a scriosadh nó a bhoga
 msgid "Two fingers swipe up from the bottom edge to trigger card view."
 msgstr "Svaidhpeáil aníos le dhá mhéar chun amharc cárta a oscailt."
 
-#: tutorial-vertical-scroll-tiny
+#: tutorial-vertical-scroll-v2-tiny
 msgid ""
-"Swipe up and down to browse your apps. Tap and hold an icon to move or delete "
-"it."
-msgstr ""
-"Svaidhpeáil anuas is aníos chun aipeanna a bhrabhsáil. Tapáil agus coinnigh "
-"deilbhín síos chun é a bhogadh nó a scriosadh."
+"Swipe up and down to browse your apps and bookmarks. Tap and hold an icon to "
+"delete, move, or edit it."
+msgstr "Svaidhpeáil anuas is aníos chun aipeanna agus leabharmharcanna a bhrabhsáil. Tapáil agus coinnigh deilbhín síos chun é a bhogadh, a scriosadh, nó a chur in eagar."
 
 #: tutorial-notifications-tiny
 msgctxt "tutorial-notifications-tiny"
@@ -7596,6 +7705,16 @@ msgid "Drag from the left edge of your screen to return to recently used apps."
 msgstr ""
 "Svaidhpeáil aniar ó thaobh na láimhe chlé chun filleadh ar na haipeanna is "
 "déanaí."
+
+#: tutorial-rocketbar-tiny
+msgid "Tap on the search box anytime to start a search or go to a website."
+msgstr ""
+
+#: tutorial-bookmarks-migration-tiny
+msgid ""
+"Your bookmarks have been moved to the homescreen. When editing, tap a "
+"bookmark to edit or rename it."
+msgstr ""
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Offline Error Dialog
@@ -8283,6 +8402,10 @@ msgstr "Aimsir"
 msgid "Save to Homescreen"
 msgstr "Sábháil ar an Scáileán Baile"
 
+#: edit-dialog-name
+msgid "Website name"
+msgstr "Ainm an tsuímh"
+
 #: edit-dialog-cancel
 msgctxt "edit-dialog-cancel"
 msgid "Cancel"
@@ -8728,10 +8851,11 @@ msgstr "Áiteanna"
 msgid "Apps"
 msgstr "Aipeanna"
 
-#: suggestions-notice
+#. # LOCALIZATION NOTE Search and Settings are names of applications. In this case, there is a section titled 'Search' within the Settings application.
+#: suggestions-settings-notice
 msgid ""
-"Search suggestions are shown as you type. Go to the Homescreen section of "
-"Settings to change your search preferences."
+"The characters you type are used to show you search suggestions. Go to the "
+"Search section of Settings to change your search preferences."
 msgstr ""
 
 #: offline-message
@@ -8816,10 +8940,6 @@ msgstr "SAMHAIN"
 msgid "DECEMBER"
 msgstr "NOLLAIG"
 
-#. # Localization note: strings in this file refer to a specific type of device
-#. # (phone, tablet, etc.). Try to be consistent across files for each type of
-#. # device, but don't use a simple copy and paste: string ID is the same, but
-#. # the device type is different in each file.
 #: internetSharing-usb-desc
 msgid "Share my phone’s Internet connection with a USB-connected device."
 msgstr "Comhroinn ceangal Idirlín mo ghutháin le gléas atá ceangailte trí USB."
@@ -8895,6 +9015,10 @@ msgstr ""
 #. # (phone, tablet, etc.). Try to be consistent across files for each type of
 #. # device, but don't use a simple copy and paste: string ID is the same, but
 #. # the device type is different in each file.
+#: change-device-name
+msgid "Change tablet name"
+msgstr "Athraigh ainm an taibléid"
+
 #: internetSharing-usb-desc
 msgid "Share my tablet’s Internet connection with a USB-connected device."
 msgstr "Comhroinn ceangal Idirlín mo tháibléid le gléas atá ceangailte trí USB."
@@ -8967,10 +9091,22 @@ msgid ""
 "way you use it."
 msgstr ""
 
+#: device-status-connected-device
+msgid "Connected to tablet audio"
+msgstr "Ceangailte le fuaim an táibléid"
+
+#: device-status-connected-device-media
+msgid "Connected to tablet/media audio"
+msgstr "Ceangailte le fuaim tháibléid/meán"
+
 #. # Localization note: strings in this file refer to a specific type of device
 #. # (phone, tablet, etc.). Try to be consistent across files for each type of
 #. # device, but don't use a simple copy and paste: string ID is the same, but
 #. # the device type is different in each file.
+#: change-device-name
+msgid "Change TV name"
+msgstr "Athraigh ainm an teilifíseáin"
+
 #: internetSharing-usb-desc
 msgid "Share my TV’s Internet connection with a USB-connected device."
 msgstr ""
@@ -9040,6 +9176,14 @@ msgid ""
 "Help us improve {{brandShortName}} by sharing data about your TV and the way "
 "you use it."
 msgstr ""
+
+#: device-status-connected-device
+msgid "Connected to TV audio"
+msgstr "Ceangailte le fuaim an teilifíseáin"
+
+#: device-status-connected-device-media
+msgid "Connected to TV/media audio"
+msgstr "Ceangailte le fuaim teilifíseáin/meán"
 
 #: description
 msgid "Gaia Settings"
@@ -9848,9 +9992,9 @@ msgstr "Cumraigh go huathoibríoch"
 msgid "WAP Push Messages"
 msgstr "Brúfhógraí WAP"
 
-#: wapPush
+#: wapPush perm-wappush
 msgid "WAP Push"
-msgstr "Brúfhógra WAP"
+msgstr "Brúfhógraí WAP"
 
 #: cellBroadcastMessages
 msgid "Cell Broadcast Messages"
@@ -10253,6 +10397,11 @@ msgstr ""
 msgid "Do you want to proceed?"
 msgstr "An bhfuil fonn ort dul ar aghaidh?"
 
+#: reset-apn-warning-title
+msgctxt "reset-apn-warning-title"
+msgid "Reset to Default"
+msgstr "Fill ar Réamhshocruithe"
+
 #: reset-apn-warning-message
 msgid "This resets the settings to default values. This cannot be undone."
 msgstr ""
@@ -10290,12 +10439,13 @@ msgid "Delete"
 msgstr "Scrios"
 
 #: add-apn
-msgid "Add New Apn"
-msgstr "Cuir APN nua leis"
+msgid "Add New APN"
+msgstr "Cuir APN Nua Leis"
 
 #: reset-apn
+msgctxt "reset-apn"
 msgid "Reset to Default"
-msgstr "Fill ar Réamhshocrú"
+msgstr "Fill ar Réamhshocruithe"
 
 #: apnSettings-reset
 msgid "APN settings reset"
@@ -10311,8 +10461,19 @@ msgctxt "bt-status-paired"
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
 
+#: device-status-connecting
+msgctxt "device-status-connecting"
+msgid "Connecting…"
+msgstr "Á Cheangal…"
+
+#: device-status-connected
+msgctxt "device-status-connected"
+msgid "Connected"
+msgstr "Ceangailte"
+
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Connectivity :: NFC
-#: nfc
+#: nfc perm-nfc
 msgid "NFC"
 msgstr "NFC"
 
@@ -10344,8 +10505,9 @@ msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
 #: wifi-hotspot
+msgctxt "wifi-hotspot"
 msgid "Wi-Fi hotspot"
-msgstr "Ball Te Wi-Fi"
+msgstr "Ball te Wi-Fi"
 
 #: wifi-password
 msgctxt "wifi-password"
@@ -10358,6 +10520,7 @@ msgid "Security"
 msgstr "Slándáil"
 
 #: usb-tethering
+msgctxt "usb-tethering"
 msgid "USB tethering"
 msgstr "Teaghránú USB"
 
@@ -10398,7 +10561,7 @@ msgstr "{{hotspotSettings}}"
 msgid "SSID network name"
 msgstr "Ainm an líonra (SSID)"
 
-#: hotspot-open
+#: hotspot-open open-notification
 msgid "open"
 msgstr "oscailte"
 
@@ -10695,7 +10858,7 @@ msgstr "Sonraí"
 
 #: sim-manager-outgoing-data-description
 msgid "Data service network and Marketplace payments"
-msgstr ""
+msgstr "Líonra seirbhíse sonraí agus íocaíochtaí Marketplace"
 
 #: sim-manager-always-ask
 msgid "Always ask"
@@ -10703,7 +10866,7 @@ msgstr "Fiafraigh i gcónaí"
 
 #: cant-disable-simcard-alert
 msgid "At least one SIM should be activated at a time"
-msgstr ""
+msgstr "Ba chóir cárta SIM amháin a bheith gníomhachtaithe i gcónaí"
 
 #: disable-simcard-confirm
 msgid ""
@@ -11471,19 +11634,19 @@ msgstr ""
 "mar shampla earraí i dtrálaí siopadóireachta, eolas faoi do shuíomh, nó "
 "dintiúir logála isteach."
 
-#. # Security :: Browser Privacy
-#: browserPrivacy
-msgid "Browser Privacy"
-msgstr "Príobháideacht Brabhsála"
+#. # Security :: Browsing Privacy
+#: browsingPrivacy
+msgid "Browsing Privacy"
+msgstr "Príobháideacht"
 
-#. # LOCALIZATION NOTE (browserPrivacy-header): if you leave the original
-#. # en-US value "{{browserPrivacy}}" in the following string, the localization
-#. # will be automatically picked from the existing string with ID "browserPrivacy".
-#. # If you need to adapt your localization to the reduced space available
-#. # in headers, you can use a shorter string here.
-#: browserPrivacy-header
-msgid "{{browserPrivacy}}"
-msgstr "{{browserPrivacy}}"
+#. # LOCALIZATION NOTE (browsingPrivacy-header): if you leave the original
+#. # en-US value "{{browsingPrivacy}}" in the following string, the localization
+#. # will be automatically picked from the existing string with ID
+#. # "browsingPrivacy". If you need to adapt your localization to the reduced space
+#. # available in headers, you can use a shorter string here.
+#: browsingPrivacy-header
+msgid "{{browsingPrivacy}}"
+msgstr "{{browsingPrivacy}}"
 
 #: confirm-clear-title
 msgctxt "confirm-clear-title"
@@ -11514,6 +11677,7 @@ msgid "Storage"
 msgstr "Stóras"
 
 #: enableUSBStorage1
+msgctxt "enableUSBStorage1"
 msgid "USB storage"
 msgstr "Stóras USB"
 
@@ -12313,6 +12477,10 @@ msgstr ""
 msgid "Gaia debug traces"
 msgstr ""
 
+#: showScreenReaderSettings
+msgid "Show screen reader settings"
+msgstr "Socruithe an léitheora scáileáin"
+
 #: app-transition
 msgid "App transition"
 msgstr ""
@@ -12396,18 +12564,15 @@ msgstr "Inrochtaineacht"
 msgid "{{accessibility}}"
 msgstr "{{accessibility}}"
 
-#: invertColors
-msgid "Invert colors"
-msgstr "Inbhéartaigh dathanna"
-
 #: screenReader
 msgid "Screen reader"
 msgstr "Léitheoir scáileáin"
 
-#: showA11ySettings
-msgid "Show accessibility settings"
-msgstr "Taispeáin socruithe inrochtaineachta"
+#: colorFilter
+msgid "Color filter"
+msgstr "Scagaire datha"
 
+#. # Device :: Accessibility :: Screen reader
 #: screenReader-enable-msg
 msgid ""
 "When the screen reader is enabled, your device will provide spoken feedback "
@@ -12439,6 +12604,19 @@ msgstr "Stop an Léitheoir Scáileáin?"
 #: screenReader-confirm-description-stop
 msgid "Stopping the screen reader will end all speech feedback."
 msgstr ""
+
+#. # Device :: Accessibility :: Color filter
+#: colorFilter-invert
+msgid "Invert"
+msgstr "Inbhéartaigh"
+
+#: colorFilter-grayscale
+msgid "Grayscale"
+msgstr "Liathscála"
+
+#: colorFilter-contrast
+msgid "Contrast"
+msgstr "Codarsnacht"
 
 #. # Device :: Improve Browser OS
 #: improveBrowserOS
@@ -12763,15 +12941,44 @@ msgid "Get Channel Status"
 msgstr "Faigh Stádas an Chainéil"
 
 #. # Incompatible Settings :: USB Storage - USB Tethering - WiFi Tethering
-#: is-warning-head
-msgid "{{newSetting}}"
-msgstr "{{newSetting}}"
+#: is-warning-storage-header
+msgctxt "is-warning-storage-header"
+msgid "USB storage"
+msgstr "Stóras USB"
 
-#: is-warning-message
+#: is-warning-tethering-header
+msgctxt "is-warning-tethering-header"
+msgid "USB tethering"
+msgstr "Teaghránú USB"
+
+#: is-warning-wifi-header
+msgctxt "is-warning-wifi-header"
+msgid "Wi-Fi hotspot"
+msgstr "Ball te Wi-Fi"
+
+#: is-warning-storage-tethering-message
 msgid ""
-"Enabling {{newSetting}} will disable {{oldSetting}}. Do you want to enable "
-"{{newSetting}}?"
-msgstr ""
+"Enabling USB storage will disable USB tethering. Do you want to enable USB "
+"storage?"
+msgstr "Má chumasaíonn tú stóras USB, díchumasófar teaghránú USB. An bhfuil fonn ort stóras USB a chumasú mar sin féin?"
+
+#: is-warning-tethering-storage-message
+msgid ""
+"Enabling USB tethering will disable USB storage. Do you want to enable USB "
+"tethering?"
+msgstr "Má chumasaíonn tú teaghránú USB, díchumasófar stóras USB. An bhfuil fonn ort teaghránú USB a chumasú mar sin féin?"
+
+#: is-warning-tethering-wifi-message
+msgid ""
+"Enabling USB tethering will disable Wi-Fi hotspot. Do you want to enable USB "
+"tethering?"
+msgstr "Má chumasaíonn tú teaghránú USB, díchumasófar an ball te Wi-Fi. An bhfuil fonn ort teaghránú USB a chumasú mar sin féin?"
+
+#: is-warning-wifi-tethering-message
+msgid ""
+"Enabling Wi-Fi hotspot will disable USB tethering. Do you want to enable Wi-"
+"Fi hotspot?"
+msgstr "Má chumasaíonn tú an ball te Wi-Fi, díchumasófar teaghránú USB. An bhfuil fonn ort an ball te Wi-Fi a chumasú mar sin féin?"
 
 #: name
 msgid "Shared Tests"
@@ -12924,7 +13131,7 @@ msgstr ""
 msgid ""
 "You’ve exceeded the maximum size. Remove attachments or shorten the message "
 "to send it."
-msgstr ""
+msgstr "Sháraigh tú an uasmhéid cheadaithe. Bain iatáin nó giorraigh an teachtaireacht chun í a sheoladh."
 
 #: newMessage
 msgid "New message"
@@ -12977,7 +13184,7 @@ msgstr "{{n}} MB"
 
 #: attachmentOpenError
 msgid "There is no application available to open this file type."
-msgstr ""
+msgstr "Níl aon fheidhmchlár agat lenar féidir comhad den chineál seo a oscailt."
 
 #. # Group participants
 #: participant
@@ -13233,35 +13440,50 @@ msgstr "{[ plural(n) ]}"
 msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipient are in your FDN list:<br />{{ numbers }}"
-msgstr "Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil an lárionad SMS agus an faighteoir seo a leanas ar do liosta FDN:<br />{{ numbers }}"
+msgstr ""
+"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"an lárionad SMS agus an faighteoir seo a leanas ar do liosta FDN:<br />"
+"{{ numbers }}"
 
 #: fdnBlocked2Body.innerHTML[two]
 msgctxt "fdnBlocked2Body.innerHTML[two]"
 msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
-msgstr "Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />{{ numbers }}"
+msgstr ""
+"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
+"{{ numbers }}"
 
 #: fdnBlocked2Body.innerHTML[few]
 msgctxt "fdnBlocked2Body.innerHTML[few]"
 msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
-msgstr "Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />{{ numbers }}"
+msgstr ""
+"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
+"{{ numbers }}"
 
 #: fdnBlocked2Body.innerHTML[many]
 msgctxt "fdnBlocked2Body.innerHTML[many]"
 msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
-msgstr "Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />{{ numbers }}"
+msgstr ""
+"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
+"{{ numbers }}"
 
 #: fdnBlocked2Body.innerHTML[other]
 msgctxt "fdnBlocked2Body.innerHTML[other]"
 msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
-msgstr "Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />{{ numbers }}"
+msgstr ""
+"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
+"{{ numbers }}"
 
 #: fdnBlocked2BtnOk
 msgctxt "fdnBlocked2BtnOk"
@@ -13277,7 +13499,7 @@ msgid ""
 "Switch the data connection to SIM {{ nonActiveSimId }} to retrieve the MMS. "
 "The current data transfer on SIM {{ activeSimId }} will be suspended. "
 "Continue anyway?"
-msgstr ""
+msgstr "Athraigh an ceangal sonraí go SIM {{ nonActiveSimId }} chun an MMS a fháil. Cuirfear an t-aistriú reatha ar SIM {{ activeSimId }} ar fionraí. Lean ort mar sin féin?"
 
 #. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
 #. # update manager
@@ -13300,7 +13522,7 @@ msgid ""
 "Switch the data connection to SIM {{ nonActiveSimId }} to send the MMS. The "
 "current data transfer on SIM {{ activeSimId }} will be suspended. Continue "
 "anyway?"
-msgstr ""
+msgstr "Athraigh an ceangal sonraí go SIM {{ nonActiveSimId }} chun an MMS a sheoladh. Cuirfear an t-aistriú reatha ar SIM {{ activeSimId }} ar fionraí. Lean ort mar sin féin?"
 
 #: switchSimToSendBtnOk
 msgid "{{switchSimToRetrieveBtnOk}}"
@@ -13317,7 +13539,7 @@ msgstr "Gan seirbhís mhóibíleach"
 #: sendNoSignalErrorBody
 msgid "Make sure you have a mobile signal and try again."
 msgstr ""
-"Bí cinnte go bhfuil seirbhís mhóibíleach ar fáil agus bain triail eile as."
+"Deimhnigh go bhfuil seirbhís mhóibíleach ar fáil agus bain triail eile as."
 
 #: sendNoSignalErrorBtnOk
 msgctxt "sendNoSignalErrorBtnOk"
@@ -13430,7 +13652,7 @@ msgstr "Teachtaireacht Gan Seoladh"
 msgid ""
 "Your previous message was not sent. Do you want to edit the unsent message or "
 "discard it and continue?"
-msgstr ""
+msgstr "Níor seoladh an teachtaireacht roimhe seo. An bhfuil fonn ort an teachtaireacht neamhsheolta a chur in eagar, nó í a scriosadh agus leanúint ar aghaidh?"
 
 #: unsent-message-option-edit
 msgctxt "unsent-message-option-edit"
@@ -15218,11 +15440,14 @@ msgstr "Leathanach imithe i léig"
 msgid ""
 "As a security precaution, this page cannot be displayed by the device because "
 "it has expired."
-msgstr "Mar réamhchúram slándála, ní féidir an leathanach seo a thaispeáint toisc go bhfuil sé imithe i léig."
+msgstr ""
+"Mar réamhchúram slándála, ní féidir an leathanach seo a thaispeáint toisc go "
+"bhfuil sé imithe i léig."
 
 #: is-printing-error
 msgid "The document cannot change while Printing or in Print Preview."
-msgstr "Ní féidir an cháipéis a athrú le linn Priontála nó Réamhamharc Priontála."
+msgstr ""
+"Ní féidir an cháipéis a athrú le linn Priontála nó Réamhamharc Priontála."
 
 #: denied-port-access
 msgid "This address is restricted"
@@ -15696,9 +15921,20 @@ msgid "Power off"
 msgstr "Múch"
 
 #. # cards view
-#: no-recent-apps
-msgid "No recent apps"
+#: no-recent-app-windows
+msgid "Your recent app windows show up here"
 msgstr ""
+
+#: no-recent-browser-windows
+msgid "Your recent browser windows show up here"
+msgstr ""
+
+#. # LOCALIZATION NOTE: The following strings are spoken by screen readers and not
+#. # shown on the screen.
+#: closeCard.ariaLabel
+msgctxt "closeCard.ariaLabel"
+msgid "Close"
+msgstr "Dún"
 
 #: dontallow
 msgid "Don’t allow"
@@ -16134,7 +16370,9 @@ msgstr "Tá fadhbanna ag {{name}}"
 msgid ""
 "{{name}} requires a network connection. Turn off airplane mode from Settings "
 "and connect to a Wi-Fi or mobile data network."
-msgstr "Éilíonn {{name}} ceangal leis an Idirlíon. Scoir den mhód eitleáin sna Socruithe agus ceangail le Wi-Fi nó le líonra sonraí soghluaiste."
+msgstr ""
+"Éilíonn {{name}} ceangal leis an Idirlíon. Scoir den mhód eitleáin sna "
+"Socruithe agus ceangail le Wi-Fi nó le líonra sonraí soghluaiste."
 
 #: network-connection-unavailable
 msgid "Network connection unavailable"
@@ -16188,9 +16426,13 @@ msgid "Select day"
 msgstr "Roghnaigh lá"
 
 #. # system overlay
-#: battery-almost-empty2
-msgid "Battery almost empty. Plug in your charger."
-msgstr "Tá do chadhnra beagnach folamh. Plugáil do luchtaire isteach."
+#: battery-almost-empty3
+msgid "Your battery is low."
+msgstr "Tá do chadhnra beagnach folamh."
+
+#: plug-in-your-charger
+msgid "Please plug in your charger."
+msgstr "Plugáil do luchtaire isteach."
 
 #. # wrapper
 #: new-window
@@ -16413,7 +16655,7 @@ msgstr "Méid iomlán: {{size}} {{unit}}"
 
 #: sdcard-unknown-size-tap-to-format-body
 msgid "Unknown, tap to format"
-msgstr ""
+msgstr "Anaithnid, tapáil chun é a fhormáidiú"
 
 #: sdcard-removed-title
 msgid "SD card removed"
@@ -16573,7 +16815,7 @@ msgstr "Mód Spárála Cumhachta"
 
 #: notification-powersaving-mode-on-description
 msgid "Power saving mode is on."
-msgstr ""
+msgstr "Mód spárála cumhachta: ann."
 
 #. # Low device storage
 #: low-device-storage
@@ -18695,39 +18937,60 @@ msgstr "Ceadanna"
 
 #: title-cam
 msgid "Select Camera"
-msgstr "Roghnaigh Ceamara"
+msgstr "Ceamara a Roghnú"
 
 #: perm-alarms
 msgid "Schedule Alarms"
-msgstr "Sceideal Aláraim"
+msgstr "Aláraim a Sceidealadh"
+
+#: perm-audio-capture
+msgid "Microphone"
+msgstr "Micreafón"
+
+#: perm-audio-capture-appRequest
+msgid "Would you like to share your microphone with {{app}}?"
+msgstr "An bhfuil tú sásta do mhicreafón a chomhroinnt le {{app}}?"
+
+#: perm-audio-capture-webRequest
+msgid "Would you like to share your microphone with {{site}}?"
+msgstr "An bhfuil tú sásta do mhicreafón a chomhroinnt le {{site}}?"
 
 #: perm-audio-channel-content
+msgctxt "perm-audio-channel-content"
 msgid "Play Sounds"
-msgstr "Seinn Fuaimeanna"
+msgstr "Fuaimeanna a Sheinm"
 
 #: perm-audio-channel-notification
 msgid "Play Notification Sounds"
-msgstr ""
+msgstr "Fógraí a Sheinm"
 
 #: perm-audio-channel-ringer
 msgid "Play Ringtone Sounds"
-msgstr ""
+msgstr "Clingthoin a Sheinm"
 
 #: perm-background-sensors
 msgid "Access Sensor Data"
-msgstr ""
+msgstr "Sonraí Braiteora a Úsáid"
 
 #: perm-browser
 msgid "Inspect Web Pages"
-msgstr ""
+msgstr "Leathanaigh Ghréasáin a Scrúdú"
 
 #: perm-camera
 msgid "Cameras"
 msgstr "Ceamaraí"
 
+#: perm-camera-selector-appRequest
+msgid "Select a camera for {{app}}."
+msgstr "Roghnaigh ceamara le haghaidh {{app}}."
+
+#: perm-camera-selector-webRequest
+msgid "Select a camera for {{site}}."
+msgstr "Roghnaigh ceamara le haghaidh {{site}}."
+
 #: perm-cellbroadcast
 msgid "Cell Broadcasts"
-msgstr ""
+msgstr "Teachtaireachtaí Craobhscaoilte"
 
 #: perm-contacts-appRequest
 msgid "{{app}} would like to access your contact list."
@@ -18799,7 +19062,7 @@ msgstr "Tá {{site}} ag iarraidh do chuid físeán a rochtain."
 
 #: perm-embed-apps
 msgid "Embed Apps"
-msgstr "Leabaigh Aipeanna"
+msgstr "Aipeanna a Leabú"
 
 #: perm-fmradio-appRequest
 msgid "{{app}} would like to use the FM Radio."
@@ -18811,11 +19074,7 @@ msgstr "Tá {{site}} ag iarraidh an raidió FM a úsáid."
 
 #: perm-geolocation-appRequest
 msgid "{{app}} would like to know your location."
-msgstr "Ar mhaith leat do shuíomh a roinnt leis an aip {{app}}?"
-
-#: perm-geolocation-webRequest
-msgid "{{site}} would like to know your location."
-msgstr "Ar mhaith leat do shuíomh a roinnt le {{site}}?"
+msgstr "Ar mhaith leat do shuíomh a nochtadh don aip {{app}}?"
 
 #: perm-geolocation-more-info
 msgid ""
@@ -18832,21 +19091,49 @@ msgstr ""
 "ar do ghléas agus go mbaileofar na sonraí fiú nuair nach bhfuil aon aipeanna "
 "ar siúl."
 
+#: perm-geolocation-webRequest
+msgid "{{site}} would like to know your location."
+msgstr "Ar mhaith leat do shuíomh a nochtadh do {{site}}?"
+
 #: perm-idle
 msgid "See Idle Status"
-msgstr ""
+msgstr "Do Stádas Díomhaointis a Fheiceáil"
 
 #: perm-indexedDB-chrome-settings
 msgid "Privileged IndexedDB"
-msgstr ""
+msgstr "IndexedDB faoi phribhléid"
 
 #: perm-indexedDB-unlimited
 msgid "Unlimited IndexedDB Storage"
-msgstr ""
+msgstr "Stóras IndexedDB Gan Teorainn"
+
+#: perm-input-manage
+msgid "Manage Keyboards"
+msgstr "Méarchláir a Bhainistiú"
+
+#: perm-input
+msgid "Act as a Keyboard"
+msgstr "Bheith ina Mhéarchlár"
+
+#: perm-media-capture
+msgid "Camera and Microphone"
+msgstr "Ceamara agus Micreafón"
+
+#: perm-media-capture-appRequest
+msgid "Would you like to share your camera and microphone with {{app}}?"
+msgstr "An bhfuil tú sásta do cheamara agus do mhicreafón a chomhroinnt le {{app}}?"
+
+#: perm-media-capture-webRequest
+msgid "Would you like to share your camera and microphone with {{site}}?"
+msgstr "An bhfuil tú sásta do cheamara agus do mhicreafón a chomhroinnt le {{site}}?"
 
 #: perm-mobileconnection
 msgid "Mobile Connection"
 msgstr "Ceangal Soghluaiste"
+
+#: perm-mobileid
+msgid "Mobile Identity"
+msgstr "Aitheantas Soghluaiste"
 
 #: perm-network-events
 msgid "Network Events"
@@ -18854,11 +19141,11 @@ msgstr "Teagmháis Líonra"
 
 #: perm-open-remote-window
 msgid "Start an App"
-msgstr "Tosaigh Aip"
+msgstr "Aip a Thosú"
 
 #: perm-permissions
 msgid "Modify Apps Permissions"
-msgstr ""
+msgstr "Ceadanna Aipeanna a Athrú"
 
 #: perm-power
 msgid "Power Settings"
@@ -18866,11 +19153,11 @@ msgstr "Socruithe Cumhachta"
 
 #: perm-settings
 msgid "Modify Settings"
-msgstr "Athraigh na Socruithe"
+msgstr "Socruithe a Athrú"
 
 #: perm-systemXHR
 msgid "Cross-Origin Requests"
-msgstr ""
+msgstr "Iarratais Trasbhunúis"
 
 #: perm-telephony
 msgid "Telephony"
@@ -18884,53 +19171,138 @@ msgstr "An bhfuil tú sásta do cheamara a roinnt le {{app}}?"
 msgid "Would you like to share your camera with {{site}}?"
 msgstr "An bhfuil tú sásta do cheamara a roinnt le {{site}}?"
 
-#: perm-audio-capture
-msgid "Microphone"
-msgstr "Micreafón"
-
-#: perm-audio-capture-appRequest
-msgid "Would you like to share your microphone with {{app}}?"
-msgstr "An bhfuil tú sásta do mhicreafón a roinnt le {{app}}?"
-
-#: perm-audio-capture-webRequest
-msgid "Would you like to share your microphone with {{site}}?"
-msgstr "An bhfuil tú sásta do mhicreafón a roinnt le {{site}}?"
-
-#: perm-media-capture
-msgid "Camera and Microphone"
-msgstr "Ceamara agus Micreafón"
-
-#: perm-media-capture-appRequest
-msgid "Would you like to share your camera and microphone with {{app}}?"
-msgstr "An bhfuil tú sásta do cheamara agus do mhicreafón a roinnt le {{app}}?"
-
-#: perm-media-capture-webRequest
-msgid "Would you like to share your camera and microphone with {{site}}?"
-msgstr "An bhfuil tú sásta do cheamara agus do mhicreafón a roinnt le {{site}}?"
-
-#: perm-camera-selector-appRequest
-msgid "Select a camera for {{app}}."
-msgstr "Roghnaigh ceamara le haghaidh {{app}}."
-
-#: perm-camera-selector-webRequest
-msgid "Select a camera for {{site}}."
-msgstr "Roghnaigh ceamara le haghaidh {{site}}."
-
-#: perm-mobileid
-msgid "Mobile Identity"
-msgstr "Aitheantas Soghluaiste"
-
 #: perm-voicemail
 msgid "Control Voicemail"
-msgstr "Bainistigh Glórphost"
+msgstr "Glórphost a Bhainistiú"
 
 #: perm-webapps-manage
 msgid "Install Webapps"
-msgstr "Suiteáil Aipeanna Gréasáin"
+msgstr "Aipeanna Gréasáin a Shuiteáil"
 
 #: perm-wifi-manage
 msgid "Manage Wi-Fi"
-msgstr "Bainistigh Wi-Fi"
+msgstr "Wi-Fi a Bhainistiú"
+
+#. # These permission names will only be seen when 'verbose app permissions' is enabled in the developer settings
+#: perm-attention
+msgid "Open Overlay Popups"
+msgstr "Preabfhuinneoga Forleagtha a Oscailt"
+
+#: perm-audio-channel-alarm
+msgid "Play Alarm Sounds"
+msgstr "Aláraim a Sheinm"
+
+#: perm-audio-channel-normal
+msgctxt "perm-audio-channel-normal"
+msgid "Play Sounds"
+msgstr "Fuaimeanna a Sheinm"
+
+#: perm-audio-channel-publicnotification
+msgid "Play public notification sounds"
+msgstr "Fógraí poiblí a sheinm"
+
+#. # "telephony sounds" refers to the audio of somebody you are in a call with.
+#: perm-audio-channel-telephony
+msgid "Play Telephony Sounds"
+msgstr "Fuaimeanna Teileafónaíochta a Sheinm"
+
+#: perm-backgroundservice
+msgid "Act as a Background Service"
+msgstr "Bheith ina Sheirbhís Chúlra"
+
+#: perm-deprecated-hwvideo
+msgid "Hardware Video Rendering (Deprecated)"
+msgstr "Fís a Rindreáil i gCrua-Earraí (imithe i léig)"
+
+#: perm-device-storage-crashes
+msgid "Crash Data Storage"
+msgstr "Stóras Sonraí Tuairteála"
+
+#: perm-downloads
+msgid "Access Downloads"
+msgstr "Íosluchtuithe a Rochtain"
+
+#: perm-embed-widgets
+msgid "Embed Widgets"
+msgstr "Giuirléidí a Leabú"
+
+#: perm-feature-detection
+msgid "Feature Detection"
+msgstr "Gnéithe a Bhrath"
+
+#: perm-mobilenetwork
+msgid "Mobile Network"
+msgstr "Líonra Soghluaiste"
+
+#. # The following moz-prefixed permissions are like the non-prefixed, but may be handled differently for privileged/certified apps
+#: perm-moz-attention
+msgid "Open Overlay Popups (moz)"
+msgstr "Preabfhuinneoga Forleagtha a Oscailt (moz)"
+
+#: perm-moz-audio-channel-ringer
+msgid "Play Ringtone Sounds (moz)"
+msgstr "Clingthoin a Sheinm (moz)"
+
+#: perm-moz-audio-channel-telephony
+msgid "Play Telephony Sounds (moz)"
+msgstr "Fuaimeanna Teileafónaíochta a Sheinm (moz)"
+
+#: perm-moz-firefox-accounts
+msgid "Firefox Accounts (moz)"
+msgstr "Cuntais Firefox (moz)"
+
+#: perm-networkstats-manage
+msgid "Control Usage Stats"
+msgstr "Staitisticí Úsáide a Bhainistiú"
+
+#: perm-nfc-hci-events
+msgid "NFC HCI Events"
+msgstr "Teagmhais HCI NFC"
+
+#: perm-nfc-manager
+msgid "Manage NFC"
+msgstr "NFC a Bhainistiú"
+
+#: perm-phonenumberservice
+msgid "Phone Number Service"
+msgstr ""
+
+#: perm-push
+msgid "Push API"
+msgstr "API Brúfhógraí"
+
+#: perm-resourcestats-manage
+msgid "Resource Stats"
+msgstr "Staitisticí Acmhainne"
+
+#: perm-sms
+msgid "Send and Read SMS"
+msgstr "SMS a Sheoladh agus a Léamh"
+
+#: perm-speaker-control
+msgid "Control Volume"
+msgstr "Airde a Rialú"
+
+#: perm-storage
+msgid "Access Storage"
+msgstr "Stóras a Rochtain"
+
+#: perm-tcp-socket
+msgid "TCP Sockets"
+msgstr "Soicéid TCP"
+
+#. # This permission should not be seen, except for our test apps.
+#: perm-test-permission
+msgid "Test Permission"
+msgstr "Cead Tástála"
+
+#: perm-time
+msgid "Set Date and Time"
+msgstr "Dáta agus Am a Shocrú"
+
+#: perm-udp-socket
+msgid "UDP Sockets"
+msgstr "Soicéid UDP"
 
 #. # Field labels
 #: label
