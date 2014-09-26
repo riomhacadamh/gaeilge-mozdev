@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-12 21:59-0500\n"
+"POT-Creation-Date: 2014-09-18 11:52-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -532,7 +532,7 @@ msgstr "Barrshuímh"
 #. # At the bottom of the folder picker drawer, there is an icon link that
 #. # goes to the account settings. This string is only used for accessibility
 #. # concerns, and is not visible visually.
-#: browser-settings settings drawer-settings-link name settingsButton.ariaLabel
+#: browser-settings settingsButton.ariaLabel settings drawer-settings-link name
 #: voicemailNoNumberSettings
 msgid "Settings"
 msgstr "Socruithe"
@@ -593,7 +593,7 @@ msgstr "Cuir leabharmharc in eagar"
 msgid "Page title"
 msgstr "Teideal an leathanaigh"
 
-#: address legendAddress edit-dialog-url
+#: address edit-dialog-url
 msgid "Address"
 msgstr "Seoladh"
 
@@ -867,7 +867,7 @@ msgstr "Teideal"
 msgid "Where?"
 msgstr "Cén áit?"
 
-#: event-description.placeholder
+#: event-description.placeholder notes.ariaLabel
 msgid "Notes"
 msgstr "Nótaí"
 
@@ -1455,13 +1455,13 @@ msgid "%A, %B %d, %Y"
 msgstr "%A, %d %B %Y"
 
 #. #errors
-#: error-start-after-end
-msgid "End date must come after start date"
-msgstr "Bí cinnte go dtarlaíonn an dáta deiridh tar éis an dáta tosaigh"
+#: error-start-date-after-end-date
+msgid "The event cannot end before its start date"
+msgstr "Tá an dáta deiridh roimh an dáta tosaigh"
 
-#: error-start-after-end-on-same-date
-msgid "End date must come after start date on the same date"
-msgstr ""
+#: error-start-time-after-end-time
+msgid "The event cannot end before its start time"
+msgstr "Tá an t-am deiridh roimh an t-am tosaigh"
 
 #: error-unauthenticated
 msgid "Wrong login and/or password"
@@ -2359,15 +2359,17 @@ msgstr "Bailiúcháin Chliste"
 msgid "Smart Collections Manager"
 msgstr "Bainisteoir na mBailiúchán Cliste"
 
-#: add
-msgid "Add"
-msgstr "Cuir Leis"
-
-#. #-#-#-#-#  appscommunicationsdialerdialer.properties.po (firefox)  #-#-#-#-#
-#. ## LOCALIZATION NOTE 'call' is an action verb
-#: call fdnAction-call
+#: call
+msgctxt "call"
 msgid "Call"
 msgstr "Glaoigh"
+
+#. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
+#. # Edit Mode
+#: edit
+msgctxt "edit"
+msgid "Edit"
+msgstr "Eagar"
 
 # space is at a premium; better than "Nuashonraigh" for that reason
 # update-button in costcontrol.properties is ok as Athnuaigh
@@ -2474,12 +2476,8 @@ msgstr "Ainm"
 msgid "Last name"
 msgstr "Sloinne"
 
-# in settings sedtweak this to "Uimhir"
-#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
-#. # Security :: Phone Lock
-#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
-#. # sleep menu
-#: tel.placeholder dialer.name phone evme-collection-title-suffix deviceMenu
+#: tel.placeholder
+msgctxt "tel.placeholder"
 msgid "Phone"
 msgstr "Guthán"
 
@@ -2597,7 +2595,63 @@ msgstr "Cuir leis na ceanáin é/í"
 msgid "Remove as Favorite"
 msgstr "Bain ó na ceanáin é/í"
 
-#. # Hidden information, for screen readers
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#: addButton.ariaLabel
+msgid "Add"
+msgstr "Cuir Leis"
+
+#: editButton.ariaLabel
+msgctxt "editButton.ariaLabel"
+msgid "Edit"
+msgstr "Eagar"
+
+#: phoneDetail.ariaLabel
+msgctxt "phoneDetail.ariaLabel"
+msgid "Phone"
+msgstr "Guthán"
+
+#: emailDetail.ariaLabel
+msgctxt "emailDetail.ariaLabel"
+msgid "Email"
+msgstr "Ríomhphost"
+
+#: addressDetail.ariaLabel
+msgctxt "addressDetail.ariaLabel"
+msgid "Address"
+msgstr "Seoladh"
+
+#: dateDetail.ariaLabel
+msgctxt "dateDetail.ariaLabel"
+msgid "Date"
+msgstr "Dáta"
+
+#: composeEmail.ariaLabel
+msgctxt "composeEmail.ariaLabel"
+msgid "Email"
+msgstr "Scríobh"
+
+#: makeCall.ariaLabel
+msgctxt "makeCall.ariaLabel"
+msgid "Call"
+msgstr "Glaoigh"
+
+#: phones.ariaLabel
+msgid "Phones"
+msgstr "Gutháin"
+
+#: emails.ariaLabel
+msgid "Emails"
+msgstr "Ríomhphoist"
+
+#: addresses.ariaLabel
+msgid "Addresses"
+msgstr "Seoltaí"
+
+#: dates.ariaLabel
+msgid "Dates"
+msgstr "Dátaí"
+
 #: exit
 msgid "Exit"
 msgstr "Scoir"
@@ -2658,9 +2712,10 @@ msgstr "Uimhreacha gutháin"
 msgid "Email address"
 msgstr "Seoladh ríomhphoist"
 
-#: legendPhoto.ariaLabel
-msgid "Photo"
-msgstr "Grianghraf"
+#: legendAddress
+msgctxt "legendAddress"
+msgid "Address"
+msgstr "Seoladh"
 
 # One of these is sed-tweaked to "Cuardach"
 #. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
@@ -3534,6 +3589,12 @@ msgstr "Clóscríobh do fhreagra…"
 msgid "Clear all text"
 msgstr "Glan an téacs"
 
+#. #-#-#-#-#  appscommunicationsdialerdialer.properties.po (firefox)  #-#-#-#-#
+#. ## LOCALIZATION NOTE 'call' is an action verb
+#: call fdnAction-call
+msgid "Call"
+msgstr "Glaoigh"
+
 #: hold.ariaLabel
 msgid "Hold"
 msgstr "Ar feitheamh"
@@ -3623,6 +3684,18 @@ msgstr "{{ m }}:{{ s }}"
 #: callDurationHours
 msgid "{{ h }}:{{ m }}:{{ s}}"
 msgstr "{{ h }}:{{ m }}:{{ s}}"
+
+#: callDurationTextFormatSeconds
+msgid "{{ s }} s"
+msgstr "{{ s }}s"
+
+#: callDurationTextFormatMinutes
+msgid "{{ m }} m {{ s }} s"
+msgstr "{{ m }}n {{ s }}s"
+
+#: callDurationTextFormatHours
+msgid "{{ h }} h {{ m }} m {{ s }} s"
+msgstr "{{ h }}u {{ m }}n {{ s }}s"
 
 #. #Suggestion bar
 #: suggestionMatches
@@ -4151,6 +4224,15 @@ msgid ""
 msgstr ""
 "Tá glao ar siúl agat cheana ar cheangal eile. Ní féidir leat ach ceangal "
 "amháin a úsáid."
+
+# in settings sedtweak this to "Uimhir"
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
+#. # Security :: Phone Lock
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. # sleep menu
+#: dialer.name phone evme-collection-title-suffix deviceMenu
+msgid "Phone"
+msgstr "Guthán"
 
 #: dialer.description
 msgid "Gaia Phone"
@@ -7374,13 +7456,11 @@ msgstr ""
 msgid "Firefox Accounts"
 msgstr "Cuntais Firefox"
 
-#: fxa-overview.innerHTML
+#: fxa-upsell.innerHTML
 msgid ""
-"A Firefox Account lets you use features like Find My Device and apps like the "
-"Firefox Marketplace."
-msgstr ""
-"Le Cuntas Firefox, beidh tú ábalta tairbhe a bhaint as gnéithe cosúil le "
-"Aimsigh Mo Ghléas agus aipeanna cosúil le hÁit Mhargaidh Firefox."
+"A Firefox Account lets you find a lost phone and buy apps from the Firefox "
+"Marketplace."
+msgstr "Le Cuntas Firefox, beidh tú in ann guthán caillte a aimsiú, agus aipeanna a cheannach ó Áit Mhargaidh Firefox."
 
 #: fxa-create-account-or-sign-in
 msgid "Create Account or Sign In"
@@ -7472,15 +7552,33 @@ msgstr ""
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # OS privacy
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: welcomeBrowser
+#: htmlWelcome.innerHTML
 msgid ""
-"Welcome to {{brandShortName}}, the free and open source operating system from "
-"Mozilla. Our mission is to promote openness, innovation and opportunity by "
-"keeping the power of the Web in your hands."
+"Welcome to {{link}}, the free and open source operating system from Mozilla. "
+"Our mission is to promote openness, innovation and opportunity by keeping the "
+"power of the Web in your hands."
 msgstr ""
-"Fáilte go dtí {{brandShortName}}, an córas oibriúcháin saor agus oscailte ó "
+"Fáilte go dtí {{link}}, an córas oibriúcháin saor agus oscailte ó "
 "Mhozilla. Is é ár misean oscailteacht, nuálaíocht, agus deiseanna a chur chun "
 "cinn trí chumhacht an Ghréasáin a choinneáil i do lámha."
+
+#: htmlWelcome-link
+msgctxt "htmlWelcome-link"
+msgid "{{brandShortName}}"
+msgstr "{{brandShortName}}"
+
+#: helpImprove.innerHTML
+msgid ""
+"You can help us improve our products and services by automatically sending "
+"analytics data. See our {{link}} to learn how we handle data from your device."
+msgstr "Is féidir leat cabhrú linn ár gcuid táirgí agus seirbhísí a fheabhú trí sonraí anailísíochta a sheoladh chugainn go huathoibríoch. Léigh an {{link}} chun foghlaim conas a úsáidimid sonraí ó do ghléas."
+
+#. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
+#. # LOCALIZATION NOTE(fxa-pn): This string corresponds to the {{pn}} placeholder
+#. # in fxa-notice.
+#: helpImprove-link fxa-pn
+msgid "Privacy Notice"
+msgstr "Fógra Príobháideachta"
 
 #. # LOCALIZATION NOTE(learn-more-privacy.innerHTML): {{link}} will be replaced at
 #. # run-time by an active link, string "learn-more-privacy-link" will be
@@ -7515,17 +7613,9 @@ msgstr ""
 "eolais a fháil faoi chomhphobal Mhozilla, faoinár dtáirgí eile, agus faoi "
 "ócáidí sóisialta i ngar duit, tabhair do sheoladh ríomhphoist thíos."
 
-#: sharePerformanceAndUsageData
-msgid ""
-"I want to help improve {{brandShortName}} by sharing data about my phone and "
-"the way I use it."
-msgstr ""
-"Tá mé sásta sonraí faoi mo ghuthán agus úsáid an ghutháin a chomhroinnt le "
-"Mozilla chun cabhrú leo {{brandShortName}} a fheabhsú."
-
-#: learnMore
-msgid "Learn more."
-msgstr "Tuilleadh eolais."
+#: sharePerformanceAndUsageData2
+msgid "Yes! Send data."
+msgstr "Tá! Seol sonraí."
 
 #: email-successfully-added
 msgid "Email successfully added"
@@ -7711,13 +7801,13 @@ msgstr ""
 
 #: tutorial-rocketbar-tiny
 msgid "Tap on the search box anytime to start a search or go to a website."
-msgstr ""
+msgstr "Tapáil an bosca cuardaigh am ar bith chun cuardach a dhéanamh nó suíomh Gréasáin a oscailt."
 
 #: tutorial-bookmarks-migration-tiny
 msgid ""
 "Your bookmarks have been moved to the homescreen. When editing, tap a "
 "bookmark to edit or rename it."
-msgstr ""
+msgstr "Cuireadh do leabharmharcanna leis an scáileán baile. Le linn eagarthóireachta, tapáil leabharmharc chun é a chur in eagar nó ainm nua a chur air."
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Offline Error Dialog
@@ -8702,13 +8792,21 @@ msgid "Manage Tones"
 msgstr "Bainistigh Toin"
 
 # definite article in context
-#: actions-share
+#: actions-share-ringtone
 msgid "Share ringtone"
 msgstr "Comhroinn an clingthon seo"
 
-#: actions-delete
+#: actions-delete-ringtone
 msgid "Delete ringtone"
 msgstr "Scrios clingthon"
+
+#: actions-share-alerttone
+msgid "Share alert"
+msgstr "Comhroinn an t-airdeall"
+
+#: actions-delete-alerttone
+msgid "Delete alert"
+msgstr "Scrios an t-airdeall"
 
 #: actions-cancel
 msgctxt "actions-cancel"
@@ -8716,9 +8814,13 @@ msgid "Cancel"
 msgstr "Cealaigh"
 
 # window title
-#: delete-title
+#: delete-title-ringtone
 msgid "Delete Ringtone"
 msgstr "Clingthon a Scriosadh"
+
+#: delete-title-alerttone
+msgid "Delete Alert"
+msgstr "Airdeall a Scriosadh"
 
 #: delete-desc
 msgid "Are you sure you want to delete \"{{tone}}\"?"
@@ -8749,9 +8851,13 @@ msgctxt "delete-cancel"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: deleted-tone
+#: deleted-ringtone
 msgid "Ringtone deleted."
 msgstr "Scriosadh an clingthon."
+
+#: deleted-alerttone
+msgid "Alert deleted."
+msgstr "Scriosadh an t-airdeall."
 
 #: created-tone
 msgid "New ringtone created."
@@ -9354,6 +9460,16 @@ msgstr "As Líne"
 #: manageNetworks
 msgid "Manage networks"
 msgstr "Bainistigh líonraí"
+
+#: wifi-bad-credentials-title
+msgid "Failed connecting to Wi-Fi"
+msgstr "Níorbh fhéidir ceangal le Wi-Fi"
+
+#: wifi-bad-credentials-confirm
+msgid ""
+"Unable to connect to {{ssid}}, authentication failed due to bad credentials. "
+"Please re-enter the network password."
+msgstr ""
 
 #. # LOCALIZATION NOTE (manageNetworks-header): if you leave the original
 #. # en-US value "{{manageNetworks}}" in the following string, the localization
@@ -10639,9 +10755,9 @@ msgstr "Clingthoin agus Fógraí"
 msgid "Media"
 msgstr "Meáin"
 
-#: savingringtone
-msgid "Saving ringtone…"
-msgstr "Clingthon á shábháil…"
+#: saving-tone
+msgid "Saving…"
+msgstr "Á Shábháil…"
 
 #: no-ringtone-app
 msgid "We were unable to find a ringtone app to manage ringtones!"
@@ -11861,11 +11977,11 @@ msgstr ""
 "Roghnaigh an áit a stórálfar grianghraif, ceol, agus íosluchtuithe de réir "
 "réamhshocraithe."
 
-#: change-default-location-confirmation
+#: change-default-media-location-confirmation
 msgid ""
-"Changing the default media storage volume will affect where photos, videos, "
-"downloads and other media will be saved to by default. Existing data will "
-"remain in its current location. Do you want to proceed?"
+"Changing the default media storage location will affect where all media will "
+"be saved by default. Existing data will remain in its current location. Do "
+"you want to proceed?"
 msgstr ""
 
 #: eject-sdcard-external-0
@@ -11890,22 +12006,14 @@ msgid "Format SD card 2"
 msgstr "Formáidigh cárta SD a dó"
 
 #: formatting
-msgid "Formatting..."
-msgstr "Á fhormáidiú..."
+msgid "Formatting…"
+msgstr "Á Fhormáidiú…"
 
-#: unmount-sdcard-message
+#: unmount-sdcard-confirmation
 msgid ""
-"You will not be able to access the content stored on SD card in certain apps "
-"after unmount it. Do you want to proceed?"
+"You will not be able to access content on the SD card after you unmount it. "
+"Do you want to proceed?"
 msgstr ""
-
-#: sdcard-detected
-msgid "SD Card detected"
-msgstr "Braitheadh cárta SIM"
-
-#: total-size
-msgid "Total size : {{size}}"
-msgstr "Méid iomlán: {{size}}"
 
 #: format-sdcard-title
 msgctxt "format-sdcard-title"
@@ -12571,9 +12679,29 @@ msgstr "{{accessibility}}"
 msgid "Screen reader"
 msgstr "Léitheoir scáileáin"
 
+#: screenReader-header
+msgctxt "screenReader-header"
+msgid "{{screenReader}}"
+msgstr "{{screenReader}}"
+
+#: screenReader-toggle
+msgctxt "screenReader-toggle"
+msgid "{{screenReader}}"
+msgstr "{{screenReader}}"
+
 #: colorFilter
 msgid "Color filter"
 msgstr "Scagaire datha"
+
+#: colorFilter-header
+msgctxt "colorFilter-header"
+msgid "{{colorFilter}}"
+msgstr "{{colorFilter}}"
+
+#: colorFilter-toggle
+msgctxt "colorFilter-toggle"
+msgid "{{colorFilter}}"
+msgstr "{{colorFilter}}"
 
 #. # Device :: Accessibility :: Screen reader
 #: screenReader-enable-msg
@@ -13038,49 +13166,79 @@ msgctxt "thread-header-text[other]"
 msgid "{{name}} (+{{n}})"
 msgstr "{{name}} (+{{n}})"
 
-#. # Edit Mode
-#: edit
-msgctxt "edit"
-msgid "Edit"
-msgstr "Eagar"
-
 #: deleting-messages
 msgid "Deleting…"
 msgstr "Á Scriosadh…"
 
-#: selected
-msgctxt "selected"
+#: selected-threads
+msgctxt "selected-threads"
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
 
-#: selected[zero]
+#: selected-threads[zero]
+msgctxt "selected-threads[zero]"
 msgid "none selected"
-msgstr "níl aon rud roghnaithe"
+msgstr "gan rogha"
 
-#: selected[one]
-msgctxt "selected[one]"
+#: selected-threads[one]
+msgctxt "selected-threads[one]"
 msgid "{{n}} selected"
-msgstr "Ceann amháin roghnaithe"
+msgstr "{{n}} snáithe roghnaithe"
 
-#: selected[two]
-msgctxt "selected[two]"
+#: selected-threads[two]
+msgctxt "selected-threads[two]"
 msgid "{{n}} selected"
-msgstr "{{n}} cheann roghnaithe"
+msgstr "{{n}} shnáithe roghnaithe"
 
-#: selected[few]
-msgctxt "selected[few]"
+#: selected-threads[few]
+msgctxt "selected-threads[few]"
 msgid "{{n}} selected"
-msgstr "{{n}} cinn roghnaithe"
+msgstr "{{n}} shnáithe roghnaithe"
 
-#: selected[many]
-msgctxt "selected[many]"
+#: selected-threads[many]
+msgctxt "selected-threads[many]"
 msgid "{{n}} selected"
-msgstr "{{n}} gcinn roghnaithe"
+msgstr "{{n}} snáithe roghnaithe"
 
-#: selected[other]
-msgctxt "selected[other]"
+#: selected-threads[other]
+msgctxt "selected-threads[other]"
 msgid "{{n}} selected"
-msgstr "{{n}} ceann roghnaithe"
+msgstr "{{n}} snáithe roghnaithe"
+
+#: selected-messages
+msgctxt "selected-messages"
+msgid "{[ plural(n) ]}"
+msgstr "{[ plural(n) ]}"
+
+#: selected-messages[zero]
+msgctxt "selected-messages[zero]"
+msgid "none selected"
+msgstr "gan rogha"
+
+#: selected-messages[one]
+msgctxt "selected-messages[one]"
+msgid "{{n}} selected"
+msgstr "{{n}} teachtaireacht roghnaithe"
+
+#: selected-messages[two]
+msgctxt "selected-messages[two]"
+msgid "{{n}} selected"
+msgstr "{{n}} theachtaireacht roghnaithe"
+
+#: selected-messages[few]
+msgctxt "selected-messages[few]"
+msgid "{{n}} selected"
+msgstr "{{n}} theachtaireacht roghnaithe"
+
+#: selected-messages[many]
+msgctxt "selected-messages[many]"
+msgid "{{n}} selected"
+msgstr "{{n}} dteachtaireacht roghnaithe"
+
+#: selected-messages[other]
+msgctxt "selected-messages[other]"
+msgid "{{n}} selected"
+msgstr "{{n}} teachtaireacht roghnaithe"
 
 #. # Options menu
 #: selectThreads-label
@@ -15243,12 +15401,6 @@ msgstr ""
 msgid "Terms of Service"
 msgstr "Téarmaí Seirbhíse"
 
-#. # LOCALIZATION NOTE(fxa-pn): This string corresponds to the {{pn}} placeholder
-#. # in fxa-notice.
-#: fxa-pn
-msgid "Privacy Notice"
-msgstr "Fógra Príobháideachta"
-
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Set & Enter Password
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -16676,21 +16828,21 @@ msgstr ""
 msgid "Total size: {{size}} {{unit}}"
 msgstr "Méid iomlán: {{size}} {{unit}}"
 
-#: sdcard-unknown-size-tap-to-format-body
-msgid "Unknown, tap to format"
-msgstr "Anaithnid, tapáil chun é a fhormáidiú"
+#: sdcard-unknown-size-then-tap-to-format-body
+msgid "Unknown size, tap to format"
+msgstr "Méid anaithnid, tapáil chun é a fhormáidiú"
 
 #: sdcard-removed-title
 msgid "SD card removed"
-msgstr ""
+msgstr "Baineadh cárta SD"
 
-#: sdcard-removed-eject-successfully
-msgid "Eject successfully"
+#: sdcard-removed-ejected-successfully
+msgid "Ejected successfully"
 msgstr "D'éirigh leis an díchur"
 
-#: sdcard-removed-not-eject-properly
-msgid "Not eject properly"
-msgstr ""
+#: sdcard-removed-not-ejected-properly
+msgid "Not ejected properly"
+msgstr "Níor éirigh leis an díchur"
 
 #. # Media Recoding
 #: microphone-is-on
