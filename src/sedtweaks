@@ -177,6 +177,11 @@ sed -i 's/^videos-space=.*/videos-space=Físeáin/' gaia-ga-IE/apps/settings/set
 # old bug
 #sed -i 's/^dontallow=/deny=/' gaia-ga-IE/apps/system/system.properties
 sed -i 's/^securityNone.*$/securityNone = Gan Slándáil/' gaia-ga-IE/apps/ftu/ftu.properties
+# vs. "Cuardaigh"
+sed -i 's/^search-header=.*/search-header=Cuardach/' gaia-ga-IE/apps/settings/settings.properties
+sed -i '/tel.placeholder/s/= Guthán/= Uimhir/' gaia-ga-IE/apps/communications/contacts/contacts.properties
+sed -i '/^update =/s/.*/update = Sábháil/' gaia-ga-IE/apps/communications/contacts/contacts.properties
+sed -i 's/\\\\u0020/\\u0020/' gaia-ga-IE/apps/sms/sms.properties
 
 bash spacefixer.sh
 
