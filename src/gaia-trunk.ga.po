@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-21 17:52-0500\n"
+"POT-Creation-Date: 2014-11-04 06:21-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -66,7 +66,7 @@ msgstr "Níl aon ghléasanna péireáilte ann"
 msgid "Turned off"
 msgstr "Múchta"
 
-#: bt-status-paired mergeActionButtonLabel
+#: bt-status-paired busy mergeActionButtonLabel
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
 
@@ -115,7 +115,7 @@ msgstr "Ag fanacht leis an ngléas eile…"
 msgid "Paired"
 msgstr "Péireáilte"
 
-#: device-status-connecting shortStatus-connecting
+#: device-status-connecting connectingEllipsis shortStatus-connecting
 msgid "Connecting…"
 msgstr "Ag ceangal…"
 
@@ -256,7 +256,7 @@ msgstr "An bhfuil fonn ort Bluetooth a thosú?"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: turn-on
+#: turn-on turnOn
 msgid "Turn On"
 msgstr "Tosaigh"
 
@@ -443,19 +443,9 @@ msgstr "Imeachtaí ar feadh an lae"
 msgid "No Events"
 msgstr "Gan Imeachtaí"
 
-#. # first time use hints
-#: hint-swipe-action
-msgid "Swipe"
-msgstr "Svaidhpeáil"
-
-# dodge "navigate"
-#: hint-swipe-to-navigate
-msgid "to navigate between calendar dates."
-msgstr "chun an dáta a athrú san fhéilire."
-
-#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # time view selector
-#: show-today today
+#: show-today
+msgctxt "show-today"
 msgid "Today"
 msgstr "Inniu"
 
@@ -487,6 +477,7 @@ msgid "Add an account"
 msgstr "Cuir cuntas leis"
 
 #: new-event
+msgctxt "new-event"
 msgid "Add event"
 msgstr "Cuir imeacht leis"
 
@@ -599,9 +590,9 @@ msgctxt "calendar-local"
 msgid "Offline calendar"
 msgstr "Féilire as líne"
 
-#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # create event
-#: event-title.placeholder mediaPlaybackTitle.ariaLabel
+#: event-title.placeholder
+msgctxt "event-title.placeholder"
 msgid "Title"
 msgstr "Teideal"
 
@@ -619,18 +610,22 @@ msgid "All day event?"
 msgstr "Ar feadh an lae?"
 
 #: event-start-date.placeholder
+msgctxt "event-start-date.placeholder"
 msgid "Start date"
 msgstr "Dáta tosaigh"
 
 #: event-end-date.placeholder
+msgctxt "event-end-date.placeholder"
 msgid "End date"
 msgstr "Dáta deiridh"
 
 #: event-start-time.placeholder
+msgctxt "event-start-time.placeholder"
 msgid "Start time"
 msgstr "Am tosaigh"
 
 #: event-end-time.placeholder
+msgctxt "event-end-time.placeholder"
 msgid "End time"
 msgstr "Am deiridh"
 
@@ -1269,9 +1264,139 @@ msgctxt "weekday-6-single-char"
 msgid "S"
 msgstr "S"
 
-#: name
+#. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
+#. # The following strings are spoken by screen readers and not shown on the
+#. # screen.
+#: weekday-5-single-char.ariaLabel friday weekday-5-long
+msgid "Friday"
+msgstr "Aoine"
+
+#: weekday-4-single-char.ariaLabel thursday weekday-4-long
+msgid "Thursday"
+msgstr "Déardaoin"
+
+#: weekday-3-single-char.ariaLabel wednesday weekday-3-long
+msgid "Wednesday"
+msgstr "Céadaoin"
+
+#: weekday-2-single-char.ariaLabel tuesday weekday-2-long
+msgid "Tuesday"
+msgstr "Máirt"
+
+#: weekday-1-single-char.ariaLabel monday weekday-1-long
+msgid "Monday"
+msgstr "Luan"
+
+#: weekday-0-single-char.ariaLabel sunday weekday-0-long
+msgid "Sunday"
+msgstr "Domhnach"
+
+#: weekday-6-single-char.ariaLabel saturday weekday-6-long
+msgid "Saturday"
+msgstr "Satharn"
+
+#: busy[one]
+msgid "{{n}} event"
+msgstr "{{n}} imeacht"
+
+#: busy[two]
+msgctxt "busy[two]"
+msgid "{{n}} events"
+msgstr "{{n}} imeacht"
+
+#: busy[few]
+msgctxt "busy[few]"
+msgid "{{n}} events"
+msgstr "{{n}} imeacht"
+
+#: busy[many]
+msgctxt "busy[many]"
+msgid "{{n}} events"
+msgstr "{{n}} n-imeacht"
+
+#: busy[other]
+msgctxt "busy[other]"
+msgid "{{n}} events"
+msgstr "{{n}} imeacht"
+
+#: present.ariaLabel
+msgctxt "present.ariaLabel"
+msgid "Today"
+msgstr "Inniu"
+
+#: past-other-month
+msgctxt "past-other-month"
+msgid "Other month"
+msgstr "Mí eile"
+
+#: future-other-month
+msgctxt "future-other-month"
+msgid "Other month"
+msgstr "Mí eile"
+
+#: icon-calendar-alarm.ariaLabel
+msgid "Has alarm"
+msgstr "Aláram aige"
+
+#: calendars.ariaLabel
+msgid "Calendars"
+msgstr "Féilirí"
+
+#: multi-day-new-event-link.ariaLabel
+msgctxt "multi-day-new-event-link.ariaLabel"
+msgid "Add event"
+msgstr "Cuir imeacht leis"
+
+#: title.ariaLabel
+msgctxt "title.ariaLabel"
+msgid "Title"
+msgstr "Teideal"
+
+#: location.ariaLabel
+msgid "Location"
+msgstr "Suíomh"
+
+#: duration.ariaLabel
+msgid "Duration"
+msgstr "Fad"
+
+#: calendar.ariaLabel name
 msgid "Calendar"
 msgstr "Féilire"
+
+#: alarms.ariaLabel
+msgid "Alarms"
+msgstr "Aláraim"
+
+#: description.ariaLabel description
+msgid "Description"
+msgstr "Cur Síos"
+
+#: start-date.ariaLabel
+msgctxt "start-date.ariaLabel"
+msgid "Start date"
+msgstr "Dáta tosaigh"
+
+#: start-time.ariaLabel
+msgctxt "start-time.ariaLabel"
+msgid "Start time"
+msgstr "Am tosaigh"
+
+#: end-date.ariaLabel
+msgctxt "end-date.ariaLabel"
+msgid "End date"
+msgstr "Dáta deiridh"
+
+#: end-time.ariaLabel
+msgctxt "end-time.ariaLabel"
+msgid "End time"
+msgstr "Am deiridh"
+
+#. #-#-#-#-#  appscollectioncollection.properties.po (firefox)  #-#-#-#-#
+#. # create-collection
+#: during-progress-loading.ariaValueText loading
+msgid "Loading"
+msgstr "Á Luchtú"
 
 #: description
 msgid "Gaia Calendar"
@@ -1442,6 +1567,14 @@ msgstr "Cadhnra: 10% fágtha"
 msgid "15% battery remaining"
 msgstr "Cadhnra: 15% fágtha"
 
+#: camera-unavailable-title
+msgid "Camera Unavailable"
+msgstr "Níl aon fháil ar an gceamara"
+
+#: camera-unavailable-text
+msgid "The camera is in use by another app."
+msgstr "Tá aip eile ag baint úsáide as an gceamara faoi láthair."
+
 #: hdr
 msgid "HDR"
 msgstr "HDR"
@@ -1503,6 +1636,14 @@ msgstr "Uath"
 #: flash-deactivated
 msgid "(Flash deactivated)"
 msgstr "(Splanc díchumasaithe)"
+
+#: Photo-Mode
+msgid "Photo Mode"
+msgstr "Mód Grianghraif"
+
+#: Video-Mode
+msgid "Video Mode"
+msgstr "Mód Físe"
 
 #: options fxa-options
 msgid "Options"
@@ -1582,8 +1723,8 @@ msgstr "Athshocraigh"
 msgid "Start"
 msgstr "Tosaigh"
 
-#: stop screenReader-confirm-button-stop stop-download-action
-#: gaia-grid-stop-download-action
+#: stop screenReader-confirm-button-stop stop-button.ariaLabel
+#: stop-download-action gaia-grid-stop-download-action
 msgid "Stop"
 msgstr "Stad"
 
@@ -1628,7 +1769,7 @@ msgstr "Aláram nua"
 msgid "Edit alarm"
 msgstr "Cuir aláram in eagar"
 
-#: pause mediaPlaybackPause
+#: pause mediaPlaybackPause.ariaLabel
 msgid "Pause"
 msgstr "Sos"
 
@@ -2027,11 +2168,6 @@ msgstr "Clog"
 msgid "Gaia Clock"
 msgstr "Clog Gaia"
 
-#. # create-collection
-#: loading
-msgid "Loading"
-msgstr "Á Luchtú"
-
 #: custom
 msgid "Custom"
 msgstr "Saincheaptha"
@@ -2337,9 +2473,10 @@ msgstr "Cuir leis na ceanáin é/í"
 msgid "Remove as Favorite"
 msgstr "Bain ó na ceanáin é/í"
 
+#. #-#-#-#-#  appscommunicationscontactscontacts.properties.po (firefox)  #-#-#-#-#
 #. # The following strings are spoken by screen readers and not shown on the
 #. # screen.
-#: addButton.ariaLabel
+#: addButton.ariaLabel add
 msgid "Add"
 msgstr "Cuir Leis"
 
@@ -2517,17 +2654,17 @@ msgstr "Easpórtáil"
 msgid "Export to SIM"
 msgstr "Easpórtáil go SIM"
 
-#: sdExport-title
-msgid "Export to SD Card"
-msgstr "Easpórtáil go Cárta SD"
+#: memoryCardExport-title
+msgid "Export to memory card"
+msgstr "Easpórtáil go cárta cuimhne"
 
 #: btExport-title
 msgid "Export to Bluetooth"
 msgstr "Easpórtáil go Bluetooth"
 
-#: sdUMSEnabled
-msgid "Cannot use SD Card because USB storage is enabled"
-msgstr "Ní féidir an Cárta SD a úsáid toisc go bhfuil USB cumasaithe"
+#: memoryCardUMSEnabled
+msgid "Cannot use memory card because USB storage is enabled"
+msgstr "Ní féidir an cárta cuimhne a úsáid toisc go bhfuil stóras USB cumasaithe"
 
 #: exportErrorTitle
 msgid "Export error"
@@ -2730,7 +2867,16 @@ msgstr "Cárta cuimhne"
 msgid "SIM {{number}}"
 msgstr "SIM {{number}}"
 
+#: simNumberWithMSISDN
+msgid "SIM {{number}}: {{msisdn}}"
+msgstr "SIM {{number}}: {{msisdn}}"
+
 #. # ICE Contacts
+#: ICEContactsGroup
+msgctxt "ICEContactsGroup"
+msgid "ICE Contacts"
+msgstr "Teagmhálaithe Éigeandála"
+
 #: setICEButton
 msgid "Set ICE Contacts"
 msgstr "Roghnaigh Teagmhálaithe Éigeandála"
@@ -2756,6 +2902,31 @@ msgstr "Roghnaigh teagmhálaí"
 msgid "ICE Contact 2"
 msgstr "Teagmhálaí Éigeandála 2"
 
+#: ICERepeatedContact
+msgid "This contact is already an existing ICE contact"
+msgstr "Is teagmhálaí éigeandála é an teagmhálaí seo cheana"
+
+#: ICEUnknownError
+msgid "There was an error setting the contact as ICE"
+msgstr "Níorbh fhéidir linn teagmhálaí éigeandála a dhéanamh as an duine seo"
+
+#: ICEContactNoNumber
+msgid "This contact doesn't have a phone number"
+msgstr "Níl uimhir ghutháin ag an duine seo"
+
+#: ICEFacebookContactNotAllowed
+msgid "Facebook contacts cannot be set as ICE contacts"
+msgstr "Ní féidir teagmhálaí Facebook a úsáid mar theagmhálaí éigeandála"
+
+#: ICEContactDelTel
+msgid "Deleted phone numbers are removed from ICE Contact"
+msgstr ""
+
+#: ICEContactDelTelAll
+msgid ""
+"All the numbers are deleted. This contact is removed from the ICE Contacts."
+msgstr ""
+
 #. # No contacts
 #: no-contacts
 msgid "No contacts"
@@ -2772,6 +2943,10 @@ msgstr "Gan iompórtáil"
 #: imported
 msgid "Imported"
 msgstr "Iompórtáilte"
+
+#: today
+msgid "Today"
+msgstr "Inniu"
 
 #: yesterday
 msgid "Yesterday"
@@ -3105,51 +3280,51 @@ msgstr "Logchomhad glaonna á chur in eagar"
 msgid "Connecting"
 msgstr "Ag Ceangal"
 
-#. ## LOCALIZATION NOTE cf-async, cf-data, cf-fax, cf-packet, cf-pad, cf-sms, cf-sync and cf-voice are the service the call forwarding is activate/inactive for.
-#. ## LOCALIZATION NOTE Its variables might be a phone number or cf-inactive.
-#: cf-async
-msgid "Asynchronous: {{ async }}\n"
-msgstr "Aisioncrónach: {{ async }}\n"
+#. ## LOCALIZATION NOTE call-forwarding-async, call-forwarding-data, call-forwarding-fax, call-forwarding-packet, call-forwarding-pad, call-forwarding-sms, call-forwarding-sync and call-forwarding-voice are the service the call forwarding is activate/inactive for.
+#. ## LOCALIZATION NOTE Its variables might be a phone number or call-forwarding-inactive.
+#: call-forwarding-async
+msgid "Asynchronous: {{ async }}"
+msgstr "Aisioncronach: {{ async }}"
 
-#: cf-data
-msgid "Data: {{ data }}\n"
-msgstr "Sonraí: {{ data }}\n"
+#: call-forwarding-data
+msgid "Data: {{ data }}"
+msgstr "Sonraí: {{ data }}"
 
-#: cf-error
+#: call-forwarding-error
 msgid "An error occurred while retrieving call forwarding status"
 msgstr "Tharla earráid agus stádas na nglaonna curtha ar aghaidh á fháil"
 
-#: cf-fax
-msgid "FAX: {{ fax }}\n"
-msgstr "FACS: {{ fax }}\n"
+#: call-forwarding-fax
+msgid "FAX: {{ fax }}"
+msgstr "FACS: {{ fax }}"
 
-#: cf-inactive
+#: call-forwarding-inactive
 msgid "Inactive"
 msgstr "Neamhghníomhach"
 
-#: cf-packet
-msgid "Packet: {{ packet }}\n"
-msgstr "Paicéad: {{ packet }}\n"
+#: call-forwarding-packet
+msgid "Packet: {{ packet }}"
+msgstr "Paicéad: {{ packet }}"
 
-#: cf-pad
-msgid "PAD: {{ pad }}\n"
-msgstr "PAD: {{ pad }}\n"
+#: call-forwarding-pad
+msgid "PAD: {{ pad }}"
+msgstr ""
 
-#: cf-sms
-msgid "SMS: {{ sms }}\n"
-msgstr "SMS: {{ sms }}\n"
+#: call-forwarding-sms
+msgid "SMS: {{ sms }}"
+msgstr "SMS: {{ sms }}"
 
-#: cf-status
-msgid "Call forwarding status\n"
-msgstr "Stádas: glaonna a chur ar aghaidh\n"
+#: call-forwarding-status
+msgid "Call forwarding status"
+msgstr ""
 
-#: cf-sync
-msgid "Synchronous: {{ sync }}\n"
-msgstr "Sioncrónach: {{ sync }}\n"
+#: call-forwarding-sync
+msgid "Synchronous: {{ sync }}"
+msgstr "Sioncronach: {{ sync }}"
 
-#: cf-voice
-msgid "Voice: {{ voice }}\n"
-msgstr "Guth: {{ voice }}\n"
+#: call-forwarding-voice
+msgid "Voice: {{ voice }}"
+msgstr "Guth: {{ voice }}"
 
 #: confirm-deletion
 msgid "Clear selected calls?"
@@ -3376,11 +3551,11 @@ msgstr "Cuireadh deireadh leis an nglao"
 msgid "via SIM{{ n }}"
 msgstr "via SIM{{ n }}"
 
-#: sim-number sim-picker-button
+#: sim-number gaia-sim-picker-button sim-picker-button
 msgid "SIM{{ n }}"
 msgstr "SIM{{ n }}"
 
-#: unknown unknown-phoneNumber unknown-contact
+#: unknown unknown-phoneNumber
 msgid "Unknown"
 msgstr "Anaithnid"
 
@@ -3487,7 +3662,7 @@ msgstr "{{ n }} moladh le haghaidh \"{{ matchNumber }}\""
 msgid "Call barring"
 msgstr "Glaonna a bhacadh"
 
-#: scCallForwarding callForwarding
+#: scCallForwarding
 msgid "Call forwarding"
 msgstr "Glaonna a chur ar aghaidh"
 
@@ -3503,7 +3678,7 @@ msgstr "Aitheantas Glaoiteora Amach"
 msgid "Password change"
 msgstr "Athrú focail faire"
 
-#: scCallWaiting callWaiting
+#: scCallWaiting
 msgid "Call waiting"
 msgstr "Glao ar feitheamh"
 
@@ -3696,7 +3871,7 @@ msgstr "Níor éirigh leis. Cumasaigh glas SIM/RUIM"
 
 #: emMmiErrorMmiFdn
 msgid "Operation is restricted to fixed dialing numbers only"
-msgstr "Is féidir é seo a dhéanamh le huimhreacha socraithe dialaithe amháin"
+msgstr "Is féidir é seo a dhéanamh le huimhreacha socraithe diailithe amháin"
 
 #: emMmiErrorStkCcUssdDial
 msgid "USSD request is modified to DIAL request"
@@ -3893,92 +4068,9 @@ msgctxt "speaker"
 msgid "Speaker"
 msgstr "Callaire"
 
-#: callAirplaneModeMessage
-msgid "To make a call you need to disable airplane mode in settings."
-msgstr "Chun glao a chur, caithfidh tú scor ón mód eitleáin sna socruithe."
-
-#: callAirplaneModeBtnOk
-msgctxt "callAirplaneModeBtnOk"
-msgid "OK"
-msgstr "OK"
-
-#: callAirplaneModeTitle sendFlightModeTitle apmActivated
-msgid "Airplane mode activated"
-msgstr "Mód eitleáin cumasaithe"
-
-#: numberIsBusyTitle
-msgid "Number is busy"
-msgstr "Tá an uimhir gnóthach"
-
-#: numberIsBusyMessage
-msgid "The number is currently busy. Please try again later."
-msgstr "Tá an uimhir gnóthach faoi láthair. Déan iarracht eile ar ball."
-
-#: fdnIsActiveTitle fdnBlocked2Title
-msgid "FDN active"
-msgstr "Tá FDN gníomhach"
-
-#: fdnIsActiveMessage
-msgid ""
-"FDN (Fixed Dialing Numbers) is activated and the following number is not in "
-"your FDN list: {{ number }}"
-msgstr ""
-"Tá FDN (Uimhreacha Socraithe Dialaithe) ar siúl ach níl an uimhir seo i do "
-"liosta FDN: {{ number }}"
-
 #: voiceMail voiceMailKey.ariaLabel
 msgid "Voicemail"
 msgstr "Glórphost"
-
-#: emergencyNumber
-msgid "Emergency number"
-msgstr "Uimhir éigeandála"
-
-#: emergencyDialogBodyBadNumber
-msgid "To make a call, the phone must be connected to a network."
-msgstr "Chun glao a chur, ní mór don ghuthán a bheith ceangailte le líonra."
-
-#: emergencyDialogBodyDeviceNotAccepted
-msgid "Emergency calls are not allowed by the network."
-msgstr "Ní cheadaíonn an líonra glaonna éigeandála."
-
-#: emergencyDialogBtnOk
-msgctxt "emergencyDialogBtnOk"
-msgid "OK"
-msgstr "OK"
-
-#: emergencyDialogTitle
-msgid "No network connection"
-msgstr "Gan ceangal líonra"
-
-#: invalidNumberToDialTitle
-msgid "Invalid phone number"
-msgstr "Uimhir neamhbhailí"
-
-#: invalidNumberToDialMessage
-msgid "The phone number you are calling is not valid."
-msgstr "Tá tú ag iarraidh glao a chur ar uimhir neamhbhailí."
-
-#: unableToCallTitle
-msgid "Unable to make a phone call now"
-msgstr "Ní féidir glao a chur faoi láthair"
-
-#: unableToCallMessage
-msgid "Cannot make a call. If you are already dialing, please hang up first."
-msgstr ""
-"Ní féidir glao a chur. Má tá tú ag diailiú cheana, croch an guthán ar dtús."
-
-#: otherConnectionInUseTitle
-msgid "Other connection in use"
-msgstr "Ceangal eile in úsáid"
-
-#: otherConnectionInUseMessage
-msgid ""
-"You have an active call on another connection. You can only use one "
-"connection at a time."
-msgstr ""
-"Tá glao ar siúl agat cheana ar cheangal eile. Ní féidir leat ach ceangal "
-"amháin a úsáid."
 
 # in settings sedtweak this to "Uimhir"
 #. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
@@ -4054,7 +4146,7 @@ msgstr "Cuireadh SIM nua isteach"
 msgid "Tap to track your internet usage."
 msgstr "Tapáil chun tuairisc a choinneáil ar úsáid Idirlín."
 
-#: widget-airplane-mode-heading
+#: widget-airplane-mode-heading airplaneMode
 msgid "Airplane Mode"
 msgstr "Mód Eitleáin"
 
@@ -4299,7 +4391,11 @@ msgstr "Gníomhaíocht ghutháin"
 
 #: short-date-format
 msgid "%b, %d"
-msgstr "%b, %d"
+msgstr "%d %b"
+
+#: long-date-format
+msgid "%B %d, %Y"
+msgstr "%d %B %Y"
 
 #: sms-sent
 msgid "SMS sent"
@@ -4336,34 +4432,6 @@ msgstr "Go Míosúil"
 #: weekly check-update-weekly
 msgid "Weekly"
 msgstr "Go Seachtainiúil"
-
-#: monday weekday-1-long
-msgid "Monday"
-msgstr "Luan"
-
-#: tuesday weekday-2-long
-msgid "Tuesday"
-msgstr "Máirt"
-
-#: wednesday weekday-3-long
-msgid "Wednesday"
-msgstr "Céadaoin"
-
-#: thursday weekday-4-long
-msgid "Thursday"
-msgstr "Déardaoin"
-
-#: friday weekday-5-long
-msgid "Friday"
-msgstr "Aoine"
-
-#: saturday weekday-6-long
-msgid "Saturday"
-msgstr "Satharn"
-
-#: sunday weekday-0-long
-msgid "Sunday"
-msgstr "Domhnach"
 
 #: billing-cycle-ends
 msgid "Billing cycle ends"
@@ -4642,6 +4710,18 @@ msgid ""
 "up here when you do."
 msgstr ""
 
+#: data-used-since
+msgid "{{amount}} of data used since {{start-date}}"
+msgstr "{{amount}} sonraí úsáidte ó {{start-date}}"
+
+#: data-used-this-week
+msgid "{{amount}} of data used this week"
+msgstr "{{amount}} sonraí úsáidte an tseachtain seo"
+
+#: data-used-this-month
+msgid "{{amount}} of data used this month"
+msgstr "{{amount}} sonraí úsáidte an mhí seo"
+
 #: name
 msgid "Usage"
 msgstr "Úsáid"
@@ -4649,6 +4729,18 @@ msgstr "Úsáid"
 #: description
 msgid "Usage application to see credit and data usage statistics"
 msgstr ""
+
+#: select-download
+msgid "Select download"
+msgstr "Roghnaigh íosluchtú"
+
+#: name downloads
+msgid "Downloads"
+msgstr "Íosluchtuithe"
+
+#: description
+msgid "Gaia Download Picker"
+msgstr "Roghnóir Íosluchtuithe Gaia"
 
 #: setup-app-name-header
 msgid "Mail"
@@ -5417,10 +5509,6 @@ msgstr "Ábhar"
 #: compose-draft-save
 msgid "Save to Local Drafts"
 msgstr "Sábháil mar dhréacht logánta"
-
-#: compose-discard-message
-msgid "Discard email?"
-msgstr "Scrios an dréacht?"
 
 #: compose-discard-confirm
 msgctxt "compose-discard-confirm"
@@ -6935,9 +7023,12 @@ msgctxt "inputCodeRetriesLeft[other]"
 msgid "{{n}} tries left."
 msgstr "{{n}} iarracht fágtha."
 
+#. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # SIM Manager
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+#. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
+#. # Personalization :: Sim cards manager
 #: simManager
 msgid "SIM Manager"
 msgstr "Bainisteoir SIM"
@@ -6946,7 +7037,7 @@ msgstr "Bainisteoir SIM"
 msgid "SIM {{n}}"
 msgstr "SIM {{n}}"
 
-#: simDefault sim-picker-button-default
+#: simDefault gaia-sim-picker-button-default sim-picker-button-default
 msgid "(default)"
 msgstr "(réamhshocrú)"
 
@@ -6968,6 +7059,10 @@ msgstr "SIM faoi ghlas le UAP"
 #: noOperator no-operator
 msgid "No operator"
 msgstr "Gan oibreoir"
+
+#: searchingOperator
+msgid "Searching"
+msgstr "Ag cuardach"
 
 #. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
@@ -7066,6 +7161,7 @@ msgid "secured by {{capabilities}}"
 msgstr "cosanta ag {{capabilities}}"
 
 #: security
+msgctxt "security"
 msgid "Security"
 msgstr "Slándáil"
 
@@ -7084,6 +7180,11 @@ msgstr "WPA-EAP"
 #: securityOpen openCard.ariaLabel open_downloaded_file
 msgid "Open"
 msgstr "Oscail"
+
+#: securityOpen.ariaLabel
+msgctxt "securityOpen.ariaLabel"
+msgid "Security"
+msgstr "Slándáil"
 
 #: identity
 msgctxt "identity"
@@ -7118,7 +7219,7 @@ msgstr "Athnuaigh"
 msgid "No wireless networks found"
 msgstr "Níor aimsíodh aon líonra gan sreang"
 
-#: join-hidden-button joinHiddenNetwork
+#: join-hidden-button
 msgid "Join hidden network"
 msgstr "Ceangail le líonra i bhfolach"
 
@@ -7134,11 +7235,11 @@ msgstr "Ainm SSID an líonra"
 #. # screen.
 #. # LOCALIZATION NOTE(wifiLevel): {{level}} will be replaced at run-time by a
 #. # number ranging from 1 to 4.
-#: wifiLevel
+#: wifiLevel.ariaLabel
 msgid "{{level}} of 4 bars"
 msgstr "{{level}} as 4 bharra"
 
-#: networksList
+#: networksList.ariaLabel
 msgid "Networks found"
 msgstr "Líonraí aimsithe"
 
@@ -7160,7 +7261,7 @@ msgstr "Dáta agus Am"
 msgid "UTC{{utcOffset}} {{region}}/{{city}}"
 msgstr "UTC{{utcOffset}} {{region}}/{{city}}"
 
-#: timeZone timezoneMessage
+#: timeZone
 msgid "Time zone"
 msgstr "Crios ama"
 
@@ -7219,7 +7320,7 @@ msgstr ""
 "Le Cuntas Firefox, beidh tú in ann guthán caillte a aimsiú, agus aipeanna a "
 "cheannach ó Áit Mhargaidh Firefox."
 
-#: fxa-create-account-or-sign-in
+#: fxa-create-account-or-sign-in fxa-invitation
 msgid "Create Account or Sign In"
 msgstr "Cruthaigh Cuntas nó Logáil Isteach"
 
@@ -7293,45 +7394,41 @@ msgid ""
 "to make our products better, faster and more responsive."
 msgstr ""
 
-#. # LOCALIZATION NOTE(learn-more-telemetry.innerHTML, learn-more-information.innerHTML:
-#. # {{link}} will be replaced at run-time by an active link, the URL will be
-#. # used as text for the link.
-#: learn-more-telemetry.innerHTML
-msgid "Learn more at {{link}}"
-msgstr "Tuilleadh eolais ó {{link}}"
-
-#: learn-more-information.innerHTML
-msgid "Learn how Mozilla handles your information at {{link}}"
+#: learn-more-telemetry2.innerHTML
+msgid ""
+"Learn more at <a href=\"{{href}}\" class=\"{{className}}\">{{textContent}}</a>"
 msgstr ""
-"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo: "
-"{{link}}"
+"Tuilleadh eolais ó <a href=\"{{href}}\" class=\"{{className}}\">{{textContent}}</a>"
+
+#: learn-more-information2.innerHTML
+msgid ""
+"Learn how Mozilla handles your information at <a href=\"{{href}}\" class="
+"\"{{className}}\">{{textContent}}</a>"
+msgstr ""
+"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo: <a href=\"{{href}}\" class=\"{{className}}\">{{textContent}}</a>"
 
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # OS privacy
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: htmlWelcome.innerHTML
+#: htmlWelcome2.innerHTML
 msgid ""
-"Welcome to {{link}}, the free and open source operating system from Mozilla. "
-"Our mission is to promote openness, innovation and opportunity by keeping the "
-"power of the Web in your hands."
-msgstr ""
-"Fáilte go dtí {{link}}, an córas oibriúcháin saor agus oscailte ó Mhozilla. "
-"Is é ár misean oscailteacht, nuálaíocht, agus deiseanna a chur chun cinn trí "
-"chumhacht an Ghréasáin a choinneáil i do lámha."
+"Welcome to <a href=\"{{href}}\" class=\"{{className}}\">{{textContent}}</a>, "
+"the free and open source operating system from Mozilla. Our mission is to "
+"promote openness, innovation and opportunity by keeping the power of the Web "
+"in your hands."
+msgstr "Fáilte go dtí <a href=\"{{href}}\" class=\"{{className}}\">{{textContent}}</a>, an córas oibriúcháin saor agus oscailte ó Mhozilla. Is é ár misean oscailteacht, nuálaíocht, agus deiseanna a chur chun cinn trí chumhacht an Ghréasáin a choinneáil i do lámha."
 
 #: htmlWelcome-link
 msgctxt "htmlWelcome-link"
 msgid "{{brandShortName}}"
 msgstr "{{brandShortName}}"
 
-#: helpImprove.innerHTML
+#: helpImprove2.innerHTML
 msgid ""
 "You can help us improve our products and services by automatically sending "
-"analytics data. See our {{link}} to learn how we handle data from your device."
-msgstr ""
-"Is féidir leat cabhrú linn ár gcuid táirgí agus seirbhísí a fheabhú trí "
-"sonraí anailísíochta a sheoladh chugainn go huathoibríoch. Léigh an {{link}} "
-"chun foghlaim conas a úsáidimid sonraí ó do ghléas."
+"analytics data. See our <a href=\"{{href}}\" class=\"{{className}}\">"
+"{{textContent}}</a> to learn how we handle data from your device."
+msgstr "Is féidir leat cabhrú linn ár gcuid táirgí agus seirbhísí a fheabhú trí sonraí anailísíochta a sheoladh chugainn go huathoibríoch. Léigh an <a href=\"{{href}}\" class=\"{{className}}\">{{textContent}}</a> chun foghlaim conas a úsáidimid sonraí ó do ghléas."
 
 #. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE(fxa-pn): This string corresponds to the {{pn}} placeholder
@@ -7340,14 +7437,12 @@ msgstr ""
 msgid "Privacy Notice"
 msgstr "Fógra Príobháideachta"
 
-#. # LOCALIZATION NOTE(learn-more-privacy.innerHTML): {{link}} will be replaced at
-#. # run-time by an active link, string "learn-more-privacy-link" will be
-#. # used as text for the link.
-#: learn-more-privacy.innerHTML
-msgid "Learn how Mozilla handles your information in our {{link}}."
+#: learn-more-privacy2.innerHTML
+msgid ""
+"Learn how Mozilla handles your information in our <a href=\"{{href}}\" class="
+"\"{{className}}\">{{textContent}}</a>."
 msgstr ""
-"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo inár "
-"{{link}}."
+"Foghlaim conas a úsáideann Mozilla do chuid faisnéis phearsanta anseo inár <a href=\"{{href}}\" class=\"{{className}}\">{{textContent}}</a>."
 
 #: learn-more-privacy-link crash-reports-description-3-privacy
 msgid "privacy policy"
@@ -7737,6 +7832,14 @@ msgstr "Uathfheabhsú: ann"
 msgid "Auto-enhance off"
 msgstr "Uathfheabhsú: as"
 
+#: apply
+msgid "Apply"
+msgstr "Cuir i bhfeidhm"
+
+#: filters
+msgid "Filters"
+msgstr "Scagairí"
+
 #: original
 msgid "Original"
 msgstr "Bunleagan"
@@ -7828,6 +7931,10 @@ msgstr "Íomhá neamhbhailí nó truaillithe, ní féidir í a thaispeáint."
 #: saved
 msgid "{{filename}} saved to Gallery"
 msgstr "Sábháladh {{filename}} sa Ghailearaí"
+
+#: edit-copy-saved
+msgid "New copy saved."
+msgstr "Cóip nua sábháilte."
 
 #: overlay-camera-button
 msgid "Go to Camera"
@@ -8284,6 +8391,10 @@ msgstr "Baile Gaia"
 #: title
 msgid "Keyboard"
 msgstr "Méarchlár"
+
+#: settingsPageTitle
+msgid "Built-in Keyboard"
+msgstr "Méarchlár Insuite"
 
 #: keyboardSettings
 msgid "Keyboard settings"
@@ -8745,8 +8856,8 @@ msgid ""
 msgstr ""
 
 #: offline-message
-msgid "No Internet Connection"
-msgstr "Gan Ceangal Idirlín"
+msgid "No internet connection"
+msgstr "Gan ceangal Idirlín"
 
 #. # History headings
 #: future
@@ -9076,7 +9187,7 @@ msgid "Gaia Settings"
 msgstr "Socruithe Gaia"
 
 #: advancedSettings
-msgid "Advanced settings"
+msgid "Advanced Settings"
 msgstr "Ardsocruithe"
 
 #. #-#-#-#-#  appssystemaccessibility.properties.po (firefox)  #-#-#-#-#
@@ -9132,16 +9243,17 @@ msgctxt "unavailable"
 msgid "Not available"
 msgstr "Níl ar fáil"
 
+#: simSettingsWithIndex
+msgctxt "simSettingsWithIndex"
+msgid "SIM {{index}} Settings"
+msgstr "Socruithe SIM {{index}}"
+
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Connectivity
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #: networkAndConnectivity
 msgid "Network & Connectivity"
 msgstr "Líonra agus Comhcheangailteacht"
-
-#: airplaneMode
-msgid "Airplane mode"
-msgstr "Mód eitleáin"
 
 #. # Connectivity :: Wi-Fi
 #: wifi
@@ -9163,24 +9275,24 @@ msgid "Turn Wi-Fi on to view available networks."
 msgstr "Cuir Wi-Fi ar siúl chun na líonraí atá ar fáil a fheiceáil."
 
 #: availableNetworks
-msgid "Available networks"
-msgstr "Líonraí le fáil"
+msgid "Available Networks"
+msgstr "Líonraí Ar Fáil"
 
 #: knownNetworks
-msgid "Known networks"
-msgstr "Líonraí ar eolas"
+msgid "Known Networks"
+msgstr "Líonraí Aitheanta"
 
 #: hiddenNetworks
-msgid "Hidden networks"
-msgstr "Líonraí i bhfolach"
+msgid "Hidden Networks"
+msgstr "Líonraí i bhFolach"
 
 #: scanning searching
 msgid "Searching…"
 msgstr "Ag Cuardach…"
 
 #: scanNetworks
-msgid "Search again"
-msgstr "Cuardaigh arís"
+msgid "Search Again"
+msgstr "Cuardaigh Arís"
 
 #: fullStatus-initializing
 msgid "Initializing…"
@@ -9235,8 +9347,8 @@ msgid "Offline"
 msgstr "As Líne"
 
 #: manageNetworks
-msgid "Manage networks"
-msgstr "Bainistigh líonraí"
+msgid "Manage Networks"
+msgstr "Bainistigh Líonraí"
 
 #: wifi-bad-credentials-title
 msgid "Failed connecting to Wi-Fi"
@@ -9265,19 +9377,22 @@ msgstr "Bainistigh teastais"
 msgid "Manage Cert."
 msgstr "Bainistigh Teastais"
 
+#: joinHiddenNetwork
+msgid "Join Hidden Network"
+msgstr "Ceangail le Líonra i bhFolach"
+
 #: securedBy
 msgid "Secured by {{capabilities}}"
 msgstr "Cosanta ag {{capabilities}}"
-
-#: security
-msgctxt "security"
-msgid "Security"
-msgstr "Slándáil"
 
 #: securityNone
 msgctxt "securityNone"
 msgid "None"
 msgstr "Gan Slándáil"
+
+#: notInRange
+msgid "Not in range"
+msgstr ""
 
 #: ipAddress
 msgid "IP address"
@@ -9402,8 +9517,8 @@ msgid "No known networks"
 msgstr "Gan líonraí aitheanta"
 
 #: certificateList
-msgid "Certificate list"
-msgstr "Liosta teastas"
+msgid "Certificate List"
+msgstr "Liosta Teastas"
 
 #: noCertificate
 msgid "No imported certificate"
@@ -9566,8 +9681,12 @@ msgid "Voicemail Number"
 msgstr "Uimhir Ghlórphoist"
 
 #: voicePrivacyMode
-msgid "Voice privacy mode"
+msgid "Voice Privacy Mode"
 msgstr ""
+
+#: callWaiting
+msgid "Call Waiting"
+msgstr "Glaonna ar Feitheamh"
 
 #: confirmCallWaitingTitle
 msgid "Unable to confirm call waiting preferences"
@@ -9578,6 +9697,10 @@ msgid ""
 "The device is currently unable to communicate with the carrier. Try setting "
 "the preference again."
 msgstr ""
+
+#: callForwarding
+msgid "Call Forwarding"
+msgstr "Cur Ar Aghaidh"
 
 #. # LOCALIZATION NOTE (callForwarding-header): if you leave the original
 #. # en-US value "{{callForwarding}}" in the following string, the localization
@@ -9682,14 +9805,12 @@ msgid "Show number"
 msgstr "Taispeáin an uimhir"
 
 #: fdn
-msgctxt "fdn"
 msgid "Fixed dialing numbers"
-msgstr "Uimhreacha socraithe dialaithe"
+msgstr "Uimhreacha socraithe diailithe"
 
 #: fdnSettings
-msgctxt "fdnSettings"
-msgid "Fixed dialing numbers"
-msgstr "Uimhreacha socraithe dialaithe"
+msgid "Fixed Dialing Numbers"
+msgstr "Uimhreacha Socraithe Diailithe"
 
 #. # LOCALIZATION NOTE (fdnSettings-header): if you leave the original
 #. # en-US value "{{fdnSettings}}" in the following string, the localization
@@ -9701,7 +9822,6 @@ msgid "{{fdnSettings}}"
 msgstr "{{fdnSettings}}"
 
 #: fdn-authorizedNumbers
-msgctxt "fdn-authorizedNumbers"
 msgid "Authorized numbers"
 msgstr "Uimhreacha údaraithe"
 
@@ -9826,6 +9946,10 @@ msgctxt "fdnAction-edit-header"
 msgid "Edit contact"
 msgstr "Cuir in eagar"
 
+#: fdnNoFDNFreeRecord
+msgid "Maximum FDN reached. You cannot add more numbers."
+msgstr ""
+
 #. # Connectivity :: Messaging
 #: messagingSettings
 msgid "Messaging Settings"
@@ -9910,6 +10034,7 @@ msgid "Service Center"
 msgstr "Lárionad Seirbhíse"
 
 #: messaging-sim-settings
+msgctxt "messaging-sim-settings"
 msgid "SIM {{index}} Settings"
 msgstr "Socruithe SIM {{index}}"
 
@@ -9941,16 +10066,16 @@ msgid "Data"
 msgstr "Sonraí"
 
 #: dataConnection
-msgid "Data connection"
-msgstr "Ceangal sonraí"
+msgid "Data Connection"
+msgstr "Ceangal Sonraí"
 
 #: dataRoaming
-msgid "Data roaming"
-msgstr "Sonraí fánaíochta"
+msgid "Data Roaming"
+msgstr "Sonraí Fánaíochta"
 
 #: networkOperator
-msgid "Network operator"
-msgstr "Oibreoir líonra"
+msgid "Network Operator"
+msgstr "Oibreoir Líonra"
 
 #. # LOCALIZATION NOTE (networkOperator-header): if you leave the original
 #. # en-US value "{{networkOperator}}" in the following string, the localization
@@ -9962,8 +10087,8 @@ msgid "{{networkOperator}}"
 msgstr "{{networkOperator}}"
 
 #: availableOperators
-msgid "Network operators in the area"
-msgstr "Oibreoirí líonra sa cheantar"
+msgid "Network Operators In The Area"
+msgstr "Oibreoirí Líonra sa Cheantar"
 
 #: preferredNetworkTypeAlertTitle
 msgid "Preferred network type"
@@ -9974,8 +10099,8 @@ msgid "Network type could not be set"
 msgstr "Níorbh fhéidir cineál an líonra a shocrú"
 
 #: operator-networkType
-msgid "Network type"
-msgstr "Cineál an líonra"
+msgid "Network Type"
+msgstr "Cineál an Líonra"
 
 #: operator-networkType-auto
 msgctxt "operator-networkType-auto"
@@ -10044,8 +10169,8 @@ msgid "Auto (WCDMA/GSM/CDMA/EVDO)"
 msgstr "Uath (WCDMA/GSM/CDMA/EVDO)"
 
 #: operator-autoSelect
-msgid "Automatic selection"
-msgstr "Roghnú uathoibríoch"
+msgid "Automatic Selection"
+msgstr "Uathroghnú"
 
 #: operator-networkSelect-auto
 msgctxt "operator-networkSelect-auto"
@@ -10100,7 +10225,7 @@ msgid "APN"
 msgstr "APN"
 
 #: apnSettings
-msgid "APN settings"
+msgid "APN Settings"
 msgstr "Socruithe APN"
 
 #. # LOCALIZATION NOTE (apnSettings-header): if you leave the original
@@ -10113,8 +10238,8 @@ msgid "{{apnSettings}}"
 msgstr "{{apnSettings}}"
 
 #: dataSettings
-msgid "Data settings"
-msgstr "Socruithe sonraí"
+msgid "Data Settings"
+msgstr "Socruithe Sonraí"
 
 #. # LOCALIZATION NOTE (dataSettings-header): if you leave the original
 #. # en-US value "{{dataSettings}}" in the following string, the localization
@@ -10126,7 +10251,7 @@ msgid "{{dataSettings}}"
 msgstr "{{dataSettings}}"
 
 #: suplSettings
-msgid "A-GPS settings"
+msgid "A-GPS Settings"
 msgstr "Socruithe A-GPS"
 
 #. # LOCALIZATION NOTE (suplSettings-header): if you leave the original
@@ -10139,8 +10264,8 @@ msgid "{{suplSettings}}"
 msgstr "{{suplSettings}}"
 
 #: messageSettings
-msgid "Message settings"
-msgstr "Socruithe teachtaireachta"
+msgid "Message Settings"
+msgstr "Socruithe Teachtaireachtaí"
 
 #. # LOCALIZATION NOTE (messageSettings-header): if you leave the original
 #. # en-US value "{{messageSettings}}" in the following string, the localization
@@ -10152,8 +10277,8 @@ msgid "{{messageSettings}}"
 msgstr "{{messageSettings}}"
 
 #: dunSettings
-msgid "Tethering settings"
-msgstr "Socruithe teaghránaithe"
+msgid "Tethering Settings"
+msgstr "Socruithe Teaghránaithe"
 
 #. # LOCALIZATION NOTE (dunSettings-header): if you leave the original
 #. # en-US value "{{dunSettings}}" in the following string, the localization
@@ -10165,7 +10290,7 @@ msgid "{{dunSettings}}"
 msgstr "{{dunSettings}}"
 
 #: imsSettings
-msgid "IMS settings"
+msgid "IMS Settings"
 msgstr "Socruithe IMS"
 
 #. # LOCALIZATION NOTE (imsSettings-header): if you leave the original
@@ -10237,8 +10362,8 @@ msgid "Protocol"
 msgstr "Prótacal"
 
 #: apn-roaming-protocol
-msgid "Roaming protocol"
-msgstr "Prótacal ar fánaíocht"
+msgid "Roaming Protocol"
+msgstr "Prótacal Fánaíochta"
 
 #: apn-protocol-notDefined
 msgctxt "apn-protocol-notDefined"
@@ -10379,7 +10504,7 @@ msgid "The SSID cannot be empty"
 msgstr "Ní cheadaítear SSID folamh"
 
 #: internetSharing
-msgid "Internet sharing"
+msgid "Internet Sharing"
 msgstr "Comhroinnt Idirlín"
 
 #. # LOCALIZATION NOTE (internetSharing-header): if you leave the original
@@ -10401,9 +10526,8 @@ msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
 #: wifi-hotspot
-msgctxt "wifi-hotspot"
-msgid "Wi-Fi hotspot"
-msgstr "Ball te Wi-Fi"
+msgid "Wi-Fi Hotspot"
+msgstr "Ball Te Wi-Fi"
 
 #: wifi-password
 msgctxt "wifi-password"
@@ -10416,13 +10540,12 @@ msgid "Security"
 msgstr "Slándáil"
 
 #: usb-tethering
-msgctxt "usb-tethering"
-msgid "USB tethering"
+msgid "USB Tethering"
 msgstr "Teaghránú USB"
 
 #: hotspotSettings
-msgid "Hotspot settings"
-msgstr "Socruithe an bhaill the"
+msgid "Hotspot Settings"
+msgstr "Socruithe an Bhaill The"
 
 #: wifi-auth-username
 msgctxt "wifi-auth-username"
@@ -10452,10 +10575,6 @@ msgstr "Focal Faire"
 #: hotspotSettings-header
 msgid "{{hotspotSettings}}"
 msgstr "{{hotspotSettings}}"
-
-#: ssid-name
-msgid "SSID network name"
-msgstr "Ainm an líonra (SSID)"
 
 #: hotspot-open open-notification
 msgid "open"
@@ -10513,8 +10632,8 @@ msgid "Alerts"
 msgstr "Foláirimh"
 
 #: other-sounds
-msgid "Other sounds"
-msgstr "Fuaimeanna eile"
+msgid "Other Sounds"
+msgstr "Fuaimeanna Eile"
 
 #: unlock-screen
 msgid "Unlock screen"
@@ -10564,16 +10683,16 @@ msgid "Adjust automatically"
 msgstr "Gile uathoibríoch"
 
 #: lockScreen
-msgid "Lock screen"
-msgstr "Cuir faoi ghlas"
+msgid "Lock Screen"
+msgstr "Scáileán Glasála"
 
 #: wallpaper name
 msgid "Wallpaper"
 msgstr "Cúlbhrat"
 
 #: screen-timeout
-msgid "Screen timeout"
-msgstr "Teorainn ama an scáileáin"
+msgid "Screen Timeout"
+msgstr "Teorainn Ama an Scáileáin"
 
 #: one-minute
 msgid "1 minute"
@@ -10596,8 +10715,8 @@ msgid "never"
 msgstr "Ná déan riamh"
 
 #: lock-orientation
-msgid "Lock orientation"
-msgstr "Ná rothlaigh"
+msgid "Lock Orientation"
+msgstr "Ná Rothlaigh"
 
 #. # Personalization :: Navigation
 #: navigation
@@ -10614,8 +10733,8 @@ msgid "{{navigation}}"
 msgstr "Brabhsáil"
 
 #: edge-swipe-navigation
-msgid "Edge swipe navigation"
-msgstr "Imill bheo"
+msgid "Edge Swipe Navigation"
+msgstr "Imill Bheo"
 
 #: edge-swipe-navigation-enable-msg
 msgid "Drag from the left or right edge of the screen to jump between apps."
@@ -10659,15 +10778,17 @@ msgstr "Tar éis atosaithe"
 msgid "{{dateAndTime}}"
 msgstr "{{dateAndTime}}"
 
-# good in context; shorter better too
 #: setTimeAutomatically
-msgid "Set automatically"
-msgstr "Socrú uathoibríoch"
+msgid "Set Automatically"
+msgstr "Uathoibríoch"
 
-# parallel with prev
 #: setTimeManually
-msgid "Set manually"
-msgstr "Socrú de láimh"
+msgid "Set Manually"
+msgstr "De Láimh"
+
+#: timezoneMessage
+msgid "Time Zone"
+msgstr "Crios Ama"
 
 #: selectTimezoneContinent
 msgid "Select continent"
@@ -10712,11 +10833,6 @@ msgstr "{{language}}"
 #: sample-format
 msgid "Sample Format"
 msgstr "Formáid Shamplach"
-
-#. # Personalization :: Sim cards manager
-#: simManager
-msgid "SIM manager"
-msgstr "Bainisteoir SIM"
 
 #. # LOCALIZATION NOTE (simManager-header): if you leave the original
 #. # en-US value "{{simManager}}" in the following string, the localization
@@ -10853,10 +10969,6 @@ msgctxt "changeHomescreenButton"
 msgid "Change"
 msgstr "Athraigh"
 
-#: description
-msgid "Description"
-msgstr "Cur Síos"
-
 #. # Personalization :: Keyboard
 #: keyboardSettings
 msgid "Keyboard Settings"
@@ -10970,11 +11082,6 @@ msgstr ""
 "Le Cuntas Firefox, beidh tú ábalta tairbhe a bhaint as gnéithe cosúil le "
 "'Aimsigh Mo Ghléas' agus aipeanna cosúil le hÁit Mhargaidh Firefox."
 
-#: fxa-invitation
-msgctxt "fxa-invitation"
-msgid "Create account or sign in"
-msgstr "Cruthaigh cuntas nó logáil isteach"
-
 #. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Panel: logged in, unverified
 #. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
@@ -11009,7 +11116,7 @@ msgstr "Seoladh teachtaireacht deimhnithe chuig {{email}}."
 msgid "Don’t see an email? {{resend}}."
 msgstr "Nár bhfuair tú an ríomhphost? {{resend}}."
 
-#: fxa-resend resend
+#: fxa-resend message-resend resend
 msgid "Resend"
 msgstr "Seol Arís"
 
@@ -11042,7 +11149,6 @@ msgid "Find My Device"
 msgstr "Aimsigh Mo Ghléas"
 
 #: findmydevice-create-account
-msgctxt "findmydevice-create-account"
 msgid "Create account or sign in"
 msgstr "Cruthaigh cuntas nó logáil isteach"
 
@@ -11086,16 +11192,16 @@ msgid "Privacy & Security"
 msgstr "Príobháideacht agus Slándáil"
 
 #: passcode-lock
-msgid "Passcode lock"
-msgstr "Úsáid cód faire"
+msgid "Passcode Lock"
+msgstr "Úsáid Cód Faire"
 
 #: passcode-lock-desc
 msgid "Passcode: {{code}}"
 msgstr "Cód faire: {{code}}"
 
 #: screenLock
-msgid "Screen lock"
-msgstr "Cur faoi ghlas"
+msgid "Screen Lock"
+msgstr "Glasáil"
 
 #. # LOCALIZATION NOTE (screenLock-header): if you leave the original
 #. # en-US value "{{screenLock}}" in the following string, the localization
@@ -11121,8 +11227,8 @@ msgstr "{{simSecurity}}"
 
 #. # Security :: App permissions
 #: appPermissions
-msgid "App permissions"
-msgstr "Ceadanna aipeanna"
+msgid "App Permissions"
+msgstr "Ceadanna Aipeanna"
 
 #. # LOCALIZATION NOTE (appPermissions-header): if you leave the original
 #. # en-US value "{{appPermissions}}" in the following string, the localization
@@ -11160,8 +11266,8 @@ msgid "Grant"
 msgstr "Ceadaithe"
 
 #: uninstallApp
-msgid "Uninstall app"
-msgstr "Díshuiteáil an aip"
+msgid "Uninstall App"
+msgstr "Díshuiteáil an Aip"
 
 #. #-#-#-#-#  appssmssms.properties.po (firefox)  #-#-#-#-#
 #. # Headers
@@ -11218,8 +11324,8 @@ msgid "Passcode doesn’t match. Try again."
 msgstr "Cód faire mícheart. Déan iarracht eile."
 
 #: confirm-passcode
-msgid "Confirm passcode"
-msgstr "Deimhnigh an cód faire"
+msgid "Confirm Passcode"
+msgstr "Deimhnigh an Cód Faire"
 
 #: immediately
 msgid "Immediately"
@@ -11573,18 +11679,6 @@ msgid "Clear cookies and other data stored by sites on this device?"
 msgstr ""
 "An bhfuil fonn ort fianáin agus sonraí eile ar an ngléas seo a ghlanadh?"
 
-#: clear-boomarks-data
-msgid "Clear bookmarks data"
-msgstr "Glan na leabharmharcanna"
-
-#: confirmClearBookmarkAppsDataDesc
-msgid ""
-"This clears private data from bookmarks that have been added to the home "
-"screen. This cannot be undone."
-msgstr ""
-"Glanann an rogha seo sonraí príobháideacha ó leabharmharcanna a chuir tú leis "
-"an scáileán baile. Ní bheidh tú in ann na sonraí a fháil ar ais."
-
 #: clear clear.ariaLabel
 msgid "Clear"
 msgstr "Glan"
@@ -11597,8 +11691,7 @@ msgid "Storage"
 msgstr "Stóras"
 
 #: enableUSBStorage1
-msgctxt "enableUSBStorage1"
-msgid "USB storage"
+msgid "USB Storage"
 msgstr "Stóras USB"
 
 #. # Storage :: Application storage
@@ -11607,8 +11700,8 @@ msgid "Unplug USB cable to disable"
 msgstr "Díphlugáil an cábla USB chun é a dhíchumasú"
 
 #: appStorage
-msgid "Application storage"
-msgstr "Stóras aipeanna"
+msgid "Application Storage"
+msgstr "Stóras Aipeanna"
 
 #. # LOCALIZATION NOTE (appStorage-header): if you leave the original
 #. # en-US value "{{appStorage}}" in the following string, the localization
@@ -11664,9 +11757,8 @@ msgid "{{size}} {{unit}} available"
 msgstr "{{size}} {{unit}} saor"
 
 #: apps-total-space
-msgctxt "apps-total-space"
-msgid "Total space"
-msgstr "Spás iomlán"
+msgid "Total Space"
+msgstr "Spás Iomlán"
 
 #: apps-free-space
 msgid "Left"
@@ -11699,8 +11791,8 @@ msgstr "Ollstóráil USB (UMS)"
 
 #. # Storage :: Media storage
 #: mediaStorage
-msgid "Media storage"
-msgstr "Stóras meán"
+msgid "Media Storage"
+msgstr "Stóras Meán"
 
 #. # LOCALIZATION NOTE (mediaStorage-header): if you leave the original
 #. # en-US value "{{mediaStorage}}" in the following string, the localization
@@ -11746,7 +11838,6 @@ msgid "Space left"
 msgstr "Spás saor"
 
 #: total-space
-msgctxt "total-space"
 msgid "Total space"
 msgstr "Spás iomlán"
 
@@ -11767,10 +11858,9 @@ msgstr "Ardroghanna"
 msgid "Enable USB storage?"
 msgstr "Cumasaigh stóras USB?"
 
-# short on space, leave off "meán"
 #: default-media-location
-msgid "Default media location"
-msgstr "Stóras réamhshocraithe"
+msgid "Default Media Location"
+msgstr "Stóras Réamhshocraithe"
 
 #: default-media-location-msg
 msgid "Choose where photos, videos, music and downloads are stored by default."
@@ -11794,6 +11884,7 @@ msgid "Eject SD card 2"
 msgstr "Díchuir cárta SD a dó"
 
 #: format-sdcard-internal
+msgctxt "format-sdcard-internal"
 msgid "Format internal storage"
 msgstr "Formáidigh an stóras inmheánach"
 
@@ -11827,6 +11918,17 @@ msgid ""
 msgstr ""
 "Scriosfar na sonraí go léir ó do chárta SD, mar shampla ceol agus grianghraif."
 
+#: format-sdcard-internal-title
+msgctxt "format-sdcard-internal-title"
+msgid "Format internal storage"
+msgstr "Formáidigh an stóras inmheánach"
+
+#: format-sdcard-internal-message
+msgid ""
+"This will erase all data stored on your internal storage, such as music and "
+"photos."
+msgstr ""
+
 # verb here!
 #: format-sdcard-btnformat
 msgctxt "format-sdcard-btnformat"
@@ -11851,8 +11953,8 @@ msgstr "Cabhair"
 
 #. # Device :: Information
 #: deviceInfo
-msgid "Device information"
-msgstr "Eolas faoin ghléas"
+msgid "Device Information"
+msgstr "Eolas faoin Ghléas"
 
 #. # LOCALIZATION NOTE (deviceInfo-header): if you leave the original
 #. # en-US value "{{deviceInfo}}" in the following string, the localization
@@ -11874,10 +11976,6 @@ msgstr "Uimhir Ghutháin"
 #: deviceInfo-ICCID-unavailable-sim
 msgid "SIM {{index}}: Not available"
 msgstr "SIM {{index}}: Níl sé ar fáil"
-
-#: downloads
-msgid "Downloads"
-msgstr "Íosluchtuithe"
 
 #. # LOCALIZATION NOTE (downloads-header): if you leave the original
 #. # en-US value "{{downloads}}" in the following string, the localization
@@ -12069,10 +12167,6 @@ msgstr "Forscrollú"
 msgid "Tiling"
 msgstr "Tíliú"
 
-#: simple-tiling
-msgid "Simple tiling"
-msgstr "Tíliú simplí"
-
 #: low-precision
 msgid "Low-precision painting"
 msgstr ""
@@ -12140,6 +12234,10 @@ msgstr ""
 
 #: geolocation-debugging-enabled
 msgid "Geolocation output in ADB"
+msgstr ""
+
+#: geolocation-debugging-gps-locations-ignored
+msgid "Ignore GPS locations"
 msgstr ""
 
 #: use-reviewer-certs
@@ -12218,6 +12316,10 @@ msgstr "Seiceáil Anois"
 #: update-status
 msgid "Update status"
 msgstr "Stádas nuashonraithe"
+
+#: no-network-when-update
+msgid "Connect to the Internet to proceed with your update."
+msgstr ""
 
 #: checking-for-update
 msgid "Checking for updates…"
@@ -12401,13 +12503,17 @@ msgstr ""
 msgid "App suspending"
 msgstr ""
 
+#: verticalhome-grouping
+msgid "App grouping"
+msgstr "Grúpáil aipeanna"
+
 #: verbose-app-permissions
 msgid "Verbose app permissions"
 msgstr ""
 
 #: window-management
 msgid "Window management"
-msgstr ""
+msgstr "Bainistiú fuinneog"
 
 #. # Device :: Downloads
 #: downloads-edit
@@ -12434,8 +12540,8 @@ msgid "{{battery}}"
 msgstr "{{battery}}"
 
 #: batteryLevel
-msgid "Current level"
-msgstr "Leibhéal an chadhnra"
+msgid "Current Level"
+msgstr "Leibhéal an Chadhnra"
 
 #: batteryLevel-percent-unplugged
 msgid "{{level}}%"
@@ -12449,18 +12555,23 @@ msgstr "{{level}}% (á luchtú)"
 msgid "{{level}}% (charged)"
 msgstr "{{level}}% (luchtaithe)"
 
+#: powerSaveModeTitle
+msgctxt "powerSaveModeTitle"
+msgid "Power Save Mode"
+msgstr "Mód Spárála Cumhachta"
+
 #: powerSaveMode
-msgid "Power save mode"
-msgstr "Mód spárála cumhachta"
+msgctxt "powerSaveMode"
+msgid "Power Save Mode"
+msgstr "Mód Spárála Cumhachta"
 
 #: powerSave-threshold
 msgid "{{level}}% battery left"
 msgstr "{{level}}% cadhnra fágtha"
 
-# right under Power save mode, so context is cleart
 #: turnOnAuto
-msgid "Turn on automatically"
-msgstr "Tosú uathoibríoch"
+msgid "Turn On Automatically"
+msgstr "Tosú Uathoibríoch"
 
 #. # Device :: Accessibility
 #: accessibility
@@ -12477,8 +12588,8 @@ msgid "{{accessibility}}"
 msgstr "{{accessibility}}"
 
 #: screenReader
-msgid "Screen reader"
-msgstr "Léitheoir scáileáin"
+msgid "Screen Reader"
+msgstr "Léitheoir Scáileáin"
 
 #: screenReader-header
 msgctxt "screenReader-header"
@@ -12491,8 +12602,8 @@ msgid "{{screenReader}}"
 msgstr "{{screenReader}}"
 
 #: colorFilter
-msgid "Color filter"
-msgstr "Scagaire datha"
+msgid "Color Filter"
+msgstr "Scagaire Datha"
 
 #: colorFilter-header
 msgctxt "colorFilter-header"
@@ -12505,6 +12616,10 @@ msgid "{{colorFilter}}"
 msgstr "{{colorFilter}}"
 
 #. # Device :: Accessibility :: Screen reader
+#: screenReader-captions
+msgid "Display speech"
+msgstr ""
+
 #: screenReader-enable-msg
 msgid ""
 "When the screen reader is enabled, your device will provide spoken feedback "
@@ -12566,16 +12681,18 @@ msgid "Send Mozilla Feedback"
 msgstr "Seol Aiseolas chuig Mozilla"
 
 #: performanceAndUsageData
-msgid "Performance and usage data"
-msgstr "Sonraí feidhmíochta agus úsáide"
+msgid "Performance and Usage Data"
+msgstr "Sonraí Feidhmíochta agus Úsáide"
 
 #: sharePerformanceAndUsageData
 msgid "Submit data"
 msgstr "Seol mo chuid sonraí"
 
+#. #-#-#-#-#  appssystemsystem.properties.po (firefox)  #-#-#-#-#
+#. # "Crash Reports" information page
 #: crashReports
-msgid "Crash reports"
-msgstr "Tuairiscí tuairteála"
+msgid "Crash Reports"
+msgstr "Tuairiscí ar Thuairteáil"
 
 #. # LOCALIZATION NOTE (crashReports): if you leave the original
 #. # en-US value "{{crashReports}}" in the following string, the localization
@@ -12766,8 +12883,8 @@ msgid "Call support:"
 msgstr "Tacaíocht ghutháin:"
 
 #: user-guide
-msgid "User guide"
-msgstr "Treoirleabhar úsáideora"
+msgid "User Guide"
+msgstr "Treoirleabhar Úsáideora"
 
 #: default-support
 msgid "Please contact your local provider for support."
@@ -12874,17 +12991,14 @@ msgstr "Faigh Stádas an Chainéil"
 
 #. # Incompatible Settings :: USB Storage - USB Tethering - WiFi Tethering
 #: is-warning-storage-header
-msgctxt "is-warning-storage-header"
 msgid "USB storage"
 msgstr "Stóras USB"
 
 #: is-warning-tethering-header
-msgctxt "is-warning-tethering-header"
 msgid "USB tethering"
 msgstr "Teaghránú USB"
 
 #: is-warning-wifi-header
-msgctxt "is-warning-wifi-header"
 msgid "Wi-Fi hotspot"
 msgstr "Ball te Wi-Fi"
 
@@ -13063,6 +13177,11 @@ msgstr "Bain an t-ábhar"
 msgid "To:"
 msgstr "Chuig:"
 
+#: send
+msgctxt "send"
+msgid "Send"
+msgstr "Seol"
+
 #: new
 msgid "New"
 msgstr "Nua"
@@ -13091,7 +13210,7 @@ msgstr "Á thiontú go teachtaireacht téacs."
 
 #: messages-max-length-text
 msgid "You’ve reached the maximum length."
-msgstr ""
+msgstr "Shroich tú an fad uasta."
 
 #: messages-max-subject-length-text
 msgid "Maximum length of subject reached."
@@ -13112,6 +13231,12 @@ msgstr "Teachtaireacht nua"
 #: sendMessage
 msgid "Send message"
 msgstr "Seol an teachtaireacht"
+
+#. # LOCALIZATION NOTE(sendMMSToEmail): shown when clicking on an e-mail inside
+#. # the body of a message to provide an option to send a multimedia message.
+#: sendMMSToEmail
+msgid "Send multimedia message"
+msgstr "Seol teachtaireacht ilmheáin"
 
 #: no-recipient
 msgid "(No recipient)"
@@ -13216,41 +13341,36 @@ msgstr ""
 msgid "Your Multimedia Message (MMS), was sent on {{datetime}}"
 msgstr "Seoladh do Theachtaireacht Il-Mheán (MMS), ar {{datetime}}"
 
-#: message-status
-msgid "Status:"
-msgstr "Stádas:"
+#: message-subject
+msgid "Subject:"
+msgstr "Ábhar:"
 
-#: message-status-sent
-msgid "sent"
-msgstr "seolta"
+#: report-status-error
+msgid "Message could not be sent"
+msgstr "Níorbh fhéidir an teachtaireacht a sheoladh"
 
-#: message-status-received
-msgid "received"
-msgstr "faighte"
-
-#: message-status-sending
-msgid "sending"
-msgstr "á seoladh"
-
-#: message-status-error
-msgid "error"
-msgstr "earráid"
-
-#: message-status-not-downloaded
+#: report-status-not-downloaded
 msgid "not downloaded"
 msgstr "gan íosluchtú"
 
-#: message-delivered
+#: report-status-delivered
 msgid "Delivered:"
 msgstr "Seachadta:"
 
-#: message-read-title
+#: report-status-read
 msgid "Read:"
 msgstr "Léite:"
 
-#: message-requested
-msgid "Requested"
-msgstr "Iarrtha"
+#: report-status-pending
+msgid "Report requested"
+msgstr ""
+
+#. # LOCALIZATION NOTE(report-status-rejected): used to describe the outgoing mms
+#. # could not be downloaded by receiver(might be an invalid number or the number 
+#. # is not allowed to download mms)
+#: report-status-rejected
+msgid "Message rejected"
+msgstr "Diúltaíodh an teachtaireacht"
 
 #: message-size-was
 msgid "Message size:"
@@ -13264,17 +13384,21 @@ msgstr "%e %B %Y, {{shortTimeFormat12}}"
 msgid "%e %B %Y, {{shortTimeFormat24}}"
 msgstr "%e %B %Y, {{shortTimeFormat24}}"
 
-#: report-recipients
-msgid "Recipients:"
-msgstr "Faighteoirí:"
+#: report-to-title
+msgid "To"
+msgstr "Chuig"
 
-#: report-from
-msgid "From:"
-msgstr "Ó:"
+#: report-from-title
+msgid "From"
+msgstr "Ó"
 
 #: message-sent
 msgid "Sent:"
 msgstr "Seolta:"
+
+#: message-sending
+msgid "{{message-delivery-status-sending}}"
+msgstr "{{message-delivery-status-sending}}"
 
 #: message-received
 msgid "Received:"
@@ -13283,6 +13407,10 @@ msgstr "Faighte:"
 #: message-via
 msgid "Via:"
 msgstr "Trí:"
+
+#: unknown-contact-title
+msgid "Unknown Contact"
+msgstr "Teagmhálaí Anaithnid"
 
 #. # LOCALIZATION NOTE(phone-type-separator): used to separate phone type from
 #. # the number itself. It should be consistent with the characters used in
@@ -13333,6 +13461,10 @@ msgstr "Níorbh fhéidir an teachtaireacht a sheoladh. Déan iarracht eile?"
 msgid "Resend this message"
 msgstr "Athsheol an teachtaireacht seo"
 
+#: deleteMessage-confirmation
+msgid "Delete selected message?"
+msgstr "Scrios an teachtaireacht roghnaithe?"
+
 #: deleteMessages-confirmation
 msgid "Delete selected messages?"
 msgstr "Scrios na teachtaireachtaí roghnaithe?"
@@ -13379,6 +13511,10 @@ msgctxt "sendMissingSimCardBtnOk"
 msgid "OK"
 msgstr "OK"
 
+#: sendFlightModeTitle apmActivated callAirplaneModeTitle
+msgid "Airplane mode activated"
+msgstr "Mód eitleáin cumasaithe"
+
 #: sendFlightModeBody
 msgid "Turn off airplane mode to send messages."
 msgstr "Scoir den mhód eitleáin chun teachtaireachtaí a sheoladh."
@@ -13400,6 +13536,19 @@ msgstr "Scoir den mhód eitleáin chun iatáin a íosluchtú."
 msgid "{{sendFlightModeBtnOk}}"
 msgstr "{{sendFlightModeBtnOk}}"
 
+#: fdnBlocked2Title fdnIsActiveTitle
+msgid "FDN active"
+msgstr "Tá FDN gníomhach"
+
+#. # LOCALIZATION NOTE (sms-counter-notice-label): if typed message exceeds the
+#. # character limit, more segments (messages) will be sent. {{number}} is the
+#. # number of current segment. 
+#. # Example: Limit 160 characters, toaster will show up when 161 characters 
+#. # typed, and string in toaster will be 'Editing SMS 2' (editing 2nd segment).
+#: sms-counter-notice-label
+msgid "Editing SMS {{number}}"
+msgstr "SMS {{number}} á chur in eagar"
+
 #. #LOCALIZATION NOTE (fdnBlocked2Body): the English translation does not need the
 #. # actual number of phone numbers. If your translation needs it, you can still add it
 #. # using the parameter {{ n }}. Also take into account that you could add HTML so be
@@ -13414,7 +13563,7 @@ msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipient are in your FDN list:<br />{{ numbers }}"
 msgstr ""
-"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"Tá an córas FDN (Uimhreacha Socraithe Diailithe) ar siúl. Deimhnigh go bhfuil "
 "an lárionad SMS agus an faighteoir seo a leanas ar do liosta FDN:<br />"
 "{{ numbers }}"
 
@@ -13424,7 +13573,7 @@ msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
 msgstr ""
-"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"Tá an córas FDN (Uimhreacha Socraithe Diailithe) ar siúl. Deimhnigh go bhfuil "
 "an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
 "{{ numbers }}"
 
@@ -13434,7 +13583,7 @@ msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
 msgstr ""
-"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"Tá an córas FDN (Uimhreacha Socraithe Diailithe) ar siúl. Deimhnigh go bhfuil "
 "an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
 "{{ numbers }}"
 
@@ -13444,7 +13593,7 @@ msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
 msgstr ""
-"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"Tá an córas FDN (Uimhreacha Socraithe Diailithe) ar siúl. Deimhnigh go bhfuil "
 "an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
 "{{ numbers }}"
 
@@ -13454,7 +13603,7 @@ msgid ""
 "FDN (Fixed Dialing Numbers) is activated. Make sure the SMS center and the "
 "following recipients are in your FDN list:<br />{{ numbers }}"
 msgstr ""
-"Tá an córas FDN (Uimhreacha Socraithe Dialaithe) ar siúl. Deimhnigh go bhfuil "
+"Tá an córas FDN (Uimhreacha Socraithe Diailithe) ar siúl. Deimhnigh go bhfuil "
 "an lárionad SMS agus na faighteoirí seo a leanas ar do liosta FDN:<br />"
 "{{ numbers }}"
 
@@ -13711,12 +13860,14 @@ msgstr "Teachtaireacht MMS"
 msgid "Message is not downloaded yet."
 msgstr "Níl an teachtaireacht íosluchtaithe fós."
 
-#. # LOCALIZATION NOTE (not-downloaded-attachment, expired-attachment):
+#. # LOCALIZATION NOTE (tobedownloaded-attachment, expired-attachment):
 #. # {{date}} is replaced at run-time with a date. The format used to display
 #. # this date is specified in the string with ID 'expiry-date-format'.
-#: not-downloaded-attachment
-msgid "Attachment can be downloaded until {{date}}."
-msgstr "Beidh tú in ann an t-iatán a íosluchtú go dtí {{date}}."
+#: tobedownloaded-attachment
+msgid ""
+"You received a multimedia message. You can use the link below to download its "
+"content until {{date}}."
+msgstr ""
 
 #: expired-attachment
 msgid "Sorry, the message expired on {{date}} and cannot be downloaded."
@@ -13803,6 +13954,12 @@ msgstr "SIM {{id}}, {{detailString}}"
 #: dsds-notification-title-with-sim
 msgid "({{sim}}) {{sender}}"
 msgstr "({{sim}}) {{sender}}"
+
+#. #LOCALIZATION NOTE (send-button): localize only the ariaLabel
+#: send-button.ariaLabel
+msgctxt "send-button.ariaLabel"
+msgid "Send"
+msgstr "Seol"
 
 #. # LOCALIZATION NOTE (send-button-sim-indication): don't localize the
 #. # sim-indication itself as we use it to show the SIM number only. Yet obviously,
@@ -15532,6 +15689,10 @@ msgstr "Cabhair"
 msgid "Enter PIN"
 msgstr "Cuir UAP isteach"
 
+#: mediaPlaybackTitle.ariaLabel
+msgid "Title"
+msgstr "Teideal"
+
 #: mediaPlaybackArtist.ariaLabel
 msgid "Artist"
 msgstr "Ealaíontóir"
@@ -15544,7 +15705,7 @@ msgstr "Rialtáin athsheinnte"
 msgid "Previous"
 msgstr "Roimhe Seo"
 
-#: mediaPlaybackPlay
+#: mediaPlaybackPlay.ariaLabel
 msgid "Play"
 msgstr "Seinn"
 
@@ -15613,11 +15774,11 @@ msgstr "%e %b"
 msgid "Status Bar"
 msgstr "Barra Stádais"
 
-#: statusbarBattery
+#: statusbarBattery.ariaLabel
 msgid "Battery {{level}} percent"
 msgstr "Cadhnra: {{level}}%"
 
-#: statusbarBatteryCharging
+#: statusbarBatteryCharging.ariaLabel
 msgid "Battery {{level}} percent, charging"
 msgstr "Cadhnra: {{level}}%, á luchtú"
 
@@ -15730,55 +15891,55 @@ msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
 
 #: statusbarNotifications[one]
-msgid "{{n}} notification"
-msgstr "{{n}} fhógra"
+msgid "{{n}} Notification"
+msgstr "{{n}} Fhógra"
 
 #: statusbarNotifications[two]
 msgctxt "statusbarNotifications[two]"
-msgid "{{n}} notifications"
-msgstr "{{n}} fhógra"
+msgid "{{n}} Notifications"
+msgstr "{{n}} Fhógra"
 
 #: statusbarNotifications[few]
 msgctxt "statusbarNotifications[few]"
-msgid "{{n}} notifications"
-msgstr "{{n}} fhógra"
+msgid "{{n}} Notifications"
+msgstr "{{n}} Fhógra"
 
 #: statusbarNotifications[many]
 msgctxt "statusbarNotifications[many]"
-msgid "{{n}} notifications"
-msgstr "{{n}} bhfógra"
+msgid "{{n}} Notifications"
+msgstr "{{n}} bhFógra"
 
 #: statusbarNotifications[other]
 msgctxt "statusbarNotifications[other]"
-msgid "{{n}} notifications"
-msgstr "{{n}} fógra"
+msgid "{{n}} Notifications"
+msgstr "{{n}} Fógra"
 
-#: statusbarNotifications-unread
-msgctxt "statusbarNotifications-unread"
+#: statusbarNotifications-unread.ariaLabel
+msgctxt "statusbarNotifications-unread.ariaLabel"
 msgid "{[ plural(n) ]}"
 msgstr "{[ plural(n) ]}"
 
-#: statusbarNotifications-unread[one]
+#: statusbarNotifications-unread.ariaLabel[one]
 msgid "{{n}} unread notification"
 msgstr "{{n}} fhógra gan léamh"
 
-#: statusbarNotifications-unread[two]
-msgctxt "statusbarNotifications-unread[two]"
+#: statusbarNotifications-unread.ariaLabel[two]
+msgctxt "statusbarNotifications-unread.ariaLabel[two]"
 msgid "{{n}} unread notifications"
 msgstr "{{n}} fhógra gan léamh"
 
-#: statusbarNotifications-unread[few]
-msgctxt "statusbarNotifications-unread[few]"
+#: statusbarNotifications-unread.ariaLabel[few]
+msgctxt "statusbarNotifications-unread.ariaLabel[few]"
 msgid "{{n}} unread notifications"
 msgstr "{{n}} fhógra gan léamh"
 
-#: statusbarNotifications-unread[many]
-msgctxt "statusbarNotifications-unread[many]"
+#: statusbarNotifications-unread.ariaLabel[many]
+msgctxt "statusbarNotifications-unread.ariaLabel[many]"
 msgid "{{n}} unread notifications"
 msgstr "{{n}} bhfógra gan léamh"
 
-#: statusbarNotifications-unread[other]
-msgctxt "statusbarNotifications-unread[other]"
+#: statusbarNotifications-unread.ariaLabel[other]
+msgctxt "statusbarNotifications-unread.ariaLabel[other]"
 msgid "{{n}} unread notifications"
 msgstr "{{n}} fógra gan léamh"
 
@@ -15899,11 +16060,11 @@ msgstr "Múch"
 #. # cards view
 #: no-recent-app-windows
 msgid "Your recent app windows show up here"
-msgstr ""
+msgstr "Taispeánfar na haipeanna is déanaí anseo"
 
 #: no-recent-browser-windows
 msgid "Your recent browser windows show up here"
-msgstr ""
+msgstr "Taispeánfar na fuinneoga brabhsálaí is déanaí anseo"
 
 #. # LOCALIZATION NOTE: The following strings are spoken by screen readers and not
 #. # shown on the screen.
@@ -16241,6 +16402,19 @@ msgstr "Riachtanach"
 msgid "Uncompressing… <span>This can take a few minutes.</span>"
 msgstr "Á Dhí-chomhbhrú… <span>Seans go dtógfaidh seo cúpla nóiméad.</span>"
 
+#: downloadWifiPrioritizedUsing2G
+msgid ""
+"Updates are downloaded via data connection when Wi-Fi is not available. When "
+"using data connection, phone calls may be blocked and additional charges may "
+"also apply."
+msgstr ""
+
+#: downloadWifiPrioritized3
+msgid ""
+"Updates are downloaded via data connection when Wi-Fi is not available. When "
+"using data connection, additional charges may apply."
+msgstr ""
+
 #: downloadNoWifiWarning
 msgid ""
 "Wi-Fi unavailable. Updating over current connection may incur additional "
@@ -16249,25 +16423,15 @@ msgstr ""
 "Níl Wi-Fi ar fáil. Seans go ngearrfar táille bhreise ort chun nuashonrú ar an "
 "gceangal gníomhach."
 
-#: downloadOfflineWarning
-msgid "Connection unavailable. Connect to a network to download updates."
+#: downloadOfflineWarning2
+msgid "Connect to a network to download updates."
 msgstr ""
-"Níl tú ceangailte leis an líonra. Ceangail anois chun nuashonruithe a "
-"íosluchtú."
-
-#: downloadDataConnectionWarning
-msgid ""
-"Updates are downloaded via data connection when Wi-Fi is not available. "
-"Additional data charges may apply."
-msgstr ""
-"Íosluchtaítear nuashonruithe trí cheangal sonraí nuair nach bhfuil Wi-Fi ar "
-"fáil. Seans go ngearrfar táille bhreise ort."
 
 #: downloadUpdatesViaDataConnection
 msgid "Download updates via data connection?"
 msgstr "Íosluchtaigh nuashonruithe ar cheangal sonraí?"
 
-#: downloadUpdatesVia2GForbidden2
+#: downloadUpdatesVia2GForbidden3
 msgid ""
 "Downloading updates is not possible on slow connections (2G). Please connect "
 "via Wi-Fi or 3G (if available) and try again."
@@ -16275,9 +16439,9 @@ msgstr ""
 "Ní féidir nuashonrú a íosluchtú trí cheangal mall (2G). Ceangail trí Wi-Fi nó "
 "líonra 3G (más féidir) agus bain triail eile as."
 
-#: downloadUpdatesViaDataConnectionMessage2
+#: downloadUpdatesViaDataConnectionMessage3
 msgid ""
-"When using a data connection, additional charges may apply. Do you want to "
+"When using a data connection, additional costs may apply. Do you want to "
 "continue?"
 msgstr ""
 
@@ -16312,6 +16476,10 @@ msgstr "Sábháladh na logchomhaid"
 #: logsFailed
 msgid "The logs could not be saved"
 msgstr "Níorbh fhéidir an logchomhad a shábháil"
+
+#: logsStart
+msgid "Capturing logs ..."
+msgstr ""
 
 #. # lock screen
 #: emergency-call-button
@@ -16390,6 +16558,18 @@ msgctxt "unrecoverable-error-action"
 msgid "OK"
 msgstr "OK"
 
+#. # Quick settings dialog
+#: data-roaming-enabled-title
+msgid "Turn on data roaming?"
+msgstr ""
+
+#: data-roaming-enabled-warning2
+msgid ""
+"In order to access the Internet, you need to turn on data roaming. Depending "
+"on your service agreement, extra charges may apply. Do you want to turn data "
+"on?"
+msgstr ""
+
 #. # value selector, time/date picker
 #: select-time
 msgid "Select time"
@@ -16462,11 +16642,6 @@ msgstr "Ná Seol"
 #: crash-end
 msgid "Send Report"
 msgstr "Seol an Tuairisc"
-
-#. # "Crash Reports" information page
-#: crashReports
-msgid "Crash Reports"
-msgstr "Tuairiscí ar Thuairteáil"
 
 #. # crash notification banner
 #: crash-banner-os2
@@ -16598,9 +16773,9 @@ msgstr "Comhad anaithnid"
 msgid "Can not open received file"
 msgstr "Ní féidir an comhad faighte a oscailt"
 
-#: unknownMediaTypeToOpen
-msgid "Can not open unknown media type:"
-msgstr "Ní féidir meán de chineál anaithnid a oscailt:"
+#: unknownMediaTypeToOpenFile
+msgid "Can not open unknown media type: {{fileName}}"
+msgstr "Ní féidir meán de chineál anaithnid a oscailt: {{fileName}}"
 
 #: cannotReceiveFile
 msgid "Can not receive file"
@@ -16631,7 +16806,7 @@ msgstr "Earráid anaithnid"
 #. # Storage Status
 #: sdcard-detected-title
 msgid "SD card detected"
-msgstr ""
+msgstr "Braitheadh cárta SD"
 
 #: sdcard-total-size-body
 msgid "Total size: {{size}} {{unit}}"
@@ -16980,19 +17155,41 @@ msgctxt "search-or-enter-address.placeholder"
 msgid "Search or enter address"
 msgstr "Cuardach nó seoladh Gréasáin"
 
-#. # Hotspot
-#: noSIMCardInHotspot
-msgid "SIM card is absent or inserted incorrectly, so turn off hotspot"
-msgstr "Ní féidir ball te a shocrú toisc nach bhfuil aon chárta SIM ann."
+#. # LOCALIZATION NOTE: The following strings are spoken by screen readers and
+#. # not shown on the screen.
+#: reload-button.ariaLabel
+msgid "Reload"
+msgstr "Athluchtaigh"
 
-#: noHopspotWhenAPMisOn
-msgid "Turn off airplane mode to use Wi-Fi hotspot"
-msgstr "Scoir den mhód eitleáin chun ceangal le Wi-Fi"
+#. # Hotspot
+#: noSIMCardInHotspot3
+msgid "Hotspot off: SIM card missing or inserted incorrectly."
+msgstr ""
+
+#: noHotspotWhenAPMisOnWifiHotspot
+msgid "Turn off airplane mode to use Wi-Fi hotspot."
+msgstr "Scoir den mhód eitleáin chun ball te Wi-Fi a úsáid."
+
+#: noHotspotWhenAPMisOnUsbHotspot
+msgid "Turn off airplane mode to use USB tethering."
+msgstr "Scoir den mhód eitleáin chun teaghránú USB a úsáid."
+
+#: noConnectivityHead
+msgid "No data connection"
+msgstr "Gan ceangal sonraí"
+
+#: noConnectivityMessageWifiHotspot
+msgid "Wi-Fi hotspot is disabled because there is no data connection."
+msgstr "Bhí an ball te Wi-Fi díchumasaithe toisc nach bhfuil ceangal sonraí ann."
+
+#: noConnectivityMessageUsbHotspot
+msgid "USB tethering is disabled because there is no data connection."
+msgstr "Bhí teaghránú USB díchumasaithe toisc nach bhfuil ceangal sonraí ann."
 
 #. # Browser Context Menu
-#: open-in-new-tab
-msgid "Open link in new tab"
-msgstr "Oscail an nasc i gcluaisín nua"
+#: open-in-new-window
+msgid "Open in new window"
+msgstr "Oscail i bhfuinneog nua"
 
 #: add-link-to-home-screen
 msgid "Add link to home screen"
@@ -17030,6 +17227,10 @@ msgstr "Comhroinn Físeán"
 msgid "Share Audio"
 msgstr "Comhroinn Fuaim"
 
+#: okCharsLeft
+msgid "OK ({{n}})"
+msgstr "OK ({{n}})"
+
 #. # Search
 #: search-or-enter-address.placeholder
 msgid "Search or enter address"
@@ -17048,6 +17249,10 @@ msgstr "Stop {{name}}"
 #: stop-download-body gaia-grid-stop-download-body
 msgid "Do you want to stop the download in progress?"
 msgstr "An bhfuil fonn ort an t-íosluchtú reatha a stopadh?"
+
+#: edit-group-header
+msgid "Edit group"
+msgstr "Cuir grúpa in eagar"
 
 #: description
 msgid "Gaia Video"
@@ -17112,6 +17317,14 @@ msgstr ""
 msgid "An unknown video error occurred."
 msgstr "Tharla earráid anaithnid leis an bhfíseán."
 
+#: video-hardware-in-use-title
+msgid "Cannot load video"
+msgstr "Ní féidir an físeán a luchtú"
+
+#: video-hardware-in-use-text
+msgid "Another app is currently using the video player."
+msgstr "Tá aip eile ag baint úsáide as an seinnteoir físe faoi láthair."
+
 #: length-label
 msgid "Length"
 msgstr "Fad"
@@ -17156,10 +17369,6 @@ msgstr "Glac Leis"
 msgid "Quit"
 msgstr "Scoir"
 
-#: store
-msgid "Store"
-msgstr "Sábháil"
-
 #: finish
 msgid "Finish"
 msgstr "Críochnaigh"
@@ -17180,11 +17389,9 @@ msgstr "Fuarthas teachtaireacht chumraíochta"
 msgid "OTA Access Point Configuration"
 msgstr ""
 
-#: cp-accept-help
-msgid "Configuration message received, click on “Accept” to continue."
-msgstr ""
-"Fuarthas teachtaireacht chumraíochta. Cliceáil “Glac Leis” chun dul ar "
-"aghaidh."
+#: cp-done-help
+msgid "Configuration message received, click on “Done” to continue."
+msgstr "Fuarthas teachtaireacht chumraíochta. Cliceáil “Déanta” chun dul ar aghaidh."
 
 #: cp-accept-help-pin
 msgid ""
@@ -17196,19 +17403,19 @@ msgstr ""
 msgid "The message has not been processed yet, do you really want to quit?"
 msgstr ""
 
-#: cp-auth-failure-confirm-dialog-message
+#: cp-install-configuration-confirm-dialog-message
 msgid ""
-"The PIN you have entered is incorrect. The PIN code should have been provided "
-"to you by whomever sent you the configuration message."
+"Your carrier is sharing with you configuration information. Do you want to "
+"install it?"
 msgstr ""
 
-#: cp-store-confirm-dialog-message
-msgid "You are about to store the following APN(s) on your phone:"
-msgstr "Tá tú ar tí an APN/na APNanna seo a leanas a shábháil ar do ghuthán:"
+#: cp-auth-failure
+msgid "PIN is not correct."
+msgstr "UAP mícheart."
 
-#: cp-finish-confirm-dialog-message
-msgid "We are done, the APN(s) are now stored."
-msgstr "Táimid críochnaithe. Tá an APN/na APNanna sábháilte anois."
+#: cp-finish-confirm-dialog-message-apn-saved
+msgid "APN(s) saved."
+msgstr "APN(anna) sábháilte."
 
 #: cp-finish-confirm-dialog-message-invalid-doc
 msgid ""
@@ -18394,6 +18601,20 @@ msgctxt "cancel_downloaded_file"
 msgid "Cancel"
 msgstr "Cealaigh"
 
+#. # Hint that appears in edit mode for groups with no title set.
+#: gaia-grid-enter-group-name
+msgid "Enter a group name"
+msgstr "Cuir ainm ar an ngrúpa"
+
+#. # SIM list
+#: gaia-sim-picker-dial-via-with-number sim-picker-dial-via-with-number
+msgid "Dial {{ phoneNumber }} via"
+msgstr "Diailigh {{ phoneNumber }} trí"
+
+#: gaia-sim-picker-select-sim sim-picker-select-sim
+msgid "Select SIM"
+msgstr "Roghnaigh SIM"
+
 #: import
 msgid "Import"
 msgstr "Iompórtáil"
@@ -18693,6 +18914,10 @@ msgstr "Chun teagmhálaithe a iompórtáil, cuir cárta cuimhne isteach"
 msgid "To import Facebook friends or contacts connect to Wi-Fi or data network"
 msgstr "Ceangail le Wi-Fi nó líonra eile chun cairde ó Facebook a iompórtáil"
 
+#: emptyAccount
+msgid "No friends or contacts found in this account."
+msgstr "Níor aimsíodh aon chairde nó teagmhálaithe sa chuntas seo."
+
 #. # SIM import
 #: simContacts-import
 msgid "Import SIM contacts"
@@ -18866,6 +19091,10 @@ msgstr "Réiltín"
 #: hashSign.ariaLabel
 msgid "Hash sign"
 msgstr "Comhartha hais"
+
+#: airplaneMode
+msgid "Airplane mode"
+msgstr "Mód eitleáin"
 
 #: noNetwork
 msgid "No network"
@@ -19222,10 +19451,6 @@ msgstr "Fuaimeanna Teileafónaíochta a Sheinm"
 msgid "Act as a Background Service"
 msgstr "Bheith ina Sheirbhís Chúlra"
 
-#: perm-deprecated-hwvideo
-msgid "Hardware Video Rendering (Deprecated)"
-msgstr "Fís a Rindreáil i gCrua-Earraí (imithe i léig)"
-
 #: perm-device-storage-crashes
 msgid "Crash Data Storage"
 msgstr "Stóras Sonraí Tuairteála"
@@ -19337,15 +19562,6 @@ msgstr "Reatha"
 #: itemWithLabel
 msgid "{{label}}, {{item}}"
 msgstr "{{label}}, {{item}}"
-
-#. # SIM list
-#: sim-picker-dial-via-with-number
-msgid "Dial {{ phoneNumber }} via"
-msgstr "Diailigh {{ phoneNumber }} trí"
-
-#: sim-picker-select-sim
-msgid "Select SIM"
-msgstr "Roghnaigh SIM"
 
 #: ringer_bubble
 msgid "Bubble"
@@ -19508,6 +19724,81 @@ msgstr "Trinc"
 #: notifier_verse
 msgid "Verse"
 msgstr "Véarsa"
+
+#: emergencyNumber
+msgid "Emergency number"
+msgstr "Uimhir éigeandála"
+
+#: callAirplaneModeMessage
+msgid "To make a call you need to disable airplane mode in settings."
+msgstr "Chun glao a chur, caithfidh tú scor ón mód eitleáin sna socruithe."
+
+#: callAirplaneModeBtnOk
+msgctxt "callAirplaneModeBtnOk"
+msgid "OK"
+msgstr "OK"
+
+#: numberIsBusyTitle
+msgid "Number is busy"
+msgstr "Tá an uimhir gnóthach"
+
+#: numberIsBusyMessage
+msgid "The number is currently busy. Please try again later."
+msgstr "Tá an uimhir gnóthach faoi láthair. Déan iarracht eile ar ball."
+
+#: fdnIsActiveMessage
+msgid ""
+"FDN (Fixed Dialing Numbers) is activated and the following number is not in "
+"your FDN list: {{ number }}"
+msgstr ""
+"Tá FDN (Uimhreacha Socraithe Diailithe) ar siúl ach níl an uimhir seo i do "
+"liosta FDN: {{ number }}"
+
+#: emergencyDialogBodyBadNumber
+msgid "To make a call, the phone must be connected to a network."
+msgstr "Chun glao a chur, ní mór don ghuthán a bheith ceangailte le líonra."
+
+#: emergencyDialogBodyDeviceNotAccepted
+msgid "Emergency calls are not allowed by the network."
+msgstr "Ní cheadaíonn an líonra glaonna éigeandála."
+
+#: emergencyDialogBtnOk
+msgctxt "emergencyDialogBtnOk"
+msgid "OK"
+msgstr "OK"
+
+#: emergencyDialogTitle
+msgid "No network connection"
+msgstr "Gan ceangal líonra"
+
+#: invalidNumberToDialTitle
+msgid "Invalid phone number"
+msgstr "Uimhir neamhbhailí"
+
+#: invalidNumberToDialMessage
+msgid "The phone number you are calling is not valid."
+msgstr "Tá tú ag iarraidh glao a chur ar uimhir neamhbhailí."
+
+#: unableToCallTitle
+msgid "Unable to make a phone call now"
+msgstr "Ní féidir glao a chur faoi láthair"
+
+#: unableToCallMessage
+msgid "Cannot make a call. If you are already dialing, please hang up first."
+msgstr ""
+"Ní féidir glao a chur. Má tá tú ag diailiú cheana, croch an guthán ar dtús."
+
+#: otherConnectionInUseTitle
+msgid "Other connection in use"
+msgstr "Ceangal eile in úsáid"
+
+#: otherConnectionInUseMessage
+msgid ""
+"You have an active call on another connection. You can only use one "
+"connection at a time."
+msgstr ""
+"Tá glao ar siúl agat cheana ar cheangal eile. Ní féidir leat ach ceangal "
+"amháin a úsáid."
 
 #: tzRegion-Africa
 msgid "Africa"
