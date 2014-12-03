@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 11:51-0500\n"
+"POT-Creation-Date: 2014-11-30 10:24-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -839,8 +839,9 @@ msgid "High"
 msgstr "Ard"
 
 #: priority.level.high.accesskey
+msgctxt "priority.level.high.accesskey"
 msgid "H"
-msgstr "H"
+msgstr "A"
 
 #: calendar.context.postpone.1hour.label
 #: calendar.context.postpone.1hour.accesskey
@@ -900,6 +901,23 @@ msgstr "&Easpórtáil Féilire…"
 #: calendar.context.properties.label calendar.context.properties.accesskey
 msgid "&Properties"
 msgstr "&Airíonna"
+
+#. <!-- LOCALIZATION NOTE (calendar.context.togglevisible.accesskey)
+#. This is the access key used for the showCalendar string
+#: calendar.context.togglevisible.accesskey
+msgctxt "calendar.context.togglevisible.accesskey"
+msgid "H"
+msgstr "T"
+
+#. <!-- LOCALIZATION NOTE (calendar.context.showonly.accesskey)
+#. This is the access key used for the showOnlyCalendar string
+#: calendar.context.showonly.accesskey
+msgid "O"
+msgstr "O"
+
+#: calendar.context.showall.label calendar.context.showall.accesskey
+msgid "Show &All Calendars"
+msgstr "Taispeáin G&ach Féilire"
 
 #: calendar.context.convertmenu.label
 msgid "Convert To"
@@ -5322,6 +5340,23 @@ msgctxt "unitDays"
 msgid "#1 day;#1 days"
 msgstr "#1 lá;#1 lá;#1 lá;#1 lá;#1 lá"
 
+#. # LOCALIZATION NOTE (showCalendar)
+#. # Used in calendar list context menu
+#. #    %1$S will be replaced with the calendar name
+#. # uses the access key calendar.context.togglevisible.accesskey
+#: showCalendar
+msgid "Show %1$S"
+msgstr "Taispeáin %1$S"
+
+#: hideCalendar
+msgid "Hide %1$S"
+msgstr "Folaigh %1$S"
+
+#. # uses the access key calendar.context.showonly.accesskey
+#: showOnlyCalendar
+msgid "Show Only %1$S"
+msgstr "Taispeáin %1$S Amháin"
+
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
 # -
@@ -6494,9 +6529,28 @@ msgstr "&Nuashonrú"
 msgid "Always check "
 msgstr "Seiceáil i gcónaí"
 
+#: gdata.reminder.default
+msgid "Default Reminder"
+msgstr "Meabhrúchán Réamhshocraithe"
+
 #: gdata.reminder.action.sms.label
 msgid "Send a Text Message"
 msgstr "Seol Teachtaireacht Téacs"
+
+#: gdata.wizard.session.description
+msgid ""
+"Please pick an existing session or enter your email address to create a new "
+"session. You only need one session per account."
+msgstr "Roghnaigh seisiún atá ann nó cuir isteach do sheoladh ríomhphoist chun seisiún nua a chruthú. Ní theastaíonn uait ach seisiún amháin do gach cuntas."
+
+#: gdata.wizard.calendars.description
+msgid ""
+"Please select the calendars and task lists you would like to subscribe to."
+msgstr "Roghnaigh na féilirí agus liostaí tascanna ar mian leat liostáil leo."
+
+#: gdata.wizard.nextstep.description
+msgid "Please advance to the next step to set up your calendars."
+msgstr "Téigh go dtí an chéad chéim eile chun do chuid féilirí a shocrú."
 
 # If you wish to be mentioned as a translator, please make sure your name and
 # email is in the licence block as a contributor. Multiple names are fine too.
@@ -6524,10 +6578,24 @@ msgstr "Ceadaíonn seo rochtain dhéthreoch do Féilire Google"
 msgid "Provider for Google Calendar"
 msgstr "Soláthraí Google Calendar"
 
-#. # Dialog strings
-#: loginDialogTitle
-msgid "Google Calendar Login"
-msgstr "Logáil isteach Fhéilire Google"
+#. # Events with only free/busy access don't have a title. Use this instead:
+#: busyTitle
+msgid "Busy (%1$S)"
+msgstr "Gnóthach (%1$S)"
+
+#: quotaExceeded
+msgid "The quota for %1$S has been exceeded, please try again later."
+msgstr "Os cionn an chuóta le haghaidh %1$S; bain triail eile as ar ball."
+
+#: providerOutdated
+msgid ""
+"This version of the provider has expired, please update to the latest version."
+msgstr "Tá an leagan seo den soláthraí dulta i léig; ba chóir duit an leagan is déanaí a shuiteáil."
+
+#: reminderOutOfRange
+msgid ""
+"Google Calendar only allows reminders up to 4 weeks before the event starts."
+msgstr "Ní féidir le Google Calendar meabhrúchán a dhéanamh níos luaithe ná ceithre seachtaine roimh thús an imeachta."
 
 # args: host
 #. # args: host

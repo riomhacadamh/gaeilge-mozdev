@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-18 08:33-0500\n"
+"POT-Creation-Date: 2014-11-30 10:25-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -234,7 +234,7 @@ msgstr ""
 #. # Bluetooth :: Confirmation Dialog
 #. #-#-#-#-#  appssettingssettings.properties.po (firefox)  #-#-#-#-#
 #. # Connectivity :: Bluetooth
-#: bluetooth name perm-bluetooth
+#: bluetooth name bluetoothOption.ariaLabel perm-bluetooth
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
@@ -405,15 +405,11 @@ msgstr "Bainisteoir na Leabharmharcanna"
 
 #. #-#-#-#-#  appscalendarcalendar.properties.po (firefox)  #-#-#-#-#
 #. # generic
-#. #-#-#-#-#  appsemailemail.properties.po (firefox)  #-#-#-#-#
-#. # In the folder picker drawer, there is a transparent area for the header,
-#. # and a tap region to take the user back to the message list. So this text is
-#. # not visible by the user, but could be used for accessibility.
 #. #-#-#-#-#  appsftuftu.properties.po (firefox)  #-#-#-#-#
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 #. # Navigation bar
 #. #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-#: back drawer-back navbar-back evme-searchbar-clear fxa-back
+#: back navbar-back evme-searchbar-clear fxa-back
 msgid "Back"
 msgstr "Siar"
 
@@ -3189,7 +3185,7 @@ msgstr "Teagmhálaithe dúbailte á gcumasc"
 msgid "No duplicate contacts found"
 msgstr "Níor aimsíodh aon teagmhálaithe dúbailte"
 
-#: merge
+#: merge merge.ariaLabel
 msgid "Merge"
 msgstr "Cumaisc"
 
@@ -3458,6 +3454,10 @@ msgstr "Abair leat!"
 #: no-logs-msg-3
 msgid "No missed calls"
 msgstr "Gan glaonna caillte"
+
+#: onHoldOption.ariaLabel
+msgid "On hold"
+msgstr "Ar feitheamh"
 
 #: outgoing
 msgid "Outgoing"
@@ -4173,6 +4173,19 @@ msgstr "Cárta SIM faoi ghlas"
 msgid "Unlock your SIM to enable Usage."
 msgstr "Díghlasáil an cárta SIM chun Úsáid a rianú."
 
+#. #-#-#-#-#  appsemergency-callemergency-call.properties.po (firefox)  #-#-#-#-#
+#. # emergency call on lockscreen
+#. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
+#. # this is a real error screen (3.2 in spec)
+#: widget-unknown-heading error message-delivery-status-error.ariaLabel
+#: fxa-invalid-email-title
+msgid "Error"
+msgstr "Earráid"
+
+#: widget-unknown-meta
+msgid "Please, make sure airplane mode is off."
+msgstr "Deimhnigh nach bhfuil an mód eitleáin ar siúl."
+
 #. # FTE Welcome
 #: fte
 msgid "Usage First Time Experience"
@@ -4754,6 +4767,14 @@ msgstr "Íosluchtuithe"
 msgid "Gaia Download Picker"
 msgstr "Roghnóir Íosluchtuithe Gaia"
 
+#. # LOCALIZATION NOTE(back-button): For various cards, a label for a general
+#. # purpose header back button rendered as an icon. The following string is spoken
+#. # by screen readers and not shown on the screen.
+#: back-button.ariaLabel
+msgctxt "back-button.ariaLabel"
+msgid "Back"
+msgstr "Siar"
+
 #: setup-app-name-header
 msgid "Mail"
 msgstr "Post"
@@ -4980,6 +5001,14 @@ msgctxt "setup-manual-account-type"
 msgid "Account type"
 msgstr "Cineál an chuntais"
 
+#. # LOCALIZATION NOTE(setup-manual-account-type-select): For the manual setup
+#. # screen, the label for account type select box. The following string is spoken
+#. # by screen readers and not shown on the screen.
+#: setup-manual-account-type-select.ariaLabel
+msgctxt "setup-manual-account-type-select.ariaLabel"
+msgid "Account type"
+msgstr "Cineál an chuntais"
+
 #: setup-manual-imap-header
 msgctxt "setup-manual-imap-header"
 msgid "IMAP settings"
@@ -5018,6 +5047,13 @@ msgstr "SSL"
 #: setup-manual-socket-starttls
 msgid "STARTTLS"
 msgstr "STARTTLS"
+
+#. # LOCALIZATION NOTE(setup-manual-socket-select): For the manual setup screen,
+#. # the label for connection security select box. The following string is spoken
+#. # by screen readers and not shown on the screen.
+#: setup-manual-socket-select.ariaLabel
+msgid "Connection security"
+msgstr "Slándáil"
 
 #: setup-manual-hostname.placeholder
 msgctxt "setup-manual-hostname.placeholder"
@@ -5906,6 +5942,14 @@ msgstr "Dréachtaí Logánta"
 msgid "Outbox"
 msgstr "Bosca Amach"
 
+#. # In the folder picker drawer, there is a transparent area for the header,
+#. # and a tap region to take the user back to the message list. So this text is
+#. # not visible by the user, but could be used for accessibility.
+#: drawer-back
+msgctxt "drawer-back"
+msgid "Back"
+msgstr "Siar"
+
 #. # In the folder picker drawer, the list of email accounts are shown. This is
 #. # the header for that section.
 #: drawer-accounts-header
@@ -6319,14 +6363,6 @@ msgstr "R-Phost"
 #: description
 msgid "Gaia E-Mail"
 msgstr "R-Phost Gaia"
-
-#. #-#-#-#-#  appsemergency-callemergency-call.properties.po (firefox)  #-#-#-#-#
-#. # emergency call on lockscreen
-#. #-#-#-#-#  appssystemfxafxa.properties.po (firefox)  #-#-#-#-#
-#. # this is a real error screen (3.2 in spec)
-#: error message-delivery-status-error.ariaLabel fxa-invalid-email-title
-msgid "Error"
-msgstr "Earráid"
 
 #: emergency-call-only
 msgid "Emergency Call Only"
@@ -8452,6 +8488,18 @@ msgstr "Uathcheartú"
 msgid "Word suggestion"
 msgstr "Focal molta"
 
+#: handwritingKeyboard
+msgid "Handwriting"
+msgstr "Lámhscríobh"
+
+#: strokeWidth
+msgid "Stroke Width"
+msgstr "Leithead Stríce"
+
+#: responseSpeed
+msgid "Response Speed"
+msgstr "Luas Freagartha"
+
 #. # Accessibility strings
 #. # LOCALIZATION NOTE (wordSuggestions): The name of the section above the
 #. # keyboard where the word suggestions appear. This is read out to screen reader
@@ -8785,7 +8833,7 @@ msgstr "Cruthaíodh clingthon nua."
 
 #: set-default-tone
 msgid "Ringtone set as default."
-msgstr ""
+msgstr "Úsáidfear an clingthon seo mar réamhshocrú."
 
 #: sd-card-subtitle short-storage-name-external-0
 msgid "SD Card"
@@ -9008,17 +9056,19 @@ msgstr ""
 
 #: findmydevice-active-tracking
 msgid "Your phone is being tracked by another device through the website."
-msgstr ""
+msgstr "Tá do ghuthán á rianú ag gléas eile tríd an suíomh Gréasáin."
 
 #: findmydevice-not-tracking
 msgid "No devices are actively tracking your phone through the website."
-msgstr ""
+msgstr "Níl do ghuthán á rianú ag aon ghléas eile tríd an suíomh Gréasáin."
 
 #: ums-confirm
 msgid ""
 "Enabling USB storage allows another computer or device connected using USB to "
 "access files on this phone."
 msgstr ""
+"Má chumasaíonn tú stóras USB, beidh ríomhairí nó gléasanna eile in ann "
+"comhaid ar an nguthán seo a rochtain trí cheangal USB."
 
 #: reset-device
 msgid "Reset Phone"
@@ -9043,6 +9093,8 @@ msgid ""
 "Help us improve {{brandShortName}} by sharing data about your phone and the "
 "way you use it."
 msgstr ""
+"Cabhraigh linn feabhas a chur ar {{brandShortName}} trí shonraí faoi do "
+"ghutháin agus an tslí a úsáideann tú é a roinnt linn."
 
 #. # Localization note: strings in this file refer to a specific type of device
 #. # (phone, tablet, etc.). Try to be consistent across files for each type of
@@ -9088,17 +9140,19 @@ msgstr ""
 
 #: findmydevice-active-tracking
 msgid "Your tablet is being tracked by another device through the website."
-msgstr ""
+msgstr "Tá do tháibléad á rianú ag gléas eile tríd an suíomh Gréasáin."
 
 #: findmydevice-not-tracking
 msgid "No devices are actively tracking your tablet through the website."
-msgstr ""
+msgstr "Níl do tháibléad á rianú ag aon ghléas eile tríd an suíomh Gréasáin."
 
 #: ums-confirm
 msgid ""
 "Enabling USB storage allows another computer or device connected using USB to "
 "access files on this tablet."
 msgstr ""
+"Má chumasaíonn tú stóras USB, beidh ríomhairí nó gléasanna eile in ann "
+"comhaid ar an táibléad seo a rochtain trí cheangal USB."
 
 #: reset-device
 msgid "Reset Tablet"
@@ -9123,6 +9177,8 @@ msgid ""
 "Help us improve {{brandShortName}} by sharing data about your tablet and the "
 "way you use it."
 msgstr ""
+"Cabhraigh linn feabhas a chur ar {{brandShortName}} trí shonraí faoi do "
+"tháibléad agus an tslí a úsáideann tú é a roinnt linn."
 
 #: device-status-connected-device
 msgid "Connected to tablet audio"
@@ -9158,6 +9214,8 @@ msgid ""
 "The ringtone was not changed because the selected file can not be played on "
 "this TV."
 msgstr ""
+"Níor athraíodh an clingthon toisc nach féidir an comhad roghnaithe a sheinm "
+"ar an teilifíseán seo."
 
 #: findmydevice-signup-description
 msgid "Find My Device allows you to locate, lock or erase your TV"
@@ -9174,17 +9232,19 @@ msgstr ""
 
 #: findmydevice-active-tracking
 msgid "Your TV is being tracked by another device through the website."
-msgstr ""
+msgstr "Tá do theilifíseán á rianú ag gléas eile tríd an suíomh Gréasáin."
 
 #: findmydevice-not-tracking
 msgid "No devices are actively tracking your TV through the website."
-msgstr ""
+msgstr "Níl do theilifíseán á rianú ag aon ghléas eile tríd an suíomh Gréasáin."
 
 #: ums-confirm
 msgid ""
 "Enabling USB storage allows another computer or device connected using USB to "
 "access files on this TV."
 msgstr ""
+"Má chumasaíonn tú stóras USB, beidh ríomhairí nó gléasanna eile in ann "
+"comhaid ar an teilifíseán seo a rochtain trí cheangal USB."
 
 #: reset-device
 msgid "Reset TV"
@@ -9209,6 +9269,8 @@ msgid ""
 "Help us improve {{brandShortName}} by sharing data about your TV and the way "
 "you use it."
 msgstr ""
+"Cabhraigh linn feabhas a chur ar {{brandShortName}} trí shonraí faoi do "
+"theilifíseán agus an tslí a úsáideann tú é a roinnt linn."
 
 #: device-status-connected-device
 msgid "Connected to TV audio"
@@ -9395,6 +9457,8 @@ msgid ""
 "Unable to connect to {{ssid}}, authentication failed due to bad credentials. "
 "Please re-enter the network password."
 msgstr ""
+"Ní féidir ceangal a bhunú le {{ssid}} mar gheall ar dhintiúir neamhbhailí. "
+"Cuir focal faire an líonra isteach arís."
 
 #. # LOCALIZATION NOTE (manageNetworks-header): if you leave the original
 #. # en-US value "{{manageNetworks}}" in the following string, the localization
@@ -9428,7 +9492,7 @@ msgstr "Gan Slándáil"
 
 #: notInRange
 msgid "Not in range"
-msgstr ""
+msgstr "As raon"
 
 #: ipAddress
 msgid "IP address"
@@ -9765,11 +9829,11 @@ msgstr "Nuair atáim gnóthach"
 
 #: callForwardingNoReply
 msgid "Forward when unanswered"
-msgstr ""
+msgstr "Cuir glaonna gan freagra ar aghaidh"
 
 #: callForwardingNoReplyShort
 msgid "When unanswered"
-msgstr ""
+msgstr "Glaonna gan freagra"
 
 #: callForwardingNotReachable
 msgid "Forward when unreachable"
@@ -11964,6 +12028,8 @@ msgid ""
 "This will erase all data stored on your internal storage, such as music and "
 "photos."
 msgstr ""
+"Scriosfar na sonraí go léir ó do stóras inmheánach, mar shampla ceol agus "
+"grianghraif."
 
 # verb here!
 #: format-sdcard-btnformat
@@ -12191,8 +12257,8 @@ msgstr ""
 msgid "Dump layers tree"
 msgstr ""
 
-#: apz
-msgid "Async Pan/Zoom"
+#: dumps-layerscope
+msgid "Dump layerscope"
 msgstr ""
 
 #: apz-overscroll
@@ -12359,7 +12425,7 @@ msgstr "Stádas nuashonraithe"
 
 #: no-network-when-update
 msgid "Connect to the Internet to proceed with your update."
-msgstr ""
+msgstr "Ceangail leis an Idirlíon chun dul ar aghaidh leis an nuashonrú."
 
 #: checking-for-update
 msgid "Checking for updates…"
@@ -12542,10 +12608,6 @@ msgstr ""
 #: app-suspending
 msgid "App suspending"
 msgstr ""
-
-#: verticalhome-grouping
-msgid "App grouping"
-msgstr "Grúpáil aipeanna"
 
 #: verbose-app-permissions
 msgid "Verbose app permissions"
@@ -13886,6 +13948,8 @@ msgid ""
 "You received a multimedia message. You can use the link below to download its "
 "content until {{date}}."
 msgstr ""
+"Fuair tú teachtaireacht ilmheán. Tig leat í a íosluchtú leis an nasc thíos go "
+"dtí {{date}}."
 
 #: expired-attachment
 msgid "Sorry, the message expired on {{date}} and cannot be downloaded."
@@ -15482,18 +15546,25 @@ msgid ""
 "{{app_name}} would like to know and verify your phone number. Please choose "
 "which one you want to share or enter a new one."
 msgstr ""
+"Ba mhaith le {{app_name}} d'uimhir ghutháin a dheimhniú. Roghnaigh an uimhir "
+"is mian leat a roinnt nó cuir uimhir nua isteach."
 
 #: verificationCodeExplanation
 msgid ""
 "We’ve sent a code to {{phone_number}}. We’ll try to pick it up automatically, "
 "but you’ll have to enter it manually if it’s not in use in this device."
 msgstr ""
+"Sheolamar cód deimhnithe chuig {{phone_number}}. Déanfaimid iarracht é a "
+"fháil go huathoibríoch, ach mura bhfuil sé in úsáid ar an ngléas seo, "
+"b'fhéidir go mbeidh sé ort é a chur isteach de láimh."
 
 #: successMessage
 msgid ""
 "Awesome! Your number {{phone_number}} is now verified and available to "
 "{{app_name}}."
 msgstr ""
+"Iontach! Tá d'uimhir {{phone_number}} deimhnithe agus ar fáil do {{app_name}} "
+"anois."
 
 #. # Errors
 #: serverErrorMessage
@@ -15501,11 +15572,13 @@ msgid ""
 "The verification server is unavailable at this time. Please check your "
 "Internet connection, try again or wait a few minutes."
 msgstr ""
+"Níl an freastalaí deimhnithe ar fáil faoi láthair. Seiceáil do cheangal "
+"Idirlín, nó fan cúpla nóiméad agus déan iarracht eile."
 
 #: timeoutErrorMessage
 msgid ""
 "There seems to be a problem with your verification code. Let's try once again!"
-msgstr ""
+msgstr "Tá fadhb leis an gcód deimhnithe. Déanaimis iarracht eile!"
 
 #: errorTitle
 msgid "Mobile identity"
@@ -16443,7 +16516,7 @@ msgstr ""
 
 #: downloadOfflineWarning2
 msgid "Connect to a network to download updates."
-msgstr ""
+msgstr "Ceangail le líonra chun nuashonruithe a íosluchtú."
 
 #: downloadUpdatesViaDataConnection
 msgid "Download updates via data connection?"
@@ -16462,6 +16535,8 @@ msgid ""
 "When using a data connection, additional costs may apply. Do you want to "
 "continue?"
 msgstr ""
+"Seans go ngearrfar táille bhreise ort chun ceangal sonraí a úsáid. An bhfuil "
+"fonn ort dul ar aghaidh mar sin féin?"
 
 #: downloadUpdatesViaDataRoamingConnection
 msgid "Download updates via data roaming?"
@@ -16496,7 +16571,7 @@ msgid "Error while saving logs"
 msgstr "Earráid agus logchomhaid á sábháil"
 
 #: logsSaving
-msgid "Capturing logṣ̣…"
+msgid "Capturing logs…"
 msgstr "Logchomhaid á sábháil…"
 
 #: logsOperationFailed
@@ -16591,7 +16666,7 @@ msgstr "OK"
 #. # Quick settings dialog
 #: data-roaming-enabled-title
 msgid "Turn on data roaming?"
-msgstr ""
+msgstr "Cuir sonraí fánaíochta ar siúl?"
 
 #: data-roaming-enabled-warning2
 msgid ""
@@ -16599,6 +16674,9 @@ msgid ""
 "on your service agreement, extra charges may apply. Do you want to turn data "
 "on?"
 msgstr ""
+"Chun teacht ar an Idirlíon, ní mór duit sonraí fánaíochta a chur ar siúl. "
+"Seans go ngearrfar táille sa bhreis ort, ag brath ar do chonradh seirbhíse. "
+"An bhfuil fonn ort sonraí a chur ar siúl?"
 
 #. # value selector, time/date picker
 #: select-time
@@ -16632,6 +16710,10 @@ msgstr "Plugáil do luchtaire isteach."
 #: new-window
 msgid "New window"
 msgstr "Fuinneog nua"
+
+#: new-private-window
+msgid "New private window"
+msgstr "Fuinneog nua phríobháideach"
 
 #: show-windows
 msgid "Show windows"
@@ -16824,6 +16906,8 @@ msgid ""
 "Bluetooth can not be used while phone is plugged in. Please unplug the phone "
 "to receive file(s)."
 msgstr ""
+"Ní féidir Bluetooth a úsáid nuair a bhíonn an guthán plugáilte isteach. Ní "
+"mór duit an guthán a dhíphlugáil chun na comhaid a fháil."
 
 #: sdcard-no-space2
 msgid "Can not complete transfer: memory card is full."
@@ -17222,6 +17306,10 @@ msgstr "Bhí teaghránú USB díchumasaithe toisc nach bhfuil ceangal sonraí an
 msgid "Open in new window"
 msgstr "Oscail i bhfuinneog nua"
 
+#: open-in-new-private-window
+msgid "Open in new private window"
+msgstr "Oscail i bhfuinneog nua phríobháideach"
+
 #: add-link-to-home-screen
 msgid "Add link to home screen"
 msgstr "Cuir nasc leis an scáileán baile"
@@ -17257,6 +17345,42 @@ msgstr "Comhroinn Físeán"
 #: share-audio
 msgid "Share Audio"
 msgstr "Comhroinn Fuaim"
+
+#. # Private Browser
+#: private-browser
+msgid "Private Browser"
+msgstr "Brabhsálaí Príobháideach"
+
+#: private-browser-title
+msgid "You’re browsing privately"
+msgstr "Tá tú ag brabhsáil go príobháideach"
+
+#: private-browser-detail1
+msgid "{{brandShortName}} won’t remember any history for this window."
+msgstr "Ní choimeádfaidh {{brandShortName}} stair ar bith san fhuinneog seo."
+
+#: private-browser-detail2
+msgid ""
+"That includes browsing history, search history, download history, web form "
+"history, cookies, and temporary internet files. However, files you download "
+"and bookmarks you make will be kept."
+msgstr ""
+"Ní choimeádfar stair bhrabhsálaí, stair chuardaigh, stair íosluchtaithe, "
+"stair fhoirme Gréasain, fianáin, nó comhaid shealadacha Idirlín. Coimeádfar "
+"comhaid a íosluchtaíonn tú agus leabharmharcanna a chruthaíonn tú, áfach."
+
+#: private-browser-detail3
+msgid ""
+"While this device won’t have a record of your browsing history, your employer "
+"or internet service provider can still track the pages you visit."
+msgstr ""
+"Cé nach mbeidh taifead de do stair bhrabhsála ar an ngléas seo, is féidir le "
+"do sholáthraí seirbhíse Idirlín nó d'fhostóir bheith ag breathnú ar na "
+"leathanaigh a dtugann tú cuairt orthu."
+
+#: private-browser-learn-more
+msgid "Learn More."
+msgstr "Tuilleadh Eolais."
 
 #: okCharsLeft
 msgid "OK ({{n}})"
@@ -17343,6 +17467,8 @@ msgid ""
 "Video cannot be played: either because the server or network failed or "
 "because the format is not supported."
 msgstr ""
+"Ní féidir an físeán a sheinm. Theip ar an bhfreastalaí nó ar an líonra, nó ní "
+"thacaítear le formáid an fhíseáin."
 
 #: error-unknown
 msgid "An unknown video error occurred."
@@ -17420,10 +17546,10 @@ msgstr "Fuarthas teachtaireacht chumraíochta"
 msgid "OTA Access Point Configuration"
 msgstr ""
 
-#: cp-done-help
-msgid "Configuration message received, click on “Done” to continue."
+#: cp-accept-help
+msgid "Configuration message received, tap on “Done” to continue."
 msgstr ""
-"Fuarthas teachtaireacht chumraíochta. Cliceáil “Déanta” chun dul ar aghaidh."
+"Fuarthas teachtaireacht chumraíochta. Tapáil “Déanta” le dul ar aghaidh."
 
 #: cp-accept-help-pin
 msgid ""
@@ -17434,10 +17560,12 @@ msgstr ""
 #: cp-quit-app-confirm-dialog-message
 msgid "The message has not been processed yet, do you really want to quit?"
 msgstr ""
+"Níl an teachtaireacht próiseáilte fós. An bhfuil tú cinnte gur mhaith leat "
+"éirí as?"
 
 #: cp-install-configuration-confirm-dialog-message
 msgid ""
-"Your carrier is sharing with you configuration information. Do you want to "
+"Your carrier is sharing configuration information with you. Do you want to "
 "install it?"
 msgstr ""
 
@@ -17461,11 +17589,11 @@ msgstr "Tharla earráid agus seoltóir na teachtaireachta á fhíordheimhniú."
 
 #: cp-finish-confirm-dialog-message-auth-unsupported-mechanism
 msgid "The authentication mechanism is not supported yet."
-msgstr ""
+msgstr "Ní thacaítear leis an modh fíordheimhnithe fós."
 
 #: cp-finish-confirm-dialog-message-no-apns
 msgid "The configuration message you received does not have valid APNs."
-msgstr ""
+msgstr "Níl aon APNanna bailí sa teachtaireacht chumraíochta a fuair tú"
 
 #: brandShortName
 msgid "B2G OS"
@@ -18549,6 +18677,8 @@ msgid ""
 "There is no more room on your SD card to save your download. Please remove "
 "some files before restarting the download."
 msgstr ""
+"Níl go leor spáis ar do chárta SD chun an t-íosluchtú a shábháil. Ba chóir "
+"duit roinnt comhad a scriosadh sula n-atosóidh tú an t-íosluchtú."
 
 #: no_memory_download_right_button
 msgctxt "no_memory_download_right_button"
@@ -18592,7 +18722,7 @@ msgstr "Scrios"
 msgid ""
 "There was an error while restarting the download. Please try to download "
 "again."
-msgstr ""
+msgstr "Tharla earráid agus an t-íosluchtú á atosú. Bain triail eile as."
 
 #: no-downloads
 msgid "No downloads"
