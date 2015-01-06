@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-02 20:17-0500\n"
+"POT-Creation-Date: 2014-12-22 17:15-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -15154,7 +15154,7 @@ msgid "You have the following search engines installed:"
 msgstr "Tá na hinnill chuardaigh seo a leanas suiteáilte:"
 
 #: columnLabel.keyword col.keyword.label keywordResultLabel
-#: bookmark_edit_keyword
+#: engineKeywordColumn.label bookmark_edit_keyword
 msgid "Keyword"
 msgstr "Lorgfhocal"
 
@@ -15171,8 +15171,8 @@ msgid "Move &Down"
 msgstr "Bog Sí&os"
 
 #: remove.label remove.accesskey languages.customize.deleteButton.label
-#: languages.customize.deleteButton.accesskey cmd.uninstallAddon.label
-#: cmd.uninstallAddon.accesskey
+#: languages.customize.deleteButton.accesskey removeEngine.label
+#: removeEngine.accesskey cmd.uninstallAddon.label cmd.uninstallAddon.accesskey
 msgid "&Remove"
 msgstr "&Bain"
 
@@ -19192,7 +19192,7 @@ msgstr "Inneall Cuardaigh Réamhshocraithe"
 msgid ""
 "Choose your default search engine. &brandShortName; uses it in the location "
 "bar, search bar, and start page."
-msgstr ""
+msgstr "Roghnaigh inneall cuardaigh réamhshocraithe. Úsáideann &brandShortName; é sa bharra suímh, sa bharra cuardaigh, agus ar an leathanach tosaigh."
 
 #: provideSearchSuggestions.label provideSearchSuggestions.accesskey
 msgid "Provide &search suggestions"
@@ -19206,7 +19206,15 @@ msgstr "Innill chuardaigh aonchlic"
 msgid ""
 "The search bar lets you search alternate engines directly. Choose which ones "
 "to display."
-msgstr ""
+msgstr "Is féidir leat innill chuardaigh a roghnú go díreach sa bharra cuardaigh. Roghnaigh na cinn atá uait."
+
+#: engineNameColumn.label
+msgid "Search Engine"
+msgstr "Inneall Cuardaigh"
+
+#: restoreDefaultSearchEngines.label restoreDefaultSearchEngines.accesskey
+msgid "Restore &Default Search Engines"
+msgstr "Athchóirigh na hInnill Chuar&daigh Réamhshocraithe"
 
 #: addMoreSearchEngines.label
 msgid "Add more search engines…"
@@ -19811,7 +19819,7 @@ msgstr "Cuardach Aonchlic"
 
 #: SearchHighlight1.text
 msgid "Search any of these sites instantly, without changing your default."
-msgstr ""
+msgstr "Cuardaigh aon cheann de na suímh seo láithreach, gan an t-inneall réamhshocraithe a athrú."
 
 #: SearchHighlight2.title
 msgid "Smart Suggestions"
@@ -19819,7 +19827,7 @@ msgstr "Moltaí Cliste"
 
 #: SearchHighlight2.text
 msgid "Suggestions from your default search engine appear as you type."
-msgstr ""
+msgstr "Feicfidh tú moltaí beo ón inneall cuardaigh réamhshocraithe."
 
 #: searchtip
 msgid "Search using %S"
@@ -21737,7 +21745,7 @@ msgid ""
 "Reporting the address and certificate information for <span id='hostname'></"
 "span> will help us identify and block malicious sites. Thanks for helping "
 "create a safer web!"
-msgstr ""
+msgstr "Dá dtabharfá seoladh agus eolas faoin teastas le haghaidh <span id='hostname'></span> dúinn, chabhródh sé linn suímh mhailíseacha a aithint agus cosc a chur orthu.  Go raibh maith agat as Gréasán níos sláine níos sábháilte a thógáil linn!"
 
 #: errorReporting.automatic
 msgid "Automatically report errors in the future"
@@ -21771,6 +21779,31 @@ msgid ""
 msgstr ""
 "<p><ul><li>Téigh i dteagmháil le húinéir an tsuímh agus inis dóibh faoin "
 "fhadhb seo.</li></ul></p>"
+
+#: oldSecurityProtocol.title
+msgid "Unable to Connect Securely"
+msgstr "Ní féidir ceangal slán a bhunú"
+
+#. LOCALIZATION NOTE (oldSecurityProtocol.longDesc) - Do not translate the
+#. <span id='hostname'></span>.
+#: oldSecurityProtocol.longDesc2
+msgid ""
+"&brandShortName; cannot guarantee the safety of your data on <span "
+"id='hostname'></span> because it uses SSLv3, a broken security protocol."
+msgstr ""
+
+#. <!-- LOCALIZATION NOTE (oldSecurityProtocol.advancedInfo) - Do not translate
+#. the <span id='errorcode'></span>.
+#: oldSecurityProtocol.advancedInfo
+msgid "Advanced info: <span id='errorcode'></span>"
+msgstr "Ardeolas: <span id='errorcode'></span>"
+
+#. #-#-#-#-#  toolkit-ga-IE.po (firefox)  #-#-#-#-#
+#. Mobile only. This text is used to link to a SUMO page explaining why Flash is not
+#. supported on this device. Use the unicode ellipsis char, \u2026, or use "..." if \u2026 doesn't suit traditions in your locale.
+#: oldSecurityProtocol.learnMore unsupportedPlatform.learnMore
+msgid "Learn More…"
+msgstr "Tuilleadh Eolais…"
 
 # -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
 # # ***** BEGIN LICENSE BLOCK *****
@@ -32167,7 +32200,7 @@ msgstr "Ceadaigh uathsheinm"
 
 #: pref_media_autoplay_enabled_summary
 msgid "Control if websites can autoplay videos and other media content"
-msgstr ""
+msgstr "An bhfuil cead ag suímh Ghréasáin físeáin nó meáin eile a sheinm go huathoibríoch?"
 
 #: pref_use_master_password
 msgid "Use master password"
@@ -32827,15 +32860,15 @@ msgstr ""
 #. Tracking content notifications in site identity popup
 #: loaded_tracking_content_message_top
 msgid "Tracking protection disabled."
-msgstr ""
+msgstr "Tá cosaint ó rianú díchumasaithe."
 
 #: loaded_tracking_content_message_bottom
 msgid "Parts of this page may track your online activity."
-msgstr ""
+msgstr "Tá seans ann go bhfuil an leathanach seo ag rianú do ghníomhaíocht ar líne."
 
 #: blocked_tracking_content_message_top2
 msgid "Tracking protection enabled."
-msgstr ""
+msgstr "Tá cosaint ó rianú cumasaithe."
 
 #: enable_protection
 msgid "Enable protection"
@@ -34873,7 +34906,7 @@ msgstr "Liostáil le"
 #. # a file they should import or the name of an api.
 #: nativeWindow.deprecated
 msgid "%1$S is deprecated. Please use %2$S instead"
-msgstr ""
+msgstr "Tá %1$S dulta i léig. Ba chóir duit %2$S a úsáid ina ionad"
 
 #: contextMenu.copyPrefName
 msgid "Copy Name"
@@ -47851,12 +47884,6 @@ msgstr "Níor aimsíodh mír chuardaigh ar bith."
 #: unsupportedPlatform.pre
 msgid "We're very sorry, but &brandShortName; can't play Flash on this device. "
 msgstr "Ní féidir le &brandShortName; Flash a sheinm ar an ngléas seo."
-
-#. Mobile only. This text is used to link to a SUMO page explaining why Flash is not
-#. supported on this device. Use the unicode ellipsis char, \u2026, or use "..." if \u2026 doesn't suit traditions in your locale.
-#: unsupportedPlatform.learnMore
-msgid "Learn More…"
-msgstr "Tuilleadh Eolais…"
 
 #. Mobile only. Include text here if needed for your locale.
 #: unsupportedPlatform.post
