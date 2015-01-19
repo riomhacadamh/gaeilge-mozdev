@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-02 20:14-0500\n"
+"POT-Creation-Date: 2015-01-19 10:28-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -2214,6 +2214,10 @@ msgctxt "event.recurrence.pattern.yearly.week.7.label"
 msgid "Saturday"
 msgstr "Satharn"
 
+#: event.recurrence.pattern.yearly.day.label
+msgid "day"
+msgstr "lá"
+
 #: event.recurrence.of.label
 msgid "of"
 msgstr "as"
@@ -2662,29 +2666,10 @@ msgstr ""
 "gach %1$S de gach mí;gach %1$S de gach #2 mhí;gach %1$S de gach #2 mhí;gach "
 "%1$S de gach #2 mí;gach %1$S de gach #2 mí"
 
-#. # LOCALIZATION NOTE (monthlyDaysOfNth_ordSymbol):
-#. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
-#. # Allows to insert a string, a character or a symbol after the numbers of a day
-#. # in a monthly rule monthlyDaysOfNth in order to give to each day number the
-#. # meaning of ordinal number (e.g.  1 -> 1st; 2 -> 2nd etc.).
-#. # Use a single string if the symbol used is the same for every monthday, otherwise
-#. # write a sequence of _31_ strings (one for every monthday) separated with commas.
-#. # If your language doesn't require that in monthlyDaysOfNth, leave it empty.
-#. # e.g.
-#. # monthlyDaysOfNth_ordSymbol=.
-#. #    -> "Occurs days 1., 2., 10. and 11. of every 2 months"
-#. # monthlyDaysOfNth_ordSymbol=st,nd,rd,th,th,th,th,th,th,th,th,th,th,th,th,
-#. #                            th,th,th,th,th,st,nd,rd,th,th,th,th,th,th,th,st
-#. #    -> "Occurs days 1st, 2nd, 10th and 11th of every 2 months"
-#: monthlyDaysOfNth_ordSymbol
-msgctxt "monthlyDaysOfNth_ordSymbol"
-msgid ""
-msgstr ""
-
 #. # LOCALIZATION NOTE (monthlyDaysOfNth_day):
 #. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
-#. # %1$S - day of month or a sequence of days of month, eventually with ordinal symbol
-#. #        coming from monthlyDaysOfNth_ordSymbol, separated with commas;
+#. # %1$S - day of month or a sequence of days of month, possibly followed by an ordinal symbol
+#. #        (depending on the string dayOrdinalSymbol in dateFormat.properties) separated with commas;
 #. # e.g. "days 3, 6 and 9" or "days 3rd, 6th and 9th"
 #: monthlyDaysOfNth_day
 msgid "day %1$S;days %1$S"
@@ -2692,8 +2677,8 @@ msgstr "lá %1$S;laethanta %1$S;laethanta %1$S;laethanta %1$S;laethanta %1$S"
 
 #. # LOCALIZATION NOTE (monthlyDaysOfNth):
 #. # Edit recurrence window -> Recurrence pattern -> Monthly repeat rules
-#. # %1$S - it's the strig monthlyDaysOfNth_day: day of month or a sequence of days
-#. #        of month, eventually with ordinal symbol, separated with commas;
+#. # %1$S - it's the string monthlyDaysOfNth_day: day of month or a sequence of days
+#. #        of month, possibly followed by an ordinal symbol, separated with commas;
 #. # #2   - monthly interval
 #. # e.g. "days 3, 6, 9 and 12 of every 3 months"
 #: monthlyDaysOfNth
@@ -2811,10 +2796,12 @@ msgstr "an deireadh"
 # e.g. "every 3 years on December 14"
 #. # LOCALIZATION NOTE (yearlyNthOn):
 #. # Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
-#. # %1$S - month
-#. # %2$S - day of month
-#. # #3 - yearly interval
+#. # %1$S - month name
+#. # %2$S - day of month possibly followed by an ordinal symbol (depending on the string
+#. #           dayOrdinalSymbol in dateFormat.properties)
+#. # #3   - yearly interval
 #. # e.g. "every 3 years on December 14"
+#. #      "every 2 years on December 8th"
 #: yearlyNthOn
 msgid "every %1$S %2$S;every #3 years on %1$S %2$S"
 msgstr ""
@@ -2852,7 +2839,7 @@ msgstr ""
 "%1$S %2$S de %3$S;gach #4 mbliana ar %1$S %2$S de %3$S;gach #4 bliain ar %1$S "
 "%2$S de %3$S"
 
-#. # LOCALIZATION NOTE (yearlyOnEveryNthOfNthNounclass1):
+#. # LOCALIZATION NOTE (yearlyOnEveryNthOfNthNounclass...):
 #. # Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
 #. # Translate these strings according to noun class/gender of weekday (%1$S)
 #. # set in 'repeadDetailsDay...Nounclass' strings.
@@ -2881,6 +2868,17 @@ msgstr ""
 "gach %1$S de %2$S;gach #3 bhliain ar gach %1$S de %2$S;gach #3 bliana ar gach "
 "%1$S de %2$S;gach #3 mbliana ar gach %1$S de %2$S;gach #3 bliain ar gach %1$S "
 "de %2$S"
+
+#. #LOCALIZATION NOTE (yearlyEveryDayOf):
+#. # Edit recurrence window -> Recurrence pattern -> Yearly repeat rules
+#. # This string describes part of a yearly rule which includes every day of a month.
+#. # %1$S - month
+#. # #2   - yearly interval
+#. # e.g. "every day of December"
+#. # e.g. "every 3 years every day of December"
+#: yearlyEveryDayOf
+msgid "every day of %1$S;every #2 years every day of %1$S"
+msgstr ""
 
 #: repeatDetailsMonth1 month.1.name
 msgid "January"
@@ -3319,8 +3317,8 @@ msgstr "ríomhphost | r-phost"
 #. # LOCALIZATION NOTE (no.datetime.suffix):
 #. # datetimes followed by these won't be used
 #: no.datetime.suffix
-msgid "floor | flr | : | email | e-mail | > | % | usd | dollars"
-msgstr ": | ríomhphost | r-phost"
+msgid "floor | flr | : | email | e-mail | > | % | usd | dollars | $"
+msgstr ""
 
 #. # LOCALIZATION NOTE (from.*):
 #. # can be a list of values, separate variants by |
@@ -4540,6 +4538,20 @@ msgstr "Drochgheata (Cumraíocht an tseachfhreastalaí?)."
 msgid "Internal server error (Temporary server outage?)."
 msgstr "Earráid inmheánach ar an bhfreastalaí (as seirbhís go sealadach?)."
 
+#: caldavRedirectTitle
+msgid "Update location for calendar %1$S?"
+msgstr ""
+
+#: caldavRedirectText
+msgid ""
+"The requests for %1$S are being redirected to a new location. Would you like "
+"to change the location to the following value?"
+msgstr ""
+
+#: caldavRedirectDisableCalendar
+msgid "Disable Calendar"
+msgstr "Díchumasaigh an Féilire"
+
 # LOCALIZATION NOTE (likelyTimezone):
 # Translators, please put the most likely timezone(s) where the people using
 # your locale will be.  Use the Olson ZoneInfo timezone name *in English*,
@@ -5088,28 +5100,54 @@ msgctxt "monthInYear.monthFormat"
 msgid "nominative"
 msgstr ""
 
+#. # LOCALIZATION NOTE (formatDateLong):
+#. # used for display dates in long format like 'Mon 15 Oct 2008' when it's
+#. # impossible to retrieve the formatatted date from the OS.
+#. #    %1$S will be replaced with name of the day in short format;
+#. #    %2$S will be replaced with the day-index of the month, possibly followed by an ordinal symbol
+#. #         (depending on the string dayOrdinalSymbol in dateFormat.properties);
+#. #    %3$S will be replaced with the name of the month in short format;
+#. #    %4$S will be replaced with the year.
+#: formatDateLong
+msgid "%1$S %2$S %3$S %4$S"
+msgstr "%1$S %2$S %3$S %4$S"
+
+#. # LOCALIZATION NOTE (dayHeaderLabel):
+#. # used for display the labels in the header of the days in day/week views in short
+#. # or long format. For example: 'Monday 6 Oct.' or 'Mon. 6 Oct.'
+#. #    %1$S will be replaced with name of the day in short or long format
+#. #    %2$S will be replaced with the day-index of the month, possibly followed by an ordinal symbol
+#. #         (depending on the string dayOrdinalSymbol in dateFormat.properties), plus the name
+#. #         of the month in short format (the day/month order depends on the OS settings).
+#: dayHeaderLabel
+msgctxt "dayHeaderLabel"
+msgid "%1$S %2$S"
+msgstr "%1$S %2$S"
+
 # LOCALIZATION NOTE (dayIntervalInMonth):
 # used for display of intervals in the form of 'March 3 - 9, 2008'
 # %1$S will be replaced with name of the month of the start date
 # %2$S will be replaced with the day-index of the start date
 # %3$S will be replaced with the day-index of the end date
 # %4$S will be replaced with the common year of both dates
-#. # LOCALIZATION NOTE (dayIntervalInMonth):
+#. # LOCALIZATION NOTE (daysIntervalInMonth):
 #. # used for display of intervals in the form of 'March 3 - 9, 2008'
 #. #    %1$S will be replaced with name of the month of the start date
-#. #    %2$S will be replaced with the day-index of the start date
-#. #    %3$S will be replaced with the day-index of the end date
+#. #    %2$S will be replaced with the day-index of the start date possibly followed by an ordinal symbol
+#. #    %3$S will be replaced with the day-index of the end date possibly followed by an ordinal symbol
 #. #    %4$S will be replaced with the common year of both dates
-#: dayIntervalInMonth
+#. # The presence of the ordinal symbol in the day-indexes depends on the string
+#. # dayOrdinalSymbol in dateFormat.properties
+#: daysIntervalInMonth
 msgid "%1$S %2$S – %3$S, %4$S"
 msgstr "%2$S – %3$S %1$S, %4$S"
 
-#. # LOCALIZATION NOTE (dayIntervalInMonth.monthFormat):
-#. # If your language requires a different declension, change this to 
+#. # LOCALIZATION NOTE (daysIntervalInMonth.monthFormat):
+#. # If your language requires a different declension, change this to
 #. # one of the values specified in dateFormat.properties.
 #. # In any case, DO NOT TRANSLATE.
-#: dayIntervalInMonth.monthFormat
-msgctxt "dayIntervalInMonth.monthFormat"
+#: daysIntervalInMonth.monthFormat
+msgctxt "daysIntervalInMonth.monthFormat"
 msgid "nominative"
 msgstr ""
 
@@ -5120,23 +5158,25 @@ msgstr ""
 # %3$S will be replaced with name of the month of the end date
 # %4$S will be replaced with the day-index of the end date
 # %5$S will be replaced with the commmon year of both dates
-#. # LOCALIZATION NOTE (dayIntervalBetweenMonths):
+#. # LOCALIZATION NOTE (daysIntervalBetweenMonths):
 #. # used for display of intervals in the form 'September 29 - October 5, 2008'
 #. #    %1$S will be replaced with name of the month of the start date
-#. #    %2$S will be replaced with the day-index of the start date
+#. #    %2$S will be replaced with the day-index of the start date possibly followed by an ordinal symbol
 #. #    %3$S will be replaced with name of the month of the end date
-#. #    %4$S will be replaced with the day-index of the end date
+#. #    %4$S will be replaced with the day-index of the end date possibly followed by an ordinal symbol
 #. #    %5$S will be replaced with the commmon year of both dates
-#: dayIntervalBetweenMonths
+#. # The presence of the ordinal symbol in the day-indexes depends on the string
+#. # dayOrdinalSymbol in dateFormat.properties
+#: daysIntervalBetweenMonths
 msgid "%1$S %2$S – %3$S %4$S, %5$S"
 msgstr "%2$S %1$S – %4$S %3$S, %5$S"
 
-#. # LOCALIZATION NOTE (dayIntervalBetweenMonths.monthFormat):
+#. # LOCALIZATION NOTE (daysIntervalBetweenMonths.monthFormat):
 #. # If your language requires a different declension, change this to 
 #. # one of the values specified in dateFormat.properties.
 #. # In any case, DO NOT TRANSLATE.
-#: dayIntervalBetweenMonths.monthFormat
-msgctxt "dayIntervalBetweenMonths.monthFormat"
+#: daysIntervalBetweenMonths.monthFormat
+msgctxt "daysIntervalBetweenMonths.monthFormat"
 msgid "nominative"
 msgstr ""
 
@@ -5148,24 +5188,26 @@ msgstr ""
 # %4$S will be replaced with name of the month of the end date
 # %5$S will be replaced with the day-index of the end date
 # %6$S will be replaced with the year of the end date
-#. # LOCALIZATION NOTE (dayIntervalBetweenYears):
+#. # LOCALIZATION NOTE (daysIntervalBetweenYears):
 #. # used for display of intervals in the form 'December 29, 2008 - January 4, 2009'
 #. #    %1$S will be replaced with name of the month of the start date
-#. #    %2$S will be replaced with the day-index of the start date
+#. #    %2$S will be replaced with the day-index of the start date possibly followed by an ordinal symbol
 #. #    %3$S will be replaced with the year of the start date
 #. #    %4$S will be replaced with name of the month of the end date
-#. #    %5$S will be replaced with the day-index of the end date
+#. #    %5$S will be replaced with the day-index of the end date possibly followed by an ordinal symbol
 #. #    %6$S will be replaced with the year of the end date
-#: dayIntervalBetweenYears
+#. # The presence of the ordinal symbol in the day-indexes depends on the string
+#. # dayOrdinalSymbol in dateFormat.properties
+#: daysIntervalBetweenYears
 msgid "%1$S %2$S, %3$S – %4$S %5$S, %6$S"
 msgstr "%2$S %1$S, %3$S – %5$S %4$S, %6$S"
 
-#. # LOCALIZATION NOTE (dayIntervalBetweenYears.monthFormat):
-#. # If your language requires a different declension, change this to 
+#. # LOCALIZATION NOTE (daysIntervalBetweenYears.monthFormat):
+#. # If your language requires a different declension, change this to
 #. # one of the values specified in dateFormat.properties.
 #. # In any case, DO NOT TRANSLATE.
-#: dayIntervalBetweenYears.monthFormat
-msgctxt "dayIntervalBetweenYears.monthFormat"
+#: daysIntervalBetweenYears.monthFormat
+msgctxt "daysIntervalBetweenYears.monthFormat"
 msgid "nominative"
 msgstr ""
 
@@ -5829,6 +5871,29 @@ msgstr "30"
 msgid "31"
 msgstr "31"
 
+#. # LOCALIZATION NOTE (dayOrdinalSymbol):
+#. # Allows to insert a string, a character or a symbol after the number of a
+#. # monthday in order to give it the meaning of ordinal number e.g.  1 -> 1st etc.
+#. # It's mainly used when formatting dates with both monthday and month name. It
+#. # affects the following localizable strings that hence must be localized *without*
+#. # any ordinal symbol for the monthday number:
+#. #   dayHeaderLabel, monthlyDaysOfNth_day,
+#. #   yearlyNthOn, daysIntervalBetweenYears,
+#. #   daysIntervalBetweenMonths, daysIntervalInMonth.
+#. # Write only a single string if the ordinal symbol is the same for every monthday, otherwise
+#. # write a sequence of _31_ strings (one for each monthday) separated with commas.
+#. # If your language doesn't require that in the mentioned strings, leave it empty.
+#. # e.g.
+#. # dayOrdinalSymbol=.
+#. #    -> daysIntervalInMonth: 'March 3. - 9., 2008'
+#. # dayOrdinalSymbol=st,nd,rd,th,th,th,th,th,th,th,th,th,th,th,th,
+#. #                  th,th,th,th,th,st,nd,rd,th,th,th,th,th,th,th,st
+#. #    -> daysIntervalBetweenMonths: 'September 29th - November 1st, 2008'
+#: dayOrdinalSymbol
+msgctxt "dayOrdinalSymbol"
+msgid ""
+msgstr ""
+
 #: noon time.noon
 msgid "Noon"
 msgstr "Meán Lae"
@@ -6278,6 +6343,14 @@ msgstr "Fada"
 msgid "Short"
 msgstr "Gearr"
 
+#: pref.timezones.caption
+msgid "Timezone"
+msgstr "Crios Ama"
+
+#: pref.timezones.label pref.timezones.accesskey
+msgid "&Select the closest city in your timezone:"
+msgstr "&Roghnaigh an chathair is gaire i do chrios ama:"
+
 #: pref.defaults.label
 msgid "Default Values for New Items"
 msgstr "Luach Réamhshocraithe le haghaidh Míreanna Nua"
@@ -6329,56 +6402,6 @@ msgstr "Catagóirí"
 #: paneViews.title
 msgid "Views"
 msgstr "Amhairc"
-
-#: paneTimezones.title
-msgid "Timezone"
-msgstr "Crios Ama"
-
-# ***** BEGIN LICENSE BLOCK *****
-# - Version: MPL 1.1/GPL 2.0/LGPL 2.1
-# -
-# - The contents of this file are subject to the Mozilla Public License Version
-# - 1.1 (the "License"); you may not use this file except in compliance with
-# - the License. You may obtain a copy of the License at
-# - http://www.mozilla.org/MPL/
-# -
-# - Software distributed under the License is distributed on an "AS IS" basis,
-# - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-# - for the specific language governing rights and limitations under the
-# - License.
-# -
-# - The Original Code is Mozilla Calendar Preferences
-# -
-# - The Initial Developer of the Original Code is
-# - OEone Corporation.
-# - Portions created by the Initial Developer are Copyright (C) 2001
-# - the Initial Developer. All Rights Reserved.
-# -
-# - Contributor(s):
-# -   Mike Potter <mikep@oeone.com>
-# -   ArentJan Banck <ajbanck@planet.nl>
-# -   Eric Belhaire <belhaire@ief.u-psud.fr>
-# -   Matthew Willis <mattwillis@gmail.com>
-# -
-# - Alternatively, the contents of this file may be used under the terms of
-# - either the GNU General Public License Version 2 or later (the "GPL"), or
-# - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
-# - in which case the provisions of the GPL or the LGPL are applicable instead
-# - of those above. If you wish to allow use of your version of this file only
-# - under the terms of either the GPL or the LGPL, and not to allow others to
-# - use your version of this file under the terms of the MPL, indicate your
-# - decision by deleting the provisions above and replace them with the notice
-# - and other provisions required by the LGPL or the GPL. If you do not delete
-# - the provisions above, a recipient may use your version of this file under
-# - the terms of any one of the MPL, the GPL or the LGPL.
-# -
-# - ***** END LICENSE BLOCK *****
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: pref.calendar.timezones.list.caption
-msgid "Select the closest city in your timezone:"
-msgstr "Roghnaigh an chathair is gaire i do chrios ama:"
 
 #: pref.calendar.view.dayandweekviews.caption
 msgid "Day and Week Views"
@@ -6454,6 +6477,43 @@ msgstr "5 seachtaine"
 #: pref.numberofweeks.6
 msgid "6 weeks"
 msgstr "6 seachtaine"
+
+#. # The addon name and short description are localized in gdata.properties
+#. # This is the addon description. The en-US version will sometimes have
+#. # additional news items at the end of the description. If you notice this and
+#. # would like them translated, please email the author directly.
+#. # params: %1$S - See amo.faqlocation
+#. #         %2$S - See amo.website
+#. # NOTE: This is a multiline string, be sure to end lines with \n\ to make sure
+#. # it stays that way.
+#: amo.description
+msgid ""
+"This extension allows Lightning to read and write events and tasks to a "
+"Google Calendar.\n"
+"\n"
+"Please read <a href=\"%1$S\">the FAQ</a> for more details and before filing a "
+"bug. Also, be sure to visit the <a href=\"%2$S\">discussion forums</a>, maybe "
+"your bug already has a solution!\n"
+"\n"
+"To search for and submit bugs, visit http://bugzilla.mozilla.org/ \n"
+"Product: Calendar\n"
+"Component: Provider: GData"
+msgstr ""
+
+#. # You can change this if you have localized the FAQ on wiki.mozilla.org
+#: amo.faqlocation
+msgid "http://wiki.mozilla.org/Calendar:GDATA_Provider"
+msgstr "http://wiki.mozilla.org/Calendar:GDATA_Provider"
+
+#. # You can change this if you would like to provide localized support.
+#: amo.email
+msgctxt "amo.email"
+msgid ""
+msgstr ""
+
+#: amo.website
+msgid "http://groups.google.com/group/provider-for-google-calendar"
+msgstr "http://groups.google.com/group/provider-for-google-calendar"
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -6580,11 +6640,19 @@ msgstr "Ceadaíonn seo rochtain dhéthreoch do Féilire Google"
 msgid "Provider for Google Calendar"
 msgstr "Soláthraí Google Calendar"
 
-#. # Events with only free/busy access don't have a title. Use this instead:
+#. # LOCALIZATION NOTE (busyTitle):
+#. # Events with only free/busy access don't have a title, they will use this
+#. # title instead. The calendar name is used as a parameter, since its often
+#. # named after the person whose calendar you are viewing.
+#. # %1$S = The calendar name
 #: busyTitle
 msgid "Busy (%1$S)"
 msgstr "Gnóthach (%1$S)"
 
+#. # LOCALIZATION NOTE (quotaExceeded):
+#. # This is shown when the request quota has been exceeded.
+#. # %1$S = The session id (what the user enters as an email
+#. #                        in the new calendar dialog)
 #: quotaExceeded
 msgid "The quota for %1$S has been exceeded, please try again later."
 msgstr "Os cionn an chuóta le haghaidh %1$S; bain triail eile as ar ball."
@@ -6602,6 +6670,28 @@ msgid ""
 msgstr ""
 "Ní féidir le Google Calendar meabhrúchán a dhéanamh níos luaithe ná ceithre "
 "seachtaine roimh thús an imeachta."
+
+#. # LOCALIZATION NOTE (syncProgressEvent):
+#. # %1$S = The name of the calendar that is being synchronized
+#. # %2$S = The number of events that have been synchronzed
+#. # %3$S = The total number of events in the synchronization run
+#: syncProgressEvent
+msgid "Synchronizing %1$S event %2$S of %3$S"
+msgstr "Imeachtaí %1$S á sioncrónú: %2$S as %3$S"
+
+#. # LOCALIZATION NOTE (syncProgressTask):
+#. # %1$S = The name of the calendar that is being synchronized
+#. # %2$S = The number of tasks that have been synchronzed
+#. # %3$S = The total number of tasks in the synchronization run
+#: syncProgressTask
+msgid "Synchronizing %1$S task %2$S of %3$S"
+msgstr "Tascanna %1$S á sioncrónú: %2$S as %3$S"
+
+#. # LOCALIZATION NOTE (syncStatus):
+#. # %1$S = The name of the calendar that is being synchronized
+#: syncStatus
+msgid "Synchronizing Calendar %1$S"
+msgstr "Féilire %1$S á shioncrónú"
 
 # args: host
 #. # args: host
@@ -8732,8 +8822,8 @@ msgstr "Tá freagra ar chuireadh sa teachtaireacht seo."
 msgid ""
 "This message contains an event that this version of Lightning cannot process."
 msgstr ""
-"Tá imeacht sa teachtaireacht seo nach féidir leis an leagan seo de Lightning a "
-"phróiseáil."
+"Tá imeacht sa teachtaireacht seo nach féidir leis an leagan seo de Lightning "
+"a phróiseáil."
 
 #: imipBarProcessingFailed
 msgid "Processing message failed. Status: %1$S."
