@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: thunderbird\n"
+"Project-Id-Version: firefox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-19 10:29-0500\n"
+"POT-Creation-Date: 2015-03-08 07:30-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -4799,12 +4799,57 @@ msgstr "Atosaigh &brandShortName; chun é a nuashonrú"
 msgid "&Apply Update…"
 msgstr "&Cuir nuashonrú i bhfeidhm…"
 
+#. This is a warning about the experimental nature of Nightly and Aurora builds. It is only shown in those versions.
+#: warningDesc.version
+msgid "&brandShortName; is experimental and may be unstable."
+msgstr ""
+"Is táirge turgnamhach é &brandShortName; agus seans nach mbeidh sé cobhsaí."
+
+#. This is a notification that Nightly/Aurora builds automatically send Telemetry data back to Mozilla. It is only shown in those versions. "It" refers to brandShortName.
+#: warningDesc.telemetryDesc
+msgid ""
+"It automatically sends information about performance, hardware, usage and "
+"customizations back to &vendorShortName; to help make &brandShortName; better."
+msgstr ""
+"Seolann sé faisnéis maidir le feidhmíocht, crua-earraí, úsáid, agus "
+"saincheapadh chuig &vendorShortName; go huathoibríoch, chun cabhrú linn "
+"feabhas a chur ar &brandShortName;."
+
+#. LOCALIZATION NOTE (community.exp.*) This paragraph is shown in "experimental" builds, i.e. Nightly and Aurora builds, instead of the other "community.*" strings below.
+#: community.exp.start
+msgctxt "community.exp.startcommunity.exp.start"
+msgid ""
+msgstr "Seo é "
+
+#. This is a link title that links to http://www.mozilla.org/.
+#: community.exp.mozillaLink
+msgctxt "community.exp.mozillaLink"
+msgid "&vendorShortName;"
+msgstr "&vendorShortName;"
+
+#: community.exp.middle
+msgid " is a "
+msgstr " - "
+
+#. LOCALIZATION NOTE (community.exp.creditslink): This is a link title that links to about:credits.
+#: community.exp.creditsLink
+msgctxt "community.exp.creditsLink"
+msgid "global community"
+msgstr "comhphobal domhanda"
+
+#: community.exp.end
+msgctxt "community.exp.end"
+msgid " working together to keep the Web open, public and accessible to all."
+msgstr ""
+" atá ag obair ar son Gréasáin atá oscailte, poiblí, agus ar fáil do chách."
+
 #: community.start2
 msgid "&brandShortName; is designed by "
 msgstr "Bhí &brandShortName; cruthaithe ag "
 
 #. This is a link title that links to http://www.mozilla.org/.
 #: community.mozillaLink
+msgctxt "community.mozillaLink"
 msgid "&vendorShortName;"
 msgstr "&vendorShortName;"
 
@@ -4814,29 +4859,36 @@ msgstr ", "
 
 #. This is a link title that links to about:credits.
 #: community.creditsLink
+msgctxt "community.creditsLink"
 msgid "global community"
 msgstr "comhphobal domhanda"
 
-#: community.end2
-msgid ""
-" working together to make the Internet better. We believe that the Internet "
-"should be open, public, and accessible to everyone without any restrictions."
+#: community.end3
+msgctxt "community.end3"
+msgid " working together to keep the Web open, public and accessible to all."
 msgstr ""
-" atá ag cur le chéile chun feabhas a chur ar an Idirlíon.  Creidimid gur "
-"chóir don Idirlíon a bheith oscailte, poiblí, agus ar fáil do chách gan srian "
-"ar bith."
+" atá ag obair ar son Gréasáin atá oscailte, poiblí, agus ar fáil do chách."
 
-#: contribute.start
-msgid "Sound interesting? "
-msgstr "Suimiúil? "
+#: helpus.start
+msgid "Want to help? "
+msgstr "Ar mhaith leat cabhrú linn? "
+
+#. This is a link title that links to the thunderbird donation page
+#: helpus.donateLink
+msgid "Make a donation"
+msgstr "Tabhair deontas"
+
+#: helpus.middle
+msgid " or "
+msgstr " nó "
 
 #. This is a link title that links to http://www.mozilla.org/contribute/.
-#: contribute.getInvolvedLink
-msgid "Get involved!"
-msgstr "Bí linn!"
+#: helpus.getInvolvedLink
+msgid "get involved!"
+msgstr "glac páirt!"
 
-#: contribute.end
-msgctxt "contribute.endcontribute.end"
+#: helpus.end
+msgctxt "helpus.end"
 msgid ""
 msgstr ""
 
@@ -4874,6 +4926,11 @@ msgstr "Tá &brandShortName; cothrom le dáta"
 #: update.adminDisabled
 msgid "Updates disabled by your system administrator"
 msgstr "Tá nuashonruithe bogearra díchumasaithe ag riarthóir do chórais"
+
+#. try to make the localized text short
+#: update.otherInstanceHandlingUpdates
+msgid "&brandShortName; is being updated by another instance"
+msgstr "Tá &brandShortName; á nuashonrú ag ásc eile"
 
 #. LOCALIZATION NOTE (update.failed.start,update.failed.linkText,update.failed.end):
 #. update.failed.start, update.failed.linkText, and update.failed.end all go into
@@ -4963,6 +5020,44 @@ msgstr " faoi láthair. "
 #: cmd.close.commandKey windowClose.key
 msgid "w"
 msgstr "w"
+
+#. This Source Code Form is subject to the terms of the Mozilla Public
+#. - License, v. 2.0. If a copy of the MPL was not distributed with this
+#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: aboutDownloads.title savedFiles.title
+msgid "Saved Files"
+msgstr "Comhaid Shábháilte"
+
+#: aboutDownloads.empty
+msgid "No Saved Files"
+msgstr ""
+
+#. LOCALIZATION NOTE (cmd.show.label, cmd.show.accesskey, cmd.showMac.label,
+#. cmd.showMac.accesskey):
+#. The show and showMac commands are never shown together, thus they can share
+#. the same access key (though the two access keys can also be different).
+#: cmd.show.label cmd.show.accesskey
+msgid "Open Containing &Folder"
+msgstr "Oscail an &Fillteán Coinneála"
+
+#: cmd.showMac.label cmd.showMac.accesskey
+msgid "Show In &Finder"
+msgstr "Taispeáin Sa &Finder"
+
+#. #-#-#-#-#  chromemessengermsgHdrViewOverlay.dtd.po (firefox)  #-#-#-#-#
+#. Attachment context menu items
+#: cmd.open.label cmd.open.accesskey openAttachment.label
+#: openAttachment.accesskey openAttachmentCmd.label openAttachmentCmd.accesskey
+msgid "&Open"
+msgstr "&Oscail"
+
+#: cmd.removeFromHistory.label cmd.removeFromHistory.accesskey
+msgid "R&emove From History"
+msgstr "&Bain ón Stair"
+
+#: cmd.clearDownloads.label cmd.clearDownloads.accesskey
+msgid "Clear &Downloads"
+msgstr "Bánaigh Íoslu&chtuithe"
 
 #: rights.title
 msgctxt "rights.title"
@@ -6510,7 +6605,7 @@ msgstr "Teachtaireachtaí á Seoladh"
 
 # # Strings used by prompt when Quitting while in progress
 #. #-#-#-#-#  chromemessengermessengercomposecomposeMsgs.properties.po (firefox)  #-#-#-#-#
-#. ## Strings used by prompt when Quitting while in progress
+#. ## Strings used by the prompt when Quitting while in progress
 #: sendingMessage quitComposeWindowTitle titleSendMsg
 msgid "Sending Message"
 msgstr "Teachtaireacht á Seoladh"
@@ -6889,7 +6984,7 @@ msgstr "Teagmháil"
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #. #-#-#-#-#  chromemessengermessenger.dtd.po (firefox)  #-#-#-#-#
 #. Folder Pane
-#: Name.box nameColumn.label folderColumn.label
+#: Name.box nameColumn.label folderNameColumn.label
 msgid "Name"
 msgstr "Ainm"
 
@@ -7382,6 +7477,14 @@ msgstr "Bog Síos"
 msgid "Address Book"
 msgstr "Leabhar Seoltaí"
 
+#: blankResultsPaneMessage.label
+msgid "This address book shows contacts only after a search"
+msgstr ""
+
+#: localResultsOnlyMessage.label
+msgid "Contacts from remote address books are not shown until you search"
+msgstr ""
+
 #: newContact.label newContact.accesskey newContactCmd.label
 #: newContactCmd.accesskey
 msgid "Address Book &Contact…"
@@ -7659,6 +7762,11 @@ msgstr "Mearchuardach"
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#: Addrbook.label Addrbook.accesskey addressBookCmd.label
+#: addressBookCmd.accesskey
+msgid "Address &Book"
+msgstr "Lea&bhar Seoltaí"
+
 #: GeneratedName.label GeneratedName.accesskey
 msgid "&Name"
 msgstr "Ai&nm"
@@ -7846,6 +7954,10 @@ msgstr "%S, %S"
 #: firstLastFormat
 msgid "%S %S  "
 msgstr "%S %S  "
+
+#: allAddressBooks
+msgid "All Address Books"
+msgstr ""
 
 #: newContactTitle
 msgid "New Contact"
@@ -9974,6 +10086,18 @@ msgid ""
 "it."
 msgstr "Cuntas speisialta é seo. Níl aon aitheantas comhcheangailte leis."
 
+#: storeType.label storeType.accesskey
+msgid "Message Store &Type:"
+msgstr ""
+
+#: mboxStore.label
+msgid "One large file (mbox)"
+msgstr ""
+
+#: maildirStore.label
+msgid "File per message (maildir)"
+msgstr ""
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -10780,10 +10904,16 @@ msgid ""
 msgstr ""
 "Bainfear %1$S ó do liosta cairde in %2$S go deo má leanann tú ar aghaidh"
 
+#. #-#-#-#-#  chromemessengerchat.properties.po (firefox)  #-#-#-#-#
 #. # LOCALIZATION NOTE (buddy.deletePrompt.displayName):
 #. # This is used to format the display name inserted in buddy.deletePrompt.message
 #. # %1$S is the alias, %2$S is the username.
-#: buddy.deletePrompt.displayName
+#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+#. ## LOCALIZATION NOTE(folderWithUnreadMsgs):
+#. ## This is a concatenation of two strings to compose a folder label with unread messages.
+#. ## %1$S = folder name
+#. ## %2$S = count of unread messages
+#: buddy.deletePrompt.displayName folderWithUnreadMsgs
 msgid "%1$S (%2$S)"
 msgstr "%1$S (%2$S)"
 
@@ -10853,9 +10983,24 @@ msgstr "An tSeachtain Seo"
 msgid "Last Week"
 msgstr "An tseachtain seo caite"
 
+#. # LOCALIZATION NOTE (messagePreview):
+#. # This is the default message preview to be shown
+#. # when the user has chosen not to show any info in the notification about the
+#. # incoming message being notified.
 #: messagePreview
 msgid "New Chat Message"
 msgstr "Teachtaireacht Nua Chomhrá"
+
+#. #LOCALIZATION NOTE (bundledMessagePreview):  Semi-colon list of plural forms.
+#. # Used when multiple incoming messages from the same sender are bundled
+#. # into a single notification.
+#. # #1 is the number of incoming messages the user is being notified about. When #1
+#. # is greater than one, the plural form after the semicolon is used.
+#. # Do not translate %1$S, it is the message preview to be shown in the
+#. # notification, i.e. the first incoming message.
+#: bundledMessagePreview
+msgid "%1$S… (and #1 more message);%1$S… (and #1 more messages)"
+msgstr ""
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -10949,11 +11094,8 @@ msgid "Sending files over 2GB is not supported."
 msgstr "Ní féidir comhad atá níos mó ná 2GB a sheoladh."
 
 #: fileExceedsLimit.thatsBigFile3
-msgid ""
-"Sending files larger than 50 MB is not supported for non-premium accounts."
+msgid "Sending files larger than 50 MB is only supported for premium accounts."
 msgstr ""
-"Ní féidir comhad atá níos mó ná 50 MB a sheoladh mura bhfuil scothchuntas "
-"agat."
 
 #: fileExceedsQuota.storageLimitReached
 msgid "Storage limit reached"
@@ -11191,13 +11333,6 @@ msgstr "&ceanntásca"
 #: mark.label mark.accesskey
 msgid "&Mark remaining headers as read"
 msgstr "&Marcáil mar léite na ceanntásca atá fágtha"
-
-#. This Source Code Form is subject to the terms of the Mozilla Public
-#. - License, v. 2.0. If a copy of the MPL was not distributed with this
-#. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
-#: savedFiles.title
-msgid "Saved Files"
-msgstr "Comhaid Shábháilte"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -11946,6 +12081,10 @@ msgstr "Scagadh tar éis Aicmiú Dramhphoist"
 msgid "After &Sending"
 msgstr ""
 
+#: contextArchive.label contextArchive.accesskey
+msgid "&Archiving"
+msgstr ""
+
 #: filterActionDesc.label filterActionDesc.accesskey
 msgid "&Perform these actions:"
 msgstr "Déan na &gníomhartha seo:"
@@ -12240,6 +12379,13 @@ msgstr ""
 #: dontWarnAboutDeleteCheckbox
 msgid "Don't ask me again"
 msgstr "Ná fiafraigh díom arís"
+
+#. # LOCALIZATION NOTE(filterFAilureWarningPrefix)
+#. # %1$S=filter error action
+#. # %2$S=error code as hexadecimal string.
+#: filterFailureWarningPrefix
+msgid "Filter Action Failed: \"%1$S\" with error code=%2$S while attempting:"
+msgstr ""
 
 #: searchTermsInvalidTitle
 msgid "Search Terms Invalid"
@@ -12628,22 +12774,6 @@ msgstr "Teachtaireachtaí a luann: #1"
 msgctxt "glodaComplete.messagesMentioningMany.label"
 msgid "Messages mentioning: #1"
 msgstr "Teachtaireachtaí a luann: #1"
-
-#. # LOCALIZATION NOTE (glodaComplete.webSearch1.label): The label used in the
-#. #  autocomplete widget to refer to a search on the web for a short string
-#. #  containing at most 15 characters. #1 is the search provider to use. #2 is
-#. #  the string to search for, truncated to 15 characters.
-#: glodaComplete.webSearch1.label
-msgid "Search #1 for: #2"
-msgstr "Cuardaigh #1 le haghaidh: #2"
-
-#. # LOCALIZATION NOTE (glodaComplete.webSearch1.label.truncated): The label used in
-#. #  the autocomplete widget to refer to a search on the web for a short string
-#. #  containing more than 15 characters. #1 is the search provider to use. #2 is
-#. #  the string to search for, truncated to 15 characters.
-#: glodaComplete.webSearch1.label.truncated
-msgid "Search #1 for: #2…"
-msgstr "Cuardaigh #1 le haghaidh: #2…"
 
 #. #-#-#-#-#  chromemessengerglodaFacetView.dtd.po (firefox)  #-#-#-#-#
 #. This Source Code Form is subject to the terms of the Mozilla Public
@@ -13707,31 +13837,19 @@ msgstr "Faisnéis Chumraíochta an Bhosca Ríomhphoist á fáil…"
 msgid "This body part will be downloaded on demand."
 msgstr "Déanfar an chuid seo den chorp á íosluchtú ar éileamh."
 
-# # @name IMAP_RECEIVING_MESSAGE_HEADERS_OF
-# # @loc None
-# LOCALIZATION NOTE (Error 5036): Do not translate the word "%S" or "%lu" below.
-# Place the word %S in your translation where the name of the server should appear.
-# Place the word %lu where the number of headers should appear.
-#. # LOCALIZATION NOTE (imapReceivingMessageHeaders): Do not translate the word "%1$S", "%2$lu" or "%3$lu" below.
-#. # Place the word %1$S in your translation where the name of the server should appear.
-#. # Place the word %2$lu where the number of the header currently being downloaded should appear.
-#. # Place the word %3$lu where the number of headers should appear.
-#: imapReceivingMessageHeaders
-msgid "%S Downloading message header %lu of %lu"
-msgstr "Ceanntásc %2$lu as %3$lu á íosluchtú ó %1$S"
+#. # LOCALIZATION NOTE (imapReceivingMessageHeaders2): Do not translate the word "%S" or "%lu" below.
+#. # Place the word %S in your translation where the name of the server should appear.
+#. # Place the word %lu where the number of headers should appear.
+#: imapReceivingMessageHeaders2
+msgid "%S Downloading message header %lu of %lu…"
+msgstr ""
 
-# # @name IMAP_RECEIVING_MESSAGE_FLAGS_OF
-# # @loc None
-# LOCALIZATION NOTE (Error 5037): Do not translate the word "%S" or "%lu" below.
-# Place the word %S in your translation where the name of the server should appear.
-# Place the word %lu where the number of flags should appear.
-#. # LOCALIZATION NOTE (imapReceivingMessageFlags): Do not translate the word "%1$S", "%2$lu" or "%3$lu" below.
-#. # Place the word %1$S in your translation where the name of the server should appear.
-#. # Place the word %2$lu where the number of the flag currently being downloaded should appear.
-#. # Place the word %3$lu where the number of flags should appear.
-#: imapReceivingMessageFlags
-msgid "%S Downloading message flag %lu of %lu"
-msgstr "Brat teachtaireachta %2$lu as %3$lu á íosluchtú ó %1$S"
+#. # LOCALIZATION NOTE (imapReceivingMessageFlags2): Do not translate the word "%S" or "%lu" below.
+#. # Place the word %S in your translation where the name of the server should appear.
+#. # Place the word %lu where the number of flags should appear.
+#: imapReceivingMessageFlags2
+msgid "%S Downloading message flag %lu of %lu…"
+msgstr ""
 
 # # @name IMAP_DELETING_MESSAGES
 # # @loc None
@@ -13785,17 +13903,12 @@ msgstr "Teachtaireachtaí á gcóipeáil go %S…"
 msgid "Copying message to %S…"
 msgstr "Teachtaireacht á cóipeáil go %S…"
 
-# # @name IMAP_FOLDER_RECEIVING_MESSAGE_OF
-# # @loc None
-# LOCALIZATION NOTE (Error 5045): Do not translate the word "%S" or "%lu" below.
-# Place the word %S in your translation where the name of the folder should appear.
-# Place the word %lu where the number of headers should appear.
-#. # LOCALIZATION NOTE (imapFolderReceivingMessageOf): Do not translate the word "%S" or "%lu" below.
+#. # LOCALIZATION NOTE (imapFolderReceivingMessageOf2): Do not translate the word "%S" or "%lu" below.
 #. # Place the word %S in your translation where the name of the folder should appear.
 #. # Place the word %lu where the number of headers should appear.
-#: imapFolderReceivingMessageOf
-msgid "%S - Downloading message %lu of %lu"
-msgstr "%S - Teachtaireacht %lu as %lu á híosluchtú"
+#: imapFolderReceivingMessageOf2
+msgid "%S - Downloading message %lu of %lu…"
+msgstr ""
 
 # # @name IMAP_DISCOVERING_MAILBOX
 # # @loc None
@@ -13821,7 +13934,7 @@ msgstr "Aimsíodh fillteán: %S"
 #. # or the username should appear
 #. #-#-#-#-#  chromemessengermessengercomposecomposeMsgs.properties.po (firefox)  #-#-#-#-#
 #. ## LOCALIZATION NOTE(smtpEnterPasswordPrompt): Do not translate the
-#. ## word $S. Place the word $S where the host name should appear.
+#. ## word %S. Place the word %S where the host name should appear.
 #: imapEnterPasswordPrompt smtpEnterPasswordPrompt
 msgid "Enter your password for %S:"
 msgstr "Iontráil d'fhocal faire le haghaidh %S:"
@@ -14088,19 +14201,13 @@ msgstr "Níl cuóta stórais ar bith ar an bhfillteán seo."
 msgid "Application is out of memory."
 msgstr "Tá an feidhmchlár as cuimhne."
 
-# # @name IMAP_COPYING_MESSAGE_OF
-# # @loc None
-# LOCALIZATION NOTE (Error 5103): Do not translate the word "%S" below.
-# Place the word %3$S in your translation where the name of the destination folder should appear.
-# Place the word %1$S where the currently copying message should appear.
-# Place the word %2$S where the total number of messages should appear.
-#. # LOCALIZATION NOTE (imapCopyingMessageOf): Do not translate the word "%S" below.
+#. # LOCALIZATION NOTE (imapCopyingMessageOf2): Do not translate the word "%S" below.
 #. # Place the word %3$S in your translation where the name of the destination folder should appear.
 #. # Place the word %1$S where the currently copying message should appear.
 #. # Place the word %2$S where the total number of messages should appear.
-#: imapCopyingMessageOf
-msgid "Copying Message %1$S of %2$S to %3$S"
-msgstr "Teachtaireacht %1$S as %2$S á cóipeáil go %3$S"
+#: imapCopyingMessageOf2
+msgid "Copying message %1$S of %2$S to %3$S…"
+msgstr ""
 
 # #-#-#-#-#  chromemessengerimapMsgs.properties.po (firefox)  #-#-#-#-#
 # # @name IMAP_MOVE_FOLDER_TO_TRASH
@@ -15113,20 +15220,6 @@ msgstr "Níl aon teachtaireachtaí nua ann."
 msgid "Received %1$S of %2$S messages"
 msgstr "Fuarthas %1$S as %2$S teachtaireacht"
 
-# The following are used by the local mail code to display progress/status/error messages
-#
-# # @name MK_POP3_OUT_OF_DISK_SPACE
-# # @loc None
-#: pop3OutOfDiskSpace
-msgid ""
-"There is not enough disk space to download new messages. Try deleting old "
-"mail, emptying the Trash folder, and compacting your mail folders, and then "
-"try again."
-msgstr ""
-"Níl go leor spás diosca chun teachtaireachtaí nua a íosluchtú. Scrios sean-"
-"teachtaireachtaí, folmhaigh an Bosca Bruscar agus dlúthaigh do chuid "
-"fillteáin ríomhphoist. Ansin déan iarracht eile."
-
 # Status - parsing folder
 # # @name LOCAL_STATUS_SELECTING_MAILBOX
 # # @loc None
@@ -15839,41 +15932,28 @@ msgstr ""
 "Níorbh fhéidir comhad sealadach %S a oscailt. Féach ar an socrú 'Comhadlann "
 "Shealadach'."
 
-# # @name NS_MSG_UNABLE_TO_SAVE_TEMPLATE
-#. ## @name NS_MSG_UNABLE_TO_SAVE_TEMPLATE
-#: 12502
-msgid "Unable to save your message as template."
-msgstr "Ní féidir do theachtaireacht a shábháil mar theimpléad."
-
-# # @name NS_MSG_UNABLE_TO_SAVE_DRAFT
-#. ## @name NS_MSG_UNABLE_TO_SAVE_DRAFT
-#: 12503
-msgid "Unable to save your message as draft."
-msgstr "Ní féidir do theachtaireacht a shábháil mar dhréacht."
-
-# # @name NS_MSG_COULDNT_OPEN_FCC_FOLDER
-#. ## @name NS_MSG_COULDNT_OPEN_FCC_FOLDER
-#: 12506
-msgid ""
-"Couldn't open Sent Mail folder. Please verify that your Mail preferences are "
-"correct."
+#: unableToSaveTemplate
+msgid "Unable to save your message as a template."
 msgstr ""
-"Níorbh fhéidir an fillteán \"Seolta\" a oscailt. Cinntigh go bhfuil do "
-"shainroghanna ríomhphoist i gceart."
 
-# # @name NS_MSG_NO_SENDER
-#. ## @name NS_MSG_NO_SENDER
-#: 12510
-msgid ""
-"No sender was specified. Please fill in your email address in the Mail & "
-"Newsgroups account settings."
+#: unableToSaveDraft
+msgid "Unable to save your message as a draft."
 msgstr ""
-"Níor sonraíodh an seoltóir. Cuir do sheoladh ríomhphoist i socruithe an "
-"chuntais le do thoil."
+
+#: couldntOpenFccFolder
+msgid ""
+"Couldn't open the Sent Mail folder. Please verify that your account settings "
+"are correct."
+msgstr ""
+
+#: noSender
+msgid ""
+"No sender was specified. Please add your email address in the account "
+"settings."
+msgstr ""
 
 # # @name NS_MSG_NO_RECIPIENTS
-#. ## @name NS_MSG_NO_RECIPIENTS
-#: 12511
+#: noRecipients
 msgid ""
 "No recipients were specified. Please enter a recipient or newsgroup in the "
 "addressing area."
@@ -15887,34 +15967,28 @@ msgstr ""
 # # @loc None
 # #-#-#-#-#  tmp.XXXXcNRgyF.po (thunderbird)  #-#-#-#-#
 # # @name NS_MSG_ERROR_WRITING_FILE
-#. ## @name NS_MSG_ERROR_WRITING_FILE
-#: 12512
+#: errorWritingFile
 msgid "Error writing temporary file."
 msgstr "Earráid agus comhad sealadach á scríobh."
 
-# # @name NS_ERROR_SENDING_FROM_COMMAND
-#. ## @name NS_ERROR_SENDING_FROM_COMMAND
-#: 12514
+#. ## LOCALIZATION NOTE (errorSendingFromCommand): argument %s is the Outgoing server (SMTP) response
+#: errorSendingFromCommand
 msgid ""
-"An error occurred while sending mail. The mail server responded:  %s.  Please "
-"verify that your email address is correct in your Mail preferences and try "
+"An error occurred while sending mail. The mail server responded: %s. Please "
+"verify that your email address is correct in your account settings and try "
 "again."
 msgstr ""
-"Tharla earráid agus ríomhphost á sheoladh. D'fhreagair an freastalaí "
-"ríomhphoist: %s. Cinntigh go bhfuil do sheoladh ríomhphoist i gceart i do "
-"shainroghanna agus déan iarracht eile."
 
-# # @name NS_ERROR_SENDING_DATA_COMMAND
-#. ## @name NS_ERROR_SENDING_DATA_COMMAND
-#: 12516
-msgid "An (SMTP) error occurred while sending mail. The server responded:  %s."
+#. ## LOCALIZATION NOTE (errorSendingDataCommand): argument %s is the Outgoing server (SMTP) response
+#: errorSendingDataCommand
+msgid ""
+"An Outgoing server (SMTP) error occurred while sending mail. The server "
+"responded:  %s."
 msgstr ""
-"Tharla earráid (SMTP) agus ríomhphost á sheoladh. D'fhreagair an freastalaí: "
-"%s"
 
 # # @name NS_ERROR_SENDING_MESSAGE
-#. ## @name NS_ERROR_SENDING_MESSAGE
-#: 12517
+#. ## LOCALIZATION NOTE (errorSendingMessage): argument %s is the Outgoing server (SMTP) response
+#: errorSendingMessage
 msgid ""
 "An error occurred while sending mail. The mail server responded:  %s. Please "
 "check the message and try again."
@@ -15922,67 +15996,47 @@ msgstr ""
 "Tharla earráid agus ríomhphost á sheoladh. D'fhreagair an freastalaí "
 "ríomhphoist: %s. Scrúdaigh an teachtaireacht agus déan iarracht eile."
 
-# # @name NS_ERROR_POST_FAILED
-#. ## @name NS_ERROR_POST_FAILED
-#: 12518
+#: postFailed
 msgid ""
 "The message could not be posted because connecting to the news server failed. "
 "The server may be unavailable or is refusing connections. Please verify that "
-"your news server settings are correct and try again, or else contact your "
-"network administrator."
+"your news server settings are correct and try again."
 msgstr ""
-"Níorbh fhéidir an teachtaireacht a sheoladh toisc gur theip ar an gceangal "
-"leis an bhfreastalaí nuachta. B'fhéidir nach bhfuil an freastalaí ar fáil nó "
-"go bhfuil sé ag diúltú le ceangail. Cinntigh go bhfuil do shocruithe don "
-"fhreastalaí nuachta i gceart agus déan iarracht eile, nó téigh i dteagmháil "
-"le do riarthóir líonra."
 
-# # @name NS_ERROR_QUEUED_DELIVERY_FAILED
-#. ## @name NS_ERROR_QUEUED_DELIVERY_FAILED
-#: 12519
-msgid "An error occurred delivering unsent messages."
-msgstr "Tharla earráid i rith sheoladh na dteachtaireachtaí gan seoladh."
+#: errorQueuedDeliveryFailed
+msgid "An error occurred while delivering the unsent messages."
+msgstr ""
 
-# # @name NS_ERROR_SEND_FAILED
-#. ## @name NS_ERROR_SEND_FAILED
-#: 12520
-msgid "Sending of message failed."
-msgstr "Theip ar sheoladh an ríomhphoist."
+#: sendFailed
+msgid "Sending of the message failed."
+msgstr ""
 
-# # @name NS_ERROR_SMTP_SERVER_ERROR
-#. ## @name NS_ERROR_SMTP_SERVER_ERROR
-#: 12524
+#. ## LOCALIZATION NOTE (smtpServerError): argument %s is the Outgoing server (SMTP) response
+#: smtpServerError
 msgid ""
-"An error occurred sending mail: SMTP server error. The server responded:  %s "
-"Contact your mail administrator for assistance."
+"An error occurred while sending mail: Outgoing server (SMTP) error. The "
+"server responded:  %s."
 msgstr ""
-"Tharla earráid agus ríomhphost á seoladh: earráid fhreastalaí SMTP. "
-"D'fhreagair an freastalaí: %s. Téigh i dteagmháil le do riarthóir ríomhphoist "
-"le haghaidh cabhrach."
 
-# # @name NS_MSG_UNABLE_TO_SEND_LATER
-#. ## @name NS_MSG_UNABLE_TO_SEND_LATER
-#: 12525
-msgid "Unable to save your message in order to send it later."
+#: unableToSendLater
+msgid "Sorry, we were unable to save your message for sending later."
 msgstr ""
-"Níorbh fhéidir do theachtaireacht a shábháil le é a sheoladh níos déanaí."
 
 # # @name NS_ERROR_COMMUNICATIONS_ERROR
-#. ## @name NS_ERROR_COMMUNICATIONS_ERROR
-#: 12526
+#. ## LOCALIZATION NOTE (communicationsError): argument %d is the error code
+#: communicationsError
 msgid "A communications error occurred: %d.  Please try again."
 msgstr "Tharla earráid chumarsáide: %d. Déan iarracht eile le do thoil."
 
 # # @name NS_ERROR_BUT_DONT_SHOW_ALERT
-#. ## @name NS_ERROR_BUT_DONT_SHOW_ALERT
-#: 12527
+#: dontShowAlert
 msgid "THIS IS JUST A PLACEHOLDER.  YOU SHOULD NEVER SEE THIS STRING."
 msgstr ""
 "NÍL I SEO ACH MARCÁLAÍ. NÍ CHEART DUIT AN TEAGHRÁN SEO A FHEISCINT RIAMH."
 
 # # @name NS_ERROR_TCP_READ_ERROR
-#. ## @name NS_ERROR_TCP_READ_ERROR
-#: 12528
+#. ## LOCALIZATION NOTE (tcpReadError): argument %s is the network error
+#: tcpReadError
 msgid ""
 "A network error occurred while receiving data.  (Network Error: %s)  Try "
 "connecting again."
@@ -15990,27 +16044,20 @@ msgstr ""
 "Tharla earráid líonra agus sonraí á fháil. (earráid líonra: %s). Déan "
 "iarracht eile ceangal."
 
-# # @name NS_ERROR_COULD_NOT_GET_USERS_MAIL_ADDRESS
-#. ## @name NS_ERROR_COULD_NOT_GET_USERS_MAIL_ADDRESS
-#: 12529
+#: couldNotGetUsersMailAddress
 msgid ""
-"An error occurred sending mail:  the return mail address was invalid.  Please "
-"verify that your email address is correct in your Mail preferences and try "
-"again."
+"An error occurred while sending mail:  the return mail address was invalid.  "
+"Please verify that your email address is correct in your account settings and "
+"try again."
 msgstr ""
-"Tharla earráid agus ríomhphost á sheoladh: bhí an seoladh fillte neamhbhailí. "
-"Cinntigh go bhfuil do sheoladh ríomhphoist i gceart i do shainroghanna agus "
-"déan iarracht eile."
 
 # # @name NS_ERROR_MIME_MPART_ATTACHMENT_ERROR
-#. ## @name NS_ERROR_MIME_MPART_ATTACHMENT_ERROR
-#: 12531
+#: mimeMpartAttachmentError
 msgid "Attachment error."
 msgstr "Earráid le hiatán."
 
 # # @name NS_MSG_FAILED_COPY_OPERATION
-#. ## @name NS_MSG_FAILED_COPY_OPERATION
-#: 12532
+#: failedCopyOperation
 msgid ""
 "The message was sent successfully, but could not be copied to your Sent "
 "folder."
@@ -16019,32 +16066,25 @@ msgstr ""
 "dtí d'fhillteán \"Seolta\"."
 
 # # @name NS_ERROR_NNTP_NO_CROSS_POSTING
-#. ## @name NS_ERROR_NNTP_NO_CROSS_POSTING
-#: 12554
+#: nntpNoCrossPosting
 msgid "You can only send a message to one news server at a time."
 msgstr ""
 "Ní féidir teachtaireacht a sheoladh ach go freastalaí nuachta amháin ag an am "
 "céanna."
 
 # # @name NS_MSG_CANCELLING
-#. ## @name NS_MSG_CANCELLING
-#: 12555
+#: msgCancelling
 msgid "Cancelling…"
 msgstr "Á Chealú…"
 
-# # @name NS_ERROR_SEND_FAILED_BUT_NNTP_OK
-#. ## @name NS_ERROR_SEND_FAILED_BUT_NNTP_OK
-#: 12560
+#: sendFailedButNntpOk
 msgid ""
-"Your message has been posted to the newsgroup but has not been sent to other "
-"recipient."
+"Your message has been posted to the newsgroup but has not been sent to the "
+"other recipient."
 msgstr ""
-"Tá do theachtaireacht seolta chuig an ngrúpa nuachta, ach níor seoladh í "
-"chuig an bhfaighteoir eile."
 
 # # @name NS_MSG_ERROR_READING_FILE
-#. ## @name NS_MSG_ERROR_READING_FILE
-#: 12563
+#: errorReadingFile
 msgid "Error reading file."
 msgstr "Earráid agus an comhad á léamh."
 
@@ -16061,61 +16101,46 @@ msgstr ""
 "réimse seoltaí, roghnaigh \"Grúpa Nuachta\" ó liosta na bhfaighteoirí, agus "
 "cuir isteach ainm an ghrúpa nuachta."
 
-# # @name NS_MSG_ERROR_ATTACHING_FILE
-#. ## @name NS_MSG_ERROR_ATTACHING_FILE
-#: 12570
+#. ## LOCALIZATION NOTE (errorAttachingFile): argument %S is the file name/URI of the object to be attached
+#: errorAttachingFile
 msgid ""
-"There was an error attaching %S. Please check if you have access to the file."
+"There was an error attaching %S. Please check that you have access to the "
+"file."
 msgstr ""
-"Tharla earráid agus %S á chur faoi iamh. Cinntigh go bhfuil cead rochtana "
-"agat don chomhad."
 
-# # @name NS_ERROR_SMTP_GREETING
-#. ## @name NS_ERROR_SMTP_GREETING
-#: 12572
+#. ## LOCALIZATION NOTE (incorrectSmtpGreeting): argument %s is the Outgoing server (SMTP) greeting
+#: incorrectSmtpGreeting
 msgid ""
-"An error occurred sending mail: The mail server sent an incorrect greeting:  "
-"%s."
+"An error occurred while sending mail: The mail server sent an incorrect "
+"greeting:  %s."
 msgstr ""
-"Tharla earráid agus ríomhphost á sheoladh: sheol an freastalaí ríomhphoist "
-"teachtaireacht fáiltithe mícheart: %s."
 
-# # @name NS_ERROR_SENDING_RCPT_COMMAND
-#. ## @name NS_ERROR_SENDING_RCPT_COMMAND
-#: 12575
+#. ## LOCALIZATION NOTE (errorSendingRcptCommand): argument %1$S is the Outgoing server (SMTP) response, argument %2$S is the intended message recipient.
+#: errorSendingRcptCommand
 msgid ""
-"An error occurred while sending mail. The mail server responded:  %1$s. "
-"Please check the message recipient %2$s and try again."
+"An error occurred while sending mail. The mail server responded:  \n"
+"%1$S.\n"
+" Please check the message recipient \"%2$S\" and try again."
 msgstr ""
-"Tharla earráid agus ríomhphost á sheoladh. D'fhreagair an freastalaí: %1$s. "
-"Seiceáil faighteoir na teachtaireachta %2$s agus déan iarracht eile."
 
-# # @name NS_ERROR_STARTTLS_FAILED_EHLO_STARTTLS
-#. ## @name NS_ERROR_STARTTLS_FAILED_EHLO_STARTTLS
-#: 12582
+#. ## LOCALIZATION NOTE (startTlsFailed): argument %S is the Outgoing server (SMTP)
+#: startTlsFailed
 msgid ""
-"An error occurred sending mail: Unable to establish a secure link with SMTP "
-"server %S using STARTTLS since it doesn't advertise that feature. Switch off "
-"STARTTLS for that server or contact your service provider."
+"An error occurred while sending mail: Unable to establish a secure link with "
+"Outgoing server (SMTP) %S using STARTTLS since it doesn't advertise that "
+"feature. Switch off STARTTLS for that server or contact your service provider."
 msgstr ""
-"Tharla earráid agus ríomhphost á sheoladh: ní féidir ceangal slán a bhunú "
-"leis an bhfreastalaí SMTP %S le STARTTLS toisc nach bhfógraíonn sé an tréith "
-"sin. Díchumasaigh STARTTLS don fhreastalaí sin nó téigh i dteagmháil le do "
-"sholáthróir seirbhíse."
 
-# # @name NS_ERROR_SMTP_PASSWORD_UNDEFINED
-#. ## @name NS_ERROR_SMTP_PASSWORD_UNDEFINED
-#: 12584
+#. ## LOCALIZATION NOTE (smtpPasswordUndefined): argument %S is the Outgoing server (SMTP) account
+#: smtpPasswordUndefined
 msgid ""
-"An error occurred sending mail: Could not get password for %S. The message "
-"was not sent."
+"An error occurred while sending mail: Could not get password for %S. The "
+"message was not sent."
 msgstr ""
-"Tharla earráid agus ríomhphost á sheoladh: níorbh fhéidir focal faire a fháil "
-"le haghaidh %S. Níor seoladh an teachtaireacht."
 
 # # @name NS_ERROR_SMTP_TEMP_SIZE_EXCEEDED
-#. ## @name NS_ERROR_SMTP_TEMP_SIZE_EXCEEDED
-#: 12586
+#. ## LOCALIZATION NOTE (smtpTempSizeExceeded): argument %s is the Outgoing server (SMTP) response
+#: smtpTempSizeExceeded
 msgid ""
 "The size of the message you are trying to send exceeds a temporary size limit "
 "of the server. The message was not sent; try to reduce the message size or "
@@ -16127,8 +16152,8 @@ msgstr ""
 "an freastalaí: %s."
 
 # # @name NS_ERROR_SMTP_PERM_SIZE_EXCEEDED_1
-#. ## @name NS_ERROR_SMTP_PERM_SIZE_EXCEEDED_1
-#: 12587
+#. ## LOCALIZATION NOTE (smtpPermSizeExceeded1): argument %d is the Outgoing server (SMTP) size limit
+#: smtpPermSizeExceeded1
 msgid ""
 "The size of the message you are trying to send exceeds the global size limit "
 "(%d bytes) of the server. The message was not sent; reduce the message size "
@@ -16139,8 +16164,8 @@ msgstr ""
 "teachtaireachta agus déan iarracht eile."
 
 # # @name NS_ERROR_SMTP_PERM_SIZE_EXCEEDED_2
-#. ## @name NS_ERROR_SMTP_PERM_SIZE_EXCEEDED_2
-#: 12588
+#. ## LOCALIZATION NOTE (smtpPermSizeExceeded2): argument %s is the Outgoing server (SMTP) response
+#: smtpPermSizeExceeded2
 msgid ""
 "The size of the message you are trying to send exceeds the global size limit "
 "of the server. The message was not sent; reduce the message size and try "
@@ -16150,170 +16175,104 @@ msgstr ""
 "an fhreastalaí. Níor seoladh an teachtaireacht. Laghdaigh méid na "
 "teachtaireachta agus déan iarracht eile. D'fhreagair an freastalaí: %s."
 
-# # @name NS_ERROR_SMTP_SEND_FAILED_UNKNOWN_SERVER
-#. ## @name NS_ERROR_SMTP_SEND_FAILED_UNKNOWN_SERVER
-#: 12589
+#. ## LOCALIZATION NOTE (smtpSendFailedUnknownServer): argument %S is the Outgoing server (SMTP)
+#: smtpSendFailedUnknownServer
 msgid ""
-"An error occurred sending mail: SMTP server %S is unknown. The server may be "
-"incorrectly configured. Please verify that your SMTP server settings are "
+"An error occurred while sending mail: Outgoing server (SMTP) %S is unknown. "
+"The server may be incorrectly configured. Please verify that your Outgoing "
+"server (SMTP) settings are correct and try again."
+msgstr ""
+
+#. ## LOCALIZATION NOTE (smtpSendRefused): argument %S is the Outgoing server (SMTP)
+#: smtpSendRefused
+msgid ""
+"The message could not be sent because connecting to Outgoing server (SMTP) %S "
+"failed. The server may be unavailable or is refusing Outgoing server (SMTP) "
+"connections. Please verify that your Outgoing server (SMTP) settings are "
 "correct and try again."
 msgstr ""
-"Tharla earráid agus ríomhphost á sheoladh: tá an freastalaí SMTP %S "
-"neamhaithnid. B'fhéidir go bhfuil cumraíocht an fhreastalaí mícheart. "
-"Cinntigh go bhfuil do shocruithe freastalaí SMTP i gceart agus déan iarracht "
-"eile."
 
-# # @name NS_ERROR_SMTP_SEND_FAILED_REFUSED
-#. ## @name NS_ERROR_SMTP_SEND_FAILED_REFUSED
-#: 12590
+#. ## LOCALIZATION NOTE (smtpSendInterrupted): argument %S is the Outgoing server (SMTP)
+#: smtpSendInterrupted
 msgid ""
-"The message could not be sent because connecting to SMTP server %S failed. "
-"The server may be unavailable or is refusing SMTP connections. Please verify "
-"that your SMTP server settings are correct and try again, or contact the "
-"server administrator."
+"The message could not be sent because the connection to Outgoing server "
+"(SMTP) %S was lost in the middle of the transaction. Try again."
 msgstr ""
-"Níorbh fhéidir an teachtaireacht a sheoladh toisc gur theip ar cheangal leis "
-"an bhfreastalaí SMTP %S. B'fhéidir nach bhfuil an freastalaí ar fáil nó go "
-"bhfuil sé ag diúltú le ceangail SMTP.  Cinntigh go bhfuil socruithe do "
-"fhreastalaí SMTP i gceart agus déan iarracht eile, nó téigh i dteagmháil le "
-"do riarthóir líonra."
 
-# # @name NS_ERROR_SMTP_SEND_FAILED_INTERRUPTED
-#. ## @name NS_ERROR_SMTP_SEND_FAILED_INTERRUPTED
-#: 12591
+#. ## LOCALIZATION NOTE (smtpSendTimeout): argument %S is the Outgoing server (SMTP)
+#: smtpSendTimeout
 msgid ""
-"The message could not be sent because the connection to SMTP server %S was "
-"lost in the middle of the transaction. Try again or contact your network "
-"administrator."
+"The message could not be sent because the connection to Outgoing server "
+"(SMTP) %S timed out. Try again."
 msgstr ""
-"Níorbh fhéidir an teachtaireacht a sheoladh toisc gur cailleadh an ceangal "
-"leis an bhfreastalaí SMTP %S i rith na seolta. Déan iarracht eile, nó téigh i "
-"dteagmháil le do riarthóir líonra."
 
-# # @name NS_ERROR_SMTP_SEND_FAILED_TIMEOUT
-#. ## @name NS_ERROR_SMTP_SEND_FAILED_TIMEOUT
-#: 12592
+#. ## LOCALIZATION NOTE (smtpSendFailedUnknownReason): argument %S is the Outgoing server (SMTP)
+#: smtpSendFailedUnknownReason
 msgid ""
-"The message could not be sent because the connection to SMTP server %S timed "
-"out. Try again or contact your network administrator."
+"The message could not be sent using Outgoing server (SMTP) %S for an unknown "
+"reason. Please verify that your Outgoing server (SMTP) settings are correct "
+"and try again."
 msgstr ""
-"Níorbh fhéidir an teachtaireacht a sheoladh toisc gur imigh an ceangal leis "
-"an bhfreastalaí SMTP %S thar am. Déan iarracht eile, nó téigh i dteagmháil le "
-"do riarthóir líonra."
 
-# # @name NS_ERROR_SMTP_SEND_FAILED_UNKNOWN_REASON
-#. ## @name NS_ERROR_SMTP_SEND_FAILED_UNKNOWN_REASON
-#: 12593
+#. # LOCALIZATION NOTE (smtpAuthChangeEncryptToPlainNoSsl): %S is the server hostname
+#: smtpAuthChangeEncryptToPlainNoSsl
 msgid ""
-"The message could not be sent using SMTP server %S for an unknown reason. "
-"Please verify that your SMTP server settings are correct and try again, or "
-"contact your network administrator."
+"The Outgoing server (SMTP) %S does not seem to support encrypted passwords. "
+"If you just set up the account, try changing the 'Authentication method' in "
+"'Account Settings | Server settings' to 'Password, transmitted insecurely'. "
+"If it used to work but now doesn't, you may be susceptible to getting your "
+"password stolen."
 msgstr ""
-"Níorbh fhéidir an teachtaireacht a sheoladh le húsáid an fhreastalaí SMTP %S "
-"ach ní fios cén fáth. Cinntigh go bhfuil socruithe do fhreastalaí SMTP i "
-"gceart, nó téigh i dteagmháil le do riarthóir líonra."
 
-# # @name NS_ERROR_SMTP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
-#. ## @name NS_ERROR_SMTP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_NO_SSL
-#. # LOCALIZATION NOTE (12594): $S is server hostname
-#: 12594
+#. # LOCALIZATION NOTE (smtpAuthChangeEncryptToPlainSsl): %S is the server hostname
+#: smtpAuthChangeEncryptToPlainSsl
 msgid ""
-"The SMTP server %S does not seem to support encrypted passwords. If you just "
-"set up the account, please try changing to 'Password, transmitted insecurely' "
-"as the 'Authentication method' in the 'Account Settings | Server settings'. "
-"If it used to work and now suddenly fails, this is a common scenario how "
-"someone could steal your password."
+"The Outgoing server (SMTP) %S does not seem to support encrypted passwords. "
+"If you just set up the account, try changing the 'Authentication method' in "
+"'Account settings | Server settings' to 'Normal password'."
 msgstr ""
-"Dealraíonn sé nach dtacaíonn freastalaí SMTP %S le focail fhaire chriptithe. "
-"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as 'Focal "
-"faire, seolta go neamhshlán' mar 'Modh fíordheimhnithe' i 'Socruithe an "
-"Chuntais | Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl "
-"anois, b'fhéidir go bhfuil duine éigin ag iarraidh d'fhocal faire a ghoid."
 
-# # @name NS_ERROR_SMTP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
-#. ## @name NS_ERROR_SMTP_AUTH_CHANGE_ENCRYPT_TO_PLAIN_SSL
-#. # LOCALIZATION NOTE (12595): $S is server hostname
-#: 12595
+#. # LOCALIZATION NOTE (smtpAuthChangePlainToEncrypt): %S is the server hostname
+#: smtpAuthChangePlainToEncrypt
 msgid ""
-"The SMTP server %S does not seem to support encrypted passwords. If you just "
-"set up this account, please try changing to 'Normal password' as the "
-"'Authentication method' in the 'Account Settings | Server settings'. If it "
-"used to work and now suddenly fails, please contact your email administrator "
-"or provider."
+"The Outgoing server (SMTP) %S does not allow plaintext passwords. Please try "
+"changing the 'Authentication method' in 'Account Settings | Server settings' "
+"to 'Encrypted password'."
 msgstr ""
-"Dealraíonn sé nach dtacaíonn freastalaí SMTP %S le focail fhaire chriptithe. "
-"Má tá tú go díreach tar éis an cuntas seo a shocrú, bain triail as "
-"'Gnáthfhocal faire' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
-"Socruithe an fhreastalaí'. Má bhí sé ag obair roimhe seo ach níl anois, téigh "
-"i dteagmháil le do riarthóir ríomhphoist nó le do sholáthraí seirbhíse."
 
-# # @name NS_ERROR_SMTP_AUTH_CHANGE_PLAIN_TO_ENCRYPT
-#. ## @name NS_ERROR_SMTP_AUTH_CHANGE_PLAIN_TO_ENCRYPT
-#. # LOCALIZATION NOTE (12596): $S is server hostname
-#: 12596
+#. # LOCALIZATION NOTE (smtpAuthFailure): %S is the server hostname
+#: smtpAuthFailure
 msgid ""
-"The SMTP server %S does not allow plaintext passwords. Please try changing to "
-"'Encrypted password' as the 'Authentication method' in the 'Account Settings "
-"| Server settings'."
+"Unable to authenticate to Outgoing server (SMTP) %S. Please check the "
+"password and verify the 'Authentication method' in 'Account Settings | "
+"Outgoing server (SMTP)'."
 msgstr ""
-"Ní ghlacann freastalaí SMTP %S le focail fhaire ghnáth-théacs. Bain triail as "
-"'Focal faire criptithe' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
-"Socruithe an fhreastalaí'."
 
-# # @name NS_ERROR_SMTP_AUTH_FAILURE
-#. ## @name NS_ERROR_SMTP_AUTH_FAILURE
-#. # LOCALIZATION NOTE (12597): $S is server hostname
-#: 12597
+#. # LOCALIZATION NOTE (smtpAuthGssapi): %S is the server hostname
+#: smtpAuthGssapi
 msgid ""
-"Unable to authenticate to SMTP server %S. Please check the password, and "
-"verify the 'Authentication method' in 'Account Settings | Outgoing server "
-"(SMTP)'."
+"The Kerberos/GSSAPI ticket was not accepted by the Outgoing server (SMTP) %S. "
+"Please check that you are logged in to the Kerberos/GSSAPI realm."
 msgstr ""
-"Níorbh fhéidir fíordheimhniú le freastalaí SMTP %S. Seiceáil an focal faire "
-"agus an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí amach "
-"(SMTP)'."
 
-# # @name NS_ERROR_SMTP_AUTH_GSSAPI
-#. ## @name NS_ERROR_SMTP_AUTH_GSSAPI
-#. # LOCALIZATION NOTE (12598): $S is server hostname
-#: 12598
+#. # LOCALIZATION NOTE (smtpAuthMechNotSupported): %S is the server hostname
+#: smtpAuthMechNotSupported
 msgid ""
-"The Kerberos/GSSAPI ticket was not accepted by the SMTP server %S. Please "
-"check that you are logged in to the Kerberos/GSSAPI realm."
+"The Outgoing server (SMTP) %S does not support the selected authentication "
+"method. Please change the 'Authentication method' in 'Account Settings | "
+"Outgoing Server (SMTP)'."
 msgstr ""
-"Níor ghlac freastalaí SMTP %S leis an ticéad Kerberos/GSSAPI. Bí cinnte go "
-"bhfuil tú logáilte isteach san fhearann Kerberos/GSSAPI."
 
-# # @name NS_ERROR_SMTP_AUTH_MECH_NOT_SUPPORTED
-#. ## @name NS_ERROR_SMTP_AUTH_MECH_NOT_SUPPORTED
-#. # LOCALIZATION NOTE (12599): $S is server hostname
-#: 12599
+#. # LOCALIZATION NOTE (smtpAuthNotSupported): %S is the server hostname
+#: smtpAuthNotSupported
 msgid ""
-"The SMTP server %S does not support the selected authentication method. "
-"Please change the 'Authentication method' in the 'Account Settings | Outgoing "
-"Server (SMTP)'."
+"Unable to authenticate to Outgoing server (SMTP) %S. It does not support "
+"authentication (Outgoing server (SMTP)-AUTH) but you have chosen to use "
+"authentication. Please change the 'Authentication method' to 'None' in the "
+"'Account Settings | Outgoing Server (SMTP)' or contact your email service "
+"provider for instructions."
 msgstr ""
-"Ní thacaíonn freastalaí SMTP %S leis an modh roghnaithe fíordheimhnithe.  "
-"Athraigh an 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | Freastalaí "
-"Amach (SMTP)'."
 
-# # @name NS_ERROR_SMTP_AUTH_NOT_SUPPORTED
-#. ## @name NS_ERROR_SMTP_AUTH_NOT_SUPPORTED
-#. # LOCALIZATION NOTE (12600): $S is server hostname
-#: 12600
-msgid ""
-"Unable to authenticate to SMTP server %S. It does not support authentication "
-"(SMTP-AUTH) but you have chosen to use authentication. Please change the "
-"'Authentication method' to 'None' in the 'Account Settings | Outgoing Server "
-"(SMTP)' or contact your email service provider for instructions."
-msgstr ""
-"Níorbh fhéidir fíordheimhniú le freastalaí SMTP %S. Ní thacaíonn sé le "
-"fíordheimhniú (SMTP-AUTH) ach tá tú ag iarraidh fíordheimhniú a úsáid.  Bain "
-"triail as 'Gan sonrú' mar 'Modh fíordheimhnithe' i 'Socruithe an Chuntais | "
-"Freastalaí Amach (SMTP)' nó téigh i dteagmháil le do sholáthraí seirbhíse "
-"ríomhphoist le haghaidh treoracha."
-
-#. ## @name NS_ERROR_ILLEGAL_LOCALPART
 #. # LOCALIZATION NOTE (errorIllegalLocalPart): %s is an email address with an illegal localpart
 #: errorIllegalLocalPart
 msgid ""
@@ -16323,13 +16282,13 @@ msgstr ""
 "Tá carachtair neamh-ASCII sa chuid áitiúil de sheoladh an fhaighteora %s. Ní "
 "thacaítear leis seo fós. Athraigh an seoladh agus déan iarracht eile."
 
-#. ## Strings use for the save message dialog shown when the user close a message compose window
+#. ## Strings used for the save message dialog shown when the user closes a message compose window
 #: saveDlogTitle
 msgctxt "saveDlogTitle"
 msgid "Save Message"
 msgstr "Sábháil an Teachtaireacht"
 
-#. ## LOCALIZATION NOTE (SaveDlogMessages): %1$S is folder name
+#. ## LOCALIZATION NOTE (SaveDlogMessages): %1$S is the folder name
 #: saveDlogMessages
 msgid ""
 "Message has not been sent. Do you want to save the message in your drafts "
@@ -16342,13 +16301,9 @@ msgstr ""
 msgid "Attach File(s)"
 msgstr "Cuir comha(i)d faoi iamh"
 
-# # @name NS_MSG_GENERIC_FAILURE_EXPLANATION
 #: genericFailureExplanation
-msgid ""
-"Please verify that your Mail & Newsgroups account settings are correct and "
-"try again."
+msgid "Please verify that your account settings are correct and try again."
 msgstr ""
-"Cinntigh go bhfuil do shocruithe cuntais i gceart agus déan iarracht eile."
 
 # # @name NS_MSG_UNDISCLOSED_RECIPIENTS
 # # LOCALIZATION NOTE: this string must be using only US_ASCII characters
@@ -16388,7 +16343,7 @@ msgid "&Cancel Sending"
 msgstr "&Ná Seol"
 
 # # Strings used by the dialog that informs about lack of newsgroup support.
-#. ## Strings used by the dialog that informs about lack of newsgroup support.
+#. ## Strings used by the dialog that informs about the lack of newsgroup support.
 #: noNewsgroupSupportTitle
 msgid "Newsgroups Not Supported"
 msgstr "Ní thacaítear le grúpaí nuachta"
@@ -16403,7 +16358,7 @@ msgstr ""
 "neamhaird ar ghrúpaí nuachta má leantar ar aghaidh."
 
 # # Strings used by the alert that tells the user an e-mail address is invalid.
-#. ## Strings used by the alert that tells the user an e-mail address is invalid.
+#. ## Strings used by the alert that tells the user that an e-mail address is invalid.
 #: addressInvalidTitle
 msgid "Invalid Recipient Address"
 msgstr "Seoladh Neamhbhailí don Fhaighteoir"
@@ -16419,7 +16374,7 @@ msgstr ""
 "sheoladh."
 
 # # String used by the dialog that ask the user to attach a web page
-#. ## String used by the dialog that ask the user to attach a web page
+#. ## String used by the dialog that asks the user to attach a web page
 #: attachPageDlogTitle
 msgid "Please specify a location to attach"
 msgstr "Sonraigh suíomh le cur faoi iamh"
@@ -16429,13 +16384,13 @@ msgid "Web Page (URL):"
 msgstr "Leathanach Gréasáin (URL):"
 
 # # String used for attachment pretty name, when attachment is a message
-#. ## String used for attachment pretty name, when attachment is a message
+#. ## String used for attachment pretty name, when the attachment is a message
 #: messageAttachmentSafeName
 msgid "Attached Message"
 msgstr "Teachtaireacht Faoi Iamh"
 
 # # String used for attachment pretty name, when attachment is message part
-#. ## String used for attachment pretty name, when attachment is message part
+#. ## String used for attachment pretty name, when the attachment is a message part
 #: partAttachmentSafeName
 msgid "Attached Message Part"
 msgstr "Cuid de Theachtaireacht Faoi Iamh"
@@ -16472,14 +16427,14 @@ msgstr ""
 "Níl comhad %1$S ann agus mar sin níorbh fhéidir é a cheangal leis an "
 "teachtaireacht."
 
-#. ## Strings used by Save as Draft/Template dialog
+#. ## Strings used by the Save as Draft/Template dialog
 #: SaveDialogTitle
 msgctxt "SaveDialogTitle"
 msgid "Save Message"
 msgstr "Sábháil an Teachtaireacht"
 
 # # LOCALIZATION NOTE (SaveDialogMsg): %1$S is folder name, %2$S is host name
-#. ## LOCALIZATION NOTE (SaveDialogMsg): %1$S is folder name, %2$S is host name
+#. ## LOCALIZATION NOTE (SaveDialogMsg): %1$S is the folder name, %2$S is the host name
 #: SaveDialogMsg
 msgid "Your message has been saved to the folder %1$S under %2$S."
 msgstr "Tá do theachtaireacht sábháilte san fhillteán %1$S ar %2$S."
@@ -16520,7 +16475,7 @@ msgstr ""
 "láithreach?"
 
 # # String used by the dialog that ask the user to enter a subject
-#. ## Strings used by prompt for Ctrl-Enter check before sending message
+#. ## Strings used by the prompt for Ctrl-Enter check before sending message
 #: sendMessageCheckWindowTitle
 msgid "Send Message"
 msgstr "Seoladh na Teachtaireachta"
@@ -16555,7 +16510,7 @@ msgstr "D'éirigh le seoladh an ríomhphoist."
 msgid "Assembling mail information…"
 msgstr "Faisnéis ríomhphoist á cur le chéile…"
 
-#. ## LOCALIZATION NOTE (gatheringAttachment): argument %S is file name/URI of attachment
+#. ## LOCALIZATION NOTE (gatheringAttachment): argument %S is the file name/URI of attachment
 #: gatheringAttachment
 msgid "Attaching %S…"
 msgstr "Ag ceangal %S leis…"
@@ -16566,7 +16521,7 @@ msgid "Creating mail message…"
 msgstr "Teachtaireacht ríomhphoist á cruthú…"
 
 # # @name NS_MSG_START_COPY_MESSAGE
-#. ## LOCALIZATION NOTE (copyMessageStart): argument %S is folder name
+#. ## LOCALIZATION NOTE (copyMessageStart): argument %S is the folder name
 #: copyMessageStart
 msgid "Copying message to %S folder…"
 msgstr "Teachtaireacht á cóipeáil go fillteán %S…"
@@ -16593,11 +16548,9 @@ msgstr ""
 #. ## Do not translate %S. It is the size of the message in user-friendly notation.
 #: largeMessageSendWarning
 msgid ""
-"Warning! You are about to send a message of size %S which may exceed the "
-"allowed limit on the mail server. Are you sure that you want to do this?"
+"Warning! You are about to send a message of size %S. Are you sure you want to "
+"do this?"
 msgstr ""
-"Fainic! Tá tú ar tí teachtaireacht %S a sheoladh agus seans go mbeidh sí níos "
-"mó ná an teorainn a cheadaíonn an freastalaí ríomhphoist. An bhfuil tú cinnte?"
 
 # # @name NS_MSG_SENDING_MESSAGE
 #: sendingMessage
@@ -16629,7 +16582,7 @@ msgstr "Earráid Sábhála Dréachta"
 msgid "Save Template Error"
 msgstr "Earráid Sábhála Teimpléid"
 
-#. ## LOCALIZATION NOTE (failureOnObjectEmbeddingWhileSaving): argument %.200S is file name/URI of object to be embedded
+#. ## LOCALIZATION NOTE (failureOnObjectEmbeddingWhileSaving): argument %.200S is the file name/URI of object to be embedded
 #: failureOnObjectEmbeddingWhileSaving
 msgid ""
 "There was a problem including the file %.200S in the message. Would you like "
@@ -16638,7 +16591,7 @@ msgstr ""
 "Níorbh fhéidir an comhad %.200S a chur isteach sa teachtaireacht. An bhfuil "
 "fonn ort an teachtaireacht a shábháil gan an comhad seo?"
 
-#. ## LOCALIZATION NOTE (failureOnObjectEmbeddingWhileSending): argument %.200S is file name/URI of object to be embedded
+#. ## LOCALIZATION NOTE (failureOnObjectEmbeddingWhileSending): argument %.200S is the file name/URI of object to be embedded
 #: failureOnObjectEmbeddingWhileSending
 msgid ""
 "There was a problem including the file %.200S in the message. Would you like "
@@ -16653,17 +16606,17 @@ msgid "Would you like to return to the compose window?"
 msgstr "An bhfuil tú ag iarraidh filleadh ar an fhuinneog scríofa?"
 
 #. ## reply header in composeMsg
-#. ## LOCALIZATION NOTE (mailnews.reply_header_authorwrotesingle): #1 is author (name of person replying to)
+#. ## LOCALIZATION NOTE (mailnews.reply_header_authorwrotesingle): #1 is the author (name of the person replying to)
 #: mailnews.reply_header_authorwrotesingle
 msgid "#1 wrote:"
 msgstr "Scríobh #1:"
 
-#. ## LOCALIZATION NOTE (mailnews.reply_header_ondateauthorwrote): #1 is author, #2 is date, #3 is time
+#. ## LOCALIZATION NOTE (mailnews.reply_header_ondateauthorwrote): #1 is the author, #2 is the date, #3 is the time
 #: mailnews.reply_header_ondateauthorwrote
 msgid "On #2 #3, #1 wrote:"
 msgstr "Ar #2 #3, scríobh #1:"
 
-#. ## LOCALIZATION NOTE (mailnews.reply_header_authorwroteondate): #1 is author, #2 is date, #3 is time
+#. ## LOCALIZATION NOTE (mailnews.reply_header_authorwroteondate): #1 is the author, #2 is the date, #3 is the time
 #: mailnews.reply_header_authorwroteondate
 msgid "#1 wrote on #2 #3:"
 msgstr "Scríobh #1 ar #2 #3:"
@@ -16704,7 +16657,7 @@ msgstr "Ainm nua an iatáin:"
 
 #. ## Attachment Reminder
 #. ## LOCALIZATION NOTE (mail.compose.attachment_reminder_keywords): comma separated
-#. ##   words that that should trigger an attachment reminder.
+#. ## words that should trigger an attachment reminder.
 #: mail.compose.attachment_reminder_keywords
 msgid ""
 ".doc,.pdf,.xls,.ppt,.rtf,.pps,attachment,attach,attached,attaching,enclosed,"
@@ -16819,16 +16772,8 @@ msgstr "Uasluchtaithe go %S"
 msgid ""
 "Your file is being linked. It will appear in the body of the message when "
 "it's done.;Your files are being linked. They will appear in the body of the "
-"message when they're done."
+"message when it's done."
 msgstr ""
-"Tá do chomhad á nascadh. Taispeánfar i gcorp na teachtaireachta é nuair a "
-"bheidh sé críochnaithe.;Tá do chuid comhad á nascadh. Taispeánfar i gcorp na "
-"teachtaireachta iad nuair a bheidh siad críochnaithe.;Tá do chuid comhad á "
-"nascadh. Taispeánfar i gcorp na teachtaireachta iad nuair a bheidh siad "
-"críochnaithe.;Tá do chuid comhad á nascadh. Taispeánfar i gcorp na "
-"teachtaireachta iad nuair a bheidh siad críochnaithe.;Tá do chuid comhad á "
-"nascadh. Taispeánfar i gcorp na teachtaireachta iad nuair a bheidh siad "
-"críochnaithe."
 
 #: cloudFilePrivacyNotification
 msgid ""
@@ -16848,10 +16793,9 @@ msgstr ""
 msgid "Enter your password for %2$S on %1$S:"
 msgstr "Iontráil d'fhocal faire le haghaidh %2$S ar %1$S:"
 
-# # @name NS_SMTP_PASSWORD_PROMPT_TITLE
 #: smtpEnterPasswordPromptTitle
-msgid "SMTP Server Password Required"
-msgstr "Focal faire de dhíth le haghaidh freastalaí SMTP"
+msgid "Outgoing server (SMTP) Password Required"
+msgstr ""
 
 #. # LOCALIZATION NOTE (removeAttachmentMsgs): Semi-colon list of plural forms.
 #. # See: http://developer.mozilla.org/en/Localization_and_Plurals
@@ -16876,7 +16820,7 @@ msgid "Authentication Error"
 msgstr "Earráid Fhíordheimhnithe"
 
 #. ## LOCALIZATION NOTE(errorCloudFileAuth.message):
-#. ## %1$S is the name of the online storage service that authentication failed against.
+#. ## %1$S is the name of the online storage service against which the authentication failed.
 #: errorCloudFileAuth.message
 msgid "Unable to authenticate to %1$S."
 msgstr "Ní féidir fíordheimhniú ar %1$S."
@@ -16886,7 +16830,7 @@ msgid "Upload Error"
 msgstr "Earráid le linn uasluchtaithe"
 
 #. ## LOCALIZATION NOTE(errorCloudFileUpload.message):
-#. ## %1$S is the name of the online storage service that uploading failed against.
+#. ## %1$S is the name of the online storage service against which the uploading failed.
 #. ## %2$S is the name of the file that failed to upload.
 #: errorCloudFileUpload.message
 msgid "Unable to upload %2$S to %1$S."
@@ -16912,13 +16856,10 @@ msgstr "Earráid in Ainm an Chomhaid"
 #. ## %2$S is the name of the file that could not be uploaded due to the excess file name length
 #: errorCloudFileNameLimit.message
 msgid ""
-"Uploading %2$S to %1$S contains has more than 120 characters in its name. "
-"Please rename the file to have 120 characters or less in its name and upload "
-"again."
+"%2$S contains has more than 120 characters in its name which is more than the "
+"maximum file name length for %1$S. Please rename the file to have 120 "
+"characters or less in its name and upload again."
 msgstr ""
-"%2$S á uasluchtú go %1$S, ach tá níos mó ná 120 carachtar ina ainm. Cuir ainm "
-"nua ar an gcomhad a bhfuil níos lú ná 120 carachtar ann, agus uasluchtaigh "
-"arís é."
 
 #: errorCloudFileLimit.title
 msgid "File Size Error"
@@ -16978,7 +16919,7 @@ msgid "%1$S makes it easy to share large files over email."
 msgstr "Tá sé éasca comhaid mhóra a roinnt trí ríomhphost le %1$S."
 
 #. ## LOCALIZATION NOTE(cloudAttachmentListItem): A line of text describing a cloud
-#. ## attachment, to be inserted into the message body. Do not translate the words
+#. ## attachment to be inserted into the message body. Do not translate the words
 #. ## %1$S, %2$S, %3$S, or %4$S. %1$S is the attachment name, %2$S is its size,
 #. ## %3$S is the name of the cloud storage service, and %4$S is the link to the
 #. ## attachment.
@@ -17497,13 +17438,6 @@ msgctxt "paste.label paste.accesskey"
 msgid "&Paste"
 msgstr "Grea&maigh"
 
-#. #-#-#-#-#  chromemessengermsgHdrViewOverlay.dtd.po (firefox)  #-#-#-#-#
-#. Attachment context menu items
-#: openAttachment.label openAttachment.accesskey openAttachmentCmd.label
-#: openAttachmentCmd.accesskey
-msgid "&Open"
-msgstr "&Oscail"
-
 #: delete.label delete.accesskey
 msgctxt "delete.label delete.accesskey"
 msgid "&Delete"
@@ -17877,6 +17811,10 @@ msgstr "Amharc &Ingearach"
 #: showFolderPaneCmd.label showFolderPaneCmd.accesskey
 msgid "&Folder Pane"
 msgstr "Pána an &Fhillteáin"
+
+#: showFolderPaneColsCmd.label showFolderPaneColsCmd.accesskey
+msgid "Folder &Pane Columns"
+msgstr ""
 
 #: showMessageCmd.label showMessageCmd.accesskey
 msgid "&Message Pane"
@@ -18509,10 +18447,6 @@ msgstr ""
 msgid "Mail &amp; &Newsgroups"
 msgstr "Ríomhphost agus Grúpaí &Nuachta"
 
-#: addressBookCmd.label addressBookCmd.accesskey
-msgid "Address &Book"
-msgstr "Lea&bhar Seoltaí"
-
 #: addons.label addons.accesskey
 msgid "&Add-ons"
 msgstr "&Breiseáin"
@@ -18900,6 +18834,16 @@ msgstr "&Clib Nua…"
 msgid "&Manage Tags…"
 msgstr "&Bainistigh Clibeanna…"
 
+#: folderUnreadColumn.label
+msgctxt "folderUnreadColumn.label"
+msgid "Unread"
+msgstr ""
+
+#: folderTotalColumn.label
+msgctxt "folderTotalColumn.label"
+msgid "Total"
+msgstr ""
+
 #: folderSizeColumn.label
 msgctxt "folderSizeColumn.label"
 msgid "Size"
@@ -19060,6 +19004,16 @@ msgstr "Méid"
 #: junkStatusColumn.label JunkStatus
 msgid "Junk Status"
 msgstr "Stádas Dramhphoist"
+
+#: unreadColumn.label
+msgctxt "unreadColumn.label"
+msgid "Unread"
+msgstr ""
+
+#: totalColumn.label
+msgctxt "totalColumn.label"
+msgid "Total"
+msgstr ""
 
 #: receivedColumn.label
 msgid "Received"
@@ -19816,6 +19770,12 @@ msgstr ""
 "san fhillteán. Cinntigh go bhfuil go leor spáis diosca agat agus go bhfuil "
 "cead scríofa agat sa chomhadchóras. Ansin déan iarracht eile."
 
+#: compactFolderInsufficientSpace
+msgid ""
+"Some folders (e.g. '%S') cannot be compacted because there is not enough free "
+"disk space. Please delete some files and try again."
+msgstr ""
+
 #: filterFolderHdrAddFailed
 msgid ""
 "The messages could not be filtered to folder '%S' because adding a message to "
@@ -19894,6 +19854,20 @@ msgstr ""
 "Tá an fillteán %S lán agus ní féidir tuilleadh teachtaireachtaí a chur ann. "
 "Chun spás a chur ar fáil do theachtaireachtaí nua, scrios sean-"
 "teachtaireachtai nó cinn nach bhfuil uait agus dlúthaigh an fillteán."
+
+# The following are used by the local mail code to display progress/status/error messages
+#
+# # @name MK_POP3_OUT_OF_DISK_SPACE
+# # @loc None
+#: outOfDiskSpace
+msgid ""
+"There is not enough disk space to download new messages. Try deleting old "
+"mail, emptying the Trash folder, and compacting your mail folders, and then "
+"try again."
+msgstr ""
+"Níl go leor spás diosca chun teachtaireachtaí nua a íosluchtú. Scrios sean-"
+"teachtaireachtaí, folmhaigh an Bosca Bruscar agus dlúthaigh do chuid "
+"fillteáin ríomhphoist. Ansin déan iarracht eile."
 
 #: errorGettingDB
 msgid ""
@@ -19984,6 +19958,10 @@ msgstr "Teastas TLS"
 msgid "NTLM"
 msgstr "NTLM"
 
+#: authOAuth2
+msgid "OAuth2"
+msgstr ""
+
 #: authAnySecure
 msgid "Any secure method (deprecated)"
 msgstr "Aon mhodh slán (i léig)"
@@ -19991,6 +19969,14 @@ msgstr "Aon mhodh slán (i léig)"
 #: authAny
 msgid "Any method (insecure)"
 msgstr "Modh ar bith (neamhshlán)"
+
+#. # OAuth2 window title
+#. # LOCALIZATION NOTE(oauth2WindowTitle):
+#. # %1$S is the username (or full email address) used for authentication.
+#. # %2$S is the hostname of the account being authenticated.
+#: oauth2WindowTitle
+msgid "Enter credentials for %1$S on %2$S"
+msgstr ""
 
 #. # LOCALIZATION NOTE(serverType-nntp): Do not translate "NNTP" in the line below
 #: serverType-nntp
@@ -20724,6 +20710,26 @@ msgstr "%.*f MB"
 msgid "%.*f GB"
 msgstr "%.*f GB"
 
+# LOCALIZATION NOTE: accountName: %1$S is server name, %2$S is user name
+#. #-#-#-#-#  chromemessengermessenger.properties.po (firefox)  #-#-#-#-#
+#. ## LOCALIZATION NOTE(folderWithAccount):
+#. ## This is used to show folder name together with an account name.
+#. ## %1$S = folder name
+#. ## %2$S = account name
+#. #-#-#-#-#  chromemessengerprefs.properties.po (firefox)  #-#-#-#-#
+#. #LOCALIZATION NOTE: accountName: %1$S is server name, %2$S is user name
+#: folderWithAccount accountName
+msgid "%1$S - %2$S"
+msgstr "%1$S - %2$S"
+
+#. ## LOCALIZATION NOTE(summarizedValue):
+#. ## This string shows an indication that the value shown is actually a summary
+#. ## accumulated from all subfolders.
+#. ## %S = summarized value from all subfolders
+#: folderSummarizedValue
+msgid "*%S"
+msgstr ""
+
 # Error message if message for a message id wasn't found
 #. # Error message if message for a message id wasn't found
 #: errorOpenMessageForMessageIdTitle
@@ -21384,14 +21390,6 @@ msgctxt "update.downloadAndInstallButton.accesskey"
 msgid "U"
 msgstr "U"
 
-#: websearch.setDefault
-msgid "Set this search engine as the default"
-msgstr "Roghnaigh mar inneall réamhshocraithe"
-
-#: websearch.isDefault
-msgid "This search engine is currently the default"
-msgstr "Is é seo an t-inneall réamhshocraithe"
-
 #: outdatedpluginsMessage.title
 msgid "Some plugins used by this page are out of date."
 msgstr "Tá cuid de na forlíontáin a úsáideann an leathanach seo as dáta."
@@ -21579,6 +21577,25 @@ msgstr ""
 #: saveAsType fileEnding
 msgid "%S file"
 msgstr "Comhad %S"
+
+# context menu strings
+# LOCALIZATION NOTE (contextMenuSearchText): %1$S is the search engine,
+# %2$S is the selection string.
+#. # LOCALIZATION NOTE (openSearch.label): The label used in the autocomplete
+#. # widget to refer to a search on the web for a short string containing at most
+#. # 15 characters. %1$S is the search provider to use. %2$S is the string to
+#. # search for.
+#: openSearch.label
+msgid "Search %1$S for \"%2$S\""
+msgstr "Téigh ar lorg \"%2$S\" i %1$S"
+
+#. # LOCALIZATION NOTE (openSearch.label.truncated): The label used in the
+#. # autocomplete widget to refer to a search on the web for a short string
+#. # containing more than 15 characters. %1$S is the search provider to use. %2$S
+#. # is the string to search for, truncated to 15 characters.
+#: openSearch.label.truncated
+msgid "Search %1$S for \"%2$S…\""
+msgstr ""
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -22049,7 +22066,7 @@ msgstr "Bainistigh síntiúis"
 msgid "Movemail"
 msgstr "Movemail"
 
-#: accountsSectionHdr.label
+#: accountsSectionHdr.label paneAccount.title
 msgid "Accounts"
 msgstr "Cuntais"
 
@@ -23583,6 +23600,10 @@ msgstr ""
 "Bhí an teachtaireacht seo criptithe le OpenPGP.<br>Chun an teachtaireacht seo "
 "a dhíchriptiú, caithfidh tú <a href=\"%S\">breiseán OpenPGP</a> a shuiteáil."
 
+#: dataChoicesTab.label
+msgid "Data Choices"
+msgstr "Roghanna Sonraí"
+
 #: itemDisplay.label
 msgid "Reading &amp; Display"
 msgstr "Léamh agus Taispeáint"
@@ -23591,22 +23612,18 @@ msgstr "Léamh agus Taispeáint"
 msgid "Network &amp; Disk Space"
 msgstr "Líonra agus Spás Diosca"
 
-#. General Settings
-#: submitTelemetry.label submitTelemetry.accesskey
-msgid "Submit &Performance Data"
-msgstr "Seol Sonraí &Feidhmíochta"
-
-#: telemetryInfoLink.label
-msgid "More information about Telemetry"
-msgstr "Tuilleadh eolais faoi Theiliméadracht"
-
 # General Settings
+#. General Settings
 #: enableGlodaSearch.label enableGlodaSearch.accesskey
 msgid "&Enable Global Search and Indexer"
 msgstr "Cumasaigh Cuardach Cuimsith&each agus an tInneacsóir"
 
 #: allowHWAccel.label allowHWAccel.accesskey
 msgid "Use &hardware acceleration when available"
+msgstr ""
+
+#: storeType.label storeType.accesskey
+msgid "Message Store &Type for new accounts:"
 msgstr ""
 
 #: scrolling.label
@@ -23660,6 +23677,48 @@ msgstr "Socraigh conas a láimhseálann &brandShortName; admhálacha léite"
 #: showReturnReceipts.label showReturnReceipts.accesskey
 msgid "&Return Receipts…"
 msgstr "Admhálacha &Léite…"
+
+#. Data Choices
+#: telemetrySection.label
+msgid "Telemetry"
+msgstr "Teiliméadracht"
+
+#: telemetryDesc.label
+msgid ""
+"Shares performance, usage, hardware and customization data about your e-mail "
+"client with &vendorShortName; to help us make &brandShortName; better"
+msgstr ""
+
+#: enableTelemetry.label enableTelemetry.accesskey
+msgid "Enable &Telemetry"
+msgstr "Cumasaigh &Teiliméadracht"
+
+#: telemetryLearnMore.label
+msgctxt "telemetryLearnMore.label"
+msgid "Learn More"
+msgstr "Tuilleadh Eolais"
+
+# converted from pseudo-properties .it file
+# This file is in the UTF-8 encoding
+# section: [Strings]
+#: crashReporterSection.label
+msgid "Crash Reporter"
+msgstr "Tuairisceoir na gClistí"
+
+#: crashReporterDesc.label
+msgid ""
+"&brandShortName; submits crash reports to help &vendorShortName; make your e-"
+"mail client more stable and secure"
+msgstr ""
+
+#: enableCrashReporter.label enableCrashReporter.accesskey
+msgid "Enable &Crash Reporter"
+msgstr "Cumasaigh Tuairisceoir na g&Clistí"
+
+#: crashReporterLearnMore.label
+msgctxt "crashReporterLearnMore.label"
+msgid "Learn More"
+msgstr "Tuilleadh Eolais"
 
 # Display and Reading Settings
 #. Display and Reading Settings
@@ -24056,6 +24115,10 @@ msgstr "Naisc &gan Chuairt:"
 #: visitedLinkColor.label visitedLinkColor.accesskey
 msgid "&Visited Links:"
 msgstr "Naisc Fh&eicthe:"
+
+#: dialogCompose.title
+msgid "Composing"
+msgstr ""
 
 #: forwardMsg.label forwardMsg.accesskey
 msgid "&Forward messages:"
@@ -24637,6 +24700,10 @@ msgstr "F&uaim réamhshocraithe chórais le haghaidh ríomhphost nua"
 msgid "S&ystem Alert Sound"
 msgstr "F&uaim airdill an chórais"
 
+#: defaultSearchEngine.label
+msgid "Default Search Engine"
+msgstr "Inneall Cuardaigh Réamhshocraithe"
+
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
 #. - file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -24698,7 +24765,7 @@ msgstr "Úsáid an staid ar líne &roimhe seo"
 msgid "As&k me for online state"
 msgstr ""
 
-#: radioAlwaysOnline.label radioAlwaysOnline.accesskey
+#: radioAlwaysOnlineState.label radioAlwaysOnlineState.accesskey
 msgid "On&line"
 msgstr ""
 
@@ -24788,6 +24855,10 @@ msgstr "width: 52em; min-height: 42em;"
 #: panePrivacy.title
 msgid "Privacy"
 msgstr "Príobháideachas"
+
+#: okButton.title okButton.accesskey
+msgid "&OK"
+msgstr "&OK"
 
 #. #-#-#-#-#  chromemessengerpreferencespreferences.properties.po (firefox)  #-#-#-#-#
 #. #### Add HTML and Plain Text Domain Names for sendOption
@@ -25409,12 +25480,6 @@ msgstr "Theip ar bhaint an chuntais seo."
 #: confirmRemoveAccountTitle
 msgid "Remove Account"
 msgstr "Bain Cuntas"
-
-# LOCALIZATION NOTE: accountName: %1$S is server name, %2$S is user name
-#. #LOCALIZATION NOTE: accountName: %1$S is server name, %2$S is user name
-#: accountName
-msgid "%1$S - %2$S"
-msgstr "%1$S - %2$S"
 
 #. # LOCALIZATION NOTE: confirmDeferAccountWarning: do not localize "\n\n", it means a new empty line in the string.
 #: confirmDeferAccountWarning

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sunbird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-19 10:28-0500\n"
+"POT-Creation-Date: 2015-03-08 07:28-0500\n"
 "PO-Revision-Date: 2006-02-16 00:01-0000\n"
 "Last-Translator: Séamus Ó Ciardhuáin <seoc (at) iolfree (dot) ie>\n"
 "Language-Team: Irish\n"
@@ -248,9 +248,9 @@ msgstr "Inniu"
 msgid "Tomorrow"
 msgstr "Amárach"
 
-#: calendar.soon.button.label
-msgid "Soon"
-msgstr "Go Luath"
+#: calendar.upcoming.button.label
+msgid "Upcoming"
+msgstr "Le teacht"
 
 #: calendar.events.filter.all.label
 msgid "All Events"
@@ -881,9 +881,23 @@ msgstr "Féilire &Nua…"
 msgid "&Find Calendar…"
 msgstr "&Aimsigh Féilire…"
 
-#: calendar.context.deleteserver.label calendar.context.deleteserver.accesskey
-msgid "&Delete Calendar"
-msgstr "&Scrios Féilire"
+#: calendar.context.deleteserver2.label
+#: calendar.context.deleteserver2.accesskey
+msgid "&Delete Calendar…"
+msgstr "&Scrios Féilire…"
+
+#. Removing the
+#. calendar is the general action of removing it, while deleting means to
+#. clear the data and unsubscribing means just taking it out of the calendar
+#. list.
+#: calendar.context.removeserver.label calendar.context.removeserver.accesskey
+msgid "&Remove Calendar…"
+msgstr "&Bain Féilire…"
+
+#: calendar.context.unsubscribeserver.label
+#: calendar.context.unsubscribeserver.accesskey
+msgid "&Unsubscribe Calendar…"
+msgstr "&Díliostáil ó Fhéilire…"
 
 #: calendar.context.synccalendars.label
 #: calendar.context.synccalendars.accesskey
@@ -1306,7 +1320,7 @@ msgstr "Cuir Mír in Eagar"
 msgid "Keep the duration when changing the end date"
 msgstr "Coimeád an fad agus an dáta deiridh á athrú"
 
-#: event.dialog.keepDurationButton.accesskey
+#: event.dialog.keepDurationButton.accesskey integrationKeepItAccessKey
 msgid "K"
 msgstr "K"
 
@@ -1388,7 +1402,7 @@ msgctxt "event.dialog.new.event.key2"
 msgid "I"
 msgstr "I"
 
-#: event.dialog.new.task.key2
+#: event.dialog.new.task.key2 integrationOptOutAccessKey
 msgid "D"
 msgstr "D"
 
@@ -4235,16 +4249,42 @@ msgstr ""
 "Feic an Consól Earráide: caitear le criosanna ama neamhaithnid mar an "
 "saorchrios ama logánta."
 
-#: unsubscribeCalendarTitle
-msgid "Unsubscribe from Calendar"
-msgstr "Díliostáil ón Fhéilire"
+#. # The following strings are for the prompt to delete/unsubscribe from the calendar
+#: removeCalendarTitle
+msgid "Remove Calendar"
+msgstr ""
 
-#. # LOCALIZATION NOTE (unsubscribeCalendarMessage):
-#. # used for an message like 'Are you sure you want to unsubscribe from calendar "Home"?'
-#. #    %1$S will be replaced with the name of a calendar
-#: unsubscribeCalendarMessage
-msgid "Are you sure you want to unsubscribe from calendar \"%1$S\"?"
-msgstr "An bhfuil tú cinnte gur mian leat díliostáil ó fhéilire \"%1$S\"?"
+#: removeCalendarButtonDelete
+msgid "Delete Calendar"
+msgstr ""
+
+#: removeCalendarButtonUnsubscribe
+#: calendar.subscriptions.dialog.unsubscribe.button.label
+msgid "Unsubscribe"
+msgstr "Díliostáil"
+
+#. # LOCALIZATION NOTE (removeCalendarMessageDeleteOrUnsubscribe): Shown for
+#. # calendar where both deleting and unsubscribing is possible.
+#. # %1$S:  The name of a calendar
+#: removeCalendarMessageDeleteOrUnsubscribe
+msgid ""
+"Do you want to remove the calendar \"%1$S\"? Unsubscribing will remove the "
+"calendar from the list, deleting will also permanently purge its data."
+msgstr ""
+
+#. # LOCALIZATION NOTE (removeCalendarMessageDelete): Shown for calendar where
+#. # deleting is the only option.
+#. # %1$S:  The name of a calendar
+#: removeCalendarMessageDelete
+msgid "Do you want to permanently delete the calendar \"%1$S\"?"
+msgstr ""
+
+#. # LOCALIZATION NOTE (removeCalendarMessageUnsubscribe): Shown for calendar
+#. # where unsubscribing is the only option.
+#. # %1$S:  The name of a calendar
+#: removeCalendarMessageUnsubscribe
+msgid "Do you want to unsubscribe from the calendar \"%1$S\"?"
+msgstr ""
 
 #: WeekTitle
 msgid "Week %1$S"
@@ -5382,6 +5422,10 @@ msgctxt "unitDays"
 msgid "#1 day;#1 days"
 msgstr "#1 lá;#1 lá;#1 lá;#1 lá;#1 lá"
 
+#: unitWeeks
+msgid "#1 week;#1 weeks"
+msgstr ""
+
 #. # LOCALIZATION NOTE (showCalendar)
 #. # Used in calendar list context menu
 #. #    %1$S will be replaced with the calendar name
@@ -5398,6 +5442,25 @@ msgstr "Folaigh %1$S"
 #: showOnlyCalendar
 msgid "Show Only %1$S"
 msgstr "Taispeáin %1$S Amháin"
+
+#. # LOCALIZATION NOTE (modifyConflict)
+#. # Used by the event dialog to resolve item modification conflicts.
+#: modifyConflictPromptTitle
+msgid "Item Modification Conflict"
+msgstr ""
+
+#: modifyConflictPromptMessage
+msgid ""
+"The item being edited in the dialog has been modified since it was opened."
+msgstr ""
+
+#: modifyConflictPromptButton1
+msgid "Overwrite the other changes"
+msgstr ""
+
+#: modifyConflictPromptButton2
+msgid "Discard these changes"
+msgstr ""
 
 # ***** BEGIN LICENSE BLOCK *****
 # - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -5460,10 +5523,6 @@ msgstr "Roghnaigh na féilirí lena liostálfar:"
 #: calendar.subscriptions.dialog.subscribe.button.label
 msgid "Subscribe"
 msgstr "Liostáil"
-
-#: calendar.subscriptions.dialog.unsubscribe.button.label
-msgid "Unsubscribe"
-msgstr "Díliostáil"
 
 #: calendar.subscriptions.dialog.statusmessage.busy.label
 msgid "Search…"
@@ -6081,6 +6140,17 @@ msgstr "&Foilsigh…"
 msgid "&Delete Selected Calendar…"
 msgstr "&Scrios an Féilire Roghnaithe…"
 
+#: calendar.unsubscribecalendar.label calendar.unsubscribecalendar.accesskey
+msgid "&Unsubscribe Selected Calendar…"
+msgstr ""
+
+#. Removing the calendar
+#. is the general action of removing it, while deleting means to clear the
+#. data and unsubscribing means just taking it out of the calendar list.
+#: calendar.removecalendar.label calendar.removecalendar.accesskey
+msgid "&Remove Selected Calendar…"
+msgstr ""
+
 #: showUnifinderCmd.label showUnifinderCmd.accesskey
 msgid "&Find Events"
 msgstr "Aimsigh I&meachtaí"
@@ -6225,10 +6295,10 @@ msgstr "Úsáid an fhuaim &réamhshocraithe"
 msgid "&Browse…"
 msgstr "&Brabhsáil…"
 
-#: pref.calendar.alarms.sound.preview.label
-#: pref.calendar.alarms.sound.preview.accessKey
-msgid "&Preview"
-msgstr "&Réamhamharc"
+#: pref.calendar.alarms.sound.play.label
+#: pref.calendar.alarms.sound.play.accessKey
+msgid "&Play"
+msgstr "&Seinn"
 
 #: pref.showalarmbox
 msgid "Show the reminder dialog"
@@ -6243,7 +6313,7 @@ msgstr "L"
 msgid "Show missed reminders"
 msgstr "Taispeáin meabhrúcháin a cailleadh"
 
-#: pref.calendar.alarms.missedAlarms.accessKey
+#: pref.calendar.alarms.missedAlarms.accessKey integrationLearnMoreAccessKey
 msgid "m"
 msgstr "m"
 
@@ -6382,6 +6452,14 @@ msgstr "I gcoibhneas leis an tosach"
 #: pref.default_task_offset_next_hour.label
 msgid "Relative to Next Hour"
 msgstr "I gcoibhneas leis an chéad uair eile"
+
+#: pref.calendar.todaypane.agenda.caption todaypane.statusButton.label
+msgid "Today Pane"
+msgstr "Pána Inniu"
+
+#: pref.soondays.label pref.soondays.accesskey
+msgid "The &upcoming section shows:"
+msgstr ""
 
 #: pref.accessibility.label
 msgid "Accessibility"
@@ -6692,6 +6770,16 @@ msgstr "Tascanna %1$S á sioncrónú: %2$S as %3$S"
 #: syncStatus
 msgid "Synchronizing Calendar %1$S"
 msgstr "Féilire %1$S á shioncrónú"
+
+#. # LOCALIZATION NOTE (requestWindowDescription):
+#. # %1$S - The session id (email) used for authentication
+#: requestWindowDescription
+msgid ""
+"The Provider for Google Calendar would like to access your account %1$S to "
+"retrieve events and tasks. Credentials and calendaring data is only "
+"transfered between your computer and Google, no third party sites are "
+"involved."
+msgstr ""
 
 # args: host
 #. # args: host
@@ -8441,7 +8529,7 @@ msgid "America/St. Barthelemy"
 msgstr "Meiriceá/Saint Barthelemy"
 
 # added with 0.1.2008d:
-#. # added with 0.1.2008d:
+#. # added with 2008d:
 #: pref.timezone.America.Argentina.San_Luis
 msgid "America/Argentina/San Luis"
 msgstr "Meiriceá/An Airgintín/San Luis"
@@ -8459,13 +8547,13 @@ msgid "Asia/Kolkata"
 msgstr "An Áise/Kolkata"
 
 # added with 0.1.2008i:
-#. # added with 0.1.2008i:
+#. # added with 2008i:
 #: pref.timezone.America.Argentina.Salta
 msgid "America/Argentina/Salta"
 msgstr "Meiriceá/An Airgintín/Salta"
 
 # added with 0.1.2010i
-#. # added with 0.1.2010i
+#. # added with 2010i
 #: pref.timezone.America.Matamoros
 msgid "America/Matamoros"
 msgstr "Meiriceá/Matamoros"
@@ -8486,7 +8574,7 @@ msgstr "An tAntartach/Macquarie"
 msgid "Asia/Novokuznetsk"
 msgstr "An Áise/Novokuznetsk"
 
-#. #added with 0.1.2011b
+#. #added with 2011b
 #: pref.timezone.America.Bahia_Banderas
 msgid "America/Bahia Banderas"
 msgstr "Meiriceá/Bahia Banderas"
@@ -8503,7 +8591,7 @@ msgstr "An tAigéan Ciúin/Chuuk"
 msgid "Pacific/Pohnpei"
 msgstr "An tAigéan Ciúin/Pohnpei"
 
-#. #added with 0.1.2011n
+#. #added with 2011n
 #: pref.timezone.Africa.Juba
 msgid "Africa/Juba"
 msgstr "An Afraic/Juba"
@@ -8528,7 +8616,7 @@ msgstr "Meiriceá/Sitka"
 msgid "Asia/Hebron"
 msgstr "An Áise/Hebron"
 
-#. #added with 0.1.2013a
+#. #added with 2013a
 #: pref.timezone.America.Creston
 msgid "America/Creston"
 msgstr "Meiriceá/Creston"
@@ -8545,10 +8633,23 @@ msgstr "An Áise/Ust-Nera"
 msgid "Europe/Busingen"
 msgstr "An Eoraip/Busingen"
 
-#. #added with 0.1.2014b
+#. #added with 2014b
 #: pref.timezone.Antarctica.Troll
 msgid "Antarctica/Troll"
 msgstr "An Antartaice/Troll"
+
+#. #added with 2014j
+#: pref.timezone.Asia.Chita
+msgid "Asia/Chita"
+msgstr ""
+
+#: pref.timezone.Asia.Srednekolymsk
+msgid "Asia/Srednekolymsk"
+msgstr ""
+
+#: pref.timezone.Pacific.Bougainville
+msgid "Pacific/Bougainville"
+msgstr ""
 
 #: lightning.menupopup.new.calendar.label
 #: lightning.menupopup.new.calendar.accesskey
@@ -8716,10 +8817,6 @@ msgstr "Ná Taispeáin &Faic"
 #: todaypane.showTodayPane.label todaypane.showTodayPane.accesskey
 msgid "Sh&ow Today Pane"
 msgstr "Taispeáin &Pána Inniu"
-
-#: todaypane.statusButton.label
-msgid "Today Pane"
-msgstr "Pána Inniu"
 
 #. # addon description:
 #: extensions.{e2fda1a4-762b-4020-b5ad-a41df1933103}.name
@@ -8912,6 +9009,93 @@ msgstr "An bhfuil fonn ort an cuireadh a phróiseáil?"
 #: invitationsLink.label
 msgid "Invitations: %1$S"
 msgstr "Cuirí: %1$S"
+
+#. # LOCALIZATION_NOTE(binaryComponentKnown): This is shown when Lightning is
+#. # missing the binary component and knows how to calculate the expected version
+#. # number. To test, remove the binary component from the components/
+#. # subdirectory and start Lightning, or force install into a different
+#. # Thunderbird version. In the last part of the sentence it should be made clear
+#. # that the user can install e.g. 3.7, 3.7.1 or anything other 3.7.x version
+#. # %1$S - The Lightning brand name, from the brandShortName string above.
+#. # %2$S - The current Lightning version
+#. # %3$S - The expected Lightning version
+#: binaryComponentKnown
+msgid ""
+"The binary component required for %1$S could not be loaded, likely because "
+"the wrong version combination is being used. You currently have %1$S %2$S "
+"installed, but should be using a version from the %3$S series."
+msgstr ""
+
+#. # LOCALIZATION_NOTE(binaryComponentUnknown): This is shown when Lightning is
+#. # missing the binary component but can't calculate the expected version. This
+#. # happens in the rare case that Lightning is installed into something other
+#. # than Thunderbird or Seamonkey. You may link to a different page if you can
+#. # commit to keeping it up to date, I'd recommend staying with the English page.
+#. # %1$S - The Lightning brand name, from the brandShortName string above.
+#. # %2$S - The application brand name, e.g. Postbox
+#. # %3$S - The application version
+#. # %3$S - The current Lightning version
+#: binaryComponentUnknown
+msgid ""
+"The binary component required for %1$S could not be loaded, likely because "
+"the wrong version combination is being used. You are using %2$S %3$S together "
+"with %1$S %4$S. Please check https://developer.mozilla.org/en/Calendar/"
+"Calendar_Versions for details."
+msgstr ""
+
+#. # LOCALIZATION_NOTE(binaryComponentTitle): The title for the dialog that
+#. # notifies about a version mismatch.
+#. # %1$S - The Lightning brand name, from the brandShortName string above.
+#: binaryComponentTitle
+msgid "Mismatching %1$S Version"
+msgstr ""
+
+#. # LOCALIZATION_NOTE(integrationLabel): Used by the notification bar shown when
+#. # Lightning is installed from the distribution folder. To trigger it, start a
+#. # new profile without Lightning in a previous Thunderbird version, then upgrade
+#. # to a Thunderbird that has Lightning packaged. See bug 1130852 for details.
+#: integrationLabel
+msgid ""
+"%1$S now contains calendaring functionality by integrating the %2$S extension."
+msgstr ""
+
+#: integrationLearnMoreButton
+msgid "Learn more"
+msgstr "Tuilleadh eolais"
+
+#: integrationOptOutButton
+msgid "Disable"
+msgstr "Díchumasaigh"
+
+#: integrationKeepItButton
+msgid "Keep"
+msgstr "Coinnigh"
+
+#. # LOCALIZATION_NOTE(integrationRestartLabel): At the current time its not yet
+#. # clear if we will be completely uninstalling Lightning or disabling it. Please
+#. # translate this string in a general manner, so that it makes sense for both
+#. # options.
+#: integrationRestartLabel
+msgid ""
+"%1$S will be removed the next time you restart %2$S. You can add it again at "
+"any time using the Add-ons Manager."
+msgstr ""
+
+#: integrationRestartButton
+msgid "Restart now"
+msgstr "Atosaigh anois"
+
+#: integrationRestartAccessKey
+msgid "R"
+msgstr "R"
+
+#: integrationUndoButton
+msgid "Undo"
+msgstr "Cealaigh"
+
+#: integrationUndoAccessKey
+msgid "U"
+msgstr "U"
 
 #. This Source Code Form is subject to the terms of the Mozilla Public
 #. - License, v. 2.0. If a copy of the MPL was not distributed with this
